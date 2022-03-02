@@ -1,0 +1,691 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reliability.space &#8212; My sample book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   reliability.space
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/interactive.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Finteractive.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/interactive.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-prediction-form">
+   Reliability Prediction - FORM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bearing-solid-lubricant-wear-model">
+   Bearing:     solid lubricant wear model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-model">
+   General model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#input-values-for-reliability-prediction">
+   Input values for reliability prediction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limiting-value-worn-volume-v-lim-m-3-described-by-mean-value-coefficient-of-variation-and-distribution">
+     -Limiting value (worn volume),
+     <span class="math notranslate nohighlight">
+      \(V_{lim}\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([m^3]\)
+     </span>
+     , described by: Mean Value, Coefficient of Variation and Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specific-wear-rate-k-h-pa-1-m-2-n-described-by-mean-value-coefficient-of-variation-and-distribution">
+     -Specific wear rate,
+     <span class="math notranslate nohighlight">
+      \(K_H\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([Pa^{-1}=m^2/N]\)
+     </span>
+     , described by: Mean Value, Coefficient of Variation and Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ball-cage-interaction-alpha-n-m-described-by-mean-value-coefficient-of-variation-and-distribution">
+     -Ball-cage interaction,
+     <span class="math notranslate nohighlight">
+      \(\alpha\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([N/m]\)
+     </span>
+     , described by: Mean Value, Coefficient of Variation and Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-uncertainty-theta-described-by-mean-value-coefficient-of-variation-lognomal-distribution">
+     -Model uncertainty,
+     <span class="math notranslate nohighlight">
+      \(\Theta\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([-]\)
+     </span>
+     , described by: Mean Value, Coefficient of Variation, Lognomal distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nominal-number-of-revolutions-rev-described-by-integer-value">
+     -Nominal number of revolutions,
+     <span class="math notranslate nohighlight">
+      \(rev\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([ \# ]\)
+     </span>
+     , described by: Integer Value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#average-number-of-revolution-per-hour-for-plotting-only">
+     -Average number of revolution per hour (for plotting only)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>reliability.space</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-prediction-form">
+   Reliability Prediction - FORM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bearing-solid-lubricant-wear-model">
+   Bearing:     solid lubricant wear model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-model">
+   General model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#input-values-for-reliability-prediction">
+   Input values for reliability prediction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limiting-value-worn-volume-v-lim-m-3-described-by-mean-value-coefficient-of-variation-and-distribution">
+     -Limiting value (worn volume),
+     <span class="math notranslate nohighlight">
+      \(V_{lim}\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([m^3]\)
+     </span>
+     , described by: Mean Value, Coefficient of Variation and Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specific-wear-rate-k-h-pa-1-m-2-n-described-by-mean-value-coefficient-of-variation-and-distribution">
+     -Specific wear rate,
+     <span class="math notranslate nohighlight">
+      \(K_H\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([Pa^{-1}=m^2/N]\)
+     </span>
+     , described by: Mean Value, Coefficient of Variation and Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ball-cage-interaction-alpha-n-m-described-by-mean-value-coefficient-of-variation-and-distribution">
+     -Ball-cage interaction,
+     <span class="math notranslate nohighlight">
+      \(\alpha\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([N/m]\)
+     </span>
+     , described by: Mean Value, Coefficient of Variation and Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-uncertainty-theta-described-by-mean-value-coefficient-of-variation-lognomal-distribution">
+     -Model uncertainty,
+     <span class="math notranslate nohighlight">
+      \(\Theta\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([-]\)
+     </span>
+     , described by: Mean Value, Coefficient of Variation, Lognomal distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nominal-number-of-revolutions-rev-described-by-integer-value">
+     -Nominal number of revolutions,
+     <span class="math notranslate nohighlight">
+      \(rev\)
+     </span>
+     <span class="math notranslate nohighlight">
+      \([ \# ]\)
+     </span>
+     , described by: Integer Value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#average-number-of-revolution-per-hour-for-plotting-only">
+     -Average number of revolution per hour (for plotting only)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="reliability-space">
+<h1>reliability.space<a class="headerlink" href="#reliability-space" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reliability-prediction-form">
+<h2>Reliability Prediction - FORM<a class="headerlink" href="#reliability-prediction-form" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="bearing-solid-lubricant-wear-model">
+<h2>Bearing:     solid lubricant wear model<a class="headerlink" href="#bearing-solid-lubricant-wear-model" title="Permalink to this headline">¶</a></h2>
+<p>For ESA RFP 17225,
+by Matthias Schubert, 2021-09-23</p>
+</div>
+<div class="section" id="general-model">
+<h2>General model<a class="headerlink" href="#general-model" title="Permalink to this headline">¶</a></h2>
+<p>Solid lubricant wear modelling is described taking example in a ball bearing. The modelling is applicable to other cases of solid lubricant wear, however, the number of revolution has to be substituted with another measure of sliding distance.
+For solid lubricant reservoir wear (e.g. cage of a ball bearing), the limit state function for the adhesive wear model is formulated as follows:</p>
+<p><span class="math notranslate nohighlight">\(g\left( {\bf{X}} \right) = {V_{{\rm{limit}}}} - \Theta  \sum\limits_{i = 1}^{{n_p}} {{K_{H,i}} {\alpha _i} r_i}\)</span></p>
+<p>Where <span class="math notranslate nohighlight">\(\alpha\)</span> denotes the average work of ball/cage interaction forces per revolution and <span class="math notranslate nohighlight">\(r_i\)</span> the number of revolutions in time interval <span class="math notranslate nohighlight">\(i\)</span> . The parameter <span class="math notranslate nohighlight">\(\alpha\)</span> will typically be estimated from tests and is, thus dependent on the wear rate <span class="math notranslate nohighlight">\(K_H\)</span>, which is used to estimate <span class="math notranslate nohighlight">\(\alpha\)</span> from the test results. Therefore, <span class="math notranslate nohighlight">\(K_H\)</span> cannot be taken out of the sum.</p>
+<p>The following calculation is done by using First Order Reliability Analysis (FORM) for one time interval i=1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">Layout</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">pystra</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">proF</span><span class="p">(</span><span class="n">E_Vlim</span><span class="p">,</span> <span class="n">COV_Vlim</span><span class="p">,</span> <span class="n">Dist_Vlim</span><span class="p">,</span> <span class="n">E_KH</span><span class="p">,</span> <span class="n">COV_KH</span><span class="p">,</span> <span class="n">Dist_KH</span><span class="p">,</span> <span class="n">E_alpha</span><span class="p">,</span> <span class="n">COV_alpha</span><span class="p">,</span> <span class="n">Dist_alpha</span><span class="p">,</span> <span class="n">E_MU</span><span class="p">,</span> <span class="n">COV_MU</span><span class="p">,</span> <span class="n">Dist_MU</span><span class="p">,</span>
+         <span class="n">E_nrev</span><span class="p">,</span> <span class="n">Rev_per_hour</span><span class="p">):</span>
+    <span class="n">E_vlimit_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_Vlim</span><span class="p">)</span>
+    <span class="n">nu_vlimit_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">COV_Vlim</span><span class="p">)</span>
+    <span class="n">E_KH_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_KH</span><span class="p">)</span>
+    <span class="n">nu_KH_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">COV_KH</span><span class="p">)</span>
+    <span class="n">E_alpha_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_alpha</span><span class="p">)</span>
+    <span class="n">nu_alpha_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">COV_alpha</span><span class="p">)</span>
+    <span class="n">E_theta_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_MU</span><span class="p">)</span>
+    <span class="n">nu_theta_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">COV_MU</span><span class="p">)</span>
+    <span class="n">rev_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_nrev</span><span class="p">)</span>
+    <span class="n">rev_hour</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">Rev_per_hour</span><span class="p">)</span>
+
+    <span class="n">rev_min</span> <span class="o">=</span> <span class="n">rev_val</span> <span class="o">*</span> <span class="mf">0.5</span>  <span class="c1"># for plotting</span>
+    <span class="n">rev_max</span> <span class="o">=</span> <span class="n">rev_val</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c1"># for plotting</span>
+
+    <span class="n">mu_R</span> <span class="o">=</span> <span class="n">E_vlimit_val</span>
+    <span class="n">sigma_R</span> <span class="o">=</span> <span class="n">E_vlimit_val</span> <span class="o">*</span> <span class="n">nu_vlimit_val</span>
+    <span class="n">x_R_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mu_R</span> <span class="o">-</span> <span class="n">sigma_R</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span> <span class="n">mu_R</span> <span class="o">+</span> <span class="n">sigma_R</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+
+    <span class="n">mu_S</span> <span class="o">=</span> <span class="n">E_KH_val</span> <span class="o">*</span> <span class="n">E_alpha_val</span> <span class="o">*</span> <span class="n">E_theta_val</span> <span class="o">*</span> <span class="n">rev_val</span>
+    <span class="n">cov_S</span> <span class="o">=</span> <span class="p">((</span><span class="n">nu_KH_val</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">nu_alpha_val</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">nu_theta_val</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+    <span class="n">sigma_S</span> <span class="o">=</span> <span class="n">cov_S</span> <span class="o">*</span> <span class="n">mu_S</span>
+    <span class="n">x_S_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">mu_S</span> <span class="o">-</span> <span class="n">sigma_S</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">1e-12</span><span class="p">),</span> <span class="n">mu_S</span> <span class="o">+</span> <span class="n">sigma_S</span> <span class="o">*</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+    <span class="n">zeta_S</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">sigma_S</span> <span class="o">/</span> <span class="n">mu_S</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
+    <span class="n">lamb_S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">mu_S</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">zeta_S</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="c1"># construct distribution and evaluate PDF</span>
+    <span class="n">my_dist</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">distributions</span><span class="o">.</span><span class="n">lognormal</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;my_dist&#39;</span><span class="p">,</span> <span class="n">lamb_S</span><span class="p">,</span> <span class="n">zeta_S</span><span class="p">,</span> <span class="n">input_type</span><span class="o">=</span><span class="s1">&#39;parameters&#39;</span><span class="p">)</span>
+    <span class="n">S_pdf</span> <span class="o">=</span> <span class="n">my_dist</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_S_mat</span><span class="p">)</span>
+
+    <span class="c1"># revolutions per hour</span>
+    <span class="c1"># rev_hour=100;</span>
+    <span class="c1">######################################################</span>
+
+    <span class="c1"># FORM ANALYSIS pystra</span>
+
+    <span class="n">stochastic_model</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">StochasticModel</span><span class="p">()</span>
+    <span class="c1"># Define random variables</span>
+
+    <span class="k">if</span> <span class="n">Dist_Vlim</span> <span class="o">==</span> <span class="s1">&#39;Normal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span> <span class="n">E_vlimit_val</span><span class="p">,</span> <span class="n">E_vlimit_val</span> <span class="o">*</span> <span class="n">nu_vlimit_val</span><span class="p">))</span>
+
+        <span class="c1"># evaluate PDF</span>
+        <span class="n">R_pdf</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_R_mat</span><span class="p">,</span> <span class="n">mu_R</span><span class="p">,</span> <span class="n">sigma_R</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">Dist_Vlim</span> <span class="o">==</span> <span class="s1">&#39;LogNormal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span> <span class="n">E_vlimit_val</span><span class="p">,</span> <span class="n">E_vlimit_val</span> <span class="o">*</span> <span class="n">nu_vlimit_val</span><span class="p">))</span>
+
+        <span class="c1"># Lognormal</span>
+        <span class="n">zeta_R</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">nu_vlimit_val</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
+        <span class="n">lamb_R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">mu_R</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">zeta_R</span> <span class="o">**</span> <span class="mi">2</span>
+
+        <span class="c1"># evaluate PDF</span>
+        <span class="n">R_pdf</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">lognorm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_R_mat</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mu_R</span><span class="p">,</span> <span class="n">sigma_R</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">Dist_Vlim</span> <span class="o">==</span> <span class="s1">&#39;Gumbel&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Gumbel</span><span class="p">(</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span> <span class="n">E_vlimit_val</span><span class="p">,</span> <span class="n">E_vlimit_val</span> <span class="o">*</span> <span class="n">nu_vlimit_val</span><span class="p">))</span>
+
+        <span class="c1"># construct distribution and evaluate PDF</span>
+        <span class="n">R_pdf</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">gumbel_r</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_R_mat</span><span class="p">,</span> <span class="n">mu_R</span><span class="p">,</span> <span class="n">sigma_R</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">Dist_KH</span> <span class="o">==</span> <span class="s1">&#39;Normal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span> <span class="n">E_KH_val</span><span class="p">,</span> <span class="n">E_KH_val</span> <span class="o">*</span> <span class="n">nu_KH_val</span><span class="p">))</span>
+
+    <span class="k">elif</span> <span class="n">Dist_KH</span> <span class="o">==</span> <span class="s1">&#39;LogNormal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span> <span class="n">E_KH_val</span><span class="p">,</span> <span class="n">E_KH_val</span> <span class="o">*</span> <span class="n">nu_KH_val</span><span class="p">))</span>
+
+    <span class="k">elif</span> <span class="n">Dist_KH</span> <span class="o">==</span> <span class="s1">&#39;Gumbel&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Gumbel</span><span class="p">(</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span> <span class="n">E_KH_val</span><span class="p">,</span> <span class="n">E_KH_val</span> <span class="o">*</span> <span class="n">nu_KH_val</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">Dist_alpha</span> <span class="o">==</span> <span class="s1">&#39;Normal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;X3&#39;</span><span class="p">,</span> <span class="n">E_alpha_val</span><span class="p">,</span> <span class="n">E_alpha_val</span> <span class="o">*</span> <span class="n">nu_alpha_val</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">Dist_alpha</span> <span class="o">==</span> <span class="s1">&#39;LogNormal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;X3&#39;</span><span class="p">,</span> <span class="n">E_alpha_val</span><span class="p">,</span> <span class="n">E_alpha_val</span> <span class="o">*</span> <span class="n">nu_alpha_val</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">Dist_alpha</span> <span class="o">==</span> <span class="s1">&#39;Gumbel&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Gumbel</span><span class="p">(</span><span class="s1">&#39;X3&#39;</span><span class="p">,</span> <span class="n">E_alpha_val</span><span class="p">,</span> <span class="n">E_alpha_val</span> <span class="o">*</span> <span class="n">nu_alpha_val</span><span class="p">))</span>
+
+    <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;X4&#39;</span><span class="p">,</span> <span class="n">E_theta_val</span><span class="p">,</span> <span class="n">E_theta_val</span> <span class="o">*</span> <span class="n">nu_theta_val</span><span class="p">))</span>
+
+    <span class="n">stochastic_model</span><span class="o">.</span><span class="n">setCorrelation</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">CorrelationMatrix</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+                                                       <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+                                                       <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+                                                       <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]]))</span>
+
+    <span class="c1"># Set some options (optional)</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">AnalysisOptions</span><span class="p">()</span>
+
+    <span class="c1"># Define limit state function</span>
+    <span class="n">limit_state</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">LimitState</span><span class="p">(</span><span class="k">lambda</span> <span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">X3</span><span class="p">,</span> <span class="n">X4</span><span class="p">:</span> <span class="n">X1</span> <span class="o">-</span> <span class="n">X2</span> <span class="o">*</span> <span class="n">X3</span> <span class="o">*</span> <span class="n">X4</span> <span class="o">*</span> <span class="n">rev_val</span><span class="p">)</span>
+    <span class="c1"># Performe FORM analysis</span>
+    <span class="n">Analysis</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">Form</span><span class="p">(</span><span class="n">analysis_options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span> <span class="n">stochastic_model</span><span class="o">=</span><span class="n">stochastic_model</span><span class="p">,</span> <span class="n">limit_state</span><span class="o">=</span><span class="n">limit_state</span><span class="p">)</span>
+    <span class="c1"># Some single results:</span>
+    <span class="n">beta</span> <span class="o">=</span> <span class="n">Analysis</span><span class="o">.</span><span class="n">getBeta</span><span class="p">()</span>
+    <span class="n">pf</span> <span class="o">=</span> <span class="n">Analysis</span><span class="o">.</span><span class="n">getFailure</span><span class="p">()</span>
+
+    <span class="n">pf_mat</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rev_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">rev_val</span> <span class="o">*</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">rev_val</span> <span class="o">*</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="c1"># for plot of the &quot;Resistance&quot;</span>
+    <span class="k">for</span> <span class="n">i_rev</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rev_mat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="c1"># Define limit state function</span>
+        <span class="n">limit_state</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">LimitState</span><span class="p">(</span><span class="k">lambda</span> <span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">X3</span><span class="p">,</span> <span class="n">X4</span><span class="p">:</span> <span class="n">X1</span> <span class="o">-</span> <span class="n">X2</span> <span class="o">*</span> <span class="n">X3</span> <span class="o">*</span> <span class="n">X4</span> <span class="o">*</span> <span class="n">rev_mat</span><span class="p">[</span><span class="n">i_rev</span><span class="p">])</span>
+        <span class="c1"># Performe FORM analysis</span>
+        <span class="n">options</span><span class="o">.</span><span class="n">printResults</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">Analysis</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">Form</span><span class="p">(</span><span class="n">analysis_options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span> <span class="n">stochastic_model</span><span class="o">=</span><span class="n">stochastic_model</span><span class="p">,</span> <span class="n">limit_state</span><span class="o">=</span><span class="n">limit_state</span><span class="p">)</span>
+        <span class="n">pf_mat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Analysis</span><span class="o">.</span><span class="n">getFailure</span><span class="p">())</span>
+
+    <span class="c1"># plots</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># %matplotlib inline</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_R_mat</span><span class="p">,</span> <span class="n">R_pdf</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_S_mat</span><span class="p">,</span> <span class="n">S_pdf</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">)</span>
+    <span class="c1"># plt.plot(np.log10(rev_val), pf,&#39;ro&#39;)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Volume [m^3]&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;probability density function&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Limiting Volume&#39;</span><span class="p">,</span> <span class="s1">&#39;Volume worn away&#39;</span><span class="p">])</span>
+
+    <span class="c1"># plt.yscale(&#39;log&#39;)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rev_val</span> <span class="o">/</span> <span class="p">(</span><span class="n">rev_hour</span> <span class="o">*</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">24</span><span class="p">),</span> <span class="n">pf</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rev_mat</span> <span class="o">/</span> <span class="p">(</span><span class="n">rev_hour</span> <span class="o">*</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">24</span><span class="p">),</span> <span class="n">pf_mat</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;probability of failure&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;years&#39;</span><span class="p">)</span>
+    <span class="c1"># plt.legend([&#39;Limiting Volume&#39;,&#39;Volume worn away&#39;])</span>
+
+    <span class="k">return</span> <span class="s1">&#39;The probability of failure is pf=</span><span class="si">{}</span><span class="s1"> at </span><span class="si">{}</span><span class="s1"> revolutions&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pf</span><span class="p">,</span> <span class="n">rev_val</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="input-values-for-reliability-prediction">
+<h2>Input values for reliability prediction<a class="headerlink" href="#input-values-for-reliability-prediction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="limiting-value-worn-volume-v-lim-m-3-described-by-mean-value-coefficient-of-variation-and-distribution">
+<h3>-Limiting value (worn volume), <span class="math notranslate nohighlight">\(V_{lim}\)</span> <span class="math notranslate nohighlight">\([m^3]\)</span>, described by: Mean Value, Coefficient of Variation and Distribution<a class="headerlink" href="#limiting-value-worn-volume-v-lim-m-3-described-by-mean-value-coefficient-of-variation-and-distribution" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="specific-wear-rate-k-h-pa-1-m-2-n-described-by-mean-value-coefficient-of-variation-and-distribution">
+<h3>-Specific wear rate, <span class="math notranslate nohighlight">\(K_H\)</span> <span class="math notranslate nohighlight">\([Pa^{-1}=m^2/N]\)</span> , described by: Mean Value, Coefficient of Variation and Distribution<a class="headerlink" href="#specific-wear-rate-k-h-pa-1-m-2-n-described-by-mean-value-coefficient-of-variation-and-distribution" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="ball-cage-interaction-alpha-n-m-described-by-mean-value-coefficient-of-variation-and-distribution">
+<h3>-Ball-cage interaction, <span class="math notranslate nohighlight">\(\alpha\)</span> <span class="math notranslate nohighlight">\([N/m]\)</span> , described by: Mean Value, Coefficient of Variation and Distribution<a class="headerlink" href="#ball-cage-interaction-alpha-n-m-described-by-mean-value-coefficient-of-variation-and-distribution" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="model-uncertainty-theta-described-by-mean-value-coefficient-of-variation-lognomal-distribution">
+<h3>-Model uncertainty, <span class="math notranslate nohighlight">\(\Theta\)</span> <span class="math notranslate nohighlight">\([-]\)</span> , described by: Mean Value, Coefficient of Variation, Lognomal distribution<a class="headerlink" href="#model-uncertainty-theta-described-by-mean-value-coefficient-of-variation-lognomal-distribution" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="nominal-number-of-revolutions-rev-described-by-integer-value">
+<h3>-Nominal number of revolutions, <span class="math notranslate nohighlight">\(rev\)</span> <span class="math notranslate nohighlight">\([ \# ]\)</span>, described by: Integer Value<a class="headerlink" href="#nominal-number-of-revolutions-rev-described-by-integer-value" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="average-number-of-revolution-per-hour-for-plotting-only">
+<h3>-Average number of revolution per hour (for plotting only)<a class="headerlink" href="#average-number-of-revolution-per-hour-for-plotting-only" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="n">interact</span><span class="p">(</span><span class="n">proF</span><span class="p">,</span> <span class="n">E_Vlim</span><span class="o">=</span><span class="s1">&#39;6.5e-8&#39;</span><span class="p">,</span> <span class="n">COV_Vlim</span><span class="o">=</span><span class="s1">&#39;0.2&#39;</span><span class="p">,</span> <span class="n">Dist_Vlim</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;LogNormal&#39;</span><span class="p">,</span> <span class="s1">&#39;Normal&#39;</span><span class="p">,</span><span class="s1">&#39;Gumbel&#39;</span><span class="p">},</span> <span class="n">E_KH</span><span class="o">=</span><span class="s1">&#39;4e-15&#39;</span><span class="p">,</span> <span class="n">COV_KH</span><span class="o">=</span><span class="s1">&#39;0.66&#39;</span><span class="p">,</span> <span class="n">Dist_KH</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;LogNormal&#39;</span><span class="p">,</span> <span class="s1">&#39;Normal&#39;</span><span class="p">,</span><span class="s1">&#39;Gumbel&#39;</span><span class="p">},</span> <span class="n">E_alpha</span><span class="o">=</span><span class="s1">&#39;0.018&#39;</span><span class="p">,</span> <span class="n">COV_alpha</span><span class="o">=</span><span class="s1">&#39;0.2&#39;</span><span class="p">,</span> <span class="n">Dist_alpha</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;LogNormal&#39;</span><span class="p">,</span> <span class="s1">&#39;Normal&#39;</span><span class="p">,</span><span class="s1">&#39;Gumbel&#39;</span><span class="p">},</span> <span class="n">E_MU</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span> <span class="n">COV_MU</span><span class="o">=</span><span class="s1">&#39;0.2&#39;</span><span class="p">,</span> <span class="n">Dist_MU</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;LogNormal&#39;</span><span class="p">},</span> <span class="n">E_nrev</span><span class="o">=</span><span class="s1">&#39;245e+6&#39;</span><span class="p">,</span><span class="n">Rev_per_hour</span><span class="o">=</span><span class="s1">&#39;1000&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "71f572cfa53d463facd896ec5efbe0ef"}
+</script></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"94e885eb82d34a67ae8d1426ea725fc0": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "71f572cfa53d463facd896ec5efbe0ef": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_4fb472d1aab04b70b8f11be0f2a4c769", "IPY_MODEL_51de16ed4b7e46f5b647b2f18dd02352", "IPY_MODEL_302ff115d63e420cac16a0f7e82c9836", "IPY_MODEL_df51d58be7704261ae6f808261a9ef9c", "IPY_MODEL_b1966ebd50434e2cb088e26dabd7d1e7", "IPY_MODEL_24c520bbfc10464aa8e4d02e182a8090", "IPY_MODEL_0fd00759878d45728afc0f3701ebfce4", "IPY_MODEL_34317d2cd9f1473197d4bfb828c82c23", "IPY_MODEL_7703665e9516422d9f8a1a330b82c37e", "IPY_MODEL_366401d0a6f24b1db7492ddea3bfb930", "IPY_MODEL_0f633ab270e247fa913138aabb639a93", "IPY_MODEL_bb56eea225264379a30cbe9707fb5094", "IPY_MODEL_7ddadebf56c248829562fda934642a44", "IPY_MODEL_6217e657849043d48e8f6eed59f15e83", "IPY_MODEL_7054567a819d41fba6fe449bd7c4b0c0"], "layout": "IPY_MODEL_94e885eb82d34a67ae8d1426ea725fc0"}}, "209146cb0a2840b183da623e142e5e13": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "14be81b1f84642438b8ff3b973f16c86": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "4fb472d1aab04b70b8f11be0f2a4c769": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "E_Vlim", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_209146cb0a2840b183da623e142e5e13", "placeholder": "\u200b", "style": "IPY_MODEL_14be81b1f84642438b8ff3b973f16c86", "value": "6.5e-8"}}, "a1412a4d18ef4a79bb70ab11973180ad": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "96fba54821424693945060031b20f2c0": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "51de16ed4b7e46f5b647b2f18dd02352": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "COV_Vlim", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_a1412a4d18ef4a79bb70ab11973180ad", "placeholder": "\u200b", "style": "IPY_MODEL_96fba54821424693945060031b20f2c0", "value": "0.2"}}, "1328e8cab5e14d2f918b4b07fd2202c8": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "e2adc1db7e6a4425903ee86eacc4d92a": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "302ff115d63e420cac16a0f7e82c9836": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["LogNormal", "Normal", "Gumbel"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Dist_Vlim", "description_tooltip": null, "disabled": false, "index": 0, "layout": "IPY_MODEL_1328e8cab5e14d2f918b4b07fd2202c8", "style": "IPY_MODEL_e2adc1db7e6a4425903ee86eacc4d92a"}}, "7825459361154a289077dde027d40049": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6273b388866e40d4aa199eeb2e145277": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "df51d58be7704261ae6f808261a9ef9c": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "E_KH", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_7825459361154a289077dde027d40049", "placeholder": "\u200b", "style": "IPY_MODEL_6273b388866e40d4aa199eeb2e145277", "value": "4e-15"}}, "3ac193e5da4b4922b4009226bc9eb013": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a951548393134962b92e7e113cc2b68d": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "b1966ebd50434e2cb088e26dabd7d1e7": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "COV_KH", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_3ac193e5da4b4922b4009226bc9eb013", "placeholder": "\u200b", "style": "IPY_MODEL_a951548393134962b92e7e113cc2b68d", "value": "0.66"}}, "66705f6585234d0fbfba780c507fcb6a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "f765065cd264436ab2ea9f7a910e364e": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "24c520bbfc10464aa8e4d02e182a8090": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["LogNormal", "Normal", "Gumbel"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Dist_KH", "description_tooltip": null, "disabled": false, "index": 0, "layout": "IPY_MODEL_66705f6585234d0fbfba780c507fcb6a", "style": "IPY_MODEL_f765065cd264436ab2ea9f7a910e364e"}}, "db50eb7ea4d64842a861d8e258a90bb9": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "cd4faffbfb104c23b42240d50fb6917e": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "0fd00759878d45728afc0f3701ebfce4": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "E_alpha", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_db50eb7ea4d64842a861d8e258a90bb9", "placeholder": "\u200b", "style": "IPY_MODEL_cd4faffbfb104c23b42240d50fb6917e", "value": "0.018"}}, "80132d1fd02d47a98aa36db82ab4d6ac": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c5f3c35caf6d4389a71349243f71ed22": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "34317d2cd9f1473197d4bfb828c82c23": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "COV_alpha", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_80132d1fd02d47a98aa36db82ab4d6ac", "placeholder": "\u200b", "style": "IPY_MODEL_c5f3c35caf6d4389a71349243f71ed22", "value": "0.2"}}, "4215b7b24f9741dcbe9d555fc892bddb": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3669b2de1bbe47368b6218c9713396de": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "7703665e9516422d9f8a1a330b82c37e": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["LogNormal", "Normal", "Gumbel"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Dist_alpha", "description_tooltip": null, "disabled": false, "index": 0, "layout": "IPY_MODEL_4215b7b24f9741dcbe9d555fc892bddb", "style": "IPY_MODEL_3669b2de1bbe47368b6218c9713396de"}}, "367344da62374223aee74e8925470bef": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5a8ae772c95849699104f9cfe8350d6c": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "366401d0a6f24b1db7492ddea3bfb930": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "E_MU", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_367344da62374223aee74e8925470bef", "placeholder": "\u200b", "style": "IPY_MODEL_5a8ae772c95849699104f9cfe8350d6c", "value": "1.0"}}, "2e35b7c163c340f38e1968a8068b6f3a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ce5603080c1344ed806bc10c5ccbae2a": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "0f633ab270e247fa913138aabb639a93": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "COV_MU", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_2e35b7c163c340f38e1968a8068b6f3a", "placeholder": "\u200b", "style": "IPY_MODEL_ce5603080c1344ed806bc10c5ccbae2a", "value": "0.2"}}, "b3d04758b6ec4455af71476ff51960a4": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "be8836f055814b0eab37adea4fee5bd6": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "bb56eea225264379a30cbe9707fb5094": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["LogNormal"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Dist_MU", "description_tooltip": null, "disabled": false, "index": 0, "layout": "IPY_MODEL_b3d04758b6ec4455af71476ff51960a4", "style": "IPY_MODEL_be8836f055814b0eab37adea4fee5bd6"}}, "1528f8d344554ea6bcdd3868cbde8ac0": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b253ef53df7c4d5cb613e219f0d8e92b": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "7ddadebf56c248829562fda934642a44": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "E_nrev", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_1528f8d344554ea6bcdd3868cbde8ac0", "placeholder": "\u200b", "style": "IPY_MODEL_b253ef53df7c4d5cb613e219f0d8e92b", "value": "245e+6"}}, "526b7012aae64df391ad1faa306e1150": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "69f7cc72e3754236aac46fb7be50ddd4": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "6217e657849043d48e8f6eed59f15e83": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "Rev_per_hour", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_526b7012aae64df391ad1faa306e1150", "placeholder": "\u200b", "style": "IPY_MODEL_69f7cc72e3754236aac46fb7be50ddd4", "value": "1000"}}, "23bf95e1a82c4dedb3a8aad899c85121": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "7054567a819d41fba6fe449bd7c4b0c0": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_23bf95e1a82c4dedb3a8aad899c85121", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "==================================================\n\n           RUNNING RELIABILITY ANALYSIS\n\n==================================================\n\n Computation of modified correlation matrix R0\n Takes some time if sensitivities are to be computed\n with gamma (3), beta (7) or chi-square (8)\n distributions.\n Please wait... (Ctrl+C breaks)\n\n.......................................\nNow carrying out iteration number: 1\nValue of limit-state function in the first step: [4.736e-08]\ne1 = 1.000000e+00 , e2 = 3.092366e-01\n.......................................\nNow carrying out iteration number: 2\ne1 = 4.354057e-01 , e2 = 3.856469e-01\n.......................................\nNow carrying out iteration number: 3\ne1 = 1.798128e-01 , e2 = 3.860063e-01\n.......................................\nNow carrying out iteration number: 4\ne1 = 1.213127e-03 , e2 = 6.572854e-02\n.......................................\nNow carrying out iteration number: 5\ne1 = 1.458222e-05 , e2 = 4.604694e-04\n\n======================================================\n\n RESULTS FROM RUNNING FORM RELIABILITY ANALYSIS\n\n Number of iterations:      5\n Reliability index beta:    1.9310859864592957\n Failure probability:       0.02673620985411586\n Number of calls to the limit-state function: 49\n\n======================================================\n\n"}, {"output_type": "display_data", "metadata": {"needs_background": "light"}, "data": {"text/plain": "<Figure size 432x288 with 1 Axes>", "image/png": "iVBORw0KGgoAAAANSUhEUgAAAXkAAAERCAYAAACepNcKAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjUuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/YYfK9AAAACXBIWXMAAAsTAAALEwEAmpwYAAA+6klEQVR4nO2dd3hVZda37wUJvUiJCKITRZEaWugQmiBSRB0dQRwVHdFRR9RPX3zVscxY52VUsIyCXVGsI/aGVEWBqKCCYgEVRQg9AUMJ6/vjOQdCSNlJzj77lHVf13PtU3ZZOznnd9Zeez1riapiGIZhJCZVgjbAMAzD8A8TecMwjATGRN4wDCOBMZE3DMNIYEzkDcMwEhgTecMwjAQm5kReRB4VkfUi8qWHde8Wkc9DY6WIbImCiYZhGHGDxFqevIhkAXnAk6rarhzb/Q3opKrn+WacYRhGnBFznryqzgM2FX5NRFqIyNsiki0i80WkVTGbjgGejYqRhmEYcUJK0AZ4ZCpwkap+KyLdgQeAgeE3ReQPwFHABwHZZxiGEZPEvMiLSB2gF/CCiIRfrl5ktdHAi6paEE3bDMMwYp2YF3lcSGmLqnYsZZ3RwCXRMccwDCN+iLmYfFFUdRuwSkROBxBHh/D7InIc0ABYGJCJhmEYMUvMibyIPIsT7ONEZI2InA+MBc4XkaXAV8CoQpuMAWZorKUJGYZhxAAxl0JpGIZhRI6Y8+QNwzCMyBFTN14bN26s6enpQZthGIYRN2RnZ29Q1bSS3o8pkU9PT2fJkiVBm2EYhhE3iMiPpb1v4RrDMIwExkTeMAwjgTGRNwzDSGBiKiZvGEbx7N69mzVr1pCfnx+0KUZA1KhRg+bNm5Oamlqu7UzkDSMOWLNmDXXr1iU9PZ1CNZyMJEFV2bhxI2vWrOGoo44q17YWrjGMOCA/P59GjRqZwCcpIkKjRo0qdCVnIm8YcYIJfHJT0f+/ibwXcnLgoYfA4qGGYcQZJvJlsWkTHH88XHQRDBninhtGElKnTp2DXnvwwQd58skny7WfXr16AbB69WqeeeaZfa8vWbKEyy67rHJGAnPmzKFnz54HvLZnzx6aNGnC2rVri93m8ccf59JLL630sWMRE/nSyM2FE0+Er7+Ga66BTz6BPn3gp5+CtswwYoKLLrqIs88+u1zbfPTRR8DBIp+ZmcmUKVMqbVNWVhZr1qxh9erV+157//33adeuHU2bNq30/uMNE/nSGDcOsrPh+efh9tvh3Xfhl1/gwguDtswwYoKbbrqJSZMmAdC/f3+uuOIKsrKyaN26NYsXL+bUU0/l2GOP5frrr9+3TfiK4JprrmH+/Pl07NiRu+++mzlz5jBixIh9+z3vvPPo378/Rx999AHi/89//pNWrVoxePBgxowZs+/4YapUqcLpp5/Oc889t++1GTNmMGbMGDZt2sTJJ59MRkYGPXr0YNmyZQed07nnnsuLL754kL1z5syhX79+/OlPf6Jly5Zcc801TJ8+nW7dutG+fXu+//57AHJycvjjH/9I165d6dq1Kx9++GGl/saVxVIoSyI3F2bOhMsvh1Gh8vX9+sFVV8ENN8CKFdC6daAmGsnJ5ZfD559Hdp8dO8I991R+P9WqVWPevHlMnjyZUaNGkZ2dTcOGDWnRogVXXHEFjRo12rfuHXfcwaRJk3j99dcBJ6KF+frrr5k9eza5ubkcd9xx/PWvf2Xp0qW89NJLfPbZZ+zZs4fOnTvTpUuXg+wYM2YM48ePZ+LEiezcuZM333yTu+++mxtuuIFOnTrxyiuv8MEHH3D22WfzeTn+mEuXLmXFihU0bNiQo48+mr/85S8sWrSIyZMnc++993LPPfcwYcIErrjiCvr06cNPP/3ECSecwIoVKyr094wEJvIl8cEHsGcPDB9+4OsXXQS33gpTpsB//hOMbYYRo5x00kkAtG/fnrZt2+4Ljxx99NH8/PPPB4h8WQwfPpzq1atTvXp1Dj30UNatW8eCBQsYNWoUNWvWBGDkyJHFbtu1a1fy8vL45ptvWLFiBT169KBBgwYsWLCAl156CYCBAweyceNGtm7d6tmmrl277junFi1aMGTIkH3nO3v2bMCFhpYvX75vm23btpGbm0vdunU9HyeSmMiXxDvvQO3a0Lv3ga+npcFZZ8ETTzixb9gwGPuMpCUSHrdfVK9eHXAhk/Dj8PM9e/ZUaF8AVatWZc+ePZSnydHo0aOZMWMGK1asYMyYMQDFbl80NTElJYW9e/fuW3/Xrl3F2lT4HAuf3969e1m4cOG+H6KgsZh8cajC22/DwIFQrdrB70+YAL//DtOmRd82w0gQ6tatS25ubrm26dOnD6+99hr5+fnk5eXxxhtvlLjumDFjePrpp/nggw/2XWFkZWUxffp0wIWHGjduTL169Q7YLj09nezsbABmzpzJ7t27y2XjkCFDuO+++/Y9L084yA9M5Ivju+9g1So44YTi32/fHgYNgnvvdSEdw0gCduzYQfPmzfeNu+66q1L7y8jIICUlhQ4dOnD33Xd72qZr166cdNJJdOjQgVNPPZXMzEzq169f7Lpt2rShVq1aDBw4kNq1awPuhu6SJUvIyMjgmmuu4YknnjhouwsuuIC5c+fSrVs3Pvnkk33bemXKlCn7jtGmTRsefPDBcm0faWKqx2tmZqbGRNOQ++6Dv/3NiX2LFsWv8+KLcPrpMGeOuyFrGD6yYsUKWtuNfgDy8vKoU6cOO3bsICsri6lTp9K5c+egzYoKxX0ORCRbVTNL2sbXmLyIrAZygQJgT2mGxBTvvOPEvSSBBxg6FKpXdxk4JvKGETXGjx/P8uXLyc/P55xzzkkaga8o0bjxOkBVN0ThOJFh506YPRvOOaf09erUcSGbmTPh3/8GqytiRJitW6FnT7jtNjjuuKCtiR0KT6AyysZi8kX55BPYvr3keHxhRo2CH36Ar77y3y4j6XjmGTcdwzJ1jcrgt8gr8K6IZIvI+OJWEJHxIrJERJbk5OT4bI4HwvmtXi4Bwzm6M2f6Z4+RlKjC1Knu8axZUFAQrD1G/OK3yPdW1c7AicAlIpJVdAVVnaqqmaqamZaW5rM5Hli5EmrVgmbNyl63aVPo3t1E3og42dluVuv48U7gd+wI2iIjXvFV5FX119ByPfBfoJufx4sIK1fCscdCFY9/mlGjYPFi+PVXf+0ykopp05yv8a9/uY+jibxRUXwTeRGpLSJ1w4+BIcCXfh0vYqxcCS1bel8/XNfm1Vf9scdIOvLyXDz+T3+C+vXdMj8fyjknJ6L079+fd95554DX7rnnHi6++OISt0lPT2fDhvjJuUhU/PTkmwALRGQpsAh4Q1Xf9vF4lWfXLncjtTwi37o1pKe7CpWGEQFmzHBCPz50F+uMM9xy8+bgbBozZgwzZsw44LVwZcdEorylF+IB30ReVX9Q1Q6h0VZVb/XrWBFj1SoXAC2PyIu4VMrZs+3umBERpk2Dtm2hRw/3vF07SE0NVuRPO+00Xn/9dXbu3Am4WvC//vorffr04dlnn6V9+/a0a9eOiRMnHrTt6tWradeu3b7nkyZN4qabbgK8lyd++umn6datGx07duTCCy+koMh3bdGiRZx66qmAK0VQs2ZNdu3aRX5+PkcffTTgygv06NGDjIwMTjnlFDaH/qD9+/fn2muvpV+/fkyePJn+/fszceJEunXrRsuWLZk/f/5B55SXl8egQYPo3Lkz7du3Z2bovty//vWvfWWRr7jiCgYOHAjArFmzOOusswD461//SmZmJm3btuXGG2/c9/4pp5yyb//vvffevvOpLFagrDArV7pleUQeXI2bRx6Bzz6DzPiY72XEJkuXwqJFMHny/qkXIi4+n5vrQjapV18e9VrDjRo1olu3brz99tuMGjWKGTNmcMYZZ7B27VomTpxIdnY2DRo0YMiQIbzyyiucfPLJng9dVnni9evX89xzz/Hhhx+SmprKxRdfzPTp0w9oVtK5c2c+++wzAObPn0+7du1YvHgxe/bsoXv37gCcffbZ3HvvvfTr148bbriBm2++mXtC57xlyxbmzp0LwGuvvcaePXtYtGgRb775JjfffDPvv//+ATbXqFGD//73v9SrV48NGzbQo0cPTjrpJLKysvj3v//NZZddxpIlS9i5cye7d+9mwYIF9O3bF4Bbb72Vhg0bUlBQwKBBg1i2bBkDBw7kkksuIScnh7S0NB577DHGjRvn+W9YGpYnX5jKiDy48sSGUQmmTXMTqUNO3z7C5VNiJWQTDtUsXryY/v37k5aWRkpKCmPHjmXevHnl2m9x5YmrV6++rzzxrFmzyM7OpmvXrnTs2JFZs2bxww8/HLCPlJQUjjnmGFasWMGiRYu48sormTdvHvPnz6dv375s3bqVLVu20C80O/2cc845wM4zwjGxEGEvukuXLgd0mAqjqlx77bVkZGRw/PHH88svv7Bu3Tq6dOlCdnY2ubm5VK9enZ49e7JkyZJ9dgA8//zzdO7cmU6dOvHVV1+xfPlyRIQ///nPPP3002zZsoWFCxdy4oknluvvWBLmyRdm5Upo3Lj85YMPOwzatHEJzf/zP/7YZiQ8O3bA00+7kkhFP4KpqVC1qmsxfGhAtYZPPvlkrrzySj799FN+//13OnfuzE8eWmEWLt0LkJ+ff8D7ZZUnVlXOOeccbr/99lKP07dvX9566y1SU1M5/vjjOffccykoKDioc1RxFC1CFrYjXOK4KNOnTycnJ4fs7GxSU1NJT08nPz9/3+PHHnuMXr16kZGRwezZs/n+++9p3bo1q1atYtKkSSxevJgGDRpw7rnn7vt7jBs3jpEjR1KjRg1OP/10UlIiI8/myRemvJk1hRk0CObPdzdvDaMCvPCCK2VwwQXFv9+ggbshG9RHrE6dOvTv35/zzjtv3w3X7t27M3fuXDZs2EBBQQHPPvvsPm85TJMmTVi/fj0bN25k586d+zpBeWXQoEG8+OKLrF+/HoBNmzbx448/HrReVlYW99xzDz179iQtLY2NGzfy9ddf07ZtW+rXr0+DBg32xdefeuqpg+wsD1u3buXQQw8lNTWV2bNnH2BPVlYWkyZNIisri759+/Lggw/SsWNHRIRt27ZRu3Zt6tevz7p163jrrbf2bdesWTOaNWvGLbfcwrnnnlth24piIl+Yyoj8wIGuxvzHH0fWJiNpmDbN1agJXdUfRIMGbhl0yGbp0qWMHj0agKZNm3L77bczYMAAOnToQOfOnRkVTisOkZqayg033ED37t0ZMWIErVq1Ktcx27Rpwy233MKQIUPIyMhg8ODBrF279qD1unfvzrp168jKcnMuMzIyyMjI2NcU5IknnuDqq68mIyODzz//nBtuuKEifwIAxo4dy5IlS8jMzGT69OkHnFPfvn1Zu3YtPXv2pEmTJtSoUWNfqKZDhw506tSJtm3bct5559G7SFOisWPHcsQRR9CmTZsK23YQqhozo0uXLhoYubmqoHrbbRXbfvNm1SpVVG+8MZJWGUnCl1+6j9+kScW/v3z58n3rrVgRRcOMqHLJJZfoww8/XOL74c9BYYAlWoqumicf5ttv3bKinvwhh7h6N7NmRcwkI3mYPt3F3QsljBRLw4bBhmwM/+jSpQvLli3bl2oZKUzkw1Q0s6Ywgwa5cM327ZGxyUgafvnFlUsqq3xTLIRsDH/Izs5m3rx5B9x8jgQm8mHCIn/MMRXfR1aWawf4ySeRsclIGnJzoW7d0tdRVWrUcDnzmzZFxy4jdtAKdvEzkQ+zciUceSRUpsN6r15u5koxM+QMozTy8lwfmpKoUaMGGzduRFU55BB3sZiAM/CNElBVNm7cSI0aNcq9reXJh/nhBwhNf64whxwCGRkm8ka5KcuTb968OWvWrCEnJ4f8fNiwwc2OrVUrejYawVKjRg2aN29e7u1M5MOsXet6rVWWvn3h0UdD889TK78/IynIy3PtCUoiNTWVo446CnAdKnv2hEsucZ0nDaM0LFwDrg3P2rWlf8u80revm7oYqqNhGF7wEpMPU726K14WKrViGKViIg9ummF+fuREHixkY5SLsmLyRenXz/kR27b5Z5ORGHgSeRE5XER6iUhWePhtWFQJz56LhMg3beoydEzkjXJQHk8eXCLX3r3w4Yf+2WQkBmXG5EXkTuAMYDkQLuKsQPlKzcUykRR5cN78q6+6b6HXNoJG0rJrlxvl8eR79ICUFJg3DyJUrNBIULzceD0ZOE5Vd/psS3D4IfKPPQZff+2qUxpGKeTluWV5PPnataFrVyfyhlEaXtzMH4DEThPxQ+TBQjaGJ3Jz3bI8Ig8uZLN4sTX5NkrHi8jvAD4XkYdEZEp4+G1YVFm71k2CqlcvMvtr0QKaNLGAqeGJsCdfnnANuJuvu3db4VOjdLyEa14NjcQlnD4Z7rdWWUSgd28TecMTFfXke/Vyt3zmzt3fnMwwilKmyKvqEyJSDQhX7vpGVXf7a1aUiVSOfGF694aXX/Zn30ZCUVFPvn5915rV4vJGaZQZrhGR/sC3wP3AA8DKhEyh9EPkwbx5o0wq6smDC9l8/LGbBWsYxeElJv9vYIiq9lPVLOAE4G5/zYoyfoh8p05Qo4aJvFEmFfXkwd18zc93N2ANozi8iHyqqn4TfqKqK0mkbJsdO9y0wUiLfLVq0K2bibxRJpXx5Pv0cUsL2Rgl4UXkl4jIIyLSPzSmAdl+GxY1Ip0+WZjevd3cc8txM0qhMp5848bQrp3VsTFKxovI/xX4CrgMmICb+XqRn0ZFlbDIN2sW+X337u2Kfi9aFPl9GwlDbq7Lkqlo2eCsLHfBaPXljeIoU+RVdaeq3qWqp6rqKap6d0LNfv31V7f0w5MPly62kI1RCrm5zouvaAZvv36uicinn0bWLiMxKFHkReT50PILEVlWdETPRJ/xM1zTsKEra2Aib5RCeStQFiU8wdri8kZxlJYnPyG0HFGZA4hIVWAJ8IuqVmpfvrB2rWvu0aiRP/vv3Ruef96KlRklUt4KlEVp2hSOPdaJ/FVXRc4uIzEoUXVUNeTicrGq/lh4ABeX4xgTgBWVMdJX1q6Fww6L3GzXovTu7erVL1/uz/6NuKeynjy4kM38+VBQUPa6RnLhxbUcXMxrnoqbikhzYDjwcHmMiip+z0gNT4pasMC/YxhxTWU9eXA3X7dsgS+/jIhJRgJRWkz+ryLyBdCqSDx+FfCFx/3fA/wPsLeU44wXkSUisiQnJ6c8tkcGv0XeipUZZRApTx4sldI4mNI8+WeAkcDM0DI8uqjq2LJ2LCIjgPWqWmpOvapOVdVMVc1MS0vzbnmk8FvkrViZUQaR8OSPPBLS02H27IiYZCQQpcXkt6rqamAysKlQPH63iHT3sO/ewEkishqYAQwUkacjYHPk2LULNm70v4BY796watX+TB7DKEQkPHmAAQOcJ7+3xOtmIxnxEpP/D5BX6Pn20Guloqr/q6rNVTUdGA18oKpnVchKv/jtN7eMhsiDefNGsUTCkwcn8ps3w7LESXA2IoAXkRdV1fATVd2Ltzr0sc+6dW7ZpIm/x7FiZUYJ7N3rJjJFypMHC9kYB+Kp/Z+IXCYiqaExAdcS0DOqOicmc+Q3bnTLxo39PY4VKzNKYPt2t4yEJ9+8ORxzjIm8cSBeRP4ioBfwC7AG6A6M99OoqBEWeb8mQhXGipUZxVCZCpTFMWCAmxRl+fJGGC+1a9ar6mhVPVRVm6jqmaq6PhrG+U60Rd6KlRlFqEwFyuIYMMDNvfvss8jsz4h/yoyti0gacAGQXnh9VT3PP7OiRFjkGzTw/1i9ernlggXQv7//xzPigkh78uGP1uzZkJkZmX0a8Y2XcM1MoD7wPvBGoRH/bNwIhxwCVav6f6wGDVzhb5v5ahQi0p5806bQqpXF5Y39eMmSqaWqE323JAg2bYpOqCZMnz4wfboLmEbjh8WIeSLtyYML2Tz1FOze7WrvGcmNF0/+dREZ5rslQbBxY3RFvm9f9622RGYjRKQ9eXAin5cH2YnTv82oBF5EfgJO6H8XkW0ikisi2/w2LCpEW+TDDTnnz4/eMY2Yxg9PvnBc3jC8ZNfUVdUqqlpTVeuFnteLhnG+E22RP/JINywub4Tww5NPS3O3f0zkDfCWXZNV3OuqGv99aDZudN2bokmfPu7bp+pfDXsjbgh78pEUeXAhm0ceceWZqlWL7L6N+MJLuObqQuPvwGvATT7aFB1273bfsGh68uBEfu1a+KFck4aNBCUvz1W8SIlwoZABA9y8u8WLI7tfI/7wEq4ZWWgMBtoB6/w3zWc2bXLLaIt8uCGnhWwMIlecrChZWe5C0UI2RkWajq7BCX18E83ZroVp08blzNvNVwP/RL5RI8jIMJE3vMXk7wXCVSirAB2BpT7aFB2CEvkqVVyJAxN5g8jVki+OAQPgwQdh506oXt2fYxixjxdPfgmQHRoLgYkxVxe+IgQl8uCupVeu3F/P3kha/PLkwYl8fj58/LE/+zfig9J6vM4KPWyjqk+ExnRVTYx6ueGYfLSza2B/Q8558Z+gZFQOPz35rCx34Wghm+SmNE++qYj0w7Xw6yQinQuPaBnoG0F68p06Qe3a1nXZ8NWTP+QQ91EzkU9uSovJ3wBcAzQH7iryngID/TIqKmzc6Ap7+OVGlUZqqovLm8gnPX568gADB8Lkya45Se3a/h3HiF1Ka+T9oqqeCPxLVQcUGfEt8LB/tmtQE5L69YOvvoING4I5vhET+OnJAwwd6iZEffCBf8cwYhsvefL/jIYhUSfaJQ2KEo7LW5ZN0qLqvyffp4/b/xuJURzcqAAVyZNPDDZtCuama5iuXaFmTQvZJDE7d7pmYX568tWqweDB8Oab7kfFSD6SV+SD9uSrVYOePU3kkxg/KlAWx/Dh8PPPLjpoJB9liryITBKRttEwJqoELfLgQjZLl8LmzcHaYQSCHxUoi+PEE93SQjbJiRdP/mtgqoh8IiIXiUh9v43yHdXYEXlVi8snKdHy5Js1g44dXcjGSD683Hh9WFV7A2fjmnkvE5FnRGSA38b5xvbtLuUgaJHv3t2VILRE5qQkWp48uJDNhx/aRWMy4ikmLyJVgVahsQFXu+ZKEZnho23+EVQFyqLUqOHy5S2/LSmJlicPMGyYay383nv+H8uILbzE5O/ChWyGAbepahdVvVNVRwKd/DbQF8KzXYPMrgkzaJDr+ZqTE7QlRpSJpiffvbv7uFvIJvnw4sl/CXRQ1QtVdVGR97r5YJP/BFnSoCgDQ/PK5swJ1Awj+kTTk69a1U2Meust2LvX/+MZsYMXkR+rqjsKvxAuXqaqW32xym9iSeS7dHHfcgvZJB3R9OTBhWzWr4fs7Ogcz4gNSqtCWUNEGgKNRaSBiDQMjXSgWVk7Dm2/SESWishXInJzBO2uHLEk8ikpLstm1qyy1zUSimh68uA8eRFLpUw2SvPkL8TVkG8FfMr+mvIzgfs97HsnMFBVO+AajQwVkR6VsjZSBFlmuDgGDoRvv3UzVoykIS/PhVGi1dCjUSPo0cPi8slGaQXKJqvqUcBVqnpUodFBVe8ra8fqCF2QkhoasTGxeuNGd40cK23sw3F5S6VMKsLFyaJZI2/YMNfce138d2k2PFJauCZcafIXETm16PCycxGpKiKfA+uB91T1k2LWGS8iS0RkSU60MkxiYSJUYdq3d/ZYyCap8LsCZXEMH+6Wb78d3eMawVFauCZUJpGRxYwRXnauqgWq2hFXk76biBzUAFxVp6pqpqpmpqWllcf2irN5c+yEasC17xk4EN5/36pIJRF+V6Asjo4doWlTC9kkEyU2DVHVG0PLcZU9iKpuEZE5wFBcSmawbNni2ubEEiecAC+8AMuXQ9vEKxVkHEwQnryIq2Xz0kuwe7frX2MkNl4mQ00QkXrieFhEPhWRIR62SxORQ0KPawLH4yZVBU8sivzgwW757rvB2mFEjSA8eXAhm61bYeHC6B/biD5e8uTPU9VtwBDgUGAccIeH7ZoCs0VkGbAYF5N/vcKWRpJYFPkjj4RWreCdd4K2xIgSQXjyAMcf7zz4V1+N/rGN6ONF5MP3/ocBj6nq0kKvlYiqLlPVTqqaoartVPUflTE0omzZAg0aBG3FwZxwgqsvn58ftCVGFAjKk69XD4YMcdFBm/2a+HgR+WwReRcn8u+ISF0gfj8au3e7b1esefLgvnn5+bBgQdCWGFEgKE8eYPRo+OknC9kkA15E/nzgGqBrqLxBNVzIJj7ZGqrEEIsi36+fy923kE1SEJQnDzBqlCuCOiM+68ga5cBLPfm9wDqgjYhkAW2BQ3y2yz+2bHHLWBT52rVd52W7+Zrw7NkDv/8enCdfty6MGAHPP+9sMRIXL9k1dwIfAtcDV4fGVT7b5R+xLPLgQjbLlsHatUFbYvjI9u1uGZTIgwvZrF9vbYYTHS/hmpOB41R1mKqODI2TfLbLP8IiH4s3XsFVkQKbkpjghIuTBRWuAVfioE4dC9kkOl5E/gdc3ZnEINz/LFY9+YwMaN4cXo+NbFPDH6JdgbI4ataEk092E6N27QrODsNfvIj8DuBzEXlIRKaEh9+G+Uash2tEnIv13nv2zUtgol1LviRGj3Z+j7UFTFy8iPyrwD+Bj9hfbjh+2w7EusiDuyOWmwvz5wdtieETseDJg5to3aCBhWwSmRJr14RR1SdCZQmOVNVvomCTv2zZ4op4164dtCUlM3CgKzL++uuuB6yRcMSKJ1+tGvzxj07kd+yAWrWCtceIPF6ya0YCnwNvh553FJH4nRAdnu0azSLe5aV2bRgwwFr4JDCx4smDC9nk5VllykTFS7jmJlzD7i0Aqvo5cJRvFvnN5s2xHaoJM2KE6xa1cmXQlhg+ECuePED//tCkiYVsEhUvIr+nmIbd8Vv0PBaLkxVHuLuDefMJSSx58lWrwumnu4/atm1BW2NEGi8i/6WInAlUFZFjReRe3E3Y+CReRD493dWVf+21oC0xfCDsycfKraHRo13ZJKtMmXh4Efm/4UoZ7ASeBbYBl/tok7/Ei8iDS2KeN8+1KzQSitxcJ/BVvHwDo0DPnnDEERaySUS81K7ZoarXqWrXUJu+61Q1fmvhxpPIn3IKFBSYN5+A5OXFRqgmTJUqcMYZrjaeNflOLEpr5P2aiLxa0oimkRElVmvJF0fnzq6ZyH//G7QlRoTJzY2Nm66FOe88V6zs0UeDtsSIJKV58pOAfwOrgN+BaaGRRyz0aa0IO3e60n/x4smLuJDNu+/uD+IaCUGQteRLonVrl7n70EPuAtJIDEoUeVWdq6pzgU6qeoaqvhYaZwJ9omdiBImH2a5FOeUUd0fMCpYlFEHWki+Niy+GH3+Et94K2hIjUni57ZMmIkeHn4jIUUCafyb5SDyKfJ8+0KiRhWwSjFj05ME1E2naFB54IGhLjEjhReSvAOaIyBwRmQPMBib4apVfxKPIp6TASSe5EgdWsCxhiFVPPjUVLrjAXTj+8EPQ1hiRwEt2zdvAsThhn4CrLR+frYtivZZ8SZx6qpul8v77QVtiRIhY9eTBiXyVKi42b8Q/nrJ0VXWnqi4NjZ1+G+UbsV5LviSGDHE2WxJzwhCrnjy4dgajRsEjj7jbQUZ8EyNTMaJEPIZrYH+pwFdesW9dAqAae3nyRbn4YjcH78UXg7bEqCwm8vHCGWe4a3xLe4h7fv8d9u6NbZEfOBCOO85uwCYCXkoNvyQiw0Uk/n8QtmxxXnGNGkFbUn4GDIC0NAvZJACx0N+1LETgootg4UL4/POgrTEqgxfh/g9wJvCtiNwhIq18tsk/4qGWfEmkpLhSga+9ZhOj4pxYqkBZGuec4/rA/uc/QVtiVAYv2TXvq+pYoDOwGnhPRD4SkXEiEl8NvuOllnxJjB7trvWtyXdcE0u15EujQQM480x4+mnYWrTYuBE3eArBiEgj4FzgL8BnwGSc6MdX+994Kk5WHL17u9SH6dODtsSoBPHiyYO7AbtjBzzxRNCWGBXFS0z+ZWA+UAsYqaonqepzqvo3oERfRESOEJHZIrJCRL4SkeAnUMW7yFepAmPHupuvViowbokXTx5cjbzevWHSJFf6yYg/vHjyD6tqG1W9XVXXAohIdQBVzSxluz3A/1PV1kAP4BIRaVNpiytDvIs8uEBpQYF583FMPHnyADfeCD//DI89FrQlRkXwIvK3FPPawrI2UtW1qvpp6HEusAI4vHzmRZh4KjNcEq1bQ7dudv0cx8STJw9w/PGuqcjtt1tljXiktHryh4lIF6CmiHQSkc6h0R8XuvGMiKQDnYBPKmFr5VBNDE8enDe/bJnltsUp8ebJizhv/qef4PHHg7bGKC+lefIn4GrKNwfuwtWW/zdwJXCt1wOISB3gJeByVT2oTbCIjBeRJSKyJCcnpzy2l4/ff3duSCKI/OjRLt/fvPm4JN48eXCVNbp3h9tuM28+3iitnvwTqjoAOFdVBxQaJ6nqy152HkqxfAmYXtI2qjo11FYwMy3NxwrG4dmu9ev7d4xo0bAhjBzp4vL2jYs7cnPdb3S1akFb4p2wN//jj+ZbxBulhWvOCj1MF5Eri46ydiwiAjwCrFDVuyJkb8UJFyeL95h8mHHjICcHXo3fTozJSqzXrSmJoUOha1fnze/eHbQ1hldKC9fUDi3rAHWLGWXRG/gzMFBEPg+NYZUxtlIkmsgPHer6vz74YNCWGOUkFvu7eiHsza9eDU8+GbQ1hldSSnpDVR8KLW+uyI5VdQEQO/UD4rWWfElUrQrjx8P118O338KxxwZtkeGRWK4lXxbDhkFmJtx6K5x9tmsyYsQ2pYVrppQ2omlkREg0Tx7gvPNcTZupU4O2xCgHsVxLvizC3vyqVfDUU0FbY3ihtHBNdhkjvkhEkW/a1HV3eOwxm44YR8SzJw8wfDh06eK8ebvvH/uUFq5JrHvoYZFPhOyawlx4Ibz0kuvuMHZs0NYYHsjLc7/P8YoI/OMfTuynTIGrrgraIqM0SgvX3BNaviYirxYdUbMwUmze7NynlBJ/1+KTQYNcPH7KFDfhy4h54t2TBxebHz4cbr4Zfv01aGuM0ihN8cIRt0nRMMR3Nm9OrFBNmCpVYMIEuPRS1+GhV6+gLTLKIJ5j8oWZPBnatoWrr7ZSSrFMaZOhskPLubhaNZuBTcDC0GvxRSLUrSmJc85xM3nvvjtoSwwPJIInD9CiBfzP/8Azz8Dc+FOEpMFLqeHhwPfAFOA+4DsROdFvwyJOonry4NzC8ePh5ZddErMRs+za5UYiePIA11wDf/iDu5C0CVKxiZcqlP8GBqhqf1XtBwwA4s9lTGSRB/ctE4F77w3aEqMUwnVrEsGTB6hVy11AfvmlNf2OVbyI/HpV/a7Q8x+A9T7Z4x/x3vqvLI44wvWAnTZt/8QvI+YIt9GrVy9YOyLJySfDCSfADTfAb78FbY1RlNKya04VkVOBr0TkTRE5V0TOAV4DFkfNwkiR6J48uABpbi7cf3/QlhglEG7o1aRJsHZEEhGX3PX77zBxYtDWGEUpzZMfGRo1gHVAP6A/kAPEl1ru2uUaVSa6yHfq5PLa7r57f1zAiCnCnm4iiTxAy5YuX/7JJ2HBgqCtMQpT2mSocdE0xFcSrW5NaVx3nUujnDoVriyzWKgRZcKe/GGHBWuHH1x3nUulPP98+PRTqF277G0M//GSXVNDRC4RkQdE5NHwiIZxESMRSxqURM+eMGCA67ycnx+0NUYRwiJ/6KHB2uEHtWu7WvPffgtXXBG0NUYYLzdenwIOw3WKmovrFJXrp1ERJyzyiXzjtTDXXw9r18IjjwRtiVGEdetcz5dErd7Yv7+Ly0+bBv/9b9DWGOBN5I9R1b8D20P1bIYD7f01K8IkkycPzpPv2xduuQW2bw/aGqMQv/2WmKGawtx8sytH/Je/wC+/BG2N4UXkw1MctohIO6A+kO6bRX6QbCIvArff7hTF8uZjinXrEu+ma1GqVXOzYHfudDXn9+4N2qLkxovITxWRBsDfgVeB5cCdvloVaZLpxmuY3r1dps2dd1refAyRDCIP+2vmffCBuz1kBEeZIq+qD6vqZlWdq6pHq+qh4a5RcUOyxeTD3HKLE/j/+7+gLTFCJEO4Jsy4cXDaae4WUXb8daBIGLxk1zQSkXtF5FMRyRaRe0SkUTSMixibN0PNmlC9etCWRJeOHWHMGJc3//PPQVuT9OzY4aYvJIMnDy5qOHWqO98zz4Rt24K2KDnxEq6ZgStj8EfgNGAD8JyfRkWcZJjtWhK33ebqzF9zTdCWJD2JONu1LBo0cLnzP/wAo0fDnj1BW5R8eBH5hqr6T1VdFRq3AIf4bFdkSWaRT093UxGfeQY++ihoa5Ka8GzXZAnXhMnKcsXL3nrL8ueDwIvIzxaR0SJSJTT+BLzht2ERJZlFHpwXf/jhrrmIpToERjJ68mEuuMA1F7nvPkv4ijalFSjLFZFtwIXAM8Cu0JgBxNfvcSI3DPFC7dpwxx2wZAk8Gl+TlROJZBZ5cB/Bk0+Gyy+HN+LLTYxrSusMVVdV64WWVVQ1JTSqqGp8FUpN9DLDXhg7Fvr1c+5UWG2MqBIO1yRiSQMvVKkCTz/t8gFGj4alS4O2KDnwEq5BRE4SkUmhMcJvoyJOsodrwKU6PPSQS/G4/PKgrUlK1q2DRo0St6SBF2rXhtdeg/r1YcQIV33D8BcvKZR3ABNwk6CWAxNCr8UHBQUudyvZRR7guONcqcAZM9xdMCOqJMtEqLJo1gxef935XkOGwPr4a0EUV3jx5IcBg1X1UVV9FBgaei0+SMbZrqUxcSK0bg0XXri/TZERFX77zUQ+TMeO8Oqr8P33rtSSRRD9w1O4hgNTJuv7YId/mMgfSPXq8Pjj8OuvcNllQVuTVKxbl3zpk6UxcCC8+abrPT9ggLUO9AsvIn8b8JmIPC4iTwDZodfig2QrTuaFbt1c2ObJJ+Gll4K2JmmwcM3B9O/vhP7HH53QW4w+8pQq8iJSBdgL9ABeDo2eqjqjrB2HmousF5EvI2JpRUnWujVlcf31rh7shRc6r97wle3bk6ukQXno1w/efttV3ujf3z6OkaZUkVfVvcClqrpWVV9V1Zmq6vWi6nFc/D5YzJMvntRUeOop1335zDNtvrnPJHLbv0jQt68T+l9/dUK/alXQFiUOXsI174nIVSJyhIg0DI+yNlLVecCmyptYSUzkS6ZVK3jwQZg7F268MWhrEppknwjlhT594J13YMMGF1G0huCRwYvInwdcAszDxeOzgSWRMkBExovIEhFZkpOTE6nd7sdEvnT+/GfXwue221xw1PCF8E1FE/nS6dULPv7YtUgcNMjdNjIqh5d68kcVM46OlAGqOlVVM1U1My0tLVK73c+WLa5VTc2akd93ojBlCnTo4MI233wTtDUJiYVrvNOypRP6vn3hnHPgf//XSi5VBi+ToWqIyJUi8rKIvCQil4tIjWgYFxE2bnRugUjQlsQuNWvCK6+4H8ORI2FT8FG2RCMs8n74MYlIgwZuvt5FF7maN6edZu2KK4qXcM2TQFvgXuA+oA3wlJ9GRZS1a8198kJ6Orz8skta/tOfYPfusrYwysFvv1lJg/KSmupKFE+eDDNnQvfusGxZ0FbFH15E/jhVPV9VZ4fGeKBlWRuJyLPAQuA4EVkjIudX1tgK8dtv0LRpIIeOO/r0ca18Zs2C88+3a+QIYhOhKoaIm7P3zjvuorxbNyf6qkFbFj94EfnPRKRH+ImIdAc+LGsjVR2jqk1VNVVVm6vqI5UxtMIkU1PNSHDuufCPf7j0yquvtm9ThLCJUJXj+OOdFz94sKuvN2yYlULwiheR7w58JCKrRWQ1zjvvJyJfiEhsXzzt3WsuVEW4/nq49FK46y4XEDUqjdWtqTxpaa7ezf33w5w50L691aX3QoqHdYKf0FRRNm50k3wsXFM+RNw18aZNcO21rhD4xIlBWxXXmK8RGUTg4ovdLNkzz3Tlis86CyZNsh/RkihT5FX1x2gY4gvJ2lQzElSpAk884a6Gwk3ATegrRF6eywwxEYocbdvCJ5/ALbfAv/7latTfdpur0lG1atDWxRZeq1DGJ+FqR+bJV4yUFBebHz3aCf3111uMvgLYbFd/qFHDifwXX0CXLnDJJdCjh+tyaewnsUXePPnKExb6Cy6AW291rlJBQdBWxRU2EcpfjjsO3n8fnnkG1qxxGTgXXWSFzsIktsiHPXn7dlWOlBTXOvC662DaNDjlFMjNDdqquME8ef8RgTFj4Ouv4W9/g0cegWOOcRHGZJ/bl9gi/9tvUKeOG0blEHHXxvff72rc9O7tJk4ZZWJ1a6JH/fouZ+Cbb+CPf4T/+z846ij30c3LC9q6YEh8kTcvPrJcfLGbb/7zz9C1K7z3XtAWxTzr1rnfSCtpED2OPtpFGZcudc1I/v53aNHC3ZxNNs8+sUXeShr4w+DBLrWhSRM44QS46SaL05fCunVW0iAo2rd3ZZkWLoROnVzE8cgjYcKE5KlZn9gibyUN/KNlSyf0f/4z3Hyza9hp4ZtisYlQwdOjh2tKsnSpC+M88ICL2Z9xhqt4mchJY4kv8ubJ+0ft2q4p+OOPw2efQUYGPPZYYn9jKoCVNIgdMjLc9I9Vq+Cqq5zw9+zpXp8yJTFDOYkr8r//Dlu3msj7jYgr+r1smbsePu88GDIEvv8+aMtiBpvtGns0bw533ulSLh96yOXcT5gAzZq5GbRz5yZOfb7EFflwSoOFa6JDejrMnu2ybz75BNq1g3/+0/3YJjkWrold6taF8eNh8WL49FNXfPW111yf2fR0V6MvOzu+L04TX+TNhYoeVaq47JsVK2D4cLjhBmjdGl54Ib6/JZUgLw927DCRjwc6dXI+ytq1LjMnIwPuuQcyM90tqL//3V2wxttHOXFF3iZCBcfhh8OLL8IHH0C9eq4JSbduLt0y3r4hlcRmu8YftWq5kM3rrztfcdo0+MMfXPplhw4u7/7SS12N+507g7a2bBJX5C1cEzwDBrgbso89BuvXu1h9Vpb7diSJ2NtEqPimUSPX5/799+GXX1xPnQ4d4NFHYehQ9/6pp7q4/nffxebHOrFFvkoVm4ESNFWrukYkK1fCvfe6NMuhQ91EqmeeSfg2g1bSIHE47DBXwmnmTFfF/PXXnce/eLGrlXPssc7LP/98ePbZ/T/wQZO4Ir92rRN4qzsaG1Sv7q5xv//eXf9u3w5jx7pvxT/+kbDVpCxck5jUrOluOz34IPz0k6uZc//90Lmza5V85pkuiHDMMc7HmTYNli8PJmNHNIauLzIzM3VJpOqEjhzp8qM++ywy+zMiy969Lkl58mR49133YzxihPtGDBsG1aoFbWFEuPFGl2S0a5er82YkPgUFLlNn3jxYsAA+/BByctx7DRu6i9iuXd0N3cxMdwurMohItqpmlvh+wop8Zqbz5N96KzL7M/zj++9dUPPJJ/fXADjtNDcdMSsrrq/GLroIXnpp/5fcSD5U4dtvndh/+KGrd//ll/srgTRtCt27u89JlQrEVsoS+cQN19hs1/ihRQvX3mfNGte0c/Bgl8M2cKD7BvzlLy4AumNH0JaWG5sIZYi4FMxx4+Dhh+Hzz2HbNvjoIzfL9vjj3XoVEXgvJOYFZLiBt2XWxBcpKS5UM2yYE/Q33nABzuefdwXCq1d3s1ROOMF9M9q1c9+gGMYmQhnFUauWK6fQs6f/x0pMkf/iC9fAu2XLoC0xKkqtWnD66W7s3OkCnG+95WrZX3mlW+fQQ104JyvL1bfPyIi5wPe6ddH5IhtGScTWNyJSvPGGWw4dGqwdRmSoXt2FcAYPhrvucrXsZ81yY/58N/EK3A9DZub+O1udO7tQkF/XwWWgauEaI3gSU+TffNN19rVvV2JyxBEuC+fcc93zH390BcMXLnR1c+67b/9UxDp1XFHx8Gjd2o2mTX0P9VhJAyMWSDyR37TJfdmvuy5oS4xo8Yc/uDF6tHu+e7dLX/jsMzeWLXP1c6ZO3b9N3bounNeypfP2W7Rw7YSOOsqVIoxARo9NhDJigcQT+XfecTdehw8P2hIjKFJTXbWpTp32v6bqJsitWOHGN9+4WbgLF8Jzzx04SyUlxdWiPfJId9Vw+OFuNGvmxmGHuVGrVqlm2EQoIxZIPJF/801o3NjFZg0jjMh+kR406MD3du1yIZ9Vq9xYvdrF/X/6yeW5/fKLW6codeq4m7+HHurmZDRu7EajRtCwIVVWNmQADUjf3ABWHQKHHOIKtsVx3r8Rf/gq8iIyFJgMVAUeVtU7/DweBQVuFuXQofZFMrxTrZorPHLsscW/rwobNrgrgV9/dXmR4ZGT44qv/fyzCw3l5Oy7H9AT+ABgTJH91akD9es7wa9Xz4WOwqNOHTdq194/atVyy5o13eOaNQ8cNWrsHzGWXWQEj2+fCBGpCtwPDAbWAItF5FVVXe7LAVVdpsWGDRaqMSKLiPPU09JcmmZZ7NgBGzfywC2beGHqZt5/YTNV87bC5s2uW9nWrW42zLZt7nFurvsByctzNX1ycytew7ZKFSf21asfOKpV279MTXXL8OPw8/DjlJSDH6ekuFG16v7H4efh18KPCz+vUuXA18OvhV8vuhRxj9u0cfYalcbPn/1uwHeq+gOAiMwARgGRFfmCAteld+VK96VJSXElbaPMTz/BiSdG/bBGTFILqMVvvx1B1TSoeloFdlFQ4AR/+3b3o7F9u+uytWOHW4ZHfr5b7tx54OOiY/fuA5fbt8OWLS4MtXv3/mV47NnjlgUF7vGePRH+G5XB99+7G+FGpfFT5A8Hfi70fA3QvehKIjIeGA9w5JFHlv8oVatCq1ZO6Fu0cMuGDStmcSVITXXOh2GEadPGzdOqEFWr7g/nxAKq7uZ0+AcgPMI/AgUFB449e9z6RV8Pv7Z374GPCwr2H2PvXktJiiB+inxxScgHVUNT1anAVHAFyip0pKeeqtBmkaRpU5elZxgJicj+cIsRV/g5FXANcESh582BxCwabhiGEaP4KfKLgWNF5CgRqQaMBl718XiGYRhGEXwL16jqHhG5FHgHl0L5qKp+5dfxDMMwjIPxNalWVd8E3vTzGIZhGEbJJG7TEMMwDMNE3jAMI5ExkTcMw0hgTOQNwzASGFGt2PwjPxCRHODHCm7eGNgQQXOCxs4ntrHziW2S6Xz+oKppJW0YUyJfGURkiaomTH1hO5/Yxs4ntrHz2Y+FawzDMBIYE3nDMIwEJpFEfmrZq8QVdj6xjZ1PbGPnEyJhYvKGYRjGwSSSJ28YhmEUwUTeMAwjgYkrkReRoSLyjYh8JyLXFPO+iMiU0PvLRKRzEHZ6xcP5jA2dxzIR+UhEOgRhp1fKOp9C63UVkQIRqUhjvKji5ZxEpL+IfC4iX4nI3GjbWB48fObqi8hrIrI0dD7jgrDTCyLyqIisF5EvS3g/3vSgrPOpmB6oalwMXLni74GjgWrAUqBNkXWGAW/hulL1AD4J2u5Knk8voEHo8Ynxfj6F1vsAV530tKDtjsD/6BBc3+IjQ88PDdruSp7PtcCdocdpwCagWtC2l3A+WUBn4MsS3o8bPfB4PhXSg3jy5Pc1BlfVXUC4MXhhRgFPquNj4BARaRptQz1S5vmo6kequjn09GNcd61Yxcv/B+BvwEvA+mgaV0G8nNOZwMuq+hOAqsbyeXk5HwXqiogAdXAiH+Uu3t5Q1Xk4+0oinvSgzPOpqB7Ek8gX1xj88AqsEyuU19bzcV5JrFLm+YjI4cApwINRtKsyePkftQQaiMgcEckWkbOjZl358XI+9wGtca06vwAmqOre6JgXceJJD8qLZz3wtWlIhPHSGNxT8/AYwbOtIjIA90/t46tFlcPL+dwDTFTVAucoxjxezikF6AIMAmoCC0XkY1Vd6bdxFcDL+ZwAfA4MBFoA74nIfFXd5rNtfhBPeuCZ8upBPIm8l8bg8dQ83JOtIpIBPAycqKobo2RbRfByPpnAjJDANwaGicgeVX0lKhaWH6+fuQ2quh3YLiLzgA5ALIq8l/MZB9yhLvD7nYisAloBi6JjYkSJJz3wRIX0IOibDeW4KZEC/AAcxf6bRm2LrDOcA2+0LAra7kqez5HAd0CvoO2NxPkUWf9xYv/Gq5f/UWtgVmjdWsCXQLugba/E+fwHuCn0uAnwC9A4aNtLOad0Sr5RGTd64PF8KqQHcePJawmNwUXkotD7D+IyNobh/hA7cF5JTOLxfG4AGgEPhLzfPRqjlfU8nk9c4eWcVHWFiLwNLAP2Ag+rarEpcEHj8X/0T+BxEfkCJ44TVTUmS/aKyLNAf6CxiKwBbgRSIf70ADydT4X0wMoaGIZhJDDxlF1jGIZhlBMTecMwjATGRN4wDCOBMZE3DMNIYEzkDcMwfKCsgmPl3NeAUBG88MgXkZM9bWvZNYZhGJFHRLKAPFz9nHYR3G9DXFpoc1XdUdb65skbMUmoFswJRV67XEQeKGWb1SLS2H/rDjjeFyJS7rkLIlJHRJaIyA8i0qzIe4+ESv0uE5EXRaRO6PUzQmVzX4/UORj+ocUUHBORFiLydqjO0XwRaVWBXZ8GvOVF4MFE3ohdngVGF3ltdOj1WGKAqi4pzwYikgI8DzwFXA3MFJF6hVa5QlU7qGoG8BNwKYCqPgf8JTJmGwExFfibqnYBrgJKdFpKoVzfAxN5I1Z5ERghItUBRCQdaAYsEJExIQ/6SxG5s+iGIpJeOA4qIleJyE2hx3NE5G4RmSciK8Q1MHlZRL4VkVsKbXOWiCwKxT8fEpGqZRkc8uxvE5GFIS+9s4i8IyLfh2eVhngI54lNVtWXgFtxNX3Csxu3hfYnuKJnFlNNAEJXZL2AF0Tkc9znoGnovVNDn+ei450i+2gKtMfNWvZE3JQ1MJILVd0oIouAocBMnPfyHO5LcSeu8uNm4F0ROVnLV+Rsl6pmiciE0L674C6rvxeRu4FDgTOA3qq6OxQiGgs86WHfP6tqz9B+Hgd6AzWArwiVWFbV84uc6yvAAfaLyGO4KfnLgf9XjnMzYpcqwBZV7Vj0DVV9GXjZwz7+BPxXVXeX56CGEasUDtmEL1G7AnNUNUdV9wDTcR11ysOroeUXwFequlZVd+KKdx2BKxvcBVgc8rgG4boplXffn6hqrqrmAPkicohXA1V1HO7KZQXuB8eIc0JXaKtE5HTY156wvC09x1DOkKWJvBHLvAIMEtebs6aqfkrxNcKLsocDP9s1iry/M7TcW+hx+HlK6BhPqGrH0DhOVW/yaHNZ+/aMqhbgrl7+WJ7tjNggVHBsIXCciKwRkfNxV4Tni8hS3NVdcd3TStpfOs4JKVcfYQvXGDGLquaJyBzgUfZ7L58Ak0NZNJtxns29RTZdBxwqIo1wKWwjgLfLcehZuJuhd6vq+lDKWl1V/bHiZ+ONUBy+hap+F3o8Evja7+MakUdVx5Tw1tAK7m81FehsZSJvxDrP4mKVowFUda2I/C8wG+dxv6mqMwtvEIqj/wP3g7CKcoqkqi4Xketx8f4qwG7gEsB3kSd0FRHKthFczfe/RuG4RoJik6EMo4KIyGogM5r11kWkP3CVqo6I1jGN+MZi8oZRcXKAWRWZDFURROQMXF715mgcz0gMzJM3DMNIYMyTNwzDSGBM5A3DMBIYE3nDMIwExkTeMAwjgfn/wRFYepw9E7sAAAAASUVORK5CYII=\n"}}, {"output_type": "display_data", "metadata": {"needs_background": "light"}, "data": {"text/plain": "<Figure size 432x288 with 1 Axes>", "image/png": "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\n"}}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "'The probability of failure is pf=[0.02673621] at 245000000.0 revolutions'"}}]}}}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="markdown-notebooks.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Jupyter Book Community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
