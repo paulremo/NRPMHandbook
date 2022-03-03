@@ -16,9 +16,9 @@ First build the book HTML:
 jupyter-book build 02_NRPMHandbook
 ```
 
-Then go into the `02_NRPMHandbook` folder and push it to the pubslishing branch using the `ghp-import` utility:
+Then push it to the pubslishing branch using the `ghp-import` utility:
 ```
-ghp-import -n -p -f _build/html
+ghp-import -n -p -f 02_NRPMHandbook/_build/html
 ```
 
 The book is then published as a Git Page with the URL https://paulremo.github.io/NRPMHandbook/.
