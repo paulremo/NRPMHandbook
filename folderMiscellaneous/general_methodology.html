@@ -49,8 +49,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.6. Detailed analysis" href="detailed_analysis.html" />
@@ -1002,7 +1002,7 @@ Besides, the use of in-orbit return is possible on a case by case basis, in the 
 </ul>
 <p>The basic principle is to provide through a reference failure rate (or a probability of failure for one-shot devices) and to up-date this reference failure rate as relevant considering the contributors (multiplying corrective factors) to the probability of failure.</p>
 <p>In the following Section the general process is described.</p>
-<p>Note that it is considered that the multiplying corrective factor is also used to up-date the probability of failure in the case of a one-shot device, based on the fact that, for constant failure rate, when the probability of failure can be approximated by $this_{is}^{inline}$ (i.e. for exponential distribution in the case t &lt;10-2) the corrective factor K leads to a new probability = Kt, which means the probability of failure is multiplied by the corrective factor.
+<p>Note that it is considered that the multiplying corrective factor is also used to up-date the probability of failure in the case of a one-shot device, based on the fact that, for constant failure rate, when the probability of failure can be approximated by <span class="math notranslate nohighlight">\(this_{is}^{inline}\)</span> (i.e. for exponential distribution in the case t &lt;10-2) the corrective factor K leads to a new probability = Kt, which means the probability of failure is multiplied by the corrective factor.
 As a result, the same applies for the probability of failure PF for a one-shot device: the basic probability can be amended by a factor K, leading to KPF.
 So, what is discussed in the following Sections, addressing directly the failure rate, applies for the probability of failure for one-shot device.</p>
 </div>
