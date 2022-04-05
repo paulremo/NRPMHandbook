@@ -1,0 +1,52 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Utilities
+    chapters:
+    - file: notebooks
+    - file: markdown-notebooks
+    - file: mymarkdownfile
+  - caption: EEE section
+    chapters:
+    - file: folderEEE/mainEEE
+  - caption: Meca section
+    chapters:
+    - file: folderMiscellaneous/mainMiscellaneous
+  - caption: Meca section
+    chapters:
+    - file: folderSystem/mainSystem
+      sections:
+      - file: folderSystem/test
+      
+      
+###############################################
+
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: markdown
+- file: notebooks
+- file: markdown-notebooks
+- file: mymarkdownfile
+
+###################################################
+
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: markdown
+- file: notebooks
+- file: markdown-notebooks
+- file: mymarkdownfile
+- file: folderEEE/mainEEE
+- file: folderMiscellaneous/mainMiscellaneous
+- file: folderSystem/mainSystem
