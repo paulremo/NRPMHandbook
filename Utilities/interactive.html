@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Interactivity test &#8212; NRPM Digital handbook</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/myscript.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Welcome to the EEE chapter !" href="../folderEEE/mainEEE.html" />
+    <link rel="prev" title="3. Interactivity-test javascript" href="interactive-js.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Utilities
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   1. Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   2. Markdown for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="interactive-js.html">
+   3. Javascipt interactivity
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Python interactivity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folderEEE/mainEEE.html">
+   1. Introduction to EEE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Meca section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folderMeca/mainMeca.html">
+   1. Introduction to Mechanical
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../folderMiscellaneous/mainMiscellaneous.html">
+   1. Introduction to Miscellaneous
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderMiscellaneous/introduction.html">
+     1.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderMiscellaneous/scope.html">
+     1.2. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderMiscellaneous/normative_references.html">
+     1.3. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderMiscellaneous/terms.html">
+     1.4. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderMiscellaneous/general_methodology.html">
+     1.5. General Methodology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderMiscellaneous/detailed_analysis.html">
+     1.6. Detailed analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderMiscellaneous/conclusion.html">
+     1.7. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderMiscellaneous/annexA.html">
+     1.8. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderMiscellaneous/annexB.html">
+     1.9. Annex B
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folderMiscellaneous/interactive.html">
+   2. First trials for interactive widgets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../folderSystem/mainSystem.html">
+   1. Introduction to RP at System Level
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderSystem/test.html">
+     1.1. Test
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    By Airbus Defence & Space
+    © Copyright 2021.
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Utilities/interactive.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/csxADS/nrpmHandbook/main/v2/gh/csxADS/nrpmHandbook/master?urlpath=tree/nrpmHandbook/Utilities/interactive.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-prediction-form">
+   4.1. Reliability Prediction - FORM
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bearing-solid-lubricant-wear-model">
+     4.1.1. Bearing:     solid lubricant wear model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-model">
+   4.2. General model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive-reliability-prediction">
+   4.3. Interactive reliability prediction
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Interactivity test</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-prediction-form">
+   4.1. Reliability Prediction - FORM
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bearing-solid-lubricant-wear-model">
+     4.1.1. Bearing:     solid lubricant wear model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-model">
+   4.2. General model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive-reliability-prediction">
+   4.3. Interactive reliability prediction
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="interactivity-test">
+<h1><span class="section-number">4. </span>Interactivity test<a class="headerlink" href="#interactivity-test" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reliability-prediction-form">
+<h2><span class="section-number">4.1. </span>Reliability Prediction - FORM<a class="headerlink" href="#reliability-prediction-form" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bearing-solid-lubricant-wear-model">
+<h3><span class="section-number">4.1.1. </span>Bearing:     solid lubricant wear model<a class="headerlink" href="#bearing-solid-lubricant-wear-model" title="Permalink to this headline">¶</a></h3>
+<p>For ESA RFP 17225,
+by Matthias Schubert, 2021-09-23</p>
+</div>
+</div>
+<div class="section" id="general-model">
+<h2><span class="section-number">4.2. </span>General model<a class="headerlink" href="#general-model" title="Permalink to this headline">¶</a></h2>
+<p>Solid lubricant wear modelling is described taking example in a ball bearing. The modelling is applicable to other cases of solid lubricant wear, however, the number of revolution has to be substituted with another measure of sliding distance.
+For solid lubricant reservoir wear (e.g. cage of a ball bearing), the limit state function for the adhesive wear model is formulated as follows:</p>
+<p>$g\left( {\bf{X}} \right) = {V_{{\text{lim}}}} - \Theta  \sum\limits_{i = 1}^{{n_p}} {{K_{H,i}} {\alpha _i} r_i}$</p>
+<p>Where $\alpha$ denotes the average work of ball/cage interaction forces per revolution and $r_i$ the number of revolutions in time interval $i$ . The parameter $\alpha$ will typically be estimated from tests and is, thus dependent on the wear rate $K_H$, which is used to estimate $\alpha$ from the test results. Therefore, $K_H$ cannot be taken out of the sum.</p>
+<p>The following calculation is done by using First Order Reliability Analysis (FORM) for one time interval i=1.</p>
+<div class="cell tag_thebe-init tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># display packages</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">Layout</span><span class="p">,</span> <span class="n">HBox</span><span class="p">,</span> <span class="n">VBox</span>
+
+<span class="c1"># scientific packages</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">pystra</span>
+
+
+
+<span class="k">def</span> <span class="nf">proF</span><span class="p">(</span><span class="n">Dist_Vlim</span><span class="p">,</span> <span class="n">E_Vlim</span><span class="p">,</span> <span class="n">COV_Vlim</span><span class="p">,</span> <span class="n">Dist_KH</span><span class="p">,</span> <span class="n">E_KH</span><span class="p">,</span> <span class="n">COV_KH</span><span class="p">,</span> <span class="n">Dist_alpha</span><span class="p">,</span> <span class="n">E_alpha</span><span class="p">,</span> <span class="n">COV_alpha</span><span class="p">,</span> <span class="n">Dist_MU</span><span class="p">,</span> <span class="n">E_MU</span><span class="p">,</span> <span class="n">COV_MU</span><span class="p">,</span> 
+         <span class="n">E_nrev</span><span class="p">,</span> <span class="n">Rev_per_hour</span><span class="p">):</span>
+    <span class="n">E_vlimit_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_Vlim</span><span class="p">)</span>
+    <span class="n">nu_vlimit_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">COV_Vlim</span><span class="p">)</span>
+    <span class="n">E_KH_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_KH</span><span class="p">)</span>
+    <span class="n">nu_KH_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">COV_KH</span><span class="p">)</span>
+    <span class="n">E_alpha_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_alpha</span><span class="p">)</span>
+    <span class="n">nu_alpha_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">COV_alpha</span><span class="p">)</span>
+    <span class="n">E_theta_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_MU</span><span class="p">)</span>
+    <span class="n">nu_theta_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">COV_MU</span><span class="p">)</span>
+    <span class="n">rev_val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">E_nrev</span><span class="p">)</span>
+    <span class="n">rev_hour</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">Rev_per_hour</span><span class="p">)</span>
+
+    <span class="n">rev_min</span> <span class="o">=</span> <span class="n">rev_val</span> <span class="o">*</span> <span class="mf">0.5</span>  <span class="c1"># for plotting</span>
+    <span class="n">rev_max</span> <span class="o">=</span> <span class="n">rev_val</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c1"># for plotting</span>
+
+    <span class="n">mu_R</span> <span class="o">=</span> <span class="n">E_vlimit_val</span>
+    <span class="n">sigma_R</span> <span class="o">=</span> <span class="n">E_vlimit_val</span> <span class="o">*</span> <span class="n">nu_vlimit_val</span>
+    <span class="n">x_R_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mu_R</span> <span class="o">-</span> <span class="n">sigma_R</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span> <span class="n">mu_R</span> <span class="o">+</span> <span class="n">sigma_R</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+
+    <span class="n">mu_S</span> <span class="o">=</span> <span class="n">E_KH_val</span> <span class="o">*</span> <span class="n">E_alpha_val</span> <span class="o">*</span> <span class="n">E_theta_val</span> <span class="o">*</span> <span class="n">rev_val</span>
+    <span class="n">cov_S</span> <span class="o">=</span> <span class="p">((</span><span class="n">nu_KH_val</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">nu_alpha_val</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">nu_theta_val</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+    <span class="n">sigma_S</span> <span class="o">=</span> <span class="n">cov_S</span> <span class="o">*</span> <span class="n">mu_S</span>
+    <span class="n">x_S_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">mu_S</span> <span class="o">-</span> <span class="n">sigma_S</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">1e-12</span><span class="p">),</span> <span class="n">mu_S</span> <span class="o">+</span> <span class="n">sigma_S</span> <span class="o">*</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+    <span class="n">zeta_S</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">sigma_S</span> <span class="o">/</span> <span class="n">mu_S</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
+    <span class="n">lamb_S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">mu_S</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">zeta_S</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="c1"># construct distribution and evaluate PDF</span>
+    <span class="n">my_dist</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">distributions</span><span class="o">.</span><span class="n">lognormal</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;my_dist&#39;</span><span class="p">,</span> <span class="n">lamb_S</span><span class="p">,</span> <span class="n">zeta_S</span><span class="p">,</span> <span class="n">input_type</span><span class="o">=</span><span class="s1">&#39;parameters&#39;</span><span class="p">)</span>
+    <span class="n">S_pdf</span> <span class="o">=</span> <span class="n">my_dist</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_S_mat</span><span class="p">)</span>
+
+    <span class="c1"># revolutions per hour</span>
+    <span class="c1"># rev_hour=100;</span>
+    <span class="c1">######################################################</span>
+
+    <span class="c1"># FORM ANALYSIS pystra</span>
+
+    <span class="n">stochastic_model</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">StochasticModel</span><span class="p">()</span>
+    <span class="c1"># Define random variables</span>
+
+    <span class="k">if</span> <span class="n">Dist_Vlim</span> <span class="o">==</span> <span class="s1">&#39;Normal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span> <span class="n">E_vlimit_val</span><span class="p">,</span> <span class="n">E_vlimit_val</span> <span class="o">*</span> <span class="n">nu_vlimit_val</span><span class="p">))</span>
+
+        <span class="c1"># evaluate PDF</span>
+        <span class="n">R_pdf</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_R_mat</span><span class="p">,</span> <span class="n">mu_R</span><span class="p">,</span> <span class="n">sigma_R</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">Dist_Vlim</span> <span class="o">==</span> <span class="s1">&#39;LogNormal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span> <span class="n">E_vlimit_val</span><span class="p">,</span> <span class="n">E_vlimit_val</span> <span class="o">*</span> <span class="n">nu_vlimit_val</span><span class="p">))</span>
+
+        <span class="c1"># Lognormal</span>
+        <span class="n">zeta_R</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">nu_vlimit_val</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
+        <span class="n">lamb_R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">mu_R</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">zeta_R</span> <span class="o">**</span> <span class="mi">2</span>
+
+        <span class="c1"># evaluate PDF</span>
+        <span class="n">R_pdf</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">lognorm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_R_mat</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mu_R</span><span class="p">,</span> <span class="n">sigma_R</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">Dist_Vlim</span> <span class="o">==</span> <span class="s1">&#39;Gumbel&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Gumbel</span><span class="p">(</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span> <span class="n">E_vlimit_val</span><span class="p">,</span> <span class="n">E_vlimit_val</span> <span class="o">*</span> <span class="n">nu_vlimit_val</span><span class="p">))</span>
+
+        <span class="c1"># construct distribution and evaluate PDF</span>
+        <span class="n">R_pdf</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">gumbel_r</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_R_mat</span><span class="p">,</span> <span class="n">mu_R</span><span class="p">,</span> <span class="n">sigma_R</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">Dist_KH</span> <span class="o">==</span> <span class="s1">&#39;Normal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span> <span class="n">E_KH_val</span><span class="p">,</span> <span class="n">E_KH_val</span> <span class="o">*</span> <span class="n">nu_KH_val</span><span class="p">))</span>
+
+    <span class="k">elif</span> <span class="n">Dist_KH</span> <span class="o">==</span> <span class="s1">&#39;LogNormal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span> <span class="n">E_KH_val</span><span class="p">,</span> <span class="n">E_KH_val</span> <span class="o">*</span> <span class="n">nu_KH_val</span><span class="p">))</span>
+
+    <span class="k">elif</span> <span class="n">Dist_KH</span> <span class="o">==</span> <span class="s1">&#39;Gumbel&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Gumbel</span><span class="p">(</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span> <span class="n">E_KH_val</span><span class="p">,</span> <span class="n">E_KH_val</span> <span class="o">*</span> <span class="n">nu_KH_val</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">Dist_alpha</span> <span class="o">==</span> <span class="s1">&#39;Normal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="s1">&#39;X3&#39;</span><span class="p">,</span> <span class="n">E_alpha_val</span><span class="p">,</span> <span class="n">E_alpha_val</span> <span class="o">*</span> <span class="n">nu_alpha_val</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">Dist_alpha</span> <span class="o">==</span> <span class="s1">&#39;LogNormal&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;X3&#39;</span><span class="p">,</span> <span class="n">E_alpha_val</span><span class="p">,</span> <span class="n">E_alpha_val</span> <span class="o">*</span> <span class="n">nu_alpha_val</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">Dist_alpha</span> <span class="o">==</span> <span class="s1">&#39;Gumbel&#39;</span><span class="p">:</span>
+        <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Gumbel</span><span class="p">(</span><span class="s1">&#39;X3&#39;</span><span class="p">,</span> <span class="n">E_alpha_val</span><span class="p">,</span> <span class="n">E_alpha_val</span> <span class="o">*</span> <span class="n">nu_alpha_val</span><span class="p">))</span>
+
+    <span class="n">stochastic_model</span><span class="o">.</span><span class="n">addVariable</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">Lognormal</span><span class="p">(</span><span class="s1">&#39;X4&#39;</span><span class="p">,</span> <span class="n">E_theta_val</span><span class="p">,</span> <span class="n">E_theta_val</span> <span class="o">*</span> <span class="n">nu_theta_val</span><span class="p">))</span>
+
+    <span class="n">stochastic_model</span><span class="o">.</span><span class="n">setCorrelation</span><span class="p">(</span><span class="n">pystra</span><span class="o">.</span><span class="n">CorrelationMatrix</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+                                                       <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+                                                       <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+                                                       <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]]))</span>
+
+    <span class="c1"># Set some options (optional)</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">AnalysisOptions</span><span class="p">()</span>
+
+    <span class="c1"># Define limit state function</span>
+    <span class="n">limit_state</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">LimitState</span><span class="p">(</span><span class="k">lambda</span> <span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">X3</span><span class="p">,</span> <span class="n">X4</span><span class="p">:</span> <span class="n">X1</span> <span class="o">-</span> <span class="n">X2</span> <span class="o">*</span> <span class="n">X3</span> <span class="o">*</span> <span class="n">X4</span> <span class="o">*</span> <span class="n">rev_val</span><span class="p">)</span>
+    <span class="c1"># Performe FORM analysis</span>
+    <span class="n">Analysis</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">Form</span><span class="p">(</span><span class="n">analysis_options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span> <span class="n">stochastic_model</span><span class="o">=</span><span class="n">stochastic_model</span><span class="p">,</span> <span class="n">limit_state</span><span class="o">=</span><span class="n">limit_state</span><span class="p">)</span>
+    <span class="c1"># Some single results:</span>
+    <span class="n">beta</span> <span class="o">=</span> <span class="n">Analysis</span><span class="o">.</span><span class="n">getBeta</span><span class="p">()</span>
+    <span class="n">pf</span> <span class="o">=</span> <span class="n">Analysis</span><span class="o">.</span><span class="n">getFailure</span><span class="p">()</span>
+
+    <span class="n">pf_mat</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rev_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">rev_val</span> <span class="o">*</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">rev_val</span> <span class="o">*</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="c1"># for plot of the &quot;Resistance&quot;</span>
+    <span class="k">for</span> <span class="n">i_rev</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rev_mat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="c1"># Define limit state function</span>
+        <span class="n">limit_state</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">LimitState</span><span class="p">(</span><span class="k">lambda</span> <span class="n">X1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">X3</span><span class="p">,</span> <span class="n">X4</span><span class="p">:</span> <span class="n">X1</span> <span class="o">-</span> <span class="n">X2</span> <span class="o">*</span> <span class="n">X3</span> <span class="o">*</span> <span class="n">X4</span> <span class="o">*</span> <span class="n">rev_mat</span><span class="p">[</span><span class="n">i_rev</span><span class="p">])</span>
+        <span class="c1"># Performe FORM analysis</span>
+        <span class="n">options</span><span class="o">.</span><span class="n">printResults</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">Analysis</span> <span class="o">=</span> <span class="n">pystra</span><span class="o">.</span><span class="n">Form</span><span class="p">(</span><span class="n">analysis_options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span> <span class="n">stochastic_model</span><span class="o">=</span><span class="n">stochastic_model</span><span class="p">,</span> <span class="n">limit_state</span><span class="o">=</span><span class="n">limit_state</span><span class="p">)</span>
+        <span class="n">pf_mat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Analysis</span><span class="o">.</span><span class="n">getFailure</span><span class="p">())</span>
+
+    <span class="c1"># plots</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># %matplotlib inline</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_R_mat</span><span class="p">,</span> <span class="n">R_pdf</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_S_mat</span><span class="p">,</span> <span class="n">S_pdf</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">)</span>
+    <span class="c1"># plt.plot(np.log10(rev_val), pf,&#39;ro&#39;)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Volume [m^3]&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;probability density function&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Limiting Volume&#39;</span><span class="p">,</span> <span class="s1">&#39;Volume worn away&#39;</span><span class="p">])</span>
+
+    <span class="c1"># plt.yscale(&#39;log&#39;)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rev_val</span> <span class="o">/</span> <span class="p">(</span><span class="n">rev_hour</span> <span class="o">*</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">24</span><span class="p">),</span> <span class="n">pf</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rev_mat</span> <span class="o">/</span> <span class="p">(</span><span class="n">rev_hour</span> <span class="o">*</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">24</span><span class="p">),</span> <span class="n">pf_mat</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;probability of failure&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;years&#39;</span><span class="p">)</span>
+    <span class="c1"># plt.legend([&#39;Limiting Volume&#39;,&#39;Volume worn away&#39;])</span>
+
+    
+    <span class="c1"># write markdown output to cell</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The **probability of failure** is $P_f$=</span><span class="si">{</span><span class="n">pf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">.2E</span><span class="si">}</span><span class="s1"> at </span><span class="si">{</span><span class="n">rev_val</span><span class="si">:</span><span class="s1">.2E</span><span class="si">}</span><span class="s1"> revolutions!&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="interactive-reliability-prediction">
+<h2><span class="section-number">4.3. </span>Interactive reliability prediction<a class="headerlink" href="#interactive-reliability-prediction" title="Permalink to this headline">¶</a></h2>
+<p>The input variables of the reliability analysis are:</p>
+<ul class="simple">
+<li><p>Limiting value (worn volume), $V_{\text{lim}}$ $[m^3]$, described by: Mean Value, Coefficient of Variation and Distribution</p></li>
+<li><p>Specific wear rate, $K_H$ $[Pa^{-1}=m^2/N]$ , described by: Mean Value, Coefficient of Variation and Distribution</p></li>
+<li><p>Ball-cage interaction, $\alpha$ $[N/m]$ , described by: Mean Value, Coefficient of Variation and Distribution</p></li>
+<li><p>Model uncertainty, $\Theta$ $[-]$ , described by: Mean Value, Coefficient of Variation, Lognomal distribution</p></li>
+<li><p>Nominal number of revolutions, $r$ $[ # ]$, described by: Integer Value</p></li>
+<li><p>Average number of revolution per hour $r_h$ (for plotting only)</p></li>
+</ul>
+<p>$$
+\sum_{i\in I} x_i^2
+$$</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To run the interactive reliability prediction on this page, click the <span class="fa fa-rocket"></span> –&gt; <span class="guilabel">Live Code</span> botton on the top of the page. Wait a few seconds until the Kernel has loaded and run the cell below with <span class="guilabel">Run</span>.</p>
+</div>
+<div class="cell tag_thebe-init tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prepare sliders and drop downs</span>
+<span class="n">Dist_Vlim_dd</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LogNormal&#39;</span><span class="p">,</span> <span class="s1">&#39;Normal&#39;</span><span class="p">,</span><span class="s1">&#39;Gumbel&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Gumbel&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Dist $V_{</span><span class="se">\\</span><span class="s1">text</span><span class="si">{lim}</span><span class="s1">}$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,)</span>
+<span class="n">E_Vlim_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">6.5e-8</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">1e-7</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text</span><span class="si">{E}</span><span class="s1">[V_{</span><span class="se">\\</span><span class="s1">text</span><span class="si">{lim}</span><span class="s1">}]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.1e&#39;</span><span class="p">,)</span>
+<span class="n">COV_Vlim_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text{C.o.V.}[V_{</span><span class="se">\\</span><span class="s1">text</span><span class="si">{lim}</span><span class="s1">}]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">,)</span>
+<span class="n">Dist_KH_dd</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LogNormal&#39;</span><span class="p">,</span> <span class="s1">&#39;Normal&#39;</span><span class="p">,</span><span class="s1">&#39;Gumbel&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Normal&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Dist $K_H$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,)</span>
+<span class="n">E_KH_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">4e-15</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">1e-15</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">1e-14</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">1e-15</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text</span><span class="si">{E}</span><span class="s1">[K_H]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.1e&#39;</span><span class="p">,)</span>
+<span class="n">COV_KH_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.65</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text{C.o.V.}[K_H]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">,)</span>
+<span class="n">Dist_alpha_dd</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LogNormal&#39;</span><span class="p">,</span> <span class="s1">&#39;Normal&#39;</span><span class="p">,</span><span class="s1">&#39;Gumbel&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Gumbel&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Dist $</span><span class="se">\\</span><span class="s1">alpha$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,)</span>
+<span class="n">E_alpha_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.018</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text</span><span class="si">{E}</span><span class="s1">[</span><span class="se">\\</span><span class="s1">alpha]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.1e&#39;</span><span class="p">,)</span>
+<span class="n">COV_alpha_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text{C.o.V.}[</span><span class="se">\\</span><span class="s1">alpha]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">,)</span>
+<span class="n">Dist_MU_dd</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LogNormal&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;LogNormal&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Dist $\Theta$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,)</span>
+<span class="n">E_MU_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text</span><span class="si">{E}</span><span class="s1">[\Theta]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.1e&#39;</span><span class="p">,)</span>
+<span class="n">COV_MU_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text{C.o.V.}[\Theta]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">,)</span>
+<span class="n">E_nrev_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">2.45e+8</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">1e+8</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">1e+9</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">5e+6</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text</span><span class="si">{E}</span><span class="s1">[r]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.1e&#39;</span><span class="p">,)</span>
+<span class="n">Rev_per_hour_fs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">1e+6</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mf">1e6</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">1e+7</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">1e+6</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;$</span><span class="se">\\</span><span class="s1">text</span><span class="si">{E}</span><span class="s1">[r_h]$&#39;</span><span class="p">,</span> <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">continuous_update</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">readout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.1e&#39;</span><span class="p">,)</span>
+
+<span class="c1"># put inside interactive</span>
+<span class="n">ip</span> <span class="o">=</span> <span class="n">interactive</span><span class="p">(</span><span class="n">proF</span><span class="p">,</span>\
+         <span class="n">Dist_Vlim</span> <span class="o">=</span> <span class="n">Dist_Vlim_dd</span><span class="p">,</span>\
+         <span class="n">E_Vlim</span> <span class="o">=</span> <span class="n">E_Vlim_fs</span><span class="p">,</span>\
+         <span class="n">COV_Vlim</span> <span class="o">=</span> <span class="n">COV_Vlim_fs</span><span class="p">,</span>\
+         <span class="n">Dist_KH</span> <span class="o">=</span> <span class="n">Dist_KH_dd</span><span class="p">,</span>\
+         <span class="n">E_KH</span> <span class="o">=</span> <span class="n">E_KH_fs</span><span class="p">,</span>\
+         <span class="n">COV_KH</span> <span class="o">=</span> <span class="n">COV_KH_fs</span><span class="p">,</span>\
+         <span class="n">Dist_alpha</span> <span class="o">=</span> <span class="n">Dist_alpha_dd</span><span class="p">,</span>\
+         <span class="n">E_alpha</span> <span class="o">=</span> <span class="n">E_alpha_fs</span><span class="p">,</span>\
+         <span class="n">COV_alpha</span> <span class="o">=</span> <span class="n">COV_alpha_fs</span><span class="p">,</span>\
+         <span class="n">Dist_MU</span> <span class="o">=</span> <span class="n">Dist_MU_dd</span><span class="p">,</span>\
+         <span class="n">E_MU</span> <span class="o">=</span> <span class="n">E_MU_fs</span><span class="p">,</span>\
+         <span class="n">COV_MU</span> <span class="o">=</span> <span class="n">COV_MU_fs</span><span class="p">,</span>\
+         <span class="n">E_nrev</span> <span class="o">=</span> <span class="n">E_nrev_fs</span><span class="p">,</span>\
+         <span class="n">Rev_per_hour</span><span class="o">=</span> <span class="n">Rev_per_hour_fs</span>\
+        <span class="p">)</span>
+
+<span class="n">ip</span><span class="o">.</span><span class="n">children</span>
+<span class="c1"># setup input controls</span>
+<span class="n">input_controls</span> <span class="o">=</span> <span class="n">ip</span><span class="o">.</span><span class="n">children</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">column_1</span> <span class="o">=</span> <span class="n">VBox</span><span class="p">(</span><span class="n">input_controls</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">column_2</span> <span class="o">=</span> <span class="n">VBox</span><span class="p">(</span><span class="n">input_controls</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">12</span><span class="p">])</span>
+<span class="n">column_3</span> <span class="o">=</span> <span class="n">VBox</span><span class="p">(</span><span class="n">input_controls</span><span class="p">[</span><span class="mi">12</span><span class="p">:])</span>
+<span class="n">input_box</span> <span class="o">=</span> <span class="n">HBox</span><span class="p">([</span><span class="n">column_1</span><span class="p">,</span> <span class="n">column_2</span><span class="p">,</span> <span class="n">column_3</span><span class="p">])</span>
+
+<span class="c1"># setup output </span>
+<span class="n">output_stream</span> <span class="o">=</span> <span class="n">ip</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_thebe-init docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show input fields</span>
+<span class="n">display</span><span class="p">(</span><span class="n">input_box</span><span class="p">)</span>
+
+<span class="c1"># show output</span>
+<span class="n">display</span><span class="p">(</span><span class="n">output_stream</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "facc87c7dfcd4a8783bcba50581bf870"}
+</script><script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "403dbf7627c34988bc5624d7794397eb"}
+</script></div>
+</div>
+</div>
+</div>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"e123e1c54f954762921b560b12f18d60": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "7fc32d36f5fd41169f21f6f49eabe574": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "acc28f7b58e946acb39d3a1d7e458c55": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["LogNormal", "Normal", "Gumbel"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Dist $V_{\\text{lim}}$", "description_tooltip": null, "disabled": false, "index": 2, "layout": "IPY_MODEL_e123e1c54f954762921b560b12f18d60", "style": "IPY_MODEL_7fc32d36f5fd41169f21f6f49eabe574"}}, "243899b477f346a783dcc0feef2c545a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9b9b6c8ab7b84c93945e231a3e22a187": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "f27a38307490429ea07700a26cf90878": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{E}[V_{\\text{lim}}]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_243899b477f346a783dcc0feef2c545a", "max": 1e-07, "min": 1e-08, "orientation": "horizontal", "readout": true, "readout_format": ".1e", "step": 1e-09, "style": "IPY_MODEL_9b9b6c8ab7b84c93945e231a3e22a187", "value": 6.5e-08}}, "ef057d3c557c4e30aebb0f00370f4c6f": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b9da98aebdfe4389a819c000449b60e7": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "ef99f68f859b4eafb5948d54e3c52da7": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{C.o.V.}[V_{\\text{lim}}]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_ef057d3c557c4e30aebb0f00370f4c6f", "max": 1.0, "min": 0.05, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.05, "style": "IPY_MODEL_b9da98aebdfe4389a819c000449b60e7", "value": 0.2}}, "0ea6693664e04f0a8b635f3acf686934": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "648c81d3861b4be2b15d24592001f4de": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "05744c14ebac4f638ef51fe9b203d7df": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["LogNormal", "Normal", "Gumbel"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Dist $K_H$", "description_tooltip": null, "disabled": false, "index": 1, "layout": "IPY_MODEL_0ea6693664e04f0a8b635f3acf686934", "style": "IPY_MODEL_648c81d3861b4be2b15d24592001f4de"}}, "955421cea21040c18f008c9dce958862": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "703489ea5b0b48a6abd4593f3fc0cdd8": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "8611a191e1284b458a951ff018001da2": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{E}[K_H]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_955421cea21040c18f008c9dce958862", "max": 1e-14, "min": 1e-15, "orientation": "horizontal", "readout": true, "readout_format": ".1e", "step": 1e-15, "style": "IPY_MODEL_703489ea5b0b48a6abd4593f3fc0cdd8", "value": 4e-15}}, "1d3fabcb5514414abdb379d68b647e08": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "8f1aa727657447709e423f35ad29dfdf": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "d0fb4d9c0e5d424ebc5a449a21bae166": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{C.o.V.}[K_H]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_1d3fabcb5514414abdb379d68b647e08", "max": 1.0, "min": 0.05, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.05, "style": "IPY_MODEL_8f1aa727657447709e423f35ad29dfdf", "value": 0.65}}, "83b993a8e11e4dddba424a170b60b4f1": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3612a24960f744549ff83fcbecb4048b": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "adf9ffe0dd2d4f52a1b0fe03449866a1": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["LogNormal", "Normal", "Gumbel"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Dist $\\alpha$", "description_tooltip": null, "disabled": false, "index": 2, "layout": "IPY_MODEL_83b993a8e11e4dddba424a170b60b4f1", "style": "IPY_MODEL_3612a24960f744549ff83fcbecb4048b"}}, "5c102592c09e44748ce7506ee49bd956": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9155fdfc67e94144b4b4a9fa4161b9d4": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "cd6151ead1c84a6a92e0a352ab46efc8": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{E}[\\alpha]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_5c102592c09e44748ce7506ee49bd956", "max": 0.1, "min": 0.01, "orientation": "horizontal", "readout": true, "readout_format": ".1e", "step": 0.001, "style": "IPY_MODEL_9155fdfc67e94144b4b4a9fa4161b9d4", "value": 0.018}}, "647186b57f9d4aa89f61d37adf4e2385": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5be92ba5263b4ba983636b87018f1625": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "8920a23b6d884516883466836f7fae08": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{C.o.V.}[\\alpha]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_647186b57f9d4aa89f61d37adf4e2385", "max": 1.0, "min": 0.05, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.05, "style": "IPY_MODEL_5be92ba5263b4ba983636b87018f1625", "value": 0.2}}, "7a90cf66f0de47718b88d900aedce277": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3157b50793ae4139a25a901d2ae9bf32": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "581e920f4f3548849844ec07b19dff13": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["LogNormal"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Dist $\\Theta$", "description_tooltip": null, "disabled": false, "index": 0, "layout": "IPY_MODEL_7a90cf66f0de47718b88d900aedce277", "style": "IPY_MODEL_3157b50793ae4139a25a901d2ae9bf32"}}, "ca70e2603ae6484385bb27d386a8cf81": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3de5d87d948a4e1ba46f6ecfd70b5121": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "1605ed81e1074bfdab9b0398ce8f2769": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{E}[\\Theta]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_ca70e2603ae6484385bb27d386a8cf81", "max": 1.0, "min": 0.01, "orientation": "horizontal", "readout": true, "readout_format": ".1e", "step": 0.01, "style": "IPY_MODEL_3de5d87d948a4e1ba46f6ecfd70b5121", "value": 1.0}}, "c66d56be36464ba2a1dd778e0e80b40e": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "457c33cb2069410e84d611d33ae83021": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "5239f57d8d9e407a9dbdfe3053ef696c": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{C.o.V.}[\\Theta]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_c66d56be36464ba2a1dd778e0e80b40e", "max": 1.0, "min": 0.05, "orientation": "horizontal", "readout": true, "readout_format": ".2f", "step": 0.05, "style": "IPY_MODEL_457c33cb2069410e84d611d33ae83021", "value": 0.2}}, "0c893553297b47c9a57e5d6130b35317": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d304695abd5949038996b6b82b4c567d": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "247ce0ee5c704d5d98372ee13a37b01f": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{E}[r]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_0c893553297b47c9a57e5d6130b35317", "max": 1000000000.0, "min": 100000000.0, "orientation": "horizontal", "readout": true, "readout_format": ".1e", "step": 5000000.0, "style": "IPY_MODEL_d304695abd5949038996b6b82b4c567d", "value": 245000000.0}}, "ad41d4c39c32485da83337c1eceadb9d": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "93fa0690c1f44f02b5ea5d68ece6faa5": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "31966c3ed0634cd9bb847da1bd05ed31": {"model_name": "FloatSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "FloatSliderView", "continuous_update": true, "description": "$\\text{E}[r_h]$", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_ad41d4c39c32485da83337c1eceadb9d", "max": 10000000.0, "min": 1000000.0, "orientation": "horizontal", "readout": true, "readout_format": ".1e", "step": 1000000.0, "style": "IPY_MODEL_93fa0690c1f44f02b5ea5d68ece6faa5", "value": 1000000.0}}, "4fd2f6d15e014c3aa127ed4804410139": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "8267b79c9be04c25b7d760b28d614de3": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_acc28f7b58e946acb39d3a1d7e458c55", "IPY_MODEL_f27a38307490429ea07700a26cf90878", "IPY_MODEL_ef99f68f859b4eafb5948d54e3c52da7", "IPY_MODEL_05744c14ebac4f638ef51fe9b203d7df", "IPY_MODEL_8611a191e1284b458a951ff018001da2", "IPY_MODEL_d0fb4d9c0e5d424ebc5a449a21bae166", "IPY_MODEL_adf9ffe0dd2d4f52a1b0fe03449866a1", "IPY_MODEL_cd6151ead1c84a6a92e0a352ab46efc8", "IPY_MODEL_8920a23b6d884516883466836f7fae08", "IPY_MODEL_581e920f4f3548849844ec07b19dff13", "IPY_MODEL_1605ed81e1074bfdab9b0398ce8f2769", "IPY_MODEL_5239f57d8d9e407a9dbdfe3053ef696c", "IPY_MODEL_247ce0ee5c704d5d98372ee13a37b01f", "IPY_MODEL_31966c3ed0634cd9bb847da1bd05ed31", "IPY_MODEL_403dbf7627c34988bc5624d7794397eb"], "layout": "IPY_MODEL_4fd2f6d15e014c3aa127ed4804410139"}}, "78f1e5e1da3a474b88ad9f22c48b93a2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "403dbf7627c34988bc5624d7794397eb": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_78f1e5e1da3a474b88ad9f22c48b93a2", "msg_id": "", "outputs": []}}, "983af1becc3d4f46952d8c9f530fecba": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "66edc746ee9a4ebf924245ae39e21de7": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_acc28f7b58e946acb39d3a1d7e458c55", "IPY_MODEL_f27a38307490429ea07700a26cf90878", "IPY_MODEL_ef99f68f859b4eafb5948d54e3c52da7", "IPY_MODEL_05744c14ebac4f638ef51fe9b203d7df", "IPY_MODEL_8611a191e1284b458a951ff018001da2", "IPY_MODEL_d0fb4d9c0e5d424ebc5a449a21bae166"], "layout": "IPY_MODEL_983af1becc3d4f46952d8c9f530fecba"}}, "54b418e847774d678fb5dbfae6b2b19a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "648efd9ab81f4517aa805d85692baae8": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_adf9ffe0dd2d4f52a1b0fe03449866a1", "IPY_MODEL_cd6151ead1c84a6a92e0a352ab46efc8", "IPY_MODEL_8920a23b6d884516883466836f7fae08", "IPY_MODEL_581e920f4f3548849844ec07b19dff13", "IPY_MODEL_1605ed81e1074bfdab9b0398ce8f2769", "IPY_MODEL_5239f57d8d9e407a9dbdfe3053ef696c"], "layout": "IPY_MODEL_54b418e847774d678fb5dbfae6b2b19a"}}, "fa60d80694ac42c4a6df6a49f8ddd1d5": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "1d4877275bb546a2a3f47f6277d12535": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_247ce0ee5c704d5d98372ee13a37b01f", "IPY_MODEL_31966c3ed0634cd9bb847da1bd05ed31"], "layout": "IPY_MODEL_fa60d80694ac42c4a6df6a49f8ddd1d5"}}, "d240ee30eca84a9e95136f6a9e4d9627": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "facc87c7dfcd4a8783bcba50581bf870": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_66edc746ee9a4ebf924245ae39e21de7", "IPY_MODEL_648efd9ab81f4517aa805d85692baae8", "IPY_MODEL_1d4877275bb546a2a3f47f6277d12535"], "layout": "IPY_MODEL_d240ee30eca84a9e95136f6a9e4d9627"}}}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "csxADS/nrpmHandbook",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Utilities"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="interactive-js.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Interactivity-test javascript</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../folderEEE/mainEEE.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Welcome to the EEE chapter !</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
