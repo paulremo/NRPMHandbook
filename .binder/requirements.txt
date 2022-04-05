@@ -2,4 +2,4 @@ jupyter-book
 matplotlib
 numpy
 scipy
-git+git://github.com/pystra/pystra.git
+git+https://github.com/pystra/pystra.git
