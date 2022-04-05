@@ -1,17 +1,18 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
-logo: logo.png
+title: NRPM Digital handbook
+author: Airbus Defence & Space
+logo: Pictures/reliabilityspace_logo_vector.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
 
-# Define the name of the latex output file for PDF builds
+# LaTeX settings
 latex:
+  latex_engine                : "xelatex"
   latex_documents:
     targetname: book.tex
 
@@ -19,18 +20,35 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+html:
+    use_multitoc_numbering: false
+    extra_navbar: |
+        <div>
+            By Airbus Defence & Space
+            © Copyright 2021.
+        </div>
+ 
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - html_admonition
+    - deflist
+  myst_url_schemes: [mailto, http, https]
+
+sphinx:
+  config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    html_js_files:
+    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/paulremo/NRPMHandbook  # Online location of your book
-  path_to_book: 02_NRPMHandbook  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
+  url                       : https://github.com/csxADS/nrpmHandbook  # Online location of your book
+  path_to_book              : nrpmHandbook  # Optional path to your book, relative to the repository root
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true
-
-# Configure launch buttons
 launch_buttons:
-  thebe: true
+  notebook_interface: "classic"
+  binderhub_url: "https://mybinder.org/v2/gh/csxADS/nrpmHandbook/main"  # The URL for your BinderHub (e.g., https://mybinder.org)
+  thebe                  : true
