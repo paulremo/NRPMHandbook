@@ -1,0 +1,1072 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1.5. General Methodology &#8212; NRPM Digital handbook</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.6. Detailed analysis" href="detailed_analysis.html" />
+    <link rel="prev" title="1.4. Terms, definitions and abbreviated terms" href="terms.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Utilities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Utilities/notebooks.html">
+   1. Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Utilities/markdown-notebooks.html">
+   2. Markdown for Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folderEEE/mainEEE.html">
+   1. Introduction to EEE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Meca section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../folderMeca/mainMeca.html">
+   1. Introduction to Mechanical
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous section
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="mainMiscellaneous.html">
+   1. Introduction to Miscellaneous
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="introduction.html">
+     1.1. Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     1.2. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="normative_references.html">
+     1.3. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="terms.html">
+     1.4. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.5. General Methodology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="detailed_analysis.html">
+     1.6. Detailed analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conclusion.html">
+     1.7. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="annexA.html">
+     1.8. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="annexB.html">
+     1.9. Annex B
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="interactive.html">
+   2. First trials for interactive widgets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../folderSystem/mainSystem.html">
+   1. Introduction to RP at System Level
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../folderSystem/test.html">
+     1.1. Test
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    By Airbus Defence & Space
+    © Copyright 2021.
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/folderMiscellaneous/general_methodology.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-prediction-for-miscellaneous-items">
+   1.5.1. Reliability prediction for miscellaneous items
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-of-miscellaneous-items">
+     1.5.1.1. List of miscellaneous items
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#root-causes-coverage">
+     1.5.1.2. Root causes coverage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-sources">
+     1.5.1.3. Data sources
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#statistical-data">
+       1.5.1.3.1. Statistical data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#analysis-of-the-failure-mechanisms">
+       1.5.1.3.2. Analysis of the failure mechanisms
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#combined-approach-bayesian-updating">
+       1.5.1.3.3. Combined approach – Bayesian updating
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reliability-handbooks-methods-supplier-model-existing-model">
+       1.5.1.3.4. Reliability handbooks methods / supplier Model: existing model
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-orbit-return-data">
+     1.5.1.4. In-orbit return data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manufacturer-reliability-data">
+     1.5.1.5. Manufacturer reliability data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-case-of-one-shot-devices">
+       1.5.1.5.1. The case of one-shot devices
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reliability-test-data">
+     1.5.1.6. Reliability test data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reliability-tests-for-one-shot-devices">
+       1.5.1.6.1. Reliability tests for One-shot devices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#wear-out-characterization">
+       1.5.1.6.2. Wear-Out characterization
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#engineering-physics-of-failure">
+     1.5.1.7. Engineering / Physics of failure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#engineering-data-combined-with-observations">
+     1.5.1.8. Engineering data combined with observations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reliability-handbooks-models">
+     1.5.1.9. Reliability handbooks / models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-models-for-miscellaneous-items">
+   1.5.2. Reliability Models for miscellaneous items
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-model-for-generic-miscellaneous-items">
+     1.5.2.1. Standard model for generic miscellaneous items
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#non-standard-model-for-specific-miscellaneous-items">
+     1.5.2.2. Non-standard model for specific miscellaneous items
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#holistic-model">
+     1.5.2.3. Holistic model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dormant-failures">
+     1.5.2.4. Dormant failures
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#process-for-reliability-modelling">
+   1.5.3. Process for Reliability modelling
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>General Methodology</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-prediction-for-miscellaneous-items">
+   1.5.1. Reliability prediction for miscellaneous items
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-of-miscellaneous-items">
+     1.5.1.1. List of miscellaneous items
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#root-causes-coverage">
+     1.5.1.2. Root causes coverage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-sources">
+     1.5.1.3. Data sources
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#statistical-data">
+       1.5.1.3.1. Statistical data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#analysis-of-the-failure-mechanisms">
+       1.5.1.3.2. Analysis of the failure mechanisms
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#combined-approach-bayesian-updating">
+       1.5.1.3.3. Combined approach – Bayesian updating
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reliability-handbooks-methods-supplier-model-existing-model">
+       1.5.1.3.4. Reliability handbooks methods / supplier Model: existing model
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-orbit-return-data">
+     1.5.1.4. In-orbit return data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manufacturer-reliability-data">
+     1.5.1.5. Manufacturer reliability data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-case-of-one-shot-devices">
+       1.5.1.5.1. The case of one-shot devices
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reliability-test-data">
+     1.5.1.6. Reliability test data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reliability-tests-for-one-shot-devices">
+       1.5.1.6.1. Reliability tests for One-shot devices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#wear-out-characterization">
+       1.5.1.6.2. Wear-Out characterization
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#engineering-physics-of-failure">
+     1.5.1.7. Engineering / Physics of failure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#engineering-data-combined-with-observations">
+     1.5.1.8. Engineering data combined with observations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reliability-handbooks-models">
+     1.5.1.9. Reliability handbooks / models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-models-for-miscellaneous-items">
+   1.5.2. Reliability Models for miscellaneous items
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#standard-model-for-generic-miscellaneous-items">
+     1.5.2.1. Standard model for generic miscellaneous items
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#non-standard-model-for-specific-miscellaneous-items">
+     1.5.2.2. Non-standard model for specific miscellaneous items
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#holistic-model">
+     1.5.2.3. Holistic model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dormant-failures">
+     1.5.2.4. Dormant failures
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#process-for-reliability-modelling">
+   1.5.3. Process for Reliability modelling
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="general-methodology">
+<h1><span class="section-number">1.5. </span>General Methodology<a class="headerlink" href="#general-methodology" title="Permalink to this headline">¶</a></h1>
+<section id="reliability-prediction-for-miscellaneous-items">
+<h2><span class="section-number">1.5.1. </span>Reliability prediction for miscellaneous items<a class="headerlink" href="#reliability-prediction-for-miscellaneous-items" title="Permalink to this headline">¶</a></h2>
+<p>For the four different sections (System, EEE, Mechanical and Miscellaneous), the same principle will be applied with for each section a clear definition of the objective(s) and then a clear explanation of the choices. When relevant, examples will be used to illustrate.</p>
+<p>The level of recommendation/rule or permission will be clearly indicated so that it is easy for the user to adapt its application of the method based on its needs.</p>
+<p>This chapter deals with the miscellaneous items which are represented by all parts/item (or sets of parts) which are not fully electrical parts, nor fully mechanical parts nor fully structural parts. The current reliability models (EEE parts, mechanical parts) are not adapted and are not the preferred way to support reliability predictions for these items. Therefore, other ways to provide reliability estimates are proposed in this chapter and are detailed in the next sections.</p>
+<p>The <a class="reference internal" href="#figure4-1"><span class="std std-ref">following figure</span></a> represents examples of some miscellaneous parts/items:</p>
+<figure class="align-default" id="figure4-1">
+<a class="reference internal image-reference" href="../_images/figure4_1.png"><img alt="../_images/figure4_1.png" src="../_images/figure4_1.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Examples of some miscellaneous items</span><a class="headerlink" href="#figure4-1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The list provided below may contain some items that are in fact EEE or mechanical type items, but which are classified as “miscellaneous” because the modelling approach for EEE/mechanical is not considered as completely suitable.</p>
+<p>One of the major characteristics of miscellaneous parts/items is that they are various (functions, technologies, nature) and very specific in the sense they are designed to support dedicated and usual functions (e.g. battery) in a satellite:</p>
+<ul class="simple">
+<li><p>They cover a wide range of Technologies (e.g. Chemical, fluidic…) apart “simple” electrical or mechanical technologies,</p></li>
+<li><p>They are not fully covered by elementary « EEE or Mechanical » models (e.g. a battery cathode is not a pure EEE part),</p></li>
+<li><p>The failures may originate from particular failure mechanisms (e.g. catalytic bed degradation for N2H4 thrusters),</p></li>
+<li><p>They may be supported by « Innovative » technology (e.g. Plasmic propulsion) with reduced in-orbit return,</p></li>
+<li><p>They can be submitted to Wear-out process (e.g. battery calendar aging) depending on their nature.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Software is, by nature, a miscellaneous item. Due to its specificity, a dedicated Section (§12.10) in the system chapter addresses software reliability modelling and therefore software reliability is not considered in the present chapter.</p>
+</div>
+<p>The Current document defines guidance to model reliability of most of the typical miscellaneous items implemented aboard the satellites:</p>
+<ul class="simple">
+<li><p>A “standard model” is defined, per family of miscellaneous items (generic items), based on IOR data, to provide a framework for the reliability prediction with room for adaptation through tailoring criteria in order to cope with the contributing factors to the reliability. The reliability data are provided in Table 11‑8.</p></li>
+<li><p>When there is no “standard model” (specific items), the Current document provides general guidance to support the reliability model building based on available technical data. In that case, referred to as “non-standard model”, the reliability model is developed by the user, based on experience and tests results and/or manufacturers data and/or IOR data, as available. The user will formally justify and submit the reliability model to the prime contractor for approval. Refer to Section 11.4.2.</p></li>
+<li><p>When the two previous model categories are not useable, a holistic model can be used, as per existing reliability handbooks and/or literature. It is a general model which does not represent exactly the design of the items and which is generally not applicable for Space systems, which means the level of confidence is not high.</p></li>
+</ul>
+<p>However, whatever the model is, it is the responsibility of the supplier to justify the selected reliability model enriched with any valuable improvement based on available data (tests data, manufacturer data, IOR data).</p>
+<p>The process used to define a Miscellaneous (MIS) item reliability model is presented in <a class="reference internal" href="#figure4-2"><span class="std std-ref">Figure 4‑2</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MIS-X, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers to Section 11.5.5.</p>
+</div>
+<figure class="align-default" id="figure4-2">
+<a class="reference internal image-reference" href="../_images/figure4_2.png"><img alt="../_images/figure4_2.png" src="../_images/figure4_2.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Miscellaneous (MIS) items reliability modelling logic.</span><a class="headerlink" href="#figure4-2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="list-of-miscellaneous-items">
+<h3><span class="section-number">1.5.1.1. </span>List of miscellaneous items<a class="headerlink" href="#list-of-miscellaneous-items" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#table4-1"><span class="std std-ref">Table 4‑1</span></a> presents the miscellaneous items for which a reliability “standard model” is defined (refer to Sections 11.7 and 11.8).</p>
+<p>The reliability model derived from IOR data gathers in fact all the elements related to an “equivalent class” and is only valid for this class of miscellaneous items. The related numerical values are provided in Table 11‑8.</p>
+<p>To use the reliability model it is, first, necessary to assess that the miscellaneous item considered falls in the scope of the model definition. The “standard model” refers to a class of miscellaneous item identified by the main functions which are supported, the parameters reflecting the reliability (quality…) and the operating conditions.</p>
+<p><a class="reference internal" href="#table4-2"><span class="std std-ref">Table 4‑2</span></a> provides additional information for the miscellaneous items for which no “standard model” is provided (the list is not exhaustive, refer to Section 11.7).</p>
+<p><strong>Table 4.1</strong> : List of Miscellaneous items with “standard model”</p>
+<figure class="align-default" id="table4-1">
+</figure>
+<p><strong>Table 4.2</strong> : List of Miscellaneous items with “non-standard model” (not exhaustive)</p>
+<figure class="align-default" id="table4-2">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>REF</th>
+      <th>SUBSYSTEM</th>
+      <th>UNIT / ITEM</th>
+      <th>RELIABILITY DATA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>RF - Radio Frequency</td>
+      <td>RF - Radio Frequency</td>
+      <td>RF - Radio Frequency</td>
+      <td>RF - Radio Frequency</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>N-STD_001</td>
+      <td>PAYLOAD</td>
+      <td>RF PASSIVE</td>
+      <td>Refer to user experience</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>PWR - Power</td>
+      <td>PWR - Power</td>
+      <td>PWR - Power</td>
+      <td>PWR - Power</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>N-STD_002</td>
+      <td>POWER</td>
+      <td>CONNECTORS</td>
+      <td>See EEE</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PROP - Propulsion</td>
+      <td>PROP - Propulsion</td>
+      <td>PROP - Propulsion</td>
+      <td>PROP - Propulsion</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>N-STD_003</td>
+      <td>PROPULSION</td>
+      <td>HET (Hall Effect Thruster)</td>
+      <td>Refer to user experience</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>N-STD_004</td>
+      <td>PROPULSION</td>
+      <td>VALVE LV (Latching Valve)</td>
+      <td>Refer to Manufacturer data</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>N-STD_005</td>
+      <td>PROPULSION</td>
+      <td>VALVE FCV (MONO STABLE) Flow Control Valve</td>
+      <td>Refer to Manufacturer data</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>N-STD_006</td>
+      <td>PROPULSION</td>
+      <td>VALVE PYRO VALVE</td>
+      <td>Refer to Manufacturer data</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>N-STD_007</td>
+      <td>PROPULSION</td>
+      <td>PT (Pressure Transducer)</td>
+      <td>Refer to Manufacturer data</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>N-STD_008</td>
+      <td>PROPULSION</td>
+      <td>FILTER</td>
+      <td>Refer to Manufacturer data</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>THER - Thermal</td>
+      <td>THER - Thermal</td>
+      <td>THER - Thermal</td>
+      <td>THER - Thermal</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>N-STD_009</td>
+      <td>THERMAL</td>
+      <td>HEAT PIPES</td>
+      <td>Refer to Manufacturer data</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>N-STD_010</td>
+      <td>THERMAL</td>
+      <td>THERMO SWITCH</td>
+      <td>Refer to Manufacturer data</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>N-STD_011</td>
+      <td>THERMAL</td>
+      <td>HEATER</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>PYRO - Pyrotechnics</td>
+      <td>PYRO - Pyrotechnics</td>
+      <td>PYRO - Pyrotechnics</td>
+      <td>PYRO - Pyrotechnics</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>N-STD_012</td>
+      <td>AOCS</td>
+      <td>Pyro Actuator</td>
+      <td>Based on Tests results (Bruceton, PROBIT, seve...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>DEP - Deployment</td>
+      <td>DEP - Deployment</td>
+      <td>DEP - Deployment</td>
+      <td>DEP - Deployment</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>N-STD_013</td>
+      <td>NEA</td>
+      <td>Non Explosive Actuator</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Other</td>
+      <td>Other</td>
+      <td>Other</td>
+      <td>Other</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>N-STD_014</td>
+      <td>PAYLOAD</td>
+      <td>OPTICS</td>
+      <td>Based on Manufacturer data.  Mechanical models...</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>N-STD_015</td>
+      <td>ALL</td>
+      <td>OPTRONICS</td>
+      <td>See EEE</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</figure>
+</section>
+<section id="root-causes-coverage">
+<h3><span class="section-number">1.5.1.2. </span>Root causes coverage<a class="headerlink" href="#root-causes-coverage" title="Permalink to this headline">¶</a></h3>
+<p>The failure mechanisms of the miscellaneous parts result from the four categories of failure root causes already introduced and reminded in Table 4‑3</p>
+<div class="note dropdown admonition">
+<p class="admonition-title"><strong>Random failure</strong></p>
+<p>Random failures are “one-off” events. They are modelled by a constant failure rate. In the frame of the Current document, a basic failure rate is attributed to a class of miscellaneous item, derived from IOR data and valid in a certain range of parameters. The model is only valid for the design lifetime. It can be used beyond the design lifetime in the case there is no wear.</p>
+</div>
+<div class="note dropdown admonition">
+<p class="admonition-title"><strong>Systematic failures</strong></p>
+<p>All physical failures are related to Design errors / manufacturing errors.</p>
+<p>When the errors are sufficiently minor inducing a “One-shot” event/situation with typical failure mechanisms in line with the item quality level, they are modelled as random failures.</p>
+<p>When it is no longer the case (obvious weakness in design, or actual design characteristics changed by manufacturing defect, premature wear-out before the end of the specified lifetime, weakness regarding the space environment) it is necessary to address and to model systematic failures. This is done based on statistics and not considering the human factor as an initial root cause.</p>
+</div>
+<div class="note dropdown admonition">
+<p class="admonition-title"><strong>Wear‐out failures</strong></p>
+<p>Considered by the process described in Section 11.5 (Wear-Out modelling), only for miscellaneous items considered as lifetime-limited items. Safe life qualification is used to address wear-out failure based on probability distribution (parameters derived from the duration for qualification). The model addresses nominal lifetime and lifetime extension.</p>
+</div>
+<div class="note dropdown admonition">
+<p class="admonition-title"><strong>Extrinsic failures</strong></p>
+<p>Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in‐orbit (e.g. temperature) are assumed to be covered by design and adequate qualification (to be verified before modelling). Any design/manufacturing errors are represented by Systematic failures modelling.</p>
+<p>A separate modelling may be required if the probability of additional failure mechanisms induced by the space environment cannot be neglected – e.g. space debris impact.</p>
+</div>
+</section>
+<section id="data-sources">
+<h3><span class="section-number">1.5.1.3. </span>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">¶</a></h3>
+<p>The inputs data constitute the basis of any reliability model.</p>
+<p>First, building a reliability model requires pertinent data regarding the specificity of the item (technology, complexity, materials, quality, qualification…) and the operating conditions in order to characterize the item.</p>
+<p>Then, different inputs for reliability characteristics are defined and classified in Chapter 6 (Part II) of the Current document.</p>
+<p>The order of preference for the use of these inputs for miscellaneous parts reliability prediction is as follows:</p>
+<section id="statistical-data">
+<h4><span class="section-number">1.5.1.3.1. </span>Statistical data<a class="headerlink" href="#statistical-data" title="Permalink to this headline">¶</a></h4>
+<p>In-orbit return (IOR) or space heritage data</p>
+<p>Manufacturer reliability data</p>
+<p>Qualification / Reliability / life test data</p>
+<p>The added-value of this estimation is that the data represent directly the behaviour of the item under operational conditions w.r.t. failures. There are two major conditions: (1) the data represent the design/manufacturing characteristics of the miscellaneous item under consideration, (2) the cumulated data (time, number of failures) are sufficient enough to provide a realistic reliability prediction.</p>
+</section>
+<section id="analysis-of-the-failure-mechanisms">
+<h4><span class="section-number">1.5.1.3.2. </span>Analysis of the failure mechanisms<a class="headerlink" href="#analysis-of-the-failure-mechanisms" title="Permalink to this headline">¶</a></h4>
+<p>Engineering / Physics of failure: analysis of the failure mechanisms,</p>
+<p>DFMEA (Design FMEA) and/or PFMEA (Process FMEA).</p>
+<p>The knowledge of the failure mechanisms and the processes supporting these failure mechanisms provide valuable information to build a reliability model. This information is not easy to collect and to adapt and is subject to criticisms from experts leading to disagreement except when the model is justified by technical arguments.</p>
+</section>
+<section id="combined-approach-bayesian-updating">
+<h4><span class="section-number">1.5.1.3.3. </span>Combined approach – Bayesian updating<a class="headerlink" href="#combined-approach-bayesian-updating" title="Permalink to this headline">¶</a></h4>
+<p>The initial prediction can be refined, combining prior knowledge and IOR or tests results.</p>
+<p>A preliminary model (constant failure rate), either PoF-based or an engineering model, provides a failure rate which is, then, assumed to a be a random variable. The distribution of this random variable is the “prior” knowledge. The expected value of the failure rate knowing additional information is the Bayesian estimator.</p>
+<p>This approach allows using prior engineering knowledge combined with IOR data or test data which does not require a large number of cumulated hours of operations. This could be a good solution when the data background is rather reduced.</p>
+</section>
+<section id="reliability-handbooks-methods-supplier-model-existing-model">
+<h4><span class="section-number">1.5.1.3.4. </span>Reliability handbooks methods / supplier Model: existing model<a class="headerlink" href="#reliability-handbooks-methods-supplier-model-existing-model" title="Permalink to this headline">¶</a></h4>
+<p>The reliability handbooks providing valuable information for miscellaneous items reliability prediction are limited to some technologies or to some specific applications.</p>
+<p>Even though it is possible to use such reliability handbooks or existing models (in the literature), most of time the applicability to space domain is inappropriate mainly due to the fact the space designs are very specific with a rigorous quality frame.</p>
+<p>Any reliability model, whatever the data sources are, needs to be justified (with technical arguments) and submitted to system level for approval.</p>
+</section>
+</section>
+<section id="in-orbit-return-data">
+<h3><span class="section-number">1.5.1.4. </span>In-orbit return data<a class="headerlink" href="#in-orbit-return-data" title="Permalink to this headline">¶</a></h3>
+<p>For “generic equipment” that is similar from one mission to the other, it is valuable to take benefit from the use of in-orbit return data. This can provide direct statistics on the related items used in a typical environment. No model with theoretical implications would meet such level of relevance as far as the items are “equivalent” to those being used in-orbit.</p>
+<p>Consequently, use of in-orbit return constitutes the basis for “miscellaneous items” that meet the following two conditions:</p>
+<p>items involved in generic “miscellaneous” functions, provided they address similar perimeters and under similar operational conditions. Technology, complexity and quality (in a wide sense) are other parameters to be checked with accuracy.
+Besides, the use of in-orbit return is possible on a case by case basis, in the frame of the assessment of a given spacecraft family for example, where functional features are the same and supported by a generic product.</p>
+<p>items with enough in-orbit return, thus excluding those devices that might have become widely used recently (low cumulated time in operation, new technology). This may also impact the level at which miscellaneous items are defined.</p>
+</section>
+<section id="manufacturer-reliability-data">
+<h3><span class="section-number">1.5.1.5. </span>Manufacturer reliability data<a class="headerlink" href="#manufacturer-reliability-data" title="Permalink to this headline">¶</a></h3>
+<p>Miscellaneous items are designed, manufactured and procured by suppliers generally specialized in space domain and for some categories of miscellaneous products, e.g. Solar Array cells manufacturer.</p>
+<p>As designers, the suppliers have a deep knowledge of their products and it is their interest to master the reliability, especially in the case of product streamlined with a long heritage. However, the behaviour of these items in-orbit is better known by the prime contractors and the customers (and insurers as well) than by the manufacturers. Nevertheless, apart these operational data, the items are qualified and specific reliability tests may be conducted on ground prior to any development.</p>
+<p>Any relevant data (e.g. failure events, nominal behaviour, cumulated time under tests) should be considered to support the item reliability modelling. A balance should be found between generic IOR data (Current document data) and dedicated manufacturers’ data.</p>
+<section id="the-case-of-one-shot-devices">
+<h4><span class="section-number">1.5.1.5.1. </span>The case of one-shot devices<a class="headerlink" href="#the-case-of-one-shot-devices" title="Permalink to this headline">¶</a></h4>
+<p>A “one-shot” device is defined as a product that can be used only once.</p>
+<p>It works (success) or it does not (failure) but once it has been activated and used (providing the function for which it is designed) it is destroyed, e.g. pyrotechnic device used to cut a cable in order to deploy a solar array after injection in-orbit.</p>
+<p>“One-shot” devices typically spend their life in dormant storage until they are activated.</p>
+<p>Their reliability is therefore not a function in time (with possible observation of a time to failure through appropriate monitoring) but a constant probability of success (or failure resp.), likely to depend on one or several physical parameters, e.g. current in the case of a pyrotechnic device.</p>
+</section>
+</section>
+<section id="reliability-test-data">
+<h3><span class="section-number">1.5.1.6. </span>Reliability test data<a class="headerlink" href="#reliability-test-data" title="Permalink to this headline">¶</a></h3>
+<p>Test data for miscellaneous items tested under operational conditions would be a relevant source of information for reliability prediction, but is not in most cases available in sufficient quantities to derive any quantitative reliability metrics. Generally, elements constituting the miscellaneous items are tested in larger quantities but do not represent the whole and assembled item. Nevertheless, this information can be valuable in order to derive contributing factors to failure or to confirm design assumptions.</p>
+<p>Physics of Failure models may use these elementary tests and resulting data to identify the failure mechanisms and the related design characteristics. Major failure mechanisms are identified per miscellaneous item and mastered as necessary through appropriate design rules. All this is qualitative information and is used as support to any reliability model, as relevant</p>
+<section id="reliability-tests-for-one-shot-devices">
+<h4><span class="section-number">1.5.1.6.1. </span>Reliability tests for One-shot devices<a class="headerlink" href="#reliability-tests-for-one-shot-devices" title="Permalink to this headline">¶</a></h4>
+<p>Several tests are recommended to verify the reliability of the one-shot devices: Bruceton [BR96], PROBIT [BR97], severe tests [BR98], one-shot tests [BR99], Neyer tests [BR100]. The resulting statistical data are useful to characterize the reliability of these items with regard to functional parameters.</p>
+</section>
+<section id="wear-out-characterization">
+<h4><span class="section-number">1.5.1.6.2. </span>Wear-Out characterization<a class="headerlink" href="#wear-out-characterization" title="Permalink to this headline">¶</a></h4>
+<p>Regarding wear-out, the miscellaneous items should be qualified versus specified lifetime and ground lifetime as per [RD7] , implementing a safety factor (number of elements, number of tests). The results of these tests are considered as evidence, with a certain level of confidence, that no wear occurs before the end of the specified lifetime (or better that no performances degradation impacts the mission of the item).</p>
+</section>
+</section>
+<section id="engineering-physics-of-failure">
+<h3><span class="section-number">1.5.1.7. </span>Engineering / Physics of failure<a class="headerlink" href="#engineering-physics-of-failure" title="Permalink to this headline">¶</a></h3>
+<p>Physics of Failure can be used to identify the dominating failure mechanisms of the miscellaneous items. This approach should be used when no data are available and pertinent enough to populate a reliability model with accuracy. It is the case for a new development with innovative technology for which no statistical data exist.</p>
+<p>Use of DFMEA / PFMEA could be helpful, and is recommended, to identify the causes (design, manufacturing) of the failure mechanisms and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A RPN metric (Risk Priority Number) is derived (refer to standard BR7) and risk mitigation actions set up in order to reduce the RPN to an acceptable level, i.e. under a certain level of probability of occurrence.</p>
+<p>When it is not possible to derive the probability of occurrence of a failure mechanism based on PoF, engineering judgement, with experts, is recommended with associated justification.</p>
+<p>The probability of occurrence ranking defined by categories could be translated in the frame of the operational conditions of the items but there is no suitable method able to support this process. It is the responsibility of engineering to justify the probability ranking.</p>
+</section>
+<section id="engineering-data-combined-with-observations">
+<h3><span class="section-number">1.5.1.8. </span>Engineering data combined with observations<a class="headerlink" href="#engineering-data-combined-with-observations" title="Permalink to this headline">¶</a></h3>
+<p>In some cases, there are valuable data mainly produced by engineering which could be considered as “prior” data. These data can be combined with either IOR data (reduced cumulated time) or test data to provide “posterior” information.</p>
+<p>A combined approach based on one of the methods listed above and Bayesian updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.</p>
+</section>
+<section id="reliability-handbooks-models">
+<h3><span class="section-number">1.5.1.9. </span>Reliability handbooks / models<a class="headerlink" href="#reliability-handbooks-models" title="Permalink to this headline">¶</a></h3>
+<p>There are no dedicated reliability handbooks really addressing exhaustively miscellaneous items. Therefore, it is not recommended to use such a method, unless when the available data source and the data use is justified.</p>
+</section>
+</section>
+<section id="reliability-models-for-miscellaneous-items">
+<h2><span class="section-number">1.5.2. </span>Reliability Models for miscellaneous items<a class="headerlink" href="#reliability-models-for-miscellaneous-items" title="Permalink to this headline">¶</a></h2>
+<p>There are three reliability models for miscellaneous items:</p>
+<p>“Standard model”, for generic miscellaneous items,</p>
+<p>“Non-standard model”, for specific miscellaneous items.</p>
+<p>“holistic model”, for miscellaneous items which are not supported by “standard model” nor by a “non-standard model”.</p>
+<section id="standard-model-for-generic-miscellaneous-items">
+<h3><span class="section-number">1.5.2.1. </span>Standard model for generic miscellaneous items<a class="headerlink" href="#standard-model-for-generic-miscellaneous-items" title="Permalink to this headline">¶</a></h3>
+<p>A “generic” miscellaneous item is an item classified as “miscellaneous” (refer to the definition provided at the beginning of this chapter) AND for which a reliability model based on IOR is defined as a reference in this Current document (see Table 4‑1).</p>
+<p>The reliability model is either (1) an exponential distribution (constant failure rate) or (2) a constant probability of success or constant probability of failure ( = 1- Probability of success) supported by Binomial model, depending on the nature of the item.</p>
+<p>The basic reliability data are provided in Table 11‑8 with the associated framework.</p>
+<p>The reliability “standard model” is then calculated based on the process presented in Section 11.5.</p>
+</section>
+<section id="non-standard-model-for-specific-miscellaneous-items">
+<h3><span class="section-number">1.5.2.2. </span>Non-standard model for specific miscellaneous items<a class="headerlink" href="#non-standard-model-for-specific-miscellaneous-items" title="Permalink to this headline">¶</a></h3>
+<p>A “specific” miscellaneous item relates to a product which is not fully modelled by EEE parts and/or mechanical parts and which is not listed in the equivalent classes of miscellaneous items in Section 11.4.1</p>
+<p>e.g. Hold Release Mechanism Low Shock presented in Figure 4‑3.</p>
+<p>The item is neither a mechanism, nor an assembly of EEE parts. It is constituted by different parts such as spring, glue, expansion unit. Since the design is very specific without any IOR data it is necessary to define a dedicated reliability model.</p>
+<p>The Current document provides general guidance to define such a reliability model: The approach to calculate the basic reliability data is presented in Section 11.7. The “specific” reliability model is then calculated based on the process presented in Section 11.5.</p>
+<figure class="align-default" id="figure4-3">
+<a class="reference internal image-reference" href="../_images/figure4_3.png"><img alt="../_images/figure4_3.png" src="../_images/figure4_3.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Miscellaneous (MIS) items reliability modelling logic.</span><a class="headerlink" href="#figure4-3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="holistic-model">
+<h3><span class="section-number">1.5.2.3. </span>Holistic model<a class="headerlink" href="#holistic-model" title="Permalink to this headline">¶</a></h3>
+<p>A holistic model refers to a model based on the existing reliability handbooks and/or literature without detailed justification related to the design.</p>
+<p>The holistic reliability model is then calculated based on the process presented in Section 4.5.</p>
+</section>
+<section id="dormant-failures">
+<h3><span class="section-number">1.5.2.4. </span>Dormant failures<a class="headerlink" href="#dormant-failures" title="Permalink to this headline">¶</a></h3>
+<p>Currently no reliability model is provided to support failure modelling in dormant mode for miscellaneous items. The miscellaneous items are from different nature (mix of EEE and mechanics, passive components, tubing, piping…) and it is not relevant to provide a generic rule to derive a dormant failure rate from the active miscellaneous item failure rate.</p>
+<p>In case, depending on the mission and on the operations, it is necessary to use a reliability model in dormant mode (no power supply during certain storage duration, no activation for “maintenance”) the user will define a dedicated reliability model (refer to the different methods listed previously) accounting for the specific conditions in storage.</p>
+</section>
+</section>
+<section id="process-for-reliability-modelling">
+<h2><span class="section-number">1.5.3. </span>Process for Reliability modelling<a class="headerlink" href="#process-for-reliability-modelling" title="Permalink to this headline">¶</a></h2>
+<p>This Section details how to build a reliability model for miscellaneous item.</p>
+<p>Figure 4‑4 provides the general process to apply whatever the basic model is: (1) the “standard model”, or (2) the “non-standard model” or even (3) the “holistic model”.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Figure 4‑4, the basic model is a failure rate but it could also be a probability of failure.</p>
+</div>
+<figure class="align-default" id="figure4-4">
+<a class="reference internal image-reference" href="../_images/figure4_4.png"><img alt="../_images/figure4_4.png" src="../_images/figure4_4.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.4 </span><span class="caption-text">General process for miscellaneous items reliability prediction.</span><a class="headerlink" href="#figure4-4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>First, it is necessary, before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used, if relevant, as a “standard model”:</p>
+<ul class="simple">
+<li><p>Functional analysis: list of all the main functions supported by the item,</p></li>
+<li><p>Technical performances: list of all the specified performances regarding the nominal mission / the reduced mission,</p></li>
+<li><p>Hardware description: functional breakdown and hardware architecture as per reliability block diagram (refer to the reliability analysis and associated FMEA),</p></li>
+<li><p>Trajectory (GEO, LEO, MEO, Interplanetary orbit) on which the item is intended to be used,</p></li>
+<li><p>Operating conditions</p>
+<ul>
+<li><p>Duty cycle</p></li>
+<li><p>Voltage, current</p></li>
+<li><p>Thermal environment</p></li>
+</ul>
+</li>
+<li><p>Flight experience: the maturity of the item regarding in-orbit background.</p></li>
+</ul>
+<p>The basic principle is to provide through a reference failure rate (or a probability of failure for one-shot devices) and to up-date this reference failure rate as relevant considering the contributors (multiplying corrective factors) to the probability of failure.</p>
+<p>In the following Section the general process is described.</p>
+<p>Note that it is considered that the multiplying corrective factor is also used to up-date the probability of failure in the case of a one-shot device, based on the fact that, for constant failure rate, when the probability of failure can be approximated by $this_{is}^{inline}$ (i.e. for exponential distribution in the case t &lt;10-2) the corrective factor K leads to a new probability = Kt, which means the probability of failure is multiplied by the corrective factor.
+As a result, the same applies for the probability of failure PF for a one-shot device: the basic probability can be amended by a factor K, leading to KPF.
+So, what is discussed in the following Sections, addressing directly the failure rate, applies for the probability of failure for one-shot device.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "csxADS/nrpmHandbook",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./folderMiscellaneous"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="terms.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.4. </span>Terms, definitions and abbreviated terms</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="detailed_analysis.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.6. </span>Detailed analysis</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

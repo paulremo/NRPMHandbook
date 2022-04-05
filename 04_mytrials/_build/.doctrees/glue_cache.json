@@ -1,0 +1,159 @@
+{
+  "folderMeca/trial1": {
+    "pie_levels": {
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<Figure size 432x144 with 1 Axes>"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "pie_levels"
+        },
+        "filenames": {
+          "image/png": "/home/senaux/Documents/nrpmDHandbook/nrpmHandbook/_build/jupyter_execute/folderMeca/trial1_8_1.png"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "plot_weight_hist": {
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "plot_weight_hist"
+        },
+        "filenames": {
+          "image/png": "/home/senaux/Documents/nrpmDHandbook/nrpmHandbook/_build/jupyter_execute/folderMeca/trial1_5_0.png"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "fig_level_pie": {
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "fig_level_pie"
+        },
+        "filenames": {
+          "image/png": "/home/senaux/Documents/nrpmDHandbook/nrpmHandbook/_build/jupyter_execute/folderMeca/trial1_7_0.png"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "hist_weights": {
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "hist_weights"
+        },
+        "filenames": {
+          "image/png": "/home/senaux/Documents/nrpmDHandbook/nrpmHandbook/_build/jupyter_execute/folderMeca/trial1_8_0.png"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "fig_scatter_grade": {
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<Figure size 576x432 with 2 Axes>"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "fig_scatter_grade"
+        },
+        "filenames": {
+          "image/png": "/home/senaux/Documents/nrpmDHandbook/nrpmHandbook/_build/jupyter_execute/folderMeca/trial1_6_0.png"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "plotly_scattered": {
+      "data": {},
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "plotly_scattered"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "data_stats": {
+      "data": {
+        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>Number</th>\n      <th>Weight</th>\n      <th>Level</th>\n      <th>Grade</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>53.000000</td>\n      <td>53.000000</td>\n      <td>53.000000</td>\n      <td>53.000000</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>87.867925</td>\n      <td>6.769811</td>\n      <td>2.150943</td>\n      <td>9.035849</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>44.831324</td>\n      <td>3.662312</td>\n      <td>0.948607</td>\n      <td>11.463791</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>7.000000</td>\n      <td>2.800000</td>\n      <td>1.000000</td>\n      <td>0.000000</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>43.000000</td>\n      <td>5.200000</td>\n      <td>1.000000</td>\n      <td>0.000000</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>95.000000</td>\n      <td>5.900000</td>\n      <td>2.000000</td>\n      <td>6.600000</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>126.000000</td>\n      <td>6.700000</td>\n      <td>3.000000</td>\n      <td>12.000000</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>155.000000</td>\n      <td>26.000000</td>\n      <td>4.000000</td>\n      <td>52.000000</td>\n    </tr>\n  </tbody>\n</table>\n</div>",
+        "text/plain": "           Number     Weight      Level      Grade\ncount   53.000000  53.000000  53.000000  53.000000\nmean    87.867925   6.769811   2.150943   9.035849\nstd     44.831324   3.662312   0.948607  11.463791\nmin      7.000000   2.800000   1.000000   0.000000\n25%     43.000000   5.200000   1.000000   0.000000\n50%     95.000000   5.900000   2.000000   6.600000\n75%    126.000000   6.700000   3.000000  12.000000\nmax    155.000000  26.000000   4.000000  52.000000"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "data_stats"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "data_desciption": {
+      "data": {
+        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>Number</th>\n      <th>Recommendation</th>\n      <th>Audit Question</th>\n      <th>Weight</th>\n      <th>Level</th>\n      <th>Description</th>\n      <th>Grade</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>7</td>\n      <td>Procedures related to corrective actions inclu...</td>\n      <td>What process is used to collect technical even...</td>\n      <td>15.4</td>\n      <td>4</td>\n      <td>Procedures related to corrective actions inclu...</td>\n      <td>46.2</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>8</td>\n      <td>Procedures related to preventive actions inclu...</td>\n      <td>Do procedures related to preventive actions in...</td>\n      <td>15.6</td>\n      <td>4</td>\n      <td>Procedures for preventive actions do exist. th...</td>\n      <td>46.8</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>17</td>\n      <td>The subassembly varnishing activity. that must...</td>\n      <td>Are inspection parameters monitored during the...</td>\n      <td>9.9</td>\n      <td>2</td>\n      <td>The varnishing activity is monitored by superv...</td>\n      <td>9.9</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>18</td>\n      <td>Maintenance procedures related to corrective a...</td>\n      <td>Does corrective maintenance take place as soon...</td>\n      <td>6.9</td>\n      <td>2</td>\n      <td>Corrective actions are made directly where the...</td>\n      <td>6.9</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>19</td>\n      <td>Based on the defined preventive maintenance pl...</td>\n      <td>Is preventive maintenance planned to correct d...</td>\n      <td>4.0</td>\n      <td>3</td>\n      <td>Real maintenance procedures are implemented fo...</td>\n      <td>8.0</td>\n    </tr>\n  </tbody>\n</table>\n</div>",
+        "text/plain": "   Number                                     Recommendation  \\\n0       7  Procedures related to corrective actions inclu...   \n1       8  Procedures related to preventive actions inclu...   \n2      17  The subassembly varnishing activity. that must...   \n3      18  Maintenance procedures related to corrective a...   \n4      19  Based on the defined preventive maintenance pl...   \n\n                                      Audit Question  Weight  Level  \\\n0  What process is used to collect technical even...    15.4      4   \n1  Do procedures related to preventive actions in...    15.6      4   \n2  Are inspection parameters monitored during the...     9.9      2   \n3  Does corrective maintenance take place as soon...     6.9      2   \n4  Is preventive maintenance planned to correct d...     4.0      3   \n\n                                         Description  Grade  \n0  Procedures related to corrective actions inclu...   46.2  \n1  Procedures for preventive actions do exist. th...   46.8  \n2  The varnishing activity is monitored by superv...    9.9  \n3  Corrective actions are made directly where the...    6.9  \n4  Real maintenance procedures are implemented fo...    8.0  "
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "data_desciption"
+        }
+      },
+      "output_type": "display_data"
+    }
+  },
+  "folderMiscellaneous/misc_utilities": {
+    "table4_2": {
+      "data": {
+        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>REF</th>\n      <th>SUBSYSTEM</th>\n      <th>UNIT / ITEM</th>\n      <th>RELIABILITY DATA</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>RF - Radio Frequency</td>\n      <td>RF - Radio Frequency</td>\n      <td>RF - Radio Frequency</td>\n      <td>RF - Radio Frequency</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>N-STD_001</td>\n      <td>PAYLOAD</td>\n      <td>RF PASSIVE</td>\n      <td>Refer to user experience</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>PWR - Power</td>\n      <td>PWR - Power</td>\n      <td>PWR - Power</td>\n      <td>PWR - Power</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>N-STD_002</td>\n      <td>POWER</td>\n      <td>CONNECTORS</td>\n      <td>See EEE</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>PROP - Propulsion</td>\n      <td>PROP - Propulsion</td>\n      <td>PROP - Propulsion</td>\n      <td>PROP - Propulsion</td>\n    </tr>\n    <tr>\n      <th>5</th>\n      <td>N-STD_003</td>\n      <td>PROPULSION</td>\n      <td>HET (Hall Effect Thruster)</td>\n      <td>Refer to user experience</td>\n    </tr>\n    <tr>\n      <th>6</th>\n      <td>N-STD_004</td>\n      <td>PROPULSION</td>\n      <td>VALVE LV (Latching Valve)</td>\n      <td>Refer to Manufacturer data</td>\n    </tr>\n    <tr>\n      <th>7</th>\n      <td>N-STD_005</td>\n      <td>PROPULSION</td>\n      <td>VALVE FCV (MONO STABLE) Flow Control Valve</td>\n      <td>Refer to Manufacturer data</td>\n    </tr>\n    <tr>\n      <th>8</th>\n      <td>N-STD_006</td>\n      <td>PROPULSION</td>\n      <td>VALVE PYRO VALVE</td>\n      <td>Refer to Manufacturer data</td>\n    </tr>\n    <tr>\n      <th>9</th>\n      <td>N-STD_007</td>\n      <td>PROPULSION</td>\n      <td>PT (Pressure Transducer)</td>\n      <td>Refer to Manufacturer data</td>\n    </tr>\n    <tr>\n      <th>10</th>\n      <td>N-STD_008</td>\n      <td>PROPULSION</td>\n      <td>FILTER</td>\n      <td>Refer to Manufacturer data</td>\n    </tr>\n    <tr>\n      <th>11</th>\n      <td>THER - Thermal</td>\n      <td>THER - Thermal</td>\n      <td>THER - Thermal</td>\n      <td>THER - Thermal</td>\n    </tr>\n    <tr>\n      <th>12</th>\n      <td>N-STD_009</td>\n      <td>THERMAL</td>\n      <td>HEAT PIPES</td>\n      <td>Refer to Manufacturer data</td>\n    </tr>\n    <tr>\n      <th>13</th>\n      <td>N-STD_010</td>\n      <td>THERMAL</td>\n      <td>THERMO SWITCH</td>\n      <td>Refer to Manufacturer data</td>\n    </tr>\n    <tr>\n      <th>14</th>\n      <td>N-STD_011</td>\n      <td>THERMAL</td>\n      <td>HEATER</td>\n      <td>NaN</td>\n    </tr>\n    <tr>\n      <th>15</th>\n      <td>PYRO - Pyrotechnics</td>\n      <td>PYRO - Pyrotechnics</td>\n      <td>PYRO - Pyrotechnics</td>\n      <td>PYRO - Pyrotechnics</td>\n    </tr>\n    <tr>\n      <th>16</th>\n      <td>N-STD_012</td>\n      <td>AOCS</td>\n      <td>Pyro Actuator</td>\n      <td>Based on Tests results (Bruceton, PROBIT, seve...</td>\n    </tr>\n    <tr>\n      <th>17</th>\n      <td>DEP - Deployment</td>\n      <td>DEP - Deployment</td>\n      <td>DEP - Deployment</td>\n      <td>DEP - Deployment</td>\n    </tr>\n    <tr>\n      <th>18</th>\n      <td>N-STD_013</td>\n      <td>NEA</td>\n      <td>Non Explosive Actuator</td>\n      <td>NaN</td>\n    </tr>\n    <tr>\n      <th>19</th>\n      <td>Other</td>\n      <td>Other</td>\n      <td>Other</td>\n      <td>Other</td>\n    </tr>\n    <tr>\n      <th>20</th>\n      <td>N-STD_014</td>\n      <td>PAYLOAD</td>\n      <td>OPTICS</td>\n      <td>Based on Manufacturer data.  Mechanical models...</td>\n    </tr>\n    <tr>\n      <th>21</th>\n      <td>N-STD_015</td>\n      <td>ALL</td>\n      <td>OPTRONICS</td>\n      <td>See EEE</td>\n    </tr>\n  </tbody>\n</table>\n</div>",
+        "text/plain": "                     REF             SUBSYSTEM  \\\n0   RF - Radio Frequency  RF - Radio Frequency   \n1              N-STD_001               PAYLOAD   \n2            PWR - Power           PWR - Power   \n3              N-STD_002                 POWER   \n4      PROP - Propulsion     PROP - Propulsion   \n5              N-STD_003            PROPULSION   \n6              N-STD_004            PROPULSION   \n7              N-STD_005            PROPULSION   \n8              N-STD_006            PROPULSION   \n9              N-STD_007            PROPULSION   \n10             N-STD_008            PROPULSION   \n11        THER - Thermal        THER - Thermal   \n12             N-STD_009               THERMAL   \n13             N-STD_010               THERMAL   \n14             N-STD_011               THERMAL   \n15   PYRO - Pyrotechnics   PYRO - Pyrotechnics   \n16             N-STD_012                  AOCS   \n17      DEP - Deployment      DEP - Deployment   \n18             N-STD_013                   NEA   \n19                 Other                 Other   \n20             N-STD_014               PAYLOAD   \n21             N-STD_015                   ALL   \n\n                                   UNIT / ITEM  \\\n0                         RF - Radio Frequency   \n1                                   RF PASSIVE   \n2                                  PWR - Power   \n3                                   CONNECTORS   \n4                            PROP - Propulsion   \n5                   HET (Hall Effect Thruster)   \n6                    VALVE LV (Latching Valve)   \n7   VALVE FCV (MONO STABLE) Flow Control Valve   \n8                             VALVE PYRO VALVE   \n9                     PT (Pressure Transducer)   \n10                                      FILTER   \n11                              THER - Thermal   \n12                                  HEAT PIPES   \n13                               THERMO SWITCH   \n14                                      HEATER   \n15                         PYRO - Pyrotechnics   \n16                               Pyro Actuator   \n17                            DEP - Deployment   \n18                      Non Explosive Actuator   \n19                                       Other   \n20                                      OPTICS   \n21                                   OPTRONICS   \n\n                                     RELIABILITY DATA  \n0                                RF - Radio Frequency  \n1                            Refer to user experience  \n2                                         PWR - Power  \n3                                             See EEE  \n4                                   PROP - Propulsion  \n5                            Refer to user experience  \n6                          Refer to Manufacturer data  \n7                          Refer to Manufacturer data  \n8                          Refer to Manufacturer data  \n9                          Refer to Manufacturer data  \n10                         Refer to Manufacturer data  \n11                                     THER - Thermal  \n12                         Refer to Manufacturer data  \n13                         Refer to Manufacturer data  \n14                                                NaN  \n15                                PYRO - Pyrotechnics  \n16  Based on Tests results (Bruceton, PROBIT, seve...  \n17                                   DEP - Deployment  \n18                                                NaN  \n19                                              Other  \n20  Based on Manufacturer data.  Mechanical models...  \n21                                            See EEE  "
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "table4_2"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "plotly_t4_1": {
+      "data": {
+        "text/plain": "None"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "plotly_t4_1"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "table4_3": {
+      "data": {
+        "text/plain": "'|    | Root cause category   | Coverage by the miscellaneous reliability prediction  methodology                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |\\n|---:|:----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\\n|  0 | Random failure        | Random failures are \"one-off\" events. They are modelled by a  constant failure rate. In the frame of the Current document, a basic  failure rate is attributed to a class of miscellaneous item, derived  from IOR data and valid in a certain range of parameters. The model is  only valid for the design lifetime. It can be used beyond the design  lifetime in the case there is no wear.                                                                                                                                                                                                                                                                                |\\n|  1 | Systematic failures   | All physical failures are related to Design errors /  manufacturing errors.  When the errors are sufficiently minor inducing a \"One-shot\"  event/situation with typical failure mechanisms in line with the item  quality level, they are modelled as random failures.  When it is no longer the case (obvious weakness in design, or actual  design characteristics changed by manufacturing defect, premature  wear-out before the end of the specified lifetime, weakness regarding  the space environment) it is necessary to address and to model  systematic failures. This is done based on statistics and not  considering the human factor as an initial root cause. |\\n|  2 | Wear-out failures     | Considered by the process described in Section 11.5 (Wear-Out  modelling), only for miscellaneous items considered as lifetime-limited  items. Safe life qualification is used to address wear-out failure based  on probability distribution (parameters derived from the duration for  qualification). The model addresses nominal lifetime and lifetime  extension.                                                                                                                                                                                                                                                                                                        |\\n|  3 | Extrinsic failures    | Foreseen extrinsic effects due to the launch environment  (vibrations, shocks) and physical conditions in-orbit (e.g. temperature)  are assumed to be covered by design and adequate qualification (to be  verified before modelling). Any design/manufacturing errors are  represented by Systematic failures modelling.  A separate modelling may be required if the probability of additional  failure mechanisms induced by the space environment cannot be neglected - e.g. space debris impact.                                                                                                                                                                         |'"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "table4_3"
+        }
+      },
+      "output_type": "display_data"
+    }
+  }
+}

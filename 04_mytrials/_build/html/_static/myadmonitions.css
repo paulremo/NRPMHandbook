@@ -1,0 +1,10 @@
+.admonitionextracredit {
+    border-left-color: rgba(0, 246, 16, 1);
+}
+.admonitionextracredit .admonition-title {
+    background-color: rgba(0, 246, 16, .1);
+}
+.admonitionextracredit .admonition-title:before {
+    color: rgba(0, 246, 16, 1);
+    content: '\f19d';
+}

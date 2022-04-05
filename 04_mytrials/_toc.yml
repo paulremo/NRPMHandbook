@@ -1,0 +1,49 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Utilities
+    numbered: true
+    chapters:
+    - file: Utilities/notebooks
+      title: Notebooks
+    - file: Utilities/markdown-notebooks
+      title: Markdown for Notebooks
+    - file: test
+      title: Test
+  - caption: EEE section
+    numbered: true
+    chapters:
+    - file: folderEEE/mainEEE
+      title: Introduction to EEE
+  - caption: Meca section
+    numbered: true
+    chapters:
+    - file: folderMeca/mainMeca
+      title: Introduction to Mechanical
+  - caption: Miscellaneous section
+    numbered: true
+    chapters:
+    - file: folderMiscellaneous/mainMiscellaneous
+      title: Introduction to Miscellaneous
+      sections:
+      - file: folderMiscellaneous/introduction
+      - file: folderMiscellaneous/scope
+      - file: folderMiscellaneous/normative_references
+      - file: folderMiscellaneous/terms
+      - file: folderMiscellaneous/general_methodology
+      - file: folderMiscellaneous/detailed_analysis
+      - file: folderMiscellaneous/conclusion    
+      - file: folderMiscellaneous/annexA    
+      - file: folderMiscellaneous/annexB                      
+    - file: folderMiscellaneous/interactive
+      title: First trials for interactive widgets
+  - caption: System section
+    numbered: true
+    chapters:
+    - file: folderSystem/mainSystem
+      title: Introduction to RP at System Level 
+      sections:
+      - file: folderSystem/test
