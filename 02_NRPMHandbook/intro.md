@@ -1,6 +1,6 @@
 # Welcome the NRPM Digital Handbook !
 
-This is the digital version of the [NRPM](nrpm_definition) handbook for reliability.space.
+This is the digital version of the [NRPM](glossary_intro) handbook for reliability.space.
 
 ```{admonition} TIPS
 :class: tip
@@ -17,20 +17,6 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 :column: col-6
 :card: border-2
 
-**Mechanical**
-^^^^
-```{image} Pictures/mecaPicture.png
-:alt: mecaPicture
-:class: bg-primary mb-1
-:width: 200px
-:align: center
-```
-+++
-{badge}`Mechanical,badge-primary`
-
-[Go to Mechanical](folderMeca/mainMeca)
----
-
 **EEE**
 ^^^^
 ```{image} Pictures/eeePicture.png
@@ -43,26 +29,27 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 {badge}`EEE,badge-primary`
 
 [Go to EEE](folderEEE/mainEEE)
+
+---
+
+**Mechanical**
+^^^^
+```{image} Pictures/mecaPicture.png
+:alt: mecaPicture
+:class: bg-primary mb-1
+:width: 200px
+:align: center
+```
++++
+{badge}`Mechanical,badge-primary`
+
+[Go to Mechanical](folderMeca/mainMeca)
 ````
 
 
 ````{panels}
 :column: col-6
 :card: border-2
-
-**RP at System Level**
-^^^^
-```{image} Pictures/systemPicture.png
-:alt: systemPicture
-:class: bg-primary mb-1
-:width: 200px
-:align: center
-```
-+++
-{badge}`RP@System,badge-primary`
-
-[Go to RP at System Level](folderSystem/mainSystem)
----
 
 **Miscellaneous**
 ^^^^
@@ -77,6 +64,20 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 [Go to Miscellaneous](folderMiscellaneous/mainMiscellaneous)
 
+---
+
+**RP at System Level**
+^^^^
+```{image} Pictures/systemPicture.png
+:alt: systemPicture
+:class: bg-primary mb-1
+:width: 200px
+:align: center
+```
++++
+{badge}`RP@System,badge-primary`
+
+[Go to RP at System Level](folderSystem/mainSystem)
 ````
 
 If you want more details, you can go there.
