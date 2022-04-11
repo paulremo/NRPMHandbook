@@ -122,7 +122,7 @@ The probability of failure for the Normal distribution assumption is derived as 
 
 ````{math}
 :label: Equation 4.3
-P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi (\frac{- \mu_{X_{1}} - \mu_{X_{2}}}{\sqrt{\sigma_{X_{1}}^{2} + \sigma_{X_{2}}^{2}}}) = \Phi (\frac{- p - 1}{\sqrt{p^{2} \nu_{X_{1}}^{2} + \nu_{X_{2}}^{2}}})
+P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi \left(\frac{- \mu_{X_{1}} - \mu_{X_{2}}}{\sqrt{\sigma_{X_{1}}^{2} + \sigma_{X_{2}}^{2}}}\right) = \Phi \left(\frac{- p - 1}{\sqrt{p^{2} \nu_{X_{1}}^{2} + \nu_{X_{2}}^{2}}}\right)
 ````
 
 Where $\mu_{X}$, $\sigma_{X}$ and $\nu_{X}$ represent the mean value, standard deviation and coefficient of variation of the random variables $X_{1}$ and $X_{2}$ and $\Phi$ denotes the cumulative distribution function of the standard Normal distribution. On the right-hand side of Equation 10 -3, the probability of failure is derived as a function of the so-called central safety factor, $p = \mu_{X_{1}} / \mu_{X_{2}}$.
@@ -131,14 +131,14 @@ For the Lognormal distribution case we get:
 
 ````{math}
 :label: Equation 4.4
-P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi (\frac{- ln(p) + 0.5 ( ln(\nu_{X_{1}}^{2} + 1) - ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{ln(\nu_{X_{1}}^{2} + 1) + ln(\nu_{X_{2}}^{2} + 1)}})
+P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi \left(\frac{- \ln(p) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
 ````
 
 Finally, in the third case, the probability of failure is simply derived from the distribution function of the remaining random variable:
 
 ````{math}
 :label: Equation 4.5
-P_{f} \cong F_{X_{1}}(\widehat{X_{2}}) or P_{f} \cong 1 - F_{X_{2}}(\widehat{X_{1}})
+P_{f} \cong F_{X_{1}}(\widehat{X_{2}})  or  P_{f} \cong 1 - F_{X_{2}}(\widehat{X_{1}})
 ````
 
 Where $\widehat{X_{1}}$ or $\widehat{X_{2}}$ represents a point estimate of the variable whose dispersion is neglected. It is relevant to note that, even though the references values for the usual dispersion of strength variables provided in Table   4 -8 are generally smaller than the values provided in Table   4 -9 for the dispersion of loads, the strength dispersion is not negligible, and the closed-form solution in Equation   10 -5 cannot be used as an approximation for these cases.
@@ -298,7 +298,7 @@ The analytic method for Bayesian updating is based on the assumption that all ra
 
 ````{math}
 :label: Equation 4.9
-F_{T}(t | \theta) = \Phi (\frac{- ln(p(t)) + ln(\theta) + 0.5 ( ln(\nu_{X_{1}}^{2} + 1) - ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{ln(\nu_{X_{1}}^{2} + 1) + ln(\nu_{X_{2}}^{2} + 1)}})
+F_{T}(t | \theta) = \Phi \left(\frac{- \ln(p(t)) + \ln(\theta) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
 ````
 
 To proceed, a suitable function $p(t)$ must be defined. For the limit state functions provided with simplified model in Section 4.7, it may be assumed that the mean value parameter $p$ is proportional to $1/t$, although for some failure mechanisms this may be an approximation only. An alternative approach would be to derive the sampling distribution for $p$ instead of $t$. The data used for updating (observations for $t$) must then be transformed to “observed” mean value parameters $p(t)$.
@@ -307,41 +307,62 @@ The following derivation is based on the proportionality assumption mentioned ab
 
 ````{math}
 :label: Equation 4.10
-F_{T}(t | \theta) = \Phi (\frac{- ln(t) - ln(k) + ln(\theta) + 0.5 ( ln(\nu_{X_{1}}^{2} + 1) - ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{ln(\nu_{X_{1}}^{2} + 1) + ln(\nu_{X_{2}}^{2} + 1)}})
+F_{T}(t | \theta) = \Phi \left(\frac{- \ln(t) - \ln(k) + \ln(\theta) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
 ````
 
 By comparing this result with the cumulative distribution function of the Lognormal distribution, it may be concluded that the random time to failure $T$ follows a Lognormal distribution with the following distribution parameters:
 
 ````{math}
 :label: Equation 4.11
-\mu_{T} = ln(k) - ln(\theta) + 0.5 (-ln(\nu_{X_{1}}^{2} + 1) + ln(\nu_{X_{2}}^{2} + 1))
+\mu_{T} = \ln(k) - \ln(\theta) + 0.5 (-\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1))
 ````
 
 ````{math}
 :label: Equation 4.12
-\sigma_{T} = \sqrt{ln(\nu_{X_{1}}^{2} + 1) + ln(\nu_{X_{2}}^{2} + 1)}
+\sigma_{T} = \sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}
 ````
 
 For the Bayesian updating, the „deterministic“ model uncertainty $\theta$ in Equation   10 -11 is now replaced by a random variable $\Theta$. The random model uncertainty is assumed to follow a Lognormal distribution with mean value $E(\Theta) = 1$ (when assuming an unbiased failure mechanism model, see Section  for discussion) and coefficient of variation $\nu_{\Theta}$ (with specific values proposed for each simplified model presented in Section 4.7). With this, the parameter $\mu_{T}$ is Normal distributed with the following prior (hyper-)parameters:
 
 ````{math}
 :label: Equation 4.13
-\mu ' = ln(k) - ln(E(\theta)) + 0.5 (ln(\nu_{\Theta}^{2} + 1) - ln(\nu_{X_{1}}^{2} + 1) + ln(\nu_{X_{2}}^{2} + 1))
+\mu ' = \ln(k) - \ln(E(\theta)) + 0.5 (\ln(\nu_{\Theta}^{2} + 1) - \ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1))
 ````
 
 ````{math}
 :label: Equation 4.14
-\sigma ' = \sqrt{ln(\nu_{\Theta}^{2} + 1)}
+\sigma ' = \sqrt{\ln(\nu_{\Theta}^{2} + 1)}
 ````
 
 The Normal distribution for the location parameter $\mu_{T}$ is a conjugate prior for the Lognormal sampling distribution. With a random sample of time-to-failure observations $\widehat{t} = \widehat{t_{1}}, ..., \widehat{t_{n}}$, the posterior hyperparameters for the Lognormal sampling distribution can thus be derived analytically: 
 
 ````{math}
 :label: Equation 4.15
-\mu '' = (\sigma '')^{2} (\frac{\mu '}{\sigma'^{2}} + \frac{\sum_{i=1}^{n} (ln(\widehat{t_{i}}))}{\sigma_{T}^{2}})
+\mu '' = (\sigma '')^{2} \left(\frac{\mu '}{\sigma'^{2}} + \frac{\sum_{i=1}^{n} (\\ln(\widehat{t_{i}}))}{\sigma_{T}^{2}}\right)
 ````
 
 ````{math}
 :label: Equation 4.16
 \sigma '' = (1 / \sigma'^{2} + n / \sigma_{T}^{2})^{1/2}
 ````
+
+To summarize, a simple Bayesian updating scheme for reliability estimates derived from the simplified method introduced in Section 4.6.2 may be defined as follows:
+
+* First the prior reliability estimate is derived, including the estimation of $\nu_{X_{1}}$, $\nu_{X_{2}}$ and $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$. The simplified model equations provided in Section 4.7 can be used for this task, using suitable input for the basic variable modelling.
+* The constant $k$ for the function $p(t) = k \bullet 1/t$ is derived from the simplified model equations provided in Section 4.7 (time $t$ may have to be replaced by e.g. number of revolutions $rev$ for some failure mechanisms); the proportionality assumption for the function $p(t) should be checked in this step.
+* The standard deviation parameter $\sigma_{T}$ of the sampling distribution is calculated from $\nu_{X_{1}}$ and $\nu_{X_{2}}$, using Equation   10 -12. Note that this parameter is assumed to be fixed in the analytic updating approach and will not be affected by the updating.
+* The prior (hyper-)parameters $\mu '$ and $\sigma '$ of the conjugate Normal distribution for the location parameter $\mu_{T}$ are calculated from the input for the simplified method, using Equation   10 -13 and Equation   10 -14 above.
+* With this, the prior is fully defined and the Bayesian updating can be performed using the formulas for the posterior hyperparameters $\mu ''$ and $\sigma ''$ for the Lognormal sampling distribution.
+
+
+The assumptions underlying this approach are summarized as follows:
+
+* The limit state function for the prior reliability estimate can be brought into the generic format used in Equation   10 -8
+* The variables $X_{1}$, $X_{2}$ and $\Theta$ follow a Lognormal distribution.
+* Only the mean values of $X_{1}$ and $X_{2}$ are a function of time .
+* The mean value parameter $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$ can be modelled as $p(t) = k \bullet 1/t$.
+* The data sample for updating is uncensored, i.e. all items have been observed until failure
+
+
+As has been discussed below Equation   10 -9, the approach may be adapted by considering $p$ instead of $t$ as the “observed” variable, allowing the use of more general functions for $p(t)$; An analytic solution is still possible in this case. More general distribution types for $X_{1}$, $X_{2}$ and/or $\Theta$ may possibly be approximated by Lognormal distributions. For more general applications, it is very unlikely that an analytic solution based on conjugate priors can be derived. Numerical methods are then required to solve the problem of updating a structural reliability estimates with observations for the random time to failure, see Chapter 7 (Part II) for details. The same is true if the data set is strongly censored, i.e. the items have not been observed until failure. It should be noted that Equation   10 -6 and Equation   10 -7 can still be used as the starting point for the formulation of the prior probabilistic model, even if the analytic solution derived above is not applicable.
+
