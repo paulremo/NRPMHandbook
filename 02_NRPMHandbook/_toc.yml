@@ -27,24 +27,43 @@ parts:
     numbered: true
     chapters:
     - file: folderMeca/mainMeca
-      title: Introduction to Mechanical
+      title: Introduction to Mechanicals
+    - file: folderMeca/interactive_guide/introduction
+      title: Mechanicals Digital Handbook
+      sections:
+      - file: folderMeca/interactive_guide/scope
+      - file: folderMeca/interactive_guide/normative_references
+      - file: folderMeca/interactive_guide/terms
+      - file: folderMeca/interactive_guide/rp_mechanical/00_rp_mechanical
+        title: Reliability prediction for mechanical and structural parts and assemblies
+        sections:
+        - file: folderMeca/interactive_guide/rp_mechanical/01_process_mechanical_rp
+        - file: folderMeca/interactive_guide/rp_mechanical/02_root_causes_coverage_mechanical
+        - file: folderMeca/interactive_guide/rp_mechanical/03_data_sources_methods_mechanical
+        - file: folderMeca/interactive_guide/rp_mechanical/04_failure_identification_focus_mecha
+        - file: folderMeca/interactive_guide/rp_mechanical/05_method_selection_mechanical
+        - file: folderMeca/interactive_guide/rp_mechanical/06_structural_method_input_mechanical
+        - file: folderMeca/interactive_guide/rp_mechanical/07_structural_models_equations_mechanical
+        - file: folderMeca/interactive_guide/rp_mechanical/08_examples_mechanical                         
   - caption: Miscellaneous section
     numbered: true
     chapters:
     - file: folderMiscellaneous/mainMiscellaneous
       title: Introduction to Miscellaneous
+    - file: folderMiscellaneous/digital_handbook/introduction
+      title: Miscellaneous Digital Handbook
       sections:
-      - file: folderMiscellaneous/introduction
-      - file: folderMiscellaneous/scope
-      - file: folderMiscellaneous/normative_references
-      - file: folderMiscellaneous/terms
-      - file: folderMiscellaneous/general_methodology
-      - file: folderMiscellaneous/detailed_analysis
-      - file: folderMiscellaneous/conclusion    
-      - file: folderMiscellaneous/annexA    
-      - file: folderMiscellaneous/annexB                      
-    - file: folderMiscellaneous/interactive
-      title: First trials for interactive widgets
+      - file: folderMiscellaneous/digital_handbook/scope
+      - file: folderMiscellaneous/digital_handbook/normative_references
+      - file: folderMiscellaneous/digital_handbook/terms
+      - file: folderMiscellaneous/digital_handbook/rp_miscellaneous
+      - file: folderMiscellaneous/digital_handbook/conclusion    
+      - file: folderMiscellaneous/digital_handbook/annexA    
+      - file: folderMiscellaneous/digital_handbook/annexB
+    - file: folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous
+      title: Miscellaneous Interactive Guide
+      sections:
+      - file: folderMiscellaneous/interactive_guide/general_methodology               
   - caption: System section
     numbered: true
     chapters:
