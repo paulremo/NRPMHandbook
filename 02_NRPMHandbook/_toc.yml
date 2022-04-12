@@ -18,6 +18,8 @@ parts:
       title: Javascipt interactivity
     - file: Utilities/interactive
       title: Python interactivity
+    - file: folderMiscellaneous/interactive_guide/search_table_test
+      title: Table interactivity
   - caption: EEE section
     numbered: true
     chapters:
@@ -63,7 +65,7 @@ parts:
     - file: folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous
       title: Miscellaneous Interactive Guide
       sections:
-      - file: folderMiscellaneous/interactive_guide/general_methodology               
+      - file: folderMiscellaneous/interactive_guide/general_methodology
   - caption: System section
     numbered: true
     chapters:
