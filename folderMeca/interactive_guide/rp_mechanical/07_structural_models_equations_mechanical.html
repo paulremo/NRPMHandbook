@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2.4.7. Structural reliability models and equations &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
@@ -29,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/myadmonitions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -39,12 +39,9 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/myscript.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -548,7 +545,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="structural-reliability-models-and-equations">
+  <div class="tex2jax_ignore mathjax_ignore section" id="structural-reliability-models-and-equations">
 <h1><span class="section-number">2.4.7. </span>Structural reliability models and equations<a class="headerlink" href="#structural-reliability-models-and-equations" title="Permalink to this headline">¶</a></h1>
 <p>The present section provides limit state functions and guidance for the modelling of several failure mechanisms that are of relevance for mechanical reliability prediction. The content of this Section is largely based on Error: Reference source not found, where some aspects are discussed in more detail.</p>
 <div class="todo admonition">
@@ -616,7 +613,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Failure mechanisms that are not listed in Table   4 -10 need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC’s WARP Error: Reference source not foundor Kowal . The “full” structural reliability method may be applied with any limit state function or failure mechanism model, see Section 4.6.1 for details.
 The following subsections dedicated to each failure mechanism model always follow the same logic: First the failure mechanism is introduced and a generic limit state function is derived that can be used with general structural reliability methods, possibly requiring numerical methods to derive the probability of failure. Closed form solutions (if available) are then discussed separately under the heading “Simplified failure mechanism model”.</p>
 <p>The derivation of these closed-form solutions is based on several assumptions related to the limit state function and the basic variable modelling, see Section 4.6.3 for a general introduction. The detailed assumptions are specific to the considered failure mechanisms; a short summary is provided together with each simplified model. Note that it is not possible to make a general statement how “exact” the analytic solutions are, e.g. when compared to a “full” structural reliability assessment. However, the assumptions listed can and should be checked to decide whether the simplified model can be used for a given application or whether the “full” structural reliability method is more appropriate.</p>
-<section id="modelling-of-failures-due-to-mechanical-wear">
+<div class="section" id="modelling-of-failures-due-to-mechanical-wear">
 <h2><span class="section-number">2.4.7.1. </span>Modelling of failures due to mechanical wear<a class="headerlink" href="#modelling-of-failures-due-to-mechanical-wear" title="Permalink to this headline">¶</a></h2>
 <p>Wear is a complex phenomenon related to the erosion or displacement of material during the contact of solid surfaces. Several types of wear can be distinguished:</p>
 <ul class="simple">
@@ -629,7 +626,7 @@ The following subsections dedicated to each failure mechanism model always follo
 <p>Adhesive, abrasive and fretting wear show common behaviour, and it is commonly agreed that for these types the adhesive wear mechanism plays a dominant role. A general wear model with a focus on <strong>adhesive wear</strong> is presented in Section .</p>
 <p><strong>Lubricated wear</strong> is related to the degradation of the lubricant or the lubricant reservoir in lubricated contacts. This regime is typical for bearings, with analytical models provided in Section  for solid lubricated bearings (particularly bearing cages), and in Section  for fluid lubricated bearings.</p>
 <p>Finally, <strong>fatigue wear</strong> is caused by cyclic loading and corresponding crack formation. It is the dominant bearing failure mechanism in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory  with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the degradation of the lubricant . For this reason, fatigue wear is not discussed any further in the following.</p>
-<section id="adhesive-wear">
+<div class="section" id="adhesive-wear">
 <h3><span class="section-number">2.4.7.1.1. </span>Adhesive wear<a class="headerlink" href="#adhesive-wear" title="Permalink to this headline">¶</a></h3>
 <p>Adhesive wear is considered as governing for many wear failures, and is thus typically used for the analytical prediction of wear. The key parameter for the wear estimation is the volume worn away per unit of sliding distance, which can be estimated based on the classical wear model by Archard , here used in the form of Lancaster . Failure due to adhesive wear is then modelled with the following limit state function:</p>
 <div class="equation admonition">
@@ -768,14 +765,12 @@ summarized as follows:</p>
 <li><p>The effect of the Lognormal assumption for <span class="math notranslate nohighlight">\(X_{1} = V_{limit}\)</span> has been investigated in [RD18] . It may lead to an underestimation of the probability of failure, see Figure 10‑6 below.</p></li>
 </ul>
 <p>Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of <span class="math notranslate nohighlight">\(X_{1} = V_{limit}\)</span> is larger than <span class="math notranslate nohighlight">\(0.3\)</span>.</p>
-<figure class="align-default" id="figure4-6">
-<a class="reference internal image-reference" href="../../../_images/figure4_81.png"><img alt="../../../_images/figure4_81.png" src="../../../_images/figure4_81.png" style="width: 600px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Comparison of the analytic solution in Equation 10‑25 (adhesive wear model with Lognormal distributed* <span class="math notranslate nohighlight">\(V_{limit}\)</span><em>) with Monte Carlo results for Normal distributed</em> <span class="math notranslate nohighlight">\(V_{limit}\)</span></span><a class="headerlink" href="#figure4-6" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="solid-lubricant-wear">
+<div class="figure align-default" id="figure4-6">
+<a class="reference internal image-reference" href="folderMeca/pictures/figure4_8.png"><img alt="folderMeca/pictures/figure4_8.png" src="folderMeca/pictures/figure4_8.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Comparison of the analytic solution in Equation 10‑25 (adhesive wear model with Lognormal distributed* <span class="math notranslate nohighlight">\(V_{limit}\)</span><em>) with Monte Carlo results for Normal distributed</em> <span class="math notranslate nohighlight">\(V_{limit}\)</span></span><a class="headerlink" href="#figure4-6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="solid-lubricant-wear">
 <h3><span class="section-number">2.4.7.1.2. </span>Solid lubricant wear<a class="headerlink" href="#solid-lubricant-wear" title="Permalink to this headline">¶</a></h3>
 <p>Due to the fact that solid lubricants do not evaporate, they are suitable for extreme temperatures (both cold and hot) and for
 applications where contamination could be an issue, e.g. in optical systems. In order to enable on-ground testing and to support the lubrication regime during operations, the lubricant (e.g. sputtered MoS<sub>2</sub>) is stored in special reservoirs such as cages in case of bearings, which are at the same time used to avoid ball collisions in ball bearings. When the lubricant is degraded, new lubricant is provided via the wear of the reservoir.</p>
@@ -874,8 +869,8 @@ applications where contamination could be an issue, e.g. in optical systems. In 
 <li><p>*The effect of the Lognormal assumption for <span class="math notranslate nohighlight">\(X_{1} = V_{limit}\)</span> may lead to an underestimation of the probability of failure, see [RD18] and Figure 10‑6.</p></li>
 </ul>
 <p>Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of <span class="math notranslate nohighlight">\(X_{1} = V_{limit}\)</span> is larger than 0.3.</p>
-</section>
-<section id="fluid-lubricant-wear">
+</div>
+<div class="section" id="fluid-lubricant-wear">
 <h3><span class="section-number">2.4.7.1.3. </span>Fluid lubricant wear<a class="headerlink" href="#fluid-lubricant-wear" title="Permalink to this headline">¶</a></h3>
 <p>In this section a fluid lubricant wear modelling is described taking example in a ball bearing again. The modelling is applicable to other cases of fluid lubricant wear, but the number of revolutions has to be substituted with another measure of sliding distance in this case.</p>
 <p>The starting point for the modelling of fluid lubricant wear is the following limit state function, see [BR79] for details:</p>
@@ -886,12 +881,10 @@ applications where contamination could be an issue, e.g. in optical systems. In 
 \[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = M_{0} - M_{inactive} - \Theta \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet K \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev(t)\]</div>
 </div>
 <p>Here, <span class="math notranslate nohighlight">\(M_{0}\)</span> denotes the initial mass of the lubricant, <span class="math notranslate nohighlight">\(M_{inactive}\)</span> the mass of lubricant not participating in the contact (e.g. due to evaporation), and <span class="math notranslate nohighlight">\(\Theta\)</span> the model uncertainty for the associated term, which represents the model to estimate lubricant life described in [BR79]. In this term, <span class="math notranslate nohighlight">\(N_{b}\)</span> denotes the number of balls in the bearing, <span class="math notranslate nohighlight">\(p_{d}\)</span> the pitch diameter, <span class="math notranslate nohighlight">\(b_{d}\)</span> the ball diameter, <span class="math notranslate nohighlight">\(\vartheta\)</span> the contact angle, <span class="math notranslate nohighlight">\(K\)</span> is an empirical constant, <span class="math notranslate nohighlight">\(p_{m}\)</span> the contact pressure and <span class="math notranslate nohighlight">\(rev\)</span> the number of revoluations during the considered time interval <span class="math notranslate nohighlight">\(t\)</span>. The variables related to bearing geometry are illustrated in the figure given below.</p>
-<figure class="align-default" id="figure4-7">
-<a class="reference internal image-reference" href="../../../_images/figure4_9.png"><img alt="../../../_images/figure4_9.png" src="../../../_images/figure4_9.png" style="height: 600px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Bearing geometry.</span><a class="headerlink" href="#figure4-7" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<div class="figure align-default" id="figure4-7">
+<a class="reference internal image-reference" href="folderMeca/pictures/figure4_9.png"><img alt="folderMeca/pictures/figure4_9.png" src="folderMeca/pictures/figure4_9.png" style="height: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Bearing geometry.</span><a class="headerlink" href="#figure4-7" title="Permalink to this image">¶</a></p>
+</div>
 <p><strong>Simplified fluid lubricant wear model</strong></p>
 <p>For the simplified modelling, it is considered sufficient to model only <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(K\)</span> as random variables; all other variables in Equation 10‑32 are assumed to be deterministic. Since the relation for the bearing life from [BR79], <span class="math notranslate nohighlight">\(K \bullet \text{exp}\left( - 3.35 \bullet p_{m} \right)\)</span>, is purely empirical, curve fitting residuals or the distribution of the coefficient <span class="math notranslate nohighlight">\(K\)</span> may be used for the probabilistic assessments.</p>
 <p>Note that in principle, <span class="math notranslate nohighlight">\(M_{inactive}\)</span> may also be treated as stochastic, but its value will generally be only a small fraction of <span class="math notranslate nohighlight">\(M_{0}\)</span>, typically not exceeding 1-2% when considering only evaporation losses for a bearing with a labyrinth seal under optimal temperature conditions [BR79].</p>
@@ -989,9 +982,9 @@ model are the following:</p>
 <li><p>The uncertainty in most of the variables listed in Table 10‑13 (except for the empirical constant of the lubricant life model <span class="math notranslate nohighlight">\(K\)</span> and the model uncertainty <span class="math notranslate nohighlight">\(\Theta\)</span>) can be neglected.</p></li>
 <li><p>The distributions of <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\Theta\)</span> can be represented by the models listed in Table 10‑13.</p></li>
 </ul>
-</section>
-</section>
-<section id="modelling-of-failures-due-to-fatigue">
+</div>
+</div>
+<div class="section" id="modelling-of-failures-due-to-fatigue">
 <h2><span class="section-number">2.4.7.2. </span>Modelling of failures due to fatigue<a class="headerlink" href="#modelling-of-failures-due-to-fatigue" title="Permalink to this headline">¶</a></h2>
 <p>Fatigue is a failure mechanism incurred by cyclic loading, leading to the initiation and extension of cracks, which degrade the strength of materials and structures. Failures due to fatigue can be considered as the consequence of several steps:</p>
 <ol class="simple">
@@ -1015,7 +1008,7 @@ model are the following:</p>
 </ul>
 <p>Crack formation analysis is typically performed for the fail-safe approach in order to ensure that failure of one redundant structural element does not cause general failure of the entire structure during the remaining lifetime. This analysis is performed based on the <u>S/N curve</u> approach, whose application for reliability modelling is outlined in Section 10.7.2.1.</p>
 <p>The safe life principle implies an assessment of the crack growth using <u>fatigue crack growth</u> models, as discussed in Section 10.7.2.2. Environmental properties can also be considered in these models, allowing the consideration of failure mechanisms due to <u>stress corrosion cracking</u> (SCC).</p>
-<section id="high-cycle-fatigue-modelling-with-the-s-n-curve-approach">
+<div class="section" id="high-cycle-fatigue-modelling-with-the-s-n-curve-approach">
 <h3><span class="section-number">2.4.7.2.1. </span>High cycle fatigue modelling with the S/N curve approach<a class="headerlink" href="#high-cycle-fatigue-modelling-with-the-s-n-curve-approach" title="Permalink to this headline">¶</a></h3>
 <p>Crack generation due to high cycle fatigue is most commonly modelled using so-called S/N curves relating a stress level or equivalent stress <span class="math notranslate nohighlight">\(S_{eq}\)</span> to the number of cycles to failure, <span class="math notranslate nohighlight">\(N_{f}\)</span>:</p>
 <div class="equation admonition">
@@ -1249,8 +1242,8 @@ considering only a single load event, i.e. <span class="math notranslate nohighl
 </tr>
 </tbody>
 </table>
-</section>
-<section id="fatigue-crack-growth-modelling">
+</div>
+<div class="section" id="fatigue-crack-growth-modelling">
 <h3><span class="section-number">2.4.7.2.2. </span>Fatigue crack growth modelling<a class="headerlink" href="#fatigue-crack-growth-modelling" title="Permalink to this headline">¶</a></h3>
 <p>Crack growth calculations are performed to show that the growth of minor
 cracks under fatigue loading does not lead to structural failure. The
@@ -1304,12 +1297,10 @@ growth, ultimately leading to fracture at <span class="math notranslate nohighli
 region is modelled by the factor
 <span class="math notranslate nohighlight">\(\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}\)</span></p></li>
 </ol>
-<figure class="align-default" id="figure4-8">
-<a class="reference internal image-reference" href="../../../_images/figure4_101.png"><img alt="../../../_images/figure4_101.png" src="../../../_images/figure4_101.png" style="width: 600px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Typical fatigue crack growth curve.</span><a class="headerlink" href="#figure4-8" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<div class="figure align-default" id="figure4-8">
+<a class="reference internal image-reference" href="folderMeca/pictures/figure4_10.png"><img alt="folderMeca/pictures/figure4_10.png" src="folderMeca/pictures/figure4_10.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Typical fatigue crack growth curve.</span><a class="headerlink" href="#figure4-8" title="Permalink to this image">¶</a></p>
+</div>
 <p>The crack length <span class="math notranslate nohighlight">\(a(t)\)</span> as a function of time (or number of cycles) can
 be calculated iteratively based on Equation 10‑51. There are three
 possible failure criteria associated with crack growth:</p>
@@ -1570,9 +1561,9 @@ properties can be found in Table 10‑16 (taken from [BR81]).</p>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-<section id="modelling-of-failures-due-to-corrosion">
+</div>
+</div>
+<div class="section" id="modelling-of-failures-due-to-corrosion">
 <h2><span class="section-number">2.4.7.3. </span>Modelling of failures due to corrosion<a class="headerlink" href="#modelling-of-failures-due-to-corrosion" title="Permalink to this headline">¶</a></h2>
 <p>Compared to terrestrial applications, the relevance of mechanical
 failures due to corrosion is generally small, as space systems operate
@@ -1593,8 +1584,8 @@ susceptibility to SCC. Quantitative reliability prediction for this
 failure mechanism is difficult, even though the effect of the
 environment may in principle be accounted for in crack growth modelling,
 see Section 10.7.2.2 for details.</p>
-</section>
-<section id="modelling-of-failures-due-to-material-degradation">
+</div>
+<div class="section" id="modelling-of-failures-due-to-material-degradation">
 <h2><span class="section-number">2.4.7.4. </span>Modelling of failures due to material degradation<a class="headerlink" href="#modelling-of-failures-due-to-material-degradation" title="Permalink to this headline">¶</a></h2>
 <p>Material degradation is a time-dependent process leading to a reduced
 performance of materials (deterioration of the physical properties)
@@ -1615,7 +1606,7 @@ materials.</p>
 <p>The following subsection provides a brief discussion of <u>radiation
 degradation</u> and proposes a generic modelling approach for its
 modelling in mechanical reliability predictions.</p>
-<section id="radiation-degradation-modelling">
+<div class="section" id="radiation-degradation-modelling">
 <h3><span class="section-number">2.4.7.4.1. </span>Radiation degradation modelling<a class="headerlink" href="#radiation-degradation-modelling" title="Permalink to this headline">¶</a></h3>
 <p>The spacecraft radiation environment is characterized by the type,
 fluence, dose rate, energy spectrum and spatial distribution of nuclear
@@ -1704,9 +1695,9 @@ model are the following:</p>
 <li><p>Failure occurs if the cumulated radiation dose exceeds the allowable dose limit.</p></li>
 <li><p>All uncertainties associated with the cumulated and allowable dose and their determination are summarized in the lognormal distributed model uncertainty variable.</p></li>
 </ul>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1721,7 +1712,7 @@ model are the following:</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./folderMeca/interactive_guide/rp_mechanical"
+            path: "./folderMeca\interactive_guide\rp_mechanical"
         },
         predefinedOutput: true
     }

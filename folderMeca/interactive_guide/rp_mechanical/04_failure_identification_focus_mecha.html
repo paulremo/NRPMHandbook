@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2.4.4. Failure mechanisms identification and focus &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
@@ -29,8 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/myadmonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mytables.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,12 +39,9 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/myscript.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -455,7 +451,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="failure-mechanisms-identification-and-focus">
+  <div class="tex2jax_ignore mathjax_ignore section" id="failure-mechanisms-identification-and-focus">
 <h1><span class="section-number">2.4.4. </span>Failure mechanisms identification and focus<a class="headerlink" href="#failure-mechanisms-identification-and-focus" title="Permalink to this headline">¶</a></h1>
 <p>A full mechanical reliability prediction looking at all potential failure mechanisms and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude failure mechanism that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and failure mechanisms), before discussing how to model each failure mechanism in <a class="reference internal" href="05_method_selection_mechanical.html"><span class="doc std std-doc">Section 4.5</span></a> and after.</p>
 <p>To implement this procedure in practice, early interaction between design and reliability engineers is required. In particular, the following information exchange is necessary:</p>
@@ -465,7 +461,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Insight into the failure mechanics of the critical failure modes: conducted tests, available models, governing variables and their distributions.</p></li>
 <li><p>To perform reliability calculations for a specific item and failure mechanism, additional design data such as geometry or loads can be required.</p></li>
 </ul>
-<section id="failure-dominance-and-focus-of-the-prediction">
+<div class="section" id="failure-dominance-and-focus-of-the-prediction">
 <span id="meca-4-4-1"></span><h2><span class="section-number">2.4.4.1. </span>Failure dominance and focus of the prediction<a class="headerlink" href="#failure-dominance-and-focus-of-the-prediction" title="Permalink to this headline">¶</a></h2>
 <p>The first step before starting a reliability assessment is a clear definition of its objective and scope, i.e. the question and the associated boundary conditions shall be clearly stated and understood, see <strong>Chapter 5 (Part I)</strong> for details. Knowing the objective and scope is important also because it implicitly defines which events and consequently failure mechanisms need to be considered.</p>
 <p>Before going into the detailed reliability assessment of a mechanical item, it is helpful to identify its main working principle using the classifications presented in  below.</p>
@@ -525,8 +521,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>Under these conditions, it may be assumed that the reliability figure for the considered structure is equal to unity for practical purposes (in reality, it is just very close to unity). Note that the listed requirements are generally fulfilled for standard structures manufactured with traditional (metallic) materials and manufacturing processes, and using structural factors of safety as defined in ECSS-E-ST-32-10C Error: Reference source not found. Reliability predictions using structural reliability methods under these conditions yield very small probabilities of failure (see e.g. the case study in Error: Reference source not found, which is confirmed also by the good performance of structure in orbit. It should be noted that the probability of systematic failures due to gross design, manufacturing or operations errors may not be negligible irrespective of these conclusions, especially in the case of new designs.</p>
 <p>For structures that do not fulfil the abovementioned conditions, reliability figures need to be calculated considering the relevant structural failure mechanisms. Studies aiming at the reusability of the flight hardware for multiple launches will need additional considerations.</p>
-</section>
-<section id="failure-mechanisms-completion">
+</div>
+<div class="section" id="failure-mechanisms-completion">
 <h2><span class="section-number">2.4.4.2. </span>Failure mechanisms completion<a class="headerlink" href="#failure-mechanisms-completion" title="Permalink to this headline">¶</a></h2>
 <p>The final step involves an assessment of relevant qualitative RAMS data (e.g. FMEA reports, non-compliances reports, design review data packages, and history data) to identify critical failure modes and related failure mechanisms. The outcome shall be used to cross-check the conclusions from the previous steps and to consider additional failure mechanisms as relevant.</p>
 <p>Similar to the considerations made for the structural category in <a class="reference internal" href="#meca-4-4-1"><span class="std std-ref">Section 4.4.1</span></a>, it can be justified to exclude certain parts and failure mechanisms from the analysis, provided that all or most of the following conditions are fulfilled:</p>
@@ -554,8 +550,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Miss ref just above</p>
 </div>
 <p>If it is not possible to test the flight item, assuming a reliability of one needs to be further justified, ideally with the aid of quantitative reliability prediction. Using the structural reliability methods discussed in <a class="reference internal" href="06_structural_method_input_mechanical.html"><span class="doc std std-doc">Section 4.6</span></a>, it is straightforward to account for the factors of safety applied during design, and space heritage without failures and/or extensive testing can easily be considered with statistical methods, or with the aid of Bayesian updating of preliminary reliability estimates (<a class="reference internal" href="06_structural_method_input_mechanical.html#meca-4-6-5"><span class="std std-ref">Section 4.6.5</span></a> and <strong>Chapter 7 Part II</strong>) if the sample size is not large enough.</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -570,7 +566,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./folderMeca/interactive_guide/rp_mechanical"
+            path: "./folderMeca\interactive_guide\rp_mechanical"
         },
         predefinedOutput: true
     }
