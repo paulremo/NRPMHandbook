@@ -478,55 +478,6 @@ const thebe_selector_output = ".output, .cell_output"
 <h1><span class="section-number">2.4.2. </span>Root causes coverage<a class="headerlink" href="#root-causes-coverage" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference internal" href="#meca-table4-1"><span class="std std-ref">Table 4 -1</span></a> gives an overview of the failure categories defined in Chapter 4 (Part I) and their coverage by the methods described in the present chapter. In the following subsections, the interpretation of each failure category within the mechanical chapter is briefly explained.</p>
 <p id="meca-table4-1"><strong>Table 4.1 : Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter</strong></p>
-<figure class="align-default" id="table4-1">
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Root cause category</th>
-      <th>Coverage by the mechanical reliability prediction  methodology</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Random failures</td>
-      <td>Considered by the methods described in Section...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Wear-out failures</td>
-      <td>Considered by the methods described in Section...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Extrinsic failures</td>
-      <td>Foreseen extrinsic effects due to the launch e...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Systematic failures</td>
-      <td>Process related failures due to minor design a...</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</figure>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Root cause category</strong></p></th>
@@ -538,13 +489,7 @@ const thebe_selector_output = ".output, .cell_output"
 <td><p>Considered by the methods described in <a class="reference internal" href="05_method_selection_mechanical.html"><span class="doc std std-doc">Section 4.5</span></a>, including early wear-out failures and failures due to foreseen extrinsic stresses, provided that these cannot be explained by gross design or manufacturing errors (cf. systematic failures).</p></td>
 </tr>
 <tr class="row-odd"><td><p>Wear-out failures</p></td>
-<td><p>Considered by the methods described in <a class="reference internal" href="05_method_selection_mechanical.html"><span class="doc std std-doc">Section 4.5</span></a>, especially by those based on structural reliability theory with time-dependent degradation models.</p></td>
-</tr>
-<tr class="row-even"><td><p>Safe life qualification alone is not sufficient as a justification to discard the probability of premature mechanical wear-out failures before the end of the nominal lifetime.</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>The consideration of additional failure mechanisms, which are assumed to be effectively handled during nominal lifetime, may be required in case of lifetime extensions (using the same methods, but with an extended modelling scope).</p></td>
-<td><p></p></td>
+<td><p>Considered by the methods described in <a class="reference internal" href="05_method_selection_mechanical.html"><span class="doc std std-doc">Section 4.5</span></a>, especially by those based on structural reliability theory with time-dependent degradation models. Safe life qualification alone is not sufficient as a justification to discard the probability of premature mechanical wear-out failures before the end of the nominal lifetime. The consideration of additional failure mechanisms, which are assumed to be effectively handled during nominal lifetime, may be required in case of lifetime extensions (using the same methods, but with an extended modelling scope).</p></td>
 </tr>
 <tr class="row-even"><td><p>Extrinsic failures</p></td>
 <td><p>Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in-orbit (e.g. temperature) should be considered as stress contributors in the modelling of random and wear-out failures, see <a class="reference internal" href="#meca-table4-2"><span class="std std-ref">Table 4 -2</span></a> in <a class="reference internal" href="#meca-4-2-3"><span class="std std-ref">Section 4.2.3</span></a> for the most relevant interactions. A separate modelling may be required if the probability of additional failure mechanisms induced by the space environment cannot be neglected – e.g. space debris impact, see <a class="reference internal" href="#meca-4-2-3"><span class="std std-ref">Section 4.2.3</span></a> for details.</p></td>
