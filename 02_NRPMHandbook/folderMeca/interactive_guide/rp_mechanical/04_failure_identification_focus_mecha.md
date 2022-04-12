@@ -93,5 +93,5 @@ To summarize, thorough testing of the flight item is a good argument to neglect 
 Miss ref just above
 ```
 
-If it is not possible to test the flight item, assuming a reliability of one needs to be further justified, ideally with the aid of quantitative reliability prediction. Using the structural reliability methods discussed in Section 4.6, it is straightforward to account for the factors of safety applied during design, and space heritage without failures and/or extensive testing can easily be considered with statistical methods, or with the aid of Bayesian updating of preliminary reliability estimates (Section 4.6.5 and Chapter 7 Part II) if the sample size is not large enough.
+If it is not possible to test the flight item, assuming a reliability of one needs to be further justified, ideally with the aid of quantitative reliability prediction. Using the structural reliability methods discussed in [Section 4.6](06_structural_method_input_mechanical.md), it is straightforward to account for the factors of safety applied during design, and space heritage without failures and/or extensive testing can easily be considered with statistical methods, or with the aid of Bayesian updating of preliminary reliability estimates ([Section 4.6.5](meca_4_6_5) and **Chapter 7 Part II**) if the sample size is not large enough.
 

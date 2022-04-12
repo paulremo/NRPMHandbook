@@ -114,6 +114,7 @@ It should be noted that only the criticism of the NSWC Handbook regarding the sp
 
 The implicit assumption of constant failure rates can be mitigated by fitting a model that allows for time dependent failure rates in the first step. The NSWC scaling method can then be applied to adjust the location parameter of the selected time to failure distribution, e.g. as multiplicative factors for the inverse of the Weibull characteristic life.
 
+(meca_4_3_2)=
 ## Methods
 
 The following methods can be used for the derivation of reliability estimates for mechanical items:
