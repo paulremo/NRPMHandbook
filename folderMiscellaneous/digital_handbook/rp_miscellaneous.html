@@ -777,7 +777,7 @@ const thebe_selector_output = ".output, .cell_output"
   <section class="tex2jax_ignore mathjax_ignore" id="reliability-prediction-for-miscellaneous-items">
 <h1><span class="section-number">2.4. </span>Reliability prediction for miscellaneous items<a class="headerlink" href="#reliability-prediction-for-miscellaneous-items" title="Permalink to this headline">¶</a></h1>
 <p>This chapter deals with the miscellaneous items which are represented by all parts/item (or sets of parts) which are not fully electrical parts, nor fully mechanical parts nor fully structural parts. The current reliability models (EEE parts, mechanical parts) are not adapted and are not the preferred way to support reliability predictions for these items. Therefore, other ways to provide reliability estimates are proposed in this chapter and are detailed in the next sections.</p>
-<p>The <a class="reference internal" href="#figure4-1"><span class="std std-ref">following figure</span></a> represents examples of some miscellaneous parts/items:</p>
+<p>The <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/02_root_causes_coverage_mechanical.html#figure4-1"><span class="std std-ref">following figure</span></a> represents examples of some miscellaneous parts/items:</p>
 <figure class="align-default" id="figure4-1">
 <a class="reference internal image-reference" href="../../_images/figure4_11.png"><img alt="../../_images/figure4_11.png" src="../../_images/figure4_11.png" style="width: 600px;" /></a>
 <figcaption>
@@ -804,7 +804,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>When the two previous model categories are not useable, a holistic model can be used, as per existing reliability handbooks and/or literature. It is a general model which does not represent exactly the design of the items and which is generally not applicable for Space systems, which means the level of confidence is not high.</p></li>
 </ul>
 <p>However, whatever the model is, it is the responsibility of the supplier to justify the selected reliability model enriched with any valuable improvement based on available data (tests data, manufacturer data, IOR data).</p>
-<p>The process used to define a Miscellaneous (MIS) item reliability model is presented in <a class="reference internal" href="#figure4-2"><span class="std std-ref">Figure 4‑2</span></a>.</p>
+<p>The process used to define a Miscellaneous (MIS) item reliability model is presented in <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/03_data_sources_methods_mechanical.html#figure4-2"><span class="std std-ref">Figure 4‑2</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>MIS-X, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers to Section 11.5.5.</p>
@@ -817,7 +817,7 @@ const thebe_selector_output = ".output, .cell_output"
 </figure>
 <section id="list-of-miscellaneous-items">
 <h2><span class="section-number">2.4.1. </span>List of miscellaneous items<a class="headerlink" href="#list-of-miscellaneous-items" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="#table4-1"><span class="std std-ref">Table 4‑1</span></a> presents the miscellaneous items for which a reliability “standard model” is defined (refer to Sections 11.7 and 11.8).</p>
+<p><a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/02_root_causes_coverage_mechanical.html#table4-1"><span class="std std-ref">Table 4‑1</span></a> presents the miscellaneous items for which a reliability “standard model” is defined (refer to Sections 11.7 and 11.8).</p>
 <p>The reliability model derived from IOR data gathers in fact all the elements related to an “equivalent class” and is only valid for this class of miscellaneous items. The related numerical values are provided in Table 11‑8.</p>
 <p>To use the reliability model it is, first, necessary to assess that the miscellaneous item considered falls in the scope of the model definition. The “standard model” refers to a class of miscellaneous item identified by the main functions which are supported, the parameters reflecting the reliability (quality…) and the operating conditions.</p>
 <p><a class="reference internal" href="#table4-2"><span class="std std-ref">Table 4‑2</span></a> provides additional information for the miscellaneous items for which no “standard model” is provided (the list is not exhaustive, refer to Section 11.7).</p>
@@ -1368,7 +1368,7 @@ So, what is discussed in the following Sections, addressing directly the failure
 </ul>
 <p class="card-text">The failure rate is referred to as basic failure rate <span class="math notranslate nohighlight">\(\lambda_{1} = \lambda_{B}\)</span>. It is defined at 60% level of confidence.</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-1">
-<span class="eqno">(2.17)<a class="headerlink" href="#equation-equation-4-1" title="Permalink to this equation">¶</a></span>\[\lambda_{1} = \lambda_{B}\]</div>
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-equation-4-1" title="Permalink to this equation">¶</a></span>\[\lambda_{1} = \lambda_{B}\]</div>
 </div>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
@@ -1386,7 +1386,7 @@ In the case the actual parameters are different (either higher or lower quality 
 <p class="card-text">The supplier identifies the physical parameters contributing to the reliability and accounting for the item specificities.
 The resulting failure rate is:</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-2">
-<span class="eqno">(2.18)<a class="headerlink" href="#equation-equation-4-2" title="Permalink to this equation">¶</a></span>\[\lambda_{2} = \lambda_{1} * K_{parameters}\]</div>
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-equation-4-2" title="Permalink to this equation">¶</a></span>\[\lambda_{2} = \lambda_{1} * K_{parameters}\]</div>
 <p class="card-text">By default, <span class="math notranslate nohighlight">\(K_{parameters}\)</span> is set to 1, under the condition that the major contributors are sufficiently close to those defined for the basic failure rate.
 It is the responsibility of the user (the supplier) to adapt and/or define the <span class="math notranslate nohighlight">\(K_{parameters}\)</span> as relevant with appropriate technical justification.</p>
 </div>
@@ -1492,7 +1492,7 @@ The average resulting factor is then applied.</p>
 </ul>
 <p class="card-text">The resulting failure rate is</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-3">
-<span class="eqno">(2.19)<a class="headerlink" href="#equation-equation-4-3" title="Permalink to this equation">¶</a></span>\[\lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\]</div>
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-equation-4-3" title="Permalink to this equation">¶</a></span>\[\lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p class="card-text">For operating conditions it is necessary to define the weights per contributor and to add a number of conditions as necessary. The process is:</p>
@@ -1520,7 +1520,7 @@ The two right-hand columns provide the result for one example (<em>“X”</em> 
 <p class="card-text">The step 4 is used to combine the predicted failure rate with IOR data in the case the item is based on a generic product which is already operated in-orbit.
 The method used is the Bayesian approach as presented in Section 4.6.3.</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-4">
-<span class="eqno">(2.20)<a class="headerlink" href="#equation-equation-4-4" title="Permalink to this equation">¶</a></span>\[\lambda_{3}^{\gamma} = \lambda_{3}\]</div>
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-equation-4-4" title="Permalink to this equation">¶</a></span>\[\lambda_{3}^{\gamma} = \lambda_{3}\]</div>
 <p class="card-text">Where <span class="math notranslate nohighlight">\(\lambda_{3}^{\gamma}\)</span> is the gamma estimator.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
@@ -1551,10 +1551,10 @@ All three Models can be defined for every Wear-out probability density function:
 <p class="card-text">The supplier justifies the wear-out model based on the qualification characteristics of the item.
 The resulting failure rate is :</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-5">
-<span class="eqno">(2.21)<a class="headerlink" href="#equation-equation-4-5" title="Permalink to this equation">¶</a></span>\[\lambda_{4}(t) = \lambda_{3}^{\gamma} + \lambda_{WO}(t)\]</div>
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-equation-4-5" title="Permalink to this equation">¶</a></span>\[\lambda_{4}(t) = \lambda_{3}^{\gamma} + \lambda_{WO}(t)\]</div>
 <p class="card-text">The reliability prediction of the item is then provided by:</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-6">
-<span class="eqno">(2.22)<a class="headerlink" href="#equation-equation-4-6" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}\]</div>
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-equation-4-6" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}\]</div>
 </div>
 <p class="card-text"><strong>Discussion about the three models</strong>
 Figure   11 -5 presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.</p>
@@ -1595,7 +1595,7 @@ Figure   11 -5 presents the differences on the reliability and on the failure ra
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">The step 6 consists in adding a probability of failure related to Systematic Failures.</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-7">
-<span class="eqno">(2.23)<a class="headerlink" href="#equation-equation-4-7" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-equation-4-7" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
 <p class="card-text">The model is common to all miscellaneous items.
 Refer to <strong>the Chapter Error: Reference source not found</strong> for defining the SF value.</p>
 </div>
@@ -1608,7 +1608,7 @@ Refer to <strong>the Chapter Error: Reference source not found</strong> for defi
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">The step 7 consists in adding a probability of failure related to the external particles.</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-8">
-<span class="eqno">(2.24)<a class="headerlink" href="#equation-equation-4-8" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - EX) * (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-equation-4-8" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - EX) * (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
 <p class="card-text">The probability of extrinsic failures EX is dependent on</p>
 <ol class="simple">
 <li><p class="card-text">The item location (outside the satellite),</p></li>
@@ -1679,7 +1679,7 @@ It is up to the discretion of the user to use the result appropriately:</p>
 <p>In the case of the exponential distribution, a natural prior distribution is the Gamma distribution (conjugate of the exponential distribution), see Chapter 7 (Part II) for details.</p>
 <p>The Bayesian estimator is defined as the expected value of the random variable <span class="math notranslate nohighlight">\(\Delta\)</span> knowing that a failure has been observed at <span class="math notranslate nohighlight">\(t_{1}\)</span>, <span class="math notranslate nohighlight">\(t_{2}\)</span> … <span class="math notranslate nohighlight">\(t_{n}\)</span>). Then, with a sample encompassing <span class="math notranslate nohighlight">\(n\)</span> items and <span class="math notranslate nohighlight">\(n\)</span> associated times to failure:</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-9">
-<span class="eqno">(2.25)<a class="headerlink" href="#equation-equation-4-9" title="Permalink to this equation">¶</a></span>\[E(\Delta | T_{1} = t_{1}, T_{2} = t_{2}, ..., T_{n} = t_{n}) = \frac{\alpha + n}{\beta + \sum_{i} (t_{i})} = \frac{\frac{\alpha}{n}}{\frac{\beta}{n} + \frac{\sum_{i} (t_{i})}{n}}\]</div>
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-equation-4-9" title="Permalink to this equation">¶</a></span>\[E(\Delta | T_{1} = t_{1}, T_{2} = t_{2}, ..., T_{n} = t_{n}) = \frac{\alpha + n}{\beta + \sum_{i} (t_{i})} = \frac{\frac{\alpha}{n}}{\frac{\beta}{n} + \frac{\sum_{i} (t_{i})}{n}}\]</div>
 <p>The parameters of the gamma prior distribution are selected as per the knowledge of the item.</p>
 <p>Let us assume for a certain miscellaneous item that a basic failure rate is calculated.</p>
 <p>Let us assume that there are some items already in flight with a certain cumulated time, not sufficient enough to provide a result in the order of magnitude of the specification (without prior knowledge).</p>
@@ -1688,11 +1688,11 @@ It is up to the discretion of the user to use the result appropriately:</p>
 <p>It is necessary to provide rules for determining the two parameters <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> with two equations.</p>
 <p>We determine <span class="math notranslate nohighlight">\(\alpha\)</span> so that the expected value of the gamma distribution is <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-10">
-<span class="eqno">(2.26)<a class="headerlink" href="#equation-equation-4-10" title="Permalink to this equation">¶</a></span>\[E(\Delta) = \frac{\alpha}{\beta} = \lambda_{0}\]</div>
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-equation-4-10" title="Permalink to this equation">¶</a></span>\[E(\Delta) = \frac{\alpha}{\beta} = \lambda_{0}\]</div>
 <p>This provides a first equation with <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>.
 A second equation is provided by the level of confidence “<span class="math notranslate nohighlight">\(a\)</span>” attributed to the value <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-11">
-<span class="eqno">(2.27)<a class="headerlink" href="#equation-equation-4-11" title="Permalink to this equation">¶</a></span>\[F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a\]</div>
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-equation-4-11" title="Permalink to this equation">¶</a></span>\[F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a\]</div>
 <p>Ideally, the prior should be defined based on two different estimates for the failure rate <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>, one representing an “average” value (point estimate, entering Equation   4 -10) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering Equation   4 -11).</p>
 <p>Once <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are determined it allows to derive the Bayesian estimator with n being the number of failures and <span class="math notranslate nohighlight">\(\sum t_{i}\)</span> the cumulated time.</p>
 </section>

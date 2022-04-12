@@ -9,7 +9,7 @@ Miss ref just above
 
 An overview on the failure mechanisms covered by the different subsections is found in Table   4 -10. The limit state functions provided in each dedicated subsection are generally applicable with the “full” structural reliability method described in Section 4.6.1 and in Chapter 6 (Part II). Simplified models in the sense of Section 4.6.2, with analytic solutions for the probability of failure calculations, are provided for some failure mechanisms. Failure mechanisms that can be modelled with the aid of simple stress strength methods (as discussed in Section 4.6.3) are also mentioned in Table   4 -10, but will not discussed any further in the present section.
 
-**Table 4.10**: Overview on Failure mechanisms covered in Section 10.7.
+**Table 4.10: Overview on Failure mechanisms covered in Section 10.7.**
 
 | **Failure mechanism category (cf. Table 10‑4)** | **Limit state functions provided in Section 10.6.5**                                                             | **Simplified model?** | **Section**      |
 |-------------------|---------------------------|----------|------------------|
@@ -107,7 +107,7 @@ time unit (the sliding “power”). Thus, $X_{2}$ is defined as the volume
 worn away and $X_{1}$ as the corresponding limiting value. Detailed
 variable definitions are given in Table 10‑11.
 
-**Table 4.10**: Overview on Failure mechanisms covered in Section 10.7.
+**Table 4.10: Overview on Failure mechanisms covered in Section 10.7.**
 
 | **List of variables** | **Unit** | **Distribution** | **CoV range** |
 |-------------------|---------------------------|----------|------------------|
@@ -237,7 +237,7 @@ g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \The
 
 $X_{2}$ is defined as the volume worn away and $X_{1}$ as the corresponding limiting value. Detailed variable definitions are given in Table 10‑12. It should be noted that the parameter $\alpha_{i}$ , defined as the average work of ball/cage interaction forces per bearing revolution, will typically be estimated from tests and is thus dependent on the wear rate $K_{H,i}$ . This is the reason why the wear rate cannot easily be taken out of the sum, as in Equation 10‑19 for the general adhesive wear model.
 
-**Table 4.12**: Assumed probabilistic models for the simplified solid lubricant wear model.
+**Table 4.12: Assumed probabilistic models for the simplified solid lubricant wear model.**
 
 | **List of variables** | **Unit** | **Distribution** | **CoV range** |
 |-------------------|---------------------------|----------|------------------|
@@ -352,7 +352,7 @@ It is furthermore assumed that all variables (except for the number of revolutio
 
 These assumptions allow the application of Equation 10‑32 without any further simplifications in the limit state function. Thus, $X_{1} = M_{0} - M_{inactive}$ is defined as the amout of lubricant available and $X_{2}$ as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in \[BR79\]. Detailed variable definitions are reminded in Table 10‑13 below.
 
-**Table 4.13**: Assumed probabilistic models for the simplified fluid lubricant wear model.
+**Table 4.13: Assumed probabilistic models for the simplified fluid lubricant wear model.**
 
 | **List of variables** | **Unit** | **Distribution** | **CoV range** |
 |-------------------|---------------------------|----------|------------------|
@@ -528,7 +528,7 @@ g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \
 
 Thus, $X_{2}$ is defined as accumulated damage, which is calculated based on the S/N curve approach with the Palmgren-Miner accumulation law, and $X_{1}$ as the corresponding limiting value. Detailed variable definitions are reminded in Table 10‑14.
 
-**Table 4.14**: Assumed probabilistic models for the simplified high-cycle fatigue model.
+**Table 4.14: Assumed probabilistic models for the simplified high-cycle fatigue model.**
 
 | **List of variables** | **Unit** | **Distribution** | **CoV range** |
 |-------------------|---------------------------|----------|------------------|
@@ -676,7 +676,7 @@ considering only a single load event, i.e. $k = 1$. The stresses $S_{eq}$ should
 
 To allow for a first quick assessment, some reference values for the coefficients of variation and some mean values are provided in Table 10‑15. The values may be assumed to be applicable or conservative for most practical purposes, especially when considering the additional conservatism that has been introduced by assuming $C = 0$.
 
-**Table 4.15**: Assumptions for the application of the simplified fatigue model to low risk items.
+**Table 4.15: Assumptions for the application of the simplified fatigue model to low risk items.**
 
 | **List of variables** | **Unit** | **Mean** | **CoV** |
 |-------------------|---------------------------|----------|------------------|
@@ -1110,7 +1110,7 @@ more detailed modelling.
 
 The variable definitions are given in Table 10‑17 below.
 
-**Table 4.17**: Assumed probabilistic models for the simplified radiation degradation model.
+**Table 4.17: Assumed probabilistic models for the simplified radiation degradation model.**
 
 | **List of variables** | **Unit** | **Distribution** | **CoV range** |
 |-------------------|---------------------------|----------|------------------|
