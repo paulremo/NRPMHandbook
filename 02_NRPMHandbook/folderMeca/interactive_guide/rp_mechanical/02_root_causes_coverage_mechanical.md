@@ -5,16 +5,10 @@
 (meca_table4_1)=
 **Table 4.1 : Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter**
 
-```{glue:figure} meca_table4_1
-:name: "table4_1"
-```
-
 |**Root cause category**|**Root cause category**|
 |-----------------------|-----------------------|
 |Random failures|Considered by the methods described in [Section 4.5](05_method_selection_mechanical.md), including early wear-out failures and failures due to foreseen extrinsic stresses, provided that these cannot be explained by gross design or manufacturing errors (cf. systematic failures).|
-|Wear-out failures|Considered by the methods described in [Section 4.5](05_method_selection_mechanical.md), especially by those based on structural reliability theory with time-dependent degradation models. 
-Safe life qualification alone is not sufficient as a justification to discard the probability of premature mechanical wear-out failures before the end of the nominal lifetime. 
-The consideration of additional failure mechanisms, which are assumed to be effectively handled during nominal lifetime, may be required in case of lifetime extensions (using the same methods, but with an extended modelling scope).|
+|Wear-out failures|Considered by the methods described in [Section 4.5](05_method_selection_mechanical.md), especially by those based on structural reliability theory with time-dependent degradation models. Safe life qualification alone is not sufficient as a justification to discard the probability of premature mechanical wear-out failures before the end of the nominal lifetime. The consideration of additional failure mechanisms, which are assumed to be effectively handled during nominal lifetime, may be required in case of lifetime extensions (using the same methods, but with an extended modelling scope).|
 |Extrinsic failures|Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in-orbit (e.g. temperature) should be considered as stress contributors in the modelling of random and wear-out failures, see [Table 4 -2](meca_table4_2) in [Section 4.2.3](meca_4_2_3) for the most relevant interactions. A separate modelling may be required if the probability of additional failure mechanisms induced by the space environment cannot be neglected – e.g. space debris impact, see [Section 4.2.3](meca_4_2_3) for details.|
 |Systematic failures|Process related failures due to minor design and manufacturing weaknesses can be considered with the methods described in [Section 4.5](05_method_selection_mechanical.md), provided that the failure process or mechanism remains unchanged (cf. random failures). 
 Gross design or manufacturing errors must be considered separately, see Section Error: Reference source not found in the System level chapter.|
