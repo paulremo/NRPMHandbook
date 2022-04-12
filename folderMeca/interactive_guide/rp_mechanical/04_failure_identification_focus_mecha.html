@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2.4.4. Failure mechanisms identification and focus &#8212; NRPM Digital handbook</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/myscript.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.4.5. Method selection for different items and failure mechanisms" href="05_method_selection_mechanical.html" />
+    <link rel="prev" title="2.4.3. Data sources and methods" href="03_data_sources_methods_mechanical.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Welcome the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Utilities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Utilities/notebooks.html">
+   1. Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Utilities/markdown-notebooks.html">
+   2. Markdown for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Utilities/interactive-js.html">
+   3. Javascipt interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Utilities/interactive.html">
+   4. Python interactivity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../folderEEE/mainEEE.html">
+   1. Introduction to EEE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Meca section
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mainMeca.html">
+   1. Introduction to Mechanicals
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../introduction.html">
+   2. Mechanicals Digital Handbook
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../scope.html">
+     2.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../normative_references.html">
+     2.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../terms.html">
+     2.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="00_rp_mechanical.html">
+     2.4. Reliability prediction for mechanical and structural parts and assemblies
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="01_process_mechanical_rp.html">
+       2.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="02_root_causes_coverage_mechanical.html">
+       2.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="03_data_sources_methods_mechanical.html">
+       2.4.3. Data sources and methods
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       2.4.4. Failure mechanisms identification and focus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="05_method_selection_mechanical.html">
+       2.4.5. Method selection for different items and failure mechanisms
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="06_structural_method_input_mechanical.html">
+       2.4.6. Structural reliability methods and inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="07_structural_models_equations_mechanical.html">
+       2.4.7. Structural reliability models and equations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="08_examples_mechanical.html">
+       2.4.8. Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../folderMiscellaneous/mainMiscellaneous.html">
+   1. Introduction to Miscellaneous
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/introduction.html">
+   2. Miscellaneous Digital Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/scope.html">
+     2.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/normative_references.html">
+     2.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/terms.html">
+     2.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/rp_miscellaneous.html">
+     2.4. Reliability prediction for miscellaneous items
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/conclusion.html">
+     2.5. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/annexA.html">
+     2.6. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/annexB.html">
+     2.7. Annex B
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous.html">
+   3. Miscellaneous Interactive Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/interactive_guide/general_methodology.html">
+     3.1. General Methodology
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderSystem/mainSystem.html">
+   1. Introduction to RP at System Level
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderSystem/test.html">
+     1.1. Test
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    By Airbus Defence & Space
+    © Copyright 2021.
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/folderMeca/interactive_guide/rp_mechanical/04_failure_identification_focus_mecha.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#failure-dominance-and-focus-of-the-prediction">
+   2.4.4.1. Failure dominance and focus of the prediction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#failure-mechanisms-completion">
+   2.4.4.2. Failure mechanisms completion
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Failure mechanisms identification and focus</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#failure-dominance-and-focus-of-the-prediction">
+   2.4.4.1. Failure dominance and focus of the prediction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#failure-mechanisms-completion">
+   2.4.4.2. Failure mechanisms completion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="failure-mechanisms-identification-and-focus">
+<h1><span class="section-number">2.4.4. </span>Failure mechanisms identification and focus<a class="headerlink" href="#failure-mechanisms-identification-and-focus" title="Permalink to this headline">¶</a></h1>
+<p>A full mechanical reliability prediction looking at all potential failure mechanisms and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude failure mechanism that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and failure mechanisms), before discussing how to model each failure mechanism in Section 4.5 and after.</p>
+<p>To implement this procedure in practice, early interaction between design and reliability engineers is required. In particular, the following information exchange is necessary:</p>
+<ul class="simple">
+<li><p>Heritage and test data on identical or similar components: cumulated hours, observed failure modes, operational conditions</p></li>
+<li><p>Identification of the most critical failure modes based on the available data, design considerations and physics of failure.</p></li>
+<li><p>Insight into the failure mechanics of the critical failure modes: conducted tests, available models, governing variables and their distributions.</p></li>
+<li><p>To perform reliability calculations for a specific item and failure mechanism, additional design data such as geometry or loads can be required.</p></li>
+</ul>
+<section id="failure-dominance-and-focus-of-the-prediction">
+<h2><span class="section-number">2.4.4.1. </span>Failure dominance and focus of the prediction<a class="headerlink" href="#failure-dominance-and-focus-of-the-prediction" title="Permalink to this headline">¶</a></h2>
+<p>The first step before starting a reliability assessment is a clear definition of its objective and scope, i.e. the question and the associated boundary conditions shall be clearly stated and understood, see Chapter 5 (Part I) for details. Knowing the objective and scope is important also because it implicitly defines which events and consequently failure mechanisms need to be considered.</p>
+<p>Before going into the detailed reliability assessment of a mechanical item, it is helpful to identify its main working principle using the classifications presented in  below.</p>
+<p><strong>Table 4.3</strong>: Classification of mechanical items based on their working principle.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Category</strong></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+<th class="head"><p><strong>Examples</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>I</p></td>
+<td><p>Active mechanisms</p></td>
+<td><p>Mechanisms employing electric motors and actuators</p></td>
+<td><p>Deployment and pointing mechanisms, scanner, inertial measurement units</p></td>
+</tr>
+<tr class="row-odd"><td><p>II</p></td>
+<td><p>Passive and pyro actuated mechanisms</p></td>
+<td><p>Mechanisms actuated by pre-stressed springs or pyro charges</p></td>
+<td><p>Release and separation mechanisms, clamp bands, hinges</p></td>
+</tr>
+<tr class="row-even"><td><p>III</p></td>
+<td><p>Non-fluidic structural components</p></td>
+<td><p>Components realizing the structural architecture</p></td>
+<td><p>Primary and secondary structure, housings, harness</p></td>
+</tr>
+<tr class="row-odd"><td><p>IV</p></td>
+<td><p>Fluidic structural components</p></td>
+<td><p>Components containing fluids or gases</p></td>
+<td><p>Pressurized vessels, heat pipes, loop heat pipes, tubing</p></td>
+</tr>
+</tbody>
+</table>
+<div class="note admonition">
+<p class="admonition-title">Note</p>
+<p>Note that some of these items may be covered by “standard” Miscellaneous models (Chapter Error: Reference source not found). However, the modelling approaches for Mechanical items provided in the present chapter may be useful in the case the “standard” Miscellaneous model based on IOR is not applicable and a “non-standard” model has to be developed by the user.</p>
+</div>
+<p>The classification helps to preliminary identify the failure mechanisms that are most relevant at assembly level. For example, as soon as motorization is present, increase of friction due to lubrication wear or distortion play a dominant role for the overall item’s reliability. For passive and pyro mechanisms, fatigue and aging are expected to define the reliability.</p>
+<p>However, the final selection of the dominant failure mechanisms shall be performed based on the concrete design solution. The identification of the dominant and secondary failure mechanisms is important as it helps focusing on the key reliability aspects whilst effectively using the schedule. To give an example, it may be sufficient to focus on the dominant ones when making a prediction at an early stage of the development.</p>
+<p>Typically, components falling into category III “Non-fluidic structural components” can be considered as “intrinsically reliable” within the design lifetime when the following requirements are satisfied:</p>
+<ul class="simple">
+<li><p>Qualification and design factors ≥ 1.25</p></li>
+<li><p>Material and loading variability within usual ranges</p></li>
+<li><p>The design shows positive margins</p></li>
+<li><p>Qualification is completed</p></li>
+<li><p>Quality Assurance program is established</p></li>
+</ul>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just below x2</p>
+</div>
+<p>Under these conditions, it may be assumed that the reliability figure for the considered structure is equal to unity for practical purposes (in reality, it is just very close to unity). Note that the listed requirements are generally fulfilled for standard structures manufactured with traditional (metallic) materials and manufacturing processes, and using structural factors of safety as defined in ECSS-E-ST-32-10C Error: Reference source not found. Reliability predictions using structural reliability methods under these conditions yield very small probabilities of failure (see e.g. the case study in Error: Reference source not found, which is confirmed also by the good performance of structure in orbit. It should be noted that the probability of systematic failures due to gross design, manufacturing or operations errors may not be negligible irrespective of these conclusions, especially in the case of new designs.</p>
+<p>For structures that do not fulfil the abovementioned conditions, reliability figures need to be calculated considering the relevant structural failure mechanisms. Studies aiming at the reusability of the flight hardware for multiple launches will need additional considerations.</p>
+</section>
+<section id="failure-mechanisms-completion">
+<h2><span class="section-number">2.4.4.2. </span>Failure mechanisms completion<a class="headerlink" href="#failure-mechanisms-completion" title="Permalink to this headline">¶</a></h2>
+<p>The final step involves an assessment of relevant qualitative RAMS data (e.g. FMEA reports, non-compliances reports, design review data packages, and history data) to identify critical failure modes and related failure mechanisms. The outcome shall be used to cross-check the conclusions from the previous steps and to consider additional failure mechanisms as relevant.</p>
+<p>Similar to the considerations made for the structural category in Section 4.4.1, it can be justified to exclude certain parts and failure mechanisms from the analysis, provided that all or most of the following conditions are fulfilled:</p>
+<ul class="simple">
+<li><p>High factors of safety and/or low variability</p></li>
+<li><p>Space qualified components</p></li>
+<li><p>Quality Assurance program is established</p></li>
+<li><p>Space heritage without observed failures</p></li>
+<li><p>Successful qualification and acceptance testing</p></li>
+</ul>
+<p>Assuming a reliability of unity for these items (apart systematic failures) results in a reduced list of the failure mechanisms to be considered in the quantitative reliability calculations. However, the exclusion of these items assumed to be “intrinsically reliable” from the quantitative analysis should be justified and documented clearly.</p>
+<p><strong>The role of testing for flight item reliability</strong></p>
+<p>The approach followed for verification testing plays an important role for the flight item’s reliability, and thus for the decision which items can be considered as “intrinsically reliable” with reliability equal to unity. The following questions are relevant in this context:</p>
+<ol class="simple">
+<li><p>Is the test performed on the flight item or on another - possibly several item(s)?</p></li>
+<li><p>How many items are tested in case it is not the flight item that is tested?</p></li>
+<li><p>What is the test level (e.g. load factors) applied?</p></li>
+</ol>
+<p>The first question is clearly the most relevant from a reliability perspective. Testing the flight item – in the mission representative environment with test levels equal to or larger than, but still in a similar order of magnitude as the stresses expected during the mission – is an excellent means to detect flaws due to both gross error and “normal” process variability that may otherwise lead to failures in orbit. It may be assumed that the good performance of structural items can be explained – partly or largely – to this effect. It is not possible to make a general statement on the choice of the exact test level in this context. On the one hand, the screening for existing flaws will be the more effective, the higher the stresses applied during the test. On the other hand, new flaws may be introduced by the test, and in the case of cumulated loading (e.g. fatigue loading), the test loads can be an important contribution to the overall life cycle loading of the flight item.</p>
+<p>For some items and/or failure mechanisms, e.g. one-shot or limited lifetime items, it is not possible to perform the test on the flight item. In this case it is critical to know how many (other) items are tested. Testing only one duplicate of the flight item is still very important for the purpose of quality assurance, but nearly useless from the perspective of reliability prediction for the (untested) flight item. Only certain systematic flaws, e.g. due to gross design or manufacturing mistakes affecting all identical items in the same way, can be detected with such a test. Even though this information is important and often decisive, e.g. during the qualification campaign followed by acceptance testing, it does not infer “intrinsic” reliability. Margins in the failure mechanisms variables and low system level complexity can indicate potentially high reliability, but in general case failures due to process variability can only be avoided (or predicted) with a larger number of tests, e.g. batch acceptance testing performed on the same lot as the flight item.</p>
+<p>Regarding the choice of the test level or duration, it is of course more interesting to test at higher levels (ideally up to failure), and there is no disbenefit from a reliability perspective as long as it is not the flight item that is tested. However, this requires good understanding of the relevant failure mechanisms. For example, to screen for premature failure (infant mortality) of parts prone to fatigue or wear, it can be necessary to reach a certain number of cycles with substantial loading while keeping cumulated damage as low as possible; aging effects might affect explosive devices which might be critical for long duration missions. Finally, it should be controlled that the test environment is representative.</p>
+<p>To summarize, thorough testing of the flight item is a good argument to neglect a certain item or failure mechanism during the reliability prediction, especially when all or most of the other conditions listed above are true. If the probability of failure shall anyway be quantified, it is possible to consider the fact that the flight item has survived the verification test by adapting the strength distribution when using structural reliability methods Error: Reference source not found. A possible application of this approach may be to trade-off between reliability and mass for one-cycle-to-failure items such as tanks.</p>
+<p>If it is not possible to test the flight item, assuming a reliability of one needs to be further justified, ideally with the aid of quantitative reliability prediction. Using the structural reliability methods discussed in Section 4.6, it is straightforward to account for the factors of safety applied during design, and space heritage without failures and/or extensive testing can easily be considered with statistical methods, or with the aid of Bayesian updating of preliminary reliability estimates (Section 4.6.5 and Chapter 7 Part II) if the sample size is not large enough.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "paulremo/NRPMHandbook",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./folderMeca/interactive_guide/rp_mechanical"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="03_data_sources_methods_mechanical.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2.4.3. </span>Data sources and methods</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="05_method_selection_mechanical.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.4.5. </span>Method selection for different items and failure mechanisms</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
