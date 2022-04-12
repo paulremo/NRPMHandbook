@@ -1,6 +1,6 @@
 #  Data sources and methods
 
-The following subsections discuss the inputs and reliability prediction methods introduced in Chapter 6 (Part II), focussing on their use in mechanical domain.
+The following subsections discuss the inputs and reliability prediction methods introduced in **Chapter 6 (Part II)**, focussing on their use in mechanical domain.
 
 ## Inputs
 
@@ -21,7 +21,7 @@ Despite its late appearance in the preference listing given above, a good unders
 
 ### Analysis of the failure mechanisms
 
-A first analysis and understanding of the potential failure mechanisms for mechanical parts and equipment should generally be available from the design process and should always be considered as an important input for the prediction, even if a pure statistical approach is used to estimate an item’s reliability. The approach described in Sections 4.4 and 4.5 is based on this idea, focussing on the identification of relevant failure mechanisms although not necessarily requiring Physics of Failure methods for the mathematical modelling.
+A first analysis and understanding of the potential failure mechanisms for mechanical parts and equipment should generally be available from the design process and should always be considered as an important input for the prediction, even if a pure statistical approach is used to estimate an item’s reliability. The approach described in Sections [4.4](04_failure_identification_focus_mecha.md) and [4.5](05_method_selection_mechanical.md) is based on this idea, focussing on the identification of relevant failure mechanisms although not necessarily requiring Physics of Failure methods for the mathematical modelling.
 
 ### In-orbit return data
 
@@ -80,9 +80,14 @@ The confidence in the NPRD data strongly depends on its relevance with respect t
 
 The NSWC Handbook for Mechanical Reliability Prediction Error: Reference source not foundprovides models derived from a combined approach similar to the one applied for EEE components in Chapter Error: Reference source not found: Base failure rates, derived from statistical data at reference conditions, are scaled to a specific design and operating conditions with the aid of multiplicative factors accounting for the specificities of material, design and environment. The scaling factors are based on PoF relationships to determine the mean time to failure MTTF at reference and operating conditions:
 
-````{math}
-:label: Equation 4.1
+
+````{admonition} Equation 4.1
+:class: equation
+``
+``  
+```{math}
 \lambda = \lambda_{ref} \bullet \frac{\lambda_{op}}{\lambda} = \lambda_{ref} \bullet \frac{MTTF_{ref}}{MTTF} = \lambda_{ref} \bullet C
+```
 ````
 
 The advantage of this approach is the increased flexibility, as generic models for different part “families”, e.g. springs, can be tuned to a wide variety of specific part types and applications. Despite this interesting feature, the direct application of the NSWC models for reliability predictions in space applications is not recommended due to the following limitations:
@@ -95,7 +100,7 @@ The advantage of this approach is the increased flexibility, as generic models f
 * 
 As a result, the NSWC should not be used as a data source for mechanical reliability prediction in space applications. The data can only be used to derive “ballpark” estimates, e.g. for early design phases, for comparison with other methods, or as a prior for Bayesian updating. 
 
-Beyond this, the NSWC method is recommended only as a scaling method for specific part types, allowing to tune statistical estimates from “space relevant” data sources (the NSWC base failure rates should not be used). The approach is applicable only if the failure mechanisms that are of relevance in space applications are the same as those considered by the NSWC models, see Table   4 -6 in Section 4.5.2 for guidance. It is based on the following steps:
+Beyond this, the NSWC method is recommended only as a scaling method for specific part types, allowing to tune statistical estimates from “space relevant” data sources (the NSWC base failure rates should not be used). The approach is applicable only if the failure mechanisms that are of relevance in space applications are the same as those considered by the NSWC models, see [Table   4 -6](meca_table4_6) in [Section 4.5.2](meca_4_5_2) for guidance. It is based on the following steps:
 
 * Estimate a new base failure rate with statistical methods using relevant data. The data should be “space relevant” in terms of design, quality level and dominating failure mechanisms, but must not exactly fit the required application.
 * Select the parameters from the NSWC Handbook method that are needed to scale the new base failure rate to the considered application.
@@ -118,9 +123,10 @@ The following methods can be used for the derivation of reliability estimates fo
 * **Handbook methods** are not the recommended choice for mechanical reliability prediction in space applications, as has been discussed in Section , addressing NPRD and NSWC. 
 * **A combined approach** based on one of the methods listed above and Bayesian updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.
 
-Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the Physics of Failure. General guidance on method selection is presented in Figure   4 -2 below. The upper row in the matrix represents statistical methods, the middle row a combined approach with Bayesian updating, and the lower row either handbook methods or data (NPRD, NSWC) or – generally preferred in the absence of statistical data – structural reliability methods (SRM) based on the Physics of Failures.
-More specific recommendations are given in Section 4.5.
+Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the Physics of Failure. General guidance on method selection is presented in [Figure 4 -2](meca_figure4_2) below. The upper row in the matrix represents statistical methods, the middle row a combined approach with Bayesian updating, and the lower row either handbook methods or data (NPRD, NSWC) or – generally preferred in the absence of statistical data – structural reliability methods (SRM) based on the Physics of Failures.
+More specific recommendations are given in [Section 4.5](05_method_selection_mechanical.md).
 
+(meca_figure4_2)=
 ```{figure} ../../pictures/figure4_2.png
 ---
 width: 600px
@@ -129,8 +135,9 @@ name: figure4_2
 Method selection for mechanical reliability prediction depending on the available input.
 ```
 
-In the following subsections, the implementation of the different methods in mechanical domain is briefly discussed, covering all methods listed above. The remainder of this chapter (Sections 4.4 and following) focuses largely on the Physics of Failure as a basis for mechanical reliability prediction.
+In the following subsections, the implementation of the different methods in mechanical domain is briefly discussed, covering all methods listed above. The remainder of this chapter ([Sections 4.4](04_failure_identification_focus_mecha.md) and [following](meca_4_3_2_1)) focuses largely on the Physics of Failure as a basis for mechanical reliability prediction.
 
+(meca_4_3_2_1)
 ### Statistical methods
 
 Statistical methods for reliability prediction are in principle domain-independent, and do not require any specific considerations for mechanical parts. However, the following two important reliability characteristics of mechanical parts should be kept in mind when doing the analysis:
@@ -139,13 +146,18 @@ Statistical methods for reliability prediction are in principle domain-independe
 * Mechanical items reliability is strongly dependent on the specific design and use conditions. Data from different applications should thus be treated with care, possibly requiring a dedicated Physics of Failure modelling to understand the impact of the relevant variables.
 
 
-The use of statistical methods for mechanical reliability prediction is not discussed any further in the present chapter; the reader is referred to Chapter 6 (Part II) for a discussion of these methods.
+The use of statistical methods for mechanical reliability prediction is not discussed any further in the present chapter; the reader is referred to **Chapter 6 (Part II)** for a discussion of these methods.
 
 ### Physics of Failure methods
-The use of structural reliability methods for mechanical reliability prediction is discussed in more detail in Sections 4.6 and 4.7. The use of other methods that are based on the Physics of Failure (not described in this chapter) is possible, provided that the failure mechanism modelling is accompanied by a suitable quantification of the relevant uncertainties.
+The use of structural reliability methods for mechanical reliability prediction is discussed in more detail in Sections [4.6](06_structural_method_input_mechanical.md) and [4.7](07_structural_models_equations_mechanical.md). The use of other methods that are based on the Physics of Failure (not described in this chapter) is possible, provided that the failure mechanism modelling is accompanied by a suitable quantification of the relevant uncertainties.
 
 ### Handbook methods
 The use of existing reliability handbooks and data sources, especially as a stand-alone method, is generally not recommended for the modelling of mechanical items in space applications. Limitations of the NPRD Error: Reference source not foundand NSWC  Error: Reference source not foundhandbooks are discussed in Section , including some guidance on potential uses of these methods, e.g. to derive ball-park estimates for preliminary design or as a prior for a combined approach using Bayesian updating.
 
+```{admonition} Todo
+:class: todo
+missing 2 refs above
+```
+
 ### Combined approach
-Bayesian updating is the recommended method for combining different sources of information for mechanical reliability prediction with independent statistical data. The specific case of Bayesian updating for reliability estimates derived with structural reliability methods, using failure data collected e.g. in part level testing, is discussed in Section 4.6.5. However, Bayesian statistics as discussed in Chapter 7 (Part II) are applicable also more generally, e.g. to update preliminary estimates based on Handbook data or expert elicitation.
+Bayesian updating is the recommended method for combining different sources of information for mechanical reliability prediction with independent statistical data. The specific case of Bayesian updating for reliability estimates derived with structural reliability methods, using failure data collected e.g. in part level testing, is discussed in [Section 4.6.5](meca_4_6_5). However, Bayesian statistics as discussed in **Chapter 7 (Part II)** are applicable also more generally, e.g. to update preliminary estimates based on Handbook data or expert elicitation.
