@@ -10,7 +10,7 @@
 }
 .admonition.todo .admonition-title:before {
     color: rgb(255, 255, 255);
-    content: '\f19d';
+    content: '\f085';
 }
 
 .admonition.rule {
@@ -21,7 +21,7 @@
 }
 .admonition.rule .admonition-title:before {
     color: rgb(255, 255, 255);
-    content: '\f19d';
+    content: '\f197';
 }
 
 .admonition.recommendation {
@@ -32,7 +32,7 @@
 }
 .admonition.recommendation .admonition-title:before {
     color: rgb(255, 255, 255);
-    content: '\f19d';
+    content: '\f091';
 }
 
 .admonition.remark {
@@ -43,5 +43,16 @@
 }
 .admonition.remark .admonition-title:before {
     color: rgb(255, 255, 255);
-    content: '\f19d';
+    content: '\f0a4';
+}
+
+.admonition.equation {
+    border-left-color: rgb(8, 8, 168);
+}
+.admonition.equation .admonition-title {
+    background-color: rgba(71, 89, 230, 0.814);
+}
+.admonition.equation .admonition-title:before {
+    color: rgb(255, 255, 255);
+    content: '\f12b';
 }

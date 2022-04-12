@@ -1,6 +1,6 @@
 # Failure mechanisms identification and focus
 
-A full mechanical reliability prediction looking at all potential failure mechanisms and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude failure mechanism that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and failure mechanisms), before discussing how to model each failure mechanism in Section 4.5 and after.
+A full mechanical reliability prediction looking at all potential failure mechanisms and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude failure mechanism that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and failure mechanisms), before discussing how to model each failure mechanism in [Section 4.5](05_method_selection_mechanical.md) and after.
 
 To implement this procedure in practice, early interaction between design and reliability engineers is required. In particular, the following information exchange is necessary:
 
@@ -9,13 +9,15 @@ To implement this procedure in practice, early interaction between design and re
 * Insight into the failure mechanics of the critical failure modes: conducted tests, available models, governing variables and their distributions. 
 * To perform reliability calculations for a specific item and failure mechanism, additional design data such as geometry or loads can be required.
 
+(meca_4_4_1)=
 ## Failure dominance and focus of the prediction
 
-The first step before starting a reliability assessment is a clear definition of its objective and scope, i.e. the question and the associated boundary conditions shall be clearly stated and understood, see Chapter 5 (Part I) for details. Knowing the objective and scope is important also because it implicitly defines which events and consequently failure mechanisms need to be considered.
+The first step before starting a reliability assessment is a clear definition of its objective and scope, i.e. the question and the associated boundary conditions shall be clearly stated and understood, see **Chapter 5 (Part I)** for details. Knowing the objective and scope is important also because it implicitly defines which events and consequently failure mechanisms need to be considered.
 
 Before going into the detailed reliability assessment of a mechanical item, it is helpful to identify its main working principle using the classifications presented in  below. 
 
-**Table 4.3**: Classification of mechanical items based on their working principle.
+(meca_table4_3)=
+**Table 4.3: Classification of mechanical items based on their working principle.**
 
 | **Category** |                                      | **Description**                                             | **Examples**                                                            |
 |----|-----------------|-----------------------|----------------------------|
@@ -27,6 +29,11 @@ Before going into the detailed reliability assessment of a mechanical item, it i
 ```{admonition} Note
 :class: note
 Note that some of these items may be covered by “standard” Miscellaneous models (Chapter Error: Reference source not found). However, the modelling approaches for Mechanical items provided in the present chapter may be useful in the case the “standard” Miscellaneous model based on IOR is not applicable and a “non-standard” model has to be developed by the user.
+```
+
+```{admonition} Todo
+:class: todo
+miss ref above
 ```
 
 The classification helps to preliminary identify the failure mechanisms that are most relevant at assembly level. For example, as soon as motorization is present, increase of friction due to lubrication wear or distortion play a dominant role for the overall item’s reliability. For passive and pyro mechanisms, fatigue and aging are expected to define the reliability. 
@@ -54,7 +61,7 @@ For structures that do not fulfil the abovementioned conditions, reliability fig
 
 The final step involves an assessment of relevant qualitative RAMS data (e.g. FMEA reports, non-compliances reports, design review data packages, and history data) to identify critical failure modes and related failure mechanisms. The outcome shall be used to cross-check the conclusions from the previous steps and to consider additional failure mechanisms as relevant.
 
-Similar to the considerations made for the structural category in Section 4.4.1, it can be justified to exclude certain parts and failure mechanisms from the analysis, provided that all or most of the following conditions are fulfilled:
+Similar to the considerations made for the structural category in [Section 4.4.1](meca_4_4_1), it can be justified to exclude certain parts and failure mechanisms from the analysis, provided that all or most of the following conditions are fulfilled:
 
 * High factors of safety and/or low variability 
 * Space qualified components
@@ -80,6 +87,11 @@ For some items and/or failure mechanisms, e.g. one-shot or limited lifetime item
 Regarding the choice of the test level or duration, it is of course more interesting to test at higher levels (ideally up to failure), and there is no disbenefit from a reliability perspective as long as it is not the flight item that is tested. However, this requires good understanding of the relevant failure mechanisms. For example, to screen for premature failure (infant mortality) of parts prone to fatigue or wear, it can be necessary to reach a certain number of cycles with substantial loading while keeping cumulated damage as low as possible; aging effects might affect explosive devices which might be critical for long duration missions. Finally, it should be controlled that the test environment is representative.
 
 To summarize, thorough testing of the flight item is a good argument to neglect a certain item or failure mechanism during the reliability prediction, especially when all or most of the other conditions listed above are true. If the probability of failure shall anyway be quantified, it is possible to consider the fact that the flight item has survived the verification test by adapting the strength distribution when using structural reliability methods Error: Reference source not found. A possible application of this approach may be to trade-off between reliability and mass for one-cycle-to-failure items such as tanks.
+
+```{admonition} Todo
+:class: todo
+Miss ref just above
+```
 
 If it is not possible to test the flight item, assuming a reliability of one needs to be further justified, ideally with the aid of quantitative reliability prediction. Using the structural reliability methods discussed in Section 4.6, it is straightforward to account for the factors of safety applied during design, and space heritage without failures and/or extensive testing can easily be considered with statistical methods, or with the aid of Bayesian updating of preliminary reliability estimates (Section 4.6.5 and Chapter 7 Part II) if the sample size is not large enough.
 

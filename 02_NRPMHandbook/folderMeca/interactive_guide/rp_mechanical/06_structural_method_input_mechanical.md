@@ -8,6 +8,7 @@ In the following, the use of different methods based on structural reliability t
 * 
 Finally, Section 4.6.4 discusses the probabilistic modelling of random variables required as an input for structural reliability methods (with given failure mechanism model, see e.g. the models presented in Section 4.7). Bayesian updating of structural reliability estimates with new (failure) data is discussed in Section 4.6.5.
 
+(meca_4_6_1)=
 ## Structural reliability methods for mechanical reliability prediction
 The general principles of structural reliability prediction methods are discussed in Chapter 6 (Part II) of this handbook. Applying these methods to mechanical reliability prediction requires going through the following steps:
 
@@ -52,10 +53,16 @@ Miss ref just above
 ### Generic approach for the formulation of the limit state function
 The simplified approach is based on a generic limit state function with the following simple format:
 
-````{math}
-:label: Equation 4.2
+
+````{admonition} Equation 4.2
+:class: equation
+``
+``  
+```{math}
 g(X) = X_{1} - \Theta X_{2}
+```
 ````
+
 
 Here, $X_{1}$ may be interpreted as the “resistance” (allowable stress, or strength) of the considered part and $X_{2}$ as the “load” (or stress) acting on it. To capture the uncertainties inherent in the applied models, a model uncertainty variable $\Theta$ is introduced. Failure occurs if the load is larger than the resistance, or $\Theta X_{2} > X_{1}$. Thus, the probability of failure is derived from the overlap of the statistical distributions of $X_{1}$ and $\Theta X_{2}$, see Figure 4 -3 for illustration. 
 
@@ -120,25 +127,40 @@ In the following, closed-form solutions are given for these three cases. The cho
 
 The probability of failure for the Normal distribution assumption is derived as follows:
 
-````{math}
-:label: Equation 4.3
+
+````{admonition} Equation 4.3
+:class: equation
+``
+``  
+```{math}
 P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi \left(\frac{- \mu_{X_{1}} - \mu_{X_{2}}}{\sqrt{\sigma_{X_{1}}^{2} + \sigma_{X_{2}}^{2}}}\right) = \Phi \left(\frac{- p - 1}{\sqrt{p^{2} \nu_{X_{1}}^{2} + \nu_{X_{2}}^{2}}}\right)
+```
 ````
 
 Where $\mu_{X}$, $\sigma_{X}$ and $\nu_{X}$ represent the mean value, standard deviation and coefficient of variation of the random variables $X_{1}$ and $X_{2}$ and $\Phi$ denotes the cumulative distribution function of the standard Normal distribution. On the right-hand side of Equation 10 -3, the probability of failure is derived as a function of the so-called central safety factor, $p = \mu_{X_{1}} / \mu_{X_{2}}$.
 
 For the Lognormal distribution case we get:
 
-````{math}
-:label: Equation 4.4
+
+````{admonition} Equation 4.4
+:class: equation
+``
+``  
+```{math}
 P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi \left(\frac{- \ln(p) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
+```
 ````
 
 Finally, in the third case, the probability of failure is simply derived from the distribution function of the remaining random variable:
 
-````{math}
-:label: Equation 4.5
+
+````{admonition} Equation 4.5
+:class: equation
+``
+``  
+```{math}
 P_{f} \cong F_{X_{1}}(\widehat{X_{2}})  or  P_{f} \cong 1 - F_{X_{2}}(\widehat{X_{1}})
+```
 ````
 
 Where $\widehat{X_{1}}$ or $\widehat{X_{2}}$ represents a point estimate of the variable whose dispersion is neglected. It is relevant to note that, even though the references values for the usual dispersion of strength variables provided in Table   4 -8 are generally smaller than the values provided in Table   4 -9 for the dispersion of loads, the strength dispersion is not negligible, and the closed-form solution in Equation   10 -5 cannot be used as an approximation for these cases.
@@ -262,6 +284,7 @@ Reference values for usual dispersions of applied stresses are provided in Table
 :name: "table4_9"
 ```
 
+(meca_4_6_5)=
 ## Bayesian updating of structural reliability estimates
 Apart from the use of Bayesian updating for basic variable distributions (Section 4.6.4), the Bayes approach can also be applied to improve prior reliability estimates derived with structural reliability methods, making use of data samples with individual time-to-failure records of several items. Also small data samples can be used for this purpose. 
 
@@ -269,81 +292,133 @@ An example for Bayesian updating of a prior structural reliability estimate is g
 
 The general principles of Bayesian updating in a reliability context are discussed in Chapter 7 (Part II). For Bayesian updating in the present context, the prior has to be defined based on the considered limit state function and the corresponding basic variable distributions. The limit state function can usually explicitly or implicitly be defined as a function of time $t$ (or number of cycles / revolutions). Thus, the cumulative distribution function of the random time to failure can be derived by estimating the probability of failure as a function of $t$:
 
-````{math}
-:label: Equation 4.6
+
+````{admonition} Equation 4.6
+:class: equation
+``
+``  
+```{math}
 F_{T}(t) = P[T \leq t] = P_{f}(t) = P[g(X(t)) \leq 0]
+```
 ````
 
 The resulting function may be interpreted as the prior predictive distribution for the sample variable, as all uncertainties (including model uncertainties and uncertainties associated with the basic variables) are already integrated in the assessment.
 
 A straightforward approach for updating this prior is to treat the model uncertainty $\Theta$, which is one of the basic variables in $X$, as the uncertain model parameter of the prior model. The prior distribution for $\Theta$ is then the distribution assumed during the structural reliability assessment and the sampling distribution (likelihood) can be derived by conditioning on $\Theta = \theta$:
 
-````{math}
-:label: Equation 4.7
+
+````{admonition} Equation 4.7
+:class: equation
+``
+``  
+```{math}
 F_{T}(t | \theta) = P[T \leq t | \theta] = P_{f}(t | \theta) = P[g(X(t)) \leq 0 | \Theta = \theta]
+```
 ````
 
 The conditional distribution function $F_{T}(t | \theta)$ defined by Equation   10 -7 can now be used as the sampling distribution for the formulation of the Likelihood, which is combined with a prior for the distribution of the random model uncertainty, $f'_{\Theta}(\theta)$, to apply Bayes rule for updating. In the general case, this will require numerical methods to perform the updating. However, an analytic solution can be derived for the special case of Bayesian updating for a prior derived from the simplified structural reliability method introduced in Section 4.6.2, as will be discussed in the following.
 
 Using the generic simplified limit state function defined in Equation   10 -2, Equation   10 -7 can be reformulated as follows:
 
-````{math}
-:label: Equation 4.8
+
+````{admonition} Equation 4.8
+:class: equation
+``
+``  
+```{math}
 F_{T}(t | \theta) = P[X_{1}(t) - \theta X_{2}(t) \leq 0] = P[p(t) X'_{1} - \theta X'_{2} \leq 0]
+```
 ````
 
 Here, $X_{1}(t)$ denotes the random “resistance” (or strength) of the considered part against the random “load” (or stress) $X_{2}(t)$. Both random variables are normalized (variables with prime) such that $E(X'_{1}) = E(X'_{2}) = 1$. The mean value information is then summarized in the parameter $p = E(X_{1})/E(X_{2})$. In Equation   10 -8 it is assumed that only the expected values of $X_{1}$ and $X_{2}$ are a function of time, while the coefficients of variation $\nu_{X_{1}}$ and $\nu_{X_{2}}$ remain constant.
 
 The analytic method for Bayesian updating is based on the assumption that all random variables in Equation   10 -8 (i.e. $X_{1}$ and $X_{2}$ or $X'_{1}$ and $X'_{2}$) are Lognormal distributed. With this assumption, the sampling distribution $F_{T}(t |\theta)$ is derived as follows:
 
-````{math}
-:label: Equation 4.9
+
+````{admonition} Equation 4.9
+:class: equation
+``
+``  
+```{math}
 F_{T}(t | \theta) = \Phi \left(\frac{- \ln(p(t)) + \ln(\theta) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
+```
 ````
 
 To proceed, a suitable function $p(t)$ must be defined. For the limit state functions provided with simplified model in Section 4.7, it may be assumed that the mean value parameter $p$ is proportional to $1/t$, although for some failure mechanisms this may be an approximation only. An alternative approach would be to derive the sampling distribution for $p$ instead of $t$. The data used for updating (observations for $t$) must then be transformed to “observed” mean value parameters $p(t)$.
 
 The following derivation is based on the proportionality assumption mentioned above. In this case, $p(t)$ may be replaced by $p = k \bullet 1/t$, where $k$ is a constant specific to the considered item and failure mechanism. This leads to the following formulation:
 
-````{math}
-:label: Equation 4.10
+
+````{admonition} Equation 4.10
+:class: equation
+``
+``  
+```{math}
 F_{T}(t | \theta) = \Phi \left(\frac{- \ln(t) - \ln(k) + \ln(\theta) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
+```
 ````
 
 By comparing this result with the cumulative distribution function of the Lognormal distribution, it may be concluded that the random time to failure $T$ follows a Lognormal distribution with the following distribution parameters:
 
-````{math}
-:label: Equation 4.11
+
+````{admonition} Equation 4.11
+:class: equation
+``
+``  
+```{math}
 \mu_{T} = \ln(k) - \ln(\theta) + 0.5 (-\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1))
+```
 ````
 
-````{math}
-:label: Equation 4.12
+````{admonition} Equation 4.12
+:class: equation
+``
+``  
+```{math}
 \sigma_{T} = \sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}
+```
 ````
 
 For the Bayesian updating, the „deterministic“ model uncertainty $\theta$ in Equation   10 -11 is now replaced by a random variable $\Theta$. The random model uncertainty is assumed to follow a Lognormal distribution with mean value $E(\Theta) = 1$ (when assuming an unbiased failure mechanism model, see Section  for discussion) and coefficient of variation $\nu_{\Theta}$ (with specific values proposed for each simplified model presented in Section 4.7). With this, the parameter $\mu_{T}$ is Normal distributed with the following prior (hyper-)parameters:
 
-````{math}
-:label: Equation 4.13
+
+````{admonition} Equation 4.13
+:class: equation
+``
+``  
+```{math}
 \mu ' = \ln(k) - \ln(E(\theta)) + 0.5 (\ln(\nu_{\Theta}^{2} + 1) - \ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1))
+```
 ````
 
-````{math}
-:label: Equation 4.14
+````{admonition} Equation 4.14
+:class: equation
+``
+``  
+```{math}
 \sigma ' = \sqrt{\ln(\nu_{\Theta}^{2} + 1)}
+```
 ````
 
 The Normal distribution for the location parameter $\mu_{T}$ is a conjugate prior for the Lognormal sampling distribution. With a random sample of time-to-failure observations $\widehat{t} = \widehat{t_{1}}, ..., \widehat{t_{n}}$, the posterior hyperparameters for the Lognormal sampling distribution can thus be derived analytically: 
 
-````{math}
-:label: Equation 4.15
+
+````{admonition} Equation 4.15
+:class: equation
+``
+``  
+```{math}
 \mu '' = (\sigma '')^{2} \left(\frac{\mu '}{\sigma'^{2}} + \frac{\sum_{i=1}^{n} (\\ln(\widehat{t_{i}}))}{\sigma_{T}^{2}}\right)
+```
 ````
 
-````{math}
-:label: Equation 4.16
+````{admonition} Equation 4.16
+:class: equation
+``
+``  
+```{math}
 \sigma '' = (1 / \sigma'^{2} + n / \sigma_{T}^{2})^{1/2}
+```
 ````
 
 To summarize, a simple Bayesian updating scheme for reliability estimates derived from the simplified method introduced in Section 4.6.2 may be defined as follows:
