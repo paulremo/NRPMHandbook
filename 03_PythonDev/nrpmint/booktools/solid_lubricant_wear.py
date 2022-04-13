@@ -73,9 +73,6 @@ def display(analysis, rev_hour):
     # plt.xlabel('years')
     # plt.legend(['Limiting Volume','Volume worn away'])
 
-    # write markdown output to cell
-    IPython.display.display(IPython.display.Markdown(f'The **probability of failure** is $P_f$={pf[0]:.2E} at {E_nrev:.2E} revolutions!'))
-
 
 def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
                  Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU,
@@ -194,45 +191,22 @@ def web_ui():
 
 if __name__ == "__main__":
     # define random variables
-    Vlim = {
-        'dist': 'Gumbel', #{'LogNormal', 'Normal', 'Gumbel'}
-        'E': 6.5e-8,
-        'CoV': 0.2
-    }
-    KH = {
-        'dist': 'Normal', #{'LogNormal', 'Normal', 'Gumbel'}
-        'E': 4e-15,
-        'CoV': 0.66
-    }
-    alpha = {
-        'dist': 'LogNormal', #{'LogNormal', 'Normal', 'Gumbel'}
-        'E': 0.018,
-        'CoV': 0.2
-    }
-    MU = {
-        'dist': 'LogNormal',
-        'E': 1,
-        'CoV': 0.2
-    }
-
-    # and constants
+    Dist_Vlim = 'Gumbel'
+    E_Vlim = 6.5e-8
+    CoV_Vlim = 0.2
+    Dist_KH = 'Normal'
+    E_KH = 4e-15
+    CoV_KH = 0.66
+    Dist_alpha = 'LogNormal'
+    E_alpha = 0.018
+    CoV_alpha = 0.2
+    Dist_MU = 'LogNormal'
+    E_MU = 1
+    CoV_MU = 0.2
     E_nrev = 245e+6
+    Rev_per_hour = 1000
 
-    # correlation matrix
-    corrmat = [[1.0, 0.0, 0.0, 0.0],
-               [0.0, 1.0, 0.5, 0.0],
-               [0.0, 0.5, 1.0, 0.0],
-               [0.0, 0.0, 0.0, 1.0]]
-
-    # define limit-state function
-    lsf = lambda Vlim, KH, alpha, MU, E_nrev: Vlim - KH * alpha * MU * E_nrev
-
-    # run form reliability analysis
-    my_reliability_analysis = form(lsf, corrmat=corrmat, Vlim=Vlim, KH=KH, alpha=alpha, MU=MU, E_nrev=E_nrev)
-
-    # display
-    rev_hour = 1000
-    display(my_reliability_analysis, rev_hour)
-
-    # print
-    print(f'The failure probability is {my_reliability_analysis.getFailure()[0]}')
+    # call model_wrapper
+    model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
+                  Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU,
+                  E_nrev, Rev_per_hour)
