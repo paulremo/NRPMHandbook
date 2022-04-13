@@ -27,6 +27,10 @@ html:
             © Copyright 2021.
         </div>
 
+# options for binder kernel
+binderOptions: {
+    repo: "https://github.com/paulremo/NRPMInteractivity",
+}
 
 # Information about where the book exists on the web
 repository:

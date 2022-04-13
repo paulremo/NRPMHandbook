@@ -1,1 +1,0 @@
-git+https://github.com/paulremo/NRPMHandbook#egg=nrpmint&subdirectory=03_PythonDev
