@@ -1,7 +1,7 @@
 from setuptools import setup
 
-requires = [
-    "pystra",
+install_requires = [
+    'pystra>=0.0.1',
 ]
 
-setup()
+setup(install_requires = install_requires)
