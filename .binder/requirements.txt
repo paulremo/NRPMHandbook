@@ -2,4 +2,4 @@ jupyter-book
 matplotlib
 numpy
 scipy
-git+https://github.com/paulremo/NRPMHandbook#egg=version_subpkg&subdirectory=03_PythonDev/reliability
+git+https://github.com/paulremo/NRPMHandbook#subdirectory=03_PythonDev/reliability
