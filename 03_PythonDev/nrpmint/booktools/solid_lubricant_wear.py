@@ -1,7 +1,7 @@
 # display packages
-# from IPython.display import display, Markdown
-# import ipywidgets as widgets
-# from ipywidgets import interactive, Layout, HBox, VBox
+import IPython
+import ipywidgets as widgets
+from ipywidgets import interactive, Layout, HBox, VBox
 
 # scientific packages
 from nrpmint.reliability.form import form
@@ -10,22 +10,22 @@ from matplotlib import pyplot as plt
 import pystra
 
 
-def display_reliability(analysis, rev_hour):
+def display(analysis, rev_hour):
     '''Displays the reliability analysis results'''
     # Some single results:
     pf = analysis.getFailure()
     stochastic_model = analysis.model
 
-    pf_mat = []
-    rev_mat = np.linspace(stochastic_model.consts['E_nrev'] * 0.8, stochastic_model.consts['E_nrev'] * 1.2, 5)
-    # for plot of the "Resistance"
-    for rev in rev_mat:
-        # Update value of constant
-        stochastic_model = analysis.model
-        stochastic_model.consts['E_nrev'] = rev
-        # Perform FORM analysis
-        my_reliability_analysis = pystra.Form(analysis_options=analysis.options, stochastic_model=stochastic_model, limit_state=analysis.limitstate)
-        pf_mat.append(my_reliability_analysis.getFailure())
+    # pf_mat = []
+    # rev_mat = np.linspace(stochastic_model.consts['E_nrev'] * 0.8, stochastic_model.consts['E_nrev'] * 1.2, 5)
+    # # for plot of the "Resistance"
+    # for rev in rev_mat:
+    #     # Update value of constant
+    #     stochastic_model = analysis.model
+    #     stochastic_model.consts['E_nrev'] = rev
+    #     # Perform FORM analysis
+    #     my_reliability_analysis = pystra.Form(analysis_options=analysis.options, stochastic_model=stochastic_model, limit_state=analysis.limitstate)
+    #     pf_mat.append(my_reliability_analysis.getFailure())
 
     # construct distribution and evaluate PDF
     E_KH = stochastic_model.variables['KH'].getMean()
@@ -66,15 +66,130 @@ def display_reliability(analysis, rev_hour):
     plt.ylabel('probability density function')
     plt.legend(['Limiting Volume', 'Volume worn away'])
 
-    plt.figure(2)
-    plt.plot(E_nrev / (rev_hour * 365 * 24), pf, 'ro')
-    plt.plot(rev_mat / (rev_hour * 365 * 24), pf_mat, 'r--')
-    plt.ylabel('probability of failure')
-    plt.xlabel('years')
+    # plt.figure(2)
+    # plt.plot(E_nrev / (rev_hour * 365 * 24), pf, 'ro')
+    # plt.plot(rev_mat / (rev_hour * 365 * 24), pf_mat, 'r--')
+    # plt.ylabel('probability of failure')
+    # plt.xlabel('years')
     # plt.legend(['Limiting Volume','Volume worn away'])
 
     # write markdown output to cell
-    # display(Markdown(f'The **probability of failure** is $P_f$={pf[0]:.2E} at {E_nrev:.2E} revolutions!'))
+    IPython.display.display(IPython.display.Markdown(f'The **probability of failure** is $P_f$={pf[0]:.2E} at {E_nrev:.2E} revolutions!'))
+
+
+def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
+                 Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU,
+                 E_nrev, Rev_per_hour):
+    '''Wrapper for nrpmint.reliability.form that passes the arguments to the correct dictionary structure.'''
+
+    Vlim = {
+        'dist': Dist_Vlim,
+        'E': E_Vlim,
+        'CoV': CoV_Vlim
+    }
+    KH = {
+        'dist': Dist_KH,
+        'E': E_KH,
+        'CoV': CoV_KH
+    }
+    alpha = {
+        'dist': Dist_alpha,
+        'E': E_alpha,
+        'CoV': CoV_alpha
+    }
+    MU = {
+        'dist': Dist_MU,
+        'E': E_MU,
+        'CoV': CoV_MU
+    }
+
+    # and constants
+    E_nrev = E_nrev
+
+    # correlation matrix
+    corrmat = [[1.0, 0.0, 0.0, 0.0],
+               [0.0, 1.0, 0.5, 0.0],
+               [0.0, 0.5, 1.0, 0.0],
+               [0.0, 0.0, 0.0, 1.0]]
+
+    # define limit-state function
+    lsf = lambda Vlim, KH, alpha, MU, E_nrev: Vlim - KH * alpha * MU * E_nrev
+
+    # run form reliability analysis
+    my_reliability_analysis = form(lsf, corrmat=corrmat, Vlim=Vlim, KH=KH, alpha=alpha, MU=MU, E_nrev=E_nrev)
+
+    # display
+    display(my_reliability_analysis, Rev_per_hour)
+
+    # print
+    print(f'The failure probability is {my_reliability_analysis.getFailure()[0]}')
+
+
+def web_ui():
+    '''Prepare user interface to interact with reliabilty functions'''
+    # prepare sliders and drop downs
+    Dist_Vlim_dd = widgets.Dropdown(options=['LogNormal', 'Normal', 'Gumbel'], value='Gumbel',
+                                    description='Dist $V_{\\text{lim}}$', disabled=False, )
+    E_Vlim_fs = widgets.FloatSlider(value=6.5e-8, min=1e-8, max=1e-7, step=1e-9,
+                                    description='$\\text{E}[V_{\\text{lim}}]$', disabled=False, continuous_update=True,
+                                    orientation='horizontal', readout=True, readout_format='.1e', )
+    CoV_Vlim_fs = widgets.FloatSlider(value=0.2, min=0.05, max=1, step=0.05,
+                                      description='$\\text{C.o.V.}[V_{\\text{lim}}]$', disabled=False,
+                                      continuous_update=True, orientation='horizontal', readout=True,
+                                      readout_format='.2f', )
+    Dist_KH_dd = widgets.Dropdown(options=['LogNormal', 'Normal', 'Gumbel'], value='Normal', description='Dist $K_H$',
+                                  disabled=False, )
+    E_KH_fs = widgets.FloatSlider(value=4e-15, min=1e-15, max=1e-14, step=1e-15, description='$\\text{E}[K_H]$',
+                                  disabled=False, continuous_update=True, orientation='horizontal', readout=True,
+                                  readout_format='.1e', )
+    CoV_KH_fs = widgets.FloatSlider(value=0.65, min=0.05, max=1, step=0.05, description='$\\text{C.o.V.}[K_H]$',
+                                    disabled=False, continuous_update=True, orientation='horizontal', readout=True,
+                                    readout_format='.2f', )
+    Dist_alpha_dd = widgets.Dropdown(options=['LogNormal', 'Normal', 'Gumbel'], value='Gumbel',
+                                     description='Dist $\\alpha$', disabled=False, )
+    E_alpha_fs = widgets.FloatSlider(value=0.018, min=0.01, max=0.1, step=0.001, description='$\\text{E}[\\alpha]$',
+                                     disabled=False, continuous_update=True, orientation='horizontal', readout=True,
+                                     readout_format='.1e', )
+    CoV_alpha_fs = widgets.FloatSlider(value=0.2, min=0.05, max=1, step=0.05, description='$\\text{C.o.V.}[\\alpha]$',
+                                       disabled=False, continuous_update=True, orientation='horizontal', readout=True,
+                                       readout_format='.2f', )
+    Dist_MU_dd = widgets.Dropdown(options=['LogNormal'], value='LogNormal', description='Dist $\Theta$',
+                                  disabled=False, )
+    E_MU_fs = widgets.FloatSlider(value=1, min=0.01, max=1, step=0.01, description='$\\text{E}[\Theta]$',
+                                  disabled=False, continuous_update=True, orientation='horizontal', readout=True,
+                                  readout_format='.1e', )
+    CoV_MU_fs = widgets.FloatSlider(value=0.2, min=0.05, max=1, step=0.05, description='$\\text{C.o.V.}[\Theta]$',
+                                    disabled=False, continuous_update=True, orientation='horizontal', readout=True,
+                                    readout_format='.2f', )
+    E_nrev_fs = widgets.FloatSlider(value=2.45e+8, min=1e+8, max=1e+9, step=5e+6, description='$\\text{E}[r]$',
+                                    disabled=False, continuous_update=True, orientation='horizontal', readout=True,
+                                    readout_format='.1e', )
+    Rev_per_hour_fs = widgets.FloatSlider(value=1e+6, min=1e6, max=1e+7, step=1e+6, description='$\\text{E}[r_h]$',
+                                          disabled=False, continuous_update=True, orientation='horizontal',
+                                          readout=True, readout_format='.1e', )
+
+    # put inside interactive
+    ip = interactive(model_wrapper, Dist_Vlim=Dist_Vlim_dd, E_Vlim=E_Vlim_fs, CoV_Vlim=CoV_Vlim_fs, Dist_KH=Dist_KH_dd,
+                     E_KH=E_KH_fs, CoV_KH=CoV_KH_fs, Dist_alpha=Dist_alpha_dd, E_alpha=E_alpha_fs, CoV_alpha=CoV_alpha_fs,
+                     Dist_MU=Dist_MU_dd, E_MU=E_MU_fs, CoV_MU=CoV_MU_fs, E_nrev=E_nrev_fs, Rev_per_hour=Rev_per_hour_fs)
+
+    ip.children
+    # setup input controls
+    input_controls = ip.children[:-1]
+    column_1 = VBox(input_controls[:6])
+    column_2 = VBox(input_controls[6:12])
+    column_3 = VBox(input_controls[12:])
+    input_box = HBox([column_1, column_2, column_3])
+
+    # setup output
+    output_stream = ip.children[-1]
+
+    # display
+    # show input fields
+    IPython.display.display(input_box)
+
+    # show output
+    IPython.display.display(output_stream)
 
 
 if __name__ == "__main__":
@@ -117,7 +232,7 @@ if __name__ == "__main__":
 
     # display
     rev_hour = 1000
-    display_reliability(my_reliability_analysis, rev_hour)
+    display(my_reliability_analysis, rev_hour)
 
     # print
     print(f'The failure probability is {my_reliability_analysis.getFailure()[0]}')
