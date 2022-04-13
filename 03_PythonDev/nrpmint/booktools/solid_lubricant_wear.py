@@ -1,10 +1,10 @@
 # display packages
-from IPython.display import display, Markdown
-import ipywidgets as widgets
-from ipywidgets import interactive, Layout, HBox, VBox
+# from IPython.display import display, Markdown
+# import ipywidgets as widgets
+# from ipywidgets import interactive, Layout, HBox, VBox
 
 # scientific packages
-from reliability.form import form
+from nrpmint.reliability.form import form
 import numpy as np
 from matplotlib import pyplot as plt
 import pystra
@@ -74,7 +74,7 @@ def display_reliability(analysis, rev_hour):
     # plt.legend(['Limiting Volume','Volume worn away'])
 
     # write markdown output to cell
-    display(Markdown(f'The **probability of failure** is $P_f$={pf[0]:.2E} at {E_nrev:.2E} revolutions!'))
+    # display(Markdown(f'The **probability of failure** is $P_f$={pf[0]:.2E} at {E_nrev:.2E} revolutions!'))
 
 
 if __name__ == "__main__":
