@@ -3,6 +3,7 @@ from setuptools import setup
 # installation requirements
 install_requires = [
     'pystra@git+https://github.com/pystra/pystra',
+    'matplotlib'
 ]
 
 setup(
