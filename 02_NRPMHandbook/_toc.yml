@@ -18,8 +18,6 @@ parts:
       title: Javascipt interactivity
     - file: Utilities/interactive
       title: Python interactivity
-    - file: folderMiscellaneous/interactive_guide/search_table_test
-      title: Table interactivity
   - caption: EEE section
     numbered: true
     chapters:
@@ -30,23 +28,23 @@ parts:
     chapters:
     - file: folderMeca/mainMeca
       title: Introduction to Mechanicals
-    - file: folderMeca/interactive_guide/introduction
+    - file: folderMeca/digital_handbook/introduction
       title: Mechanicals Digital Handbook
       sections:
-      - file: folderMeca/interactive_guide/scope
-      - file: folderMeca/interactive_guide/normative_references
-      - file: folderMeca/interactive_guide/terms
-      - file: folderMeca/interactive_guide/rp_mechanical/00_rp_mechanical
+      - file: folderMeca/digital_handbook/scope
+      - file: folderMeca/digital_handbook/normative_references
+      - file: folderMeca/digital_handbook/terms
+      - file: folderMeca/digital_handbook/rp_mechanical/00_rp_mechanical
         title: Reliability prediction for mechanical and structural parts and assemblies
         sections:
-        - file: folderMeca/interactive_guide/rp_mechanical/01_process_mechanical_rp
-        - file: folderMeca/interactive_guide/rp_mechanical/02_root_causes_coverage_mechanical
-        - file: folderMeca/interactive_guide/rp_mechanical/03_data_sources_methods_mechanical
-        - file: folderMeca/interactive_guide/rp_mechanical/04_failure_identification_focus_mecha
-        - file: folderMeca/interactive_guide/rp_mechanical/05_method_selection_mechanical
-        - file: folderMeca/interactive_guide/rp_mechanical/06_structural_method_input_mechanical
-        - file: folderMeca/interactive_guide/rp_mechanical/07_structural_models_equations_mechanical
-        - file: folderMeca/interactive_guide/rp_mechanical/08_examples_mechanical                         
+        - file: folderMeca/digital_handbook/rp_mechanical/01_process_mechanical_rp
+        - file: folderMeca/digital_handbook/rp_mechanical/02_root_causes_coverage_mechanical
+        - file: folderMeca/digital_handbook/rp_mechanical/03_data_sources_methods_mechanical
+        - file: folderMeca/digital_handbook/rp_mechanical/04_failure_identification_focus_mecha
+        - file: folderMeca/digital_handbook/rp_mechanical/05_method_selection_mechanical
+        - file: folderMeca/digital_handbook/rp_mechanical/06_structural_method_input_mechanical
+        - file: folderMeca/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical
+        - file: folderMeca/digital_handbook/rp_mechanical/08_examples_mechanical                         
   - caption: Miscellaneous section
     numbered: true
     chapters:
@@ -65,7 +63,10 @@ parts:
     - file: folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous
       title: Miscellaneous Interactive Guide
       sections:
-      - file: folderMiscellaneous/interactive_guide/general_methodology
+      - file: folderMiscellaneous/interactive_guide/search_table_test
+        title: Table interactivity
+      - file: folderMiscellaneous/interactive_guide/misc_failure_rate_processing
+        title: Failure rate processing
   - caption: System section
     numbered: true
     chapters:

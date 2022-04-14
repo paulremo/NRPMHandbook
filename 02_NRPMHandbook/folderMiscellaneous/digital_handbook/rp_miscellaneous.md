@@ -310,6 +310,7 @@ The supplier justifies the rationale supporting the use of a “model” (functi
 
 The failure rate is referred to as basic failure rate $\lambda_{1} = \lambda_{B}$. It is defined at 60% level of confidence.
 
+(misc_equation4_1)=
 ```{math}
 :label: Equation 4.1
 \lambda_{1} = \lambda_{B}
@@ -447,6 +448,7 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
 
 The resulting failure rate is 
 
+(misc_equation4_3)=
 ```{math}
 :label: Equation 4.3
 \lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}
