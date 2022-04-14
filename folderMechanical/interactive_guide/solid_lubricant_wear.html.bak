@@ -442,8 +442,8 @@ For solid lubricant reservoir wear (e.g. cage of a ball bearing), the limit stat
     {
         requestKernel: true,
         binderOptions: {
-            repo: "paulremo/NRPMInteractivity",
-            ref: "python",
+            repo: "paulremo/NRPMInteractivity/python",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
