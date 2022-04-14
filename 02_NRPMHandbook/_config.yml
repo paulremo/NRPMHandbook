@@ -27,16 +27,24 @@ html:
             © Copyright 2021.
         </div>
 
-# options for binder kernel
-binderOptions: {
-    repo: "https://github.com/paulremo/NRPMInteractivity",
-}
 
 # Information about where the book exists on the web
 repository:
   url                       : https://github.com/paulremo/NRPMHandbook  # Online location of your book
   path_to_book              : 02_NRPMHandbook  # Optional path to your book, relative to the repository root
   branch                    : main 
+ 
+ 
+# modifications of sphinx config
+sphinx:
+  config:
+    # modifications of thebe config (change of the repo URL to the interactivity repo)
+    thebe_config:
+      repository_url        : https://github.com/paulremo/NRPMInteractivity
+      repository_branch     : main
 
+
+# deactivate mybinder button and activate thebe button
 launch_buttons:
-  thebe                  : true
+  binderhub_url             : ""
+  thebe                     : true
