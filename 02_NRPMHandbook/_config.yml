@@ -23,7 +23,7 @@ html:
     use_multitoc_numbering: false
     extra_navbar: |
         <div>
-            By Airbus Defence & Space
+            By Matrisk & Airbus Defence & Space
             © Copyright 2021.
         </div>
 
