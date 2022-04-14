@@ -41,7 +41,7 @@ sphinx:
     # modifications of thebe config (change of the repo URL to the interactivity repo)
     thebe_config:
       repository_url        : https://github.com/paulremo/NRPMInteractivity
-      repository_branch     : main
+      repository_branch     : python
 
 
 # deactivate mybinder button and activate thebe button
