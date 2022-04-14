@@ -173,10 +173,9 @@ def web_ui():
     ip.children
     # setup input controls
     input_controls = ip.children[:-1]
-    column_1 = VBox(input_controls[:6])
-    column_2 = VBox(input_controls[6:12])
-    column_3 = VBox(input_controls[12:])
-    input_box = HBox([column_1, column_2, column_3])
+    column_1 = VBox(input_controls[:7])
+    column_2 = VBox(input_controls[7:])
+    input_box = HBox([column_1, column_2])
 
     # setup output
     output_stream = ip.children[-1]
