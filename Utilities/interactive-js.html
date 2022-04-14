@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>3. Interactivity-test javascript &#8212; NRPM Digital handbook</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
@@ -38,9 +39,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/myscript.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -50,9 +54,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Soil lubricant wear model" href="interactive.html" />
+    <link rel="next" title="4. Interactivity test" href="interactive.html" />
     <link rel="prev" title="2. Notebooks with MyST Markdown" href="markdown-notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -396,6 +402,12 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
+        <a class="binder-button" href="https://mybinder.org/v2/gh/paulremo/NRPMHandbook/main?urlpath=tree/02_NRPMHandbook/Utilities/interactive-js.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
         
         
         <button type="button" class="btn btn-secondary topbarbtn"
@@ -428,18 +440,18 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="interactivity-test-javascript">
+  <section class="tex2jax_ignore mathjax_ignore" id="interactivity-test-javascript">
 <h1><span class="section-number">3. </span>Interactivity-test javascript<a class="headerlink" href="#interactivity-test-javascript" title="Permalink to this headline">¶</a></h1>
 <p>This page tests the interactivity with javascript.</p>
 <p>You can include custom javascript in the book - click this button to display a surprise message.</p>
 <p><button onclick="myFunction()">Click me</button></p>
-<p id="demo"></p></div>
+<p id="demo"></p></section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "paulremo/NRPMInteractivity",
+            repo: "paulremo/NRPMHandbook",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -470,7 +482,7 @@ const thebe_selector_output = ".output, .cell_output"
     <a class='right-next' id="next-link" href="interactive.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Soil lubricant wear model</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Interactivity test</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.4.6. Structural reliability methods and inputs &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
@@ -29,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mytables.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -38,9 +40,12 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/myscript.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -530,7 +535,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="structural-reliability-methods-and-inputs">
+  <section class="tex2jax_ignore mathjax_ignore" id="structural-reliability-methods-and-inputs">
 <h1><span class="section-number">2.4.6. </span>Structural reliability methods and inputs<a class="headerlink" href="#structural-reliability-methods-and-inputs" title="Permalink to this headline">¶</a></h1>
 <p>In the following, the use of different methods based on structural reliability theory are briefly discussed in the context of mechanical reliability prediction (Section <a class="reference internal" href="#meca-4-6-1"><span class="std std-ref">4.6.1</span></a> to <a class="reference internal" href="#meca-4-6-3"><span class="std std-ref">4.6.3</span></a>):</p>
 <ul class="simple">
@@ -540,7 +545,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li></li>
 </ul>
 <p>Finally, <a class="reference internal" href="#meca-4-6-4"><span class="std std-ref">Section 4.6.4</span></a> discusses the probabilistic modelling of random variables required as an input for structural reliability methods (with given failure mechanism model, see e.g. the models presented in <a class="reference internal" href="07_structural_models_equations_mechanical.html"><span class="doc std std-doc">Section 4.7</span></a>). Bayesian updating of structural reliability estimates with new (failure) data is discussed in <a class="reference internal" href="#meca-4-6-5"><span class="std std-ref">Section 4.6.5</span></a>.</p>
-<div class="section" id="structural-reliability-methods-for-mechanical-reliability-prediction">
+<section id="structural-reliability-methods-for-mechanical-reliability-prediction">
 <span id="meca-4-6-1"></span><h2><span class="section-number">2.4.6.1. </span>Structural reliability methods for mechanical reliability prediction<a class="headerlink" href="#structural-reliability-methods-for-mechanical-reliability-prediction" title="Permalink to this headline">¶</a></h2>
 <p>The general principles of structural reliability prediction methods are discussed in <strong>Chapter 6 (Part II)</strong> of this handbook. Applying these methods to mechanical reliability prediction requires going through the following steps:</p>
 <ul class="simple">
@@ -560,8 +565,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>The probabilistic modelling of basic variables needs to account for the most relevant uncertainties associated with the failure mechanism modelling and with the physical variables entering the limit state function. Possible inputs for this step are discussed in <a class="reference internal" href="#meca-4-6-4"><span class="std std-ref">Section 4.6.4</span></a>.</p>
 <p>Aiming at realistic modelling, it will not generally be possible to derive analytic solutions for the probability of failure with a given limit state function and probabilistic modelling. Simplified models with analytic interference calculations are discussed in <a class="reference internal" href="#meca-4-6-2"><span class="std std-ref">Section 4.6.2</span></a>. Also, the well-known stress-strength methods for structural items may in certain cases be solved analytically, see <a class="reference internal" href="#meca-4-6-3"><span class="std std-ref">Section 4.6.3</span></a> for details. More general models may be developed using the numerical methods listed in <strong>Chapter 6 (Part II)</strong>.</p>
-</div>
-<div class="section" id="simplified-structural-reliability-modelling-with-analytic-solutions">
+</section>
+<section id="simplified-structural-reliability-modelling-with-analytic-solutions">
 <span id="meca-4-6-2"></span><h2><span class="section-number">2.4.6.2. </span>Simplified structural reliability modelling with analytic solutions<a class="headerlink" href="#simplified-structural-reliability-modelling-with-analytic-solutions" title="Permalink to this headline">¶</a></h2>
 <p>To allow for a quick reliability assessment without detailed knowledge of the underlying probabilistic methods, simplified part level methods based on structural reliability theory have been developed for several failure mechanisms, see <a class="reference internal" href="07_structural_models_equations_mechanical.html"><span class="doc std std-doc">Section 4.7</span></a> for details. The simplifications concern the formulation of the limit state function, the distributional assumptions for basic variables entering the model, and the derivation of analytic formulas for interference calculations.</p>
 <p>The most important aspects of simplified structural reliability modelling from a user’s perspective are summarized in <a class="reference internal" href="#meca-table4-7"><span class="std std-ref">Table   4 -7 below</span></a>.</p>
@@ -593,7 +598,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Todo</p>
 <p>Miss ref just above</p>
 </div>
-<div class="section" id="generic-approach-for-the-formulation-of-the-limit-state-function">
+<section id="generic-approach-for-the-formulation-of-the-limit-state-function">
 <h3><span class="section-number">2.4.6.2.1. </span>Generic approach for the formulation of the limit state function<a class="headerlink" href="#generic-approach-for-the-formulation-of-the-limit-state-function" title="Permalink to this headline">¶</a></h3>
 <p>The simplified approach is based on a generic limit state function with the following simple format:</p>
 <div class="equation admonition" id="meca-equation4-2">
@@ -604,10 +609,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>Here, <span class="math notranslate nohighlight">\(X_{1}\)</span> may be interpreted as the “resistance” (allowable stress, or strength) of the considered part and <span class="math notranslate nohighlight">\(X_{2}\)</span> as the “load” (or stress) acting on it. To capture the uncertainties inherent in the applied models, a model uncertainty variable <span class="math notranslate nohighlight">\(\Theta\)</span> is introduced. Failure occurs if the load is larger than the resistance, or <span class="math notranslate nohighlight">\(\Theta X_{2} &gt; X_{1}\)</span>. Thus, the probability of failure is derived from the overlap of the statistical distributions of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(\Theta X_{2}\)</span>, see <a class="reference internal" href="#meca-figure4-3"><span class="std std-ref">Figure 4 -3</span></a> for illustration.</p>
 <p>Time dependence is considered by modelling either <span class="math notranslate nohighlight">\(X_{1}\)</span> or <span class="math notranslate nohighlight">\(X_{2}\)</span> (or both) as a function of time.</p>
-<div class="figure align-default" id="figure4-3">
+<figure class="align-default" id="figure4-3">
 <span id="meca-figure4-3"></span><a class="reference internal image-reference" href="../../../_images/figure4_5.png"><img alt="../../../_images/figure4_5.png" src="../../../_images/figure4_5.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Illustration of structural reliability methods, with probability of failure resulting from the overlap of the statistical distribution for the “load” and the “resistance” (statistical interference).</span><a class="headerlink" href="#figure4-3" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Illustration of structural reliability methods, with probability of failure resulting from the overlap of the statistical distribution for the “load” and the “resistance” (statistical interference).</span><a class="headerlink" href="#figure4-3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Despite its simplicity, the limit state function in <a class="reference internal" href="#meca-equation4-2"><span class="std std-ref">Equation 4‑2</span></a>  is fairly generic, considering that both <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> can be a function of several random variables specific to the considered failure mechanism. In the simplified method, the two variables are defined such that the mean and coefficients of variation of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> as well as the probability of failure <span class="math notranslate nohighlight">\(P_{f}\)</span> can be estimated analytically with pre-defined distributional models for the underlying basic variables. The results may easily be updated if new test or operation data becomes available during the course of a space project, see <a class="reference internal" href="#meca-4-6-5"><span class="std std-ref">Section 4.6.5</span></a> for details.</p>
 <p>The distribution of the model uncertainty <span class="math notranslate nohighlight">\(\Theta\)</span> is fixed for the simplified models, assuming a coefficient of variation of <span class="math notranslate nohighlight">\(\nu_{\Theta} = 0.2\)</span> for most of the models considered in <a class="reference internal" href="07_structural_models_equations_mechanical.html"><span class="doc std std-doc">Section 4.7</span></a>, which are generally empirical models. Setting the mean value to <span class="math notranslate nohighlight">\(\mu_{\Theta} = 1\)</span> (assuming that the model or, more precisely, the limit state function is unbiased) is appropriate when realistic predictions are required.</p>
 <p>When needed, a certain explicit conservatism can be introduced in the simplified method by letting <span class="math notranslate nohighlight">\(\mu_{\Theta} &gt; 1\)</span> , which is equivalent to assuming a higher loading or “stress” than estimated by the model (i.e. a biased load and/or resistance model). In accordance with ECSS-E-ST-32-10C Error: Reference source not foundwhere a “model factor” is multiplied with the design loads to account for uncertainties in mathematical models, it is recommended to set <span class="math notranslate nohighlight">\(\mu_{\Theta} = 1.2\)</span> (or higher), referring to the model factor typically used for spacecrafts at the beginning of new developments. The effect of this assumption on the estimated failure probability depends on the distributional assumptions and on the design margin of safety. <a class="reference internal" href="#meca-figure4-4"><span class="std std-ref">Figure   4 -4</span></a> shows a comparison between some results for <span class="math notranslate nohighlight">\(\mu_{\Theta} = 1.0\)</span> (unbiased) and <span class="math notranslate nohighlight">\(\mu_{\Theta} = 1.2\)</span> (conservative bias), assuming Lognormal distributions for all random variables.</p>
@@ -615,12 +622,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Todo</p>
 <p>Miss ref just above</p>
 </div>
-<div class="figure align-default" id="figure4-4">
+<figure class="align-default" id="figure4-4">
 <span id="meca-figure4-4"></span><a class="reference internal image-reference" href="../../../_images/figure4_6.png"><img alt="../../../_images/figure4_6.png" src="../../../_images/figure4_6.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Effect of assuming a conservative bias in the model uncertainty variable (<span class="math notranslate nohighlight">\(\mu_{\Theta} &gt; 1\)</span>) on the estimated probability of failure.</span><a class="headerlink" href="#figure4-4" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="general-process-for-the-application-of-the-simplified-structural-reliability-method">
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Effect of assuming a conservative bias in the model uncertainty variable (<span class="math notranslate nohighlight">\(\mu_{\Theta} &gt; 1\)</span>) on the estimated probability of failure.</span><a class="headerlink" href="#figure4-4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="general-process-for-the-application-of-the-simplified-structural-reliability-method">
 <h3><span class="section-number">2.4.6.2.2. </span>General process for the application of the simplified structural reliability method<a class="headerlink" href="#general-process-for-the-application-of-the-simplified-structural-reliability-method" title="Permalink to this headline">¶</a></h3>
 <p>The application of the simplified failure mechanism models always follows the same basic steps:</p>
 <ul>
@@ -634,9 +643,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The mean and coefficient of variation of the “resistance” and the “load” variable <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> are used as an input to estimate the probability of failure, which is performed using a predefined analytic function for statistical interference between the “resistance” and “load” (distributions for <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span>). The formulas provided in <a class="reference internal" href="07_structural_models_equations_mechanical.html"><span class="doc std std-doc">Section 4.7</span></a> for each failure mechanism with simplified model.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="section" id="stress-strength-methods-for-structural-items">
+</section>
+</section>
+<section id="stress-strength-methods-for-structural-items">
 <span id="meca-4-6-3"></span><h2><span class="section-number">2.4.6.3. </span>Stress strength methods for structural items<a class="headerlink" href="#stress-strength-methods-for-structural-items" title="Permalink to this headline">¶</a></h2>
 <p>Another well-known application of the generic limit state function in <a class="reference internal" href="#meca-equation4-2"><span class="std std-ref">Equation 4‑2</span></a> is the stress-strength method commonly applied for structural components, but also for other applications in mechanical reliability prediction (e.g. to assess motorization performance). Typically, the “strength” or resistance <span class="math notranslate nohighlight">\(X_{1}\)</span>  and the “stress” or load <span class="math notranslate nohighlight">\(X_{2}\)</span> are the only two variables considered, which is equivalent to dropping the model uncertainty variable <span class="math notranslate nohighlight">\(\Theta\)</span> in <a class="reference internal" href="#meca-equation4-2"><span class="std std-ref">Equation 4‑2</span></a>. Note that this simplification furthermore implies that only a single stress and resistance is considered, unless e.g. several loads can be combined in a single metric, allowing to reduce a multivariate load distribution to a single random “stress” <span class="math notranslate nohighlight">\(X_{2}\)</span> (see also <a class="reference internal" href="#meca-4-6-2"><span class="std std-ref">Section 4.6.2</span></a>). Problems that cannot be reduced to a two-variable problem can be handled using the general structural reliability methods discussed in <a class="reference internal" href="#meca-4-6-1"><span class="std std-ref">Section 4.6.1</span></a>.</p>
 <p>The modelling of the two basic variables generally has to account for time dependency. In the simplest case without strength degradation, the resistance <span class="math notranslate nohighlight">\(X_{1}\)</span> can be considered as time invariant. A time variant load <span class="math notranslate nohighlight">\(X_{2}(t)\)</span> may then be transformed into a time invariant random variable by taking the maximum load <span class="math notranslate nohighlight">\(X_{2}^{max} = max(X_{2}(t))\)</span> during a specified time period, e.g. the highest load experienced during launch. The probabilistic modelling for the maximum load should then be based on extreme value theory (e.g. by fitting a random variable distribution to the maxima of a random process). More complex cases with time variant strength (e.g. degradation effects) and/or cumulative loading (e.g. fatigue loads) require dedicated considerations using time variant structural reliability methods. In the remainder of this section, these applications will not be discussed any further, the focus will be on time invariant reliability calculations.</p>
@@ -678,12 +687,14 @@ const thebe_selector_output = ".output, .cell_output"
 <p>miss ref above</p>
 </div>
 <p>It is interesting to note that the impact of different distributional assumptions gets smaller when referring to design values for stress and strength, compared to the results shown in <a class="reference internal" href="#meca-figure4-5"><span class="std std-ref">Figure   4 -5</span></a>, which are directly based on the central safety factor and thus referring to mean values for both variables. An important prerequisite for robust results is that the transformation between fractiles and mean values is performed based on the same distributional assumptions as the ones used for the reliability calculations.</p>
-<div class="figure align-default" id="figure4-5">
+<figure class="align-default" id="figure4-5">
 <span id="meca-figure4-5"></span><a class="reference internal image-reference" href="../../../_images/figure4_7.png"><img alt="../../../_images/figure4_7.png" src="../../../_images/figure4_7.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Effect of distributional assumptions on the relationship between the probability of failure and the central safety factor, defined as the ration between the mean values of strength and stress.</span><a class="headerlink" href="#figure4-5" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="basic-variable-modelling-for-mechanical-reliability-applications">
+<figcaption>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Effect of distributional assumptions on the relationship between the probability of failure and the central safety factor, defined as the ration between the mean values of strength and stress.</span><a class="headerlink" href="#figure4-5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="basic-variable-modelling-for-mechanical-reliability-applications">
 <span id="meca-4-6-4"></span><h2><span class="section-number">2.4.6.4. </span>Basic variable modelling for mechanical reliability applications<a class="headerlink" href="#basic-variable-modelling-for-mechanical-reliability-applications" title="Permalink to this headline">¶</a></h2>
 <p>The probabilistic modelling for the physical variables entering the limit state function, also called “basic variables”, requires going through the following three steps (see also <strong>Chapter 6 in Part II</strong>):</p>
 <ul>
@@ -728,7 +739,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-<div class="section" id="modelling-of-strength-variables">
+<section id="modelling-of-strength-variables">
 <h3><span class="section-number">2.4.6.4.1. </span>Modelling of strength variables<a class="headerlink" href="#modelling-of-strength-variables" title="Permalink to this headline">¶</a></h3>
 <p>Mathematically, these effects can be accounted for by increasing the coefficients of variation of the basic physical variables used in the model and/or with the aid of a “model uncertainty” variable, possibly including a bias in the mean value (see e.g. <a class="reference internal" href="#meca-4-6-2"><span class="std std-ref">Section 4.6.2</span></a>). It depends on the information used for the basic variable modelling how much the variability needs to be increased to account for process contributions. To give an example, strength modelling based on material data (e.g. for metallic materials) does not account for any process contributions apart from those introduced during material production. The situation is, however, different when considering assembly level data, e.g. from structural inserts testing, which typically considers the whole insert as an assembly. In the latter case, possible process contributions must only be considered on the loading side.</p>
 <p>Obtaining statistical information for the strength (or resistance) of materials is generally straight-forward. Vendor’s datasheets and manufacturer specifications can be considered, and data for standard materials can be found in the literature. Well-known data sources for structural materials are the Metallic Materials Properties Development and Standardization (MMPDS) Handbook  for metallic material properties (superseding MIL-HDBK-5J ) and the FRAMES-2 database for mechanical test data of metallic and composite materials maintained by ESA . New materials or conventional materials produced with a new production process are generally tested to determine the material characteristics.
@@ -741,7 +752,7 @@ The available data can be used also to define or check the assumed distribution 
 <p>With a given distributional assumption, the final step involves the estimation of the distribution parameters (or the mean and coefficient of variation) from the data. It is important to note that the distribution fit should be optimized especially in the lower tail of the data, which is dominating failure. The design value, typically defined statistically as a lower fractile value of the strength distribution, is thus a highly relevant piece of information, which can be combined with a coefficient of variation (or – better – with a second fractile value, e.g. combining A- and B-value) to derive the parameters of any two-parameter distribution model.</p>
 <p>Reference values for usual dispersions of material strength are provided in <a class="reference internal" href="#meca-table4-8"><span class="std std-ref">Table   4 -8</span></a>, which is based on PSS-01-306 Draft 1 . The original source of the data dates back to 1987 , considering test results and publications available at that time. It should be noted that the coefficients of variation have been derived, and traditionally been used, assuming normal distributed stress and strength variables.</p>
 <p id="meca-table4-8"><strong>Table 4.8</strong> : Reference values for usual dispersions (Coefficients of Variation) of strength variables .</p>
-<div class="figure align-default" id="table4-8">
+<figure class="align-default" id="table4-8">
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -815,22 +826,16 @@ The available data can be used also to define or check the assumed distribution 
       <td>Strength w.r.t. axial loading  Strength w.r.t....</td>
       <td>16%  Skin CoV*</td>
     </tr>
-    <tr>
-      <th>8</th>
-      <td>*Remark: the skin CoV corresponds to the Coeff...</td>
-      <td>*Remark: the skin CoV corresponds to the Coeff...</td>
-      <td>*Remark: the skin CoV corresponds to the Coeff...</td>
-    </tr>
   </tbody>
 </table>
 </div></div></div>
-</div>
+</figure>
 <div class="remark admonition">
 <p class="admonition-title">Remark</p>
 <p>The skin CoV corresponds to the Coefficient of Variation for the strength of the flange material.</p>
 </div>
-</div>
-<div class="section" id="modelling-of-stress-variables">
+</section>
+<section id="modelling-of-stress-variables">
 <h3><span class="section-number">2.4.6.4.2. </span>Modelling of stress variables<a class="headerlink" href="#modelling-of-stress-variables" title="Permalink to this headline">¶</a></h3>
 <p>Determining the statistical distribution of load variables is more difficult than the assessment of material characteristics.</p>
 <p>Four major difficulties may arise during (probabilistic) load analysis</p>
@@ -856,7 +861,7 @@ The available data can be used also to define or check the assumed distribution 
 <p>Distributional assumptions should nevertheless be backed by an engineering understanding of the load analysis process. To give an example, random vibration loads may be assumed to follow a Normal distribution when looking at the instantaneous (point-in-time) distribution of the random process. Assuming a linear response of the spacecraft structure, this assumption is still valid for the point-in-time distribution of the response spectrum. However, the peak response during a certain load event follows a Rayleigh distribution, or an extreme value distribution with parameters depending on the duration of the random vibration . It should be noted that also the exceedance probability of a “three sigma” peak response, often used as limit load for design purposes, depends on the duration of the loading, and cannot be derived directly from the Normal distribution.</p>
 <p>Reference values for usual dispersions of applied stresses are provided in <a class="reference internal" href="#meca-table4-9"><span class="std std-ref">Table   4 -9</span></a>, which is based on PSS-01-306 Draft 1 . The original source of the data dates back to 1987 , considering the knowledge and technology available at that time. With the development of new launchers ( refers to data collected for Ariane I to III, STS and Delta), much of this information must be considered as outdated, though probably conservative. Some of the highest values in <a class="reference internal" href="#meca-table4-9"><span class="std std-ref">Table   4 -9</span></a> are a direct result of the limited sample size of flight measurements in the same configuration that were available for the analysis. Moreover, it should be noted that the coefficients of variation have been derived, and traditionally been used, assuming normal distributed stress and strength. Also, for some loads it is not clear how the values provided are related to the underlying random process, e.g. whether the coefficient of variation for acoustic vibrations relates to the point-in-time response distribution, to the peak response, or to the resulting fatigue loading.</p>
 <p id="meca-table4-9"><strong>Table 4.9</strong> : Reference values for usual dispersions (Coefficients of Variation) of loads .</p>
-<div class="figure align-default" id="table4-9">
+<figure class="align-default" id="table4-9">
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -924,10 +929,10 @@ The available data can be used also to define or check the assumed distribution 
   </tbody>
 </table>
 </div></div></div>
-</div>
-</div>
-</div>
-<div class="section" id="bayesian-updating-of-structural-reliability-estimates">
+</figure>
+</section>
+</section>
+<section id="bayesian-updating-of-structural-reliability-estimates">
 <span id="meca-4-6-5"></span><h2><span class="section-number">2.4.6.5. </span>Bayesian updating of structural reliability estimates<a class="headerlink" href="#bayesian-updating-of-structural-reliability-estimates" title="Permalink to this headline">¶</a></h2>
 <p>Apart from the use of Bayesian updating for basic variable distributions (<a class="reference internal" href="#meca-4-6-4"><span class="std std-ref">Section 4.6.4</span></a>), the Bayes approach can also be applied to improve prior reliability estimates derived with structural reliability methods, making use of data samples with individual time-to-failure records of several items. Also small data samples can be used for this purpose.</p>
 <p>An example for Bayesian updating of a prior structural reliability estimate is given in <span class="xref myst">Section 4.8.2</span> (analytic approach) <span class="xref myst">Section 4.8.3</span> (numerical approach using MCMC).</p>
@@ -1030,14 +1035,14 @@ The available data can be used also to define or check the assumed distribution 
 <li><p>The data sample for updating is uncensored, i.e. all items have been observed until failure</p></li>
 </ul>
 <p>As has been discussed below Equation   10 -9, the approach may be adapted by considering <span class="math notranslate nohighlight">\(p\)</span> instead of <span class="math notranslate nohighlight">\(t\)</span> as the “observed” variable, allowing the use of more general functions for <span class="math notranslate nohighlight">\(p(t)\)</span>; An analytic solution is still possible in this case. More general distribution types for <span class="math notranslate nohighlight">\(X_{1}\)</span>, <span class="math notranslate nohighlight">\(X_{2}\)</span> and/or <span class="math notranslate nohighlight">\(\Theta\)</span> may possibly be approximated by Lognormal distributions. For more general applications, it is very unlikely that an analytic solution based on conjugate priors can be derived. Numerical methods are then required to solve the problem of updating a structural reliability estimates with observations for the random time to failure, see Chapter 7 (Part II) for details. The same is true if the data set is strongly censored, i.e. the items have not been observed until failure. It should be noted that Equation   10 -6 and Equation   10 -7 can still be used as the starting point for the formulation of the prior probabilistic model, even if the analytic solution derived above is not applicable.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "paulremo/NRPMInteractivity",
+            repo: "paulremo/NRPMHandbook",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -1046,7 +1051,7 @@ The available data can be used also to define or check the assumed distribution 
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./folderMeca\interactive_guide\rp_mechanical"
+            path: "./folderMeca/interactive_guide/rp_mechanical"
         },
         predefinedOutput: true
     }

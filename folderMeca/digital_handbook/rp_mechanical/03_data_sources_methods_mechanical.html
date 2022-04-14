@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2.4.3. Data sources and methods &#8212; NRPM Digital handbook</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mytables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/myscript.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.4.4. Failure mechanisms identification and focus" href="04_failure_identification_focus_mecha.html" />
+    <link rel="prev" title="2.4.2. Root causes coverage" href="02_root_causes_coverage_mechanical.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Welcome the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Utilities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Utilities/notebooks.html">
+   1. Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Utilities/markdown-notebooks.html">
+   2. Markdown for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Utilities/interactive-js.html">
+   3. Javascipt interactivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Utilities/interactive.html">
+   4. Python interactivity
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../folderEEE/mainEEE.html">
+   1. Introduction to EEE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Meca section
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mainMeca.html">
+   1. Introduction to Mechanicals
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../introduction.html">
+   2. Mechanicals Digital Handbook
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../scope.html">
+     2.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../normative_references.html">
+     2.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../terms.html">
+     2.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="00_rp_mechanical.html">
+     2.4. Reliability prediction for mechanical and structural parts and assemblies
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="01_process_mechanical_rp.html">
+       2.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="02_root_causes_coverage_mechanical.html">
+       2.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       2.4.3. Data sources and methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="04_failure_identification_focus_mecha.html">
+       2.4.4. Failure mechanisms identification and focus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="05_method_selection_mechanical.html">
+       2.4.5. Method selection for different items and failure mechanisms
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="06_structural_method_input_mechanical.html">
+       2.4.6. Structural reliability methods and inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="07_structural_models_equations_mechanical.html">
+       2.4.7. Structural reliability models and equations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="08_examples_mechanical.html">
+       2.4.8. Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../folderMiscellaneous/mainMiscellaneous.html">
+   1. Introduction to Miscellaneous
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/introduction.html">
+   2. Miscellaneous Digital Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/scope.html">
+     2.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/normative_references.html">
+     2.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/terms.html">
+     2.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/rp_miscellaneous.html">
+     2.4. Reliability prediction for miscellaneous items
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/conclusion.html">
+     2.5. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/annexA.html">
+     2.6. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/annexB.html">
+     2.7. Annex B
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous.html">
+   3. Miscellaneous Interactive Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/interactive_guide/search_table_test.html">
+     3.1. Table interactivity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/interactive_guide/misc_failure_rate_processing.html">
+     3.2. Failure rate processing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderSystem/mainSystem.html">
+   1. Introduction to RP at System Level
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderSystem/test.html">
+     1.1. Test
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    By Airbus Defence & Space
+    © Copyright 2021.
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/folderMeca/digital_handbook/rp_mechanical/03_data_sources_methods_mechanical.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inputs">
+   2.4.3.1. Inputs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-of-the-failure-mechanisms">
+     2.4.3.1.1. Analysis of the failure mechanisms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-orbit-return-data">
+     2.4.3.1.2. In-orbit return data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manufacturer-reliability-data">
+     2.4.3.1.3. Manufacturer reliability data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-data">
+     2.4.3.1.4. Test data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#models-from-existing-data-sources">
+     2.4.3.1.5. Models from existing data sources
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods">
+   2.4.3.2. Methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#statistical-methods">
+     2.4.3.2.1. Statistical methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#physics-of-failure-methods">
+     2.4.3.2.2. Physics of Failure methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#handbook-methods">
+     2.4.3.2.3. Handbook methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combined-approach">
+     2.4.3.2.4. Combined approach
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Data sources and methods</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inputs">
+   2.4.3.1. Inputs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-of-the-failure-mechanisms">
+     2.4.3.1.1. Analysis of the failure mechanisms
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-orbit-return-data">
+     2.4.3.1.2. In-orbit return data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manufacturer-reliability-data">
+     2.4.3.1.3. Manufacturer reliability data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-data">
+     2.4.3.1.4. Test data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#models-from-existing-data-sources">
+     2.4.3.1.5. Models from existing data sources
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methods">
+   2.4.3.2. Methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#statistical-methods">
+     2.4.3.2.1. Statistical methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#physics-of-failure-methods">
+     2.4.3.2.2. Physics of Failure methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#handbook-methods">
+     2.4.3.2.3. Handbook methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combined-approach">
+     2.4.3.2.4. Combined approach
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="data-sources-and-methods">
+<h1><span class="section-number">2.4.3. </span>Data sources and methods<a class="headerlink" href="#data-sources-and-methods" title="Permalink to this headline">¶</a></h1>
+<p>The following subsections discuss the inputs and reliability prediction methods introduced in <strong>Chapter 6 (Part II)</strong>, focussing on their use in mechanical domain.</p>
+<section id="inputs">
+<h2><span class="section-number">2.4.3.1. </span>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<p>The order of preference for the use of different data sources and inputs for mechanical parts reliability prediction is as follows:</p>
+<ol class="simple">
+<li><p>In-orbit return data</p></li>
+<li><p>Manufacturer reliability data</p></li>
+<li><p>Test data</p></li>
+<li><p>Analysis of the failure mechanisms</p></li>
+<li><p>Models from existing data sources</p></li>
+</ol>
+<p>Each input will be briefly discussed below from a mechanical reliability prediction perspective.</p>
+<p>Using a data source for reliability prediction – e.g. in-orbit return as the first preference – requires that relevant data is available in sufficient quantity. If this condition is not fulfilled, the next preferred input needs to be considered. Nevertheless, relevant data, even if not available in large enough quantities, can still be used to validate, tune or update the modelling in a combined approach.</p>
+<p>Despite its late appearance in the preference listing given above, a good understanding of the failure mechanisms driving the (un-)reliability of mechanical parts should always form the basis for the reliability prediction, even if it is only used to decide whether the available data can be used for the prediction.</p>
+<section id="analysis-of-the-failure-mechanisms">
+<h3><span class="section-number">2.4.3.1.1. </span>Analysis of the failure mechanisms<a class="headerlink" href="#analysis-of-the-failure-mechanisms" title="Permalink to this headline">¶</a></h3>
+<p>A first analysis and understanding of the potential failure mechanisms for mechanical parts and equipment should generally be available from the design process and should always be considered as an important input for the prediction, even if a pure statistical approach is used to estimate an item’s reliability. The approach described in Sections <a class="reference internal" href="04_failure_identification_focus_mecha.html"><span class="doc std std-doc">4.4</span></a> and <a class="reference internal" href="05_method_selection_mechanical.html"><span class="doc std std-doc">4.5</span></a> is based on this idea, focussing on the identification of relevant failure mechanisms although not necessarily requiring Physics of Failure methods for the mathematical modelling.</p>
+</section>
+<section id="in-orbit-return-data">
+<h3><span class="section-number">2.4.3.1.2. </span>In-orbit return data<a class="headerlink" href="#in-orbit-return-data" title="Permalink to this headline">¶</a></h3>
+<p>In-orbit return failure data provides valuable information on the in-service reliability performance in space applications. For mechanical equipment, it may in certain cases be possible to track the failure cause down to part level, making the information even more valuable. However, the use of in-orbit return data for reliability prediction is hindered by the small degree of standardization of mechanical items (compared to EEE) and the large effect of the design details and the operational conditions on mechanical part reliability. As a stand-alone input, it will thus be restricted to highly standardized applications. Apart from this, in-orbit return can provide the following information when combined with other inputs:</p>
+<ul class="simple">
+<li><p>Information on observed failure modes and root causes to select the focus of the prediction</p></li>
+<li><p>In-orbit measurements of physical data to model the relevant variables in PoF approaches</p></li>
+<li><p>Failure/success data to update a model based on other inputs</p></li>
+</ul>
+</section>
+<section id="manufacturer-reliability-data">
+<h3><span class="section-number">2.4.3.1.3. </span>Manufacturer reliability data<a class="headerlink" href="#manufacturer-reliability-data" title="Permalink to this headline">¶</a></h3>
+<p>Mechanical space equipment suppliers are highly specialized companies, delivering their products for many different missions. Manufacturer reliability data can thus be a highly relevant source of information for mechanical reliability prediction. This holds especially for standardized items with a long space heritage, where manufacturer’s in-orbit return (considered in Section ) can be used for the reliability prediction. Also test data available on the manufacturer’s side may be considered. Manufacturer reliability data derived from analysis should be checked for consistency with the methodology presented in this handbook.</p>
+<p>Apart from this, more general manufacturer data, such as design information, material specifications, or equipment level FMEA analyses are also important inputs for reliability predictions of mechanical parts.</p>
+</section>
+<section id="test-data">
+<h3><span class="section-number">2.4.3.1.4. </span>Test data<a class="headerlink" href="#test-data" title="Permalink to this headline">¶</a></h3>
+<p>Test data for mechanical parts tested at operational conditions would be a relevant source of information for reliability prediction, but is in most cases not available in large enough quantities. Small data samples can be used to calibrate or update models derived from analysis, or to check the modelling assumptions.</p>
+<p>Another possible use of test data is for the derivation of physical quantities needed in reliability models based on PoF, such as e.g. wear rates or resistances against specific stresses. The advantage is that with this approach test data can be useful even if the test is performed at different than operational conditions and/or the design is not exactly the same as for the flight item. An important limitation is that in practice most items are not tested to failure and therefore the data is censored and less informative for modelling purposes.</p>
+<p>Finally, one specific feature of pre-flight acceptance tests should be mentioned: Due to the fact that these tests are performed on the flight item, they can provide relevant information about its strength or resistance against the applied stresses. The fact that the item has passed the tests may be used to exclude lower fractile values of the strength distribution in PoF approaches. Note that this “proof load” approach is only valid for failure mechanisms resulting from peak load effects, and cannot be applied when cumulative stresses are driving failure. More details on the use of proof load test results for reliability prediction can be found e.g. in Error: Reference source not found, .</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+</section>
+<section id="models-from-existing-data-sources">
+<h3><span class="section-number">2.4.3.1.5. </span>Models from existing data sources<a class="headerlink" href="#models-from-existing-data-sources" title="Permalink to this headline">¶</a></h3>
+<p>Two well-known reliability handbooks are presently available providing input data for mechanical reliability prediction: the NPRD Error: Reference source not foundand the NSWC Error: Reference source not found. Both handbooks cannot be recommended as a stand-alone method for mechanical reliability prediction in space applications, but may be used as a complementary source of information, as will be discussed in the following.</p>
+<p><strong>Non-electronic parts reliability data (NPRD)</strong></p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just below</p>
+</div>
+<p>NPRD Error: Reference source not foundis a data source providing part and assembly level failure rate estimates from various sources and industries. Its application is straight-forward when used without extrapolation beyond the covered part types, operational and environmental conditions. Due to the following limitations, it cannot be used as a general reliability data source for mechanical reliability prediction in space applications:</p>
+<ul class="simple">
+<li><p>The coverage of part types used in space and space-graded parts is limited</p></li>
+<li><p>Most data come from terrestrial sources, with limited coverage of space applications</p></li>
+<li><p>The information provided is not sufficient to justify extrapolations beyond data coverage</p></li>
+<li><p>For assemblies listed, there can be difficulties of interpreting whether the failure rate provided relates to the assembly as a whole, or only to one of its components</p></li>
+<li><p>Only industry- and time-averaged failure rate estimates are provided due to the way the data has been collected, which does not allow to derive time-dependant failure rates</p></li>
+<li><p>It is unclear which categories of failures are included in the data (e.g. random vs. wear-out)</p></li>
+<li><p>Parts of the data presented are very old, as data collection started in the early 1970’s</p></li>
+</ul>
+<p>Despite these drawbacks, NPRD may still be used to derive “ballpark” estimates for the reliability of mechanical parts, to be used e.g. in early design phases, as a comparison benchmark for predictions based on other methods, or as a prior that can be updated with relevant data in a Bayesian approach. Due to the large impact of terrestrial data sources on the summary statistics, it is recommended to search for dedicated data from space applications.</p>
+<p>The confidence in the NPRD data strongly depends on its relevance with respect to the part type and quality, the use conditions, the environment and the dominating failure mechanisms. It may therefore only be used as a reference for specific applications if sufficient justification can be provided that the data is relevant with respect to the part type and quality, the use conditions, the environment and the considered failure mechanisms.</p>
+<p><strong>Naval Surface Warfare Center (NSWC) Reliability Prediction Handbook</strong></p>
+<p>The NSWC Handbook for Mechanical Reliability Prediction Error: Reference source not foundprovides models derived from a combined approach similar to the one applied for EEE components in Chapter Error: Reference source not found: Base failure rates, derived from statistical data at reference conditions, are scaled to a specific design and operating conditions with the aid of multiplicative factors accounting for the specificities of material, design and environment. The scaling factors are based on PoF relationships to determine the mean time to failure MTTF at reference and operating conditions:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.1</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\lambda = \lambda_{ref} \bullet \frac{\lambda_{op}}{\lambda} = \lambda_{ref} \bullet \frac{MTTF_{ref}}{MTTF} = \lambda_{ref} \bullet C\]</div>
+</div>
+<p>The advantage of this approach is the increased flexibility, as generic models for different part “families”, e.g. springs, can be tuned to a wide variety of specific part types and applications. Despite this interesting feature, the direct application of the NSWC models for reliability predictions in space applications is not recommended due to the following limitations:</p>
+<ul class="simple">
+<li><p>Base failure rates are from naval/terrestrial sources only and do not reflect the use conditions nor the quality level of mechanical parts used in space</p></li>
+<li><p>The sample size of the data used to derive the base failure rates is unknown and may in some cases be very small .</p></li>
+<li><p>The scaling factors are based on the Physics of Failure in terrestrial applications, which may in some cases not be applicable in space</p></li>
+<li><p>Scaling factors are based on deterministic relationships, which may lead to a large bias when the effect of the variable entering the scaling factor is highly nonlinear</p></li>
+<li><p>The model output is a constant failure rate, which is often not consistent with the failure mechanisms that have been analysed to derive the scaling factors</p></li>
+<li></li>
+</ul>
+<p>As a result, the NSWC should not be used as a data source for mechanical reliability prediction in space applications. The data can only be used to derive “ballpark” estimates, e.g. for early design phases, for comparison with other methods, or as a prior for Bayesian updating.</p>
+<p>Beyond this, the NSWC method is recommended only as a scaling method for specific part types, allowing to tune statistical estimates from “space relevant” data sources (the NSWC base failure rates should not be used). The approach is applicable only if the failure mechanisms that are of relevance in space applications are the same as those considered by the NSWC models, see <a class="reference internal" href="05_method_selection_mechanical.html#meca-table4-6"><span class="std std-ref">Table   4 -6</span></a> in <a class="reference internal" href="05_method_selection_mechanical.html#meca-4-5-2"><span class="std std-ref">Section 4.5.2</span></a> for guidance. It is based on the following steps:</p>
+<ul class="simple">
+<li><p>Estimate a new base failure rate with statistical methods using relevant data. The data should be “space relevant” in terms of design, quality level and dominating failure mechanisms, but must not exactly fit the required application.</p></li>
+<li><p>Select the parameters from the NSWC Handbook method that are needed to scale the new base failure rate to the considered application.</p>
+<ul>
+<li><p>Determine scaling factors for the new base failure rate (new “reference conditions”, implicit in the statistical data used)</p></li>
+<li><p>Determine scaling factors for the considered application (“operational conditions”)</p></li>
+<li><p>Determine ratio between the “operational” and “reference” scaling factors</p></li>
+</ul>
+</li>
+<li><p>The ratios determined in the previous step can now be used as scaling factors to adapt the new base failure rate to the considered application.</p></li>
+</ul>
+<p>It should be noted that only the criticism of the NSWC Handbook regarding the space relevance of the base failure rates can be corrected with this procedure. To avoid or reduce potential biases due to the scaling method, it should not be used in case of large deviations between “reference” and “operating” conditions, and physical variables entering the scaling factor calculations should be estimated as realistic mean values.</p>
+<p>The implicit assumption of constant failure rates can be mitigated by fitting a model that allows for time dependent failure rates in the first step. The NSWC scaling method can then be applied to adjust the location parameter of the selected time to failure distribution, e.g. as multiplicative factors for the inverse of the Weibull characteristic life.</p>
+</section>
+</section>
+<section id="methods">
+<span id="meca-4-3-2"></span><h2><span class="section-number">2.4.3.2. </span>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p>The following methods can be used for the derivation of reliability estimates for mechanical items:</p>
+<ul class="simple">
+<li><p><strong>Statistical methods</strong> for the derivation of a suitable failure time distribution are applicable provided that relevant statistical data is available in sufficient quantity for the mechanical item under consideration and for comparable operating and environmental conditions.</p></li>
+<li><p><strong>Physics of Failure methods (PoF)</strong> based on structural reliability theory and an analysis of the relevant failure mechanisms are the preferred way of modelling when the available data is inappropriate or not sufficient for a pure statistical approach.</p></li>
+<li><p><strong>Handbook methods</strong> are not the recommended choice for mechanical reliability prediction in space applications, as has been discussed in Section , addressing NPRD and NSWC.</p></li>
+<li><p><strong>A combined approach</strong> based on one of the methods listed above and Bayesian updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.</p></li>
+</ul>
+<p>Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the Physics of Failure. General guidance on method selection is presented in <a class="reference internal" href="#meca-figure4-2"><span class="std std-ref">Figure 4 -2</span></a> below. The upper row in the matrix represents statistical methods, the middle row a combined approach with Bayesian updating, and the lower row either handbook methods or data (NPRD, NSWC) or – generally preferred in the absence of statistical data – structural reliability methods (SRM) based on the Physics of Failures.
+More specific recommendations are given in <a class="reference internal" href="05_method_selection_mechanical.html"><span class="doc std std-doc">Section 4.5</span></a>.</p>
+<figure class="align-default" id="figure4-2">
+<span id="meca-figure4-2"></span><a class="reference internal image-reference" href="../../../_images/figure4_2.png"><img alt="../../../_images/figure4_2.png" src="../../../_images/figure4_2.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Method selection for mechanical reliability prediction depending on the available input.</span><a class="headerlink" href="#figure4-2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>In the following subsections, the implementation of the different methods in mechanical domain is briefly discussed, covering all methods listed above. The remainder of this chapter (<a class="reference internal" href="04_failure_identification_focus_mecha.html"><span class="doc std std-doc">Sections 4.4</span></a> and <span class="xref myst">following</span>) focuses largely on the Physics of Failure as a basis for mechanical reliability prediction.</p>
+<p>(meca_4_3_2_1)</p>
+<section id="statistical-methods">
+<h3><span class="section-number">2.4.3.2.1. </span>Statistical methods<a class="headerlink" href="#statistical-methods" title="Permalink to this headline">¶</a></h3>
+<p>Statistical methods for reliability prediction are in principle domain-independent, and do not require any specific considerations for mechanical parts. However, the following two important reliability characteristics of mechanical parts should be kept in mind when doing the analysis:</p>
+<ul class="simple">
+<li><p>Many mechanical items are prone to premature wear-out, requiring a thorough selection of the distributional model. Assuming constant failure rates as a default is not acceptable, especially when the dominating failure mechanisms are known to be time-dependent.</p></li>
+<li><p>Mechanical items reliability is strongly dependent on the specific design and use conditions. Data from different applications should thus be treated with care, possibly requiring a dedicated Physics of Failure modelling to understand the impact of the relevant variables.</p></li>
+</ul>
+<p>The use of statistical methods for mechanical reliability prediction is not discussed any further in the present chapter; the reader is referred to <strong>Chapter 6 (Part II)</strong> for a discussion of these methods.</p>
+</section>
+<section id="physics-of-failure-methods">
+<h3><span class="section-number">2.4.3.2.2. </span>Physics of Failure methods<a class="headerlink" href="#physics-of-failure-methods" title="Permalink to this headline">¶</a></h3>
+<p>The use of structural reliability methods for mechanical reliability prediction is discussed in more detail in Sections <a class="reference internal" href="06_structural_method_input_mechanical.html"><span class="doc std std-doc">4.6</span></a> and <a class="reference internal" href="07_structural_models_equations_mechanical.html"><span class="doc std std-doc">4.7</span></a>. The use of other methods that are based on the Physics of Failure (not described in this chapter) is possible, provided that the failure mechanism modelling is accompanied by a suitable quantification of the relevant uncertainties.</p>
+</section>
+<section id="handbook-methods">
+<h3><span class="section-number">2.4.3.2.3. </span>Handbook methods<a class="headerlink" href="#handbook-methods" title="Permalink to this headline">¶</a></h3>
+<p>The use of existing reliability handbooks and data sources, especially as a stand-alone method, is generally not recommended for the modelling of mechanical items in space applications. Limitations of the NPRD Error: Reference source not foundand NSWC  Error: Reference source not foundhandbooks are discussed in Section , including some guidance on potential uses of these methods, e.g. to derive ball-park estimates for preliminary design or as a prior for a combined approach using Bayesian updating.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>missing 2 refs above</p>
+</div>
+</section>
+<section id="combined-approach">
+<h3><span class="section-number">2.4.3.2.4. </span>Combined approach<a class="headerlink" href="#combined-approach" title="Permalink to this headline">¶</a></h3>
+<p>Bayesian updating is the recommended method for combining different sources of information for mechanical reliability prediction with independent statistical data. The specific case of Bayesian updating for reliability estimates derived with structural reliability methods, using failure data collected e.g. in part level testing, is discussed in <a class="reference internal" href="06_structural_method_input_mechanical.html#meca-4-6-5"><span class="std std-ref">Section 4.6.5</span></a>. However, Bayesian statistics as discussed in <strong>Chapter 7 (Part II)</strong> are applicable also more generally, e.g. to update preliminary estimates based on Handbook data or expert elicitation.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "paulremo/NRPMHandbook",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./folderMeca/digital_handbook/rp_mechanical"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="02_root_causes_coverage_mechanical.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2.4.2. </span>Root causes coverage</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="04_failure_identification_focus_mecha.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.4.4. </span>Failure mechanisms identification and focus</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

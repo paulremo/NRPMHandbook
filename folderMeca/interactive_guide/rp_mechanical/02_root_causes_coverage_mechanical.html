@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.4.2. Root causes coverage &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
@@ -38,9 +39,12 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/myscript.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -470,7 +474,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="root-causes-coverage">
+  <section class="tex2jax_ignore mathjax_ignore" id="root-causes-coverage">
 <h1><span class="section-number">2.4.2. </span>Root causes coverage<a class="headerlink" href="#root-causes-coverage" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference internal" href="#meca-table4-1"><span class="std std-ref">Table 4 -1</span></a> gives an overview of the failure categories defined in Chapter 4 (Part I) and their coverage by the methods described in the present chapter. In the following subsections, the interpretation of each failure category within the mechanical chapter is briefly explained.</p>
 <p id="meca-table4-1"><strong>Table 4.1 : Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter</strong></p>
@@ -495,22 +499,24 @@ const thebe_selector_output = ".output, .cell_output"
 </tr>
 </tbody>
 </table>
-<div class="section" id="random-failures">
+<section id="random-failures">
 <span id="meca-4-2-1"></span><h2><span class="section-number">2.4.2.1. </span>Random failures<a class="headerlink" href="#random-failures" title="Permalink to this headline">¶</a></h2>
 <p>he Physics of Failure (PoF) of mechanical parts are mostly well-understood and give strong indications also on the failure root cause. Nevertheless, from a modelling perspective it may be meaningful not to go into the details of the root cause that has led to a certain failure mechanism. To give an example, a premature bearing wear failure may be due to a residual undetected part level defect or weakness (random), due to “normal” aging or wear-out (wear-out), induced by environmental effects such as thermal loads leading to distortion (extrinsic) or due to a misalignment at assembly level (systematic). Despite the difference in the failure root cause, all these failures are due to the same failure mechanism, which can be modelled with the same physical law.</p>
 <p>In this line of thought, all failures due to minor uncertainties in the design and due to manufacturing variability will be considered as random failures for mechanical items, whereas gross errors, possibly leading to new failure mechanisms and unforeseen events, are considered as systematic failures. With this classification, it is possible to consider the contribution of design and manufacturing process variability in the mechanical reliability prediction, e.g. by increasing the variability of the basic variables when using structural reliability methods as discussed in <a class="reference internal" href="06_structural_method_input_mechanical.html#meca-4-6-1"><span class="std std-ref">Section 4.6.4</span></a>. Only gross errors, classified as systematic failures, need to be considered separately.</p>
-</div>
-<div class="section" id="wear-out-failures">
+</section>
+<section id="wear-out-failures">
 <h2><span class="section-number">2.4.2.2. </span>Wear-out failures<a class="headerlink" href="#wear-out-failures" title="Permalink to this headline">¶</a></h2>
 <p>In the frame of this handbook, wear-out failures are generally assumed to occur after the specified mission life time, assuming that safe life qualification processes have successfully mitigated the risk of premature failures. However, for mechanical items, this assumption may not necessarily be valid, as experience shows that there is a certain risk of premature wear-out despite safe life qualification, which may lead to a (slowly) increasing failure rate already during the course of the mission, as illustrated in <a class="reference internal" href="#meca-figure4-1"><span class="std std-ref">Figure 4 -1</span></a>. The root cause of these premature wear-out failures will mostly be related to the design or manufacturing process. However, following the same line of thought as in <a class="reference internal" href="#meca-4-2-1"><span class="std std-ref">Section 4.2.1</span></a> above, failures due to minor design or manufacturing variability can nevertheless be considered as wear-out rather than systematic failures, and considered with the methodology presented in this chapter. Only wear-out failures due to gross design or manufacturing errors are left for the systematic failure modelling.</p>
-<div class="figure align-default" id="figure4-1">
+<figure class="align-default" id="figure4-1">
 <span id="meca-figure4-1"></span><a class="reference internal image-reference" href="../../../_images/figure4_1.png"><img alt="../../../_images/figure4_1.png" src="../../../_images/figure4_1.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Failure rate as a function of time for typical mechanical components.</span><a class="headerlink" href="#figure4-1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Failure rate as a function of time for typical mechanical components.</span><a class="headerlink" href="#figure4-1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>When exceeding the qualification time, e.g. for a satellite life time extension, the modelling of wear-out failures becomes even more relevant. Additional degradation mechanisms whose effect is negligible during the specified lifetime may need to be considered, and failures due to all degradation mechanisms become more likely.</p>
 <p><a class="reference internal" href="04_failure_identification_focus_mecha.html#meca-4-4-1"><span class="std std-ref">Section 4.4.1</span></a> contains guidance on the identification of dominant failure mechanisms – including wear-out mechanisms - for several part types, though focusing on reliability prediction for the design lifetime, i.e. within safe life qualification domain. Failure mechanisms that are normally considered effectively handled by qualification, such as e.g. radiation degradation of optical equipment, may need to be added when considering a life time extension.</p>
-</div>
-<div class="section" id="extrinsic-failures">
+</section>
+<section id="extrinsic-failures">
 <span id="meca-4-2-3"></span><h2><span class="section-number">2.4.2.3. </span>Extrinsic failures<a class="headerlink" href="#extrinsic-failures" title="Permalink to this headline">¶</a></h2>
 <p>External effects acting as loads on mechanical parts are considered during the design, generally reducing the risk of extrinsic failures. To quantify the remaining risk, reliability calculations must consider relevant extrinsic contributors.</p>
 <p>For mechanical reliability assessment, the following aspects need to be considered:</p>
@@ -553,22 +559,22 @@ const thebe_selector_output = ".output, .cell_output"
 </ol>
 <p>Collision failures can be neglected in the frame of reliability prediction if the corresponding probability of failure is at least one order of magnitude smaller than the probability of failure due to other failure root causes.</p>
 <p>Space debris and micro meteoroid impact will not be discussed any further in the present chapter.</p>
-</div>
-<div class="section" id="systematic-failures">
+</section>
+<section id="systematic-failures">
 <h2><span class="section-number">2.4.2.4. </span>Systematic failures<a class="headerlink" href="#systematic-failures" title="Permalink to this headline">¶</a></h2>
 <p>Failures due to design and manufacturing weaknesses can to a certain extent be considered with the methodology presented in this chapter, provided that the failure process or mechanism remains unchanged. Failures due to gross errors during design, manufacturing or operations are discussed in Section Error: Reference source not found. They are out of scope for the present chapter.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>Miss ref just above</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "paulremo/NRPMInteractivity",
+            repo: "paulremo/NRPMHandbook",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -577,7 +583,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./folderMeca\interactive_guide\rp_mechanical"
+            path: "./folderMeca/interactive_guide/rp_mechanical"
         },
         predefinedOutput: true
     }

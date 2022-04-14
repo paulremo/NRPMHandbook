@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Here is a page where you can dynamically see Questions &#8212; NRPM Digital handbook</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
@@ -38,9 +39,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/myscript.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -50,6 +54,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -394,6 +400,12 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
+        <a class="binder-button" href="https://mybinder.org/v2/gh/paulremo/NRPMHandbook/main?urlpath=tree/02_NRPMHandbook/folderMiscellaneous/question_display.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
         
         
         <button type="button" class="btn btn-secondary topbarbtn"
@@ -426,7 +438,7 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="here-is-a-page-where-you-can-dynamically-see-questions">
+  <section class="tex2jax_ignore mathjax_ignore" id="here-is-a-page-where-you-can-dynamically-see-questions">
 <h1>Here is a page where you can dynamically see Questions<a class="headerlink" href="#here-is-a-page-where-you-can-dynamically-see-questions" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -441,19 +453,570 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_18964</span>\<span class="mf">3856961439.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Number&quot;</span><span class="p">,</span><span class="s2">&quot;Recommendation&quot;</span><span class="p">,</span><span class="s2">&quot;Audit Question&quot;</span><span class="p">,</span><span class="s2">&quot;Weight&quot;</span><span class="p">,</span><span class="s2">&quot;Level&quot;</span><span class="p">,</span><span class="s2">&quot;Description&quot;</span><span class="p">,</span><span class="s2">&quot;Grade&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">datas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/manufactoring_on_board.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">data_cols</span><span class="p">,</span> <span class="n">na_filter</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Number</th>
+      <th>Recommendation</th>
+      <th>Audit Question</th>
+      <th>Weight</th>
+      <th>Level</th>
+      <th>Description</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>7</td>
+      <td>Procedures related to corrective actions inclu...</td>
+      <td>What process is used to collect technical even...</td>
+      <td>15.4</td>
+      <td>4</td>
+      <td>Procedures related to corrective actions inclu...</td>
+      <td>46.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8</td>
+      <td>Procedures related to preventive actions inclu...</td>
+      <td>Do procedures related to preventive actions in...</td>
+      <td>15.6</td>
+      <td>4</td>
+      <td>Procedures for preventive actions do exist. th...</td>
+      <td>46.8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>17</td>
+      <td>The subassembly varnishing activity. that must...</td>
+      <td>Are inspection parameters monitored during the...</td>
+      <td>9.9</td>
+      <td>2</td>
+      <td>The varnishing activity is monitored by superv...</td>
+      <td>9.9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18</td>
+      <td>Maintenance procedures related to corrective a...</td>
+      <td>Does corrective maintenance take place as soon...</td>
+      <td>6.9</td>
+      <td>2</td>
+      <td>Corrective actions are made directly where the...</td>
+      <td>6.9</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>19</td>
+      <td>Based on the defined preventive maintenance pl...</td>
+      <td>Is preventive maintenance planned to correct d...</td>
+      <td>4.0</td>
+      <td>3</td>
+      <td>Real maintenance procedures are implemented fo...</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>21</td>
+      <td>This verification is less complicated than a p...</td>
+      <td>Is there a periodic verification of programmin...</td>
+      <td>4.1</td>
+      <td>1</td>
+      <td>There is no periodic verification of the progr...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>22</td>
+      <td>This filter assures that the final test that f...</td>
+      <td>Are the skills of final test operators systema...</td>
+      <td>4.1</td>
+      <td>2</td>
+      <td>The equivalent of an audit is done to monitor ...</td>
+      <td>4.1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>23</td>
+      <td>It is important to perform the minimum number ...</td>
+      <td>Are production and manipulation of subassembli...</td>
+      <td>6.5</td>
+      <td>1</td>
+      <td>No manipulation of subassemblies is automated.</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>25</td>
+      <td>It is essential to specifically monitor and ma...</td>
+      <td>Are data loaded in programmable production mea...</td>
+      <td>2.8</td>
+      <td>3</td>
+      <td>A check and maintenance of data programmed in ...</td>
+      <td>5.6</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>33</td>
+      <td>Delegation of the general inspection assures o...</td>
+      <td>Is the subassembly varnishing inspection done ...</td>
+      <td>4.4</td>
+      <td>4</td>
+      <td>A person other than the varnishing operator ma...</td>
+      <td>13.2</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>37</td>
+      <td>The particular subassembly drying task within ...</td>
+      <td>Is the subassembly drying activity after varni...</td>
+      <td>5.6</td>
+      <td>3</td>
+      <td>Operators drying the subassembly are experienc...</td>
+      <td>11.2</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>41</td>
+      <td>Operators must be provided with a workstation ...</td>
+      <td>Are the instructions (protocol and particular ...</td>
+      <td>7.4</td>
+      <td>3</td>
+      <td>Instructions related to the activity to be per...</td>
+      <td>14.8</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>42</td>
+      <td>Take readings of temperature profiles for each...</td>
+      <td>Are there any records of temperature profiles ...</td>
+      <td>6.9</td>
+      <td>3</td>
+      <td>Readings are used to precisely know levels app...</td>
+      <td>13.8</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>43</td>
+      <td>The description of actions to be carried out d...</td>
+      <td>How is it assured that production means are ad...</td>
+      <td>7.2</td>
+      <td>3</td>
+      <td>Each production means is accompanied by a desc...</td>
+      <td>14.4</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>46</td>
+      <td>Recording on an Anomaly datasheet type documen...</td>
+      <td>How are technical events or anomaly reports re...</td>
+      <td>7.6</td>
+      <td>3</td>
+      <td>Every production problem. regardless of its na...</td>
+      <td>15.2</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>60</td>
+      <td>The different subassemblies are made and integ...</td>
+      <td>How are priorities managed as a function of en...</td>
+      <td>3.1</td>
+      <td>2</td>
+      <td>According to production planning. some priorit...</td>
+      <td>3.1</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>61</td>
+      <td>List and implement protection means to avoid r...</td>
+      <td>Have means of protecting subassemblies during ...</td>
+      <td>7.3</td>
+      <td>2</td>
+      <td>Protection means are identified but are partia...</td>
+      <td>7.3</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>77</td>
+      <td>A clear statement of persons authorised to app...</td>
+      <td>How are changes to manufacturing processes con...</td>
+      <td>13.9</td>
+      <td>3</td>
+      <td>Process changes are recorded. persons authoris...</td>
+      <td>27.8</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>84</td>
+      <td>Measure the bath contamination by sampling (fr...</td>
+      <td>Is contamination of solder baths measured by s...</td>
+      <td>5.8</td>
+      <td>3</td>
+      <td>The content of contaminating pollutant in the ...</td>
+      <td>11.6</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>88</td>
+      <td>Set up self-checking to filter human errors th...</td>
+      <td>Is a self checking system applied to filter hu...</td>
+      <td>5.3</td>
+      <td>1</td>
+      <td>No self-checking is done on the task</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>89</td>
+      <td>It must be impossible for reliability to be re...</td>
+      <td>Are there any indicators to verify that a good...</td>
+      <td>6.0</td>
+      <td>3</td>
+      <td>There are indicators to assure that a good sol...</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>90</td>
+      <td>Setting up periodic store inventories prevents...</td>
+      <td>Are checks made to assure that stock inventori...</td>
+      <td>5.5</td>
+      <td>3</td>
+      <td>Periodic inventories are made. If the date of ...</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>91</td>
+      <td>Set up protections against ESD for subassembli...</td>
+      <td>Have you set up specific protections against E...</td>
+      <td>26.0</td>
+      <td>3</td>
+      <td>There are validated procedures for protection ...</td>
+      <td>52.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>92</td>
+      <td>A number of production means parameters are pr...</td>
+      <td>Are there any periodic verifications used to m...</td>
+      <td>4.9</td>
+      <td>2</td>
+      <td>Tools and instruments used for inspection of p...</td>
+      <td>4.9</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>93</td>
+      <td>Set up suitable protections if necessary to av...</td>
+      <td>Are there any appropriate protections to avoid...</td>
+      <td>6.0</td>
+      <td>1</td>
+      <td>No specific protection is used when cleaning s...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>94</td>
+      <td>Set up a self-test of testers in order to dete...</td>
+      <td>Are there any self-tests of test tools in orde...</td>
+      <td>5.1</td>
+      <td>1</td>
+      <td>No self-test is done on the testers.</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>95</td>
+      <td>This cross check filters nonconformities befor...</td>
+      <td>Is there a cross-check to optimise the final i...</td>
+      <td>5.6</td>
+      <td>1</td>
+      <td>There is no cross-check at the final inspectio...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>96</td>
+      <td>A so-called conformity check must be identifie...</td>
+      <td>Is there a conformity check when putting into ...</td>
+      <td>6.0</td>
+      <td>3</td>
+      <td>A real check on conformity of items is made be...</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>97</td>
+      <td>Use of the statistical process control by maki...</td>
+      <td>is there an SPC (Statistical Process Control) ...</td>
+      <td>4.5</td>
+      <td>1</td>
+      <td>There is no inspection of the production proce...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>98</td>
+      <td>The special feature of the varnishing activity...</td>
+      <td>Is there a detailed description of the varnish...</td>
+      <td>5.8</td>
+      <td>3</td>
+      <td>The different actions to be carried out and th...</td>
+      <td>11.6</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>99</td>
+      <td>Accidental use of out-of-date consumables can ...</td>
+      <td>Is there a label for identification and withdr...</td>
+      <td>6.4</td>
+      <td>3</td>
+      <td>Consumables are correctly identified by labell...</td>
+      <td>12.8</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>100</td>
+      <td>This involves monitoring of test execution ind...</td>
+      <td>Is there a real time processing of test monito...</td>
+      <td>4.7</td>
+      <td>1</td>
+      <td>There are no test monitoring indicators.</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>101</td>
+      <td>This maintenance by metrological monitoring of...</td>
+      <td>is there a preventive maintenance by metrologi...</td>
+      <td>5.9</td>
+      <td>1</td>
+      <td>No preventive maintenance measure by metrologi...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>102</td>
+      <td>The activity must be done under the permanent ...</td>
+      <td>Is a method used for checking drifts and malfu...</td>
+      <td>6.1</td>
+      <td>2</td>
+      <td>There are several malfunction indicators for t...</td>
+      <td>6.1</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>112</td>
+      <td>Have high and low safety systems tied to inspe...</td>
+      <td>Are high and low safety systems provided tied ...</td>
+      <td>5.7</td>
+      <td>2</td>
+      <td>Inspection and monitoring means can stop the a...</td>
+      <td>5.7</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>115</td>
+      <td>Possess a plan for qualification of a method o...</td>
+      <td>Is there a qualification plan of the method of...</td>
+      <td>6.5</td>
+      <td>1</td>
+      <td>There is no plan specific to the method of rem...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>120</td>
+      <td>Include an inspection step (even visual) to as...</td>
+      <td>Is there an inspection step (even visual) to a...</td>
+      <td>6.5</td>
+      <td>1</td>
+      <td>No particular visual inspection is done during...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>121</td>
+      <td>Provide preventive maintenance (by the use of ...</td>
+      <td>Is there a preventive maintenance to detect an...</td>
+      <td>4.7</td>
+      <td>1</td>
+      <td>There is no preventive maintenance plan in pro...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>125</td>
+      <td>Wait for the time necessary to reach thermal e...</td>
+      <td>Is a rest time between each silk screen printi...</td>
+      <td>6.4</td>
+      <td>2</td>
+      <td>A number of measures are applied during the co...</td>
+      <td>6.4</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>126</td>
+      <td>All preventive and corrective maintenance oper...</td>
+      <td>Have plans for maintenance of production means...</td>
+      <td>6.7</td>
+      <td>1</td>
+      <td>There is no revision and record of the plan fo...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>127</td>
+      <td>Make sure that varnish preparation (dosing) is...</td>
+      <td>Is the preparation (dosing) of varnish control...</td>
+      <td>5.9</td>
+      <td>3</td>
+      <td>The preparation of the varnish is controlled b...</td>
+      <td>11.8</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>128</td>
+      <td>Make sure that the operators are well informed...</td>
+      <td>Is there a procedure for assuring that operato...</td>
+      <td>4.4</td>
+      <td>1</td>
+      <td>No plan has been set up to inform operators an...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>129</td>
+      <td>Make sure that the final inspection of the var...</td>
+      <td>Is it assured that the inspection on the final...</td>
+      <td>5.2</td>
+      <td>2</td>
+      <td>The final inspection of varnishing activities ...</td>
+      <td>5.2</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>136</td>
+      <td>Make sure that the person who will perform the...</td>
+      <td>Is it checked that the procedure for implement...</td>
+      <td>5.1</td>
+      <td>1</td>
+      <td>There is no procedure or the operator cannot a...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>138</td>
+      <td>Make sure that the right software is loaded an...</td>
+      <td>Is it checked that the right software is loade...</td>
+      <td>6.7</td>
+      <td>2</td>
+      <td>After software has been loaded in a hardware s...</td>
+      <td>6.7</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>139</td>
+      <td>Make sure that maintenance is done on producti...</td>
+      <td>Is a check carried out to assure that means ar...</td>
+      <td>5.9</td>
+      <td>2</td>
+      <td>Maintenance is provided for production means a...</td>
+      <td>5.9</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>140</td>
+      <td>Make sure that the operator has received train...</td>
+      <td>Is it checked that the operator has received t...</td>
+      <td>8.5</td>
+      <td>2</td>
+      <td>There is a verification to assure that the ope...</td>
+      <td>8.5</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>141</td>
+      <td>All overstresses must be detectable and quanti...</td>
+      <td>Are means secured (drying oven T�) through dir...</td>
+      <td>6.6</td>
+      <td>2</td>
+      <td>There are monitoring systems or other indicato...</td>
+      <td>6.6</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>144</td>
+      <td>It is important that the person responsible fo...</td>
+      <td>Are personnel made aware about a visual verifi...</td>
+      <td>5.9</td>
+      <td>1</td>
+      <td>No particular verification is done after compo...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>145</td>
+      <td>Increase operators awareness about the verific...</td>
+      <td>Are operators made aware of the need to verify...</td>
+      <td>5.9</td>
+      <td>1</td>
+      <td>No particular verification is made to check th...</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>153</td>
+      <td>Use measurements for verification of purchased...</td>
+      <td>Is the conformity of purchased products checked?</td>
+      <td>8.6</td>
+      <td>3</td>
+      <td>Conformity of purchased products is verified b...</td>
+      <td>17.2</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>154</td>
+      <td>Perform an inspection action (barcode reading....</td>
+      <td>Is an inspection action (barcode reading. read...</td>
+      <td>6.1</td>
+      <td>3</td>
+      <td>The identification of the product to be tested...</td>
+      <td>12.2</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>155</td>
+      <td>Check that the test coverage during and after ...</td>
+      <td>Is it checked that the test coverage for burn-...</td>
+      <td>5.2</td>
+      <td>3</td>
+      <td>The test coverage rate during burn-in is verif...</td>
+      <td>10.4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -508,71 +1071,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "f3b7a86c8545442583adac8d70ea33c2", "version_major": 2, "version_minor": 0}
-</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
-## Question N° 22
-
-
-### Audit Question : Are the skills of final test operators systematically audited?
-
-### Description : The equivalent of an audit is done to monitor the skills of operators performing the final product test. but it is not formally defined.
-
-### Recommendation : This filter assures that the final test that forms the final verification milestone is carried out by a
-competent person and particularly a person whose skills are monitored to assure that the most
-recent requirements are taken into consideration.
-The audit assures that the operator reviews control over procedures and critical points. to achieve
-perfect confidence in execution of the final test.
-
-### Weight : 4.1
-
-### Level : 2
-
-### Grade : 4.1
-
-
-13
-## Question N° 43
-
-
-### Audit Question : How is it assured that production means are adapted to elements to be produced?
-
-### Description : Each production means is accompanied by a description of a set of parameters to be
-verified before use on a subassembly. These are formally identified in a document that has not been validated by an authority independent from the operating entity.
-
-### Recommendation : The description of actions to be carried out during application of a production tool on a subassembly must be sufficiently explicit to not allow interpretation by the operator that would result in accidental use of inappropriate means.
-It must be assured that the reliability of subassemblies will not be reduced by the use of an unsuitable tool.
-
-### Weight : 7.2
-
-### Level : 3
-
-### Grade : 14.4
-
-
-3
-## Question N° 18
-
-
-### Audit Question : Does corrective maintenance take place as soon as an anomaly appears on production means or produced subassemblies?
-
-### Description : Corrective actions are made directly where the anomaly was observed. although a corrective maintenance plan was not set up.
-
-### Recommendation : Maintenance procedures related to corrective actions in production must include:
-- Effective processing of complaints and subassembly nonconformity reports.
-- The search for causes of nonconformity related to the process and recording of the results of
-this search.
-- Determination of corrective actions necessary to eliminate causes of nonconformity.
-- Application of control means to assure that the corrective action is implemented and that it
-produces the required effect.
-
-### Weight : 6.9
-
-### Level : 2
-
-### Grade : 6.9
-</pre></div>
-</div>
-</div>
+{"version_major": 2, "version_minor": 0, "model_id": "07fd7ec53a334d4d882dfe2033b13d4e"}
+</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -600,13 +1100,19 @@ document.getElementById("btn").innerHTML = "You have clicked on JavaScript butto
 }
 </script>
 </body>
-</html></div>
+</html></section>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"79e9c9cfda2747fd8fdd7d5df70cfd12": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a3ca10d9ac5b4b4e94faf4ef22ae93ba": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "07fd7ec53a334d4d882dfe2033b13d4e": {"model_name": "DropdownModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["What process is used to collect technical events. to produce anomaly reports and measure increases in reliability? How are equipment changes managed?", "Do procedures related to preventive actions include:\n- The use of appropriate information sources?\n- Determination of appropriate steps?\n- Triggering of preventive actions and application of control means?\n- A management review of corrective actions?", "Are inspection parameters monitored during the varnishing activity?", "Does corrective maintenance take place as soon as an anomaly appears on production means or produced subassemblies?", "Is preventive maintenance planned to correct drifts to production means parameters?", "Is there a periodic verification of programming means so that the software loading operation is done correctly?", "Are the skills of final test operators systematically audited?", "Are production and manipulation of subassemblies automated?", "Are data loaded in programmable production means managed?", "Is the subassembly varnishing inspection done by someone other than the varnishing operator?", "Is the subassembly drying activity after varnishing carried out by experienced personnel?", "Are the instructions (protocol and particular instructions to be respected) given to operators?", "Are there any records of temperature profiles for each program used for the soldering means?", "How is it assured that production means are adapted to elements to be produced?", "How are technical events or anomaly reports recorded?", "How are priorities managed as a function of end of file dates?", "Have means of protecting subassemblies during some production activities been identified and implemented?", "How are changes to manufacturing processes controlled?", "Is contamination of solder baths measured by sampling (so as not to exceed the pollutant content during this activity)?", "Is a self checking system applied to filter human errors (that could reduce reliability of the subassembly)?", "Are there any indicators to verify that a good solder is obtained when components are transferred?", "Are checks made to assure that stock inventories are defined and respected", "Have you set up specific protections against ESD for subassemblies during manipulations and storage?", "Are there any periodic verifications used to monitor tools used for inspection of production means?", "Are there any appropriate protections to avoid degrading subassemblies while cleaning?", "Are there any self-tests of test tools in order to detect any anomalies before use on the subassembly ?", "Is there a cross-check to optimise the final inspection of varnishing of subassemblies?", "Is there a conformity check when putting into stock in stores with the exclusion of non-conforming items?", "is there an SPC (Statistical Process Control) for the production process?", "Is there a detailed description of the varnishing protocol?", "Is there a label for identification and withdrawal of out-of-date consumables?", "Is there a real time processing of test monitoring indicators so as to not to degrade the subassembly as soon as an anomaly appears?", "is there a preventive maintenance by metrological monitoring?", "Is a method used for checking drifts and malfunctions (by probes and other monitoring systems).\nand to validate or allow the operation of drying ovens?", "Are high and low safety systems provided tied to inspection and monitoring means (systematically stop the cycle and analysis by a technician before restarting)?", "Is there a qualification plan of the method of removing masking varnishes used so as not to reduce reliability of the subassembly?", "Is there an inspection step (even visual) to assure that the masking varnish placement activity takes place correctly before varnishing?", "Is there a preventive maintenance to detect an anomaly. if there is one. before a production means is used on a subassembly?", "Is a rest time between each silk screen printing operation respected to avoid overstressing the\nsubassembly?", "Have plans for maintenance of production means been revised and made more robust to eliminate any possibility of degradation to component connections?", "Is the preparation (dosing) of varnish controlled by a qualified procedure and test measurements?", "Is there a procedure for assuring that operators are well informed and are studies done to determine how to update their skills in real time?", "Is it assured that the inspection on the final varnishing quality is effective. by strictly applying the inspection procedure", "Is it checked that the procedure for implementing the means is known?", "Is it checked that the right software is loaded. and that its version is identified?", "Is a check carried out to assure that means are maintained and that this maintenance is\nfollowed?", "Is it checked that the operator has received training (qualification). appropriate for the activity?", "Are means secured (drying oven T\ufffd) through direct monitoring by probes and recordings. to prevent overstresses?", "Are personnel made aware about a visual verification of subassemblies after placement and before remelting?", "Are operators made aware of the need to verify the quality of soldering flux deposit (implementation of a verification action that must appear in the subassembly follower sheet)?", "Is the conformity of purchased products checked?", "Is an inspection action (barcode reading. reading the S/N) performed to verify that the right product is available before starting the test?", "Is it checked that the test coverage for burn-in is formalised correctly?"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "Question selection", "description_tooltip": null, "disabled": false, "index": 0, "layout": "IPY_MODEL_79e9c9cfda2747fd8fdd7d5df70cfd12", "style": "IPY_MODEL_a3ca10d9ac5b4b4e94faf4ef22ae93ba"}}}, "version_major": 2, "version_minor": 0}
+</script>
+
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "paulremo/NRPMInteractivity",
+            repo: "paulremo/NRPMHandbook",
             ref: "main",
         },
         codeMirrorConfig: {
