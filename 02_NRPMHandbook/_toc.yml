@@ -31,7 +31,12 @@ parts:
         - file: folderMeca/digital_handbook/rp_mechanical/05_method_selection_mechanical
         - file: folderMeca/digital_handbook/rp_mechanical/06_structural_method_input_mechanical
         - file: folderMeca/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical
-        - file: folderMeca/digital_handbook/rp_mechanical/08_examples_mechanical                         
+        - file: folderMeca/digital_handbook/rp_mechanical/08_examples_mechanical   
+    - file: folderMeca/interactive_guide/introduction_guide_meca
+      title: Meca Interactive Guide
+      sections:
+      - file: folderMeca/interactive_guide/soil_lubricant_wear
+        title: Soil lubricant wear 
   - caption: Miscellaneous section
     numbered: true
     chapters:
