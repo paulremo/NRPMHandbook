@@ -17,24 +17,20 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd
-from myst_nb import glue
+from nrpmint.booktools import solid_lubricant_wear
 
-df1 = pd.read_html("table4_1.html")
-datas1 = pd.DataFrame(df1[0])
-
-glue("meca_table4_1",datas1)
+# start the web user-interface
+solid_lubricant_wear.web_ui()
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[1;32m~\AppData\Local\Temp\ipykernel_548\655537596.py[0m in [0;36m<module>[1;34m[0m
-[1;32m----> 1[1;33m [1;32mimport[0m [0mpandas[0m [1;32mas[0m [0mpd[0m[1;33m[0m[1;33m[0m[0m
-[0m[0;32m      2[0m [1;32mfrom[0m [0mmyst_nb[0m [1;32mimport[0m [0mglue[0m[1;33m[0m[1;33m[0m[0m
-[0;32m      3[0m [1;33m[0m[0m
-[0;32m      4[0m [0mdf1[0m [1;33m=[0m [0mpd[0m[1;33m.[0m[0mread_html[0m[1;33m([0m[1;34m"table4_1.html"[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
-[0;32m      5[0m [0mdatas1[0m [1;33m=[0m [0mpd[0m[1;33m.[0m[0mDataFrame[0m[1;33m([0m[0mdf1[0m[1;33m[[0m[1;36m0[0m[1;33m][0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;32m~\AppData\Local\Temp\ipykernel_18844\3464934119.py[0m in [0;36m<module>[1;34m[0m
+[1;32m----> 1[1;33m [1;32mfrom[0m [0mnrpmint[0m[1;33m.[0m[0mbooktools[0m [1;32mimport[0m [0msolid_lubricant_wear[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m      2[0m [1;33m[0m[0m
+[0;32m      3[0m [1;31m# start the web user-interface[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
+[0;32m      4[0m [0msolid_lubricant_wear[0m[1;33m.[0m[0mweb_ui[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
 
-[1;31mModuleNotFoundError[0m: No module named 'pandas'
-ModuleNotFoundError: No module named 'pandas'
+[1;31mModuleNotFoundError[0m: No module named 'nrpmint'
+ModuleNotFoundError: No module named 'nrpmint'
 
