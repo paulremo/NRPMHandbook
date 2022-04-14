@@ -40,12 +40,9 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/myscript.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -55,6 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -107,33 +106,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Utilities
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Utilities/notebooks.html">
-   1. Notebooks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Utilities/markdown-notebooks.html">
-   2. Markdown for Notebooks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Utilities/interactive-js.html">
-   3. Javascipt interactivity
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Utilities/interactive.html">
-   4. Python interactivity
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   EEE section
  </span>
 </p>
@@ -156,8 +128,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="folderMeca/digital_handbook/introduction.html">
-   2. Mechanicals Digital Handbook
+  <a class="reference internal" href="folderMeca/interactive_guide/introduction_guide_meca.html">
+   2. Meca Interactive Guide
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -166,71 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="folderMeca/digital_handbook/scope.html">
-     2.1. Scope
+    <a class="reference internal" href="folderMeca/interactive_guide/soil_lubricant_wear.html">
+     2.1. Soil lubricant wear
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="folderMeca/digital_handbook/normative_references.html">
-     2.2. Normative References
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="folderMeca/digital_handbook/terms.html">
-     2.3. Terms, definitions and abbreviated terms
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="folderMeca/digital_handbook/rp_mechanical/00_rp_mechanical.html">
-     2.4. Reliability prediction for mechanical and structural parts and assemblies
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="folderMeca/digital_handbook/rp_mechanical/01_process_mechanical_rp.html">
-       2.4.1. Process for mechanical reliability prediction
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="folderMeca/digital_handbook/rp_mechanical/02_root_causes_coverage_mechanical.html">
-       2.4.2. Root causes coverage
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="folderMeca/digital_handbook/rp_mechanical/03_data_sources_methods_mechanical.html">
-       2.4.3. Data sources and methods
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="folderMeca/digital_handbook/rp_mechanical/04_failure_identification_focus_mecha.html">
-       2.4.4. Failure mechanisms identification and focus
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="folderMeca/digital_handbook/rp_mechanical/05_method_selection_mechanical.html">
-       2.4.5. Method selection for different items and failure mechanisms
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="folderMeca/digital_handbook/rp_mechanical/06_structural_method_input_mechanical.html">
-       2.4.6. Structural reliability methods and inputs
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="folderMeca/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical.html">
-       2.4.7. Structural reliability models and equations
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="folderMeca/digital_handbook/rp_mechanical/08_examples_mechanical.html">
-       2.4.8. Examples
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -250,8 +160,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="folderMiscellaneous/digital_handbook/introduction.html">
    2. Miscellaneous Digital Handbook
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -297,8 +207,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous.html">
    3. Miscellaneous Interactive Guide
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -326,8 +236,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="folderSystem/mainSystem.html">
    1. Introduction to RP at System Level
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -346,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <div class="navbar_extra_footer">
   <div>
-    By Airbus Defence & Space
+    By Matrisk & Airbus Defence & Space
     © Copyright 2021.
 </div>
 

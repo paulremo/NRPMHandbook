@@ -4,9 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>3.1. General Methodology &#8212; NRPM Digital handbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General Methodology &#8212; NRPM Digital handbook</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -30,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mytables.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -39,12 +39,9 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/myscript.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -55,11 +52,9 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. Welcome to the System chapter !" href="../../folderSystem/mainSystem.html" />
-    <link rel="prev" title="3. Welcome to the interactive guide for the miscellaneous RP calculation !" href="introduction_guide_miscellaneous.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -105,33 +100,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Utilities
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../Utilities/notebooks.html">
-   1. Notebooks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../Utilities/markdown-notebooks.html">
-   2. Markdown for Notebooks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../Utilities/interactive-js.html">
-   3. Javascipt interactivity
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../Utilities/interactive.html">
-   4. Python interactivity
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   EEE section
  </span>
 </p>
@@ -154,8 +122,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../folderMeca/interactive_guide/introduction.html">
-   2. Mechanicals Digital Handbook
+  <a class="reference internal" href="../../folderMeca/interactive_guide/introduction_guide_meca.html">
+   2. Meca Interactive Guide
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -164,71 +132,9 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../folderMeca/interactive_guide/scope.html">
-     2.1. Scope
+    <a class="reference internal" href="../../folderMeca/interactive_guide/soil_lubricant_wear.html">
+     2.1. Soil lubricant wear
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../folderMeca/interactive_guide/normative_references.html">
-     2.2. Normative References
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../folderMeca/interactive_guide/terms.html">
-     2.3. Terms, definitions and abbreviated terms
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/00_rp_mechanical.html">
-     2.4. Reliability prediction for mechanical and structural parts and assemblies
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/01_process_mechanical_rp.html">
-       2.4.1. Process for mechanical reliability prediction
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/02_root_causes_coverage_mechanical.html">
-       2.4.2. Root causes coverage
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/03_data_sources_methods_mechanical.html">
-       2.4.3. Data sources and methods
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/04_failure_identification_focus_mecha.html">
-       2.4.4. Failure mechanisms identification and focus
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/05_method_selection_mechanical.html">
-       2.4.5. Method selection for different items and failure mechanisms
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/06_structural_method_input_mechanical.html">
-       2.4.6. Structural reliability methods and inputs
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/07_structural_models_equations_mechanical.html">
-       2.4.7. Structural reliability models and equations
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../folderMeca/interactive_guide/rp_mechanical/08_examples_mechanical.html">
-       2.4.8. Examples
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -238,7 +144,7 @@ const thebe_selector_output = ".output, .cell_output"
   Miscellaneous section
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../mainMiscellaneous.html">
    1. Introduction to Miscellaneous
@@ -248,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../digital_handbook/introduction.html">
    2. Miscellaneous Digital Handbook
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -291,19 +197,24 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="introduction_guide_miscellaneous.html">
    3. Miscellaneous Interactive Guide
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     3.1. General Methodology
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="search_table_test.html">
+     3.1. Table interactivity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="misc_failure_rate_processing.html">
+     3.2. Failure rate processing
     </a>
    </li>
   </ul>
@@ -319,8 +230,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../folderSystem/mainSystem.html">
    1. Introduction to RP at System Level
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -339,7 +250,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <div class="navbar_extra_footer">
   <div>
-    By Airbus Defence & Space
+    By Matrisk & Airbus Defence & Space
     © Copyright 2021.
 </div>
 
@@ -402,12 +313,6 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/paulremo/NRPMHandbook/main?urlpath=tree/02_NRPMHandbook/folderMiscellaneous/interactive_guide/general_methodology.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
         
         
         <button type="button" class="btn btn-secondary topbarbtn"
@@ -429,7 +334,7 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reliability-prediction-for-miscellaneous-items">
-   3.1.1. Reliability prediction for miscellaneous items
+   Reliability prediction for miscellaneous items
   </a>
  </li>
 </ul>
@@ -454,7 +359,7 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reliability-prediction-for-miscellaneous-items">
-   3.1.1. Reliability prediction for miscellaneous items
+   Reliability prediction for miscellaneous items
   </a>
  </li>
 </ul>
@@ -466,23 +371,23 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="general-methodology">
-<h1><span class="section-number">3.1. </span>General Methodology<a class="headerlink" href="#general-methodology" title="Permalink to this headline">¶</a></h1>
-<section id="reliability-prediction-for-miscellaneous-items">
-<h2><span class="section-number">3.1.1. </span>Reliability prediction for miscellaneous items<a class="headerlink" href="#reliability-prediction-for-miscellaneous-items" title="Permalink to this headline">¶</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="general-methodology">
+<h1>General Methodology<a class="headerlink" href="#general-methodology" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reliability-prediction-for-miscellaneous-items">
+<h2>Reliability prediction for miscellaneous items<a class="headerlink" href="#reliability-prediction-for-miscellaneous-items" title="Permalink to this headline">¶</a></h2>
 <p>For the four different sections (System, EEE, Mechanical and Miscellaneous), the same principle will be applied with for each section a clear definition of the objective(s) and then a clear explanation of the choices. When relevant, examples will be used to illustrate.</p>
 <p>The level of recommendation/rule or permission will be clearly indicated so that it is easy for the user to adapt its application of the method based on its needs.</p>
 <p>This chapter deals with the miscellaneous items which are represented by all parts/item (or sets of parts) which are not fully electrical parts, nor fully mechanical parts nor fully structural parts. The current reliability models (EEE parts, mechanical parts) are not adapted and are not the preferred way to support reliability predictions for these items. Therefore, other ways to provide reliability estimates are proposed in this chapter and are detailed in the next sections.</p>
 <p>The <a class="reference internal" href="../digital_handbook/rp_miscellaneous.html#figure4-1"><span class="std std-ref">following figure</span></a> represents examples of some miscellaneous parts/items:</p>
-<p><img alt="alt text" src="../../_images/figure4_11.png" /></p>
-</section>
-</section>
+<p><img alt="alt text" src="../../_images/figure4_1.png" /></p>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "paulremo/NRPMHandbook",
+            repo: "paulremo/NRPMInteractivity",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -491,7 +396,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./folderMiscellaneous/interactive_guide"
+            path: "./folderMiscellaneous\interactive_guide"
         },
         predefinedOutput: true
     }
@@ -502,21 +407,7 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="introduction_guide_miscellaneous.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Welcome to the interactive guide for the miscellaneous RP calculation !</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../../folderSystem/mainSystem.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Welcome to the System chapter !</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
