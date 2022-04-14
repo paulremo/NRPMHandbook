@@ -10,33 +10,33 @@ parts:
     chapters:
     - file: folderEEE/mainEEE
       title: Introduction to EEE
-  - caption: Meca section
+  - caption: Mechanical section
     numbered: true
     chapters:
-    - file: folderMeca/mainMeca
+    - file: folderMechanical/mainMechanical
       title: Introduction to Mechanicals
-    - file: folderMeca/digital_handbook/introduction
+    - file: folderMechanical/digital_handbook/introduction
       title: Mechanicals Digital Handbook
       sections:
-      - file: folderMeca/digital_handbook/scope
-      - file: folderMeca/digital_handbook/normative_references
-      - file: folderMeca/digital_handbook/terms
-      - file: folderMeca/digital_handbook/rp_mechanical/00_rp_mechanical
+      - file: folderMechanical/digital_handbook/scope
+      - file: folderMechanical/digital_handbook/normative_references
+      - file: folderMechanical/digital_handbook/terms
+      - file: folderMechanical/digital_handbook/rp_mechanical/00_rp_mechanical
         title: Reliability prediction for mechanical and structural parts and assemblies
         sections:
-        - file: folderMeca/digital_handbook/rp_mechanical/01_process_mechanical_rp
-        - file: folderMeca/digital_handbook/rp_mechanical/02_root_causes_coverage_mechanical
-        - file: folderMeca/digital_handbook/rp_mechanical/03_data_sources_methods_mechanical
-        - file: folderMeca/digital_handbook/rp_mechanical/04_failure_identification_focus_mecha
-        - file: folderMeca/digital_handbook/rp_mechanical/05_method_selection_mechanical
-        - file: folderMeca/digital_handbook/rp_mechanical/06_structural_method_input_mechanical
-        - file: folderMeca/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical
-        - file: folderMeca/digital_handbook/rp_mechanical/08_examples_mechanical   
-    - file: folderMeca/interactive_guide/introduction_guide_meca
-      title: Meca Interactive Guide
+        - file: folderMechanical/digital_handbook/rp_mechanical/01_process_mechanical_rp
+        - file: folderMechanical/digital_handbook/rp_mechanical/02_root_causes_coverage_mechanical
+        - file: folderMechanical/digital_handbook/rp_mechanical/03_data_sources_methods_mechanical
+        - file: folderMechanical/digital_handbook/rp_mechanical/04_failure_identification_focus_mecha
+        - file: folderMechanical/digital_handbook/rp_mechanical/05_method_selection_mechanical
+        - file: folderMechanical/digital_handbook/rp_mechanical/06_structural_method_input_mechanical
+        - file: folderMechanical/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical
+        - file: folderMechanical/digital_handbook/rp_mechanical/08_examples_mechanical   
+    - file: folderMechanical/interactive_guide/introduction_guide_mechanical
+      title: Mechanical Interactive Guide
       sections:
-      - file: folderMeca/interactive_guide/soil_lubricant_wear
-        title: Soil lubricant wear 
+      - file: folderMechanical/interactive_guide/solid_lubricant_wear
+        title: Solid lubricant wear 
   - caption: Miscellaneous section
     numbered: true
     chapters:
