@@ -5,19 +5,6 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: Utilities
-    numbered: true
-    chapters:
-    - file: Utilities/notebooks
-      title: Notebooks
-    - file: Utilities/markdown-notebooks
-      title: Markdown for Notebooks
-    - file: test
-      title: Test
-    - file: Utilities/interactive-js
-      title: Javascipt interactivity
-    - file: Utilities/interactive
-      title: Python interactivity
   - caption: EEE section
     numbered: true
     chapters:
