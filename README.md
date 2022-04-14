@@ -26,8 +26,11 @@ The book is then published as a Git Page with the URL https://paulremo.github.io
 ## Where is the book hosted?
 The book is hosted on *GitHub Pages*. 
 
-## How to access interactive content?
-There are two ways to access interactive content:
+## What about interactivity?
+The handbook contains two types of interactive content: javascript-based and python-based content. The two are hosted and accessed differently:
 
-- **Binder** by hovering over the :rocket: on top of the page and selecing *Binder*. This will open the current site of the Jupyer Book on https://mybinder.org.
-- **Thebe** by hovering over the :rocket: on top of the page and selecing *Live Code*. *Thebe* will then start a mybinder kernel and embed it directly in the Jupyter Book. 
+- **Javascript** content is accessible directly through the browser without additional user-action. The source files are stored in `.js` files inside the `_static` folder.
+- **Python** content cannot be run on the browser and is instead launched by hovering over the :rocket: on top of the page and selecing *Live Code*. This launches a kernel provided by [mybinder](https://mybinder.org/) and shown in the browser with the [thebe](https://github.com/executablebooks/thebe) interface. 
+
+### Python configuration
+The python-based content requires a package called `nrpmin` from a seperate [github repository](https://github.com/paulremo/NRPMInteractivity/). To launch thebe in the correct repository, special configuration options have to be passed to [sphinx-thebe](https://sphinx-thebe.readthedocs.io/en/latest/configure.html). These settings are stored in the `_config.yml` file of this repo.
