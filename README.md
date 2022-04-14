@@ -30,4 +30,7 @@ The book is hosted on *GitHub Pages*.
 The handbook contains two types of interactive content: javascript-based and python-based content. The two are hosted and accessed differently:
 
 - **Javascript** content is accessible directly through the browser without additional user-action. The source files are stored in `.js` files inside the `_static` folder.
-- **Python** content cannot be run on the browser and is instead launched by hovering over the :rocket: on top of the page and selecing *Live Code*. This launches a kernel provided by [mybinder](https://mybinder.org/) and shown in the browser with the [thebe](https://github.com/executablebooks/thebe) interface. The python-based content requires a package called `nrpmin` from a seperate [github repository](https://github.com/paulremo/NRPMInteractivity/). All settings connecting these services are stored in the `_config.yml` file of this repo.
+- **Python** content cannot be run on the browser and is instead launched by hovering over the :rocket: on top of the page and selecing *Live Code*. This launches a kernel provided by [mybinder](https://mybinder.org/) and shown in the browser with the [thebe](https://github.com/executablebooks/thebe) interface. 
+
+### Python configuration
+The python-based content requires a package called `nrpmin` from a seperate [github repository](https://github.com/paulremo/NRPMInteractivity/). To launch thebe in the correct repository, special configuration options have to be passed to [sphinx-thebe](https://sphinx-thebe.readthedocs.io/en/latest/configure.html). These settings are stored in the `_config.yml` file of this repo.
