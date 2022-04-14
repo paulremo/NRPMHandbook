@@ -1,5 +1,0 @@
-jupyter-book
-matplotlib
-numpy
-scipy
-git+https://github.com/pystra/pystra.git
