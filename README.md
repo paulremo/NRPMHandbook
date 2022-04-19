@@ -40,7 +40,8 @@ The `_static` folder is included as a submodule in this repository. After clonin
 ```
 git submodule update --init --recursive
 ```
-To automatically update submodules at subsequent pulls, the following option has to be set
+To update submodules at subsequent pulls, the following command has to be run from the main repository
 ```
-git config --global submodule.recurse true
+git submodule update --remote
 ```
+If changes in the submodule are pulled, they need to be committed to the main repository explicitly afterwards.
