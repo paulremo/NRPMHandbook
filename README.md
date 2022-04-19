@@ -34,3 +34,13 @@ The handbook contains two types of interactive content: javascript-based and pyt
 
 ### Python configuration
 The python-based content requires a package called `nrpmin` from a seperate [github repository](https://github.com/paulremo/NRPMInteractivity/). To launch thebe in the correct repository, special configuration options have to be passed to [sphinx-thebe](https://sphinx-thebe.readthedocs.io/en/latest/configure.html). These settings are stored in the `_config.yml` file of this repo.
+
+### Javascript and CSS `_static` folder
+The `_static` folder is included as a submodule in this repository. After cloning this repository to a local machine, the submodules have to be pulled seperately with
+```
+git submodule update --init --recursive
+```
+To automatically update submodules at subsequent pulls, the following option has to be set
+```
+git config --global submodule.recurse true
+```
