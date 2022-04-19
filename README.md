@@ -29,13 +29,13 @@ The book is hosted on *GitHub Pages*.
 ## What about interactivity?
 The handbook contains two types of interactive content: javascript-based and python-based content. The two are hosted and accessed differently:
 
-- **Javascript** content is accessible directly through the browser without additional user-action. The source files are stored in `.js` files inside the `_static` folder.
+- **Javascript** content is accessible directly through the browser without additional user-action. The source files are stored in `.js`, `.css`, and `.html` files inside the `_static` folder.
 - **Python** content cannot be run on the browser and is instead launched by hovering over the :rocket: on top of the page and selecing *Live Code*. This launches a kernel provided by [mybinder](https://mybinder.org/) and shown in the browser with the [thebe](https://github.com/executablebooks/thebe) interface. 
 
-### Python configuration
-The python-based content requires a package called `nrpmin` from a seperate [github repository](https://github.com/paulremo/NRPMInteractivity/). To launch thebe in the correct repository, special configuration options have to be passed to [sphinx-thebe](https://sphinx-thebe.readthedocs.io/en/latest/configure.html). These settings are stored in the `_config.yml` file of this repo.
+### Javascript configuration
+Javascript-based interactivity is implemented in `.html` files inside the `_static` folder. Every interactive element has a dedicated `.html` file. These files are included in the jupyter-book through iframe tags. Javascript is used to resize the iframe to its content.
 
-### Javascript and CSS `_static` folder
+#### Javascript and CSS `_static` folder
 The `_static` folder is included as a submodule in this repository. After cloning this repository to a local machine, the submodules have to be pulled seperately with
 ```
 git submodule update --init --recursive
@@ -45,3 +45,7 @@ To update submodules at subsequent pulls, the following command has to be run fr
 git submodule update --remote
 ```
 If changes in the submodule are pulled, they need to be committed to the main repository explicitly afterwards.
+
+
+### Python configuration
+The python-based content requires a package called `nrpmin` from a seperate [github repository](https://github.com/paulremo/NRPMInteractivity/). To launch thebe in the correct repository, special configuration options have to be passed to [sphinx-thebe](https://sphinx-thebe.readthedocs.io/en/latest/configure.html). These settings are stored in the `_config.yml` file of this repo.
