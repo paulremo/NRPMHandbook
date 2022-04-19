@@ -47,10 +47,10 @@
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/js/d3.v3.min.js"></script>
     <script src="../../../_static/js/draw_circle_lib.js"></script>
-    <script src="../../../_static/js/include_html.js"></script>
     <script src="../../../_static/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/js/radial_bar_lib.js"></script>
+    <script src="../../../_static/js/resize_iframe.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -607,7 +607,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Here, <span class="math notranslate nohighlight">\(X_{1}\)</span> may be interpreted as the “resistance” (allowable stress, or strength) of the considered part and <span class="math notranslate nohighlight">\(X_{2}\)</span> as the “load” (or stress) acting on it. To capture the uncertainties inherent in the applied models, a model uncertainty variable <span class="math notranslate nohighlight">\(\Theta\)</span> is introduced. Failure occurs if the load is larger than the resistance, or <span class="math notranslate nohighlight">\(\Theta X_{2} &gt; X_{1}\)</span>. Thus, the probability of failure is derived from the overlap of the statistical distributions of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(\Theta X_{2}\)</span>, see Figure 4 -3 for illustration.</p>
 <p>Time dependence is considered by modelling either <span class="math notranslate nohighlight">\(X_{1}\)</span> or <span class="math notranslate nohighlight">\(X_{2}\)</span> (or both) as a function of time.</p>
 <div class="figure align-default" id="figure4-3">
-<a class="reference internal image-reference" href="../../../_images/figure4_51.png"><img alt="../../../_images/figure4_51.png" src="../../../_images/figure4_51.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/figure4_5.png"><img alt="../../../_images/figure4_5.png" src="../../../_images/figure4_5.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Illustration of structural reliability methods, with probability of failure resulting from the overlap of the statistical distribution for the “load” and the “resistance” (statistical interference).</span><a class="headerlink" href="#figure4-3" title="Permalink to this image">¶</a></p>
 </div>
 <p>Despite its simplicity, the limit state function in Equation 10 -2 is fairly generic, considering that both <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> can be a function of several random variables specific to the considered failure mechanism. In the simplified method, the two variables are defined such that the mean and coefficients of variation of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> as well as the probability of failure <span class="math notranslate nohighlight">\(P_{f}\)</span> can be estimated analytically with pre-defined distributional models for the underlying basic variables. The results may easily be updated if new test or operation data becomes available during the course of a space project, see Section 4.6.5 for details.</p>
@@ -618,7 +618,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Miss ref just above</p>
 </div>
 <div class="figure align-default" id="figure4-4">
-<a class="reference internal image-reference" href="../../../_images/figure4_61.png"><img alt="../../../_images/figure4_61.png" src="../../../_images/figure4_61.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/figure4_6.png"><img alt="../../../_images/figure4_6.png" src="../../../_images/figure4_6.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Effect of assuming a conservative bias in the model uncertainty variable (<span class="math notranslate nohighlight">\(\mu_{\Theta} &gt; 1\)</span>) on the estimated probability of failure.</span><a class="headerlink" href="#figure4-4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -677,7 +677,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>It should be noted that the design factors used in practice, defined as the ratio between the design allowable load and the design limit load, are generally much smaller than the central safety factors depicted on the horizontal axis in Figure   10 -5. The reason is that designers usually make use of conservative estimates for stress and strength, which first have to be transformed to mean values before making use of Equation   10 -3 or Equation   10 -4.  To give an example, ECSS-E-ST-32C Error: Reference source not founddefines the limit load statistically as the load level not being exceeded with a probability of <span class="math notranslate nohighlight">\(99%\)</span> during the service life of a structure. Assuming a Normal distributed load with a coefficient of variation of <span class="math notranslate nohighlight">\(0.2\)</span>, this fractile value is a factor of 1.5 higher than the corresponding mean value of the same distribution. Additional conservatism is introduced in the strength value (e.g. using A- or B-values for material strength, defined as lower <span class="math notranslate nohighlight">\(1%\)</span> or <span class="math notranslate nohighlight">\(10%\)</span> fractiles of the strength distribution), and with the aid of explicit margins and/or factors of safety introduced in the design.</p>
 <p>It is interesting to note that the impact of different distributional assumptions gets smaller when referring to design values for stress and strength, compared to the results shown in Figure   10 -5, which are directly based on the central safety factor and thus referring to mean values for both variables. An important prerequisite for robust results is that the transformation between fractiles and mean values is performed based on the same distributional assumptions as the ones used for the reliability calculations.</p>
 <div class="figure align-default" id="figure4-5">
-<a class="reference internal image-reference" href="../../../_images/figure4_71.png"><img alt="../../../_images/figure4_71.png" src="../../../_images/figure4_71.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/figure4_7.png"><img alt="../../../_images/figure4_7.png" src="../../../_images/figure4_7.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Effect of distributional assumptions on the relationship between the probability of failure and the central safety factor, defined as the ration between the mean values of strength and stress.</span><a class="headerlink" href="#figure4-5" title="Permalink to this image">¶</a></p>
 </div>
 </div>

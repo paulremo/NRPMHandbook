@@ -779,7 +779,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>This chapter deals with the miscellaneous items which are represented by all parts/item (or sets of parts) which are not fully electrical parts, nor fully mechanical parts nor fully structural parts. The current reliability models (<a class="reference internal" href="../../folderEEE/mainEEE.html"><span class="doc std std-doc">EEE parts</span></a>, mechanical parts[]) are not adapted and are not the preferred way to support reliability predictions for these items. Therefore, other ways to provide reliability estimates are proposed in this chapter and are detailed in the next sections.</p>
 <p>The <a class="reference internal" href="#misc-figure4-1"><span class="std std-ref">following figure</span></a> represents examples of some miscellaneous parts/items:</p>
 <div class="figure align-default" id="figure4-1">
-<span id="misc-figure4-1"></span><a class="reference internal image-reference" href="../../_images/figure4_1.png"><img alt="../../_images/figure4_1.png" src="../../_images/figure4_1.png" style="width: 600px;" /></a>
+<span id="misc-figure4-1"></span><a class="reference internal image-reference" href="../../_images/figure4_11.png"><img alt="../../_images/figure4_11.png" src="../../_images/figure4_11.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Examples of some miscellaneous items</span><a class="headerlink" href="#figure4-1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The list provided below may contain some items that are in fact EEE or mechanical type items, but which are classified as “miscellaneous” because the modelling approach for EEE/mechanical is not considered as completely suitable.</p>
@@ -808,7 +808,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>MIS-X, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers to <span class="xref myst">Section 4.5.5</span>.</p>
 </div>
 <div class="figure align-default" id="figure4-2">
-<span id="misc-figure4-2"></span><a class="reference internal image-reference" href="../../_images/figure4_2.png"><img alt="../../_images/figure4_2.png" src="../../_images/figure4_2.png" style="width: 600px;" /></a>
+<span id="misc-figure4-2"></span><a class="reference internal image-reference" href="../../_images/figure4_21.png"><img alt="../../_images/figure4_21.png" src="../../_images/figure4_21.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Miscellaneous (MIS) items reliability modelling logic.</span><a class="headerlink" href="#figure4-2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="list-of-miscellaneous-items">
@@ -1140,7 +1140,7 @@ Besides, the use of in-orbit return is possible on a case by case basis, in the 
 <p>The item is neither a mechanism, nor an assembly of EEE parts. It is constituted by different parts such as spring, glue, expansion unit. Since the design is very specific without any IOR data it is necessary to define a dedicated reliability model.</p>
 <p>The Current document provides general guidance to define such a reliability model: The approach to calculate the basic reliability data is presented in <a class="reference internal" href="#misc-4-7"><span class="std std-ref">Section 4.7</span></a>. The “specific” reliability model is then calculated based on the process presented in <a class="reference internal" href="#misc-4-5"><span class="std std-ref">Section 4.5</span></a>.</p>
 <div class="figure align-default" id="figure4-3">
-<span id="misc-figure4-3"></span><a class="reference internal image-reference" href="../../_images/figure4_3.png"><img alt="../../_images/figure4_3.png" src="../../_images/figure4_3.png" style="width: 600px;" /></a>
+<span id="misc-figure4-3"></span><a class="reference internal image-reference" href="../../_images/figure4_31.png"><img alt="../../_images/figure4_31.png" src="../../_images/figure4_31.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Miscellaneous (MIS) items reliability modelling logic.</span><a class="headerlink" href="#figure4-3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -1169,7 +1169,7 @@ Besides, the use of in-orbit return is possible on a case by case basis, in the 
 <p>On Figure 4‑4, the basic model is a failure rate but it could also be a probability of failure.</p>
 </div>
 <div class="figure align-default" id="figure4-4">
-<span id="misc-figure4-4"></span><a class="reference internal image-reference" href="../../_images/figure4_4.png"><img alt="../../_images/figure4_4.png" src="../../_images/figure4_4.png" style="width: 600px;" /></a>
+<span id="misc-figure4-4"></span><a class="reference internal image-reference" href="../../_images/figure4_41.png"><img alt="../../_images/figure4_41.png" src="../../_images/figure4_41.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.12 </span><span class="caption-text">General process for miscellaneous items reliability prediction.</span><a class="headerlink" href="#figure4-4" title="Permalink to this image">¶</a></p>
 </div>
 <p>First, it is necessary, before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used, if relevant, as a “standard model”:</p>
@@ -1348,7 +1348,7 @@ The average resulting factor is then applied.</p>
 <p class="card-text"><a class="reference internal" href="#misc-table4-4"><span class="std std-ref">Table4-4</span></a> provides an example of such a calculation.</p>
 </div>
 <p class="card-text" id="misc-table4-4"><strong>Table 4.4</strong> : Values of factors per their ranking.</p>
-<img alt="figure4_4" class="align-center" src="../../_images/figure4_4.png" />
+<img alt="figure4_4" class="align-center" src="../../_images/figure4_41.png" />
 <p class="card-text">The column <em>“value”</em> provides the factors depending on the classification (column <em>“scale”</em>).
 The two right-hand columns provide the result for one example (<em>“X”</em> representing the ranking regarding the different categories with the associated resulting factor in the right column)</p>
 <p class="card-text"><span class="math notranslate nohighlight">\(1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\)</span></p>
@@ -1411,15 +1411,15 @@ The resulting failure rate is :</p>
 <p class="card-text">The model 1 is recommended as it combines a constant failure rate model with an increasing failure rate model. Other models could be used when appropriate justification is provided by the user.</p>
 </div>
 <div class="figure align-default" id="figure4-5">
-<span id="misc-figure4-5"></span><a class="reference internal image-reference" href="../../_images/figure4_5.png"><img alt="../../_images/figure4_5.png" src="../../_images/figure4_5.png" style="width: 600px;" /></a>
+<span id="misc-figure4-5"></span><a class="reference internal image-reference" href="../../_images/figure4_51.png"><img alt="../../_images/figure4_51.png" src="../../_images/figure4_51.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.13 </span><span class="caption-text">Failure rates for the three Wear-out models (Exponential, Weibull)</span><a class="headerlink" href="#figure4-5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="figure4-6">
-<span id="misc-figure4-6"></span><a class="reference internal image-reference" href="../../_images/figure4_6.png"><img alt="../../_images/figure4_6.png" src="../../_images/figure4_6.png" style="width: 600px;" /></a>
+<span id="misc-figure4-6"></span><a class="reference internal image-reference" href="../../_images/figure4_61.png"><img alt="../../_images/figure4_61.png" src="../../_images/figure4_61.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.14 </span><span class="caption-text">Example of WO distribution calculation (assumption: Normal distribution)</span><a class="headerlink" href="#figure4-6" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="figure4-7">
-<span id="misc-figure4-7"></span><a class="reference internal image-reference" href="../../_images/figure4_7.png"><img alt="../../_images/figure4_7.png" src="../../_images/figure4_7.png" style="width: 600px;" /></a>
+<span id="misc-figure4-7"></span><a class="reference internal image-reference" href="../../_images/figure4_71.png"><img alt="../../_images/figure4_71.png" src="../../_images/figure4_71.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.15 </span><span class="caption-text">Example of WO distribution calculation (assumption: Weibull distribution)</span><a class="headerlink" href="#figure4-7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -1473,7 +1473,7 @@ It is up to the discretion of the user to use the result appropriately:</p>
 </ul>
 <p>An example of calculation is presented in <a class="reference internal" href="#misc-table4-5"><span class="std std-ref">Table 4 -5</span></a>.</p>
 <p id="misc-table4-5"><strong>Table 4.5</strong> : Example of a reliability calculation for a Miscellaneous item: TWTA.</p>
-<img alt="table4_5" class="align-center" src="../../_images/figure4_8.png" />
+<img alt="table4_5" class="align-center" src="../../_images/figure4_81.png" />
 </div>
 </div>
 <div class="section" id="use-of-ior-data-and-or-tests-results">
@@ -1574,7 +1574,7 @@ A second equation is provided by the level of confidence “<span class="math no
 <li><p><strong>&#64;system level</strong>: reviewed by procurement within the unit acceptance process</p></li>
 </ul>
 <div class="figure align-default" id="figure4-8">
-<span id="misc-figure4-8"></span><a class="reference internal image-reference" href="../../_images/figure4_8.png"><img alt="../../_images/figure4_8.png" src="../../_images/figure4_8.png" style="width: 600px;" /></a>
+<span id="misc-figure4-8"></span><a class="reference internal image-reference" href="../../_images/figure4_81.png"><img alt="../../_images/figure4_81.png" src="../../_images/figure4_81.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.16 </span><span class="caption-text">Differences between FMEA, DFMEA and PFMEA.</span><a class="headerlink" href="#figure4-8" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#misc-figure4-8"><span class="std std-ref">Figure 4 -8</span></a> highlights the differences and the commonalities between FMEA, DFMEA and PFMEA.</p>
@@ -1587,7 +1587,7 @@ A second equation is provided by the level of confidence “<span class="math no
 </ul>
 <p>The Risk Priority Number (RPN), which is derived, is an index reflecting the residual technical risk.</p>
 <div class="figure align-default" id="figure4-9">
-<span id="misc-figure4-9"></span><a class="reference internal image-reference" href="../../_images/figure4_10.png"><img alt="../../_images/figure4_10.png" src="../../_images/figure4_10.png" style="width: 600px;" /></a>
+<span id="misc-figure4-9"></span><a class="reference internal image-reference" href="../../_images/figure4_101.png"><img alt="../../_images/figure4_101.png" src="../../_images/figure4_101.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.17 </span><span class="caption-text">Differences between FMEA, DFMEA and PFMEA.</span><a class="headerlink" href="#figure4-9" title="Permalink to this image">¶</a></p>
 </div>
 <dl class="glossary simple">
@@ -1601,7 +1601,7 @@ A second equation is provided by the level of confidence “<span class="math no
 </dd>
 </dl>
 <p id="misc-table4-6"><strong>Table 4.6</strong> : Occurrence scale with 10 levels.</p>
-<img alt="table4_6" class="align-center" src="../../_images/figure4_11.png" />
+<img alt="table4_6" class="align-center" src="../../_images/figure4_111.png" />
 <dl class="glossary simple">
 <dt id="term-TRL">TRL<a class="headerlink" href="#term-TRL" title="Permalink to this term">¶</a></dt><dd><p>Technology Readiness Level</p>
 </dd>

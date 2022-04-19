@@ -47,10 +47,10 @@
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/js/d3.v3.min.js"></script>
     <script src="../../../_static/js/draw_circle_lib.js"></script>
-    <script src="../../../_static/js/include_html.js"></script>
     <script src="../../../_static/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/js/radial_bar_lib.js"></script>
+    <script src="../../../_static/js/resize_iframe.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -519,7 +519,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h2><span class="section-number">2.4.2.2. </span>Wear-out failures<a class="headerlink" href="#wear-out-failures" title="Permalink to this headline">¶</a></h2>
 <p>In the frame of this handbook, wear-out failures are generally assumed to occur after the specified mission life time, assuming that safe life qualification processes have successfully mitigated the risk of premature failures. However, for mechanical items, this assumption may not necessarily be valid, as experience shows that there is a certain risk of premature wear-out despite safe life qualification, which may lead to a (slowly) increasing failure rate already during the course of the mission, as illustrated in <a class="reference internal" href="#meca-figure4-1"><span class="std std-ref">Figure 4 -1</span></a>. The root cause of these premature wear-out failures will mostly be related to the design or manufacturing process. However, following the same line of thought as in <a class="reference internal" href="#meca-4-2-1"><span class="std std-ref">Section 4.2.1</span></a> above, failures due to minor design or manufacturing variability can nevertheless be considered as wear-out rather than systematic failures, and considered with the methodology presented in this chapter. Only wear-out failures due to gross design or manufacturing errors are left for the systematic failure modelling.</p>
 <div class="figure align-default" id="figure4-1">
-<span id="meca-figure4-1"></span><a class="reference internal image-reference" href="../../../_images/figure4_12.png"><img alt="../../../_images/figure4_12.png" src="../../../_images/figure4_12.png" style="width: 600px;" /></a>
+<span id="meca-figure4-1"></span><a class="reference internal image-reference" href="../../../_images/figure4_1.png"><img alt="../../../_images/figure4_1.png" src="../../../_images/figure4_1.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Failure rate as a function of time for typical mechanical components.</span><a class="headerlink" href="#figure4-1" title="Permalink to this image">¶</a></p>
 </div>
 <p>When exceeding the qualification time, e.g. for a satellite life time extension, the modelling of wear-out failures becomes even more relevant. Additional degradation mechanisms whose effect is negligible during the specified lifetime may need to be considered, and failures due to all degradation mechanisms become more likely.</p>

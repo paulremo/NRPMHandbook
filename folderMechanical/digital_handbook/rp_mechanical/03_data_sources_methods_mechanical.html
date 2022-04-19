@@ -47,10 +47,10 @@
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/js/d3.v3.min.js"></script>
     <script src="../../../_static/js/draw_circle_lib.js"></script>
-    <script src="../../../_static/js/include_html.js"></script>
     <script src="../../../_static/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/js/radial_bar_lib.js"></script>
+    <script src="../../../_static/js/resize_iframe.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -664,7 +664,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the Physics of Failure. General guidance on method selection is presented in <a class="reference internal" href="#meca-figure4-2"><span class="std std-ref">Figure 4 -2</span></a> below. The upper row in the matrix represents statistical methods, the middle row a combined approach with Bayesian updating, and the lower row either handbook methods or data (NPRD, NSWC) or – generally preferred in the absence of statistical data – structural reliability methods (SRM) based on the Physics of Failures.
 More specific recommendations are given in <a class="reference internal" href="05_method_selection_mechanical.html"><span class="doc std std-doc">Section 4.5</span></a>.</p>
 <div class="figure align-default" id="figure4-2">
-<span id="meca-figure4-2"></span><a class="reference internal image-reference" href="../../../_images/figure4_21.png"><img alt="../../../_images/figure4_21.png" src="../../../_images/figure4_21.png" style="width: 600px;" /></a>
+<span id="meca-figure4-2"></span><a class="reference internal image-reference" href="../../../_images/figure4_2.png"><img alt="../../../_images/figure4_2.png" src="../../../_images/figure4_2.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Method selection for mechanical reliability prediction depending on the available input.</span><a class="headerlink" href="#figure4-2" title="Permalink to this image">¶</a></p>
 </div>
 <p>In the following subsections, the implementation of the different methods in mechanical domain is briefly discussed, covering all methods listed above. The remainder of this chapter (<a class="reference internal" href="04_failure_identification_focus_mecha.html"><span class="doc std std-doc">Sections 4.4</span></a> and <span class="xref myst">following</span>) focuses largely on the Physics of Failure as a basis for mechanical reliability prediction.</p>
