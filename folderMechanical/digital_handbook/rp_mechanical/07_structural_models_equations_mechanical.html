@@ -1,0 +1,1765 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.4.7. Structural reliability models and equations &#8212; NRPM Digital handbook</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/misc_failure_rate_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/misc_failure_rate_sliders.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/mytables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/radial_bar.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/d3.v3.min.js"></script>
+    <script src="../../../_static/js/draw_circle_lib.js"></script>
+    <script src="../../../_static/js/include_html.js"></script>
+    <script src="../../../_static/js/misc_failure_rate_buttons.js"></script>
+    <script src="../../../_static/js/misc_failure_rate_sliders.js"></script>
+    <script src="../../../_static/js/radial_bar_lib.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="2.4.8. Examples" href="08_examples_mechanical.html" />
+    <link rel="prev" title="2.4.6. Structural reliability methods and inputs" href="06_structural_method_input_mechanical.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Welcome the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../folderEEE/mainEEE.html">
+   1. Introduction to EEE
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mechanical section
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mainMechanical.html">
+   1. Introduction to Mechanicals
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../introduction.html">
+   2. Mechanicals Digital Handbook
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../scope.html">
+     2.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../normative_references.html">
+     2.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../terms.html">
+     2.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="00_rp_mechanical.html">
+     2.4. Reliability prediction for mechanical and structural parts and assemblies
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="01_process_mechanical_rp.html">
+       2.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="02_root_causes_coverage_mechanical.html">
+       2.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="03_data_sources_methods_mechanical.html">
+       2.4.3. Data sources and methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="04_failure_identification_focus_mecha.html">
+       2.4.4. Failure mechanisms identification and focus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="05_method_selection_mechanical.html">
+       2.4.5. Method selection for different items and failure mechanisms
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="06_structural_method_input_mechanical.html">
+       2.4.6. Structural reliability methods and inputs
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       2.4.7. Structural reliability models and equations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="08_examples_mechanical.html">
+       2.4.8. Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../interactive_guide/introduction_guide_mechanical.html">
+   3. Mechanical Interactive Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive_guide/solid_lubricant_wear.html">
+     3.1. Solid lubricant wear
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../folderMiscellaneous/mainMiscellaneous.html">
+   1. Introduction to Miscellaneous
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/introduction.html">
+   2. Miscellaneous Digital Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/scope.html">
+     2.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/normative_references.html">
+     2.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/terms.html">
+     2.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/rp_miscellaneous.html">
+     2.4. Reliability prediction for miscellaneous items
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/conclusion.html">
+     2.5. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/annexA.html">
+     2.6. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/digital_handbook/annexB.html">
+     2.7. Annex B
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous.html">
+   3. Miscellaneous Interactive Guide
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/interactive_guide/search_table_test.html">
+     3.1. Table interactivity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMiscellaneous/interactive_guide/misc_failure_rate_processing.html">
+     3.2. Failure rate processing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System section
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderSystem/mainSystem.html">
+   1. Introduction to RP at System Level
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderSystem/test.html">
+     1.1. Test
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    By Matrisk & Airbus Defence & Space
+    © Copyright 2021.
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/folderMechanical/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-of-failures-due-to-mechanical-wear">
+   2.4.7.1. Modelling of failures due to mechanical wear
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adhesive-wear">
+     2.4.7.1.1. Adhesive wear
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solid-lubricant-wear">
+     2.4.7.1.2. Solid lubricant wear
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fluid-lubricant-wear">
+     2.4.7.1.3. Fluid lubricant wear
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-of-failures-due-to-fatigue">
+   2.4.7.2. Modelling of failures due to fatigue
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#high-cycle-fatigue-modelling-with-the-s-n-curve-approach">
+     2.4.7.2.1. High cycle fatigue modelling with the S/N curve approach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fatigue-crack-growth-modelling">
+     2.4.7.2.2. Fatigue crack growth modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-of-failures-due-to-corrosion">
+   2.4.7.3. Modelling of failures due to corrosion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-of-failures-due-to-material-degradation">
+   2.4.7.4. Modelling of failures due to material degradation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radiation-degradation-modelling">
+     2.4.7.4.1. Radiation degradation modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Structural reliability models and equations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-of-failures-due-to-mechanical-wear">
+   2.4.7.1. Modelling of failures due to mechanical wear
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adhesive-wear">
+     2.4.7.1.1. Adhesive wear
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solid-lubricant-wear">
+     2.4.7.1.2. Solid lubricant wear
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fluid-lubricant-wear">
+     2.4.7.1.3. Fluid lubricant wear
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-of-failures-due-to-fatigue">
+   2.4.7.2. Modelling of failures due to fatigue
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#high-cycle-fatigue-modelling-with-the-s-n-curve-approach">
+     2.4.7.2.1. High cycle fatigue modelling with the S/N curve approach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fatigue-crack-growth-modelling">
+     2.4.7.2.2. Fatigue crack growth modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-of-failures-due-to-corrosion">
+   2.4.7.3. Modelling of failures due to corrosion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-of-failures-due-to-material-degradation">
+   2.4.7.4. Modelling of failures due to material degradation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radiation-degradation-modelling">
+     2.4.7.4.1. Radiation degradation modelling
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="structural-reliability-models-and-equations">
+<h1><span class="section-number">2.4.7. </span>Structural reliability models and equations<a class="headerlink" href="#structural-reliability-models-and-equations" title="Permalink to this headline">¶</a></h1>
+<p>The present section provides limit state functions and guidance for the modelling of several failure mechanisms that are of relevance for mechanical reliability prediction. The content of this Section is largely based on Error: Reference source not found, where some aspects are discussed in more detail.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<p>An overview on the failure mechanisms covered by the different subsections is found in Table   4 -10. The limit state functions provided in each dedicated subsection are generally applicable with the “full” structural reliability method described in Section 4.6.1 and in Chapter 6 (Part II). Simplified models in the sense of Section 4.6.2, with analytic solutions for the probability of failure calculations, are provided for some failure mechanisms. Failure mechanisms that can be modelled with the aid of simple stress strength methods (as discussed in Section 4.6.3) are also mentioned in Table   4 -10, but will not discussed any further in the present section.</p>
+<p><strong>Table 4.10: Overview on Failure mechanisms covered in Section 10.7.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Failure mechanism category (cf. Table 10‑4)</strong></p></th>
+<th class="head"><p><strong>Limit state functions provided in Section 10.6.5</strong></p></th>
+<th class="head"><p><strong>Simplified model?</strong></p></th>
+<th class="head"><p><strong>Section</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Distortion</p></td>
+<td><p>The modelling of distortion is very case specific, but can often be handled with generic stress strength methods</p></td>
+<td><p></p></td>
+<td><p>(10.6.1, 10.6.3)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wear</p></td>
+<td><p>General (adhesive) wear</p></td>
+<td><p>Yes</p></td>
+<td><p>10.7.1.1</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Solid lubricant wear</p></td>
+<td><p>Yes</p></td>
+<td><p>10.7.1.2</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Fluid lubricant wear</p></td>
+<td><p>Yes</p></td>
+<td><p>10.7.1.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Fracture / Fatigue</p></td>
+<td><p>High cycle fatigue</p></td>
+<td><p>Yes</p></td>
+<td><p>10.7.2.1</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Fatigue crack growth</p></td>
+<td><p>No</p></td>
+<td><p>10.7.2.2</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Fracture and low cycle fatigue: stress strength approach</p></td>
+<td><p></p></td>
+<td><p>(10.6.3)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Corrosion</p></td>
+<td><p>Stress corrosion cracking</p></td>
+<td><p>No</p></td>
+<td><p>(10.7.3)</p></td>
+</tr>
+<tr class="row-even"><td><p>Material degradation</p></td>
+<td><p>Radiation damage</p></td>
+<td><p>Yes</p></td>
+<td><p>10.7.4.1</p></td>
+</tr>
+</tbody>
+</table>
+<p>Failure mechanisms that are not listed in Table   4 -10 need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC’s WARP Error: Reference source not foundor Kowal . The “full” structural reliability method may be applied with any limit state function or failure mechanism model, see Section 4.6.1 for details.
+The following subsections dedicated to each failure mechanism model always follow the same logic: First the failure mechanism is introduced and a generic limit state function is derived that can be used with general structural reliability methods, possibly requiring numerical methods to derive the probability of failure. Closed form solutions (if available) are then discussed separately under the heading “Simplified failure mechanism model”.</p>
+<p>The derivation of these closed-form solutions is based on several assumptions related to the limit state function and the basic variable modelling, see Section 4.6.3 for a general introduction. The detailed assumptions are specific to the considered failure mechanisms; a short summary is provided together with each simplified model. Note that it is not possible to make a general statement how “exact” the analytic solutions are, e.g. when compared to a “full” structural reliability assessment. However, the assumptions listed can and should be checked to decide whether the simplified model can be used for a given application or whether the “full” structural reliability method is more appropriate.</p>
+<div class="section" id="modelling-of-failures-due-to-mechanical-wear">
+<h2><span class="section-number">2.4.7.1. </span>Modelling of failures due to mechanical wear<a class="headerlink" href="#modelling-of-failures-due-to-mechanical-wear" title="Permalink to this headline">¶</a></h2>
+<p>Wear is a complex phenomenon related to the erosion or displacement of material during the contact of solid surfaces. Several types of wear can be distinguished:</p>
+<ul class="simple">
+<li><p><em>Adhesive wear</em> – displacement and attachment of wear debris from one surface to another.</p></li>
+<li><p><em>Abrasive wear</em> – cutting and deformation of material from a soft surface when a harder surface slides across it (2-body) or due to hard particles between two surfaces (3-body).</p></li>
+<li><p><em>Fretting wear</em> – wear between two solid surfaces experiencing oscillatory relative motion of low amplitude, e.g. induced by vibration.</p></li>
+<li><p><em>Lubricated wear</em> – wear in lubricated contacts.</p></li>
+<li><p><em>Fatigue wear</em> – weakening of a surface by cyclic loading as wear particles are detached by cyclic crack growth of micro-cracks on the surface.</p></li>
+</ul>
+<p>Adhesive, abrasive and fretting wear show common behaviour, and it is commonly agreed that for these types the adhesive wear mechanism plays a dominant role. A general wear model with a focus on <strong>adhesive wear</strong> is presented in Section .</p>
+<p><strong>Lubricated wear</strong> is related to the degradation of the lubricant or the lubricant reservoir in lubricated contacts. This regime is typical for bearings, with analytical models provided in Section  for solid lubricated bearings (particularly bearing cages), and in Section  for fluid lubricated bearings.</p>
+<p>Finally, <strong>fatigue wear</strong> is caused by cyclic loading and corresponding crack formation. It is the dominant bearing failure mechanism in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory  with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the degradation of the lubricant . For this reason, fatigue wear is not discussed any further in the following.</p>
+<div class="section" id="adhesive-wear">
+<h3><span class="section-number">2.4.7.1.1. </span>Adhesive wear<a class="headerlink" href="#adhesive-wear" title="Permalink to this headline">¶</a></h3>
+<p>Adhesive wear is considered as governing for many wear failures, and is thus typically used for the analytical prediction of wear. The key parameter for the wear estimation is the volume worn away per unit of sliding distance, which can be estimated based on the classical wear model by Archard , here used in the form of Lancaster . Failure due to adhesive wear is then modelled with the following limit state function:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.17</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet S(t) \bullet v(t)\text{d}t}\]</div>
+</div>
+<p><span class="math notranslate nohighlight">\(V_{limit}\)</span> is the limiting value for the volume worn away, <span class="math notranslate nohighlight">\(\Sigma\)</span> the model uncertainty for the Archard wear model, <span class="math notranslate nohighlight">\(K_{H}\)</span> the specific wear rate, <span class="math notranslate nohighlight">\(S\)</span> the normal load, <span class="math notranslate nohighlight">\(\nu\)</span> the sliding velocity and <span class="math notranslate nohighlight">\(T\)</span> the considered time interval. As an alternative to the limiting value for the volume worn away, the model can also be reformulated in terms of the wear depth <span class="math notranslate nohighlight">\(d\)</span>:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.18</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = d_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet \frac{S(t)}{A_{app}} \bullet v(t)\text{d}t}\]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(d_{limit}\)</span> is the limiting value for the wear depth <span class="math notranslate nohighlight">\(d\)</span> and
+<span class="math notranslate nohighlight">\(A_{app}\)</span> is the area of apparent contact. Both limit state functions
+are basically identical, and either one of them can be used for the wear
+modelling depending on the problem definition.</p>
+<p>By adapting the wear rate, the approach can also be used for other wear
+mechanisms, such as fretting or abrasive wear. The nature of the wear
+coefficient is generally very complex and its analytical modelling is
+difficult. Hence, in practice the Archard model is combined with
+experimental data in order to perform lifetime assessments.</p>
+<p><strong>Simplified adhesive wear model</strong></p>
+<p>Assuming that the specific wear rate <span class="math notranslate nohighlight">\(K_{H}\)</span> is constant over the whole
+mission (in practice it is typically derived from tests under “worst
+case” conditions) and that the remaining time dependent variables are
+constant during certain deterministic time intervals (e.g. different
+mission phases), the limit state function given in Equation 10‑17 can be
+simplified as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.19</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet K_{H} \bullet \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}}\]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(P_{i} = S_{i} \bullet v_{i}\)</span> corresponds to the sliding work per
+time unit (the sliding “power”). Thus, <span class="math notranslate nohighlight">\(X_{2}\)</span> is defined as the volume
+worn away and <span class="math notranslate nohighlight">\(X_{1}\)</span> as the corresponding limiting value. Detailed
+variable definitions are given in Table 10‑11.</p>
+<p><strong>Table 4.10: Overview on Failure mechanisms covered in Section 10.7.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>List of variables</strong></p></th>
+<th class="head"><p><strong>Unit</strong></p></th>
+<th class="head"><p><strong>Distribution</strong></p></th>
+<th class="head"><p><strong>CoV range</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V_{limit}\)</span> : Limiting value (worn volume)</p></td>
+<td><p><span class="math notranslate nohighlight">\([m^{3}]\)</span></p></td>
+<td><p>(Lognormal)</p></td>
+<td><p><span class="math notranslate nohighlight">\(0 \leq \nu_{V_{limit}} \leq 0.3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(K_{H}\)</span> : Specific wear rate</p></td>
+<td><p><span class="math notranslate nohighlight">\([Pa^{-1} = m^{2} / N]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\( \nu_{K_{H}} \ge 0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n_{p}\)</span> : Number of phases / time intervals</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(P_{i}\)</span> : Sliding work / time unit in interval i</p></td>
+<td><p><span class="math notranslate nohighlight">\(Nm/s\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\( \nu_{P_{i}} \ge 0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(t_{i}\)</span> : Length of time interval i</p></td>
+<td><p><span class="math notranslate nohighlight">\([s]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Theta\)</span> : Model uncertainty</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{\Theta} = 0.2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>The expected values and coefficients of variation of  and  are determined as follows:</p>
+<p>he expected values and coefficients of variation of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span>
+are determined as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.20</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.21</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\mu_{X_{2}} = \text{E}\left\lbrack K_{H} \right\rbrack \bullet \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}}\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.22</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\nu_{X_{1}} = \nu_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.23</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\nu_{X_{2}} = \sqrt{\nu_{K_{H}}^{2} + \left( 1 + \nu_{K_{H}}^{2} \right) \bullet \frac{\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack}{\left( \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}} \right)^{2}}}\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.24</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack = \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack P_{i},P_{j} \right\rbrack \bullet t_{i} \bullet t_{j}}} =\\ \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\rho_{P_{i}P_{j}} \bullet \sqrt{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet \text{Var}\left\lbrack P_{j} \right\rbrack} \bullet t_{i} \bullet t_{j}}}\end{aligned}\end{align} \]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(\rho_{P_{i}P_{j}}\)</span> denotes the correlation between the sliding work per time unit in different mission phases. The correlation structure may be defined in a simplified way, e.g. assuming <span class="math notranslate nohighlight">\(\rho_{P_{i}P_{j}} = 1\)</span> if the sources of uncertainty in <span class="math notranslate nohighlight">\(P\)</span> are the same in mission phase <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> and <span class="math notranslate nohighlight">\(\rho_{P_{i}P_{j}} = 0\)</span> if thereare different uncertainty sources. Assuming full correlation increases the coefficient of variation of <span class="math notranslate nohighlight">\(X_{2}\)</span>, which is conservative for small probabilities of failure.</p>
+<p>The approach can be further simplified when considering only one mission
+phase (i.e. <span class="math notranslate nohighlight">\(n_{P} = 1\)</span>), leading to:
+<span class="math notranslate nohighlight">\(\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack = \text{Var}\lbrack P\rbrack \bullet t^{2}\)</span>.
+In practice, this may also be used as a conservative simplification for <span class="math notranslate nohighlight">\(n_{P} &gt; 1\)</span>, taking <span class="math notranslate nohighlight">\(P\)</span> from the most critical phase and <span class="math notranslate nohighlight">\(t\)</span> as the total length of the mission. Another strong simplification is possible if the uncertainty in the sliding work per time unit is negligibly small. In this case, the uncertainty in the sum may be neglected and the variance term in Equation 10‑24 becomes zero.</p>
+<p>With the distributional assumptions in Table 10‑11, an analytic solution for the probability of failure calculations is derived based on a Lognormal approximation for <span class="math notranslate nohighlight">\(X_{2}\)</span>:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.25</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left(\text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left(\frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left(v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) -\text{ln}\left( v_{\Theta}^{2} + 1 \right)\right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left(v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}}\right)\end{aligned}\end{align} \]</div>
+</div>
+<p>The main assumptions underlying the simplified adhesive wear model are
+summarized as follows:</p>
+<ul class="simple">
+<li><p>The mission - or the considered time interval <span class="math notranslate nohighlight">\(t\)</span> - is divided into <span class="math notranslate nohighlight">\(n_{P}\)</span> intervals with known (deterministic) duration <span class="math notranslate nohighlight">\(t_{i}\)</span>.</p></li>
+<li><p>The wear rate <span class="math notranslate nohighlight">\(K_{H}\)</span> is constant over the whole mission (all time intervals <span class="math notranslate nohighlight">\(i\)</span>).</p></li>
+<li><p>The normal load <span class="math notranslate nohighlight">\(S_{i}\)</span> and sliding velocity <span class="math notranslate nohighlight">\(v_{i}\)</span> (or the sliding work per time unit <span class="math notranslate nohighlight">\(P_{i} = S_{i} \bullet v_{i}\)</span>) are constant during each time interval <span class="math notranslate nohighlight">\(t_{i}\)</span>.</p></li>
+<li><p>The distributions of all basic variables can be represented by the models listed in Table 10‑11. Other models for <span class="math notranslate nohighlight">\(K_{H}\)</span> and <span class="math notranslate nohighlight">\(P_{i}\)</span> are possible as long as the distribution of <span class="math notranslate nohighlight">\(X_{2}\)</span> may still be approximated by a Lognormal distribution.</p></li>
+<li><p>The effect of the Lognormal assumption for <span class="math notranslate nohighlight">\(X_{1} = V_{limit}\)</span> has been investigated in [RD18] . It may lead to an underestimation of the probability of failure, see Figure 10‑6 below.</p></li>
+</ul>
+<p>Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of <span class="math notranslate nohighlight">\(X_{1} = V_{limit}\)</span> is larger than <span class="math notranslate nohighlight">\(0.3\)</span>.</p>
+<div class="figure align-default" id="figure4-6">
+<a class="reference internal image-reference" href="../../../_images/figure4_81.png"><img alt="../../../_images/figure4_81.png" src="../../../_images/figure4_81.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Comparison of the analytic solution in Equation 10‑25 (adhesive wear model with Lognormal distributed* <span class="math notranslate nohighlight">\(V_{limit}\)</span><em>) with Monte Carlo results for Normal distributed</em> <span class="math notranslate nohighlight">\(V_{limit}\)</span></span><a class="headerlink" href="#figure4-6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="solid-lubricant-wear">
+<h3><span class="section-number">2.4.7.1.2. </span>Solid lubricant wear<a class="headerlink" href="#solid-lubricant-wear" title="Permalink to this headline">¶</a></h3>
+<p>Due to the fact that solid lubricants do not evaporate, they are suitable for extreme temperatures (both cold and hot) and for
+applications where contamination could be an issue, e.g. in optical systems. In order to enable on-ground testing and to support the lubrication regime during operations, the lubricant (e.g. sputtered MoS<sub>2</sub>) is stored in special reservoirs such as cages in case of bearings, which are at the same time used to avoid ball collisions in ball bearings. When the lubricant is degraded, new lubricant is provided via the wear of the reservoir.</p>
+<p>In the following, solid lubricant wear modelling is described taking example in a ball bearing. The modelling is applicable to other cases of solid lubricant wear; however, the number of revolutions has to be substituted with another suitable measure of sliding distance.</p>
+<p>The modelling easily can be adapted from the adhesive wear model given in Section 10.7.1. Wear is realized during cage/ball contact; hence the relation <span class="math notranslate nohighlight">\(\int_{0}^{t}{S(t) \bullet v(t)\text{d}t}\)</span> in Equation 10‑17 or Equation 10‑18 represents the work of the ball/cage interaction forces. For the bearing example, time is replaced by the number of revolutions <span class="math notranslate nohighlight">\(rev\)</span>. The equality
+<span class="math notranslate nohighlight">\(\int_{0}^{t}{S(t) \bullet v(t)\text{d}t} = \int_{0}^{rev}{\alpha(rev)\text{d}rev}\)</span> can be used for experimental evaluation of the average ball/cage interaction forces, defining a new interaction parameter <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p><strong>Simplified solid lubricant wear model</strong></p>
+<p>Using the simplified form of the adhesive wear model in Equation 10‑19 (assuming constant conditions during each mission phase), a limit state function for solid lubricant wear can be derived as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.26</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \sum_{i = 1}^{n_{P}}{K_{H,i} \bullet \alpha_{i} \bullet {rev}_{i}}\]</div>
+</div>
+<p><span class="math notranslate nohighlight">\(X_{2}\)</span> is defined as the volume worn away and <span class="math notranslate nohighlight">\(X_{1}\)</span> as the corresponding limiting value. Detailed variable definitions are given in Table 10‑12. It should be noted that the parameter <span class="math notranslate nohighlight">\(\alpha_{i}\)</span> , defined as the average work of ball/cage interaction forces per bearing revolution, will typically be estimated from tests and is thus dependent on the wear rate <span class="math notranslate nohighlight">\(K_{H,i}\)</span> . This is the reason why the wear rate cannot easily be taken out of the sum, as in Equation 10‑19 for the general adhesive wear model.</p>
+<p><strong>Table 4.12: Assumed probabilistic models for the simplified solid lubricant wear model.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>List of variables</strong></p></th>
+<th class="head"><p><strong>Unit</strong></p></th>
+<th class="head"><p><strong>Distribution</strong></p></th>
+<th class="head"><p><strong>CoV range</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V_{limit}\)</span> : Limiting value (worn volume)</p></td>
+<td><p><span class="math notranslate nohighlight">\([m^{3}]\)</span></p></td>
+<td><p>(Lognormal)</p></td>
+<td><p><span class="math notranslate nohighlight">\(0 \leq \nu_{V_{limit}} \leq 0.3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(K_{H, i}\)</span> : Specific wear rate in interval i</p></td>
+<td><p><span class="math notranslate nohighlight">\([Pa^{-1} = m^{2} / N]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\( \nu_{K_{H, i}} \ge 0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n_{p}\)</span> : Number of phases / time intervals</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\alpha_{i}\)</span> : Ball-cage interaction in interval i</p></td>
+<td><p><span class="math notranslate nohighlight">\(Nm/s\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\( \nu_{\alpha_{i}} \ge 0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(rev_{i}\)</span> : Number of revolutions in interval i</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Theta\)</span> : Model uncertainty</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{\Theta} = 0.2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>The expected values and coefficients of variation of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> are determined as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.27</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.28</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\mu_{X_{2}} = \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack K_{H,i} \bullet \alpha_{i} \right\rbrack \bullet {rev}_{i}} = \sum_{i = 1}^{n_{P}}{\left( \text{E}\left\lbrack K_{H,i} \right\rbrack \bullet \text{E}\left\lbrack \alpha_{i} \right\rbrack + \text{Cov}\left\lbrack K_{H,i},\alpha_{i} \right\rbrack \right) \bullet {rev}_{i}}\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.29</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[v_{X_{1}} = v_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.30</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[v_{X_{2}} = \frac{1}{\mu_{X_{2}}}\sqrt{\sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack K_{H,i}\alpha_{i} \right\rbrack \bullet {rev}_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack K_{H,i}\alpha_{i},K_{H,j}\alpha_{j} \right\rbrack \bullet {rev}_{i} \bullet {rev}_{j}}}}\]</div>
+</div>
+<p>Assuming full correlation to derive the covariance between <span class="math notranslate nohighlight">\(K_{H,i}\)</span> and <span class="math notranslate nohighlight">\(\alpha_{i}\)</span> (for Equation 10‑28) and for the product of the two variables between different time intervals (for Equation 10‑30) leads to conservative results. As in the general adhesive wear model, the problem can be simplified by considering only one mission phase (<span class="math notranslate nohighlight">\(n_{P} = 1\)</span>), requiring assumptions only on the covariance in Equation 10‑28; the covariance term in Equation 10‑30 can be dropped if <span class="math notranslate nohighlight">\(n_{P} = 1\)</span>.</p>
+<p>With the distributional assumptions in Table 10‑12, an analytic solution for the probability of failure is derived based on a Lognormal approximation for <span class="math notranslate nohighlight">\(X_{2}\)</span>:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.31</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\end{aligned}\end{align} \]</div>
+</div>
+<p>The main assumptions underlying the simplified solid lubricant wear model are the following:</p>
+<ul class="simple">
+<li><p>The mission is divided into <span class="math notranslate nohighlight">\(n_{P}\)</span> intervals with known number of revolutions <span class="math notranslate nohighlight">\({rev}_{i}\)</span>.</p></li>
+<li><p>The wear rate <span class="math notranslate nohighlight">\(K_{H,i}\)</span> and ball-cage interaction work <span class="math notranslate nohighlight">\(\alpha_{i}\)</span> are constant during each interval.</p></li>
+<li><p>The distributions of all basic variables can be represented by the models listed in Table 10‑12. Other models for <span class="math notranslate nohighlight">\(K_{H,i}\)</span> and <span class="math notranslate nohighlight">\(\alpha_{i}\)</span> are possible as long as the distribution of <span class="math notranslate nohighlight">\(X_{2}\)</span> may still be approximated by a Lognormal distribution.</p></li>
+<li><p>*The effect of the Lognormal assumption for <span class="math notranslate nohighlight">\(X_{1} = V_{limit}\)</span> may lead to an underestimation of the probability of failure, see [RD18] and Figure 10‑6.</p></li>
+</ul>
+<p>Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of <span class="math notranslate nohighlight">\(X_{1} = V_{limit}\)</span> is larger than 0.3.</p>
+</div>
+<div class="section" id="fluid-lubricant-wear">
+<h3><span class="section-number">2.4.7.1.3. </span>Fluid lubricant wear<a class="headerlink" href="#fluid-lubricant-wear" title="Permalink to this headline">¶</a></h3>
+<p>In this section a fluid lubricant wear modelling is described taking example in a ball bearing again. The modelling is applicable to other cases of fluid lubricant wear, but the number of revolutions has to be substituted with another measure of sliding distance in this case.</p>
+<p>The starting point for the modelling of fluid lubricant wear is the following limit state function, see [BR79] for details:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.29</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = M_{0} - M_{inactive} - \Theta \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet K \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev(t)\]</div>
+</div>
+<p>Here, <span class="math notranslate nohighlight">\(M_{0}\)</span> denotes the initial mass of the lubricant, <span class="math notranslate nohighlight">\(M_{inactive}\)</span> the mass of lubricant not participating in the contact (e.g. due to evaporation), and <span class="math notranslate nohighlight">\(\Theta\)</span> the model uncertainty for the associated term, which represents the model to estimate lubricant life described in [BR79]. In this term, <span class="math notranslate nohighlight">\(N_{b}\)</span> denotes the number of balls in the bearing, <span class="math notranslate nohighlight">\(p_{d}\)</span> the pitch diameter, <span class="math notranslate nohighlight">\(b_{d}\)</span> the ball diameter, <span class="math notranslate nohighlight">\(\vartheta\)</span> the contact angle, <span class="math notranslate nohighlight">\(K\)</span> is an empirical constant, <span class="math notranslate nohighlight">\(p_{m}\)</span> the contact pressure and <span class="math notranslate nohighlight">\(rev\)</span> the number of revoluations during the considered time interval <span class="math notranslate nohighlight">\(t\)</span>. The variables related to bearing geometry are illustrated in the figure given below.</p>
+<div class="figure align-default" id="figure4-7">
+<a class="reference internal image-reference" href="../../../_images/figure4_9.png"><img alt="../../../_images/figure4_9.png" src="../../../_images/figure4_9.png" style="height: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Bearing geometry.</span><a class="headerlink" href="#figure4-7" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Simplified fluid lubricant wear model</strong></p>
+<p>For the simplified modelling, it is considered sufficient to model only <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(K\)</span> as random variables; all other variables in Equation 10‑32 are assumed to be deterministic. Since the relation for the bearing life from [BR79], <span class="math notranslate nohighlight">\(K \bullet \text{exp}\left( - 3.35 \bullet p_{m} \right)\)</span>, is purely empirical, curve fitting residuals or the distribution of the coefficient <span class="math notranslate nohighlight">\(K\)</span> may be used for the probabilistic assessments.</p>
+<p>Note that in principle, <span class="math notranslate nohighlight">\(M_{inactive}\)</span> may also be treated as stochastic, but its value will generally be only a small fraction of <span class="math notranslate nohighlight">\(M_{0}\)</span>, typically not exceeding 1-2% when considering only evaporation losses for a bearing with a labyrinth seal under optimal temperature conditions [BR79].</p>
+<p>It is furthermore assumed that all variables (except for the number of revolutions <span class="math notranslate nohighlight">\(rev\)</span>) are constant over the whole length of the mission. <span class="math notranslate nohighlight">\(M_{inactive}\)</span> should be estimated considering the amount of lubricant that has evaporated (or is not participating in the contact due to other reasons) at the end of the mission. In reality the amount of evaporated lubricant depends on the number of revolutions, thus the proposed approach leads to a slightly conservative estimation.</p>
+<p>These assumptions allow the application of Equation 10‑32 without any further simplifications in the limit state function. Thus, <span class="math notranslate nohighlight">\(X_{1} = M_{0} - M_{inactive}\)</span> is defined as the amout of lubricant available and <span class="math notranslate nohighlight">\(X_{2}\)</span> as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in [BR79]. Detailed variable definitions are reminded in Table 10‑13 below.</p>
+<p><strong>Table 4.13: Assumed probabilistic models for the simplified fluid lubricant wear model.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>List of variables</strong></p></th>
+<th class="head"><p><strong>Unit</strong></p></th>
+<th class="head"><p><strong>Distribution</strong></p></th>
+<th class="head"><p><strong>CoV range</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(M_{0}\)</span> : Initial mass of the lubricant in the bearing</p></td>
+<td><p><span class="math notranslate nohighlight">\([g]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(M_{inactive}\)</span> : Mass of lubricant not participating in the contact (e.g. due to evaporation)</p></td>
+<td><p><span class="math notranslate nohighlight">\([g]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(K\)</span> : Empirical constant of the lubricant</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\( \nu_{K} &gt; 0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(N_{b}\)</span> : Number of balls in the bearing</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p_{d}\)</span> : Pitch diameter</p></td>
+<td><p><span class="math notranslate nohighlight">\([m]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(b_{d}\)</span> : Ball diameter</p></td>
+<td><p><span class="math notranslate nohighlight">\([m]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\vartheta\)</span> : Contact angle</p></td>
+<td><p><span class="math notranslate nohighlight">\([rad]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_{m}\)</span> : Contact pressure</p></td>
+<td><p><span class="math notranslate nohighlight">\([GPa]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(rev\)</span> : Number of revolutions</p></td>
+<td><p><span class="math notranslate nohighlight">\([10^{6}]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Theta\)</span> : Model uncertainty</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{\Theta} = 0.2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>The mean value of <span class="math notranslate nohighlight">\(X_{1}\)</span> is determined as <span class="math notranslate nohighlight">\(\mu_{X_{1}} = M_{0} - M_{inactive}\)</span> with coefficient of variation <span class="math notranslate nohighlight">\(v_{X_{1}} = 0\)</span>. For <span class="math notranslate nohighlight">\(X_{2}\)</span>, the following equations can be used:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.33</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\mu_{X_{2}} = \frac{\left( v_{K}^{2} + 1 \right)}{\text{E}\lbrack K\rbrack} \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.34</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[v_{X_{2}} = v_{K} = \frac{\sqrt{\text{Var}\lbrack K\rbrack}}{\text{E}\lbrack K\rbrack}\]</div>
+</div>
+<p>The probability of failure is estimated as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.35</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5\left( \text{ln}\left( v_{X_{2}}^{2} + 1 \right) + \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\end{aligned}\end{align} \]</div>
+</div>
+<p>The main assumptions underlying the simplified fluid lubricant wear model are the following:</p>
+<p>The main assumptions underlying the simplified fluid lubricant wear
+model are the following:</p>
+<ul class="simple">
+<li><p>Failures in fluid lubricant wear are dominated by the life of the lubricant.</p></li>
+<li><p>The amount of lubricant not participating in the contact (e.g. due to evaporation), <span class="math notranslate nohighlight">\(M_{inactive}\)</span>, is a small fraction of the initial amount of lubricant, <span class="math notranslate nohighlight">\(M_{0}\)</span> (1-2% for bearings with a labyrinth seal under optimal temperature condition).</p></li>
+<li><p>The estimate for the (deterministic) variable <span class="math notranslate nohighlight">\(M_{inactive}\)</span> is chosen conservatively, e.g. by determining the amount of lubricant evaporated at the end of the mission based on the model provided in [BR79].</p></li>
+<li><p>The uncertainty in most of the variables listed in Table 10‑13 (except for the empirical constant of the lubricant life model <span class="math notranslate nohighlight">\(K\)</span> and the model uncertainty <span class="math notranslate nohighlight">\(\Theta\)</span>) can be neglected.</p></li>
+<li><p>The distributions of <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\Theta\)</span> can be represented by the models listed in Table 10‑13.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="modelling-of-failures-due-to-fatigue">
+<h2><span class="section-number">2.4.7.2. </span>Modelling of failures due to fatigue<a class="headerlink" href="#modelling-of-failures-due-to-fatigue" title="Permalink to this headline">¶</a></h2>
+<p>Fatigue is a failure mechanism incurred by cyclic loading, leading to the initiation and extension of cracks, which degrade the strength of materials and structures. Failures due to fatigue can be considered as the consequence of several steps:</p>
+<ol class="simple">
+<li><p>Formation of the crack (crack initiation)</p></li>
+<li><p>Small-crack growth</p></li>
+<li><p>Large-crack growth</p></li>
+<li><p>Failure by fracture</p></li>
+</ol>
+<p>Two loading conditions are distinguished:</p>
+<ul class="simple">
+<li><p><strong>High-Cycle Fatigue</strong>: A high-frequency, low-amplitude loading condition created by structural, acoustic, or aerodynamic vibrations that can propagate flaws to failure.</p></li>
+<li><p><strong>Low-Cycle Fatigue</strong>: A low-frequency, high-amplitude loading condition created by thermal, pressure, or structural loads that can propagate flaws to failure.</p></li>
+</ul>
+<p>Failures due to low-cycle fatigue are driven by accumulated plastic deformations, which are typically not allowed (i.e. the design is restricted to elastic regime). If necessary, low-cycle fatigue can be assessed by the ultimate failure criterion, e.g. by means of non-linear finite element analysis with dedicated failure models or dedicated criteria like Manson-Coffin failure criterion. The probability of failure can be assessed using general structural reliability or stress strength methods.</p>
+<p>In the remainder of this section, only high-cycle fatigue is considered.</p>
+<p>The standard approach to the fracture control for space projects is presented in ECSS-E-ST-32-01C [BR80]. Depending on the criticality, different approaches can be used:</p>
+<ul class="simple">
+<li><p><strong>Fail-safe</strong> – damage-tolerance design principle, where a structure has redundancy to ensure that failure of one structural element does not cause general failure of the entire structure during the remaining lifetime.</p></li>
+<li><p><strong>Safe life</strong> – fracture-control design principle, for which the largest undetected defect that can exist in the part does not grow to failure when subjected to the cyclic and sustained loads and environments encountered during the lifetime.</p></li>
+<li><p><strong>Low risk of fracture</strong> – e.g. when the stress level is below the endurance limit <span class="math notranslate nohighlight">\(C\)</span>, then assessment can be performed approximately based on stress and endurance limit only.</p></li>
+</ul>
+<p>Crack formation analysis is typically performed for the fail-safe approach in order to ensure that failure of one redundant structural element does not cause general failure of the entire structure during the remaining lifetime. This analysis is performed based on the <u>S/N curve</u> approach, whose application for reliability modelling is outlined in Section 10.7.2.1.</p>
+<p>The safe life principle implies an assessment of the crack growth using <u>fatigue crack growth</u> models, as discussed in Section 10.7.2.2. Environmental properties can also be considered in these models, allowing the consideration of failure mechanisms due to <u>stress corrosion cracking</u> (SCC).</p>
+<div class="section" id="high-cycle-fatigue-modelling-with-the-s-n-curve-approach">
+<h3><span class="section-number">2.4.7.2.1. </span>High cycle fatigue modelling with the S/N curve approach<a class="headerlink" href="#high-cycle-fatigue-modelling-with-the-s-n-curve-approach" title="Permalink to this headline">¶</a></h3>
+<p>Crack generation due to high cycle fatigue is most commonly modelled using so-called S/N curves relating a stress level or equivalent stress <span class="math notranslate nohighlight">\(S_{eq}\)</span> to the number of cycles to failure, <span class="math notranslate nohighlight">\(N_{f}\)</span>:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.36</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\text{log}_{10}\left( N_{f} \right) = A - B \bullet \text{log}_{10}\left( S_{eq} - C \right)\]</div>
+</div>
+<p>Where the equivalent stress is determined as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.37</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[S_{eq} = S_{\max}(1 - R)^{P} = S_{\max}\left( 1 - \frac{S_{\min}}{S_{\max}} \right)^{P}\]</div>
+</div>
+<p>Here, <span class="math notranslate nohighlight">\(S_{\min}\)</span> and <span class="math notranslate nohighlight">\(S_{\max}\)</span> denoting the minimum and maximum stress during one load cycle and <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(P\)</span> are model parameters of the S/N curve model that can be derived from test data, e.g. those presented in MMPDS-12 [BR66] or its predecessor, MIL-HDBK-5 [BR67]. Of special interest is the parameter <span class="math notranslate nohighlight">\(C\)</span>, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus <span class="math notranslate nohighlight">\(N_{f}(S \leq C) \rightarrow \infty\)</span>.</p>
+<p>The S/N curve is valid for cyclic loading with constant amplitude or equivalent stress. For cyclic loading with varying stress levels, the S/N curve is combined with the Palmgren-Miner accumulation law to estimate the accumulated damage <span class="math notranslate nohighlight">\(D_{tot}\)</span> after <span class="math notranslate nohighlight">\(N\)</span> stress cycles:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.38</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}D_{tot} = \sum_{i = 1}^{N}\frac{1}{N_{f,i}} = \sum_{i = 1}^{N}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}\\= \ \sum_{j = 1}^{k}{N_{j} \bullet 10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}\end{aligned}\end{align} \]</div>
+</div>
+<p>Where each <span class="math notranslate nohighlight">\(S_{eq,i}\)</span> is drawn from the distribution of equivalent stresses derived from the loading process. The second line in Equation 10‑38 is derived by dividing the continuous distribution of <span class="math notranslate nohighlight">\(S_{eq,i}\)</span> into a discrete number of bins. In this final expression, <span class="math notranslate nohighlight">\(k\)</span> denotes the number of bins, <span class="math notranslate nohighlight">\(N_{j}\)</span> the number of cycles in each bin and <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> the corresponding equivalent stress representative for each bin.</p>
+<p>As a failure criterion, the accumulated damage <span class="math notranslate nohighlight">\(D_{tot}\)</span> is compared with a fixed threshold <span class="math notranslate nohighlight">\(D_{cr}\)</span> that is typically assumed to be equal to one. However, due to the empirical nature of Miner’s law, failures may also occur at values for <span class="math notranslate nohighlight">\(D_{tot}\)</span> that are below or above unity and <span class="math notranslate nohighlight">\(D_{cr}\)</span> must be considered as a random variable.</p>
+<p>A limit state function for high-cycle fatigue is now derived as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.39</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}g\left(X(t)\right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot}\\D_{cr} - \Theta \bullet \sum_{i = 1}^{N(t)}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}\\= D_{cr} - \Theta \bullet \sum_{j = 1}^{k}{N_{j}(t) \bullet 10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}\end{aligned}\end{align} \]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The time dependent formulation in Equation 10‑39 neglects load history effects, which is consistent with the accumulative nature of the Palmgren-Miner model. However, when the goal is to evaluate the probability of failure in different mission phases, the accumulated damage contribution of each load event (e.g. testing, launch, in-orbit) should be evaluated separately.</p>
+</div>
+<p><strong>Simplified S/N curve modelling</strong></p>
+<p>The starting point for the simplified model is the limit state function in Equation 10‑39, with load cycles summarized in bins (last row). For the simplified approach, the variables <span class="math notranslate nohighlight">\(N_{j}\)</span>, <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are assumed to be deterministic. The uncertainty associated with the loading <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> is then the only uncertainty that cannot be taken out of the sum. A simple approach to model this uncertainty is to multiply deterministic values for <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> (e.g. taken from design calculations) with a random stress scaling factor <span class="math notranslate nohighlight">\(SSF\)</span> that is applied globally, i.e. taking on the same value for all bins [BR81]. If it is furthermore assumed that the endurance limit <span class="math notranslate nohighlight">\(C\)</span> equals zero (which is conservative for all applications), the limit state function defined in Equation 10‑39 can be brought into the following simple expression:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.40</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot} = D_{cr} - \Theta \bullet 10^{- A} \bullet {SSF}^{B} \bullet \sum_{j = 1}^{k}{N_{j} \bullet {S_{eq,j}}^{B}}\]</div>
+</div>
+<p>Thus, <span class="math notranslate nohighlight">\(X_{2}\)</span> is defined as accumulated damage, which is calculated based on the S/N curve approach with the Palmgren-Miner accumulation law, and <span class="math notranslate nohighlight">\(X_{1}\)</span> as the corresponding limiting value. Detailed variable definitions are reminded in Table 10‑14.</p>
+<p><strong>Table 4.14: Assumed probabilistic models for the simplified high-cycle fatigue model.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>List of variables</strong></p></th>
+<th class="head"><p><strong>Unit</strong></p></th>
+<th class="head"><p><strong>Distribution</strong></p></th>
+<th class="head"><p><strong>CoV range</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(D_{cr}\)</span> : Threshold for accumulated damage</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\( \nu_{D_{cr}} \ge 0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(A\)</span> : S/N curve parameter : Intercept</p></td>
+<td><p><span class="math notranslate nohighlight">\([(log_{10}[N/m^{2}])^{-1}]\)</span></p></td>
+<td><p>Normal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{A} \ge 0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(B\)</span> : S/N curve parameter : Slope</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(SSF\)</span> : Global stress scalling factor</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{SSF} \ge 0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(k\)</span> : Number of bins / load events</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(N_{j}\)</span> : (Equivalent) number of cycles in load</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(S_{eq, j}\)</span> : (Equivalent) stress in load event j</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Theta\)</span> : Model uncertainty</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{\Theta} = 0.2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Without additional information, the expected value of <span class="math notranslate nohighlight">\(D_{cr}\)</span> may be assumed to be equal to unity and its coefficient of variation equal to 0.3 (based on JCSS [BR82] and Wirsching [BR83]). The mean value and coefficient of variation of the stress scaling factor <span class="math notranslate nohighlight">\(SSF\)</span> can be determined as follows: First an appropriate coefficient of variation <span class="math notranslate nohighlight">\(v_{SSF}\)</span> reflecting all uncertainties associated with the load analysis is chosen, considering the most uncertain load event to be conservative.
+The mean value of the stress scaling factor then depends on the definition of the <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> values. Design values for fatigue stresses are typically defined as upper fractile values, leading to the following relationship:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.41</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\text{E}\lbrack SSF\rbrack = \frac{\sqrt{v_{SSF}^{2} + 1}}{\text{exp}\left( \Phi^{- 1}(\alpha) \bullet \sqrt{\text{ln}\left( v_{SSF}^{2} + 1 \right)} \right)}\]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(\Phi^{- 1}( \bullet )\)</span> denotes the inverse of the Standard Normal distribution function and <span class="math notranslate nohighlight">\(\alpha\)</span> is the probability that the stresses will be smaller than <span class="math notranslate nohighlight">\(S_{eq,j}\)</span>.</p>
+<p>Finally, the expected values and coefficients of variation of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> are determined as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.42</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\mu_{X_{1}} = \text{E}\lbrack D_{cr}\rbrack\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.43</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\mu_{X_{2}} = \text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack \bullet \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}}\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.44</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack = 10^{- E\lbrack A\rbrack + \frac{1}{2}\text{∙ln}(10) \bullet Var\lbrack A\rbrack} \bullet {E\lbrack SSF\rbrack}^{B} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2} - B}\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.45</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[v_{X_{1}} = v_{D_{cr}} = \frac{\sqrt{\text{Var}\lbrack D_{cr}\rbrack}}{\text{E}\lbrack D_{cr}\rbrack}\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.46</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[v_{X_{2}} = \sqrt{10^{Var\lbrack A\rbrack\text{∙ln}(10)} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2}} - 1}\]</div>
+</div>
+<p>With the distributional assumptions in Table 10‑14, an analytic solution for the probability of failure calculations is derived as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.47</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\end{aligned}\end{align} \]</div>
+</div>
+<p>With large coefficients of variation for the S/N curve parameter <span class="math notranslate nohighlight">\(A\)</span> and/or the stress scaling factor <span class="math notranslate nohighlight">\(SSF\)</span>, both <span class="math notranslate nohighlight">\(v_{X_{2}}\)</span> and <span class="math notranslate nohighlight">\(\mu_{X_{2}}\)</span> can become very large, leading to numerical issues during the estimation of the input required for Equation 10‑47. A more robust solution for the probability of failure is achieved with the aid of a small reformulation:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.48</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P_{f} = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \mu_{X_{1}} \right) + \text{ln}\left( \mu_{X_{2}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(Var\left\lbrack \ln\left( X_{2} \right) \right\rbrack\)</span> and <span class="math notranslate nohighlight">\(\ln\left( \mu_{X_{2}} \right)\)</span> can be estimated as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.49</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\text{Var}\lbrack\ln\left(X_{2}\right)\rbrack = \nu_{A}^{2} \bullet \text{E}[A]^{2} \bullet \ln(10)^{2} + B^{2} \bullet \ln \left( \nu_{SSF}^{2} + 1 \right)\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.50</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\ln \left( \mu_{X_{2}} \right) = 0.5 \bullet \left( E[A]^{2} \bullet \ln (10)^{2} + (B^{2} - B) \bullet \ln \left( \nu_{SSF}^{2} + 1 \right) \right) \\- \text{E}\lbrack A\rbrack \bullet \text{ln}(10) + B \bullet \text{ln}\left( \text{E}\lbrack SSF\rbrack \right) + \text{ln}\left( \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}} \right)\end{aligned}\end{align} \]</div>
+</div>
+<p>The main assumptions underlying the simplified high cycle fatigue model
+are the following:</p>
+<ul class="simple">
+<li><p>The distributions of all basic variables can be represented by the models listed in Table 10‑14.</p></li>
+<li><p>The failure mechanism is described by the S/N curve approach combined with the Palmgren-Miner accumulation law. Load history effects are neglected.</p></li>
+<li><p>Uncertainties associated with the (equivalent) number of load cycles <span class="math notranslate nohighlight">\(N_{j}\)</span> in each bin / loading block are neglected.</p></li>
+<li><p>Uncertainty in the fatigue loading is modelled with the aid of “global” stress scaling factor, assuming the same uncertainty (and full correlation) for the load cycles in different bins.</p></li>
+<li><p>The uncertainty associated with the loading is independent of the uncertainty associated with the S/N curve model.</p></li>
+<li><p>Any uncertainty in the S/N curve slope <span class="math notranslate nohighlight">\(B\)</span> is neglected, or must be included in the probabilistic model for the intercept <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>The endurance limit is set to <span class="math notranslate nohighlight">\(C = 0\)</span>. The conservatism introduced by this assumption can be reduced by setting the number of cycles <span class="math notranslate nohighlight">\(N_{j}\)</span> for all bins with design values <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> below the endurance limit to zero. More realistic estimates can only be derived by modelling <span class="math notranslate nohighlight">\(C\)</span> as a random variable in Equation 10‑39, requiring numerical methods to estimate the probability of failure.</p></li>
+</ul>
+<p><strong>Application of the simplified model to low risk items</strong></p>
+<p>The probability of failure for parts with low risk of fracture, e.g. with design stresses below the endurance limit <span class="math notranslate nohighlight">\(C\)</span>, can in principle also be modelledwith the simplified method introduced above. However, in deterministic
+a nalysis for low risk items, it is generally not required to determine the (equivalent) number of cycles <span class="math notranslate nohighlight">\(N_{j}\)</span> for each bin, making it difficult to derive the required input even for the simplified method.</p>
+<p>To derive a conservative ball park estimate, the sum <span class="math notranslate nohighlight">\(\sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}}\)</span> may be replaced by
+considering only a single load event, i.e. <span class="math notranslate nohighlight">\(k = 1\)</span>. The stresses <span class="math notranslate nohighlight">\(S_{eq}\)</span> should then be taken from the most serious bin (in terms of loads). Also, the number of cycles <span class="math notranslate nohighlight">\(N\)</span> should be estimated conservatively, e.g. assuming <span class="math notranslate nohighlight">\(N = 10^{8}\)</span> or using a rough estimate for the total number of cycles in all load events (including those with lower stresses). If this turns out to be too conservative, the sum must be calculated as in the general S/N curve approach, considering all bins with their respective stresses and (equivalent) number of cycles. A dedicated modelling of the uncertainties associated with <span class="math notranslate nohighlight">\(C\)</span> may be required to further improve the analysis</p>
+<p>To allow for a first quick assessment, some reference values for the coefficients of variation and some mean values are provided in Table 10‑15. The values may be assumed to be applicable or conservative for most practical purposes, especially when considering the additional conservatism that has been introduced by assuming <span class="math notranslate nohighlight">\(C = 0\)</span>.</p>
+<p><strong>Table 4.15: Assumptions for the application of the simplified fatigue model to low risk items.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>List of variables</strong></p></th>
+<th class="head"><p><strong>Unit</strong></p></th>
+<th class="head"><p><strong>Mean</strong></p></th>
+<th class="head"><p><strong>CoV</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(D_{cr}\)</span> : Threshold for accumulated damage</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(E\lbrack D_{cr} \rbrack = 1.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\( \nu_{D_{cr}} = 0.3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(A\)</span> : S/N curve parameter : Intercept</p></td>
+<td><p><span class="math notranslate nohighlight">\([(log_{10}[N/m^{2}])^{-1}]\)</span></p></td>
+<td><p>User input</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{A}  = 0.05\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(B\)</span> : S/N curve parameter : Slope</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>User input</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(SSF\)</span> : Global stress scalling factor</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(E\lbrack SSF \rbrack = 0.527\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{SSF} = 0.3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(k\)</span> : Number of bins / load events</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>User input</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(N_{j}\)</span> : (Equivalent) number of cycles in load</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>User input</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(S_{eq, j}\)</span> : (Equivalent) stress in load event j</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>User input</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Theta\)</span> : Model uncertainty</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(E\lbrack \Theta \rbrack = 1.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{\Theta} = 0.3\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="fatigue-crack-growth-modelling">
+<h3><span class="section-number">2.4.7.2.2. </span>Fatigue crack growth modelling<a class="headerlink" href="#fatigue-crack-growth-modelling" title="Permalink to this headline">¶</a></h3>
+<p>Crack growth calculations are performed to show that the growth of minor
+cracks under fatigue loading does not lead to structural failure. The
+required deterministic methods are available and implemented in
+specialized Software, such as ESACRACK [BR84] / NASGRO [BR85]. A
+probabilistic approach based these models is possible and has been
+described by [BR86] and [BR81], discussing the development and use
+of a probabilistic version of ESACRACK. Developments for NASA in the
+field of probabilistic fracture mechanics are discussed in [BR87]. In
+the present section, only the generic approach to probabilistic fracture
+analysis is presented together with a short discussion of the required
+uncertainty quantification. More detailed information can be found in
+Mattrand [BR81].</p>
+<p>In the space industry fatigue crack growth calculations are typically
+performed using a relationship called the NASGRO equation, which was
+initially documented by Forman and Mettu [BR88]. It is given by
+[BR85]:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.51</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[\frac{da}{dN} = C\left\lbrack \left( \frac{1 - f}{1 - R} \right)\mathrm{\Delta}K \right\rbrack^{n}\frac{\left( 1 - \frac{\Delta K_{th}}{\mathrm{\Delta}K} \right)^{p}}{\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}}\]</div>
+</div>
+<p>With the following variable definitions:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(N\)</span> number of applied fatigue cycles</p></li>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> crack length</p></li>
+<li><p><span class="math notranslate nohighlight">\(K = K(S_{i},F_{i},a)\)</span> stress intensity factor, derived from the components of stress <span class="math notranslate nohighlight">\(S_{i}\)</span> with geometrical correction factors <span class="math notranslate nohighlight">\(F_{i}\)</span> that are derived specifically for each crack case.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R = \frac{K_{\min}}{K_{\max}}\)</span> stress ratio</p></li>
+<li><p><span class="math notranslate nohighlight">\(f = f(\ R,\alpha,\frac{S_{\max}}{\sigma_{0}})\)</span> crack opening function (<span class="math notranslate nohighlight">\(\alpha\)</span> denotes a plane stress/strain constraint factor and <span class="math notranslate nohighlight">\(\frac{S_{\max}}{\sigma_{0}}\)</span> the ratio between the maximum applied stress and the flow stress)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathrm{\Delta}K\)</span> stress intensity factor range</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta K_{th}\)</span> threshold stress intensity factor (empirical relation, depending on the crack geometry)</p></li>
+<li><p><span class="math notranslate nohighlight">\(K_{c}\)</span> critical stress intensity factor (empirical relation, depending on the crack geometry)</p></li>
+<li><p><span class="math notranslate nohighlight">\(C,n,p,q\)</span> empirical constants of the crack growth model</p></li>
+</ul>
+<p>Typically fatigue crack growth data has three regions, as depicted in
+Figure 10‑8:</p>
+<ol class="simple">
+<li><p>Near-threshold region, characterized by very low crack growth (no
+growth below the threshold <span class="math notranslate nohighlight">\(\mathrm{\Delta}K_{th}\)</span>). This region is
+modelled with the aid of the factor
+<span class="math notranslate nohighlight">\(\left( 1 - \frac{\Delta K_{th}}{\mathrm{\Delta}K} \right)^{p}\)</span></p></li>
+<li><p>Steady-state where the relation between <span class="math notranslate nohighlight">\(\mathrm{\Delta}K\)</span> and
+<span class="math notranslate nohighlight">\(\frac{da}{dN}\)</span> is linear (in log-log scale), which is modelled with
+the aid of the well-known Paris law
+<span class="math notranslate nohighlight">\(\frac{da}{dN} = C\lbrack\mathrm{\Delta}K\rbrack^{n}.\)</span> The factor
+<span class="math notranslate nohighlight">\(\frac{(1 - f)}{(1 - R)}\)</span> has been introduced to account for crack
+opening effects</p></li>
+<li><p>Near instability region, characterized by rapid, unstable crack
+growth, ultimately leading to fracture at <span class="math notranslate nohighlight">\(K_{\max}\)</span>=<span class="math notranslate nohighlight">\(K_{c}\)</span>. This
+region is modelled by the factor
+<span class="math notranslate nohighlight">\(\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}\)</span></p></li>
+</ol>
+<div class="figure align-default" id="figure4-8">
+<a class="reference internal image-reference" href="../../../_images/figure4_101.png"><img alt="../../../_images/figure4_101.png" src="../../../_images/figure4_101.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Typical fatigue crack growth curve.</span><a class="headerlink" href="#figure4-8" title="Permalink to this image">¶</a></p>
+</div>
+<p>The crack length <span class="math notranslate nohighlight">\(a(t)\)</span> as a function of time (or number of cycles) can
+be calculated iteratively based on Equation 10‑51. There are three
+possible failure criteria associated with crack growth:</p>
+<ol class="simple">
+<li><p>Crack instability: It occurs when <span class="math notranslate nohighlight">\(K_{\max}\left( a(t) \right)\)</span>
+exceeds the relevant fracture toughness <span class="math notranslate nohighlight">\(K_{instability}\)</span>, which
+depends on the crack geometry, stress/strain state and the
+environment.</p></li>
+<li><p>Yielding: It occurs if the net section stress
+<span class="math notranslate nohighlight">\(\sigma_{n}\left( a(t) \right)\)</span> exceeds the flow stress
+<span class="math notranslate nohighlight">\(\sigma_{flow}\)</span>, defined as the average between yield and ultimate
+stress.</p></li>
+<li><p>Crack size: As an optional criterion the maximum allowable crack
+size <span class="math notranslate nohighlight">\(a_{\max}\)</span> may be checked.</p></li>
+</ol>
+<p>To perform a reliability analysis, each failure criterion must be
+evaluated individually. In principle, this evaluation has to be made at
+every iteration to obtain correct reliability estimates as a function of
+time. However, in practice it may be sufficient to estimate the
+probability of failure at discrete time steps, e.g. at the end of each
+load event or mission phase.</p>
+<p>When considering each failure criterion individually, the formulation of
+limit state functions for a given crack length <span class="math notranslate nohighlight">\(a(t)\)</span> is
+straight-forward (variable definitions have been given in the definition
+of the three failure criteria above:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.52</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g_{1}\left( \mathbf{X},a(t) \right) = K_{instability} - K_{\max}\left( a(t) \right)\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.53</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g_{2}\left( \mathbf{X,}a(t) \right) = \sigma_{flow} - \sigma_{n}\left( a(t) \right)\]</div>
+</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.54</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g_{3}\left( \mathbf{X,}a(t) \right) = a_{\max} - a(t)\]</div>
+</div>
+<p>Different cases must be distinguished to determine the fracture
+toughness <span class="math notranslate nohighlight">\(K_{instability}\)</span>:</p>
+<ul class="simple">
+<li><p>For through cracks: <span class="math notranslate nohighlight">\(K_{instability} = K_{c}\)</span></p></li>
+<li><p>For part-through cracks: <span class="math notranslate nohighlight">\(K_{instability} = K_{Ie}/(a - tip)\)</span> or <span class="math notranslate nohighlight">\(K_{instability} = K_{Ie}/(c - tip)\)</span></p></li>
+<li><p>For part-through crack tips that have free surfaces: <span class="math notranslate nohighlight">\(K_{instability} = 1.1K_{Ie}\)</span></p></li>
+<li><p>For corrosive environments (e.g. Stress Corrosion Cracking): <span class="math notranslate nohighlight">\(K_{instability} = K_{eac}\)</span></p></li>
+</ul>
+<p>Where <span class="math notranslate nohighlight">\(K_{c}\)</span> denotes the low constraint toughness value, <span class="math notranslate nohighlight">\(K_{Ie}\)</span> the
+apparent surface flaw toughness and <span class="math notranslate nohighlight">\(K_{eac}\)</span> corresponds to
+environmentally assisted crack toughness.</p>
+<p>Finally, the probability of failure is estimated by combining all
+required criteria, e.g. (if only the first two criteria, crack stability
+and yielding, apply):</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.55</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P_{f}(t) = \text{Pr}\left\lbrack g_{1}\left( a(t) \right) \leq 0 \cup g_{2}\left( a(t) \right) \leq 0 \right\rbrack\]</div>
+</div>
+<p>As an alternative, <span class="math notranslate nohighlight">\(g_{1}\)</span> and <span class="math notranslate nohighlight">\(g_{2}\)</span> may also be combined into a
+single limit state function by making use of an interaction model, as
+described e.g. by [BR81]. Note, however, that these models are
+generally developed for a specific crack geometry, e.g. assuming a
+through crack in an infinite plate. Hence, the applicability to the
+crack under consideration shall be assessed when using an interaction
+model instead of Equation 10‑55.</p>
+<p>Independent of the approach chosen to combine several failure criteria,
+reliability is best assessed using Monte Carlo simulations with variance
+reduction techniques to reduce the number of required simulations.
+FORM/SORM techniques are not recommended due to the iterative nature and
+nonlinear behaviour of the crack growth model.</p>
+<p>To perform a reliability assessment, the following uncertainties have to
+be considered and propagated through the model:</p>
+<ul class="simple">
+<li><p>Loading uncertainty</p></li>
+<li><p>Initial crack size uncertainty</p></li>
+<li><p>Uncertainties associated with material properties</p></li>
+</ul>
+<p>The probabilistic modelling should explicitly account for the main
+uncertainties related to each of these three modelling areas.</p>
+<p><strong>Uncertainties associated with the loading</strong></p>
+<p>For a given crack size and geometry, the stress intensity factor
+<span class="math notranslate nohighlight">\(K\)</span> is proportional to the stress.
+Therefore, the uncertainties in the loading may in principle be modelled
+using the same approach as for the S/N-Curve approach (Section
+10.7.2.1), i.e. based on a global stress scaling factor
+<span class="math notranslate nohighlight">\(SSF\)</span> applied to each stress intensity
+factor during the calculation. However, a more rigorous treatment of the
+loading sequence is required for crack growth analysis than for the S/N
+curve approach.</p>
+<p>One possible reason for load sequence effects is that the crack growth
+model predicts larger final crack sizes for a load sequence starting
+with the largest load amplitudes than for another load sequence with the
+same load spectrum, but starting with the smallest amplitudes. These
+effects are best considered in a simulation framework, where the whole
+load process must be simulated for each calculation.</p>
+<p>The simulated load sequence may also be used to assess the failure
+criteria related to crack instability and yielding. Note that the
+maximum stress intensity factor <span class="math notranslate nohighlight">\(K_{\max}\left( a(t) \right)\)</span> and the
+net section stress <span class="math notranslate nohighlight">\(\sigma_{n}\left( a(t) \right)\)</span> in these criteria
+depends not only on the crack length, but also on the applied maximum
+stress level <span class="math notranslate nohighlight">\(S_{max}\)</span>, leading to a time
+variant reliability problem.</p>
+<p>A simplified, conservative approach to determine the probability of
+failure during a certain load event or mission phase is to combine the
+simulated crack length at the end of the considered time interval with
+the simulated maximum stress level during the same interval when
+assessing the limit state functions <span class="math notranslate nohighlight">\(g_{1}\)</span> and <span class="math notranslate nohighlight">\(g_{2}\)</span>.</p>
+<p><strong>Uncertainties associated with the initial crack size</strong></p>
+<p>Mechanical parts of space products are usually inspected for defects,
+using one of the available non-destructive evaluation (NDE) techniques.
+Nevertheless, even if no defect was detected during the inspection, it
+cannot be assumed that the inspected part is free of cracks. A
+probabilistic model for the crack size distribution after inspection can
+be derived based on the following assumptions:</p>
+<ul class="simple">
+<li><p>A crack is always present, even though it might be very small.</p></li>
+<li><p>The crack aspect ratio is known, allowing to focus on a single
+variable <span class="math notranslate nohighlight">\(a\)</span> to describe the crack.</p></li>
+<li><p>The probability distribution of the crack size before inspection is
+<span class="math notranslate nohighlight">\({f'}_{A}(a)\)</span></p></li>
+<li><p>The uncertainty associated with the chosen NDE technique can be
+described with the aid of a probability of detection curve
+<span class="math notranslate nohighlight">\(POD(a)\)</span>, see e.g. [BR90].</p></li>
+<li><p>Only parts without detected defects are used.</p></li>
+</ul>
+<p>Bayes’ theorem (Chapter 7 Part II) can now be used to determine the
+probability distribution of the crack size after inspection [BR91]:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.56</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[{f''}_{A}(a) = \frac{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)}{\int_{0}^{\infty}{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)\text{\ d}a}}\]</div>
+</div>
+<p>In practice, the prior <span class="math notranslate nohighlight">\({f'}_{A}(a)\)</span> will often have
+to be determined based on expert judgment, as data on the crack size
+distribution before inspection is generally limited. In the case of a
+part that is inspected (again) after testing, a probabilistic crack
+growth analysis for the applied test loads can be used to derive
+<span class="math notranslate nohighlight">\({f'}_{A}(a)\)</span>.</p>
+<p>In [BR81],[BR87] it is stated that the POD curve may be interpreted
+directly as the cumulative distribution function of the crack size after
+inspection. This approach leads to the same result as Equation 10‑56
+when assuming a noninformative (positive) uniform prior distribution for
+the initial crack size.</p>
+<p>Further simplifications are possible if only the NDE limit value is
+used, which is usually associated with a POD of 90% at a 95% confidence
+interval. For a given distribution type and coefficient of variation, a
+probabilistic model for the crack size <span class="math notranslate nohighlight">\(a\)</span>
+may then be derived by requiring that the exceedance probability of the
+limit value must be equal to 10%.</p>
+<p><strong>Uncertainties associated with material properties</strong></p>
+<p>The NASGRO equation parameters <span class="math notranslate nohighlight">\(C,n,p\)</span> and
+<span class="math notranslate nohighlight">\(q\)</span> are empirical constants whose
+distribution can in principle be derived from data analysis using
+experimental data. In practice the problem may be simplified by focusing
+on those parameters that are relevant for the considered loading and
+initial crack size, keeping the remaining parameters constant. To give
+an example, focussing on the Paris law region of the NASGRO equation
+(region II in Figure 10‑8) is acceptable if it is expected that most of
+the crack growth will occur in this region (i.e. for intermediate
+initial stress intensity factor ranges and small enough initial crack
+size). The strongest possible simplification in this case is to model
+only the multiplicative factor <span class="math notranslate nohighlight">\(C\)</span> as a random variable, summarizing all
+uncertainties associated with the NASGRO equation.</p>
+<p>Apart from the NASGRO equation parameters, also the material properties
+entering the calculations may be treated as random variables which can
+be assessed based on experimental data. The sensitivity of these
+variables on the overall result depends on the loading and the initial
+crack size. To give an example, the uncertainty associated with the
+threshold stress intensity factor range <span class="math notranslate nohighlight">\(\mathrm{\Delta}K_{th}\)</span> (e.g.
+derived from the distribution of <span class="math notranslate nohighlight">\(\mathrm{\Delta}K_{0}\)</span> in Table 10‑16)
+may be neglected if the loading does not contain a large number of
+cycles with stress intensity factor ranges below this threshold. At the
+upper limit, uncertainty in the fracture toughness (<span class="math notranslate nohighlight">\(K_{Ic}\)</span> or
+<span class="math notranslate nohighlight">\(K_{instability}\)</span>) and flow stress <span class="math notranslate nohighlight">\(\sigma_{flow}\)</span> (or yield stress
+<span class="math notranslate nohighlight">\(\sigma_{y}\)</span>) may be expected to play a major role only if the initial
+crack size is close to the critical size [BR81].</p>
+<p>A literature survey presented by Mattrand [BR81] reports coefficients
+of variation between 5% and 25% for the fracture toughness and yield
+strength of metallic materials (note that some material specific
+information may be found e.g. in MMPDS-12 [BR66] or its predecessor,
+MIL-HDBK-5 [BR67]). Typical distributional assumptions for the two
+variables are Weibull or Lognormal distributions. A proposal for the
+probabilistic modelling of Al 7075 T7351 and Ti 6Al 4V material
+properties can be found in Table 10‑16 (taken from [BR81]).</p>
+<p><strong>Table 4.16</strong>: robabilistic modelling of material parameters for Al 7075 T7351 and Ti 6Al 4V</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p><strong>Al 7075 T7351</strong></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p><strong>Ti 6 Al 4V</strong></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Variable</strong></p></td>
+<td><p><strong>Dist.</strong></p></td>
+<td><p><strong>Mean</strong></p></td>
+<td><p><strong>ST. dev</strong></p></td>
+<td><p><strong>COV</strong> [%]</p></td>
+<td><p><strong>Mean</strong></p></td>
+<td><p><strong>ST. dev</strong></p></td>
+<td><p><strong>COV</strong> [%]</p></td>
+</tr>
+<tr class="row-odd"><td><p>C  [mm/(MPa.mm1/2)n]</p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.06.10{-10}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.65.10{-11}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(25\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.89.10{-14}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.17.10{-17}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(24\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>Constant</p></td>
+<td><p><span class="math notranslate nohighlight">\(2.479\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(/\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(/\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.45\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(/\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(/\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(K_{lc}\)</span>  [MPa.mm1/2]</p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(869\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(86.9\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1737\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(173.7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma y\)</span>  [MPa]</p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(414\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(41.4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(931\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(93.1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta K_{0}\)</span>  [MPa.mm1/2]</p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(104\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10.4\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(122\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(12.2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(10\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="modelling-of-failures-due-to-corrosion">
+<h2><span class="section-number">2.4.7.3. </span>Modelling of failures due to corrosion<a class="headerlink" href="#modelling-of-failures-due-to-corrosion" title="Permalink to this headline">¶</a></h2>
+<p>Compared to terrestrial applications, the relevance of mechanical
+failures due to corrosion is generally small, as space systems operate
+in vacuum and a short exposure to corrosive environments on ground is
+ensured by specific storage conditions. Special types of corrosion that
+that are of relevance only for specific parts, e.g. in the propulsion
+subsystem, are not discussed in the present handbook. The reader is
+referred to the compendium of limit states for space applications that
+has been prepared by Kowal [BR65], which includes also a discussion of
+several types of corrosion.</p>
+<p>A corrosion mechanism that is closely related to the crack growth
+phenomenon is <u>Stress Corrosion Cracking (SCC)</u>, which is defined
+as an environmentally induced formation and growth of cracks in
+materials exposed to a corrosive environment. The standard strategy to
+avoid failures due to this phenomenon is based on the selection of
+suitable materials, making use of a test-based classification by
+susceptibility to SCC. Quantitative reliability prediction for this
+failure mechanism is difficult, even though the effect of the
+environment may in principle be accounted for in crack growth modelling,
+see Section 10.7.2.2 for details.</p>
+</div>
+<div class="section" id="modelling-of-failures-due-to-material-degradation">
+<h2><span class="section-number">2.4.7.4. </span>Modelling of failures due to material degradation<a class="headerlink" href="#modelling-of-failures-due-to-material-degradation" title="Permalink to this headline">¶</a></h2>
+<p>Material degradation is a time-dependent process leading to a reduced
+performance of materials (deterioration of the physical properties)
+under the influence of environmental actions such as temperature or
+radiation. For normal mission durations, these effects can usually be
+controlled during the design, e.g. by appropriate material selection.
+However, a dedicated modelling may be required for specific
+applications, or more broadly for wear-out modelling in the context of
+life time extensions beyond the nominal mission.</p>
+<p><u>Thermal degradation</u> is of relevance mainly for non-metallic
+materials such as polymers or insulation material. Some basic models
+have been reviewed in [BR65]. Thermal degradation as an individual
+failure mechanism is not discussed any further in the present chapter.
+Note, however, that temperature may have to be considered as a
+contributor or influencing variable during several other failure
+mechanisms, e.g. affecting strength and elasticity parameters for common
+materials.</p>
+<p>The following subsection provides a brief discussion of <u>radiation
+degradation</u> and proposes a generic modelling approach for its
+modelling in mechanical reliability predictions.</p>
+<div class="section" id="radiation-degradation-modelling">
+<h3><span class="section-number">2.4.7.4.1. </span>Radiation degradation modelling<a class="headerlink" href="#radiation-degradation-modelling" title="Permalink to this headline">¶</a></h3>
+<p>The spacecraft radiation environment is characterized by the type,
+fluence, dose rate, energy spectrum and spatial distribution of nuclear
+radiation at the considered point of interest inside and outside the
+spacecraft for the duration of the mission. However, the response can be
+related directly to the absorbed dose. The dose shall be calculated
+taking both external and internal radiation sources into account.</p>
+<p>Radiation affects a variety of material parameters including yield
+strength and ultimate stress, creep, fatigue, thermal conductivity,
+hardness, optical properties etc. Metallic materials are rather
+unaffected by radiation, but degradation needs to be considered for
+optical materials (e.g. darkening of glass) and for organic materials
+such as plastics and polymers [BR92]. Due to the complexity of the
+phenomena, a quantitative estimation of the radiation effects is
+difficult. Therefore, a simplified assessment of the radiation hardness
+is performed during the design, taking its basis in an allowable
+radiation dose, above which the material exhibits significant change in
+properties.</p>
+<p>A similar philosophy can be employed for the reliability assessment. In
+this case the difference between the radiation dose <span class="math notranslate nohighlight">\(D\)</span> and allowable
+dose <span class="math notranslate nohighlight">\(D_{A}\)</span> is used as a limit state function:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.57</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[g\left( \text{X} \right) = X_{1} - \Theta \bullet X_{2}(t) = D_{A} - \Theta \bullet D(t)\]</div>
+</div>
+<p>Thus, <span class="math notranslate nohighlight">\(X_{1}\)</span> is defined as the allowable radiation dose <span class="math notranslate nohighlight">\(D_{A}\)</span> and
+<span class="math notranslate nohighlight">\(X_{2}\)</span> as the cumulated dose <span class="math notranslate nohighlight">\(D\)</span> determined as a function of time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p><strong>Simplified radiation degradation model</strong></p>
+<p>A strongly simplified assessment can be achieved by summarizing all
+uncertainties associated with the radiation modelling in the model
+uncertainty variable <span class="math notranslate nohighlight">\(\theta\)</span>, allowing to consider both <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(D_{A}\)</span>
+in Equation 10‑57 as deterministic variables. The resulting simplified
+model should be seen mainly as a starting point or placeholder for a
+more detailed modelling.</p>
+<p>The variable definitions are given in Table 10‑17 below.</p>
+<p><strong>Table 4.17: Assumed probabilistic models for the simplified radiation degradation model.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>List of variables</strong></p></th>
+<th class="head"><p><strong>Unit</strong></p></th>
+<th class="head"><p><strong>Distribution</strong></p></th>
+<th class="head"><p><strong>CoV range</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(D_{A}\)</span> : Allowable radiation dose</p></td>
+<td><p><span class="math notranslate nohighlight">\([rad]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(D\)</span> : Calculated radiation dose during mission</p></td>
+<td><p><span class="math notranslate nohighlight">\([rad]\)</span></p></td>
+<td><p>Deterministic</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Theta\)</span> : Model uncertainty</p></td>
+<td><p><span class="math notranslate nohighlight">\([-]\)</span></p></td>
+<td><p>Lognormal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nu_{\Theta} = 0.4\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>To account for the uncertainties in choosing the deterministic values
+for <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(D_{A}\)</span>, the coefficient of variation for the model
+uncertainty is larger than for the other simplified models presented in
+Section 10.7.1 to 10.7.2. The model uncertainty CoV can be reduced if
+the model is improved by considering <span class="math notranslate nohighlight">\(D\)</span> and/or <span class="math notranslate nohighlight">\(D_{A}\)</span> as random
+(instead of deterministic) variables with appropriate uncertainty
+quantification.</p>
+<p>With deterministic dose variables, the expected values of <span class="math notranslate nohighlight">\(X_{1}\)</span> and
+<span class="math notranslate nohighlight">\(X_{2}\)</span> are simply derived as <span class="math notranslate nohighlight">\(\mu_{X_{1}} = D_{A}\)</span> and
+<span class="math notranslate nohighlight">\(\ \mu_{X_{2}} = D\)</span>; the corresponding coefficients of variation are
+assumed equal to zero. With these assumptions, the analytic solution for
+the probability of failure is derived as follows:</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation 4.58</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P_{f}(t) = \text{P}\left\lbrack X_{1} - X_{2}(t) \bullet \Theta \leq 0 \right\rbrack = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5 \bullet \text{ln}\left( v_{\Theta}^{2} + 1 \right)}{\sqrt{\text{ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\]</div>
+</div>
+<p>The main assumptions underlying the simplified radiation degradation
+model are the following:</p>
+<ul class="simple">
+<li><p>Failure occurs if the cumulated radiation dose exceeds the allowable dose limit.</p></li>
+<li><p>All uncertainties associated with the cumulated and allowable dose and their determination are summarized in the lognormal distributed model uncertainty variable.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "paulremo/NRPMInteractivity",
+            ref: "python",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./folderMechanical\digital_handbook\rp_mechanical"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="06_structural_method_input_mechanical.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2.4.6. </span>Structural reliability methods and inputs</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="08_examples_mechanical.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.4.8. </span>Examples</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

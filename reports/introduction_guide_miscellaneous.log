@@ -56,26 +56,26 @@ class ThreeScaleWidget:
         #Definition of buttons
         
         self.b1 = widgets.Button(
-            description=self.b_names[2],
+            description=self.b_names["b1"],
             disabled=False,
             button_style='success', # 'success', 'info', 'warning', 'danger' or ''
             tooltip=self.tooltips["b1"],
             #icon='check' # (FontAwesome names without the `fa-` prefix)
         )
 
-        self.b2 = widgets.Button(
-            description='MEDIUM',
+        self.b1 = widgets.Button(
+            description=self.b_names["b1"],
             disabled=False,
-            button_style='warning', # 'success', 'info', 'warning', 'danger' or ''
-            tooltip='New space',
+            button_style='success', # 'success', 'info', 'warning', 'danger' or ''
+            tooltip=self.tooltips["b1"],
             #icon='check' # (FontAwesome names without the `fa-` prefix)
         )
-
-        self.b3 = widgets.Button(
-            description='LOW',
+        
+        self.b1 = widgets.Button(
+            description=self.b_names["b1"],
             disabled=False,
-            button_style='danger', # 'success', 'info', 'warning', 'danger' or ''
-            tooltip='COTS',
+            button_style='success', # 'success', 'info', 'warning', 'danger' or ''
+            tooltip=self.tooltips["b1"],
             #icon='check' # (FontAwesome names without the `fa-` prefix)
         )
 
@@ -158,10 +158,10 @@ pi_Q_layout = widgets.TwoByTwoLayout(top_left=widgets.Label(value="$\Pi_{Q}$ cho
                bottom_right=pi_Q_widget)
 ------------------
 
-[1;36m  File [1;32m"C:\Users\Paul\AppData\Local\Temp\ipykernel_4480\718217318.py"[1;36m, line [1;32m7[0m
+[1;36m  File [1;32m"C:\Users\Paul\AppData\Local\Temp\ipykernel_14516\2715182589.py"[1;36m, line [1;32m7[0m
 [1;33m    def __init__(self, scale_type, colors = None, name, tooltips = None, values):[0m
 [1;37m                ^[0m
 [1;31mSyntaxError[0m[1;31m:[0m non-default argument follows default argument
 
-SyntaxError: non-default argument follows default argument (718217318.py, line 7)
+SyntaxError: non-default argument follows default argument (2715182589.py, line 7)
 

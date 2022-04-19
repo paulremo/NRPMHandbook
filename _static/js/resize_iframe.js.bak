@@ -1,0 +1,3 @@
+function resizeIFrameToFitContent( iFrame ) {
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test with JS</title>
+    <link rel="stylesheet" href="../css/misc_failure_rate_sliders.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <table class="customed-table">
+
+        <tr>
+            <td class="value-type">
+                <h2>Value of &lambda;<sub>1</sub> : </h2>
+            </td>
+            <td class="value-processed">
+                <p id="test_value"></p>
+            </td>
+            <td class="description">
+                <p>Quality</p>
+            </td>
+            <td class="description-value">
+                <p id="test_description"></p>
+            </td>
+            <td class="controllers">
+                <input type="range" class="three-choice-slider" min="0" max="300" id="r" step="1" value="0"
+                    oninput="testSlider.changed()">
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="value-type">
+                <h2>Value of &Pi;<sub>Q</sub> : </h2>
+            </td>
+            <td class="value-processed">
+                <p id="piQ_value"></p>
+            </td>
+            <td class="controllers">
+                <button class="red-button" id="low_piQ_button" onclick = "redButtonPiQ.clicked()">LOW</button>
+                <button class="yellow-button" id="medium_piQ_button" onclick = "yellowButtonPiQ.clicked()">MEDIUM</button>
+                <button class="green-button" id="high_piQ_button" onclick = "greenButtonPiQ.clicked()">HIGH</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type">
+                <h2>Value of &Pi;<sub>M</sub> : </h2>
+            </td>
+            <td class="value-processed">
+                <p id="piM_value"></p>
+            </td>
+            <td>
+                <button class="red-button" id="low_piM_button" onclick = "redButtonPiM.clicked()">LOW</button>
+                <button class="yellow-button" id="medium_piM_button" onclick = "yellowButtonPiM.clicked()">MEDIUM</button>
+                <button class="green-button" id="high_piM_button" onclick = "greenButtonPiM.clicked()">HIGH</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type">
+                <h2>Value of &Pi;<sub>T</sub> : </h2>
+            </td>
+            <td class="value-processed">
+                <p id="piT_value"></p>
+            </td>
+            <td>
+                <input type="checkbox" id="piT_checkbox" onclick="checkboxPiT.change_check()">
+                <label for="piT_checkbox">Allowable</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type">
+                <h2>Value of &Pi;<sub>C</sub> : </h2>
+            </td>
+            <td class="value-processed">
+                <p id="piC_value"></p>
+            </td>
+            <td>
+                <input type="checkbox" id="piC_checkbox" onclick="checkboxPiC.change_check()">
+                <label for="piC_checkbox">Allowable</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type">
+                <h2>Value of &Pi;<sub>OP</sub> : </h2>
+            </td>
+            <td class="value-processed">
+                <p id="piOP_value"></p>
+            </td>
+            <td>
+                <table class="customed-table">
+                    <tr>
+                        <td class="value-type">
+                            <h3>Value of orbit : </h3>
+                        </td>
+                        <td class="value-processed">
+                            <p id="orbit_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_orbit_button" onclick = "redButtonOrbit.clicked()">LOW COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_orbit_button" onclick = "yellowButtonOrbit.clicked()">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_orbit_button" onclick = "greenButtonOrbit.clicked()">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="value-type">
+                            <h3>Value of temperature : </h3>
+                        </td>
+                        <td class="value-processed">
+                            <p id="temperature_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_temperature_button" onclick = "redButtonTemperature.clicked()">LOW COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_temperature_button" onclick = "yellowButtonTemperature.clicked()">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_temperature_button" onclick = "greenButtonTemperature.clicked()">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="value-type">
+                            <h3>Value of power : </h3>
+                        </td>
+                        <td class="value-processed">
+                            <p id="power_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_power_button" onclick = "redButtonPower.clicked()">LOW COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_power_button" onclick = "yellowButtonPower.clicked()">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_power_button" onclick = "greenButtonPower.clicked()">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="value-type">
+                            <h3>Value of thermal cycling : </h3>
+                        </td>
+                        <td class="value-processed">
+                            <p id="tc_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_tc_button" onclick = "redButtonTC.clicked()">LOW COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_tc_button" onclick = "yellowButtonTC.clicked()">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_tc_button" onclick = "greenButtonTC.clicked()">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="value-type">
+                            <h3>Value of duty cycle : </h3>
+                        </td>
+                        <td class="value-processed">
+                            <p id="dc_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_dc_button" onclick = "redButtonDC.clicked()">LOW COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_dc_button" onclick = "yellowButtonDC.clicked()">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_dc_button" onclick = "greenButtonDC.clicked()">FULL COMPLIANCE</button>
+                    </tr>
+                    <tr>
+                        <td class="value-type">
+                            <h3>Value of others : </h3>
+                        </td>
+                        <td class="value-processed">
+                            <p id="others_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_others_button" onclick = "redButtonOthers.clicked()">LOW COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_others_button" onclick = "yellowButtonOthers.clicked()">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_others_button" onclick = "greenButtonOthers.clicked()">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+    <h1>Value of &lambda;<sub>3</sub> : <a id="lambda3_value"></a> </h1>
+
+    <script src="https://colorjs.io/dist/color.js"></script>
+    <script type="text/javascript" src="../js/misc_failure_rate_sliders.js"></script>
+
+
+</body>
+
+</html>
