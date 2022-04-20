@@ -17,37 +17,37 @@ input[type=range].three-choice-slider {
     cursor: pointer;
 }
 
-.customed-table {
-    border-collapse: collapse;
-}
-
-.value-type {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    width: 190px;
-    height: 60px;
-}
-
-.value-processed {
-    font-weight: bold;
-    color: #009879;
-    width: 100px;
-    font-family: 'Nunito', sans-serif;
-    text-align: center;
-}
-
 .description {
-    background-color: #009879;
+    background-color: #383b3a;
     color: #ffffff;
     text-align: center;
-    width: 190px;
+    font-size: 12px;
+    width: 80px;
     height: 60px;
+}
+
+.description-piOP {
+    background-color: #b3b3b3;
+    color: #000000;
+    text-align: center;
+    font-size: 12px;
+    width: 80px;
+    height: 80px;
 }
 
 .description-value {
     font-weight: bold;
-    color: #009879;
+    color: #383b3a;
+    margin: auto 13px;
+    width: 80px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.description-value-piOP {
+    font-weight: bold;
+    color: #383b3a;
+    margin: auto 20px;
     width: 100px;
     font-family: 'Nunito', sans-serif;
     text-align: center;
@@ -56,31 +56,61 @@ input[type=range].three-choice-slider {
 h1 {
     color: #8d0308;
     font-family: 'Nunito', sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 1px;
-    margin-left: 10px;
-}
-
-h2 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 30px;
     font-size: 20px;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 1px;
-    margin-left: 10px;
-}
+    margin-left: 5px;
+    margin-right: 5px;
+    }
 
-h3 {
+h2 {
     font-family: 'Nunito', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 1px;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    }
+    
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    }
+
+.customed-table {
+    border-collapse: collapse;
 }
+
+.value-type{
+    background-color: #383b3a;
+    color: #ffffff;
+    text-align: center;
+    width: 80px;
+    height: 60px;
+}
+
+.value-processed{
+    font-weight: bold;
+    color: #383b3a;
+    width: 80px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+.text-entry{
+    border-color: #383b3a;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: fit-content;
+}
+
 
 .tcs-label {
     font-weight: bold;
