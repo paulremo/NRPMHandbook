@@ -1,4 +1,0 @@
-[submodule "02_NRPMHandbook/NRPMInteractivity"]
-	path = 02_NRPMHandbook/_static
-	url = https://github.com/paulremo/NRPMInteractivity
-	branch = _static
