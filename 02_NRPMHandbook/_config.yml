@@ -20,13 +20,15 @@ bibtex_bibfiles:
   - references.bib
 
 html:
-    use_multitoc_numbering: false
-    extra_navbar: |
+  use_multitoc_numbering: false
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+  extra_navbar: |
         <div>
             By Matrisk & Airbus Defence & Space
             © Copyright 2021.
         </div>
-
 
 # Information about where the book exists on the web
 repository:
