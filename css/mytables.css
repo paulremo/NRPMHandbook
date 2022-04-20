@@ -1,36 +1,54 @@
-#myInput {
-    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-    background-position: 10px 12px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; /* Full-width */
-    font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
-  }
-  
-  #myTable {
-    border-collapse: collapse; /* Collapse borders */
-    width: 400px; /* Full-width */
-    border: 1px solid #ddd; /* Add a grey border */
-    font-size: 10px;
-  }
-  
-  
+.myInput {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+	margin: 10px 10px;
+  padding: 5px;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 40%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.myTable {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.myTable tr {
+  border-color: lighten(#34495E, 10%);
+}
+
+.myTable td, .myTable th{
+  text-align: center;
+  padding: 8px;
+}
 
 
-  
-  #myTable th, #myTable td {
-    text-align: left; /* Left-align text */
-    padding: 12px; /* Add padding */
-  }
-  
-  #myTable tr {
-    /* Add a bottom border to all table rows */
-    border-bottom: 1px solid #ddd;
-  }
-  
-  #myTable tr.header, #myTable tr:hover {
-    /* Add a grey background color to the table header and on hover */
-    background-color: #b9b2b2;
-  }
+.myTable td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.myTable thead th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
+.myTable thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.myTable tr:nth-child(even) {
+  background: #F8F8F8;
+}
