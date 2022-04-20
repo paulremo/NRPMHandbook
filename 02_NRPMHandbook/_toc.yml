@@ -5,18 +5,18 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: EEE section
+  - caption: EEE chapter
     numbered: true
     chapters:
     - file: folderEEE/mainEEE
-      title: Introduction to EEE
-  - caption: Mechanical section
+      title: Introduction
+  - caption: Mechanical chapter
     numbered: true
     chapters:
     - file: folderMechanical/mainMechanical
-      title: Introduction to Mechanicals
+      title: Introduction
     - file: folderMechanical/digital_handbook/introduction
-      title: Mechanicals Digital Handbook
+      title: Digital Handbook
       sections:
       - file: folderMechanical/digital_handbook/scope
       - file: folderMechanical/digital_handbook/normative_references
@@ -33,17 +33,17 @@ parts:
         - file: folderMechanical/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical
         - file: folderMechanical/digital_handbook/rp_mechanical/08_examples_mechanical   
     - file: folderMechanical/interactive_guide/introduction_guide_mechanical
-      title: Mechanical Interactive Guide
+      title: Interactive Guide
       sections:
       - file: folderMechanical/interactive_guide/solid_lubricant_wear
         title: Solid lubricant wear 
-  - caption: Miscellaneous section
+  - caption: Miscellaneous chapter
     numbered: true
     chapters:
     - file: folderMiscellaneous/mainMiscellaneous
-      title: Introduction to Miscellaneous
+      title: Introduction
     - file: folderMiscellaneous/digital_handbook/introduction
-      title: Miscellaneous Digital Handbook
+      title: Digital Handbook
       sections:
       - file: folderMiscellaneous/digital_handbook/scope
       - file: folderMiscellaneous/digital_handbook/normative_references
@@ -53,16 +53,14 @@ parts:
       - file: folderMiscellaneous/digital_handbook/annexA    
       - file: folderMiscellaneous/digital_handbook/annexB
     - file: folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous
-      title: Miscellaneous Interactive Guide
+      title: Interactive Guide
       sections:
       - file: folderMiscellaneous/interactive_guide/search_table_test
         title: Table interactivity
       - file: folderMiscellaneous/interactive_guide/misc_failure_rate_processing
         title: Failure rate processing
-  - caption: System section
+  - caption: System chapter
     numbered: true
     chapters:
     - file: folderSystem/mainSystem
-      title: Introduction to RP at System Level 
-      sections:
-      - file: folderSystem/test
+      title: Introduction
