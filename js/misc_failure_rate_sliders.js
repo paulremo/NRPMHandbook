@@ -1,26 +1,81 @@
 class NumberEntry {
-    constructor(name, value, text_entry, message, value_text) {
+    constructor(name, value, text_entry, message, value_text, error_message = "", success_message = "", info_message = "") {
         this.name = name;
         this.value = value;
         this.text_entry = text_entry
         this.message = message;
         this.value_text = value_text;
+        this.success_message = success_message;
+        this.error_message = error_message;
+        this.info_message = info_message;
+
+        this.message.innerHTML = this.info_message;
     }
 
     check_content() {
         const numberCheck = new RegExp('[0-9]+([\\.][0-9]*)?');
+        //var numberCheck = /([0-9]*[\.])?[0-9]+/;
+        //console.log(numberCheck.test(this.text_entry.value) && !this.text_entry.value.includes("-") && !this.text_entry.value.includes(","));
         if (numberCheck.test(this.text_entry.value) && !this.text_entry.value.includes("-") && !this.text_entry.value.includes(",")) {
             this.text_entry.color = "green";
-            this.value_text.innerHTML = parseFloat(this.text_entry.value);
-            this.message.innerHTML = "&lambda;" + "1".sub() + " validated";
-            process_lambda3();
+            //console.log(parseFloat(this.text_entry.value));
+            this.message.innerHTML = this.success_message;
+            this.changeValue(true);
         }
         else {
             this.text_entry.color = "red";
-            this.message.innerHTML = "Wrong format, please enter a number (float or integer) with decimal delimiter '.'";
+            this.message.innerHTML = this.error_message;
+            this.changeValue(false);
+        }
+        this.value_text.innerHTML = this.value;
+        process_lambda3();
+    }
+}
+
+class Lambda1Entry extends NumberEntry{
+    constructor(name, value, text_entry, message, value_text, error_message = "", success_message = "") {
+        super(name, value, text_entry, message, value_text, error_message, success_message);
+    }
+
+    changeValue(condition){
+        if (condition){
+            this.value = parseFloat(this.text_entry.value);
+        }
+        else{
+            this.value = 1.0;
         }
     }
 }
+
+class Lambda2Entry extends NumberEntry{
+    constructor(name, value, text_entry, message, value_text, error_message = "", success_message = "", info_message = "", lambda1) {
+        super(name, value, text_entry, message, value_text, error_message, success_message, info_message);
+        this.lambda1 = lambda1;
+    }
+
+    changeValue(condition){
+        console.log(this.lambda1.value);
+        if (condition){
+            this.value = parseFloat(this.text_entry.value) * this.lambda1.value;
+        }
+        else{
+            this.value = this.lambda1.value;
+        }
+    }
+}
+
+class LambdaEntry{
+    constructor(lambda1, lambda2){
+        this.lambda1 = lambda1;
+        this.lambda2 = lambda2;
+    }
+
+    onLambdachanged(){
+        this.lambda1.check_content();
+        this.lambda2.check_content()
+    }
+}
+
 
 class OneChoiceCheckbox {
     constructor(name, checkbox, value_checked, value_unchecked, text_area) {
@@ -74,6 +129,8 @@ class ThreeChoicesSlider {
             this.description_area.innerHTML = this.descriptions[2];
             this.value_area.innerHTML = this.values[2];
         }
+        process_pi_op();
+        process_lambda3();
     }
 
     /*Taken from the web*/
@@ -96,7 +153,7 @@ class ThreeChoicesSlider {
         if (value > 150) {
             let factor = (value - 150) / 150;
             let color1 = [255, 229, 14];
-            let color2 = [196, 13, 2];
+            let color2 = [8, 158, 3];
             var result = color1.slice();
             for (var i = 0; i < 3; i++) {
                 result[i] = Math.round(result[i] + factor * (color2[i] - color1[i]));
@@ -105,7 +162,7 @@ class ThreeChoicesSlider {
         }
         else {
             let factor = value / 150;
-            let color1 = [8, 158, 3];
+            let color1 = [196, 13, 2];
             let color2 = [255, 229, 14];
             var result = color1.slice();
             for (var i = 0; i < 3; i++) {
@@ -121,18 +178,41 @@ class ThreeChoicesSlider {
     }
 }
 
-let piQSlider = new ThreeChoicesSlider("piQslider", document.getElementById("piQ_slider"), "", ["LOW", "MEDIUM", "HIGH"], [1.0, 1.25, 1.5], document.getElementById("piQ_value"), document.getElementById("piQ_description"));
+let lambda1Entry = new Lambda1Entry("lambda1", 1.0, document.getElementById("lambda1_entry"), document.getElementById("lambda1_message"), document.getElementById("lambda1_value"), "Wrong format, please enter a number (float or integer) with decimal delimiter '.'", "&lambda;" + "1".sub() + " validated");
+
+let lambda2Entry = new Lambda2Entry("lambda2", 1.0, document.getElementById("lambda2_entry"), document.getElementById("lambda2_message"), document.getElementById("lambda2_value"), "Wrong format, please enter a number (float or integer) with decimal delimiter '.'", "K" + "parameters".sub() + " validated", "Please enter a value for " + "K" + "parameters".sub() + " if necessary", lambda1Entry);
+
+let lambda12Entry = new LambdaEntry(lambda1Entry, lambda2Entry);
+
+let piQSlider = new ThreeChoicesSlider("piQslider", document.getElementById("piQ_slider"), "", ["LOW", "MEDIUM", "HIGH"], [1.5, 1.25, 1.0], document.getElementById("piQ_value"), document.getElementById("piQ_description"));
 piQSlider.changed();
 
+let piMSlider = new ThreeChoicesSlider("piMslider", document.getElementById("piM_slider"), "", ["LOW", "MEDIUM", "HIGH"], [1.5, 1.25, 1.0], document.getElementById("piM_value"), document.getElementById("piM_description"));
+piMSlider.changed();
+
+let orbitSlider = new ThreeChoicesSlider("orbitslider", document.getElementById("orbit_slider"), "", ["LOW COMPLIANCE", "PARTIAL COMPLIANCE", "FULL COMPLIANCE"], [0.3, 0.25, 0.2], document.getElementById("orbit_value"), document.getElementById("orbit_description"));
+orbitSlider.changed();
+
+let temperatureSlider = new ThreeChoicesSlider("temperatureslider", document.getElementById("temperature_slider"), "", ["LOW COMPLIANCE", "PARTIAL COMPLIANCE", "FULL COMPLIANCE"], [0.3, 0.25, 0.2], document.getElementById("temperature_value"), document.getElementById("temperature_description"));
+temperatureSlider.changed();
+
+let powerSlider = new ThreeChoicesSlider("powerslider", document.getElementById("power_slider"), "", ["LOW COMPLIANCE", "PARTIAL COMPLIANCE", "FULL COMPLIANCE"], [0.3, 0.25, 0.2], document.getElementById("power_value"), document.getElementById("power_description"));
+powerSlider.changed();
+
+let dcSlider = new ThreeChoicesSlider("dcslider", document.getElementById("dc_slider"), "", ["LOW COMPLIANCE", "PARTIAL COMPLIANCE", "FULL COMPLIANCE"], [0.3, 0.25, 0.2], document.getElementById("dc_value"), document.getElementById("dc_description"));
+dcSlider.changed();
+
+let tcSlider = new ThreeChoicesSlider("tcslider", document.getElementById("tc_slider"), "", ["LOW COMPLIANCE", "PARTIAL COMPLIANCE", "FULL COMPLIANCE"], [0.15, 0.13, 0.1], document.getElementById("tc_value"), document.getElementById("tc_description"));
+tcSlider.changed();
+
+let othersSlider = new ThreeChoicesSlider("othersslider", document.getElementById("others_slider"), "", ["LOW COMPLIANCE", "PARTIAL COMPLIANCE", "FULL COMPLIANCE"], [0.15, 0.13, 0.1], document.getElementById("others_value"), document.getElementById("others_description"));
+othersSlider.changed();
 
 let checkboxPiT = new OneChoiceCheckbox("piT", document.getElementById("piT_checkbox"), 1.0, 1.0, document.getElementById("piT_value"));
 checkboxPiT.change_check();
 
 let checkboxPiC = new OneChoiceCheckbox("piT", document.getElementById("piC_checkbox"), 1.0, 1.0, document.getElementById("piC_value"));
 checkboxPiC.change_check();
-
-let lambda1Entry = new NumberEntry("lambda1", 1.0, document.getElementById("lambda1_entry"), document.getElementById("lambda1_message"), document.getElementById("lambda1_value"));
-
 
 function process_pi_op() {
     var res = parseFloat(document.getElementById("others_value").innerHTML) + parseFloat(document.getElementById("dc_value").innerHTML) + parseFloat(document.getElementById("tc_value").innerHTML) + parseFloat(document.getElementById("power_value").innerHTML) + parseFloat(document.getElementById("temperature_value").innerHTML) + parseFloat(document.getElementById("orbit_value").innerHTML);
@@ -141,6 +221,6 @@ function process_pi_op() {
 }
 
 function process_lambda3() {
-    var res = parseFloat(document.getElementById("piOP_value").innerHTML) * parseFloat(document.getElementById("piT_value").innerHTML) * parseFloat(document.getElementById("piC_value").innerHTML) * parseFloat(document.getElementById("piM_value").innerHTML) * parseFloat(document.getElementById("piQ_value").innerHTML) * parseFloat(document.getElementById("lambda1_value").innerHTML);
+    var res = parseFloat(document.getElementById("piOP_value").innerHTML) * parseFloat(document.getElementById("piT_value").innerHTML) * parseFloat(document.getElementById("piC_value").innerHTML) * parseFloat(document.getElementById("piM_value").innerHTML) * parseFloat(document.getElementById("piQ_value").innerHTML) * lambda1Entry.value * lambda2Entry.value;
     document.getElementById("lambda3_value").innerText = res.toFixed(6);
 }

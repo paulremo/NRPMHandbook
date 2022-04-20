@@ -15,13 +15,29 @@
 
         <tr>
             <td class="value-type">
-                <h2>Value of &lambda;<sub>1</sub> : </h2>
+                <h2>Value of &lambda;<sub>1</sub> (FITs) </h2>
             </td>
             <td class="value-processed">
                 <p id="lambda1_value"></p>
             </td>
-            <td class="controllers">   
-                <textarea class="text-entry" id="lambda1_entry" name="story" rows="1" cols="33" onchange="lambda1Entry.check_content()"></textarea><a style="margin-left: 50px;" id="lambda1_message"></a>
+            <td class="controllers">
+                <textarea class="text-entry" id="lambda1_entry" name="story" rows="1" cols="12"
+                    onchange="lambda12Entry.onLambdachanged()"></textarea><a style="margin-left: 50px;"
+                    id="lambda1_message"></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type">
+                <h2>Value of &lambda;<sub>2</sub> (FITs) </h2>
+            </td>
+            <td class="value-processed">
+                <p id="lambda2_value"></p>
+            </td>
+            <td class="controllers">
+                <textarea class="text-entry" id="lambda2_entry" name="story" rows="1" cols="12"
+                    onchange="lambda12Entry.onLambdachanged()"></textarea><a style="margin-left: 50px;"
+                    id="lambda2_message"></a>
             </td>
         </tr>
 
@@ -32,20 +48,24 @@
             <td class="value-processed">
                 <p id="piQ_value"></p>
             </td>
-            <td class="description">
-                <p>Quality</p>
-            </td>
-            <td class="description-value">
-                <p id="piQ_description"></p>
-            </td>
-            <td class="controllers">
-                <input type="range" class="three-choice-slider" min="0" max="300" id="piQ_slider" step="1" value="0"
-                    oninput="piQSlider.changed()">
+            <td>
+                <table class="customed-table">
+                    <td class="description">
+                        <p>Quality</p>
+                    </td>
+                    <td class="description-value">
+                        <p id="piQ_description"></p>
+                    </td>
+                    <td class="controllers">
+                        <input type="range" class="three-choice-slider" min="0" max="300" id="piQ_slider" step="1"
+                            value="0" oninput="piQSlider.changed()">
+                    </td>
+                </table>
             </td>
 
         </tr>
 
-        <!--<tr>
+        <tr>
             <td class="value-type">
                 <h2>Value of &Pi;<sub>M</sub> : </h2>
             </td>
@@ -53,10 +73,20 @@
                 <p id="piM_value"></p>
             </td>
             <td>
-                <button class="red-button" id="low_piM_button" onclick = "redButtonPiM.clicked()">LOW</button>
-                <button class="yellow-button" id="medium_piM_button" onclick = "yellowButtonPiM.clicked()">MEDIUM</button>
-                <button class="green-button" id="high_piM_button" onclick = "greenButtonPiM.clicked()">HIGH</button>
+                <table class="customed-table">
+                    <td class="description">
+                        <p>Maturity</p>
+                    </td>
+                    <td class="description-value">
+                        <p id="piM_description"></p>
+                    </td>
+                    <td class="controllers">
+                        <input type="range" class="three-choice-slider" min="0" max="300" id="piM_slider" step="1"
+                            value="0" oninput="piMSlider.changed()">
+                    </td>
+                </table>
             </td>
+
         </tr>
 
         <tr>
@@ -67,9 +97,20 @@
                 <p id="piT_value"></p>
             </td>
             <td>
-                <input type="checkbox" id="piT_checkbox" onclick="checkboxPiT.change_check()">
-                <label for="piT_checkbox">Allowable</label>
+                <table class="customed-table">
+                    <td class="description">
+                        <p>Technology</p>
+                    </td>
+                    <td class="description-value">
+                        <p id="piT_description"></p>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="piT_checkbox" onclick="checkboxPiT.change_check()">
+                        <label for="piT_checkbox">Applicable</label>
+                    </td>
+                </table>
             </td>
+
         </tr>
 
         <tr>
@@ -80,9 +121,20 @@
                 <p id="piC_value"></p>
             </td>
             <td>
-                <input type="checkbox" id="piC_checkbox" onclick="checkboxPiC.change_check()">
-                <label for="piC_checkbox">Allowable</label>
+                <table class="customed-table">
+                    <td class="description">
+                        <p>Complexity</p>
+                    </td>
+                    <td class="description-value">
+                        <p id="piC_description"></p>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="piC_checkbox" onclick="checkboxPiC.change_check()">
+                        <label for="piC_checkbox">Applicable</label>
+                    </td>
+                </table>
             </td>
+
         </tr>
 
         <tr>
@@ -96,91 +148,159 @@
                 <table class="customed-table">
                     <tr>
                         <td class="value-type">
-                            <h3>Value of orbit : </h3>
+                            <h2>Value of orbit : </h2>
                         </td>
                         <td class="value-processed">
                             <p id="orbit_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_orbit_button" onclick = "redButtonOrbit.clicked()">LOW COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_orbit_button" onclick = "yellowButtonOrbit.clicked()">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_orbit_button" onclick = "greenButtonOrbit.clicked()">FULL COMPLIANCE</button>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Orbit</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="orbit_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="orbit_slider"
+                                        step="1" value="0" oninput="orbitSlider.changed()">
+                                </td>
+                            </table>
                         </td>
                     </tr>
+
                     <tr>
                         <td class="value-type">
-                            <h3>Value of temperature : </h3>
+                            <h2>Value of temperature : </h2>
                         </td>
                         <td class="value-processed">
                             <p id="temperature_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_temperature_button" onclick = "redButtonTemperature.clicked()">LOW COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_temperature_button" onclick = "yellowButtonTemperature.clicked()">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_temperature_button" onclick = "greenButtonTemperature.clicked()">FULL COMPLIANCE</button>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Temperature</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="temperature_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300"
+                                        id="temperature_slider" step="1" value="0"
+                                        oninput="temperatureSlider.changed()">
+                                </td>
+                            </table>
                         </td>
                     </tr>
+
                     <tr>
                         <td class="value-type">
-                            <h3>Value of power : </h3>
+                            <h2>Value of power : </h2>
                         </td>
                         <td class="value-processed">
                             <p id="power_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_power_button" onclick = "redButtonPower.clicked()">LOW COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_power_button" onclick = "yellowButtonPower.clicked()">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_power_button" onclick = "greenButtonPower.clicked()">FULL COMPLIANCE</button>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Power</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="power_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="power_slider"
+                                        step="1" value="0" oninput="powerSlider.changed()">
+                                </td>
+                            </table>
                         </td>
                     </tr>
+
                     <tr>
                         <td class="value-type">
-                            <h3>Value of thermal cycling : </h3>
-                        </td>
-                        <td class="value-processed">
-                            <p id="tc_value"></p>
-                        </td>
-                        <td>
-                            <button class="red-button" id="low_tc_button" onclick = "redButtonTC.clicked()">LOW COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_tc_button" onclick = "yellowButtonTC.clicked()">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_tc_button" onclick = "greenButtonTC.clicked()">FULL COMPLIANCE</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="value-type">
-                            <h3>Value of duty cycle : </h3>
+                            <h2>Value of duty cycle : </h2>
                         </td>
                         <td class="value-processed">
                             <p id="dc_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_dc_button" onclick = "redButtonDC.clicked()">LOW COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_dc_button" onclick = "yellowButtonDC.clicked()">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_dc_button" onclick = "greenButtonDC.clicked()">FULL COMPLIANCE</button>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Duty cycle</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="dc_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="dc_slider"
+                                        step="1" value="0" oninput="dcSlider.changed()">
+                                </td>
+                            </table>
+                        </td>
                     </tr>
+
                     <tr>
                         <td class="value-type">
-                            <h3>Value of others : </h3>
+                            <h2>Value of Thermal cycling : </h2>
+                        </td>
+                        <td class="value-processed">
+                            <p id="tc_value"></p>
+                        </td>
+                        <td>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Temperature cycling</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="tc_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="tc_slider"
+                                        step="1" value="0" oninput="tcSlider.changed()">
+                                </td>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="value-type">
+                            <h2>Value of others : </h2>
                         </td>
                         <td class="value-processed">
                             <p id="others_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_others_button" onclick = "redButtonOthers.clicked()">LOW COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_others_button" onclick = "yellowButtonOthers.clicked()">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_others_button" onclick = "greenButtonOthers.clicked()">FULL COMPLIANCE</button>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Others</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="others_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="others_slider"
+                                        step="1" value="0" oninput="othersSlider.changed()">
+                                </td>
+                            </table>
                         </td>
                     </tr>
                 </table>
             </td>
-        </tr> -->
+
+        </tr>
 
     </table>
 
-    <h1>Value of &lambda;<sub>3</sub> : <a id="lambda3_value"></a> </h1>
+    <h1>Value of &lambda;<sub>3</sub> : <a id="lambda3_value"></a> (FITS)</h1>
 
-    <script src="https://colorjs.io/dist/color.js"></script>
     <script type="text/javascript" src="../js/misc_failure_rate_sliders.js"></script>
+
+    <script>
+        let str = document.getElementById("lambda1_entry");
+        str.placeholder = "Enter the value of \u{03BB}\u{2081}";
+        let str2 = document.getElementById("lambda2_entry");
+        str2.placeholder = "Enter Kparameters";
+    </script>
 
 
 </body>
