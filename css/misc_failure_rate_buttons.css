@@ -1,14 +1,15 @@
 .green-button {
-    padding: 10px 20px;
-    margin: 15px;
-    font-size: 12px;
+    padding: 5px 5px;
+    margin: 5px;
+    font-size: 9px;
+    font-weight: bold;
     text-align: center;
     cursor: pointer;
     outline: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
     background-color: #04AA6D;
     border: none;
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     box-shadow: 0 5px #666;
 }
 
@@ -21,16 +22,17 @@
 }*/
 
 .red-button {
-    padding: 10px 20px;
-    margin: 15px;
-    font-size: 12px;
+    padding: 5px 5px;
+    margin: 5px;
+    font-size: 9px;
+    font-weight: bold;
     text-align: center;
     cursor: pointer;
     outline: none;
-    color: #fff;
-    background-color: #f3522f;
+    color: rgb(0, 0, 0);
+    background-color: #d12500;
     border: none;
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     box-shadow: 0 5px #666;
 }
 
@@ -43,16 +45,17 @@
 }*/
 
 .yellow-button {
-    padding: 10px 20px;
-    margin: 15px;
-    font-size: 12px;
+    padding: 5px 5px;
+    margin: 5px;
+    font-size: 9px;
+    font-weight: bold;
     text-align: center;
     cursor: pointer;
     outline: none;
-    color: #fff;
-    background-color: #fad739;
+    color: rgb(0, 0, 0);
+    background-color: #e1b800;
     border: none;
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     box-shadow: 0 5px #666;
 }
 
@@ -67,30 +70,32 @@
 h1 {
     color: #8d0308;
     font-family: 'Nunito', sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 1px;
-    margin-left: 10px;
-    }
-
-h2 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 30px;
     font-size: 20px;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 1px;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    }
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
     }
     
 h3 {
     font-family: 'Nunito', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 1px;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     }
 
 .customed-table {
@@ -98,24 +103,25 @@ h3 {
 }
 
 .value-type{
-    background-color: #009879;
+    background-color: #383b3a;
     color: #ffffff;
-    text-align: left;
-    width: 190px;
+    text-align: center;
+    width: 80px;
     height: 60px;
 }
 
 .value-processed{
     font-weight: bold;
-    color: #009879;
-    width: 100px;
+    color: #383b3a;
+    width: 50px;
     font-family: 'Nunito', sans-serif;
     text-align: center;
 }
 
 .text-entry{
-    border-color: #009879;
+    border-color: #383b3a;
     border-radius: 5px;
     margin-left: 10px;
     padding-left: 10px;
+    width: fit-content;
 }

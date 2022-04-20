@@ -1,5 +1,5 @@
 class NumberEntry {
-    constructor(name, value, text_entry, message, value_text){
+    constructor(name, value, text_entry, message, value_text) {
         this.name = name;
         this.value = value;
         this.text_entry = text_entry
@@ -7,23 +7,23 @@ class NumberEntry {
         this.value_text = value_text;
     }
 
-    check_content(){
-        var numberCheck = /[+-]?([0-9]*[.])?[0-9]+/;
-        if (this.text_entry.value.match(numberCheck) && !this.text_entry.value.includes(",")){
+    check_content() {
+        const numberCheck = new RegExp('[0-9]+([\\.][0-9]*)?');
+        if (numberCheck.test(this.text_entry.value) && !this.text_entry.value.includes("-") && !this.text_entry.value.includes(",")) {
             this.text_entry.color = "green";
-            console.log(parseFloat(this.text_entry.value));
             this.value_text.innerHTML = parseFloat(this.text_entry.value);
             this.message.innerHTML = "&lambda;" + "1".sub() + " validated";
+            process_lambda3();
         }
-        else{
+        else {
             this.text_entry.color = "red";
             this.message.innerHTML = "Wrong format, please enter a number (float or integer) with decimal delimiter '.'";
         }
     }
 }
 
-class OneChoiceCheckbox{
-    constructor(name, checkbox, value_checked, value_unchecked, text_area){
+class OneChoiceCheckbox {
+    constructor(name, checkbox, value_checked, value_unchecked, text_area) {
         this.name = name;
         this.checkbox = checkbox;
         this.value_checked = value_checked;
@@ -31,15 +31,15 @@ class OneChoiceCheckbox{
         this.text_area = text_area
     }
 
-    change_check(){
-        if (this.checkbox.checked){
+    change_check() {
+        if (this.checkbox.checked) {
             this.text_area.textContent = this.value_checked;
             this.text_area.style.color = "#009879";
         }
-        else{
+        else {
             this.text_area.style.color = "red";
             this.text_area.textContent = this.value_unchecked;
-        } 
+        }
         process_lambda3();
     }
 }
@@ -94,7 +94,7 @@ class ThreeChoicesSlider {
     /*Taken from the web*/
     static interpolateColor(value) {
         if (value > 150) {
-            let factor = (value - 150)/150;
+            let factor = (value - 150) / 150;
             let color1 = [255, 229, 14];
             let color2 = [196, 13, 2];
             var result = color1.slice();
@@ -104,7 +104,7 @@ class ThreeChoicesSlider {
             return result;
         }
         else {
-            let factor = value/150;
+            let factor = value / 150;
             let color1 = [8, 158, 3];
             let color2 = [255, 229, 14];
             var result = color1.slice();
@@ -121,8 +121,8 @@ class ThreeChoicesSlider {
     }
 }
 
-let testSlider = new ThreeChoicesSlider("test", document.getElementById("r"), "", ["LOW", "MEDIUM", "HIGH"], [1.0,1.25,1.5], document.getElementById("test_value"), document.getElementById("test_description"));
-testSlider.changed();
+let piQSlider = new ThreeChoicesSlider("piQslider", document.getElementById("piQ_slider"), "", ["LOW", "MEDIUM", "HIGH"], [1.0, 1.25, 1.5], document.getElementById("piQ_value"), document.getElementById("piQ_description"));
+piQSlider.changed();
 
 
 let checkboxPiT = new OneChoiceCheckbox("piT", document.getElementById("piT_checkbox"), 1.0, 1.0, document.getElementById("piT_value"));
@@ -134,13 +134,13 @@ checkboxPiC.change_check();
 let lambda1Entry = new NumberEntry("lambda1", 1.0, document.getElementById("lambda1_entry"), document.getElementById("lambda1_message"), document.getElementById("lambda1_value"));
 
 
-function process_pi_op(){
+function process_pi_op() {
     var res = parseFloat(document.getElementById("others_value").innerHTML) + parseFloat(document.getElementById("dc_value").innerHTML) + parseFloat(document.getElementById("tc_value").innerHTML) + parseFloat(document.getElementById("power_value").innerHTML) + parseFloat(document.getElementById("temperature_value").innerHTML) + parseFloat(document.getElementById("orbit_value").innerHTML);
     console.log(res.toFixed(2))
     document.getElementById("piOP_value").innerText = res.toFixed(2);
 }
 
-function process_lambda3(){
+function process_lambda3() {
     var res = parseFloat(document.getElementById("piOP_value").innerHTML) * parseFloat(document.getElementById("piT_value").innerHTML) * parseFloat(document.getElementById("piC_value").innerHTML) * parseFloat(document.getElementById("piM_value").innerHTML) * parseFloat(document.getElementById("piQ_value").innerHTML) * parseFloat(document.getElementById("lambda1_value").innerHTML);
     document.getElementById("lambda3_value").innerText = res.toFixed(6);
 }

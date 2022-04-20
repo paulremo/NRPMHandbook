@@ -38,7 +38,7 @@ input[type=range].three-choice-slider {
 }
 
 .description {
-    background-color: #7f9c95;
+    background-color: #009879;
     color: #ffffff;
     text-align: center;
     width: 190px;
@@ -47,7 +47,7 @@ input[type=range].three-choice-slider {
 
 .description-value {
     font-weight: bold;
-    color: #7f9c95;
+    color: #009879;
     width: 100px;
     font-family: 'Nunito', sans-serif;
     text-align: center;
