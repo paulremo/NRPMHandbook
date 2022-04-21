@@ -13,7 +13,6 @@ parts:
   - caption: Mechanical chapter
     numbered: false
     chapters:
-    numbered: true
     - file: folderMechanical/digital_handbook/introduction
       title: Handbook
       sections:
