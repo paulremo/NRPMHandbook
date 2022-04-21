@@ -18,20 +18,21 @@
   font-weight: normal;
   border: none;
   border-collapse: collapse;
-  /*width: 80%;*/
+  width: 100%;
   white-space: nowrap;
   background-color: white;
+  overflow: auto;
 }
 
 .myTable tr {
   border-color: lighten(#34495E, 10%);
-  width: 80px;
+  /*width: 50px;*/
 }
 
 .myTable td, .myTable th{
   text-align: center;
   padding: 8px;
-  width: 80px;
+  /*width: 80px;*/
 }
 
 
