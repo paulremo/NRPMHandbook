@@ -2,9 +2,9 @@
 
 When the miscellaneous item under consideration does not match the criteria of the miscellaneous equivalent class (e.g. SSPA – Solid State Power Amplifier- cannot be compared to a TWTA in terms of technology), it is necessary to build a reliability model based on engineering/PoF approach as defined hereafter.
 
-Once the reliability model is established it can be tailored as necessary based on the approach presented in [Section 4.5](misc_4_5).
+Once the reliability model is established it can be tailored as necessary based on the approach presented in [Section 4.5](05_process_reliability_modelling_misc.md).
 
-First, it is necessary, to collect/define all technical information about the miscellaneous item in order to characterize it (refer to [Section 4.5](misc_4_5)). Then the basic failure rate $\lambda_{1}$ = $\lambda_{B}$ is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of [Section 4.5](misc_4_5) corresponding to [step 2](misc_step2) to [7](misc_step7).
+First, it is necessary, to collect/define all technical information about the miscellaneous item in order to characterize it (refer to [Section 4.5](05_process_reliability_modelling_misc.md)). Then the basic failure rate $\lambda_{1}$ = $\lambda_{B}$ is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of [Section 4.5](05_process_reliability_modelling_misc.md) corresponding to [step 2](misc_step2) to [7](misc_step7).
 
 
 (misc_4_7_1)=
@@ -110,6 +110,6 @@ The occurrence scale of [Table 4 -6](misc_table4_6) is used to derive, based on 
 
 This represents the basic failure rate or the basic probability of failure.
 
-Then the general process to adapt this failure rate is described in [Section 4.5](misc_4_5).
+Then the general process to adapt this failure rate is described in [Section 4.5](05_process_reliability_modelling_misc.md).
 
 It is noteworthy that this probability ranking needs to be clearly justified and documented.
