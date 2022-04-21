@@ -123,5 +123,7 @@
     border-radius: 5px;
     margin-left: 10px;
     padding-left: 10px;
-    width: fit-content;
+    width: 130px;
+    resize:none;
+    font-size: 10px;
 }

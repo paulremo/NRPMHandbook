@@ -2,7 +2,7 @@
 
 [Table 4 -8](misc_table4_8) provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
 
-The meaning of the columns is explained in .
+The meaning of the columns is explained in **XXX**.
 
 ```{admonition} Todo
 :class: todo
@@ -36,9 +36,5 @@ REF ERROR just above in 1.
 
 (misc_table4_8)=
 **Table 4.8** : reliability data table
-
-```{glue:figure} table4_8
-:name: "table4_8"
-```
 
 <iframe src="../../../_static/interactivity/html/misc_table4_8.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>

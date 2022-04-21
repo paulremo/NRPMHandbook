@@ -20,12 +20,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **EEE**
 ^^^^
-```{image} _static/images/eeePicture.png
-:alt: eeePicture
-:class: bg-primary mb-1
-:width: 200px
-:align: center
-```
+<img src="_static/images/eeePicture.png" alt="logo triple e" style="width:200px;margin-left:20%;" onclick="redirect('folderEEE/mainEEE.html')">
 +++
 {badge}`EEE,badge-primary`
 
@@ -35,12 +30,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **Mechanical**
 ^^^^
-```{image} _static/images//mecaPicture.png
-:alt: mecaPicture
-:class: bg-primary mb-1
-:width: 200px
-:align: center
-```
+<img src="_static/images//mecaPicture.png" alt="logo mechanical" style="width:200px;margin-left:20%;" onclick="redirect('folderMechanical/digital_handbook/introduction.html')">
 +++
 {badge}`Mechanical,badge-primary`
 
@@ -54,12 +44,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **Miscellaneous**
 ^^^^
-```{image} _static/images//miscellaneousPicture.png
-:alt: miscellaneousPicture
-:class: bg-primary mb-1
-:width: 200px
-:align: center
-```
+<img src="_static/images//miscellaneousPicture.png" alt="logo miscellaneous" style="width:200px;margin-left:20%;" onclick="redirect('folderMiscellaneous/digital_handbook/introduction.html')">
 +++
 {badge}`Miscellaneous,badge-primary`
 
@@ -69,12 +54,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **RP at System Level**
 ^^^^
-```{image} _static/images//systemPicture.png
-:alt: systemPicture
-:class: bg-primary mb-1
-:width: 200px
-:align: center
-```
+<img src="_static/images//systemPicture.png" alt="logo system" style="width:200px;margin-left:20%;" onclick="redirect('folderSystem/mainSystem.html')">
 +++
 {badge}`RP@System,badge-primary`
 
