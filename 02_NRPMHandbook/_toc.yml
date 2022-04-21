@@ -9,14 +9,13 @@ parts:
     numbered: true
     chapters:
     - file: folderEEE/mainEEE
-      title: Introduction
+      title: Handbook
   - caption: Mechanical chapter
-    numbered: true
+    numbered: false
     chapters:
-    - file: folderMechanical/mainMechanical
-      title: Introduction
+    numbered: true
     - file: folderMechanical/digital_handbook/introduction
-      title: Digital Handbook
+      title: Handbook
       sections:
       - file: folderMechanical/digital_handbook/scope
       - file: folderMechanical/digital_handbook/normative_references
@@ -33,17 +32,15 @@ parts:
         - file: folderMechanical/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical
         - file: folderMechanical/digital_handbook/rp_mechanical/08_examples_mechanical   
     - file: folderMechanical/interactive_guide/introduction_guide_mechanical
-      title: Interactive Guide
+      title: Models
       sections:
       - file: folderMechanical/interactive_guide/solid_lubricant_wear
         title: Solid lubricant wear 
   - caption: Miscellaneous chapter
     numbered: true
     chapters:
-    - file: folderMiscellaneous/mainMiscellaneous
-      title: Introduction
     - file: folderMiscellaneous/digital_handbook/introduction
-      title: Digital Handbook
+      title: Handbook
       sections:
       - file: folderMiscellaneous/digital_handbook/scope
       - file: folderMiscellaneous/digital_handbook/normative_references
@@ -53,7 +50,7 @@ parts:
       - file: folderMiscellaneous/digital_handbook/annexA    
       - file: folderMiscellaneous/digital_handbook/annexB
     - file: folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous
-      title: Interactive Guide
+      title: Models
       sections:
       - file: folderMiscellaneous/interactive_guide/search_table_test
         title: Table interactivity
@@ -63,4 +60,4 @@ parts:
     numbered: true
     chapters:
     - file: folderSystem/mainSystem
-      title: Introduction
+      title: Handbook
