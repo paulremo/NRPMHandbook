@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/interactivity/css/map.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/interactivity/css/mytables.css" />
@@ -47,9 +48,11 @@
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../_static/interactivity/js/map.js"></script>
     <script src="../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../_static/interactivity/js/radial_bar_lib.js"></script>
+    <script src="../../_static/interactivity/js/table_search.js"></script>
     <script src="../../_static/js/resize_iframe.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -328,7 +331,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="navbar_extra_footer">
   <div>
     By Matrisk & Airbus Defence & Space
-    © Copyright 2021.
+    © Copyright 2022.
 </div>
 
 </div>
@@ -500,7 +503,8 @@ from the Equation 4.1 in the section Reliability prediction of the Miscellaneous
 <div class="section" id="lambda-3-calculation">
 <h2><span class="section-number">3.2.3. </span>Lambda 3 calculation<a class="headerlink" href="#lambda-3-calculation" title="Permalink to this headline">¶</a></h2>
 <p>Here you can calculate the failure rate <span class="math notranslate nohighlight">\(\lambda_{3}\)</span> with the formula <span class="math notranslate nohighlight">\(\lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\)</span> from the <a class="reference internal" href="../digital_handbook/rp_miscellaneous.html#misc-equation4-3"><span class="std std-ref">Equation 4.3</span></a> in the section <a class="reference internal" href="../digital_handbook/rp_miscellaneous.html"><span class="doc std std-doc">Reliability prediction</span></a> of the <a class="reference internal" href="../mainMiscellaneous.html"><span class="doc std std-doc">Miscellaneous Digital Handbook</span></a></p>
-<iframe src="../../_static/interactivity/html/misc_failure_rate_buttons.html" frameborder="0" style="width:100%" id="ext_interactive" onload="resize_iframe()"></iframe></div>
+<iframe src="../../_static/interactivity/html/misc_failure_rate_buttons.html" frameborder="0" style="width:100%" id="ext_interactive" onload="resize_iframe()"></iframe><p><button class="back-forward-button" onclick="redirect('../digital_handbook/rp_miscellaneous.html#back_from_misc_failure_rate_processing_balise')">Back to handbook</button></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

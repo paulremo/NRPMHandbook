@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/interactivity/css/map.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/interactivity/css/mytables.css" />
@@ -47,9 +48,11 @@
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../_static/interactivity/js/map.js"></script>
     <script src="../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../_static/interactivity/js/radial_bar_lib.js"></script>
+    <script src="../../_static/interactivity/js/table_search.js"></script>
     <script src="../../_static/js/resize_iframe.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
@@ -328,7 +331,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="navbar_extra_footer">
   <div>
     By Matrisk & Airbus Defence & Space
-    © Copyright 2021.
+    © Copyright 2022.
 </div>
 
 </div>
@@ -1240,7 +1243,8 @@ The resulting failure rate is:</p>
 It is the responsibility of the user (the supplier) to adapt and/or define the <span class="math notranslate nohighlight">\(K_{parameters}\)</span> as relevant with appropriate technical justification.</p>
 </div>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3" id="misc-step3">
+</details><h2 id="back_from_misc_failure_rate_processing_balise"></h2>
+<details class="sphinx-bs dropdown card mb-3" id="misc-step3">
 <summary class="summary-title card-header">
 <strong>STEP 3 : Consideration of reliability contributors</strong><div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -1342,6 +1346,7 @@ The average resulting factor is then applied.</p>
 <p class="card-text">The resulting failure rate is</p>
 <div class="math notranslate nohighlight" id="equation-equation-4-3">
 <span id="misc-equation4-3"></span><span class="eqno">(2.3)<a class="headerlink" href="#equation-equation-4-3" title="Permalink to this equation">¶</a></span>\[\lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\]</div>
+<p class="card-text"><button class="back-forward-button" onclick="redirect('../interactive_guide/misc_failure_rate_processing.html')">Interactive calculation</button></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p class="card-text">For operating conditions it is necessary to define the weights per contributor and to add a number of conditions as necessary. The process is:</p>
@@ -2159,6 +2164,7 @@ A second equation is provided by the level of confidence “<span class="math no
 </table>
 </div></div></div>
 </div>
+<p id="back-from-search-table"><a class="reference internal" href="../interactive_guide/search_table_test.html"><span class="doc std std-doc">Click here to have a better look on the table</span></a></p>
 </div>
 </div>
 
