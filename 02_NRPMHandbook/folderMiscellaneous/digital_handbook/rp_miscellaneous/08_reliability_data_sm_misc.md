@@ -41,8 +41,4 @@ REF ERROR just above in 1.
 :name: "table4_8"
 ```
 
-(back_from_search_table)=
-[Click here to have a better look on the table](../interactive_guide/search_table_test.ipynb)
-
-
 <iframe src="../../../_static/interactivity/html/misc_table4_8.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
