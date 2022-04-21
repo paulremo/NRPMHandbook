@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test with JS</title>
+    <link rel="stylesheet" href="../css/map.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">    
+</head>
+
+<body>
+
+    <table class="formula-map">
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="extra_1"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="map-node" id="1">
+                <button class="map-button" id="map_button">MAP</button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="extra_2"></td>
+            <td class="map-node" id="2">
+                <button class="node-button" id="map_button">NODE</button>
+            </td>
+            <td></td>
+            <td class="map-node" id="3">
+                <button class="node-button" id="piQ" onclick="mb.expend()">NODE</button>
+            </td>
+            <td id="extra_3" class="extra-space">
+                <div>
+                    <button class="tc-button" id="tcc_1_3" onclick="mb.clickedButton('tcc_1_3')" >LOW</button>
+                    <button class="tc-button" id="tcc_2_3" onclick="mb.clickedButton('tcc_2_3')">MEDIUM</button>
+                    <button class="tc-button" id="tcc_3_3" onclick="mb.clickedButton('tcc_3_3')">HIGH</button>
+                </div>
+                
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="central-node">
+                <button class="central-button" id="map_button">CENTRAL</button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="extra_4"></td>
+            <td class="map-node" id="4">
+                <button class="node-button" id="map_button">NODE</button>
+            </td>
+            <td></td>
+            <td class="map-node" id="5">
+                <button class="node-button" id="map_button">NODE</button>
+            </td>
+            <td id="extra_5"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="map-node" id="6">
+                <button class="node-button" id="piM" onclick="mb2.expend()">NODE</button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="extra_6" class="extra-space">
+                <div>
+                    <button class="tc-button" id="tcc_1_6" onclick="mb2.clickedButton('tcc_1_6')">LOW</button>
+                    <button class="tc-button" id="tcc_2_6" onclick="mb2.clickedButton('tcc_2_6')">MEDIUM</button>
+                    <button class="tc-button" id="tcc_3_6" onclick="mb2.clickedButton('tcc_3_6')">HIGH</button>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="../js/map.js"></script>
+
+</body>
+
+
+</html>

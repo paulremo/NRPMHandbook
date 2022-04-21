@@ -67,7 +67,7 @@
   transform: translateY(4px);
 }*/
 
-h1 {
+.main-value-title {
     color: #8d0308;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
@@ -78,7 +78,7 @@ h1 {
     margin-right: 5px;
     }
 
-h2 {
+.value-type-title {
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
     font-weight: bold;
@@ -88,7 +88,7 @@ h2 {
     margin-right: 5px;
     }
     
-h3 {
+    .value-type-subtitle {
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
     font-weight: bold;
@@ -125,3 +125,5 @@ h3 {
     padding-left: 10px;
     width: fit-content;
 }
+
+
