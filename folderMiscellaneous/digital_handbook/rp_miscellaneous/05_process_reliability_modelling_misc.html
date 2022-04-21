@@ -1,0 +1,881 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.4.5. Process for Reliability modelling &#8212; NRPM Digital handbook</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/radial_bar.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../../_static/interactivity/js/map.js"></script>
+    <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
+    <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
+    <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
+    <script src="../../../_static/interactivity/js/table_search.js"></script>
+    <script src="../../../_static/js/redirect.js"></script>
+    <script src="../../../_static/js/resize_iframe.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.4.6. Use of IOR data and/or tests results" href="06_ior_results.html" />
+    <link rel="prev" title="1.4.4. Reliability Models for miscellaneous items" href="04_reliability_models_misc.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Welcome the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../folderEEE/mainEEE.html">
+   1. Handbook
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mechanical chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderMechanical/digital_handbook/introduction.html">
+   Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMechanical/digital_handbook/scope.html">
+     Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMechanical/digital_handbook/normative_references.html">
+     Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMechanical/digital_handbook/terms.html">
+     Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../folderMechanical/digital_handbook/rp_mechanical/00_rp_mechanical.html">
+     Reliability prediction for mechanical and structural parts and assemblies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../folderMechanical/digital_handbook/rp_mechanical/01_process_mechanical_rp.html">
+       Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../folderMechanical/digital_handbook/rp_mechanical/02_root_causes_coverage_mechanical.html">
+       Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../folderMechanical/digital_handbook/rp_mechanical/03_data_sources_methods_mechanical.html">
+       Data sources and methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../folderMechanical/digital_handbook/rp_mechanical/04_failure_identification_focus_mecha.html">
+       Failure mechanisms identification and focus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../folderMechanical/digital_handbook/rp_mechanical/05_method_selection_mechanical.html">
+       Method selection for different items and failure mechanisms
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../folderMechanical/digital_handbook/rp_mechanical/06_structural_method_input_mechanical.html">
+       Structural reliability methods and inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../folderMechanical/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical.html">
+       Structural reliability models and equations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../folderMechanical/digital_handbook/rp_mechanical/08_examples_mechanical.html">
+       Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../folderMechanical/interactive_guide/introduction_guide_mechanical.html">
+   Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../folderMechanical/interactive_guide/solid_lubricant_wear.html">
+     Solid lubricant wear
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous chapter
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../introduction.html">
+   1. Handbook
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../scope.html">
+     1.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../normative_references.html">
+     1.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../terms.html">
+     1.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="00_rp_miscellaneous.html">
+     1.4. Reliability prediction for miscellaneous items
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="01_misc_items.html">
+       1.4.1. List of miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="02_root_causes_coverage_misc.html">
+       1.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="03_data_sources_methods_misc.html">
+       1.4.3. Data sources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="04_reliability_models_misc.html">
+       1.4.4. Reliability Models for miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       1.4.5. Process for Reliability modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="06_ior_results.html">
+       1.4.6. Use of IOR data and/or tests results
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="07_basic_fr_derivation_nsm_misc.html">
+       1.4.7. Basic failure rate derivation for “non-standard model” items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="08_reliability_data_sm_misc.html">
+       1.4.8. Reliability Data for Miscellaneous “Standard model”
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conclusion.html">
+     1.5. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../annexA.html">
+     1.6. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../annexB.html">
+     1.7. Annex B
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../interactive_guide/introduction_guide_miscellaneous.html">
+   2. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive_guide/search_table_test.html">
+     2.1. Table interactivity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive_guide/misc_failure_rate_processing.html">
+     2.2. Failure rate processing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../folderSystem/mainSystem.html">
+   1. Handbook
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    <img src="_images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
+    <img src="_images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/folderMiscellaneous/digital_handbook/rp_miscellaneous/05_process_reliability_modelling_misc.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/paulremo/NRPMHandbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/paulremo/NRPMHandbook/issues/new?title=Issue%20on%20page%20%2FfolderMiscellaneous/digital_handbook/rp_miscellaneous/05_process_reliability_modelling_misc.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/paulremo/NRPMHandbook/edit/main/02_NRPMHandbook/folderMiscellaneous/digital_handbook/rp_miscellaneous/05_process_reliability_modelling_misc.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#result-after-completing-step-1-to-step-7">
+   1.4.5.1. Result after completing Step 1 to Step 7
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Process for Reliability modelling</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#result-after-completing-step-1-to-step-7">
+   1.4.5.1. Result after completing Step 1 to Step 7
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="process-for-reliability-modelling">
+<h1><span class="section-number">1.4.5. </span>Process for Reliability modelling<a class="headerlink" href="#process-for-reliability-modelling" title="Permalink to this headline">¶</a></h1>
+<p>This Section details how to build a reliability model for miscellaneous item.</p>
+<p>Figure 4‑4 provides the general process to apply whatever the basic model is:</p>
+<ol class="simple">
+<li><p>the “standard model”, or</p></li>
+<li><p>the “non-standard model” or even</p></li>
+<li><p>the “holistic model”.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Figure 4‑4, the basic model is a failure rate but it could also be a probability of failure.</p>
+</div>
+<div class="figure align-default" id="figure4-4">
+<span id="misc-figure4-4"></span><a class="reference internal image-reference" href="folderMiscellaneous/digital_handbook/picture/figure4_4.png"><img alt="folderMiscellaneous/digital_handbook/picture/figure4_4.png" src="folderMiscellaneous/digital_handbook/picture/figure4_4.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">General process for miscellaneous items reliability prediction.</span><a class="headerlink" href="#figure4-4" title="Permalink to this image">¶</a></p>
+</div>
+<p>First, it is necessary, before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used, if relevant, as a “standard model”:</p>
+<ul class="simple">
+<li><p>Functional analysis: list of all the main functions supported by the item,</p></li>
+<li><p>Technical performances: list of all the specified performances regarding the nominal mission / the reduced mission,</p></li>
+<li><p>Hardware description: functional breakdown and hardware architecture as per reliability block diagram (refer to the reliability analysis and associated FMEA),</p></li>
+<li><p>Trajectory (GEO, LEO, MEO, Interplanetary orbit) on which the item is intended to be used,</p></li>
+<li><p>Operating conditions</p>
+<ul>
+<li><p>Duty cycle</p></li>
+<li><p>Voltage, current</p></li>
+<li><p>Thermal environment</p></li>
+</ul>
+</li>
+<li><p>Flight experience: the maturity of the item regarding in-orbit background.</p></li>
+</ul>
+<p>The basic principle is to provide through a reference failure rate (or a probability of failure for one-shot devices) and to up-date this reference failure rate as relevant considering the contributors (multiplying corrective factors) to the probability of failure.</p>
+<p>In the following Section the general process is described.</p>
+<p>Note that it is considered that the multiplying corrective factor is also used to up-date the probability of failure in the case of a one-shot device, based on the fact that, for constant failure rate, when the probability of failure can be approximated by <span class="math notranslate nohighlight">\(\lambda t\)</span> (i.e. for exponential distribution in the case <span class="math notranslate nohighlight">\(\lambda t &lt; 10^{-2}\)</span>) the corrective factor <span class="math notranslate nohighlight">\(K\)</span> leads to a new probability = <span class="math notranslate nohighlight">\(K t\)</span>, which means the probability of failure is multiplied by the corrective factor.
+As a result, the same applies for the probability of failure <span class="math notranslate nohighlight">\(P_{F}\)</span> for a one-shot device: the basic probability can be amended by a factor <span class="math notranslate nohighlight">\(K\)</span>, leading to <span class="math notranslate nohighlight">\(K P_{F}\)</span>.
+So, what is discussed in the following Sections, addressing directly the failure rate, applies for the probability of failure for one-shot device.</p>
+<details class="sphinx-bs dropdown card mb-3" id="misc-step1">
+<summary class="summary-title card-header">
+<strong>STEP 1 : Selection of the initial model</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The basic principle is to start from a reference failure rate, either derived from in-orbit data in the frame of the Current document or from a “non-standard model” duly justified by the supplier.</p>
+<div class="rule admonition">
+<p class="admonition-title">Rule</p>
+<p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO1_{rule}}\)</span></strong></p>
+<p class="card-text">The supplier justifies the rationale supporting the use of a “model” (functional analysis, hardware configuration, operating conditions) providing as a minimum:</p>
+<ul class="simple">
+<li><p class="card-text">Miscellaneous category</p></li>
+<li><p class="card-text">List of the main functions / main performances</p></li>
+<li><p class="card-text">Operating conditions range</p></li>
+</ul>
+<p class="card-text">The failure rate is referred to as basic failure rate <span class="math notranslate nohighlight">\(\lambda_{1} = \lambda_{B}\)</span>. It is defined at 60% level of confidence.</p>
+<div class="math notranslate nohighlight" id="equation-equation-4-1">
+<span id="misc-equation4-1"></span><span class="eqno">(1.1)<a class="headerlink" href="#equation-equation-4-1" title="Permalink to this equation">¶</a></span>\[\lambda_{1} = \lambda_{B}\]</div>
+</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3" id="misc-step2">
+<summary class="summary-title card-header">
+<strong>STEP 2 : Normalization of the basic failure rate</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The major contributors to the reliability are identified in <span class="xref myst">Table4-8</span>.
+In the case the actual parameters are different (either higher or lower quality levels, additional stresses, specific technology, specific contributors to the reliability) a tailoring factor is recommended to account for the item’s specificities.</p>
+<div class="rule admonition">
+<p class="admonition-title">Rule</p>
+<p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO2_{rule}}\)</span></strong></p>
+<p class="card-text">The supplier identifies the physical parameters contributing to the reliability and accounting for the item specificities.
+The resulting failure rate is:</p>
+<div class="math notranslate nohighlight" id="equation-equation-4-2">
+<span id="misc-equation4-2"></span><span class="eqno">(1.2)<a class="headerlink" href="#equation-equation-4-2" title="Permalink to this equation">¶</a></span>\[\lambda_{2} = \lambda_{1} * K_{parameters}\]</div>
+<p class="card-text">By default, <span class="math notranslate nohighlight">\(K_{parameters}\)</span> is set to 1, under the condition that the major contributors are sufficiently close to those defined for the basic failure rate.
+It is the responsibility of the user (the supplier) to adapt and/or define the <span class="math notranslate nohighlight">\(K_{parameters}\)</span> as relevant with appropriate technical justification.</p>
+</div>
+</div>
+</details><h2 id="back_from_misc_failure_rate_processing_balise"></h2>
+<details class="sphinx-bs dropdown card mb-3" id="misc-step3">
+<summary class="summary-title card-header">
+<strong>STEP 3 : Consideration of reliability contributors</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The basic failure rate which is derived from IOR relates to a certain set of assumptions likely to impact the reliability. It is therefore necessary to amend as relevant the basic failure rate to account for the real conditions of the item under consideration.</p>
+<ul>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\Pi_{Q}\)</span> = QUALITY factor</p>
+<p class="card-text">This factor covers the quality level used to design/manufacture the miscellaneous item. It addresses the quality process, as a whole, as defined in the ECSS framework.
+A three level scale is used:</p>
+<ul>
+<li><p class="card-text"><strong>Level 1</strong> = HIGH Quality (e.g. most of Telecommunications satellites)</p>
+<p class="card-text">The technical risk is mitigated / cancelled as necessary. This level refers to the high quality standard used for space (refer to ECSS).</p>
+</li>
+<li><p class="card-text"><strong>Level 2</strong> = MEDIUM Quality (e.g. New Space paradigm)</p>
+<p class="card-text">The technical risk is optimized. This level is an intermediate level between High quality level and Low quality level.</p>
+</li>
+<li><p class="card-text"><strong>Level 3</strong> = LOW Quality (e.g. COTS without quality space standard requiring specific qualification)</p>
+<p class="card-text">The technical risk is mitigated up to the cost target, otherwise accepted.</p>
+</li>
+</ul>
+<div class="rule admonition">
+<p class="admonition-title">Rule</p>
+<p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO3_{rule}}\)</span></strong></p>
+<p class="card-text">The supplier justifies with technical argument the quality level of the miscellaneous item providing the quality reference as define in the Product Assurance requirements applicable to the miscellaneous item.</p>
+</div>
+</li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\Pi_{M}\)</span> = MATURITY factor</p>
+<p class="card-text">This factor addresses the maturity level of the supplier.
+A three level scale is used:</p>
+<ul>
+<li><p class="card-text"><strong>Level 1</strong> = HIGH Maturity</p>
+<p class="card-text">The supplier is a specialist providing the space stakeholders with the miscellaneous item,</p>
+</li>
+<li><p class="card-text"><strong>Level 2</strong> = MEDIUM Maturity</p>
+<p class="card-text">The item is a new development for the supplier,</p>
+</li>
+<li><p class="card-text"><strong>Level 3</strong> = LOW Maturity (e.g. COTS without quality space standard requiring specific qualification)</p>
+<p class="card-text">The supplier is a newcomer on the market to develop such a product.</p>
+</li>
+</ul>
+<div class="rule admonition">
+<p class="admonition-title">Rule</p>
+<p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO4_{rule}}\)</span></strong></p>
+<p class="card-text">The supplier justifies with technical arguments the maturity level of the miscellaneous item providing evidences of the related ranking.</p>
+</div>
+</li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\Pi_{T}\)</span> = TECHNOLOGY factor</p>
+<p class="card-text">This factor relates to the “technology” supporting the item. “Technology” is considered in a wide sense and is already addressed in the IOR equivalent class from which the basic failure rate is derived.
+No assumption can really be defined to account for the use of a new technology or a technology slightly different.
+The supplier justifies with technical arguments the reason why the technology of its product matches the technology accounted in the basic failure rate. If it is not the case, a “non-standard model” is developed by the supplier.
+<em>e.g. SSPA implements a different technology than TWTA and therefore the reliability model used for TWTA will not be used for SSPA</em>.</p>
+<div class="rule admonition">
+<p class="admonition-title">Rule</p>
+<p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO5_{rule}}\)</span></strong></p>
+<p class="card-text">The supplier justifies that the technology supporting the item is consistent with the IOR data used as a basis to determine the basic failure rate.</p>
+</div>
+</li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\Pi_{C}\)</span> = COMPLEXITY factor</p>
+<p class="card-text">Reliability depends on the complexity of the item. The assessment of the complexity is difficult.
+The supplier justifies with technical arguments the reason why the complexity of its product is consistent with the complexity accounted in the basic failure rate. If it is not the case a “non-standard model” is developed by the supplier.</p>
+<div class="rule admonition">
+<p class="admonition-title">Rule</p>
+<p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO6_{rule}}\)</span></strong></p>
+<p class="card-text">The supplier justifies that the complexity (design) supporting the item is consistent with the IOR data used as a basis to determine the basic failure rate.</p>
+</div>
+</li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(\Pi_{OP}\)</span> = OPERATING CONDITIONS factor</p>
+<p class="card-text">The factor represents the frame of the significant operating conditions of the item. It is item-dependent.</p>
+<ul class="simple">
+<li><p class="card-text">Orbit,</p></li>
+<li><p class="card-text">Temperature,</p></li>
+<li><p class="card-text">Power,</p></li>
+<li><p class="card-text">Thermal Cycling,</p></li>
+<li><p class="card-text">Duty cycle,</p></li>
+<li><p class="card-text">Other relevant conditions considered as reliability contributor.</p></li>
+</ul>
+<div class="rule admonition">
+<p class="admonition-title">Rule</p>
+<p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO7_{rule}}\)</span></strong></p>
+<p class="card-text">The supplier identifies with adequate justification the parameters / stresses impacting the reliability with an associated weight representing the contribution of the parameter to the reliability.</p>
+</div>
+</li>
+<li><div class="rule admonition">
+<p class="admonition-title">Rule</p>
+<p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO8_{rule}}\)</span></strong></p>
+<p class="card-text">The supplier classifies each significant condition in three categories:</p>
+<ul class="simple">
+<li><p class="card-text"><strong>FULLY COMPLIANT</strong>: The basic failure rate has been derived for the same operating conditions (w.r.t. this parameter)</p></li>
+<li><p class="card-text"><strong>PARTIALLY COMPLIANT</strong>: The basic failure rate has been derived based on different operating conditions and the parameter is assumed to be a contributor to the reliability with medium impact,</p></li>
+<li><p class="card-text"><strong>NOT COMPLIANT</strong>: The basic failure rate has been derived based on different operating conditions and the parameter is assumed to be a contributor to the reliability with high impact</p></li>
+</ul>
+</div>
+<p class="card-text">The weighting factor attributed per condition represents the contribution of each condition to the reliability of the item.
+The average resulting factor is then applied.</p>
+</li>
+</ul>
+<p class="card-text">The resulting failure rate is</p>
+<div class="math notranslate nohighlight" id="equation-equation-4-3">
+<span id="misc-equation4-3"></span><span class="eqno">(1.3)<a class="headerlink" href="#equation-equation-4-3" title="Permalink to this equation">¶</a></span>\[\lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\]</div>
+<p class="card-text"><button class="back-forward-button" onclick="redirect('../interactive_guide/misc_failure_rate_processing.html')">Interactive calculation</button></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="card-text">For operating conditions it is necessary to define the weights per contributor and to add a number of conditions as necessary. The process is:</p>
+<ul class="simple">
+<li><p class="card-text">To define the number of conditions</p></li>
+<li><p class="card-text">To attribute a weighting factor per condition</p></li>
+<li><p class="card-text">To define the category for each condition</p></li>
+<li><p class="card-text">To calculate the resulting factor to be added.</p></li>
+</ul>
+<p class="card-text"><a class="reference internal" href="#misc-table4-4"><span class="std std-ref">Table4-4</span></a> provides an example of such a calculation.</p>
+</div>
+<p class="card-text" id="misc-table4-4"><strong>Table 4.4</strong> : Values of factors per their ranking.</p>
+<img alt="figure4_4" class="align-center" src="folderMiscellaneous/digital_handbook/picture/figure4_4.png" />
+<p class="card-text">The column <em>“value”</em> provides the factors depending on the classification (column <em>“scale”</em>).
+The two right-hand columns provide the result for one example (<em>“X”</em> representing the ranking regarding the different categories with the associated resulting factor in the right column)</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3" id="misc-step4">
+<summary class="summary-title card-header">
+<strong>STEP 4 : Application of combined approach</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The step 4 is used to combine the predicted failure rate with IOR data in the case the item is based on a generic product which is already operated in-orbit.
+The method used is the Bayesian approach as presented in <a class="reference internal" href="06_ior_results.html#misc-4-6-3"><span class="std std-ref">Section 4.6.3</span></a>.</p>
+<div class="math notranslate nohighlight" id="equation-equation-4-4">
+<span id="misc-equation4-4"></span><span class="eqno">(1.4)<a class="headerlink" href="#equation-equation-4-4" title="Permalink to this equation">¶</a></span>\[\lambda_{3}^{\gamma} = \lambda_{3}\]</div>
+<p class="card-text">Where <span class="math notranslate nohighlight">\(\lambda_{3}^{\gamma}\)</span> is the gamma estimator.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3" id="misc-step5">
+<summary class="summary-title card-header">
+<strong>STEP 5 : Wear-out modelling</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The step 5 incorporates in the reliability model the failures due to potential wear, as necessary.
+The model consists in adding to the constant failure rate (representing Random failures) an increasing failure rate representing the wear-out contribution to the failure of the item.
+Let’s denote <span class="math notranslate nohighlight">\(T\)</span> as the Time To Failure random variable.
+<span class="math notranslate nohighlight">\(T_{RF}\)</span> is the <span class="math notranslate nohighlight">\(TTF\)</span> representing Random Failures (constant failure rate for miscellaneous items)
+<span class="math notranslate nohighlight">\(T_{RF}\)</span> is modelled by the exponential distribution.
+<span class="math notranslate nohighlight">\(T_{WO}\)</span> is the <span class="math notranslate nohighlight">\(TTF\)</span> representing Wear-Out failures (increasing failure rate)
+<span class="math notranslate nohighlight">\(T_{WO}\)</span> is modelled by any distribution with increasing failure rate, i.e. Weibull <span class="math notranslate nohighlight">\(W(\beta, \eta)\)</span>, Normal <span class="math notranslate nohighlight">\(N(m, \sigma)\)</span>, Log-Normal <span class="math notranslate nohighlight">\(\textbf{XXX}\)</span> as relevant (based on the supplier knowledge).
+Three models are presented to model include wear-out mechanisms and impacts on the reliability of the item.</p>
+<ul class="simple">
+<li><p class="card-text"><strong>MODEL 1</strong>: <span class="math notranslate nohighlight">\(RF\)</span> model and <span class="math notranslate nohighlight">\(WO\)</span> model are combined from <span class="math notranslate nohighlight">\(t=0\)</span>, based on <span class="math notranslate nohighlight">\(T = TTF = min(T_{RF}, T_{WO})\)</span></p></li>
+<li><p class="card-text"><strong>MODEL 2</strong>: <span class="math notranslate nohighlight">\(RF\)</span> model and <span class="math notranslate nohighlight">\(WO\)</span> model are combined beyond <span class="math notranslate nohighlight">\(\theta\)</span> , assumed to be the qualification time (laps of time defined in accordance with the technical requirements –agreed with the customer- in order to demonstrate the capability of an item to withstand the applied stresses all along the specified lifetime without significant degradations preventing from the mission achievement).</p></li>
+<li><p class="card-text"><strong>MODEL 3</strong>: <span class="math notranslate nohighlight">\(RF\)</span> distribution and <span class="math notranslate nohighlight">\(WO_{PDF}\)</span> are separated &#64; <span class="math notranslate nohighlight">\(\alpha\)</span> (<span class="math notranslate nohighlight">\(RF\)</span> before, <span class="math notranslate nohighlight">\(WO\)</span> beyond) from <span class="math notranslate nohighlight">\(\lambda_{WO}(\alpha)=\lambda_{RF}\)</span>
+The three models are presented in <strong>Section Error: Reference source not found</strong>
+All three Models can be defined for every Wear-out probability density function: Normal, log-Normal, Gamma … with adequate properties.</p></li>
+</ul>
+<div class="rule admonition">
+<p class="admonition-title">Rule</p>
+<p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO9_{rule}}\)</span></strong></p>
+<p class="card-text">The supplier justifies the wear-out model based on the qualification characteristics of the item.
+The resulting failure rate is :</p>
+<div class="math notranslate nohighlight" id="equation-equation-4-5">
+<span id="misc-equation4-5"></span><span class="eqno">(1.5)<a class="headerlink" href="#equation-equation-4-5" title="Permalink to this equation">¶</a></span>\[\lambda_{4}(t) = \lambda_{3}^{\gamma} + \lambda_{WO}(t)\]</div>
+<p class="card-text">The reliability prediction of the item is then provided by:</p>
+<div class="math notranslate nohighlight" id="equation-equation-4-6">
+<span id="misc-equation4-6"></span><span class="eqno">(1.6)<a class="headerlink" href="#equation-equation-4-6" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}\]</div>
+</div>
+<p class="card-text"><strong>Discussion about the three models</strong>
+<a class="reference internal" href="#misc-figure4-5"><span class="std std-ref">Figure 4 -5</span></a> presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.</p>
+<ul class="simple">
+<li><p class="card-text">Model 1 and model 3 are very close since the constant failure rates used for miscellaneous items are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.</p></li>
+<li><p class="card-text">Model2 could be considered as optimistic since it addresses wear-out only after the qualification time.</p></li>
+<li><p class="card-text">Model 1 appears as the most appropriate, summing the failure rate for Random failures modelling and the failure rate for Wear-out failure modelling. It is recommended to be used except technical arguments support another choice.</p></li>
+</ul>
+<div class="recommendation admonition">
+<p class="admonition-title">Recommendation</p>
+<p class="card-text">The model 1 is recommended as it combines a constant failure rate model with an increasing failure rate model. Other models could be used when appropriate justification is provided by the user.</p>
+</div>
+<div class="figure align-default" id="figure4-5">
+<span id="misc-figure4-5"></span><a class="reference internal image-reference" href="folderMiscellaneous/digital_handbook/picture/figure4_5.png"><img alt="folderMiscellaneous/digital_handbook/picture/figure4_5.png" src="folderMiscellaneous/digital_handbook/picture/figure4_5.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Failure rates for the three Wear-out models (Exponential, Weibull)</span><a class="headerlink" href="#figure4-5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="figure4-6">
+<span id="misc-figure4-6"></span><a class="reference internal image-reference" href="folderMiscellaneous/digital_handbook/picture/figure4_6.png"><img alt="folderMiscellaneous/digital_handbook/picture/figure4_6.png" src="folderMiscellaneous/digital_handbook/picture/figure4_6.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.6 </span><span class="caption-text">Example of WO distribution calculation (assumption: Normal distribution)</span><a class="headerlink" href="#figure4-6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="figure4-7">
+<span id="misc-figure4-7"></span><a class="reference internal image-reference" href="folderMiscellaneous/digital_handbook/picture/figure4_7.png"><img alt="folderMiscellaneous/digital_handbook/picture/figure4_7.png" src="folderMiscellaneous/digital_handbook/picture/figure4_7.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">Example of WO distribution calculation (assumption: Weibull distribution)</span><a class="headerlink" href="#figure4-7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3" id="misc-step6">
+<summary class="summary-title card-header">
+<strong>STEP 6 : Systematic failures modelling</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The step 6 consists in adding a probability of failure related to Systematic Failures.</p>
+<div class="math notranslate nohighlight" id="equation-equation-4-7">
+<span id="misc-equation4-7"></span><span class="eqno">(1.7)<a class="headerlink" href="#equation-equation-4-7" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
+<p class="card-text">The model is common to all miscellaneous items.
+Refer to <strong>the Chapter Error: Reference source not found</strong> for defining the SF value.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p class="card-text">miss ref above</p>
+</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3" id="id1">
+<summary class="summary-title card-header">
+<strong>STEP 7 : Extrinsic failures modelling</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The step 7 consists in adding a probability of failure related to the external particles.</p>
+<div class="math notranslate nohighlight" id="equation-equation-4-8">
+<span id="misc-equation4-8"></span><span class="eqno">(1.8)<a class="headerlink" href="#equation-equation-4-8" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - EX) * (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
+<p class="card-text">The probability of extrinsic failures EX is dependent on</p>
+<ol class="simple">
+<li><p class="card-text">The item location (outside the satellite),</p></li>
+<li><p class="card-text">The probability to be hit by a particle (refer to µmeteorits flux and characteristics depending on the orbit, on the position on the orbit and on the velocity vector) and</p></li>
+<li><p class="card-text">The shielding for the item protection.</p></li>
+</ol>
+<p class="card-text">The definition of a model representing the probability to be hit by a debris is out of the scope of the Current document. Refer to Chapter <strong>Error: Reference source not found</strong> for more information.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</details><div class="section" id="result-after-completing-step-1-to-step-7">
+<h2><span class="section-number">1.4.5.1. </span>Result after completing Step 1 to Step 7<a class="headerlink" href="#result-after-completing-step-1-to-step-7" title="Permalink to this headline">¶</a></h2>
+<p>The method allows deriving a reliability function in time as presented here above.
+It is up to the discretion of the user to use the result appropriately:</p>
+<ul class="simple">
+<li><p>Probability of failure</p></li>
+<li><p>Probability of success</p></li>
+<li><p>Equivalent failure rate derived at a certain time (only valid at this time)</p></li>
+<li><p>Approximation of the probability of failure by <span class="math notranslate nohighlight">\(\lambda t\)</span>, when <span class="math notranslate nohighlight">\(\lambda\)</span> is small regarding <span class="math notranslate nohighlight">\(10^{-2}\)</span>.</p></li>
+</ul>
+<p>An example of calculation is presented in <a class="reference internal" href="#misc-table4-5"><span class="std std-ref">Table 4 -5</span></a>.</p>
+<p id="misc-table4-5"><strong>Table 4.5</strong> : Example of a reliability calculation for a Miscellaneous item: TWTA.</p>
+<img alt="table4_5" class="align-center" src="folderMiscellaneous/digital_handbook/picture/figure4_8.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "paulremo/NRPMInteractivity",
+            ref: "python",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./folderMiscellaneous\digital_handbook\rp_miscellaneous"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="04_reliability_models_misc.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.4.4. </span>Reliability Models for miscellaneous items</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="06_ior_results.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.4.6. </span>Use of IOR data and/or tests results</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Matrisk & Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

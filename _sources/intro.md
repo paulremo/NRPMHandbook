@@ -8,7 +8,7 @@ This is the digital version of the [NRPM](glossary_intro) handbook for reliabili
 You can fin the table of contents just here on the left side, or you can look below and find [another one](toc) at the end of the page ! 
 ```
 
-Here you can find help, calculation processes and fine graphical representations about [EEE](folderEEE/mainEEE), [Mechanical](folderMeca/mainMeca), [Miscellaneous](folderMiscellaneous/mainMiscellaneous) and [RP at System Level](folderSystem/mainSystem) !
+Here you can find help, calculation processes and fine graphical representations about [EEE](folderEEE/mainEEE), [Mechanical](folderMechanical/digital_handbook/introduction), [Miscellaneous](folderMiscellaneous/digital_handbook/introduction) and [RP at System Level](folderSystem/mainSystem) !
 
 ```{note}
 If you have trouble with the acronyms, feel free to have a look on the [glossary](glossary_intro)
@@ -20,7 +20,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **EEE**
 ^^^^
-```{image} Pictures/eeePicture.png
+```{image} _static/images/eeePicture.png
 :alt: eeePicture
 :class: bg-primary mb-1
 :width: 200px
@@ -35,7 +35,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **Mechanical**
 ^^^^
-```{image} Pictures/mecaPicture.png
+```{image} _static/images//mecaPicture.png
 :alt: mecaPicture
 :class: bg-primary mb-1
 :width: 200px
@@ -44,7 +44,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 +++
 {badge}`Mechanical,badge-primary`
 
-[Go to Mechanical](folderMeca/mainMeca)
+[Go to Mechanical](folderMechanical/digital_handbook/introduction)
 ````
 
 
@@ -54,7 +54,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **Miscellaneous**
 ^^^^
-```{image} Pictures/miscellaneousPicture.png
+```{image} _static/images//miscellaneousPicture.png
 :alt: miscellaneousPicture
 :class: bg-primary mb-1
 :width: 200px
@@ -63,13 +63,13 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 +++
 {badge}`Miscellaneous,badge-primary`
 
-[Go to Miscellaneous](folderMiscellaneous/mainMiscellaneous)
+[Go to Miscellaneous](folderMiscellaneous/digital_handbook/introduction)
 
 ---
 
 **RP at System Level**
 ^^^^
-```{image} Pictures/systemPicture.png
+```{image} _static/images//systemPicture.png
 :alt: systemPicture
 :class: bg-primary mb-1
 :width: 200px
