@@ -213,6 +213,8 @@ Comparison of the analytic solution in Equation 10‑25 (adhesive wear model wit
 
 ### Solid lubricant wear
 
+<button id="solid_lubricant_button" class="back-forward-button" onclick="redirect('../../interactive_guide/solid_lubricant_wear.html')">Go to model</button>
+
 Due to the fact that solid lubricants do not evaporate, they are suitable for extreme temperatures (both cold and hot) and for
 applications where contamination could be an issue, e.g. in optical systems. In order to enable on-ground testing and to support the lubrication regime during operations, the lubricant (e.g. sputtered MoS<sub>2</sub>) is stored in special reservoirs such as cages in case of bearings, which are at the same time used to avoid ball collisions in ball bearings. When the lubricant is degraded, new lubricant is provided via the wear of the reservoir.
 
