@@ -12,31 +12,38 @@
   transition: all 0.3s;
 }
 
+.scroller {
+  overflow-x: scroll;
+  scrollbar-color: #4FC3A1 #324960;
+}
+
+
 .myTable {
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: normal;
   border: none;
   border-collapse: collapse;
   width: 100%;
-  max-width: 100%;
   white-space: nowrap;
   background-color: white;
+  overflow: auto;
 }
 
 .myTable tr {
   border-color: lighten(#34495E, 10%);
+  /*width: 50px;*/
 }
 
 .myTable td, .myTable th{
   text-align: center;
   padding: 8px;
+  /*width: 80px;*/
 }
 
 
 .myTable td {
   border-right: 1px solid #f8f8f8;
-  font-size: 12px;
 }
 
 .myTable thead th {

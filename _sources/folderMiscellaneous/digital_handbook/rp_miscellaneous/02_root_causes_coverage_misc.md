@@ -18,7 +18,7 @@ When it is no longer the case (obvious weakness in design, or actual design char
 
 ```{admonition} **Wear‐out failures**
 :class: note, dropdown
-Considered by the process described in [Section 4.5](misc_4_5) (Wear-Out modelling), only for miscellaneous items considered as lifetime-limited items. Safe life qualification is used to address wear-out failure based on probability distribution (parameters derived from the duration for qualification). The model addresses nominal lifetime and lifetime extension.
+Considered by the process described in [Section 4.5](05_process_reliability_modelling_misc.md) (Wear-Out modelling), only for miscellaneous items considered as lifetime-limited items. Safe life qualification is used to address wear-out failure based on probability distribution (parameters derived from the duration for qualification). The model addresses nominal lifetime and lifetime extension.
 ```
 
 ```{admonition} **Extrinsic failures**

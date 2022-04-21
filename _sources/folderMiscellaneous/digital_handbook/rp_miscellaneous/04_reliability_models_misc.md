@@ -21,7 +21,7 @@ The reliability model is either
 
 The basic reliability data are provided in [Table 4‑8](misc_table4_8) with the associated framework.
 
-The reliability “standard model” is then calculated based on the process presented in [Section 4.5](misc_4_5).
+The reliability “standard model” is then calculated based on the process presented in [Section 4.5](05_process_reliability_modelling_misc.md).
 
 
 (misc_4_4_2)=
@@ -33,7 +33,7 @@ e.g. Hold Release Mechanism Low Shock presented in [Figure 4‑3](misc_figure4_3
 
 The item is neither a mechanism, nor an assembly of EEE parts. It is constituted by different parts such as spring, glue, expansion unit. Since the design is very specific without any IOR data it is necessary to define a dedicated reliability model.
 
-The Current document provides general guidance to define such a reliability model: The approach to calculate the basic reliability data is presented in [Section 4.7](misc_4_7). The “specific” reliability model is then calculated based on the process presented in [Section 4.5](misc_4_5).
+The Current document provides general guidance to define such a reliability model: The approach to calculate the basic reliability data is presented in [Section 4.7](07_basic_fr_derivation_nsm_misc.md). The “specific” reliability model is then calculated based on the process presented in [Section 4.5](05_process_reliability_modelling_misc.md).
 
 (misc_figure4_3)=
 ```{figure} ../picture/figure4_3.png
@@ -50,7 +50,7 @@ Miscellaneous (MIS) items reliability modelling logic.
 
 A holistic model refers to a model based on the existing reliability handbooks and/or literature without detailed justification related to the design.
 
-The holistic reliability model is then calculated based on the process presented in [Section 4.5](misc_4_5).
+The holistic reliability model is then calculated based on the process presented in [Section 4.5](05_process_reliability_modelling_misc.md).
 
 
 (misc_4_4_4)=
