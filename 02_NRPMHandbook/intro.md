@@ -1,5 +1,6 @@
 # Welcome the NRPM Digital Handbook !
 
+
 This is the digital version of the [NRPM](glossary_intro) handbook for reliability.space.
 
 ```{admonition} TIPS
