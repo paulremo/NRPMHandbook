@@ -61,8 +61,6 @@ parts:
     - file: folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous
       title: Models
       sections:
-      - file: folderMiscellaneous/interactive_guide/search_table_test
-        title: Table interactivity
       - file: folderMiscellaneous/interactive_guide/misc_failure_rate_processing
         title: Failure rate processing
   - caption: System chapter
