@@ -9,11 +9,11 @@ Figure 4‑4 provides the general process to apply whatever the basic model is:
 3. the “holistic model”.
 
 ```{note}
-On Figure 4‑4, the basic model is a failure rate but it could also be a probability of failure.
+On [Figure 4‑4](misc_figure4_4), the basic model is a failure rate but it could also be a probability of failure.
 ```
 
 (misc_figure4_4)=
-```{figure} ../picture/figure4_4.png
+```{figure} ../../picture/figure4_4.png
 ---
 width: 600px
 name: figure4_4
@@ -206,7 +206,7 @@ The resulting failure rate is
 \lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}
 ```
 
-<button class="back-forward-button" onclick="redirect('../interactive_guide/misc_failure_rate_processing.html')">Interactive calculation</button>
+<button class="back-forward-button" onclick="redirect('../../interactive_guide/misc_failure_rate_processing.html')">Go to model</button>
 
 ```{note}
 For operating conditions it is necessary to define the weights per contributor and to add a number of conditions as necessary. The process is:
@@ -222,7 +222,7 @@ For operating conditions it is necessary to define the weights per contributor a
 (misc_table4_4)=
 **Table 4.4** : Values of factors per their ranking.
 
-```{image} ../picture/figure4_4.png
+```{image} ../../picture/figure4_4.png
 :alt: figure4_4
 :align: center
 ```
@@ -299,7 +299,7 @@ The model 1 is recommended as it combines a constant failure rate model with an 
 ````
 
 (misc_figure4_5)=
-```{figure} ../picture/figure4_5.png
+```{figure} ../../picture/figure4_5.png
 ---
 width: 600px
 name: figure4_5
@@ -308,7 +308,7 @@ Failure rates for the three Wear-out models (Exponential, Weibull)
 ```
 
 (misc_figure4_6)=
-```{figure} ../picture/figure4_6.png
+```{figure} ../../picture/figure4_6.png
 ---
 width: 600px
 name: figure4_6
@@ -317,7 +317,7 @@ Example of WO distribution calculation (assumption: Normal distribution)
 ```
 
 (misc_figure4_7)=
-```{figure} ../picture/figure4_7.png
+```{figure} ../../picture/figure4_7.png
 ---
 width: 600px
 name: figure4_7
@@ -347,7 +347,7 @@ miss ref above
 `````
 
 
-(misc_step6)=
+(misc_step7)=
 `````{dropdown} **STEP 7 : Extrinsic failures modelling**
 The step 7 consists in adding a probability of failure related to the external particles.
 
@@ -365,7 +365,6 @@ The probability of extrinsic failures EX is dependent on
   
 The definition of a model representing the probability to be hit by a debris is out of the scope of the Current document. Refer to Chapter **Error: Reference source not found** for more information.
 
-````
 `````
 
 
@@ -385,7 +384,7 @@ An example of calculation is presented in [Table 4 -5](misc_table4_5).
 (misc_table4_5)=
 **Table 4.5** : Example of a reliability calculation for a Miscellaneous item: TWTA.
 
-```{image} ../picture/figure4_8.png
+```{image} ../../picture/figure4_8.png
 :alt: table4_5
 :align: center
 ```

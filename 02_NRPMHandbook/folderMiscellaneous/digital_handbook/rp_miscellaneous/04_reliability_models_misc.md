@@ -36,7 +36,7 @@ The item is neither a mechanism, nor an assembly of EEE parts. It is constituted
 The Current document provides general guidance to define such a reliability model: The approach to calculate the basic reliability data is presented in [Section 4.7](07_basic_fr_derivation_nsm_misc.md). The “specific” reliability model is then calculated based on the process presented in [Section 4.5](05_process_reliability_modelling_misc.md).
 
 (misc_figure4_3)=
-```{figure} ../picture/figure4_3.png
+```{figure} ../../picture/figure4_3.png
 ---
 width: 600px
 name: figure4_3

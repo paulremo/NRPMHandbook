@@ -5,7 +5,7 @@ This chapter deals with the miscellaneous items which are represented by all par
 The [following figure](misc_figure4_1) represents examples of some miscellaneous parts/items:
 
 (misc_figure4_1)=
-```{figure} ../picture/figure4_1.png
+```{figure} ../../picture/figure4_1.png
 ---
 width: 600px
 name: figure4_1
@@ -42,7 +42,7 @@ MIS-X, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers 
 ```
 
 (misc_figure4_2)=
-```{figure} ../picture/figure4_2.png
+```{figure} ../../picture/figure4_2.png
 ---
 width: 600px
 name: figure4_2

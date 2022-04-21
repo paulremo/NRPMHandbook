@@ -11,7 +11,7 @@ parts:
     - file: folderEEE/mainEEE
       title: Handbook
   - caption: Mechanical chapter
-    numbered: false
+    numbered: true
     chapters:
     - file: folderMechanical/digital_handbook/introduction
       title: Handbook
