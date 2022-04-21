@@ -2,8 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: NRPM Digital handbook
-author: Airbus Defence & Space
+author: Matrisk & Airbus Defence & Space
 logo: Pictures/reliabilityspace_logo_vector.png
+copyright: "2022"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -26,8 +27,8 @@ html:
   use_edit_page_button: true
   extra_navbar: |
         <div>
-            By Matrisk & Airbus Defence & Space
-            © Copyright 2022.
+            <img src="_images/logo_matrisk.jpg" alt="Matrisk logo" style="width:40%;height:40%;">
+            <img src="_images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
         </div>
 
 # Information about where the book exists on the web
