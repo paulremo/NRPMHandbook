@@ -25,12 +25,13 @@
 
 .myTable tr {
   border-color: lighten(#34495E, 10%);
+  width: 80px;
 }
 
 .myTable td, .myTable th{
   text-align: center;
   padding: 8px;
-  width: 10%;
+  width: 80px;
 }
 
 
