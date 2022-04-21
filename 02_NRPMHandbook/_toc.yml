@@ -44,7 +44,17 @@ parts:
       - file: folderMiscellaneous/digital_handbook/scope
       - file: folderMiscellaneous/digital_handbook/normative_references
       - file: folderMiscellaneous/digital_handbook/terms
-      - file: folderMiscellaneous/digital_handbook/rp_miscellaneous
+      - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/00_rp_miscellaneous
+        title: Reliability prediction for miscellaneous items
+        sections:
+        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/01_misc_items
+        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/02_root_causes_coverage_misc
+        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/03_data_sources_methods_misc
+        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/04_reliability_models_misc
+        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/05_process_reliability_modelling_misc
+        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/06_ior_results
+        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/07_basic_fr_derivation_nsm_misc
+        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/08_reliability_data_sm_misc        
       - file: folderMiscellaneous/digital_handbook/conclusion    
       - file: folderMiscellaneous/digital_handbook/annexA    
       - file: folderMiscellaneous/digital_handbook/annexB

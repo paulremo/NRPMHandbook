@@ -1,10 +1,7 @@
 # Welcome to the EEE chapter !
 
 ````{note}
-The general model applied to each EEE component is 
-\begin{equation*}
-\lambda = \lambda_{Physique}+ \pi_{PM} + \pi_{Process}
-\end{equation*}
+The general model applied to each EEE component is $\lambda = \lambda_{Physique}+ \pi_{PM} + \pi_{Process}$
 ````
 
 Here is [a HTML file](test.html)
