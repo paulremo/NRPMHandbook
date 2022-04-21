@@ -25,10 +25,11 @@ html:
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: true
+  favicon: _static/images/favicon.ico
   extra_navbar: |
         <div>
-            <img src="_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
-            <img src="_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
+            <img src="/_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
+            <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
         </div>
 
 # Information about where the book exists on the web
@@ -45,6 +46,7 @@ sphinx:
     thebe_config:
       repository_url        : https://github.com/paulremo/NRPMInteractivity
       repository_branch     : python
+      
 
 
 # deactivate mybinder button and activate thebe button
