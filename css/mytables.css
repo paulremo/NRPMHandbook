@@ -12,6 +12,12 @@
   transition: all 0.3s;
 }
 
+.scroller {
+  overflow-x: scroll;
+  scrollbar-color: #4FC3A1 #324960;
+}
+
+
 .myTable {
   border-radius: 5px;
   font-size: 10px;
