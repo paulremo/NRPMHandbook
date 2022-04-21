@@ -30,6 +30,7 @@
 .myTable td, .myTable th{
   text-align: center;
   padding: 8px;
+  width: 10%;
 }
 
 
