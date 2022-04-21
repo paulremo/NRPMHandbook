@@ -395,6 +395,8 @@ It is the responsibility of the user (the supplier) to adapt and/or define the $
 ````
 `````
 
+<h2 id="back_from_misc_failure_rate_processing_balise"></h2>
+
 (misc_step3)=
 `````{dropdown} **STEP 3 : Consideration of reliability contributors**
 The basic failure rate which is derived from IOR relates to a certain set of assumptions likely to impact the reliability. It is therefore necessary to amend as relevant the basic failure rate to account for the real conditions of the item under consideration.
@@ -510,6 +512,8 @@ The resulting failure rate is
 :label: Equation 4.3
 \lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}
 ```
+
+<button class="back-forward-button" onclick="redirect('../interactive_guide/misc_failure_rate_processing.html')">Interactive calculation</button>
 
 ```{note}
 For operating conditions it is necessary to define the weights per contributor and to add a number of conditions as necessary. The process is:
@@ -948,3 +952,6 @@ REF ERROR just above in 1.
 ```{glue:figure} table4_8
 :name: "table4_8"
 ```
+
+(back_from_search_table)=
+[Click here to have a better look on the table](../interactive_guide/search_table_test.ipynb)
