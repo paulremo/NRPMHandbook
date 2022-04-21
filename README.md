@@ -18,7 +18,7 @@ jupyter-book build 02_NRPMHandbook
 
 Then push it to the pubslishing branch using the `ghp-import` utility:
 ```
-ghp-import -n -p -f 02_NRPMHandbook/_build/html
+ghp-import -n -p -f --cname=nrpmhandbook.reliability.space 02_NRPMHandbook\_build\html
 ```
 
 The book is then published as a Git Page with the URL https://paulremo.github.io/NRPMHandbook/.
