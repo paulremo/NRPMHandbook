@@ -27,7 +27,7 @@
   width: 100%;
   white-space: nowrap;
   background-color: white;
-  /*overflow: auto;*/
+  overflow: auto;
 }
 
 .myTable tr {
@@ -79,7 +79,7 @@
   border-collapse: collapse;
   width: 100%;
   background-color: #ffffff;
-  /*overflow: auto;*/
+  overflow: auto;
 }
 
 .large-table tr {
