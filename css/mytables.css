@@ -46,6 +46,11 @@
   border-right: 1px solid #f8f8f8;
 }
 
+.full-span {
+  background-color: rgb(104, 104, 104);
+  color: white;
+}
+
 .myTable thead th {
   color: #ffffff;
   background: #4FC3A1;

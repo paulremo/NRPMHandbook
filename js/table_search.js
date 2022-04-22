@@ -13,7 +13,7 @@ function searchTable() {
         j=0;
         while (!found && j < td_lst.length){
             td = td_lst[j];
-            //console.log(td);
+            console.log(td.className);
             if (td) {
                 txtValue = td.innerText;
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -24,7 +24,9 @@ function searchTable() {
                 console.log(txtValue);
                 console.log(found);
             }*/
-            
+            if (td.className == "full-span"){
+                found = true;
+            }
             j++;
         }
         if (found){
