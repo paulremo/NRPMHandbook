@@ -2,7 +2,10 @@
 
 The failure mechanisms of the miscellaneous parts result from the four categories of failure root causes already introduced and reminded in [Table 4‑3](misc_table4_3).
 
-```{admonition} **Random failure**
+(misc_table4_3)=
+<iframe src="../../../_static/interactivity/html/misc_table4_3.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+
+<!--```{admonition} **Random failure**
 :class: note, dropdown
 Random failures are "one-off" events. They are modelled by a constant failure rate. In the frame of the Current document, a basic failure rate is attributed to a class of miscellaneous item, derived from IOR data and valid in a certain range of parameters. The model is only valid for the design lifetime. It can be used beyond the design lifetime in the case there is no wear.
 ```
@@ -26,4 +29,4 @@ Considered by the process described in [Section 4.5](05_process_reliability_mode
 Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in‐orbit (e.g. temperature) are assumed to be covered by design and adequate qualification (to be verified before modelling). Any design/manufacturing errors are represented by Systematic failures modelling.
 
 A separate modelling may be required if the probability of additional failure mechanisms induced by the space environment cannot be neglected – e.g. space debris impact.
-```
+```-->

@@ -30,9 +30,7 @@ REF ERROR just above in 1.
 (misc_table4_7)=
 **Table 4.7** : Structure of the reliability data table in [Table 4 -8](misc_table4_8)
 
-```{glue:figure} table4_7
-:name: "table4_7"
-```
+<iframe src="../../../_static/interactivity/html/misc_table4_7.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
 
 (misc_table4_8)=
 **Table 4.8** : reliability data table
