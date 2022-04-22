@@ -27,7 +27,7 @@
   width: 100%;
   white-space: nowrap;
   background-color: white;
-  overflow: auto;
+  /*overflow: auto;*/
 }
 
 .myTable tr {
