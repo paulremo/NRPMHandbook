@@ -70,6 +70,11 @@
   background-color: #c4e4da;
 }
 
+.myTable thead th.major-head{
+  color: #ffffff;
+  background: #2d639a;
+}
+
 
 .large-table {
   border-radius: 5px;
@@ -116,3 +121,5 @@
 .large-table tr:hover {
   background-color: #c4e4da;
 }
+
+.fa-star-o:before{content:"\f006"}
