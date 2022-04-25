@@ -19,18 +19,18 @@ parts:
       - file: mechanical/handbook/scope
       - file: mechanical/handbook/normative_references
       - file: mechanical/handbook/terms
-      - file: mechanical/handbook/rp_mechanical/rp_mechanical
+      - file: mechanical/handbook/rp/rp
         title: Reliability prediction for mechanical and structural parts and assemblies
         sections:
-        - file: mechanical/handbook/rp_mechanical/process_mechanical_rp
-        - file: mechanical/handbook/rp_mechanical/root_causes_coverage_mechanical
-        - file: mechanical/handbook/rp_mechanical/data_sources_methods_mechanical
-        - file: mechanical/handbook/rp_mechanical/failure_identification_focus_mecha
-        - file: mechanical/handbook/rp_mechanical/method_selection_mechanical
-        - file: mechanical/handbook/rp_mechanical/structural_method_input_mechanical
-        - file: mechanical/handbook/rp_mechanical/structural_models_equations_mechanical
-        - file: mechanical/handbook/rp_mechanical/examples_mechanical   
-    - file: mechanical/models/introduction_guide_mechanical
+        - file: mechanical/handbook/rp/process_rp
+        - file: mechanical/handbook/rp/root_causes_coverage
+        - file: mechanical/handbook/rp/data_sources_methods
+        - file: mechanical/handbook/rp/failure_identification_focus
+        - file: mechanical/handbook/rp/method_selection
+        - file: mechanical/handbook/rp/structural_method_input
+        - file: mechanical/handbook/rp/structural_models_equations
+        - file: mechanical/handbook/rp/examples   
+    - file: mechanical/models/introduction
       title: Models
       sections:
       - file: mechanical/models/solid_lubricant_wear
@@ -44,17 +44,17 @@ parts:
       - file: miscellaneous/handbook/scope
       - file: miscellaneous/handbook/normative_references
       - file: miscellaneous/handbook/terms
-      - file: miscellaneous/handbook/rp_miscellaneous/rp_miscellaneous
+      - file: miscellaneous/handbook/rp/rp
         title: Reliability prediction for miscellaneous items
         sections:
-        - file: miscellaneous/handbook/rp_miscellaneous/misc_items
-        - file: miscellaneous/handbook/rp_miscellaneous/root_causes_coverage_misc
-        - file: miscellaneous/handbook/rp_miscellaneous/data_sources_methods_misc
-        - file: miscellaneous/handbook/rp_miscellaneous/reliability_models_misc
-        - file: miscellaneous/handbook/rp_miscellaneous/process_reliability_modelling_misc
-        - file: miscellaneous/handbook/rp_miscellaneous/ior_results
-        - file: miscellaneous/handbook/rp_miscellaneous/basic_fr_derivation_nsm_misc
-        - file: miscellaneous/handbook/rp_miscellaneous/reliability_data_sm_misc                       
+        - file: miscellaneous/handbook/rp/items
+        - file: miscellaneous/handbook/rp/root_causes_coverage
+        - file: miscellaneous/handbook/rp/data_sources_methods
+        - file: miscellaneous/handbook/rp/reliability_models
+        - file: miscellaneous/handbook/rp/process_reliability_modelling
+        - file: miscellaneous/handbook/rp/ior_results
+        - file: miscellaneous/handbook/rp/basic_fr_derivation_nsm
+        - file: miscellaneous/handbook/rp/reliability_data_sm                       
       - file: miscellaneous/handbook/conclusion    
       - file: miscellaneous/handbook/annexA    
       - file: miscellaneous/handbook/annexB
@@ -72,19 +72,19 @@ parts:
       - file: system/handbook/scope
       - file: system/handbook/normative_references
       - file: system/handbook/terms
-      - file: system/handbook/rp_system/rp_system
+      - file: system/handbook/rp/rp
         title: Reliability prediction for system level items
         sections:
-        - file: system/handbook/rp_system/rp_different_levels
-        - file: system/handbook/rp_system/root_causes_coverage
-        - file: system/handbook/rp_system/methods
-        - file: system/handbook/rp_system/reliability_assessment_phased_missions
-        - file: system/handbook/rp_system/important_measures
-        - file: system/handbook/rp_system/reliability_assessment_degraded_systems
-        - file: system/handbook/rp_system/modelling_common_cause_failure
-        - file: system/handbook/rp_system/sl_modelling_wear_out    
-        - file: system/handbook/rp_system/systematic_failure_modelling  
-        - file: system/handbook/rp_system/consideration_software_failures     
+        - file: system/handbook/rp/rp_different_levels
+        - file: system/handbook/rp/root_causes_coverage
+        - file: system/handbook/rp/methods
+        - file: system/handbook/rp/reliability_assessment_phased_missions
+        - file: system/handbook/rp/important_measures
+        - file: system/handbook/rp/reliability_assessment_degraded_systems
+        - file: system/handbook/rp/modelling_common_cause_failure
+        - file: system/handbook/rp/sl_modelling_wear_out    
+        - file: system/handbook/rp/systematic_failure_modelling  
+        - file: system/handbook/rp/consideration_software_failures     
       - file: system/handbook/conclusion    
     - file: system/models/intro_models
       title: Models
