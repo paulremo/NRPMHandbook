@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table 4 1 - System</title>
+    <link rel="stylesheet" href="../css/mytables.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="text" class="myInput" id="myInput" onkeyup="searchTable()" placeholder="Search table...">
+    <div class="scroller">
+        <table class="large-table" id="myTable">
+            <thead>
+                <tr>
+                    <th>Failure Category</th>
+                    <th>Root Cause</th>
+                    <th>System Level Methods</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>Random failure</td>
+                <td>Unknown residual defect/weakness consistent with quality level and under normal stresses. Only
+                    moderate wear-out or degradation of parts. </td>
+                <td>Random failures on part level are mutually independent and failure rates are constant or do not
+                    change significantly over time.
+                    On system level various methods can be used, see Section Error: Reference source not found.</td>
+            </tr>
+            <tr>
+                <td>Systematic Failure</td>
+                <td>
+                    <p>Design error</p>
+                    <p>Manufacturing error</p>
+                    <p>Operations error</p>
+                </td>
+                <td>
+                    <p>Systematic failures are the result of human error introduced during design, manufacturing or
+                        operation. The calculation of systematic failures is part of Section Error: Reference source not
+                        found. Systematic failures are to be considered in the system reliability prediction in addition
+                        to the random failures on part level.</p>
+                    <p>Systematic failures could also result in Common Cause Failures, i.e. failures of several
+                        components due to the same cause. Calculation of Common Cause Failures on system level is part
+                        of Section Error: Reference source not found</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Wear-out failures</td>
+                <td>
+                    <p>Physical degradation process</p>
+                    <p>Operations related</p>
+                    <p>Environment related </p>
+                    <p>Classified as Systematic failure if early wear-out is the result of development or manufacturing
+                        error. </p>
+                </td>
+                <td>Failure rates of parts prone to wear-out are time-dependent. On system level wear-out failures can
+                    also be considered in the system level reliability prediction by using different probability
+                    distribution on component level for the wear-out failures (e.g. Weibull). System level analysis with
+                    wear-out on part level is considered in Section Error: Reference source not found</td>
+            </tr>
+            <tr>
+                <td>Extrinsic Failures</td>
+                <td>
+                    <a>Space environment phenomena inducing external failure causes:
+                        <ul>
+                            <li>Vacuum</li>
+                            <li>Mechanical shock, vibration</li>
+                            <li>Micro meteoroids</li>
+                            <li>Debris</li>
+                            <li>Radiation</li>
+                            <li>Plasma</li>
+                            <li>Thermal</li>
+                            <li>Magnetic field</li>
+                        </ul>
+                    </a>
+                    <p>Classified as Systematic failure if the root cause was underestimated, e.g. requirement or design
+                        error (see Chapter 4 in Part I for classification)</p>
+                </td>
+                <td>
+                    <p>Quantitative assessment of extrinsic failures with the system level methods presented in Section
+                        12.3 is possible.</p>
+                    <p>Extrinsic events can also be regarded as potential Common Cause Failure, see Section Error:
+                        Reference source not found.</p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <script type="text/javascript" src="../js/table_search.js"></script>
+</body>
+
+</html>
