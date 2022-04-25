@@ -8,63 +8,83 @@ parts:
   - caption: EEE chapter
     numbered: true
     chapters:
-    - file: folderEEE/mainEEE
+    - file: eee/mainEEE
       title: Handbook
   - caption: Mechanical chapter
     numbered: true
     chapters:
-    - file: folderMechanical/digital_handbook/introduction
+    - file: mechanical/handbook/introduction
       title: Handbook
       sections:
-      - file: folderMechanical/digital_handbook/scope
-      - file: folderMechanical/digital_handbook/normative_references
-      - file: folderMechanical/digital_handbook/terms
-      - file: folderMechanical/digital_handbook/rp_mechanical/00_rp_mechanical
+      - file: mechanical/handbook/scope
+      - file: mechanical/handbook/normative_references
+      - file: mechanical/handbook/terms
+      - file: mechanical/handbook/rp_mechanical/rp_mechanical
         title: Reliability prediction for mechanical and structural parts and assemblies
         sections:
-        - file: folderMechanical/digital_handbook/rp_mechanical/01_process_mechanical_rp
-        - file: folderMechanical/digital_handbook/rp_mechanical/02_root_causes_coverage_mechanical
-        - file: folderMechanical/digital_handbook/rp_mechanical/03_data_sources_methods_mechanical
-        - file: folderMechanical/digital_handbook/rp_mechanical/04_failure_identification_focus_mecha
-        - file: folderMechanical/digital_handbook/rp_mechanical/05_method_selection_mechanical
-        - file: folderMechanical/digital_handbook/rp_mechanical/06_structural_method_input_mechanical
-        - file: folderMechanical/digital_handbook/rp_mechanical/07_structural_models_equations_mechanical
-        - file: folderMechanical/digital_handbook/rp_mechanical/08_examples_mechanical   
-    - file: folderMechanical/interactive_guide/introduction_guide_mechanical
+        - file: mechanical/handbook/rp_mechanical/process_mechanical_rp
+        - file: mechanical/handbook/rp_mechanical/root_causes_coverage_mechanical
+        - file: mechanical/handbook/rp_mechanical/data_sources_methods_mechanical
+        - file: mechanical/handbook/rp_mechanical/failure_identification_focus_mecha
+        - file: mechanical/handbook/rp_mechanical/method_selection_mechanical
+        - file: mechanical/handbook/rp_mechanical/structural_method_input_mechanical
+        - file: mechanical/handbook/rp_mechanical/structural_models_equations_mechanical
+        - file: mechanical/handbook/rp_mechanical/examples_mechanical   
+    - file: mechanical/models/introduction_guide_mechanical
       title: Models
       sections:
-      - file: folderMechanical/interactive_guide/solid_lubricant_wear
+      - file: mechanical/models/solid_lubricant_wear
         title: Solid lubricant wear 
   - caption: Miscellaneous chapter
     numbered: true
     chapters:
-    - file: folderMiscellaneous/digital_handbook/introduction
+    - file: miscellaneous/handbook/introduction
       title: Handbook
       sections:
-      - file: folderMiscellaneous/digital_handbook/scope
-      - file: folderMiscellaneous/digital_handbook/normative_references
-      - file: folderMiscellaneous/digital_handbook/terms
-      - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/00_rp_miscellaneous
+      - file: miscellaneous/handbook/scope
+      - file: miscellaneous/handbook/normative_references
+      - file: miscellaneous/handbook/terms
+      - file: miscellaneous/handbook/rp_miscellaneous/rp_miscellaneous
         title: Reliability prediction for miscellaneous items
         sections:
-        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/01_misc_items
-        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/02_root_causes_coverage_misc
-        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/03_data_sources_methods_misc
-        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/04_reliability_models_misc
-        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/05_process_reliability_modelling_misc
-        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/06_ior_results
-        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/07_basic_fr_derivation_nsm_misc
-        - file: folderMiscellaneous/digital_handbook/rp_miscellaneous/08_reliability_data_sm_misc        
-      - file: folderMiscellaneous/digital_handbook/conclusion    
-      - file: folderMiscellaneous/digital_handbook/annexA    
-      - file: folderMiscellaneous/digital_handbook/annexB
-    - file: folderMiscellaneous/interactive_guide/introduction_guide_miscellaneous
+        - file: miscellaneous/handbook/rp_miscellaneous/misc_items
+        - file: miscellaneous/handbook/rp_miscellaneous/root_causes_coverage_misc
+        - file: miscellaneous/handbook/rp_miscellaneous/data_sources_methods_misc
+        - file: miscellaneous/handbook/rp_miscellaneous/reliability_models_misc
+        - file: miscellaneous/handbook/rp_miscellaneous/process_reliability_modelling_misc
+        - file: miscellaneous/handbook/rp_miscellaneous/ior_results
+        - file: miscellaneous/handbook/rp_miscellaneous/basic_fr_derivation_nsm_misc
+        - file: miscellaneous/handbook/rp_miscellaneous/reliability_data_sm_misc                       
+      - file: miscellaneous/handbook/conclusion    
+      - file: miscellaneous/handbook/annexA    
+      - file: miscellaneous/handbook/annexB
+    - file: miscellaneous/models/introduction_guide_miscellaneous
       title: Models
       sections:
-      - file: folderMiscellaneous/interactive_guide/misc_failure_rate_processing
+      - file: miscellaneous/models/misc_failure_rate_processing
         title: Failure rate processing
   - caption: System chapter
     numbered: true
     chapters:
-    - file: folderSystem/mainSystem
+    - file: system/handbook/introduction
       title: Handbook
+      sections:
+      - file: system/handbook/scope
+      - file: system/handbook/normative_references
+      - file: system/handbook/terms
+      - file: system/handbook/rp_system/rp_system
+        title: Reliability prediction for system level items
+        sections:
+        - file: system/handbook/rp_system/rp_different_levels
+        - file: system/handbook/rp_system/root_causes_coverage
+        - file: system/handbook/rp_system/methods
+        - file: system/handbook/rp_system/reliability_assessment_phased_missions
+        - file: system/handbook/rp_system/important_measures
+        - file: system/handbook/rp_system/reliability_assessment_degraded_systems
+        - file: system/handbook/rp_system/modelling_common_cause_failure
+        - file: system/handbook/rp_system/sl_modelling_wear_out    
+        - file: system/handbook/rp_system/systematic_failure_modelling  
+        - file: system/handbook/rp_system/consideration_software_failures     
+      - file: system/handbook/conclusion    
+    - file: system/models/intro_models
+      title: Models
