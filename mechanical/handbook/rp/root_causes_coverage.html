@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.4.2. Root causes coverage &#8212; NRPM Digital handbook</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/radial_bar.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../../_static/interactivity/js/map.js"></script>
+    <script src="../../../_static/interactivity/js/map2.js"></script>
+    <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
+    <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
+    <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
+    <script src="../../../_static/interactivity/js/table_search.js"></script>
+    <script src="../../../_static/js/redirect.js"></script>
+    <script src="../../../_static/js/resize_iframe.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1.4.3. Data sources and methods" href="data_sources_methods.html" />
+    <link rel="prev" title="1.4.1. Process for mechanical reliability prediction" href="process_rp.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Welcome the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../eee/mainEEE.html">
+   1. Handbook
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mechanical chapter
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../introduction.html">
+   1. Handbook
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../scope.html">
+     1.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../normative_references.html">
+     1.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../terms.html">
+     1.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="rp.html">
+     1.4. Reliability prediction for mechanical and structural parts and assemblies
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="process_rp.html">
+       1.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       1.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="data_sources_methods.html">
+       1.4.3. Data sources and methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="failure_identification_focus.html">
+       1.4.4. Failure mechanisms identification and focus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="method_selection.html">
+       1.4.5. Method selection for different items and failure mechanisms
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="structural_method_input.html">
+       1.4.6. Structural reliability methods and inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="structural_models_equations.html">
+       1.4.7. Structural reliability models and equations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="examples.html">
+       1.4.8. Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../models/introduction.html">
+   2. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../models/solid_lubricant_wear.html">
+     2.1. Solid lubricant wear
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../miscellaneous/handbook/introduction.html">
+   1. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/scope.html">
+     1.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/normative_references.html">
+     1.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/terms.html">
+     1.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../miscellaneous/handbook/rp/rp.html">
+     1.4. Reliability prediction for miscellaneous items
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/rp/items.html">
+       1.4.1. List of miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/rp/root_causes_coverage.html">
+       1.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/rp/data_sources_methods.html">
+       1.4.3. Data sources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/rp/reliability_models.html">
+       1.4.4. Reliability Models for miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/rp/process_reliability_modelling.html">
+       1.4.5. Process for Reliability modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/rp/ior_results.html">
+       1.4.6. Use of IOR data and/or tests results
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/rp/basic_fr_derivation_nsm.html">
+       1.4.7. Basic failure rate derivation for “non-standard model” items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/rp/reliability_data_sm.html">
+       1.4.8. Reliability Data for Miscellaneous “Standard model”
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/conclusion.html">
+     1.5. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/annexA.html">
+     1.6. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/annexB.html">
+     1.7. Annex B
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../miscellaneous/models/introduction_guide_miscellaneous.html">
+   2. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/models/misc_failure_rate_processing.html">
+     2.1. Failure rate processing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../system/handbook/introduction.html">
+   1. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../system/handbook/scope.html">
+     1.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../system/handbook/normative_references.html">
+     1.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../system/handbook/terms.html">
+     1.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../system/handbook/rp/rp.html">
+     1.4. Reliability prediction for system level items
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/rp_different_levels.html">
+       1.4.1. Reliability prediction at different levels
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/root_causes_coverage.html">
+       1.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/methods.html">
+       1.4.3. System level methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/reliability_assessment_phased_missions.html">
+       1.4.4. Reliability Models for miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/important_measures.html">
+       1.4.5. Use of IOR data and/or tests results
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/reliability_assessment_degraded_systems.html">
+       1.4.6. Process for Reliability modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/modelling_common_cause_failure.html">
+       1.4.7. Basic failure rate derivation for “non-standard model” items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/sl_modelling_wear_out.html">
+       1.4.8. Reliability Data for Miscellaneous “Standard model”
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/systematic_failure_modelling.html">
+       1.4.9. Title 9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../system/handbook/rp/consideration_software_failures.html">
+       1.4.10. Title 10
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../system/handbook/conclusion.html">
+     1.5. Conclusion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../system/models/intro_models.html">
+   2. Models
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    <img src="/_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
+    <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/mechanical/handbook/rp/root_causes_coverage.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/paulremo/NRPMHandbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/paulremo/NRPMHandbook/issues/new?title=Issue%20on%20page%20%2Fmechanical/handbook/rp/root_causes_coverage.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/paulremo/NRPMHandbook/edit/main/02_NRPMHandbook/mechanical/handbook/rp/root_causes_coverage.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#random-failures">
+   1.4.2.1. Random failures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wear-out-failures">
+   1.4.2.2. Wear-out failures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extrinsic-failures">
+   1.4.2.3. Extrinsic failures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#systematic-failures">
+   1.4.2.4. Systematic failures
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Root causes coverage</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#random-failures">
+   1.4.2.1. Random failures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wear-out-failures">
+   1.4.2.2. Wear-out failures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extrinsic-failures">
+   1.4.2.3. Extrinsic failures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#systematic-failures">
+   1.4.2.4. Systematic failures
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="root-causes-coverage">
+<h1><span class="section-number">1.4.2. </span>Root causes coverage<a class="headerlink" href="#root-causes-coverage" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="#meca-table4-1"><span class="std std-ref">Table 4 -1</span></a> gives an overview of the failure categories defined in Chapter 4 (Part I) and their coverage by the methods described in the present chapter. In the following subsections, the interpretation of each failure category within the mechanical chapter is briefly explained.</p>
+<p id="meca-table4-1"><strong>Table 4.1 : Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter</strong></p>
+<div class="figure align-default" id="table4-1">
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Root cause category</strong></p></th>
+<th class="head"><p><strong>Root cause category</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Random failures</p></td>
+<td><p>Considered by the methods described in <a class="reference internal" href="method_selection.html"><span class="doc std std-doc">Section 4.5</span></a>, including early wear-out failures and failures due to foreseen extrinsic stresses, provided that these cannot be explained by gross design or manufacturing errors (cf. systematic failures).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wear-out failures</p></td>
+<td><p>Considered by the methods described in <a class="reference internal" href="method_selection.html"><span class="doc std std-doc">Section 4.5</span></a>, especially by those based on structural reliability theory with time-dependent degradation models.  Safe life qualification alone is not sufficient as a justification to discard the probability of premature mechanical wear-out failures before the end of the nominal lifetime.  The consideration of additional failure mechanisms, which are assumed to be effectively handled during nominal lifetime, may be required in case of lifetime extensions (using the same methods, but with an extended modelling scope).</p></td>
+</tr>
+<tr class="row-even"><td><p>Extrinsic failures</p></td>
+<td><p>Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in-orbit (e.g. temperature) should be considered as stress contributors in the modelling of random and wear-out failures, see <a class="reference internal" href="#meca-table4-2"><span class="std std-ref">Table 4 -2</span></a> in <a class="reference internal" href="#meca-4-2-3"><span class="std std-ref">Section 4.2.3</span></a> for the most relevant interactions. A separate modelling may be required if the probability of additional failure mechanisms induced by the space environment cannot be neglected – e.g. space debris impact, see <a class="reference internal" href="#meca-4-2-3"><span class="std std-ref">Section 4.2.3</span></a> for details.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Systematic failures</p></td>
+<td><p>Process related failures due to minor design and manufacturing weaknesses can be considered with the methods described in <a class="reference internal" href="method_selection.html"><span class="doc std std-doc">Section 4.5</span></a>, provided that the failure process or mechanism remains unchanged (cf. random failures).  Gross design or manufacturing errors must be considered separately, see Section Error: Reference source not found in the System level chapter.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="random-failures">
+<span id="meca-4-2-1"></span><h2><span class="section-number">1.4.2.1. </span>Random failures<a class="headerlink" href="#random-failures" title="Permalink to this headline">¶</a></h2>
+<p>he Physics of Failure (PoF) of mechanical parts are mostly well-understood and give strong indications also on the failure root cause. Nevertheless, from a modelling perspective it may be meaningful not to go into the details of the root cause that has led to a certain failure mechanism. To give an example, a premature bearing wear failure may be due to a residual undetected part level defect or weakness (random), due to “normal” aging or wear-out (wear-out), induced by environmental effects such as thermal loads leading to distortion (extrinsic) or due to a misalignment at assembly level (systematic). Despite the difference in the failure root cause, all these failures are due to the same failure mechanism, which can be modelled with the same physical law.</p>
+<p>In this line of thought, all failures due to minor uncertainties in the design and due to manufacturing variability will be considered as random failures for mechanical items, whereas gross errors, possibly leading to new failure mechanisms and unforeseen events, are considered as systematic failures. With this classification, it is possible to consider the contribution of design and manufacturing process variability in the mechanical reliability prediction, e.g. by increasing the variability of the basic variables when using structural reliability methods as discussed in <a class="reference internal" href="structural_method_input.html#meca-4-6-1"><span class="std std-ref">Section 4.6.4</span></a>. Only gross errors, classified as systematic failures, need to be considered separately.</p>
+</div>
+<div class="section" id="wear-out-failures">
+<h2><span class="section-number">1.4.2.2. </span>Wear-out failures<a class="headerlink" href="#wear-out-failures" title="Permalink to this headline">¶</a></h2>
+<p>In the frame of this handbook, wear-out failures are generally assumed to occur after the specified mission life time, assuming that safe life qualification processes have successfully mitigated the risk of premature failures. However, for mechanical items, this assumption may not necessarily be valid, as experience shows that there is a certain risk of premature wear-out despite safe life qualification, which may lead to a (slowly) increasing failure rate already during the course of the mission, as illustrated in <a class="reference internal" href="#meca-figure4-1"><span class="std std-ref">Figure 4 -1</span></a>. The root cause of these premature wear-out failures will mostly be related to the design or manufacturing process. However, following the same line of thought as in <a class="reference internal" href="#meca-4-2-1"><span class="std std-ref">Section 4.2.1</span></a> above, failures due to minor design or manufacturing variability can nevertheless be considered as wear-out rather than systematic failures, and considered with the methodology presented in this chapter. Only wear-out failures due to gross design or manufacturing errors are left for the systematic failure modelling.</p>
+<div class="figure align-default" id="figure4-1">
+<span id="meca-figure4-1"></span><a class="reference internal image-reference" href="../../../_images/figure4_1.png"><img alt="../../../_images/figure4_1.png" src="../../../_images/figure4_1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Failure rate as a function of time for typical mechanical components.</span><a class="headerlink" href="#figure4-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>When exceeding the qualification time, e.g. for a satellite life time extension, the modelling of wear-out failures becomes even more relevant. Additional degradation mechanisms whose effect is negligible during the specified lifetime may need to be considered, and failures due to all degradation mechanisms become more likely.</p>
+<p><a class="reference internal" href="failure_identification_focus.html#meca-4-4-1"><span class="std std-ref">Section 4.4.1</span></a> contains guidance on the identification of dominant failure mechanisms – including wear-out mechanisms - for several part types, though focusing on reliability prediction for the design lifetime, i.e. within safe life qualification domain. Failure mechanisms that are normally considered effectively handled by qualification, such as e.g. radiation degradation of optical equipment, may need to be added when considering a life time extension.</p>
+</div>
+<div class="section" id="extrinsic-failures">
+<span id="meca-4-2-3"></span><h2><span class="section-number">1.4.2.3. </span>Extrinsic failures<a class="headerlink" href="#extrinsic-failures" title="Permalink to this headline">¶</a></h2>
+<p>External effects acting as loads on mechanical parts are considered during the design, generally reducing the risk of extrinsic failures. To quantify the remaining risk, reliability calculations must consider relevant extrinsic contributors.</p>
+<p>For mechanical reliability assessment, the following aspects need to be considered:</p>
+<ul class="simple">
+<li><p>Where possible, the failure modes related to the environmental condition shall be mitigated by design. For example, outgassing in vacuum conditions can be reduced by careful material selection; solar wind induced effects can be mitigated by grounding protection etc. Errors in the design solutions or specification are classified as systematic failures.</p></li>
+<li><p>Similarly, failures due to UV degradation, radiation, or atomic oxygen effects within the duration of the nominal mission life are considered as systematic failures. For life time extensions, failures due to these cumulative effects may have to be considered in the reliability prediction (classified as wear-out failures).</p></li>
+<li><p>Failure mechanisms considered during the reliability prediction can be driven by a combination of environmental parameters. For example, extreme thermal loads affect material fatigue and fracture properties; thermal parameters define the viscosity of the lubrication, thus affecting the friction and lubrication wear. To account for the relevant environmental parameters, the defining variables must be adjusted accordingly.</p></li>
+</ul>
+<p>The extrinsic effects contributing most to mechanical failure mechanisms are summarized in <a class="reference internal" href="#meca-table4-2"><span class="std std-ref">Table 4 -2</span></a>. The full list of the environments which might cause extrinsic failures is presented in <strong>Chapter 4 (Part I)</strong>.</p>
+<p id="meca-table4-2"><strong>Table 4.2: Environments with the highest contribution to the extrinsic failures.</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Environment</strong></p></th>
+<th class="head"><p><strong>Failure mechanism</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Vibrations</p></td>
+<td><p>distortion, fatigue, fracture</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thermal loads</p></td>
+<td><p>distortion, lubrication wear, thermal fatigue</p></td>
+</tr>
+<tr class="row-even"><td><p>Shocks</p></td>
+<td><p>distortion, fracture</p></td>
+</tr>
+<tr class="row-odd"><td><p>Space debris impact</p></td>
+<td><p>Ultimate failure (in the failure mode sense)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Accounting for these effects with the methodology for mechanical reliability prediction presented in this chapter is possible as long as the failure modes and mechanisms considered remain unchanged. An example for an extrinsic failure root cause that introduces an additional failure mode is space debris (or micro meteorite) impact, which will be discussed in the remainder of this section.</p>
+<p><strong>Space debris and micrometeoroid impact</strong></p>
+<p>Extrinsic failures due space debris or micrometeoroid impact are typically relevant for components with significant exposed area (e.g. reflectors, solar arrays). Accounting for these failures may require a dedicated modelling if it cannot be shown that the impact on mission reliability is negligible.</p>
+<p>The calculation is performed in the following three steps:</p>
+<ol class="simple">
+<li><p>Determine the debris and meteoroids environment (average flux as a function of particle size, velocity distribution) based on the mission parameters , e.g. using tools like ESA MASTER 2009  to assess the debris or meteoroid flux on a spacecraft on an arbitrary earth orbit.</p></li>
+<li><p>Obtain minimum critical particle size for each direction of the component on the spacecraft, considering directionality and velocity of the impact. The term “critical” relates to the effects of an impact on the satellite elements, e.g. penetration of the shielding leading to damage of shielded elements.</p></li>
+<li><p>Combine the results from the previous steps to calculate the probability of collision and number of collisions with the particles larger or equal to the critical particle size, see e.g. ECSS‐E‐ST‐10‐04C .</p></li>
+</ol>
+<p>Collision failures can be neglected in the frame of reliability prediction if the corresponding probability of failure is at least one order of magnitude smaller than the probability of failure due to other failure root causes.</p>
+<p>Space debris and micro meteoroid impact will not be discussed any further in the present chapter.</p>
+</div>
+<div class="section" id="systematic-failures">
+<h2><span class="section-number">1.4.2.4. </span>Systematic failures<a class="headerlink" href="#systematic-failures" title="Permalink to this headline">¶</a></h2>
+<p>Failures due to design and manufacturing weaknesses can to a certain extent be considered with the methodology presented in this chapter, provided that the failure process or mechanism remains unchanged. Failures due to gross errors during design, manufacturing or operations are discussed in Section Error: Reference source not found. They are out of scope for the present chapter.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "paulremo/NRPMInteractivity",
+            ref: "python",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mechanical\handbook\rp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="process_rp.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.4.1. </span>Process for mechanical reliability prediction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="data_sources_methods.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.4.3. </span>Data sources and methods</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Matrisk | Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
