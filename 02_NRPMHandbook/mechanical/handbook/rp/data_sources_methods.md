@@ -21,7 +21,7 @@ Despite its late appearance in the preference listing given above, a good unders
 
 ### Analysis of the failure mechanisms
 
-A first analysis and understanding of the potential failure mechanisms for mechanical parts and equipment should generally be available from the design process and should always be considered as an important input for the prediction, even if a pure statistical approach is used to estimate an item’s reliability. The approach described in Sections [4.4](failure_identification_focus_mecha.md) and [4.5](method_selection_mechanical.md) is based on this idea, focussing on the identification of relevant failure mechanisms although not necessarily requiring Physics of Failure methods for the mathematical modelling.
+A first analysis and understanding of the potential failure mechanisms for mechanical parts and equipment should generally be available from the design process and should always be considered as an important input for the prediction, even if a pure statistical approach is used to estimate an item’s reliability. The approach described in Sections [4.4](failure_identification_focus.md) and [4.5](method_selection.md) is based on this idea, focussing on the identification of relevant failure mechanisms although not necessarily requiring Physics of Failure methods for the mathematical modelling.
 
 ### In-orbit return data
 
@@ -124,7 +124,7 @@ The following methods can be used for the derivation of reliability estimates fo
 * **A combined approach** based on one of the methods listed above and Bayesian updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.
 
 Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the Physics of Failure. General guidance on method selection is presented in [Figure 4 -2](meca_figure4_2) below. The upper row in the matrix represents statistical methods, the middle row a combined approach with Bayesian updating, and the lower row either handbook methods or data (NPRD, NSWC) or – generally preferred in the absence of statistical data – structural reliability methods (SRM) based on the Physics of Failures.
-More specific recommendations are given in [Section 4.5](method_selection_mechanical.md).
+More specific recommendations are given in [Section 4.5](method_selection.md).
 
 (meca_figure4_2)=
 ```{figure} ../../pictures/figure4_2.png
@@ -135,7 +135,7 @@ name: figure4_2
 Method selection for mechanical reliability prediction depending on the available input.
 ```
 
-In the following subsections, the implementation of the different methods in mechanical domain is briefly discussed, covering all methods listed above. The remainder of this chapter ([Sections 4.4](failure_identification_focus_mecha.md) and [following](meca_4_3_2_1)) focuses largely on the Physics of Failure as a basis for mechanical reliability prediction.
+In the following subsections, the implementation of the different methods in mechanical domain is briefly discussed, covering all methods listed above. The remainder of this chapter ([Sections 4.4](failure_identification_focus.md) and [following](meca_4_3_2_1)) focuses largely on the Physics of Failure as a basis for mechanical reliability prediction.
 
 (meca_4_3_2_1)
 ### Statistical methods
@@ -149,7 +149,7 @@ Statistical methods for reliability prediction are in principle domain-independe
 The use of statistical methods for mechanical reliability prediction is not discussed any further in the present chapter; the reader is referred to **Chapter 6 (Part II)** for a discussion of these methods.
 
 ### Physics of Failure methods
-The use of structural reliability methods for mechanical reliability prediction is discussed in more detail in Sections [4.6](structural_method_input_mechanical.md) and [4.7](structural_models_equations_mechanical.md). The use of other methods that are based on the Physics of Failure (not described in this chapter) is possible, provided that the failure mechanism modelling is accompanied by a suitable quantification of the relevant uncertainties.
+The use of structural reliability methods for mechanical reliability prediction is discussed in more detail in Sections [4.6](structural_method_input.md) and [4.7](structural_models_equations.md). The use of other methods that are based on the Physics of Failure (not described in this chapter) is possible, provided that the failure mechanism modelling is accompanied by a suitable quantification of the relevant uncertainties.
 
 ### Handbook methods
 The use of existing reliability handbooks and data sources, especially as a stand-alone method, is generally not recommended for the modelling of mechanical items in space applications. Limitations of the NPRD Error: Reference source not foundand NSWC  Error: Reference source not foundhandbooks are discussed in Section , including some guidance on potential uses of these methods, e.g. to derive ball-park estimates for preliminary design or as a prior for a combined approach using Bayesian updating.

@@ -1,6 +1,6 @@
 # Failure mechanisms identification and focus
 
-A full mechanical reliability prediction looking at all potential failure mechanisms and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude failure mechanism that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and failure mechanisms), before discussing how to model each failure mechanism in [Section 4.5](method_selection_mechanical.md) and after.
+A full mechanical reliability prediction looking at all potential failure mechanisms and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude failure mechanism that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and failure mechanisms), before discussing how to model each failure mechanism in [Section 4.5](method_selection.md) and after.
 
 To implement this procedure in practice, early interaction between design and reliability engineers is required. In particular, the following information exchange is necessary:
 
