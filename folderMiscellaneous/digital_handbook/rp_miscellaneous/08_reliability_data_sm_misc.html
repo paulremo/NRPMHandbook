@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myadmonitions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map2.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
@@ -50,6 +51,7 @@
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
     <script src="../../../_static/interactivity/js/map.js"></script>
+    <script src="../../../_static/interactivity/js/map2.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
@@ -490,126 +492,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p id="misc-table4-7"><strong>Table 4.7</strong> : Structure of the reliability data table in <a class="reference internal" href="#misc-table4-8"><span class="std std-ref">Table 4 -8</span></a></p>
-<div class="figure align-default" id="table4-7">
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Column</th>
-      <th>Description</th>
-      <th>Remark</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>REF</td>
-      <td>Identifies the miscellaneous item</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>EQUIPMENT</td>
-      <td>Name of the item</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>FR</td>
-      <td>Depending on the model either a constant Failu...</td>
-      <td>Constant failure rate @60% LoC (Chi Square) or...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>POINT ESTIMATE</td>
-      <td>When relevant - observed failure(s) â point ...</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>QUALITY</td>
-      <td>Level of quality used to define the âstandar...</td>
-      <td>HIGH, MEDIUM, LOW</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>MATURITY</td>
-      <td>Indicates the level of maturity, generally bas...</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>TECHNOLOGY</td>
-      <td>Indicates when relevant which technology is co...</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>COMPLEXITY</td>
-      <td>Indicates when relevant the level of complexity</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>ORBIT</td>
-      <td>Indicates which orbit is relevant to the âst...</td>
-      <td>LEO, GEO</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>TÂ°</td>
-      <td>Indicates the range of TÂ° when TÂ° has to be ...</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>POWER</td>
-      <td>Indicates the range of Power when Power has to...</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>CYCLING</td>
-      <td>Indicates the fact that cycling is a contribut...</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>DUTY CYCLE</td>
-      <td>The percentage of time during which the item i...</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>OTHER</td>
-      <td>Any other parameters or data to be considered</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>WO</td>
-      <td>Wear-Out is to be considered when âYESâ</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
+<iframe src="../../../_static/interactivity/html/misc_table4_7.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
 <p id="misc-table4-8"><strong>Table 4.8</strong> : reliability data table</p>
 <iframe src="../../../_static/interactivity/html/misc_table4_8.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
 </div>

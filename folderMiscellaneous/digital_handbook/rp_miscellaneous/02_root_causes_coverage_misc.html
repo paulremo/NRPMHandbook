@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myadmonitions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map2.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
@@ -50,6 +51,7 @@
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
     <script src="../../../_static/interactivity/js/map.js"></script>
+    <script src="../../../_static/interactivity/js/map2.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
@@ -464,27 +466,33 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="root-causes-coverage">
 <h1><span class="section-number">1.4.2. </span>Root causes coverage<a class="headerlink" href="#root-causes-coverage" title="Permalink to this headline">¶</a></h1>
-<p>The failure mechanisms of the miscellaneous parts result from the four categories of failure root causes already introduced and reminded in <span class="xref myst">Table 4‑3</span>.</p>
-<div class="note dropdown admonition">
-<p class="admonition-title"><strong>Random failure</strong></p>
-<p>Random failures are “one-off” events. They are modelled by a constant failure rate. In the frame of the Current document, a basic failure rate is attributed to a class of miscellaneous item, derived from IOR data and valid in a certain range of parameters. The model is only valid for the design lifetime. It can be used beyond the design lifetime in the case there is no wear.</p>
-</div>
-<div class="note dropdown admonition">
-<p class="admonition-title"><strong>Systematic failures</strong></p>
-<p>All physical failures are related to Design errors / manufacturing errors.</p>
-<p>When the errors are sufficiently minor inducing a “One-shot” event/situation with typical failure mechanisms in line with the item quality level, they are modelled as random failures.</p>
-<p>When it is no longer the case (obvious weakness in design, or actual design characteristics changed by manufacturing defect, premature wear-out before the end of the specified lifetime, weakness regarding the space environment) it is necessary to address and to model systematic failures. This is done based on statistics and not considering the human factor as an initial root cause.</p>
-</div>
-<div class="note dropdown admonition">
-<p class="admonition-title"><strong>Wear‐out failures</strong></p>
-<p>Considered by the process described in <a class="reference internal" href="05_process_reliability_modelling_misc.html"><span class="doc std std-doc">Section 4.5</span></a> (Wear-Out modelling), only for miscellaneous items considered as lifetime-limited items. Safe life qualification is used to address wear-out failure based on probability distribution (parameters derived from the duration for qualification). The model addresses nominal lifetime and lifetime extension.</p>
-</div>
-<div class="note dropdown admonition">
-<p class="admonition-title"><strong>Extrinsic failures</strong></p>
-<p>Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in‐orbit (e.g. temperature) are assumed to be covered by design and adequate qualification (to be verified before modelling). Any design/manufacturing errors are represented by Systematic failures modelling.</p>
-<p>A separate modelling may be required if the probability of additional failure mechanisms induced by the space environment cannot be neglected – e.g. space debris impact.</p>
-</div>
-</div>
+<p>The failure mechanisms of the miscellaneous parts result from the four categories of failure root causes already introduced and reminded in <a class="reference internal" href="#misc-table4-3"><span class="std std-ref">Table 4‑3</span></a>.</p>
+<iframe src="../../../_static/interactivity/html/misc_table4_3.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<!--```{admonition} **Random failure**
+:class: note, dropdown
+Random failures are "one-off" events. They are modelled by a constant failure rate. In the frame of the Current document, a basic failure rate is attributed to a class of miscellaneous item, derived from IOR data and valid in a certain range of parameters. The model is only valid for the design lifetime. It can be used beyond the design lifetime in the case there is no wear.
+```
+
+```{admonition} **Systematic failures**
+:class: note, dropdown
+All physical failures are related to Design errors / manufacturing errors.
+
+When the errors are sufficiently minor inducing a “One-shot” event/situation with typical failure mechanisms in line with the item quality level, they are modelled as random failures.
+
+When it is no longer the case (obvious weakness in design, or actual design characteristics changed by manufacturing defect, premature wear-out before the end of the specified lifetime, weakness regarding the space environment) it is necessary to address and to model systematic failures. This is done based on statistics and not considering the human factor as an initial root cause.
+```
+
+```{admonition} **Wear‐out failures**
+:class: note, dropdown
+Considered by the process described in [Section 4.5](05_process_reliability_modelling_misc.md) (Wear-Out modelling), only for miscellaneous items considered as lifetime-limited items. Safe life qualification is used to address wear-out failure based on probability distribution (parameters derived from the duration for qualification). The model addresses nominal lifetime and lifetime extension.
+```
+
+```{admonition} **Extrinsic failures**
+:class: note, dropdown
+Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in‐orbit (e.g. temperature) are assumed to be covered by design and adequate qualification (to be verified before modelling). Any design/manufacturing errors are represented by Systematic failures modelling.
+
+A separate modelling may be required if the probability of additional failure mechanisms induced by the space environment cannot be neglected – e.g. space debris impact.
+```--></div>
 
     <script type="text/x-thebe-config">
     {

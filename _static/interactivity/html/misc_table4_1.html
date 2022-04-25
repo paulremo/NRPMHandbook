@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table 4 1 - Miscellaneous</title>
+    <link rel="stylesheet" href="../css/mytables.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="text" class="myInput" id="myInput" onkeyup="searchTable()" placeholder="Search table...">
+    <div class="scroller">
+        <table class="myTable" id="myTable">
+            <thead>
+                <tr>
+                    <th>REF</th>
+                    <th>SUBSYSTEM</th>
+                    <th>UNIT / ITEM</th>
+                    <th>RELIABILITY DATA</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td colspan="4" class="full-span">RF - Radio Frequency</td>
+            </tr>
+            <tr>
+                <td>STD_001</td>
+                <td>PAYLOAD</td>
+                <td>TWTA, Single MPM</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td>STD_002</td>
+                <td>PAYLOAD</td>
+                <td>TWTA, Double MPM</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="full-span">PWR - Power</td>
+            </tr>
+            <tr>
+                <td>STD_003</td>
+                <td>POWER</td>
+                <td>BATTERY CELL GEO</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td>STD_004</td>
+                <td>POWER</td>
+                <td>BATTERY CELL LEO</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td>STD_005</td>
+                <td>POWER</td>
+                <td>SOLAR ARRAY CELL Si</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td>STD_006</td>
+                <td>POWER</td>
+                <td>SOLAR ARRAY CELL GaAs</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td>STD_007</td>
+                <td>POWER</td>
+                <td>SADM (Solar Array drive Mechanism) GEO</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td>STD_008</td>
+                <td>POWER</td>
+                <td>SADM (Solar Array drive Mechanism) LEO</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="full-span">PROP - Propulsion</td>
+            </tr>
+            <tr>
+                <td>STD_009</td>
+                <td>PROPULSION</td>
+                <td>THRUSTER</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td>STD_010</td>
+                <td>PROPULSION</td>
+                <td>TANK TUBING</td>
+                <td>probability of failure</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="full-span">AOCS - Attitude and Orbit Control System</td>
+            </tr>
+            <tr>
+                <td>STD_011</td>
+                <td>AOCS</td>
+                <td>RW (Reaction Wheel) GEO</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td>STD_012</td>
+                <td>AOCS</td>
+                <td>RW (Reaction Wheel) LEO</td>
+                <td>Constant failure rate</td>
+            </tr>
+            <tr>
+                <td colspan="4">DEP - Deployment</td>
+            </tr>
+            <tr>
+                <td>STD_013</td>
+                <td>DEPLOYMENT</td>
+                <td>DEPLOYMENT DEVICE<br />
+                    Antenna, boom</td>
+                <td>Probability of failure</td>
+            </tr>
+            <tr>
+                <td>STD_014</td>
+                <td>DEPLOYMENT</td>
+                <td>
+                    <p>DEPLOYMENT DEVICE</p>
+                    <p>Solar Array</p>
+                </td>
+                <td>Probability of failure</td>
+            </tr>
+
+        </table>
+    </div>
+    <script type="text/javascript" src="../js/table_search.js"></script>
+</body>
+
+</html>

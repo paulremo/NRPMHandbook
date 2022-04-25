@@ -1,0 +1,75 @@
+.formula-map {
+    background-color: white;
+    margin-left: 100px;
+}
+
+.formula-map td {
+    width: 20%;
+    height: 80px;
+}
+
+.map-node {
+    background-color: white;
+    width: 70px;
+
+}
+
+.central-node {
+    background-color: white
+}
+
+.extra-space {
+    padding-top: 20px;
+}
+
+.map-button {
+    margin: 15px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #47064a;
+    border: none;
+    border-radius: 30px;
+    width: 120px;
+    height: 50px;
+}
+
+.central-button {
+    margin: 15px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #0c0679;
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+}
+
+.node-button {
+    margin: 15px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #7a747b;
+    border: none;
+    border-radius: 30px;
+    width: 120px;
+    height: 50px;
+}
+
+.tc-button {
+    background-color: aquamarine;
+    width: 30%;
+    font-size: 9px;
+    text-align: center;
+}
