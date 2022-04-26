@@ -203,59 +203,59 @@ let lambda2Entry = new Lambda2Entry("lambda2", 1.0, document.getElementById("lam
 
 let lambda12Entry = new LambdaEntry(lambda1Entry, lambda2Entry);
 
-let redButtonPiQ = new RedButton("LOW", 1.0, document.getElementById("low_piQ_button"), "Space");
-let greenButtonPiQ = new GreenButton("HIGH", 1.25, document.getElementById("high_piQ_button"), "New Space");
-let yellowButtonPiQ = new YellowButton("MEDIUM", 1.5, document.getElementById("medium_piQ_button"), "COTS");
+let redButtonPiQ = new RedButton("LOW", 1.5, document.getElementById("low_piQ_button"), "Space");
+let greenButtonPiQ = new GreenButton("HIGH", 1.0, document.getElementById("high_piQ_button"), "New Space");
+let yellowButtonPiQ = new YellowButton("MEDIUM", 1.25, document.getElementById("medium_piQ_button"), "COTS");
 ChoiceButton.associate_all_buttons(redButtonPiQ, greenButtonPiQ, yellowButtonPiQ);
 ChoiceButton.associate_text_area(redButtonPiQ, greenButtonPiQ, yellowButtonPiQ, document.getElementById("piQ_value"));
 redButtonPiQ.clicked();
 
 
-let redButtonPiM = new RedButton("LOW", 1.0, document.getElementById("low_piM_button"), "Specialist");
-let greenButtonPiM = new GreenButton("HIGH", 1.25, document.getElementById("high_piM_button"), "Adaptation");
-let yellowButtonPiM = new YellowButton("MEDIUM", 1.5, document.getElementById("medium_piM_button"), "New comer");
+let redButtonPiM = new RedButton("LOW",1.5 , document.getElementById("low_piM_button"), "Specialist");
+let greenButtonPiM = new GreenButton("HIGH",1.0 , document.getElementById("high_piM_button"), "Adaptation");
+let yellowButtonPiM = new YellowButton("MEDIUM",1.25 , document.getElementById("medium_piM_button"), "New comer");
 ChoiceButton.associate_all_buttons(redButtonPiM, greenButtonPiM, yellowButtonPiM);
 ChoiceButton.associate_text_area(redButtonPiM, greenButtonPiM, yellowButtonPiM, document.getElementById("piM_value"));
 redButtonPiM.clicked();
 
-let redButtonOrbit = new RedButton("LOW", 0.2, document.getElementById("low_orbit_button"));
-let greenButtonOrbit = new GreenButton("HIGH", 0.25, document.getElementById("high_orbit_button"));
-let yellowButtonOrbit = new YellowButton("MEDIUM", 0.3, document.getElementById("medium_orbit_button"));
+let redButtonOrbit = new RedButton("LOW", 0.3, document.getElementById("low_orbit_button"));
+let greenButtonOrbit = new GreenButton("HIGH", 0.2, document.getElementById("high_orbit_button"));
+let yellowButtonOrbit = new YellowButton("MEDIUM", 0.25, document.getElementById("medium_orbit_button"));
 ChoiceButton.associate_all_buttons(redButtonOrbit, greenButtonOrbit, yellowButtonOrbit);
 ChoiceButton.associate_text_area(redButtonOrbit, greenButtonOrbit, yellowButtonOrbit, document.getElementById("orbit_value"));
 redButtonOrbit.clicked();
 
-let redButtonTemperature = new RedButton("LOW", 0.2, document.getElementById("low_temperature_button"));
-let greenButtonTemperature = new GreenButton("HIGH", 0.25, document.getElementById("high_temperature_button"));
-let yellowButtonTemperature = new YellowButton("MEDIUM", 0.3, document.getElementById("medium_temperature_button"));
+let redButtonTemperature = new RedButton("LOW",0.3 , document.getElementById("low_temperature_button"));
+let greenButtonTemperature = new GreenButton("HIGH",0.2 , document.getElementById("high_temperature_button"));
+let yellowButtonTemperature = new YellowButton("MEDIUM",0.25 , document.getElementById("medium_temperature_button"));
 ChoiceButton.associate_all_buttons(redButtonTemperature, greenButtonTemperature, yellowButtonTemperature);
 ChoiceButton.associate_text_area(redButtonTemperature, greenButtonTemperature, yellowButtonTemperature, document.getElementById("temperature_value"));
 redButtonTemperature.clicked();
 
-let redButtonPower = new RedButton("LOW", 0.2, document.getElementById("low_power_button"));
-let greenButtonPower = new GreenButton("HIGH", 0.25, document.getElementById("high_power_button"));
-let yellowButtonPower = new YellowButton("MEDIUM", 0.3, document.getElementById("medium_power_button"));
+let redButtonPower = new RedButton("LOW", 0.3, document.getElementById("low_power_button"));
+let greenButtonPower = new GreenButton("HIGH", 0.2, document.getElementById("high_power_button"));
+let yellowButtonPower = new YellowButton("MEDIUM",0.25 , document.getElementById("medium_power_button"));
 ChoiceButton.associate_all_buttons(redButtonPower, greenButtonPower, yellowButtonPower);
 ChoiceButton.associate_text_area(redButtonPower, greenButtonPower, yellowButtonPower, document.getElementById("power_value"));
 redButtonPower.clicked();
 
-let redButtonTC = new RedButton("LOW", 0.1, document.getElementById("low_tc_button"));
-let greenButtonTC = new GreenButton("HIGH", 0.13, document.getElementById("high_tc_button"));
-let yellowButtonTC = new YellowButton("MEDIUM", 0.15, document.getElementById("medium_tc_button"));
+let redButtonTC = new RedButton("LOW", 0.15, document.getElementById("low_tc_button"));
+let greenButtonTC = new GreenButton("HIGH", 0.1, document.getElementById("high_tc_button"));
+let yellowButtonTC = new YellowButton("MEDIUM",0.13 , document.getElementById("medium_tc_button"));
 ChoiceButton.associate_all_buttons(redButtonTC, greenButtonTC, yellowButtonTC);
 ChoiceButton.associate_text_area(redButtonTC, greenButtonTC, yellowButtonTC, document.getElementById("tc_value"));
 redButtonTC.clicked();
 
-let redButtonDC = new RedButton("LOW", 0.2, document.getElementById("low_dc_button"));
-let greenButtonDC = new GreenButton("HIGH", 0.25, document.getElementById("high_dc_button"));
-let yellowButtonDC = new YellowButton("MEDIUM", 0.3, document.getElementById("medium_dc_button"));
+let redButtonDC = new RedButton("LOW", 0.3, document.getElementById("low_dc_button"));
+let greenButtonDC = new GreenButton("HIGH",0.2, document.getElementById("high_dc_button"));
+let yellowButtonDC = new YellowButton("MEDIUM",  0.25, document.getElementById("medium_dc_button"));
 ChoiceButton.associate_all_buttons(redButtonDC, greenButtonDC, yellowButtonDC);
 ChoiceButton.associate_text_area(redButtonDC, greenButtonDC, yellowButtonDC, document.getElementById("dc_value"));
 redButtonDC.clicked();
 
-let redButtonOthers = new RedButton("LOW", 0.1, document.getElementById("low_others_button"));
-let greenButtonOthers = new GreenButton("HIGH", 0.13, document.getElementById("high_others_button"));
-let yellowButtonOthers = new YellowButton("MEDIUM", 0.15, document.getElementById("medium_others_button"));
+let redButtonOthers = new RedButton("LOW", 0.15, document.getElementById("low_others_button"));
+let greenButtonOthers = new GreenButton("HIGH", 0.1, document.getElementById("high_others_button"));
+let yellowButtonOthers = new YellowButton("MEDIUM", 0.13, document.getElementById("medium_others_button"));
 ChoiceButton.associate_all_buttons(redButtonOthers, greenButtonOthers, yellowButtonOthers);
 ChoiceButton.associate_text_area(redButtonOthers, greenButtonOthers, yellowButtonOthers, document.getElementById("others_value"));
 redButtonOthers.clicked();
