@@ -138,3 +138,8 @@ I_{m1} = XXX
 ```
 ````
 
+(syst_table4_9)=
+**Table 4.9** : Birnbaum or marginal importance
+
+<iframe src="../../../_static/interactivity/html/syst_table4_9.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+
