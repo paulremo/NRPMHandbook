@@ -800,3 +800,24 @@ The marginal distribution $P\left(B=S_{B_{1}}\right)$ is obtained from Bayesian 
 P\left(B=S_{B_{1}}\right) = P\left(B=S_{B_{1}}|A=S_{A_{1}}\right)P\left(A=S_{A_{1}}\right) + P\left(B=S_{B_{1}}|A=S_{A_{2}}\right)P\left(A=S_{A_{2}}\right)
 ```
 ````
+
+An advantage of Bayesian networks for system reliability estimation is the fact that it allows to merge knowledge of diverse natures in one model: data from feedback experience, experts’ judgment (express through logical rules, equations or subjective probabilities), the behaviour of the studied system (functional and dysfunctional analysis) and observations. Moreover, Bayesian network allow the explicit representation of dependencies between failures and establish cause effect relationships between the influencing factors Error: Reference source not found. Dependent events can be found in reliability analysis in the following cases Error: Reference source not found:
+
+- **Common causes**. Failure of multiple items occurring from a single cause that is common to all of them. Thus, under these conditions, component failures are no longer independent. See also Section Error: Reference source not found.
+- **Mutually exclusive primary events**. Consider the basic events: “switch fails to close” and “switch fails to open”. These two basic events are mutually exclusive, i.e., the occurrence of one basic event precludes another. Thus, the occurrence of one event is not independent from the occurrence of another event when basic events are mutually exclusive.
+- **Standby redundancies**. When an operating component fails, a standby component is put into operation, and the redundant configuration continues to function. Thus, component failures are not statistically independent, since the failure of the standby component depends on the time when the primary operating component has failed.
+- **Components supporting loads**. Assume that a set of components supports loads such as stresses, currents, etc. A failure of one component increases the load supported by the other components. Consequently, the remaining components are more likely to fail, and we cannot assume statistical independence of components.
+
+(syst_4_3_6_1)=
+### Determine conditional probability tables in Bayesian networks
+
+The reliability analysis based on Bayesian networks starts with identifying the set of random variables to describe the network. In a Bayesian network, each node represents a random variable and the connections between nodes indicate the causal relationships between variables. The conditional probability table needs to be defined to represent this relationship and thus to represent the system architecture that is to be analysed. In the following, the Bayesian network and associated conditional probability table is shown for serial system, [Figure 4.22](syst_figure4_22). It should be noted that for a serial and parallel system the Bayesian network is the same but with different probability tables.
+
+(syst_figure4_22)=
+```{figure} ../../picture/figure4_22.png
+---
+width: 200px
+name: figure4_22
+---
+Bayesian network of a serial system
+```
