@@ -186,3 +186,8 @@ Miss ref just above
 ```
 
 The following rules should be applied to Boolean variables belonging to the same component to simplify the Boolean expression, with $j>i$. 
+
+(syst_table4_8)=
+**Table 4.8** : Boolean Phase Algebra rules
+
+<iframe src="../../../_static/interactivity/html/syst_table4_8.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
