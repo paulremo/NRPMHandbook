@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table 4 4 - System</title>
+    <link rel="stylesheet" href="../css/mytables.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="text" class="myInput" id="myInput" onkeyup="searchTable()" placeholder="Search table...">
+    <div class="scroller">
+        <table class="large-table" id="myTable">
+            <thead>
+                <tr>
+                    <th>Phase transition scenarios</th>
+                    <th>Success Criteria</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>
+                    A combination of failures does not lead to system failure in both phases $i$ and $i+1$.
+                </td>
+                <td>
+                    Success criterion does not change from phase $i$ to $i+1$. E.g. same RBD or FTA.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    A combination of failures leads to system failure in both phases $i$ and $i+1$.
+                </td>
+                <td>
+                    Success criteria do not change from phase $i$ to $i+1$. E.g. same RBD or FTA.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    A combination of component failures does not imply system failure in phase but is treated as system
+                    failure in phase $i+1$.
+                </td>
+                <td>
+                    This case should be treated as latent failures in the earlier phase $i$ as well. This is because
+                    such
+                    combinations, once present during a phase are bound to lead to the system failure eventually at the
+                    transition time when the system enters the later phase $i+1$.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    A combination of component failures implies system failure in phase $i$ but does not imply system
+                    failure in phase $i+1$.
+                </td>
+                <td>
+                    We need to account for the probability of occurrence of these failure combinations only until phase
+                    $i$. Any probability attributed to such combinations of component failures in later phases does not
+                    contribute towards system unreliability.
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <script type="text/javascript" src="../js/table_search.js"></script>
+</body>
+
+</html>
