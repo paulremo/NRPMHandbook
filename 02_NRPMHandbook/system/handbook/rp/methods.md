@@ -881,7 +881,7 @@ Miss ref just above
 (syst_figure4_23)=
 ```{figure} ../../picture/figure4_23.png
 ---
-width: 200px
+width: 600px
 name: figure4_23
 ---
 Bayesian network with common cause failure
