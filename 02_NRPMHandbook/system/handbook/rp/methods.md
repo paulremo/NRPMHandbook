@@ -821,3 +821,68 @@ name: figure4_22
 ---
 Bayesian network of a serial system
 ```
+
+The joint probability of the serial system is given by
+
+(syst_equation4_27)=
+````{admonition} Equation 4.27
+:class: equation
+``
+``  
+```{math}
+P(X,A,B) = P(X|A,B)P(A,B)
+```
+````
+
+The conditional probability of the child node X for a serial system is given by [Equation 4.28](syst_equation4_28) Error: Reference source not found:
+
+```{admonition} Todo
+:class: todo
+Miss ref just above
+```
+
+(syst_equation4_28)=
+````{admonition} Equation 4.28
+:class: equation
+``
+``  
+```{math}
+P(X|A,B) = \begin{bmatrix}
+1 & 1 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+```
+````
+
+For a serial system the conditional probabilities are either 1 or 0, which means system failure will occur for certain if A or B fails. The conditional probability table for a parallel system is given in [Equation 4.29](syst_equation4_29). 
+
+(syst_equation4_28)=
+````{admonition} Equation 4.28
+:class: equation
+``
+``  
+```{math}
+P(X|A,B) = \begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 1
+\end{bmatrix}
+```
+````
+
+The marginal probability $P(A,B)$ of root node $A$ and $B$ is given by the probabilities of the states of the random variables $A$ and $B$.
+
+Another advantage of Bayesian network is that it allows to model dependencies. [Figure 4.23](syst_figure4_23) shows a Bayesian network for analysing common cause failures. In the example, the failure of the component is caused by an external event or shock (see shock model in Section Error: Reference source not found). While the events $S_{1}$ and $S_{3}$ cause only one component ($A$ or $B$) to fail, the event $S_{2}$ will result in the loss of both components. Thus, component $A$ and $B$ are not independent as their failure could result from a common source. The system states are assigned to $X$. In this case, all the conditional probability matrices (for $A$, $B$, and $X$) are defined equivalent to AND gates.
+
+```{admonition} Todo
+:class: todo
+Miss ref just above
+```
+
+(syst_figure4_23)=
+```{figure} ../../picture/figure4_23.png
+---
+width: 200px
+name: figure4_23
+---
+Bayesian network with common cause failure
+```
