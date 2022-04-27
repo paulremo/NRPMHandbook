@@ -82,7 +82,7 @@ parts:
         - file: system/handbook/rp/important_measures
         - file: system/handbook/rp/reliability_assessment_degraded_systems
         - file: system/handbook/rp/modelling_common_cause_failure
-        - file: system/handbook/rp/sl_modelling_wear_out    
+        - file: system/handbook/rp/system_level_modelling_wear_out    
         - file: system/handbook/rp/systematic_failure_modelling  
         - file: system/handbook/rp/consideration_software_failures     
       - file: system/handbook/conclusion    
