@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table 4 11 - System</title>
+    <link rel="stylesheet" href="../css/mytables.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="text" class="myInput" id="myInput" onkeyup="searchTable()" placeholder="Search table...">
+    <div class="scroller">
+        <table class="myTable" id="myTable">
+            <thead>
+                <tr>
+                    <th><b>Group</b></th>
+                    <th><b>ID</b></th>
+                    <th><b>Component Name</b></th>
+                    <th><b>Initial reliability</b>
+                        <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                <semantics>
+                                    <msub>
+                                        <mi>R</mi>
+                                        <mi>i</mi>
+                                    </msub>
+                                    <annotation encoding="application/x-tex">R_{i}</annotation>
+                                </semantics>
+                            </math></p>
+                    </th>
+                    <th><b>Birnbaum importance</b></th>
+                    <th>
+                        <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                <semantics>
+                                    <mrow>
+                                        <mstyle mathvariant="normal">
+                                            <mi>Δ</mi>
+                                        </mstyle>
+                                        <msub>
+                                            <mi>R</mi>
+                                            <mi>i</mi>
+                                        </msub>
+                                    </mrow>
+                                    <annotation encoding="application/x-tex">\mathrm{\Delta}R_{i}</annotation>
+                                </semantics>
+                            </math></p>
+                    </th>
+                    <th><b>Reliability target</b>
+                        <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                <semantics>
+                                    <msub>
+                                        <mover>
+                                            <mi>R</mi>
+                                            <mo accent="true">̂</mo>
+                                        </mover>
+                                        <mi>i</mi>
+                                    </msub>
+                                    <annotation encoding="application/x-tex">{\hat{R}}_{i}</annotation>
+                                </semantics>
+                            </math></p>
+                    </th>
+                    <th><b>Maximum reliability</b>
+                        <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                <semantics>
+                                    <msub>
+                                        <mi>R</mi>
+                                        <mrow>
+                                            <mi>i</mi>
+                                            <mo>,</mo>
+                                            <mo>max</mo>
+                                        </mrow>
+                                    </msub>
+                                    <annotation encoding="application/x-tex">R_{i,\max}</annotation>
+                                </semantics>
+                            </math></p>
+                    </th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>I</td>
+                <td>1</td>
+                <td>Power Converter</td>
+                <td>0,91613</td>
+                <td>9,97178E-01</td>
+                <td>4,11E-02</td>
+                <td>0,95500</td>
+                <td>0,95500</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">II</td>
+                <td>2</td>
+                <td>Battery</td>
+                <td>0,91613</td>
+                <td>4,14603E-02</td>
+                <td>1,46E-02</td>
+                <td>0,93077</td>
+                <td>0,9450</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Solar Panel \#3 </td>
+                <td>0,91613</td>
+                <td>6,40290E-02</td>
+                <td>1,35E-02</td>
+                <td>0,92963</td>
+                <td>0,9400</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">III</td>
+                <td>1</td>
+                <td>Power Converter</td>
+                <td>0,91613</td>
+                <td>2,77546E-03</td>
+                <td>0</td>
+                <td>0,91613</td>
+                <td>0,9400</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Power Converter</td>
+                <td>0,91613</td>
+                <td>2,77546E-03</td>
+                <td>0</td>
+                <td>0,91613</td>
+                <td>0,9400</td>
+            </tr>
+
+        </table>
+    </div>
+    <script type="text/javascript" src="../js/table_search.js"></script>
+</body>
+
+</html>

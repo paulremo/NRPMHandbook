@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table 4 15 - System</title>
+    <link rel="stylesheet" href="../css/mytables.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="text" class="myInput" id="myInput" onkeyup="searchTable()" placeholder="Search table...">
+    <div class="scroller">
+        <table class="large-table" id="myTable">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Susceptibility Score <a><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+                                <semantics>
+                                    <msub>
+                                        <mtext mathvariant="normal">CCS</mtext>
+                                        <mi>i</mi>
+                                    </msub>
+                                    <annotation encoding="application/x-tex">\text{CCS}_{i}</annotation>
+                                </semantics>
+                            </math></a>
+                    </th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>Separation/segregation</td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>Diversity/ redundancy</td>
+                <td>10</td>
+            </tr>
+
+            <tr>
+                <td>Complexity/maturity of design/experience</td>
+                <td>5</td>
+            </tr>
+
+            <tr>
+                <td>Use of assessments/ analysis and feedback data</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>Procedures/ human interface (e.g. maintenance/testing)</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>Competence/ training/ safety culture </td>
+                <td>5</td>
+            </tr>
+
+            <tr>
+                <td>Environmental testing  </td>
+                <td>5</td>
+            </tr>
+
+            <tr>
+                <td>Sum</td>
+                <td>32</td>
+            </tr>
+
+        </table>
+    </div>
+    <script type="text/javascript" src="../js/table_search.js"></script>
+</body>
+
+</html>

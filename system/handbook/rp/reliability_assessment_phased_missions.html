@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.4.4. Reliability Models for miscellaneous items &#8212; NRPM Digital handbook</title>
+    <title>1.4.4. Reliability assessment of phased missions &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -68,10 +68,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="1.4.5. Use of IOR data and/or tests results" href="important_measures.html" />
+    <link rel="next" title="1.4.5. Important measures" href="important_measures.html" />
     <link rel="prev" title="1.4.3. System level methods" href="methods.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -211,6 +213,11 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
     </ul>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/handbook/bibliographic_references.html">
+     1.5. Bibliographic References
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -329,6 +336,11 @@ const thebe_selector_output = ".output, .cell_output"
      1.7. Annex B
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/bibliographic_references.html">
+     1.8. Bibliographic References
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -407,27 +419,27 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       1.4.4. Reliability Models for miscellaneous items
+       1.4.4. Reliability assessment of phased missions
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="important_measures.html">
-       1.4.5. Use of IOR data and/or tests results
+       1.4.5. Important measures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_assessment_degraded_systems.html">
-       1.4.6. Process for Reliability modelling
+       1.4.6. Reliability assessment of degraded systems
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="modelling_common_cause_failure.html">
-       1.4.7. Basic failure rate derivation for “non-standard model” items
+       1.4.7. Modelling of Common Cause failure
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="sl_modelling_wear_out.html">
-       1.4.8. Reliability Data for Miscellaneous “Standard model”
+      <a class="reference internal" href="system_level_modelling_wear_out.html">
+       1.4.8. System level modelling of wear-out
       </a>
      </li>
      <li class="toctree-l3">
@@ -542,6 +554,39 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mission-phase-success-criteria">
+   1.4.4.1. Mission phase success criteria
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mission-phase-dependent-failure-rates">
+   1.4.4.2. Mission phase dependent failure rates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combinatorial-methods-for-phased-mission-based-on-mini-components">
+   1.4.4.3. Combinatorial methods for phased mission based on mini-components
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-phase-algebra">
+   1.4.4.4. Boolean phase algebra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#state-space-model-of-phased-mission">
+   1.4.4.5. State space model of phased mission
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -549,19 +594,301 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Reliability Models for miscellaneous items</h1>
+                <h1>Reliability assessment of phased missions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mission-phase-success-criteria">
+   1.4.4.1. Mission phase success criteria
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mission-phase-dependent-failure-rates">
+   1.4.4.2. Mission phase dependent failure rates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combinatorial-methods-for-phased-mission-based-on-mini-components">
+   1.4.4.3. Combinatorial methods for phased mission based on mini-components
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-phase-algebra">
+   1.4.4.4. Boolean phase algebra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#state-space-model-of-phased-mission">
+   1.4.4.5. State space model of phased mission
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="reliability-models-for-miscellaneous-items">
-<h1><span class="section-number">1.4.4. </span>Reliability Models for miscellaneous items<a class="headerlink" href="#reliability-models-for-miscellaneous-items" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="reliability-assessment-of-phased-missions">
+<h1><span class="section-number">1.4.4. </span>Reliability assessment of phased missions<a class="headerlink" href="#reliability-assessment-of-phased-missions" title="Permalink to this headline">¶</a></h1>
+<p>The operation of missions encountered in space involves several different tasks or phases that must be accomplished in sequence. Systems used like this are usually called phased-mission systems. <a class="reference internal" href="#syst-figure4-24"><span class="std std-ref">Figure 4.24</span></a> shows an example of a phased mission of a space satellite system.</p>
+<div class="figure align-default" id="figure4-24">
+<span id="syst-figure4-24"></span><a class="reference internal image-reference" href="../../../_images/figure4_24.png"><img alt="../../../_images/figure4_24.png" src="../../../_images/figure4_24.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.41 </span><span class="caption-text">Example phased space mission</span><a class="headerlink" href="#figure4-24" title="Permalink to this image">¶</a></p>
+</div>
+<p>During each mission phase, the system has to accomplish a specified task and may be subject to different stresses as well as different dependability requirements. Thus, system configuration, success criteria, and component failure behaviour may change from phase to phase. This dynamic behaviour usually requires a distinct model for each phase of the mission in the reliability analysis. Generally, there are two classes of approaches to the evaluation of phased-mission systems:</p>
+<ul class="simple">
+<li><p>Analytical modelling and</p></li>
+<li><p>Simulation.</p></li>
+</ul>
+<p>Simulation offers greater generality in system representation. On the other hand, analytical modelling techniques can incorporate a desirable combination of flexibility in representation as well as ease of solution. The analytical modelling approaches can be further categorized into three classes:</p>
+<ul class="simple">
+<li><p>State space oriented model</p></li>
+<li><p>Combinatorial methods and</p></li>
+<li><p>Phase modular solution, which combines the former two methods as appropriate.</p></li>
+</ul>
+<p>In the following the analytical approach based on the combinatorial method and state space based model using Markov will be introduced.</p>
+<div class="section" id="mission-phase-success-criteria">
+<h2><span class="section-number">1.4.4.1. </span>Mission phase success criteria<a class="headerlink" href="#mission-phase-success-criteria" title="Permalink to this headline">¶</a></h2>
+<p>To analyse a phased mission, it is important to understand the functional relation of system components in each phase, which can be represented through the methods shown in Section Error: Reference source not found, e.g. RBD or FTA. In general, two cases have to be considered.</p>
+<ul class="simple">
+<li><p>Success criteria for the system are phase independent, which means the same functional relation and thus the same reliability block diagram can be used for all phases.</p></li>
+<li><p>Success criteria for the system are phase dependent, thus for each individual phase a different functional relation between the functional blocks of the system has to be considered.</p></li>
+</ul>
+<p>Depending on the success criteria the system could include:</p>
+<ul class="simple">
+<li><p>Common failure combination, which means if a certain combination of failures occurs during the mission it will lead to system failure regardless of the phase. Thus, the failures are common to all phases of the mission. The mission reliability of such failure combinations is calculated for the last phase considering the entire mission duration.</p></li>
+<li><p>Phase failure combinations, which means failure combinations leading to system failure are specific to one phase and are described by probability of occurrence specific to the phase.</p></li>
+</ul>
+<p>In case of phase independent success criteria, the methods described in Section Error: Reference source not found can be used and no special treatment is required. However, the failure rates of the functional blocks of the system may depend on the phase, as a consequence of different loads applied in different mission phases. Phase dependent component reliability is considered in section Error: Reference source not found.</p>
+<p>There are several reasons for reconfiguration and changes in success criteria from phase to phase Error: Reference source not found, which in the end could result in a situation where some combination of failures of components leads to failure of the system in one phase, whereas the same combination does not lead to failure in another phase.</p>
+<ul class="simple">
+<li><p>A component is used in all phases but its operational level requirements may change. In this case, no special treatment is required for this component. The definition of operation or failed state depends on the success criteria.</p></li>
+<li><p>A component is used in consecutive phases starting with one phase, and is then not needed for system operation in the remaining phases.</p></li>
+<li><p>A component is required to remain operational for some phase, is not needed for the operation of a few phases and is then required again for system operation.</p></li>
+<li><p>Spare or operational redundant modules corresponding to one subsystem become spare or redundant modules for another subsystem.</p></li>
+</ul>
+<p>To derive the appropriate success criteria for the reliability analysis of phased mission the phase transition needs to be considered. Depending on the success criteria of the consecutive phase there could be cases where the system state may change at the time of phase transition. The following scenarios of phase transitions could be considered Error: Reference source not found:</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss 4 ref just above</p>
+</div>
+<p id="syst-table4-7"><strong>Table 4.7</strong> : Phase transition scenarios in phased mission</p>
+<iframe src="../../../_static/interactivity/html/syst_table4_7.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+</div>
+<div class="section" id="mission-phase-dependent-failure-rates">
+<span id="syst-4-4-2"></span><h2><span class="section-number">1.4.4.2. </span>Mission phase dependent failure rates<a class="headerlink" href="#mission-phase-dependent-failure-rates" title="Permalink to this headline">¶</a></h2>
+<p>During the different phases of the space mission different load levels might be applied on the components. Vibration and acceleration loads are reaching the peak during launch phase, and in-orbit acceleration loads are significantly lower but radiation is high. This can be considered by phase specific failure rates for the system elements. For constant failure rates, the reliability function of a component in phase  can be expressed as shown in <span class="xref myst">Equation 4.30</span>.</p>
+<div class="equation admonition" id="syst-equation4-28">
+<p class="admonition-title">Equation 4.28</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[R_{k}(t) = \text{exp}\left(-\lambda_{k}t\right)\text{exp}\left(-\sum_{i=1}^{i=k-1}\lambda_{i}T_{i}\right)\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_{k}\)</span> denotes the reliability of the component in phase <span class="math notranslate nohighlight">\(k\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{i}\)</span> denotes the duration of phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> denotes the time starting at beginning of phase <span class="math notranslate nohighlight">\(k\)</span> such that, <span class="math notranslate nohighlight">\(0 \leq t \leq T_{k}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda_{k}\)</span> denotes the failure rate of the component in phase <span class="math notranslate nohighlight">\(k\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda_{i}\)</span> denotes the failure rate of the component in phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
+</ul>
+</div>
+<p>If wear-out has to be considered please refer to Section Error: Reference source not found.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+</div>
+<div class="section" id="combinatorial-methods-for-phased-mission-based-on-mini-components">
+<h2><span class="section-number">1.4.4.3. </span>Combinatorial methods for phased mission based on mini-components<a class="headerlink" href="#combinatorial-methods-for-phased-mission-based-on-mini-components" title="Permalink to this headline">¶</a></h2>
+<p>The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms Error: Reference source not found proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in <a class="reference internal" href="#syst-figure4-25"><span class="std std-ref">Figure 4.25</span></a>. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<div class="figure align-default" id="figure4-25">
+<span id="syst-figure4-25"></span><a class="reference internal image-reference" href="../../../_images/figure4_25.png"><img alt="../../../_images/figure4_25.png" src="../../../_images/figure4_25.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.42 </span><span class="caption-text">Example for mini components representing component A in three phases</span><a class="headerlink" href="#figure4-25" title="Permalink to this image">¶</a></p>
+</div>
+<p>The concept of mini components is shown in the following, using an example of a multi-phase mission with three component <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span>. The interaction of the system components in order to successfully complete the individual phases is represented through the reliability block diagram for each phase, as shown in <a class="reference internal" href="#syst-figure4-26"><span class="std std-ref">Figure 4.26</span></a>.</p>
+<div class="figure align-default" id="figure4-26">
+<span id="syst-figure4-26"></span><a class="reference internal image-reference" href="../../../_images/figure4_26.png"><img alt="../../../_images/figure4_26.png" src="../../../_images/figure4_26.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.43 </span><span class="caption-text">Reliability block diagram for individual phases of a multi-phase mission</span><a class="headerlink" href="#figure4-26" title="Permalink to this image">¶</a></p>
+</div>
+<p>From the multi-phase mission shown in <a class="reference internal" href="#syst-figure4-26"><span class="std std-ref">Figure 4.26</span></a>, a single-phase mission model as shown in <a class="reference internal" href="#syst-figure4-27"><span class="std std-ref">Figure 4.27</span></a> is obtained with the application of mini components.</p>
+<div class="figure align-default" id="figure4-27">
+<span id="syst-figure4-27"></span><a class="reference internal image-reference" href="../../../_images/figure4_27.png"><img alt="../../../_images/figure4_27.png" src="../../../_images/figure4_27.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.44 </span><span class="caption-text">Single phase mission model</span><a class="headerlink" href="#figure4-27" title="Permalink to this image">¶</a></p>
+</div>
+<p>The initial configurations for the three phases have been transformed to a single reliability block diagram comprising three sub-systems in a series arrangement. Since the subsystems will generally have components in common, they will not function independently Error: Reference source not found. The reliability of each phase is obtained from the following equations:</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<div class="equation admonition" id="syst-equation4-31">
+<p class="admonition-title">Equation 4.31</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[R_{1}(t) = 1 - (1-q_{A_{1}})(1-q_{B_{1}})(1-q_{C_{1}})\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-32">
+<p class="admonition-title">Equation 4.32</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[R_{2}(t) = q_{A_{1}}q_{A_{2}}\left(q_{B_{1}}q_{B_{2}} + q_{C_{1}}q_{C_{2}} - q_{B_{1}}q_{B_{2}}q_{C_{1}}q_{C_{2}}\right)\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-33">
+<p class="admonition-title">Equation 4.33</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[R_{3}(t) = q_{A_{1}}q_{A_{2}}q_{A_{3}}q_{B_{1}}q_{B_{2}}q_{B_{3}}q_{C_{1}}q_{C_{2}}q_{C_{3}}\]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(q_{ij}\)</span> denotes the conditional reliability of component <span class="math notranslate nohighlight">\(i\)</span> in phase <span class="math notranslate nohighlight">\(j\)</span> given that it has not failed in the previous phase, which is obtained from the following equation.</p>
+<div class="equation admonition" id="syst-equation4-34">
+<p class="admonition-title">Equation 4.34</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[q_{ij} = P\left(x_{i}\left(t_{j}\right) = 1 | x_{i}\left(t_{j-1}\right) = 1\right)\]</div>
+</div>
+</div>
+<div class="section" id="boolean-phase-algebra">
+<span id="syst-4-4-4"></span><h2><span class="section-number">1.4.4.4. </span>Boolean phase algebra<a class="headerlink" href="#boolean-phase-algebra" title="Permalink to this headline">¶</a></h2>
+<p>The before mentioned methods consider the failure of components in different phases separately. To overcome this limitation and to handle the dependencies of component states used in various mission phases, a set of Boolean algebraic laws to represent combinations of component behaviour can be applied to phased mission systems. A basic event A may be represented in the following way Error: Reference source not found:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A_{1}=1\)</span> denotes the event that component A is operational during the interval from the start of the mission until the end of phase <span class="math notranslate nohighlight">\(i\)</span>. This automatically implies that the component is operational during all earlier phases as well.</p></li>
+</ul>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<p>The following rules should be applied to Boolean variables belonging to the same component to simplify the Boolean expression, with <span class="math notranslate nohighlight">\(j&gt;i\)</span>.</p>
+<p id="syst-table4-8"><strong>Table 4.8</strong> : Boolean Phase Algebra rules</p>
+<iframe src="../../../_static/interactivity/html/syst_table4_8.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<p>The Boolean phase algebra in <a class="reference internal" href="#syst-table4-8"><span class="std std-ref">Table 4.8</span></a> allows identifying the possible scenarios where due to more stringent failure criteria in a later phase the system failure occurs and is described as a latent failure. With application of the Boolean algebra, the performance of a component through different phases is no longer considered separately. Using the Boolean phase algebra, the system reliability over all phases is obtained by the following equation:</p>
+<div class="equation admonition" id="syst-equation4-35">
+<p class="admonition-title">Equation 4.35</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[R_{S} = 1 - \left(P\left(E_{P} \right) + \sum_{i=1}^{i=p-1}P\left(PFC_{i}\right) \right)\]</div>
+<p>Where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\left(PFC_{i}\right)\)</span> denotes the probability of occurrence that phase failure combination in phase <span class="math notranslate nohighlight">\(i\)</span> occurs</p></li>
+<li><p><span class="math notranslate nohighlight">\(P\left(E_{P} \right)\)</span> is the probability of system failure calculated for phase <span class="math notranslate nohighlight">\(p\)</span>, where  <span class="math notranslate nohighlight">\(p\)</span> denotes the last phase. This includes also common failure combinations.</p></li>
+</ul>
+</div>
+<p><strong>Example :</strong></p>
+<p>The system reliability of the system shown in <a class="reference internal" href="#syst-figure4-26"><span class="std std-ref">Figure 4.26</span></a> is given by</p>
+<div class="equation admonition" id="syst-equation4-36">
+<p class="admonition-title">Equation 4.36</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[R_{s} = 1 - \left( P\left( E_{3} \right) + P\left( \text{PFC}_{2} \right) + P\left( \text{PFC}_{1} \right) \right)\]</div>
+</div>
+<p>The failure combinations for the 3 phases are given by:</p>
+<div class="equation admonition" id="syst-equation4-37">
+<p class="admonition-title">Equation 4.37</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[E_{1} = {\overline{A}}_{1} \cap {\overline{B}}_{1} \cap {\overline{C}}_{1}\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-38">
+<p class="admonition-title">Equation 4.38</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[E_{2} = {\overline{A}}_{2} \cup {\overline{B}}_{2} \cap {\overline{C}}_{2}\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-39">
+<p class="admonition-title">Equation 4.39</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[E_{3} = {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3}\]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(E_{i}\)</span> denotes the failure combination leading to system failure in phase <span class="math notranslate nohighlight">\(i\)</span> given as Boolean logic expression.</p>
+<p>With <a class="reference internal" href="#syst-equation4-39"><span class="std std-ref">Equation 4.39</span></a> the following is obtained for the failure probability in phase 3.</p>
+<div class="equation admonition" id="syst-equation4-40">
+<p class="admonition-title">Equation 4.40</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P\left( E \middle| 3 \right) = P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)\]</div>
+</div>
+<p>The failure probability in phase 1 and 2 is given by the following equations.</p>
+<div class="equation admonition" id="syst-equation4-41">
+<p class="admonition-title">Equation 4.41</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P\left( \text{PFC} \middle| 1 \right) = P\left( \left( E_{1} \cap {\overline{E}}_{2} \right) \cap {\overline{E}}_{3} \right)\]</div>
+<div class="math notranslate nohighlight">
+\[P\left( \text{PFC} \middle| 1 \right) = P\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-42">
+<p class="admonition-title">Equation 4.42</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P\left( \text{PFC} \middle| 2 \right) = P\left( E_{2} \cap {\overline{E}}_{3} \right)\]</div>
+<div class="math notranslate nohighlight">
+\[P\left( \text{PFC} \middle| 2 \right) = P\]</div>
+</div>
+<p>The phase algebra rules in <a class="reference internal" href="#syst-table4-8"><span class="std std-ref">Table 4.8</span></a> are applied for phase 2 and the following is obtained:</p>
+<div class="equation admonition" id="syst-equation4-43">
+<p class="admonition-title">Equation 4.43</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P\left( \text{PFC} \middle| 2 \right) = P\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-44">
+<p class="admonition-title">Equation 4.44</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P\left( \text{PFC} \middle| 2 \right) = P\left( \left( {\overline{A}}_{2} \cup {\overline{B}}_{2}{\overline{\cap C}}_{2} \right) \cap \left( A_{3} \cap B_{3} \cap C_{3} \right) \right)\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-45">
+<p class="admonition-title">Equation 4.45</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P\left( \text{PFC} \middle| 2 \right) = P\]</div>
+</div>
+<p>In <a class="reference internal" href="#syst-equation4-45"><span class="std std-ref">Equation 4.45</span></a> it can be seen that both component A and B are failed in phase 2 but operational in phase 3, which is not possible for non-repairable system according to the Boolean phase algebra rules in <a class="reference internal" href="#syst-table4-8"><span class="std std-ref">Table 4.8</span></a>. Thus with <span class="math notranslate nohighlight">\(\overline{A_{2}} \cap A_{3} \rightarrow 0\)</span> and <span class="math notranslate nohighlight">\(\overline{B_{2}} \cap B_{3} \rightarrow 0\)</span>, the phase failure combination <span class="math notranslate nohighlight">\(\text{PFC}_{2}\)</span> is empty. The same is obtained for <span class="math notranslate nohighlight">\(\text{PFC}_{1}\)</span>.</p>
+<div class="equation admonition" id="syst-equation4-46">
+<p class="admonition-title">Equation 4.46</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[P\left( \text{PFC} \middle| 1 \right) = P\]</div>
+</div>
+<p>Thus, the reliability of the phase mission system is given by <a class="reference internal" href="#syst-equation4-47"><span class="std std-ref">Equation 4.47</span></a>. It can be seen that the system reliability over all phases is determined by the availability of the components in the last phase.</p>
+<div class="equation admonition" id="syst-equation4-47">
+<p class="admonition-title">Equation 4.47</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight">
+\[R_{S}\left( t \right) = 1 - P\left( E \middle| 3 \right) = 1 - P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)\]</div>
+</div>
+</div>
+<div class="section" id="state-space-model-of-phased-mission">
+<span id="syst-4-4-5"></span><h2><span class="section-number">1.4.4.5. </span>State space model of phased mission<a class="headerlink" href="#state-space-model-of-phased-mission" title="Permalink to this headline">¶</a></h2>
+<p>The phased mission system can also be analysed based on a state space model using Markov model. Smotherman and Zemoudeh Error: Reference source not found used a single non-homogeneous Markov chain model to perform the reliability analysis of a phased mission system. The behaviour of the system in each phase is represented using a different Markov chain, which may contain a different subset of states. The state transitions are described in terms of time dependent rates to include phase changes. Thus, state-dependent phase changes, random phase durations as well as time varying failure and repair behaviour can be easily modelled.</p>
+<p>The example shown in <a class="reference internal" href="#syst-figure4-26"><span class="std std-ref">Figure 4.26</span></a> is shown as Markov chain in <a class="reference internal" href="#syst-figure4-28"><span class="std std-ref">Figure 4.28</span></a>, where the failure of components A, B and C are given by the associated failure rates <span class="math notranslate nohighlight">\(\lambda_{a}\)</span>, <span class="math notranslate nohighlight">\(\lambda_{b}\)</span> and <span class="math notranslate nohighlight">\(\lambda_{c}\)</span>. Each component can have two states, failed or operational. An identifier is assigned to each system state where, e.g.”011” indicates A failed, B and C operational. The transition from phase 1 to phase 2 is given by the time dependent rate <span class="math notranslate nohighlight">\(h_{1}\left( t \right)\)</span> and <span class="math notranslate nohighlight">\(h_{2}\left( t \right)\)</span> denotes the rate of change from phase 2 to phase 3.</p>
+<p>The main advantage of this model is that it includes the configurations for all phases as well as the phase changes. But on the other side, as the number of components increases this approach results in a large model as the number of states increases rapidly.</p>
+<div class="figure align-default" id="figure4-28">
+<span id="syst-figure4-28"></span><a class="reference internal image-reference" href="../../../_images/figure4_28.png"><img alt="../../../_images/figure4_28.png" src="../../../_images/figure4_28.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.45 </span><span class="caption-text">Phased mission Markov model approach by Smotherman and Zemoudeh Error: Reference source not found</span><a class="headerlink" href="#figure4-28" title="Permalink to this image">¶</a></p>
+</div>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>miss ref above</p>
+</div>
+<p>As shown before, two classes of approaches have been developed to analyse phased missions, the combinatorial approach and the Markov chain approach. The combinatorial approaches are computationally efficient, but are applicable only when each phase is a static phase, in which all components are functionally independent and the order in which failures occur does not matter. Markov based approaches are able to capture the functional dependencies among components and the required order of failures, or dynamic failure criteria. On the other hand, the size of the Markov model may increase such it become not feasible to be solved. Therefore, a modular approach that combines combinatorial and Markov chain approach as appropriate can also be used to analyse phased mission systems Error: Reference source not found.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>miss ref above</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -599,7 +926,7 @@ const thebe_selector_output = ".output, .cell_output"
     <a class='right-next' id="next-link" href="important_measures.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.4.5. </span>Use of IOR data and/or tests results</p>
+        <p class="prev-next-title"><span class="section-number">1.4.5. </span>Important measures</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

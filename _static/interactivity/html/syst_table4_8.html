@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table 4 8 - System</title>
+    <link rel="stylesheet" href="../css/mytables.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="text" class="myInput" id="myInput" onkeyup="searchTable()" placeholder="Search table...">
+    <div class="scroller">
+        <table class="large-table" id="myTable">
+            <thead>
+                <tr>
+                    <th>Phase Algebra Rule</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>
+                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∩</mo><msub><mi>A</mi><mi>j</mi></msub><mo>→</mo><msub><mi>A</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">A_{i} \cap A_{j} \rightarrow A_{j}</annotation></semantics></math></p>
+                </td>
+                <td>
+                    The event “A is operational in phase i and the later phase j” is equivalent to the event “A is operational in the later phase j”
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∩</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover><mo>→</mo><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover></mrow><annotation encoding="application/x-tex">\overline{A_{i}} \cap \overline{A_{j}} \rightarrow \overline{A_{i}}</annotation></semantics></math></p>
+                </td>
+                <td>
+                    The event “A has failed in phase i and the later phase j” is equivalent to the event “A has failed in phase i”
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∩</mo><msub><mi>A</mi><mi>j</mi></msub><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\overline{A_{i}} \cap A_{j} \rightarrow 0</annotation></semantics></math></p>
+                </td>
+                <td>
+                    The event “A has failed in phase i, but is operational in the later phase j does not exist for a non-repairable phase mission system
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∪</mo><msub><mi>A</mi><mi>j</mi></msub><mo>→</mo><msub><mi>A</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">A_{i} \cup A_{j} \rightarrow A_{i}</annotation></semantics></math></p>
+                </td>
+                <td>
+                    The event “A is operational in phase i or in the later phase j” is equivalent to the event “A is operational in the phase i”
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∪</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover><mo>→</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover></mrow><annotation encoding="application/x-tex">\overline{A_{i}} \cup \overline{A_{j}} \rightarrow \overline{A_{j}}</annotation></semantics></math></p>
+                </td>
+                <td>
+                    The event “A has failed in phase i or in the later phase j“ is equivalent to the event “A has failed in phase j”
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∪</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">A_{i} \cup \overline{A_{j}} \rightarrow 1</annotation></semantics></math></p>
+                </td>
+                <td>
+                    The event “A is operational in phase i or failed in the later phase j” is equivalent to certain event 1
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∪</mo><msub><mi>A</mi><mi>j</mi></msub><mo>→</mo><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∪</mo><msub><mi>A</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\overline{A_{i}} \cup A_{j} \rightarrow \overline{A_{i}} \cup A_{j}</annotation></semantics></math></p>
+                </td>
+                <td>
+                    The event “A has failed in phase i, or is operational in the later phase j” cannot be simplified any further
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∩</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover><mo>→</mo><msub><mi>A</mi><mi>i</mi></msub><mo>∩</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover></mrow><annotation encoding="application/x-tex">A_{i} \cap \overline{A_{j}} \rightarrow A_{i} \cap \overline{A_{j}}</annotation></semantics></math></p>
+                </td>
+                <td>
+                    The event “A is operational in phase i and failed in the later phase j” cannot be simplified any further
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <script type="text/javascript" src="../js/table_search.js"></script>
+</body>
+
+</html>
