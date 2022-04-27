@@ -29,7 +29,8 @@ parts:
         - file: mechanical/handbook/rp/method_selection
         - file: mechanical/handbook/rp/structural_method_input
         - file: mechanical/handbook/rp/structural_models_equations
-        - file: mechanical/handbook/rp/examples   
+        - file: mechanical/handbook/rp/examples                        
+      - file: mechanical/handbook/bibliographic_references  
     - file: mechanical/models/introduction
       title: Models
       sections:
@@ -57,7 +58,8 @@ parts:
         - file: miscellaneous/handbook/rp/reliability_data_sm                       
       - file: miscellaneous/handbook/conclusion    
       - file: miscellaneous/handbook/annexA    
-      - file: miscellaneous/handbook/annexB
+      - file: miscellaneous/handbook/annexB  
+      - file: miscellaneous/handbook/bibliographic_references
     - file: miscellaneous/models/introduction_guide_miscellaneous
       title: Models
       sections:

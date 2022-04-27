@@ -1,8 +1,8 @@
 # NRPMHandbook
-Welcome to the repository that stores and tracks the development on the ADS/Matrisk project for developing a jupyter book of the NRPM handbook. The repository contains three subfolders.
+Welcome to the repository that stores and tracks the development on the ADS/Matrisk project for developing a jupyter book of the NRPM digital handbook. The repository contains three subfolders.
 
 - `01_Resources` This folder hosts general resources of the project such as shared documents, related project documentation, pictures, etc.
-- `02_NRPMHandbook` This is the main folder for the handbook. All jupyter files are stored in this folder.
+- `02_NRPMHandbook` This is the main folder for the digital handbook. All jupyter files are stored in this folder.
 - `03_PythonDev` This is the folder where pure python development files (e.g., for the interactive part of the notebook) can be stored. Ideally, code would be developed inside this folder and then copied to the jupyter notebook only for UI considerations.
 - `.binder` This folder holds the binder configuration, i.e. requirements for the binder kernels.
 
@@ -26,8 +26,47 @@ The book is then published as a Git Page with the URL https://paulremo.github.io
 ## Where is the book hosted?
 The book is hosted on *GitHub Pages*. 
 
+## How do bibliographies work?
+The digital handbook uses a single `.bib` file to store all references. All global bibliography settings are set in the `_config.yml` file.
+
+### General
+Every chapter has its own bibliography that consists of two different reference types:
+- **Normative references** are displayed in the *normative references* section of each chapter and are labeled as **NR_{EEE,MEC,MIS,SYS}_X** where X is a consecutive number.
+- **Bibliographic references** are displayed in the *bibliographic references* section of each chapter and are labeled as **BR_{EEE,MEC,MIS,SYS}_X** where X is a consecutive number.
+
+### How to cite?
+Two different citation formats are supported: 
+- `{cite:p}\`key\`` for paranthesis citations
+- `{cite:t}\`key\`` for textual citations
+ 
+The key is the key defined inside the `.bib` file but is additionally preceded by a prefix according to the chapter: `eee-`, `mec-`, `mis-`, or `sys-`. 
+
+### How to define the bibliography?
+Each chapter contains two separate bibliographies that are defined with the following commands:
+````
+# Normative References
+```{bibliography}
+:filter: keywords % "nr"
+:labelprefix: NR_{EEE,MEC,MIS,SYS}_
+:keyprefix: {eee-,mec-,mis-,sys-}
+```
+````
+and
+````
+# Bibliographic References
+```{bibliography}
+:filter: keywords % "br"
+:labelprefix: BR_{EEE,MEC,MIS,SYS}_
+:keyprefix: {eee-,mec-,mis-,sys-}
+```
+````
+
+### What to do if something goes wrong?
+Delete the `_build` folder and rebuild the book from scratch. This can fix issues related to incorrect bibliographies.
+ 
+
 ## What about interactivity?
-The handbook contains two types of interactive content: javascript-based and python-based content. The two are hosted and accessed differently:
+The digital handbook contains two types of interactive content: javascript-based and python-based content. The two are hosted and accessed differently:
 
 - **Javascript** content is accessible directly through the browser without additional user-action. The source files are stored in `.js`, `.css`, and `.html` files inside the `_static` folder.
 - **Python** content cannot be run on the browser and is instead launched by hovering over the :rocket: on top of the page and selecing *Live Code*. This launches a kernel provided by [mybinder](https://mybinder.org/) and shown in the browser with the [thebe](https://github.com/executablebooks/thebe) interface. 
