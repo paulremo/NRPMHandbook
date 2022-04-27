@@ -46,7 +46,10 @@ sphinx:
     thebe_config:
       repository_url        : https://github.com/paulremo/NRPMInteractivity
       repository_branch     : python
-      
+    # modifications of bibtex reference style
+    bibtex_default_style    : plain
+    bibtex_reference_style  : label
+    
 
 
 # deactivate mybinder button and activate thebe button
