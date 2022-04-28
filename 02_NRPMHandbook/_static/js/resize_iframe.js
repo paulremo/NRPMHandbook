@@ -1,17 +1,14 @@
-function resize_iframe() {
-	document.getElementById('ext_interactive').style.height = window.innerHeight + 'px';
+function resize_iframe(my_frame) {
+  const total_content_height = Math.max($(my_frame.contentWindow.document).height(), $(my_frame.contentWindow).height())
+  my_frame.style.height = total_content_height + 'px';
 }
 
-$(document).ready(function () {
-	let frames = document.getElementsByTagName('iframe');
-	for (var i = 0; i < frames.length; i++) {
-		f = frames.item(i);
-		f.style.height = window.innerHeight + 'px';
-		/*console.log(f.style.height);*/
-	}
-});
 
-
-//.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-
-//document.getElementById(id).style.height = window.innerHeight +'px';
+//window.onload = function () {
+//	const my_frames = document.getElementsByClassName("ext_content");
+//
+//	for (const my_frame of my_frames) {
+//		// resize iframes to fit content
+//		resize_iframe(my_frame)
+//	}
+//};
