@@ -376,7 +376,7 @@ Posterior distribution of the model parameters for the Poisson/Weibull anomaly o
 (syst_table4_18)=
 **Table 4.18** : Posterior parameters of the Weibull distribution for the occurrence rate of anomalies.
 
-<iframe src="../../../_static/interactivity/html/syst_table4_18.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_18.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 #### Anomaly repartition by subsystem
 
@@ -396,7 +396,7 @@ These probabilities can be combined with the overall anomaly occurrence rate. As
 (syst_table4_19)=
 **Table 4.19** : Posterior parameters of the Dirichlet distribution for the repartition of anomalies by subsystem.
 
-<iframe src="../../../_static/interactivity/html/syst_table4_19.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_19.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 #### Anomaly repartition by hardware failure
 
@@ -427,7 +427,7 @@ Posterior marginal distributions of the conditional probabilities for the repart
 (syst_table4_20)=
 **Table 4.20** : Posterior parameters of the Dirichlet distribution for the repartition of a hardware failure for given an anomaly for on satellite level and for all subsystems.
 
-<iframe src="../../../_static/interactivity/html/syst_table4_20.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_20.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 #### Anomaly repartition by severity given hardware failure
 
@@ -458,4 +458,4 @@ The posterior parameters of the Dirichlet distribution for the different severit
 (syst_table4_21)=
 **Table 4.21** : Posterior parameters of the Dirichlet distribution for the different severity classes conditional on an anomaly and a hardware failure at satellite level and for all subsystems.
 
-<iframe src="../../../_static/interactivity/html/syst_table4_21.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_21.html" frameborder="0" onload="resize_iframe(this)"></iframe>

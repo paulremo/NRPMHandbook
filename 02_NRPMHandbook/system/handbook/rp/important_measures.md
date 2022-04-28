@@ -141,7 +141,7 @@ I_{m1} = XXX
 (syst_table4_9)=
 **Table 4.9** : Birnbaum or marginal importance
 
-<iframe src="../../../_static/interactivity/html/syst_table4_9.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_9.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 (syst_4_5_2)=
 ## Reduced structural importance
@@ -174,7 +174,7 @@ It can be seen that the relative ranking of the components will be the same for 
 (syst_table4_10)=
 **Table 4.10** : Example for marginal and reduced structural Importance.
 
-<iframe src="../../../_static/interactivity/html/syst_table4_10.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_10.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 ## Reliability allocation based on importance measures
 
@@ -358,5 +358,5 @@ The reliability target for components in group III are not adapted as the system
 (syst_table4_11)=
 **Table 4.11** : Example reliability allocation using Birnbaum importance measures
 
-<iframe src="../../../_static/interactivity/html/syst_table4_11.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_11.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 

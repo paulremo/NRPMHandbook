@@ -5,7 +5,7 @@ This section presents various system reliability modelling techniques such as re
 (syst_table4_2)=
 **Table 4.2** : Overview of system level methods.
 
-<iframe src="../../../_static/interactivity/html/syst_table4_2.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 ```{admonition} Todo
 :class: todo
@@ -17,7 +17,7 @@ Depending on the specific characteristics that shall be represented in the syste
 (syst_table4_3)=
 **Table 4.3** : Selection of system level methods.
 
-<iframe src="../../../_static/interactivity/html/syst_table4_3.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_3.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 Before starting a system reliability analysis, the following aspects are important to consider:
 
