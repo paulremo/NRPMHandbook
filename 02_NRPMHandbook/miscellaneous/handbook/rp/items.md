@@ -15,7 +15,7 @@ To use the reliability model it is, first, necessary to assess that the miscella
 :name: "table4_1"
 ```-->
 
-<iframe src="../../../_static/interactivity/html/misc_table4_1.html" frameborder="0" style="width:100%;" id="ext_interactive" class="myIFrame"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_1.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 (misc_table4_2)=
 **Table 4.2** : List of Miscellaneous items with “non-standard model” (not exhaustive)
@@ -23,4 +23,4 @@ To use the reliability model it is, first, necessary to assess that the miscella
 <!--```{glue:figure} table4_2
 :name: "table4_2"
 ```-->
-<iframe src="../../../_static/interactivity/html/misc_table4_2.html" frameborder="0" style="width:100%;" id="ext_interactive2" class="myIFrame"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_2.html" frameborder="0" onload="resize_iframe(this)"></iframe>

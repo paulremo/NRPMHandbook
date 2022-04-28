@@ -166,5 +166,5 @@ As shown in the example in [Table 4.15](syst_table4_15) the assigned Susceptibil
 (syst_table4_15)=
 **Table 4.15** : Example for the evaluation of a Common Cause Beta Factor
 
-<iframe src="../../../_static/interactivity/html/syst_table4_15.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_15.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
