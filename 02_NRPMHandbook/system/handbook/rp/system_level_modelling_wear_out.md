@@ -97,7 +97,7 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the random failure 
 ``
 ``  
 ```{math}
-$\begin{matrix}
+\begin{matrix}
   \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                       
   \lambda\left( t \right) = \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1} \\   
   \end{matrix}\left\{ \begin{matrix}                                                                            
