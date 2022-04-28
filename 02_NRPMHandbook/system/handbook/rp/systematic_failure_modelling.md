@@ -459,3 +459,70 @@ The posterior parameters of the Dirichlet distribution for the different severit
 **Table 4.21** : Posterior parameters of the Dirichlet distribution for the different severity classes conditional on an anomaly and a hardware failure at satellite level and for all subsystems.
 
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_21.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+
+### Additional data
+
+In addition to the information directly used for modelling (Section Error: Reference source not found above), the following information can be useful for the interpretation of the modelling results. The data is taken from the same source as the model input.
+
+```{admonition} Todo
+:class: todo
+miss ref above
+```
+
+#### Major anomalies during In Orbit Testing
+
+The data sample used for modelling summarizes in orbit return collected during the whole mission. {numref}`Figure 7.42` shows the percentage of major anomalies that have been observed during In Orbit Testing at the beginning of a satellite mission, both at satellite level (red horizontal line) and for the different subsystems (bar chart). The red numbers indicate whether the percentage of anomalies during IOT is larger (factor \> 1.0) or smaller than the average at satellite level (red line, 17.5%). For subsystems without bar, the black data labels indicate whether there were no major anomalies at all ("NaN") or only during IOT ("0.0%).
+
+The variation by subsystem is another indication that the distribution of the random time to anomaly occurrence should actually depend on the subsystem, which represents an important limitation of the anomaly occurrence model developed at satellite level (see also Section Error: Reference source not found for discussion). The percentages and factors provided in {numref}`Figure 7.42` can be used as a reference when the occurrence of subsystem anomalies during IOT is of interest. However, it should be noted that the In Orbit Testing phase is more than just a time slot at the beginning of a satellite mission, and its duration is variable (although usually in the range of 1 to several months).
+
+```{figure} ../../picture/figure4_42.png
+---
+width: 600px
+name: Figure 7.42
+---
+Percentage of major anomalies that were observed during In Orbit Testing at satellite level (red line) and for the different subsystems (bar chart).
+```
+
+#### Classification by root cause and severity
+
+As discussed in Section Error: Reference source not found, systematic failures and anomalies can be further classified by the detailed root cause, from design and manufacturing errors to operations. {numref}`Figure 7.43` shows the classification of observed anomalies by root cause, using the definitions from the data source, as outlined in Section Error: Reference source not found. The repartition by severity category clearly shows that anomalies leading to hardware failures and/or having an impact on the mission (severity 1 to 4) are mainly due to root causes in hardware design or manufacturing. Severe events due to other root causes are rare exceptions, as can be seen also from {numref}`Figure 7.44`. It should be noted that "Hardware failure" is here defined in a wide sense, i.e. all anomalies having an impact on the mission (severity 1 to 3) are considered as failures, even though they may not involve a definitive hardware failure.
+
+```{admonition} Todo
+:class: todo
+miss 2 ref above
+```
+
+```{figure} ../../picture/figure4_43.png
+---
+width: 600px
+name: Figure 7.43
+---
+Classification of major anomalies by severity category and root cause (Operations OPS, Hardware design/manufacturing HW, Software error SW, System design/manufacturing SYS, Environmental design ENVT).
+
+```
+
+```{figure} ../../picture/figure4_44.png
+---
+width: 600px
+name: Figure 7.44
+---
+Percentage of anomalies with hardware failure (severity category 1 to 4) for the different root causes (see {numref}`Figure 7.43` for definitions). The percentage in this figure relates to the total number of major anomalies (with or without Hardware failure) attributed to a specific root cause.
+```
+
+#### Classification by technical domain (EEE, Mechanical, Miscellaneous)
+
+The repartition by satellite subsystem already gives a first indication on the relevance of systematic anomalies related to EEE, Mechanical or Miscellaneous items. For the anomalies whose root cause is classified as "hardware", {numref}`Figure 7.45` gives further information on the repartition by the type of the equipment involved, and by the details of the root cause (design or manufacturing error). The classification is done at equipment level, considering all satellite subsystems and using the same three classes as outlined in Chapter Error: Reference source not found (EEE), Error: Reference source not found (Mechanical -- MEC) and Error: Reference source not found (Miscellaneous -- MIS). It can be seen that the contribution of "Mechanical" anomalies is very low, which may be explained by the fact that many of the most error-prone satellite elements are classified as "Miscellaneous items" in this handbook.
+
+```{admonition} Todo
+:class: todo
+miss 2 ref above
+```
+
+```{figure} ../../picture/figure4_45.png
+---
+width: 600px
+name: Figure 7.45
+---
+Repartition of anomalies whose root cause is classified as "Hardware" by the type of the equipment (EEE, Mechanical -- MEC, Miscellaneous -- MIS) involved and the detailed root cause.
+```
+
