@@ -1,0 +1,7 @@
+.interactive-table col {
+	width: 1% !important;
+}
+
+.interactive-table td {
+	padding: 0 !important;
+}
