@@ -28,11 +28,13 @@ REF ERROR just above in 1.
 ````
 
 (misc_table4_7)=
-**Table 4.7** : Structure of the reliability data table in [Table 4 -8](misc_table4_8)
+**Table 4.7** : Structure of the reliability data table in [Table 4 -8](misc_table4_8) {numref}`misc_table4_8`
 
-<iframe src="../../../_static/interactivity/html/misc_table4_7.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
 
-(misc_table4_8)=
-**Table 4.8** : reliability data table
+<iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_7.html"></iframe>
 
-<iframe src="../../../_static/interactivity/html/misc_table4_8.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+
+```{list-table} Table title
+:name: misc_table4_8
+<iframe src=".." frameborder="0" style="width:100%;"></iframe>
+```

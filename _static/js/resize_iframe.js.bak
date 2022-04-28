@@ -4,7 +4,7 @@ function resize_iframe(my_frame) {
 
 
 //window.onload = function () {
-window.addEventListener("load", function(){
+document.addEventListener("load", function(){
 	const my_frames = document.getElementsByClassName("ext_content");
 
 	for (const my_frame of my_frames) {
