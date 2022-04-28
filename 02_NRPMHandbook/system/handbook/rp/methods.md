@@ -55,13 +55,13 @@ The RBD is created under the assumption that all failures are independent, thus 
 (syst_4_3_1_1)=
 ### Procedure for system reliability prediction using Reliability Block Diagram
 
-The procedure for constructing an RBD is shown in [Figure 4.3](syst_figure4_3). 
+The procedure for constructing an RBD is shown in {numref}`Figure 7.3`. 
 
 (syst_figure4_3)=
 ```{figure} ../../picture/figure4_3.png
 ---
 width: 600px
-name: figure4_3
+name: Figure 7.3
 ---
 Procedure for Reliability Prediction using Reliability Block Diagram
 ```
@@ -73,13 +73,13 @@ In the following, the calculation of some basic system architecture schemes usin
 
 **Serial System**
 
-In case of a serial system, each component is required to operate error-free in order to fulfil the system's function successfully ([Figure 4.4](syst_figure4_4)).
+In case of a serial system, each component is required to operate error-free in order to fulfil the system's function successfully ({numref}`Figure 7.4`).
 
 (syst_figure4_4)=
 ```{figure} ../../picture/figure4_4.png
 ---
 width: 600px
-name: figure4_4
+name: Figure 7.4
 ---
 Reliability Block Diagram for a Serial System
 ```
@@ -120,13 +120,13 @@ R_{S}(t) = \sum_{i = 1}^{n} R_{i}(t)
 
 **Parallel System**
 
-In case of a parallel system, at least one component is required to operate error-free in order to fulfil the system function ([Figure 4.5](syst_figure4_5)). The failure of one component is tolerable as the system is still functioning, thus redundancy is implemented in the system. 
+In case of a parallel system, at least one component is required to operate error-free in order to fulfil the system function ({numref}`Figure 7.5`). The failure of one component is tolerable as the system is still functioning, thus redundancy is implemented in the system. 
 
 (syst_figure4_5)=
 ```{figure} ../../picture/figure4_5.png
 ---
 width: 600px
-name: figure4_5
+name: Figure 7.5
 ---
 Reliability Block Diagram for a Parallel System
 ```
@@ -165,7 +165,7 @@ R_{S}(t) = 1 - \prod_{i=1}^{n} (1-R_{i}(t))
 
 **Combined Serial/Parallel System**
 
-Many complex space systems can be represented as a combination of serial and parallel systems. Through decomposition, the complex system can be simplified to determine its reliability with the before mentioned equations. [Figure 4.6](syst_figure4_6) presents the RBD of a common system architecture, which can be analysed through decomposition of serial and parallel systems.
+Many complex space systems can be represented as a combination of serial and parallel systems. Through decomposition, the complex system can be simplified to determine its reliability with the before mentioned equations. {numref}`Figure 7.6` presents the RBD of a common system architecture, which can be analysed through decomposition of serial and parallel systems.
 
 Before the failure probability and reliability of this particular system consisting of three components (A, B and C) is determined, the system architecture has to be simplified in accordance with the Boolean logic.
 
@@ -174,7 +174,7 @@ Before the failure probability and reliability of this particular system consist
 ```{figure} ../../picture/figure4_6.png
 ---
 width: 600px
-name: figure4_6
+name: Figure 7.6
 ---
 Decomposition of a System Architecture
 ```
@@ -215,13 +215,13 @@ R_{S}(t) = R_{A}(t) + R_{B}(t) * R_{C}(t) -  R_{A}(t) * R_{B}(t) * R_{C}(t)
 
 **Approximation by minimal cut sets**
 
-For certain system architectures the RBD cannot be decomposed. [Figure 4.7](syst_figure4_7) shows an example of such a system architecture (bridge system) that cannot be reduced to a combination of serial and parallel arrangements.
+For certain system architectures the RBD cannot be decomposed. {numref}`Figure 7.7` shows an example of such a system architecture (bridge system) that cannot be reduced to a combination of serial and parallel arrangements.
 
 (syst_figure4_7)=
 ```{figure} ../../picture/figure4_7.png
 ---
 width: 600px
-name: figure4_7
+name: Figure 7.7
 ---
 Reliability Block Diagram for a Complex System
 ```
@@ -235,13 +235,13 @@ $MC_{2} = (C,D)$,
 $MC_{3} = (A,D,E)$,
 $MC_{4} = (B,C,E)$.
 
-[Figure 4.8](syst_figure4_8) presents the minimal cut set that has been applied on the final scheme of the RBD.
+{numref}`Figure 7.8` presents the minimal cut set that has been applied on the final scheme of the RBD.
 
 (syst_figure4_8)=
 ```{figure} ../../picture/figure4_8.png
 ---
 width: 600px
-name: figure4_8
+name: Figure 7.8
 ---
 Minimal Cut Sets
 ```
@@ -298,35 +298,35 @@ The fault tree analysis has the same limitations as RBD, thus
 (syst_4_3_2_1)=
 ### Basic system and redundancy schemes
 
-A redundancy in the system is represented as an AND gate in the fault tree, as shown in [Figure 4.9](syst_figure4_9). Both component A and B have to fail to cause the system failure. 
+A redundancy in the system is represented as an AND gate in the fault tree, as shown in {numref}`Figure 7.9`. Both component A and B have to fail to cause the system failure. 
 
 (syst_figure4_9)=
 ```{figure} ../../picture/figure4_9.png
 ---
 width: 600px
-name: figure4_9
+name: Figure 7.9
 ---
 Example Fault Tree of system with two redundant components.
 ```
 
-The calculation is identical to RBD, thus [Equation 4.4](syst_equation4_4) and [Equation 4.5](syst_equation4_5) apply also for the fault tree. A system with components working in serial arrangement is represented by an OR gate in the fault tree, which means if either component A or B fails the system will fail, see [Figure 4.10](syst_figure4_10). 
+The calculation is identical to RBD, thus [Equation 4.4](syst_equation4_4) and [Equation 4.5](syst_equation4_5) apply also for the fault tree. A system with components working in serial arrangement is represented by an OR gate in the fault tree, which means if either component A or B fails the system will fail, see {numref}`Figure 7.10`. 
 
 (syst_figure4_10)=
 ```{figure} ../../picture/figure4_10.png
 ---
 width: 600px
-name: figure4_10
+name: Figure 7.10
 ---
 Example Fault Tree of system with two component working in series.
 ```
 
-For the calculation the same rules apply as for RBD, thus [Equation 4.1](syst_equation4_1) and [Equation 4.2](syst_equation4_2) are to be used to calculate reliability or failure probability of the fault tree shown in Figure   12 -10. A combination of AND and OR gate, which would correspond to combination of serial and parallel arrangement in RBD is shown in [Figure 4.11](syst_figure4_11). The calculation is done similar to RBD by decomposition. 
+For the calculation the same rules apply as for RBD, thus [Equation 4.1](syst_equation4_1) and [Equation 4.2](syst_equation4_2) are to be used to calculate reliability or failure probability of the fault tree shown in Figure   12 -10. A combination of AND and OR gate, which would correspond to combination of serial and parallel arrangement in RBD is shown in {numref}`Figure 7.11`. The calculation is done similar to RBD by decomposition. 
 
 (syst_figure4_11)=
 ```{figure} ../../picture/figure4_11.png
 ---
 width: 600px
-name: figure4_11
+name: Figure 7.11
 ---
 Example Fault Tree with OR and AND gates.
 ```
@@ -337,7 +337,7 @@ A system consisting of n components or sub-systems, of which only k need to be f
 ```{figure} ../../picture/figure4_12.png
 ---
 width: 600px
-name: figure4_12
+name: Figure 7.12
 ---
 Example Fault Tree with Vote gate (2 out of 3 logic).
 ```
@@ -378,13 +378,13 @@ An initiating event may be caused by:
 
 The initiating event is normally anticipated during the system development and the system designers have implemented barriers that are designed to respond to the initiating event by terminating the sequence or by mitigating the consequences. For each initiating event the potential progressions leading to system failure, the system dependencies and the conditional system responses have to be identified. 
 
-[Figure 4.13](syst_figure4_13) shows an example of a generic event tree to illustrate how the initiating event evolves. Starting point for the creation of the event tree is the initiating event. Then the event tree is constructed considering the timing and the sequence of further events and failures that are leading to the outcome. Therefore, failure or success of barriers, mitigations means and additional events that are relevant for a specific initiating event are considered in the sequence in which they will be activated. Such additional events could be for example further component failures or external events. In the sequence of the event tree in most applications only two alternatives (“true” and “false”) are considered. It is, however, possible to have three or more alternatives. 
+{numref}`Figure 7.13` shows an example of a generic event tree to illustrate how the initiating event evolves. Starting point for the creation of the event tree is the initiating event. Then the event tree is constructed considering the timing and the sequence of further events and failures that are leading to the outcome. Therefore, failure or success of barriers, mitigations means and additional events that are relevant for a specific initiating event are considered in the sequence in which they will be activated. Such additional events could be for example further component failures or external events. In the sequence of the event tree in most applications only two alternatives (“true” and “false”) are considered. It is, however, possible to have three or more alternatives. 
 
 (syst_figure4_13)=
 ```{figure} ../../picture/figure4_13.png
 ---
 width: 600px
-name: figure4_13
+name: Figure 7.13
 ---
 Example of a generic event tree
 ```
@@ -475,18 +475,18 @@ In the following, the Markov model for a system with two components working in a
 - System state S3 = B operable, A failed
 - System state S4 = A and B failed
 
-The state transition rates are given by the failure rates for component $A$ and $B$, $\lambda_{A}$ and $\lambda_{B}$. [Figure 4.14](syst_figure4_14) shows the corresponding state transition diagram. 
+The state transition rates are given by the failure rates for component $A$ and $B$, $\lambda_{A}$ and $\lambda_{B}$. {numref}`Figure 7.14` shows the corresponding state transition diagram. 
 
 (syst_figure4_14)=
 ```{figure} ../../picture/figure4_14.png
 ---
 width: 600px
-name: figure4_14
+name: Figure 7.14
 ---
 State transition diagram of system with two redundant components
 ```
 
-A set of differential equations can be obtained from the state transition diagram in [Figure 4.14](syst_figure4_14). Each differential equation describes the change in the probability of being in one state, which can be formulated in the general equation, given in [Equation 4.14](syst_equation4_14). 
+A set of differential equations can be obtained from the state transition diagram in {numref}`Figure 7.14`. Each differential equation describes the change in the probability of being in one state, which can be formulated in the general equation, given in [Equation 4.14](syst_equation4_14). 
 
 (syst_equation4_14)=
 ````{admonition} Equation 4.14
@@ -498,7 +498,7 @@ A set of differential equations can be obtained from the state transition diagra
 ```
 ````
 
-The following set of differential equations is obtained from the state transition diagram in [Figure 4.14](syst_figure4_14)
+The following set of differential equations is obtained from the state transition diagram in {numref}`Figure 7.14`
 
 (syst_equation4_15)=
 ````{admonition} Equation 4.15
@@ -626,24 +626,24 @@ A Petri net consists of the following basic elements:
 - 
 Within the Petri net, tokens are dynamic elements used to indicate the system state at a certain point in time. Petri nets containing tokens are referred to as marked Petri nets. Firing is an event where one or more tokens move from one place to another.  
 
-The multiplicity assigned to an arc in the Petri net specifies the number of tokens that an arc delivers at a time, whereby multiplicity of $1$ is usually not explicitly defined in the Petri net. A transition is enabled if the number of tokens in each of its inputs is equal to or greater than the multiplicity of the associated arcs. This concept allows to indicate if state transition is enabled or not, as shown in [Figure 4.15](syst_figure4_15). In the example, a multiplicity of $2$ is assigned to the arc from $p_{2}$, thus only with two tokens in $p_{2}$, the transition $t_{1}$ is enabled.
+The multiplicity assigned to an arc in the Petri net specifies the number of tokens that an arc delivers at a time, whereby multiplicity of $1$ is usually not explicitly defined in the Petri net. A transition is enabled if the number of tokens in each of its inputs is equal to or greater than the multiplicity of the associated arcs. This concept allows to indicate if state transition is enabled or not, as shown in {numref}`Figure 7.15`. In the example, a multiplicity of $2$ is assigned to the arc from $p_{2}$, thus only with two tokens in $p_{2}$, the transition $t_{1}$ is enabled.
 
 (syst_figure4_15)=
 ```{figure} ../../picture/figure4_15.png
 ---
 width: 600px
-name: figure4_15
+name: Figure 7.15
 ---
 Petri net before and after firing
 ```
 
-Similar to enabling a transition, the inverse function to inhibit a transition can also be modelled in the Petri net, represented by an inhibition arc. In the example in [Figure 4.16](syst_figure4_16) the transition is inhibited as long as one token is in place $p_{2}$. 
+Similar to enabling a transition, the inverse function to inhibit a transition can also be modelled in the Petri net, represented by an inhibition arc. In the example in {numref}`Figure 7.16` the transition is inhibited as long as one token is in place $p_{2}$. 
 
 (syst_figure4_16)=
 ```{figure} ../../picture/figure4_16.png
 ---
 width: 600px
-name: figure4_16
+name: Figure 7.16
 ---
 Petri net with inhibitor arc
 ```
@@ -664,24 +664,24 @@ width: 600px
 name: table4_4
 ```
 
-A single repairable component that can obtain two states (operable or failed); can be represented by a Petri net as shown in [Figure 4.17](syst_figure4_17). The places $p_{1}$ and $p_{2}$ are representing the two states of the component and the failure or restoration of the component is shown as transitions $t_{1}$ and $t_{2}$ in the Petri net. 
+A single repairable component that can obtain two states (operable or failed); can be represented by a Petri net as shown in {numref}`Figure 7.17`. The places $p_{1}$ and $p_{2}$ are representing the two states of the component and the failure or restoration of the component is shown as transitions $t_{1}$ and $t_{2}$ in the Petri net. 
 
 (syst_figure4_17)=
 ```{figure} ../../picture/figure4_17.png
 ---
 width: 600px
-name: figure4_17
+name: Figure 7.17
 ---
 Petri net of single element
 ```
 
-The Petri nets corresponding to failure of a serial system and a parallel system are shown in [Figure 4.18](syst_figure4_18).
+The Petri nets corresponding to failure of a serial system and a parallel system are shown in {numref}`Figure 7.18`.
 
 (syst_figure4_18)=
 ```{figure} ../../picture/figure4_18.png
 ---
 width: 600px
-name: figure4_18
+name: Figure 7.18
 ---
 Petri net of a) serial system (OR gate) and b) parallel system (AND gate)
 ```
@@ -711,7 +711,7 @@ As the model that is to be developed depends on the complexity of the system and
 ```{figure} ../../picture/figure4_19.png
 ---
 width: 600px
-name: figure4_19
+name: Figure 7.19
 ---
 Main steps for system reliability analysis with Petri nets. 
 ```
@@ -730,7 +730,7 @@ Miss ref just above
 ```{figure} ../../picture/figure4_20.png
 ---
 width: 600px
-name: figure4_20
+name: Figure 7.20
 ---
 Analysis methods of Petri nets
 ```
@@ -741,14 +741,14 @@ Analysis methods of Petri nets
 Bayesian networks are directed acyclic graphs DAG, in which the nodes represent random variables and a probability is associated to each state of the node. Directed arcs between pairs of nodes represent dependencies between the random variables. A Bayesian network uniquely defines a joint probability distribution over all the random variables present in the graph. The nodes that have arrows directed into them are called child nodes and the nodes that have arrows directed from them are called parent nodes. Nodes without incoming arcs, thus without parents, are called root nodes. Each root node has a marginal probability distribution associated with it, and all other nodes have conditional (conditioned on the state of the parent nodes) probability tables associated with them. The conditional probability tables quantify the probability of a node depending on the states of its parent nodes. The state probabilities for all nodes are fully defined by the input and calculated from the (marginal and conditional) probability tables. The underlying inference method, making use of Bayes' theorem (see Chapter 7 Part II) is a powerful tool allowing also inverse modelling, e.g. to estimate the conditional probability of component failures based on an observed system level failure mode.
 
 
-The graph can be regarded as a probabilistic expert system, whereby the reasoning is based on dependency relations: fault-symptoms, cause-effects, and hypothesis-evidence. Every fault and symptom is modelled by random variables with a finite range of possible values. An example of a basic Bayesian network is shown in [Figure 4.21](syst_figure4_21).
+The graph can be regarded as a probabilistic expert system, whereby the reasoning is based on dependency relations: fault-symptoms, cause-effects, and hypothesis-evidence. Every fault and symptom is modelled by random variables with a finite range of possible values. An example of a basic Bayesian network is shown in {numref}`Figure 7.21`.
 
 
 (syst_figure4_21)=
 ```{figure} ../../picture/figure4_21.png
 ---
 width: 200px
-name: figure4_21
+name: Figure 7.21
 ---
 Example of a basic Bayesian network
 ```
@@ -767,7 +767,7 @@ P\left(X_{1},..., X_{n}\right) = \prod^{n}P\left(X_{i}|pa\left(X_{i}\right)\righ
 ````
 where $pa\left(X_{i}\right)$ denotes the set of parents of node $X_{i}$. 
 
-The computation is based on the probabilities of the parents’ states and the conditional probability table. In the following example, two nodes $A$ and $B$, each with two possible states ($S_{1}$ and $S_{2}$) are considered. The associated Bayesian network is shown in [Figure 4.22](syst_figure4_22). The a priori probabilities of node A are defined as shown in the following table.
+The computation is based on the probabilities of the parents’ states and the conditional probability table. In the following example, two nodes $A$ and $B$, each with two possible states ($S_{1}$ and $S_{2}$) are considered. The associated Bayesian network is shown in {numref}`Figure 7.22`. The a priori probabilities of node A are defined as shown in the following table.
 
 (syst_table4_5)=
 **Table 4.5** : A priori probabilities of node A
@@ -811,13 +811,13 @@ An advantage of Bayesian networks for system reliability estimation is the fact 
 (syst_4_3_6_1)=
 ### Determine conditional probability tables in Bayesian networks
 
-The reliability analysis based on Bayesian networks starts with identifying the set of random variables to describe the network. In a Bayesian network, each node represents a random variable and the connections between nodes indicate the causal relationships between variables. The conditional probability table needs to be defined to represent this relationship and thus to represent the system architecture that is to be analysed. In the following, the Bayesian network and associated conditional probability table is shown for serial system, [Figure 4.22](syst_figure4_22). It should be noted that for a serial and parallel system the Bayesian network is the same but with different probability tables.
+The reliability analysis based on Bayesian networks starts with identifying the set of random variables to describe the network. In a Bayesian network, each node represents a random variable and the connections between nodes indicate the causal relationships between variables. The conditional probability table needs to be defined to represent this relationship and thus to represent the system architecture that is to be analysed. In the following, the Bayesian network and associated conditional probability table is shown for serial system, {numref}`Figure 7.22`. It should be noted that for a serial and parallel system the Bayesian network is the same but with different probability tables.
 
 (syst_figure4_22)=
 ```{figure} ../../picture/figure4_22.png
 ---
 width: 200px
-name: figure4_22
+name: Figure 7.22
 ---
 Bayesian network of a serial system
 ```
@@ -871,7 +871,7 @@ P(X|A,B) = \begin{bmatrix}
 
 The marginal probability $P(A,B)$ of root node $A$ and $B$ is given by the probabilities of the states of the random variables $A$ and $B$.
 
-Another advantage of Bayesian network is that it allows to model dependencies. [Figure 4.23](syst_figure4_23) shows a Bayesian network for analysing common cause failures. In the example, the failure of the component is caused by an external event or shock (see shock model in Section Error: Reference source not found). While the events $S_{1}$ and $S_{3}$ cause only one component ($A$ or $B$) to fail, the event $S_{2}$ will result in the loss of both components. Thus, component $A$ and $B$ are not independent as their failure could result from a common source. The system states are assigned to $X$. In this case, all the conditional probability matrices (for $A$, $B$, and $X$) are defined equivalent to AND gates.
+Another advantage of Bayesian network is that it allows to model dependencies. {numref}`Figure 7.23` shows a Bayesian network for analysing common cause failures. In the example, the failure of the component is caused by an external event or shock (see shock model in Section Error: Reference source not found). While the events $S_{1}$ and $S_{3}$ cause only one component ($A$ or $B$) to fail, the event $S_{2}$ will result in the loss of both components. Thus, component $A$ and $B$ are not independent as their failure could result from a common source. The system states are assigned to $X$. In this case, all the conditional probability matrices (for $A$, $B$, and $X$) are defined equivalent to AND gates.
 
 ```{admonition} Todo
 :class: todo
@@ -882,7 +882,7 @@ Miss ref just above
 ```{figure} ../../picture/figure4_23.png
 ---
 width: 600px
-name: figure4_23
+name: Figure 7.23
 ---
 Bayesian network with common cause failure
 ```

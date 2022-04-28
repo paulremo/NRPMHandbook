@@ -56,7 +56,7 @@ In order to avoid that Common Cause Failures restrict the achievable system reli
 (syst_4_7_2)=
 ## Basic Parameter model
 
-The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and common cause failures, as shown in [Figure 4.31](syst_figure4_31). The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by Error: Reference source not found
+The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and common cause failures, as shown in {numref}`Figure 7.31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by Error: Reference source not found
 
 ```{admonition} Todo
 :class: todo
@@ -79,7 +79,7 @@ The direct basic parameter model requires estimating all possible failure event 
 ```{figure} ../../picture/figure4_31.png
 ---
 width: 600px
-name: figure4_31
+name: Figure 7.31
 ---
 System failure calculation including Common Cause Failure – Basic Parameter Model. 
 ```

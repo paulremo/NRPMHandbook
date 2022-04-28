@@ -1,12 +1,12 @@
 # Reliability assessment of phased missions
 
-The operation of missions encountered in space involves several different tasks or phases that must be accomplished in sequence. Systems used like this are usually called phased-mission systems. [Figure 4.24](syst_figure4_24) shows an example of a phased mission of a space satellite system.
+The operation of missions encountered in space involves several different tasks or phases that must be accomplished in sequence. Systems used like this are usually called phased-mission systems. {numref}`Figure 7.24` shows an example of a phased mission of a space satellite system.
 
 (syst_figure4_24)=
 ```{figure} ../../picture/figure4_24.png
 ---
 width: 600px
-name: figure4_24
+name: Figure 7.24
 ---
 Example phased space mission 
 ```
@@ -87,7 +87,7 @@ Miss ref just above
 
 ## Combinatorial methods for phased mission based on mini-components
 
-The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms Error: Reference source not found proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in [Figure 4.25](syst_figure4_25). That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases. 
+The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms Error: Reference source not found proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in {numref}`Figure 7.25`. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases. 
 
 ```{admonition} Todo
 :class: todo
@@ -98,29 +98,29 @@ Miss ref just above
 ```{figure} ../../picture/figure4_25.png
 ---
 width: 600px
-name: figure4_25
+name: Figure 7.25
 ---
 Example for mini components representing component A in three phases
 ```
 
-The concept of mini components is shown in the following, using an example of a multi-phase mission with three component $A$, $B$ and $C$. The interaction of the system components in order to successfully complete the individual phases is represented through the reliability block diagram for each phase, as shown in [Figure 4.26](syst_figure4_26).
+The concept of mini components is shown in the following, using an example of a multi-phase mission with three component $A$, $B$ and $C$. The interaction of the system components in order to successfully complete the individual phases is represented through the reliability block diagram for each phase, as shown in {numref}`Figure 7.26`.
 
 (syst_figure4_26)=
 ```{figure} ../../picture/figure4_26.png
 ---
 width: 600px
-name: figure4_26
+name: Figure 7.26
 ---
 Reliability block diagram for individual phases of a multi-phase mission
 ```
 
-From the multi-phase mission shown in [Figure 4.26](syst_figure4_26), a single-phase mission model as shown in [Figure 4.27](syst_figure4_27) is obtained with the application of mini components.
+From the multi-phase mission shown in {numref}`Figure 7.26`, a single-phase mission model as shown in {numref}`Figure 7.27` is obtained with the application of mini components.
 
 (syst_figure4_27)=
 ```{figure} ../../picture/figure4_27.png
 ---
 width: 600px
-name: figure4_27
+name: Figure 7.27
 ---
 Single phase mission model
 ```
@@ -190,7 +190,7 @@ The following rules should be applied to Boolean variables belonging to the same
 (syst_table4_8)=
 **Table 4.8** : Boolean Phase Algebra rules
 
-<iframe src="../../../_static/interactivity/html/syst_table4_8.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe src="../../../_static/interactivity/html/syst_table4_8.html" frameborder="0" style="width:100%;" id="ext_interactive" onkeyup="resize_iframe()"></iframe>
 
 The Boolean phase algebra in [Table 4.8](syst_table4_8) allows identifying the possible scenarios where due to more stringent failure criteria in a later phase the system failure occurs and is described as a latent failure. With application of the Boolean algebra, the performance of a component through different phases is no longer considered separately. Using the Boolean phase algebra, the system reliability over all phases is obtained by the following equation:
 
@@ -209,7 +209,7 @@ Where
 
 **Example :**
 
-The system reliability of the system shown in [Figure 4.26](syst_figure4_26) is given by
+The system reliability of the system shown in {numref}`Figure 7.26` is given by
 
 (syst_equation4_36)=
 ````{admonition} Equation 4.36
@@ -356,7 +356,7 @@ R_{S}\left( t \right) = 1 - P\left( E \middle| 3 \right) = 1 - P\left( {\overlin
 
 The phased mission system can also be analysed based on a state space model using Markov model. Smotherman and Zemoudeh Error: Reference source not found used a single non-homogeneous Markov chain model to perform the reliability analysis of a phased mission system. The behaviour of the system in each phase is represented using a different Markov chain, which may contain a different subset of states. The state transitions are described in terms of time dependent rates to include phase changes. Thus, state-dependent phase changes, random phase durations as well as time varying failure and repair behaviour can be easily modelled.
 
-The example shown in [Figure 4.26](syst_figure4_26) is shown as Markov chain in [Figure 4.28](syst_figure4_28), where the failure of components A, B and C are given by the associated failure rates $\lambda_{a}$, $\lambda_{b}$ and $\lambda_{c}$. Each component can have two states, failed or operational. An identifier is assigned to each system state where, e.g."011" indicates A failed, B and C operational. The transition from phase 1 to phase 2 is given by the time dependent rate $h_{1}\left( t \right)$ and $h_{2}\left( t \right)$ denotes the rate of change from phase 2 to phase 3.
+The example shown in {numref}`Figure 7.26` is shown as Markov chain in {numref}`Figure 7.28`, where the failure of components A, B and C are given by the associated failure rates $\lambda_{a}$, $\lambda_{b}$ and $\lambda_{c}$. Each component can have two states, failed or operational. An identifier is assigned to each system state where, e.g."011" indicates A failed, B and C operational. The transition from phase 1 to phase 2 is given by the time dependent rate $h_{1}\left( t \right)$ and $h_{2}\left( t \right)$ denotes the rate of change from phase 2 to phase 3.
 
 The main advantage of this model is that it includes the configurations for all phases as well as the phase changes. But on the other side, as the number of components increases this approach results in a large model as the number of states increases rapidly.
 
@@ -364,7 +364,7 @@ The main advantage of this model is that it includes the configurations for all 
 ```{figure} ../../picture/figure4_28.png
 ---
 width: 600px
-name: figure4_28
+name: Figure 7.28
 ---
 Phased mission Markov model approach by Smotherman and Zemoudeh Error: Reference source not found
 ```
