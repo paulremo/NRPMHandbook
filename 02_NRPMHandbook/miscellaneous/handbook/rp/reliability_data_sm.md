@@ -24,15 +24,22 @@ The failure rate is provided per TWT Channel (mono channel or dual channel). In 
 :class: todo
 REF ERROR just above in 1.
 ```
-
 ````
 
-(misc_table4_7)=
-**Table 4.7** : Structure of the reliability data table in [Table 4 -8](misc_table4_8)`
+Reference to a table {numref}`misc_table4_7` and to another table {numref}`misc_table4_8`.
+
+```{list-table} Structure of the reliability data table
+:class: interactive-table
+:name: misc_table4_7
+
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_7.html" frameBorder="0" onload="resize_iframe(this)" ></iframe>
+```
 
 
-<iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_7.html" frameBorder="0" onload="resize_iframe(this)" ></iframe>
 
-(misc_table4_8)=
-**Table 4.8** :
-<iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_8.html" frameBorder="0" onload="resize_iframe(this)" ></iframe>
+```{list-table} Reliability data
+:class: interactive-table
+:name: misc_table4_8
+
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_8.html" frameBorder="0" onload="resize_iframe(this)" ></iframe>
+```

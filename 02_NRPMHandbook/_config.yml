@@ -31,7 +31,7 @@ html:
             <img src="/_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
             <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
         </div>
-  announcement: "⚠️This digital handbook is currently under development! Content may change unexpectedly!⚠️"
+  announcement              : "️This digital handbook is currently under development! Content may change unexpectedly!⚠"
 
 # Information about where the book exists on the web
 repository:
