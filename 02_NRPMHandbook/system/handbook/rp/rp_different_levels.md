@@ -1,28 +1,28 @@
 # Reliability prediction at different levels
 
-Following the definition of a system in [Chapter 3 (Preface)](), a system is considered in the generic sense, and can be defined at any level as a set of components or functions that are interrelated or interact to achieve a specified objective. In this respect, within the scope of system level reliability prediction the term component is not limited to elementary parts, but is considered more generally as the elements the system consists of, which could be parts, pieces of equipment or sub-systems. The system level reliability prediction requires various input data; component level reliability data, the system architecture, system functions, the operational context, the Failure Mode and Effect Analysis (FMEA), Failure Mode Effect and Criticality Analysis (FMECA) and the Failure Mode and Effect Summary (FMES), as shown in [Figure 4.1](syst_figure4_1). 
+Following the definition of a system in [Chapter 3 (Preface)](), a system is considered in the generic sense, and can be defined at any level as a set of components or functions that are interrelated or interact to achieve a specified objective. In this respect, within the scope of system level reliability prediction the term component is not limited to elementary parts, but is considered more generally as the elements the system consists of, which could be parts, pieces of equipment or sub-systems. The system level reliability prediction requires various input data; component level reliability data, the system architecture, system functions, the operational context, the Failure Mode and Effect Analysis (FMEA), Failure Mode Effect and Criticality Analysis (FMECA) and the Failure Mode and Effect Summary (FMES), as shown in {numref}`Figure 7.1`. 
 
 (syst_figure4_1)=
 ```{figure} ../../picture/figure4_1.png
 ---
 width: 600px
-name: figure4_1
+name: Figure 7.1
 ---
 Input and Output data of system reliability prediction
 ```
 
-The reliability prediction activities are performed at different levels of integration, starting from component level up to system level reliability prediction, as shown in [Figure 4.2](syst_figure4_2). The system level reliability analysis aims to demonstrate that the system level reliability requirements are achieved. The system level reliability requirement is cascaded to lower levels to define sub-system, equipment level requirements and derive an architecture that is capable of meeting the requirements. To support the cascading of reliability requirements from system to lower levels a preliminary system level reliability model could be used. 
+The reliability prediction activities are performed at different levels of integration, starting from component level up to system level reliability prediction, as shown in {numref}`Figure 7.2`. The system level reliability analysis aims to demonstrate that the system level reliability requirements are achieved. The system level reliability requirement is cascaded to lower levels to define sub-system, equipment level requirements and derive an architecture that is capable of meeting the requirements. To support the cascading of reliability requirements from system to lower levels a preliminary system level reliability model could be used. 
 
 (syst_figure4_2)=
 ```{figure} ../../picture/figure4_2.png
 ---
 width: 600px
-name: figure4_2
+name: Figure 7.2
 ---
 Reliability Prediction at different levels.
 ```
 
-As shown in [Figure 4.2](syst_figure4_2), to establish a system level reliability prediction the reliability data that are evaluated at the different levels are aggregated bottom-up from component level to system level. 
+As shown in {numref}`Figure 7.2`, to establish a system level reliability prediction the reliability data that are evaluated at the different levels are aggregated bottom-up from component level to system level. 
 
 Starting point is the reliability prediction at the lowest level (elementary parts). At this stage the failure rates or failure probabilities respectively for a single component are determined under the given environmental and operating conditions for a specific mission profile (see Chapters Error: Reference source not found, Error: Reference source not found and Error: Reference source not found). 
 

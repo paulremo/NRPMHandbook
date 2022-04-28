@@ -404,7 +404,7 @@ The previous example assumes perfect switching, i.e. activation of the stand-by 
 ```{figure} ../../picture/figure4_32.png
 ---
 width: 600px
-name: figure4_32
+name: Figure 7.32
 ---
 Stand-by system with switching device
 ```

@@ -2,7 +2,7 @@
 
 Depending on the system architecture and the functions of its components the loss of some single components in redundant system architectures does not necessarily lead to the total loss of a function, but results in a degraded system performance. For the reliability assessment, usually 100% performance is defined, and any deviation is considered as a system failure. From a risk assessment perspective, it is also interesting to know how much the actual performance deviates from the specified one and if some residual performance can be maintained. Not only failure scenarios leading to total loss are relevant, another important criterion is whether a certain performance level can be achieved or not. To allow for the calculation of occurrence probabilities for degraded modes of system performance, a relative contribution to system performance at component level is assigned. The method is based on the evaluation of reliability block diagrams described through its success path. The system performances are linked to a minimum set of resources and modelled accordingly as RBD.
 
-To illustrate the concept of performance degradation, the fictive example of the power supply system is extended such that the contribution of each solar panel is also taken into account. Solar panel \#1 (component 3) provides 500W, solar panel \#2 (component 4) provides 300W and solar panel \#3 (component 5) provides 200W electrical power. The corresponding reliability block diagram is shown in [Figure 4.30](syst_figure4_30).
+To illustrate the concept of performance degradation, the fictive example of the power supply system is extended such that the contribution of each solar panel is also taken into account. Solar panel \#1 (component 3) provides 500W, solar panel \#2 (component 4) provides 300W and solar panel \#3 (component 5) provides 200W electrical power. The corresponding reliability block diagram is shown in {numref}`Figure 7.30`.
 
 The system can be described through the following success paths.
 
@@ -23,7 +23,7 @@ In this example, if all three solar panels are working, an electrical power of 1
 ```{figure} ../../picture/figure4_30.png
 ---
 width: 600px
-name: figure4_30
+name: Figure 7.30
 ---
 Example Reliability Block Diagram - System with degraded performance.
 ```
@@ -75,7 +75,7 @@ With this method, the occurrence probability for all system performance levels a
 
 It should be noted that for practical reasons, the applicability of this method using elementary system states is limited to systems with a small number of components, since the number of states grows exponentially with the number of components. For *n* components $2^{n}$ states have to be considered.
 
-Therefore, it is more efficient to use the success paths. For each system performance level, the correlated success paths have to be generated. In addition, auxiliary conditions are defined that describe the logical combination of the performance determining components that are required to achieve performance levels equal to or greater than $p_{S}$. This will be explained using the example shown in [Figure 4.30](syst_figure4_30) and [Table 4.13](syst_table4_13). The analysis of degraded systems consists of the following steps Error: Reference source not found:
+Therefore, it is more efficient to use the success paths. For each system performance level, the correlated success paths have to be generated. In addition, auxiliary conditions are defined that describe the logical combination of the performance determining components that are required to achieve performance levels equal to or greater than $p_{S}$. This will be explained using the example shown in {numref}`Figure 7.30` and [Table 4.13](syst_table4_13). The analysis of degraded systems consists of the following steps Error: Reference source not found:
 
 -   Identification of all possible system performance levels through combination of the performance contributing components.
 

@@ -25,13 +25,13 @@ In this line of thought, all failures due to minor uncertainties in the design a
 
 ## Wear-out failures
 
-In the frame of this handbook, wear-out failures are generally assumed to occur after the specified mission life time, assuming that safe life qualification processes have successfully mitigated the risk of premature failures. However, for mechanical items, this assumption may not necessarily be valid, as experience shows that there is a certain risk of premature wear-out despite safe life qualification, which may lead to a (slowly) increasing failure rate already during the course of the mission, as illustrated in [Figure 4 -1](meca_figure4_1). The root cause of these premature wear-out failures will mostly be related to the design or manufacturing process. However, following the same line of thought as in [Section 4.2.1](meca_4_2_1) above, failures due to minor design or manufacturing variability can nevertheless be considered as wear-out rather than systematic failures, and considered with the methodology presented in this chapter. Only wear-out failures due to gross design or manufacturing errors are left for the systematic failure modelling.
+In the frame of this handbook, wear-out failures are generally assumed to occur after the specified mission life time, assuming that safe life qualification processes have successfully mitigated the risk of premature failures. However, for mechanical items, this assumption may not necessarily be valid, as experience shows that there is a certain risk of premature wear-out despite safe life qualification, which may lead to a (slowly) increasing failure rate already during the course of the mission, as illustrated in {numref}`Figure 3.1`. The root cause of these premature wear-out failures will mostly be related to the design or manufacturing process. However, following the same line of thought as in [Section 4.2.1](meca_4_2_1) above, failures due to minor design or manufacturing variability can nevertheless be considered as wear-out rather than systematic failures, and considered with the methodology presented in this chapter. Only wear-out failures due to gross design or manufacturing errors are left for the systematic failure modelling.
 
 (meca_figure4_1)=
 ```{figure} ../../pictures/figure4_1.png
 ---
 width: 600px
-name: figure4_1
+name: Figure 3.1
 ---
 Failure rate as a function of time for typical mechanical components.
 ```

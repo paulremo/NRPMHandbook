@@ -64,14 +64,15 @@ g(X) = X_{1} - \Theta X_{2}
 ````
 
 
-Here, $X_{1}$ may be interpreted as the “resistance” (allowable stress, or strength) of the considered part and $X_{2}$ as the “load” (or stress) acting on it. To capture the uncertainties inherent in the applied models, a model uncertainty variable $\Theta$ is introduced. Failure occurs if the load is larger than the resistance, or $\Theta X_{2} > X_{1}$. Thus, the probability of failure is derived from the overlap of the statistical distributions of $X_{1}$ and $\Theta X_{2}$, see Figure 4 -3 for illustration. 
+Here, $X_{1}$ may be interpreted as the “resistance” (allowable stress, or strength) of the considered part and $X_{2}$ as the “load” (or stress) acting on it. To capture the uncertainties inherent in the applied models, a model uncertainty variable $\Theta$ is introduced. Failure occurs if the load is larger than the resistance, or $\Theta X_{2} > X_{1}$. Thus, the probability of failure is derived from the overlap of the statistical distributions of $X_{1}$ and $\Theta X_{2}$, see {numref}`Figure 3.3` for illustration. 
 
 Time dependence is considered by modelling either $X_{1}$ or $X_{2}$ (or both) as a function of time.
 
+(meca_figure4_3)=
 ```{figure} ../../pictures/figure4_5.png
 ---
 width: 600px
-name: figure4_3
+name: Figure 3.3
 ---
 Illustration of structural reliability methods, with probability of failure resulting from the overlap of the statistical distribution for the “load” and the “resistance” (statistical interference).
 ```
@@ -80,17 +81,18 @@ Despite its simplicity, the limit state function in Equation 10 -2 is fairly gen
 
 The distribution of the model uncertainty $\Theta$ is fixed for the simplified models, assuming a coefficient of variation of $\nu_{\Theta} = 0.2$ for most of the models considered in Section 4.7, which are generally empirical models. Setting the mean value to $\mu_{\Theta} = 1$ (assuming that the model or, more precisely, the limit state function is unbiased) is appropriate when realistic predictions are required. 
 
-When needed, a certain explicit conservatism can be introduced in the simplified method by letting $\mu_{\Theta} > 1$ , which is equivalent to assuming a higher loading or “stress” than estimated by the model (i.e. a biased load and/or resistance model). In accordance with ECSS-E-ST-32-10C Error: Reference source not foundwhere a “model factor” is multiplied with the design loads to account for uncertainties in mathematical models, it is recommended to set $\mu_{\Theta} = 1.2$ (or higher), referring to the model factor typically used for spacecrafts at the beginning of new developments. The effect of this assumption on the estimated failure probability depends on the distributional assumptions and on the design margin of safety. Figure   4 -4 shows a comparison between some results for $\mu_{\Theta} = 1.0$ (unbiased) and $\mu_{\Theta} = 1.2$ (conservative bias), assuming Lognormal distributions for all random variables.
+When needed, a certain explicit conservatism can be introduced in the simplified method by letting $\mu_{\Theta} > 1$ , which is equivalent to assuming a higher loading or “stress” than estimated by the model (i.e. a biased load and/or resistance model). In accordance with ECSS-E-ST-32-10C Error: Reference source not foundwhere a “model factor” is multiplied with the design loads to account for uncertainties in mathematical models, it is recommended to set $\mu_{\Theta} = 1.2$ (or higher), referring to the model factor typically used for spacecrafts at the beginning of new developments. The effect of this assumption on the estimated failure probability depends on the distributional assumptions and on the design margin of safety. {numref}`Figure 3.4` shows a comparison between some results for $\mu_{\Theta} = 1.0$ (unbiased) and $\mu_{\Theta} = 1.2$ (conservative bias), assuming Lognormal distributions for all random variables.
 
 ```{admonition} Todo
 :class: todo
 Miss ref just above
 ```
 
+(meca_figure4_4)=
 ```{figure} ../../pictures/figure4_6.png
 ---
 width: 600px
-name: figure4_4
+name: Figure 3.4
 ---
 Effect of assuming a conservative bias in the model uncertainty variable ($\mu_{\Theta} > 1$) on the estimated probability of failure.
 ```
@@ -167,16 +169,17 @@ Where $\widehat{X_{1}}$ or $\widehat{X_{2}}$ represents a point estimate of the 
 
 The closed-form solutions in Equation   10 -3 and Equation   10 -4 show that for given distributional models, reliability is fully determined by the coefficients of variation $\nu_{X_{1}}$ and $\nu_{X_{2}}$ and the central safety factor $p = \mu_{X_{1}} / \mu_{X_{2}}$ representing the ratio between the mean values of strength and stress. Note that this conclusion holds also for other distributional assumptions without analytic solution. However, the quantitative relationship between the central safety factor and the probability of failure is rather sensitive to the distributional assumptions, as interference takes place only in the tails of the stress and strength distributions.
 
-The effect of distributional assumptions is illustrated in Figure   10 -5, comparing Equation   10 -3 for Normal distributed stress and strength with Equation   10 -4 for Lognormal distributed basic variables. The difference between the two models grows with the coefficients of variation (in Figure   10 -5, only $\nu_{X_{2}}$ is varied) and with the central safety factor, and thus with the reliability of the considered part. 
+The effect of distributional assumptions is illustrated in {numref}`Figure 3.5`, comparing Equation   10 -3 for Normal distributed stress and strength with Equation   10 -4 for Lognormal distributed basic variables. The difference between the two models grows with the coefficients of variation (in {numref}`Figure 3.5`, only $\nu_{X_{2}}$ is varied) and with the central safety factor, and thus with the reliability of the considered part. 
 
-It should be noted that the design factors used in practice, defined as the ratio between the design allowable load and the design limit load, are generally much smaller than the central safety factors depicted on the horizontal axis in Figure   10 -5. The reason is that designers usually make use of conservative estimates for stress and strength, which first have to be transformed to mean values before making use of Equation   10 -3 or Equation   10 -4.  To give an example, ECSS-E-ST-32C Error: Reference source not founddefines the limit load statistically as the load level not being exceeded with a probability of $99%$ during the service life of a structure. Assuming a Normal distributed load with a coefficient of variation of $0.2$, this fractile value is a factor of 1.5 higher than the corresponding mean value of the same distribution. Additional conservatism is introduced in the strength value (e.g. using A- or B-values for material strength, defined as lower $1%$ or $10%$ fractiles of the strength distribution), and with the aid of explicit margins and/or factors of safety introduced in the design. 
+It should be noted that the design factors used in practice, defined as the ratio between the design allowable load and the design limit load, are generally much smaller than the central safety factors depicted on the horizontal axis in {numref}`Figure 3.5`. The reason is that designers usually make use of conservative estimates for stress and strength, which first have to be transformed to mean values before making use of Equation   10 -3 or Equation   10 -4.  To give an example, ECSS-E-ST-32C Error: Reference source not founddefines the limit load statistically as the load level not being exceeded with a probability of $99%$ during the service life of a structure. Assuming a Normal distributed load with a coefficient of variation of $0.2$, this fractile value is a factor of 1.5 higher than the corresponding mean value of the same distribution. Additional conservatism is introduced in the strength value (e.g. using A- or B-values for material strength, defined as lower $1%$ or $10%$ fractiles of the strength distribution), and with the aid of explicit margins and/or factors of safety introduced in the design. 
 
-It is interesting to note that the impact of different distributional assumptions gets smaller when referring to design values for stress and strength, compared to the results shown in Figure   10 -5, which are directly based on the central safety factor and thus referring to mean values for both variables. An important prerequisite for robust results is that the transformation between fractiles and mean values is performed based on the same distributional assumptions as the ones used for the reliability calculations.
+It is interesting to note that the impact of different distributional assumptions gets smaller when referring to design values for stress and strength, compared to the results shown in {numref}`Figure 3.5`, which are directly based on the central safety factor and thus referring to mean values for both variables. An important prerequisite for robust results is that the transformation between fractiles and mean values is performed based on the same distributional assumptions as the ones used for the reliability calculations.
 
+(meca_figure4_5)=
 ```{figure} ../../pictures/figure4_7.png
 ---
 width: 600px
-name: figure4_5
+name: Figure 3.5
 ---
 Effect of distributional assumptions on the relationship between the probability of failure and the central safety factor, defined as the ration between the mean values of strength and stress.
 ```

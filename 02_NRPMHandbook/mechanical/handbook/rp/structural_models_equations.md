@@ -199,14 +199,15 @@ summarized as follows:
 * The wear rate $K_{H}$ is constant over the whole mission (all time intervals $i$).
 * The normal load $S_{i}$ and sliding velocity $v_{i}$ (or the sliding work per time unit $P_{i} = S_{i} \bullet v_{i}$) are constant during each time interval $t_{i}$.
 * The distributions of all basic variables can be represented by the models listed in Table 10‑11. Other models for $K_{H}$ and $P_{i}$ are possible as long as the distribution of $X_{2}$ may still be approximated by a Lognormal distribution.
-* The effect of the Lognormal assumption for $X_{1} = V_{limit}$ has been investigated in \[RD18\] . It may lead to an underestimation of the probability of failure, see Figure 10‑6 below.
+* The effect of the Lognormal assumption for $X_{1} = V_{limit}$ has been investigated in \[RD18\] . It may lead to an underestimation of the probability of failure, see {numref}`Figure 3.6` below.
 
 Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of $X_{1} = V_{limit}$ is larger than $0.3$.
 
+(meca_figure4_6)=
 ```{figure} ../../pictures/figure4_8.png
 ---
 width: 600px
-name: figure4_6
+name: Figure 3.6
 ---
 Comparison of the analytic solution in Equation 10‑25 (adhesive wear model with Lognormal distributed* $V_{limit}$*) with Monte Carlo results for Normal distributed* $V_{limit}$
 ```
@@ -314,7 +315,7 @@ The main assumptions underlying the simplified solid lubricant wear model are th
 
 * The distributions of all basic variables can be represented by the models listed in Table 10‑12. Other models for $K_{H,i}$ and $\alpha_{i}$ are possible as long as the distribution of $X_{2}$ may still be approximated by a Lognormal distribution.
 
-* *The effect of the Lognormal assumption for $X_{1} = V_{limit}$ may lead to an underestimation of the probability of failure, see \[RD18\] and Figure 10‑6.
+* *The effect of the Lognormal assumption for $X_{1} = V_{limit}$ may lead to an underestimation of the probability of failure, see \[RD18\] and {numref}`Figure 3.6`.
 
 Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of $X_{1} = V_{limit}$ is larger than 0.3.
 
@@ -339,7 +340,7 @@ Here, $M_{0}$ denotes the initial mass of the lubricant, $M_{inactive}$ the mass
 ```{figure} ../../pictures/figure4_9.png
 ---
 height: 600px
-name: figure4_7
+name: Figure 3.7
 ---
 Bearing geometry.
 ```
@@ -741,7 +742,7 @@ With the following variable definitions:
 * $C,n,p,q$ empirical constants of the crack growth model
 
 Typically fatigue crack growth data has three regions, as depicted in
-Figure 10‑8:
+{numref}`Figure 3.8`:
 
 1.  Near-threshold region, characterized by very low crack growth (no
     growth below the threshold $\mathrm{\Delta}K_{th}$). This region is
@@ -760,10 +761,11 @@ Figure 10‑8:
     region is modelled by the factor
     $\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}$
 
+(meca_figure4_8)=
 ```{figure} ../../pictures/figure4_10.png
 ---
 width: 600px
-name: figure4_8
+name: Figure 3.8
 ---
 Typical fatigue crack growth curve.
 ```

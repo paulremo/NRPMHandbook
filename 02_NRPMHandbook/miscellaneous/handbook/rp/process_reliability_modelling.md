@@ -2,21 +2,21 @@
 
 This Section details how to build a reliability model for miscellaneous item.
 
-Figure 4‑4 provides the general process to apply whatever the basic model is: 
+Figure 4.4 provides the general process to apply whatever the basic model is: 
 
 1. the “standard model”, or 
 2. the “non-standard model” or even 
 3. the “holistic model”.
 
 ```{note}
-On [Figure 4‑4](misc_figure4_4), the basic model is a failure rate but it could also be a probability of failure.
+On {numref}`Figure 5.4`, the basic model is a failure rate but it could also be a probability of failure.
 ```
 
 (misc_figure4_4)=
 ```{figure} ../../picture/figure4_4.png
 ---
 width: 600px
-name: figure4_4
+name: Figure 5.4
 ---
 General process for miscellaneous items reliability prediction.
 ```
@@ -287,7 +287,7 @@ P(FAILURE) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 ````
 
 **Discussion about the three models**
-[Figure 4 -5](misc_figure4_5) presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.
+{numref}`Figure 5.5` presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.
 
 * Model 1 and model 3 are very close since the constant failure rates used for miscellaneous items are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.
 * Model2 could be considered as optimistic since it addresses wear-out only after the qualification time.
@@ -302,7 +302,7 @@ The model 1 is recommended as it combines a constant failure rate model with an 
 ```{figure} ../../picture/figure4_5.png
 ---
 width: 600px
-name: figure4_5
+name: Figure 5.5
 ---
 Failure rates for the three Wear-out models (Exponential, Weibull)
 ```
@@ -311,7 +311,7 @@ Failure rates for the three Wear-out models (Exponential, Weibull)
 ```{figure} ../../picture/figure4_6.png
 ---
 width: 600px
-name: figure4_6
+name: Figure 5.6
 ---
 Example of WO distribution calculation (assumption: Normal distribution)
 ```
@@ -320,7 +320,7 @@ Example of WO distribution calculation (assumption: Normal distribution)
 ```{figure} ../../picture/figure4_7.png
 ---
 width: 600px
-name: figure4_7
+name: Figure 5.7
 ---
 Example of WO distribution calculation (assumption: Weibull distribution)
 ```

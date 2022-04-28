@@ -8,7 +8,7 @@ The [following figure](misc_figure4_1) represents examples of some miscellaneous
 ```{figure} ../../picture/figure4_1.png
 ---
 width: 600px
-name: figure4_1
+name: Figure 5.1
 ---
 Examples of some miscellaneous items
 ```
@@ -35,7 +35,7 @@ The Current document defines guidance to model reliability of most of the typica
 
 However, whatever the model is, it is the responsibility of the supplier to justify the selected reliability model enriched with any valuable improvement based on available data (tests data, manufacturer data, IOR data).
 
-The process used to define a Miscellaneous (MIS) item reliability model is presented in [Figure 4‑2](misc_figure4_2).
+The process used to define a Miscellaneous (MIS) item reliability model is presented in {numref}`Figure 5.2`.
 
 ```{note}
 MIS-X, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers to [Section 4.5.5](misc_4_5_5).
@@ -45,7 +45,7 @@ MIS-X, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers 
 ```{figure} ../../picture/figure4_2.png
 ---
 width: 600px
-name: figure4_2
+name: Figure 5.2
 ---
 Miscellaneous (MIS) items reliability modelling logic.
 ```

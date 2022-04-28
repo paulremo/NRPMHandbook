@@ -35,7 +35,7 @@ The Current document defines guidance to model reliability of most of the typica
 
 However, whatever the model is, it is the responsibility of the supplier to justify the selected reliability model enriched with any valuable improvement based on available data (tests data, manufacturer data, IOR data).
 
-The process used to define a Miscellaneous (MIS) item reliability model is presented in [Figure 4‑2](misc_figure4_2).
+The process used to define a Miscellaneous (MIS) item reliability model is presented in [Figure 4.2](misc_figure4_2).
 
 ```{note}
 MIS-X, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers to [Section 4.5.5](misc_4_5_5).
@@ -272,7 +272,7 @@ The reliability “standard model” is then calculated based on the process pre
 
 A “specific” miscellaneous item relates to a product which is not fully modelled by EEE parts and/or mechanical parts and which is not listed in the equivalent classes of miscellaneous items in [Section 4.4.1](misc_4_4_1).
 
-e.g. Hold Release Mechanism Low Shock presented in [Figure 4‑3](misc_figure4_3).
+e.g. Hold Release Mechanism Low Shock presented in [Figure 4.3](misc_figure4_3).
 
 The item is neither a mechanism, nor an assembly of EEE parts. It is constituted by different parts such as spring, glue, expansion unit. Since the design is very specific without any IOR data it is necessary to define a dedicated reliability model.
 
@@ -309,14 +309,14 @@ In case, depending on the mission and on the operations, it is necessary to use 
 
 This Section details how to build a reliability model for miscellaneous item.
 
-Figure 4‑4 provides the general process to apply whatever the basic model is: 
+Figure 4.4 provides the general process to apply whatever the basic model is: 
 
 1. the “standard model”, or 
 2. the “non-standard model” or even 
 3. the “holistic model”.
 
 ```{note}
-On Figure 4‑4, the basic model is a failure rate but it could also be a probability of failure.
+On Figure 4.4, the basic model is a failure rate but it could also be a probability of failure.
 ```
 
 (misc_figure4_4)=
@@ -594,7 +594,7 @@ P(FAILURE) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 ````
 
 **Discussion about the three models**
-[Figure 4 -5](misc_figure4_5) presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.
+[Figure 4.5](misc_figure4_5) presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.
 
 * Model 1 and model 3 are very close since the constant failure rates used for miscellaneous items are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.
 * Model2 could be considered as optimistic since it addresses wear-out only after the qualification time.
@@ -843,9 +843,9 @@ name: figure4_8
 Differences between FMEA, DFMEA and PFMEA.
 ```
 
-[Figure 4 -8](misc_figure4_8) highlights the differences and the commonalities between FMEA, DFMEA and PFMEA.
+[Figure 4.8](misc_figure4_8) highlights the differences and the commonalities between FMEA, DFMEA and PFMEA.
 
-[Figure 4 -9](misc_figure4_9)  provides an example of DFMEA and PFMEA at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in [Figure 4 -8](misc_figure4_8)), whereas the right-hand side refers to DFMEA data (green perimeter in [Figure 4 -8](misc_figure4_8)).
+[Figure 4.9](misc_figure4_9)  provides an example of DFMEA and PFMEA at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in [Figure 4.8](misc_figure4_8)), whereas the right-hand side refers to DFMEA data (green perimeter in [Figure 4.8](misc_figure4_8)).
 
 The main outcome is the ranking of every root cause (Design error, Manufacturing error) in
 
