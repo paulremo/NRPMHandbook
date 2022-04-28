@@ -1,4 +1,4 @@
 .ext_content {
 	width: 100%;
-	frameborder: 0;
+	overflow-y: hidden;
 }
