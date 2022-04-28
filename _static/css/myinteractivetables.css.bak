@@ -1,0 +1,12 @@
+/*.interactive-table col {
+	width: 1% !important;
+}
+*/
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.interactive-table td {
+	padding: 0 !important;
+}
