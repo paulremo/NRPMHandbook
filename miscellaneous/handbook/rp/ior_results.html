@@ -33,8 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
@@ -58,8 +57,7 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
-    <script src="../../../_static/interactivity/js/map.js"></script>
-    <script src="../../../_static/interactivity/js/map2.js"></script>
+    <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
@@ -363,7 +361,12 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../models/failure_rate_processing.html">
+     6.1. Failure rate processing
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -667,8 +670,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The failure rate is no longer considered as a real but as a random variable <span class="math notranslate nohighlight">\(\Delta\)</span>.</p>
 <p>In the case of the exponential distribution, a natural prior distribution is the Gamma distribution (conjugate of the exponential distribution), see <span class="xref myst">Chapter 7 (Part II)</span> for details.</p>
 <p>The Bayesian estimator is defined as the expected value of the random variable <span class="math notranslate nohighlight">\(\Delta\)</span> knowing that a failure has been observed at <span class="math notranslate nohighlight">\(t_{1}\)</span>, <span class="math notranslate nohighlight">\(t_{2}\)</span> … <span class="math notranslate nohighlight">\(t_{n}\)</span>). Then, with a sample encompassing <span class="math notranslate nohighlight">\(n\)</span> items and <span class="math notranslate nohighlight">\(n\)</span> associated times to failure:</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-9">
-<span id="misc-equation4-9"></span><span class="eqno">(5.9)<a class="headerlink" href="#equation-equation-4-9" title="Permalink to this equation">¶</a></span>\[E(\Delta | T_{1} = t_{1}, T_{2} = t_{2}, ..., T_{n} = t_{n}) = \frac{\alpha + n}{\beta + \sum_{i} (t_{i})} = \frac{\frac{\alpha}{n}}{\frac{\beta}{n} + \frac{\sum_{i} (t_{i})}{n}}\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-9">
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-equation-5-9" title="Permalink to this equation">¶</a></span>\[E(\Delta | T_{1} = t_{1}, T_{2} = t_{2}, ..., T_{n} = t_{n}) = \frac{\alpha + n}{\beta + \sum_{i} (t_{i})} = \frac{\frac{\alpha}{n}}{\frac{\beta}{n} + \frac{\sum_{i} (t_{i})}{n}}\]</div>
+</div>
 <p>The parameters of the gamma prior distribution are selected as per the knowledge of the item.</p>
 <p>Let us assume for a certain miscellaneous item that a basic failure rate is calculated.</p>
 <p>Let us assume that there are some items already in flight with a certain cumulated time, not sufficient enough to provide a result in the order of magnitude of the specification (without prior knowledge).</p>
@@ -676,13 +683,21 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Let us consider a Gamma (<span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span>) distribution assumed as “prior” distribution of the failure rate <span class="math notranslate nohighlight">\(\Delta\)</span>.</p>
 <p>It is necessary to provide rules for determining the two parameters <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> with two equations.</p>
 <p>We determine <span class="math notranslate nohighlight">\(\alpha\)</span> so that the expected value of the gamma distribution is <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>.</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-10">
-<span id="misc-equation4-10"></span><span class="eqno">(5.10)<a class="headerlink" href="#equation-equation-4-10" title="Permalink to this equation">¶</a></span>\[E(\Delta) = \frac{\alpha}{\beta} = \lambda_{0}\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-10">
+<span class="eqno">(5.10)<a class="headerlink" href="#equation-equation-5-10" title="Permalink to this equation">¶</a></span>\[E(\Delta) = \frac{\alpha}{\beta} = \lambda_{0}\]</div>
+</div>
 <p>This provides a first equation with <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>.
 A second equation is provided by the level of confidence “<span class="math notranslate nohighlight">\(a\)</span>” attributed to the value <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-11">
-<span id="misc-equation4-11"></span><span class="eqno">(5.11)<a class="headerlink" href="#equation-equation-4-11" title="Permalink to this equation">¶</a></span>\[F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a\]</div>
-<p>Ideally, the prior should be defined based on two different estimates for the failure rate <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>, one representing an “average” value (point estimate, entering <a class="reference internal" href="../rp_miscellaneous.html#misc-equation4-10"><span class="std std-ref">Equation 4 -10</span></a>) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering <a class="reference internal" href="../rp_miscellaneous.html#misc-equation4-11"><span class="std std-ref">Equation 4 -11</span></a>).</p>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-11">
+<span class="eqno">(5.11)<a class="headerlink" href="#equation-equation-5-11" title="Permalink to this equation">¶</a></span>\[F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a\]</div>
+</div>
+<p>Ideally, the prior should be defined based on two different estimates for the failure rate <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>, one representing an “average” value (point estimate, entering Eq. <a class="reference internal" href="#equation-equation-5-10">(5.10)</a>) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering Eq. <a class="reference internal" href="#equation-equation-5-11">(5.11)</a>).</p>
 <p>Once <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are determined it allows to derive the Bayesian estimator with n being the number of failures and <span class="math notranslate nohighlight">\(\sum t_{i}\)</span> the cumulated time.</p>
 </div>
 </div>

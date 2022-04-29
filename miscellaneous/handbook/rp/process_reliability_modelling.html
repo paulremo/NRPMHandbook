@@ -33,8 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
@@ -58,8 +57,7 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
-    <script src="../../../_static/interactivity/js/map.js"></script>
-    <script src="../../../_static/interactivity/js/map2.js"></script>
+    <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
@@ -363,7 +361,12 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../models/failure_rate_processing.html">
+     6.1. Failure rate processing
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -659,8 +662,12 @@ So, what is discussed in the following Sections, addressing directly the failure
 <li><p class="card-text">Operating conditions range</p></li>
 </ul>
 <p class="card-text">The failure rate is referred to as basic failure rate <span class="math notranslate nohighlight">\(\lambda_{1} = \lambda_{B}\)</span>. It is defined at 60% level of confidence.</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-1">
-<span id="misc-equation4-1"></span><span class="eqno">(5.1)<a class="headerlink" href="#equation-equation-4-1" title="Permalink to this equation">¶</a></span>\[\lambda_{1} = \lambda_{B}\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p class="card-text"><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-1">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-equation-5-1" title="Permalink to this equation">¶</a></span>\[\lambda_{1} = \lambda_{B}\]</div>
+</div>
 </div>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3" id="misc-step2">
@@ -677,8 +684,12 @@ In the case the actual parameters are different (either higher or lower quality 
 <p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO2_{rule}}\)</span></strong></p>
 <p class="card-text">The supplier identifies the physical parameters contributing to the reliability and accounting for the item specificities.
 The resulting failure rate is:</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-2">
-<span id="misc-equation4-2"></span><span class="eqno">(5.2)<a class="headerlink" href="#equation-equation-4-2" title="Permalink to this equation">¶</a></span>\[\lambda_{2} = \lambda_{1} * K_{parameters}\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p class="card-text"><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-2">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-equation-5-2" title="Permalink to this equation">¶</a></span>\[\lambda_{2} = \lambda_{1} * K_{parameters}\]</div>
+</div>
 <p class="card-text">By default, <span class="math notranslate nohighlight">\(K_{parameters}\)</span> is set to 1, under the condition that the major contributors are sufficiently close to those defined for the basic failure rate.
 It is the responsibility of the user (the supplier) to adapt and/or define the <span class="math notranslate nohighlight">\(K_{parameters}\)</span> as relevant with appropriate technical justification.</p>
 </div>
@@ -784,8 +795,12 @@ The average resulting factor is then applied.</p>
 </li>
 </ul>
 <p class="card-text">The resulting failure rate is</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-3">
-<span id="misc-equation4-3"></span><span class="eqno">(5.3)<a class="headerlink" href="#equation-equation-4-3" title="Permalink to this equation">¶</a></span>\[\lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p class="card-text"><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-3">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-equation-5-3" title="Permalink to this equation">¶</a></span>\[\lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\]</div>
+</div>
 <p class="card-text"><button class="back-forward-button" onclick="redirect('../../models/misc_failure_rate_processing.html')">Go to model</button></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -813,9 +828,13 @@ The two right-hand columns provide the result for one example (<em>“X”</em> 
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">The step 4 is used to combine the predicted failure rate with IOR data in the case the item is based on a generic product which is already operated in-orbit.
 The method used is the Bayesian approach as presented in <a class="reference internal" href="../rp_miscellaneous.html#misc-4-6-3"><span class="std std-ref">Section 4.6.3</span></a>.</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-4">
-<span id="misc-equation4-4"></span><span class="eqno">(5.4)<a class="headerlink" href="#equation-equation-4-4" title="Permalink to this equation">¶</a></span>\[\lambda_{3}^{\gamma} = \lambda_{3}\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p class="card-text"><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-4">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-equation-5-4" title="Permalink to this equation">¶</a></span>\[\lambda_{3}^{\gamma} = \lambda_{3}\]</div>
 <p class="card-text">Where <span class="math notranslate nohighlight">\(\lambda_{3}^{\gamma}\)</span> is the gamma estimator.</p>
+</div>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3" id="misc-step5">
 <summary class="summary-title card-header">
@@ -844,11 +863,19 @@ All three Models can be defined for every Wear-out probability density function:
 <p class="card-text"><strong><span class="math notranslate nohighlight">\(\bf{JO9_{rule}}\)</span></strong></p>
 <p class="card-text">The supplier justifies the wear-out model based on the qualification characteristics of the item.
 The resulting failure rate is :</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-5">
-<span id="misc-equation4-5"></span><span class="eqno">(5.5)<a class="headerlink" href="#equation-equation-4-5" title="Permalink to this equation">¶</a></span>\[\lambda_{4}(t) = \lambda_{3}^{\gamma} + \lambda_{WO}(t)\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p class="card-text"><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-5">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-equation-5-5" title="Permalink to this equation">¶</a></span>\[\lambda_{4}(t) = \lambda_{3}^{\gamma} + \lambda_{WO}(t)\]</div>
+</div>
 <p class="card-text">The reliability prediction of the item is then provided by:</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-6">
-<span id="misc-equation4-6"></span><span class="eqno">(5.6)<a class="headerlink" href="#equation-equation-4-6" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p class="card-text"><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-6">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-equation-5-6" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}\]</div>
+</div>
 </div>
 <p class="card-text"><strong>Discussion about the three models</strong>
 <a class="reference internal" href="#figure-5-5"><span class="std std-numref">Fig. 5.5</span></a> presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.</p>
@@ -882,8 +909,12 @@ The resulting failure rate is :</p>
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">The step 6 consists in adding a probability of failure related to Systematic Failures.</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-7">
-<span id="misc-equation4-7"></span><span class="eqno">(5.7)<a class="headerlink" href="#equation-equation-4-7" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p class="card-text"><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-7">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-equation-5-7" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
+</div>
 <p class="card-text">The model is common to all miscellaneous items.
 Refer to <strong>the Chapter Error: Reference source not found</strong> for defining the SF value.</p>
 <div class="todo admonition">
@@ -899,8 +930,12 @@ Refer to <strong>the Chapter Error: Reference source not found</strong> for defi
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">The step 7 consists in adding a probability of failure related to the external particles.</p>
-<div class="math notranslate nohighlight" id="equation-equation-4-8">
-<span id="misc-equation4-8"></span><span class="eqno">(5.8)<a class="headerlink" href="#equation-equation-4-8" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - EX) * (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
+<div class="equation admonition">
+<p class="admonition-title">Equation</p>
+<p class="card-text"><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-5-8">
+<span class="eqno">(5.8)<a class="headerlink" href="#equation-equation-5-8" title="Permalink to this equation">¶</a></span>\[P(FAILURE) = 1 - (1 - EX) * (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})\]</div>
+</div>
 <p class="card-text">The probability of extrinsic failures EX is dependent on</p>
 <ol class="simple">
 <li><p class="card-text">The item location (outside the satellite),</p></li>

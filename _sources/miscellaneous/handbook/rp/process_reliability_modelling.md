@@ -42,10 +42,10 @@ As a result, the same applies for the probability of failure $P_{F}$ for a one-s
 So, what is discussed in the following Sections, addressing directly the failure rate, applies for the probability of failure for one-shot device.
 
 (misc_step1)=
-`````{dropdown} **STEP 1 : Selection of the initial model**
+``````{dropdown} **STEP 1 : Selection of the initial model**
 The basic principle is to start from a reference failure rate, either derived from in-orbit data in the frame of the Current document or from a “non-standard model” duly justified by the supplier.
 
-````{admonition} Rule
+`````{admonition} Rule
 :class: rule
 **$\bf{JO1_{rule}}$** 
 
@@ -57,41 +57,51 @@ The supplier justifies the rationale supporting the use of a “model” (functi
 
 The failure rate is referred to as basic failure rate $\lambda_{1} = \lambda_{B}$. It is defined at 60% level of confidence.
 
-(misc_equation4_1)=
+````{admonition} Equation
+:class: equation
+``
+``  
 ```{math}
-:label: Equation 4.1
+:label: Equation 5.1
 \lambda_{1} = \lambda_{B}
 ```
 ````
+
 `````
+``````
+
 
 (misc_step2)=
-`````{dropdown} **STEP 2 : Normalization of the basic failure rate**
+``````{dropdown} **STEP 2 : Normalization of the basic failure rate**
 The major contributors to the reliability are identified in [Table4-8](terms.md).
 In the case the actual parameters are different (either higher or lower quality levels, additional stresses, specific technology, specific contributors to the reliability) a tailoring factor is recommended to account for the item’s specificities.
 
-````{admonition} Rule
+`````{admonition} Rule
 :class: rule
 **$\bf{JO2_{rule}}$** 
 
 The supplier identifies the physical parameters contributing to the reliability and accounting for the item specificities.
 The resulting failure rate is:
 
-(misc_equation4_2)=
+````{admonition} Equation
+:class: equation
+``
+``  
 ```{math}
-:label: Equation 4.2
+:label: Equation 5.2
 \lambda_{2} = \lambda_{1} * K_{parameters}
 ```
+````
 
 By default, $K_{parameters}$ is set to 1, under the condition that the major contributors are sufficiently close to those defined for the basic failure rate.
 It is the responsibility of the user (the supplier) to adapt and/or define the $K_{parameters}$ as relevant with appropriate technical justification.
-````
 `````
+``````
 
 <h2 id="back_from_misc_failure_rate_processing_balise"></h2>
 
 (misc_step3)=
-`````{dropdown} **STEP 3 : Consideration of reliability contributors**
+``````{dropdown} **STEP 3 : Consideration of reliability contributors**
 The basic failure rate which is derived from IOR relates to a certain set of assumptions likely to impact the reliability. It is therefore necessary to amend as relevant the basic failure rate to account for the real conditions of the item under consideration.
 
 * $\Pi_{Q}$ = QUALITY factor
@@ -110,12 +120,12 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
   
     The technical risk is mitigated up to the cost target, otherwise accepted.
 
-  ````{admonition} Rule
+  `````{admonition} Rule
   :class: rule
   **$\bf{JO3_{rule}}$** 
 
   The supplier justifies with technical argument the quality level of the miscellaneous item providing the quality reference as define in the Product Assurance requirements applicable to the miscellaneous item.
-  ````        
+  `````        
 
 * $\Pi_{M}$ = MATURITY factor
   
@@ -133,12 +143,12 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
   
     The supplier is a newcomer on the market to develop such a product.
 
-  ````{admonition} Rule
+  `````{admonition} Rule
   :class: rule
   **$\bf{JO4_{rule}}$** 
 
   The supplier justifies with technical arguments the maturity level of the miscellaneous item providing evidences of the related ranking.
-  ````        
+  `````        
 
 * $\Pi_{T}$ = TECHNOLOGY factor
   
@@ -147,24 +157,24 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
   The supplier justifies with technical arguments the reason why the technology of its product matches the technology accounted in the basic failure rate. If it is not the case, a “non-standard model” is developed by the supplier.
   _e.g. SSPA implements a different technology than TWTA and therefore the reliability model used for TWTA will not be used for SSPA_.
 
-  ````{admonition} Rule
+  `````{admonition} Rule
   :class: rule
   **$\bf{JO5_{rule}}$** 
 
   The supplier justifies that the technology supporting the item is consistent with the IOR data used as a basis to determine the basic failure rate.
-  ````        
+  `````        
 
 * $\Pi_{C}$ = COMPLEXITY factor
   
   Reliability depends on the complexity of the item. The assessment of the complexity is difficult.
   The supplier justifies with technical arguments the reason why the complexity of its product is consistent with the complexity accounted in the basic failure rate. If it is not the case a “non-standard model” is developed by the supplier.
 
-  ````{admonition} Rule
+  `````{admonition} Rule
   :class: rule
   **$\bf{JO6_{rule}}$** 
 
   The supplier justifies that the complexity (design) supporting the item is consistent with the IOR data used as a basis to determine the basic failure rate.
-  ````        
+  `````        
 
 * $\Pi_{OP}$ = OPERATING CONDITIONS factor
   
@@ -177,14 +187,14 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
   * Duty cycle,
   * Other relevant conditions considered as reliability contributor. 
 
-  ````{admonition} Rule
+  `````{admonition} Rule
   :class: rule
   **$\bf{JO7_{rule}}$** 
 
   The supplier identifies with adequate justification the parameters / stresses impacting the reliability with an associated weight representing the contribution of the parameter to the reliability. 
-  ````        
+  `````        
 
-* ````{admonition} Rule
+* `````{admonition} Rule
   :class: rule
   **$\bf{JO8_{rule}}$** 
 
@@ -193,18 +203,23 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
   * **FULLY COMPLIANT**: The basic failure rate has been derived for the same operating conditions (w.r.t. this parameter)
   * **PARTIALLY COMPLIANT**: The basic failure rate has been derived based on different operating conditions and the parameter is assumed to be a contributor to the reliability with medium impact,
   * **NOT COMPLIANT**: The basic failure rate has been derived based on different operating conditions and the parameter is assumed to be a contributor to the reliability with high impact
-  ````    
+  `````    
 
   The weighting factor attributed per condition represents the contribution of each condition to the reliability of the item.
   The average resulting factor is then applied.
 
 The resulting failure rate is 
 
-(misc_equation4_3)=
+
+````{admonition} Equation
+:class: equation
+``
+``  
 ```{math}
-:label: Equation 4.3
+:label: Equation 5.3
 \lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}
 ```
+````
 
 <button class="back-forward-button" onclick="redirect('../../models/misc_failure_rate_processing.html')">Go to model</button>
 
@@ -232,23 +247,27 @@ The two right-hand columns provide the result for one example (_“X”_ represe
 
 $1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}$
 
-`````
+``````
 
 (misc_step4)=
-`````{dropdown} **STEP 4 : Application of combined approach**
+``````{dropdown} **STEP 4 : Application of combined approach**
 The step 4 is used to combine the predicted failure rate with IOR data in the case the item is based on a generic product which is already operated in-orbit.
 The method used is the Bayesian approach as presented in [Section 4.6.3](misc_4_6_3).
 
-(misc_equation4_4)=
-````{math}
-:label: Equation 4.4
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation 5.4
 \lambda_{3}^{\gamma} = \lambda_{3}
-````
+```
 Where $\lambda_{3}^{\gamma}$ is the gamma estimator.
-`````
+````
+``````
 
 (misc_step5)=
-`````{dropdown} **STEP 5 : Wear-out modelling**
+``````{dropdown} **STEP 5 : Wear-out modelling**
 The step 5 incorporates in the reliability model the failures due to potential wear, as necessary.
 The model consists in adding to the constant failure rate (representing Random failures) an increasing failure rate representing the wear-out contribution to the failure of the item.
 Let’s denote $T$ as the Time To Failure random variable.
@@ -264,27 +283,35 @@ Three models are presented to model include wear-out mechanisms and impacts on t
 The three models are presented in **Section Error: Reference source not found**
 All three Models can be defined for every Wear-out probability density function: Normal, log-Normal, Gamma … with adequate properties.
 
-````{admonition} Rule
+`````{admonition} Rule
 :class: rule
 **$\bf{JO9_{rule}}$** 
 
 The supplier justifies the wear-out model based on the qualification characteristics of the item.
 The resulting failure rate is :
 
-(misc_equation4_5)=
+````{admonition} Equation
+:class: equation
+``
+``  
 ```{math}
-:label: Equation 4.5
+:label: Equation 5.5
 \lambda_{4}(t) = \lambda_{3}^{\gamma} + \lambda_{WO}(t)
 ```
+````
 
 The reliability prediction of the item is then provided by:
 
-(misc_equation4_6)=
+````{admonition} Equation
+:class: equation
+``
+``  
 ```{math}
-:label: Equation 4.6
+:label: Equation 5.6
 P(FAILURE) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 ```
 ````
+`````
 
 **Discussion about the three models**
 {numref}`Figure 5.5` presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.
@@ -324,16 +351,20 @@ name: Figure 5.7
 ---
 Example of WO distribution calculation (assumption: Weibull distribution)
 ```
-`````
+``````
 
 (misc_step6)=
-`````{dropdown} **STEP 6 : Systematic failures modelling**
+``````{dropdown} **STEP 6 : Systematic failures modelling**
 The step 6 consists in adding a probability of failure related to Systematic Failures.
 
-(misc_equation4_7)=
-````{math}
-:label: Equation 4.7
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation 5.7
 P(FAILURE) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})
+```
 ````
 
 The model is common to all miscellaneous items.
@@ -344,17 +375,21 @@ Refer to **the Chapter Error: Reference source not found** for defining the SF v
 miss ref above
 ````
 
-`````
+``````
 
 
 (misc_step7)=
-`````{dropdown} **STEP 7 : Extrinsic failures modelling**
+``````{dropdown} **STEP 7 : Extrinsic failures modelling**
 The step 7 consists in adding a probability of failure related to the external particles.
 
-(misc_equation4_8)=
-````{math}
-:label: Equation 4.8
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation 5.8
 P(FAILURE) = 1 - (1 - EX) * (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})
+```
 ````
 
 The probability of extrinsic failures EX is dependent on 
@@ -365,7 +400,7 @@ The probability of extrinsic failures EX is dependent on
   
 The definition of a model representing the probability to be hit by a debris is out of the scope of the Current document. Refer to Chapter **Error: Reference source not found** for more information.
 
-`````
+``````
 
 
 (misc_4_5_1)=

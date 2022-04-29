@@ -33,8 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
@@ -58,8 +57,7 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
-    <script src="../../../_static/interactivity/js/map.js"></script>
-    <script src="../../../_static/interactivity/js/map2.js"></script>
+    <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
@@ -363,7 +361,12 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/models/failure_rate_processing.html">
+     6.1. Failure rate processing
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -779,10 +782,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Naval Surface Warfare Center (NSWC) Reliability Prediction Handbook</strong></p>
 <p>The NSWC Handbook for Mechanical Reliability Prediction Error: Reference source not foundprovides models derived from a combined approach similar to the one applied for EEE components in Chapter Error: Reference source not found: Base failure rates, derived from statistical data at reference conditions, are scaled to a specific design and operating conditions with the aid of multiplicative factors accounting for the specificities of material, design and environment. The scaling factors are based on PoF relationships to determine the mean time to failure MTTF at reference and operating conditions:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.1</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\lambda = \lambda_{ref} \bullet \frac{\lambda_{op}}{\lambda} = \lambda_{ref} \bullet \frac{MTTF_{ref}}{MTTF} = \lambda_{ref} \bullet C\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-1">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-equation-3-1" title="Permalink to this equation">¶</a></span>\[\lambda = \lambda_{ref} \bullet \frac{\lambda_{op}}{\lambda} = \lambda_{ref} \bullet \frac{MTTF_{ref}}{MTTF} = \lambda_{ref} \bullet C\]</div>
 </div>
 <p>The advantage of this approach is the increased flexibility, as generic models for different part “families”, e.g. springs, can be tuned to a wide variety of specific part types and applications. Despite this interesting feature, the direct application of the NSWC models for reliability predictions in space applications is not recommended due to the following limitations:</p>
 <ul class="simple">

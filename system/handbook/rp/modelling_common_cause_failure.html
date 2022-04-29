@@ -33,8 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
@@ -58,8 +57,7 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
-    <script src="../../../_static/interactivity/js/map.js"></script>
-    <script src="../../../_static/interactivity/js/map2.js"></script>
+    <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
@@ -363,7 +361,12 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/models/failure_rate_processing.html">
+     6.1. Failure rate processing
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -704,10 +707,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Miss ref just above</p>
 </div>
 <div class="equation admonition" id="syst-equation4-87">
-<p class="admonition-title">Equation 4.87</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[Q_{S} = Q_{I}^{2} + Q_{C}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-87">
+<span class="eqno">(7.87)<a class="headerlink" href="#equation-equation-7-87" title="Permalink to this equation">¶</a></span>\[Q_{S} = Q_{I}^{2} + Q_{C}\]</div>
 </div>
 <p>The direct basic parameter model requires estimating all possible failure event probabilities, which could be obtained from in-orbit return data of common cause failures but also from expert knowledge and engineering judgement.</p>
 <div class="figure align-default" id="figure-7-31">
@@ -723,19 +726,19 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Miss ref just above</p>
 </div>
 <div class="equation admonition" id="syst-equation4-88">
-<p class="admonition-title">Equation 4.88</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\lambda_{T} = \lambda_{I} + \lambda_{C}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-88">
+<span class="eqno">(7.88)<a class="headerlink" href="#equation-equation-7-88" title="Permalink to this equation">¶</a></span>\[\lambda_{T} = \lambda_{I} + \lambda_{C}\]</div>
 </div>
 <p>where <span class="math notranslate nohighlight">\(\lambda_{I} = \left( 1 - \beta \right)\lambda_{T}\)</span> denotes the failure rate of independent failure and</p>
 <p><span class="math notranslate nohighlight">\(\lambda_{C} = \beta\lambda_{T}\)</span> denotes the failure rate of common cause failure</p>
 <p>The factor <span class="math notranslate nohighlight">\(\beta\)</span> is defined as the ratio of the failure rate due to common cause to the total failure rate.</p>
 <div class="equation admonition" id="syst-equation4-89">
-<p class="admonition-title">Equation 4.89</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\beta = \frac{\lambda_{C}}{\lambda_{T}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-89">
+<span class="eqno">(7.89)<a class="headerlink" href="#equation-equation-7-89" title="Permalink to this equation">¶</a></span>\[\beta = \frac{\lambda_{C}}{\lambda_{T}}\]</div>
 </div>
 <p>In order to estimate the factor <span class="math notranslate nohighlight">\(\beta\)</span>, the contributing factors for common cause failure is assessed.</p>
 </div>
@@ -743,26 +746,26 @@ const thebe_selector_output = ".output, .cell_output"
 <h2><span class="section-number">7.4.7.4. </span>Estimation of Common Cause Beta Factor<a class="headerlink" href="#estimation-of-common-cause-beta-factor" title="Permalink to this headline">¶</a></h2>
 <p>With the categories of significant contributors to CCF shown in section Error: Reference source not found, the common cause beta factor can be estimated, starting with an assessment of each of the common cause susceptibility categories and for each, assigning a susceptibility score 1, 5 or 10 corresponding to the susceptibility, where 1 represents a low susceptibility to common cause failure in this category. For example, a susceptibility score of 1 assigned to the category “diversity” would correspond to a system that consists of redundant component using different design concepts with no common hard- or software, whereas a susceptibility score of 10 indicates a high susceptibility to common cause failure, for example redundancies consists of identical COTS components. Susceptibility score 5 corresponds to medium susceptibility to common cause failure. The sum over all categories provides the total Common Cause Score.</p>
 <div class="equation admonition" id="syst-equation4-90">
-<p class="admonition-title">Equation 4.90</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\text{CCS} = \sum_{i}^{}{\text{CC}S_{i}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-90">
+<span class="eqno">(7.90)<a class="headerlink" href="#equation-equation-7-90" title="Permalink to this equation">¶</a></span>\[\text{CCS} = \sum_{i}^{}{\text{CC}S_{i}}\]</div>
 </div>
 <p>The next step is to assess the maximum common cause value MCCV. According to Error: Reference source not found one of three possible values 10%, 20% or 30% should be selected for the MCCV based on experience of maximum common cause failure in the industry. For example, for an industry with a strong safety culture and established methods to analyse and mitigate common cause failure as it is the case for the space industry, the lowest value of MCCV is selected.</p>
 <p>The beta factor is calculated as follows</p>
 <div class="equation admonition" id="syst-equation4-91">
-<p class="admonition-title">Equation 4.91</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-91">
+<span class="eqno">(7.91)<a class="headerlink" href="#equation-equation-7-91" title="Permalink to this equation">¶</a></span>\[\beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV}\]</div>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(\text{CCS}_{\max}\)</span> denotes the maximum possible Common Cause Susceptibility Score, assigning 10 to each category.</p>
-<p>As shown in the example in <a class="reference internal" href="#syst-table4-15"><span class="std std-ref">Table 4.15</span></a> the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (<em>CCS</em>) of 32. With 7 categories, <span class="math notranslate nohighlight">\(\text{CCS}_{\max}\)</span> is 70. If the lowest value of 10% for <span class="math notranslate nohighlight">\(\text{MCCV}\)</span> is selected, the following <span class="math notranslate nohighlight">\(\beta\)</span> value is obtained from <a class="reference internal" href="#syst-equation4-91"><span class="std std-ref">Equation 4.91</span></a>.</p>
+<p>As shown in the example in <a class="reference internal" href="#syst-table4-15"><span class="std std-ref">Table 4.15</span></a> the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (<em>CCS</em>) of 32. With 7 categories, <span class="math notranslate nohighlight">\(\text{CCS}_{\max}\)</span> is 70. If the lowest value of 10% for <span class="math notranslate nohighlight">\(\text{MCCV}\)</span> is selected, the following <span class="math notranslate nohighlight">\(\beta\)</span> value is obtained from Eq. <a class="reference internal" href="#equation-equation-7-91">(7.91)</a>.</p>
 <div class="equation admonition" id="syst-equation4-92">
-<p class="admonition-title">Equation 4.92</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV} = \frac{32}{70} \times 0.10 = 0.0471\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-92">
+<span class="eqno">(7.92)<a class="headerlink" href="#equation-equation-7-92" title="Permalink to this equation">¶</a></span>\[\beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV} = \frac{32}{70} \times 0.10 = 0.0471\]</div>
 </div>
 <p id="syst-table4-15"><strong>Table 4.15</strong> : Example for the evaluation of a Common Cause Beta Factor</p>
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_15.html" frameborder="0" onload="resize_iframe(this)"></iframe>

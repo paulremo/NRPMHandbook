@@ -81,11 +81,12 @@ The confidence in the NPRD data strongly depends on its relevance with respect t
 The NSWC Handbook for Mechanical Reliability Prediction Error: Reference source not foundprovides models derived from a combined approach similar to the one applied for EEE components in Chapter Error: Reference source not found: Base failure rates, derived from statistical data at reference conditions, are scaled to a specific design and operating conditions with the aid of multiplicative factors accounting for the specificities of material, design and environment. The scaling factors are based on PoF relationships to determine the mean time to failure MTTF at reference and operating conditions:
 
 
-````{admonition} Equation 4.1
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.1
 \lambda = \lambda_{ref} \bullet \frac{\lambda_{op}}{\lambda} = \lambda_{ref} \bullet \frac{MTTF_{ref}}{MTTF} = \lambda_{ref} \bullet C
 ```
 ````

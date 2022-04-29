@@ -33,8 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
@@ -58,8 +57,7 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
-    <script src="../../../_static/interactivity/js/map.js"></script>
-    <script src="../../../_static/interactivity/js/map2.js"></script>
+    <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
@@ -363,7 +361,12 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/models/failure_rate_processing.html">
+     6.1. Failure rate processing
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -687,16 +690,16 @@ const thebe_selector_output = ".output, .cell_output"
 <h3><span class="section-number">7.4.8.1.1. </span>Model 1<a class="headerlink" href="#model-1" title="Permalink to this headline">¶</a></h3>
 <p>The failure probability is the sum of random failures and wear-out failures assuming that wear-out can occur throughout the entire service life and not just after qualification life time. With this model the life time of an item can be interpreted as the minimum of the life time based on random or wear-out failures. Random failures are described by an exponential distribution and wear-out by a Weibull distribution. Thus, the following equations are obtained for failure rate and reliability:</p>
 <div class="equation admonition" id="syst-equation4-93">
-<p class="admonition-title">Equation 4.93</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\lambda\left( t \right) = \lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-93">
+<span class="eqno">(7.93)<a class="headerlink" href="#equation-equation-7-93" title="Permalink to this equation">¶</a></span>\[\lambda\left( t \right) = \lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1}\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-94">
-<p class="admonition-title">Equation 4.94</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t}{\alpha} \right)^{\beta} \right) \right\rbrack}^{}}_{}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-94">
+<span class="eqno">(7.94)<a class="headerlink" href="#equation-equation-7-94" title="Permalink to this equation">¶</a></span>\[R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t}{\alpha} \right)^{\beta} \right) \right\rbrack}^{}}_{}\]</div>
 </div>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
@@ -707,10 +710,10 @@ const thebe_selector_output = ".output, .cell_output"
 <h3><span class="section-number">7.4.8.1.2. </span>Model 2<a class="headerlink" href="#model-2" title="Permalink to this headline">¶</a></h3>
 <p>This model assumes that wear-out failure can only occur after the qualification time <span class="math notranslate nohighlight">\(\tau_{1}\)</span>, before it no wear-out is considered and only random failures are considered. Thus, to calculate failure rates and reliability a distinction between two cases is made: Time <span class="math notranslate nohighlight">\(t\)</span> is below the qualification time <span class="math notranslate nohighlight">\(\tau_{1}\)</span> and <span class="math notranslate nohighlight">\(t\)</span> is equal to or greater than the qualification time.</p>
 <div class="equation admonition" id="syst-equation4-95">
-<p class="admonition-title">Equation 4.95</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{matrix}                                                                                                 
+<div class="math notranslate nohighlight" id="equation-equation-7-95">
+<span class="eqno">(7.95)<a class="headerlink" href="#equation-equation-7-95" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{matrix}                                                                                                 
   \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                                                             
   \lambda\left( t \right) = \lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta - 1} \\                
   \end{matrix}\left\{ \begin{matrix}                                                                                               
@@ -718,10 +721,10 @@ const thebe_selector_output = ".output, .cell_output"
   t &lt; \tau_{1} \\                                                                                                     t \geq \tau_{1} \\                                                                                                     \end{matrix} \right.\ \end{split}\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-96">
-<p class="admonition-title">Equation 4.96</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{matrix}                                                                                                 
+<div class="math notranslate nohighlight" id="equation-equation-7-96">
+<span class="eqno">(7.96)<a class="headerlink" href="#equation-equation-7-96" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{matrix}                                                                                                 
   R\left( t \right) = {\exp\left\lbrack - \lambda_{R}t \right\rbrack}^{} \\                                                                           
   R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta} \right) \right\rbrack}^{}}_{} \\   
   \end{matrix}\left\{ \begin{matrix}                                                                                               
@@ -731,24 +734,24 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="model-3">
 <h3><span class="section-number">7.4.8.1.3. </span>Model 3<a class="headerlink" href="#model-3" title="Permalink to this headline">¶</a></h3>
-<p>The failure rate <span class="math notranslate nohighlight">\(\lambda\left( t \right)\)</span> is the maximum of the random failure rate and the wear-out failure rate, <a class="reference internal" href="#syst-equation4-97"><span class="std std-ref">Equation 4.97</span></a>. At a certain operating time <span class="math notranslate nohighlight">\(t = \tau_{2}\)</span> the failure rate due to wear-out <span class="math notranslate nohighlight">\(\lambda_{W}\)</span> equals the constant failure rate of random failure, <a class="reference internal" href="#syst-equation4-98"><span class="std std-ref">Equation 4.98</span></a>. From that point on the wear-out failure rate is dominating. Thus, the probability density functions are separated in random failures only for<span class="math notranslate nohighlight">\(t &lt; \tau_{2}\)</span> and wear-out only for time <span class="math notranslate nohighlight">\(t \geq \tau_{2}\)</span></p>
+<p>The failure rate <span class="math notranslate nohighlight">\(\lambda\left( t \right)\)</span> is the maximum of the random failure rate and the wear-out failure rate, Eq. <a class="reference internal" href="#equation-equation-7-97">(7.97)</a>. At a certain operating time <span class="math notranslate nohighlight">\(t = \tau_{2}\)</span> the failure rate due to wear-out <span class="math notranslate nohighlight">\(\lambda_{W}\)</span> equals the constant failure rate of random failure, Eq. <a class="reference internal" href="#equation-equation-7-98">(7.98)</a>. From that point on the wear-out failure rate is dominating. Thus, the probability density functions are separated in random failures only for<span class="math notranslate nohighlight">\(t &lt; \tau_{2}\)</span> and wear-out only for time <span class="math notranslate nohighlight">\(t \geq \tau_{2}\)</span></p>
 <div class="equation admonition" id="syst-equation4-97">
-<p class="admonition-title">Equation 4.97</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\lambda\left( t \right) = \max\left( \lambda_{R},\lambda_{W} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-97">
+<span class="eqno">(7.97)<a class="headerlink" href="#equation-equation-7-97" title="Permalink to this equation">¶</a></span>\[\lambda\left( t \right) = \max\left( \lambda_{R},\lambda_{W} \right)\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-98">
-<p class="admonition-title">Equation 4.98</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\lambda_{R} = \lambda_{W}\left( \tau_{2} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-98">
+<span class="eqno">(7.98)<a class="headerlink" href="#equation-equation-7-98" title="Permalink to this equation">¶</a></span>\[\lambda_{R} = \lambda_{W}\left( \tau_{2} \right)\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-99">
-<p class="admonition-title">Equation 4.99</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{matrix}
+<div class="math notranslate nohighlight" id="equation-equation-7-99">
+<span class="eqno">(7.99)<a class="headerlink" href="#equation-equation-7-99" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{matrix}
   \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                       
   \lambda\left( t \right) = \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1} \\   
   \end{matrix}\left\{ \begin{matrix}                                                                            
@@ -757,10 +760,10 @@ const thebe_selector_output = ".output, .cell_output"
   \end{matrix} \right.\ \end{split}\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-100">
-<p class="admonition-title">Equation 4.100</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{matrix}
+<div class="math notranslate nohighlight" id="equation-equation-7-100">
+<span class="eqno">(7.100)<a class="headerlink" href="#equation-equation-7-100" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{matrix}
   R\left( t \right) = {\exp\left\lbrack - \lambda_{R}t \right\rbrack}^{} \\                                     
   R\left( t \right) = {\exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack}^{} \\          
   \end{matrix}\left\{ \begin{matrix}                                                                            
@@ -768,12 +771,12 @@ const thebe_selector_output = ".output, .cell_output"
   t \geq \tau_{2} \\                                                                                            
   \end{matrix} \right.\ \end{split}\]</div>
 </div>
-<p>The time <span class="math notranslate nohighlight">\(\tau_{2}\)</span> can be obtained from <a class="reference internal" href="#syst-equation4-101"><span class="std std-ref">Equation 4.101</span></a>.</p>
+<p>The time <span class="math notranslate nohighlight">\(\tau_{2}\)</span> can be obtained from Eq. <a class="reference internal" href="#equation-equation-7-101">(7.101)</a>.</p>
 <div class="equation admonition" id="syst-equation4-101">
-<p class="admonition-title">Equation 4.101</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\tau_{2} = \alpha\left( \frac{\lambda_{R}\alpha}{\beta} \right)^{\frac{1}{\beta - 1}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-101">
+<span class="eqno">(7.101)<a class="headerlink" href="#equation-equation-7-101" title="Permalink to this equation">¶</a></span>\[\tau_{2} = \alpha\left( \frac{\lambda_{R}\alpha}{\beta} \right)^{\frac{1}{\beta - 1}}\]</div>
 </div>
 </div>
 </div>
@@ -781,26 +784,26 @@ const thebe_selector_output = ".output, .cell_output"
 <h2><span class="section-number">7.4.8.2. </span>Wear-out in phased missions<a class="headerlink" href="#wear-out-in-phased-missions" title="Permalink to this headline">¶</a></h2>
 <p>For components used in phased missions, the failure rates may not only depend on the stress levels applied in different phases, but also on the age of the component. Consequently, the time duration of each phase cannot be considered independently. If wear-out and age of the components are relevant to determine the component reliability the accumulated mission time has to be considered, which is given by:</p>
 <div class="equation admonition" id="syst-equation4-102">
-<p class="admonition-title">Equation 4.102</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[T_{\text{Ck}} = \sum_{i = 1}^{i = k}T_{i}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-102">
+<span class="eqno">(7.102)<a class="headerlink" href="#equation-equation-7-102" title="Permalink to this equation">¶</a></span>\[T_{\text{Ck}} = \sum_{i = 1}^{i = k}T_{i}\]</div>
 <p>Where</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(T_{\text{Ck}}\)</span> denotes the accumulated time of component from mission start to phase <span class="math notranslate nohighlight">\(k\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(T_{i}\)</span> denotes the duration of phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
 </ul>
 </div>
-<p>The reliability function of the component that is exposed to random failures and also wear-out failures throughout the mission is given in <a class="reference internal" href="#syst-equation4-103"><span class="std std-ref">Equation 4.103</span></a> (see wear-out first approach in Section Error: Reference source not found).</p>
+<p>The reliability function of the component that is exposed to random failures and also wear-out failures throughout the mission is given in Eq. <a class="reference internal" href="#equation-equation-7-103">(7.103)</a> (see wear-out first approach in Section Error: Reference source not found).</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>Miss ref just above</p>
 </div>
 <div class="equation admonition" id="syst-equation4-103">
-<p class="admonition-title">Equation 4.103</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{k}\left( t \right) = \exp\left\lbrack - \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t}{\alpha_{k}} \right)^{\beta_{k}} \right) \right\rbrack \bullet \exp\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right) \right\rbrack \bullet \exp\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}}}{\alpha_{i}} \right)^{\beta_{i}} \right) \right\rbrack\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-103">
+<span class="eqno">(7.103)<a class="headerlink" href="#equation-equation-7-103" title="Permalink to this equation">¶</a></span>\[R_{k}\left( t \right) = \exp\left\lbrack - \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t}{\alpha_{k}} \right)^{\beta_{k}} \right) \right\rbrack \bullet \exp\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right) \right\rbrack \bullet \exp\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}}}{\alpha_{i}} \right)^{\beta_{i}} \right) \right\rbrack\]</div>
 <p>Where</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(T_{\text{Ci}}\)</span> denotes the accumulated time of component from mission start to phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
@@ -813,12 +816,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><span class="math notranslate nohighlight">\(\beta_{i}\)</span> denotes the shape parameter of the Weibull distribution in phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
 </ul>
 </div>
-<p>If wear-out occurs only after the qualification time <span class="math notranslate nohighlight">\(\tau\)</span> is reached (second approach) <a class="reference internal" href="#syst-equation4-103"><span class="std std-ref">Equation 4.103</span></a> can be adapted accordingly and for <span class="math notranslate nohighlight">\(T_{\text{ck}} &gt; \tau\)</span> the following equation is obtained.</p>
+<p>If wear-out occurs only after the qualification time <span class="math notranslate nohighlight">\(\tau\)</span> is reached (second approach) Eq. <a class="reference internal" href="#equation-equation-7-103">(7.103)</a> can be adapted accordingly and for <span class="math notranslate nohighlight">\(T_{\text{ck}} &gt; \tau\)</span> the following equation is obtained.</p>
 <div class="equation admonition" id="syst-equation4-104">
-<p class="admonition-title">Equation 4.104</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{k}\left( t \right) = {e^{- \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t - \tau_{1}}{\alpha_{k}} \right)^{\beta_{k}} \right)}e^{- \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right)}e^{- \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{1}}{\alpha_{i}} \right)^{\beta_{i}} \right)}}_{}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-104">
+<span class="eqno">(7.104)<a class="headerlink" href="#equation-equation-7-104" title="Permalink to this equation">¶</a></span>\[R_{k}\left( t \right) = {e^{- \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t - \tau_{1}}{\alpha_{k}} \right)^{\beta_{k}} \right)}e^{- \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right)}e^{- \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{1}}{\alpha_{i}} \right)^{\beta_{i}} \right)}}_{}\]</div>
 <p>Where</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\tau_{1}\)</span> denotes the qualification time of the component</p></li>
@@ -828,17 +831,17 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Todo</p>
 <p>Miss factor just above</p>
 </div>
-<p>For mission phases before qualification time <span class="math notranslate nohighlight">\(T_{\text{ck}} &lt; \tau_{1}\)</span>, wear-out does not have to be considered and the reliability of the component in phase k is given by <span class="xref myst">Equation 4.30</span>.</p>
+<p>For mission phases before qualification time <span class="math notranslate nohighlight">\(T_{\text{ck}} &lt; \tau_{1}\)</span>, wear-out does not have to be considered and the reliability of the component in phase k is given by Eq. <a class="reference internal" href="reliability_assessment_phased_missions.html#equation-equation-7-30">(7.30)</a>.</p>
 <p>For Model 3, see Section Error: Reference source not found, wear-out is considered only for <span class="math notranslate nohighlight">\(T_{\text{ck}} &gt; \tau_{2}\)</span> and for <span class="math notranslate nohighlight">\(T_{\text{ck}} &lt; \tau_{2}\)</span> only random failures are taken into account. The following equation is obtained for <span class="math notranslate nohighlight">\(T_{\text{ck}} &gt; \tau_{2}\)</span>.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>Miss ref just above</p>
 </div>
 <div class="equation admonition" id="syst-equation4-105">
-<p class="admonition-title">Equation 4.105</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{k}\left( t \right) = {{\exp\left\lbrack - \left( \frac{T_{\text{Ck} - 1} + t - \tau_{2}}{\alpha_{k}} \right)^{\beta_{k}} \right\rbrack}^{}{\exp\left\lbrack - \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{2}}{\alpha_{i}} \right)^{\beta_{i}} \right\rbrack}^{}}_{}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-105">
+<span class="eqno">(7.105)<a class="headerlink" href="#equation-equation-7-105" title="Permalink to this equation">¶</a></span>\[R_{k}\left( t \right) = {{\exp\left\lbrack - \left( \frac{T_{\text{Ck} - 1} + t - \tau_{2}}{\alpha_{k}} \right)^{\beta_{k}} \right\rbrack}^{}{\exp\left\lbrack - \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{2}}{\alpha_{i}} \right)^{\beta_{i}} \right\rbrack}^{}}_{}\]</div>
 <p>Where</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\tau_{2}\)</span> denotes the time at which the wear-out failure rate equals the random failure rate.</p></li>
@@ -848,30 +851,30 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Todo</p>
 <p>Miss factor just above</p>
 </div>
-<p>For <span class="math notranslate nohighlight">\(T_{\text{ck}} &lt; \tau_{2}\)</span> the reliability function of the component in phase k is also given by <span class="xref myst">Equation 4.30</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(T_{\text{ck}} &lt; \tau_{2}\)</span> the reliability function of the component in phase k is also given by Eq. <a class="reference internal" href="reliability_assessment_phased_missions.html#equation-equation-7-30">(7.30)</a>.</p>
 </div>
 <div class="section" id="reliability-of-serial-and-parallel-systems-considering-wear-out">
 <h2><span class="section-number">7.4.8.3. </span>Reliability of serial and parallel systems considering wear-out<a class="headerlink" href="#reliability-of-serial-and-parallel-systems-considering-wear-out" title="Permalink to this headline">¶</a></h2>
 <p>The system reliability function for a serial system is given by:</p>
 <div class="equation admonition" id="syst-equation4-106">
-<p class="admonition-title">Equation 4.106</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{S}\left( t \right) = R_{A}\left( t \right) \ast R_{B}\left( t \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-106">
+<span class="eqno">(7.106)<a class="headerlink" href="#equation-equation-7-106" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = R_{A}\left( t \right) \ast R_{B}\left( t \right)\]</div>
 </div>
 <p>The reliability for a parallel system in hot redundancy, thus all components in use and same load is applied is given by</p>
 <div class="equation admonition" id="syst-equation4-107">
-<p class="admonition-title">Equation 4.107</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{S}\left( t \right) = R_{A}\left( t \right) + R_{B}\left( t \right) - R_{A}\left( t \right)R_{B}\left( t \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-107">
+<span class="eqno">(7.107)<a class="headerlink" href="#equation-equation-7-107" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = R_{A}\left( t \right) + R_{B}\left( t \right) - R_{A}\left( t \right)R_{B}\left( t \right)\]</div>
 </div>
-<p>In order to consider wear-out of the components the corresponding reliability function of the wear-out model is to be used. If for example the first approach for wear out modelling is used for both components, given by <a class="reference internal" href="#syst-equation4-94"><span class="std std-ref">Equation 4.94</span></a>, the following is obtained for a serial system.</p>
+<p>In order to consider wear-out of the components the corresponding reliability function of the wear-out model is to be used. If for example the first approach for wear out modelling is used for both components, given by Eq. <a class="reference internal" href="#equation-equation-7-94">(7.94)</a>, the following is obtained for a serial system.</p>
 <div class="equation admonition" id="syst-equation4-108">
-<p class="admonition-title">Equation 4.108</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{S}\left( t \right) = {\exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack\exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack}_{}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-108">
+<span class="eqno">(7.108)<a class="headerlink" href="#equation-equation-7-108" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = {\exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack\exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack}_{}\]</div>
 </div>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
@@ -879,44 +882,44 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>For a parallel system the following expression is obtained:</p>
 <div class="equation admonition" id="syst-equation4-109">
-<p class="admonition-title">Equation 4.109</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{S}\left( t \right) = \exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack + \exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack - \exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack\exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-109">
+<span class="eqno">(7.109)<a class="headerlink" href="#equation-equation-7-109" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = \exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack + \exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack - \exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack\exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack\]</div>
 </div>
 </div>
 <div class="section" id="conditional-reliability">
 <h2><span class="section-number">7.4.8.4. </span>Conditional reliability<a class="headerlink" href="#conditional-reliability" title="Permalink to this headline">¶</a></h2>
 <p>The conditional reliability is the probability of a system successfully completing another mission phase knowing that it has not failed during previous phases. This conditional reliability is of particular relevance for life time extensions. The fact that a component was working correctly without a failure over a certain period of the mission needs to be considered to estimate the reliability over the following phases of the mission. The system’s conditional reliability function is given by:</p>
 <div class="equation admonition" id="syst-equation4-110">
-<p class="admonition-title">Equation 4.110</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{S}\left( t \middle| T \right) = \frac{R_{S}\left( T + t \right)}{R_{S}\left( T \right)}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-110">
+<span class="eqno">(7.110)<a class="headerlink" href="#equation-equation-7-110" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \middle| T \right) = \frac{R_{S}\left( T + t \right)}{R_{S}\left( T \right)}\]</div>
 </div>
 <p>In the following an example of a serial system that consists of two components is considered. The system reliability is given by:</p>
 <div class="equation admonition" id="syst-equation4-111">
-<p class="admonition-title">Equation 4.111</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{S}\left( t \right) = R_{1}\left( t \right)R_{2}\left( t \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-111">
+<span class="eqno">(7.111)<a class="headerlink" href="#equation-equation-7-111" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = R_{1}\left( t \right)R_{2}\left( t \right)\]</div>
 </div>
 <p>The mission duration shall be extended from 50000 hours by another 10000 hours to 60000 hours. 50000 hours correspond to the qualification time of the components and the system was still in operational state after 50000 hours were accumulated. For the components the following parameters shown in <a class="reference internal" href="#syst-table4-16"><span class="std std-ref">Table 4.16</span></a> are given:</p>
 <p id="syst-table4-16"><strong>Table 4.16</strong> : Example for parameters for component with random and wear-out failures</p>
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_16.html" frameborder="0" onload="resize_iframe(this)"></iframe>
-<p><a class="reference internal" href="#syst-equation4-112"><span class="std std-ref">Equation 4.112</span></a> provides the reliability for a mission extension of a duration <em>t</em> giving that <em>T</em> hours of successful operation have already been accumulated up to the start of the mission extension. The system reliability is evaluated to assure that it will complete the next mission extension successfully.</p>
+<p>Eq. <a class="reference internal" href="#equation-equation-7-112">(7.112)</a> provides the reliability for a mission extension of a duration <em>t</em> giving that <em>T</em> hours of successful operation have already been accumulated up to the start of the mission extension. The system reliability is evaluated to assure that it will complete the next mission extension successfully.</p>
 <div class="equation admonition" id="syst-equation4-112">
-<p class="admonition-title">Equation 4.112</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R_{S}\left( t \middle| T \right) = \frac{R_{1}\left( T + t \right)R_{2}\left( T + t \right)}{R_{1}\left( T \right)R_{2}\left( T \right)}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-112">
+<span class="eqno">(7.112)<a class="headerlink" href="#equation-equation-7-112" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \middle| T \right) = \frac{R_{1}\left( T + t \right)R_{2}\left( T + t \right)}{R_{1}\left( T \right)R_{2}\left( T \right)}\]</div>
 </div>
 <p>If the Model 2 is applied for example to consider the wear-out of the components, the following equation is obtained:</p>
 <div class="equation admonition" id="syst-equation4-113">
-<p class="admonition-title">Equation 4.113</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R\left( t \middle| T \right) = \frac{\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)}{{\exp\left( - \lambda_{R}T \right)\exp\left( - \lambda_{R}T \right)}^{}}_{}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-113">
+<span class="eqno">(7.113)<a class="headerlink" href="#equation-equation-7-113" title="Permalink to this equation">¶</a></span>\[R\left( t \middle| T \right) = \frac{\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)}{{\exp\left( - \lambda_{R}T \right)\exp\left( - \lambda_{R}T \right)}^{}}_{}\]</div>
 </div>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
@@ -935,10 +938,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Miss ref just above</p>
 </div>
 <div class="equation admonition" id="syst-equation4-114">
-<p class="admonition-title">Equation 4.114</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_{2,\text{sb}}\left( x \right)R_{2,A}\left( t - x \right)\text{dx}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-114">
+<span class="eqno">(7.114)<a class="headerlink" href="#equation-equation-7-114" title="Permalink to this equation">¶</a></span>\[R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_{2,\text{sb}}\left( x \right)R_{2,A}\left( t - x \right)\text{dx}}\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(R_{1}\)</span> denotes the reliability and <span class="math notranslate nohighlight">\(f_{1}\)</span> the probability density function of the active component.</p></li>
@@ -946,7 +949,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><span class="math notranslate nohighlight">\(R_{2,A}\)</span> denotes the reliability of the stand-by component in active mode.</p></li>
 </ul>
 </div>
-<p><a class="reference internal" href="#syst-equation4-114"><span class="std std-ref">Equation 4.114</span></a> can be solved by numerical integration.</p>
+<p>Eq. <a class="reference internal" href="#equation-equation-7-114">(7.114)</a> can be solved by numerical integration.</p>
 <p>The previous example assumes perfect switching, i.e. activation of the stand-by component is certain once the active component fails. In reality in many cases a switching device is implemented in the system to activate the stand-by component when the active component fails. Therefore, the failure properties of the switch must also be included in the analysis as imperfect switching.</p>
 <div class="figure align-default" id="figure-7-32">
 <span id="syst-figure4-32"></span><a class="reference internal image-reference" href="../../../_images/figure4_321.png"><img alt="../../../_images/figure4_321.png" src="../../../_images/figure4_321.png" style="width: 600px;" /></a>
@@ -958,10 +961,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Miss ref just above</p>
 </div>
 <div class="equation admonition" id="syst-equation4-115">
-<p class="admonition-title">Equation 4.115</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_{2,\text{sb}}\left( x \right)R_{2,A}\left( t - x \right)R_{\text{SW}}\left( x \right)R_{\text{SWREQ}}\text{dx}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-7-115">
+<span class="eqno">(7.115)<a class="headerlink" href="#equation-equation-7-115" title="Permalink to this equation">¶</a></span>\[R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_{2,\text{sb}}\left( x \right)R_{2,A}\left( t - x \right)R_{\text{SW}}\left( x \right)R_{\text{SWREQ}}\text{dx}}\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(R_{1}\)</span> denotes the reliability and <span class="math notranslate nohighlight">\(f_{1}\)</span> the probability density function of the active component.</p></li>

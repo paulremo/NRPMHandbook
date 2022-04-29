@@ -33,8 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
@@ -58,8 +57,7 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
-    <script src="../../../_static/interactivity/js/map.js"></script>
-    <script src="../../../_static/interactivity/js/map2.js"></script>
+    <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
     <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
@@ -363,7 +361,12 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/models/failure_rate_processing.html">
+     6.1. Failure rate processing
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -791,17 +794,17 @@ The following subsections dedicated to each failure mechanism model always follo
 <h3><span class="section-number">3.4.7.1.1. </span>Adhesive wear<a class="headerlink" href="#adhesive-wear" title="Permalink to this headline">¶</a></h3>
 <p>Adhesive wear is considered as governing for many wear failures, and is thus typically used for the analytical prediction of wear. The key parameter for the wear estimation is the volume worn away per unit of sliding distance, which can be estimated based on the classical wear model by Archard , here used in the form of Lancaster . Failure due to adhesive wear is then modelled with the following limit state function:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.17</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet S(t) \bullet v(t)\text{d}t}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-17">
+<span class="eqno">(3.17)<a class="headerlink" href="#equation-equation-3-17" title="Permalink to this equation">¶</a></span>\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet S(t) \bullet v(t)\text{d}t}\]</div>
 </div>
 <p><span class="math notranslate nohighlight">\(V_{limit}\)</span> is the limiting value for the volume worn away, <span class="math notranslate nohighlight">\(\Sigma\)</span> the model uncertainty for the Archard wear model, <span class="math notranslate nohighlight">\(K_{H}\)</span> the specific wear rate, <span class="math notranslate nohighlight">\(S\)</span> the normal load, <span class="math notranslate nohighlight">\(\nu\)</span> the sliding velocity and <span class="math notranslate nohighlight">\(T\)</span> the considered time interval. As an alternative to the limiting value for the volume worn away, the model can also be reformulated in terms of the wear depth <span class="math notranslate nohighlight">\(d\)</span>:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.18</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = d_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet \frac{S(t)}{A_{app}} \bullet v(t)\text{d}t}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-18">
+<span class="eqno">(3.18)<a class="headerlink" href="#equation-equation-3-18" title="Permalink to this equation">¶</a></span>\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = d_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet \frac{S(t)}{A_{app}} \bullet v(t)\text{d}t}\]</div>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(d_{limit}\)</span> is the limiting value for the wear depth <span class="math notranslate nohighlight">\(d\)</span> and
 <span class="math notranslate nohighlight">\(A_{app}\)</span> is the area of apparent contact. Both limit state functions
@@ -817,13 +820,13 @@ experimental data in order to perform lifetime assessments.</p>
 mission (in practice it is typically derived from tests under “worst
 case” conditions) and that the remaining time dependent variables are
 constant during certain deterministic time intervals (e.g. different
-mission phases), the limit state function given in Equation 10‑17 can be
+mission phases), the limit state function given in Eq. <a class="reference internal" href="#equation-equation-3-17">(3.17)</a> can be
 simplified as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.19</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet K_{H} \bullet \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-19">
+<span class="eqno">(3.19)<a class="headerlink" href="#equation-equation-3-19" title="Permalink to this equation">¶</a></span>\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet K_{H} \bullet \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}}\]</div>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(P_{i} = S_{i} \bullet v_{i}\)</span> corresponds to the sliding work per
 time unit (the sliding “power”). Thus, <span class="math notranslate nohighlight">\(X_{2}\)</span> is defined as the volume
@@ -875,46 +878,46 @@ variable definitions are given in Table 10‑11.</p>
 <p>he expected values and coefficients of variation of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span>
 are determined as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.20</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-20">
+<span class="eqno">(3.20)<a class="headerlink" href="#equation-equation-3-20" title="Permalink to this equation">¶</a></span>\[\mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.21</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\mu_{X_{2}} = \text{E}\left\lbrack K_{H} \right\rbrack \bullet \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-21">
+<span class="eqno">(3.21)<a class="headerlink" href="#equation-equation-3-21" title="Permalink to this equation">¶</a></span>\[\mu_{X_{2}} = \text{E}\left\lbrack K_{H} \right\rbrack \bullet \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}}\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.22</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\nu_{X_{1}} = \nu_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-22">
+<span class="eqno">(3.22)<a class="headerlink" href="#equation-equation-3-22" title="Permalink to this equation">¶</a></span>\[\nu_{X_{1}} = \nu_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.23</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\nu_{X_{2}} = \sqrt{\nu_{K_{H}}^{2} + \left( 1 + \nu_{K_{H}}^{2} \right) \bullet \frac{\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack}{\left( \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}} \right)^{2}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-23">
+<span class="eqno">(3.23)<a class="headerlink" href="#equation-equation-3-23" title="Permalink to this equation">¶</a></span>\[\nu_{X_{2}} = \sqrt{\nu_{K_{H}}^{2} + \left( 1 + \nu_{K_{H}}^{2} \right) \bullet \frac{\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack}{\left( \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}} \right)^{2}}}\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.24</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack = \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack P_{i},P_{j} \right\rbrack \bullet t_{i} \bullet t_{j}}} =\\ \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\rho_{P_{i}P_{j}} \bullet \sqrt{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet \text{Var}\left\lbrack P_{j} \right\rbrack} \bullet t_{i} \bullet t_{j}}}\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-24">
+<span class="eqno">(3.24)<a class="headerlink" href="#equation-equation-3-24" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack = \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack P_{i},P_{j} \right\rbrack \bullet t_{i} \bullet t_{j}}} =\\ \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\rho_{P_{i}P_{j}} \bullet \sqrt{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet \text{Var}\left\lbrack P_{j} \right\rbrack} \bullet t_{i} \bullet t_{j}}}\end{aligned}\end{align} \]</div>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(\rho_{P_{i}P_{j}}\)</span> denotes the correlation between the sliding work per time unit in different mission phases. The correlation structure may be defined in a simplified way, e.g. assuming <span class="math notranslate nohighlight">\(\rho_{P_{i}P_{j}} = 1\)</span> if the sources of uncertainty in <span class="math notranslate nohighlight">\(P\)</span> are the same in mission phase <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> and <span class="math notranslate nohighlight">\(\rho_{P_{i}P_{j}} = 0\)</span> if thereare different uncertainty sources. Assuming full correlation increases the coefficient of variation of <span class="math notranslate nohighlight">\(X_{2}\)</span>, which is conservative for small probabilities of failure.</p>
 <p>The approach can be further simplified when considering only one mission
 phase (i.e. <span class="math notranslate nohighlight">\(n_{P} = 1\)</span>), leading to:
 <span class="math notranslate nohighlight">\(\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack = \text{Var}\lbrack P\rbrack \bullet t^{2}\)</span>.
-In practice, this may also be used as a conservative simplification for <span class="math notranslate nohighlight">\(n_{P} &gt; 1\)</span>, taking <span class="math notranslate nohighlight">\(P\)</span> from the most critical phase and <span class="math notranslate nohighlight">\(t\)</span> as the total length of the mission. Another strong simplification is possible if the uncertainty in the sliding work per time unit is negligibly small. In this case, the uncertainty in the sum may be neglected and the variance term in Equation 10‑24 becomes zero.</p>
+In practice, this may also be used as a conservative simplification for <span class="math notranslate nohighlight">\(n_{P} &gt; 1\)</span>, taking <span class="math notranslate nohighlight">\(P\)</span> from the most critical phase and <span class="math notranslate nohighlight">\(t\)</span> as the total length of the mission. Another strong simplification is possible if the uncertainty in the sliding work per time unit is negligibly small. In this case, the uncertainty in the sum may be neglected and the variance term in Eq. <a class="reference internal" href="#equation-equation-3-24">(3.24)</a> becomes zero.</p>
 <p>With the distributional assumptions in Table 10‑11, an analytic solution for the probability of failure calculations is derived based on a Lognormal approximation for <span class="math notranslate nohighlight">\(X_{2}\)</span>:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.25</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left(\text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left(\frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left(v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) -\text{ln}\left( v_{\Theta}^{2} + 1 \right)\right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left(v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}}\right)\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-25">
+<span class="eqno">(3.25)<a class="headerlink" href="#equation-equation-3-25" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left(\text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left(\frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left(v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) -\text{ln}\left( v_{\Theta}^{2} + 1 \right)\right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left(v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}}\right)\end{aligned}\end{align} \]</div>
 </div>
 <p>The main assumptions underlying the simplified adhesive wear model are
 summarized as follows:</p>
@@ -928,7 +931,7 @@ summarized as follows:</p>
 <p>Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of <span class="math notranslate nohighlight">\(X_{1} = V_{limit}\)</span> is larger than <span class="math notranslate nohighlight">\(0.3\)</span>.</p>
 <div class="figure align-default" id="figure-3-6">
 <span id="meca-figure4-6"></span><a class="reference internal image-reference" href="../../../_images/figure4_8.png"><img alt="../../../_images/figure4_8.png" src="../../../_images/figure4_8.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Comparison of the analytic solution in Equation 10‑25 (adhesive wear model with Lognormal distributed* <span class="math notranslate nohighlight">\(V_{limit}\)</span><em>) with Monte Carlo results for Normal distributed</em> <span class="math notranslate nohighlight">\(V_{limit}\)</span></span><a class="headerlink" href="#figure-3-6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Comparison of the analytic solution in Eq. <a class="reference internal" href="#equation-equation-3-25">(3.25)</a> (adhesive wear model with Lognormal distributed* <span class="math notranslate nohighlight">\(V_{limit}\)</span><em>) with Monte Carlo results for Normal distributed</em> <span class="math notranslate nohighlight">\(V_{limit}\)</span></span><a class="headerlink" href="#figure-3-6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="solid-lubricant-wear">
@@ -937,17 +940,17 @@ summarized as follows:</p>
 <p>Due to the fact that solid lubricants do not evaporate, they are suitable for extreme temperatures (both cold and hot) and for
 applications where contamination could be an issue, e.g. in optical systems. In order to enable on-ground testing and to support the lubrication regime during operations, the lubricant (e.g. sputtered MoS<sub>2</sub>) is stored in special reservoirs such as cages in case of bearings, which are at the same time used to avoid ball collisions in ball bearings. When the lubricant is degraded, new lubricant is provided via the wear of the reservoir.</p>
 <p>In the following, solid lubricant wear modelling is described taking example in a ball bearing. The modelling is applicable to other cases of solid lubricant wear; however, the number of revolutions has to be substituted with another suitable measure of sliding distance.</p>
-<p>The modelling easily can be adapted from the adhesive wear model given in Section 10.7.1. Wear is realized during cage/ball contact; hence the relation <span class="math notranslate nohighlight">\(\int_{0}^{t}{S(t) \bullet v(t)\text{d}t}\)</span> in Equation 10‑17 or Equation 10‑18 represents the work of the ball/cage interaction forces. For the bearing example, time is replaced by the number of revolutions <span class="math notranslate nohighlight">\(rev\)</span>. The equality
+<p>The modelling easily can be adapted from the adhesive wear model given in Section 10.7.1. Wear is realized during cage/ball contact; hence the relation <span class="math notranslate nohighlight">\(\int_{0}^{t}{S(t) \bullet v(t)\text{d}t}\)</span> in Eq. <a class="reference internal" href="#equation-equation-3-17">(3.17)</a> or Eq. <a class="reference internal" href="#equation-equation-3-17">(3.17)</a> represents the work of the ball/cage interaction forces. For the bearing example, time is replaced by the number of revolutions <span class="math notranslate nohighlight">\(rev\)</span>. The equality
 <span class="math notranslate nohighlight">\(\int_{0}^{t}{S(t) \bullet v(t)\text{d}t} = \int_{0}^{rev}{\alpha(rev)\text{d}rev}\)</span> can be used for experimental evaluation of the average ball/cage interaction forces, defining a new interaction parameter <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
 <p><strong>Simplified solid lubricant wear model</strong></p>
-<p>Using the simplified form of the adhesive wear model in Equation 10‑19 (assuming constant conditions during each mission phase), a limit state function for solid lubricant wear can be derived as follows:</p>
+<p>Using the simplified form of the adhesive wear model in Eq. <a class="reference internal" href="#equation-equation-3-19">(3.19)</a> (assuming constant conditions during each mission phase), a limit state function for solid lubricant wear can be derived as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.26</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \sum_{i = 1}^{n_{P}}{K_{H,i} \bullet \alpha_{i} \bullet {rev}_{i}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-26">
+<span class="eqno">(3.26)<a class="headerlink" href="#equation-equation-3-26" title="Permalink to this equation">¶</a></span>\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \sum_{i = 1}^{n_{P}}{K_{H,i} \bullet \alpha_{i} \bullet {rev}_{i}}\]</div>
 </div>
-<p><span class="math notranslate nohighlight">\(X_{2}\)</span> is defined as the volume worn away and <span class="math notranslate nohighlight">\(X_{1}\)</span> as the corresponding limiting value. Detailed variable definitions are given in Table 10‑12. It should be noted that the parameter <span class="math notranslate nohighlight">\(\alpha_{i}\)</span> , defined as the average work of ball/cage interaction forces per bearing revolution, will typically be estimated from tests and is thus dependent on the wear rate <span class="math notranslate nohighlight">\(K_{H,i}\)</span> . This is the reason why the wear rate cannot easily be taken out of the sum, as in Equation 10‑19 for the general adhesive wear model.</p>
+<p><span class="math notranslate nohighlight">\(X_{2}\)</span> is defined as the volume worn away and <span class="math notranslate nohighlight">\(X_{1}\)</span> as the corresponding limiting value. Detailed variable definitions are given in Table 10‑12. It should be noted that the parameter <span class="math notranslate nohighlight">\(\alpha_{i}\)</span> , defined as the average work of ball/cage interaction forces per bearing revolution, will typically be estimated from tests and is thus dependent on the wear rate <span class="math notranslate nohighlight">\(K_{H,i}\)</span> . This is the reason why the wear rate cannot easily be taken out of the sum, as in Eq. <a class="reference internal" href="#equation-equation-3-19">(3.19)</a> for the general adhesive wear model.</p>
 <p><strong>Table 4.12: Assumed probabilistic models for the simplified solid lubricant wear model.</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -992,36 +995,36 @@ applications where contamination could be an issue, e.g. in optical systems. In 
 </table>
 <p>The expected values and coefficients of variation of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> are determined as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.27</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-27">
+<span class="eqno">(3.27)<a class="headerlink" href="#equation-equation-3-27" title="Permalink to this equation">¶</a></span>\[\mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.28</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\mu_{X_{2}} = \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack K_{H,i} \bullet \alpha_{i} \right\rbrack \bullet {rev}_{i}} = \sum_{i = 1}^{n_{P}}{\left( \text{E}\left\lbrack K_{H,i} \right\rbrack \bullet \text{E}\left\lbrack \alpha_{i} \right\rbrack + \text{Cov}\left\lbrack K_{H,i},\alpha_{i} \right\rbrack \right) \bullet {rev}_{i}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-28">
+<span class="eqno">(3.28)<a class="headerlink" href="#equation-equation-3-28" title="Permalink to this equation">¶</a></span>\[\mu_{X_{2}} = \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack K_{H,i} \bullet \alpha_{i} \right\rbrack \bullet {rev}_{i}} = \sum_{i = 1}^{n_{P}}{\left( \text{E}\left\lbrack K_{H,i} \right\rbrack \bullet \text{E}\left\lbrack \alpha_{i} \right\rbrack + \text{Cov}\left\lbrack K_{H,i},\alpha_{i} \right\rbrack \right) \bullet {rev}_{i}}\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.29</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[v_{X_{1}} = v_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-29">
+<span class="eqno">(3.32)<a class="headerlink" href="#equation-equation-3-29" title="Permalink to this equation">¶</a></span>\[v_{X_{1}} = v_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.30</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[v_{X_{2}} = \frac{1}{\mu_{X_{2}}}\sqrt{\sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack K_{H,i}\alpha_{i} \right\rbrack \bullet {rev}_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack K_{H,i}\alpha_{i},K_{H,j}\alpha_{j} \right\rbrack \bullet {rev}_{i} \bullet {rev}_{j}}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-30">
+<span class="eqno">(3.30)<a class="headerlink" href="#equation-equation-3-30" title="Permalink to this equation">¶</a></span>\[v_{X_{2}} = \frac{1}{\mu_{X_{2}}}\sqrt{\sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack K_{H,i}\alpha_{i} \right\rbrack \bullet {rev}_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack K_{H,i}\alpha_{i},K_{H,j}\alpha_{j} \right\rbrack \bullet {rev}_{i} \bullet {rev}_{j}}}}\]</div>
 </div>
-<p>Assuming full correlation to derive the covariance between <span class="math notranslate nohighlight">\(K_{H,i}\)</span> and <span class="math notranslate nohighlight">\(\alpha_{i}\)</span> (for Equation 10‑28) and for the product of the two variables between different time intervals (for Equation 10‑30) leads to conservative results. As in the general adhesive wear model, the problem can be simplified by considering only one mission phase (<span class="math notranslate nohighlight">\(n_{P} = 1\)</span>), requiring assumptions only on the covariance in Equation 10‑28; the covariance term in Equation 10‑30 can be dropped if <span class="math notranslate nohighlight">\(n_{P} = 1\)</span>.</p>
+<p>Assuming full correlation to derive the covariance between <span class="math notranslate nohighlight">\(K_{H,i}\)</span> and <span class="math notranslate nohighlight">\(\alpha_{i}\)</span> (for Eq. <a class="reference internal" href="#equation-equation-3-28">(3.28)</a>) and for the product of the two variables between different time intervals (for Eq. <a class="reference internal" href="#equation-equation-3-28">(3.28)</a>) leads to conservative results. As in the general adhesive wear model, the problem can be simplified by considering only one mission phase (<span class="math notranslate nohighlight">\(n_{P} = 1\)</span>), requiring assumptions only on the covariance in Eq. <a class="reference internal" href="#equation-equation-3-28">(3.28)</a>; the covariance term in Eq. <a class="reference internal" href="#equation-equation-3-28">(3.28)</a> can be dropped if <span class="math notranslate nohighlight">\(n_{P} = 1\)</span>.</p>
 <p>With the distributional assumptions in Table 10‑12, an analytic solution for the probability of failure is derived based on a Lognormal approximation for <span class="math notranslate nohighlight">\(X_{2}\)</span>:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.31</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-31">
+<span class="eqno">(3.31)<a class="headerlink" href="#equation-equation-3-31" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\end{aligned}\end{align} \]</div>
 </div>
 <p>The main assumptions underlying the simplified solid lubricant wear model are the following:</p>
 <ul class="simple">
@@ -1037,10 +1040,10 @@ applications where contamination could be an issue, e.g. in optical systems. In 
 <p>In this section a fluid lubricant wear modelling is described taking example in a ball bearing again. The modelling is applicable to other cases of fluid lubricant wear, but the number of revolutions has to be substituted with another measure of sliding distance in this case.</p>
 <p>The starting point for the modelling of fluid lubricant wear is the following limit state function, see [BR79] for details:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.29</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = M_{0} - M_{inactive} - \Theta \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet K \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev(t)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-29">
+<span class="eqno">(3.32)<a class="headerlink" href="#equation-equation-3-29" title="Permalink to this equation">¶</a></span>\[g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = M_{0} - M_{inactive} - \Theta \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet K \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev(t)\]</div>
 </div>
 <p>Here, <span class="math notranslate nohighlight">\(M_{0}\)</span> denotes the initial mass of the lubricant, <span class="math notranslate nohighlight">\(M_{inactive}\)</span> the mass of lubricant not participating in the contact (e.g. due to evaporation), and <span class="math notranslate nohighlight">\(\Theta\)</span> the model uncertainty for the associated term, which represents the model to estimate lubricant life described in [BR79]. In this term, <span class="math notranslate nohighlight">\(N_{b}\)</span> denotes the number of balls in the bearing, <span class="math notranslate nohighlight">\(p_{d}\)</span> the pitch diameter, <span class="math notranslate nohighlight">\(b_{d}\)</span> the ball diameter, <span class="math notranslate nohighlight">\(\vartheta\)</span> the contact angle, <span class="math notranslate nohighlight">\(K\)</span> is an empirical constant, <span class="math notranslate nohighlight">\(p_{m}\)</span> the contact pressure and <span class="math notranslate nohighlight">\(rev\)</span> the number of revoluations during the considered time interval <span class="math notranslate nohighlight">\(t\)</span>. The variables related to bearing geometry are illustrated in the figure given below.</p>
 <div class="figure align-default" id="figure-3-7">
@@ -1048,10 +1051,10 @@ applications where contamination could be an issue, e.g. in optical systems. In 
 <p class="caption"><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Bearing geometry.</span><a class="headerlink" href="#figure-3-7" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Simplified fluid lubricant wear model</strong></p>
-<p>For the simplified modelling, it is considered sufficient to model only <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(K\)</span> as random variables; all other variables in Equation 10‑32 are assumed to be deterministic. Since the relation for the bearing life from [BR79], <span class="math notranslate nohighlight">\(K \bullet \text{exp}\left( - 3.35 \bullet p_{m} \right)\)</span>, is purely empirical, curve fitting residuals or the distribution of the coefficient <span class="math notranslate nohighlight">\(K\)</span> may be used for the probabilistic assessments.</p>
+<p>For the simplified modelling, it is considered sufficient to model only <span class="math notranslate nohighlight">\(\Theta\)</span> and <span class="math notranslate nohighlight">\(K\)</span> as random variables; all other variables in Eq. <code class="xref eq docutils literal notranslate"><span class="pre">Equation</span> <span class="pre">3.32</span></code> are assumed to be deterministic. Since the relation for the bearing life from [BR79], <span class="math notranslate nohighlight">\(K \bullet \text{exp}\left( - 3.35 \bullet p_{m} \right)\)</span>, is purely empirical, curve fitting residuals or the distribution of the coefficient <span class="math notranslate nohighlight">\(K\)</span> may be used for the probabilistic assessments.</p>
 <p>Note that in principle, <span class="math notranslate nohighlight">\(M_{inactive}\)</span> may also be treated as stochastic, but its value will generally be only a small fraction of <span class="math notranslate nohighlight">\(M_{0}\)</span>, typically not exceeding 1-2% when considering only evaporation losses for a bearing with a labyrinth seal under optimal temperature conditions [BR79].</p>
 <p>It is furthermore assumed that all variables (except for the number of revolutions <span class="math notranslate nohighlight">\(rev\)</span>) are constant over the whole length of the mission. <span class="math notranslate nohighlight">\(M_{inactive}\)</span> should be estimated considering the amount of lubricant that has evaporated (or is not participating in the contact due to other reasons) at the end of the mission. In reality the amount of evaporated lubricant depends on the number of revolutions, thus the proposed approach leads to a slightly conservative estimation.</p>
-<p>These assumptions allow the application of Equation 10‑32 without any further simplifications in the limit state function. Thus, <span class="math notranslate nohighlight">\(X_{1} = M_{0} - M_{inactive}\)</span> is defined as the amout of lubricant available and <span class="math notranslate nohighlight">\(X_{2}\)</span> as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in [BR79]. Detailed variable definitions are reminded in Table 10‑13 below.</p>
+<p>These assumptions allow the application of Eq. <code class="xref eq docutils literal notranslate"><span class="pre">Equation</span> <span class="pre">3.32</span></code> without any further simplifications in the limit state function. Thus, <span class="math notranslate nohighlight">\(X_{1} = M_{0} - M_{inactive}\)</span> is defined as the amout of lubricant available and <span class="math notranslate nohighlight">\(X_{2}\)</span> as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in [BR79]. Detailed variable definitions are reminded in Table 10‑13 below.</p>
 <p><strong>Table 4.13: Assumed probabilistic models for the simplified fluid lubricant wear model.</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -1116,23 +1119,23 @@ applications where contamination could be an issue, e.g. in optical systems. In 
 </table>
 <p>The mean value of <span class="math notranslate nohighlight">\(X_{1}\)</span> is determined as <span class="math notranslate nohighlight">\(\mu_{X_{1}} = M_{0} - M_{inactive}\)</span> with coefficient of variation <span class="math notranslate nohighlight">\(v_{X_{1}} = 0\)</span>. For <span class="math notranslate nohighlight">\(X_{2}\)</span>, the following equations can be used:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.33</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\mu_{X_{2}} = \frac{\left( v_{K}^{2} + 1 \right)}{\text{E}\lbrack K\rbrack} \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-33">
+<span class="eqno">(3.33)<a class="headerlink" href="#equation-equation-3-33" title="Permalink to this equation">¶</a></span>\[\mu_{X_{2}} = \frac{\left( v_{K}^{2} + 1 \right)}{\text{E}\lbrack K\rbrack} \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.34</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[v_{X_{2}} = v_{K} = \frac{\sqrt{\text{Var}\lbrack K\rbrack}}{\text{E}\lbrack K\rbrack}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-34">
+<span class="eqno">(3.34)<a class="headerlink" href="#equation-equation-3-34" title="Permalink to this equation">¶</a></span>\[v_{X_{2}} = v_{K} = \frac{\sqrt{\text{Var}\lbrack K\rbrack}}{\text{E}\lbrack K\rbrack}\]</div>
 </div>
 <p>The probability of failure is estimated as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.35</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5\left( \text{ln}\left( v_{X_{2}}^{2} + 1 \right) + \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-35">
+<span class="eqno">(3.35)<a class="headerlink" href="#equation-equation-3-35" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5\left( \text{ln}\left( v_{X_{2}}^{2} + 1 \right) + \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\end{aligned}\end{align} \]</div>
 </div>
 <p>The main assumptions underlying the simplified fluid lubricant wear model are the following:</p>
 <p>The main assumptions underlying the simplified fluid lubricant wear
@@ -1174,46 +1177,46 @@ model are the following:</p>
 <h3><span class="section-number">3.4.7.2.1. </span>High cycle fatigue modelling with the S/N curve approach<a class="headerlink" href="#high-cycle-fatigue-modelling-with-the-s-n-curve-approach" title="Permalink to this headline">¶</a></h3>
 <p>Crack generation due to high cycle fatigue is most commonly modelled using so-called S/N curves relating a stress level or equivalent stress <span class="math notranslate nohighlight">\(S_{eq}\)</span> to the number of cycles to failure, <span class="math notranslate nohighlight">\(N_{f}\)</span>:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.36</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\text{log}_{10}\left( N_{f} \right) = A - B \bullet \text{log}_{10}\left( S_{eq} - C \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-36">
+<span class="eqno">(3.36)<a class="headerlink" href="#equation-equation-3-36" title="Permalink to this equation">¶</a></span>\[\text{log}_{10}\left( N_{f} \right) = A - B \bullet \text{log}_{10}\left( S_{eq} - C \right)\]</div>
 </div>
 <p>Where the equivalent stress is determined as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.37</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[S_{eq} = S_{\max}(1 - R)^{P} = S_{\max}\left( 1 - \frac{S_{\min}}{S_{\max}} \right)^{P}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-37">
+<span class="eqno">(3.37)<a class="headerlink" href="#equation-equation-3-37" title="Permalink to this equation">¶</a></span>\[S_{eq} = S_{\max}(1 - R)^{P} = S_{\max}\left( 1 - \frac{S_{\min}}{S_{\max}} \right)^{P}\]</div>
 </div>
 <p>Here, <span class="math notranslate nohighlight">\(S_{\min}\)</span> and <span class="math notranslate nohighlight">\(S_{\max}\)</span> denoting the minimum and maximum stress during one load cycle and <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(P\)</span> are model parameters of the S/N curve model that can be derived from test data, e.g. those presented in MMPDS-12 [BR66] or its predecessor, MIL-HDBK-5 [BR67]. Of special interest is the parameter <span class="math notranslate nohighlight">\(C\)</span>, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus <span class="math notranslate nohighlight">\(N_{f}(S \leq C) \rightarrow \infty\)</span>.</p>
 <p>The S/N curve is valid for cyclic loading with constant amplitude or equivalent stress. For cyclic loading with varying stress levels, the S/N curve is combined with the Palmgren-Miner accumulation law to estimate the accumulated damage <span class="math notranslate nohighlight">\(D_{tot}\)</span> after <span class="math notranslate nohighlight">\(N\)</span> stress cycles:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.38</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}D_{tot} = \sum_{i = 1}^{N}\frac{1}{N_{f,i}} = \sum_{i = 1}^{N}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}\\= \ \sum_{j = 1}^{k}{N_{j} \bullet 10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-38">
+<span class="eqno">(3.38)<a class="headerlink" href="#equation-equation-3-38" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}D_{tot} = \sum_{i = 1}^{N}\frac{1}{N_{f,i}} = \sum_{i = 1}^{N}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}\\= \ \sum_{j = 1}^{k}{N_{j} \bullet 10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}\end{aligned}\end{align} \]</div>
 </div>
-<p>Where each <span class="math notranslate nohighlight">\(S_{eq,i}\)</span> is drawn from the distribution of equivalent stresses derived from the loading process. The second line in Equation 10‑38 is derived by dividing the continuous distribution of <span class="math notranslate nohighlight">\(S_{eq,i}\)</span> into a discrete number of bins. In this final expression, <span class="math notranslate nohighlight">\(k\)</span> denotes the number of bins, <span class="math notranslate nohighlight">\(N_{j}\)</span> the number of cycles in each bin and <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> the corresponding equivalent stress representative for each bin.</p>
+<p>Where each <span class="math notranslate nohighlight">\(S_{eq,i}\)</span> is drawn from the distribution of equivalent stresses derived from the loading process. The second line in Eq. <a class="reference internal" href="#equation-equation-3-38">(3.38)</a> is derived by dividing the continuous distribution of <span class="math notranslate nohighlight">\(S_{eq,i}\)</span> into a discrete number of bins. In this final expression, <span class="math notranslate nohighlight">\(k\)</span> denotes the number of bins, <span class="math notranslate nohighlight">\(N_{j}\)</span> the number of cycles in each bin and <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> the corresponding equivalent stress representative for each bin.</p>
 <p>As a failure criterion, the accumulated damage <span class="math notranslate nohighlight">\(D_{tot}\)</span> is compared with a fixed threshold <span class="math notranslate nohighlight">\(D_{cr}\)</span> that is typically assumed to be equal to one. However, due to the empirical nature of Miner’s law, failures may also occur at values for <span class="math notranslate nohighlight">\(D_{tot}\)</span> that are below or above unity and <span class="math notranslate nohighlight">\(D_{cr}\)</span> must be considered as a random variable.</p>
 <p>A limit state function for high-cycle fatigue is now derived as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.39</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}g\left(X(t)\right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot}\\D_{cr} - \Theta \bullet \sum_{i = 1}^{N(t)}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}\\= D_{cr} - \Theta \bullet \sum_{j = 1}^{k}{N_{j}(t) \bullet 10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-39">
+<span class="eqno">(3.39)<a class="headerlink" href="#equation-equation-3-39" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}g\left(X(t)\right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot}\\D_{cr} - \Theta \bullet \sum_{i = 1}^{N(t)}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}\\= D_{cr} - \Theta \bullet \sum_{j = 1}^{k}{N_{j}(t) \bullet 10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}\end{aligned}\end{align} \]</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The time dependent formulation in Equation 10‑39 neglects load history effects, which is consistent with the accumulative nature of the Palmgren-Miner model. However, when the goal is to evaluate the probability of failure in different mission phases, the accumulated damage contribution of each load event (e.g. testing, launch, in-orbit) should be evaluated separately.</p>
+<p>The time dependent formulation in Eq. <a class="reference internal" href="#equation-equation-3-39">(3.39)</a> neglects load history effects, which is consistent with the accumulative nature of the Palmgren-Miner model. However, when the goal is to evaluate the probability of failure in different mission phases, the accumulated damage contribution of each load event (e.g. testing, launch, in-orbit) should be evaluated separately.</p>
 </div>
 <p><strong>Simplified S/N curve modelling</strong></p>
-<p>The starting point for the simplified model is the limit state function in Equation 10‑39, with load cycles summarized in bins (last row). For the simplified approach, the variables <span class="math notranslate nohighlight">\(N_{j}\)</span>, <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are assumed to be deterministic. The uncertainty associated with the loading <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> is then the only uncertainty that cannot be taken out of the sum. A simple approach to model this uncertainty is to multiply deterministic values for <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> (e.g. taken from design calculations) with a random stress scaling factor <span class="math notranslate nohighlight">\(SSF\)</span> that is applied globally, i.e. taking on the same value for all bins [BR81]. If it is furthermore assumed that the endurance limit <span class="math notranslate nohighlight">\(C\)</span> equals zero (which is conservative for all applications), the limit state function defined in Equation 10‑39 can be brought into the following simple expression:</p>
+<p>The starting point for the simplified model is the limit state function in Eq. <a class="reference internal" href="#equation-equation-3-39">(3.39)</a>, with load cycles summarized in bins (last row). For the simplified approach, the variables <span class="math notranslate nohighlight">\(N_{j}\)</span>, <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are assumed to be deterministic. The uncertainty associated with the loading <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> is then the only uncertainty that cannot be taken out of the sum. A simple approach to model this uncertainty is to multiply deterministic values for <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> (e.g. taken from design calculations) with a random stress scaling factor <span class="math notranslate nohighlight">\(SSF\)</span> that is applied globally, i.e. taking on the same value for all bins [BR81]. If it is furthermore assumed that the endurance limit <span class="math notranslate nohighlight">\(C\)</span> equals zero (which is conservative for all applications), the limit state function defined in Eq. <a class="reference internal" href="#equation-equation-3-39">(3.39)</a> can be brought into the following simple expression:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.40</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot} = D_{cr} - \Theta \bullet 10^{- A} \bullet {SSF}^{B} \bullet \sum_{j = 1}^{k}{N_{j} \bullet {S_{eq,j}}^{B}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-40">
+<span class="eqno">(3.40)<a class="headerlink" href="#equation-equation-3-40" title="Permalink to this equation">¶</a></span>\[g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot} = D_{cr} - \Theta \bullet 10^{- A} \bullet {SSF}^{B} \bullet \sum_{j = 1}^{k}{N_{j} \bullet {S_{eq,j}}^{B}}\]</div>
 </div>
 <p>Thus, <span class="math notranslate nohighlight">\(X_{2}\)</span> is defined as accumulated damage, which is calculated based on the S/N curve approach with the Palmgren-Miner accumulation law, and <span class="math notranslate nohighlight">\(X_{1}\)</span> as the corresponding limiting value. Detailed variable definitions are reminded in Table 10‑14.</p>
 <p><strong>Table 4.14: Assumed probabilistic models for the simplified high-cycle fatigue model.</strong></p>
@@ -1271,69 +1274,69 @@ model are the following:</p>
 <p>Without additional information, the expected value of <span class="math notranslate nohighlight">\(D_{cr}\)</span> may be assumed to be equal to unity and its coefficient of variation equal to 0.3 (based on JCSS [BR82] and Wirsching [BR83]). The mean value and coefficient of variation of the stress scaling factor <span class="math notranslate nohighlight">\(SSF\)</span> can be determined as follows: First an appropriate coefficient of variation <span class="math notranslate nohighlight">\(v_{SSF}\)</span> reflecting all uncertainties associated with the load analysis is chosen, considering the most uncertain load event to be conservative.
 The mean value of the stress scaling factor then depends on the definition of the <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> values. Design values for fatigue stresses are typically defined as upper fractile values, leading to the following relationship:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.41</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\text{E}\lbrack SSF\rbrack = \frac{\sqrt{v_{SSF}^{2} + 1}}{\text{exp}\left( \Phi^{- 1}(\alpha) \bullet \sqrt{\text{ln}\left( v_{SSF}^{2} + 1 \right)} \right)}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-41">
+<span class="eqno">(3.41)<a class="headerlink" href="#equation-equation-3-41" title="Permalink to this equation">¶</a></span>\[\text{E}\lbrack SSF\rbrack = \frac{\sqrt{v_{SSF}^{2} + 1}}{\text{exp}\left( \Phi^{- 1}(\alpha) \bullet \sqrt{\text{ln}\left( v_{SSF}^{2} + 1 \right)} \right)}\]</div>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(\Phi^{- 1}( \bullet )\)</span> denotes the inverse of the Standard Normal distribution function and <span class="math notranslate nohighlight">\(\alpha\)</span> is the probability that the stresses will be smaller than <span class="math notranslate nohighlight">\(S_{eq,j}\)</span>.</p>
 <p>Finally, the expected values and coefficients of variation of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> are determined as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.42</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\mu_{X_{1}} = \text{E}\lbrack D_{cr}\rbrack\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-42">
+<span class="eqno">(3.42)<a class="headerlink" href="#equation-equation-3-42" title="Permalink to this equation">¶</a></span>\[\mu_{X_{1}} = \text{E}\lbrack D_{cr}\rbrack\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.43</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\mu_{X_{2}} = \text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack \bullet \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-43">
+<span class="eqno">(3.43)<a class="headerlink" href="#equation-equation-3-43" title="Permalink to this equation">¶</a></span>\[\mu_{X_{2}} = \text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack \bullet \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}}\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.44</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack = 10^{- E\lbrack A\rbrack + \frac{1}{2}\text{∙ln}(10) \bullet Var\lbrack A\rbrack} \bullet {E\lbrack SSF\rbrack}^{B} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2} - B}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-44">
+<span class="eqno">(3.44)<a class="headerlink" href="#equation-equation-3-44" title="Permalink to this equation">¶</a></span>\[\text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack = 10^{- E\lbrack A\rbrack + \frac{1}{2}\text{∙ln}(10) \bullet Var\lbrack A\rbrack} \bullet {E\lbrack SSF\rbrack}^{B} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2} - B}\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.45</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[v_{X_{1}} = v_{D_{cr}} = \frac{\sqrt{\text{Var}\lbrack D_{cr}\rbrack}}{\text{E}\lbrack D_{cr}\rbrack}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-45">
+<span class="eqno">(3.45)<a class="headerlink" href="#equation-equation-3-45" title="Permalink to this equation">¶</a></span>\[v_{X_{1}} = v_{D_{cr}} = \frac{\sqrt{\text{Var}\lbrack D_{cr}\rbrack}}{\text{E}\lbrack D_{cr}\rbrack}\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.46</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[v_{X_{2}} = \sqrt{10^{Var\lbrack A\rbrack\text{∙ln}(10)} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2}} - 1}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-46">
+<span class="eqno">(3.46)<a class="headerlink" href="#equation-equation-3-46" title="Permalink to this equation">¶</a></span>\[v_{X_{2}} = \sqrt{10^{Var\lbrack A\rbrack\text{∙ln}(10)} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2}} - 1}\]</div>
 </div>
 <p>With the distributional assumptions in Table 10‑14, an analytic solution for the probability of failure calculations is derived as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.47</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-47">
+<span class="eqno">(3.47)<a class="headerlink" href="#equation-equation-3-47" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]\\= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\end{aligned}\end{align} \]</div>
 </div>
-<p>With large coefficients of variation for the S/N curve parameter <span class="math notranslate nohighlight">\(A\)</span> and/or the stress scaling factor <span class="math notranslate nohighlight">\(SSF\)</span>, both <span class="math notranslate nohighlight">\(v_{X_{2}}\)</span> and <span class="math notranslate nohighlight">\(\mu_{X_{2}}\)</span> can become very large, leading to numerical issues during the estimation of the input required for Equation 10‑47. A more robust solution for the probability of failure is achieved with the aid of a small reformulation:</p>
+<p>With large coefficients of variation for the S/N curve parameter <span class="math notranslate nohighlight">\(A\)</span> and/or the stress scaling factor <span class="math notranslate nohighlight">\(SSF\)</span>, both <span class="math notranslate nohighlight">\(v_{X_{2}}\)</span> and <span class="math notranslate nohighlight">\(\mu_{X_{2}}\)</span> can become very large, leading to numerical issues during the estimation of the input required for Eq. <a class="reference internal" href="#equation-equation-3-47">(3.47)</a>. A more robust solution for the probability of failure is achieved with the aid of a small reformulation:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.48</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[P_{f} = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \mu_{X_{1}} \right) + \text{ln}\left( \mu_{X_{2}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-48">
+<span class="eqno">(3.48)<a class="headerlink" href="#equation-equation-3-48" title="Permalink to this equation">¶</a></span>\[P_{f} = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \mu_{X_{1}} \right) + \text{ln}\left( \mu_{X_{2}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\]</div>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(Var\left\lbrack \ln\left( X_{2} \right) \right\rbrack\)</span> and <span class="math notranslate nohighlight">\(\ln\left( \mu_{X_{2}} \right)\)</span> can be estimated as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.49</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\text{Var}\lbrack\ln\left(X_{2}\right)\rbrack = \nu_{A}^{2} \bullet \text{E}[A]^{2} \bullet \ln(10)^{2} + B^{2} \bullet \ln \left( \nu_{SSF}^{2} + 1 \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-49">
+<span class="eqno">(3.49)<a class="headerlink" href="#equation-equation-3-49" title="Permalink to this equation">¶</a></span>\[\text{Var}\lbrack\ln\left(X_{2}\right)\rbrack = \nu_{A}^{2} \bullet \text{E}[A]^{2} \bullet \ln(10)^{2} + B^{2} \bullet \ln \left( \nu_{SSF}^{2} + 1 \right)\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.50</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\ln \left( \mu_{X_{2}} \right) = 0.5 \bullet \left( E[A]^{2} \bullet \ln (10)^{2} + (B^{2} - B) \bullet \ln \left( \nu_{SSF}^{2} + 1 \right) \right) \\- \text{E}\lbrack A\rbrack \bullet \text{ln}(10) + B \bullet \text{ln}\left( \text{E}\lbrack SSF\rbrack \right) + \text{ln}\left( \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}} \right)\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-50">
+<span class="eqno">(3.50)<a class="headerlink" href="#equation-equation-3-50" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}\ln \left( \mu_{X_{2}} \right) = 0.5 \bullet \left( E[A]^{2} \bullet \ln (10)^{2} + (B^{2} - B) \bullet \ln \left( \nu_{SSF}^{2} + 1 \right) \right) \\- \text{E}\lbrack A\rbrack \bullet \text{ln}(10) + B \bullet \text{ln}\left( \text{E}\lbrack SSF\rbrack \right) + \text{ln}\left( \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}} \right)\end{aligned}\end{align} \]</div>
 </div>
 <p>The main assumptions underlying the simplified high cycle fatigue model
 are the following:</p>
@@ -1344,7 +1347,7 @@ are the following:</p>
 <li><p>Uncertainty in the fatigue loading is modelled with the aid of “global” stress scaling factor, assuming the same uncertainty (and full correlation) for the load cycles in different bins.</p></li>
 <li><p>The uncertainty associated with the loading is independent of the uncertainty associated with the S/N curve model.</p></li>
 <li><p>Any uncertainty in the S/N curve slope <span class="math notranslate nohighlight">\(B\)</span> is neglected, or must be included in the probabilistic model for the intercept <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
-<li><p>The endurance limit is set to <span class="math notranslate nohighlight">\(C = 0\)</span>. The conservatism introduced by this assumption can be reduced by setting the number of cycles <span class="math notranslate nohighlight">\(N_{j}\)</span> for all bins with design values <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> below the endurance limit to zero. More realistic estimates can only be derived by modelling <span class="math notranslate nohighlight">\(C\)</span> as a random variable in Equation 10‑39, requiring numerical methods to estimate the probability of failure.</p></li>
+<li><p>The endurance limit is set to <span class="math notranslate nohighlight">\(C = 0\)</span>. The conservatism introduced by this assumption can be reduced by setting the number of cycles <span class="math notranslate nohighlight">\(N_{j}\)</span> for all bins with design values <span class="math notranslate nohighlight">\(S_{eq,j}\)</span> below the endurance limit to zero. More realistic estimates can only be derived by modelling <span class="math notranslate nohighlight">\(C\)</span> as a random variable in Eq. <a class="reference internal" href="#equation-equation-3-39">(3.39)</a>, requiring numerical methods to estimate the probability of failure.</p></li>
 </ul>
 <p><strong>Application of the simplified model to low risk items</strong></p>
 <p>The probability of failure for parts with low risk of fracture, e.g. with design stresses below the endurance limit <span class="math notranslate nohighlight">\(C\)</span>, can in principle also be modelledwith the simplified method introduced above. However, in deterministic
@@ -1424,10 +1427,10 @@ performed using a relationship called the NASGRO equation, which was
 initially documented by Forman and Mettu [BR88]. It is given by
 [BR85]:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.51</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[\frac{da}{dN} = C\left\lbrack \left( \frac{1 - f}{1 - R} \right)\mathrm{\Delta}K \right\rbrack^{n}\frac{\left( 1 - \frac{\Delta K_{th}}{\mathrm{\Delta}K} \right)^{p}}{\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-51">
+<span class="eqno">(3.51)<a class="headerlink" href="#equation-equation-3-51" title="Permalink to this equation">¶</a></span>\[\frac{da}{dN} = C\left\lbrack \left( \frac{1 - f}{1 - R} \right)\mathrm{\Delta}K \right\rbrack^{n}\frac{\left( 1 - \frac{\Delta K_{th}}{\mathrm{\Delta}K} \right)^{p}}{\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}}\]</div>
 </div>
 <p>With the following variable definitions:</p>
 <ul class="simple">
@@ -1464,7 +1467,7 @@ region is modelled by the factor
 <p class="caption"><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Typical fatigue crack growth curve.</span><a class="headerlink" href="#figure-3-8" title="Permalink to this image">¶</a></p>
 </div>
 <p>The crack length <span class="math notranslate nohighlight">\(a(t)\)</span> as a function of time (or number of cycles) can
-be calculated iteratively based on Equation 10‑51. There are three
+be calculated iteratively based on Eq. <a class="reference internal" href="#equation-equation-3-51">(3.51)</a>. There are three
 possible failure criteria associated with crack growth:</p>
 <ol class="simple">
 <li><p>Crack instability: It occurs when <span class="math notranslate nohighlight">\(K_{\max}\left( a(t) \right)\)</span>
@@ -1489,22 +1492,22 @@ limit state functions for a given crack length <span class="math notranslate noh
 straight-forward (variable definitions have been given in the definition
 of the three failure criteria above:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.52</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g_{1}\left( \mathbf{X},a(t) \right) = K_{instability} - K_{\max}\left( a(t) \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-52">
+<span class="eqno">(3.52)<a class="headerlink" href="#equation-equation-3-52" title="Permalink to this equation">¶</a></span>\[g_{1}\left( \mathbf{X},a(t) \right) = K_{instability} - K_{\max}\left( a(t) \right)\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.53</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g_{2}\left( \mathbf{X,}a(t) \right) = \sigma_{flow} - \sigma_{n}\left( a(t) \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-53">
+<span class="eqno">(3.53)<a class="headerlink" href="#equation-equation-3-53" title="Permalink to this equation">¶</a></span>\[g_{2}\left( \mathbf{X,}a(t) \right) = \sigma_{flow} - \sigma_{n}\left( a(t) \right)\]</div>
 </div>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.54</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g_{3}\left( \mathbf{X,}a(t) \right) = a_{\max} - a(t)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-54">
+<span class="eqno">(3.54)<a class="headerlink" href="#equation-equation-3-54" title="Permalink to this equation">¶</a></span>\[g_{3}\left( \mathbf{X,}a(t) \right) = a_{\max} - a(t)\]</div>
 </div>
 <p>Different cases must be distinguished to determine the fracture
 toughness <span class="math notranslate nohighlight">\(K_{instability}\)</span>:</p>
@@ -1521,10 +1524,10 @@ environmentally assisted crack toughness.</p>
 required criteria, e.g. (if only the first two criteria, crack stability
 and yielding, apply):</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.55</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[P_{f}(t) = \text{Pr}\left\lbrack g_{1}\left( a(t) \right) \leq 0 \cup g_{2}\left( a(t) \right) \leq 0 \right\rbrack\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-55">
+<span class="eqno">(3.55)<a class="headerlink" href="#equation-equation-3-55" title="Permalink to this equation">¶</a></span>\[P_{f}(t) = \text{Pr}\left\lbrack g_{1}\left( a(t) \right) \leq 0 \cup g_{2}\left( a(t) \right) \leq 0 \right\rbrack\]</div>
 </div>
 <p>As an alternative, <span class="math notranslate nohighlight">\(g_{1}\)</span> and <span class="math notranslate nohighlight">\(g_{2}\)</span> may also be combined into a
 single limit state function by making use of an interaction model, as
@@ -1532,7 +1535,7 @@ described e.g. by [BR81]. Note, however, that these models are
 generally developed for a specific crack geometry, e.g. assuming a
 through crack in an infinite plate. Hence, the applicability to the
 crack under consideration shall be assessed when using an interaction
-model instead of Equation 10‑55.</p>
+model instead of Eq. <a class="reference internal" href="#equation-equation-3-55">(3.55)</a>.</p>
 <p>Independent of the approach chosen to combine several failure criteria,
 reliability is best assessed using Monte Carlo simulations with variance
 reduction techniques to reduce the number of required simulations.
@@ -1596,10 +1599,10 @@ described with the aid of a probability of detection curve
 <p>Bayes’ theorem (Chapter 7 Part II) can now be used to determine the
 probability distribution of the crack size after inspection [BR91]:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.56</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[{f''}_{A}(a) = \frac{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)}{\int_{0}^{\infty}{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)\text{\ d}a}}\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-56">
+<span class="eqno">(3.56)<a class="headerlink" href="#equation-equation-3-56" title="Permalink to this equation">¶</a></span>\[{f''}_{A}(a) = \frac{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)}{\int_{0}^{\infty}{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)\text{\ d}a}}\]</div>
 </div>
 <p>In practice, the prior <span class="math notranslate nohighlight">\({f'}_{A}(a)\)</span> will often have
 to be determined based on expert judgment, as data on the crack size
@@ -1609,7 +1612,7 @@ growth analysis for the applied test loads can be used to derive
 <span class="math notranslate nohighlight">\({f'}_{A}(a)\)</span>.</p>
 <p>In [BR81],[BR87] it is stated that the POD curve may be interpreted
 directly as the cumulative distribution function of the crack size after
-inspection. This approach leads to the same result as Equation 10‑56
+inspection. This approach leads to the same result as Eq. <a class="reference internal" href="#equation-equation-3-56">(3.56)</a>
 when assuming a noninformative (positive) uniform prior distribution for
 the initial crack size.</p>
 <p>Further simplifications are possible if only the NDE limit value is
@@ -1791,10 +1794,10 @@ properties.</p>
 this case the difference between the radiation dose <span class="math notranslate nohighlight">\(D\)</span> and allowable
 dose <span class="math notranslate nohighlight">\(D_{A}\)</span> is used as a limit state function:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.57</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[g\left( \text{X} \right) = X_{1} - \Theta \bullet X_{2}(t) = D_{A} - \Theta \bullet D(t)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-57">
+<span class="eqno">(3.57)<a class="headerlink" href="#equation-equation-3-57" title="Permalink to this equation">¶</a></span>\[g\left( \text{X} \right) = X_{1} - \Theta \bullet X_{2}(t) = D_{A} - \Theta \bullet D(t)\]</div>
 </div>
 <p>Thus, <span class="math notranslate nohighlight">\(X_{1}\)</span> is defined as the allowable radiation dose <span class="math notranslate nohighlight">\(D_{A}\)</span> and
 <span class="math notranslate nohighlight">\(X_{2}\)</span> as the cumulated dose <span class="math notranslate nohighlight">\(D\)</span> determined as a function of time <span class="math notranslate nohighlight">\(t\)</span>.</p>
@@ -1802,7 +1805,7 @@ dose <span class="math notranslate nohighlight">\(D_{A}\)</span> is used as a li
 <p>A strongly simplified assessment can be achieved by summarizing all
 uncertainties associated with the radiation modelling in the model
 uncertainty variable <span class="math notranslate nohighlight">\(\theta\)</span>, allowing to consider both <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(D_{A}\)</span>
-in Equation 10‑57 as deterministic variables. The resulting simplified
+in Eq. <a class="reference internal" href="#equation-equation-3-57">(3.57)</a> as deterministic variables. The resulting simplified
 model should be seen mainly as a starting point or placeholder for a
 more detailed modelling.</p>
 <p>The variable definitions are given in Table 10‑17 below.</p>
@@ -1846,10 +1849,10 @@ quantification.</p>
 assumed equal to zero. With these assumptions, the analytic solution for
 the probability of failure is derived as follows:</p>
 <div class="equation admonition">
-<p class="admonition-title">Equation 4.58</p>
+<p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight">
-\[P_{f}(t) = \text{P}\left\lbrack X_{1} - X_{2}(t) \bullet \Theta \leq 0 \right\rbrack = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5 \bullet \text{ln}\left( v_{\Theta}^{2} + 1 \right)}{\sqrt{\text{ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-equation-3-58">
+<span class="eqno">(3.58)<a class="headerlink" href="#equation-equation-3-58" title="Permalink to this equation">¶</a></span>\[P_{f}(t) = \text{P}\left\lbrack X_{1} - X_{2}(t) \bullet \Theta \leq 0 \right\rbrack = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5 \bullet \text{ln}\left( v_{\Theta}^{2} + 1 \right)}{\sqrt{\text{ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)\]</div>
 </div>
 <p>The main assumptions underlying the simplified radiation degradation
 model are the following:</p>

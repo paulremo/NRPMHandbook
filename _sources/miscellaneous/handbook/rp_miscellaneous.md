@@ -786,7 +786,7 @@ A second equation is provided by the level of confidence "$a$" attributed to the
 F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a
 ````
 
-Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering [Equation 4 -10](misc_equation4_10)) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering [Equation 4 -11](misc_equation4_11)).
+Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering [Equation 4.10](misc_equation4_10)) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering [Equation 4.11](misc_equation4_11)).
 
 Once $\alpha$ and $\beta$ are determined it allows to derive the Bayesian estimator with n being the number of failures and $\sum t_{i}$ the cumulated time.
 

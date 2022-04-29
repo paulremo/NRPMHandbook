@@ -51,11 +51,12 @@ Finally, **fatigue wear** is caused by cyclic loading and corresponding crack fo
 Adhesive wear is considered as governing for many wear failures, and is thus typically used for the analytical prediction of wear. The key parameter for the wear estimation is the volume worn away per unit of sliding distance, which can be estimated based on the classical wear model by Archard , here used in the form of Lancaster . Failure due to adhesive wear is then modelled with the following limit state function:
 
 
-````{admonition} Equation 4.17
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.17
 g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet S(t) \bullet v(t)\text{d}t}
 ```
 ````
@@ -63,11 +64,12 @@ g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \The
 $V_{limit}$ is the limiting value for the volume worn away, $\Sigma$ the model uncertainty for the Archard wear model, $K_{H}$ the specific wear rate, $S$ the normal load, $\nu$ the sliding velocity and $T$ the considered time interval. As an alternative to the limiting value for the volume worn away, the model can also be reformulated in terms of the wear depth $d$:
 
 
-````{admonition} Equation 4.18
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.18
 g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = d_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet \frac{S(t)}{A_{app}} \bullet v(t)\text{d}t}
 ```
 ````
@@ -89,15 +91,16 @@ Assuming that the specific wear rate $K_{H}$ is constant over the whole
 mission (in practice it is typically derived from tests under “worst
 case” conditions) and that the remaining time dependent variables are
 constant during certain deterministic time intervals (e.g. different
-mission phases), the limit state function given in Equation 10‑17 can be
+mission phases), the limit state function given in Eq. {eq}`Equation 3.17` can be
 simplified as follows:
 
 
-````{admonition} Equation 4.19
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.19
 g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet K_{H} \bullet \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}}
 ```
 ````
@@ -124,47 +127,52 @@ he expected values and coefficients of variation of $X_{1}$ and $X_{2}$
 are determined as follows:
 
 
-````{admonition} Equation 4.20
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.20
 \mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack
 ```
 ````
 
-````{admonition} Equation 4.21
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.21
 \mu_{X_{2}} = \text{E}\left\lbrack K_{H} \right\rbrack \bullet \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}}
 ```
 ````
 
-````{admonition} Equation 4.22
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.22
 \nu_{X_{1}} = \nu_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}
 ```
 ````
 
-````{admonition} Equation 4.23
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.23
 \nu_{X_{2}} = \sqrt{\nu_{K_{H}}^{2} + \left( 1 + \nu_{K_{H}}^{2} \right) \bullet \frac{\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack}{\left( \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}} \right)^{2}}}
 ```
 ````
 
-````{admonition} Equation 4.24
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.24
 \text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack = \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack P_{i},P_{j} \right\rbrack \bullet t_{i} \bullet t_{j}}} =
 
  \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\rho_{P_{i}P_{j}} \bullet \sqrt{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet \text{Var}\left\lbrack P_{j} \right\rbrack} \bullet t_{i} \bullet t_{j}}}
@@ -176,16 +184,17 @@ Where $\rho_{P_{i}P_{j}}$ denotes the correlation between the sliding work per t
 The approach can be further simplified when considering only one mission
 phase (i.e. $n_{P} = 1$), leading to:
 $\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack = \text{Var}\lbrack P\rbrack \bullet t^{2}$.
-In practice, this may also be used as a conservative simplification for $n_{P} > 1$, taking $P$ from the most critical phase and $t$ as the total length of the mission. Another strong simplification is possible if the uncertainty in the sliding work per time unit is negligibly small. In this case, the uncertainty in the sum may be neglected and the variance term in Equation 10‑24 becomes zero.
+In practice, this may also be used as a conservative simplification for $n_{P} > 1$, taking $P$ from the most critical phase and $t$ as the total length of the mission. Another strong simplification is possible if the uncertainty in the sliding work per time unit is negligibly small. In this case, the uncertainty in the sum may be neglected and the variance term in Eq. {eq}`Equation 3.24` becomes zero.
 
 With the distributional assumptions in Table 10‑11, an analytic solution for the probability of failure calculations is derived based on a Lognormal approximation for $X_{2}$:
 
 
-````{admonition} Equation 4.25
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.25
 P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]
 
 = \text{Φ}\left( \frac{\text{ln}\left(\text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left(\frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left(v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) -\text{ln}\left( v_{\Theta}^{2} + 1 \right)\right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left(v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}}\right)
@@ -209,7 +218,7 @@ Due to the effect of the last assumption, the analytic method should not be used
 width: 600px
 name: Figure 3.6
 ---
-Comparison of the analytic solution in Equation 10‑25 (adhesive wear model with Lognormal distributed* $V_{limit}$*) with Monte Carlo results for Normal distributed* $V_{limit}$
+Comparison of the analytic solution in Eq. {eq}`Equation 3.25` (adhesive wear model with Lognormal distributed* $V_{limit}$*) with Monte Carlo results for Normal distributed* $V_{limit}$
 ```
 
 ### Solid lubricant wear
@@ -221,24 +230,25 @@ applications where contamination could be an issue, e.g. in optical systems. In 
 
 In the following, solid lubricant wear modelling is described taking example in a ball bearing. The modelling is applicable to other cases of solid lubricant wear; however, the number of revolutions has to be substituted with another suitable measure of sliding distance.
 
-The modelling easily can be adapted from the adhesive wear model given in Section 10.7.1. Wear is realized during cage/ball contact; hence the relation $\int_{0}^{t}{S(t) \bullet v(t)\text{d}t}$ in Equation 10‑17 or Equation 10‑18 represents the work of the ball/cage interaction forces. For the bearing example, time is replaced by the number of revolutions $rev$. The equality
+The modelling easily can be adapted from the adhesive wear model given in Section 10.7.1. Wear is realized during cage/ball contact; hence the relation $\int_{0}^{t}{S(t) \bullet v(t)\text{d}t}$ in Eq. {eq}`Equation 3.17` or Eq. {eq}`Equation 3.17` represents the work of the ball/cage interaction forces. For the bearing example, time is replaced by the number of revolutions $rev$. The equality
 $\int_{0}^{t}{S(t) \bullet v(t)\text{d}t} = \int_{0}^{rev}{\alpha(rev)\text{d}rev}$ can be used for experimental evaluation of the average ball/cage interaction forces, defining a new interaction parameter $\alpha$.
 
 **Simplified solid lubricant wear model**
 
-Using the simplified form of the adhesive wear model in Equation 10‑19 (assuming constant conditions during each mission phase), a limit state function for solid lubricant wear can be derived as follows:
+Using the simplified form of the adhesive wear model in Eq. {eq}`Equation 3.19` (assuming constant conditions during each mission phase), a limit state function for solid lubricant wear can be derived as follows:
 
 
-````{admonition} Equation 4.26
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.26
 g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \sum_{i = 1}^{n_{P}}{K_{H,i} \bullet \alpha_{i} \bullet {rev}_{i}}
 ```
 ````
 
-$X_{2}$ is defined as the volume worn away and $X_{1}$ as the corresponding limiting value. Detailed variable definitions are given in Table 10‑12. It should be noted that the parameter $\alpha_{i}$ , defined as the average work of ball/cage interaction forces per bearing revolution, will typically be estimated from tests and is thus dependent on the wear rate $K_{H,i}$ . This is the reason why the wear rate cannot easily be taken out of the sum, as in Equation 10‑19 for the general adhesive wear model.
+$X_{2}$ is defined as the volume worn away and $X_{1}$ as the corresponding limiting value. Detailed variable definitions are given in Table 10‑12. It should be noted that the parameter $\alpha_{i}$ , defined as the average work of ball/cage interaction forces per bearing revolution, will typically be estimated from tests and is thus dependent on the wear rate $K_{H,i}$ . This is the reason why the wear rate cannot easily be taken out of the sum, as in Eq. {eq}`Equation 3.19` for the general adhesive wear model.
 
 **Table 4.12: Assumed probabilistic models for the simplified solid lubricant wear model.**
 
@@ -254,53 +264,58 @@ $X_{2}$ is defined as the volume worn away and $X_{1}$ as the corresponding limi
 The expected values and coefficients of variation of $X_{1}$ and $X_{2}$ are determined as follows:
 
 
-````{admonition} Equation 4.27
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.27
 \mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack
 ```
 ````
 
-````{admonition} Equation 4.28
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.28
 \mu_{X_{2}} = \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack K_{H,i} \bullet \alpha_{i} \right\rbrack \bullet {rev}_{i}} = \sum_{i = 1}^{n_{P}}{\left( \text{E}\left\lbrack K_{H,i} \right\rbrack \bullet \text{E}\left\lbrack \alpha_{i} \right\rbrack + \text{Cov}\left\lbrack K_{H,i},\alpha_{i} \right\rbrack \right) \bullet {rev}_{i}}
 ```
 ````
 
-````{admonition} Equation 4.29
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.29
 v_{X_{1}} = v_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}
 ```
 ````
 
 
-````{admonition} Equation 4.30
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.30
 v_{X_{2}} = \frac{1}{\mu_{X_{2}}}\sqrt{\sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack K_{H,i}\alpha_{i} \right\rbrack \bullet {rev}_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack K_{H,i}\alpha_{i},K_{H,j}\alpha_{j} \right\rbrack \bullet {rev}_{i} \bullet {rev}_{j}}}}
 ```
 ````
 
-Assuming full correlation to derive the covariance between $K_{H,i}$ and $\alpha_{i}$ (for Equation 10‑28) and for the product of the two variables between different time intervals (for Equation 10‑30) leads to conservative results. As in the general adhesive wear model, the problem can be simplified by considering only one mission phase ($n_{P} = 1$), requiring assumptions only on the covariance in Equation 10‑28; the covariance term in Equation 10‑30 can be dropped if $n_{P} = 1$.
+Assuming full correlation to derive the covariance between $K_{H,i}$ and $\alpha_{i}$ (for Eq. {eq}`Equation 3.28`) and for the product of the two variables between different time intervals (for Eq. {eq}`Equation 3.28`) leads to conservative results. As in the general adhesive wear model, the problem can be simplified by considering only one mission phase ($n_{P} = 1$), requiring assumptions only on the covariance in Eq. {eq}`Equation 3.28`; the covariance term in Eq. {eq}`Equation 3.28` can be dropped if $n_{P} = 1$.
 
 With the distributional assumptions in Table 10‑12, an analytic solution for the probability of failure is derived based on a Lognormal approximation for $X_{2}$:
 
 
-````{admonition} Equation 4.31
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.31
 P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]
 
 = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
@@ -326,11 +341,12 @@ In this section a fluid lubricant wear modelling is described taking example in 
 The starting point for the modelling of fluid lubricant wear is the following limit state function, see \[BR79\] for details:
 
 
-````{admonition} Equation 4.29
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.29
 g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = M_{0} - M_{inactive} - \Theta \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet K \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev(t)
 ```
 ````
@@ -347,13 +363,13 @@ Bearing geometry.
 
 **Simplified fluid lubricant wear model**
 
-For the simplified modelling, it is considered sufficient to model only $\Theta$ and $K$ as random variables; all other variables in Equation 10‑32 are assumed to be deterministic. Since the relation for the bearing life from \[BR79\], $K \bullet \text{exp}\left( - 3.35 \bullet p_{m} \right)$, is purely empirical, curve fitting residuals or the distribution of the coefficient $K$ may be used for the probabilistic assessments.
+For the simplified modelling, it is considered sufficient to model only $\Theta$ and $K$ as random variables; all other variables in Eq. {eq}`Equation 3.32` are assumed to be deterministic. Since the relation for the bearing life from \[BR79\], $K \bullet \text{exp}\left( - 3.35 \bullet p_{m} \right)$, is purely empirical, curve fitting residuals or the distribution of the coefficient $K$ may be used for the probabilistic assessments.
 
 Note that in principle, $M_{inactive}$ may also be treated as stochastic, but its value will generally be only a small fraction of $M_{0}$, typically not exceeding 1-2% when considering only evaporation losses for a bearing with a labyrinth seal under optimal temperature conditions \[BR79\].
 
 It is furthermore assumed that all variables (except for the number of revolutions $rev$) are constant over the whole length of the mission. $M_{inactive}$ should be estimated considering the amount of lubricant that has evaporated (or is not participating in the contact due to other reasons) at the end of the mission. In reality the amount of evaporated lubricant depends on the number of revolutions, thus the proposed approach leads to a slightly conservative estimation.
 
-These assumptions allow the application of Equation 10‑32 without any further simplifications in the limit state function. Thus, $X_{1} = M_{0} - M_{inactive}$ is defined as the amout of lubricant available and $X_{2}$ as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in \[BR79\]. Detailed variable definitions are reminded in Table 10‑13 below.
+These assumptions allow the application of Eq. {eq}`Equation 3.32` without any further simplifications in the limit state function. Thus, $X_{1} = M_{0} - M_{inactive}$ is defined as the amout of lubricant available and $X_{2}$ as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in \[BR79\]. Detailed variable definitions are reminded in Table 10‑13 below.
 
 **Table 4.13: Assumed probabilistic models for the simplified fluid lubricant wear model.**
 
@@ -373,20 +389,22 @@ These assumptions allow the application of Equation 10‑32 without any further 
 The mean value of $X_{1}$ is determined as $\mu_{X_{1}} = M_{0} - M_{inactive}$ with coefficient of variation $v_{X_{1}} = 0$. For $X_{2}$, the following equations can be used:
 
 
-````{admonition} Equation 4.33
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.33
 \mu_{X_{2}} = \frac{\left( v_{K}^{2} + 1 \right)}{\text{E}\lbrack K\rbrack} \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev
 ```
 ````
 
-````{admonition} Equation 4.34
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.34
 v_{X_{2}} = v_{K} = \frac{\sqrt{\text{Var}\lbrack K\rbrack}}{\text{E}\lbrack K\rbrack}
 ```
 ````
@@ -394,11 +412,12 @@ v_{X_{2}} = v_{K} = \frac{\sqrt{\text{Var}\lbrack K\rbrack}}{\text{E}\lbrack K\r
 The probability of failure is estimated as follows:
 
 
-````{admonition} Equation 4.35
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.35
 P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]
 
 = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5\left( \text{ln}\left( v_{X_{2}}^{2} + 1 \right) + \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
@@ -458,22 +477,24 @@ The safe life principle implies an assessment of the crack growth using <u>fatig
 
 Crack generation due to high cycle fatigue is most commonly modelled using so-called S/N curves relating a stress level or equivalent stress $S_{eq}$ to the number of cycles to failure, $N_{f}$:
 
-````{admonition} Equation 4.36
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.36
 \text{log}_{10}\left( N_{f} \right) = A - B \bullet \text{log}_{10}\left( S_{eq} - C \right)
 ```
 ````
 
 Where the equivalent stress is determined as follows:
 
-````{admonition} Equation 4.37
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.37
 S_{eq} = S_{\max}(1 - R)^{P} = S_{\max}\left( 1 - \frac{S_{\min}}{S_{\max}} \right)^{P}
 ```
 ````
@@ -482,28 +503,30 @@ Here, $S_{\min}$ and $S_{\max}$ denoting the minimum and maximum stress during o
 
 The S/N curve is valid for cyclic loading with constant amplitude or equivalent stress. For cyclic loading with varying stress levels, the S/N curve is combined with the Palmgren-Miner accumulation law to estimate the accumulated damage $D_{tot}$ after $N$ stress cycles:
 
-````{admonition} Equation 4.38
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math} 
+:label: Equation 3.38
 D_{tot} = \sum_{i = 1}^{N}\frac{1}{N_{f,i}} = \sum_{i = 1}^{N}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}
 
 = \ \sum_{j = 1}^{k}{N_{j} \bullet 10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}
 ```
 ````
 
-Where each $S_{eq,i}$ is drawn from the distribution of equivalent stresses derived from the loading process. The second line in Equation 10‑38 is derived by dividing the continuous distribution of $S_{eq,i}$ into a discrete number of bins. In this final expression, $k$ denotes the number of bins, $N_{j}$ the number of cycles in each bin and $S_{eq,j}$ the corresponding equivalent stress representative for each bin.
+Where each $S_{eq,i}$ is drawn from the distribution of equivalent stresses derived from the loading process. The second line in Eq. {eq}`Equation 3.38` is derived by dividing the continuous distribution of $S_{eq,i}$ into a discrete number of bins. In this final expression, $k$ denotes the number of bins, $N_{j}$ the number of cycles in each bin and $S_{eq,j}$ the corresponding equivalent stress representative for each bin.
 
 As a failure criterion, the accumulated damage $D_{tot}$ is compared with a fixed threshold $D_{cr}$ that is typically assumed to be equal to one. However, due to the empirical nature of Miner’s law, failures may also occur at values for $D_{tot}$ that are below or above unity and $D_{cr}$ must be considered as a random variable.
 
 A limit state function for high-cycle fatigue is now derived as follows:
 
-````{admonition} Equation 4.39
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math} 
+:label: Equation 3.39
 g\left(X(t)\right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot}
 
 D_{cr} - \Theta \bullet \sum_{i = 1}^{N(t)}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}
@@ -513,18 +536,19 @@ D_{cr} - \Theta \bullet \sum_{i = 1}^{N(t)}{10^{- A} \bullet \left( \text{max}\l
 ````
 
 ```{note}
-The time dependent formulation in Equation 10‑39 neglects load history effects, which is consistent with the accumulative nature of the Palmgren-Miner model. However, when the goal is to evaluate the probability of failure in different mission phases, the accumulated damage contribution of each load event (e.g. testing, launch, in-orbit) should be evaluated separately.
+The time dependent formulation in Eq. {eq}`Equation 3.39` neglects load history effects, which is consistent with the accumulative nature of the Palmgren-Miner model. However, when the goal is to evaluate the probability of failure in different mission phases, the accumulated damage contribution of each load event (e.g. testing, launch, in-orbit) should be evaluated separately.
 ```
 
 **Simplified S/N curve modelling**
 
-The starting point for the simplified model is the limit state function in Equation 10‑39, with load cycles summarized in bins (last row). For the simplified approach, the variables $N_{j}$, $B$ and $C$ are assumed to be deterministic. The uncertainty associated with the loading $S_{eq,j}$ is then the only uncertainty that cannot be taken out of the sum. A simple approach to model this uncertainty is to multiply deterministic values for $S_{eq,j}$ (e.g. taken from design calculations) with a random stress scaling factor $SSF$ that is applied globally, i.e. taking on the same value for all bins \[BR81\]. If it is furthermore assumed that the endurance limit $C$ equals zero (which is conservative for all applications), the limit state function defined in Equation 10‑39 can be brought into the following simple expression:
+The starting point for the simplified model is the limit state function in Eq. {eq}`Equation 3.39`, with load cycles summarized in bins (last row). For the simplified approach, the variables $N_{j}$, $B$ and $C$ are assumed to be deterministic. The uncertainty associated with the loading $S_{eq,j}$ is then the only uncertainty that cannot be taken out of the sum. A simple approach to model this uncertainty is to multiply deterministic values for $S_{eq,j}$ (e.g. taken from design calculations) with a random stress scaling factor $SSF$ that is applied globally, i.e. taking on the same value for all bins \[BR81\]. If it is furthermore assumed that the endurance limit $C$ equals zero (which is conservative for all applications), the limit state function defined in Eq. {eq}`Equation 3.39` can be brought into the following simple expression:
 
-````{admonition} Equation 4.40
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.40
 g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot} = D_{cr} - \Theta \bullet 10^{- A} \bullet {SSF}^{B} \bullet \sum_{j = 1}^{k}{N_{j} \bullet {S_{eq,j}}^{B}}
 ```
 ````
@@ -547,11 +571,12 @@ Thus, $X_{2}$ is defined as accumulated damage, which is calculated based on the
 Without additional information, the expected value of $D_{cr}$ may be assumed to be equal to unity and its coefficient of variation equal to 0.3 (based on JCSS \[BR82\] and Wirsching \[BR83\]). The mean value and coefficient of variation of the stress scaling factor $SSF$ can be determined as follows: First an appropriate coefficient of variation $v_{SSF}$ reflecting all uncertainties associated with the load analysis is chosen, considering the most uncertain load event to be conservative.
 The mean value of the stress scaling factor then depends on the definition of the $S_{eq,j}$ values. Design values for fatigue stresses are typically defined as upper fractile values, leading to the following relationship:
 
-````{admonition} Equation 4.41
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.41
 \text{E}\lbrack SSF\rbrack = \frac{\sqrt{v_{SSF}^{2} + 1}}{\text{exp}\left( \Phi^{- 1}(\alpha) \bullet \sqrt{\text{ln}\left( v_{SSF}^{2} + 1 \right)} \right)}
 ```
 ````
@@ -560,47 +585,52 @@ Where $\Phi^{- 1}( \bullet )$ denotes the inverse of the Standard Normal distrib
 
 Finally, the expected values and coefficients of variation of $X_{1}$ and $X_{2}$ are determined as follows:
 
-````{admonition} Equation 4.42
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.42
 \mu_{X_{1}} = \text{E}\lbrack D_{cr}\rbrack
 ```
 ````
 
-````{admonition} Equation 4.43
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.43
 \mu_{X_{2}} = \text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack \bullet \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}}
 ```
 ````
 
-````{admonition} Equation 4.44
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.44
 \text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack = 10^{- E\lbrack A\rbrack + \frac{1}{2}\text{∙ln}(10) \bullet Var\lbrack A\rbrack} \bullet {E\lbrack SSF\rbrack}^{B} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2} - B}
 ```
 ````
 
-````{admonition} Equation 4.45
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.45
 v_{X_{1}} = v_{D_{cr}} = \frac{\sqrt{\text{Var}\lbrack D_{cr}\rbrack}}{\text{E}\lbrack D_{cr}\rbrack}
 ```
 ````
 
-````{admonition} Equation 4.46
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.46
 v_{X_{2}} = \sqrt{10^{Var\lbrack A\rbrack\text{∙ln}(10)} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2}} - 1}
 ```
 ````
@@ -608,44 +638,48 @@ v_{X_{2}} = \sqrt{10^{Var\lbrack A\rbrack\text{∙ln}(10)} \bullet \left( \sqrt{
 With the distributional assumptions in Table 10‑14, an analytic solution for the probability of failure calculations is derived as follows:
 
 
-````{admonition} Equation 4.47
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math} 
+:label: Equation 3.47
 P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]
 
 = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
 ```
 ````
 
-With large coefficients of variation for the S/N curve parameter $A$ and/or the stress scaling factor $SSF$, both $v_{X_{2}}$ and $\mu_{X_{2}}$ can become very large, leading to numerical issues during the estimation of the input required for Equation 10‑47. A more robust solution for the probability of failure is achieved with the aid of a small reformulation:
+With large coefficients of variation for the S/N curve parameter $A$ and/or the stress scaling factor $SSF$, both $v_{X_{2}}$ and $\mu_{X_{2}}$ can become very large, leading to numerical issues during the estimation of the input required for Eq. {eq}`Equation 3.47`. A more robust solution for the probability of failure is achieved with the aid of a small reformulation:
 
-````{admonition} Equation 4.48
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.48
 P_{f} = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \mu_{X_{1}} \right) + \text{ln}\left( \mu_{X_{2}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
 ```
 ````
 
 Where $Var\left\lbrack \ln\left( X_{2} \right) \right\rbrack$ and $\ln\left( \mu_{X_{2}} \right)$ can be estimated as follows:
 
-````{admonition} Equation 4.49
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.49
 \text{Var}\lbrack\ln\left(X_{2}\right)\rbrack = \nu_{A}^{2} \bullet \text{E}[A]^{2} \bullet \ln(10)^{2} + B^{2} \bullet \ln \left( \nu_{SSF}^{2} + 1 \right)
 ```
 ````
 
-````{admonition} Equation 4.50
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.50
 \ln \left( \mu_{X_{2}} \right) = 0.5 \bullet \left( E[A]^{2} \bullet \ln (10)^{2} + (B^{2} - B) \bullet \ln \left( \nu_{SSF}^{2} + 1 \right) \right) 
 
 - \text{E}\lbrack A\rbrack \bullet \text{ln}(10) + B \bullet \text{ln}\left( \text{E}\lbrack SSF\rbrack \right) + \text{ln}\left( \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}} \right)
@@ -667,7 +701,7 @@ are the following:
 
 * Any uncertainty in the S/N curve slope $B$ is neglected, or must be included in the probabilistic model for the intercept $A$.
 
-* The endurance limit is set to $C = 0$. The conservatism introduced by this assumption can be reduced by setting the number of cycles $N_{j}$ for all bins with design values $S_{eq,j}$ below the endurance limit to zero. More realistic estimates can only be derived by modelling $C$ as a random variable in Equation 10‑39, requiring numerical methods to estimate the probability of failure.
+* The endurance limit is set to $C = 0$. The conservatism introduced by this assumption can be reduced by setting the number of cycles $N_{j}$ for all bins with design values $S_{eq,j}$ below the endurance limit to zero. More realistic estimates can only be derived by modelling $C$ as a random variable in Eq. {eq}`Equation 3.39`, requiring numerical methods to estimate the probability of failure.
 
 **Application of the simplified model to low risk items**
 
@@ -712,11 +746,12 @@ performed using a relationship called the NASGRO equation, which was
 initially documented by Forman and Mettu \[BR88\]. It is given by
 \[BR85\]:
 
-````{admonition} Equation 4.51
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.51
 \frac{da}{dN} = C\left\lbrack \left( \frac{1 - f}{1 - R} \right)\mathrm{\Delta}K \right\rbrack^{n}\frac{\left( 1 - \frac{\Delta K_{th}}{\mathrm{\Delta}K} \right)^{p}}{\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}}
 ```
 ````
@@ -771,7 +806,7 @@ Typical fatigue crack growth curve.
 ```
 
 The crack length $a(t)$ as a function of time (or number of cycles) can
-be calculated iteratively based on Equation 10‑51. There are three
+be calculated iteratively based on Eq. {eq}`Equation 3.51`. There are three
 possible failure criteria associated with crack growth:
 
 1.  Crack instability: It occurs when $K_{\max}\left( a(t) \right)$
@@ -799,29 +834,32 @@ limit state functions for a given crack length $a(t)$ is
 straight-forward (variable definitions have been given in the definition
 of the three failure criteria above:
 
-````{admonition} Equation 4.52
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.52
 g_{1}\left( \mathbf{X},a(t) \right) = K_{instability} - K_{\max}\left( a(t) \right)
 ```
 ````
 
-````{admonition} Equation 4.53
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.53
 g_{2}\left( \mathbf{X,}a(t) \right) = \sigma_{flow} - \sigma_{n}\left( a(t) \right)
 ```
 ````
 
-````{admonition} Equation 4.54
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.54
 g_{3}\left( \mathbf{X,}a(t) \right) = a_{\max} - a(t)
 ```
 ````
@@ -845,11 +883,12 @@ Finally, the probability of failure is estimated by combining all
 required criteria, e.g. (if only the first two criteria, crack stability
 and yielding, apply):
 
-````{admonition} Equation 4.55
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.55
 P_{f}(t) = \text{Pr}\left\lbrack g_{1}\left( a(t) \right) \leq 0 \cup g_{2}\left( a(t) \right) \leq 0 \right\rbrack
 ```
 ````
@@ -860,7 +899,7 @@ described e.g. by \[BR81\]. Note, however, that these models are
 generally developed for a specific crack geometry, e.g. assuming a
 through crack in an infinite plate. Hence, the applicability to the
 crack under consideration shall be assessed when using an interaction
-model instead of Equation 10‑55.
+model instead of Eq. {eq}`Equation 3.55`.
 
 Independent of the approach chosen to combine several failure criteria,
 reliability is best assessed using Monte Carlo simulations with variance
@@ -939,11 +978,12 @@ be derived based on the following assumptions:
 Bayes’ theorem (Chapter 7 Part II) can now be used to determine the
 probability distribution of the crack size after inspection \[BR91\]:
 
-````{admonition} Equation 4.56
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.56
 {f''}_{A}(a) = \frac{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)}{\int_{0}^{\infty}{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)\text{\ d}a}}
 ```
 ````
@@ -957,7 +997,7 @@ ${f'}_{A}(a)$.
 
 In \[BR81\],\[BR87\] it is stated that the POD curve may be interpreted
 directly as the cumulative distribution function of the crack size after
-inspection. This approach leads to the same result as Equation 10‑56
+inspection. This approach leads to the same result as Eq. {eq}`Equation 3.56`
 when assuming a noninformative (positive) uniform prior distribution for
 the initial crack size.
 
@@ -1091,11 +1131,12 @@ A similar philosophy can be employed for the reliability assessment. In
 this case the difference between the radiation dose $D$ and allowable
 dose $D_{A}$ is used as a limit state function:
 
-````{admonition} Equation 4.57
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.57
 g\left( \text{X} \right) = X_{1} - \Theta \bullet X_{2}(t) = D_{A} - \Theta \bullet D(t)
 ```
 ````
@@ -1108,7 +1149,7 @@ $X_{2}$ as the cumulated dose $D$ determined as a function of time $t$.
 A strongly simplified assessment can be achieved by summarizing all
 uncertainties associated with the radiation modelling in the model
 uncertainty variable $\theta$, allowing to consider both $D$ and $D_{A}$
-in Equation 10‑57 as deterministic variables. The resulting simplified
+in Eq. {eq}`Equation 3.57` as deterministic variables. The resulting simplified
 model should be seen mainly as a starting point or placeholder for a
 more detailed modelling.
 
@@ -1137,11 +1178,12 @@ $\ \mu_{X_{2}} = D$; the corresponding coefficients of variation are
 assumed equal to zero. With these assumptions, the analytic solution for
 the probability of failure is derived as follows:
 
-````{admonition} Equation 4.58
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 3.58
 P_{f}(t) = \text{P}\left\lbrack X_{1} - X_{2}(t) \bullet \Theta \leq 0 \right\rbrack = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5 \bullet \text{ln}\left( v_{\Theta}^{2} + 1 \right)}{\sqrt{\text{ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
 ```
 ````
