@@ -3,7 +3,6 @@ Welcome to the repository that stores and tracks the development on the ADS/Matr
 
 - `01_Resources` This folder hosts general resources of the project such as shared documents, related project documentation, pictures, etc.
 - `02_NRPMHandbook` This is the main folder for the digital handbook. All jupyter files are stored in this folder.
-- `03_PythonDev` This is the folder where pure python development files (e.g., for the interactive part of the notebook) can be stored. Ideally, code would be developed inside this folder and then copied to the jupyter notebook only for UI considerations.
 - `.binder` This folder holds the binder configuration, i.e. requirements for the binder kernels.
 
 # FAQ
