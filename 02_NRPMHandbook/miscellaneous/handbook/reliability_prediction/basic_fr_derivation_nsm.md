@@ -85,12 +85,15 @@ SPF
 ```
 
 (misc_table4_6)=
-**Table 4.6** : Occurrence scale with 10 levels.
+````{list-table} Occurrence scale with 10 levels.
+:class: interactive-table
+:name: Occurrence scale with 10 levels.
 
-```{image} ../../picture/figure4_11.png
+* - ```{image} ../../picture/figure4_11.png
 :alt: table4_6
 :align: center
 ```
+````
 
 ```{glossary}
 TRL
@@ -101,11 +104,11 @@ TRL
 (misc_4_7_2)=
 ### Probability assessment
 
-The occurrence scale of [Table 4 -6](misc_table4_6) is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:
+The occurrence scale of {numref}` Occurrence scale with 10 levels.` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:
 
 * In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a RF passive part which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
 * A probability of occurrence is assigned to every failure mode and the sum provides the probability of occurrence of the item.
-* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to $10^{-4}$ as level 4 ([Table 4 -6](misc_table4_6) ) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
+* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}` Occurrence scale with 10 levels.` ) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
 
 
 This represents the basic failure rate or the basic probability of failure.

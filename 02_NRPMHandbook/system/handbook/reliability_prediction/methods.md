@@ -884,13 +884,12 @@ P(X|A,B) = \begin{bmatrix}
 
 For a serial system the conditional probabilities are either 1 or 0, which means system failure will occur for certain if A or B fails. The conditional probability table for a parallel system is given in Eq. {eq}`Equation 7.29`. 
 
-(syst_equation4_28)=
 ````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
-:label: Equation 7.28
+:label: Equation 7.29
 P(X|A,B) = \begin{bmatrix}
 1 & 0 & 0 & 0 \\
 0 & 1 & 1 & 1

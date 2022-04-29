@@ -2,7 +2,7 @@
 
 As presented, a reliability model can be built based on IOR data and/or on test data (manufacturers, user) or combined with IOR data and/or on test data (manufacturers, user).
 
-The basic failure rate or the basic probability of failure in [Table 4 -8](misc_table4_8) is based on such IOR data. The data was compiled from the IOR background in ADS & TAS fleets.
+The basic failure rate or the basic probability of failure in {numref}` Reliability data` is based on such IOR data. The data was compiled from the IOR background in ADS & TAS fleets.
 
 Per miscellaneous items, the anomalies are collected regarding representative products (quality, range of operational conditions, orbit as relevant) and the failures are classified in random failures ($RF$) and systematic failures ($SF$). To avoid duplication of systematic anomalies, they are only counted once. That means that the derived failure rates include as relevant systematic failure contribution.
 
@@ -99,6 +99,6 @@ F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \f
 ````
 
 
-Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering Eq. {eq}`Equation 5.10`) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering Eq. {eq}`Equation 5.11`).
+Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering [Equation 4.10](misc_equation4_10)) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering [Equation 4.11](misc_equation4_11)).
 
 Once $\alpha$ and $\beta$ are determined it allows to derive the Bayesian estimator with n being the number of failures and $\sum t_{i}$ the cumulated time.

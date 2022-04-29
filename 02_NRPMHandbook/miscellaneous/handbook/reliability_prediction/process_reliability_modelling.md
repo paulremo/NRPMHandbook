@@ -2,7 +2,7 @@
 
 This Section details how to build a reliability model for miscellaneous item.
 
-Figure 4.4 provides the general process to apply whatever the basic model is: 
+{numref}`Figure 5.4` provides the general process to apply whatever the basic model is: 
 
 1. the “standard model”, or 
 2. the “non-standard model” or even 
@@ -73,7 +73,7 @@ The failure rate is referred to as basic failure rate $\lambda_{1} = \lambda_{B}
 
 (misc_step2)=
 ``````{dropdown} **STEP 2 : Normalization of the basic failure rate**
-The major contributors to the reliability are identified in [Table4-8](terms.md).
+The major contributors to the reliability are identified in {numref}`Reliability data`.
 In the case the actual parameters are different (either higher or lower quality levels, additional stresses, specific technology, specific contributors to the reliability) a tailoring factor is recommended to account for the item’s specificities.
 
 `````{admonition} Rule
@@ -231,16 +231,20 @@ For operating conditions it is necessary to define the weights per contributor a
 * To define the category for each condition
 * To calculate the resulting factor to be added.
 
-[Table4-4](misc_table4_4) provides an example of such a calculation.
+{numref}` Values of factors per their ranking.` provides an example of such a calculation.
 ```
 
 (misc_table4_4)=
-**Table 4.4** : Values of factors per their ranking.
+````{list-table} Values of factors per their ranking.
+:class: interactive-table
+:name: Values of factors per their ranking.
 
-```{image} ../../picture/figure4_4.png
+* - ```{image} ../../picture/figure4_4.png
 :alt: figure4_4
 :align: center
 ```
+
+````
 
 The column _“value”_ provides the factors depending on the classification (column _“scale”_).
 The two right-hand columns provide the result for one example (_“X”_ representing the ranking regarding the different categories with the associated resulting factor in the right column)
@@ -414,12 +418,16 @@ It is up to the discretion of the user to use the result appropriately:
 * Equivalent failure rate derived at a certain time (only valid at this time)
 * Approximation of the probability of failure by $\lambda t$, when $\lambda$ is small regarding $10^{-2}$.
   
-An example of calculation is presented in [Table 4 -5](misc_table4_5).
+An example of calculation is presented in {numref}`Example of a reliability calculation for a Miscellaneous item`.
 
 (misc_table4_5)=
-**Table 4.5** : Example of a reliability calculation for a Miscellaneous item: TWTA.
+````{list-table} Example of a reliability calculation for a Miscellaneous item
+:class: interactive-table
+:name: Example of a reliability calculation for a Miscellaneous item
 
-```{image} ../../picture/figure4_8.png
+* - ```{image} ../../picture/figure4_8.png
 :alt: table4_5
 :align: center
 ```
+
+``

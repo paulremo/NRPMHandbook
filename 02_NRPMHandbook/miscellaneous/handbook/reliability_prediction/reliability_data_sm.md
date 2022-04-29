@@ -1,6 +1,6 @@
 # Reliability Data for Miscellaneous “Standard model”
 
-[Table 4 -8](misc_table4_8) provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
+{numref}` Reliability data` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
 
 The meaning of the columns is explained in **XXX**.
 
@@ -26,20 +26,18 @@ REF ERROR just above in 1.
 ```
 ````
 
-Reference to a table {numref}`misc_table4_7` and to another table {numref}`misc_table4_8`.
+Reference to a table {numref}` Structure of the reliability data table` and to another table {numref}` Reliability data`.
 
 ```{list-table} Structure of the reliability data table
 :class: interactive-table
-:name: misc_table4_7
+:name: Structure of the reliability data table
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_7.html" frameBorder="0" onload="resize_iframe(this)" ></iframe>
 ```
 
-
-
 ```{list-table} Reliability data
 :class: interactive-table
-:name: misc_table4_8
+:name: Reliability data
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_8.html" frameBorder="0" onload="resize_iframe(this)" ></iframe>
 ```
