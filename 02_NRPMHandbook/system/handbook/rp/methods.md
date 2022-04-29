@@ -87,21 +87,23 @@ Reliability Block Diagram for a Serial System
 The following rules apply for the calculation of the Failure Probability or Reliability of serial systems under the assumption that the components are independent:
 
 (syst_equation4_1)=
-````{admonition} Equation 4.1
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.1
 R_{S}(t) = R_{A}(t) * R_{B}(t)
 ```
 ````
 
 (syst_equation4_2)=
-````{admonition} Equation 4.2
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.2
 F_{S}(t) = F_{A}(t) + F_{B}(t) - F_{A}(t) * F_{B}(t)
 ```
 ````
@@ -109,11 +111,12 @@ F_{S}(t) = F_{A}(t) + F_{B}(t) - F_{A}(t) * F_{B}(t)
 In general, the following rule applies for a serial system with $n$ components:
 
 (syst_equation4_3)=
-````{admonition} Equation 4.3
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.3
 R_{S}(t) = \sum_{i = 1}^{n} R_{i}(t)
 ```
 ````
@@ -134,31 +137,34 @@ Reliability Block Diagram for a Parallel System
 For parallel systems, the following mathematical rules for the calculation of the Failure Probability or Reliability apply under the assumption that both components are independent:
 
 (syst_equation4_4)=
-````{admonition} Equation 4.4
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.4
 R_{S}(t) = R_{A}(t) + R_{B}(t) - R_{A}(t) * R_{B}(t)
 ```
 ````
 
 (syst_equation4_5)=
-````{admonition} Equation 4.5
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.5
 F_{S}(t) = F_{A}(t) * F_{B}(t)
 ```
 ````
 
 (syst_equation4_6)=
-````{admonition} Equation 4.6
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.6
 R_{S}(t) = 1 - \prod_{i=1}^{n} (1-R_{i}(t))
 ```
 ````
@@ -182,11 +188,12 @@ Decomposition of a System Architecture
 In the first step, the summary of the serial connection between the failure of component B and C is obtained by the following equation:
 
 (syst_equation4_7)=
-````{admonition} Equation 4.7
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.7
 R_{B \vee C}(t) = R_{B}(t) * R_{C}(t)
 ```
 ````
@@ -194,21 +201,23 @@ R_{B \vee C}(t) = R_{B}(t) * R_{C}(t)
 In the second and final step, the combination of the parallel arrangement described in the transitional scheme yields:
 
 (syst_equation4_8)=
-````{admonition} Equation 4.8
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.8
 R_{S}(t) = R_{A}(t) + R_{B \vee C}(t) -  R_{A}(t) * R_{B \vee C}(t)
 ```
 ````
 
 (syst_equation4_9)=
-````{admonition} Equation 4.9
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.9
 R_{S}(t) = R_{A}(t) + R_{B}(t) * R_{C}(t) -  R_{A}(t) * R_{B}(t) * R_{C}(t)
 ```
 ````
@@ -249,23 +258,25 @@ Minimal Cut Sets
 The failure probability of the entire system can be approximated by adding the failure probabilities of the minimal cut sets. For each minimal cut set the failure probability is obtained by multiplying the failure probabilities of all its components.
 
 (syst_equation4_10)=
-````{admonition} Equation 4.10
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.10
 F_{S}(t) \cong F_{A}(t)F_{B}(t) + F_{C}(t)F_{D}(t) + F_{A}(t)F_{D}(t)F_{E}(t) + F_{B}(t)F_{C}(t)F_{E}(t)
 ```
 ````
 
-The system reliability is then given by [Equation 4.11](syst_equation4_11).
+The system reliability is then given by Eq. {eq}`Equation 7.11`.
 
 (syst_equation4_11)=
-````{admonition} Equation 4.11
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.11
 R(t) = 1 - F(t)
 ```
 ````
@@ -309,7 +320,7 @@ name: Figure 7.9
 Example Fault Tree of system with two redundant components.
 ```
 
-The calculation is identical to RBD, thus [Equation 4.4](syst_equation4_4) and [Equation 4.5](syst_equation4_5) apply also for the fault tree. A system with components working in serial arrangement is represented by an OR gate in the fault tree, which means if either component A or B fails the system will fail, see {numref}`Figure 7.10`. 
+The calculation is identical to RBD, thus Eq. {eq}`Equation 7.4` and Eq. {eq}`Equation 7.5` apply also for the fault tree. A system with components working in serial arrangement is represented by an OR gate in the fault tree, which means if either component A or B fails the system will fail, see {numref}`Figure 7.10`. 
 
 (syst_figure4_10)=
 ```{figure} ../../picture/figure4_10.png
@@ -320,7 +331,7 @@ name: Figure 7.10
 Example Fault Tree of system with two component working in series.
 ```
 
-For the calculation the same rules apply as for RBD, thus [Equation 4.1](syst_equation4_1) and [Equation 4.2](syst_equation4_2) are to be used to calculate reliability or failure probability of the fault tree shown in Figure   12 -10. A combination of AND and OR gate, which would correspond to combination of serial and parallel arrangement in RBD is shown in {numref}`Figure 7.11`. The calculation is done similar to RBD by decomposition. 
+For the calculation the same rules apply as for RBD, thus Eq. {eq}`Equation 7.1` and Eq. {eq}`Equation 7.2` are to be used to calculate reliability or failure probability of the fault tree shown in Figure   12 -10. A combination of AND and OR gate, which would correspond to combination of serial and parallel arrangement in RBD is shown in {numref}`Figure 7.11`. The calculation is done similar to RBD by decomposition. 
 
 (syst_figure4_11)=
 ```{figure} ../../picture/figure4_11.png
@@ -331,7 +342,7 @@ name: Figure 7.11
 Example Fault Tree with OR and AND gates.
 ```
 
-A system consisting of n components or sub-systems, of which only k need to be functioning for system success, is called a “k-out-of-n” configuration. For such a system, k is less than n. The associated fault tree is represented with a voting gate, the figure indicates the number of basic events that are required for the top event. Given that the system components are identical and statistically independent the system reliability is given by the Binomial distribution in [Equation 4.12](syst_equation4_12).
+A system consisting of n components or sub-systems, of which only k need to be functioning for system success, is called a “k-out-of-n” configuration. For such a system, k is less than n. The associated fault tree is represented with a voting gate, the figure indicates the number of basic events that are required for the top event. Given that the system components are identical and statistically independent the system reliability is given by the Binomial distribution in Eq. {eq}`Equation 7.12`.
 
 (syst_figure4_12)=
 ```{figure} ../../picture/figure4_12.png
@@ -343,11 +354,12 @@ Example Fault Tree with Vote gate (2 out of 3 logic).
 ```
 
 (syst_equation4_12)=
-````{admonition} Equation 4.12
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.12
 R_{S}(t) = \sum_{k}^{n} \frac{n!}{i!(n-i)!}R(t)^{i}(1-R(t))^{n-i}
 ```
 ````
@@ -392,11 +404,12 @@ Example of a generic event tree
 The consequences of the event are considered through a series of possible paths. Each path is assigned a probability of occurrence and thus the probability of the various possible outcomes can be calculated. For example, the quantitative assessment of the probability that outcome 1 occurs given the initiating event has occurred is given by: 
 
 (syst_equation4_13)=
-````{admonition} Equation 4.13
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.13
 P(Outcome 1 | Initiating event) = P(B_{1} \cup B_{2} \cup B_{3} \cup B_{4})
 ```
 ````
@@ -486,14 +499,15 @@ name: Figure 7.14
 State transition diagram of system with two redundant components
 ```
 
-A set of differential equations can be obtained from the state transition diagram in {numref}`Figure 7.14`. Each differential equation describes the change in the probability of being in one state, which can be formulated in the general equation, given in [Equation 4.14](syst_equation4_14). 
+A set of differential equations can be obtained from the state transition diagram in {numref}`Figure 7.14`. Each differential equation describes the change in the probability of being in one state, which can be formulated in the general equation, given in Eq. {eq}`Equation 7.14`. 
 
 (syst_equation4_14)=
-````{admonition} Equation 4.14
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.14
 \text{Change in probability of state } i = \text{incoming probability from all other states} - \text{outgoing probability to all other states}
 ```
 ````
@@ -501,42 +515,46 @@ A set of differential equations can be obtained from the state transition diagra
 The following set of differential equations is obtained from the state transition diagram in {numref}`Figure 7.14`
 
 (syst_equation4_15)=
-````{admonition} Equation 4.15
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.15
 \dot{P_{1}}(t) = -(\lambda_{A} + \lambda_{B})P_{1}(t)
 ```
 ````
 
 
 (syst_equation4_16)=
-````{admonition} Equation 4.16
+````{admonition} Equation
 :class: equation
 ``  
 ``  
 ```{math}
+:label: Equation 7.16
 \dot{P_{2}}(t) = \lambda_{B}P_{1}(t) - \lambda_{A}P_{2}(t)
 ```
 ````
 
 (syst_equation4_17)=
-````{admonition} Equation 4.17
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.17
 \dot{P_{3}}(t) = \lambda_{A}P_{1}(t) - \lambda_{B}P_{3}(t)
 ```
 ````
 
 (syst_equation4_18)=
-````{admonition} Equation 4.18
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.18
 \dot{P_{4}}(t) = \lambda_{A}P_{2}(t) + \lambda_{B}P_{3}(t)
 ```
 ````
@@ -544,11 +562,12 @@ The following set of differential equations is obtained from the state transitio
 Where $P_{1}(t)$ denotes the probability of being in state $S_{1}$, and $P_{2}(t)$ denotes the probability of being in state $S_{2}$ and so on. The system of differential equations can be represented as follows:
 
 (syst_equation4_19)=
-````{admonition} Equation 4.19
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.19
 [\dot{P}] = [P][A]
 ```
 ````
@@ -556,11 +575,12 @@ Where $P_{1}(t)$ denotes the probability of being in state $S_{1}$, and $P_{2}(t
 For a system with $m$ states, the square matrix $A$ has $m$ rows and $m$ columns. The sum of all possible system states must be 1 at all times. 
 
 (syst_equation4_20)=
-````{admonition} Equation 4.20
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.20
 \sum^{i=m}P_{i}(t) = 1
 ```
 ````
@@ -568,41 +588,45 @@ For a system with $m$ states, the square matrix $A$ has $m$ rows and $m$ columns
 To solve the differential equations, the initial state probabilities at $t = 0$ have to be defined, in this case both components are operable at $t=0$, thus $P_{1}(t) = 1$ and the other state probabilities are zero. From the solution of the system of differential equations, the following is obtained: 
 
 (syst_equation4_21)=
-````{admonition} Equation 4.21
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.21
 P_{1}(t) = \text{exp}\left(-\left(\lambda_{A} + \lambda_{B} \right)t\right)
 ```
 ````
 
 (syst_equation4_22)=
-````{admonition} Equation 4.22
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.22
 P_{2}(t) = \text{exp}\left(-\lambda_{A}t\right)
 ```
 ````
 
 (syst_equation4_23)=
-````{admonition} Equation 4.23
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.23
 P_{3}(t) = \text{exp}\left(-\lambda_{B}t\right)
 ```
 ````
 
 (syst_equation4_24)=
-````{admonition} Equation 4.24
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.24
 P_{4}(t) = 1 - \text{exp}\left(-\lambda_{B}t\right)
 ```
 ````
@@ -753,15 +777,16 @@ name: Figure 7.21
 Example of a basic Bayesian network
 ```
 
-Considering a Bayesian network with random variables $X_{1}, X_{2}, ..., X_{n}$ by applying the chain rule of probability theory, the joint probability given in [Equation 4.27](syst_equation4_27) can be expressed as follows: 
+Considering a Bayesian network with random variables $X_{1}, X_{2}, ..., X_{n}$ by applying the chain rule of probability theory, the joint probability given in Eq. {eq}`Equation 7.27` can be expressed as follows: 
 
 
 (syst_equation4_25)=
-````{admonition} Equation 4.25
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.25
 P\left(X_{1},..., X_{n}\right) = \prod^{n}P\left(X_{i}|pa\left(X_{i}\right)\right)
 ```
 ````
@@ -792,11 +817,12 @@ name: table4_6
 The marginal distribution $P\left(B=S_{B_{1}}\right)$ is obtained from Bayesian network inference as follows:
 
 (syst_equation4_26)=
-````{admonition} Equation 4.26
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.26
 P\left(B=S_{B_{1}}\right) = P\left(B=S_{B_{1}}|A=S_{A_{1}}\right)P\left(A=S_{A_{1}}\right) + P\left(B=S_{B_{1}}|A=S_{A_{2}}\right)P\left(A=S_{A_{2}}\right)
 ```
 ````
@@ -825,16 +851,17 @@ Bayesian network of a serial system
 The joint probability of the serial system is given by
 
 (syst_equation4_27)=
-````{admonition} Equation 4.27
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.27
 P(X,A,B) = P(X|A,B)P(A,B)
 ```
 ````
 
-The conditional probability of the child node X for a serial system is given by [Equation 4.28](syst_equation4_28) Error: Reference source not found:
+The conditional probability of the child node X for a serial system is given by Eq. {eq}`Equation 7.28` Error: Reference source not found:
 
 ```{admonition} Todo
 :class: todo
@@ -842,11 +869,12 @@ Miss ref just above
 ```
 
 (syst_equation4_28)=
-````{admonition} Equation 4.28
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.28
 P(X|A,B) = \begin{bmatrix}
 1 & 1 & 1 & 0 \\
 0 & 0 & 0 & 1
@@ -854,14 +882,15 @@ P(X|A,B) = \begin{bmatrix}
 ```
 ````
 
-For a serial system the conditional probabilities are either 1 or 0, which means system failure will occur for certain if A or B fails. The conditional probability table for a parallel system is given in [Equation 4.29](syst_equation4_29). 
+For a serial system the conditional probabilities are either 1 or 0, which means system failure will occur for certain if A or B fails. The conditional probability table for a parallel system is given in Eq. {eq}`Equation 7.29`. 
 
 (syst_equation4_28)=
-````{admonition} Equation 4.28
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.28
 P(X|A,B) = \begin{bmatrix}
 1 & 0 & 0 & 0 \\
 0 & 1 & 1 & 1

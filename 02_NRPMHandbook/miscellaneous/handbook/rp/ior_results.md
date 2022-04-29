@@ -50,11 +50,16 @@ In the case of the exponential distribution, a natural prior distribution is the
 
 The Bayesian estimator is defined as the expected value of the random variable $\Delta$ knowing that a failure has been observed at $t_{1}$, $t_{2}$ … $t_{n}$). Then, with a sample encompassing $n$ items and $n$ associated times to failure:
 
-(misc_equation4_9)=
-````{math}
-:label: Equation 4.9
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation 5.9
 E(\Delta | T_{1} = t_{1}, T_{2} = t_{2}, ..., T_{n} = t_{n}) = \frac{\alpha + n}{\beta + \sum_{i} (t_{i})} = \frac{\frac{\alpha}{n}}{\frac{\beta}{n} + \frac{\sum_{i} (t_{i})}{n}}
+```
 ````
+
 
 The parameters of the gamma prior distribution are selected as per the knowledge of the item.
 
@@ -70,21 +75,30 @@ It is necessary to provide rules for determining the two parameters $\alpha$ and
 
 We determine $\alpha$ so that the expected value of the gamma distribution is $\lambda_{0}$.
 
-(misc_equation4_10)=
-````{math}
-:label: Equation 4.10
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation 5.10
 E(\Delta) = \frac{\alpha}{\beta} = \lambda_{0}
+```
 ````
 
 This provides a first equation with $\alpha$ and $\beta$.
 A second equation is provided by the level of confidence "$a$" attributed to the value $\lambda_{0}$:
 
-(misc_equation4_11)=
-````{math}
-:label: Equation 4.11
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation 5.11
 F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a
+```
 ````
 
-Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering [Equation 4 -10](misc_equation4_10)) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering [Equation 4 -11](misc_equation4_11)).
+
+Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering Eq. {eq}`Equation 5.10`) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering Eq. {eq}`Equation 5.11`).
 
 Once $\alpha$ and $\beta$ are determined it allows to derive the Bayesian estimator with n being the number of failures and $\sum t_{i}$ the cumulated time.

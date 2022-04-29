@@ -65,7 +65,7 @@ parts:
     - file: miscellaneous/models/introduction_guide_miscellaneous
       title: Models
       sections:
-      - file: miscellaneous/models/misc_failure_rate_processing
+      - file: miscellaneous/models/failure_rate_processing
         title: Failure rate processing
   - caption: System chapter
     numbered: true

@@ -64,11 +64,12 @@ Miss ref just above
 ```
 
 (syst_equation4_87)=
-````{admonition} Equation 4.87
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.87
 Q_{S} = Q_{I}^{2} + Q_{C}
 ```
 ````
@@ -94,11 +95,12 @@ Miss ref just above
 ```
 
 (syst_equation4_88)=
-````{admonition} Equation 4.88
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.88
 \lambda_{T} = \lambda_{I} + \lambda_{C}
 ```
 ````
@@ -110,11 +112,12 @@ $\lambda_{C} = \beta\lambda_{T}$ denotes the failure rate of common cause failur
 The factor $\beta$ is defined as the ratio of the failure rate due to common cause to the total failure rate.
 
 (syst_equation4_89)=
-````{admonition} Equation 4.89
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.89
 \beta = \frac{\lambda_{C}}{\lambda_{T}}
 ```
 ````
@@ -126,11 +129,12 @@ In order to estimate the factor $\beta$, the contributing factors for common cau
 With the categories of significant contributors to CCF shown in section Error: Reference source not found, the common cause beta factor can be estimated, starting with an assessment of each of the common cause susceptibility categories and for each, assigning a susceptibility score 1, 5 or 10 corresponding to the susceptibility, where 1 represents a low susceptibility to common cause failure in this category. For example, a susceptibility score of 1 assigned to the category "diversity" would correspond to a system that consists of redundant component using different design concepts with no common hard- or software, whereas a susceptibility score of 10 indicates a high susceptibility to common cause failure, for example redundancies consists of identical COTS components. Susceptibility score 5 corresponds to medium susceptibility to common cause failure. The sum over all categories provides the total Common Cause Score.
 
 (syst_equation4_90)=
-````{admonition} Equation 4.90
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.90
 \text{CCS} = \sum_{i}^{}{\text{CC}S_{i}}
 ```
 ````
@@ -140,25 +144,27 @@ The next step is to assess the maximum common cause value MCCV. According to Err
 The beta factor is calculated as follows
 
 (syst_equation4_91)=
-````{admonition} Equation 4.91
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.91
 \beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV}
 ```
 ````
 
 Where $\text{CCS}_{\max}$ denotes the maximum possible Common Cause Susceptibility Score, assigning 10 to each category.
 
-As shown in the example in [Table 4.15](syst_table4_15) the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (*CCS*) of 32. With 7 categories, $\text{CCS}_{\max}$ is 70. If the lowest value of 10% for $\text{MCCV}$ is selected, the following $\beta$ value is obtained from [Equation 4.91](syst_equation4_91).
+As shown in the example in [Table 4.15](syst_table4_15) the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (*CCS*) of 32. With 7 categories, $\text{CCS}_{\max}$ is 70. If the lowest value of 10% for $\text{MCCV}$ is selected, the following $\beta$ value is obtained from Eq. {eq}`Equation 7.91`.
 
 (syst_equation4_92)=
-````{admonition} Equation 4.92
+````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
+:label: Equation 7.92
 \beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV} = \frac{32}{70} \times 0.10 = 0.0471
 ```
 ````
