@@ -1,9 +1,14 @@
 # Root causes coverage
 
-The failure mechanisms of the miscellaneous parts result from the four categories of failure root causes already introduced and reminded in [Table 4‑3](misc_table4_3).
+The failure mechanisms of the miscellaneous parts result from the four categories of failure root causes already introduced and reminded in {numref}`Occurrence scale with 10 levels.`.
 
 (misc_table4_3)=
-<iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_3.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Occurrence scale with 10 levels.
+:class: interactive-table
+:name: Occurrence scale with 10 levels.
+
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_3.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 <!--```{admonition} **Random failure**
 :class: note, dropdown

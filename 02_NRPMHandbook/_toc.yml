@@ -24,7 +24,7 @@ parts:
       - file: mechanical/handbook/reliability_prediction/reliability_prediction
         title: Reliability prediction for mechanical and structural parts and assemblies
         sections:
-        - file: mechanical/handbook/reliability_prediction/process_reliability_prediction
+        - file: mechanical/handbook/reliability_prediction/process_reliability_modelling
         - file: mechanical/handbook/reliability_prediction/root_causes_coverage
         - file: mechanical/handbook/reliability_prediction/data_sources_methods
         - file: mechanical/handbook/reliability_prediction/failure_identification_focus
