@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table 4 6 - Mechanical</title>
+    <link rel="stylesheet" href="../css/mytables.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="../vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="../vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+</head>
+
+<body>
+
+    <input type="text" class="myInput" id="myInput" onkeyup="searchTable()" placeholder="Search table...">
+    <div class="scroller">
+        <table class="myTable" id="myTable">
+            <thead>
+                <tr>
+                    <th colspan="5"></th>
+                    <th colspan="3">Structural reliability methods</th>
+                    <th colspan="2">NSWG 2011 handbook</th>
+                </tr>
+                <tr>
+                    <th>Part type</th>
+                    <th>Description</th>
+                    <th>Mechanical item category</th>
+                    <th>Predominant failure mechanism</th>
+                    <th>Modelling recommendation</th>
+                    <th>Potential failure mechanisms</th>
+                    <th>Limit state function</th>
+                    <th>Simplified method</th>
+                    <th>Model available</th>
+                    <th>Space relevance of NSWC method</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>Bearings</td>
+                <td>A device that constrains relative motion to only the I Active desired motion, and reduces friction
+                    between moving parts</td>
+                <td>I Active</td>
+                <td>Lubrication wear</td>
+                <td>Structural reliability methods</td>
+                <td>
+                    <p><u>wear</u></p>
+                    <p>fatigue &fracture</p>
+                    <p>distortion</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p>generic</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>method not applicable due to predominance of lubrication wear over fatigue in space</td>
+            </tr>
+
+            <tr>
+                <td>Springs</td>
+                <td>An elastic object that stores mechanical energy, II Passive used to exert forces or to provide flexibility.</td>
+                <td>II Passive</td>
+                <td>Load loss, creep (distortion)</td>
+                <td>Statistical methods, NSWC adjusted, or Structural (but  difficult to model creep)</td>
+                <td>
+                    <p>fatigue &fracture</p>
+                    <p><u>distortion</u></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>depends on the type and application; fatigue/fracture less relevant in space</td>
+            </tr>
+
+            <tr>
+                <td>Gears and splines</td>
+                <td>A toothed machine part such as a wheel or cylinder I Active that meshes with another toothed part to transmit motion or to change speed or direction</td>
+                <td>I Active</td>
+                <td>Lubrication wear</td>
+                <td>Structural reliability methods</td>
+                <td>
+                    <p><u>wear</u></p>
+                    <p>fatigue &fracture</p>
+                    <p>distortion</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p>generic</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>application questionable due to space specific lubrication and rotation speeds</td>
+            </tr>
+
+            <tr>
+                <td>Shafts</td>
+                <td>A rotating device, usually of circular cross section that transmits torque from one part to another</td>
+                <td>I Active</td>
+                <td>Wear (when contact is present),otherwise fatigue</td>
+                <td>Structural reliability methods</td>
+                <td>
+                    <p><u>wear</u></p>
+                    <p>fatigue &fracture</p>
+                    <p>distortion</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p>generic</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>method is maintenance related and thus not applicable to space</td>
+            </tr>
+
+            <tr>
+                <td>Hinges</td>
+                <td>Ajoint that holds two parts together such that one II Passive can swing relative to the other</td>
+                <td>II Passive</td>
+                <td>Increased friction or kinematic issues</td>
+                <td>Structural reliability methods</td>
+                <td>
+                    <p><u>distortion</u></p>
+                    <p>wear</p>
+                </td>
+                <td>
+                    <p>generic</p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>only some general considerations in NSWC</td>
+            </tr>
+
+            <tr>
+                <td>Mirrors and lenses</td>
+                <td>A piece of glass or similar material designed to reflect (mirror), or to concentrate or disperse light rays.</td>
+                <td>IV Structural</td>
+                <td>Fracture</td>
+                <td>Structural reliability methods</td>
+                <td>
+                    <p><u>fatigue &fracture</u></p>
+                    <p>distortion</p>
+                    <p>degradation</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p>generic</p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>NA</td>
+            </tr>
+
+            <tr>
+                <td>Flexural pivots</td>
+                <td>A flexure which is engineered to be compliant in one or more angular degrees of freedom.</td>
+                <td>
+                    <p>I Active</p>
+                    <p>II Passive</p>
+                </td>
+                <td>Fatigue</td>
+                <td>Structural reliability methods</td>
+                <td>
+                    <p><u>fatigue &fracture</u></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>NA</td>
+            </tr>
+
+            <tr>
+                <td>Fusible Wires</td>
+                <td>A device consisting of metal strips soldered with a fusible alloy that melts at a specific temperature, allowing the pieces to separate</td>
+                <td>II Passive</td>
+                <td>Quality issue or random failure</td>
+                <td>Statistical methods</td>
+                <td>
+                    <p>fatigue &fracture</p>
+                    <p>distortion</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p>generic</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>NA</td>
+            </tr>
+
+            <tr>
+                <td>Seals and Gaskets</td>
+                <td>A device placed between two surfaces to prevent the flow of gas or fluid from one region to another</td>
+                <td>
+                    <p>I Active</p>
+                    <p>II Passive</p>
+                    <p>III Fluidic</p>
+                </td>
+                <td>Wear, degradation, installation damage</td>
+                <td>NSWC adjusted, Statistical methods or Structural reliability methods</td>
+                <td>
+                    <p><u>wear</u></p>
+                    <p>distortion</p>
+                    <p>degradation</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p>generic</p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                </td>
+                <td>method may be applicable but requires base failure rate adjustment</td>
+            </tr>
+
+            <tr>
+                <td>Structural component (ind.threaded fasteners,inserts, brackets)</td>
+                <td>A mechanical component designed to sustain loads or pressures, provide stiffness or stability, or
+                    provide support or containment.</td>
+                <td>IV Structural</td>
+                <td>Fracture</td>
+                <td>Structural reliability methods</td>
+                <td>
+                    <p><u>fatigue &fracture</u></p>
+                    <p>distortion</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p>generic</p>
+                </td>
+                <td>
+                    <p><i class="fa fa-check" style="color:green"></i></p>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>
+                    <p><i class="fa fa-times" style="color:red"></i></p>
+                </td>
+                <td>NA</td>
+            </tr>
+
+
+
+        </table>
+    </div>
+    <script type="text/javascript" src="../js/table_search.js"></script>
+</body>
+
+</html>
