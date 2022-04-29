@@ -123,3 +123,61 @@
 }
 
 .fa-star-o:before{content:"\f006"}
+
+/*static-table*/
+.static-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  /*white-space: nowrap;*/
+  background-color: white;
+  overflow: auto;
+}
+
+.static-table tr {
+  border-color: lighten(#34495E, 10%);
+  /*width: 50px;*/
+}
+
+.static-table td, .static-table th{
+  text-align: center;
+  padding: 8px;
+  /*width: 80px;*/
+}
+
+
+.static-table td {
+  border-right: 1px solid #f8f8f8;
+}
+
+.full-span {
+  background-color: rgb(104, 104, 104);
+  color: white;
+}
+
+.static-table thead th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
+.static-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.static-table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+
+.static-table tr:hover {
+  background-color: #c4e4da;
+}
+
+.static-table thead th.major-head{
+  color: #ffffff;
+  background: #2d639a;
+}

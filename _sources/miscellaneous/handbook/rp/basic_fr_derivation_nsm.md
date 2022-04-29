@@ -44,14 +44,14 @@ miss ref above
 ```{figure} ../../picture/figure4_8.png
 ---
 width: 600px
-name: figure4_8
+name: Figure 5.8
 ---
 Differences between FMEA, DFMEA and PFMEA.
 ```
 
-[Figure 4 -8](misc_figure4_8) highlights the differences and the commonalities between FMEA, DFMEA and PFMEA.
+{numref}`Figure 5.8` highlights the differences and the commonalities between FMEA, DFMEA and PFMEA.
 
-[Figure 4 -9](misc_figure4_9)  provides an example of DFMEA and PFMEA at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in [Figure 4 -8](misc_figure4_8)), whereas the right-hand side refers to DFMEA data (green perimeter in [Figure 4 -8](misc_figure4_8)).
+{numref}`Figure 5.9`  provides an example of DFMEA and PFMEA at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in {numref}`Figure 5.8`), whereas the right-hand side refers to DFMEA data (green perimeter in {numref}`Figure 5.8`).
 
 The main outcome is the ranking of every root cause (Design error, Manufacturing error) in
 
@@ -65,7 +65,7 @@ The Risk Priority Number (RPN), which is derived, is an index reflecting the res
 ```{figure} ../../picture/figure4_10.png
 ---
 width: 600px
-name: figure4_9
+name: Figure 5.9
 ---
 Differences between FMEA, DFMEA and PFMEA.
 ```

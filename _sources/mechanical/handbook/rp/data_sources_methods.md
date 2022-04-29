@@ -123,14 +123,14 @@ The following methods can be used for the derivation of reliability estimates fo
 * **Handbook methods** are not the recommended choice for mechanical reliability prediction in space applications, as has been discussed in Section , addressing NPRD and NSWC. 
 * **A combined approach** based on one of the methods listed above and Bayesian updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.
 
-Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the Physics of Failure. General guidance on method selection is presented in [Figure 4 -2](meca_figure4_2) below. The upper row in the matrix represents statistical methods, the middle row a combined approach with Bayesian updating, and the lower row either handbook methods or data (NPRD, NSWC) or – generally preferred in the absence of statistical data – structural reliability methods (SRM) based on the Physics of Failures.
+Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the Physics of Failure. General guidance on method selection is presented in {numref}`Figure 3.2` below. The upper row in the matrix represents statistical methods, the middle row a combined approach with Bayesian updating, and the lower row either handbook methods or data (NPRD, NSWC) or – generally preferred in the absence of statistical data – structural reliability methods (SRM) based on the Physics of Failures.
 More specific recommendations are given in [Section 4.5](method_selection.md).
 
 (meca_figure4_2)=
 ```{figure} ../../pictures/figure4_2.png
 ---
 width: 600px
-name: figure4_2
+name: Figure 3.2
 ---
 Method selection for mechanical reliability prediction depending on the available input.
 ```

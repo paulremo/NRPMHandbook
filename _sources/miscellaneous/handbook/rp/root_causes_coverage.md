@@ -3,7 +3,7 @@
 The failure mechanisms of the miscellaneous parts result from the four categories of failure root causes already introduced and reminded in [Table 4‑3](misc_table4_3).
 
 (misc_table4_3)=
-<iframe src="../../../_static/interactivity/html/misc_table4_3.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_3.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 <!--```{admonition} **Random failure**
 :class: note, dropdown

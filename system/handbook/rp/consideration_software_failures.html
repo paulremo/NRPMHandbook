@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6.4.10. Title 10 &#8212; NRPM Digital handbook</title>
+    <title>7.4.10. Consideration of software failures &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/images.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myadmonitions.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
@@ -73,11 +74,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="6.5. Conclusion" href="../conclusion.html" />
-    <link rel="prev" title="6.4.9. Title 9" href="systematic_failure_modelling.html" />
+    <link rel="next" title="7.5. Conclusion" href="../conclusion.html" />
+    <link rel="prev" title="7.4.9. Systematic failure modelling" href="systematic_failure_modelling.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -117,7 +120,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../intro.html">
-   Welcome the NRPM Digital Handbook !
+   Welcome to the NRPM Digital Handbook !
   </a>
  </li>
 </ul>
@@ -132,6 +135,11 @@ const thebe_selector_output = ".output, .cell_output"
    1. Handbook
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../eee/models/intro_models.html">
+   2. Models
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -141,7 +149,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/handbook/introduction.html">
-   2. Handbook
+   3. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -151,22 +159,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/scope.html">
-     2.1. Scope
+     3.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/normative_references.html">
-     2.2. Normative References
+     3.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/terms.html">
-     2.3. Terms, definitions and abbreviated terms
+     3.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../mechanical/handbook/rp/rp.html">
-     2.4. Reliability prediction for mechanical and structural parts and assemblies
+     3.4. Reliability prediction for mechanical and structural parts and assemblies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -176,56 +184,56 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/rp/process_rp.html">
-       2.4.1. Process for mechanical reliability prediction
+       3.4.1. Process for mechanical reliability prediction
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/rp/root_causes_coverage.html">
-       2.4.2. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/rp/data_sources_methods.html">
-       2.4.3. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/rp/failure_identification_focus.html">
-       2.4.4. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/rp/method_selection.html">
-       2.4.5. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/rp/structural_method_input.html">
-       2.4.6. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/rp/structural_models_equations.html">
-       2.4.7. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/rp/examples.html">
-       2.4.8. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/bibliographic_references.html">
-     2.5. Bibliographic References
+     3.5. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/models/introduction.html">
-   3. Models
+   4. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -235,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/models/solid_lubricant_wear.html">
-     3.1. Solid lubricant wear
+     4.1. Solid lubricant wear
     </a>
    </li>
   </ul>
@@ -249,7 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../miscellaneous/handbook/introduction.html">
-   4. Handbook
+   5. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -259,22 +267,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/scope.html">
-     4.1. Scope
+     5.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/normative_references.html">
-     4.2. Normative References
+     5.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/terms.html">
-     4.3. Terms, definitions and abbreviated terms
+     5.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../miscellaneous/handbook/rp/rp.html">
-     4.4. Reliability prediction for miscellaneous items
+     5.4. Reliability prediction for miscellaneous items
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -284,83 +292,78 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/rp/items.html">
-       4.4.1. List of miscellaneous items
+       5.4.1. List of miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/rp/root_causes_coverage.html">
-       4.4.2. Root causes coverage
+       5.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/rp/data_sources_methods.html">
-       4.4.3. Data sources
+       5.4.3. Data sources
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/rp/reliability_models.html">
-       4.4.4. Reliability Models for miscellaneous items
+       5.4.4. Reliability Models for miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/rp/process_reliability_modelling.html">
-       4.4.5. Process for Reliability modelling
+       5.4.5. Process for Reliability modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/rp/ior_results.html">
-       4.4.6. Use of IOR data and/or tests results
+       5.4.6. Use of IOR data and/or tests results
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/rp/basic_fr_derivation_nsm.html">
-       4.4.7. Basic failure rate derivation for “non-standard model” items
+       5.4.7. Basic failure rate derivation for “non-standard model” items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/rp/reliability_data_sm.html">
-       4.4.8. Reliability Data for Miscellaneous “Standard model”
+       5.4.8. Reliability Data for Miscellaneous “Standard model”
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/conclusion.html">
-     4.5. Conclusion
+     5.5. Conclusion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/annexA.html">
-     4.6. Annex A
+     5.6. Annex A
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/annexB.html">
-     4.7. Annex B
+     5.7. Annex B
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/bibliographic_references.html">
-     4.8. Bibliographic References
+     5.8. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../miscellaneous/models/introduction_guide_miscellaneous.html">
-   5. Models
+   6. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../miscellaneous/models/misc_failure_rate_processing.html">
-     5.1. Failure rate processing
-    </a>
-   </li>
+  <ul class="simple">
   </ul>
  </li>
 </ul>
@@ -372,7 +375,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../introduction.html">
-   6. Handbook
+   7. Handbook
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -382,22 +385,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../scope.html">
-     6.1. Scope
+     7.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../normative_references.html">
-     6.2. Normative References
+     7.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../terms.html">
-     6.3. Terms, definitions and abbreviated terms
+     7.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="rp.html">
-     6.4. Reliability prediction for system level items
+     7.4. Reliability prediction for system level items
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -407,66 +410,66 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="rp_different_levels.html">
-       6.4.1. Reliability prediction at different levels
+       7.4.1. Reliability prediction at different levels
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="root_causes_coverage.html">
-       6.4.2. Root causes coverage
+       7.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="methods.html">
-       6.4.3. System level methods
+       7.4.3. System level methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_assessment_phased_missions.html">
-       6.4.4. Reliability assessment of phased missions
+       7.4.4. Reliability assessment of phased missions
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="important_measures.html">
-       6.4.5. Important measures
+       7.4.5. Important measures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_assessment_degraded_systems.html">
-       6.4.6. Reliability assessment of degraded systems
+       7.4.6. Reliability assessment of degraded systems
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="modelling_common_cause_failure.html">
-       6.4.7. Modelling of Common Cause failure
+       7.4.7. Modelling of Common Cause failure
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system_level_modelling_wear_out.html">
-       6.4.8. System level modelling of wear-out
+       7.4.8. System level modelling of wear-out
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="systematic_failure_modelling.html">
-       6.4.9. Title 9
+       7.4.9. Systematic failure modelling
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       6.4.10. Title 10
+       7.4.10. Consideration of software failures
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../conclusion.html">
-     6.5. Conclusion
+     7.5. Conclusion
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../models/intro_models.html">
-   7. Models
+   8. Models
   </a>
  </li>
 </ul>
@@ -557,6 +560,29 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-requirement-errors">
+   7.4.10.1. Software requirement errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-development-errors">
+   7.4.10.2. Software development errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#failure-propagation-in-the-overall-system">
+   7.4.10.3. Failure propagation in the overall system
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -564,19 +590,89 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Title 10</h1>
+                <h1>Consideration of software failures</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-requirement-errors">
+   7.4.10.1. Software requirement errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-development-errors">
+   7.4.10.2. Software development errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#failure-propagation-in-the-overall-system">
+   7.4.10.3. Failure propagation in the overall system
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="title-10">
-<h1><span class="section-number">6.4.10. </span>Title 10<a class="headerlink" href="#title-10" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="consideration-of-software-failures">
+<h1><span class="section-number">7.4.10. </span>Consideration of software failures<a class="headerlink" href="#consideration-of-software-failures" title="Permalink to this headline">¶</a></h1>
+<p>As has already been discussed in Section Error: Reference source not found, software failures are a special case of systematic failures. They result either from errors in the software functional requirements or from errors in the software development process (software design or coding), and are activated by a specific input or context. The activation of the error in a given context is deterministic (in the sense of a systematic failure), but it is not known in advance.</p>
+<p>Software failures contribute to the overall (un-)reliability of a system. To avoid major losses due to software failures, a number of strategies and measures are implemented, including defensive programming and exception handling, FDIR to facilitate software reprogramming from ground, and general fault avoidance techniques (verification, validation and qualification based on quality rules). Software Criticality Analysis helps to target these efforts by defining quality levels as a function of the criticality (classified according to the severity of consequences in ECCS-Q-ST-30C Error: Reference source not found) in a purely qualitative process. As for systematic hardware failures, the aim is to reduce the likelihood of software failures, especially those leading to major losses. However, it is necessary to point out that there remains a residual risk no matter what the software quality is.</p>
+<p>In the following, we distinguish between software requirement errors, which are introduced “outside” the software development process, and design or coding errors that occur during software development. Finally, software errors need to be considered from the perspective of the overall system. The focus is on quantitative modelling aspects; a discussion of the qualitative approaches to analyse software failures (e.g. in terms of propagation, effects, severity) is out of scope for the reliability prediction handbook.</p>
+<p>Note that the data set used for the quantitative modelling in Section Error: Reference source not found in principle considers all types of software related major anomalies. The effect of the anomalies at system level is considered with the aid of the anomaly severity classification.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>miss 3 ref above</p>
+</div>
+<div class="section" id="software-requirement-errors">
+<h2><span class="section-number">7.4.10.1. </span>Software requirement errors<a class="headerlink" href="#software-requirement-errors" title="Permalink to this headline">¶</a></h2>
+<p>Errors related to the software requirement specification (including missing, unclear or wrong requirements) are traditionally considered out of scope in software reliability prediction, which focusses on a software’s ability to perform in line with its technical specification (which should specify the outside data and context). However, there is evidence that in complex systems including both hardware and software, software errors resulting from complex or misunderstood requirements tend to be both more frequent (or more difficult to detect and fix, and thus more frequent in late phases of the development and during operation) and more severe than software development errors, see e.g. Lutz Error: Reference source not found and Leveson Error: Reference source not found. Another aspect related to this class of errors is the importance of good requirements for the design of interfaces between software components and between software and hardware, which also tends to be error-prone and critical for the overall system performance.</p>
+<p>Conceptually, there is no big difference between requirement errors for software and hardware, especially when dealing with interfaces between the two. However, it may be assumed that the rate of occurrence and the severity classification of their effects may be different.</p>
+</div>
+<div class="section" id="software-development-errors">
+<h2><span class="section-number">7.4.10.2. </span>Software development errors<a class="headerlink" href="#software-development-errors" title="Permalink to this headline">¶</a></h2>
+<p>The focus of existing software reliability prediction methods and modelsis on software development errors, introduced during software design and coding (w.r.t. the software environment). Various methods and associated tools are available on the market; see e.g. the reviews presented in IEEE Std 1633:2016 Error: Reference source not found, Chu et al. Error: Reference source not found or the RIDE1 study Error: Reference source not found. Models can be set up “a priori” at the beginning of the development phase, or “a posteriori”, making refinements based on inputs from testing during the development and production of Software (reliability growth modelling). “A posteriori” methods are based on observing the activation of bugs of a specific software during test or operations, aiming at the prediction of the probability of the (future) activation of residual errors after bug fixing in time. In contrast to this, “a priori” models can only be based on the observation of bugs in other software than the one under analysis, generally making use of some relevant characteristics of the software product and development process to determine the error rate.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>miss ref above</p>
+</div>
+<p>A major concern with all existing models is how to populate them with relevant data and assumptions:</p>
+<ul class="simple">
+<li><p>Software development characteristics for “a priori” prediction models</p></li>
+<li><p>Results from software testing, including test coverage, validation of inputs data, qualification in operational environment for “a posteriori” modelling</p></li>
+<li><p>IOR data would certainly be the most relevance source to tune the models, but the consistency of the observed data with new software is questionable, e.g. in terms of software complexity, languages and standards</p></li>
+</ul>
+<p>Another problem is related to the fact that the existing software reliability prediction models were generally developed to assess software systems with target failure rates around <span class="math notranslate nohighlight">\(10^{-3}\)</span> to <span class="math notranslate nohighlight">\(10^{-4}\)</span> per hour, which is several orders of magnitude higher than what is considered acceptable for space applications, at least when regarding severe effects such as “loss of mission”. The confidence in the prediction of failure rates in the order of <span class="math notranslate nohighlight">\(10^{-5}\)</span> to <span class="math notranslate nohighlight">\(10^{-6}\)</span> per hour is generally low, which is an important limitation for software reliability prediction in space applications and more generally in safety regulated industries, see e.g. Kanoun Error: Reference source not found or Chu et al. Error: Reference source not found.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>miss 2 ref above</p>
+</div>
+<p>In summary, it may be concluded that the existing models for software reliability prediction may be used to support qualitative processes (e.g. to monitor trends), but cannot be considered mature enough to derive pertinent reliability figures, especially for the low failure rates required in space applications. Considering that the most relevant root causes of software related failures are anyway out of scope for predictions made with the existing models – see the discussion of software requirement errors in Section Error: Reference source not found – there seems to be no added value in using these predictions to support the software design process in space projects.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>miss ref above</p>
+</div>
+</div>
+<div class="section" id="failure-propagation-in-the-overall-system">
+<h2><span class="section-number">7.4.10.3. </span>Failure propagation in the overall system<a class="headerlink" href="#failure-propagation-in-the-overall-system" title="Permalink to this headline">¶</a></h2>
+<p>To understand the contribution of software failures to the overall system (un-)reliability, it must be understood how detrimental their effect will be at system level. This question cannot be answered by software reliability prediction, as the focus is on what happens within the overall system after a software failure.</p>
+<p>The current quality assurance processes and design rules for Software are based on qualitative considerations accounting for the system level effects of software failures. The ECSS software criticality (severity) assessment does not require, and even explicitly excludes (clause 5.4.2.f), any probabilistic modelling Error: Reference source not found. In practice this means that a quantitative reliability prediction would influence neither the Software development process nor the system failure tolerance. Similar approaches can be found in other industries, see e.g. DO-178C Error: Reference source not found for the aeronautics domain.</p>
+<p>A different approach to account for the effects of software at system level is described in ED-153 Error: Reference source not found for safety assurance of software functions in Air Navigation Services (limited to on-ground applications), which allows to select the software assurance level as a function of both the effect severity class and the likelihood of generating such an effect (classified on a qualitative scale with four categories from “Very Possible” to “Extreme Unlikely”). As a result, the required assurance level can be reduced if the likelihood of high severity effects is small, even if they cannot be avoided completely. However, it needs to be emphasized that this approach does not require any reliability prediction for the software itself, the focus is rather on the conditional probability of severe (hardware) effects given software failure. Furthermore, it should be noted that ED-153 takes a rather atypical position on this topic, and many Communication, Navigation and Surveillance and Air Traffic Management (CNS/ATM) Systems use ED-109 instead (also known as DO-278, Error: Reference source not found), which takes a similar position on software reliability prediction as presented in DO-178C Error: Reference source not found for airborne systems.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>miss 2 ref above</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -608,13 +704,13 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6.4.9. </span>Title 9</p>
+            <p class="prev-next-title"><span class="section-number">7.4.9. </span>Systematic failure modelling</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../conclusion.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.5. </span>Conclusion</p>
+        <p class="prev-next-title"><span class="section-number">7.5. </span>Conclusion</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

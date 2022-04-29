@@ -97,7 +97,7 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the random failure 
 ``
 ``  
 ```{math}
-$\begin{matrix}
+\begin{matrix}
   \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                       
   \lambda\left( t \right) = \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1} \\   
   \end{matrix}\left\{ \begin{matrix}                                                                            
@@ -330,7 +330,7 @@ The mission duration shall be extended from 50000 hours by another 10000 hours t
 (syst_table4_16)=
 **Table 4.16** : Example for parameters for component with random and wear-out failures
 
-<iframe src="../../../_static/interactivity/html/syst_table4_16.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_16.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 [Equation 4.112](syst_equation4_112) provides the reliability for a mission extension of a duration *t* giving that *T* hours of successful operation have already been accumulated up to the start of the mission extension. The system reliability is evaluated to assure that it will complete the next mission extension successfully.
 
@@ -366,7 +366,7 @@ With the three wear-out models the following results shown in [Table 4.17](syst_
 (syst_table4_17)=
 **Table 4.17** : Conditional probability for different wear-out models
 
-<iframe src="../../../_static/interactivity/html/syst_table4_17.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_17.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 ## Reliability of standby systems with and without a switching device
 
@@ -404,7 +404,7 @@ The previous example assumes perfect switching, i.e. activation of the stand-by 
 ```{figure} ../../picture/figure4_32.png
 ---
 width: 600px
-name: figure4_32
+name: Figure 7.32
 ---
 Stand-by system with switching device
 ```

@@ -67,13 +67,13 @@ r : = \left( R_{i}\left( t \right),\ldots R_{n}\left( t \right) \right)
 ```
 ````
 
-In the following, to demonstrate the calculation of the Birnbaum importance a fictive example of a power supply system as shown in [Figure 4.29](syst_figure4_29) is considered. It consists of three solar arrays of different size to provide electrical power. Two larger solar arrays are charging the battery. A power converter is implemented to provide the required voltage levels to the satellite systems.
+In the following, to demonstrate the calculation of the Birnbaum importance a fictive example of a power supply system as shown in {numref}`Figure 7.29` is considered. It consists of three solar arrays of different size to provide electrical power. Two larger solar arrays are charging the battery. A power converter is implemented to provide the required voltage levels to the satellite systems.
 
 (syst_figure4_29)=
 ```{figure} ../../picture/figure4_29.png
 ---
 width: 600px
-name: figure4_29
+name: Figure 7.29
 ---
 Reliability Block diagram Power Supply System (fictive example)
 ```
@@ -141,7 +141,7 @@ I_{m1} = XXX
 (syst_table4_9)=
 **Table 4.9** : Birnbaum or marginal importance
 
-<iframe src="../../../_static/interactivity/html/syst_table4_9.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_9.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 (syst_4_5_2)=
 ## Reduced structural importance
@@ -167,14 +167,14 @@ I_{\text{RS}}\left( i,r \right) = \frac{1}{{1 - R}_{\text{mi}n}}\int_{R_{\min}}^
 miss factor at final Ri
 ```
 
-The reduced structural importance allows assessing the influence of individual components on the system reliability already in early phases of the development, when the system architecture is available but no component failure rates. [Table 4.10](syst_table4_10) shows a comparison of Birnbaum and reduced structural importance for the system architecture shown in [Figure 4.29](syst_figure4_29). For this example, it is assumed that all failure rates of the system are below 1.0E-06 1/h, and with 10 years mission duration a minimum component reliability $R_{\min}$ of 0.916 is obtained.
+The reduced structural importance allows assessing the influence of individual components on the system reliability already in early phases of the development, when the system architecture is available but no component failure rates. [Table 4.10](syst_table4_10) shows a comparison of Birnbaum and reduced structural importance for the system architecture shown in {numref}`Figure 7.29`. For this example, it is assumed that all failure rates of the system are below 1.0E-06 1/h, and with 10 years mission duration a minimum component reliability $R_{\min}$ of 0.916 is obtained.
 
 It can be seen that the relative ranking of the components will be the same for the Birnbaum importance and the reduced structural importance, because the system architecture is the determining factor for the importance of the individual components rather than the failure rates. The absolute values of importance measures are different and with the reduced structural importance the potential system reliability improvement cannot be quantified, but it provides a qualitative assessment where reliability improvement has the biggest impact on system reliability.
 
 (syst_table4_10)=
 **Table 4.10** : Example for marginal and reduced structural Importance.
 
-<iframe src="../../../_static/interactivity/html/syst_table4_10.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_10.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 ## Reliability allocation based on importance measures
 
@@ -224,7 +224,7 @@ $\mathrm{\Delta}R_{i}$ denotes the change in reliability of component $i$ and
 
 $\mathrm{\Delta}R_{S}$ denotes the change of the system reliability
 
-In the following, the system architecture shown in [Figure 4.29](syst_figure4_29) is considered as an example to demonstrate the use of importance measures for reliability allocation. Let's assume the following reliability target for the system is given:
+In the following, the system architecture shown in {numref}`Figure 7.29` is considered as an example to demonstrate the use of importance measures for reliability allocation. Let's assume the following reliability target for the system is given:
 
 *The reliability of the system shall be at least 0.95 after 10 years mission duration (87600 hours). *
 
@@ -358,5 +358,5 @@ The reliability target for components in group III are not adapted as the system
 (syst_table4_11)=
 **Table 4.11** : Example reliability allocation using Birnbaum importance measures
 
-<iframe src="../../../_static/interactivity/html/syst_table4_11.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_11.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 

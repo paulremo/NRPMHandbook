@@ -5,4 +5,4 @@ Based on the classification of the root causes of failures, different system lev
 (syst_table4_1)=
 **Table 4.1** : Classification of failure root causes and associated system level methods.
 
-<iframe src="../../../_static/interactivity/html/syst_table4_1.html" frameborder="0" style="width:100%;" id="ext_interactive" onload="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_1.html" frameborder="0" onload="resize_iframe(this)"></iframe>
