@@ -181,38 +181,43 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
+       3.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.1. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.2. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.3. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.4. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.5. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.6. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
-       3.4.7. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
@@ -605,7 +610,7 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="process-for-reliability-modelling">
 <h1><span class="section-number">5.4.5. </span>Process for Reliability modelling<a class="headerlink" href="#process-for-reliability-modelling" title="Permalink to this headline">¶</a></h1>
 <p>This Section details how to build a reliability model for miscellaneous item.</p>
-<p>Figure 4.4 provides the general process to apply whatever the basic model is:</p>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">5.4</span></code> provides the general process to apply whatever the basic model is:</p>
 <ol class="simple">
 <li><p>the “standard model”, or</p></li>
 <li><p>the “non-standard model” or even</p></li>
@@ -672,7 +677,7 @@ So, what is discussed in the following Sections, addressing directly the failure
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">The major contributors to the reliability are identified in <span class="xref myst">Table4-8</span>.
+<p class="card-text">The major contributors to the reliability are identified in <a class="reference internal" href="reliability_data_sm.html#reliability-data"><span class="std std-numref">Table 5.5</span></a>.
 In the case the actual parameters are different (either higher or lower quality levels, additional stresses, specific technology, specific contributors to the reliability) a tailoring factor is recommended to account for the item’s specificities.</p>
 <div class="rule admonition">
 <p class="admonition-title">Rule</p>
@@ -806,10 +811,8 @@ The average resulting factor is then applied.</p>
 <li><p class="card-text">To define the category for each condition</p></li>
 <li><p class="card-text">To calculate the resulting factor to be added.</p></li>
 </ul>
-<p class="card-text"><a class="reference internal" href="sav.html#misc-table4-4"><span class="std std-ref">Table4-4</span></a> provides an example of such a calculation.</p>
+<p class="card-text"><code class="xref std std-numref docutils literal notranslate"> <span class="pre">Values</span> <span class="pre">of</span> <span class="pre">factors</span> <span class="pre">per</span> <span class="pre">their</span> <span class="pre">ranking.</span></code> provides an example of such a calculation.</p>
 </div>
-<p class="card-text" id="misc-table4-4"><strong>Table 4.4</strong> : Values of factors per their ranking.</p>
-<img alt="figure4_4" class="align-center" src="../../../_images/figure4_41.png" />
 <p class="card-text">The column <em>“value”</em> provides the factors depending on the classification (column <em>“scale”</em>).
 The two right-hand columns provide the result for one example (<em>“X”</em> representing the ranking regarding the different categories with the associated resulting factor in the right column)</p>
 <p class="card-text"><span class="math notranslate nohighlight">\(1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\)</span></p>
@@ -949,9 +952,7 @@ It is up to the discretion of the user to use the result appropriately:</p>
 <li><p>Equivalent failure rate derived at a certain time (only valid at this time)</p></li>
 <li><p>Approximation of the probability of failure by <span class="math notranslate nohighlight">\(\lambda t\)</span>, when <span class="math notranslate nohighlight">\(\lambda\)</span> is small regarding <span class="math notranslate nohighlight">\(10^{-2}\)</span>.</p></li>
 </ul>
-<p>An example of calculation is presented in <a class="reference internal" href="sav.html#misc-table4-5"><span class="std std-ref">Table 4 -5</span></a>.</p>
-<p id="misc-table4-5"><strong>Table 4.5</strong> : Example of a reliability calculation for a Miscellaneous item: TWTA.</p>
-<img alt="table4_5" class="align-center" src="../../../_images/figure4_81.png" />
+<p>An example of calculation is presented in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Example</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">reliability</span> <span class="pre">calculation</span> <span class="pre">for</span> <span class="pre">a</span> <span class="pre">Miscellaneous</span> <span class="pre">item</span></code>.</p>
 </div>
 </div>
 

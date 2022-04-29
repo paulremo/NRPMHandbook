@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.4.5. Structural reliability methods and inputs &#8212; NRPM Digital handbook</title>
+    <title>3.4.6. Structural reliability methods and inputs &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -77,8 +77,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3.4.6. Structural reliability models and equations" href="structural_models_equations.html" />
-    <link rel="prev" title="3.4.4. Method selection for different items and failure mechanisms" href="method_selection.html" />
+    <link rel="next" title="3.4.7. Structural reliability models and equations" href="structural_models_equations.html" />
+    <link rel="prev" title="3.4.5. Method selection for different items and failure mechanisms" href="method_selection.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -181,38 +181,43 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul class="current">
      <li class="toctree-l3">
+      <a class="reference internal" href="process_reliability_modelling.html">
+       3.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="root_causes_coverage.html">
-       3.4.1. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="data_sources_methods.html">
-       3.4.2. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="failure_identification_focus.html">
-       3.4.3. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="method_selection.html">
-       3.4.4. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       3.4.5. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="structural_models_equations.html">
-       3.4.6. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="examples.html">
-       3.4.7. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
@@ -565,51 +570,51 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#structural-reliability-methods-for-mechanical-reliability-prediction">
-   3.4.5.1. Structural reliability methods for mechanical reliability prediction
+   3.4.6.1. Structural reliability methods for mechanical reliability prediction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simplified-structural-reliability-modelling-with-analytic-solutions">
-   3.4.5.2. Simplified structural reliability modelling with analytic solutions
+   3.4.6.2. Simplified structural reliability modelling with analytic solutions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generic-approach-for-the-formulation-of-the-limit-state-function">
-     3.4.5.2.1. Generic approach for the formulation of the limit state function
+     3.4.6.2.1. Generic approach for the formulation of the limit state function
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#general-process-for-the-application-of-the-simplified-structural-reliability-method">
-     3.4.5.2.2. General process for the application of the simplified structural reliability method
+     3.4.6.2.2. General process for the application of the simplified structural reliability method
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stress-strength-methods-for-structural-items">
-   3.4.5.3. Stress strength methods for structural items
+   3.4.6.3. Stress strength methods for structural items
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-variable-modelling-for-mechanical-reliability-applications">
-   3.4.5.4. Basic variable modelling for mechanical reliability applications
+   3.4.6.4. Basic variable modelling for mechanical reliability applications
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modelling-of-strength-variables">
-     3.4.5.4.1. Modelling of strength variables
+     3.4.6.4.1. Modelling of strength variables
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modelling-of-stress-variables">
-     3.4.5.4.2. Modelling of stress variables
+     3.4.6.4.2. Modelling of stress variables
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bayesian-updating-of-structural-reliability-estimates">
-   3.4.5.5. Bayesian updating of structural reliability estimates
+   3.4.6.5. Bayesian updating of structural reliability estimates
   </a>
  </li>
 </ul>
@@ -634,51 +639,51 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#structural-reliability-methods-for-mechanical-reliability-prediction">
-   3.4.5.1. Structural reliability methods for mechanical reliability prediction
+   3.4.6.1. Structural reliability methods for mechanical reliability prediction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simplified-structural-reliability-modelling-with-analytic-solutions">
-   3.4.5.2. Simplified structural reliability modelling with analytic solutions
+   3.4.6.2. Simplified structural reliability modelling with analytic solutions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generic-approach-for-the-formulation-of-the-limit-state-function">
-     3.4.5.2.1. Generic approach for the formulation of the limit state function
+     3.4.6.2.1. Generic approach for the formulation of the limit state function
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#general-process-for-the-application-of-the-simplified-structural-reliability-method">
-     3.4.5.2.2. General process for the application of the simplified structural reliability method
+     3.4.6.2.2. General process for the application of the simplified structural reliability method
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stress-strength-methods-for-structural-items">
-   3.4.5.3. Stress strength methods for structural items
+   3.4.6.3. Stress strength methods for structural items
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#basic-variable-modelling-for-mechanical-reliability-applications">
-   3.4.5.4. Basic variable modelling for mechanical reliability applications
+   3.4.6.4. Basic variable modelling for mechanical reliability applications
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modelling-of-strength-variables">
-     3.4.5.4.1. Modelling of strength variables
+     3.4.6.4.1. Modelling of strength variables
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modelling-of-stress-variables">
-     3.4.5.4.2. Modelling of stress variables
+     3.4.6.4.2. Modelling of stress variables
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bayesian-updating-of-structural-reliability-estimates">
-   3.4.5.5. Bayesian updating of structural reliability estimates
+   3.4.6.5. Bayesian updating of structural reliability estimates
   </a>
  </li>
 </ul>
@@ -691,7 +696,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="structural-reliability-methods-and-inputs">
-<h1><span class="section-number">3.4.5. </span>Structural reliability methods and inputs<a class="headerlink" href="#structural-reliability-methods-and-inputs" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.4.6. </span>Structural reliability methods and inputs<a class="headerlink" href="#structural-reliability-methods-and-inputs" title="Permalink to this headline">¶</a></h1>
 <p>In the following, the use of different methods based on structural reliability theory are briefly discussed in the context of mechanical reliability prediction (Section 4.6.1 to 4.6.3):</p>
 <ul class="simple">
 <li><p>General structural reliability methods, as introduced in Chapter 6 (Part II)</p></li>
@@ -701,7 +706,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p>Finally, Section 4.6.4 discusses the probabilistic modelling of random variables required as an input for structural reliability methods (with given failure mechanism model, see e.g. the models presented in Section 4.7). Bayesian updating of structural reliability estimates with new (failure) data is discussed in Section 4.6.5.</p>
 <div class="section" id="structural-reliability-methods-for-mechanical-reliability-prediction">
-<span id="meca-4-6-1"></span><h2><span class="section-number">3.4.5.1. </span>Structural reliability methods for mechanical reliability prediction<a class="headerlink" href="#structural-reliability-methods-for-mechanical-reliability-prediction" title="Permalink to this headline">¶</a></h2>
+<span id="meca-4-6-1"></span><h2><span class="section-number">3.4.6.1. </span>Structural reliability methods for mechanical reliability prediction<a class="headerlink" href="#structural-reliability-methods-for-mechanical-reliability-prediction" title="Permalink to this headline">¶</a></h2>
 <p>The general principles of structural reliability prediction methods are discussed in Chapter 6 (Part II) of this handbook. Applying these methods to mechanical reliability prediction requires going through the following steps:</p>
 <ul class="simple">
 <li><p>Selection of the failure mechanism(s) to be modelled (cf. Section 4.4 and 4.5 above)</p></li>
@@ -720,7 +725,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Aiming at realistic modelling, it will not generally be possible to derive analytic solutions for the probability of failure with a given limit state function and probabilistic modelling. Simplified models with analytic interference calculations are discussed in Section 4.6.2. Also, the well-known stress-strength methods for structural items may in certain cases be solved analytically, see Section 4.6.3 for details. More general models may be developed using the numerical methods listed in Chapter 6 (Part II).</p>
 </div>
 <div class="section" id="simplified-structural-reliability-modelling-with-analytic-solutions">
-<h2><span class="section-number">3.4.5.2. </span>Simplified structural reliability modelling with analytic solutions<a class="headerlink" href="#simplified-structural-reliability-modelling-with-analytic-solutions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.6.2. </span>Simplified structural reliability modelling with analytic solutions<a class="headerlink" href="#simplified-structural-reliability-modelling-with-analytic-solutions" title="Permalink to this headline">¶</a></h2>
 <p>To allow for a quick reliability assessment without detailed knowledge of the underlying probabilistic methods, simplified part level methods based on structural reliability theory have been developed for several failure mechanisms, see Section 4.7 for details. The simplifications concern the formulation of the limit state function, the distributional assumptions for basic variables entering the model, and the derivation of analytic formulas for interference calculations.</p>
 <p>The most important aspects of simplified structural reliability modelling from a user’s perspective are summarized in Table   4 -7 below.</p>
 <p><strong>Table 4.7</strong>: Difference between the use of “full” and simplified structural reliability methods</p>
@@ -752,7 +757,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Miss ref just above</p>
 </div>
 <div class="section" id="generic-approach-for-the-formulation-of-the-limit-state-function">
-<h3><span class="section-number">3.4.5.2.1. </span>Generic approach for the formulation of the limit state function<a class="headerlink" href="#generic-approach-for-the-formulation-of-the-limit-state-function" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.6.2.1. </span>Generic approach for the formulation of the limit state function<a class="headerlink" href="#generic-approach-for-the-formulation-of-the-limit-state-function" title="Permalink to this headline">¶</a></h3>
 <p>The simplified approach is based on a generic limit state function with the following simple format:</p>
 <div class="equation admonition">
 <p class="admonition-title">Equation</p>
@@ -779,7 +784,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="general-process-for-the-application-of-the-simplified-structural-reliability-method">
-<h3><span class="section-number">3.4.5.2.2. </span>General process for the application of the simplified structural reliability method<a class="headerlink" href="#general-process-for-the-application-of-the-simplified-structural-reliability-method" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.6.2.2. </span>General process for the application of the simplified structural reliability method<a class="headerlink" href="#general-process-for-the-application-of-the-simplified-structural-reliability-method" title="Permalink to this headline">¶</a></h3>
 <p>The application of the simplified failure mechanism models always follows the same basic steps:</p>
 <ul>
 <li><p><strong><em>Estimate the mean and coefficient of variation for all basic variables required by the model</em></strong></p>
@@ -795,7 +800,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="stress-strength-methods-for-structural-items">
-<h2><span class="section-number">3.4.5.3. </span>Stress strength methods for structural items<a class="headerlink" href="#stress-strength-methods-for-structural-items" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.6.3. </span>Stress strength methods for structural items<a class="headerlink" href="#stress-strength-methods-for-structural-items" title="Permalink to this headline">¶</a></h2>
 <p>Another well-known application of the generic limit state function in Equation 10 -2 is the stress-strength method commonly applied for structural components, but also for other applications in mechanical reliability prediction (e.g. to assess motorization performance). Typically, the “strength” or resistance <span class="math notranslate nohighlight">\(X_{1}\)</span>  and the “stress” or load <span class="math notranslate nohighlight">\(X_{2}\)</span> are the only two variables considered, which is equivalent to dropping the model uncertainty variable <span class="math notranslate nohighlight">\(\Theta\)</span> in Equation   10 -2. Note that this simplification furthermore implies that only a single stress and resistance is considered, unless e.g. several loads can be combined in a single metric, allowing to reduce a multivariate load distribution to a single random “stress” <span class="math notranslate nohighlight">\(X_{2}\)</span> (see also Section 4.6.2). Problems that cannot be reduced to a two-variable problem can be handled using the general structural reliability methods discussed in Section 4.6.1.</p>
 <p>The modelling of the two basic variables generally has to account for time dependency. In the simplest case without strength degradation, the resistance <span class="math notranslate nohighlight">\(X_{1}\)</span> can be considered as time invariant. A time variant load <span class="math notranslate nohighlight">\(X_{2}(t)\)</span> may then be transformed into a time invariant random variable by taking the maximum load <span class="math notranslate nohighlight">\(X_{2}^{max} = max(X_{2}(t))\)</span> during a specified time period, e.g. the highest load experienced during launch. The probabilistic modelling for the maximum load should then be based on extreme value theory (e.g. by fitting a random variable distribution to the maxima of a random process). More complex cases with time variant strength (e.g. degradation effects) and/or cumulative loading (e.g. fatigue loads) require dedicated considerations using time variant structural reliability methods. In the remainder of this section, these applications will not be discussed any further, the focus will be on time invariant reliability calculations.</p>
 <p>Time invariant reliability problems - i.e. problems without the need to consider time dependency of <span class="math notranslate nohighlight">\(X_{1}\)</span> and <span class="math notranslate nohighlight">\(X_{2}\)</span> during the reliability calculations - can generally be solved using one of the methods discussed in Chapter 6 Part II (e.g. FORM/SORM, Monte Carlo simulations). Analytic solutions are available for the following simple distributional assumptions:</p>
@@ -838,7 +843,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="basic-variable-modelling-for-mechanical-reliability-applications">
-<h2><span class="section-number">3.4.5.4. </span>Basic variable modelling for mechanical reliability applications<a class="headerlink" href="#basic-variable-modelling-for-mechanical-reliability-applications" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.6.4. </span>Basic variable modelling for mechanical reliability applications<a class="headerlink" href="#basic-variable-modelling-for-mechanical-reliability-applications" title="Permalink to this headline">¶</a></h2>
 <p>The probabilistic modelling for the physical variables entering the limit state function, also called “basic variables”, requires going through the following three steps (see also Chapter 6 in Part II):</p>
 <ul>
 <li><p>Decide which uncertainties need to be modelled</p>
@@ -883,7 +888,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <div class="section" id="modelling-of-strength-variables">
-<h3><span class="section-number">3.4.5.4.1. </span>Modelling of strength variables<a class="headerlink" href="#modelling-of-strength-variables" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.6.4.1. </span>Modelling of strength variables<a class="headerlink" href="#modelling-of-strength-variables" title="Permalink to this headline">¶</a></h3>
 <p>Mathematically, these effects can be accounted for by increasing the coefficients of variation of the basic physical variables used in the model and/or with the aid of a “model uncertainty” variable, possibly including a bias in the mean value (see e.g. Section 4.6.2). It depends on the information used for the basic variable modelling how much the variability needs to be increased to account for process contributions. To give an example, strength modelling based on material data (e.g. for metallic materials) does not account for any process contributions apart from those introduced during material production. The situation is, however, different when considering assembly level data, e.g. from structural inserts testing, which typically considers the whole insert as an assembly. In the latter case, possible process contributions must only be considered on the loading side.</p>
 <p>Obtaining statistical information for the strength (or resistance) of materials is generally straight-forward. Vendor’s datasheets and manufacturer specifications can be considered, and data for standard materials can be found in the literature. Well-known data sources for structural materials are the Metallic Materials Properties Development and Standardization (MMPDS) Handbook  for metallic material properties (superseding MIL-HDBK-5J ) and the FRAMES-2 database for mechanical test data of metallic and composite materials maintained by ESA . New materials or conventional materials produced with a new production process are generally tested to determine the material characteristics.
 The available data can be used also to define or check the assumed distribution function, e.g. using quantile plotting techniques. Engineering knowledge and data from similar materials can support this task if the data is not sufficient to justify distributional assumptions, for example:</p>
@@ -985,7 +990,7 @@ The available data can be used also to define or check the assumed distribution 
 </div>
 </div>
 <div class="section" id="modelling-of-stress-variables">
-<h3><span class="section-number">3.4.5.4.2. </span>Modelling of stress variables<a class="headerlink" href="#modelling-of-stress-variables" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.6.4.2. </span>Modelling of stress variables<a class="headerlink" href="#modelling-of-stress-variables" title="Permalink to this headline">¶</a></h3>
 <p>Determining the statistical distribution of load variables is more difficult than the assessment of material characteristics.</p>
 <p>Four major difficulties may arise during (probabilistic) load analysis</p>
 <ul>
@@ -1082,7 +1087,7 @@ The available data can be used also to define or check the assumed distribution 
 </div>
 </div>
 <div class="section" id="bayesian-updating-of-structural-reliability-estimates">
-<span id="meca-4-6-5"></span><h2><span class="section-number">3.4.5.5. </span>Bayesian updating of structural reliability estimates<a class="headerlink" href="#bayesian-updating-of-structural-reliability-estimates" title="Permalink to this headline">¶</a></h2>
+<span id="meca-4-6-5"></span><h2><span class="section-number">3.4.6.5. </span>Bayesian updating of structural reliability estimates<a class="headerlink" href="#bayesian-updating-of-structural-reliability-estimates" title="Permalink to this headline">¶</a></h2>
 <p>Apart from the use of Bayesian updating for basic variable distributions (Section 4.6.4), the Bayes approach can also be applied to improve prior reliability estimates derived with structural reliability methods, making use of data samples with individual time-to-failure records of several items. Also small data samples can be used for this purpose.</p>
 <p>An example for Bayesian updating of a prior structural reliability estimate is given in Section 4.8.2 (analytic approach) Section 4.8.3 (numerical approach using MCMC).</p>
 <p>The general principles of Bayesian updating in a reliability context are discussed in Chapter 7 (Part II). For Bayesian updating in the present context, the prior has to be defined based on the considered limit state function and the corresponding basic variable distributions. The limit state function can usually explicitly or implicitly be defined as a function of time <span class="math notranslate nohighlight">\(t\)</span> (or number of cycles / revolutions). Thus, the cumulative distribution function of the random time to failure can be derived by estimating the probability of failure as a function of <span class="math notranslate nohighlight">\(t\)</span>:</p>
@@ -1212,13 +1217,13 @@ The available data can be used also to define or check the assumed distribution 
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3.4.4. </span>Method selection for different items and failure mechanisms</p>
+            <p class="prev-next-title"><span class="section-number">3.4.5. </span>Method selection for different items and failure mechanisms</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="structural_models_equations.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.4.6. </span>Structural reliability models and equations</p>
+        <p class="prev-next-title"><span class="section-number">3.4.7. </span>Structural reliability models and equations</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

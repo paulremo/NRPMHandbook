@@ -181,38 +181,43 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
+       3.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.1. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.2. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.3. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.4. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.5. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.6. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
-       3.4.7. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
@@ -583,7 +588,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The system can be described through the following success paths.</p>
 <p id="syst-table4-12"><strong>Table 4.12</strong> : Success paths and their relative performance contribution</p>
 <div class="figure align-default" id="table4-12">
-<a class="reference internal image-reference" href="../../../_images/figure4_121.png"><img alt="../../../_images/figure4_121.png" src="../../../_images/figure4_121.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/figure4_12.png"><img alt="../../../_images/figure4_12.png" src="../../../_images/figure4_12.png" style="width: 600px;" /></a>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(M_{i}\)</span> denotes a success path, i.e. a combination of components for which the system is in operable state if all components of the success path are operational. The success path is represented by conjunctive terms of indicator variables <span class="math notranslate nohighlight">\(X_{i}\)</span>. At least one minimal success path is required to get a working system.</p>
 <p>In this example, if all three solar panels are working, an electrical power of 1kW is provided. In the following, a relative contribution to the system performance is assigned to the different solar panels. To component 3 a relative contribution of 50% is assigned, that means if the success path that contains the component 3 is functioning, 50% of the total system performance are available. In this case, 50% of electrical power. Component 4 has a relative contribution of 30% and 20% are assigned to component 5. In <a class="reference internal" href="#syst-table4-13"><span class="std std-ref">Table 4.13</span></a> all system states with a system performance &gt; 0% are listed. To each elementary state the contributing success path is listed in <a class="reference internal" href="#syst-table4-13"><span class="std std-ref">Table 4.13</span></a>. Depending on the availability of the success path that contains one of the service providing units 3, 4 or 5, a certain level of system performance <span class="math notranslate nohighlight">\(p_{S}\)</span> can be achieved.</p>

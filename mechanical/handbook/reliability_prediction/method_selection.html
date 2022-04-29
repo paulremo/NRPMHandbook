@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.4.4. Method selection for different items and failure mechanisms &#8212; NRPM Digital handbook</title>
+    <title>3.4.5. Method selection for different items and failure mechanisms &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -75,8 +75,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3.4.5. Structural reliability methods and inputs" href="structural_method_input.html" />
-    <link rel="prev" title="3.4.3. Failure mechanisms identification and focus" href="failure_identification_focus.html" />
+    <link rel="next" title="3.4.6. Structural reliability methods and inputs" href="structural_method_input.html" />
+    <link rel="prev" title="3.4.4. Failure mechanisms identification and focus" href="failure_identification_focus.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -179,38 +179,43 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul class="current">
      <li class="toctree-l3">
+      <a class="reference internal" href="process_reliability_modelling.html">
+       3.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="root_causes_coverage.html">
-       3.4.1. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="data_sources_methods.html">
-       3.4.2. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="failure_identification_focus.html">
-       3.4.3. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       3.4.4. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="structural_method_input.html">
-       3.4.5. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="structural_models_equations.html">
-       3.4.6. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="examples.html">
-       3.4.7. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
@@ -563,17 +568,17 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#categories-and-combinations-of-mechanical-failure-mechanisms">
-   3.4.4.1. Categories and combinations of mechanical failure mechanisms
+   3.4.5.1. Categories and combinations of mechanical failure mechanisms
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#selection-of-methods-for-part-level-mechanical-reliability-prediction">
-   3.4.4.2. Selection of methods for part level mechanical reliability prediction
+   3.4.5.2. Selection of methods for part level mechanical reliability prediction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#selection-of-methods-for-assembly-level-mechanical-reliability-prediction">
-   3.4.4.3. Selection of methods for assembly level mechanical reliability prediction
+   3.4.5.3. Selection of methods for assembly level mechanical reliability prediction
   </a>
  </li>
 </ul>
@@ -598,17 +603,17 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#categories-and-combinations-of-mechanical-failure-mechanisms">
-   3.4.4.1. Categories and combinations of mechanical failure mechanisms
+   3.4.5.1. Categories and combinations of mechanical failure mechanisms
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#selection-of-methods-for-part-level-mechanical-reliability-prediction">
-   3.4.4.2. Selection of methods for part level mechanical reliability prediction
+   3.4.5.2. Selection of methods for part level mechanical reliability prediction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#selection-of-methods-for-assembly-level-mechanical-reliability-prediction">
-   3.4.4.3. Selection of methods for assembly level mechanical reliability prediction
+   3.4.5.3. Selection of methods for assembly level mechanical reliability prediction
   </a>
  </li>
 </ul>
@@ -621,10 +626,10 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="method-selection-for-different-items-and-failure-mechanisms">
-<h1><span class="section-number">3.4.4. </span>Method selection for different items and failure mechanisms<a class="headerlink" href="#method-selection-for-different-items-and-failure-mechanisms" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.4.5. </span>Method selection for different items and failure mechanisms<a class="headerlink" href="#method-selection-for-different-items-and-failure-mechanisms" title="Permalink to this headline">¶</a></h1>
 <p>Once it is clear what needs to be considered in the reliability prediction (see Section 4.4), the next step is to decide <em>how</em> each part and failure mechanism should be modelled. The present section gives guidance on this method selection task.</p>
 <div class="section" id="categories-and-combinations-of-mechanical-failure-mechanisms">
-<h2><span class="section-number">3.4.4.1. </span>Categories and combinations of mechanical failure mechanisms<a class="headerlink" href="#categories-and-combinations-of-mechanical-failure-mechanisms" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.5.1. </span>Categories and combinations of mechanical failure mechanisms<a class="headerlink" href="#categories-and-combinations-of-mechanical-failure-mechanisms" title="Permalink to this headline">¶</a></h2>
 <p>The method selection for mechanical parts reliability modelling should always take basis in a good understanding of the failure mechanisms that are of relevance for the considered item, especially the predominant ones. To simplify the presentation in the following sections, mechanical failure mechanisms are grouped into five distinct categories listed in Table  4 -4.</p>
 <p><strong>Table 4.4: Categories of mechanical failure mechanisms.</strong></p>
 <table class="colwidths-auto table">
@@ -671,7 +676,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="selection-of-methods-for-part-level-mechanical-reliability-prediction">
-<span id="meca-4-5-2"></span><h2><span class="section-number">3.4.4.2. </span>Selection of methods for part level mechanical reliability prediction<a class="headerlink" href="#selection-of-methods-for-part-level-mechanical-reliability-prediction" title="Permalink to this headline">¶</a></h2>
+<span id="meca-4-5-2"></span><h2><span class="section-number">3.4.5.2. </span>Selection of methods for part level mechanical reliability prediction<a class="headerlink" href="#selection-of-methods-for-part-level-mechanical-reliability-prediction" title="Permalink to this headline">¶</a></h2>
 <p>The approach for method selection presented in the following is centred around the identified failure mechanisms, see Table   4 -6 giving an overview of different mechanical part types with associated failure mechanisms and modelling recommendations.</p>
 <p>The third column of Table   4 -6 gives an indication about the relevance of each part type for different classes of mechanical systems introduced in . As has been discussed in Section 4.4, it may be sufficient to focus on those parts that dominate system level reliability. In the same way, the reliability of a specific part is often dominated by a single (or very few) failure mechanism(s), allowing to focus the analysis especially with methods that are based on the PoF.</p>
 <p>Which failure mechanism(s) dominates reliability depends not only on the part type, but also on the application; e.g. a spring is likely to fail differently when used with static, cyclic or dynamic loading. The “predominant” failure mechanisms listed in Table   4 -6 should therefore be considered only as a first guidance.</p>
@@ -687,7 +692,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="selection-of-methods-for-assembly-level-mechanical-reliability-prediction">
-<h2><span class="section-number">3.4.4.3. </span>Selection of methods for assembly level mechanical reliability prediction<a class="headerlink" href="#selection-of-methods-for-assembly-level-mechanical-reliability-prediction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.5.3. </span>Selection of methods for assembly level mechanical reliability prediction<a class="headerlink" href="#selection-of-methods-for-assembly-level-mechanical-reliability-prediction" title="Permalink to this headline">¶</a></h2>
 <p>Reliability prediction for assemblies of mechanical parts can either be made bottom-up, combining part level inputs with system level reliability methods, or top-down, using inputs directly collected at the level of the considered assembly. In general, similar considerations apply as for part level mechanical reliability prediction, leading to the following modelling recommendations:</p>
 <ul class="simple">
 <li><p>Statistical (or combined) methods are suitable provided that relevant failure data is available directly at the level of the considered assembly.</p></li>
@@ -732,13 +737,13 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3.4.3. </span>Failure mechanisms identification and focus</p>
+            <p class="prev-next-title"><span class="section-number">3.4.4. </span>Failure mechanisms identification and focus</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="structural_method_input.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.4.5. </span>Structural reliability methods and inputs</p>
+        <p class="prev-next-title"><span class="section-number">3.4.6. </span>Structural reliability methods and inputs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

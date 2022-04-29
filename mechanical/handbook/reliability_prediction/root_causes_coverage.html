@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.4.1. Root causes coverage &#8212; NRPM Digital handbook</title>
+    <title>3.4.2. Root causes coverage &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -75,8 +75,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3.4.2. Data sources and methods" href="data_sources_methods.html" />
-    <link rel="prev" title="3.4. Reliability prediction for mechanical and structural parts and assemblies" href="reliability_prediction.html" />
+    <link rel="next" title="3.4.3. Data sources and methods" href="data_sources_methods.html" />
+    <link rel="prev" title="3.4.1. Process for mechanical reliability prediction" href="process_reliability_modelling.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -178,39 +178,44 @@ const thebe_selector_output = ".output, .cell_output"
      </i>
     </label>
     <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="process_reliability_modelling.html">
+       3.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       3.4.1. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="data_sources_methods.html">
-       3.4.2. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="failure_identification_focus.html">
-       3.4.3. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="method_selection.html">
-       3.4.4. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="structural_method_input.html">
-       3.4.5. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="structural_models_equations.html">
-       3.4.6. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="examples.html">
-       3.4.7. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
@@ -563,22 +568,22 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#random-failures">
-   3.4.1.1. Random failures
+   3.4.2.1. Random failures
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wear-out-failures">
-   3.4.1.2. Wear-out failures
+   3.4.2.2. Wear-out failures
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#extrinsic-failures">
-   3.4.1.3. Extrinsic failures
+   3.4.2.3. Extrinsic failures
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#systematic-failures">
-   3.4.1.4. Systematic failures
+   3.4.2.4. Systematic failures
   </a>
  </li>
 </ul>
@@ -603,22 +608,22 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#random-failures">
-   3.4.1.1. Random failures
+   3.4.2.1. Random failures
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wear-out-failures">
-   3.4.1.2. Wear-out failures
+   3.4.2.2. Wear-out failures
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#extrinsic-failures">
-   3.4.1.3. Extrinsic failures
+   3.4.2.3. Extrinsic failures
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#systematic-failures">
-   3.4.1.4. Systematic failures
+   3.4.2.4. Systematic failures
   </a>
  </li>
 </ul>
@@ -631,7 +636,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="root-causes-coverage">
-<h1><span class="section-number">3.4.1. </span>Root causes coverage<a class="headerlink" href="#root-causes-coverage" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.4.2. </span>Root causes coverage<a class="headerlink" href="#root-causes-coverage" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference internal" href="#meca-table4-1"><span class="std std-ref">Table 4 -1</span></a> gives an overview of the failure categories defined in Chapter 4 (Part I) and their coverage by the methods described in the present chapter. In the following subsections, the interpretation of each failure category within the mechanical chapter is briefly explained.</p>
 <p id="meca-table4-1"><strong>Table 4.1 : Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter</strong></p>
 <div class="figure align-default" id="table4-1">
@@ -658,12 +663,12 @@ const thebe_selector_output = ".output, .cell_output"
 </tbody>
 </table>
 <div class="section" id="random-failures">
-<span id="meca-4-2-1"></span><h2><span class="section-number">3.4.1.1. </span>Random failures<a class="headerlink" href="#random-failures" title="Permalink to this headline">¶</a></h2>
+<span id="meca-4-2-1"></span><h2><span class="section-number">3.4.2.1. </span>Random failures<a class="headerlink" href="#random-failures" title="Permalink to this headline">¶</a></h2>
 <p>he Physics of Failure (PoF) of mechanical parts are mostly well-understood and give strong indications also on the failure root cause. Nevertheless, from a modelling perspective it may be meaningful not to go into the details of the root cause that has led to a certain failure mechanism. To give an example, a premature bearing wear failure may be due to a residual undetected part level defect or weakness (random), due to “normal” aging or wear-out (wear-out), induced by environmental effects such as thermal loads leading to distortion (extrinsic) or due to a misalignment at assembly level (systematic). Despite the difference in the failure root cause, all these failures are due to the same failure mechanism, which can be modelled with the same physical law.</p>
 <p>In this line of thought, all failures due to minor uncertainties in the design and due to manufacturing variability will be considered as random failures for mechanical items, whereas gross errors, possibly leading to new failure mechanisms and unforeseen events, are considered as systematic failures. With this classification, it is possible to consider the contribution of design and manufacturing process variability in the mechanical reliability prediction, e.g. by increasing the variability of the basic variables when using structural reliability methods as discussed in <a class="reference internal" href="structural_method_input.html#meca-4-6-1"><span class="std std-ref">Section 4.6.4</span></a>. Only gross errors, classified as systematic failures, need to be considered separately.</p>
 </div>
 <div class="section" id="wear-out-failures">
-<h2><span class="section-number">3.4.1.2. </span>Wear-out failures<a class="headerlink" href="#wear-out-failures" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.2.2. </span>Wear-out failures<a class="headerlink" href="#wear-out-failures" title="Permalink to this headline">¶</a></h2>
 <p>In the frame of this handbook, wear-out failures are generally assumed to occur after the specified mission life time, assuming that safe life qualification processes have successfully mitigated the risk of premature failures. However, for mechanical items, this assumption may not necessarily be valid, as experience shows that there is a certain risk of premature wear-out despite safe life qualification, which may lead to a (slowly) increasing failure rate already during the course of the mission, as illustrated in <a class="reference internal" href="#figure-3-1"><span class="std std-numref">Fig. 3.1</span></a>. The root cause of these premature wear-out failures will mostly be related to the design or manufacturing process. However, following the same line of thought as in <a class="reference internal" href="#meca-4-2-1"><span class="std std-ref">Section 4.2.1</span></a> above, failures due to minor design or manufacturing variability can nevertheless be considered as wear-out rather than systematic failures, and considered with the methodology presented in this chapter. Only wear-out failures due to gross design or manufacturing errors are left for the systematic failure modelling.</p>
 <div class="figure align-default" id="figure-3-1">
 <span id="meca-figure4-1"></span><a class="reference internal image-reference" href="../../../_images/figure4_1.png"><img alt="../../../_images/figure4_1.png" src="../../../_images/figure4_1.png" style="width: 600px;" /></a>
@@ -673,7 +678,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p><a class="reference internal" href="failure_identification_focus.html#meca-4-4-1"><span class="std std-ref">Section 4.4.1</span></a> contains guidance on the identification of dominant failure mechanisms – including wear-out mechanisms - for several part types, though focusing on reliability prediction for the design lifetime, i.e. within safe life qualification domain. Failure mechanisms that are normally considered effectively handled by qualification, such as e.g. radiation degradation of optical equipment, may need to be added when considering a life time extension.</p>
 </div>
 <div class="section" id="extrinsic-failures">
-<span id="meca-4-2-3"></span><h2><span class="section-number">3.4.1.3. </span>Extrinsic failures<a class="headerlink" href="#extrinsic-failures" title="Permalink to this headline">¶</a></h2>
+<span id="meca-4-2-3"></span><h2><span class="section-number">3.4.2.3. </span>Extrinsic failures<a class="headerlink" href="#extrinsic-failures" title="Permalink to this headline">¶</a></h2>
 <p>External effects acting as loads on mechanical parts are considered during the design, generally reducing the risk of extrinsic failures. To quantify the remaining risk, reliability calculations must consider relevant extrinsic contributors.</p>
 <p>For mechanical reliability assessment, the following aspects need to be considered:</p>
 <ul class="simple">
@@ -717,7 +722,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Space debris and micro meteoroid impact will not be discussed any further in the present chapter.</p>
 </div>
 <div class="section" id="systematic-failures">
-<h2><span class="section-number">3.4.1.4. </span>Systematic failures<a class="headerlink" href="#systematic-failures" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.2.4. </span>Systematic failures<a class="headerlink" href="#systematic-failures" title="Permalink to this headline">¶</a></h2>
 <p>Failures due to design and manufacturing weaknesses can to a certain extent be considered with the methodology presented in this chapter, provided that the failure process or mechanism remains unchanged. Failures due to gross errors during design, manufacturing or operations are discussed in Section Error: Reference source not found. They are out of scope for the present chapter.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
@@ -751,17 +756,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="reliability_prediction.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="process_reliability_modelling.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3.4. </span>Reliability prediction for mechanical and structural parts and assemblies</p>
+            <p class="prev-next-title"><span class="section-number">3.4.1. </span>Process for mechanical reliability prediction</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="data_sources_methods.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.4.2. </span>Data sources and methods</p>
+        <p class="prev-next-title"><span class="section-number">3.4.3. </span>Data sources and methods</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

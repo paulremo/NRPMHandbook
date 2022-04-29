@@ -181,38 +181,43 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
+       3.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.1. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.2. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.3. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.4. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.5. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.6. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
-       3.4.7. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
@@ -625,7 +630,7 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="use-of-ior-data-and-or-tests-results">
 <h1><span class="section-number">5.4.6. </span>Use of IOR data and/or tests results<a class="headerlink" href="#use-of-ior-data-and-or-tests-results" title="Permalink to this headline">¶</a></h1>
 <p>As presented, a reliability model can be built based on IOR data and/or on test data (manufacturers, user) or combined with IOR data and/or on test data (manufacturers, user).</p>
-<p>The basic failure rate or the basic probability of failure in <a class="reference internal" href="reliability_data_sm.html#misc-table4-8"><span class="std std-ref">Table 4 -8</span></a> is based on such IOR data. The data was compiled from the IOR background in ADS &amp; TAS fleets.</p>
+<p>The basic failure rate or the basic probability of failure in <code class="xref std std-numref docutils literal notranslate"> <span class="pre">Reliability</span> <span class="pre">data</span></code> is based on such IOR data. The data was compiled from the IOR background in ADS &amp; TAS fleets.</p>
 <p>Per miscellaneous items, the anomalies are collected regarding representative products (quality, range of operational conditions, orbit as relevant) and the failures are classified in random failures (<span class="math notranslate nohighlight">\(RF\)</span>) and systematic failures (<span class="math notranslate nohighlight">\(SF\)</span>). To avoid duplication of systematic anomalies, they are only counted once. That means that the derived failure rates include as relevant systematic failure contribution.</p>
 <p>The IOR data recorded are:</p>
 <ul class="simple">
@@ -692,7 +697,7 @@ A second equation is provided by the level of confidence “<span class="math no
 <div class="math notranslate nohighlight" id="equation-equation-5-11">
 <span class="eqno">(5.11)<a class="headerlink" href="#equation-equation-5-11" title="Permalink to this equation">¶</a></span>\[F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a\]</div>
 </div>
-<p>Ideally, the prior should be defined based on two different estimates for the failure rate <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>, one representing an “average” value (point estimate, entering Eq. <a class="reference internal" href="#equation-equation-5-10">(5.10)</a>) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering Eq. <a class="reference internal" href="#equation-equation-5-11">(5.11)</a>).</p>
+<p>Ideally, the prior should be defined based on two different estimates for the failure rate <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>, one representing an “average” value (point estimate, entering <span class="xref myst">Equation 4.10</span>) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering <span class="xref myst">Equation 4.11</span>).</p>
 <p>Once <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are determined it allows to derive the Bayesian estimator with n being the number of failures and <span class="math notranslate nohighlight">\(\sum t_{i}\)</span> the cumulated time.</p>
 </div>
 </div>

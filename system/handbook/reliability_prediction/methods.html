@@ -181,38 +181,43 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
+       3.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.1. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.2. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.3. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.4. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.5. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.6. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
-       3.4.7. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
@@ -939,7 +944,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>A system consisting of n components or sub-systems, of which only k need to be functioning for system success, is called a “k-out-of-n” configuration. For such a system, k is less than n. The associated fault tree is represented with a voting gate, the figure indicates the number of basic events that are required for the top event. Given that the system components are identical and statistically independent the system reliability is given by the Binomial distribution in Eq. <a class="reference internal" href="#equation-equation-7-12">(7.12)</a>.</p>
 <div class="figure align-default" id="figure-7-12">
-<span id="syst-figure4-12"></span><a class="reference internal image-reference" href="../../../_images/figure4_121.png"><img alt="../../../_images/figure4_121.png" src="../../../_images/figure4_121.png" style="width: 600px;" /></a>
+<span id="syst-figure4-12"></span><a class="reference internal image-reference" href="../../../_images/figure4_12.png"><img alt="../../../_images/figure4_12.png" src="../../../_images/figure4_12.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 7.12 </span><span class="caption-text">Example Fault Tree with Vote gate (2 out of 3 logic).</span><a class="headerlink" href="#figure-7-12" title="Permalink to this image">¶</a></p>
 </div>
 <div class="equation admonition" id="syst-equation4-12">
@@ -1262,7 +1267,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="math notranslate nohighlight" id="equation-equation-7-27">
 <span class="eqno">(7.27)<a class="headerlink" href="#equation-equation-7-27" title="Permalink to this equation">¶</a></span>\[P(X,A,B) = P(X|A,B)P(A,B)\]</div>
 </div>
-<p>The conditional probability of the child node X for a serial system is given by Eq. <a class="reference internal" href="#equation-equation-7-28">(7.29)</a> Error: Reference source not found:</p>
+<p>The conditional probability of the child node X for a serial system is given by Eq. <a class="reference internal" href="#equation-equation-7-28">(7.28)</a> Error: Reference source not found:</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>Miss ref just above</p>
@@ -1271,17 +1276,17 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-28">
-<span class="eqno">(7.29)<a class="headerlink" href="#equation-equation-7-28" title="Permalink to this equation">¶</a></span>\[\begin{split}P(X|A,B) = \begin{bmatrix}
+<span class="eqno">(7.28)<a class="headerlink" href="#equation-equation-7-28" title="Permalink to this equation">¶</a></span>\[\begin{split}P(X|A,B) = \begin{bmatrix}
 1 &amp; 1 &amp; 1 &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 1
 \end{bmatrix}\end{split}\]</div>
 </div>
-<p>For a serial system the conditional probabilities are either 1 or 0, which means system failure will occur for certain if A or B fails. The conditional probability table for a parallel system is given in Eq. <code class="xref eq docutils literal notranslate"><span class="pre">Equation</span> <span class="pre">7.29</span></code>.</p>
-<div class="equation admonition" id="id2">
+<p>For a serial system the conditional probabilities are either 1 or 0, which means system failure will occur for certain if A or B fails. The conditional probability table for a parallel system is given in Eq. <a class="reference internal" href="#equation-equation-7-29">(7.29)</a>.</p>
+<div class="equation admonition">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
-<div class="math notranslate nohighlight" id="equation-equation-7-28">
-<span class="eqno">(7.29)<a class="headerlink" href="#equation-equation-7-28" title="Permalink to this equation">¶</a></span>\[\begin{split}P(X|A,B) = \begin{bmatrix}
+<div class="math notranslate nohighlight" id="equation-equation-7-29">
+<span class="eqno">(7.29)<a class="headerlink" href="#equation-equation-7-29" title="Permalink to this equation">¶</a></span>\[\begin{split}P(X|A,B) = \begin{bmatrix}
 1 &amp; 0 &amp; 0 &amp; 0 \\
 0 &amp; 1 &amp; 1 &amp; 1
 \end{bmatrix}\end{split}\]</div>

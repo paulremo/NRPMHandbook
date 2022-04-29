@@ -181,38 +181,43 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
+       3.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.1. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.2. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.3. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.4. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.5. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.6. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
-       3.4.7. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
@@ -674,8 +679,6 @@ const thebe_selector_output = ".output, .cell_output"
 <dt id="term-SPF">SPF<a class="headerlink" href="#term-SPF" title="Permalink to this term">¶</a></dt><dd><p>Single Point Failure</p>
 </dd>
 </dl>
-<p id="misc-table4-6"><strong>Table 4.6</strong> : Occurrence scale with 10 levels.</p>
-<img alt="table4_6" class="align-center" src="../../../_images/figure4_11.png" />
 <dl class="glossary simple">
 <dt id="term-TRL">TRL<a class="headerlink" href="#term-TRL" title="Permalink to this term">¶</a></dt><dd><p>Technology Readiness Level</p>
 </dd>
@@ -683,11 +686,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="probability-assessment">
 <h2><span class="section-number">5.4.7.2. </span>Probability assessment<a class="headerlink" href="#probability-assessment" title="Permalink to this headline">¶</a></h2>
-<p>The occurrence scale of <a class="reference internal" href="#misc-table4-6"><span class="std std-ref">Table 4 -6</span></a> is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:</p>
+<p>The occurrence scale of <code class="xref std std-numref docutils literal notranslate"> <span class="pre">Occurrence</span> <span class="pre">scale</span> <span class="pre">with</span> <span class="pre">10</span> <span class="pre">levels.</span></code> is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:</p>
 <ul class="simple">
 <li><p>In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a RF passive part which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).</p></li>
 <li><p>A probability of occurrence is assigned to every failure mode and the sum provides the probability of occurrence of the item.</p></li>
-<li><p>A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to <span class="math notranslate nohighlight">\(10^{-4}\)</span> as level 4 (<a class="reference internal" href="#misc-table4-6"><span class="std std-ref">Table 4 -6</span></a> ) leads to a failure rate of <span class="math notranslate nohighlight">\(1,14 10^{-9}\)</span> for 10 years.</p></li>
+<li><p>A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to <span class="math notranslate nohighlight">\(10^{-4}\)</span> as level 4 (<code class="xref std std-numref docutils literal notranslate"> <span class="pre">Occurrence</span> <span class="pre">scale</span> <span class="pre">with</span> <span class="pre">10</span> <span class="pre">levels.</span></code> ) leads to a failure rate of <span class="math notranslate nohighlight">\(1,14 10^{-9}\)</span> for 10 years.</p></li>
 </ul>
 <p>This represents the basic failure rate or the basic probability of failure.</p>
 <p>Then the general process to adapt this failure rate is described in <a class="reference internal" href="process_reliability_modelling.html"><span class="doc std std-doc">Section 4.5</span></a>.</p>

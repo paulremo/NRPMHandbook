@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.4.3. Failure mechanisms identification and focus &#8212; NRPM Digital handbook</title>
+    <title>3.4.4. Failure mechanisms identification and focus &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -75,8 +75,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3.4.4. Method selection for different items and failure mechanisms" href="method_selection.html" />
-    <link rel="prev" title="3.4.2. Data sources and methods" href="data_sources_methods.html" />
+    <link rel="next" title="3.4.5. Method selection for different items and failure mechanisms" href="method_selection.html" />
+    <link rel="prev" title="3.4.3. Data sources and methods" href="data_sources_methods.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -179,38 +179,43 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul class="current">
      <li class="toctree-l3">
+      <a class="reference internal" href="process_reliability_modelling.html">
+       3.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="root_causes_coverage.html">
-       3.4.1. Root causes coverage
+       3.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="data_sources_methods.html">
-       3.4.2. Data sources and methods
+       3.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       3.4.3. Failure mechanisms identification and focus
+       3.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="method_selection.html">
-       3.4.4. Method selection for different items and failure mechanisms
+       3.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="structural_method_input.html">
-       3.4.5. Structural reliability methods and inputs
+       3.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="structural_models_equations.html">
-       3.4.6. Structural reliability models and equations
+       3.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="examples.html">
-       3.4.7. Examples
+       3.4.8. Examples
       </a>
      </li>
     </ul>
@@ -563,12 +568,12 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#failure-dominance-and-focus-of-the-prediction">
-   3.4.3.1. Failure dominance and focus of the prediction
+   3.4.4.1. Failure dominance and focus of the prediction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#failure-mechanisms-completion">
-   3.4.3.2. Failure mechanisms completion
+   3.4.4.2. Failure mechanisms completion
   </a>
  </li>
 </ul>
@@ -593,12 +598,12 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#failure-dominance-and-focus-of-the-prediction">
-   3.4.3.1. Failure dominance and focus of the prediction
+   3.4.4.1. Failure dominance and focus of the prediction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#failure-mechanisms-completion">
-   3.4.3.2. Failure mechanisms completion
+   3.4.4.2. Failure mechanisms completion
   </a>
  </li>
 </ul>
@@ -611,7 +616,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="failure-mechanisms-identification-and-focus">
-<h1><span class="section-number">3.4.3. </span>Failure mechanisms identification and focus<a class="headerlink" href="#failure-mechanisms-identification-and-focus" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.4.4. </span>Failure mechanisms identification and focus<a class="headerlink" href="#failure-mechanisms-identification-and-focus" title="Permalink to this headline">¶</a></h1>
 <p>A full mechanical reliability prediction looking at all potential failure mechanisms and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude failure mechanism that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and failure mechanisms), before discussing how to model each failure mechanism in <a class="reference internal" href="method_selection.html"><span class="doc std std-doc">Section 4.5</span></a> and after.</p>
 <p>To implement this procedure in practice, early interaction between design and reliability engineers is required. In particular, the following information exchange is necessary:</p>
 <ul class="simple">
@@ -621,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>To perform reliability calculations for a specific item and failure mechanism, additional design data such as geometry or loads can be required.</p></li>
 </ul>
 <div class="section" id="failure-dominance-and-focus-of-the-prediction">
-<span id="meca-4-4-1"></span><h2><span class="section-number">3.4.3.1. </span>Failure dominance and focus of the prediction<a class="headerlink" href="#failure-dominance-and-focus-of-the-prediction" title="Permalink to this headline">¶</a></h2>
+<span id="meca-4-4-1"></span><h2><span class="section-number">3.4.4.1. </span>Failure dominance and focus of the prediction<a class="headerlink" href="#failure-dominance-and-focus-of-the-prediction" title="Permalink to this headline">¶</a></h2>
 <p>The first step before starting a reliability assessment is a clear definition of its objective and scope, i.e. the question and the associated boundary conditions shall be clearly stated and understood, see <strong>Chapter 5 (Part I)</strong> for details. Knowing the objective and scope is important also because it implicitly defines which events and consequently failure mechanisms need to be considered.</p>
 <p>Before going into the detailed reliability assessment of a mechanical item, it is helpful to identify its main working principle using the classifications presented in  below.</p>
 <p id="meca-table4-3"><strong>Table 4.3: Classification of mechanical items based on their working principle.</strong></p>
@@ -682,7 +687,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>For structures that do not fulfil the abovementioned conditions, reliability figures need to be calculated considering the relevant structural failure mechanisms. Studies aiming at the reusability of the flight hardware for multiple launches will need additional considerations.</p>
 </div>
 <div class="section" id="failure-mechanisms-completion">
-<h2><span class="section-number">3.4.3.2. </span>Failure mechanisms completion<a class="headerlink" href="#failure-mechanisms-completion" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.4.2. </span>Failure mechanisms completion<a class="headerlink" href="#failure-mechanisms-completion" title="Permalink to this headline">¶</a></h2>
 <p>The final step involves an assessment of relevant qualitative RAMS data (e.g. FMEA reports, non-compliances reports, design review data packages, and history data) to identify critical failure modes and related failure mechanisms. The outcome shall be used to cross-check the conclusions from the previous steps and to consider additional failure mechanisms as relevant.</p>
 <p>Similar to the considerations made for the structural category in <a class="reference internal" href="#meca-4-4-1"><span class="std std-ref">Section 4.4.1</span></a>, it can be justified to exclude certain parts and failure mechanisms from the analysis, provided that all or most of the following conditions are fulfilled:</p>
 <ul class="simple">
@@ -741,13 +746,13 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3.4.2. </span>Data sources and methods</p>
+            <p class="prev-next-title"><span class="section-number">3.4.3. </span>Data sources and methods</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="method_selection.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.4.4. </span>Method selection for different items and failure mechanisms</p>
+        <p class="prev-next-title"><span class="section-number">3.4.5. </span>Method selection for different items and failure mechanisms</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
