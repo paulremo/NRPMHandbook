@@ -1,0 +1,1035 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.4.8. System level modelling of wear-out &#8212; NRPM Digital handbook</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/images.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/radial_bar.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../../_static/interactivity/js/map3.js"></script>
+    <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
+    <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
+    <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
+    <script src="../../../_static/interactivity/js/table_search.js"></script>
+    <script src="../../../_static/js/redirect.js"></script>
+    <script src="../../../_static/js/resize_iframe.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="7.4.9. Systematic failure modelling" href="systematic_failure_modelling.html" />
+    <link rel="prev" title="7.4.7. Modelling of Common Cause failure" href="modelling_common_cause_failure.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Welcome to the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../eee/mainEEE.html">
+   1. Handbook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../eee/models/intro_models.html">
+   2. Models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mechanical chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../mechanical/handbook/introduction.html">
+   3. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/handbook/scope.html">
+     3.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/handbook/normative_references.html">
+     3.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/handbook/terms.html">
+     3.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/reliability_prediction.html">
+     3.4. Reliability prediction for mechanical and structural parts and assemblies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
+       3.4.1. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
+       3.4.2. Data sources and methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
+       3.4.3. Failure mechanisms identification and focus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
+       3.4.4. Method selection for different items and failure mechanisms
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
+       3.4.5. Structural reliability methods and inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
+       3.4.6. Structural reliability models and equations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
+       3.4.7. Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/handbook/bibliographic_references.html">
+     3.5. Bibliographic References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../mechanical/models/introduction.html">
+   4. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/models/solid_lubricant_wear.html">
+     4.1. Solid lubricant wear
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../miscellaneous/handbook/introduction.html">
+   5. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/scope.html">
+     5.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/normative_references.html">
+     5.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/terms.html">
+     5.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_prediction.html">
+     5.4. Reliability prediction for miscellaneous items
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/items.html">
+       5.4.1. List of miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/root_causes_coverage.html">
+       5.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/data_sources_methods.html">
+       5.4.3. Data sources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_models.html">
+       5.4.4. Reliability Models for miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html">
+       5.4.5. Process for Reliability modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/ior_results.html">
+       5.4.6. Use of IOR data and/or tests results
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html">
+       5.4.7. Basic failure rate derivation for “non-standard model” items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_data_sm.html">
+       5.4.8. Reliability Data for Miscellaneous “Standard model”
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/conclusion.html">
+     5.5. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/annexA.html">
+     5.6. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/annexB.html">
+     5.7. Annex B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/bibliographic_references.html">
+     5.8. Bibliographic References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../miscellaneous/models/introduction_guide_miscellaneous.html">
+   6. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/models/failure_rate_processing.html">
+     6.1. Failure rate processing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System chapter
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../introduction.html">
+   7. Handbook
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../scope.html">
+     7.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../normative_references.html">
+     7.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../terms.html">
+     7.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="reliability_prediction.html">
+     7.4. Reliability prediction for system level items
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="reliability_prediction_different_levels.html">
+       7.4.1. Reliability prediction at different levels
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="root_causes_coverage.html">
+       7.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="methods.html">
+       7.4.3. System level methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="reliability_assessment_phased_missions.html">
+       7.4.4. Reliability assessment of phased missions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="important_measures.html">
+       7.4.5. Important measures
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="reliability_assessment_degraded_systems.html">
+       7.4.6. Reliability assessment of degraded systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="modelling_common_cause_failure.html">
+       7.4.7. Modelling of Common Cause failure
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       7.4.8. System level modelling of wear-out
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="systematic_failure_modelling.html">
+       7.4.9. Systematic failure modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="consideration_software_failures.html">
+       7.4.10. Consideration of software failures
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conclusion.html">
+     7.5. Conclusion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../models/intro_models.html">
+   8. Models
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    <img src="/_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
+    <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/system/handbook/reliability_prediction/system_level_modelling_wear_out.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/paulremo/NRPMHandbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/paulremo/NRPMHandbook/issues/new?title=Issue%20on%20page%20%2Fsystem/handbook/reliability_prediction/system_level_modelling_wear_out.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/paulremo/NRPMHandbook/edit/main/02_NRPMHandbook/system/handbook/reliability_prediction/system_level_modelling_wear_out.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wear-out-model-on-component-level">
+   7.4.8.1. Wear-out model on component level
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-1">
+     7.4.8.1.1. Model 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-2">
+     7.4.8.1.2. Model 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-3">
+     7.4.8.1.3. Model 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wear-out-in-phased-missions">
+   7.4.8.2. Wear-out in phased missions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-of-serial-and-parallel-systems-considering-wear-out">
+   7.4.8.3. Reliability of serial and parallel systems considering wear-out
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditional-reliability">
+   7.4.8.4. Conditional reliability
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-of-standby-systems-with-and-without-a-switching-device">
+   7.4.8.5. Reliability of standby systems with and without a switching device
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>System level modelling of wear-out</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wear-out-model-on-component-level">
+   7.4.8.1. Wear-out model on component level
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-1">
+     7.4.8.1.1. Model 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-2">
+     7.4.8.1.2. Model 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-3">
+     7.4.8.1.3. Model 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wear-out-in-phased-missions">
+   7.4.8.2. Wear-out in phased missions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-of-serial-and-parallel-systems-considering-wear-out">
+   7.4.8.3. Reliability of serial and parallel systems considering wear-out
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditional-reliability">
+   7.4.8.4. Conditional reliability
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-of-standby-systems-with-and-without-a-switching-device">
+   7.4.8.5. Reliability of standby systems with and without a switching device
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="system-level-modelling-of-wear-out">
+<h1><span class="section-number">7.4.8. </span>System level modelling of wear-out<a class="headerlink" href="#system-level-modelling-of-wear-out" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="wear-out-model-on-component-level">
+<h2><span class="section-number">7.4.8.1. </span>Wear-out model on component level<a class="headerlink" href="#wear-out-model-on-component-level" title="Permalink to this headline">¶</a></h2>
+<p>The fact that wear-out can occur at component level and that the failure rates are then no longer constant needs to be considered for the system level reliability prediction. To calculate the reliability of components prone to wear-out, the following three approaches are introduced. In this section the use of these wear-out models for system level reliability prediction is shown.</p>
+<div class="section" id="model-1">
+<h3><span class="section-number">7.4.8.1.1. </span>Model 1<a class="headerlink" href="#model-1" title="Permalink to this headline">¶</a></h3>
+<p>The failure probability is the sum of random failures and wear-out failures assuming that wear-out can occur throughout the entire service life and not just after qualification life time. With this model the life time of an item can be interpreted as the minimum of the life time based on random or wear-out failures. Random failures are described by an exponential distribution and wear-out by a Weibull distribution. Thus, the following equations are obtained for failure rate and reliability:</p>
+<div class="equation admonition" id="syst-equation4-93">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-93">
+<span class="eqno">(7.93)<a class="headerlink" href="#equation-equation-7-93" title="Permalink to this equation">¶</a></span>\[\lambda\left( t \right) = \lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1}\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-94">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-94">
+<span class="eqno">(7.94)<a class="headerlink" href="#equation-equation-7-94" title="Permalink to this equation">¶</a></span>\[R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t}{\alpha} \right)^{\beta} \right) \right\rbrack}^{}}_{}\]</div>
+</div>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss factor above</p>
+</div>
+</div>
+<div class="section" id="model-2">
+<h3><span class="section-number">7.4.8.1.2. </span>Model 2<a class="headerlink" href="#model-2" title="Permalink to this headline">¶</a></h3>
+<p>This model assumes that wear-out failure can only occur after the qualification time <span class="math notranslate nohighlight">\(\tau_{1}\)</span>, before it no wear-out is considered and only random failures are considered. Thus, to calculate failure rates and reliability a distinction between two cases is made: Time <span class="math notranslate nohighlight">\(t\)</span> is below the qualification time <span class="math notranslate nohighlight">\(\tau_{1}\)</span> and <span class="math notranslate nohighlight">\(t\)</span> is equal to or greater than the qualification time.</p>
+<div class="equation admonition" id="syst-equation4-95">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-95">
+<span class="eqno">(7.95)<a class="headerlink" href="#equation-equation-7-95" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{matrix}                                                                                                 
+  \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                                                             
+  \lambda\left( t \right) = \lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta - 1} \\                
+  \end{matrix}\left\{ \begin{matrix}                                                                                               
+  
+  t &lt; \tau_{1} \\                                                                                                     t \geq \tau_{1} \\                                                                                                     \end{matrix} \right.\ \end{split}\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-96">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-96">
+<span class="eqno">(7.96)<a class="headerlink" href="#equation-equation-7-96" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{matrix}                                                                                                 
+  R\left( t \right) = {\exp\left\lbrack - \lambda_{R}t \right\rbrack}^{} \\                                                                           
+  R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta} \right) \right\rbrack}^{}}_{} \\   
+  \end{matrix}\left\{ \begin{matrix}                                                                                               
+  
+  t &lt; \tau_{1} \\                                                                                                     t \geq \tau_{1} \\                                                                                                     \end{matrix} \right.\ \end{split}\]</div>
+</div>
+</div>
+<div class="section" id="model-3">
+<h3><span class="section-number">7.4.8.1.3. </span>Model 3<a class="headerlink" href="#model-3" title="Permalink to this headline">¶</a></h3>
+<p>The failure rate <span class="math notranslate nohighlight">\(\lambda\left( t \right)\)</span> is the maximum of the random failure rate and the wear-out failure rate, Eq. <a class="reference internal" href="#equation-equation-7-97">(7.97)</a>. At a certain operating time <span class="math notranslate nohighlight">\(t = \tau_{2}\)</span> the failure rate due to wear-out <span class="math notranslate nohighlight">\(\lambda_{W}\)</span> equals the constant failure rate of random failure, Eq. <a class="reference internal" href="#equation-equation-7-98">(7.98)</a>. From that point on the wear-out failure rate is dominating. Thus, the probability density functions are separated in random failures only for<span class="math notranslate nohighlight">\(t &lt; \tau_{2}\)</span> and wear-out only for time <span class="math notranslate nohighlight">\(t \geq \tau_{2}\)</span></p>
+<div class="equation admonition" id="syst-equation4-97">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-97">
+<span class="eqno">(7.97)<a class="headerlink" href="#equation-equation-7-97" title="Permalink to this equation">¶</a></span>\[\lambda\left( t \right) = \max\left( \lambda_{R},\lambda_{W} \right)\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-98">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-98">
+<span class="eqno">(7.98)<a class="headerlink" href="#equation-equation-7-98" title="Permalink to this equation">¶</a></span>\[\lambda_{R} = \lambda_{W}\left( \tau_{2} \right)\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-99">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-99">
+<span class="eqno">(7.99)<a class="headerlink" href="#equation-equation-7-99" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{matrix}
+  \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                       
+  \lambda\left( t \right) = \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1} \\   
+  \end{matrix}\left\{ \begin{matrix}                                                                            
+  t &lt; \tau_{2} \\                                                                                               
+  t \geq \tau_{2} \\                                                                                            
+  \end{matrix} \right.\ \end{split}\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-100">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-100">
+<span class="eqno">(7.100)<a class="headerlink" href="#equation-equation-7-100" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{matrix}
+  R\left( t \right) = {\exp\left\lbrack - \lambda_{R}t \right\rbrack}^{} \\                                     
+  R\left( t \right) = {\exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack}^{} \\          
+  \end{matrix}\left\{ \begin{matrix}                                                                            
+  t &lt; \tau_{2} \\                                                                                               
+  t \geq \tau_{2} \\                                                                                            
+  \end{matrix} \right.\ \end{split}\]</div>
+</div>
+<p>The time <span class="math notranslate nohighlight">\(\tau_{2}\)</span> can be obtained from Eq. <a class="reference internal" href="#equation-equation-7-101">(7.101)</a>.</p>
+<div class="equation admonition" id="syst-equation4-101">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-101">
+<span class="eqno">(7.101)<a class="headerlink" href="#equation-equation-7-101" title="Permalink to this equation">¶</a></span>\[\tau_{2} = \alpha\left( \frac{\lambda_{R}\alpha}{\beta} \right)^{\frac{1}{\beta - 1}}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="wear-out-in-phased-missions">
+<h2><span class="section-number">7.4.8.2. </span>Wear-out in phased missions<a class="headerlink" href="#wear-out-in-phased-missions" title="Permalink to this headline">¶</a></h2>
+<p>For components used in phased missions, the failure rates may not only depend on the stress levels applied in different phases, but also on the age of the component. Consequently, the time duration of each phase cannot be considered independently. If wear-out and age of the components are relevant to determine the component reliability the accumulated mission time has to be considered, which is given by:</p>
+<div class="equation admonition" id="syst-equation4-102">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-102">
+<span class="eqno">(7.102)<a class="headerlink" href="#equation-equation-7-102" title="Permalink to this equation">¶</a></span>\[T_{\text{Ck}} = \sum_{i = 1}^{i = k}T_{i}\]</div>
+<p>Where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T_{\text{Ck}}\)</span> denotes the accumulated time of component from mission start to phase <span class="math notranslate nohighlight">\(k\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{i}\)</span> denotes the duration of phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
+</ul>
+</div>
+<p>The reliability function of the component that is exposed to random failures and also wear-out failures throughout the mission is given in Eq. <a class="reference internal" href="#equation-equation-7-103">(7.103)</a> (see wear-out first approach in Section Error: Reference source not found).</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<div class="equation admonition" id="syst-equation4-103">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-103">
+<span class="eqno">(7.103)<a class="headerlink" href="#equation-equation-7-103" title="Permalink to this equation">¶</a></span>\[R_{k}\left( t \right) = \exp\left\lbrack - \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t}{\alpha_{k}} \right)^{\beta_{k}} \right) \right\rbrack \bullet \exp\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right) \right\rbrack \bullet \exp\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}}}{\alpha_{i}} \right)^{\beta_{i}} \right) \right\rbrack\]</div>
+<p>Where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T_{\text{Ci}}\)</span> denotes the accumulated time of component from mission start to phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{i}\)</span> denotes the duration of phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(t_{}\)</span> denotes the time starting at beginning of phase <span class="math notranslate nohighlight">\(k\)</span> such that, <span class="math notranslate nohighlight">\(0 \leq {t \leq T}_{k}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda_{k}\)</span> denotes the failure rate of the component in last phase <span class="math notranslate nohighlight">\(k\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda_{i}\)</span> denotes the failure rate of the component in phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha_{i}\)</span> denotes the characteristic life of the Weibull distribution in phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha_{k}\)</span> denotes the characteristic life of the Weibull distribution in the last phase <span class="math notranslate nohighlight">\(k\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta_{i}\)</span> denotes the shape parameter of the Weibull distribution in phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
+</ul>
+</div>
+<p>If wear-out occurs only after the qualification time <span class="math notranslate nohighlight">\(\tau\)</span> is reached (second approach) Eq. <a class="reference internal" href="#equation-equation-7-103">(7.103)</a> can be adapted accordingly and for <span class="math notranslate nohighlight">\(T_{\text{ck}} &gt; \tau\)</span> the following equation is obtained.</p>
+<div class="equation admonition" id="syst-equation4-104">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-104">
+<span class="eqno">(7.104)<a class="headerlink" href="#equation-equation-7-104" title="Permalink to this equation">¶</a></span>\[R_{k}\left( t \right) = {e^{- \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t - \tau_{1}}{\alpha_{k}} \right)^{\beta_{k}} \right)}e^{- \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right)}e^{- \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{1}}{\alpha_{i}} \right)^{\beta_{i}} \right)}}_{}\]</div>
+<p>Where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\tau_{1}\)</span> denotes the qualification time of the component</p></li>
+</ul>
+</div>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss factor just above</p>
+</div>
+<p>For mission phases before qualification time <span class="math notranslate nohighlight">\(T_{\text{ck}} &lt; \tau_{1}\)</span>, wear-out does not have to be considered and the reliability of the component in phase k is given by Eq. <a class="reference internal" href="reliability_assessment_phased_missions.html#equation-equation-7-30">(7.30)</a>.</p>
+<p>For Model 3, see Section Error: Reference source not found, wear-out is considered only for <span class="math notranslate nohighlight">\(T_{\text{ck}} &gt; \tau_{2}\)</span> and for <span class="math notranslate nohighlight">\(T_{\text{ck}} &lt; \tau_{2}\)</span> only random failures are taken into account. The following equation is obtained for <span class="math notranslate nohighlight">\(T_{\text{ck}} &gt; \tau_{2}\)</span>.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<div class="equation admonition" id="syst-equation4-105">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-105">
+<span class="eqno">(7.105)<a class="headerlink" href="#equation-equation-7-105" title="Permalink to this equation">¶</a></span>\[R_{k}\left( t \right) = {{\exp\left\lbrack - \left( \frac{T_{\text{Ck} - 1} + t - \tau_{2}}{\alpha_{k}} \right)^{\beta_{k}} \right\rbrack}^{}{\exp\left\lbrack - \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{2}}{\alpha_{i}} \right)^{\beta_{i}} \right\rbrack}^{}}_{}\]</div>
+<p>Where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\tau_{2}\)</span> denotes the time at which the wear-out failure rate equals the random failure rate.</p></li>
+</ul>
+</div>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss factor just above</p>
+</div>
+<p>For <span class="math notranslate nohighlight">\(T_{\text{ck}} &lt; \tau_{2}\)</span> the reliability function of the component in phase k is also given by Eq. <a class="reference internal" href="reliability_assessment_phased_missions.html#equation-equation-7-30">(7.30)</a>.</p>
+</div>
+<div class="section" id="reliability-of-serial-and-parallel-systems-considering-wear-out">
+<h2><span class="section-number">7.4.8.3. </span>Reliability of serial and parallel systems considering wear-out<a class="headerlink" href="#reliability-of-serial-and-parallel-systems-considering-wear-out" title="Permalink to this headline">¶</a></h2>
+<p>The system reliability function for a serial system is given by:</p>
+<div class="equation admonition" id="syst-equation4-106">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-106">
+<span class="eqno">(7.106)<a class="headerlink" href="#equation-equation-7-106" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = R_{A}\left( t \right) \ast R_{B}\left( t \right)\]</div>
+</div>
+<p>The reliability for a parallel system in hot redundancy, thus all components in use and same load is applied is given by</p>
+<div class="equation admonition" id="syst-equation4-107">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-107">
+<span class="eqno">(7.107)<a class="headerlink" href="#equation-equation-7-107" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = R_{A}\left( t \right) + R_{B}\left( t \right) - R_{A}\left( t \right)R_{B}\left( t \right)\]</div>
+</div>
+<p>In order to consider wear-out of the components the corresponding reliability function of the wear-out model is to be used. If for example the first approach for wear out modelling is used for both components, given by Eq. <a class="reference internal" href="#equation-equation-7-94">(7.94)</a>, the following is obtained for a serial system.</p>
+<div class="equation admonition" id="syst-equation4-108">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-108">
+<span class="eqno">(7.108)<a class="headerlink" href="#equation-equation-7-108" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = {\exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack\exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack}_{}\]</div>
+</div>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss factor just above</p>
+</div>
+<p>For a parallel system the following expression is obtained:</p>
+<div class="equation admonition" id="syst-equation4-109">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-109">
+<span class="eqno">(7.109)<a class="headerlink" href="#equation-equation-7-109" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = \exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack + \exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack - \exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack\exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack\]</div>
+</div>
+</div>
+<div class="section" id="conditional-reliability">
+<h2><span class="section-number">7.4.8.4. </span>Conditional reliability<a class="headerlink" href="#conditional-reliability" title="Permalink to this headline">¶</a></h2>
+<p>The conditional reliability is the probability of a system successfully completing another mission phase knowing that it has not failed during previous phases. This conditional reliability is of particular relevance for life time extensions. The fact that a component was working correctly without a failure over a certain period of the mission needs to be considered to estimate the reliability over the following phases of the mission. The system’s conditional reliability function is given by:</p>
+<div class="equation admonition" id="syst-equation4-110">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-110">
+<span class="eqno">(7.110)<a class="headerlink" href="#equation-equation-7-110" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \middle| T \right) = \frac{R_{S}\left( T + t \right)}{R_{S}\left( T \right)}\]</div>
+</div>
+<p>In the following an example of a serial system that consists of two components is considered. The system reliability is given by:</p>
+<div class="equation admonition" id="syst-equation4-111">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-111">
+<span class="eqno">(7.111)<a class="headerlink" href="#equation-equation-7-111" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = R_{1}\left( t \right)R_{2}\left( t \right)\]</div>
+</div>
+<p>The mission duration shall be extended from 50000 hours by another 10000 hours to 60000 hours. 50000 hours correspond to the qualification time of the components and the system was still in operational state after 50000 hours were accumulated. For the components the following parameters shown in <a class="reference internal" href="#syst-table4-16"><span class="std std-ref">Table 4.16</span></a> are given:</p>
+<p id="syst-table4-16"><strong>Table 4.16</strong> : Example for parameters for component with random and wear-out failures</p>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_16.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+<p>Eq. <a class="reference internal" href="#equation-equation-7-112">(7.112)</a> provides the reliability for a mission extension of a duration <em>t</em> giving that <em>T</em> hours of successful operation have already been accumulated up to the start of the mission extension. The system reliability is evaluated to assure that it will complete the next mission extension successfully.</p>
+<div class="equation admonition" id="syst-equation4-112">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-112">
+<span class="eqno">(7.112)<a class="headerlink" href="#equation-equation-7-112" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \middle| T \right) = \frac{R_{1}\left( T + t \right)R_{2}\left( T + t \right)}{R_{1}\left( T \right)R_{2}\left( T \right)}\]</div>
+</div>
+<p>If the Model 2 is applied for example to consider the wear-out of the components, the following equation is obtained:</p>
+<div class="equation admonition" id="syst-equation4-113">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-113">
+<span class="eqno">(7.113)<a class="headerlink" href="#equation-equation-7-113" title="Permalink to this equation">¶</a></span>\[R\left( t \middle| T \right) = \frac{\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)}{{\exp\left( - \lambda_{R}T \right)\exp\left( - \lambda_{R}T \right)}^{}}_{}\]</div>
+</div>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss factor just above</p>
+</div>
+<p>With the three wear-out models the following results shown in <a class="reference internal" href="#syst-table4-17"><span class="std std-ref">Table 4.17</span></a> are obtained. It can be seen that the first approach provides the most conservative results, as it takes wear-out already from <em>t</em>=0 into account.</p>
+<p id="syst-table4-17"><strong>Table 4.17</strong> : Conditional probability for different wear-out models</p>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_17.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+</div>
+<div class="section" id="reliability-of-standby-systems-with-and-without-a-switching-device">
+<h2><span class="section-number">7.4.8.5. </span>Reliability of standby systems with and without a switching device<a class="headerlink" href="#reliability-of-standby-systems-with-and-without-a-switching-device" title="Permalink to this headline">¶</a></h2>
+<p>In the following section, another form of redundancy is presented: standby redundancy. In standby redundancy the components have two states: an active state and a standby state. The stand-by component is exposed to reduced loads while not needed and under the operating load when they are activated. Consequently, components in standby redundancy have two failure distributions, one for each state. In the case that both stand-by and active failure distributions are the same, the units are in a simple parallel configuration (also called a hot standby configuration). When the failure rate of the standby component is lower than in active mode that is called a warm standby configuration. When the rate of failure of the standby component is zero (i.e., the component cannot fail when in standby), it is called a cold standby configuration.</p>
+<p>The reliability of the system at time <span class="math notranslate nohighlight">\(t\)</span> can be obtained using the following equation Error: Reference source not found:</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<div class="equation admonition" id="syst-equation4-114">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-114">
+<span class="eqno">(7.114)<a class="headerlink" href="#equation-equation-7-114" title="Permalink to this equation">¶</a></span>\[R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_{2,\text{sb}}\left( x \right)R_{2,A}\left( t - x \right)\text{dx}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_{1}\)</span> denotes the reliability and <span class="math notranslate nohighlight">\(f_{1}\)</span> the probability density function of the active component.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{2,\text{sb}}\)</span> denotes the reliability of the stand-by component in stand-by mode.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{2,A}\)</span> denotes the reliability of the stand-by component in active mode.</p></li>
+</ul>
+</div>
+<p>Eq. <a class="reference internal" href="#equation-equation-7-114">(7.114)</a> can be solved by numerical integration.</p>
+<p>The previous example assumes perfect switching, i.e. activation of the stand-by component is certain once the active component fails. In reality in many cases a switching device is implemented in the system to activate the stand-by component when the active component fails. Therefore, the failure properties of the switch must also be included in the analysis as imperfect switching.</p>
+<div class="figure align-default" id="figure-7-32">
+<span id="syst-figure4-32"></span><a class="reference internal image-reference" href="../../../_images/figure4_321.png"><img alt="../../../_images/figure4_321.png" src="../../../_images/figure4_321.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.32 </span><span class="caption-text">Stand-by system with switching device</span><a class="headerlink" href="#figure-7-32" title="Permalink to this image">¶</a></p>
+</div>
+<p>Two scenarios have to be considered to include the reliability of a switch in the analysis with two probabilities can be considered. The first one is the probability of the switch performing the action (i.e., switching) when requested to do so, the Switch Probability per Request, which is expressed as a static probability. The second probability takes into account the possibility that the switch could fail before the active component fails, as the switch might wear out with age due to material degradation. However, a switch failure does not cause the system to fail immediately, but if the active component fails and the switch has also failed, then the system cannot be switched to the standby component and it therefore fails. The reliability of the system including switching is given by the following equation Error: Reference source not found.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<div class="equation admonition" id="syst-equation4-115">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-115">
+<span class="eqno">(7.115)<a class="headerlink" href="#equation-equation-7-115" title="Permalink to this equation">¶</a></span>\[R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_{2,\text{sb}}\left( x \right)R_{2,A}\left( t - x \right)R_{\text{SW}}\left( x \right)R_{\text{SWREQ}}\text{dx}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_{1}\)</span> denotes the reliability and <span class="math notranslate nohighlight">\(f_{1}\)</span> the probability density function of the active component.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{2,\text{sb}}\)</span> denotes the reliability of the stand-by component in stand-by mode.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{2,A}\)</span> denotes the reliability of the stand-by component in active mode.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{\text{SW}}\)</span> denotes the reliability of the switch considering wear-out</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{\text{SWREQ}}\)</span> denotes the reliability of the switch per request given as time-invariant static probability</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "paulremo/NRPMInteractivity",
+            ref: "python",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./system\handbook\reliability_prediction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="modelling_common_cause_failure.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7.4.7. </span>Modelling of Common Cause failure</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="systematic_failure_modelling.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7.4.9. </span>Systematic failure modelling</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Matrisk | Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,812 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.4.6. Reliability assessment of degraded systems &#8212; NRPM Digital handbook</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/images.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/mytables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/radial_bar.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../../_static/interactivity/js/map3.js"></script>
+    <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
+    <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
+    <script src="../../../_static/interactivity/js/radial_bar_lib.js"></script>
+    <script src="../../../_static/interactivity/js/table_search.js"></script>
+    <script src="../../../_static/js/redirect.js"></script>
+    <script src="../../../_static/js/resize_iframe.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="7.4.7. Modelling of Common Cause failure" href="modelling_common_cause_failure.html" />
+    <link rel="prev" title="7.4.5. Important measures" href="important_measures.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   Welcome to the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../eee/mainEEE.html">
+   1. Handbook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../eee/models/intro_models.html">
+   2. Models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mechanical chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../mechanical/handbook/introduction.html">
+   3. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/handbook/scope.html">
+     3.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/handbook/normative_references.html">
+     3.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/handbook/terms.html">
+     3.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/reliability_prediction.html">
+     3.4. Reliability prediction for mechanical and structural parts and assemblies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
+       3.4.1. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
+       3.4.2. Data sources and methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
+       3.4.3. Failure mechanisms identification and focus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
+       3.4.4. Method selection for different items and failure mechanisms
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
+       3.4.5. Structural reliability methods and inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
+       3.4.6. Structural reliability models and equations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
+       3.4.7. Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/handbook/bibliographic_references.html">
+     3.5. Bibliographic References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../mechanical/models/introduction.html">
+   4. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mechanical/models/solid_lubricant_wear.html">
+     4.1. Solid lubricant wear
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../miscellaneous/handbook/introduction.html">
+   5. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/scope.html">
+     5.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/normative_references.html">
+     5.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/terms.html">
+     5.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_prediction.html">
+     5.4. Reliability prediction for miscellaneous items
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/items.html">
+       5.4.1. List of miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/root_causes_coverage.html">
+       5.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/data_sources_methods.html">
+       5.4.3. Data sources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_models.html">
+       5.4.4. Reliability Models for miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html">
+       5.4.5. Process for Reliability modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/ior_results.html">
+       5.4.6. Use of IOR data and/or tests results
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html">
+       5.4.7. Basic failure rate derivation for “non-standard model” items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_data_sm.html">
+       5.4.8. Reliability Data for Miscellaneous “Standard model”
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/conclusion.html">
+     5.5. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/annexA.html">
+     5.6. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/annexB.html">
+     5.7. Annex B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/handbook/bibliographic_references.html">
+     5.8. Bibliographic References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../miscellaneous/models/introduction_guide_miscellaneous.html">
+   6. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../miscellaneous/models/failure_rate_processing.html">
+     6.1. Failure rate processing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System chapter
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../introduction.html">
+   7. Handbook
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../scope.html">
+     7.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../normative_references.html">
+     7.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../terms.html">
+     7.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="reliability_prediction.html">
+     7.4. Reliability prediction for system level items
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="reliability_prediction_different_levels.html">
+       7.4.1. Reliability prediction at different levels
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="root_causes_coverage.html">
+       7.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="methods.html">
+       7.4.3. System level methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="reliability_assessment_phased_missions.html">
+       7.4.4. Reliability assessment of phased missions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="important_measures.html">
+       7.4.5. Important measures
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       7.4.6. Reliability assessment of degraded systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="modelling_common_cause_failure.html">
+       7.4.7. Modelling of Common Cause failure
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="system_level_modelling_wear_out.html">
+       7.4.8. System level modelling of wear-out
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="systematic_failure_modelling.html">
+       7.4.9. Systematic failure modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="consideration_software_failures.html">
+       7.4.10. Consideration of software failures
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../conclusion.html">
+     7.5. Conclusion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../models/intro_models.html">
+   8. Models
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    <img src="/_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
+    <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/system/handbook/reliability_prediction/reliability_assessment_degraded_systems.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/paulremo/NRPMHandbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/paulremo/NRPMHandbook/issues/new?title=Issue%20on%20page%20%2Fsystem/handbook/reliability_prediction/reliability_assessment_degraded_systems.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/paulremo/NRPMHandbook/edit/main/02_NRPMHandbook/system/handbook/reliability_prediction/reliability_assessment_degraded_systems.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Reliability assessment of degraded systems</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="reliability-assessment-of-degraded-systems">
+<h1><span class="section-number">7.4.6. </span>Reliability assessment of degraded systems<a class="headerlink" href="#reliability-assessment-of-degraded-systems" title="Permalink to this headline">¶</a></h1>
+<p>Depending on the system architecture and the functions of its components the loss of some single components in redundant system architectures does not necessarily lead to the total loss of a function, but results in a degraded system performance. For the reliability assessment, usually 100% performance is defined, and any deviation is considered as a system failure. From a risk assessment perspective, it is also interesting to know how much the actual performance deviates from the specified one and if some residual performance can be maintained. Not only failure scenarios leading to total loss are relevant, another important criterion is whether a certain performance level can be achieved or not. To allow for the calculation of occurrence probabilities for degraded modes of system performance, a relative contribution to system performance at component level is assigned. The method is based on the evaluation of reliability block diagrams described through its success path. The system performances are linked to a minimum set of resources and modelled accordingly as RBD.</p>
+<p>To illustrate the concept of performance degradation, the fictive example of the power supply system is extended such that the contribution of each solar panel is also taken into account. Solar panel #1 (component 3) provides 500W, solar panel #2 (component 4) provides 300W and solar panel #3 (component 5) provides 200W electrical power. The corresponding reliability block diagram is shown in <a class="reference internal" href="#figure-7-30"><span class="std std-numref">Fig. 7.30</span></a>.</p>
+<p>The system can be described through the following success paths.</p>
+<p id="syst-table4-12"><strong>Table 4.12</strong> : Success paths and their relative performance contribution</p>
+<div class="figure align-default" id="table4-12">
+<a class="reference internal image-reference" href="../../../_images/figure4_121.png"><img alt="../../../_images/figure4_121.png" src="../../../_images/figure4_121.png" style="width: 600px;" /></a>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(M_{i}\)</span> denotes a success path, i.e. a combination of components for which the system is in operable state if all components of the success path are operational. The success path is represented by conjunctive terms of indicator variables <span class="math notranslate nohighlight">\(X_{i}\)</span>. At least one minimal success path is required to get a working system.</p>
+<p>In this example, if all three solar panels are working, an electrical power of 1kW is provided. In the following, a relative contribution to the system performance is assigned to the different solar panels. To component 3 a relative contribution of 50% is assigned, that means if the success path that contains the component 3 is functioning, 50% of the total system performance are available. In this case, 50% of electrical power. Component 4 has a relative contribution of 30% and 20% are assigned to component 5. In <a class="reference internal" href="#syst-table4-13"><span class="std std-ref">Table 4.13</span></a> all system states with a system performance &gt; 0% are listed. To each elementary state the contributing success path is listed in <a class="reference internal" href="#syst-table4-13"><span class="std std-ref">Table 4.13</span></a>. Depending on the availability of the success path that contains one of the service providing units 3, 4 or 5, a certain level of system performance <span class="math notranslate nohighlight">\(p_{S}\)</span> can be achieved.</p>
+<div class="figure align-default" id="figure-7-30">
+<span id="syst-figure4-30"></span><a class="reference internal image-reference" href="../../../_images/figure4_30.png"><img alt="../../../_images/figure4_30.png" src="../../../_images/figure4_30.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.30 </span><span class="caption-text">Example Reliability Block Diagram - System with degraded performance.</span><a class="headerlink" href="#figure-7-30" title="Permalink to this image">¶</a></p>
+</div>
+<p id="syst-table4-13"><strong>Table 4.13</strong> : System states with degraded system performance</p>
+<div class="figure align-default" id="table4-13">
+<a class="reference internal image-reference" href="../../../_images/figure4_13.png"><img alt="../../../_images/figure4_13.png" src="../../../_images/figure4_13.png" style="width: 600px;" /></a>
+</div>
+<p>Based on the elementary states that are linked to a certain system performance level, a Boolean system function <span class="math notranslate nohighlight">\(\Phi_{P_{S}}\)</span> can be obtained that describes the top event “system performance level equals <span class="math notranslate nohighlight">\(p_{S}\)</span>”. With <span class="math notranslate nohighlight">\(p_{S} = 50%\)</span> the following system function <span class="math notranslate nohighlight">\(\Phi_{P_{S}}\)</span> is obtained:</p>
+<div class="equation admonition" id="syst-equation4-68">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-68">
+<span class="eqno">(7.68)<a class="headerlink" href="#equation-equation-7-68" title="Permalink to this equation">¶</a></span>\[\Phi_{50\mathrm{\%}} = X_{1}X_{2}\overline{X_{3}}X_{4}X_{5} \vee X_{1}X_{2}X_{3}\overline{X_{4}}\overline{X_{5}}\]</div>
+</div>
+<p>Since the elementary states are mutually exclusive, the probability of occurrence can be calculated based on the system state function in Eq. <a class="reference internal" href="#equation-equation-7-68">(7.68)</a>.</p>
+<div class="equation admonition" id="syst-equation4-69">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-69">
+<span class="eqno">(7.69)<a class="headerlink" href="#equation-equation-7-69" title="Permalink to this equation">¶</a></span>\[P\left\lbrack \Phi \middle| 50\mathrm{\%} = 1 \right\rbrack = {P_{50\mathrm{\%}} = R}_{1}R_{2}F_{3}R_{4}R_{5} + {R_{1}R}_{2}R_{3}F_{4}F_{5}\]</div>
+</div>
+<p>With this method, the occurrence probability for all system performance levels at the end of the mission duration can be calculated, where the following definition applies:</p>
+<div class="equation admonition" id="syst-equation4-70">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-70">
+<span class="eqno">(7.70)<a class="headerlink" href="#equation-equation-7-70" title="Permalink to this equation">¶</a></span>\[\sum_{i = 0\mathrm{\%}}^{100\mathrm{\%}}P_{i} = 1\]</div>
+</div>
+<p>It should be noted that for practical reasons, the applicability of this method using elementary system states is limited to systems with a small number of components, since the number of states grows exponentially with the number of components. For <em>n</em> components <span class="math notranslate nohighlight">\(2^{n}\)</span> states have to be considered.</p>
+<p>Therefore, it is more efficient to use the success paths. For each system performance level, the correlated success paths have to be generated. In addition, auxiliary conditions are defined that describe the logical combination of the performance determining components that are required to achieve performance levels equal to or greater than <span class="math notranslate nohighlight">\(p_{S}\)</span>. This will be explained using the example shown in <a class="reference internal" href="#figure-7-30"><span class="std std-numref">Fig. 7.30</span></a> and <a class="reference internal" href="#syst-table4-13"><span class="std std-ref">Table 4.13</span></a>. The analysis of degraded systems consists of the following steps Error: Reference source not found:</p>
+<ul class="simple">
+<li><p>Identification of all possible system performance levels through combination of the performance contributing components.</p></li>
+<li><p>Generation of success paths and auxiliary conditions to obtain Boolean disjunctive normal form.</p></li>
+<li><p>Orthogonalisation of success paths to obtain orthogonal conjunctive normal form.</p></li>
+<li><p>Calculation of system performance occurrence probability with component reliability and component failure probability</p></li>
+<li><p>Inverting the calculated values to obtain the performance distribution function.</p></li>
+</ul>
+<p>To achieve a system performance of <span class="math notranslate nohighlight">\(p_{S}\)</span> ≥ 50% the following condition can be defined, which describes a combination of success paths for which the system performance is at least 50%.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<div class="equation admonition" id="syst-equation4-71">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-71">
+<span class="eqno">(7.71)<a class="headerlink" href="#equation-equation-7-71" title="Permalink to this equation">¶</a></span>\[\Gamma_{\geq 50\mathrm{\%}} = X_{3}X_{4}X_{5} \vee X_{3}X_{4} \vee X_{3}X_{5} \vee X_{4}X_{5} \vee X_{3}\]</div>
+</div>
+<p>Generally, the condition can be formulated as:</p>
+<div class="equation admonition" id="syst-equation4-72">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-72">
+<span class="eqno">(7.72)<a class="headerlink" href="#equation-equation-7-72" title="Permalink to this equation">¶</a></span>\[\Gamma_{} = f = 1f_{\max}\left\lbrack g = 1 \middle| g_{\max}X_{g} \right\rbrack\]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(g_{\max}\)</span> denotes the number of component state variables of the conjunctive terms of the auxiliary condition and <span class="math notranslate nohighlight">\(f_{\max}\)</span> denotes the number of disjunctive terms</p>
+<p>Eq. <a class="reference internal" href="#equation-equation-7-71">(7.71)</a> can be simplified and the following term is obtained:</p>
+<div class="equation admonition" id="syst-equation4-73">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-73">
+<span class="eqno">(7.73)<a class="headerlink" href="#equation-equation-7-73" title="Permalink to this equation">¶</a></span>\[\Gamma_{50\mathrm{\%}} = X_{4}X_{5} \vee X_{3}\]</div>
+</div>
+<p>The system state function can be defined as follows:</p>
+<div class="equation admonition" id="syst-equation4-74">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-74">
+<span class="eqno">(7.74)<a class="headerlink" href="#equation-equation-7-74" title="Permalink to this equation">¶</a></span>\[\Phi = k = 1mM_{k}\]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(k\)</span> denotes the index of the success paths and <span class="math notranslate nohighlight">\(m\)</span> the total number of success path.</p>
+<p>With Eq. <a class="reference internal" href="#equation-equation-7-72">(7.72)</a>, the following expression is obtained for the system state function for the top event “system performance <span class="math notranslate nohighlight">\(p_{S}\)</span> ≥ x” Error: Reference source not found.</p>
+<div class="todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Miss ref just above</p>
+</div>
+<div class="equation admonition" id="syst-equation4-75">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-75">
+<span class="eqno">(7.75)<a class="headerlink" href="#equation-equation-7-75" title="Permalink to this equation">¶</a></span>\[\Phi = f = 1f_{\max}\left\lbrack g = 1 \middle| g_{\max}\left( h = 1 \middle| h_{\max}M_{h} \right) \right\rbrack\]</div>
+</div>
+<p>Where <span class="math notranslate nohighlight">\(h\)</span> denotes the index of the success path. Each success path can contain of set of state variables <span class="math notranslate nohighlight">\(X_{g}\)</span> with <span class="math notranslate nohighlight">\(g\)</span> from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(g_{\max}\)</span>. With Eq. <a class="reference internal" href="#equation-equation-7-75">(7.75)</a> and Eq. <a class="reference internal" href="#equation-equation-7-73">(7.73)</a>, the following system state function is obtained that represents the top event “system performance <span class="math notranslate nohighlight">\(p_{S}\)</span> ≥ 50%”.</p>
+<div class="equation admonition" id="syst-equation4-76">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-76">
+<span class="eqno">(7.76)<a class="headerlink" href="#equation-equation-7-76" title="Permalink to this equation">¶</a></span>\[\Phi_{\geq 50\mathrm{\%}} = M_{1} \vee \left( M_{2} \land M_{3} \right)\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-77">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-77">
+<span class="eqno">(7.77)<a class="headerlink" href="#equation-equation-7-77" title="Permalink to this equation">¶</a></span>\[\Phi_{\geq 50\mathrm{\%}} = X_{1}X_{2}X_{3} \vee X_{1}X_{2}X_{4}X_{5}\]</div>
+</div>
+<p>Through orthogonalization, Eq. <a class="reference internal" href="#equation-equation-7-77">(7.77)</a> can be transformed from a Boolean conjunctive normal form to an orthogonal conjunctive normal form, Eq. <a class="reference internal" href="#equation-equation-7-78">(7.78)</a>.</p>
+<div class="equation admonition" id="syst-equation4-78">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-78">
+<span class="eqno">(7.78)<a class="headerlink" href="#equation-equation-7-78" title="Permalink to this equation">¶</a></span>\[\Phi_{\geq 50\mathrm{\%}} = X_{1}X_{2}X_{3} \vee X_{1}X_{2}{\overline{X}}_{3}X_{4}X_{5}\]</div>
+</div>
+<p>Thus, Eq. <a class="reference internal" href="#equation-equation-7-78">(7.78)</a> represents mutually exclusive events and the probability of a system performance greater than or equal to 50% can be directly obtained by replacing indicator variables by the component reliabilities or failure probabilities respectively.</p>
+<div class="equation admonition" id="syst-equation4-79">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-79">
+<span class="eqno">(7.79)<a class="headerlink" href="#equation-equation-7-79" title="Permalink to this equation">¶</a></span>\[P_{\geq 50\mathrm{\%}} = R_{1}R_{2}R_{3} \vee R_{1}R_{2}{\overline{F}}_{3}R_{4}R_{5}\]</div>
+</div>
+<p>In order to calculate the occurrence probability for all possible system performance levels, the before mentioned calculation has to be repeated for the different combinations of available solar panels resulting in different performance levels. The following auxiliary conditions are obtained from <a class="reference internal" href="#syst-table4-13"><span class="std std-ref">Table 4.13</span></a> for the different system performance levels.</p>
+<div class="equation admonition" id="syst-equation4-80">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-80">
+<span class="eqno">(7.80)<a class="headerlink" href="#equation-equation-7-80" title="Permalink to this equation">¶</a></span>\[\Gamma_{\geq 20\mathrm{\%}} = X_{5}\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-81">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-81">
+<span class="eqno">(7.81)<a class="headerlink" href="#equation-equation-7-81" title="Permalink to this equation">¶</a></span>\[\Gamma_{\geq 30\mathrm{\%}} = X_{4}\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-82">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-82">
+<span class="eqno">(7.82)<a class="headerlink" href="#equation-equation-7-82" title="Permalink to this equation">¶</a></span>\[\Gamma_{\geq 70\mathrm{\%}} = X_{3}X_{5}\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-83">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-83">
+<span class="eqno">(7.83)<a class="headerlink" href="#equation-equation-7-83" title="Permalink to this equation">¶</a></span>\[\Gamma_{\geq 80\mathrm{\%}} = X_{3}X_{4}\]</div>
+</div>
+<div class="equation admonition" id="syst-equation4-84">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-84">
+<span class="eqno">(7.84)<a class="headerlink" href="#equation-equation-7-84" title="Permalink to this equation">¶</a></span>\[\Gamma_{100\mathrm{\%}} = X_{3}X_{4}X_{5}\]</div>
+</div>
+<p>The probability that the system performance is within the interval [0, x] is defined as the performance distribution function.</p>
+<div class="equation admonition" id="syst-equation4-85">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-85">
+<span class="eqno">(7.85)<a class="headerlink" href="#equation-equation-7-85" title="Permalink to this equation">¶</a></span>\[P_{x\mathrm{\%}} = P\left\lbrack x &gt; p_{s} \geq 0 \right\rbrack\]</div>
+</div>
+<p>The performance distribution function is obtained by inverting the function <span class="math notranslate nohighlight">\(P_{\geq x\mathrm{\%}}.\)</span></p>
+<div class="equation admonition" id="syst-equation4-86">
+<p class="admonition-title">Equation</p>
+<p><code class="docutils literal notranslate"> </code></p>
+<div class="math notranslate nohighlight" id="equation-equation-7-86">
+<span class="eqno">(7.86)<a class="headerlink" href="#equation-equation-7-86" title="Permalink to this equation">¶</a></span>\[P_{x\mathrm{\%}} = P\left\lbrack x &gt; p_{s} \geq 0 \right\rbrack = 1 - P\left\lbrack 100\mathrm{\%} \geq p_{s} \geq x \right\rbrack$ *=*${1 - P}_{\geq x\mathrm{\%}}\]</div>
+</div>
+<p>The occurrence probabilities for the different system performance levels are shown in <a class="reference internal" href="#syst-table4-14"><span class="std std-ref">Table 4.14</span></a>.</p>
+<p id="syst-table4-14"><strong>Table 4.14</strong> : Occurrence probability of degraded system performance states</p>
+<div class="figure align-default" id="table4-14">
+<a class="reference internal image-reference" href="../../../_images/figure4_14.png"><img alt="../../../_images/figure4_14.png" src="../../../_images/figure4_14.png" style="width: 600px;" /></a>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "paulremo/NRPMInteractivity",
+            ref: "python",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./system\handbook\reliability_prediction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="important_measures.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7.4.5. </span>Important measures</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="modelling_common_cause_failure.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7.4.7. </span>Modelling of Common Cause failure</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Matrisk | Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
