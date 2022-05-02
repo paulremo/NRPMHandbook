@@ -1,5 +1,5 @@
+(misc_5_5)=
 # Process for Reliability modelling
-
 This Section details how to build a reliability model for miscellaneous item.
 
 {numref}`Figure 5.4` provides the general process to apply whatever the basic model is: 
@@ -12,7 +12,6 @@ This Section details how to build a reliability model for miscellaneous item.
 On {numref}`Figure 5.4`, the basic model is a failure rate but it could also be a probability of failure.
 ```
 
-(misc_figure4_4)=
 ```{figure} ../../picture/figure4_4.png
 ---
 width: 600px
@@ -235,16 +234,14 @@ For operating conditions it is necessary to define the weights per contributor a
 ```
 
 (misc_table4_4)=
-````{list-table} Values of factors per their ranking.
+```{list-table} Values of factors per their ranking.
 :class: interactive-table
 :name: Values of factors per their ranking.
 
-* - ```{image} ../../picture/figure4_4.png
-:alt: figure4_4
-:align: center
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_4.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
-````
+```
 
 The column _“value”_ provides the factors depending on the classification (column _“scale”_).
 The two right-hand columns provide the result for one example (_“X”_ representing the ranking regarding the different categories with the associated resulting factor in the right column)
@@ -256,7 +253,7 @@ $1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_
 (misc_step4)=
 ``````{dropdown} **STEP 4 : Application of combined approach**
 The step 4 is used to combine the predicted failure rate with IOR data in the case the item is based on a generic product which is already operated in-orbit.
-The method used is the Bayesian approach as presented in [Section 4.6.3](misc_4_6_3).
+The method used is the Bayesian approach as presented in {numref}`misc_5_6_3`.
 
 ````{admonition} Equation
 :class: equation
@@ -407,7 +404,7 @@ The definition of a model representing the probability to be hit by a debris is 
 ``````
 
 
-(misc_4_5_1)=
+(misc_5_5_1)=
 ### Result after completing Step 1 to Step 7
 
 The method allows deriving a reliability function in time as presented here above.
@@ -421,13 +418,9 @@ It is up to the discretion of the user to use the result appropriately:
 An example of calculation is presented in {numref}`Example of a reliability calculation for a Miscellaneous item`.
 
 (misc_table4_5)=
-````{list-table} Example of a reliability calculation for a Miscellaneous item
+```{list-table} Example of a reliability calculation for a Miscellaneous item
 :class: interactive-table
 :name: Example of a reliability calculation for a Miscellaneous item
 
-* - ```{image} ../../picture/figure4_8.png
-:alt: table4_5
-:align: center
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_5.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
-
-``
