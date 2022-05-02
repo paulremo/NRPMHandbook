@@ -572,11 +572,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#dfmea-pfmea">
    5.4.7.1. DFMEA / PFMEA
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probability-assessment">
-   5.4.7.2. Probability assessment
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probability-assessment">
+     5.4.7.1.1. Probability assessment
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -602,11 +604,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#dfmea-pfmea">
    5.4.7.1. DFMEA / PFMEA
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probability-assessment">
-   5.4.7.2. Probability assessment
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probability-assessment">
+     5.4.7.1.1. Probability assessment
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -618,21 +622,21 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="basic-failure-rate-derivation-for-non-standard-model-items">
-<h1><span class="section-number">5.4.7. </span>Basic failure rate derivation for “non-standard model” items<a class="headerlink" href="#basic-failure-rate-derivation-for-non-standard-model-items" title="Permalink to this headline">¶</a></h1>
+<span id="misc-5-7"></span><h1><span class="section-number">5.4.7. </span>Basic failure rate derivation for “non-standard model” items<a class="headerlink" href="#basic-failure-rate-derivation-for-non-standard-model-items" title="Permalink to this headline">¶</a></h1>
 <p>When the miscellaneous item under consideration does not match the criteria of the miscellaneous equivalent class (e.g. SSPA – Solid State Power Amplifier- cannot be compared to a TWTA in terms of technology), it is necessary to build a reliability model based on engineering/PoF approach as defined hereafter.</p>
-<p>Once the reliability model is established it can be tailored as necessary based on the approach presented in <a class="reference internal" href="process_reliability_modelling.html"><span class="doc std std-doc">Section 4.5</span></a>.</p>
-<p>First, it is necessary, to collect/define all technical information about the miscellaneous item in order to characterize it (refer to <a class="reference internal" href="process_reliability_modelling.html"><span class="doc std std-doc">Section 4.5</span></a>). Then the basic failure rate <span class="math notranslate nohighlight">\(\lambda_{1}\)</span> = <span class="math notranslate nohighlight">\(\lambda_{B}\)</span> is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of <a class="reference internal" href="process_reliability_modelling.html"><span class="doc std std-doc">Section 4.5</span></a> corresponding to <a class="reference internal" href="sav.html#misc-step2"><span class="std std-ref">step 2</span></a> to <a class="reference internal" href="sav.html#misc-step7"><span class="std std-ref">7</span></a>.</p>
+<p>Once the reliability model is established it can be tailored as necessary based on the approach presented in <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 5.4.5</span></a>.</p>
+<p>First, it is necessary, to collect/define all technical information about the miscellaneous item in order to characterize it (refer to <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 5.4.5</span></a>). Then the basic failure rate <span class="math notranslate nohighlight">\(\lambda_{1}\)</span> = <span class="math notranslate nohighlight">\(\lambda_{B}\)</span> is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 5.4.5</span></a>) corresponding to <a class="reference internal" href="process_reliability_modelling.html#misc-step2"><span class="std std-ref">step 2</span></a> to <a class="reference internal" href="process_reliability_modelling.html#misc-step7"><span class="std std-ref">7</span></a>.</p>
 <div class="section" id="dfmea-pfmea">
-<h2><span class="section-number">5.4.7.1. </span>DFMEA / PFMEA<a class="headerlink" href="#dfmea-pfmea" title="Permalink to this headline">¶</a></h2>
+<span id="misc-5-5-1"></span><h2><span class="section-number">5.4.7.1. </span>DFMEA / PFMEA<a class="headerlink" href="#dfmea-pfmea" title="Permalink to this headline">¶</a></h2>
 <p>After the first item characterization, a DFMEA and a PFMEA are performed in order to assess the failure modes due to</p>
 <ol class="simple">
 <li><p>Design errors and</p></li>
 <li><p>Manufacturing errors.</p></li>
 </ol>
-<p>It is recommended to use the SAE standard [BR1] which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in Error: Reference source not found.</p>
+<p>It is recommended to use the <span id="id1">[<a class="reference internal" href="../bibliographic_references.html#id7" title="Society of Automotive Engineers International (SAE). Potential failure mode and effects analysis in design (design fmea), potential failure mode and effects analysis in manufacturing and assembly processes (process fmea). Standard, SAE, 2009.">BR_MIS_9</a>, <a class="reference internal" href="../bibliographic_references.html#id13" title="Society of Automotive Engineers International (SAE). Process failure mode and effects analysis (pfmea) and control plans. Technical Report, SAE, 2017.">BR_MIS_10</a>]</span> which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in [RD2].</p>
 <p><strong>FMEA: Required for every unit</strong></p>
 <ul class="simple">
-<li><p>Is a tool/method supporting the design of the unit, identifying all the elementary “failure modes” due to “<em>RANDOM FAILURE” (part intrinsic reliability)</em> as defined in the failure mode list (refer to Error: Reference source not foundannex G).</p></li>
+<li><p>Is a tool/method supporting the design of the unit, identifying all the elementary “failure modes” due to “<em>RANDOM FAILURE” (part intrinsic reliability)</em> as defined in the failure mode list (refer to [RD2]).</p></li>
 <li><p><strong>&#64;unit level</strong>: under supplier responsibility</p></li>
 <li><p><strong>&#64;system level</strong>: integrated at system level by System RAMS engineer (including HSIA supporting the failure tolerance: observability in-orbit…)</p></li>
 </ul>
@@ -679,22 +683,33 @@ const thebe_selector_output = ".output, .cell_output"
 <dt id="term-SPF">SPF<a class="headerlink" href="#term-SPF" title="Permalink to this term">¶</a></dt><dd><p>Single Point Failure</p>
 </dd>
 </dl>
+<span id="misc-table4-6"></span><table class="interactive-table table" id="occurrence-scale-with-10-levels">
+<caption><span class="caption-number">Table 5.6 </span><span class="caption-text">Occurrence scale with 10 levels</span><a class="headerlink" href="#occurrence-scale-with-10-levels" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_6.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="glossary simple">
 <dt id="term-TRL">TRL<a class="headerlink" href="#term-TRL" title="Permalink to this term">¶</a></dt><dd><p>Technology Readiness Level</p>
 </dd>
 </dl>
-</div>
 <div class="section" id="probability-assessment">
-<h2><span class="section-number">5.4.7.2. </span>Probability assessment<a class="headerlink" href="#probability-assessment" title="Permalink to this headline">¶</a></h2>
-<p>The occurrence scale of <code class="xref std std-numref docutils literal notranslate"> <span class="pre">Occurrence</span> <span class="pre">scale</span> <span class="pre">with</span> <span class="pre">10</span> <span class="pre">levels.</span></code> is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:</p>
+<span id="misc-5-5-2"></span><h3><span class="section-number">5.4.7.1.1. </span>Probability assessment<a class="headerlink" href="#probability-assessment" title="Permalink to this headline">¶</a></h3>
+<p>The occurrence scale of <a class="reference internal" href="#misc-5-5-2"><span class="std std-numref">Section 5.4.7.1.1</span></a> is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:</p>
 <ul class="simple">
 <li><p>In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a RF passive part which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).</p></li>
 <li><p>A probability of occurrence is assigned to every failure mode and the sum provides the probability of occurrence of the item.</p></li>
-<li><p>A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to <span class="math notranslate nohighlight">\(10^{-4}\)</span> as level 4 (<code class="xref std std-numref docutils literal notranslate"> <span class="pre">Occurrence</span> <span class="pre">scale</span> <span class="pre">with</span> <span class="pre">10</span> <span class="pre">levels.</span></code> ) leads to a failure rate of <span class="math notranslate nohighlight">\(1,14 10^{-9}\)</span> for 10 years.</p></li>
+<li><p>A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to <span class="math notranslate nohighlight">\(10^{-4}\)</span> as level 4 (<a class="reference internal" href="#occurrence-scale-with-10-levels"><span class="std std-numref">Table 5.6</span></a>) leads to a failure rate of <span class="math notranslate nohighlight">\(1,14 10^{-9}\)</span> for 10 years.</p></li>
 </ul>
 <p>This represents the basic failure rate or the basic probability of failure.</p>
-<p>Then the general process to adapt this failure rate is described in <a class="reference internal" href="process_reliability_modelling.html"><span class="doc std std-doc">Section 4.5</span></a>.</p>
+<p>Then the general process to adapt this failure rate is described in <code class="xref std std-numref docutils literal notranslate"><span class="pre">misc_4_5</span></code>.</p>
 <p>It is noteworthy that this probability ranking needs to be clearly justified and documented.</p>
+</div>
 </div>
 </div>
 

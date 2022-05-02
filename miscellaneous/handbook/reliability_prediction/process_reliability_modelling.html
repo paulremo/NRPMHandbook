@@ -608,9 +608,9 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="process-for-reliability-modelling">
-<h1><span class="section-number">5.4.5. </span>Process for Reliability modelling<a class="headerlink" href="#process-for-reliability-modelling" title="Permalink to this headline">¶</a></h1>
+<span id="misc-5-5"></span><h1><span class="section-number">5.4.5. </span>Process for Reliability modelling<a class="headerlink" href="#process-for-reliability-modelling" title="Permalink to this headline">¶</a></h1>
 <p>This Section details how to build a reliability model for miscellaneous item.</p>
-<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">5.4</span></code> provides the general process to apply whatever the basic model is:</p>
+<p><a class="reference internal" href="#figure-5-4"><span class="std std-numref">Fig. 5.4</span></a> provides the general process to apply whatever the basic model is:</p>
 <ol class="simple">
 <li><p>the “standard model”, or</p></li>
 <li><p>the “non-standard model” or even</p></li>
@@ -618,10 +618,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>On <code class="xref std std-numref docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">5.4</span></code>, the basic model is a failure rate but it could also be a probability of failure.</p>
+<p>On <a class="reference internal" href="#figure-5-4"><span class="std std-numref">Fig. 5.4</span></a>, the basic model is a failure rate but it could also be a probability of failure.</p>
 </div>
 <div class="figure align-default" id="figure-5-4">
-<span id="misc-figure4-4"></span><a class="reference internal image-reference" href="../../../_images/figure4_41.png"><img alt="../../../_images/figure4_41.png" src="../../../_images/figure4_41.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/figure4_41.png"><img alt="../../../_images/figure4_41.png" src="../../../_images/figure4_41.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">General process for miscellaneous items reliability prediction.</span><a class="headerlink" href="#figure-5-4" title="Permalink to this image">¶</a></p>
 </div>
 <p>First, it is necessary, before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used, if relevant, as a “standard model”:</p>
@@ -677,7 +677,7 @@ So, what is discussed in the following Sections, addressing directly the failure
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">The major contributors to the reliability are identified in <a class="reference internal" href="reliability_data_sm.html#reliability-data"><span class="std std-numref">Table 5.5</span></a>.
+<p class="card-text">The major contributors to the reliability are identified in <a class="reference internal" href="reliability_data_sm.html#reliability-data"><span class="std std-numref">Table 5.8</span></a>.
 In the case the actual parameters are different (either higher or lower quality levels, additional stresses, specific technology, specific contributors to the reliability) a tailoring factor is recommended to account for the item’s specificities.</p>
 <div class="rule admonition">
 <p class="admonition-title">Rule</p>
@@ -813,9 +813,25 @@ The average resulting factor is then applied.</p>
 </ul>
 <p class="card-text"><code class="xref std std-numref docutils literal notranslate"> <span class="pre">Values</span> <span class="pre">of</span> <span class="pre">factors</span> <span class="pre">per</span> <span class="pre">their</span> <span class="pre">ranking.</span></code> provides an example of such a calculation.</p>
 </div>
-<p class="card-text">The column <em>“value”</em> provides the factors depending on the classification (column <em>“scale”</em>).
-The two right-hand columns provide the result for one example (<em>“X”</em> representing the ranking regarding the different categories with the associated resulting factor in the right column)</p>
-<p class="card-text"><span class="math notranslate nohighlight">\(1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}\)</span></p>
+<span id="misc-table4-4"></span><table class="interactive-table table" id="values-of-factors-per-their-ranking">
+<caption><span class="caption-number">Table 5.4 </span><span class="caption-text">Values of factors per their ranking.</span><a class="headerlink" href="#values-of-factors-per-their-ranking" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_4.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+The column _“value”_ provides the factors depending on the classification (column _“scale”_).
+The two right-hand columns provide the result for one example (_“X”_ representing the ranking regarding the different categories with the associated resulting factor in the right column)
+
+$1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}$
+
+</pre></div>
+</div>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3" id="misc-step4">
 <summary class="summary-title card-header">
@@ -825,7 +841,7 @@ The two right-hand columns provide the result for one example (<em>“X”</em> 
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">The step 4 is used to combine the predicted failure rate with IOR data in the case the item is based on a generic product which is already operated in-orbit.
-The method used is the Bayesian approach as presented in <a class="reference internal" href="ior_results.html#misc-4-6-3"><span class="std std-ref">Section 4.6.3</span></a>.</p>
+The method used is the Bayesian approach as presented in <a class="reference internal" href="ior_results.html#misc-5-6-3"><span class="std std-numref">Section 5.4.6.2.1</span></a>.</p>
 <div class="equation admonition">
 <p class="admonition-title">Equation</p>
 <p class="card-text"><code class="docutils literal notranslate"> </code></p>
@@ -876,7 +892,7 @@ The resulting failure rate is :</p>
 </div>
 </div>
 <p class="card-text"><strong>Discussion about the three models</strong>
-<code class="xref std std-numref docutils literal notranslate"><span class="pre">Figure</span> <span class="pre">5.5</span></code> presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.</p>
+<a class="reference internal" href="#figure-5-5"><span class="std std-numref">Fig. 5.5</span></a> presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.</p>
 <ul class="simple">
 <li><p class="card-text">Model 1 and model 3 are very close since the constant failure rates used for miscellaneous items are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.</p></li>
 <li><p class="card-text">Model2 could be considered as optimistic since it addresses wear-out only after the qualification time.</p></li>
@@ -952,7 +968,18 @@ It is up to the discretion of the user to use the result appropriately:</p>
 <li><p>Equivalent failure rate derived at a certain time (only valid at this time)</p></li>
 <li><p>Approximation of the probability of failure by <span class="math notranslate nohighlight">\(\lambda t\)</span>, when <span class="math notranslate nohighlight">\(\lambda\)</span> is small regarding <span class="math notranslate nohighlight">\(10^{-2}\)</span>.</p></li>
 </ul>
-<p>An example of calculation is presented in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Example</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">reliability</span> <span class="pre">calculation</span> <span class="pre">for</span> <span class="pre">a</span> <span class="pre">Miscellaneous</span> <span class="pre">item</span></code>.</p>
+<p>An example of calculation is presented in <a class="reference internal" href="#example-of-a-reliability-calculation-for-a-miscellaneous-item"><span class="std std-numref">Table 5.5</span></a>.</p>
+<span id="misc-table4-5"></span><table class="interactive-table table" id="example-of-a-reliability-calculation-for-a-miscellaneous-item">
+<caption><span class="caption-number">Table 5.5 </span><span class="caption-text">Example of a reliability calculation for a Miscellaneous item</span><a class="headerlink" href="#example-of-a-reliability-calculation-for-a-miscellaneous-item" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_5.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 

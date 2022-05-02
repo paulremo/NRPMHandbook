@@ -636,40 +636,40 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="reliability-models-for-miscellaneous-items">
-<h1><span class="section-number">5.4.4. </span>Reliability Models for miscellaneous items<a class="headerlink" href="#reliability-models-for-miscellaneous-items" title="Permalink to this headline">¶</a></h1>
+<span id="misc-5-4"></span><h1><span class="section-number">5.4.4. </span>Reliability Models for miscellaneous items<a class="headerlink" href="#reliability-models-for-miscellaneous-items" title="Permalink to this headline">¶</a></h1>
 <p>There are three reliability models for miscellaneous items:</p>
 <p>“Standard model”, for generic miscellaneous items,</p>
 <p>“Non-standard model”, for specific miscellaneous items.</p>
 <p>“Holistic model”, for miscellaneous items which are not supported by “standard model” nor by a “non-standard model”.</p>
 <div class="section" id="standard-model-for-generic-miscellaneous-items">
 <h2><span class="section-number">5.4.4.1. </span>Standard model for generic miscellaneous items<a class="headerlink" href="#standard-model-for-generic-miscellaneous-items" title="Permalink to this headline">¶</a></h2>
-<p>A “generic” miscellaneous item is an item classified as “miscellaneous” (refer to the definition provided at the beginning of this chapter) AND for which a reliability model based on IOR is defined as a reference in this Current document (see <a class="reference internal" href="items.html#list-of-miscellaneous-items-with-standard-model"><span class="std std-numref">Table 5.1</span></a>).</p>
+<p>A “generic” miscellaneous item is an item classified as “miscellaneous” (refer to the definition provided at the beginning of this chapter) AND for which a reliability model based on IOR is defined as a reference in this Current document (see <a class="reference internal" href="items.html#misc-5-1"><span class="std std-numref">Section 5.4.1</span></a>).</p>
 <p>The reliability model is either</p>
 <ol class="simple">
 <li><p>an exponential distribution (constant failure rate) or</p></li>
 <li><p>a constant probability of success or constant probability of failure ( = 1- Probability of success) supported by Binomial model, depending on the nature of the item.</p></li>
 </ol>
-<p>The basic reliability data are provided in <a class="reference internal" href="reliability_data_sm.html#reliability-data"><span class="std std-numref">Table 5.5</span></a> with the associated framework.</p>
-<p>The reliability “standard model” is then calculated based on the process presented in <a class="reference internal" href="process_reliability_modelling.html"><span class="doc std std-doc">Section 4.5</span></a>.</p>
+<p>The basic reliability data are provided in <a class="reference internal" href="reliability_data_sm.html#reliability-data"><span class="std std-numref">Table 5.8</span></a> with the associated framework.</p>
+<p>The reliability “standard model” is then calculated based on the process presented in <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 5.4.5</span></a>.</p>
 </div>
 <div class="section" id="non-standard-model-for-specific-miscellaneous-items">
-<h2><span class="section-number">5.4.4.2. </span>Non-standard model for specific miscellaneous items<a class="headerlink" href="#non-standard-model-for-specific-miscellaneous-items" title="Permalink to this headline">¶</a></h2>
-<p>A “specific” miscellaneous item relates to a product which is not fully modelled by EEE parts and/or mechanical parts and which is not listed in the equivalent classes of miscellaneous items in <a class="reference internal" href="#misc-4-4-1"><span class="std std-ref">Section 4.4.1</span></a>.</p>
+<span id="misc-5-4-2"></span><h2><span class="section-number">5.4.4.2. </span>Non-standard model for specific miscellaneous items<a class="headerlink" href="#non-standard-model-for-specific-miscellaneous-items" title="Permalink to this headline">¶</a></h2>
+<p>A “specific” miscellaneous item relates to a product which is not fully modelled by EEE parts and/or mechanical parts and which is not listed in the equivalent classes of miscellaneous items in <code class="xref std std-numref docutils literal notranslate"><span class="pre">misc_5_4_1</span></code>.</p>
 <p>e.g. Hold Release Mechanism Low Shock presented in <a class="reference internal" href="#figure-5-3"><span class="std std-numref">Fig. 5.3</span></a>.</p>
 <p>The item is neither a mechanism, nor an assembly of EEE parts. It is constituted by different parts such as spring, glue, expansion unit. Since the design is very specific without any IOR data it is necessary to define a dedicated reliability model.</p>
-<p>The Current document provides general guidance to define such a reliability model: The approach to calculate the basic reliability data is presented in <a class="reference internal" href="basic_fr_derivation_nsm.html"><span class="doc std std-doc">Section 4.7</span></a>. The “specific” reliability model is then calculated based on the process presented in <a class="reference internal" href="process_reliability_modelling.html"><span class="doc std std-doc">Section 4.5</span></a>.</p>
+<p>The Current document provides general guidance to define such a reliability model: The approach to calculate the basic reliability data is presented in <a class="reference internal" href="basic_fr_derivation_nsm.html#misc-5-7"><span class="std std-numref">Section 5.4.7</span></a>. The “specific” reliability model is then calculated based on the process presented in <a class="reference internal" href="reliability_data_sm.html#misc-5-8"><span class="std std-numref">Section 5.4.8</span></a>.</p>
 <div class="figure align-default" id="figure-5-3">
 <span id="misc-figure4-3"></span><a class="reference internal image-reference" href="../../../_images/figure4_31.png"><img alt="../../../_images/figure4_31.png" src="../../../_images/figure4_31.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Miscellaneous (MIS) items reliability modelling logic.</span><a class="headerlink" href="#figure-5-3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="holistic-model">
-<h2><span class="section-number">5.4.4.3. </span>Holistic model<a class="headerlink" href="#holistic-model" title="Permalink to this headline">¶</a></h2>
+<span id="misc-5-4-3"></span><h2><span class="section-number">5.4.4.3. </span>Holistic model<a class="headerlink" href="#holistic-model" title="Permalink to this headline">¶</a></h2>
 <p>A holistic model refers to a model based on the existing reliability handbooks and/or literature without detailed justification related to the design.</p>
-<p>The holistic reliability model is then calculated based on the process presented in <a class="reference internal" href="process_reliability_modelling.html"><span class="doc std std-doc">Section 4.5</span></a>.</p>
+<p>The holistic reliability model is then calculated based on the process presented in <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 5.4.5</span></a>.</p>
 </div>
 <div class="section" id="dormant-failures">
-<h2><span class="section-number">5.4.4.4. </span>Dormant failures<a class="headerlink" href="#dormant-failures" title="Permalink to this headline">¶</a></h2>
+<span id="misc-5-4-4"></span><h2><span class="section-number">5.4.4.4. </span>Dormant failures<a class="headerlink" href="#dormant-failures" title="Permalink to this headline">¶</a></h2>
 <p>Currently no reliability model is provided to support failure modelling in dormant mode for miscellaneous items. The miscellaneous items are from different nature (mix of EEE and mechanics, passive components, tubing, piping…) and it is not relevant to provide a generic rule to derive a dormant failure rate from the active miscellaneous item failure rate.</p>
 <p>In case, depending on the mission and on the operations, it is necessary to use a reliability model in dormant mode (no power supply during certain storage duration, no activation for “maintenance”) the user will define a dedicated reliability model (refer to the different methods listed previously) accounting for the specific conditions in storage.</p>
 </div>

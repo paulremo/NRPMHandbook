@@ -1,5 +1,5 @@
+(misc_5_6)=
 # Use of IOR data and/or tests results
-
 As presented, a reliability model can be built based on IOR data and/or on test data (manufacturers, user) or combined with IOR data and/or on test data (manufacturers, user).
 
 The basic failure rate or the basic probability of failure in {numref}` Reliability data` is based on such IOR data. The data was compiled from the IOR background in ADS & TAS fleets.
@@ -23,14 +23,14 @@ The IOR data recorded are:
   * Example: the percentage is nearly 100% for low values of $TTF$ and the percentage decreases as the $TTF$ increases in time. 
 
 
-(misc_4_6_1)=
-### Failure rate estimator
+(misc_5_6_1)=
+## Failure rate estimator
 
 The basic failure rate estimation is a one-sided upper bound interval estimation, see [Chapter 6 (Part II)]() for details.
 
 
-(misc_4_6_2)=
-### Proportion of failure estimator
+(misc_5_6_2)=
+## Proportion of failure estimator
 
 To determine a proportion of failures based on the observation of failures within a sample of n elements (e.g. IOR data for “one-shot” device), it is possible to use:
 
@@ -41,7 +41,7 @@ To determine a proportion of failures based on the observation of failures withi
 It is recommended to use the interval estimate, see [Chapter 6 (Part II)]() for details.
 
 
-(misc_4_6_3)=
+(misc_5_6_3)=
 ### Gamma Bayesian estimator
 
 The failure rate is no longer considered as a real but as a random variable $\Delta$.
@@ -99,6 +99,6 @@ F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \f
 ````
 
 
-Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering [Equation 4.10](misc_equation4_10)) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering [Equation 4.11](misc_equation4_11)).
+Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering {numref}`Equation 5.10`) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering {numref}`Equation 5.11`).
 
 Once $\alpha$ and $\beta$ are determined it allows to derive the Bayesian estimator with n being the number of failures and $\sum t_{i}$ the cumulated time.

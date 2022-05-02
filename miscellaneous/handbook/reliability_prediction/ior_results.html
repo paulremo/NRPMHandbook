@@ -577,11 +577,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#proportion-of-failure-estimator">
    5.4.6.2. Proportion of failure estimator
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gamma-bayesian-estimator">
-   5.4.6.3. Gamma Bayesian estimator
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gamma-bayesian-estimator">
+     5.4.6.2.1. Gamma Bayesian estimator
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -612,11 +614,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#proportion-of-failure-estimator">
    5.4.6.2. Proportion of failure estimator
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gamma-bayesian-estimator">
-   5.4.6.3. Gamma Bayesian estimator
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gamma-bayesian-estimator">
+     5.4.6.2.1. Gamma Bayesian estimator
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -628,7 +632,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="use-of-ior-data-and-or-tests-results">
-<h1><span class="section-number">5.4.6. </span>Use of IOR data and/or tests results<a class="headerlink" href="#use-of-ior-data-and-or-tests-results" title="Permalink to this headline">¶</a></h1>
+<span id="misc-5-6"></span><h1><span class="section-number">5.4.6. </span>Use of IOR data and/or tests results<a class="headerlink" href="#use-of-ior-data-and-or-tests-results" title="Permalink to this headline">¶</a></h1>
 <p>As presented, a reliability model can be built based on IOR data and/or on test data (manufacturers, user) or combined with IOR data and/or on test data (manufacturers, user).</p>
 <p>The basic failure rate or the basic probability of failure in <code class="xref std std-numref docutils literal notranslate"> <span class="pre">Reliability</span> <span class="pre">data</span></code> is based on such IOR data. The data was compiled from the IOR background in ADS &amp; TAS fleets.</p>
 <p>Per miscellaneous items, the anomalies are collected regarding representative products (quality, range of operational conditions, orbit as relevant) and the failures are classified in random failures (<span class="math notranslate nohighlight">\(RF\)</span>) and systematic failures (<span class="math notranslate nohighlight">\(SF\)</span>). To avoid duplication of systematic anomalies, they are only counted once. That means that the derived failure rates include as relevant systematic failure contribution.</p>
@@ -652,11 +656,11 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <div class="section" id="failure-rate-estimator">
-<h2><span class="section-number">5.4.6.1. </span>Failure rate estimator<a class="headerlink" href="#failure-rate-estimator" title="Permalink to this headline">¶</a></h2>
+<span id="misc-5-6-1"></span><h2><span class="section-number">5.4.6.1. </span>Failure rate estimator<a class="headerlink" href="#failure-rate-estimator" title="Permalink to this headline">¶</a></h2>
 <p>The basic failure rate estimation is a one-sided upper bound interval estimation, see <span class="xref myst">Chapter 6 (Part II)</span> for details.</p>
 </div>
 <div class="section" id="proportion-of-failure-estimator">
-<h2><span class="section-number">5.4.6.2. </span>Proportion of failure estimator<a class="headerlink" href="#proportion-of-failure-estimator" title="Permalink to this headline">¶</a></h2>
+<span id="misc-5-6-2"></span><h2><span class="section-number">5.4.6.2. </span>Proportion of failure estimator<a class="headerlink" href="#proportion-of-failure-estimator" title="Permalink to this headline">¶</a></h2>
 <p>To determine a proportion of failures based on the observation of failures within a sample of n elements (e.g. IOR data for “one-shot” device), it is possible to use:</p>
 <ul class="simple">
 <li><p>Point estimate</p></li>
@@ -664,9 +668,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Estimation by interval.</p></li>
 </ul>
 <p>It is recommended to use the interval estimate, see <span class="xref myst">Chapter 6 (Part II)</span> for details.</p>
-</div>
 <div class="section" id="gamma-bayesian-estimator">
-<h2><span class="section-number">5.4.6.3. </span>Gamma Bayesian estimator<a class="headerlink" href="#gamma-bayesian-estimator" title="Permalink to this headline">¶</a></h2>
+<span id="misc-5-6-3"></span><h3><span class="section-number">5.4.6.2.1. </span>Gamma Bayesian estimator<a class="headerlink" href="#gamma-bayesian-estimator" title="Permalink to this headline">¶</a></h3>
 <p>The failure rate is no longer considered as a real but as a random variable <span class="math notranslate nohighlight">\(\Delta\)</span>.</p>
 <p>In the case of the exponential distribution, a natural prior distribution is the Gamma distribution (conjugate of the exponential distribution), see <span class="xref myst">Chapter 7 (Part II)</span> for details.</p>
 <p>The Bayesian estimator is defined as the expected value of the random variable <span class="math notranslate nohighlight">\(\Delta\)</span> knowing that a failure has been observed at <span class="math notranslate nohighlight">\(t_{1}\)</span>, <span class="math notranslate nohighlight">\(t_{2}\)</span> … <span class="math notranslate nohighlight">\(t_{n}\)</span>). Then, with a sample encompassing <span class="math notranslate nohighlight">\(n\)</span> items and <span class="math notranslate nohighlight">\(n\)</span> associated times to failure:</p>
@@ -697,8 +700,9 @@ A second equation is provided by the level of confidence “<span class="math no
 <div class="math notranslate nohighlight" id="equation-equation-5-11">
 <span class="eqno">(5.11)<a class="headerlink" href="#equation-equation-5-11" title="Permalink to this equation">¶</a></span>\[F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a\]</div>
 </div>
-<p>Ideally, the prior should be defined based on two different estimates for the failure rate <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>, one representing an “average” value (point estimate, entering <span class="xref myst">Equation 4.10</span>) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering <span class="xref myst">Equation 4.11</span>).</p>
+<p>Ideally, the prior should be defined based on two different estimates for the failure rate <span class="math notranslate nohighlight">\(\lambda_{0}\)</span>, one representing an “average” value (point estimate, entering <code class="xref std std-numref docutils literal notranslate"><span class="pre">Equation</span> <span class="pre">5.10</span></code>) and one representing an estimate at a given level of confidence (e.g. conservative estimate, entering <code class="xref std std-numref docutils literal notranslate"><span class="pre">Equation</span> <span class="pre">5.11</span></code>).</p>
 <p>Once <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are determined it allows to derive the Bayesian estimator with n being the number of failures and <span class="math notranslate nohighlight">\(\sum t_{i}\)</span> the cumulated time.</p>
+</div>
 </div>
 </div>
 
