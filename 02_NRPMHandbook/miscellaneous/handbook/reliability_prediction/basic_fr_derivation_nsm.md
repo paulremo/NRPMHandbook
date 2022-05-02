@@ -1,14 +1,14 @@
+(misc_5_7)=
 # Basic failure rate derivation for “non-standard model” items
-
 When the miscellaneous item under consideration does not match the criteria of the miscellaneous equivalent class (e.g. SSPA – Solid State Power Amplifier- cannot be compared to a TWTA in terms of technology), it is necessary to build a reliability model based on engineering/PoF approach as defined hereafter.
 
-Once the reliability model is established it can be tailored as necessary based on the approach presented in [Section 4.5](process_reliability_modelling.md).
+Once the reliability model is established it can be tailored as necessary based on the approach presented in {numref}`misc_5_5`.
 
-First, it is necessary, to collect/define all technical information about the miscellaneous item in order to characterize it (refer to [Section 4.5](process_reliability_modelling.md)). Then the basic failure rate $\lambda_{1}$ = $\lambda_{B}$ is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of [Section 4.5](process_reliability_modelling.md) corresponding to [step 2](misc_step2) to [7](misc_step7).
+First, it is necessary, to collect/define all technical information about the miscellaneous item in order to characterize it (refer to {numref}`misc_5_5`). Then the basic failure rate $\lambda_{1}$ = $\lambda_{B}$ is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of {numref}`misc_5_5`) corresponding to [step 2](misc_step2) to [7](misc_step7).
 
 
-(misc_4_7_1)=
-### DFMEA / PFMEA
+(misc_5_5_1)=
+## DFMEA / PFMEA
 
 After the first item characterization, a DFMEA and a PFMEA are performed in order to assess the failure modes due to 
 
@@ -84,16 +84,16 @@ SPF
   Single Point Failure
 ```
 
-(misc_table4_6)=
-````{list-table} Occurrence scale with 10 levels.
-:class: interactive-table
-:name: Occurrence scale with 10 levels.
 
-* - ```{image} ../../picture/figure4_11.png
-:alt: table4_6
-:align: center
+
+(misc_table4_6)=
+```{list-table} Occurrence scale with 10 levels
+:class: interactive-table
+:name: Occurrence scale with 10 levels
+
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_6.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
-````
+
 
 ```{glossary}
 TRL
@@ -101,18 +101,18 @@ TRL
 ```
 
 
-(misc_4_7_2)=
+(misc_5_5_2)=
 ### Probability assessment
 
-The occurrence scale of {numref}` Occurrence scale with 10 levels.` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:
+The occurrence scale of {numref}`misc_5_5_2` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:
 
 * In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a RF passive part which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
 * A probability of occurrence is assigned to every failure mode and the sum provides the probability of occurrence of the item.
-* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}` Occurrence scale with 10 levels.` ) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
+* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}`Occurrence scale with 10 levels`) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
 
 
 This represents the basic failure rate or the basic probability of failure.
 
-Then the general process to adapt this failure rate is described in [Section 4.5](process_reliability_modelling.md).
+Then the general process to adapt this failure rate is described in {numref}`misc_4_5`.
 
 It is noteworthy that this probability ranking needs to be clearly justified and documented.

@@ -1,5 +1,5 @@
+(misc_5_8)=
 # Reliability Data for Miscellaneous “Standard model”
-
 {numref}` Reliability data` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
 
 The meaning of the columns is explained in **XXX**.
