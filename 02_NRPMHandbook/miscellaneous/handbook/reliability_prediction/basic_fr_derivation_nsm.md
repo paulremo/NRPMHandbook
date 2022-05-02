@@ -15,11 +15,11 @@ After the first item characterization, a DFMEA and a PFMEA are performed in orde
 1. Design errors and
 2. Manufacturing errors.
 
-It is recommended to use the {cite:p}`mis-SAE_standard, mis-PFMEA` which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in Error: Reference source not found.
+It is recommended to use the {cite:p}`mis-SAE_standard, mis-PFMEA` which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in [RD2].
 
 **FMEA: Required for every unit**
 
-* Is a tool/method supporting the design of the unit, identifying all the elementary “failure modes” due to “_RANDOM FAILURE” (part intrinsic reliability)_ as defined in the failure mode list (refer to Error: Reference source not foundannex G). 
+* Is a tool/method supporting the design of the unit, identifying all the elementary “failure modes” due to “_RANDOM FAILURE” (part intrinsic reliability)_ as defined in the failure mode list (refer to [RD2]). 
 * **@unit level**: under supplier responsibility
 * **@system level**: integrated at system level by System RAMS engineer (including HSIA supporting the failure tolerance: observability in-orbit…)
 

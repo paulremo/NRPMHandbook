@@ -106,7 +106,7 @@ Regarding wear-out, the miscellaneous items should be qualified versus specified
 
 Physics of Failure can be used to identify the dominating failure mechanisms of the miscellaneous items. This approach should be used when no data are available and pertinent enough to populate a reliability model with accuracy. It is the case for a new development with innovative technology for which no statistical data exist.
 
-Use of DFMEA / PFMEA could be helpful, and is recommended, to identify the causes (design, manufacturing) of the failure mechanisms and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A RPN metric (Risk Priority Number) is derived (refer to standard BR7) and risk mitigation actions set up in order to reduce the RPN to an acceptable level, i.e. under a certain level of probability of occurrence.
+Use of DFMEA / PFMEA could be helpful, and is recommended, to identify the causes (design, manufacturing) of the failure mechanisms and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A RPN metric (Risk Priority Number) is derived (refer to standard {cite:p}`mis-PFMEA`) and risk mitigation actions set up in order to reduce the RPN to an acceptable level, i.e. under a certain level of probability of occurrence.
 
 When it is not possible to derive the probability of occurrence of a failure mechanism based on PoF, engineering judgement, with experts, is recommended with associated justification.
 
