@@ -15,7 +15,7 @@ After the first item characterization, a DFMEA and a PFMEA are performed in orde
 1. Design errors and
 2. Manufacturing errors.
 
-It is recommended to use the SAE standard [BR1] which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in Error: Reference source not found.
+It is recommended to use the {cite:p}`mis-SAE_standard, mis-PFMEA` which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in Error: Reference source not found.
 
 **FMEA: Required for every unit**
 
