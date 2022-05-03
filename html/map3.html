@@ -7,14 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
 
     <table class="formula-map">
         <thead>
-            <th width="20%"><button class="back-button" id="back_button" onclick="sf.backToMain()">Back</button></th>
             <th width="20%"></th>
+            <th width="20%"><button class="back-button" id="back_button" onclick="sf.backToMain()">Back</button></th>
             <th width="20%"></th>
             <th width="20%"></th>
             <th width="20%"></th>
@@ -70,7 +72,7 @@
             <td></td>
             <td></td>
             <td class="central-node">
-                <button class="central-button" id="0">CENTRAL</button>
+                <button class="central-button" id="0" onclick="sf.clickNode(this)">CENTRAL</button>
             </td>
             <td></td>
             <td></td>
@@ -110,9 +112,9 @@
         <tr>
             <td></td>
             <td></td>
-            <td id="extra_6" class="extra-space">
+            <td id="extra_6">
                 <div>
-                    <button class="tc-button" id="tcc_1_6" onclick="sf.clickedButton(this)">LOW</button>
+                    <button class="tc-button" id="tcc_1_6" onclick="sf.clickedButton(this)" >LOW</button>
                     <button class="tc-button" id="tcc_2_6" onclick="sf.clickedButton(this)">MEDIUM</button>
                     <button class="tc-button" id="tcc_3_6" onclick="sf.clickedButton(this)">HIGH</button>
                 </div>
@@ -121,6 +123,10 @@
             <td></td>
         </tr>
     </table>
+
+    <div style="padding: 80px;" id="entry-div">
+        <textarea id="entry" row = "1" col ="12" class="formula-entry" placeholder="Enter a value" oninput="sf.entryChanged()"></textarea>
+    </div>
 
     <script type="text/javascript" src="../js/map3.js"></script>
 

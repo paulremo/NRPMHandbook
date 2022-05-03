@@ -1,3 +1,13 @@
+class FormulaEntry{
+    constructor(id, name, corrector){
+        this.id = id;
+        this.name = name;
+        this.value = null;
+        this.corrector = corrector;
+    }
+
+}
+
 class FormulaButton {
     constructor(id, name) {
         this.name = name;
@@ -54,12 +64,13 @@ class SFConfiguration {
 }
 
 class SquidFormula {
-    constructor(nb_nodes, node_configurations, main_configuration) {
+    constructor(nb_nodes, node_configurations, main_configuration, entry) {
         this.nb_nodes = nb_nodes;
         this.node_configurations = node_configurations;
         this.main_configuration = main_configuration;
         this.current_configuration = this.main_configuration;
-
+        this.entry = entry;
+        this.selectedEntry = null;
         this.setConfiguration();
     }
 
@@ -73,6 +84,7 @@ class SquidFormula {
         //console.log(triggeredId)
         let triggeredNode = this.searchNode(triggeredId);
         if (triggeredNode instanceof ThreeChoiceButton) {
+            this.entry.style.visibility = "hidden";
             console.log(triggeredNode.displayed);
             if (triggeredNode.displayed) {
                 document.getElementById("tcc_1_" + triggeredId).style.visibility = "hidden";
@@ -88,6 +100,8 @@ class SquidFormula {
             }
         }
         else if (triggeredNode instanceof BinaryChoiceButton) {
+            this.entry.style.visibility = "hidden";
+            this.entry.value = "";
             if (triggeredNode.selected){
                 console.log("true");
                 node.style.background = "red";
@@ -105,10 +119,20 @@ class SquidFormula {
                 this.searchNode(triggeredId).current_choice = true;
             }
         }
-        else{
+        else if (triggeredNode instanceof FormulaEntry) {
+            this.entry.style.visibility = "visible";
+            this.selectedEntry = triggeredNode;
+        }
+        else if (triggeredNode instanceof MapButton){
+            this.entry.style.visibility = "hidden";
+            this.entry.value = "";
             console.log("other");
             this.current_configuration = triggeredNode.subConfiguration;
             this.setConfiguration();
+        }
+        else{
+            this.entry.style.visibility = "hidden";
+            this.entry.value = "";
         }
     }
 
@@ -154,7 +178,7 @@ class SquidFormula {
                 document.getElementById(nodeID).innerHTML = this.searchNode(nodeID).name + " : " + this.searchNode(nodeID).choices.get(this.searchNode(nodeID).current_choice);
             }
             else{
-                document.getElementById(nodeID).style.background = "grey";
+                document.getElementById(nodeID).style.background = "gray";
                 document.getElementById(nodeID).innerHTML = this.searchNode(nodeID).name
             }
             
@@ -170,13 +194,27 @@ class SquidFormula {
                 }
             }
             else{
-                document.getElementById(nodeID).style.background = "grey";
+                document.getElementById(nodeID).style.background = "gray";
                 document.getElementById(nodeID).innerHTML = this.searchNode(nodeID).name
             }
         }
-        else{
+        else if (this.searchNode(nodeID) instanceof FormulaEntry){
+            if (this.searchNode(nodeID).value != null){
+                document.getElementById(nodeID).style.background = "green";
+                document.getElementById(nodeID).innerHTML = this.searchNode(nodeID).name + " : " + this.searchNode(nodeID).value;
+            }
+            else{
+                document.getElementById(nodeID).style.background = "gray";
+                document.getElementById(nodeID).innerHTML = this.searchNode(nodeID).name;
+            }
+        }
+        else if (this.searchNode(nodeID) instanceof MapButton){
             document.getElementById(nodeID).innerHTML = this.searchNode(nodeID).name;
             document.getElementById(nodeID).style.background = "#47064a";
+        }
+        else{
+            this.entry.style.visibility = "hidden";
+            this.entry.value = "";
         }
         document.getElementById("tcc_1_" + nodeID).style.visibility = "hidden";
         document.getElementById("tcc_2_" + nodeID).style.visibility = "hidden";
@@ -184,6 +222,9 @@ class SquidFormula {
     }
 
     setConfiguration(){
+        this.entry.style.visibility = "hidden";
+        this.entry.value = "";
+        document.getElementById("0").innerHTML = this.current_configuration.centralNode.name + " : " + this.current_configuration.centralNode.value;
         for (var [key, node] of this.current_configuration.nodes) {
             //console.log(key);
             this.initNode(key);
@@ -193,6 +234,21 @@ class SquidFormula {
     backToMain(){
         this.current_configuration = this.main_configuration;
         this.setConfiguration();
+    }
+
+    entryChanged(){
+        let txt = this.entry.value;
+        if (this.selectedEntry.corrector.test(txt) && !txt.includes("-") && !txt.includes(",")){
+            document.getElementById(this.selectedEntry.id).innerHTML = this.selectedEntry.name + " : " + txt;
+            document.getElementById(this.selectedEntry.id).style.background = "green";
+            this.selectedEntry.value = parseFloat(txt);
+        }
+        else{
+            document.getElementById(this.selectedEntry.id).innerHTML = this.selectedEntry.name + " ! " + txt;
+            document.getElementById(this.selectedEntry.id).style.background = "black";
+            this.selectedEntry.value = null;
+        }
+
     }
 }
 
@@ -221,8 +277,8 @@ v3.set("1", 0.15);
 v3.set("2", 0.13);
 v3.set("3", 0.1);
 
-let centralNode = new CentralButton("0", "CENTER", 1);
-let centralNode2 = new CentralButton("0", "SUBCENTER", 1);
+let centralNode = new CentralButton("0", "&lambda;<sub>3</sub>", 1);
+let centralNode2 = new CentralButton("0", "&pi;<sub>OP</sub>", 1);
 
 var binValue = new Map();
 binValue.set(true, 1.0);
@@ -232,12 +288,12 @@ var binChoices = new Map();
 binChoices.set(true, "Allowable");
 binChoices.set(false, "Not Allowable");
 
-n1_2 = new ThreeChoiceButton("1", "name1b", v1, c2);
-n2_2 = new ThreeChoiceButton("2", "name2b", v2, c2);
-n3_2 = new ThreeChoiceButton("3", "name3b", v2, c2);
-n4_2 = new ThreeChoiceButton("4", "name4b", v3, c2);
-n5_2 = new ThreeChoiceButton("5", "name5b", v2, c2);
-n6_2 = new ThreeChoiceButton("6", "name6b", v3, c2);
+n1_2 = new ThreeChoiceButton("1", "Orbit", v1, c2);
+n2_2 = new ThreeChoiceButton("2", "Temperature", v2, c2);
+n3_2 = new ThreeChoiceButton("3", "Power", v2, c2);
+n4_2 = new ThreeChoiceButton("4", "Thermal Cycling", v3, c2);
+n5_2 = new ThreeChoiceButton("5", "Duty cycle", v2, c2);
+n6_2 = new ThreeChoiceButton("6", "Others", v3, c2);
 
 var dic2 = new Map();
 dic2.set("1", n1_2);
@@ -248,12 +304,12 @@ dic2.set("5", n5_2);
 dic2.set("6", n6_2);
 conf2 = new SFConfiguration(dic2, centralNode2);
 
-n1_1 = new MapButton("1", "MAP", 0, conf2);
-n2_1 = new ThreeChoiceButton("2", "name2", v1, c1);
-n3_1 = new ThreeChoiceButton("3", "name3", v1, c1);
-n4_1 = new ThreeChoiceButton("4", "name4", v1, c1);
-n5_1 = new BinaryChoiceButton("5", "name5", binValue, binChoices);
-n6_1 = new BinaryChoiceButton("6", "name6", binValue, binChoices);
+n1_1 = new MapButton("1", "&pi;<sub>OP</sub>", 0, conf2);
+n2_1 = new ThreeChoiceButton("2", "&pi;<sub>M</sub>", v1, c1);
+n3_1 = new ThreeChoiceButton("3", "&pi;<sub>Q</sub>", v1, c1);
+n4_1 = new BinaryChoiceButton("4", "&pi;<sub>T</sub>", binValue, binChoices);
+n5_1 = new BinaryChoiceButton("5", "&pi;<sub>C</sub>", binValue, binChoices);
+n6_1 = new FormulaEntry("6", "&lambda;<sub>2</sub>", new RegExp('[0-9]+([\\.][0-9]*)?'));
 
 var dic1 = new Map();
 dic1.set("1", n1_1);
@@ -262,9 +318,9 @@ dic1.set("3", n3_1);
 dic1.set("4", n4_1);
 dic1.set("5", n5_1);
 dic1.set("6", n6_1);
-conf1 = new SFConfiguration(dic1, centralNode)
+conf1 = new SFConfiguration(dic1, centralNode);
 
 
 
-sf = new SquidFormula(6, null, conf1);
+sf = new SquidFormula(6, null, conf1, document.getElementById("entry"));
 
