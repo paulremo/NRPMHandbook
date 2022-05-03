@@ -1,6 +1,6 @@
 (misc_5_8)=
 # Reliability Data for Miscellaneous “Standard model”
-{numref}` Reliability data` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
+{numref}`Reliability data` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
 
 The meaning of the columns is explained in **XXX**.
 
@@ -13,7 +13,7 @@ Miss ref just above "in ..."
 :class: note
 The failure rate is provided per TWT Channel (mono channel or dual channel). In order to be used for LEO, if adaptation is necessary, it is recommended to use 
 
-1.  by default the following proportion (based on average MIL-HDBK-217 {cite:p}`mis-MIL-HDBK-217F` reliability prediction) of the whole failure rate.
+1.  by default the following proportion (based on average MIL-HDBK-217 {cite:t}`mis-MIL-HDBK-217F` reliability prediction) of the whole failure rate.
     * EPC_common = 36%
     * EPC_channel = 9%
     * CAMP = 25%
@@ -26,7 +26,7 @@ REF ERROR just above in 1.
 ```
 ````
 
-Reference to a table {numref}` Structure of the reliability data table` and to another table {numref}` Reliability data`.
+Reference to a table {numref}`Structure of the reliability data table` and to another table {numref}`Reliability data`.
 
 ```{list-table} Structure of the reliability data table
 :class: interactive-table
