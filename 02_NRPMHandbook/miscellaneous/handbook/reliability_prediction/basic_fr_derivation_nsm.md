@@ -15,11 +15,11 @@ After the first item characterization, a DFMEA and a PFMEA are performed in orde
 1. Design errors and
 2. Manufacturing errors.
 
-It is recommended to use the {cite:p}`mis-SAE_standard, mis-PFMEA` which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in [RD2].
+It is recommended to use the {cite:p}`mis-SAE_standard, mis-PFMEA` which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in {cite:p}`mis-ECSS-Q-ST-30-02C`.
 
 **FMEA: Required for every unit**
 
-* Is a tool/method supporting the design of the unit, identifying all the elementary “failure modes” due to “_RANDOM FAILURE” (part intrinsic reliability)_ as defined in the failure mode list (refer to [RD2]). 
+* Is a tool/method supporting the design of the unit, identifying all the elementary “failure modes” due to “_RANDOM FAILURE” (part intrinsic reliability)_ as defined in the failure mode list (refer to {cite:p}`mis-ECSS-Q-ST-30-02C`). 
 * **@unit level**: under supplier responsibility
 * **@system level**: integrated at system level by System RAMS engineer (including HSIA supporting the failure tolerance: observability in-orbit…)
 
@@ -113,6 +113,6 @@ The occurrence scale of {numref}`misc_5_5_2` is used to derive, based on enginee
 
 This represents the basic failure rate or the basic probability of failure.
 
-Then the general process to adapt this failure rate is described in {numref}`misc_4_5`.
+Then the general process to adapt this failure rate is described in {numref}`misc_5_5`.
 
 It is noteworthy that this probability ranking needs to be clearly justified and documented.
