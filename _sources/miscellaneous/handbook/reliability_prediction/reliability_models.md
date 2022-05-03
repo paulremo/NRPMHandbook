@@ -27,7 +27,7 @@ The reliability “standard model” is then calculated based on the process pre
 (misc_5_4_2)=
 ## Non-standard model for specific miscellaneous items
 
-A “specific” miscellaneous item relates to a product which is not fully modelled by EEE parts and/or mechanical parts and which is not listed in the equivalent classes of miscellaneous items in {numref}`misc_5_4_1`.
+A “specific” miscellaneous item relates to a product which is not fully modelled by EEE parts and/or mechanical parts and which is not listed in the equivalent classes of miscellaneous items in {numref}`misc_5_1`.
 
 e.g. Hold Release Mechanism Low Shock presented in {numref}`Figure 5.3`.
 

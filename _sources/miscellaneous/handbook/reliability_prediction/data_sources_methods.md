@@ -9,12 +9,10 @@ Then, different inputs for reliability characteristics are defined and classifie
 The order of preference for the use of these inputs for miscellaneous parts reliability prediction is as follows:
 
 
-#### Statistical data
-In-orbit return (IOR) or space heritage data
-
-Manufacturer reliability data
-
-Qualification / Reliability / life test data
+**Statistical data**
+- In-orbit return (IOR) or space heritage data
+- Manufacturer reliability data
+- Qualification / Reliability / life test data
 
 The added-value of this estimation is that the data represent directly the behaviour of the item under operational conditions w.r.t. failures. There are two major conditions: 
  
@@ -22,15 +20,15 @@ The added-value of this estimation is that the data represent directly the behav
 2. The cumulated data (time, number of failures) are sufficient enough to provide a realistic reliability prediction.
 
 
-#### Analysis of the failure mechanisms
-Engineering / Physics of failure: analysis of the failure mechanisms,
-
-DFMEA (Design FMEA) and/or PFMEA (Process FMEA).
+**Analysis of the failure mechanisms**
+- Engineering / Physics of failure: analysis of the failure mechanisms,
+- DFMEA (Design FMEA) 
+- and/or PFMEA (Process FMEA).
 
 The knowledge of the failure mechanisms and the processes supporting these failure mechanisms provide valuable information to build a reliability model. This information is not easy to collect and to adapt and is subject to criticisms from experts leading to disagreement except when the model is justified by technical arguments.
 
 
-#### Combined approach – Bayesian updating
+**Combined approach – Bayesian updating**
 The initial prediction can be refined, combining prior knowledge and IOR or tests results.
 
 A preliminary model (constant failure rate), either PoF-based or an engineering model, provides a failure rate which is, then, assumed to a be a random variable. The distribution of this random variable is the “prior” knowledge. The expected value of the failure rate knowing additional information is the Bayesian estimator.
@@ -38,7 +36,7 @@ A preliminary model (constant failure rate), either PoF-based or an engineering 
 This approach allows using prior engineering knowledge combined with IOR data or test data which does not require a large number of cumulated hours of operations. This could be a good solution when the data background is rather reduced.
 
 
-#### Reliability handbooks methods / supplier Model: existing model
+**Reliability handbooks methods / supplier Model: existing model**
 The reliability handbooks providing valuable information for miscellaneous items reliability prediction are limited to some technologies or to some specific applications.
 
 Even though it is possible to use such reliability handbooks or existing models (in the literature), most of time the applicability to space domain is inappropriate mainly due to the fact the space designs are very specific with a rigorous quality frame.
@@ -53,10 +51,10 @@ For “generic equipment” that is similar from one mission to the other, it is
 
 Consequently, use of in-orbit return constitutes the basis for “miscellaneous items” that meet the following two conditions:
 
-items involved in generic “miscellaneous” functions, provided they address similar perimeters and under similar operational conditions. Technology, complexity and quality (in a wide sense) are other parameters to be checked with accuracy.
+- items involved in generic “miscellaneous” functions, provided they address similar perimeters and under similar operational conditions. Technology, complexity and quality (in a wide sense) are other parameters to be checked with accuracy.
 Besides, the use of in-orbit return is possible on a case by case basis, in the frame of the assessment of a given spacecraft family for example, where functional features are the same and supported by a generic product.
 
-items with enough in-orbit return, thus excluding those devices that might have become widely used recently (low cumulated time in operation, new technology). This may also impact the level at which miscellaneous items are defined.
+- items with enough in-orbit return, thus excluding those devices that might have become widely used recently (low cumulated time in operation, new technology). This may also impact the level at which miscellaneous items are defined.
 
 
 (misc_5_3_2)=
@@ -98,7 +96,7 @@ Several tests are recommended to verify the reliability of the one-shot devices:
 (misc_5_3_3_2)=
 ### Wear-Out characterization
 
-Regarding wear-out, the miscellaneous items should be qualified versus specified lifetime and ground lifetime as per [RD7] , implementing a safety factor (number of elements, number of tests). The results of these tests are considered as evidence, with a certain level of confidence, that no wear occurs before the end of the specified lifetime (or better that no performances degradation impacts the mission of the item).
+Regarding wear-out, the miscellaneous items should be qualified versus specified lifetime and ground lifetime as per {cite:p}`mis-ECSS-E-ST-33-01C`, implementing a safety factor (number of elements, number of tests). The results of these tests are considered as evidence, with a certain level of confidence, that no wear occurs before the end of the specified lifetime (or better that no performances degradation impacts the mission of the item).
 
 
 (misc_5_3_4)=

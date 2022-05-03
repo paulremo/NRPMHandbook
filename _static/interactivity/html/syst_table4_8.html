@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -23,7 +26,7 @@
 
             <tr>
                 <td>
-                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∩</mo><msub><mi>A</mi><mi>j</mi></msub><mo>→</mo><msub><mi>A</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">A_{i} \cap A_{j} \rightarrow A_{j}</annotation></semantics></math></p>
+                    <p>\(A_{i} \cap A_{j} \rightarrow A_{j}\)</p>
                 </td>
                 <td>
                     The event “A is operational in phase i and the later phase j” is equivalent to the event “A is operational in the later phase j”
@@ -32,7 +35,7 @@
 
             <tr>
                 <td>
-                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∩</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover><mo>→</mo><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover></mrow><annotation encoding="application/x-tex">\overline{A_{i}} \cap \overline{A_{j}} \rightarrow \overline{A_{i}}</annotation></semantics></math></p>
+                    <p>\(\overline{A_{i}} \cap \overline{A_{j}} \rightarrow \overline{A_{i}}\)</p>
                 </td>
                 <td>
                     The event “A has failed in phase i and the later phase j” is equivalent to the event “A has failed in phase i”
@@ -41,7 +44,7 @@
 
             <tr>
                 <td>
-                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∩</mo><msub><mi>A</mi><mi>j</mi></msub><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\overline{A_{i}} \cap A_{j} \rightarrow 0</annotation></semantics></math></p>
+                    <p>\(\overline{A_{i}} \cap A_{j} \rightarrow 0\)</p>
                 </td>
                 <td>
                     The event “A has failed in phase i, but is operational in the later phase j does not exist for a non-repairable phase mission system
@@ -50,7 +53,7 @@
 
             <tr>
                 <td>
-                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∪</mo><msub><mi>A</mi><mi>j</mi></msub><mo>→</mo><msub><mi>A</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">A_{i} \cup A_{j} \rightarrow A_{i}</annotation></semantics></math></p>
+                    <p>\(A_{i} \cup A_{j} \rightarrow A_{i}\)</p>
                 </td>
                 <td>
                     The event “A is operational in phase i or in the later phase j” is equivalent to the event “A is operational in the phase i”
@@ -59,7 +62,7 @@
 
             <tr>
                 <td>
-                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∪</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover><mo>→</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover></mrow><annotation encoding="application/x-tex">\overline{A_{i}} \cup \overline{A_{j}} \rightarrow \overline{A_{j}}</annotation></semantics></math></p>
+                    <p>\(\overline{A_{i}} \cup \overline{A_{j}} \rightarrow \overline{A_{j}}\)</p>
                 </td>
                 <td>
                     The event “A has failed in phase i or in the later phase j“ is equivalent to the event “A has failed in phase j”
@@ -68,7 +71,7 @@
 
             <tr>
                 <td>
-                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∪</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover><mo>→</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">A_{i} \cup \overline{A_{j}} \rightarrow 1</annotation></semantics></math></p>
+                    <p>\(A_{i} \cup \overline{A_{j}} \rightarrow 1\)</p>
                 </td>
                 <td>
                     The event “A is operational in phase i or failed in the later phase j” is equivalent to certain event 1
@@ -77,7 +80,7 @@
 
             <tr>
                 <td>
-                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∪</mo><msub><mi>A</mi><mi>j</mi></msub><mo>→</mo><mover><msub><mi>A</mi><mi>i</mi></msub><mo accent="true">¯</mo></mover><mo>∪</mo><msub><mi>A</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\overline{A_{i}} \cup A_{j} \rightarrow \overline{A_{i}} \cup A_{j}</annotation></semantics></math></p>
+                    <p>\(\overline{A_{i}} \cup A_{j} \rightarrow \overline{A_{i}} \cup A_{j}\)</p>
                 </td>
                 <td>
                     The event “A has failed in phase i, or is operational in the later phase j” cannot be simplified any further
@@ -86,7 +89,7 @@
 
             <tr>
                 <td>
-                    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∩</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover><mo>→</mo><msub><mi>A</mi><mi>i</mi></msub><mo>∩</mo><mover><msub><mi>A</mi><mi>j</mi></msub><mo accent="true">¯</mo></mover></mrow><annotation encoding="application/x-tex">A_{i} \cap \overline{A_{j}} \rightarrow A_{i} \cap \overline{A_{j}}</annotation></semantics></math></p>
+                    <p>\(A_{i} \cap \overline{A_{j}} \rightarrow A_{i} \cap \overline{A_{j}}\)</p>
                 </td>
                 <td>
                     The event “A is operational in phase i and failed in the later phase j” cannot be simplified any further

@@ -1,6 +1,6 @@
 (misc_5_0)=
 # Reliability prediction for miscellaneous items
-This chapter deals with the miscellaneous items which are represented by all parts/item (or sets of parts) which are not fully electrical parts, nor fully mechanical parts nor fully structural parts. The current reliability models ([EEE parts](../../eee/mainEEE.md), mechanical parts[]) are not adapted and are not the preferred way to support reliability predictions for these items. Therefore, other ways to provide reliability estimates are proposed in this chapter and are detailed in the next sections.
+This chapter deals with the miscellaneous items which are represented by all parts/item (or sets of parts) which are not fully electrical parts, nor fully mechanical parts nor fully structural parts. The current reliability models ([EEE parts](../../eee/mainEEE.md), [mechanical parts](../../mechanical/handbook/introduction.md)) are not adapted and are not the preferred way to support reliability predictions for these items. Therefore, other ways to provide reliability estimates are proposed in this chapter and are detailed in the next sections.
 
 The {numref}`Figure 5.1` represents examples of some miscellaneous parts/items:
 
@@ -38,7 +38,7 @@ However, whatever the model is, it is the responsibility of the supplier to just
 The process used to define a Miscellaneous (MIS) item reliability model is presented in {numref}`Figure 5.2`.
 
 ```{note}
-MIS-X, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers to XXX
+{numref}`Figure 5.2`, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers to {numref}`misc_5_5`
 ```
 
 (misc_figure4_2)=
