@@ -96,9 +96,7 @@ By default, $K_{parameters}$ is set to 1, under the condition that the major con
 It is the responsibility of the user (the supplier) to adapt and/or define the $K_{parameters}$ as relevant with appropriate technical justification.
 `````
 ``````
-
-<h2 id="back_from_misc_failure_rate_processing_balise"></h2>
-
+<a id="back_from_misc_failure_rate_processing_balise"></a>
 (misc_step3)=
 ``````{dropdown} **STEP 3 : Consideration of reliability contributors**
 The basic failure rate which is derived from IOR relates to a certain set of assumptions likely to impact the reliability. It is therefore necessary to amend as relevant the basic failure rate to account for the real conditions of the item under consideration.
@@ -230,25 +228,21 @@ For operating conditions it is necessary to define the weights per contributor a
 * To define the category for each condition
 * To calculate the resulting factor to be added.
 
-{numref}` Values of factors per their ranking.` provides an example of such a calculation.
+{numref}`Values of factors per their ranking` provides an example of such a calculation.
 ```
+``````
 
-(misc_table4_4)=
-```{list-table} Values of factors per their ranking.
+```{list-table} Values of factors per their ranking
 :class: interactive-table
-:name: Values of factors per their ranking.
+:name: Values of factors per their ranking
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_4.html" frameborder="0" onload="resize_iframe(this)"></iframe>
-```
-
 ```
 
 The column _“value”_ provides the factors depending on the classification (column _“scale”_).
 The two right-hand columns provide the result for one example (_“X”_ representing the ranking regarding the different categories with the associated resulting factor in the right column)
 
 $1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}$
-
-``````
 
 (misc_step4)=
 ``````{dropdown} **STEP 4 : Application of combined approach**
