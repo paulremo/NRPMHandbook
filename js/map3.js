@@ -22,6 +22,7 @@ class ThreeChoiceButton extends FormulaButton {
         this.choices = choices;
         this.displayed = false;
         this.current_choice = null;
+        this.value = null;
     }
 
 }
@@ -33,6 +34,7 @@ class BinaryChoiceButton extends FormulaButton {
         this.choices = choices;
         this.selected = false;
         this.current_choice = null;
+        this.value = null;
     }
 
 }
@@ -52,14 +54,14 @@ class CentralButton extends FormulaButton {
         super(id, name);
         this.value = value;
     }
-
 }
 
 
 class SFConfiguration {
-    constructor(nodes, centralNode) {
+    constructor(nodes, centralNode, calculationType) {
         this.nodes = nodes;
         this.centralNode = centralNode;
+        this.calculationType = calculationType;
     }
 }
 
@@ -107,6 +109,7 @@ class SquidFormula {
                 node.style.background = "red";
                 node.innerHTML = this.searchNode(triggeredId).name + " : " + this.searchNode(triggeredId).choices.get(false);
                 node.title = this.searchNode(triggeredId).values.get(false);
+                triggeredNode.value = this.searchNode(triggeredId).values.get(false);
                 this.searchNode(triggeredId).selected = false;
                 this.searchNode(triggeredId).current_choice = false;
             }
@@ -115,6 +118,7 @@ class SquidFormula {
                 node.style.background = "green";
                 node.innerHTML = this.searchNode(triggeredId).name + " : " + this.searchNode(triggeredId).choices.get(true);
                 node.title = this.searchNode(triggeredId).values.get(true);
+                triggeredNode.value = this.searchNode(triggeredId).values.get(true);
                 this.searchNode(triggeredId).selected = true;
                 this.searchNode(triggeredId).current_choice = true;
             }
@@ -131,9 +135,13 @@ class SquidFormula {
             this.setConfiguration();
         }
         else{
+            var v = this.current_configuration.centralNode.value;
             this.entry.style.visibility = "hidden";
             this.entry.value = "";
+            navigator.clipboard.writeText(v);
+            alert("Copied the text: " + v);
         }
+        this.processCentralValue()
     }
 
     clickedButton(btn) {
@@ -149,6 +157,7 @@ class SquidFormula {
             document.getElementById(nodeID).style.background = "green";
         }
         this.searchNode(nodeID).current_choice = btnID;
+        this.searchNode(nodeID).value = this.searchNode(nodeID).values.get(btnID);
         this.updateTitle(nodeID, btnID);
         this.clickNode(document.getElementById(nodeID));
     }
@@ -209,7 +218,12 @@ class SquidFormula {
             }
         }
         else if (this.searchNode(nodeID) instanceof MapButton){
-            document.getElementById(nodeID).innerHTML = this.searchNode(nodeID).name;
+            if (this.searchNode(nodeID).subConfiguration.centralNode.value != null){
+                document.getElementById(nodeID).innerHTML = this.searchNode(nodeID).name + " : " + this.searchNode(nodeID).subConfiguration.centralNode.value;
+            }
+            else{
+                document.getElementById(nodeID).innerHTML = this.searchNode(nodeID).name;
+            }
             document.getElementById(nodeID).style.background = "#47064a";
         }
         else{
@@ -249,6 +263,33 @@ class SquidFormula {
             this.selectedEntry.value = null;
         }
 
+        this.processCentralValue();
+
+    }
+
+    processCentralValue(){
+        console.log(this);
+        var finalvalue;
+        if (this.current_configuration.calculationType == "prod"){
+            finalvalue = 1;
+        }
+        else{
+            finalvalue = 0;
+        }
+        for (var [key, node] of this.current_configuration.nodes) {
+            //console.log(key);
+            console.log("node value : " + this.searchNode(node.id).value);
+            if (this.searchNode(node.id).value != null){
+                if (this.current_configuration.calculationType == "prod"){
+                    finalvalue = finalvalue * this.searchNode(node.id).value;
+                }
+                else{
+                    finalvalue = finalvalue + this.searchNode(node.id).value;
+                }
+            }
+        }
+        this.current_configuration.centralNode.value = finalvalue;
+        document.getElementById(this.current_configuration.centralNode.id).innerHTML = this.current_configuration.centralNode.name + " : " + finalvalue.toFixed(5);
     }
 }
 
@@ -278,7 +319,7 @@ v3.set("2", 0.13);
 v3.set("3", 0.1);
 
 let centralNode = new CentralButton("0", "&lambda;<sub>3</sub>", 1);
-let centralNode2 = new CentralButton("0", "&pi;<sub>OP</sub>", 1);
+let centralNode2 = new CentralButton("0", "&pi;<sub>OP</sub>", 0);
 
 var binValue = new Map();
 binValue.set(true, 1.0);
@@ -302,14 +343,14 @@ dic2.set("3", n3_2);
 dic2.set("4", n4_2);
 dic2.set("5", n5_2);
 dic2.set("6", n6_2);
-conf2 = new SFConfiguration(dic2, centralNode2);
+conf2 = new SFConfiguration(dic2, centralNode2, "sum");
 
-n1_1 = new MapButton("1", "&pi;<sub>OP</sub>", 0, conf2);
+n1_1 = new MapButton("1", "&pi;<sub>OP</sub>", null, conf2);
 n2_1 = new ThreeChoiceButton("2", "&pi;<sub>M</sub>", v1, c1);
 n3_1 = new ThreeChoiceButton("3", "&pi;<sub>Q</sub>", v1, c1);
 n4_1 = new BinaryChoiceButton("4", "&pi;<sub>T</sub>", binValue, binChoices);
 n5_1 = new BinaryChoiceButton("5", "&pi;<sub>C</sub>", binValue, binChoices);
-n6_1 = new FormulaEntry("6", "&lambda;<sub>2</sub>", new RegExp('[0-9]+([\\.][0-9]*)?'));
+n6_1 = new FormulaEntry("6", "&lambda;<sub>2</sub>", new RegExp('^[0-9]+\\.?[0-9]*$'));
 
 var dic1 = new Map();
 dic1.set("1", n1_1);
@@ -318,7 +359,7 @@ dic1.set("3", n3_1);
 dic1.set("4", n4_1);
 dic1.set("5", n5_1);
 dic1.set("6", n6_1);
-conf1 = new SFConfiguration(dic1, centralNode);
+conf1 = new SFConfiguration(dic1, centralNode, "prod");
 
 
 
