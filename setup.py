@@ -11,5 +11,6 @@ setup(
     version = '0.1',
     author = 'Paul-Remo Wagner',
     author_email = 'wagner@matrisk.com',
-    install_requires = install_requires
+    install_requires = install_requires,
+    packages = find_packages(exclude=['tests*'])
 )
