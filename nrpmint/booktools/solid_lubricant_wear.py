@@ -102,24 +102,28 @@ def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
 
     # and constants
     E_nrev = E_nrev
+    Rev_per_hour = Rev_per_hour
 
     # correlation matrix
+    corr_KH_alpha = 0.5
     corrmat = [[1.0, 0.0, 0.0, 0.0],
-               [0.0, 1.0, 0.5, 0.0],
-               [0.0, 0.5, 1.0, 0.0],
+               [0.0, 1.0, corr_KH_alpha, 0.0],
+               [0.0, corr_KH_alpha, 1.0, 0.0],
                [0.0, 0.0, 0.0, 1.0]]
 
     # define limit-state function
-    lsf = lambda Vlim, KH, alpha, MU, E_nrev: Vlim - KH * alpha * MU * E_nrev
+    lsf = lambda Vlim, KH, alpha, MU, E_nrev, Rev_per_hour: Vlim - MU * KH * alpha * E_nrev * Rev_per_hour
 
     # run form reliability analysis
-    my_reliability_analysis = form(lsf, corrmat=corrmat, Vlim=Vlim, KH=KH, alpha=alpha, MU=MU, E_nrev=E_nrev)
+    my_reliability_analysis = form(lsf, corrmat=corrmat, Vlim=Vlim, KH=KH, alpha=alpha, MU=MU, E_nrev=E_nrev, Rev_per_hour=Rev_per_hour)
 
     # display
     display(my_reliability_analysis, Rev_per_hour)
 
     # print
     print(f'The failure probability is {my_reliability_analysis.getFailure()[0]}')
+
+    return my_reliability_analysis
 
 
 def web_ui():
@@ -186,26 +190,3 @@ def web_ui():
 
     # show output
     IPython.display.display(output_stream)
-
-
-if __name__ == "__main__":
-    # define random variables
-    Dist_Vlim = 'Gumbel'
-    E_Vlim = 6.5e-8
-    CoV_Vlim = 0.2
-    Dist_KH = 'Normal'
-    E_KH = 4e-15
-    CoV_KH = 0.66
-    Dist_alpha = 'LogNormal'
-    E_alpha = 0.018
-    CoV_alpha = 0.2
-    Dist_MU = 'LogNormal'
-    E_MU = 1
-    CoV_MU = 0.2
-    E_nrev = 245e+6
-    Rev_per_hour = 1000
-
-    # call model_wrapper
-    model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
-                  Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU,
-                  E_nrev, Rev_per_hour)
