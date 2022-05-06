@@ -84,5 +84,137 @@ RP
   
 NRPM
   New Reliability Prediction Methodology
+  
+IOR
+  In Orbit Return (Data/Information)
+
+N2H4 thrusters
+  hydrazine thrusters
+ 
+MIS
+  Miscellaneous (Items/Parts)
+
+SYS
+  System
+  
+MEC
+  Mechanical (Items/Parts)
+
+RF
+  Random Failure
+
+SF
+  Systematic Failure
+
+WO
+  Wear Out Failure
+
+EX
+  Extrinsic Failure
+
+STD
+  Standard (Model)
+
+GEO
+  Geostationary Orbit
+  
+LEO
+  Low Earth Orbit
+
+MEO
+  Medium Earth Orbit
+
+TWTA
+  Traveling Wave Tube Amplifier
+
+MPM
+  Microwave Power Module
+
+RF
+  Radio Frequency
+
+PWR
+  Power
+
+PROP
+  Propulsion
+
+AOCS
+  Attitude and Orbit Control System
+  
+DEP
+  Deployment
+
+RW
+  Reaction Wheel
+  
+SADM
+  Solar Array Drive Mechanism
+
+SA
+  Solar Array
+
+GaAs
+  Galliumarsenid
+  
+Si
+  Silicium
+
+GaN
+  Galliumnitrid
+
+FMEA
+  Failure Mode and Effects Analysis
+  
+DFMEA
+  Design Failure Mode and Effects Analysis
+
+PFMEA
+  Process Failure Mode and Effects Analysis
+
+PoF
+  Physics of Failure
+
+RPN
+  Risk Priority Number
+
+COTS
+  Components Out of The Shelf
+
+SSPA
+  Solid State Power Amplifiers
+
+TTF
+  Time To Failure
+
+MTTF
+  Mean Time To Failure
+
+TAS
+  Thales Alenia Space
+
+ADS
+  Airbus Defence and Space
+
+Matrisk
+  Managing technical risks
+
+RAMS
+  Reliability, Availability, Maintainability, Safety
+
+SA
+  Solar Array
+
+I_SA
+  SA current
+
+TM
+  Telemetry
+
+SPF
+  Single Point Failure
+
+TRL
+  Technology Readiness Level
 ```
 ````
