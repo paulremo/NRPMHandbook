@@ -5,99 +5,79 @@ from ipywidgets import interactive, Layout, HBox, VBox
 
 # scientific packages
 from nrpmint.reliability.form import form
-from nrpmint.reliability.random_variables import UniRV, MultiRV
 import numpy as np
 from matplotlib import pyplot as plt
 import pystra
 
 
-def display(reliability_analyses, mult_one_idx, rev_per_hour):
+def display(analysis, rev_hour):
     '''Displays the reliability analysis results'''
-    pf_mat, nrev_mat = [], []
-    n_samples = 10**5
+    # Some single results:
+    pf = analysis.getFailure()
+    stochastic_model = analysis.model
 
-    # compute results for the main analysis
-    main_analysis = reliability_analyses[mult_one_idx]
-    stochastic_model = main_analysis.model
+    # pf_mat = []
+    # rev_mat = np.linspace(stochastic_model.consts['E_nrev'] * 0.8, stochastic_model.consts['E_nrev'] * 1.2, 5)
+    # # for plot of the "Resistance"
+    # for rev in rev_mat:
+    #     # Update value of constant
+    #     stochastic_model = analysis.model
+    #     stochastic_model.consts['E_nrev'] = rev
+    #     # Perform FORM analysis
+    #     my_reliability_analysis = pystra.Form(analysis_options=analysis.options, stochastic_model=stochastic_model, limit_state=analysis.limitstate)
+    #     pf_mat.append(my_reliability_analysis.getFailure())
 
-    # retrieve distribution properties
-    Vlim = stochastic_model.variables['Vlim']
-    E_Vlim = Vlim.getMean()
-    CoV_Vlim = Vlim.getStdv() / E_Vlim
-    Dist_Vlim = Vlim.dist_type
-    KH = stochastic_model.variables['KH']
-    E_KH = KH.getMean()
-    CoV_KH = KH.getStdv() / E_KH
-    Dist_KH = KH.dist_type
-    alpha = stochastic_model.variables['alpha']
-    E_alpha = alpha.getMean()
-    CoV_alpha = alpha.getStdv() / E_alpha
-    Dist_alpha = alpha.dist_type
-    MU = stochastic_model.variables['MU']
-    E_MU = MU.getMean()
-    CoV_MU = MU.getStdv() / E_MU
-    Dist_MU = MU.dist_type
+    # construct distribution and evaluate PDF
+    E_KH = stochastic_model.variables['KH'].getMean()
+    E_alpha = stochastic_model.variables['alpha'].getMean()
+    E_MU = stochastic_model.variables['MU'].getMean()
+    E_Vlim = stochastic_model.variables['Vlim'].getMean()
+    E_nrev = stochastic_model.consts['E_nrev']
+    CoV_KH = stochastic_model.variables['KH'].getStdv()/E_KH
+    CoV_alpha = stochastic_model.variables['alpha'].getStdv()/E_alpha
+    CoV_MU = stochastic_model.variables['MU'].getStdv()/E_MU
+    CoV_Vlim = stochastic_model.variables['Vlim'].getStdv()/E_Vlim
 
-    nrev = stochastic_model.consts['nrev']
+    # impact
+    mu_S = E_KH * E_alpha * E_MU * E_nrev
+    CoV_S = ((CoV_KH) ** 2 + (CoV_alpha) ** 2 + (CoV_MU) ** 2) ** 0.5
+    sigma_S = CoV_S * mu_S
+    x_S_mat = np.linspace(max(mu_S - sigma_S * 3, 1e-12), mu_S + sigma_S * 6, 100)
 
-    corrmat = stochastic_model.correlation
+    zeta_S = (np.log(1 + (sigma_S / mu_S) ** 2)) ** 0.5
+    lamb_S = np.log(mu_S) - 0.5 * zeta_S ** 2
 
-    # sample from random variables
-    Vlim_dist = UniRV(Dist_Vlim, E_Vlim, CoV_Vlim)
-    KH_dist = UniRV(Dist_KH, E_KH, CoV_KH)
-    alpha_dist = UniRV(Dist_alpha, E_alpha, CoV_alpha)
-    MU_dist = UniRV(Dist_MU, E_MU, CoV_MU)
-    joint_dist = MultiRV([Vlim_dist, KH_dist, alpha_dist, MU_dist], corrmat)
-    x = joint_dist.rvs(n_samples)
+    my_dist = pystra.distributions.lognormal.Lognormal('my_dist', lamb_S, zeta_S, input_type='parameters')
+    S_pdf = my_dist.pdf(x_S_mat)
 
-    # evaluate limit_state function
-    g, r, a = limit_state_function(x[:,0], x[:,1], x[:,2], x[:,3], nrev, sep_out=True)
+    # resistance
+    mu_R = E_Vlim
+    sigma_R = E_Vlim * CoV_Vlim
+    x_R_mat = np.linspace(mu_R - sigma_R * 4, mu_R + sigma_R * 4, 50)
 
-    # loop over analyses
-    for rel_analysis in reliability_analyses:
-        stochastic_model = rel_analysis.model
-
-        # retrieve failure probability
-        pf_mat.append(rel_analysis.getFailure())
-        nrev_mat.append(stochastic_model.consts['nrev'])
+    # evaluate pdf
+    R_pdf = stochastic_model.getVariable('Vlim').pdf(x_R_mat)
 
     # plots
     plt.figure(1)
-    plt.hist(r, bins=100, density=True, alpha=0.8)
-    plt.hist(a, bins=100, density=True, alpha=0.8)
+    plt.plot(x_R_mat, R_pdf, 'b-')
+    plt.plot(x_S_mat, S_pdf, 'r-')
     plt.xlabel(r'volume $m^3$')
     plt.ylabel('probability density function')
     plt.legend(['Limiting Volume', 'Volume worn away'])
 
-    plt.figure(2)
-    plt.plot(nrev / (rev_per_hour * 365 * 24), pf_mat[mult_one_idx], 'ro')
-    plt.plot(np.array(nrev_mat) / (rev_per_hour * 365 * 24), pf_mat, 'r--')
-    plt.ylabel('probability of failure')
-    plt.xlabel('years')
-    plt.legend(['Limiting Volume','Volume worn away'])
+    # plt.figure(2)
+    # plt.plot(E_nrev / (rev_hour * 365 * 24), pf, 'ro')
+    # plt.plot(rev_mat / (rev_hour * 365 * 24), pf_mat, 'r--')
+    # plt.ylabel('probability of failure')
+    # plt.xlabel('years')
+    # plt.legend(['Limiting Volume','Volume worn away'])
 
 
-def limit_state_function(Vlim, KH, alpha, MU, nrev, sep_out=False):
-    """
-    Limit state function used in this model.
-    """
-    r = Vlim
-    a = MU * KH * alpha * nrev
-
-    g = r - a
-
-    if sep_out:
-        return g, r, a
-    else:
-        return g
-
-
-def single_analysis(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alpha, E_alpha, CoV_alpha,
-                    Dist_MU, E_MU, CoV_MU, rho_KH_alpha, nrev):
-    '''
-    Wrapper for nrpmint.reliability.form that passes the arguments to the correct dictionary structure and returns the
-    reliability analysis.
-    '''
+def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
+                 Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU,
+                 E_nrev, Rev_per_hour):
+    '''Wrapper for nrpmint.reliability.form that passes the arguments to the correct dictionary structure.'''
 
     Vlim = {
         'dist': Dist_Vlim,
@@ -120,42 +100,26 @@ def single_analysis(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alp
         'CoV': CoV_MU
     }
 
+    # and constants
+    E_nrev = E_nrev
+
     # correlation matrix
     corrmat = [[1.0, 0.0, 0.0, 0.0],
-               [0.0, 1.0, rho_KH_alpha, 0.0],
-               [0.0, rho_KH_alpha, 1.0, 0.0],
+               [0.0, 1.0, 0.5, 0.0],
+               [0.0, 0.5, 1.0, 0.0],
                [0.0, 0.0, 0.0, 1.0]]
 
     # define limit-state function
-    lsf = lambda Vlim, KH, alpha, MU, nrev: limit_state_function(Vlim, KH, alpha, MU, nrev)
+    lsf = lambda Vlim, KH, alpha, MU, E_nrev: Vlim - KH * alpha * MU * E_nrev
 
-    # run and return form reliability analysis
-    return form(lsf, corrmat=corrmat, Vlim=Vlim, KH=KH, alpha=alpha, MU=MU, nrev=nrev)
-
-
-def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
-                 Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU,
-                 rho_KH_alpha, nrev, rev_per_hour):
-    '''Wrapper to be called by ipywidgets to run the reliability analyses and display the outputs.'''
-
-    # do a set of reliability analyses for different nrev
-    mult_list = [0.8, 0.9, 1, 1.1, 1.2]
-    mult_one_idx = mult_list.index(1)
-    reliability_analyses = []
-    for mult in mult_list:
-        # run form reliability analysis
-        curr_nrev = nrev*mult
-        rel_analysis = single_analysis(Dist_Vlim=Dist_Vlim, E_Vlim=E_Vlim, CoV_Vlim=CoV_Vlim, Dist_KH=Dist_KH, E_KH=E_KH,
-                        CoV_KH=CoV_KH, Dist_alpha=Dist_alpha, E_alpha=E_alpha, CoV_alpha=CoV_alpha, Dist_MU=Dist_MU,
-                        E_MU=E_MU, CoV_MU=CoV_MU, rho_KH_alpha=rho_KH_alpha, nrev=curr_nrev)
-
-        reliability_analyses.append(rel_analysis)
+    # run form reliability analysis
+    my_reliability_analysis = form(lsf, corrmat=corrmat, Vlim=Vlim, KH=KH, alpha=alpha, MU=MU, E_nrev=E_nrev)
 
     # display
-    display(reliability_analyses, mult_one_idx, rev_per_hour)
+    display(my_reliability_analysis, Rev_per_hour)
 
     # print
-    print(f'The failure probability is {reliability_analyses[mult_one_idx].getFailure()[0]}')
+    print(f'The failure probability is {my_reliability_analysis.getFailure()[0]}')
 
 
 def web_ui():
@@ -194,21 +158,17 @@ def web_ui():
     CoV_MU_fs = widgets.FloatSlider(value=0.2, min=0.05, max=1, step=0.05, description='$\\text{C.o.V.}[\Theta]$',
                                     disabled=False, continuous_update=True, orientation='horizontal', readout=True,
                                     readout_format='.2f', )
-    rho_KH_alpha_fs = widgets.FloatSlider(value=0.5, min=0, max=1, step=0.01, description='$\\rho_{KH,\\alpha}$',
+    E_nrev_fs = widgets.FloatSlider(value=2.45e+8, min=1e+8, max=1e+9, step=5e+6, description='$\\text{E}[r]$',
                                     disabled=False, continuous_update=True, orientation='horizontal', readout=True,
                                     readout_format='.1e', )
-    nrev_fs = widgets.FloatSlider(value=2.45e+8, min=1e+8, max=1e+9, step=5e+6, description='$\\text{E}[r]$',
-                                    disabled=False, continuous_update=True, orientation='horizontal', readout=True,
-                                    readout_format='.1e', )
-    rev_per_hour_fs = widgets.FloatSlider(value=1e+6, min=1e6, max=1e+7, step=1e+6, description='$\\text{E}[r_h]$',
+    Rev_per_hour_fs = widgets.FloatSlider(value=1e+6, min=1e6, max=1e+7, step=1e+6, description='$\\text{E}[r_h]$',
                                           disabled=False, continuous_update=True, orientation='horizontal',
                                           readout=True, readout_format='.1e', )
 
     # put inside interactive
     ip = interactive(model_wrapper, Dist_Vlim=Dist_Vlim_dd, E_Vlim=E_Vlim_fs, CoV_Vlim=CoV_Vlim_fs, Dist_KH=Dist_KH_dd,
                      E_KH=E_KH_fs, CoV_KH=CoV_KH_fs, Dist_alpha=Dist_alpha_dd, E_alpha=E_alpha_fs, CoV_alpha=CoV_alpha_fs,
-                     Dist_MU=Dist_MU_dd, E_MU=E_MU_fs, CoV_MU=CoV_MU_fs, rho_KH_alpha=rho_KH_alpha_fs, nrev=nrev_fs,
-                     rev_per_hour=rev_per_hour_fs)
+                     Dist_MU=Dist_MU_dd, E_MU=E_MU_fs, CoV_MU=CoV_MU_fs, E_nrev=E_nrev_fs, Rev_per_hour=Rev_per_hour_fs)
 
     ip.children
     # setup input controls
@@ -226,3 +186,26 @@ def web_ui():
 
     # show output
     IPython.display.display(output_stream)
+
+
+if __name__ == "__main__":
+    # define random variables
+    Dist_Vlim = 'Gumbel'
+    E_Vlim = 6.5e-8
+    CoV_Vlim = 0.2
+    Dist_KH = 'Normal'
+    E_KH = 4e-15
+    CoV_KH = 0.66
+    Dist_alpha = 'LogNormal'
+    E_alpha = 0.018
+    CoV_alpha = 0.2
+    Dist_MU = 'LogNormal'
+    E_MU = 1
+    CoV_MU = 0.2
+    E_nrev = 245e+6
+    Rev_per_hour = 1000
+
+    # call model_wrapper
+    model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
+                  Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU,
+                  E_nrev, Rev_per_hour)

@@ -4,9 +4,10 @@ import numpy as np
 
 # import module
 from nrpmint.reliability.form import form
+from nrpmint.reliability.random_variables import UniRV, MultiRV
 
 @pytest.mark.parametrize('dist_type', [('Normal'), ('LogNormal'), ('Gumbel')])
-def test_univariate(unirv, dist_type):
+def test_univariate(dist_type):
     """
     Tests whether the form analysis is correct for univariate problems on a simple limit-state function g(r)=r-c
     """
@@ -23,7 +24,7 @@ def test_univariate(unirv, dist_type):
         c = 1
     elif dist_type=='Gumbel':
         c = 7
-    my_dist = unirv(dist_type, R['E'], R['CoV'])
+    my_dist = UniRV(dist_type, R['E'], R['CoV'])
     Pf_true = my_dist.dist.cdf(c)
 
     # conduct FORM analysis
@@ -37,7 +38,7 @@ def test_univariate(unirv, dist_type):
     ('Normal', 'LogNormal', 0.00013928),
     ('LogNormal', 'Gumbel', 0.00023707)
 ])
-def test_multivariate(unirv, multirv, dist_type_r, dist_type_a, Pf_true):
+def test_multivariate(dist_type_r, dist_type_a, Pf_true):
     """
     Tests whether the form analysis is correct for multivariate problems on a simple limit-state function g(r)=r-a
     """
@@ -58,9 +59,9 @@ def test_multivariate(unirv, multirv, dist_type_r, dist_type_a, Pf_true):
 
     # compute true Pf, if it is not precomputed for speed
     if Pf_true == None:
-        r_rv = unirv(dist_type_r, R['E'], R['CoV'])
-        a_rv = unirv(dist_type_a, A['E'], A['CoV'])
-        x_rv = multirv([r_rv, a_rv], corrmat)
+        r_rv = UniRV(dist_type_r, R['E'], R['CoV'])
+        a_rv = UniRV(dist_type_a, A['E'], A['CoV'])
+        x_rv = MultiRV([r_rv, a_rv], corrmat)
 
         x = x_rv.rvs(10**8)
         Pf_true = np.mean((x[:,0]-x[:,1])<0)
