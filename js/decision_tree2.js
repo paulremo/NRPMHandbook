@@ -221,6 +221,7 @@ class DecisionTree {
     }
 
     clickLevel(event) {
+        console.log("event : " + event.x + " , " + event.y);
         var inside = false;
         var clicked_depth;
         var clicked_leaf;
