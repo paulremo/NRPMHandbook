@@ -1,4 +1,4 @@
-WIDTH = 120;
+WIDTH = 105;
 HEIGHT = 30;
 
 SPACEX = 20;
@@ -21,7 +21,7 @@ class Node {
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.fillStyle = 'white';
-        ctx.font = '12px serif';
+        ctx.font = '9px serif';
         let txt_x = this.x + (this.width - ctx.measureText(this.txt).width) / 2;
         let txt_y = this.y + 2 * HEIGHT / 3;
         ctx.fillText(this.txt, txt_x, txt_y);
