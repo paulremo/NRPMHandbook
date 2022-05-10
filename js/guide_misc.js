@@ -5,12 +5,15 @@ const InteractType = Object.freeze({
 });
 
 class Conversation {
-    constructor(container, branches) {
+    constructor(container, branches, extra_bar) {
         this.container = container;
         this.branches = branches;
+        this.extra_bar = extra_bar;
 
         this.current_branch = this.branches.get("b0");
         this.current_branch.init(this);
+
+        this.picture = document.getElementById("astroPicture");
     }
 
     next(id) {
@@ -33,8 +36,19 @@ class Conversation {
                 this.current_branch.nextStep(false);
             }
         }
+        else if (cls == "categories") {
+            let res = dataModelsByCategories.get(id);
+            console.log(dataModelsByCategories.get("Power"))
+            console.log(id);
+            console.log("res")
+            console.log(res)
+            this.current_branch.nextStep(true, res);
+        }
+        else if (cls == "itemComponents"){
+            this.current_branch.nextStep(true, id);
+        }
         else {
-            console.log("else");
+            //console.log("else");
             this.current_branch.nextStep(true, id);
         }
     }
@@ -62,45 +76,51 @@ class Branch {
         let msg = this.messages.get(this.step);
         let tr = this.conversation.container.insertRow();
         let td = tr.insertCell(0);
-        if (msg.configurable){
+        if (msg.configurable) {
             msg.configure(this.data)
         }
         td.appendChild(msg.htmlRep);
-        setTimeout(() => { this.nextStep() }, 2000);
+        setTimeout(() => { this.nextStep() }, 500);
     }
 
     nextStep(new_branch_id = null, arg = null) {
-        console.log("next step " + arg);
+        //console.log("next step " + arg);
         this.step += 1;
         if (this.step >= this.messages.size) {
-            console.log("end of branch : " + arg);
-            if (this.successors.get(new_branch_id) != undefined){
+            //console.log("end of branch : " + arg);
+            if (this.successors.get(new_branch_id) != undefined) {
                 this.conversation.switchBranch(this.successors.get(new_branch_id), arg);
             }
-            else{
+            else {
                 console.log("end of conversation");
             }
         }
         else {
-            console.log("stay on branch : " + arg);
+            //console.log("stay on branch : " + arg);
             let next_msg = this.messages.get(this.step);
+            /*if (next_msg.interactive){
+                this.conversation.picture.setAttribute("src", "../html/pictures/astronaut2.png");
+            }
+            else{
+                this.conversation.picture.setAttribute("src", "../html/pictures/astronaut1.png");
+            }*/
             let tr = this.conversation.container.insertRow();
             let td = tr.insertCell(0);
             if (next_msg instanceof DataMessage) {
                 next_msg.configure(this.data);
             }
             if (next_msg instanceof ConfigurableMessage) {
-                console.log("configurable message");
+                //console.log("configurable message");
                 next_msg.configure(arg);
             }
             if (next_msg instanceof ExitMessage) {
-                console.log("Exit Message");
+                //console.log("Exit Message");
                 next_msg.configure(arg);
-                setTimeout(() => { this.nextStep() }, 2000);
+                setTimeout(() => { this.nextStep() }, 500);
             }
             td.appendChild(next_msg.htmlRep);
             if (!next_msg.interactive) {
-                setTimeout(() => { this.nextStep() }, 2000);
+                setTimeout(() => { this.nextStep() }, 500);
             }
 
         }
@@ -155,6 +175,7 @@ class SearchMessage extends Message {
     }
 
     getResult(dt) {
+        console.log("get result")
         let res = new Set();
         let words = dt.split(" ");
         for (var item of this.data) {
@@ -176,15 +197,26 @@ class SearchMessage extends Message {
 }
 
 class DataMessage extends Message {
-    constructor(text, sender, interactor = null, type = null) {
+    constructor(text, sender,  classNm = null, data = null, interactor = null, type = null) {
         super(text, sender, true, true, interactor, type);
+        this.data = data;
+        this.classNm = classNm;
     }
 
     configure(data) {
+        if (data == null) {
+            data = this.data;
+        }
+        console.log("data")
+        console.log(data)
+        console.log(this.data)
         for (var item of data) {
             let b = document.createElement("button");
             b.innerHTML = item;
             b.setAttribute("id", item)
+            if (this.classNm != null){
+                b.className = this.classNm;
+            }
             b.setAttribute("onclick", "conv.next('" + item + "')")
             this.interactor.appendChild(b);
         }
@@ -212,18 +244,18 @@ class ConfigurableMessage extends Message {
 
 }
 
-class ExitMessage extends Message{
+class ExitMessage extends Message {
     constructor(text, sender, destination) {
-        super(text,sender,true,true);
+        super(text, sender, true, true);
         this.destination = destination;
     }
-    configure(data){
+    configure(data) {
         let div = document.createElement("div");
         div.setAttribute("class", this.sender);
         let par = document.createElement("button");
         par.innerHTML = this.text;
         par.setAttribute("onclick", "window.location.href = '" + this.destination + "';");
-        par.className =  this.sender;
+        par.className = this.sender;
         div.style.borderColor = "#383b3a";
         div.appendChild(par);
         this.htmlRep = div;
@@ -313,6 +345,65 @@ dataComponentType = new Map([
     ["OPTRONICS", "non-standard"],
 ])
 
+dataCategories = new Set([
+    "Radio Frequency",
+    "Power",
+    "Propulsion",
+    "Attitude and Orbit Control System",
+    "Thermal",
+    "Pyrotechnics",
+    "Deployment",
+    "Other"
+]);
+
+dataModelsByCategories = new Map([
+    ["Radio Frequency", new Set(
+        ["TWTA, Single MPM",
+        "TWTA, Double MPM",
+        "RF PASSIVE",]
+    )],
+    ["Power", new Set(
+        ["CONNECTORS",
+        "BATTERY CELL GEO",
+        "BATTERY CELL LEO",
+        "SOLAR ARRAY CELL Si",
+        "SOLAR ARRAY CELL GaAs",
+        "SADM (Solar Array drive Mechanism) GEO",
+        "SADM (Solar Array drive Mechanism) LEO",]
+    )],
+    ["Propulsion", new Set(
+        ["THRUSTER",
+        "TANK TUBING",
+        "HET (Hall Effect Thruster)",
+        "VALVE LV (Latching Valve)",
+        "VALVE FCV (MONO STABLE) Flow Control Valve",
+        "VALVE PYRO VALVE",
+        "PT (Pressure Transducer)",
+        "FILTER",]
+    )],
+    ["Attitude and Orbit Control System", new Set(
+        ["RW (Reaction Wheel) GEO",
+        "RW (Reaction Wheel) LEO",
+        "DEPLOYMENT DEVICE Antenna, boom",
+        "DEPLOYMENT DEVICE Solar Array",]
+    )],
+    ["Thermal", new Set(
+        ["HEAT PIPES",
+        "THERMO SWITCH",
+        "HEATER",]
+    )],
+    ["Pyrotechnics", new Set(
+        ["Pyro Actuator",]
+    )],
+    ["Deployment", new Set(
+        ["Non Explosive Actuator",]
+    )],
+    ["Other", new Set(
+        ["OPTICS",
+        "OPTRONICS",]
+    )]
+])
+
 let m1 = new Message("Welcome to the failure rate calculation guide for the miscellaneous items !", "other-message", false, false);
 let m2 = new Message("Before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used", "other-message", false, false);
 let m3 = new Message("Is it OK ?", "other-message", false, false);
@@ -330,17 +421,33 @@ let m9 = new ConfigurableMessage("This component is", "other-message", dataCompo
 let m10 = new ExitMessage("You can go on the handbook page", "other-message", "http://127.0.0.1:5500/02_NRPMHandbook/_build/html/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
 let m11 = new ExitMessage("Or you can go to this page to calculate the failure rate", "other-message", "http://127.0.0.1:5500/02_NRPMHandbook/_build/html/miscellaneous/models/failure_rate_processing.html");
 
+let m12 = new Message("Maybe we use another name... To which subsystem does your component belong ?", "other-message", false, false);
+let m13 = new DataMessage("...", "other-message","categories", dataCategories);
+
+let m14 = new Message("Is this one of these components ?", "other-message", false, false);
+let m15 = new DataMessage("", "other-message", "itemComponents");
+
+let m16 = new ConfigurableMessage("This component is", "other-message", dataComponentType
+);
+
+let m17 = new ExitMessage("You can go on the handbook page", "other-message", "http://127.0.0.1:5500/02_NRPMHandbook/_build/html/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
+let m18 = new ExitMessage("Or you can go to this page to calculate the failure rate", "other-message", "http://127.0.0.1:5500/02_NRPMHandbook/_build/html/miscellaneous/models/failure_rate_processing.html");
+
 
 let mb0 = new Map([[0, m1], [1, m2], [2, m3], [3, m4], [4, m5], [5, m6]]);
 //console.log(mb0);
 let mb1 = new Map([[0, m7], [1, m8]]);
-let mb2 = new Map([[0, new Message("b2", "other-message", false, false)]]);
-let mb3 = new Map([[0, m9],[1, m10],[2, m11]]);
+let mb2 = new Map([[0, m12], [1, m13]]);
+let mb3 = new Map([[0, m9], [1, m10], [2, m11]]);
+let mb4 = new Map([[0, m14], [1, m15]])
+let mb5 = new Map([[0, m16], [1, m17], [2, m18]]);
 
+let b5 = new Branch(mb5, new Map());
+let b4 = new Branch(mb4, new Map([[true, "b5"]]));
 let b3 = new Branch(mb3, new Map())
 let b1 = new Branch(mb1, new Map([[true, "b3"]]));
-let b2 = new Branch(mb2, new Map());
+let b2 = new Branch(mb2, new Map([[true, "b4"]]));
 let b0 = new Branch(mb0, new Map([[true, "b1"], [false, "b2"]]));
 
-let b = new Map([["b0", b0], ["b1", b1], ["b2", b2], ["b3", b3]]);
+let b = new Map([["b0", b0], ["b1", b1], ["b2", b2], ["b3", b3], ["b4", b4], ["b5", b5]]);
 conv = new Conversation(document.getElementById("messagesTrack"), b);
