@@ -76,6 +76,7 @@ If you want more details, you can go there.
 
 ````{dropdown} Click to show the glossary
 ```{glossary}
+  
 EEE
   Electrical, Electronic and Electro-mechanical
 
@@ -124,8 +125,23 @@ LEO
 MEO
   Medium Earth Orbit
 
+TWT
+  Travelling Wave Tube
+  
 TWTA
   Traveling Wave Tube Amplifier
+
+EPC
+  Electronic Power Conditioner
+
+EPC common
+  EPC that is common to all channels 
+  
+EPC channel 
+  EPC that is specific to one channel
+
+CAMP
+  Channel AMPlifier
 
 MPM
   Microwave Power Module
