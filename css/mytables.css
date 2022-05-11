@@ -1,5 +1,6 @@
 .myInput {
-  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-family: sans-serif;
   color: #333;
 	margin: 10px 10px;
   padding: 5px;
@@ -14,13 +15,14 @@
 
 .scroller {
   overflow-x: scroll;
-  scrollbar-color: #4FC3A1 #324960;
+  scrollbar-color: #2d639a #324960;
 }
 
 
 .myTable {
+  font-family: sans-serif;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: normal;
   border: none;
   border-collapse: collapse;
@@ -53,7 +55,7 @@
 
 .myTable thead th {
   color: #ffffff;
-  background: #4FC3A1;
+  background: #74a0c1;
 }
 
 .myTable thead th:nth-child(odd) {
@@ -67,7 +69,7 @@
 
 
 .myTable tr:hover {
-  background-color: #c4e4da;
+  background-color: #9dc3e1;
 }
 
 .myTable thead th.major-head{
@@ -77,8 +79,9 @@
 
 
 .large-table {
+  font-family: sans-serif;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: normal;
   border: none;
   border-collapse: collapse;
@@ -105,7 +108,7 @@
 
 .large-table thead th {
   color: #ffffff;
-  background: #4FC3A1;
+  background: #2D639A;
 }
 
 .large-table thead th:nth-child(odd) {
@@ -119,15 +122,16 @@
 
 
 .large-table tr:hover {
-  background-color: #c4e4da;
+  background-color: #9dc3e1;
 }
 
 .fa-star-o:before{content:"\f006"}
 
 /*static-table*/
 .static-table {
+  font-family: sans-serif;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: normal;
   border: none;
   border-collapse: collapse;
@@ -160,7 +164,7 @@
 
 .static-table thead th {
   color: #ffffff;
-  background: #4FC3A1;
+  background: #2D639A;
 }
 
 .static-table thead th:nth-child(odd) {
@@ -174,7 +178,7 @@
 
 
 .static-table tr:hover {
-  background-color: #c4e4da;
+  background-color: #9dc3e1;
 }
 
 .static-table thead th.major-head{

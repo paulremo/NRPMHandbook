@@ -20,7 +20,7 @@
 .other-message {
     word-wrap: break-word;
     width: 300px;
-    text-align: justify;
+    /*text-align: justify;*/
     background-color: rgb(2, 17, 67);
     color: azure;
     border-radius: 10px;
@@ -32,10 +32,26 @@
 .my-message {
     word-wrap: break-word;
     width: 300px;
-    text-align: justify;
+    /*text-align: justify;*/
     background-color: rgb(219, 167, 36);
     border-radius: 10px;
     padding: 5px;
     margin-left: 150px;
     margin-top: 20px;
+}
+
+.extra-bar {
+    word-wrap: break-word;
+    margin-left: 650px;
+    margin-top: 20px;
+}
+
+.button-fail{
+    background-color: rgb(0, 0, 0);
+    color:white
+}
+
+.button-next{
+    background-color: rgb(0, 0, 0);
+    color:white
 }
