@@ -8,7 +8,6 @@ version: 2
 python:
   install:
     - method: pip
-      path: .
     - requirements: readthedocs_requirements.txt
 
 # Set the version of Python and other tools you might need
