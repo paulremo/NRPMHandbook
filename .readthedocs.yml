@@ -13,13 +13,11 @@ python:
 build:
   os: ubuntu-22.04
   tools:
-    python: "3.7"
+    python: "3.8"
   jobs:
     pre_build:
       # Generate the Sphinx configuration for this Jupyter Book so it builds.
-      - echo "Starting 'pre_build' step!"
       - jupyter-book config sphinx 02_NRPMHandbook/
-      - echo "Finished 'pre_build' step!"
 
 
 # Build documentation in the 02_NRPMHandbook/ directory with Sphinx
