@@ -17,7 +17,8 @@ build:
   jobs:
     pre_build:
       # Generate the Sphinx configuration for this Jupyter Book so it builds.
-      - "jupyter-book config sphinx 02_NRPMHandbook/"
+      - jupyter-book config sphinx 02_NRPMHandbook/
+      - echo "Finished 'post_build' step!"
 
 
 # Build documentation in the 02_NRPMHandbook/ directory with Sphinx
