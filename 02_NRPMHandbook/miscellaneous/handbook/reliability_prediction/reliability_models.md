@@ -2,11 +2,11 @@
 # Reliability models for miscellaneous items
 There are three reliability models for miscellaneous items:
 
-“Standard model”, for generic miscellaneous items,
+* “Standard model”, for generic miscellaneous items,
 
-“Non-standard model”, for specific miscellaneous items.
+* “Non-standard model”, for specific miscellaneous items.
 
-“Holistic model”, for miscellaneous items which are not supported by “standard model” nor by a “non-standard model”.
+* “Holistic model”, for miscellaneous items which are not supported by “standard model” nor by a “non-standard model”.
 
 
 (misc_5_4_1)=
