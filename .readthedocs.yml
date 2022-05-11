@@ -5,6 +5,10 @@
 # Required
 version: 2
 
+python:
+  install:
+    - requirements: readthedocs_requirements.txt
+
 # Set the version of Python and other tools you might need
 build:
   os: ubuntu-22.04
@@ -15,15 +19,9 @@ build:
       # Generate the Sphinx configuration for this Jupyter Book so it builds.
       - "jupyter-book config sphinx 02_NRPMHandbook/"
 
-python:
-  install:
-    - requirements: readthedocs_requirements.txt
-
 
 # Build documentation in the 02_NRPMHandbook/ directory with Sphinx
 sphinx:
   configuration: 02_NRPMHandbook/conf.py
   builder: html
-  fail_on_warning: false
-
-
+  fail_on_warning: true
