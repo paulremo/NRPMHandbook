@@ -1,5 +1,5 @@
 (misc_5_5)=
-# Process for Reliability modelling
+# Process for reliability modelling
 This Section details how to build a reliability model for miscellaneous item.
 
 {numref}`Figure 5.4` provides the general process to apply whatever the basic model is: 
@@ -399,7 +399,7 @@ The definition of a model representing the probability to be hit by a debris is 
 
 
 (misc_5_5_1)=
-### Result after completing Step 1 to Step 7
+### Result after completing step 1 to step 7
 
 The method allows deriving a reliability function in time as presented here above.
 It is up to the discretion of the user to use the result appropriately:

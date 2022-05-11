@@ -1,4 +1,4 @@
-# Normative References
+# Normative references
 ```{bibliography}
 :filter: keywords % "nr"
 :labelprefix: NR_MIS_

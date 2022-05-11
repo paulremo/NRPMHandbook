@@ -126,13 +126,13 @@ miss ref above
 The data used for modelling provides information on anomalies observed during operations in orbit. Combined with data on the fleet (providing information on the satellites' lifetime), this anomaly data is used to derive the anomaly occurrence rate as a function of operating time. It is important to note that also anomalies without mission impact are considered in the occurrence model, with the aim to achieve a more relevant sample size. The following five severity classes are used to classify the anomalies by their effect on the mission:
 
 -   **Severity 1, HIGH**: Impact on mission between \]50% - 100%\]\
-    > A « MISSION HIGH CRITICAL » event leads, at the end of the failure scenario, to the loss of more than 50% of the mission (versus major performances) as defined in the Technical Specification.
+    > A "MISSION HIGH CRITICAL" event leads, at the end of the failure scenario, to the loss of more than 50% of the mission (versus major performances) as defined in the Technical Specification.
 
 -   **Severity 2, MEDIUM**: Impact on mission between \]10% - 50%\]\
-    > A « MISSION MEDIUM CRITICAL » event leads, at the end of the failure scenario, to the loss of more than 10% and less than 50% of the mission (versus major performances) as defined in the Technical Specification
+    > A "MISSION MEDIUM CRITICAL" event leads, at the end of the failure scenario, to the loss of more than 10% and less than 50% of the mission (versus major performances) as defined in the Technical Specification
 
 -   **Severity 3, LOW:** Impact on mission between \]0% - 10%\]\
-    > A « MISSION LOW CRITICAL » event leads, at the end of the failure scenario, to the loss of more than 0% and less than 10% of the mission (versus major performances) as defined in the Technical Specification.
+    > "A MISSION LOW CRITICAL" event leads, at the end of the failure scenario, to the loss of more than 0% and less than 10% of the mission (versus major performances) as defined in the Technical Specification.
 
 -   **Severity 4, NO IMPACT:** No mission impact, with hardware failure (recovery/workaround)\
     > The anomaly may lead to mission interruption or not, with definitive HW failure and mission fully resumed at the end of the failure scenario (recovery/workaround).
