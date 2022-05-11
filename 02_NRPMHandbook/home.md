@@ -56,7 +56,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 ^^^^
 <img class="link-image" src="_static/images//systemPicture.png" alt="logo system" style="width:200px;margin-left:20%;" onclick="redirect('system/handbook/introduction.html')">
 +++
-{badge}`RP@System,badge-primary`
+{badge}`System,badge-primary`
 
 [Go to System](system/handbook/introduction)
 ````
