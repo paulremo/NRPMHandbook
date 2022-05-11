@@ -50,6 +50,8 @@ sphinx:
     # modifications of bibtex reference style
     bibtex_default_style    : plain
     bibtex_reference_style  : label
+    execution_show_tb: True
+    execution_timeout: 60
     
 
 
