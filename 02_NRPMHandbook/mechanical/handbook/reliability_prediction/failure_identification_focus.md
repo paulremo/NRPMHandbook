@@ -17,14 +17,13 @@ The first step before starting a reliability assessment is a clear definition of
 Before going into the detailed reliability assessment of a mechanical item, it is helpful to identify its main working principle using the classifications presented in  below. 
 
 (meca_table4_3)=
-**Table 4.3: Classification of mechanical items based on their working principle.**
+```{list-table} Classification of mechanical items based on their working principle
+:class: interactive-table
+:name: Classification of mechanical items based on their working principle
 
-| **Category** |                                      | **Description**                                             | **Examples**                                                            |
-|----|-----------------|-----------------------|----------------------------|
-| I            | Active mechanisms                    | Mechanisms employing electric motors and actuators          | Deployment and pointing mechanisms, scanner, inertial measurement units |
-| II           | Passive and pyro actuated mechanisms | Mechanisms actuated by pre-stressed springs or pyro charges | Release and separation mechanisms, clamp bands, hinges                  |
-| III          | Non-fluidic structural components    | Components realizing the structural architecture            | Primary and secondary structure, housings, harness                      |
-| IV           | Fluidic structural components        | Components containing fluids or gases                       | Pressurized vessels, heat pipes, loop heat pipes, tubing                |
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_3.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
+
 
 ```{admonition} Note
 :class: note

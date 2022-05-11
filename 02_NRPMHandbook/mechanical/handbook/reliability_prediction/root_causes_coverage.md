@@ -3,18 +3,12 @@
 [Table 4 -1](meca_table4_1) gives an overview of the failure categories defined in Chapter 4 (Part I) and their coverage by the methods described in the present chapter. In the following subsections, the interpretation of each failure category within the mechanical chapter is briefly explained.
 
 (meca_table4_1)=
-**Table 4.1 : Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter**
+```{list-table} Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter
+:class: interactive-table
+:name: Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter
 
-```{glue:figure} meca_table4_1
-:name: "table4_1"
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_1.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
-
-|**Root cause category**|**Root cause category**|
-|-----------------------|-----------------------|
-|Random failures|Considered by the methods described in [Section 4.5](method_selection.md), including early wear-out failures and failures due to foreseen extrinsic stresses, provided that these cannot be explained by gross design or manufacturing errors (cf. systematic failures).|
-|Wear-out failures|Considered by the methods described in [Section 4.5](method_selection.md), especially by those based on structural reliability theory with time-dependent degradation models.  Safe life qualification alone is not sufficient as a justification to discard the probability of premature mechanical wear-out failures before the end of the nominal lifetime.  The consideration of additional failure mechanisms, which are assumed to be effectively handled during nominal lifetime, may be required in case of lifetime extensions (using the same methods, but with an extended modelling scope).|
-|Extrinsic failures|Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in-orbit (e.g. temperature) should be considered as stress contributors in the modelling of random and wear-out failures, see [Table 4 -2](meca_table4_2) in [Section 4.2.3](meca_4_2_3) for the most relevant interactions. A separate modelling may be required if the probability of additional failure mechanisms induced by the space environment cannot be neglected – e.g. space debris impact, see [Section 4.2.3](meca_4_2_3) for details.|
-|Systematic failures|Process related failures due to minor design and manufacturing weaknesses can be considered with the methods described in [Section 4.5](method_selection.md), provided that the failure process or mechanism remains unchanged (cf. random failures).  Gross design or manufacturing errors must be considered separately, see Section Error: Reference source not found in the System level chapter.|
 
 (meca_4_2_1)=
 ## Random failures
@@ -54,14 +48,12 @@ For mechanical reliability assessment, the following aspects need to be consider
 The extrinsic effects contributing most to mechanical failure mechanisms are summarized in [Table 4 -2](meca_table4_2). The full list of the environments which might cause extrinsic failures is presented in **Chapter 4 (Part I)**.
 
 (meca_table4_2)=
-**Table 4.2: Environments with the highest contribution to the extrinsic failures.**
+```{list-table} Environments with the highest contribution to the extrinsic failures
+:class: interactive-table
+:name: Environments with the highest contribution to the extrinsic failures
 
-| **Environment**     | **Failure mechanism**                         |
-|---------------------|-----------------------------------------------|
-| Vibrations          | distortion, fatigue, fracture                 |
-| Thermal loads       | distortion, lubrication wear, thermal fatigue |
-| Shocks              | distortion, fracture                          |
-| Space debris impact | Ultimate failure (in the failure mode sense)  |
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 Accounting for these effects with the methodology for mechanical reliability prediction presented in this chapter is possible as long as the failure modes and mechanisms considered remain unchanged. An example for an extrinsic failure root cause that introduces an additional failure mode is space debris (or micro meteorite) impact, which will be discussed in the remainder of this section. 
 

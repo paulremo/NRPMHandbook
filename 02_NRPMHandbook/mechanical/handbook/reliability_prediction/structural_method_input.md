@@ -242,10 +242,12 @@ With a given distributional assumption, the final step involves the estimation o
 
 Reference values for usual dispersions of material strength are provided in Table   4 -8, which is based on PSS-01-306 Draft 1 . The original source of the data dates back to 1987 , considering test results and publications available at that time. It should be noted that the coefficients of variation have been derived, and traditionally been used, assuming normal distributed stress and strength variables.
 
-**Table 4.8** : Reference values for usual dispersions (Coefficients of Variation) of strength variables .
+(meca_table4_8)=
+```{list-table} Reference values for usual dispersions (Coefficients of Variation) of strength variables
+:class: interactive-table
+:name: Reference values for usual dispersions (Coefficients of Variation) of strength variables
 
-```{glue:figure} meca_table4_8
-:name: "table4_8"
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_8.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
 ```{admonition} Remark
@@ -285,10 +287,12 @@ Distributional assumptions should nevertheless be backed by an engineering under
 
 Reference values for usual dispersions of applied stresses are provided in Table   4 -9, which is based on PSS-01-306 Draft 1 . The original source of the data dates back to 1987 , considering the knowledge and technology available at that time. With the development of new launchers ( refers to data collected for Ariane I to III, STS and Delta), much of this information must be considered as outdated, though probably conservative. Some of the highest values in Table   4 -9 are a direct result of the limited sample size of flight measurements in the same configuration that were available for the analysis. Moreover, it should be noted that the coefficients of variation have been derived, and traditionally been used, assuming normal distributed stress and strength. Also, for some loads it is not clear how the values provided are related to the underlying random process, e.g. whether the coefficient of variation for acoustic vibrations relates to the point-in-time response distribution, to the peak response, or to the resulting fatigue loading.
 
-**Table 4.9** : Reference values for usual dispersions (Coefficients of Variation) of loads .
+(meca_table4_9)=
+```{list-table} Reference values for usual dispersions (Coefficients of Variation) of loads
+:class: interactive-table
+:name: Reference values for usual dispersions (Coefficients of Variation) of loads
 
-```{glue:figure} meca_table4_9
-:name: "table4_9"
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_9.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
 (meca_4_6_5)=

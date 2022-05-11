@@ -225,39 +225,39 @@ Apart from these basic assumptions, the mathematical modelling is based on a pur
 
 *The anomaly occurrence probability is described by a Weibull distribution. The time dependent anomaly occurrence rate is defined by:*
 
-$\lambda_{}\left( t \right) = \frac{\beta}{\alpha^{\beta}}t^{\beta - 1}$
+> $\lambda_{}\left( t \right) = \frac{\beta}{\alpha^{\beta}}t^{\beta - 1}$
 
 The data set used for the modelling contains the repeated time to event counts of anomalies in a time interval and the number of satellites operating in the time interval . The cumulative event $\Lambda\left( t_{i},t_{i + 1} \right)$ rate between two times $t_{i}$ and $t_{i + 1}$ follows from the Weibull event rate:
 
-$\Lambda\left( t_{i},t_{i + 1} \right) = \int_{t_{i}}^{t_{i + 1}}{\lambda\left( t \right)\text{dt}}$
+> $\Lambda\left( t_{i},t_{i + 1} \right) = \int_{t_{i}}^{t_{i + 1}}{\lambda\left( t \right)\text{dt}}$
 
 The likelihood for count data of repeated events in one specific time interval $i$ is defined as:
 
-$L_{i} = \frac{\left( \Lambda\left( t_{i},t_{i + 1} \right) \right)^{n_{a,i}}e^{- \Lambda\left( t_{i},t_{i + 1} \right)}}{n_{a,i}!}$
+> $L_{i} = \frac{\left( \Lambda\left( t_{i},t_{i + 1} \right) \right)^{n_{a,i}}e^{- \Lambda\left( t_{i},t_{i + 1} \right)}}{n_{a,i}!}$
 
 For all time intervals the likelihood is:
 
-$L = \prod_{i = 1}^{m}\frac{\left( \Lambda\left( t_{i},t_{i + 1} \right) \right)^{n_{a,i}}e^{- \Lambda\left( t_{i},t_{i + 1} \right)}}{n_{a,i}!}$
+> $L = \prod_{i = 1}^{m}\frac{\left( \Lambda\left( t_{i},t_{i + 1} \right) \right)^{n_{a,i}}e^{- \Lambda\left( t_{i},t_{i + 1} \right)}}{n_{a,i}!}$
 
 The negative log-likelihood is given by:
 
-$l = - \sum_{i = 1}^{m}{\log\left( \frac{\left( \Lambda\left( t_{i},t_{i + 1} \right) \right)^{n_{a,i}}e^{- \Lambda\left( t_{i},t_{i + 1} \right)}}{n_{a,i}!} \right)}$
+> $l = - \sum_{i = 1}^{m}{\log\left( \frac{\left( \Lambda\left( t_{i},t_{i + 1} \right) \right)^{n_{a,i}}e^{- \Lambda\left( t_{i},t_{i + 1} \right)}}{n_{a,i}!} \right)}$
 
 The observations of the number of anomalies for each subsystem can be used to estimate the anomaly probability for each subsystem given an anomaly occurred.
 
 This probability can be modelled by a multinomial sampling distribution. The conjugate prior is a multivariate generalization of the beta distribution and known as Dirichlet distribution:
 
-$f\left( p_{i,\text{subsystem}} \vee \text{anomaly} \right) = \frac{\Gamma\left( \sum_{i = 1}^{12}\eta_{i} \right)}{\prod_{i = 1}^{12}{\Gamma\left( \eta_{i} \right)}}\prod_{i = 1}^{12}p_{i}^{\eta_{i} - 1}$
+> $f\left( p_{i,\text{subsystem}} \vee \text{anomaly} \right) = \frac{\Gamma\left( \sum_{i = 1}^{12}\eta_{i} \right)}{\prod_{i = 1}^{12}{\Gamma\left( \eta_{i} \right)}}\prod_{i = 1}^{12}p_{i}^{\eta_{i} - 1}$
 
 where $\eta_{i}$ represent the parameters of the Dirichlet distribution for the 12 subsystems.
 
 A non-informative prior is used with
 
-$f'\left( p_{i} \vee \text{anomaly} \right)^{}\text{DIR}\left( \eta_{i} = 1 \right)$
+> $f'\left( p_{i} \vee \text{anomaly} \right)^{}\text{DIR}\left( \eta_{i} = 1 \right)$
 
 Given the count data of anomalies per subsystem $n_{,i}$ the posterior distribution is given by:
 
-$f'{'\left( p_{i} \vee \text{anomaly} \right)}^{}\text{DIR}\left( \eta_{i} + n_{,i} \right)$
+> $f'{'\left( p_{i} \vee \text{anomaly} \right)}^{}\text{DIR}\left( \eta_{i} + n_{,i} \right)$
 
 **Anomaly classification modelling**
 
@@ -265,37 +265,33 @@ In a first step the probability of a hardware failure (Severity 4) and the compl
 
 This probabilities for a hardware failure $p_{1,\text{HW}\text{failure}}$ and no hardware failures $p_{2,\text{no}\text{HW}\text{failure}}$ conditional on an anomaly is modelled using a multinomial sampling distribution. The conjugate prior is a multivariate generalization of the beta distribution and known as Dirichlet distribution:
 
-$f\left( p_{i,\text{HW}\text{failure}} \vee \text{anomaly} \right) = \frac{\Gamma\left( \sum_{i = 1}^{2}\delta_{i} \right)}{\prod_{i = 1}^{2}{\Gamma\left( \delta_{i} \right)}}\prod_{i = 1}^{2}p_{i}^{\delta_{i} - 1}$
-
+> $f\left( p_{i,\text{HW}\text{failure}} \vee \text{anomaly} \right) = \frac{\Gamma\left( \sum_{i = 1}^{2}\delta_{i} \right)}{\prod_{i = 1}^{2}{\Gamma\left( \delta_{i} \right)}}\prod_{i = 1}^{2}p_{i}^{\delta_{i} - 1}$
 where
-
-$p_{1,\text{HW}\text{failure}} = \Pr\left( \text{hardware}\text{failure} \vee \text{anomaly} \right)$
-
-$p_{2,\text{no}\text{HW}\text{failure}} = \Pr\left( \text{no}\text{hardware}\text{failure} \vee \text{anomaly} \right) = 1 - p_{1,\text{HW}\text{failure}}$
-
-$\delta_{i}$ represents the parameter of the Dirichlet distribution. The marginal distribution of $p_{i}$ is a beta distribution.
+- $p_{1,\text{HW}\text{failure}} = \Pr\left( \text{hardware}\text{failure} \vee \text{anomaly} \right)$
+- $p_{2,\text{no}\text{HW}\text{failure}} = \Pr\left( \text{no}\text{hardware}\text{failure} \vee \text{anomaly} \right) = 1 - p_{1,\text{HW}\text{failure}}$
+- $\delta_{i}$ represents the parameter of the Dirichlet distribution. The marginal distribution of $p_{i}$ is a beta distribution.
 
 A non-informative prior is used as a prior with
 
-$f'\left( p_{i} \vee \text{anomaly} \right)^{}\text{DIR}\left( \delta_{i} = 1 \right)$
+> $f'\left( p_{i} \vee \text{anomaly} \right)^{}\text{DIR}\left( \delta_{i} = 1 \right)$
 
 Given the count data of hardware failures $n_{c1}$ and no hardware failures $n_{c2}$ the posterior distribution is given by
 
-$f'{'\left( p_{i} \vee \text{anomaly} \right)}^{}\text{DIR}\left( \delta_{i} + n_{\text{ci}} \right)$
+> $f'{'\left( p_{i} \vee \text{anomaly} \right)}^{}\text{DIR}\left( \delta_{i} + n_{\text{ci}} \right)$
 
 **Severity rate modelling**
 
 Given a hardware failure, the probability of observing a specific severity (Severity 1-4) can also be modelled using a Dirichlet distribution:
 
-$f\left( p_{\text{Severity}i} \vee \text{anomaly},\text{HW}\text{failure} \right) = \frac{\Gamma\left( \sum_{i = 1}^{4}\theta_{i} \right)}{\prod_{i = 1}^{4}{\Gamma\left( \theta_{i} \right)}}\prod_{i = 1}^{4}p_{i}^{\theta_{i} - 1}$
+> $f\left( p_{\text{Severity}i} \vee \text{anomaly},\text{HW}\text{failure} \right) = \frac{\Gamma\left( \sum_{i = 1}^{4}\theta_{i} \right)}{\prod_{i = 1}^{4}{\Gamma\left( \theta_{i} \right)}}\prod_{i = 1}^{4}p_{i}^{\theta_{i} - 1}$
 
 For the parameter estimation a non-informative prior is used.
 
-$f'\left( p_{\text{Severity}i} \vee \text{anomaly},\text{HW}\text{failure} \right)\text{DIR}\left( \theta_{i} = 1 \right)$
+> $f'\left( p_{\text{Severity}i} \vee \text{anomaly},\text{HW}\text{failure} \right)\text{DIR}\left( \theta_{i} = 1 \right)$
 
 Using the count data of different severity counts $n_{s1}$ distribution is given by
 
-$f''\left( p_{\text{Severity}i} \vee \text{anomaly},\text{HW}\text{failure} \right)\text{DIR}\left( \theta_{i} + n_{\text{si}} \right)$
+> $f''\left( p_{\text{Severity}i} \vee \text{anomaly},\text{HW}\text{failure} \right)\text{DIR}\left( \theta_{i} + n_{\text{si}} \right)$
 
 Detailed count data is available for modelling HW failure and the associated severity class for each defined subsystem. The analysis is performed for the entire system as well as for the subsystem in the case count data is available. Modelling the subsystems lead to larger uncertainties in the estimation due to larger statistical uncertainties.
 

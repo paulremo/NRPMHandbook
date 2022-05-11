@@ -303,7 +303,7 @@ The reliability prediction of the item is then provided by:
 ``  
 ```{math}
 :label: Equation 5.6
-P(FAILURE) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
+P(\text{FAILURE}) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 ```
 ````
 `````
@@ -358,7 +358,7 @@ The step 6 consists in adding a probability of failure related to Systematic Fai
 ``  
 ```{math}
 :label: Equation 5.7
-P(FAILURE) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})
+P(\text{FAILURE}) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})
 ```
 ````
 
@@ -383,7 +383,7 @@ The step 7 consists in adding a probability of failure related to the external p
 ``  
 ```{math}
 :label: Equation 5.8
-P(FAILURE) = 1 - (1 - EX) * (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})
+P(\text{FAILURE}) = 1 - \left(1 - EX\right) * \left(1 - SF\right) * \left(1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}\right)
 ```
 ````
 
