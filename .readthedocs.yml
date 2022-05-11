@@ -9,9 +9,7 @@ python:
   install:
     - method: pip
       path: .
-      extra_requirements:
-        - jupyter-book
-        - sphinx
+    - requirements: readthedocs_requirements.txt
 
 # Set the version of Python and other tools you might need
 build:
