@@ -18,9 +18,9 @@ The list provided below may contain some items that are in fact EEE or mechanica
 One of the major characteristics of miscellaneous parts/items is that they are various (functions, technologies, nature) and very specific in the sense they are designed to support dedicated and usual functions (e.g. battery) in a satellite:
 
 * They cover a wide range of Technologies (e.g. Chemical, fluidic…) apart “simple” electrical or mechanical technologies,
-* They are not fully covered by elementary « EEE or Mechanical » models (e.g. a battery cathode is not a pure EEE part),
+* They are not fully covered by elementary "EEE or Mechanical" models (e.g. a battery cathode is not a pure EEE part),
 * The failures may originate from particular failure mechanisms (e.g. catalytic bed degradation for N2H4 thrusters),
-* They may be supported by « Innovative » technology (e.g. Plasmic propulsion) with reduced in-orbit return,
+* They may be supported by "Innovative" technology (e.g. Plasmic propulsion) with reduced in-orbit return,
 * They can be submitted to Wear-out process (e.g. battery calendar aging) depending on their nature.
 
 ```{note}

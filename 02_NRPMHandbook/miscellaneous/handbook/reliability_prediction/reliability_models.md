@@ -1,5 +1,5 @@
 (misc_5_4)=
-# Reliability Models for miscellaneous items
+# Reliability models for miscellaneous items
 There are three reliability models for miscellaneous items:
 
 “Standard model”, for generic miscellaneous items,

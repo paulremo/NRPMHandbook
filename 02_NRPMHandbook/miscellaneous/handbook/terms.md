@@ -6,6 +6,6 @@
 ## Terms specific for the present handbook
 
 
-## Convention and Nomenclature
+## Convention and nomenclature
 
 
