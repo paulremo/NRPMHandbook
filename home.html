@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="_static/interactivity/css/guide_misc.css" />
     <link rel="stylesheet" type="text/css" href="_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="_static/interactivity/css/misc_failure_rate_sliders.css" />
@@ -56,7 +57,9 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="_static/interactivity/js/decision_tree2.js"></script>
     <script src="_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="_static/interactivity/js/guide_misc.js"></script>
     <script src="_static/interactivity/js/map3.js"></script>
     <script src="_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="_static/interactivity/js/misc_failure_rate_sliders.js"></script>
@@ -77,7 +80,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Welcome to the EEE chapter !" href="eee/mainEEE.html" />
+    <link rel="next" title="1. Introduction" href="preface/intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,18 +126,40 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface/documentation.html">
+   2. Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface/terms.html">
+   3. Terms, definitions and abbreviations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   EEE chapter
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="eee/mainEEE.html">
-   1. Handbook
+   4. Handbook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="eee/models/intro_models.html">
-   2. Models
+   5. Models
   </a>
  </li>
 </ul>
@@ -146,7 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="mechanical/handbook/introduction.html">
-   3. Handbook
+   6. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -156,22 +181,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/handbook/scope.html">
-     3.1. Scope
+     6.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/handbook/normative_references.html">
-     3.2. Normative References
+     6.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/handbook/terms.html">
-     3.3. Terms, definitions and abbreviated terms
+     6.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="mechanical/handbook/reliability_prediction/reliability_prediction.html">
-     3.4. Reliability prediction for mechanical and structural parts and assemblies
+     6.4. Reliability prediction for mechanical and structural parts and assemblies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -181,56 +206,56 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
-       3.4.1. Process for mechanical reliability prediction
+       6.4.1. Process for mechanical reliability prediction
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.2. Root causes coverage
+       6.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.3. Data sources and methods
+       6.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.4. Failure mechanisms identification and focus
+       6.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.5. Method selection for different items and failure mechanisms
+       6.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.6. Structural reliability methods and inputs
+       6.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.7. Structural reliability models and equations
+       6.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/examples.html">
-       3.4.8. Examples
+       6.4.8. Examples
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/handbook/bibliographic_references.html">
-     3.5. Bibliographic References
+     6.5. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="mechanical/models/introduction.html">
-   4. Models
+   7. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -240,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/models/solid_lubricant_wear.html">
-     4.1. Solid lubricant wear
+     7.1. Solid lubricant wear
     </a>
    </li>
   </ul>
@@ -254,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="miscellaneous/handbook/introduction.html">
-   5. Handbook
+   8. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -264,22 +289,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/scope.html">
-     5.1. Scope
+     8.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/normative_references.html">
-     5.2. Normative References
+     8.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/terms.html">
-     5.3. Terms, definitions and abbreviated terms
+     8.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/reliability_prediction.html">
-     5.4. Reliability prediction for miscellaneous items
+     8.4. Reliability prediction for miscellaneous items
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -289,71 +314,71 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/items.html">
-       5.4.1. List of miscellaneous items
+       8.4.1. List of miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/root_causes_coverage.html">
-       5.4.2. Root causes coverage
+       8.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/data_sources_methods.html">
-       5.4.3. Data sources
+       8.4.3. Data sources
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/reliability_models.html">
-       5.4.4. Reliability Models for miscellaneous items
+       8.4.4. Reliability Models for miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html">
-       5.4.5. Process for Reliability modelling
+       8.4.5. Process for Reliability modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/ior_results.html">
-       5.4.6. Use of IOR data and/or tests results
+       8.4.6. Use of IOR data and/or tests results
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html">
-       5.4.7. Basic failure rate derivation for “non-standard model” items
+       8.4.7. Basic failure rate derivation for “non-standard model” items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/reliability_data_sm.html">
-       5.4.8. Reliability Data for Miscellaneous “Standard model”
+       8.4.8. Reliability Data for Miscellaneous “Standard model”
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/conclusion.html">
-     5.5. Conclusion
+     8.5. Conclusion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/annexA.html">
-     5.6. Annex A
+     8.6. Annex A
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/annexB.html">
-     5.7. Annex B
+     8.7. Annex B
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/bibliographic_references.html">
-     5.8. Bibliographic References
+     8.8. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="miscellaneous/models/introduction_guide_miscellaneous.html">
-   6. Models
+   9. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -363,7 +388,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/models/failure_rate_processing.html">
-     6.1. Failure rate processing
+     9.1. Failure rate processing
     </a>
    </li>
   </ul>
@@ -377,7 +402,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="system/handbook/introduction.html">
-   7. Handbook
+   10. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -387,22 +412,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="system/handbook/scope.html">
-     7.1. Scope
+     10.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="system/handbook/normative_references.html">
-     7.2. Normative References
+     10.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="system/handbook/terms.html">
-     7.3. Terms, definitions and abbreviated terms
+     10.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="system/handbook/reliability_prediction/reliability_prediction.html">
-     7.4. Reliability prediction for system level items
+     10.4. Reliability prediction for system level items
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -412,66 +437,66 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/reliability_prediction_different_levels.html">
-       7.4.1. Reliability prediction at different levels
+       10.4.1. Reliability prediction at different levels
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/root_causes_coverage.html">
-       7.4.2. Root causes coverage
+       10.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/methods.html">
-       7.4.3. System level methods
+       10.4.3. System level methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/reliability_assessment_phased_missions.html">
-       7.4.4. Reliability assessment of phased missions
+       10.4.4. Reliability assessment of phased missions
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/important_measures.html">
-       7.4.5. Important measures
+       10.4.5. Important measures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/reliability_assessment_degraded_systems.html">
-       7.4.6. Reliability assessment of degraded systems
+       10.4.6. Reliability assessment of degraded systems
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/modelling_common_cause_failure.html">
-       7.4.7. Modelling of Common Cause failure
+       10.4.7. Modelling of Common Cause failure
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/system_level_modelling_wear_out.html">
-       7.4.8. System level modelling of wear-out
+       10.4.8. System level modelling of wear-out
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/systematic_failure_modelling.html">
-       7.4.9. Systematic failure modelling
+       10.4.9. Systematic failure modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/consideration_software_failures.html">
-       7.4.10. Consideration of software failures
+       10.4.10. Consideration of software failures
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="system/handbook/conclusion.html">
-     7.5. Conclusion
+     10.5. Conclusion
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="system/models/intro_models.html">
-   8. Models
+   11. Models
   </a>
  </li>
 </ul>
@@ -519,7 +544,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/home.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -539,10 +564,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/paulremo/NRPMHandbook/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/paulremo/NRPMHandbook/issues/new?title=Issue%20on%20page%20%2Fhome.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/paulremo/NRPMHandbook/edit/main/02_NRPMHandbook/intro.md"><button
+        <a class="edit-button" href="https://github.com/paulremo/NRPMHandbook/edit/main/02_NRPMHandbook/home.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -582,7 +607,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-the-nrpm-digital-handbook">
 <h1>Welcome to the NRPM Digital Handbook !<a class="headerlink" href="#welcome-to-the-nrpm-digital-handbook" title="Permalink to this headline">¶</a></h1>
-<p>This is the digital version of the <a class="reference internal" href="#glossary-intro"><span class="std std-ref">NRPM</span></a> handbook for reliability.space.</p>
+<p>This is the digital version of the <span class="xref myst">NRPM</span> handbook for reliability.space.</p>
 <div class="tip admonition">
 <p class="admonition-title">TIPS</p>
 <p>You can find the table of contents just here on the left side, or you can look below and find <a class="reference internal" href="system/mainSystem.html#toc"><span class="std std-ref">another one</span></a> at the end of the page !</p>
@@ -590,7 +615,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Here you can find help, calculation processes and fine graphical representations about <a class="reference internal" href="eee/mainEEE.html"><span class="doc std std-doc">EEE</span></a>, <a class="reference internal" href="mechanical/handbook/introduction.html"><span class="doc std std-doc">Mechanical</span></a>, <a class="reference internal" href="miscellaneous/handbook/introduction.html"><span class="doc std std-doc">Miscellaneous</span></a> and <a class="reference internal" href="system/handbook/introduction.html"><span class="doc std std-doc">RP at System Level</span></a> !</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you have trouble with the acronyms, feel free to have a look on the <a class="reference internal" href="#glossary-intro"><span class="std std-ref">glossary</span></a></p>
+<p>If you have trouble with the acronyms, feel free to have a look on the <span class="xref myst">glossary</span></p>
 </div>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
@@ -656,150 +681,17 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>If you want more details, you can go there.</p>
-<p id="toc"><strong>Table of contents</strong></p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Click to show the table of contents<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">EEE chapter</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="eee/mainEEE.html">1. Handbook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="eee/models/intro_models.html">2. Models</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mechanical chapter</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="mechanical/handbook/introduction.html">3. Handbook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mechanical/models/introduction.html">4. Models</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous chapter</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous/handbook/introduction.html">5. Handbook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous/models/introduction_guide_miscellaneous.html">6. Models</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">System chapter</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="system/handbook/introduction.html">7. Handbook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="system/models/intro_models.html">8. Models</a></li>
-</ul>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
-</details><p id="glossary-intro"><strong>Glossary</strong></p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Click to show the glossary<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<dl class="glossary simple">
-<dt id="term-EEE">EEE<a class="headerlink" href="#term-EEE" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Electrical, Electronic and Electro-mechanical</p>
-</dd>
-<dt id="term-RP">RP<a class="headerlink" href="#term-RP" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Reliability Prediction</p>
-</dd>
-<dt id="term-NRPM">NRPM<a class="headerlink" href="#term-NRPM" title="Permalink to this term">¶</a></dt><dd><p class="card-text">New Reliability Prediction Methodology</p>
-</dd>
-<dt id="term-IOR">IOR<a class="headerlink" href="#term-IOR" title="Permalink to this term">¶</a></dt><dd><p class="card-text">In Orbit Return (Data/Information)</p>
-</dd>
-<dt id="term-N2H4-thrusters">N2H4 thrusters<a class="headerlink" href="#term-N2H4-thrusters" title="Permalink to this term">¶</a></dt><dd><p class="card-text">hydrazine thrusters</p>
-</dd>
-<dt id="term-MIS">MIS<a class="headerlink" href="#term-MIS" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Miscellaneous (Items/Parts)</p>
-</dd>
-<dt id="term-SYS">SYS<a class="headerlink" href="#term-SYS" title="Permalink to this term">¶</a></dt><dd><p class="card-text">System</p>
-</dd>
-<dt id="term-MEC">MEC<a class="headerlink" href="#term-MEC" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Mechanical (Items/Parts)</p>
-</dd>
-<dt id="term-RF">RF<a class="headerlink" href="#term-RF" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Random Failure</p>
-</dd>
-<dt id="term-SF">SF<a class="headerlink" href="#term-SF" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Systematic Failure</p>
-</dd>
-<dt id="term-WO">WO<a class="headerlink" href="#term-WO" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Wear Out Failure</p>
-</dd>
-<dt id="term-EX">EX<a class="headerlink" href="#term-EX" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Extrinsic Failure</p>
-</dd>
-<dt id="term-STD">STD<a class="headerlink" href="#term-STD" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Standard (Model)</p>
-</dd>
-<dt id="term-GEO">GEO<a class="headerlink" href="#term-GEO" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Geostationary Orbit</p>
-</dd>
-<dt id="term-LEO">LEO<a class="headerlink" href="#term-LEO" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Low Earth Orbit</p>
-</dd>
-<dt id="term-MEO">MEO<a class="headerlink" href="#term-MEO" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Medium Earth Orbit</p>
-</dd>
-<dt id="term-TWTA">TWTA<a class="headerlink" href="#term-TWTA" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Traveling Wave Tube Amplifier</p>
-</dd>
-<dt id="term-MPM">MPM<a class="headerlink" href="#term-MPM" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Microwave Power Module</p>
-</dd>
-<dt id="term-0">RF<a class="headerlink" href="#term-0" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Radio Frequency</p>
-</dd>
-<dt id="term-PWR">PWR<a class="headerlink" href="#term-PWR" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Power</p>
-</dd>
-<dt id="term-PROP">PROP<a class="headerlink" href="#term-PROP" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Propulsion</p>
-</dd>
-<dt id="term-AOCS">AOCS<a class="headerlink" href="#term-AOCS" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Attitude and Orbit Control System</p>
-</dd>
-<dt id="term-DEP">DEP<a class="headerlink" href="#term-DEP" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Deployment</p>
-</dd>
-<dt id="term-RW">RW<a class="headerlink" href="#term-RW" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Reaction Wheel</p>
-</dd>
-<dt id="term-SADM">SADM<a class="headerlink" href="#term-SADM" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Solar Array Drive Mechanism</p>
-</dd>
-<dt id="term-SA">SA<a class="headerlink" href="#term-SA" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Solar Array</p>
-</dd>
-<dt id="term-GaAs">GaAs<a class="headerlink" href="#term-GaAs" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Galliumarsenid</p>
-</dd>
-<dt id="term-Si">Si<a class="headerlink" href="#term-Si" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Silicium</p>
-</dd>
-<dt id="term-GaN">GaN<a class="headerlink" href="#term-GaN" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Galliumnitrid</p>
-</dd>
-<dt id="term-FMEA">FMEA<a class="headerlink" href="#term-FMEA" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Failure Mode and Effects Analysis</p>
-</dd>
-<dt id="term-DFMEA">DFMEA<a class="headerlink" href="#term-DFMEA" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Design Failure Mode and Effects Analysis</p>
-</dd>
-<dt id="term-PFMEA">PFMEA<a class="headerlink" href="#term-PFMEA" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Process Failure Mode and Effects Analysis</p>
-</dd>
-<dt id="term-PoF">PoF<a class="headerlink" href="#term-PoF" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Physics of Failure</p>
-</dd>
-<dt id="term-RPN">RPN<a class="headerlink" href="#term-RPN" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Risk Priority Number</p>
-</dd>
-<dt id="term-COTS">COTS<a class="headerlink" href="#term-COTS" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Components Out of The Shelf</p>
-</dd>
-<dt id="term-SSPA">SSPA<a class="headerlink" href="#term-SSPA" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Solid State Power Amplifiers</p>
-</dd>
-<dt id="term-TTF">TTF<a class="headerlink" href="#term-TTF" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Time To Failure</p>
-</dd>
-<dt id="term-MTTF">MTTF<a class="headerlink" href="#term-MTTF" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Mean Time To Failure</p>
-</dd>
-<dt id="term-TAS">TAS<a class="headerlink" href="#term-TAS" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Thales Alenia Space</p>
-</dd>
-<dt id="term-ADS">ADS<a class="headerlink" href="#term-ADS" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Airbus Defence and Space</p>
-</dd>
-<dt id="term-Matrisk">Matrisk<a class="headerlink" href="#term-Matrisk" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Managing technical risks</p>
-</dd>
-<dt id="term-RAMS">RAMS<a class="headerlink" href="#term-RAMS" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Reliability, Availability, Maintainability, Safety</p>
-</dd>
-<dt id="term-1">SA<a class="headerlink" href="#term-1" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Solar Array</p>
-</dd>
-<dt id="term-I_SA">I_SA<a class="headerlink" href="#term-I_SA" title="Permalink to this term">¶</a></dt><dd><p class="card-text">SA current</p>
-</dd>
-<dt id="term-TM">TM<a class="headerlink" href="#term-TM" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Telemetry</p>
-</dd>
-<dt id="term-SPF">SPF<a class="headerlink" href="#term-SPF" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Single Point Failure</p>
-</dd>
-<dt id="term-TRL">TRL<a class="headerlink" href="#term-TRL" title="Permalink to this term">¶</a></dt><dd><p class="card-text">Technology Readiness Level</p>
-</dd>
-</dl>
-</div>
-</details></div>
 
     <script type="text/x-thebe-config">
     {
@@ -826,10 +718,10 @@ Click to show the glossary<div class="summary-down docutils">
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="eee/mainEEE.html" title="next page">
+    <a class='right-next' id="next-link" href="preface/intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Welcome to the EEE chapter !</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

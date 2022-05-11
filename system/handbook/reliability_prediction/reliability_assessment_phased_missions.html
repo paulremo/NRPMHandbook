@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.4.4. Reliability assessment of phased missions &#8212; NRPM Digital handbook</title>
+    <title>10.4.4. Reliability assessment of phased missions &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/guide_misc.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
@@ -56,7 +57,9 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../../../_static/interactivity/js/decision_tree2.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../../_static/interactivity/js/guide_misc.js"></script>
     <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
@@ -79,8 +82,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="7.4.5. Important measures" href="important_measures.html" />
-    <link rel="prev" title="7.4.3. System level methods" href="methods.html" />
+    <link rel="next" title="10.4.5. Important measures" href="important_measures.html" />
+    <link rel="prev" title="10.4.3. System level methods" href="methods.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,8 +122,30 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../intro.html">
+  <a class="reference internal" href="../../../home.html">
    Welcome to the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/documentation.html">
+   2. Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/terms.html">
+   3. Terms, definitions and abbreviations
   </a>
  </li>
 </ul>
@@ -132,12 +157,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../eee/mainEEE.html">
-   1. Handbook
+   4. Handbook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../eee/models/intro_models.html">
-   2. Models
+   5. Models
   </a>
  </li>
 </ul>
@@ -149,7 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/handbook/introduction.html">
-   3. Handbook
+   6. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -159,22 +184,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/scope.html">
-     3.1. Scope
+     6.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/normative_references.html">
-     3.2. Normative References
+     6.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/terms.html">
-     3.3. Terms, definitions and abbreviated terms
+     6.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/reliability_prediction.html">
-     3.4. Reliability prediction for mechanical and structural parts and assemblies
+     6.4. Reliability prediction for mechanical and structural parts and assemblies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -184,56 +209,56 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
-       3.4.1. Process for mechanical reliability prediction
+       6.4.1. Process for mechanical reliability prediction
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.2. Root causes coverage
+       6.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.3. Data sources and methods
+       6.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.4. Failure mechanisms identification and focus
+       6.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.5. Method selection for different items and failure mechanisms
+       6.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.6. Structural reliability methods and inputs
+       6.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.7. Structural reliability models and equations
+       6.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
-       3.4.8. Examples
+       6.4.8. Examples
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/bibliographic_references.html">
-     3.5. Bibliographic References
+     6.5. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/models/introduction.html">
-   4. Models
+   7. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -243,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/models/solid_lubricant_wear.html">
-     4.1. Solid lubricant wear
+     7.1. Solid lubricant wear
     </a>
    </li>
   </ul>
@@ -257,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../miscellaneous/handbook/introduction.html">
-   5. Handbook
+   8. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -267,22 +292,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/scope.html">
-     5.1. Scope
+     8.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/normative_references.html">
-     5.2. Normative References
+     8.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/terms.html">
-     5.3. Terms, definitions and abbreviated terms
+     8.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_prediction.html">
-     5.4. Reliability prediction for miscellaneous items
+     8.4. Reliability prediction for miscellaneous items
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -292,71 +317,71 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/items.html">
-       5.4.1. List of miscellaneous items
+       8.4.1. List of miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/root_causes_coverage.html">
-       5.4.2. Root causes coverage
+       8.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/data_sources_methods.html">
-       5.4.3. Data sources
+       8.4.3. Data sources
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_models.html">
-       5.4.4. Reliability Models for miscellaneous items
+       8.4.4. Reliability Models for miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html">
-       5.4.5. Process for Reliability modelling
+       8.4.5. Process for Reliability modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/ior_results.html">
-       5.4.6. Use of IOR data and/or tests results
+       8.4.6. Use of IOR data and/or tests results
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html">
-       5.4.7. Basic failure rate derivation for “non-standard model” items
+       8.4.7. Basic failure rate derivation for “non-standard model” items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_data_sm.html">
-       5.4.8. Reliability Data for Miscellaneous “Standard model”
+       8.4.8. Reliability Data for Miscellaneous “Standard model”
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/conclusion.html">
-     5.5. Conclusion
+     8.5. Conclusion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/annexA.html">
-     5.6. Annex A
+     8.6. Annex A
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/annexB.html">
-     5.7. Annex B
+     8.7. Annex B
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/bibliographic_references.html">
-     5.8. Bibliographic References
+     8.8. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../miscellaneous/models/introduction_guide_miscellaneous.html">
-   6. Models
+   9. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -366,7 +391,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/models/failure_rate_processing.html">
-     6.1. Failure rate processing
+     9.1. Failure rate processing
     </a>
    </li>
   </ul>
@@ -380,7 +405,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../introduction.html">
-   7. Handbook
+   10. Handbook
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -390,22 +415,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../scope.html">
-     7.1. Scope
+     10.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../normative_references.html">
-     7.2. Normative References
+     10.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../terms.html">
-     7.3. Terms, definitions and abbreviated terms
+     10.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="reliability_prediction.html">
-     7.4. Reliability prediction for system level items
+     10.4. Reliability prediction for system level items
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -415,66 +440,66 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_prediction_different_levels.html">
-       7.4.1. Reliability prediction at different levels
+       10.4.1. Reliability prediction at different levels
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="root_causes_coverage.html">
-       7.4.2. Root causes coverage
+       10.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="methods.html">
-       7.4.3. System level methods
+       10.4.3. System level methods
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       7.4.4. Reliability assessment of phased missions
+       10.4.4. Reliability assessment of phased missions
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="important_measures.html">
-       7.4.5. Important measures
+       10.4.5. Important measures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_assessment_degraded_systems.html">
-       7.4.6. Reliability assessment of degraded systems
+       10.4.6. Reliability assessment of degraded systems
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="modelling_common_cause_failure.html">
-       7.4.7. Modelling of Common Cause failure
+       10.4.7. Modelling of Common Cause failure
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system_level_modelling_wear_out.html">
-       7.4.8. System level modelling of wear-out
+       10.4.8. System level modelling of wear-out
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="systematic_failure_modelling.html">
-       7.4.9. Systematic failure modelling
+       10.4.9. Systematic failure modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="consideration_software_failures.html">
-       7.4.10. Consideration of software failures
+       10.4.10. Consideration of software failures
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../conclusion.html">
-     7.5. Conclusion
+     10.5. Conclusion
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../models/intro_models.html">
-   8. Models
+   11. Models
   </a>
  </li>
 </ul>
@@ -572,27 +597,27 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mission-phase-success-criteria">
-   7.4.4.1. Mission phase success criteria
+   10.4.4.1. Mission phase success criteria
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mission-phase-dependent-failure-rates">
-   7.4.4.2. Mission phase dependent failure rates
+   10.4.4.2. Mission phase dependent failure rates
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#combinatorial-methods-for-phased-mission-based-on-mini-components">
-   7.4.4.3. Combinatorial methods for phased mission based on mini-components
+   10.4.4.3. Combinatorial methods for phased mission based on mini-components
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#boolean-phase-algebra">
-   7.4.4.4. Boolean phase algebra
+   10.4.4.4. Boolean phase algebra
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#state-space-model-of-phased-mission">
-   7.4.4.5. State space model of phased mission
+   10.4.4.5. State space model of phased mission
   </a>
  </li>
 </ul>
@@ -617,27 +642,27 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mission-phase-success-criteria">
-   7.4.4.1. Mission phase success criteria
+   10.4.4.1. Mission phase success criteria
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mission-phase-dependent-failure-rates">
-   7.4.4.2. Mission phase dependent failure rates
+   10.4.4.2. Mission phase dependent failure rates
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#combinatorial-methods-for-phased-mission-based-on-mini-components">
-   7.4.4.3. Combinatorial methods for phased mission based on mini-components
+   10.4.4.3. Combinatorial methods for phased mission based on mini-components
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#boolean-phase-algebra">
-   7.4.4.4. Boolean phase algebra
+   10.4.4.4. Boolean phase algebra
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#state-space-model-of-phased-mission">
-   7.4.4.5. State space model of phased mission
+   10.4.4.5. State space model of phased mission
   </a>
  </li>
 </ul>
@@ -650,11 +675,11 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="reliability-assessment-of-phased-missions">
-<h1><span class="section-number">7.4.4. </span>Reliability assessment of phased missions<a class="headerlink" href="#reliability-assessment-of-phased-missions" title="Permalink to this headline">¶</a></h1>
-<p>The operation of missions encountered in space involves several different tasks or phases that must be accomplished in sequence. Systems used like this are usually called phased-mission systems. <a class="reference internal" href="#figure-7-24"><span class="std std-numref">Fig. 7.24</span></a> shows an example of a phased mission of a space satellite system.</p>
+<h1><span class="section-number">10.4.4. </span>Reliability assessment of phased missions<a class="headerlink" href="#reliability-assessment-of-phased-missions" title="Permalink to this headline">¶</a></h1>
+<p>The operation of missions encountered in space involves several different tasks or phases that must be accomplished in sequence. Systems used like this are usually called phased-mission systems. <a class="reference internal" href="#figure-7-24"><span class="std std-numref">Fig. 10.24</span></a> shows an example of a phased mission of a space satellite system.</p>
 <div class="figure align-default" id="figure-7-24">
 <span id="syst-figure4-24"></span><a class="reference internal image-reference" href="../../../_images/figure4_24.png"><img alt="../../../_images/figure4_24.png" src="../../../_images/figure4_24.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.24 </span><span class="caption-text">Example phased space mission</span><a class="headerlink" href="#figure-7-24" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.24 </span><span class="caption-text">Example phased space mission</span><a class="headerlink" href="#figure-7-24" title="Permalink to this image">¶</a></p>
 </div>
 <p>During each mission phase, the system has to accomplish a specified task and may be subject to different stresses as well as different dependability requirements. Thus, system configuration, success criteria, and component failure behaviour may change from phase to phase. This dynamic behaviour usually requires a distinct model for each phase of the mission in the reliability analysis. Generally, there are two classes of approaches to the evaluation of phased-mission systems:</p>
 <ul class="simple">
@@ -669,7 +694,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p>In the following the analytical approach based on the combinatorial method and state space based model using Markov will be introduced.</p>
 <div class="section" id="mission-phase-success-criteria">
-<h2><span class="section-number">7.4.4.1. </span>Mission phase success criteria<a class="headerlink" href="#mission-phase-success-criteria" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.4.1. </span>Mission phase success criteria<a class="headerlink" href="#mission-phase-success-criteria" title="Permalink to this headline">¶</a></h2>
 <p>To analyse a phased mission, it is important to understand the functional relation of system components in each phase, which can be represented through the methods shown in Section Error: Reference source not found, e.g. RBD or FTA. In general, two cases have to be considered.</p>
 <ul class="simple">
 <li><p>Success criteria for the system are phase independent, which means the same functional relation and thus the same reliability block diagram can be used for all phases.</p></li>
@@ -697,13 +722,13 @@ const thebe_selector_output = ".output, .cell_output"
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_7.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 </div>
 <div class="section" id="mission-phase-dependent-failure-rates">
-<span id="syst-4-4-2"></span><h2><span class="section-number">7.4.4.2. </span>Mission phase dependent failure rates<a class="headerlink" href="#mission-phase-dependent-failure-rates" title="Permalink to this headline">¶</a></h2>
-<p>During the different phases of the space mission different load levels might be applied on the components. Vibration and acceleration loads are reaching the peak during launch phase, and in-orbit acceleration loads are significantly lower but radiation is high. This can be considered by phase specific failure rates for the system elements. For constant failure rates, the reliability function of a component in phase  can be expressed as shown in Eq. <a class="reference internal" href="#equation-equation-7-30">(7.30)</a>.</p>
+<span id="syst-4-4-2"></span><h2><span class="section-number">10.4.4.2. </span>Mission phase dependent failure rates<a class="headerlink" href="#mission-phase-dependent-failure-rates" title="Permalink to this headline">¶</a></h2>
+<p>During the different phases of the space mission different load levels might be applied on the components. Vibration and acceleration loads are reaching the peak during launch phase, and in-orbit acceleration loads are significantly lower but radiation is high. This can be considered by phase specific failure rates for the system elements. For constant failure rates, the reliability function of a component in phase  can be expressed as shown in Eq. <a class="reference internal" href="#equation-equation-7-30">(10.30)</a>.</p>
 <div class="equation admonition" id="syst-equation4-30">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-30">
-<span class="eqno">(7.30)<a class="headerlink" href="#equation-equation-7-30" title="Permalink to this equation">¶</a></span>\[R_{k}(t) = \text{exp}\left(-\lambda_{k}t\right)\text{exp}\left(-\sum_{i=1}^{i=k-1}\lambda_{i}T_{i}\right)\]</div>
+<span class="eqno">(10.30)<a class="headerlink" href="#equation-equation-7-30" title="Permalink to this equation">¶</a></span>\[R_{k}(t) = \text{exp}\left(-\lambda_{k}t\right)\text{exp}\left(-\sum_{i=1}^{i=k-1}\lambda_{i}T_{i}\right)\]</div>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(R_{k}\)</span> denotes the reliability of the component in phase <span class="math notranslate nohighlight">\(k\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(T_{i}\)</span> denotes the duration of phase <span class="math notranslate nohighlight">\(i\)</span></p></li>
@@ -719,25 +744,25 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="combinatorial-methods-for-phased-mission-based-on-mini-components">
-<h2><span class="section-number">7.4.4.3. </span>Combinatorial methods for phased mission based on mini-components<a class="headerlink" href="#combinatorial-methods-for-phased-mission-based-on-mini-components" title="Permalink to this headline">¶</a></h2>
-<p>The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms Error: Reference source not found proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in <a class="reference internal" href="#figure-7-25"><span class="std std-numref">Fig. 7.25</span></a>. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases.</p>
+<h2><span class="section-number">10.4.4.3. </span>Combinatorial methods for phased mission based on mini-components<a class="headerlink" href="#combinatorial-methods-for-phased-mission-based-on-mini-components" title="Permalink to this headline">¶</a></h2>
+<p>The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms Error: Reference source not found proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in <a class="reference internal" href="#figure-7-25"><span class="std std-numref">Fig. 10.25</span></a>. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>Miss ref just above</p>
 </div>
 <div class="figure align-default" id="figure-7-25">
 <span id="syst-figure4-25"></span><a class="reference internal image-reference" href="../../../_images/figure4_25.png"><img alt="../../../_images/figure4_25.png" src="../../../_images/figure4_25.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.25 </span><span class="caption-text">Example for mini components representing component A in three phases</span><a class="headerlink" href="#figure-7-25" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.25 </span><span class="caption-text">Example for mini components representing component A in three phases</span><a class="headerlink" href="#figure-7-25" title="Permalink to this image">¶</a></p>
 </div>
-<p>The concept of mini components is shown in the following, using an example of a multi-phase mission with three component <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span>. The interaction of the system components in order to successfully complete the individual phases is represented through the reliability block diagram for each phase, as shown in <a class="reference internal" href="#figure-7-26"><span class="std std-numref">Fig. 7.26</span></a>.</p>
+<p>The concept of mini components is shown in the following, using an example of a multi-phase mission with three component <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span>. The interaction of the system components in order to successfully complete the individual phases is represented through the reliability block diagram for each phase, as shown in <a class="reference internal" href="#figure-7-26"><span class="std std-numref">Fig. 10.26</span></a>.</p>
 <div class="figure align-default" id="figure-7-26">
 <span id="syst-figure4-26"></span><a class="reference internal image-reference" href="../../../_images/figure4_26.png"><img alt="../../../_images/figure4_26.png" src="../../../_images/figure4_26.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.26 </span><span class="caption-text">Reliability block diagram for individual phases of a multi-phase mission</span><a class="headerlink" href="#figure-7-26" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.26 </span><span class="caption-text">Reliability block diagram for individual phases of a multi-phase mission</span><a class="headerlink" href="#figure-7-26" title="Permalink to this image">¶</a></p>
 </div>
-<p>From the multi-phase mission shown in <a class="reference internal" href="#figure-7-26"><span class="std std-numref">Fig. 7.26</span></a>, a single-phase mission model as shown in <a class="reference internal" href="#figure-7-27"><span class="std std-numref">Fig. 7.27</span></a> is obtained with the application of mini components.</p>
+<p>From the multi-phase mission shown in <a class="reference internal" href="#figure-7-26"><span class="std std-numref">Fig. 10.26</span></a>, a single-phase mission model as shown in <a class="reference internal" href="#figure-7-27"><span class="std std-numref">Fig. 10.27</span></a> is obtained with the application of mini components.</p>
 <div class="figure align-default" id="figure-7-27">
 <span id="syst-figure4-27"></span><a class="reference internal image-reference" href="../../../_images/figure4_27.png"><img alt="../../../_images/figure4_27.png" src="../../../_images/figure4_27.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.27 </span><span class="caption-text">Single phase mission model</span><a class="headerlink" href="#figure-7-27" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.27 </span><span class="caption-text">Single phase mission model</span><a class="headerlink" href="#figure-7-27" title="Permalink to this image">¶</a></p>
 </div>
 <p>The initial configurations for the three phases have been transformed to a single reliability block diagram comprising three sub-systems in a series arrangement. Since the subsystems will generally have components in common, they will not function independently Error: Reference source not found. The reliability of each phase is obtained from the following equations:</p>
 <div class="todo admonition">
@@ -748,30 +773,30 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-31">
-<span class="eqno">(7.31)<a class="headerlink" href="#equation-equation-7-31" title="Permalink to this equation">¶</a></span>\[R_{1}(t) = 1 - (1-q_{A_{1}})(1-q_{B_{1}})(1-q_{C_{1}})\]</div>
+<span class="eqno">(10.31)<a class="headerlink" href="#equation-equation-7-31" title="Permalink to this equation">¶</a></span>\[R_{1}(t) = 1 - (1-q_{A_{1}})(1-q_{B_{1}})(1-q_{C_{1}})\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-32">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-32">
-<span class="eqno">(7.32)<a class="headerlink" href="#equation-equation-7-32" title="Permalink to this equation">¶</a></span>\[R_{2}(t) = q_{A_{1}}q_{A_{2}}\left(q_{B_{1}}q_{B_{2}} + q_{C_{1}}q_{C_{2}} - q_{B_{1}}q_{B_{2}}q_{C_{1}}q_{C_{2}}\right)\]</div>
+<span class="eqno">(10.32)<a class="headerlink" href="#equation-equation-7-32" title="Permalink to this equation">¶</a></span>\[R_{2}(t) = q_{A_{1}}q_{A_{2}}\left(q_{B_{1}}q_{B_{2}} + q_{C_{1}}q_{C_{2}} - q_{B_{1}}q_{B_{2}}q_{C_{1}}q_{C_{2}}\right)\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-33">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-33">
-<span class="eqno">(7.33)<a class="headerlink" href="#equation-equation-7-33" title="Permalink to this equation">¶</a></span>\[R_{3}(t) = q_{A_{1}}q_{A_{2}}q_{A_{3}}q_{B_{1}}q_{B_{2}}q_{B_{3}}q_{C_{1}}q_{C_{2}}q_{C_{3}}\]</div>
+<span class="eqno">(10.33)<a class="headerlink" href="#equation-equation-7-33" title="Permalink to this equation">¶</a></span>\[R_{3}(t) = q_{A_{1}}q_{A_{2}}q_{A_{3}}q_{B_{1}}q_{B_{2}}q_{B_{3}}q_{C_{1}}q_{C_{2}}q_{C_{3}}\]</div>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(q_{ij}\)</span> denotes the conditional reliability of component <span class="math notranslate nohighlight">\(i\)</span> in phase <span class="math notranslate nohighlight">\(j\)</span> given that it has not failed in the previous phase, which is obtained from the following equation.</p>
 <div class="equation admonition" id="syst-equation4-34">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-34">
-<span class="eqno">(7.34)<a class="headerlink" href="#equation-equation-7-34" title="Permalink to this equation">¶</a></span>\[q_{ij} = P\left(x_{i}\left(t_{j}\right) = 1 | x_{i}\left(t_{j-1}\right) = 1\right)\]</div>
+<span class="eqno">(10.34)<a class="headerlink" href="#equation-equation-7-34" title="Permalink to this equation">¶</a></span>\[q_{ij} = P\left(x_{i}\left(t_{j}\right) = 1 | x_{i}\left(t_{j-1}\right) = 1\right)\]</div>
 </div>
 </div>
 <div class="section" id="boolean-phase-algebra">
-<span id="syst-4-4-4"></span><h2><span class="section-number">7.4.4.4. </span>Boolean phase algebra<a class="headerlink" href="#boolean-phase-algebra" title="Permalink to this headline">¶</a></h2>
+<span id="syst-4-4-4"></span><h2><span class="section-number">10.4.4.4. </span>Boolean phase algebra<a class="headerlink" href="#boolean-phase-algebra" title="Permalink to this headline">¶</a></h2>
 <p>The before mentioned methods consider the failure of components in different phases separately. To overcome this limitation and to handle the dependencies of component states used in various mission phases, a set of Boolean algebraic laws to represent combinations of component behaviour can be applied to phased mission systems. A basic event A may be represented in the following way Error: Reference source not found:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(A_{1}=1\)</span> denotes the event that component A is operational during the interval from the start of the mission until the end of phase <span class="math notranslate nohighlight">\(i\)</span>. This automatically implies that the component is operational during all earlier phases as well.</p></li>
@@ -788,7 +813,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-35">
-<span class="eqno">(7.35)<a class="headerlink" href="#equation-equation-7-35" title="Permalink to this equation">¶</a></span>\[R_{S} = 1 - \left(P\left(E_{P} \right) + \sum_{i=1}^{i=p-1}P\left(PFC_{i}\right) \right)\]</div>
+<span class="eqno">(10.35)<a class="headerlink" href="#equation-equation-7-35" title="Permalink to this equation">¶</a></span>\[R_{S} = 1 - \left(P\left(E_{P} \right) + \sum_{i=1}^{i=p-1}P\left(PFC_{i}\right) \right)\]</div>
 <p>Where</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(P\left(PFC_{i}\right)\)</span> denotes the probability of occurrence that phase failure combination in phase <span class="math notranslate nohighlight">\(i\)</span> occurs</p></li>
@@ -796,46 +821,46 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <p><strong>Example :</strong></p>
-<p>The system reliability of the system shown in <a class="reference internal" href="#figure-7-26"><span class="std std-numref">Fig. 7.26</span></a> is given by</p>
+<p>The system reliability of the system shown in <a class="reference internal" href="#figure-7-26"><span class="std std-numref">Fig. 10.26</span></a> is given by</p>
 <div class="equation admonition" id="syst-equation4-36">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-36">
-<span class="eqno">(7.36)<a class="headerlink" href="#equation-equation-7-36" title="Permalink to this equation">¶</a></span>\[R_{s} = 1 - \left( P\left( E_{3} \right) + P\left( \text{PFC}_{2} \right) + P\left( \text{PFC}_{1} \right) \right)\]</div>
+<span class="eqno">(10.36)<a class="headerlink" href="#equation-equation-7-36" title="Permalink to this equation">¶</a></span>\[R_{s} = 1 - \left( P\left( E_{3} \right) + P\left( \text{PFC}_{2} \right) + P\left( \text{PFC}_{1} \right) \right)\]</div>
 </div>
 <p>The failure combinations for the 3 phases are given by:</p>
 <div class="equation admonition" id="syst-equation4-37">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-37">
-<span class="eqno">(7.37)<a class="headerlink" href="#equation-equation-7-37" title="Permalink to this equation">¶</a></span>\[E_{1} = {\overline{A}}_{1} \cap {\overline{B}}_{1} \cap {\overline{C}}_{1}\]</div>
+<span class="eqno">(10.37)<a class="headerlink" href="#equation-equation-7-37" title="Permalink to this equation">¶</a></span>\[E_{1} = {\overline{A}}_{1} \cap {\overline{B}}_{1} \cap {\overline{C}}_{1}\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-38">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-38">
-<span class="eqno">(7.38)<a class="headerlink" href="#equation-equation-7-38" title="Permalink to this equation">¶</a></span>\[E_{2} = {\overline{A}}_{2} \cup {\overline{B}}_{2} \cap {\overline{C}}_{2}\]</div>
+<span class="eqno">(10.38)<a class="headerlink" href="#equation-equation-7-38" title="Permalink to this equation">¶</a></span>\[E_{2} = {\overline{A}}_{2} \cup {\overline{B}}_{2} \cap {\overline{C}}_{2}\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-39">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-39">
-<span class="eqno">(7.39)<a class="headerlink" href="#equation-equation-7-39" title="Permalink to this equation">¶</a></span>\[E_{3} = {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3}\]</div>
+<span class="eqno">(10.39)<a class="headerlink" href="#equation-equation-7-39" title="Permalink to this equation">¶</a></span>\[E_{3} = {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3}\]</div>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(E_{i}\)</span> denotes the failure combination leading to system failure in phase <span class="math notranslate nohighlight">\(i\)</span> given as Boolean logic expression.</p>
-<p>With Eq. <a class="reference internal" href="#equation-equation-7-39">(7.39)</a> the following is obtained for the failure probability in phase 3.</p>
+<p>With Eq. <a class="reference internal" href="#equation-equation-7-39">(10.39)</a> the following is obtained for the failure probability in phase 3.</p>
 <div class="equation admonition" id="syst-equation4-40">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-40">
-<span class="eqno">(7.40)<a class="headerlink" href="#equation-equation-7-40" title="Permalink to this equation">¶</a></span>\[P\left( E \middle| 3 \right) = P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)\]</div>
+<span class="eqno">(10.40)<a class="headerlink" href="#equation-equation-7-40" title="Permalink to this equation">¶</a></span>\[P\left( E \middle| 3 \right) = P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)\]</div>
 </div>
 <p>The failure probability in phase 1 and 2 is given by the following equations.</p>
 <div class="equation admonition" id="syst-equation4-41">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-41">
-<span class="eqno">(7.41)<a class="headerlink" href="#equation-equation-7-41" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 1 \right) = P\left( \left( E_{1} \cap {\overline{E}}_{2} \right) \cap {\overline{E}}_{3} \right)\]</div>
+<span class="eqno">(10.41)<a class="headerlink" href="#equation-equation-7-41" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 1 \right) = P\left( \left( E_{1} \cap {\overline{E}}_{2} \right) \cap {\overline{E}}_{3} \right)\]</div>
 <div class="math notranslate nohighlight">
 \[P\left( \text{PFC} \middle| 1 \right) = P\]</div>
 </div>
@@ -843,7 +868,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-42">
-<span class="eqno">(7.42)<a class="headerlink" href="#equation-equation-7-42" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 2 \right) = P\left( E_{2} \cap {\overline{E}}_{3} \right)\]</div>
+<span class="eqno">(10.42)<a class="headerlink" href="#equation-equation-7-42" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 2 \right) = P\left( E_{2} \cap {\overline{E}}_{3} \right)\]</div>
 <div class="math notranslate nohighlight">
 \[P\left( \text{PFC} \middle| 2 \right) = P\]</div>
 </div>
@@ -852,43 +877,43 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-43">
-<span class="eqno">(7.43)<a class="headerlink" href="#equation-equation-7-43" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 2 \right) = P\]</div>
+<span class="eqno">(10.43)<a class="headerlink" href="#equation-equation-7-43" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 2 \right) = P\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-44">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-44">
-<span class="eqno">(7.44)<a class="headerlink" href="#equation-equation-7-44" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 2 \right) = P\left( \left( {\overline{A}}_{2} \cup {\overline{B}}_{2}{\overline{\cap C}}_{2} \right) \cap \left( A_{3} \cap B_{3} \cap C_{3} \right) \right)\]</div>
+<span class="eqno">(10.44)<a class="headerlink" href="#equation-equation-7-44" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 2 \right) = P\left( \left( {\overline{A}}_{2} \cup {\overline{B}}_{2}{\overline{\cap C}}_{2} \right) \cap \left( A_{3} \cap B_{3} \cap C_{3} \right) \right)\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-45">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-45">
-<span class="eqno">(7.45)<a class="headerlink" href="#equation-equation-7-45" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 2 \right) = P\]</div>
+<span class="eqno">(10.45)<a class="headerlink" href="#equation-equation-7-45" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 2 \right) = P\]</div>
 </div>
-<p>In Eq. <a class="reference internal" href="#equation-equation-7-45">(7.45)</a> it can be seen that both component A and B are failed in phase 2 but operational in phase 3, which is not possible for non-repairable system according to the Boolean phase algebra rules in <a class="reference internal" href="#syst-table4-8"><span class="std std-ref">Table 4.8</span></a>. Thus with <span class="math notranslate nohighlight">\(\overline{A_{2}} \cap A_{3} \rightarrow 0\)</span> and <span class="math notranslate nohighlight">\(\overline{B_{2}} \cap B_{3} \rightarrow 0\)</span>, the phase failure combination <span class="math notranslate nohighlight">\(\text{PFC}_{2}\)</span> is empty. The same is obtained for <span class="math notranslate nohighlight">\(\text{PFC}_{1}\)</span>.</p>
+<p>In Eq. <a class="reference internal" href="#equation-equation-7-45">(10.45)</a> it can be seen that both component A and B are failed in phase 2 but operational in phase 3, which is not possible for non-repairable system according to the Boolean phase algebra rules in <a class="reference internal" href="#syst-table4-8"><span class="std std-ref">Table 4.8</span></a>. Thus with <span class="math notranslate nohighlight">\(\overline{A_{2}} \cap A_{3} \rightarrow 0\)</span> and <span class="math notranslate nohighlight">\(\overline{B_{2}} \cap B_{3} \rightarrow 0\)</span>, the phase failure combination <span class="math notranslate nohighlight">\(\text{PFC}_{2}\)</span> is empty. The same is obtained for <span class="math notranslate nohighlight">\(\text{PFC}_{1}\)</span>.</p>
 <div class="equation admonition" id="syst-equation4-46">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-46">
-<span class="eqno">(7.46)<a class="headerlink" href="#equation-equation-7-46" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 1 \right) = P\]</div>
+<span class="eqno">(10.46)<a class="headerlink" href="#equation-equation-7-46" title="Permalink to this equation">¶</a></span>\[P\left( \text{PFC} \middle| 1 \right) = P\]</div>
 </div>
-<p>Thus, the reliability of the phase mission system is given by Eq. <a class="reference internal" href="#equation-equation-7-47">(7.47)</a>. It can be seen that the system reliability over all phases is determined by the availability of the components in the last phase.</p>
+<p>Thus, the reliability of the phase mission system is given by Eq. <a class="reference internal" href="#equation-equation-7-47">(10.47)</a>. It can be seen that the system reliability over all phases is determined by the availability of the components in the last phase.</p>
 <div class="equation admonition" id="syst-equation4-47">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-47">
-<span class="eqno">(7.47)<a class="headerlink" href="#equation-equation-7-47" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = 1 - P\left( E \middle| 3 \right) = 1 - P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)\]</div>
+<span class="eqno">(10.47)<a class="headerlink" href="#equation-equation-7-47" title="Permalink to this equation">¶</a></span>\[R_{S}\left( t \right) = 1 - P\left( E \middle| 3 \right) = 1 - P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)\]</div>
 </div>
 </div>
 <div class="section" id="state-space-model-of-phased-mission">
-<span id="syst-4-4-5"></span><h2><span class="section-number">7.4.4.5. </span>State space model of phased mission<a class="headerlink" href="#state-space-model-of-phased-mission" title="Permalink to this headline">¶</a></h2>
+<span id="syst-4-4-5"></span><h2><span class="section-number">10.4.4.5. </span>State space model of phased mission<a class="headerlink" href="#state-space-model-of-phased-mission" title="Permalink to this headline">¶</a></h2>
 <p>The phased mission system can also be analysed based on a state space model using Markov model. Smotherman and Zemoudeh Error: Reference source not found used a single non-homogeneous Markov chain model to perform the reliability analysis of a phased mission system. The behaviour of the system in each phase is represented using a different Markov chain, which may contain a different subset of states. The state transitions are described in terms of time dependent rates to include phase changes. Thus, state-dependent phase changes, random phase durations as well as time varying failure and repair behaviour can be easily modelled.</p>
-<p>The example shown in <a class="reference internal" href="#figure-7-26"><span class="std std-numref">Fig. 7.26</span></a> is shown as Markov chain in <a class="reference internal" href="#figure-7-28"><span class="std std-numref">Fig. 7.28</span></a>, where the failure of components A, B and C are given by the associated failure rates <span class="math notranslate nohighlight">\(\lambda_{a}\)</span>, <span class="math notranslate nohighlight">\(\lambda_{b}\)</span> and <span class="math notranslate nohighlight">\(\lambda_{c}\)</span>. Each component can have two states, failed or operational. An identifier is assigned to each system state where, e.g.”011” indicates A failed, B and C operational. The transition from phase 1 to phase 2 is given by the time dependent rate <span class="math notranslate nohighlight">\(h_{1}\left( t \right)\)</span> and <span class="math notranslate nohighlight">\(h_{2}\left( t \right)\)</span> denotes the rate of change from phase 2 to phase 3.</p>
+<p>The example shown in <a class="reference internal" href="#figure-7-26"><span class="std std-numref">Fig. 10.26</span></a> is shown as Markov chain in <a class="reference internal" href="#figure-7-28"><span class="std std-numref">Fig. 10.28</span></a>, where the failure of components A, B and C are given by the associated failure rates <span class="math notranslate nohighlight">\(\lambda_{a}\)</span>, <span class="math notranslate nohighlight">\(\lambda_{b}\)</span> and <span class="math notranslate nohighlight">\(\lambda_{c}\)</span>. Each component can have two states, failed or operational. An identifier is assigned to each system state where, e.g.”011” indicates A failed, B and C operational. The transition from phase 1 to phase 2 is given by the time dependent rate <span class="math notranslate nohighlight">\(h_{1}\left( t \right)\)</span> and <span class="math notranslate nohighlight">\(h_{2}\left( t \right)\)</span> denotes the rate of change from phase 2 to phase 3.</p>
 <p>The main advantage of this model is that it includes the configurations for all phases as well as the phase changes. But on the other side, as the number of components increases this approach results in a large model as the number of states increases rapidly.</p>
 <div class="figure align-default" id="figure-7-28">
 <span id="syst-figure4-28"></span><a class="reference internal image-reference" href="../../../_images/figure4_28.png"><img alt="../../../_images/figure4_28.png" src="../../../_images/figure4_28.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.28 </span><span class="caption-text">Phased mission Markov model approach by Smotherman and Zemoudeh Error: Reference source not found</span><a class="headerlink" href="#figure-7-28" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.28 </span><span class="caption-text">Phased mission Markov model approach by Smotherman and Zemoudeh Error: Reference source not found</span><a class="headerlink" href="#figure-7-28" title="Permalink to this image">¶</a></p>
 </div>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
@@ -931,13 +956,13 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7.4.3. </span>System level methods</p>
+            <p class="prev-next-title"><span class="section-number">10.4.3. </span>System level methods</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="important_measures.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.4.5. </span>Important measures</p>
+        <p class="prev-next-title"><span class="section-number">10.4.5. </span>Important measures</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

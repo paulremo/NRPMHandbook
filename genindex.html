@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="_static/interactivity/css/guide_misc.css" />
     <link rel="stylesheet" type="text/css" href="_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="_static/interactivity/css/misc_failure_rate_sliders.css" />
@@ -56,7 +57,9 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="_static/interactivity/js/decision_tree2.js"></script>
     <script src="_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="_static/interactivity/js/guide_misc.js"></script>
     <script src="_static/interactivity/js/map3.js"></script>
     <script src="_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="_static/interactivity/js/misc_failure_rate_sliders.js"></script>
@@ -115,8 +118,30 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="home.html">
    Welcome to the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface/documentation.html">
+   2. Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preface/terms.html">
+   3. Terms, definitions and abbreviations
   </a>
  </li>
 </ul>
@@ -128,12 +153,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="eee/mainEEE.html">
-   1. Handbook
+   4. Handbook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="eee/models/intro_models.html">
-   2. Models
+   5. Models
   </a>
  </li>
 </ul>
@@ -145,7 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="mechanical/handbook/introduction.html">
-   3. Handbook
+   6. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -155,22 +180,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/handbook/scope.html">
-     3.1. Scope
+     6.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/handbook/normative_references.html">
-     3.2. Normative References
+     6.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/handbook/terms.html">
-     3.3. Terms, definitions and abbreviated terms
+     6.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="mechanical/handbook/reliability_prediction/reliability_prediction.html">
-     3.4. Reliability prediction for mechanical and structural parts and assemblies
+     6.4. Reliability prediction for mechanical and structural parts and assemblies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -180,56 +205,56 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
-       3.4.1. Process for mechanical reliability prediction
+       6.4.1. Process for mechanical reliability prediction
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.2. Root causes coverage
+       6.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.3. Data sources and methods
+       6.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.4. Failure mechanisms identification and focus
+       6.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.5. Method selection for different items and failure mechanisms
+       6.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.6. Structural reliability methods and inputs
+       6.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.7. Structural reliability models and equations
+       6.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="mechanical/handbook/reliability_prediction/examples.html">
-       3.4.8. Examples
+       6.4.8. Examples
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/handbook/bibliographic_references.html">
-     3.5. Bibliographic References
+     6.5. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="mechanical/models/introduction.html">
-   4. Models
+   7. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -239,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="mechanical/models/solid_lubricant_wear.html">
-     4.1. Solid lubricant wear
+     7.1. Solid lubricant wear
     </a>
    </li>
   </ul>
@@ -253,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="miscellaneous/handbook/introduction.html">
-   5. Handbook
+   8. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -263,22 +288,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/scope.html">
-     5.1. Scope
+     8.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/normative_references.html">
-     5.2. Normative References
+     8.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/terms.html">
-     5.3. Terms, definitions and abbreviated terms
+     8.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/reliability_prediction.html">
-     5.4. Reliability prediction for miscellaneous items
+     8.4. Reliability prediction for miscellaneous items
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -288,71 +313,71 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/items.html">
-       5.4.1. List of miscellaneous items
+       8.4.1. List of miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/root_causes_coverage.html">
-       5.4.2. Root causes coverage
+       8.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/data_sources_methods.html">
-       5.4.3. Data sources
+       8.4.3. Data sources
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/reliability_models.html">
-       5.4.4. Reliability Models for miscellaneous items
+       8.4.4. Reliability Models for miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html">
-       5.4.5. Process for Reliability modelling
+       8.4.5. Process for Reliability modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/ior_results.html">
-       5.4.6. Use of IOR data and/or tests results
+       8.4.6. Use of IOR data and/or tests results
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html">
-       5.4.7. Basic failure rate derivation for “non-standard model” items
+       8.4.7. Basic failure rate derivation for “non-standard model” items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="miscellaneous/handbook/reliability_prediction/reliability_data_sm.html">
-       5.4.8. Reliability Data for Miscellaneous “Standard model”
+       8.4.8. Reliability Data for Miscellaneous “Standard model”
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/conclusion.html">
-     5.5. Conclusion
+     8.5. Conclusion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/annexA.html">
-     5.6. Annex A
+     8.6. Annex A
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/annexB.html">
-     5.7. Annex B
+     8.7. Annex B
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/handbook/bibliographic_references.html">
-     5.8. Bibliographic References
+     8.8. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="miscellaneous/models/introduction_guide_miscellaneous.html">
-   6. Models
+   9. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -362,7 +387,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="miscellaneous/models/failure_rate_processing.html">
-     6.1. Failure rate processing
+     9.1. Failure rate processing
     </a>
    </li>
   </ul>
@@ -376,7 +401,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="system/handbook/introduction.html">
-   7. Handbook
+   10. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -386,22 +411,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="system/handbook/scope.html">
-     7.1. Scope
+     10.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="system/handbook/normative_references.html">
-     7.2. Normative References
+     10.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="system/handbook/terms.html">
-     7.3. Terms, definitions and abbreviated terms
+     10.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="system/handbook/reliability_prediction/reliability_prediction.html">
-     7.4. Reliability prediction for system level items
+     10.4. Reliability prediction for system level items
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -411,66 +436,66 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/reliability_prediction_different_levels.html">
-       7.4.1. Reliability prediction at different levels
+       10.4.1. Reliability prediction at different levels
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/root_causes_coverage.html">
-       7.4.2. Root causes coverage
+       10.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/methods.html">
-       7.4.3. System level methods
+       10.4.3. System level methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/reliability_assessment_phased_missions.html">
-       7.4.4. Reliability assessment of phased missions
+       10.4.4. Reliability assessment of phased missions
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/important_measures.html">
-       7.4.5. Important measures
+       10.4.5. Important measures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/reliability_assessment_degraded_systems.html">
-       7.4.6. Reliability assessment of degraded systems
+       10.4.6. Reliability assessment of degraded systems
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/modelling_common_cause_failure.html">
-       7.4.7. Modelling of Common Cause failure
+       10.4.7. Modelling of Common Cause failure
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/system_level_modelling_wear_out.html">
-       7.4.8. System level modelling of wear-out
+       10.4.8. System level modelling of wear-out
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/systematic_failure_modelling.html">
-       7.4.9. Systematic failure modelling
+       10.4.9. Systematic failure modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system/handbook/reliability_prediction/consideration_software_failures.html">
-       7.4.10. Consideration of software failures
+       10.4.10. Consideration of software failures
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="system/handbook/conclusion.html">
-     7.5. Conclusion
+     10.5. Conclusion
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="system/models/intro_models.html">
-   8. Models
+   11. Models
   </a>
  </li>
 </ul>
@@ -565,30 +590,76 @@ const thebe_selector_output = ".output, .cell_output"
 
 <div class="genindex-jumpbox">
  <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#Wikipedia)"><strong>Wikipedia)</strong></a>
  | <a href="#W"><strong>W</strong></a>
  
 </div>
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-ADS"><strong>ADS</strong></a>
+      <li><a href="preface/terms.html#term-AC"><strong>AC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-AD"><strong>AD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-AEC"><strong>AEC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-AEC-Q"><strong>AEC-Q</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-AECMA"><strong>AECMA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-AF"><strong>AF</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-AOCS"><strong>AOCS</strong></a>
+      <li><a href="preface/terms.html#term-ANADEF"><strong>ANADEF</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-ANOMALY-ECSS-S-ST-00-01C_2012"><strong>ANOMALY (ECSS-S-ST-00-01C_2012)</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-AOCS"><strong>AOCS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-AR"><strong>AR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-ARINC"><strong>ARINC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-ASIC"><strong>ASIC</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-BGA"><strong>BGA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-BiCMOS"><strong>BiCMOS</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-BR"><strong>BR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-BS"><strong>BS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-BTI"><strong>BTI</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -596,7 +667,45 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-COTS"><strong>COTS</strong></a>
+      <li><a href="preface/terms.html#term-CAMP"><strong>CAMP</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CCD"><strong>CCD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CCF"><strong>CCF</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CCS"><strong>CCS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CDR"><strong>CDR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CECC"><strong>CECC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CERDIP"><strong>CERDIP</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CMOS"><strong>CMOS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CNES"><strong>CNES</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-COMMON-CAUSE-FAILURE-RD8"><strong>COMMON CAUSE FAILURE [RD8]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CONTRIBUTING-FACTOR"><strong>CONTRIBUTING FACTOR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-COTS"><strong>COTS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CoV"><strong>CoV</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CPGA"><strong>CPGA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CPLD"><strong>CPLD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CRM"><strong>CRM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CRR"><strong>CRR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CTE"><strong>CTE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-CV"><strong>CV</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -604,11 +713,35 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-DEP"><strong>DEP</strong></a>
+      <li><a href="preface/terms.html#term-DAG"><strong>DAG</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DC"><strong>DC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DD"><strong>DD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DEEP-SUB-MICRON-TECHNOLOGIES"><strong>DEEP SUB MICRON TECHNOLOGIES</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DEGRADATION-PROGRESSIVE-FAILURE"><strong>DEGRADATION (PROGRESSIVE) FAILURE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DEP"><strong>DEP</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DET"><strong>DET</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-DFMEA"><strong>DFMEA</strong></a>
+      <li><a href="preface/terms.html#term-DFMEA"><strong>DFMEA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DFMEA-Design-FMEA"><strong>DFMEA – Design FMEA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DHS"><strong>DHS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DOE"><strong>DOE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DRAM"><strong>DRAM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DSM"><strong>DSM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-DSP"><strong>DSP</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -616,11 +749,43 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-EEE"><strong>EEE</strong></a>
+      <li><a href="preface/terms.html#term-Ea"><strong>Ea</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-ECSS"><strong>ECSS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EEE"><strong>EEE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EEE-PART"><strong>EEE PART</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EEPROM"><strong>EEPROM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EIA"><strong>EIA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-ELR"><strong>ELR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EM"><strong>EM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EMC"><strong>EMC</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-EX"><strong>EX</strong></a>
+      <li><a href="preface/terms.html#term-EPISTEMIC-UNCERTAINTY"><strong>EPISTEMIC UNCERTAINTY</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EPPL"><strong>EPPL</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EPROM"><strong>EPROM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EQUIPMENT-UNIT-RD8"><strong>EQUIPMENT/UNIT [RD8]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-ESA"><strong>ESA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-ESD"><strong>ESD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-ETA"><strong>ETA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EX"><strong>EX</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-EXTRINSIC-FAILURE"><strong>EXTRINSIC FAILURE</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -628,7 +793,49 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-FMEA"><strong>FMEA</strong></a>
+      <li><a href="preface/terms.html#term-FAILURE"><strong>FAILURE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FAILURE-MECHANISM"><strong>FAILURE MECHANISM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FAILURE-MODE"><strong>FAILURE MODE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FAILURE-MODE-AND-EFFECT-ANALYSIS-FMEA-RD2"><strong>FAILURE MODE AND EFFECT ANALYSIS FMEA [RD2]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FAILURE-MODE-AND-EFFECTS-SUMMARY-FMES"><strong>FAILURE MODE AND EFFECTS SUMMARY FMES</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FAILURE-MODE-EFFECT-AND-CRITICALITY-ANALYSIS-FMECA-RD2"><strong>FAILURE MODE, EFFECT AND CRITICALITY ANALYSIS FMECA [RD2]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FAILURE-ROOT-CAUSE"><strong>FAILURE ROOT CAUSE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FCV"><strong>FCV</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FDIR"><strong>FDIR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FET"><strong>FET</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-FIT"><strong>FIT</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FMD"><strong>FMD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FMEA"><strong>FMEA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FMECA"><strong>FMECA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FMES"><strong>FMES</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FOO"><strong>FOO</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FORM"><strong>FORM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FPGA"><strong>FPGA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FR"><strong>FR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FRR"><strong>FRR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-FTA"><strong>FTA</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -636,13 +843,35 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-GaAs"><strong>GaAs</strong></a>
+      <li><a href="preface/terms.html#term-GaAs"><strong>GaAs</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-GaN"><strong>GaN</strong></a>
+      <li><a href="preface/terms.html#term-GaN"><strong>GaN</strong></a>
 </li>
-      <li><a href="intro.html#term-GEO"><strong>GEO</strong></a>
+      <li><a href="preface/terms.html#term-GEO"><strong>GEO</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-HANDBOOK-DATA-SOURCE"><strong>HANDBOOK DATA SOURCE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-HCI"><strong>HCI</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-HDBK"><strong>HDBK</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-HET"><strong>HET</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-HF"><strong>HF</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-HPA"><strong>HPA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-HW"><strong>HW</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -650,11 +879,51 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-I_SA"><strong>I_SA</strong></a>, <a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-I_SA"><strong>[1]</strong></a>
+      <li><a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-I_SA"><strong>I_SA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-IC"><strong>IC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-IEC"><strong>IEC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-IEEE"><strong>IEEE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-IGBT"><strong>IGBT</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-IOR"><strong>IOR</strong></a>
+      <li><a href="preface/terms.html#term-IN-ORBIT-RETURN-IOR-DATA"><strong>IN-ORBIT RETURN (IOR) DATA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-INTERFACE-RD8"><strong>INTERFACE [RD8]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-IOR"><strong>IOR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-IOT"><strong>IOT</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-IPC"><strong>IPC</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-JAN"><strong>JAN</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-JANS"><strong>JANS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-JANTX"><strong>JANTX</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-JANTXV"><strong>JANTXV</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-JEDEC"><strong>JEDEC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-JEP"><strong>JEP</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-JESD"><strong>JESD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-JFET"><strong>JFET</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -662,7 +931,23 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-LEO"><strong>LEO</strong></a>
+      <li><a href="preface/terms.html#term-LCD"><strong>LCD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-LED"><strong>LED</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-LEO"><strong>LEO</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-LEVEL-OF-CONFIDENCE"><strong>LEVEL OF CONFIDENCE</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-LMS"><strong>LMS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-LoC"><strong>LoC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-LRR"><strong>LRR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-LV"><strong>LV</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -670,19 +955,53 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-Matrisk"><strong>Matrisk</strong></a>
+      <li><a href="preface/terms.html#term-MANUFACTURER-DATA"><strong>MANUFACTURER DATA</strong></a>
 </li>
-      <li><a href="intro.html#term-MEC"><strong>MEC</strong></a>
+      <li><a href="preface/terms.html#term-MC"><strong>MC</strong></a>
 </li>
-      <li><a href="intro.html#term-MEO"><strong>MEO</strong></a>
+      <li><a href="preface/terms.html#term-MCCV"><strong>MCCV</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MCM"><strong>MCM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MCMC"><strong>MCMC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MCR"><strong>MCR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MDR"><strong>MDR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MEC"><strong>MEC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MECHANICAL-PART"><strong>MECHANICAL PART</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MECHANISM-RD7"><strong>MECHANISM [RD7]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MEO"><strong>MEO</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-MIS"><strong>MIS</strong></a>
+      <li><a href="preface/terms.html#term-MIL"><strong>MIL</strong></a>
 </li>
-      <li><a href="intro.html#term-MPM"><strong>MPM</strong></a>
+      <li><a href="preface/terms.html#term-MIS"><strong>MIS</strong></a>
 </li>
-      <li><a href="intro.html#term-MTTF"><strong>MTTF</strong></a>
+      <li><a href="preface/terms.html#term-MISCELLANEOUS-ITEM"><strong>MISCELLANEOUS ITEM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MISSION-LIFETIME"><strong>MISSION LIFETIME</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MMIC"><strong>MMIC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MMPDS"><strong>MMPDS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MODEL-UNCERTAINTY"><strong>MODEL UNCERTAINTY</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MOS"><strong>MOS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MOSFET"><strong>MOSFET</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MPM"><strong>MPM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MTBF"><strong>MTBF</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-MTTF"><strong>MTTF</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -690,11 +1009,53 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-N2H4-thrusters"><strong>N2H4 thrusters</strong></a>
+      <li><a href="preface/terms.html#term-N-STD"><strong>N-STD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-N-A"><strong>N/A</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NaN"><strong>NaN</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NAND"><strong>NAND</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NASA"><strong>NASA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NASDA"><strong>NASDA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NDE"><strong>NDE</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-NRPM"><strong>NRPM</strong></a>
+      <li><a href="preface/terms.html#term-NEA"><strong>NEA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NEW-SPACE"><strong>NEW SPACE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NIST"><strong>NIST</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NMOS"><strong>NMOS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NOR"><strong>NOR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NPRD"><strong>NPRD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NRPM"><strong>NRPM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-NSWC"><strong>NSWC</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-O"><strong>O</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-O-O"><strong>O/O</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-OCC"><strong>OCC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-ORR"><strong>ORR</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -702,15 +1063,73 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-PFMEA"><strong>PFMEA</strong></a>
+      <li><a href="preface/terms.html#term-PAL"><strong>PAL</strong></a>
 </li>
-      <li><a href="intro.html#term-PoF"><strong>PoF</strong></a>
+      <li><a href="preface/terms.html#term-PART-COMPONENT-RD8"><strong>PART/COMPONENT [RD8]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PBGA"><strong>PBGA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PCB"><strong>PCB</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PDF"><strong>PDF</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PDR"><strong>PDR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PEN"><strong>PEN</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PERTINENCE"><strong>PERTINENCE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PFMEA"><strong>PFMEA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PFMEA-Process-FMEA"><strong>PFMEA - Process FMEA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PHEMT"><strong>PHEMT</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PHYSICS-OF-FAILURE-source"><strong>PHYSICS OF FAILURE (source</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PL"><strong>PL</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-PROP"><strong>PROP</strong></a>
+      <li><a href="preface/terms.html#term-POD"><strong>POD</strong></a>
 </li>
-      <li><a href="intro.html#term-PWR"><strong>PWR</strong></a>
+      <li><a href="preface/terms.html#term-PoF"><strong>PoF</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PPM"><strong>PPM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PPS"><strong>PPS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PROBABILITY-DENSITY-FUNCTION"><strong>PROBABILITY DENSITY FUNCTION</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PROM"><strong>PROM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PROP"><strong>PROP</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PRR"><strong>PRR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PT"><strong>PT</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PTFE"><strong>PTFE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PTH"><strong>PTH</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PWR"><strong>PWR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-PYRO"><strong>PYRO</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-QA"><strong>QA</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-QR"><strong>QR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-QUALITY-RD8"><strong>QUALITY [RD8]</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -718,17 +1137,43 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-RAMS"><strong>RAMS</strong></a>
+      <li><a href="preface/terms.html#term-RAMS"><strong>RAMS</strong></a>
 </li>
-      <li><a href="intro.html#term-0"><strong>RF</strong></a>, <a href="intro.html#term-RF"><strong>[1]</strong></a>
+      <li><a href="preface/terms.html#term-RANDOM-FAILURE"><strong>RANDOM FAILURE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RBD"><strong>RBD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-REF"><strong>REF</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RELIABILITY-PREDICTION"><strong>RELIABILITY PREDICTION</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RELIABILITY-PREDICTION-METHOD"><strong>RELIABILITY PREDICTION METHOD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RELIABILITY-PREDICTION-METHODOLOGY"><strong>RELIABILITY PREDICTION METHODOLOGY</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RELIABILITY-PREDICTION-MODEL"><strong>RELIABILITY PREDICTION MODEL</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RELIABILITY-PREDICTION-SPACE-APPLICATION"><strong>RELIABILITY PREDICTION SPACE APPLICATION</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-RP"><strong>RP</strong></a>
+      <li><a href="preface/terms.html#term-REQUIREMENT-IEEE-STD-1220-1998"><strong>REQUIREMENT (IEEE-STD-1220-1998)</strong></a>
 </li>
-      <li><a href="intro.html#term-RPN"><strong>RPN</strong></a>
+      <li><a href="preface/terms.html#term-0"><strong>RF</strong></a>, <a href="preface/terms.html#term-RF"><strong>[1]</strong></a>
 </li>
-      <li><a href="intro.html#term-RW"><strong>RW</strong></a>
+      <li><a href="preface/terms.html#term-RF-PASSIVE-PART"><strong>RF PASSIVE PART</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RH"><strong>RH</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RP"><strong>RP</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RPDSM"><strong>RPDSM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RPN"><strong>RPN</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RUL"><strong>RUL</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-RW"><strong>RW</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -736,23 +1181,85 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-1"><strong>SA</strong></a>, <a href="intro.html#term-SA"><strong>[1]</strong></a>, <a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-SA"><strong>[2]</strong></a>
+      <li><a href="preface/terms.html#term-S-N"><strong>S/N</strong></a>
 </li>
-      <li><a href="intro.html#term-SADM"><strong>SADM</strong></a>
+      <li><a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-SA"><strong>SA</strong></a>, <a href="preface/terms.html#term-SA"><strong>[1]</strong></a>
 </li>
-      <li><a href="intro.html#term-SF"><strong>SF</strong></a>
+      <li><a href="preface/terms.html#term-SADM"><strong>SADM</strong></a>
 </li>
-      <li><a href="intro.html#term-Si"><strong>Si</strong></a>
+      <li><a href="preface/terms.html#term-SAE"><strong>SAE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SAFE-LIFE-QUALIFICATION"><strong>SAFE LIFE QUALIFICATION</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SCC"><strong>SCC</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SCU"><strong>SCU</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SDIP"><strong>SDIP</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SEE"><strong>SEE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SEP"><strong>SEP</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SEU"><strong>SEU</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SEV"><strong>SEV</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SF"><strong>SF</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-Si"><strong>Si</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SiGe"><strong>SiGe</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SIMPLIFIED-STRUCTURAL-RELIABILITY-METHOD"><strong>SIMPLIFIED STRUCTURAL RELIABILITY METHOD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SM"><strong>SM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SMD"><strong>SMD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SnPb"><strong>SnPb</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-SPF"><strong>SPF</strong></a>, <a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-SPF"><strong>[1]</strong></a>
+      <li><a href="preface/terms.html#term-SORM"><strong>SORM</strong></a>
 </li>
-      <li><a href="intro.html#term-SSPA"><strong>SSPA</strong></a>
+      <li><a href="preface/terms.html#term-SPACE-SEGMENT-RD8"><strong>SPACE SEGMENT [RD8]</strong></a>
 </li>
-      <li><a href="intro.html#term-STD"><strong>STD</strong></a>
+      <li><a href="preface/terms.html#term-SPACECRAFT-RD8"><strong>SPACECRAFT [RD8]</strong></a>
 </li>
-      <li><a href="intro.html#term-SYS"><strong>SYS</strong></a>
+      <li><a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-SPF"><strong>SPF</strong></a>, <a href="preface/terms.html#term-SPF"><strong>[1]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SRAM"><strong>SRAM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SRM"><strong>SRM</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SRR"><strong>SRR</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SSPA"><strong>SSPA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-STATISTICAL-METHOD"><strong>STATISTICAL METHOD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-STATISTICAL-UNCERTAINTY"><strong>STATISTICAL UNCERTAINTY</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-STD"><strong>STD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-STN"><strong>STN</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-STRU"><strong>STRU</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-STRUCTURAL-RELIABILITY-METHOD"><strong>STRUCTURAL RELIABILITY METHOD</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SUDDEN-FAILURE"><strong>SUDDEN FAILURE</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SW"><strong>SW</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SYS"><strong>SYS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SYSTEM-RD8"><strong>SYSTEM [RD8]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SYSTEM-ENGINEERING-International-Council-on-Systems-Engineering-INCOSE"><strong>SYSTEM ENGINEERING (International Council on Systems Engineering INCOSE)</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-SYSTEMATIC-FAILURE"><strong>SYSTEMATIC FAILURE</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -760,17 +1267,47 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-TAS"><strong>TAS</strong></a>
+      <li><a href="preface/terms.html#term-TDDB"><strong>TDDB</strong></a>
 </li>
-      <li><a href="intro.html#term-TM"><strong>TM</strong></a>, <a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-TM"><strong>[1]</strong></a>
+      <li><a href="preface/terms.html#term-TEST-RD8"><strong>TEST [RD8]</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-TEST-DATA"><strong>TEST DATA</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-TFT"><strong>TFT</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-THER"><strong>THER</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-TID"><strong>TID</strong></a>
+</li>
+      <li><a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-TM"><strong>TM</strong></a>, <a href="preface/terms.html#term-TM"><strong>[1]</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-TRL"><strong>TRL</strong></a>, <a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-TRL"><strong>[1]</strong></a>
+      <li><a href="preface/terms.html#term-TMI"><strong>TMI</strong></a>
 </li>
-      <li><a href="intro.html#term-TTF"><strong>TTF</strong></a>
+      <li><a href="preface/terms.html#term-TN"><strong>TN</strong></a>
 </li>
-      <li><a href="intro.html#term-TWTA"><strong>TWTA</strong></a>
+      <li><a href="preface/terms.html#term-TNID"><strong>TNID</strong></a>
+</li>
+      <li><a href="miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html#term-TRL"><strong>TRL</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-TTF"><strong>TTF</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-TVS"><strong>TVS</strong></a>
+</li>
+      <li><a href="preface/terms.html#term-TWTA"><strong>TWTA</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-UTE"><strong>UTE</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-UV"><strong>UV</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -778,7 +1315,23 @@ const thebe_selector_output = ".output, .cell_output"
 <h2 id="W">W</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="intro.html#term-WO"><strong>WO</strong></a>
+      <li><a href="preface/terms.html#term-WEAR-OUT-FAILURE"><strong>WEAR-OUT FAILURE</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Wikipedia)">Wikipedia)</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-BAYESIAN-INFERENCE-source"><strong>BAYESIAN INFERENCE (source</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="preface/terms.html#term-WO"><strong>WO</strong></a>
 </li>
   </ul></td>
 </tr></table>

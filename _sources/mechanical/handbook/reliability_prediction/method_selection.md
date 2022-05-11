@@ -28,6 +28,8 @@ However, independence between different failure mechanisms may not always be a v
 :align: center
 ```
 
+<iframe class="ext_content" src="../../../_static/interactivity/html/decision_tree2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+
 A simple way to account for such interactions is to select the dominating failure mechanism (e.g. the one with the highest probability of failure) and to consider the effect of other failure mechanism(s) on the dominating failure mechanism. When using structural reliability methods, this can be achieved by adapting the basic variable distributions to account for physical effects related to other failure mechanism processes. The assessment then requires the following steps:
 
 * Selection of the dominating failure mechanism – e.g. wear of a lubricated bearing.

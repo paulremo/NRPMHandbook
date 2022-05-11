@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Introduction &#8212; NRPM Digital handbook</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/images.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/mybuttons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/myiframes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/guide_misc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/map3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/misc_failure_rate_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/misc_failure_rate_sliders.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/mytables.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/radial_bar.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../_static/interactivity/js/decision_tree2.js"></script>
+    <script src="../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../_static/interactivity/js/guide_misc.js"></script>
+    <script src="../_static/interactivity/js/map3.js"></script>
+    <script src="../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
+    <script src="../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
+    <script src="../_static/interactivity/js/radial_bar_lib.js"></script>
+    <script src="../_static/interactivity/js/table_search.js"></script>
+    <script src="../_static/js/redirect.js"></script>
+    <script src="../_static/js/resize_iframe.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Documentation" href="documentation.html" />
+    <link rel="prev" title="Welcome to the NRPM Digital Handbook !" href="../home.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../home.html">
+   Welcome to the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="documentation.html">
+   2. Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="terms.html">
+   3. Terms, definitions and abbreviations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eee/mainEEE.html">
+   4. Handbook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eee/models/intro_models.html">
+   5. Models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mechanical chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../mechanical/handbook/introduction.html">
+   6. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/handbook/scope.html">
+     6.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/handbook/normative_references.html">
+     6.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/handbook/terms.html">
+     6.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../mechanical/handbook/reliability_prediction/reliability_prediction.html">
+     6.4. Reliability prediction for mechanical and structural parts and assemblies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
+       6.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
+       6.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/data_sources_methods.html">
+       6.4.3. Data sources and methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
+       6.4.4. Failure mechanisms identification and focus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/method_selection.html">
+       6.4.5. Method selection for different items and failure mechanisms
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/structural_method_input.html">
+       6.4.6. Structural reliability methods and inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/structural_models_equations.html">
+       6.4.7. Structural reliability models and equations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/examples.html">
+       6.4.8. Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/handbook/bibliographic_references.html">
+     6.5. Bibliographic References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../mechanical/models/introduction.html">
+   7. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/models/solid_lubricant_wear.html">
+     7.1. Solid lubricant wear
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../miscellaneous/handbook/introduction.html">
+   8. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/scope.html">
+     8.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/normative_references.html">
+     8.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/terms.html">
+     8.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/reliability_prediction.html">
+     8.4. Reliability prediction for miscellaneous items
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/items.html">
+       8.4.1. List of miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/root_causes_coverage.html">
+       8.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/data_sources_methods.html">
+       8.4.3. Data sources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/reliability_models.html">
+       8.4.4. Reliability Models for miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html">
+       8.4.5. Process for Reliability modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/ior_results.html">
+       8.4.6. Use of IOR data and/or tests results
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html">
+       8.4.7. Basic failure rate derivation for “non-standard model” items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/reliability_data_sm.html">
+       8.4.8. Reliability Data for Miscellaneous “Standard model”
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/conclusion.html">
+     8.5. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/annexA.html">
+     8.6. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/annexB.html">
+     8.7. Annex B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/bibliographic_references.html">
+     8.8. Bibliographic References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../miscellaneous/models/introduction_guide_miscellaneous.html">
+   9. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/models/failure_rate_processing.html">
+     9.1. Failure rate processing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../system/handbook/introduction.html">
+   10. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../system/handbook/scope.html">
+     10.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../system/handbook/normative_references.html">
+     10.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../system/handbook/terms.html">
+     10.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../system/handbook/reliability_prediction/reliability_prediction.html">
+     10.4. Reliability prediction for system level items
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/reliability_prediction_different_levels.html">
+       10.4.1. Reliability prediction at different levels
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/root_causes_coverage.html">
+       10.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/methods.html">
+       10.4.3. System level methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/reliability_assessment_phased_missions.html">
+       10.4.4. Reliability assessment of phased missions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/important_measures.html">
+       10.4.5. Important measures
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/reliability_assessment_degraded_systems.html">
+       10.4.6. Reliability assessment of degraded systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/modelling_common_cause_failure.html">
+       10.4.7. Modelling of Common Cause failure
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/system_level_modelling_wear_out.html">
+       10.4.8. System level modelling of wear-out
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/systematic_failure_modelling.html">
+       10.4.9. Systematic failure modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/consideration_software_failures.html">
+       10.4.10. Consideration of software failures
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../system/handbook/conclusion.html">
+     10.5. Conclusion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../system/models/intro_models.html">
+   11. Models
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    <img src="/_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
+    <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/preface/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/paulremo/NRPMHandbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/paulremo/NRPMHandbook/issues/new?title=Issue%20on%20page%20%2Fpreface/intro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/paulremo/NRPMHandbook/edit/main/02_NRPMHandbook/preface/intro.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objective">
+   1.1. Objective
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope">
+   1.2. Scope
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reliability-prediction">
+     1.2.1. Reliability prediction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#space-applications">
+     1.2.2. Space Applications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methodology-methods-and-models">
+     1.2.3. Methodology, Methods and Models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-the-handbook">
+   1.3. How to use the handbook
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objective">
+   1.1. Objective
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope">
+   1.2. Scope
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reliability-prediction">
+     1.2.1. Reliability prediction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#space-applications">
+     1.2.2. Space Applications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methodology-methods-and-models">
+     1.2.3. Methodology, Methods and Models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-the-handbook">
+   1.3. How to use the handbook
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>The present chapter explains the scope, structure and use of the handbook, with the objective to provide an introduction that is both short and useful from a handbook user’s perspective.</p>
+<div class="section" id="objective">
+<h2><span class="section-number">1.1. </span>Objective<a class="headerlink" href="#objective" title="Permalink to this headline">¶</a></h2>
+<p>The reliability.space 2020 handbook was developed during an ESA study aiming at the development of a reliability prediction methodology for space applications. The objective of the handbook is to provide a methodology that is dedicated to space, avoiding the limitations and shortcomings of existing reliability prediction methodologies which were largely focussing on ground applications. More details on the development of this reliability.space methodology can be found in <span class="xref myst">Annex A</span>.</p>
+</div>
+<div class="section" id="scope">
+<h2><span class="section-number">1.2. </span>Scope<a class="headerlink" href="#scope" title="Permalink to this headline">¶</a></h2>
+<p>The objective of this handbook is to provide a methodology, methods and models for reliability prediction in space applications. The scope of the handbook can be explained by discussing the following terms:</p>
+<ul class="simple">
+<li><p>Reliability Prediction</p></li>
+<li><p>Space applications</p></li>
+<li><p>Methodology, methods and models</p></li>
+</ul>
+<div class="section" id="reliability-prediction">
+<h3><span class="section-number">1.2.1. </span>Reliability prediction<a class="headerlink" href="#reliability-prediction" title="Permalink to this headline">¶</a></h3>
+<p>The term <strong>Reliability Prediction (RP)</strong> is here understood as the process, or outcome, of estimating (predicting) the reliability of a system or its components, i.e. the probability of success. In the more general context of RAMS analyses, making use of qualitative and quantitative techniques, Reliability Prediction is restricted to providing quantitative estimates for the probability of success or failure. The focus of the methodology presented herein is on Reliability in this narrow sense. Specific requirements of Availability, Maintainability or Safety analyses have not been considered during the development of the methodology and are out of the handbook’s scope, even though the probabilistic methods provided may of course also be used to support these analyses.</p>
+</div>
+<div class="section" id="space-applications">
+<h3><span class="section-number">1.2.2. </span>Space Applications<a class="headerlink" href="#space-applications" title="Permalink to this headline">¶</a></h3>
+<p>For the purpose of the Handbook, the term <strong>Space Applications</strong> refers to Reliability Predictions for systems that operate in space, e.g. a spacecraft. While parts of the methodology may also be used to model end-to-end systems including the ground segment, the handbook does not cover aspects specific to ground applications, e.g. related to the effect of ground environmental conditions. In terms of technology coverage, the methodology is limited to unmanned spacecraft technology.</p>
+</div>
+<div class="section" id="methodology-methods-and-models">
+<h3><span class="section-number">1.2.3. </span>Methodology, Methods and Models<a class="headerlink" href="#methodology-methods-and-models" title="Permalink to this headline">¶</a></h3>
+<p>The handbook includes a Reliability Prediction methodology for space applications together with information on the methods and models that can be used to perform the predictions.</p>
+<div class="figure align-default" id="figure-1">
+<a class="reference internal image-reference" href="../_images/figure1.png"><img alt="../_images/figure1.png" src="../_images/figure1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Hierarchy of Methodology, Methods, Models and Data for reliability predictions aiming at decision support and trade-offs in space projects. The practical implementation and tooling is not considered in the frame of the handbook.</span><a class="headerlink" href="#figure-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Reliability prediction is not an end in itself – the ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single spacecrafts or constellations.</p>
+<p>The purpose of the handbook’s Methodology section (Part I) is to provide guidance for the use of Reliability Prediction to support such decisions. The ground rules and scope of the prediction are defined accounting for the RP objectives and uses as well as for the project life cycle phase in which the predictions are performed. Ultimately, the goal is to select suitable methods and models to perform a prediction in a given context.</p>
+<p>The Methods section of the handbook (Part II) contains information about the inputs and modelling approaches that can be used to develop models for reliability predictions in a given application. The discussion of methods forms the basis for the models presented thereafter, but can also be used to derive new models or update existing ones for future applications.
+Models and data for reliability prediction in practical applications can be found in the Models section of the handbook (Part III).</p>
+<p>Even though the handbook targets decision support, the decision-making as such is left to the user; reliability prediction is limited to providing the numbers that can be used to decide in a given trade-off situation. Also the practical implementation and development or choice of suitable Software tools is out of scope for the handbook. As a general rule, models are provided with full detail, allowing the development of tools without any restrictions regarding the information needed to implement the models.</p>
+</div>
+</div>
+<div class="section" id="how-to-use-the-handbook">
+<h2><span class="section-number">1.3. </span>How to use the handbook<a class="headerlink" href="#how-to-use-the-handbook" title="Permalink to this headline">¶</a></h2>
+<p>To simplify its application by the user, the handbook is divided in three volumes and a Preface:
+The Preface contains terms and definitions, abbreviated terms and common nomenclature for all three volumes.</p>
+<ul class="simple">
+<li><p>Part I (Methodology) explains the framework and taxonomy used in this handbook and provides guidance for users that are in charge of planning a prediction.</p></li>
+<li><p>Part II (Methods) provides information on different modelling inputs and approaches, allowing to understand each model’s background and limitations, to update existing models with new data and to develop new models in consistency with the handbook philosophy.</p></li>
+<li><p>Part III (Models) defines the models and data to be used for reliability prediction in space applications.</p></li>
+</ul>
+<p>Each volume has its intended audience, focussing on a specific use of the reliability prediction handbook, see <a class="reference internal" href="#figure-2"><span class="std std-numref">Fig. 1.2</span></a>. for details. The average handbook user whose task is to perform a prediction with the given models will find all required material in Part III, which is divided by technical domain (EEE, Mechanical, Miscellaneous) and level (parts and small assemblies versus systems). It is, however, assumed that the user is familiar with the basic notions and concepts introduced in the other parts, e.g. the taxonomy explained in Part I.</p>
+<div class="figure align-default" id="figure-2">
+<a class="reference internal image-reference" href="../_images/figure2.png"><img alt="../_images/figure2.png" src="../_images/figure2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Overview on the three handbook volumes and their usage by reliability prediction task.</span><a class="headerlink" href="#figure-2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "paulremo/NRPMInteractivity",
+            ref: "python",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./preface"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../home.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to the NRPM Digital Handbook !</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="documentation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Documentation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Matrisk | Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

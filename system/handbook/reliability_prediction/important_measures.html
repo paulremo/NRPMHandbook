@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.4.5. Important measures &#8212; NRPM Digital handbook</title>
+    <title>10.4.5. Important measures &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/guide_misc.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
@@ -56,7 +57,9 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../../../_static/interactivity/js/decision_tree2.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../../_static/interactivity/js/guide_misc.js"></script>
     <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
@@ -79,8 +82,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="7.4.6. Reliability assessment of degraded systems" href="reliability_assessment_degraded_systems.html" />
-    <link rel="prev" title="7.4.4. Reliability assessment of phased missions" href="reliability_assessment_phased_missions.html" />
+    <link rel="next" title="10.4.6. Reliability assessment of degraded systems" href="reliability_assessment_degraded_systems.html" />
+    <link rel="prev" title="10.4.4. Reliability assessment of phased missions" href="reliability_assessment_phased_missions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,8 +122,30 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../intro.html">
+  <a class="reference internal" href="../../../home.html">
    Welcome to the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/documentation.html">
+   2. Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/terms.html">
+   3. Terms, definitions and abbreviations
   </a>
  </li>
 </ul>
@@ -132,12 +157,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../eee/mainEEE.html">
-   1. Handbook
+   4. Handbook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../eee/models/intro_models.html">
-   2. Models
+   5. Models
   </a>
  </li>
 </ul>
@@ -149,7 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/handbook/introduction.html">
-   3. Handbook
+   6. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -159,22 +184,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/scope.html">
-     3.1. Scope
+     6.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/normative_references.html">
-     3.2. Normative References
+     6.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/terms.html">
-     3.3. Terms, definitions and abbreviated terms
+     6.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/reliability_prediction.html">
-     3.4. Reliability prediction for mechanical and structural parts and assemblies
+     6.4. Reliability prediction for mechanical and structural parts and assemblies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -184,56 +209,56 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
-       3.4.1. Process for mechanical reliability prediction
+       6.4.1. Process for mechanical reliability prediction
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.2. Root causes coverage
+       6.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.3. Data sources and methods
+       6.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.4. Failure mechanisms identification and focus
+       6.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.5. Method selection for different items and failure mechanisms
+       6.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.6. Structural reliability methods and inputs
+       6.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.7. Structural reliability models and equations
+       6.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
-       3.4.8. Examples
+       6.4.8. Examples
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/bibliographic_references.html">
-     3.5. Bibliographic References
+     6.5. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/models/introduction.html">
-   4. Models
+   7. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -243,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/models/solid_lubricant_wear.html">
-     4.1. Solid lubricant wear
+     7.1. Solid lubricant wear
     </a>
    </li>
   </ul>
@@ -257,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../miscellaneous/handbook/introduction.html">
-   5. Handbook
+   8. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -267,22 +292,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/scope.html">
-     5.1. Scope
+     8.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/normative_references.html">
-     5.2. Normative References
+     8.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/terms.html">
-     5.3. Terms, definitions and abbreviated terms
+     8.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_prediction.html">
-     5.4. Reliability prediction for miscellaneous items
+     8.4. Reliability prediction for miscellaneous items
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -292,71 +317,71 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/items.html">
-       5.4.1. List of miscellaneous items
+       8.4.1. List of miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/root_causes_coverage.html">
-       5.4.2. Root causes coverage
+       8.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/data_sources_methods.html">
-       5.4.3. Data sources
+       8.4.3. Data sources
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_models.html">
-       5.4.4. Reliability Models for miscellaneous items
+       8.4.4. Reliability Models for miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html">
-       5.4.5. Process for Reliability modelling
+       8.4.5. Process for Reliability modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/ior_results.html">
-       5.4.6. Use of IOR data and/or tests results
+       8.4.6. Use of IOR data and/or tests results
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html">
-       5.4.7. Basic failure rate derivation for “non-standard model” items
+       8.4.7. Basic failure rate derivation for “non-standard model” items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_data_sm.html">
-       5.4.8. Reliability Data for Miscellaneous “Standard model”
+       8.4.8. Reliability Data for Miscellaneous “Standard model”
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/conclusion.html">
-     5.5. Conclusion
+     8.5. Conclusion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/annexA.html">
-     5.6. Annex A
+     8.6. Annex A
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/annexB.html">
-     5.7. Annex B
+     8.7. Annex B
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/bibliographic_references.html">
-     5.8. Bibliographic References
+     8.8. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../miscellaneous/models/introduction_guide_miscellaneous.html">
-   6. Models
+   9. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -366,7 +391,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/models/failure_rate_processing.html">
-     6.1. Failure rate processing
+     9.1. Failure rate processing
     </a>
    </li>
   </ul>
@@ -380,7 +405,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../introduction.html">
-   7. Handbook
+   10. Handbook
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -390,22 +415,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../scope.html">
-     7.1. Scope
+     10.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../normative_references.html">
-     7.2. Normative References
+     10.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../terms.html">
-     7.3. Terms, definitions and abbreviated terms
+     10.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="reliability_prediction.html">
-     7.4. Reliability prediction for system level items
+     10.4. Reliability prediction for system level items
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -415,66 +440,66 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_prediction_different_levels.html">
-       7.4.1. Reliability prediction at different levels
+       10.4.1. Reliability prediction at different levels
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="root_causes_coverage.html">
-       7.4.2. Root causes coverage
+       10.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="methods.html">
-       7.4.3. System level methods
+       10.4.3. System level methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_assessment_phased_missions.html">
-       7.4.4. Reliability assessment of phased missions
+       10.4.4. Reliability assessment of phased missions
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       7.4.5. Important measures
+       10.4.5. Important measures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_assessment_degraded_systems.html">
-       7.4.6. Reliability assessment of degraded systems
+       10.4.6. Reliability assessment of degraded systems
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="modelling_common_cause_failure.html">
-       7.4.7. Modelling of Common Cause failure
+       10.4.7. Modelling of Common Cause failure
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system_level_modelling_wear_out.html">
-       7.4.8. System level modelling of wear-out
+       10.4.8. System level modelling of wear-out
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="systematic_failure_modelling.html">
-       7.4.9. Systematic failure modelling
+       10.4.9. Systematic failure modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="consideration_software_failures.html">
-       7.4.10. Consideration of software failures
+       10.4.10. Consideration of software failures
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../conclusion.html">
-     7.5. Conclusion
+     10.5. Conclusion
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../models/intro_models.html">
-   8. Models
+   11. Models
   </a>
  </li>
 </ul>
@@ -572,17 +597,17 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#birnbaum-importance-or-marginal-importance">
-   7.4.5.1. Birnbaum importance or marginal importance
+   10.4.5.1. Birnbaum importance or marginal importance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reduced-structural-importance">
-   7.4.5.2. Reduced structural importance
+   10.4.5.2. Reduced structural importance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reliability-allocation-based-on-importance-measures">
-   7.4.5.3. Reliability allocation based on importance measures
+   10.4.5.3. Reliability allocation based on importance measures
   </a>
  </li>
 </ul>
@@ -607,17 +632,17 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#birnbaum-importance-or-marginal-importance">
-   7.4.5.1. Birnbaum importance or marginal importance
+   10.4.5.1. Birnbaum importance or marginal importance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reduced-structural-importance">
-   7.4.5.2. Reduced structural importance
+   10.4.5.2. Reduced structural importance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reliability-allocation-based-on-importance-measures">
-   7.4.5.3. Reliability allocation based on importance measures
+   10.4.5.3. Reliability allocation based on importance measures
   </a>
  </li>
 </ul>
@@ -630,7 +655,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="important-measures">
-<h1><span class="section-number">7.4.5. </span>Important measures<a class="headerlink" href="#important-measures" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">10.4.5. </span>Important measures<a class="headerlink" href="#important-measures" title="Permalink to this headline">¶</a></h1>
 <p>In case the reliability targets are not met, the design process reconsiders the system architecture in order to improve the reliability. Quantification of system reliability gives only the overall system performance measure, but the reliability assessment can also provide a ranking of components with respect to their significance for system reliability. Several measures of significance have been proposed for the case where the support model is a fault tree or RBD, grouped under the generic designation of “importance measures”. The aim of importance measures is to support system design in selecting the most efficient solution through quantitative analysis related to the following questions Error: Reference source not found:</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
@@ -649,7 +674,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>A system shall not change its status from functional to failed if a component changes its status from failed to functional</p></li>
 </ul>
 <div class="section" id="birnbaum-importance-or-marginal-importance">
-<span id="syst-4-5-1"></span><h2><span class="section-number">7.4.5.1. </span>Birnbaum importance or marginal importance<a class="headerlink" href="#birnbaum-importance-or-marginal-importance" title="Permalink to this headline">¶</a></h2>
+<span id="syst-4-5-1"></span><h2><span class="section-number">10.4.5.1. </span>Birnbaum importance or marginal importance<a class="headerlink" href="#birnbaum-importance-or-marginal-importance" title="Permalink to this headline">¶</a></h2>
 <p>The so-called Birnbaum or marginal importance indicates how sensitive the system reliability is with regard to changes of the reliability of a certain component. The marginal importance of component <span class="math notranslate nohighlight">\(i\)</span> is defined as the [partial derivative] of the system reliability function <span class="math notranslate nohighlight">\(R_{S}\)</span> with respect to the reliability of component <span class="math notranslate nohighlight">\(i\)</span> Error: Reference source not found.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
@@ -659,66 +684,66 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-48">
-<span class="eqno">(7.48)<a class="headerlink" href="#equation-equation-7-48" title="Permalink to this equation">¶</a></span>\[I_{m}\left( i \right) = \frac{\partial R_{S}}{\partial R_{i}}\]</div>
+<span class="eqno">(10.48)<a class="headerlink" href="#equation-equation-7-48" title="Permalink to this equation">¶</a></span>\[I_{m}\left( i \right) = \frac{\partial R_{S}}{\partial R_{i}}\]</div>
 </div>
-<p>Instead of the partial derivation, the Birnbaum importance can be obtained, as shown in Eq. <a class="reference internal" href="#equation-equation-7-49">(7.49)</a>, by calculating the difference in the system reliability if the reliability of component <span class="math notranslate nohighlight">\(i\)</span> is set to 1 and 0,</p>
+<p>Instead of the partial derivation, the Birnbaum importance can be obtained, as shown in Eq. <a class="reference internal" href="#equation-equation-7-49">(10.49)</a>, by calculating the difference in the system reliability if the reliability of component <span class="math notranslate nohighlight">\(i\)</span> is set to 1 and 0,</p>
 <div class="equation admonition" id="syst-equation4-49">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-49">
-<span class="eqno">(7.49)<a class="headerlink" href="#equation-equation-7-49" title="Permalink to this equation">¶</a></span>\[I_{m}\left( i \right) = R_{S}\]</div>
+<span class="eqno">(10.49)<a class="headerlink" href="#equation-equation-7-49" title="Permalink to this equation">¶</a></span>\[I_{m}\left( i \right) = R_{S}\]</div>
 </div>
 <p>Where <span class="math notranslate nohighlight">\(r\)</span> denotes the ordered list of component reliabilities for <em>i</em>= 1 to <em>n</em>. The component reliability <span class="math notranslate nohighlight">\(R_{i}\)</span> is varied and set to 1 and zero, whereas all other component reliabilities in vector <span class="math notranslate nohighlight">\(r\)</span> remain unchanged.</p>
 <div class="equation admonition" id="syst-equation4-50">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-50">
-<span class="eqno">(7.50)<a class="headerlink" href="#equation-equation-7-50" title="Permalink to this equation">¶</a></span>\[r : = \left( R_{i}\left( t \right),\ldots R_{n}\left( t \right) \right)\]</div>
+<span class="eqno">(10.50)<a class="headerlink" href="#equation-equation-7-50" title="Permalink to this equation">¶</a></span>\[r : = \left( R_{i}\left( t \right),\ldots R_{n}\left( t \right) \right)\]</div>
 </div>
-<p>In the following, to demonstrate the calculation of the Birnbaum importance a fictive example of a power supply system as shown in <a class="reference internal" href="#figure-7-29"><span class="std std-numref">Fig. 7.29</span></a> is considered. It consists of three solar arrays of different size to provide electrical power. Two larger solar arrays are charging the battery. A power converter is implemented to provide the required voltage levels to the satellite systems.</p>
+<p>In the following, to demonstrate the calculation of the Birnbaum importance a fictive example of a power supply system as shown in <a class="reference internal" href="#figure-7-29"><span class="std std-numref">Fig. 10.29</span></a> is considered. It consists of three solar arrays of different size to provide electrical power. Two larger solar arrays are charging the battery. A power converter is implemented to provide the required voltage levels to the satellite systems.</p>
 <div class="figure align-default" id="figure-7-29">
 <span id="syst-figure4-29"></span><a class="reference internal image-reference" href="../../../_images/figure4_29.png"><img alt="../../../_images/figure4_29.png" src="../../../_images/figure4_29.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.29 </span><span class="caption-text">Reliability Block diagram Power Supply System (fictive example)</span><a class="headerlink" href="#figure-7-29" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.29 </span><span class="caption-text">Reliability Block diagram Power Supply System (fictive example)</span><a class="headerlink" href="#figure-7-29" title="Permalink to this image">¶</a></p>
 </div>
 <p>The system structure function of this example is given by</p>
 <div class="equation admonition" id="syst-equation4-51">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-51">
-<span class="eqno">(7.51)<a class="headerlink" href="#equation-equation-7-51" title="Permalink to this equation">¶</a></span>\[\Phi\left( x \right) = \left( x \middle| 1 \land x_{5} \right) \vee \left( x \middle| 1 \land x_{2} \land x_{3} \right) \vee \left( x \middle| 1{\land x}_{2}{\land x}_{4} \right)\]</div>
+<span class="eqno">(10.51)<a class="headerlink" href="#equation-equation-7-51" title="Permalink to this equation">¶</a></span>\[\Phi\left( x \right) = \left( x \middle| 1 \land x_{5} \right) \vee \left( x \middle| 1 \land x_{2} \land x_{3} \right) \vee \left( x \middle| 1{\land x}_{2}{\land x}_{4} \right)\]</div>
 </div>
-<p>The disjunctive terms in Eq. <a class="reference internal" href="#equation-equation-7-51">(7.51)</a> are derived from minimal success paths and are not mutually exclusive terms. To simplify the calculation of the expected value Eq. <a class="reference internal" href="#equation-equation-7-51">(7.51)</a> is transformed such that it consists of mutually exclusive terms only.</p>
+<p>The disjunctive terms in Eq. <a class="reference internal" href="#equation-equation-7-51">(10.51)</a> are derived from minimal success paths and are not mutually exclusive terms. To simplify the calculation of the expected value Eq. <a class="reference internal" href="#equation-equation-7-51">(10.51)</a> is transformed such that it consists of mutually exclusive terms only.</p>
 <div class="equation admonition" id="syst-equation4-52">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-52">
-<span class="eqno">(7.52)<a class="headerlink" href="#equation-equation-7-52" title="Permalink to this equation">¶</a></span>\[\Phi\left( x \right) = \left( x \middle| 1 \land {\overline{x}}_{2} \land x_{5} \right) \vee \left( x \middle| 1 \land x_{2} \land x_{3} \land {\overline{x}}_{4} \right) \vee \left( x \middle| 1{\land x}_{2} \land {\overline{x}}_{3}{\land x}_{4} \right)\]</div>
+<span class="eqno">(10.52)<a class="headerlink" href="#equation-equation-7-52" title="Permalink to this equation">¶</a></span>\[\Phi\left( x \right) = \left( x \middle| 1 \land {\overline{x}}_{2} \land x_{5} \right) \vee \left( x \middle| 1 \land x_{2} \land x_{3} \land {\overline{x}}_{4} \right) \vee \left( x \middle| 1{\land x}_{2} \land {\overline{x}}_{3}{\land x}_{4} \right)\]</div>
 </div>
 <p>The system reliability function is then given by:</p>
 <div class="equation admonition" id="syst-equation4-53">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-53">
-<span class="eqno">(7.53)<a class="headerlink" href="#equation-equation-7-53" title="Permalink to this equation">¶</a></span>\[R_{S} = E\left( \Phi\left( x \right) \right) = P\]</div>
+<span class="eqno">(10.53)<a class="headerlink" href="#equation-equation-7-53" title="Permalink to this equation">¶</a></span>\[R_{S} = E\left( \Phi\left( x \right) \right) = P\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-54">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-54">
-<span class="eqno">(7.54)<a class="headerlink" href="#equation-equation-7-54" title="Permalink to this equation">¶</a></span>\[R_{S} = R_{1}\left( 1 - R_{2} \right)R_{5} + R_{1}R_{2}R_{3}\left( 1 - R_{4} \right) + R_{1}R_{2}\left( 1 - R \middle| 3 \right)R_{4}\]</div>
+<span class="eqno">(10.54)<a class="headerlink" href="#equation-equation-7-54" title="Permalink to this equation">¶</a></span>\[R_{S} = R_{1}\left( 1 - R_{2} \right)R_{5} + R_{1}R_{2}R_{3}\left( 1 - R_{4} \right) + R_{1}R_{2}\left( 1 - R \middle| 3 \right)R_{4}\]</div>
 </div>
-<p>Using Eq. <a class="reference internal" href="#equation-equation-7-49">(7.49)</a>, the following expression is obtained for Birnbaum importance of component 1.</p>
+<p>Using Eq. <a class="reference internal" href="#equation-equation-7-49">(10.49)</a>, the following expression is obtained for Birnbaum importance of component 1.</p>
 <div class="equation admonition" id="syst-equation4-55">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-55">
-<span class="eqno">(7.55)<a class="headerlink" href="#equation-equation-7-55" title="Permalink to this equation">¶</a></span>\[I_{m1} = XXX\]</div>
+<span class="eqno">(10.55)<a class="headerlink" href="#equation-equation-7-55" title="Permalink to this equation">¶</a></span>\[I_{m1} = XXX\]</div>
 </div>
 <p id="syst-table4-9"><strong>Table 4.9</strong> : Birnbaum or marginal importance</p>
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_9.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 </div>
 <div class="section" id="reduced-structural-importance">
-<span id="syst-4-5-2"></span><h2><span class="section-number">7.4.5.2. </span>Reduced structural importance<a class="headerlink" href="#reduced-structural-importance" title="Permalink to this headline">¶</a></h2>
+<span id="syst-4-5-2"></span><h2><span class="section-number">10.4.5.2. </span>Reduced structural importance<a class="headerlink" href="#reduced-structural-importance" title="Permalink to this headline">¶</a></h2>
 <p>The calculation of importance measures requires a defined system architecture and reliability data for each component. In case of exponential distributed life time, this is represented through the failure rate of the component. Especially in early phases of the development and for new technologies with limited in-service experience, the failure rates are not known. Therefore, to be able to assess the relative importance of components without the failure rate of the component, structural importance measures are defined. Structural importance measures are depending on the system structure only. Thus, if the system architecture is time-invariant, the structural importance is time-invariant as well.</p>
 <p>Typical structural importance measures are using a reliability of 0.5 for all components or calculating a mean value of the importance over the interval <span class="math notranslate nohighlight">\(R_{i} \in \left\lbrack 0;1 \right\rbrack.\)</span></p>
 <p>This assumption is not realistic for space systems. The relevant range of component reliabilities for highly reliable space systems is much smaller. Even if the failure rates for the components are not known, a conservative assumption about the order of magnitude of the worst case failure rates allows defining a relevant interval. To account for this, the reduced structural importance has been defined as mean value of the Birnbaum importance for component reliability in the range between <span class="math notranslate nohighlight">\(R_{\min}\)</span> and 1. It is assumed that all components of the system have reliability equal to or greater than <span class="math notranslate nohighlight">\(R_{\min}\)</span> at the end of the considered time interval, although the exact failure rates are not known, but only the rough order of magnitude Error: Reference source not found. That means, for each component the reliability is set to <span class="math notranslate nohighlight">\(R_{\min}\)</span> and to 1 for the lower and upper boundary.</p>
@@ -726,19 +751,19 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-56">
-<span class="eqno">(7.56)<a class="headerlink" href="#equation-equation-7-56" title="Permalink to this equation">¶</a></span>\[I_{\text{RS}}\left( i,r \right) = \frac{1}{{1 - R}_{\text{mi}n}}\int_{R_{\min}}^{1}{\frac{\partial R_{s}\left( r \right)}{\partial R_{i}}dR_{i}} = \frac{1}{{1 - R}_{\text{mi}n}}{\int_{R_{\min}}^{1}{I_{m}\left( i,r \right)dR_{i}}}_{}\]</div>
+<span class="eqno">(10.56)<a class="headerlink" href="#equation-equation-7-56" title="Permalink to this equation">¶</a></span>\[I_{\text{RS}}\left( i,r \right) = \frac{1}{{1 - R}_{\text{mi}n}}\int_{R_{\min}}^{1}{\frac{\partial R_{s}\left( r \right)}{\partial R_{i}}dR_{i}} = \frac{1}{{1 - R}_{\text{mi}n}}{\int_{R_{\min}}^{1}{I_{m}\left( i,r \right)dR_{i}}}_{}\]</div>
 </div>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>miss factor at final Ri</p>
 </div>
-<p>The reduced structural importance allows assessing the influence of individual components on the system reliability already in early phases of the development, when the system architecture is available but no component failure rates. <a class="reference internal" href="#syst-table4-10"><span class="std std-ref">Table 4.10</span></a> shows a comparison of Birnbaum and reduced structural importance for the system architecture shown in <a class="reference internal" href="#figure-7-29"><span class="std std-numref">Fig. 7.29</span></a>. For this example, it is assumed that all failure rates of the system are below 1.0E-06 1/h, and with 10 years mission duration a minimum component reliability <span class="math notranslate nohighlight">\(R_{\min}\)</span> of 0.916 is obtained.</p>
+<p>The reduced structural importance allows assessing the influence of individual components on the system reliability already in early phases of the development, when the system architecture is available but no component failure rates. <a class="reference internal" href="#syst-table4-10"><span class="std std-ref">Table 4.10</span></a> shows a comparison of Birnbaum and reduced structural importance for the system architecture shown in <a class="reference internal" href="#figure-7-29"><span class="std std-numref">Fig. 10.29</span></a>. For this example, it is assumed that all failure rates of the system are below 1.0E-06 1/h, and with 10 years mission duration a minimum component reliability <span class="math notranslate nohighlight">\(R_{\min}\)</span> of 0.916 is obtained.</p>
 <p>It can be seen that the relative ranking of the components will be the same for the Birnbaum importance and the reduced structural importance, because the system architecture is the determining factor for the importance of the individual components rather than the failure rates. The absolute values of importance measures are different and with the reduced structural importance the potential system reliability improvement cannot be quantified, but it provides a qualitative assessment where reliability improvement has the biggest impact on system reliability.</p>
 <p id="syst-table4-10"><strong>Table 4.10</strong> : Example for marginal and reduced structural Importance.</p>
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_10.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 </div>
 <div class="section" id="reliability-allocation-based-on-importance-measures">
-<h2><span class="section-number">7.4.5.3. </span>Reliability allocation based on importance measures<a class="headerlink" href="#reliability-allocation-based-on-importance-measures" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.5.3. </span>Reliability allocation based on importance measures<a class="headerlink" href="#reliability-allocation-based-on-importance-measures" title="Permalink to this headline">¶</a></h2>
 <p>The importance measure quantifies the impact of each component on the system reliability. This information can be used to support the allocation of a system reliability target to subsystem or component level, as a general rule Error: Reference source not found:</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
@@ -751,7 +776,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-57">
-<span class="eqno">(7.57)<a class="headerlink" href="#equation-equation-7-57" title="Permalink to this equation">¶</a></span>\[\text{dR}_{S}\left( r \right) = \sum_{i = 1}^{n}{\frac{\partial R_{S}}{\partial R_{i}}dR_{i}}\]</div>
+<span class="eqno">(10.57)<a class="headerlink" href="#equation-equation-7-57" title="Permalink to this equation">¶</a></span>\[\text{dR}_{S}\left( r \right) = \sum_{i = 1}^{n}{\frac{\partial R_{S}}{\partial R_{i}}dR_{i}}\]</div>
 </div>
 <p>Thus, the change in system reliability is the weighted sum of changes in component reliability, where the weighting factors are given by the Birnbaum Importance of the components. The change of the system reliability depending on the change of one component reliability can be determined using the Birnbaum importance as shown in the following equation Error: Reference source not found:</p>
 <div class="todo admonition">
@@ -762,12 +787,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-58">
-<span class="eqno">(7.58)<a class="headerlink" href="#equation-equation-7-58" title="Permalink to this equation">¶</a></span>\[{\mathrm{\Delta}R}_{S} = \sum_{i = 1}^{n}{I_{m}\left( i,r \right)\mathrm{\Delta}R_{i}}\]</div>
+<span class="eqno">(10.58)<a class="headerlink" href="#equation-equation-7-58" title="Permalink to this equation">¶</a></span>\[{\mathrm{\Delta}R}_{S} = \sum_{i = 1}^{n}{I_{m}\left( i,r \right)\mathrm{\Delta}R_{i}}\]</div>
 </div>
 <p>Where:</p>
 <p><span class="math notranslate nohighlight">\(\mathrm{\Delta}R_{i}\)</span> denotes the change in reliability of component <span class="math notranslate nohighlight">\(i\)</span> and</p>
 <p><span class="math notranslate nohighlight">\(\mathrm{\Delta}R_{S}\)</span> denotes the change of the system reliability</p>
-<p>In the following, the system architecture shown in <a class="reference internal" href="#figure-7-29"><span class="std std-numref">Fig. 7.29</span></a> is considered as an example to demonstrate the use of importance measures for reliability allocation. Let’s assume the following reliability target for the system is given:</p>
+<p>In the following, the system architecture shown in <a class="reference internal" href="#figure-7-29"><span class="std std-numref">Fig. 10.29</span></a> is considered as an example to demonstrate the use of importance measures for reliability allocation. Let’s assume the following reliability target for the system is given:</p>
 <p>*The reliability of the system shall be at least 0.95 after 10 years mission duration (87600 hours). *</p>
 <p>From the example in <a class="reference internal" href="#syst-table4-10"><span class="std std-ref">Table 4.10</span></a>, it can be seen that the power conversion should have the highest reliability target as it has the biggest influences on the system reliability. A lower reliability value could be assigned to solar panel #1 and #2 since they have a significantly lower impact on the system reliability. The allocation of reliability targets to components consists of the following steps:</p>
 <ol class="simple">
@@ -777,7 +802,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>Calculation of system reliability and Birnbaum importance.</p></li>
 </ol>
-<p>With the initial reliability a system reliability of <span class="math notranslate nohighlight">\(R_{S}\left( t \right) = 0,9092\)</span> is obtained. Based on Eq. <a class="reference internal" href="#equation-equation-7-48">(7.48)</a> the Birnbaum importance is calculated for all components. The results are shown in <a class="reference internal" href="#syst-table4-11"><span class="std std-ref">Table 4.11</span></a>.</p>
+<p>With the initial reliability a system reliability of <span class="math notranslate nohighlight">\(R_{S}\left( t \right) = 0,9092\)</span> is obtained. Based on Eq. <a class="reference internal" href="#equation-equation-7-48">(10.48)</a> the Birnbaum importance is calculated for all components. The results are shown in <a class="reference internal" href="#syst-table4-11"><span class="std std-ref">Table 4.11</span></a>.</p>
 <ol class="simple">
 <li><p>Comparison of the calculated reliability with the system reliability requirement.<br />
 The difference to the required system reliability is given by:</p></li>
@@ -786,38 +811,38 @@ The difference to the required system reliability is given by:</p></li>
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-59">
-<span class="eqno">(7.59)<a class="headerlink" href="#equation-equation-7-59" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{S} = {\hat{R}}_{S}\left( t \right) - R_{S}\left( t \right)\]</div>
+<span class="eqno">(10.59)<a class="headerlink" href="#equation-equation-7-59" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{S} = {\hat{R}}_{S}\left( t \right) - R_{S}\left( t \right)\]</div>
 </div>
 <ol class="simple">
 <li><p>Calculation of component reliability targets using Birnbaum importance measures, as described in the following.</p></li>
 </ol>
-<p>With Eq. <a class="reference internal" href="#equation-equation-7-58">(7.58)</a> the change of the system reliability depending on the change of component reliability can be calculated using the Birnbaum importance. This equation can be transformed such that the change of component reliability to achieve a defined change in system reliability can be calculated.</p>
+<p>With Eq. <a class="reference internal" href="#equation-equation-7-58">(10.58)</a> the change of the system reliability depending on the change of component reliability can be calculated using the Birnbaum importance. This equation can be transformed such that the change of component reliability to achieve a defined change in system reliability can be calculated.</p>
 <div class="equation admonition" id="syst-equation4-60">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-60">
-<span class="eqno">(7.60)<a class="headerlink" href="#equation-equation-7-60" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{i} = \frac{{\mathrm{\Delta}R}_{S}}{I_{m}\left( i,r \right)}\]</div>
+<span class="eqno">(10.60)<a class="headerlink" href="#equation-equation-7-60" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{i} = \frac{{\mathrm{\Delta}R}_{S}}{I_{m}\left( i,r \right)}\]</div>
 </div>
 <p>The reliability target is given by the minimum of the initial reliability plus <span class="math notranslate nohighlight">\(\mathrm{\Delta}R_{i}\)</span> and the maximum achievable reliability <span class="math notranslate nohighlight">\(R_{i,\max}\)</span>.</p>
 <div class="equation admonition" id="syst-equation4-61">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-61">
-<span class="eqno">(7.61)<a class="headerlink" href="#equation-equation-7-61" title="Permalink to this equation">¶</a></span>\[{\hat{R}}_{i} = \min\left( R_{i} + \mathrm{\Delta}R_{i};R_{i,\max} \right)\]</div>
+<span class="eqno">(10.61)<a class="headerlink" href="#equation-equation-7-61" title="Permalink to this equation">¶</a></span>\[{\hat{R}}_{i} = \min\left( R_{i} + \mathrm{\Delta}R_{i};R_{i,\max} \right)\]</div>
 </div>
 <p>In order to allocate the reliability targets efficiently, the components are grouped such that the Birnbaum importance of the components are in the same order of magnitude, as shown in <a class="reference internal" href="#syst-table4-11"><span class="std std-ref">Table 4.11</span></a>. As starting point, the group with the highest Birnbaum importance is selected as candidates for reliability improvement as an improvement of these components has the biggest influence on system reliability. In the example, group I consists of one component only. The required reliability target improvement for component 1 is calculated based on the following equation.</p>
 <div class="equation admonition" id="syst-equation4-62">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-62">
-<span class="eqno">(7.62)<a class="headerlink" href="#equation-equation-7-62" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{1} = \frac{{\mathrm{\Delta}R}_{S}}{I_{m}\left( 1,r \right)} = \frac{0,04081}{0,992} = 0,0411\]</div>
+<span class="eqno">(10.62)<a class="headerlink" href="#equation-equation-7-62" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{1} = \frac{{\mathrm{\Delta}R}_{S}}{I_{m}\left( 1,r \right)} = \frac{0,04081}{0,992} = 0,0411\]</div>
 </div>
 <p>With a maximum achievable reliability of <span class="math notranslate nohighlight">\(R_{1,\max} = 0.955\)</span> the reliability target of component 1 is given by:</p>
 <div class="equation admonition" id="syst-equation4-63">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-63">
-<span class="eqno">(7.63)<a class="headerlink" href="#equation-equation-7-63" title="Permalink to this equation">¶</a></span>\[{\hat{R}}_{1} = \min\left( R_{1} + \mathrm{\Delta}R_{1};R_{1,\max} \right) = \min\left( 0,91613 + 0,0411;0,955 \right)\]</div>
+<span class="eqno">(10.63)<a class="headerlink" href="#equation-equation-7-63" title="Permalink to this equation">¶</a></span>\[{\hat{R}}_{1} = \min\left( R_{1} + \mathrm{\Delta}R_{1};R_{1,\max} \right) = \min\left( 0,91613 + 0,0411;0,955 \right)\]</div>
 </div>
 <p>As the required improvement would exceed the maximum achievable reliability, the reliability of the other components has to be increased in order to achieve the system reliability target. The remaining gap to the system target is recalculated and with the new target for component 1 it could be reduced to 2,23E-03.</p>
 <p>The components in group II are now considered for allocation of new reliability targets. It is assumed that the system reliability increase is equally distributed over the two components in this group. The required reliability improvements for component 2 and 5 are given as follows:</p>
@@ -825,20 +850,20 @@ The difference to the required system reliability is given by:</p></li>
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-64">
-<span class="eqno">(7.64)<a class="headerlink" href="#equation-equation-7-64" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{2} = \frac{0,5{\mathrm{\Delta}R}_{S}}{I_{m}\left( 2,r \right)} = \frac{1,117E - 03}{4,14603E - 02} = 1,46E - 02\]</div>
+<span class="eqno">(10.64)<a class="headerlink" href="#equation-equation-7-64" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{2} = \frac{0,5{\mathrm{\Delta}R}_{S}}{I_{m}\left( 2,r \right)} = \frac{1,117E - 03}{4,14603E - 02} = 1,46E - 02\]</div>
 </div>
 <div class="equation admonition" id="syst-equation4-65">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-65">
-<span class="eqno">(7.65)<a class="headerlink" href="#equation-equation-7-65" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{5} = \frac{0,5{\mathrm{\Delta}R}_{S}}{I_{m}\left( 5,r \right)} = \frac{1,117E - 03}{6,4029E - 02} = 1,35E - 02\]</div>
+<span class="eqno">(10.65)<a class="headerlink" href="#equation-equation-7-65" title="Permalink to this equation">¶</a></span>\[\mathrm{\Delta}R_{5} = \frac{0,5{\mathrm{\Delta}R}_{S}}{I_{m}\left( 5,r \right)} = \frac{1,117E - 03}{6,4029E - 02} = 1,35E - 02\]</div>
 </div>
 <p>The reliability targets for component 2 and 5 are obtained from the following equations:</p>
 <div class="equation admonition" id="syst-equation4-66">
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-66">
-<span class="eqno">(7.66)<a class="headerlink" href="#equation-equation-7-66" title="Permalink to this equation">¶</a></span>\[{\hat{R}}_{2} = \min\left( R_{2} + \mathrm{\Delta}R_{2};R_{2,\max} \right)\]</div>
+<span class="eqno">(10.66)<a class="headerlink" href="#equation-equation-7-66" title="Permalink to this equation">¶</a></span>\[{\hat{R}}_{2} = \min\left( R_{2} + \mathrm{\Delta}R_{2};R_{2,\max} \right)\]</div>
 <div class="math notranslate nohighlight">
 \[\mathrm{\text{\ \ \ \ \ }} = \min\left( 0,91613 + 1,46E - 02;0,945 \right) = 0,93077\]</div>
 </div>
@@ -846,7 +871,7 @@ The difference to the required system reliability is given by:</p></li>
 <p class="admonition-title">Equation</p>
 <p><code class="docutils literal notranslate"> </code></p>
 <div class="math notranslate nohighlight" id="equation-equation-7-67">
-<span class="eqno">(7.67)<a class="headerlink" href="#equation-equation-7-67" title="Permalink to this equation">¶</a></span>\[{\hat{R}}_{5} = \min\left( R_{5} + \mathrm{\Delta}R_{5};R_{5,\max} \right)\]</div>
+<span class="eqno">(10.67)<a class="headerlink" href="#equation-equation-7-67" title="Permalink to this equation">¶</a></span>\[{\hat{R}}_{5} = \min\left( R_{5} + \mathrm{\Delta}R_{5};R_{5,\max} \right)\]</div>
 <div class="math notranslate nohighlight">
 \[\mathrm{\text{\ \ \ \ \ }} = \min\left( 0,91613 + 1,35E - 02;0,945 \right) = 0,92963\]</div>
 </div>
@@ -885,13 +910,13 @@ The difference to the required system reliability is given by:</p></li>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7.4.4. </span>Reliability assessment of phased missions</p>
+            <p class="prev-next-title"><span class="section-number">10.4.4. </span>Reliability assessment of phased missions</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="reliability_assessment_degraded_systems.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.4.6. </span>Reliability assessment of degraded systems</p>
+        <p class="prev-next-title"><span class="section-number">10.4.6. </span>Reliability assessment of degraded systems</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

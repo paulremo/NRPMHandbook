@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.4.9. Systematic failure modelling &#8212; NRPM Digital handbook</title>
+    <title>10.4.9. Systematic failure modelling &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/guide_misc.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
@@ -56,7 +57,9 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../../../_static/interactivity/js/decision_tree2.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../../_static/interactivity/js/guide_misc.js"></script>
     <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
@@ -79,8 +82,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="7.4.10. Consideration of software failures" href="consideration_software_failures.html" />
-    <link rel="prev" title="7.4.8. System level modelling of wear-out" href="system_level_modelling_wear_out.html" />
+    <link rel="next" title="10.4.10. Consideration of software failures" href="consideration_software_failures.html" />
+    <link rel="prev" title="10.4.8. System level modelling of wear-out" href="system_level_modelling_wear_out.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,8 +122,30 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../intro.html">
+  <a class="reference internal" href="../../../home.html">
    Welcome to the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/documentation.html">
+   2. Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/terms.html">
+   3. Terms, definitions and abbreviations
   </a>
  </li>
 </ul>
@@ -132,12 +157,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../eee/mainEEE.html">
-   1. Handbook
+   4. Handbook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../eee/models/intro_models.html">
-   2. Models
+   5. Models
   </a>
  </li>
 </ul>
@@ -149,7 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/handbook/introduction.html">
-   3. Handbook
+   6. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -159,22 +184,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/scope.html">
-     3.1. Scope
+     6.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/normative_references.html">
-     3.2. Normative References
+     6.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/terms.html">
-     3.3. Terms, definitions and abbreviated terms
+     6.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/reliability_prediction.html">
-     3.4. Reliability prediction for mechanical and structural parts and assemblies
+     6.4. Reliability prediction for mechanical and structural parts and assemblies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -184,56 +209,56 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
-       3.4.1. Process for mechanical reliability prediction
+       6.4.1. Process for mechanical reliability prediction
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.2. Root causes coverage
+       6.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.3. Data sources and methods
+       6.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.4. Failure mechanisms identification and focus
+       6.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.5. Method selection for different items and failure mechanisms
+       6.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.6. Structural reliability methods and inputs
+       6.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.7. Structural reliability models and equations
+       6.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
-       3.4.8. Examples
+       6.4.8. Examples
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/bibliographic_references.html">
-     3.5. Bibliographic References
+     6.5. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/models/introduction.html">
-   4. Models
+   7. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -243,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/models/solid_lubricant_wear.html">
-     4.1. Solid lubricant wear
+     7.1. Solid lubricant wear
     </a>
    </li>
   </ul>
@@ -257,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../miscellaneous/handbook/introduction.html">
-   5. Handbook
+   8. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -267,22 +292,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/scope.html">
-     5.1. Scope
+     8.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/normative_references.html">
-     5.2. Normative References
+     8.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/terms.html">
-     5.3. Terms, definitions and abbreviated terms
+     8.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_prediction.html">
-     5.4. Reliability prediction for miscellaneous items
+     8.4. Reliability prediction for miscellaneous items
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -292,71 +317,71 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/items.html">
-       5.4.1. List of miscellaneous items
+       8.4.1. List of miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/root_causes_coverage.html">
-       5.4.2. Root causes coverage
+       8.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/data_sources_methods.html">
-       5.4.3. Data sources
+       8.4.3. Data sources
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_models.html">
-       5.4.4. Reliability Models for miscellaneous items
+       8.4.4. Reliability Models for miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html">
-       5.4.5. Process for Reliability modelling
+       8.4.5. Process for Reliability modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/ior_results.html">
-       5.4.6. Use of IOR data and/or tests results
+       8.4.6. Use of IOR data and/or tests results
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html">
-       5.4.7. Basic failure rate derivation for “non-standard model” items
+       8.4.7. Basic failure rate derivation for “non-standard model” items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../miscellaneous/handbook/reliability_prediction/reliability_data_sm.html">
-       5.4.8. Reliability Data for Miscellaneous “Standard model”
+       8.4.8. Reliability Data for Miscellaneous “Standard model”
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/conclusion.html">
-     5.5. Conclusion
+     8.5. Conclusion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/annexA.html">
-     5.6. Annex A
+     8.6. Annex A
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/annexB.html">
-     5.7. Annex B
+     8.7. Annex B
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/handbook/bibliographic_references.html">
-     5.8. Bibliographic References
+     8.8. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../miscellaneous/models/introduction_guide_miscellaneous.html">
-   6. Models
+   9. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -366,7 +391,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../miscellaneous/models/failure_rate_processing.html">
-     6.1. Failure rate processing
+     9.1. Failure rate processing
     </a>
    </li>
   </ul>
@@ -380,7 +405,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../introduction.html">
-   7. Handbook
+   10. Handbook
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -390,22 +415,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../scope.html">
-     7.1. Scope
+     10.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../normative_references.html">
-     7.2. Normative References
+     10.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../terms.html">
-     7.3. Terms, definitions and abbreviated terms
+     10.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="reliability_prediction.html">
-     7.4. Reliability prediction for system level items
+     10.4. Reliability prediction for system level items
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -415,66 +440,66 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_prediction_different_levels.html">
-       7.4.1. Reliability prediction at different levels
+       10.4.1. Reliability prediction at different levels
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="root_causes_coverage.html">
-       7.4.2. Root causes coverage
+       10.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="methods.html">
-       7.4.3. System level methods
+       10.4.3. System level methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_assessment_phased_missions.html">
-       7.4.4. Reliability assessment of phased missions
+       10.4.4. Reliability assessment of phased missions
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="important_measures.html">
-       7.4.5. Important measures
+       10.4.5. Important measures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_assessment_degraded_systems.html">
-       7.4.6. Reliability assessment of degraded systems
+       10.4.6. Reliability assessment of degraded systems
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="modelling_common_cause_failure.html">
-       7.4.7. Modelling of Common Cause failure
+       10.4.7. Modelling of Common Cause failure
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="system_level_modelling_wear_out.html">
-       7.4.8. System level modelling of wear-out
+       10.4.8. System level modelling of wear-out
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       7.4.9. Systematic failure modelling
+       10.4.9. Systematic failure modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="consideration_software_failures.html">
-       7.4.10. Consideration of software failures
+       10.4.10. Consideration of software failures
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../conclusion.html">
-     7.5. Conclusion
+     10.5. Conclusion
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../models/intro_models.html">
-   8. Models
+   11. Models
   </a>
  </li>
 </ul>
@@ -572,133 +597,133 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#systematic-failures-in-reliability-prediction">
-   7.4.9.1. Systematic failures in reliability prediction
+   10.4.9.1. Systematic failures in reliability prediction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#systematic-failures-classification">
-   7.4.9.2. Systematic failures classification
+   10.4.9.2. Systematic failures classification
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-sources-and-methods">
-   7.4.9.3. Data sources and methods
+   10.4.9.3. Data sources and methods
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inputs-used-for-modelling">
-     7.4.9.3.1. Inputs used for modelling
+     10.4.9.3.1. Inputs used for modelling
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#definition-of-major-anomaly">
-     7.4.9.3.2. Definition of major anomaly
+     10.4.9.3.2. Definition of major anomaly
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-anomalies-as-systematic">
-     7.4.9.3.3. Classification of anomalies as “systematic”
+     10.4.9.3.3. Classification of anomalies as “systematic”
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-major-anomalies-by-severity-satellite-level">
-     7.4.9.3.4. Classification of major anomalies by severity (satellite level)
+     10.4.9.3.4. Classification of major anomalies by severity (satellite level)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-major-anomalies-by-subsystem-and-severity">
-     7.4.9.3.5. Classification of major anomalies by subsystem (and severity)
+     10.4.9.3.5. Classification of major anomalies by subsystem (and severity)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-anomalies-by-root-cause">
-     7.4.9.3.6. Classification of anomalies by root cause
+     10.4.9.3.6. Classification of anomalies by root cause
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-hardware-anomalies-by-technical-domain">
-     7.4.9.3.7. Classification of hardware anomalies by technical domain
+     10.4.9.3.7. Classification of hardware anomalies by technical domain
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#models">
-   7.4.9.4. Models
+   10.4.9.4. Models
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#applicability-and-limitations">
-     7.4.9.4.1. Applicability and limitations
+     10.4.9.4.1. Applicability and limitations
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#applicability-by-manufacturer-and-type-of-spacecraft">
-       7.4.9.4.1.1. Applicability by manufacturer and type of spacecraft
+       10.4.9.4.1.1. Applicability by manufacturer and type of spacecraft
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#using-severity-levels-in-a-reliability-prediction-context">
-       7.4.9.4.1.2. Using severity levels in a reliability prediction context
+       10.4.9.4.1.2. Using severity levels in a reliability prediction context
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#applicability-at-different-levels">
-       7.4.9.4.1.3. Applicability at different levels
+       10.4.9.4.1.3. Applicability at different levels
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#limitations-for-design-support">
-       7.4.9.4.1.4. Limitations for design support
+       10.4.9.4.1.4. Limitations for design support
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modelling-results">
-     7.4.9.4.2. Modelling results
+     10.4.9.4.2. Modelling results
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#anomaly-occurrence-model">
-       7.4.9.4.2.1. Anomaly occurrence model
+       10.4.9.4.2.1. Anomaly occurrence model
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#anomaly-repartition-by-subsystem">
-       7.4.9.4.2.2. Anomaly repartition by subsystem
+       10.4.9.4.2.2. Anomaly repartition by subsystem
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#anomaly-repartition-by-hardware-failure">
-       7.4.9.4.2.3. Anomaly repartition by hardware failure
+       10.4.9.4.2.3. Anomaly repartition by hardware failure
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#anomaly-repartition-by-severity-given-hardware-failure">
-       7.4.9.4.2.4. Anomaly repartition by severity given hardware failure
+       10.4.9.4.2.4. Anomaly repartition by severity given hardware failure
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#additional-data">
-     7.4.9.4.3. Additional data
+     10.4.9.4.3. Additional data
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#major-anomalies-during-in-orbit-testing">
-       7.4.9.4.3.1. Major anomalies during In Orbit Testing
+       10.4.9.4.3.1. Major anomalies during In Orbit Testing
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#classification-by-root-cause-and-severity">
-       7.4.9.4.3.2. Classification by root cause and severity
+       10.4.9.4.3.2. Classification by root cause and severity
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#classification-by-technical-domain-eee-mechanical-miscellaneous">
-       7.4.9.4.3.3. Classification by technical domain (EEE, Mechanical, Miscellaneous)
+       10.4.9.4.3.3. Classification by technical domain (EEE, Mechanical, Miscellaneous)
       </a>
      </li>
     </ul>
@@ -727,133 +752,133 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#systematic-failures-in-reliability-prediction">
-   7.4.9.1. Systematic failures in reliability prediction
+   10.4.9.1. Systematic failures in reliability prediction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#systematic-failures-classification">
-   7.4.9.2. Systematic failures classification
+   10.4.9.2. Systematic failures classification
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-sources-and-methods">
-   7.4.9.3. Data sources and methods
+   10.4.9.3. Data sources and methods
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inputs-used-for-modelling">
-     7.4.9.3.1. Inputs used for modelling
+     10.4.9.3.1. Inputs used for modelling
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#definition-of-major-anomaly">
-     7.4.9.3.2. Definition of major anomaly
+     10.4.9.3.2. Definition of major anomaly
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-anomalies-as-systematic">
-     7.4.9.3.3. Classification of anomalies as “systematic”
+     10.4.9.3.3. Classification of anomalies as “systematic”
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-major-anomalies-by-severity-satellite-level">
-     7.4.9.3.4. Classification of major anomalies by severity (satellite level)
+     10.4.9.3.4. Classification of major anomalies by severity (satellite level)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-major-anomalies-by-subsystem-and-severity">
-     7.4.9.3.5. Classification of major anomalies by subsystem (and severity)
+     10.4.9.3.5. Classification of major anomalies by subsystem (and severity)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-anomalies-by-root-cause">
-     7.4.9.3.6. Classification of anomalies by root cause
+     10.4.9.3.6. Classification of anomalies by root cause
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classification-of-hardware-anomalies-by-technical-domain">
-     7.4.9.3.7. Classification of hardware anomalies by technical domain
+     10.4.9.3.7. Classification of hardware anomalies by technical domain
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#models">
-   7.4.9.4. Models
+   10.4.9.4. Models
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#applicability-and-limitations">
-     7.4.9.4.1. Applicability and limitations
+     10.4.9.4.1. Applicability and limitations
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#applicability-by-manufacturer-and-type-of-spacecraft">
-       7.4.9.4.1.1. Applicability by manufacturer and type of spacecraft
+       10.4.9.4.1.1. Applicability by manufacturer and type of spacecraft
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#using-severity-levels-in-a-reliability-prediction-context">
-       7.4.9.4.1.2. Using severity levels in a reliability prediction context
+       10.4.9.4.1.2. Using severity levels in a reliability prediction context
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#applicability-at-different-levels">
-       7.4.9.4.1.3. Applicability at different levels
+       10.4.9.4.1.3. Applicability at different levels
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#limitations-for-design-support">
-       7.4.9.4.1.4. Limitations for design support
+       10.4.9.4.1.4. Limitations for design support
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modelling-results">
-     7.4.9.4.2. Modelling results
+     10.4.9.4.2. Modelling results
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#anomaly-occurrence-model">
-       7.4.9.4.2.1. Anomaly occurrence model
+       10.4.9.4.2.1. Anomaly occurrence model
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#anomaly-repartition-by-subsystem">
-       7.4.9.4.2.2. Anomaly repartition by subsystem
+       10.4.9.4.2.2. Anomaly repartition by subsystem
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#anomaly-repartition-by-hardware-failure">
-       7.4.9.4.2.3. Anomaly repartition by hardware failure
+       10.4.9.4.2.3. Anomaly repartition by hardware failure
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#anomaly-repartition-by-severity-given-hardware-failure">
-       7.4.9.4.2.4. Anomaly repartition by severity given hardware failure
+       10.4.9.4.2.4. Anomaly repartition by severity given hardware failure
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#additional-data">
-     7.4.9.4.3. Additional data
+     10.4.9.4.3. Additional data
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#major-anomalies-during-in-orbit-testing">
-       7.4.9.4.3.1. Major anomalies during In Orbit Testing
+       10.4.9.4.3.1. Major anomalies during In Orbit Testing
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#classification-by-root-cause-and-severity">
-       7.4.9.4.3.2. Classification by root cause and severity
+       10.4.9.4.3.2. Classification by root cause and severity
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#classification-by-technical-domain-eee-mechanical-miscellaneous">
-       7.4.9.4.3.3. Classification by technical domain (EEE, Mechanical, Miscellaneous)
+       10.4.9.4.3.3. Classification by technical domain (EEE, Mechanical, Miscellaneous)
       </a>
      </li>
     </ul>
@@ -870,32 +895,32 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="systematic-failure-modelling">
-<h1><span class="section-number">7.4.9. </span>Systematic failure modelling<a class="headerlink" href="#systematic-failure-modelling" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">10.4.9. </span>Systematic failure modelling<a class="headerlink" href="#systematic-failure-modelling" title="Permalink to this headline">¶</a></h1>
 <p>The present section introduces the modelling of systematic failures using In Orbit Return data. After an introduction to the topic (Section Error: Reference source not found) and the classification of systematic failures (Section Error: Reference source not found), the modelling is explained starting with the data sources and methods used (Section Error: Reference source not found). The description of the model in Section Error: Reference source not found starts with a discussion of is range of applicability, which is related to the applicability of the data source used.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>miss 4 ref above</p>
 </div>
 <div class="section" id="systematic-failures-in-reliability-prediction">
-<h2><span class="section-number">7.4.9.1. </span>Systematic failures in reliability prediction<a class="headerlink" href="#systematic-failures-in-reliability-prediction" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.9.1. </span>Systematic failures in reliability prediction<a class="headerlink" href="#systematic-failures-in-reliability-prediction" title="Permalink to this headline">¶</a></h2>
 <p>According to the classification provided in <span class="xref myst">Chapter 4 (Part I)</span>, systematic failures are failures for which the root cause is known and has been identified as a design, manufacturing or operations error. The fact that the root cause is known (at least a posteriori) and can be eliminated is the main difference between systematic and random failures. First priority should thus clearly be to avoid systematic failures rather than modelling their occurrence. However, it is also clear that even though a specific root cause may be eliminated by adapting the design or the process in which the error occurred, experience shows that other root causes will lead to new systematic failures. It is thus possible – and can be meaningful, depending on the intended use of the prediction – to derive a statistical model for systematic failures in the same way as for random failures.</p>
 <p>Another major difference to random failures is that systematic failure root causes may be introduced at any level of assembly, from part to system. In fact, considering the high quality of parts used in space and the complexity and uniqueness of the assembled systems, one may even assume that the occurrence of part related systematic failures is negligible compared to non-part related failures with root causes introduced at higher levels of assembly.</p>
 <p>It is important to remind that the occurrence of systematic failures at lower levels of assembly may be driven by common cause effects and it is generally not valid to assume independence between systematic failures, e.g. in identical equipment operating in redundancy. However, two systematic failures resulting from the same root cause must not be fully dependent either; depending on the setting the degree of dependence between two systematic failures may range from nearly independent (“random-like”) to fully dependent.</p>
 <p>The modelling approach followed in the present section avoids these difficulties by working top-down, starting at spacecraft level and going down to subsystem level only. No common cause modelling is required with this approach, as subsystems are combined at spacecraft level in a serial system design. However, common cause must be considered for systematic failures when relying on models developed at lower levels.</p>
 <p>Considering the system level effects, it may be said that systematic failure root causes are generally more likely to lead to severe consequences at spacecraft level than random failures, whose effect can be modelled and mitigated by redundancy and Fault Detection Isolation and Recovery (FDIR). However, this does not mean that each systematic failure immediately leads to the collapse of the overall system in the sense of a single point failure. Redundancy, robust design and failure detection and recovery can help in the case of systematic failures as well, and workarounds may be implemented from ground by uploading software updates and/or adapting operational procedures.</p>
-<p>To account for these mitigation measures, the modelling presented in this section considers (major) anomalies rather than failures, and works with a classification by severity to model the impact on the mission. Definitions are provided in Section Error: Reference source not found. <a class="reference internal" href="#figure-7-33"><span class="std std-numref">Fig. 7.33</span></a> illustrates the introduction of flaws during design (including specification) and manufacturing, which – if undetected before launch – may lead to failures or anomalies in orbit under operational and/or environmental stresses (Note that operation errors may lead to systematic failures even without the presence of flaws). The severity category depends on the effect propagation in the overall system, and can be reduced by mitigation measures implemented a priori during design, or a posteriori after anomaly investigation.</p>
+<p>To account for these mitigation measures, the modelling presented in this section considers (major) anomalies rather than failures, and works with a classification by severity to model the impact on the mission. Definitions are provided in Section Error: Reference source not found. <a class="reference internal" href="#figure-7-33"><span class="std std-numref">Fig. 10.33</span></a> illustrates the introduction of flaws during design (including specification) and manufacturing, which – if undetected before launch – may lead to failures or anomalies in orbit under operational and/or environmental stresses (Note that operation errors may lead to systematic failures even without the presence of flaws). The severity category depends on the effect propagation in the overall system, and can be reduced by mitigation measures implemented a priori during design, or a posteriori after anomaly investigation.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>miss ref above</p>
 </div>
 <div class="figure align-default" id="figure-7-33">
 <span id="syst-figure4-33"></span><a class="reference internal image-reference" href="../../../_images/figure4_33.png"><img alt="../../../_images/figure4_33.png" src="../../../_images/figure4_33.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.33 </span><span class="caption-text">Root causes and effects of systematic failures.</span><a class="headerlink" href="#figure-7-33" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.33 </span><span class="caption-text">Root causes and effects of systematic failures.</span><a class="headerlink" href="#figure-7-33" title="Permalink to this image">¶</a></p>
 </div>
-<p>An ideal model for systematic failure or anomaly modelling considers all the aspects shown in <a class="reference internal" href="#figure-7-33"><span class="std std-numref">Fig. 7.33</span></a>, including not only the root causes of failure, but also the effect of mitigation measures implemented to avoid the occurrence of systematic failures and to mitigate their effect on the mission. In the present section, a first step is made, focussing on the occurrence and severity of anomalies in orbit. The resulting model provides global quantitative figures that are already useful for reliability prediction in a top down approach, but it is does not allow to quantify the effect of the various mitigation measures that have already been implemented before launch.</p>
+<p>An ideal model for systematic failure or anomaly modelling considers all the aspects shown in <a class="reference internal" href="#figure-7-33"><span class="std std-numref">Fig. 10.33</span></a>, including not only the root causes of failure, but also the effect of mitigation measures implemented to avoid the occurrence of systematic failures and to mitigate their effect on the mission. In the present section, a first step is made, focussing on the occurrence and severity of anomalies in orbit. The resulting model provides global quantitative figures that are already useful for reliability prediction in a top down approach, but it is does not allow to quantify the effect of the various mitigation measures that have already been implemented before launch.</p>
 </div>
 <div class="section" id="systematic-failures-classification">
-<h2><span class="section-number">7.4.9.2. </span>Systematic failures classification<a class="headerlink" href="#systematic-failures-classification" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4.9.2. </span>Systematic failures classification<a class="headerlink" href="#systematic-failures-classification" title="Permalink to this headline">¶</a></h2>
 <p>To define and classify systematic failures, it is first necessary to define a sound DESIGN, a sound MANUFACTURING and a sound OPERATION. The related errors are derived accordingly.</p>
 <p>*<strong>DESIGN</strong> is SOUND when the system *</p>
 <ul class="simple">
@@ -928,16 +953,16 @@ const thebe_selector_output = ".output, .cell_output"
 <p>It is also noteworthy that in some situations the systematic failures occur in a complex failure scenario, e.g. a random failure at equipment level may lead to the loss of the satellite through failure propagation when the FDIR function is not designed appropriately (e.g. no segregation between nominal channel and redundant one).</p>
 </div>
 <div class="section" id="data-sources-and-methods">
-<span id="syst-4-9-3"></span><h2><span class="section-number">7.4.9.3. </span>Data sources and methods<a class="headerlink" href="#data-sources-and-methods" title="Permalink to this headline">¶</a></h2>
+<span id="syst-4-9-3"></span><h2><span class="section-number">10.4.9.3. </span>Data sources and methods<a class="headerlink" href="#data-sources-and-methods" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="inputs-used-for-modelling">
-<span id="syst-4-9-3-1"></span><h3><span class="section-number">7.4.9.3.1. </span>Inputs used for modelling<a class="headerlink" href="#inputs-used-for-modelling" title="Permalink to this headline">¶</a></h3>
+<span id="syst-4-9-3-1"></span><h3><span class="section-number">10.4.9.3.1. </span>Inputs used for modelling<a class="headerlink" href="#inputs-used-for-modelling" title="Permalink to this headline">¶</a></h3>
 <p>The data source used for quantitative modelling of systematic failures is in-orbit return (IOR) data with information on major anomalies collected at satellite level. A fundamental assumption for the use of IOR is that the occurrence of systematic anomalies in orbit depends on the quality assurance policy and processes implemented in the space industry, allowing to use information from the past as long as the processes do not change fundamentally.</p>
 <p>The modelling results provided in Section Error: Reference source not found make use of IOR collected by Airbus Defence and Space between 1986 and 2018 regarding a fleet of 164 satellites in-orbit (at 2019/01/01).</p>
 <p>Relying on the inputs from a given data source, the modelling results obviously depend on the classification of anomalies and failures used to generate the data sample. In particular the classification of an event as “systematic” or “random” plays an important role in this context, and may be based on very different criteria in different organizations, even when working with the same definitions.</p>
 <p>All classifications and definitions required to understand the modelling are provided in the following.</p>
 </div>
 <div class="section" id="definition-of-major-anomaly">
-<h3><span class="section-number">7.4.9.3.2. </span>Definition of major anomaly<a class="headerlink" href="#definition-of-major-anomaly" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.9.3.2. </span>Definition of major anomaly<a class="headerlink" href="#definition-of-major-anomaly" title="Permalink to this headline">¶</a></h3>
 <p>The term “anomaly” is defined as any deviation from the expected situation. It includes failures, but also other events like e.g. outages or erroneous functioning.</p>
 <p>The following anomalies observed in orbit are classified as major:</p>
 <ul class="simple">
@@ -948,7 +973,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="classification-of-anomalies-as-systematic">
-<h3><span class="section-number">7.4.9.3.3. </span>Classification of anomalies as “systematic”<a class="headerlink" href="#classification-of-anomalies-as-systematic" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.9.3.3. </span>Classification of anomalies as “systematic”<a class="headerlink" href="#classification-of-anomalies-as-systematic" title="Permalink to this headline">¶</a></h3>
 <p>The models and data presented in this section are consistent with the classification of failures by root cause discussed in <span class="xref myst">Chapter 4 (Part I)</span>; the classification of anomalies is based on the same principles. Only major anomalies classified as “systematic” are considered for the modelling. As discussed in Section Error: Reference source not found above, this includes anomalies due to errors in the design (including specification), manufacturing and operation of space systems.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
@@ -956,7 +981,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="classification-of-major-anomalies-by-severity-satellite-level">
-<h3><span class="section-number">7.4.9.3.4. </span>Classification of major anomalies by severity (satellite level)<a class="headerlink" href="#classification-of-major-anomalies-by-severity-satellite-level" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.9.3.4. </span>Classification of major anomalies by severity (satellite level)<a class="headerlink" href="#classification-of-major-anomalies-by-severity-satellite-level" title="Permalink to this headline">¶</a></h3>
 <p>The data used for modelling provides information on anomalies observed during operations in orbit. Combined with data on the fleet (providing information on the satellites’ lifetime), this anomaly data is used to derive the anomaly occurrence rate as a function of operating time. It is important to note that also anomalies without mission impact are considered in the occurrence model, with the aim to achieve a more relevant sample size. The following five severity classes are used to classify the anomalies by their effect on the mission:</p>
 <ul>
 <li><p><strong>Severity 1, HIGH</strong>: Impact on mission between ]50% - 100%]\</p>
@@ -991,7 +1016,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>It should be noted that even though there is no difference in terms of the consequences at system level between the severity categories 4 and 5, from a reliability perspective (considering the remaining lifetime after anomaly occurrence) it does make a difference whether there was a loss of hardware or not. For this reason, it was decided to explicitly model the probability that an anomaly involves a hardware failure (Severity 1 to 4) or not (Severity 5), before going into a more detailed modelling of the severity category given hardware failure.</p>
 </div>
 <div class="section" id="classification-of-major-anomalies-by-subsystem-and-severity">
-<h3><span class="section-number">7.4.9.3.5. </span>Classification of major anomalies by subsystem (and severity)<a class="headerlink" href="#classification-of-major-anomalies-by-subsystem-and-severity" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.9.3.5. </span>Classification of major anomalies by subsystem (and severity)<a class="headerlink" href="#classification-of-major-anomalies-by-subsystem-and-severity" title="Permalink to this headline">¶</a></h3>
 <p>The repartition of major anomalies by satellite subsystem in which the anomaly occurred is based on the following classification:</p>
 <ul class="simple">
 <li><p><strong>AOCS:</strong> Attitude and Orbit Control System</p></li>
@@ -1011,7 +1036,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>For the subsystems with anomaly data, the anomalies are further classified by severity, following the same (mission level) classification as introduced above.</p>
 </div>
 <div class="section" id="classification-of-anomalies-by-root-cause">
-<h3><span class="section-number">7.4.9.3.6. </span>Classification of anomalies by root cause<a class="headerlink" href="#classification-of-anomalies-by-root-cause" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.9.3.6. </span>Classification of anomalies by root cause<a class="headerlink" href="#classification-of-anomalies-by-root-cause" title="Permalink to this headline">¶</a></h3>
 <p>In consistency with the taxonomy of failures by failure root cause provided in Section Error: Reference source not found above, “systematic” anomalies can now be further classified by distinguishing the following root causes:</p>
 <ul>
 <li><p><strong>Operation</strong>:</p>
@@ -1048,7 +1073,7 @@ Note: it is assumed that the User’s Manual is error free, otherwise the error 
 </div>
 </div>
 <div class="section" id="classification-of-hardware-anomalies-by-technical-domain">
-<h3><span class="section-number">7.4.9.3.7. </span>Classification of hardware anomalies by technical domain<a class="headerlink" href="#classification-of-hardware-anomalies-by-technical-domain" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.9.3.7. </span>Classification of hardware anomalies by technical domain<a class="headerlink" href="#classification-of-hardware-anomalies-by-technical-domain" title="Permalink to this headline">¶</a></h3>
 <p>Anomalies whose root cause is classified as “hardware” (design or manufacturing error) can be further classified by the type of hardware, considering the equipment involved in a subsystem anomaly. The repartition is done using the same classification as for the chapters in Part III of this handbook, i.e. considering EEE, Mechanical (MEC) and Miscellaneous (MIS) items.</p>
 <p><strong>Methods and modelling assumptions</strong></p>
 <p>The modelling approach chosen to derive a model from the data is based on two steps: First, the anomaly and fleet data is used to derive an anomaly occurrence model at satellite level, assuming a non-homogeneous Poisson process with Weibull (time dependent) rate of major anomaly occurrence. In the second step, a set of conditional probabilities is derived based on the classification of major anomalies by subsystem and severity. “Conditional” in this context means the second model is conditional on the occurrence of a major anomaly.</p>
@@ -1098,93 +1123,93 @@ Note: it is assumed that the User’s Manual is error free, otherwise the error 
 </div>
 </div>
 <div class="section" id="models">
-<span id="syst-4-9-4"></span><h2><span class="section-number">7.4.9.4. </span>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
+<span id="syst-4-9-4"></span><h2><span class="section-number">10.4.9.4. </span>Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="applicability-and-limitations">
-<span id="syst-4-9-4-1"></span><h3><span class="section-number">7.4.9.4.1. </span>Applicability and limitations<a class="headerlink" href="#applicability-and-limitations" title="Permalink to this headline">¶</a></h3>
+<span id="syst-4-9-4-1"></span><h3><span class="section-number">10.4.9.4.1. </span>Applicability and limitations<a class="headerlink" href="#applicability-and-limitations" title="Permalink to this headline">¶</a></h3>
 <p>In the following, some basic assumptions and resulting limitations of the models are briefly discussed from the perspective of the model user.</p>
 <div class="section" id="applicability-by-manufacturer-and-type-of-spacecraft">
-<h4><span class="section-number">7.4.9.4.1.1. </span>Applicability by manufacturer and type of spacecraft<a class="headerlink" href="#applicability-by-manufacturer-and-type-of-spacecraft" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">10.4.9.4.1.1. </span>Applicability by manufacturer and type of spacecraft<a class="headerlink" href="#applicability-by-manufacturer-and-type-of-spacecraft" title="Permalink to this headline">¶</a></h4>
 <p>The selected modelling approach is independent of the manufacturer and spacecraft for which the prediction shall be performed, but the data used for modelling is not. In terms of quality assurance levels and manufacturer experience, the model is valid for major satellite prime contractors, and should not be used when lower quality levels must be suspected. see e.g. Lecointe et al. Error: Reference source not found for a comparison between cubesat reliability and traditional GEO satellites or Swartwout Error: Reference source not found for a comparison of different cubesat missions implying different quality assurance regimes.</p>
 <p>The impact of different spacecraft development strategies (e.g. generic versus non-generic product) and orbits (e.g. GEO versus LEO) was investigated based on the data used for the model in Section Error: Reference source not found below, but the results were difficult to interpret and are therefore not shown hereafter. The model provided is based on the overall fleet data, i.e. considering a mix of generic and non-generic products in different orbits. What can be said from the investigations made is that the model is well in line with the results derived for GEO satellites. For other types of spacecrafts, it may be used as a first approximation even though implying a somewhat larger implicit model uncertainty.</p>
 </div>
 <div class="section" id="using-severity-levels-in-a-reliability-prediction-context">
-<h4><span class="section-number">7.4.9.4.1.2. </span>Using severity levels in a reliability prediction context<a class="headerlink" href="#using-severity-levels-in-a-reliability-prediction-context" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">10.4.9.4.1.2. </span>Using severity levels in a reliability prediction context<a class="headerlink" href="#using-severity-levels-in-a-reliability-prediction-context" title="Permalink to this headline">¶</a></h4>
 <p>As has been explained in Section Error: Reference source not found above, the model is based on data on major anomalies collected at satellite level. The use of the model is thus most straightforward when applied in combination with predictions for different degraded system modes, as discussed in Section Error: Reference source not found for the case of random failures. In this context, it is important to note that the severity of the observed anomalies may have been limited not only by barriers inherent in the system design (e.g. redundancy, FDIR), but also by measures implemented after anomaly occurrence, e.g. when patches are uploaded to “repair” a software bug or workarounds are implemented in the case of an anomaly due to hardware design or manufacturing errors. Thus, the prediction does not give the “inherent” reliability of the technical system, but rather that of a larger system, involving also the recovery strategies (i.e. failure management on-board plus Ground capacity for recovery / workaround) implemented after launch.</p>
 <p>Another consequence of the selected modelling approach is that it is not straight-forward how to use the results when making predictions based on a more traditional interpretation of system level relia-bility, where severity is not of relevance: Either the system performs as specified or it is considered as failed. A shortcut approximation in this case is to consider all anomalies except for those classified as “no impact” (severity 4 and 5) to derive the systematic failure rate (mission out of specification) at system level. Adding also the anomalies with hardware failure (severity 4) gives an upper bound for the systematic failure rate.</p>
 </div>
 <div class="section" id="applicability-at-different-levels">
-<h4><span class="section-number">7.4.9.4.1.3. </span>Applicability at different levels<a class="headerlink" href="#applicability-at-different-levels" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">10.4.9.4.1.3. </span>Applicability at different levels<a class="headerlink" href="#applicability-at-different-levels" title="Permalink to this headline">¶</a></h4>
 <p>The modelling has been performed top down, starting at satellite level and going down to subsystem level only in a second step. As has been discussed in Section Error: Reference source not found, an important assumption behind this approach is that the shape of the anomaly occurrence model is independent of the considered subsystem, which is certainly not true in reality. As a result, even though it is mathematically possible to derive a time dependent anomaly rate per subsystem simply by multiplying the satellite level anomaly occurrence model with the conditional probability of each subsystem given anomaly occurrence, but the distribution of anomalies over time should be treated with caution when following this approach (see also Section Error: Reference source not found).</p>
 <p>Going down only to subsystem level avoids the complexities arising due to redundancy implemented at equipment level: The data preparation would have been much more demanding at this level. The effect of redundancy is implicit in the classification by severity, but cannot be made explicit based on the data used for modelling.</p>
 <p>As subsystems are combined at satellite level in a serial system design, it is not necessary to consider common cause effects when using the model.</p>
 </div>
 <div class="section" id="limitations-for-design-support">
-<h4><span class="section-number">7.4.9.4.1.4. </span>Limitations for design support<a class="headerlink" href="#limitations-for-design-support" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">10.4.9.4.1.4. </span>Limitations for design support<a class="headerlink" href="#limitations-for-design-support" title="Permalink to this headline">¶</a></h4>
 <p>As the modelling goes down to subsystem level only, the results cannot be used to assess the impact of design decisions at equipment level, including redundancy sizing, on the occurrence rate and severity of systematic anomalies. Also other relevant variables, such as e.g. the maturity category of the equipment used (from space proven to completely new design) or the amount and type of testing performed for quality assurance, are not considered by the model, as it would have been very difficult to produce the data required for such a model. As a result, the model presented in the following cannot be used to support decision-making during the design of a spacecraft, but only to predict the occurrence of anomalies due to systematic flaws under the assumption of usual quality assurance procedures implemented by major satellite prime contractors.</p>
 </div>
 </div>
 <div class="section" id="modelling-results">
-<span id="syst-4-9-4-2"></span><h3><span class="section-number">7.4.9.4.2. </span>Modelling results<a class="headerlink" href="#modelling-results" title="Permalink to this headline">¶</a></h3>
+<span id="syst-4-9-4-2"></span><h3><span class="section-number">10.4.9.4.2. </span>Modelling results<a class="headerlink" href="#modelling-results" title="Permalink to this headline">¶</a></h3>
 <p>As discussed in Section Error: Reference source not found, the modelling provides an anomaly occurrence model at satellite level and a set of conditional probabilities for the repartition of anomalies by subsystem and severity. Results and parameters for each model component are given in the following, based on the data set described in Section Error: Reference source not found and under the assumptions and limitations discussed above.</p>
 <div class="section" id="anomaly-occurrence-model">
-<h4><span class="section-number">7.4.9.4.2.1. </span>Anomaly occurrence model<a class="headerlink" href="#anomaly-occurrence-model" title="Permalink to this headline">¶</a></h4>
-<p>The data base used for the estimation of the parameters is illustrated in <a class="reference internal" href="#figure-7-34"><span class="std std-numref">Fig. 7.34</span></a>. The portfolio of satellites is almost equally distributed over the time which indicates that the number of launches in each year does not vary too much in the considered time. Per satellite an anomaly can occur several times within one satellite (repeated events). The total number of anomalies is thus larger than the number of satellites in the portfolio.</p>
+<h4><span class="section-number">10.4.9.4.2.1. </span>Anomaly occurrence model<a class="headerlink" href="#anomaly-occurrence-model" title="Permalink to this headline">¶</a></h4>
+<p>The data base used for the estimation of the parameters is illustrated in <a class="reference internal" href="#figure-7-34"><span class="std std-numref">Fig. 10.34</span></a>. The portfolio of satellites is almost equally distributed over the time which indicates that the number of launches in each year does not vary too much in the considered time. Per satellite an anomaly can occur several times within one satellite (repeated events). The total number of anomalies is thus larger than the number of satellites in the portfolio.</p>
 <div class="figure align-default" id="figure-7-34">
 <span id="syst-figure4-34"></span><a class="reference internal image-reference" href="../../../_images/figure4_34.png"><img alt="../../../_images/figure4_34.png" src="../../../_images/figure4_34.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.34 </span><span class="caption-text">Data base for modelling the time dependent anomaly occurrence rate.</span><a class="headerlink" href="#figure-7-34" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.34 </span><span class="caption-text">Data base for modelling the time dependent anomaly occurrence rate.</span><a class="headerlink" href="#figure-7-34" title="Permalink to this image">¶</a></p>
 </div>
-<p>The rate of anomaly occurrence (all severities) derived from the Poisson/Weibull model fitted to the data is shown in <a class="reference internal" href="#figure-7-35"><span class="std std-numref">Fig. 7.35</span></a>. Markov Chain Monte Carlo simulations were used to determine the posterior distribution of the model parameters <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>. As can be seen from the 90% confidence interval, the statistical uncertainty associated with the model is rather small due to the fact that also minor anomalies are considered in the data sample, leading to a considerable sample size.</p>
+<p>The rate of anomaly occurrence (all severities) derived from the Poisson/Weibull model fitted to the data is shown in <a class="reference internal" href="#figure-7-35"><span class="std std-numref">Fig. 10.35</span></a>. Markov Chain Monte Carlo simulations were used to determine the posterior distribution of the model parameters <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>. As can be seen from the 90% confidence interval, the statistical uncertainty associated with the model is rather small due to the fact that also minor anomalies are considered in the data sample, leading to a considerable sample size.</p>
 <div class="figure align-default" id="figure-7-35">
 <span id="syst-figure4-35"></span><a class="reference internal image-reference" href="../../../_images/figure4_35.png"><img alt="../../../_images/figure4_35.png" src="../../../_images/figure4_35.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.35 </span><span class="caption-text">Time dependent anomaly occurrence rate due to systematic root causes based on the Poisson/Weibull model for anomalies observed at satellite level (all severities).</span><a class="headerlink" href="#figure-7-35" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.35 </span><span class="caption-text">Time dependent anomaly occurrence rate due to systematic root causes based on the Poisson/Weibull model for anomalies observed at satellite level (all severities).</span><a class="headerlink" href="#figure-7-35" title="Permalink to this image">¶</a></p>
 </div>
-<p>The bivariate distribution of the model parameters after convergence of the MCMC simulation is illustrated in <a class="reference internal" href="#figure-7-36"><span class="std std-numref">Fig. 7.36</span></a>. It can be seen that the shape parameter of the Weibull model is clearly below unity, implying a decreasing failure rate as shown in <a class="reference internal" href="#figure-7-35"><span class="std std-numref">Fig. 7.35</span></a>. The parameters of the Weibull distribution are highly correlated. This correlation needs to be considered when calculating the failure rate. The joint distribution of the Weibull parameters can be approximated here by a bivariate normal distribution.</p>
+<p>The bivariate distribution of the model parameters after convergence of the MCMC simulation is illustrated in <a class="reference internal" href="#figure-7-36"><span class="std std-numref">Fig. 10.36</span></a>. It can be seen that the shape parameter of the Weibull model is clearly below unity, implying a decreasing failure rate as shown in <a class="reference internal" href="#figure-7-35"><span class="std std-numref">Fig. 10.35</span></a>. The parameters of the Weibull distribution are highly correlated. This correlation needs to be considered when calculating the failure rate. The joint distribution of the Weibull parameters can be approximated here by a bivariate normal distribution.</p>
 <div class="figure align-default" id="figure-7-36">
 <span id="syst-figure4-36"></span><a class="reference internal image-reference" href="../../../_images/figure4_36.png"><img alt="../../../_images/figure4_36.png" src="../../../_images/figure4_36.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.36 </span><span class="caption-text">Posterior distribution of the model parameters for the Poisson/Weibull anomaly occurrence model, based on the MCMC chains [10’000 post burn in simulations].</span><a class="headerlink" href="#figure-7-36" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.36 </span><span class="caption-text">Posterior distribution of the model parameters for the Poisson/Weibull anomaly occurrence model, based on the MCMC chains [10’000 post burn in simulations].</span><a class="headerlink" href="#figure-7-36" title="Permalink to this image">¶</a></p>
 </div>
 <p id="syst-table4-18"><strong>Table 4.18</strong> : Posterior parameters of the Weibull distribution for the occurrence rate of anomalies.</p>
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_18.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 </div>
 <div class="section" id="anomaly-repartition-by-subsystem">
-<h4><span class="section-number">7.4.9.4.2.2. </span>Anomaly repartition by subsystem<a class="headerlink" href="#anomaly-repartition-by-subsystem" title="Permalink to this headline">¶</a></h4>
-<p>The posterior marginal probabilities for the repartition of the anomalies by subsystem is provided in <a class="reference internal" href="#figure-7-37"><span class="std std-numref">Fig. 7.37</span></a>. The marginal probability distributions follow beta distribution. Samples from the multivariate probability distribution are correlated and can be generated by using the parameters of the Dirichlet distribution provided in <a class="reference internal" href="#syst-table4-19"><span class="std std-ref">Table 4.19</span></a>.</p>
+<h4><span class="section-number">10.4.9.4.2.2. </span>Anomaly repartition by subsystem<a class="headerlink" href="#anomaly-repartition-by-subsystem" title="Permalink to this headline">¶</a></h4>
+<p>The posterior marginal probabilities for the repartition of the anomalies by subsystem is provided in <a class="reference internal" href="#figure-7-37"><span class="std std-numref">Fig. 10.37</span></a>. The marginal probability distributions follow beta distribution. Samples from the multivariate probability distribution are correlated and can be generated by using the parameters of the Dirichlet distribution provided in <a class="reference internal" href="#syst-table4-19"><span class="std std-ref">Table 4.19</span></a>.</p>
 <div class="figure align-default" id="figure-7-37">
 <span id="syst-figure4-37"></span><a class="reference internal image-reference" href="../../../_images/figure4_37.png"><img alt="../../../_images/figure4_37.png" src="../../../_images/figure4_37.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.37 </span><span class="caption-text">Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by subsystem.</span><a class="headerlink" href="#figure-7-37" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.37 </span><span class="caption-text">Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by subsystem.</span><a class="headerlink" href="#figure-7-37" title="Permalink to this image">¶</a></p>
 </div>
 <p>These probabilities can be combined with the overall anomaly occurrence rate. As mentioned before the resulting distribution of subsystem anomalies over time is questionable due to the assumption that the shape of the curve is the same for all subsystems.</p>
 <p id="syst-table4-19"><strong>Table 4.19</strong> : Posterior parameters of the Dirichlet distribution for the repartition of anomalies by subsystem.</p>
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_19.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 </div>
 <div class="section" id="anomaly-repartition-by-hardware-failure">
-<h4><span class="section-number">7.4.9.4.2.3. </span>Anomaly repartition by hardware failure<a class="headerlink" href="#anomaly-repartition-by-hardware-failure" title="Permalink to this headline">¶</a></h4>
-<p><em>Based on the model provided in section</em> <em>Error: Reference source not found the marginal posterior probability of hardware failure conditional on an anomaly is shown in</em> <em><a class="reference internal" href="#figure-7-38"><span class="std std-numref">Fig. 7.38</span></a>. The parameters of the Dirichlet distribution are given in</em> <em><a class="reference internal" href="#syst-table4-20"><span class="std std-ref">Table 4.20</span></a> (satellite level).</em></p>
+<h4><span class="section-number">10.4.9.4.2.3. </span>Anomaly repartition by hardware failure<a class="headerlink" href="#anomaly-repartition-by-hardware-failure" title="Permalink to this headline">¶</a></h4>
+<p><em>Based on the model provided in section</em> <em>Error: Reference source not found the marginal posterior probability of hardware failure conditional on an anomaly is shown in</em> <em><a class="reference internal" href="#figure-7-38"><span class="std std-numref">Fig. 10.38</span></a>. The parameters of the Dirichlet distribution are given in</em> <em><a class="reference internal" href="#syst-table4-20"><span class="std std-ref">Table 4.20</span></a> (satellite level).</em></p>
 <p><em>Since the model is a bivariate Dirichlet distribution the two outcomes are fully negativly correlated and can thus be fully represented by a 2-parameter beta distribution.</em></p>
-<p><em>The marginal posterior probability of hardware failure conditional on an anomaly for all subsystems can be sampled from the Dirichlet distribution using the parameters provided in</em> <em><a class="reference internal" href="#syst-table4-20"><span class="std std-ref">Table 4.20</span></a>. The corresponding marginal posterior distributions for all subsystems are provided in</em> <em><a class="reference internal" href="#figure-7-39"><span class="std std-numref">Fig. 7.39</span></a>.</em></p>
+<p><em>The marginal posterior probability of hardware failure conditional on an anomaly for all subsystems can be sampled from the Dirichlet distribution using the parameters provided in</em> <em><a class="reference internal" href="#syst-table4-20"><span class="std std-ref">Table 4.20</span></a>. The corresponding marginal posterior distributions for all subsystems are provided in</em> <em><a class="reference internal" href="#figure-7-39"><span class="std std-numref">Fig. 10.39</span></a>.</em></p>
 <div class="figure align-default" id="figure-7-38">
 <span id="syst-figure4-38"></span><a class="reference internal image-reference" href="../../../_images/figure4_38.png"><img alt="../../../_images/figure4_38.png" src="../../../_images/figure4_38.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.38 </span><span class="caption-text">Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by hardware failures on satellite level.</span><a class="headerlink" href="#figure-7-38" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.38 </span><span class="caption-text">Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by hardware failures on satellite level.</span><a class="headerlink" href="#figure-7-38" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-7-39">
 <span id="syst-figure4-39"></span><a class="reference internal image-reference" href="../../../_images/figure4_39.png"><img alt="../../../_images/figure4_39.png" src="../../../_images/figure4_39.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.39 </span><span class="caption-text">Posterior marginal distributions of the conditional probabilities for the repartition of anomalies for the subsystems(a=anomaly).</span><a class="headerlink" href="#figure-7-39" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.39 </span><span class="caption-text">Posterior marginal distributions of the conditional probabilities for the repartition of anomalies for the subsystems(a=anomaly).</span><a class="headerlink" href="#figure-7-39" title="Permalink to this image">¶</a></p>
 </div>
 <p id="syst-table4-20"><strong>Table 4.20</strong> : Posterior parameters of the Dirichlet distribution for the repartition of a hardware failure for given an anomaly for on satellite level and for all subsystems.</p>
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_20.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 </div>
 <div class="section" id="anomaly-repartition-by-severity-given-hardware-failure">
-<h4><span class="section-number">7.4.9.4.2.4. </span>Anomaly repartition by severity given hardware failure<a class="headerlink" href="#anomaly-repartition-by-severity-given-hardware-failure" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">10.4.9.4.2.4. </span>Anomaly repartition by severity given hardware failure<a class="headerlink" href="#anomaly-repartition-by-severity-given-hardware-failure" title="Permalink to this headline">¶</a></h4>
 <p>The repartition of anomalies by severity category is modelled with the following set of conditional probabilities fitted to the data:</p>
-<p>The marginal distributions of the four probabilities, representing statistical uncertainty due to the limited sample size used for modelling, are shown in <a class="reference internal" href="#figure-7-40"><span class="std std-numref">Fig. 7.40</span></a>.</p>
+<p>The marginal distributions of the four probabilities, representing statistical uncertainty due to the limited sample size used for modelling, are shown in <a class="reference internal" href="#figure-7-40"><span class="std std-numref">Fig. 10.40</span></a>.</p>
 <div class="figure align-default" id="figure-7-40">
 <a class="reference internal image-reference" href="../../../_images/figure4_40.png"><img alt="../../../_images/figure4_40.png" src="../../../_images/figure4_40.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.40 </span><span class="caption-text">Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by severity considered at satellite level.</span><a class="headerlink" href="#figure-7-40" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.40 </span><span class="caption-text">Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by severity considered at satellite level.</span><a class="headerlink" href="#figure-7-40" title="Permalink to this image">¶</a></p>
 </div>
-<p>The probabilities provided in <a class="reference internal" href="#figure-7-40"><span class="std std-numref">Fig. 7.40</span></a> are conditional on anomaly occurrence (Table 12 -18) and on hardware failure (Table 12 -20 for satellite level). When combined with the anomaly occurrence model, time-dependent occurrence rates can be derived for the different severity categories, as illustrated in <a class="reference internal" href="#figure-7-41"><span class="std std-numref">Fig. 7.41</span></a> below (the 90% confidence interval now includes the uncertainty inherent in the anomaly repartition model and the hardware failure model).</p>
+<p>The probabilities provided in <a class="reference internal" href="#figure-7-40"><span class="std std-numref">Fig. 10.40</span></a> are conditional on anomaly occurrence (Table 12 -18) and on hardware failure (Table 12 -20 for satellite level). When combined with the anomaly occurrence model, time-dependent occurrence rates can be derived for the different severity categories, as illustrated in <a class="reference internal" href="#figure-7-41"><span class="std std-numref">Fig. 10.41</span></a> below (the 90% confidence interval now includes the uncertainty inherent in the anomaly repartition model and the hardware failure model).</p>
 <div class="figure align-default" id="figure-7-41">
 <a class="reference internal image-reference" href="../../../_images/figure4_411.png"><img alt="../../../_images/figure4_411.png" src="../../../_images/figure4_411.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.41 </span><span class="caption-text">Anomaly occurrence rate for different severity categories, considered at satellite level.</span><a class="headerlink" href="#figure-7-41" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.41 </span><span class="caption-text">Anomaly occurrence rate for different severity categories, considered at satellite level.</span><a class="headerlink" href="#figure-7-41" title="Permalink to this image">¶</a></p>
 </div>
 <p>The posterior parameters of the Dirichlet distribution for the different severity classes conditional on an anomaly and a hardware failure for satellite level and for all subsystems <a class="reference internal" href="#syst-table4-20"><span class="std std-ref">Table 4.20</span></a>.</p>
 <p id="syst-table4-21"><strong>Table 4.21</strong> : Posterior parameters of the Dirichlet distribution for the different severity classes conditional on an anomaly and a hardware failure at satellite level and for all subsystems.</p>
@@ -1192,47 +1217,47 @@ Note: it is assumed that the User’s Manual is error free, otherwise the error 
 </div>
 </div>
 <div class="section" id="additional-data">
-<h3><span class="section-number">7.4.9.4.3. </span>Additional data<a class="headerlink" href="#additional-data" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.4.9.4.3. </span>Additional data<a class="headerlink" href="#additional-data" title="Permalink to this headline">¶</a></h3>
 <p>In addition to the information directly used for modelling (Section Error: Reference source not found above), the following information can be useful for the interpretation of the modelling results. The data is taken from the same source as the model input.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>miss ref above</p>
 </div>
 <div class="section" id="major-anomalies-during-in-orbit-testing">
-<h4><span class="section-number">7.4.9.4.3.1. </span>Major anomalies during In Orbit Testing<a class="headerlink" href="#major-anomalies-during-in-orbit-testing" title="Permalink to this headline">¶</a></h4>
-<p>The data sample used for modelling summarizes in orbit return collected during the whole mission. <a class="reference internal" href="#figure-7-42"><span class="std std-numref">Fig. 7.42</span></a> shows the percentage of major anomalies that have been observed during In Orbit Testing at the beginning of a satellite mission, both at satellite level (red horizontal line) and for the different subsystems (bar chart). The red numbers indicate whether the percentage of anomalies during IOT is larger (factor &gt; 1.0) or smaller than the average at satellite level (red line, 17.5%). For subsystems without bar, the black data labels indicate whether there were no major anomalies at all (“NaN”) or only during IOT (“0.0%).</p>
-<p>The variation by subsystem is another indication that the distribution of the random time to anomaly occurrence should actually depend on the subsystem, which represents an important limitation of the anomaly occurrence model developed at satellite level (see also Section Error: Reference source not found for discussion). The percentages and factors provided in <a class="reference internal" href="#figure-7-42"><span class="std std-numref">Fig. 7.42</span></a> can be used as a reference when the occurrence of subsystem anomalies during IOT is of interest. However, it should be noted that the In Orbit Testing phase is more than just a time slot at the beginning of a satellite mission, and its duration is variable (although usually in the range of 1 to several months).</p>
+<h4><span class="section-number">10.4.9.4.3.1. </span>Major anomalies during In Orbit Testing<a class="headerlink" href="#major-anomalies-during-in-orbit-testing" title="Permalink to this headline">¶</a></h4>
+<p>The data sample used for modelling summarizes in orbit return collected during the whole mission. <a class="reference internal" href="#figure-7-42"><span class="std std-numref">Fig. 10.42</span></a> shows the percentage of major anomalies that have been observed during In Orbit Testing at the beginning of a satellite mission, both at satellite level (red horizontal line) and for the different subsystems (bar chart). The red numbers indicate whether the percentage of anomalies during IOT is larger (factor &gt; 1.0) or smaller than the average at satellite level (red line, 17.5%). For subsystems without bar, the black data labels indicate whether there were no major anomalies at all (“NaN”) or only during IOT (“0.0%).</p>
+<p>The variation by subsystem is another indication that the distribution of the random time to anomaly occurrence should actually depend on the subsystem, which represents an important limitation of the anomaly occurrence model developed at satellite level (see also Section Error: Reference source not found for discussion). The percentages and factors provided in <a class="reference internal" href="#figure-7-42"><span class="std std-numref">Fig. 10.42</span></a> can be used as a reference when the occurrence of subsystem anomalies during IOT is of interest. However, it should be noted that the In Orbit Testing phase is more than just a time slot at the beginning of a satellite mission, and its duration is variable (although usually in the range of 1 to several months).</p>
 <div class="figure align-default" id="figure-7-42">
 <a class="reference internal image-reference" href="../../../_images/figure4_421.png"><img alt="../../../_images/figure4_421.png" src="../../../_images/figure4_421.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.42 </span><span class="caption-text">Percentage of major anomalies that were observed during In Orbit Testing at satellite level (red line) and for the different subsystems (bar chart).</span><a class="headerlink" href="#figure-7-42" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.42 </span><span class="caption-text">Percentage of major anomalies that were observed during In Orbit Testing at satellite level (red line) and for the different subsystems (bar chart).</span><a class="headerlink" href="#figure-7-42" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="classification-by-root-cause-and-severity">
-<h4><span class="section-number">7.4.9.4.3.2. </span>Classification by root cause and severity<a class="headerlink" href="#classification-by-root-cause-and-severity" title="Permalink to this headline">¶</a></h4>
-<p>As discussed in Section Error: Reference source not found, systematic failures and anomalies can be further classified by the detailed root cause, from design and manufacturing errors to operations. <a class="reference internal" href="#figure-7-43"><span class="std std-numref">Fig. 7.43</span></a> shows the classification of observed anomalies by root cause, using the definitions from the data source, as outlined in Section Error: Reference source not found. The repartition by severity category clearly shows that anomalies leading to hardware failures and/or having an impact on the mission (severity 1 to 4) are mainly due to root causes in hardware design or manufacturing. Severe events due to other root causes are rare exceptions, as can be seen also from <a class="reference internal" href="#figure-7-44"><span class="std std-numref">Fig. 7.44</span></a>. It should be noted that “Hardware failure” is here defined in a wide sense, i.e. all anomalies having an impact on the mission (severity 1 to 3) are considered as failures, even though they may not involve a definitive hardware failure.</p>
+<h4><span class="section-number">10.4.9.4.3.2. </span>Classification by root cause and severity<a class="headerlink" href="#classification-by-root-cause-and-severity" title="Permalink to this headline">¶</a></h4>
+<p>As discussed in Section Error: Reference source not found, systematic failures and anomalies can be further classified by the detailed root cause, from design and manufacturing errors to operations. <a class="reference internal" href="#figure-7-43"><span class="std std-numref">Fig. 10.43</span></a> shows the classification of observed anomalies by root cause, using the definitions from the data source, as outlined in Section Error: Reference source not found. The repartition by severity category clearly shows that anomalies leading to hardware failures and/or having an impact on the mission (severity 1 to 4) are mainly due to root causes in hardware design or manufacturing. Severe events due to other root causes are rare exceptions, as can be seen also from <a class="reference internal" href="#figure-7-44"><span class="std std-numref">Fig. 10.44</span></a>. It should be noted that “Hardware failure” is here defined in a wide sense, i.e. all anomalies having an impact on the mission (severity 1 to 3) are considered as failures, even though they may not involve a definitive hardware failure.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>miss 2 ref above</p>
 </div>
 <div class="figure align-default" id="figure-7-43">
 <a class="reference internal image-reference" href="../../../_images/figure4_43.png"><img alt="../../../_images/figure4_43.png" src="../../../_images/figure4_43.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.43 </span><span class="caption-text">Classification of major anomalies by severity category and root cause (Operations OPS, Hardware design/manufacturing HW, Software error SW, System design/manufacturing SYS, Environmental design ENVT).</span><a class="headerlink" href="#figure-7-43" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.43 </span><span class="caption-text">Classification of major anomalies by severity category and root cause (Operations OPS, Hardware design/manufacturing HW, Software error SW, System design/manufacturing SYS, Environmental design ENVT).</span><a class="headerlink" href="#figure-7-43" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="figure-7-44">
 <a class="reference internal image-reference" href="../../../_images/figure4_44.png"><img alt="../../../_images/figure4_44.png" src="../../../_images/figure4_44.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.44 </span><span class="caption-text">Percentage of anomalies with hardware failure (severity category 1 to 4) for the different root causes (see <a class="reference internal" href="#figure-7-43"><span class="std std-numref">Fig. 7.43</span></a> for definitions). The percentage in this figure relates to the total number of major anomalies (with or without Hardware failure) attributed to a specific root cause.</span><a class="headerlink" href="#figure-7-44" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.44 </span><span class="caption-text">Percentage of anomalies with hardware failure (severity category 1 to 4) for the different root causes (see <a class="reference internal" href="#figure-7-43"><span class="std std-numref">Fig. 10.43</span></a> for definitions). The percentage in this figure relates to the total number of major anomalies (with or without Hardware failure) attributed to a specific root cause.</span><a class="headerlink" href="#figure-7-44" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="classification-by-technical-domain-eee-mechanical-miscellaneous">
-<h4><span class="section-number">7.4.9.4.3.3. </span>Classification by technical domain (EEE, Mechanical, Miscellaneous)<a class="headerlink" href="#classification-by-technical-domain-eee-mechanical-miscellaneous" title="Permalink to this headline">¶</a></h4>
-<p>The repartition by satellite subsystem already gives a first indication on the relevance of systematic anomalies related to EEE, Mechanical or Miscellaneous items. For the anomalies whose root cause is classified as “hardware”, <a class="reference internal" href="#figure-7-45"><span class="std std-numref">Fig. 7.45</span></a> gives further information on the repartition by the type of the equipment involved, and by the details of the root cause (design or manufacturing error). The classification is done at equipment level, considering all satellite subsystems and using the same three classes as outlined in Chapter Error: Reference source not found (EEE), Error: Reference source not found (Mechanical – MEC) and Error: Reference source not found (Miscellaneous – MIS). It can be seen that the contribution of “Mechanical” anomalies is very low, which may be explained by the fact that many of the most error-prone satellite elements are classified as “Miscellaneous items” in this handbook.</p>
+<h4><span class="section-number">10.4.9.4.3.3. </span>Classification by technical domain (EEE, Mechanical, Miscellaneous)<a class="headerlink" href="#classification-by-technical-domain-eee-mechanical-miscellaneous" title="Permalink to this headline">¶</a></h4>
+<p>The repartition by satellite subsystem already gives a first indication on the relevance of systematic anomalies related to EEE, Mechanical or Miscellaneous items. For the anomalies whose root cause is classified as “hardware”, <a class="reference internal" href="#figure-7-45"><span class="std std-numref">Fig. 10.45</span></a> gives further information on the repartition by the type of the equipment involved, and by the details of the root cause (design or manufacturing error). The classification is done at equipment level, considering all satellite subsystems and using the same three classes as outlined in Chapter Error: Reference source not found (EEE), Error: Reference source not found (Mechanical – MEC) and Error: Reference source not found (Miscellaneous – MIS). It can be seen that the contribution of “Mechanical” anomalies is very low, which may be explained by the fact that many of the most error-prone satellite elements are classified as “Miscellaneous items” in this handbook.</p>
 <div class="todo admonition">
 <p class="admonition-title">Todo</p>
 <p>miss 2 ref above</p>
 </div>
 <div class="figure align-default" id="figure-7-45">
 <a class="reference internal image-reference" href="../../../_images/figure4_45.png"><img alt="../../../_images/figure4_45.png" src="../../../_images/figure4_45.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.45 </span><span class="caption-text">Repartition of anomalies whose root cause is classified as “Hardware” by the type of the equipment (EEE, Mechanical – MEC, Miscellaneous – MIS) involved and the detailed root cause.</span><a class="headerlink" href="#figure-7-45" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10.45 </span><span class="caption-text">Repartition of anomalies whose root cause is classified as “Hardware” by the type of the equipment (EEE, Mechanical – MEC, Miscellaneous – MIS) involved and the detailed root cause.</span><a class="headerlink" href="#figure-7-45" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -1268,13 +1293,13 @@ Note: it is assumed that the User’s Manual is error free, otherwise the error 
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7.4.8. </span>System level modelling of wear-out</p>
+            <p class="prev-next-title"><span class="section-number">10.4.8. </span>System level modelling of wear-out</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="consideration_software_failures.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.4.10. </span>Consideration of software failures</p>
+        <p class="prev-next-title"><span class="section-number">10.4.10. </span>Consideration of software failures</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

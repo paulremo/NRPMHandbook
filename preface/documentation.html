@@ -1,0 +1,817 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Documentation &#8212; NRPM Digital handbook</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/images.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/mybuttons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/myiframes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/guide_misc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/map3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/misc_failure_rate_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/misc_failure_rate_sliders.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/mytables.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/css/radial_bar.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/interactivity/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendor/fontawesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../_static/interactivity/js/decision_tree2.js"></script>
+    <script src="../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../_static/interactivity/js/guide_misc.js"></script>
+    <script src="../_static/interactivity/js/map3.js"></script>
+    <script src="../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
+    <script src="../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
+    <script src="../_static/interactivity/js/radial_bar_lib.js"></script>
+    <script src="../_static/interactivity/js/table_search.js"></script>
+    <script src="../_static/js/redirect.js"></script>
+    <script src="../_static/js/resize_iframe.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Terms, definitions and abbreviated terms" href="terms.html" />
+    <link rel="prev" title="1. Introduction" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/reliabilityspace_logo_vector.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NRPM Digital handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../home.html">
+   Welcome to the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="terms.html">
+   3. Terms, definitions and abbreviations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EEE chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eee/mainEEE.html">
+   4. Handbook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eee/models/intro_models.html">
+   5. Models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mechanical chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../mechanical/handbook/introduction.html">
+   6. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/handbook/scope.html">
+     6.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/handbook/normative_references.html">
+     6.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/handbook/terms.html">
+     6.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../mechanical/handbook/reliability_prediction/reliability_prediction.html">
+     6.4. Reliability prediction for mechanical and structural parts and assemblies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
+       6.4.1. Process for mechanical reliability prediction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
+       6.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/data_sources_methods.html">
+       6.4.3. Data sources and methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
+       6.4.4. Failure mechanisms identification and focus
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/method_selection.html">
+       6.4.5. Method selection for different items and failure mechanisms
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/structural_method_input.html">
+       6.4.6. Structural reliability methods and inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/structural_models_equations.html">
+       6.4.7. Structural reliability models and equations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../mechanical/handbook/reliability_prediction/examples.html">
+       6.4.8. Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/handbook/bibliographic_references.html">
+     6.5. Bibliographic References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../mechanical/models/introduction.html">
+   7. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../mechanical/models/solid_lubricant_wear.html">
+     7.1. Solid lubricant wear
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../miscellaneous/handbook/introduction.html">
+   8. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/scope.html">
+     8.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/normative_references.html">
+     8.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/terms.html">
+     8.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/reliability_prediction.html">
+     8.4. Reliability prediction for miscellaneous items
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/items.html">
+       8.4.1. List of miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/root_causes_coverage.html">
+       8.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/data_sources_methods.html">
+       8.4.3. Data sources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/reliability_models.html">
+       8.4.4. Reliability Models for miscellaneous items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html">
+       8.4.5. Process for Reliability modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/ior_results.html">
+       8.4.6. Use of IOR data and/or tests results
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm.html">
+       8.4.7. Basic failure rate derivation for “non-standard model” items
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../miscellaneous/handbook/reliability_prediction/reliability_data_sm.html">
+       8.4.8. Reliability Data for Miscellaneous “Standard model”
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/conclusion.html">
+     8.5. Conclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/annexA.html">
+     8.6. Annex A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/annexB.html">
+     8.7. Annex B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/handbook/bibliographic_references.html">
+     8.8. Bibliographic References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../miscellaneous/models/introduction_guide_miscellaneous.html">
+   9. Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miscellaneous/models/failure_rate_processing.html">
+     9.1. Failure rate processing
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  System chapter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../system/handbook/introduction.html">
+   10. Handbook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../system/handbook/scope.html">
+     10.1. Scope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../system/handbook/normative_references.html">
+     10.2. Normative References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../system/handbook/terms.html">
+     10.3. Terms, definitions and abbreviated terms
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../system/handbook/reliability_prediction/reliability_prediction.html">
+     10.4. Reliability prediction for system level items
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/reliability_prediction_different_levels.html">
+       10.4.1. Reliability prediction at different levels
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/root_causes_coverage.html">
+       10.4.2. Root causes coverage
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/methods.html">
+       10.4.3. System level methods
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/reliability_assessment_phased_missions.html">
+       10.4.4. Reliability assessment of phased missions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/important_measures.html">
+       10.4.5. Important measures
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/reliability_assessment_degraded_systems.html">
+       10.4.6. Reliability assessment of degraded systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/modelling_common_cause_failure.html">
+       10.4.7. Modelling of Common Cause failure
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/system_level_modelling_wear_out.html">
+       10.4.8. System level modelling of wear-out
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/systematic_failure_modelling.html">
+       10.4.9. Systematic failure modelling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../system/handbook/reliability_prediction/consideration_software_failures.html">
+       10.4.10. Consideration of software failures
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../system/handbook/conclusion.html">
+     10.5. Conclusion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../system/models/intro_models.html">
+   11. Models
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+    <img src="/_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
+    <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/preface/documentation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/paulremo/NRPMHandbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/paulremo/NRPMHandbook/issues/new?title=Issue%20on%20page%20%2Fpreface/documentation.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/paulremo/NRPMHandbook/edit/main/02_NRPMHandbook/preface/documentation.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-documents">
+   2.1. Reference Documents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliographic-references">
+   2.2. Bibliographic references
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Documentation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-documents">
+   2.1. Reference Documents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliographic-references">
+   2.2. Bibliographic references
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="documentation">
+<h1><span class="section-number">2. </span>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reference-documents">
+<h2><span class="section-number">2.1. </span>Reference Documents<a class="headerlink" href="#reference-documents" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container" id="id1">
+<dl class="citation">
+<dt class="label" id="id30"><span class="brackets">NR_MIS_1</span></dt>
+<dd><p>Airbus Defence &amp; Space (ADS). Tec-qqd study - reliability prediction data sources and methodologies for space applications. Standard ADS-RPDSM-FR, ADS, 2016.</p>
+</dd>
+<dt class="label" id="id31"><span class="brackets">NR_MIS_2</span></dt>
+<dd><p>Airbus Operations (AO). Tec-qqd study - reliability prediction of mechanical systems &amp; parts. Standard AO/1-8017/14/NL/KM, AO, 2016.</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets">NR_MIS_3</span></dt>
+<dd><p>Naval Surface Warfare Center. Handbook of reliability prediction procedures for mechanical equipment. Standard NSWC-11, Naval Surface Warfare Center, 2011.</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets">NR_MIS_4</span></dt>
+<dd><p>Naval Surface Warfare Center. Web-accessible repository of physics-based models (riac). <a class="reference external" href="http://www.theriac.org/WARP/index.php/">http://www.theriac.org/WARP/index.php/</a>, 2011. [Online; accessed 08.04.2020].</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets">NR_MIS_5</span></dt>
+<dd><p>DEPARTMENT OF DEFENSE. Electronic reliability design handbook. Standard MIL-HDBK-338B, DEPARTMENT OF DEFENSE, 1988.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets">NR_MIS_6</span></dt>
+<dd><p>DEPARTMENT OF DEFENSE. Reliability prediction of electronic equipment. Standard MIL-HDBK-217F Notice 2, DEPARTMENT OF DEFENSE, 1995.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets">NR_MIS_7</span></dt>
+<dd><p>European Cooperation for Space Standardization (ECSS). Space engineering - fault tree analysis. Standard ECSS-Q-ST-40-12C, ECSS, 2008.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets">NR_MIS_8</span></dt>
+<dd><p>European Cooperation for Space Standardization (ECSS). Space engineering - structural general requirements. Standard ECSS-E-ST-32C Rev. 1, ECSS, 2008.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets">NR_MIS_9</span></dt>
+<dd><p>European Cooperation for Space Standardization (ECSS). Space engineering - structural factors of safety for spaceflight hardware. Standard ECSS-E-ST-32-10C Rev. 1, ECSS, 2009.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets">NR_MIS_10</span></dt>
+<dd><p>European Cooperation for Space Standardization (ECSS). Space product assurance - failure modes, effects (and criticality) analysis (fmea/fmeca). Standard ECSS-Q-ST-30-02C, ECSS, 2009.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets">NR_MIS_11</span></dt>
+<dd><p>European Cooperation for Space Standardization (ECSS). Space product assurance - components reliability data sources and their use. Standard ECSS-Q-HB-30-08A, ECSS, 2011.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets">NR_MIS_12</span></dt>
+<dd><p>European Cooperation for Space Standardization (ECSS). Glossary of terms. Standard ECSS-S-ST-00-01C, ECSS, 2012.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets">NR_MIS_13</span></dt>
+<dd><p>European Cooperation for Space Standardization (ECSS). Space product assurance - dependability. Standard ECSS-Q-ST-30C Rev.1, ECSS, 2017.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets">NR_MIS_14</span></dt>
+<dd><p>European Cooperation for Space Standardization (ECSS). Space engineering – mechanisms. Standard ECSS-E-ST-33-01C Rev. 2, ECSS, 2019.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets">NR_MIS_15</span></dt>
+<dd><p>Christopher Ramsay Holdgraf, A. Culich, A. Rokem, F. Deniz, M. Alegro, and D. Ushizima. Portable learning environments for hands-on computational instruction using container-and cloud-based technology to teach data science. In <em>ACM International Conference Proceeding Series</em>, volume Part F1287. 2017. <a class="reference external" href="https://doi.org/10.1145/3093338.3093370">doi:10.1145/3093338.3093370</a>.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">NR_MIS_16</span></dt>
+<dd><p>Christopher Ramsay Holdgraf, J.W. Rieger, C. Micheli, S. Martin, R.T. Knight, and F.E. Theunissen. Encoding and decoding models in cognitive electrophysiology. <em>Frontiers in Systems Neuroscience</em>, 2017. <a class="reference external" href="https://doi.org/10.3389/fnsys.2017.00061">doi:10.3389/fnsys.2017.00061</a>.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets">NR_MIS_17</span></dt>
+<dd><p>Quanterion Solutions Incorporated. Nonelectronic parts reliability data. Standard NPRD-16, QUANTERION, 2016.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets">NR_MIS_18</span></dt>
+<dd><p>Quanterion Solutions Incorporated. Reliability prediction models. Standard HDBK-217Plus:2015 Notice 1 - Handbook of 217PlusTM, QUANTERION, 2017.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets">NR_MIS_19</span></dt>
+<dd><p>Institute of Electrical and Electronics Engineers (IEEE). Standard framework for reliability prediction of hardware. Standard IEEE Std 1413TM, IEEE, 2010.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets">NR_MIS_20</span></dt>
+<dd><p>Institut pour la Maîtrise des Risques (IMdR). Reliability methodology for electronic systems - fides guide 2009 issue a. Standard UTE C80-811, IMdR, 2009.</p>
+</dd>
+<dt class="label" id="id32"><span class="brackets">NR_MIS_21</span></dt>
+<dd><p>Thalès Alenia Space. Tec-qqd study - use of quantitative reliability requirements for space applications. Standard TASF-RAMS-0010, Thalès Alenia Space, 2016.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="bibliographic-references">
+<h2><span class="section-number">2.2. </span>Bibliographic references<a class="headerlink" href="#bibliographic-references" title="Permalink to this headline">¶</a></h2>
+<p>Bibliographic references [BR] that are used only in one part of the handbook are listed separately in dedicated Annexes of Part I and Part II, and for each chapter in Part III. The numbering is consecutive to avoid any confusion when reading the document as a whole.</p>
+<div class="docutils container" id="id33">
+<dl class="citation">
+<dt class="label" id="id40"><span class="brackets">BR_MIS_1</span></dt>
+<dd><p>Groupe de travail de Pyrotechnie. Méthode statistique de bruceton. Technical Report, GTPS, 2011.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets">BR_MIS_2</span></dt>
+<dd><p>Groupe de travail de Pyrotechnie. Méthode statistique de bruceton. Technical Report, GTPS, 2011.</p>
+</dd>
+<dt class="label" id="id42"><span class="brackets">BR_MIS_3</span></dt>
+<dd><p>Groupe de travail de Pyrotechnie. Méthode statistique des essais durcis. Technical Report, GTPS, 2012.</p>
+</dd>
+<dt class="label" id="id41"><span class="brackets">BR_MIS_4</span></dt>
+<dd><p>Groupe de travail de Pyrotechnie. Méthode statistique des probit. Technical Report, GTPS, 2014.</p>
+</dd>
+<dt class="label" id="id44"><span class="brackets">BR_MIS_5</span></dt>
+<dd><p>C Etcheverry. Improvements to the neyer method of estimating reliability of one-shot systems used in pyrotechnic. Technical Report, LambdaMu n°20, 2016.</p>
+</dd>
+<dt class="label" id="id38"><span class="brackets">BR_MIS_6</span></dt>
+<dd><p>David Flanagan and Yukihiro Matsumoto. <em>The Ruby Programming Language</em>. O'Reilly Media, 2008.</p>
+</dd>
+<dt class="label" id="id34"><span class="brackets">BR_MIS_7</span></dt>
+<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
+</dd>
+<dt class="label" id="id35"><span class="brackets">BR_MIS_8</span></dt>
+<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, Jochem W. Rieger, Nathan Crone, Jack J. Lin, Robert T. Knight, and Frédéric E. Theunissen. Rapid tuning shifts in human auditory cortex enhance speech intelligibility. <em>Nature Communications</em>, 7(May):13654, 2016. URL: <a class="reference external" href="http://www.nature.com/doifinder/10.1038/ncomms13654">http://www.nature.com/doifinder/10.1038/ncomms13654</a>, <a class="reference external" href="https://doi.org/10.1038/ncomms13654">doi:10.1038/ncomms13654</a>.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets">BR_MIS_9</span></dt>
+<dd><p>Society of Automotive Engineers International (SAE). Potential failure mode and effects analysis in design (design fmea), potential failure mode and effects analysis in manufacturing and assembly processes (process fmea). Standard, SAE, 2009.</p>
+</dd>
+<dt class="label" id="id45"><span class="brackets">BR_MIS_10</span></dt>
+<dd><p>Society of Automotive Engineers International (SAE). Process failure mode and effects analysis (pfmea) and control plans. Technical Report, SAE, 2017.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "paulremo/NRPMInteractivity",
+            ref: "python",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./preface"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="terms.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Terms, definitions and abbreviated terms</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Matrisk | Airbus Defence & Space<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

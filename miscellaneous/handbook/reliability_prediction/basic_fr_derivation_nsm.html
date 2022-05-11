@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.4.7. Basic failure rate derivation for “non-standard model” items &#8212; NRPM Digital handbook</title>
+    <title>8.4.7. Basic failure rate derivation for “non-standard model” items &#8212; NRPM Digital handbook</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/mybuttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myiframes.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/myinteractivetables.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/guide_misc.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/map3.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_buttons.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/interactivity/css/misc_failure_rate_sliders.css" />
@@ -56,7 +57,9 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/interactivity/js/d3.v3.min.js"></script>
+    <script src="../../../_static/interactivity/js/decision_tree2.js"></script>
     <script src="../../../_static/interactivity/js/draw_circle_lib.js"></script>
+    <script src="../../../_static/interactivity/js/guide_misc.js"></script>
     <script src="../../../_static/interactivity/js/map3.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_buttons.js"></script>
     <script src="../../../_static/interactivity/js/misc_failure_rate_sliders.js"></script>
@@ -79,8 +82,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.4.8. Reliability Data for Miscellaneous “Standard model”" href="reliability_data_sm.html" />
-    <link rel="prev" title="5.4.6. Use of IOR data and/or tests results" href="ior_results.html" />
+    <link rel="next" title="8.4.8. Reliability Data for Miscellaneous “Standard model”" href="reliability_data_sm.html" />
+    <link rel="prev" title="8.4.6. Use of IOR data and/or tests results" href="ior_results.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,8 +122,30 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../intro.html">
+  <a class="reference internal" href="../../../home.html">
    Welcome to the NRPM Digital Handbook !
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preface
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/documentation.html">
+   2. Documentation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preface/terms.html">
+   3. Terms, definitions and abbreviations
   </a>
  </li>
 </ul>
@@ -132,12 +157,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../../eee/mainEEE.html">
-   1. Handbook
+   4. Handbook
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../eee/models/intro_models.html">
-   2. Models
+   5. Models
   </a>
  </li>
 </ul>
@@ -149,7 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/handbook/introduction.html">
-   3. Handbook
+   6. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -159,22 +184,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/scope.html">
-     3.1. Scope
+     6.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/normative_references.html">
-     3.2. Normative References
+     6.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/terms.html">
-     3.3. Terms, definitions and abbreviated terms
+     6.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/reliability_prediction.html">
-     3.4. Reliability prediction for mechanical and structural parts and assemblies
+     6.4. Reliability prediction for mechanical and structural parts and assemblies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -184,56 +209,56 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/process_reliability_modelling.html">
-       3.4.1. Process for mechanical reliability prediction
+       6.4.1. Process for mechanical reliability prediction
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/root_causes_coverage.html">
-       3.4.2. Root causes coverage
+       6.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/data_sources_methods.html">
-       3.4.3. Data sources and methods
+       6.4.3. Data sources and methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/failure_identification_focus.html">
-       3.4.4. Failure mechanisms identification and focus
+       6.4.4. Failure mechanisms identification and focus
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/method_selection.html">
-       3.4.5. Method selection for different items and failure mechanisms
+       6.4.5. Method selection for different items and failure mechanisms
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_method_input.html">
-       3.4.6. Structural reliability methods and inputs
+       6.4.6. Structural reliability methods and inputs
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/structural_models_equations.html">
-       3.4.7. Structural reliability models and equations
+       6.4.7. Structural reliability models and equations
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../mechanical/handbook/reliability_prediction/examples.html">
-       3.4.8. Examples
+       6.4.8. Examples
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/handbook/bibliographic_references.html">
-     3.5. Bibliographic References
+     6.5. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../mechanical/models/introduction.html">
-   4. Models
+   7. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -243,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../mechanical/models/solid_lubricant_wear.html">
-     4.1. Solid lubricant wear
+     7.1. Solid lubricant wear
     </a>
    </li>
   </ul>
@@ -257,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../introduction.html">
-   5. Handbook
+   8. Handbook
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -267,22 +292,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../scope.html">
-     5.1. Scope
+     8.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../normative_references.html">
-     5.2. Normative References
+     8.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../terms.html">
-     5.3. Terms, definitions and abbreviated terms
+     8.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="reliability_prediction.html">
-     5.4. Reliability prediction for miscellaneous items
+     8.4. Reliability prediction for miscellaneous items
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
@@ -292,71 +317,71 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="items.html">
-       5.4.1. List of miscellaneous items
+       8.4.1. List of miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="root_causes_coverage.html">
-       5.4.2. Root causes coverage
+       8.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="data_sources_methods.html">
-       5.4.3. Data sources
+       8.4.3. Data sources
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_models.html">
-       5.4.4. Reliability Models for miscellaneous items
+       8.4.4. Reliability Models for miscellaneous items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="process_reliability_modelling.html">
-       5.4.5. Process for Reliability modelling
+       8.4.5. Process for Reliability modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="ior_results.html">
-       5.4.6. Use of IOR data and/or tests results
+       8.4.6. Use of IOR data and/or tests results
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       5.4.7. Basic failure rate derivation for “non-standard model” items
+       8.4.7. Basic failure rate derivation for “non-standard model” items
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="reliability_data_sm.html">
-       5.4.8. Reliability Data for Miscellaneous “Standard model”
+       8.4.8. Reliability Data for Miscellaneous “Standard model”
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../conclusion.html">
-     5.5. Conclusion
+     8.5. Conclusion
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../annexA.html">
-     5.6. Annex A
+     8.6. Annex A
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../annexB.html">
-     5.7. Annex B
+     8.7. Annex B
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../bibliographic_references.html">
-     5.8. Bibliographic References
+     8.8. Bibliographic References
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../models/introduction_guide_miscellaneous.html">
-   6. Models
+   9. Models
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -366,7 +391,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../models/failure_rate_processing.html">
-     6.1. Failure rate processing
+     9.1. Failure rate processing
     </a>
    </li>
   </ul>
@@ -380,7 +405,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../../system/handbook/introduction.html">
-   7. Handbook
+   10. Handbook
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -390,22 +415,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../system/handbook/scope.html">
-     7.1. Scope
+     10.1. Scope
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../system/handbook/normative_references.html">
-     7.2. Normative References
+     10.2. Normative References
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../system/handbook/terms.html">
-     7.3. Terms, definitions and abbreviated terms
+     10.3. Terms, definitions and abbreviated terms
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../../system/handbook/reliability_prediction/reliability_prediction.html">
-     7.4. Reliability prediction for system level items
+     10.4. Reliability prediction for system level items
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -415,66 +440,66 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/reliability_prediction_different_levels.html">
-       7.4.1. Reliability prediction at different levels
+       10.4.1. Reliability prediction at different levels
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/root_causes_coverage.html">
-       7.4.2. Root causes coverage
+       10.4.2. Root causes coverage
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/methods.html">
-       7.4.3. System level methods
+       10.4.3. System level methods
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/reliability_assessment_phased_missions.html">
-       7.4.4. Reliability assessment of phased missions
+       10.4.4. Reliability assessment of phased missions
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/important_measures.html">
-       7.4.5. Important measures
+       10.4.5. Important measures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/reliability_assessment_degraded_systems.html">
-       7.4.6. Reliability assessment of degraded systems
+       10.4.6. Reliability assessment of degraded systems
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/modelling_common_cause_failure.html">
-       7.4.7. Modelling of Common Cause failure
+       10.4.7. Modelling of Common Cause failure
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/system_level_modelling_wear_out.html">
-       7.4.8. System level modelling of wear-out
+       10.4.8. System level modelling of wear-out
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/systematic_failure_modelling.html">
-       7.4.9. Systematic failure modelling
+       10.4.9. Systematic failure modelling
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../../system/handbook/reliability_prediction/consideration_software_failures.html">
-       7.4.10. Consideration of software failures
+       10.4.10. Consideration of software failures
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../../system/handbook/conclusion.html">
-     7.5. Conclusion
+     10.5. Conclusion
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../system/models/intro_models.html">
-   8. Models
+   11. Models
   </a>
  </li>
 </ul>
@@ -572,12 +597,12 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dfmea-pfmea">
-   5.4.7.1. DFMEA / PFMEA
+   8.4.7.1. DFMEA / PFMEA
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#probability-assessment">
-     5.4.7.1.1. Probability assessment
+     8.4.7.1.1. Probability assessment
     </a>
    </li>
   </ul>
@@ -604,12 +629,12 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dfmea-pfmea">
-   5.4.7.1. DFMEA / PFMEA
+   8.4.7.1. DFMEA / PFMEA
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#probability-assessment">
-     5.4.7.1.1. Probability assessment
+     8.4.7.1.1. Probability assessment
     </a>
    </li>
   </ul>
@@ -624,21 +649,21 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="basic-failure-rate-derivation-for-non-standard-model-items">
-<span id="misc-5-7"></span><h1><span class="section-number">5.4.7. </span>Basic failure rate derivation for “non-standard model” items<a class="headerlink" href="#basic-failure-rate-derivation-for-non-standard-model-items" title="Permalink to this headline">¶</a></h1>
+<span id="misc-5-7"></span><h1><span class="section-number">8.4.7. </span>Basic failure rate derivation for “non-standard model” items<a class="headerlink" href="#basic-failure-rate-derivation-for-non-standard-model-items" title="Permalink to this headline">¶</a></h1>
 <p>When the miscellaneous item under consideration does not match the criteria of the miscellaneous equivalent class (e.g. SSPA – Solid State Power Amplifier- cannot be compared to a TWTA in terms of technology), it is necessary to build a reliability model based on engineering/PoF approach as defined hereafter.</p>
-<p>Once the reliability model is established it can be tailored as necessary based on the approach presented in <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 5.4.5</span></a>.</p>
-<p>First, it is necessary, to collect/define all technical information about the miscellaneous item in order to characterize it (refer to <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 5.4.5</span></a>). Then the basic failure rate <span class="math notranslate nohighlight">\(\lambda_{1}\)</span> = <span class="math notranslate nohighlight">\(\lambda_{B}\)</span> is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 5.4.5</span></a>) corresponding to <a class="reference internal" href="process_reliability_modelling.html#misc-step2"><span class="std std-ref">step 2</span></a> to <a class="reference internal" href="process_reliability_modelling.html#misc-step7"><span class="std std-ref">7</span></a>.</p>
+<p>Once the reliability model is established it can be tailored as necessary based on the approach presented in <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 8.4.5</span></a>.</p>
+<p>First, it is necessary, to collect/define all technical information about the miscellaneous item in order to characterize it (refer to <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 8.4.5</span></a>). Then the basic failure rate <span class="math notranslate nohighlight">\(\lambda_{1}\)</span> = <span class="math notranslate nohighlight">\(\lambda_{B}\)</span> is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 8.4.5</span></a>) corresponding to <a class="reference internal" href="process_reliability_modelling.html#misc-step2"><span class="std std-ref">step 2</span></a> to <a class="reference internal" href="process_reliability_modelling.html#misc-step7"><span class="std std-ref">7</span></a>.</p>
 <div class="section" id="dfmea-pfmea">
-<span id="misc-5-5-1"></span><h2><span class="section-number">5.4.7.1. </span>DFMEA / PFMEA<a class="headerlink" href="#dfmea-pfmea" title="Permalink to this headline">¶</a></h2>
+<span id="misc-5-5-1"></span><h2><span class="section-number">8.4.7.1. </span>DFMEA / PFMEA<a class="headerlink" href="#dfmea-pfmea" title="Permalink to this headline">¶</a></h2>
 <p>After the first item characterization, a DFMEA and a PFMEA are performed in order to assess the failure modes due to</p>
 <ol class="simple">
 <li><p>Design errors and</p></li>
 <li><p>Manufacturing errors.</p></li>
 </ol>
-<p>It is recommended to use the <span id="id1">of Automotive Engineers International (SAE) [<a class="reference internal" href="../bibliographic_references.html#id7" title="Society of Automotive Engineers International (SAE). Potential failure mode and effects analysis in design (design fmea), potential failure mode and effects analysis in manufacturing and assembly processes (process fmea). Standard, SAE, 2009.">BR_MIS_9</a>], of Automotive Engineers International (SAE) [<a class="reference internal" href="../bibliographic_references.html#id13" title="Society of Automotive Engineers International (SAE). Process failure mode and effects analysis (pfmea) and control plans. Technical Report, SAE, 2017.">BR_MIS_10</a>]</span> which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in <span id="id2">for Space Standardization (ECSS) [<a class="reference internal" href="../normative_references.html#id15" title="European Cooperation for Space Standardization (ECSS). Space product assurance - failure modes, effects (and criticality) analysis (fmea/fmeca). Standard ECSS-Q-ST-30-02C, ECSS, 2009.">NR_MIS_10</a>]</span>.</p>
+<p>It is recommended to use the <span id="id1">of Automotive Engineers International (SAE) [<a class="reference internal" href="../../../preface/documentation.html#id39" title="Society of Automotive Engineers International (SAE). Potential failure mode and effects analysis in design (design fmea), potential failure mode and effects analysis in manufacturing and assembly processes (process fmea). Standard, SAE, 2009.">BR_MIS_9</a>], of Automotive Engineers International (SAE) [<a class="reference internal" href="../../../preface/documentation.html#id45" title="Society of Automotive Engineers International (SAE). Process failure mode and effects analysis (pfmea) and control plans. Technical Report, SAE, 2017.">BR_MIS_10</a>]</span> which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in <span id="id2">for Space Standardization (ECSS) [<a class="reference internal" href="../../../preface/documentation.html#id15" title="European Cooperation for Space Standardization (ECSS). Space product assurance - failure modes, effects (and criticality) analysis (fmea/fmeca). Standard ECSS-Q-ST-30-02C, ECSS, 2009.">NR_MIS_10</a>]</span>.</p>
 <p><strong>FMEA: Required for every unit</strong></p>
 <ul class="simple">
-<li><p>Is a tool/method supporting the design of the unit, identifying all the elementary “failure modes” due to “<em>RANDOM FAILURE” (part intrinsic reliability)</em> as defined in the failure mode list (refer to <span id="id3">for Space Standardization (ECSS) [<a class="reference internal" href="../normative_references.html#id15" title="European Cooperation for Space Standardization (ECSS). Space product assurance - failure modes, effects (and criticality) analysis (fmea/fmeca). Standard ECSS-Q-ST-30-02C, ECSS, 2009.">NR_MIS_10</a>]</span>).</p></li>
+<li><p>Is a tool/method supporting the design of the unit, identifying all the elementary “failure modes” due to “<em>RANDOM FAILURE” (part intrinsic reliability)</em> as defined in the failure mode list (refer to <span id="id3">for Space Standardization (ECSS) [<a class="reference internal" href="../../../preface/documentation.html#id15" title="European Cooperation for Space Standardization (ECSS). Space product assurance - failure modes, effects (and criticality) analysis (fmea/fmeca). Standard ECSS-Q-ST-30-02C, ECSS, 2009.">NR_MIS_10</a>]</span>).</p></li>
 <li><p><strong>&#64;unit level</strong>: under supplier responsibility</p></li>
 <li><p><strong>&#64;system level</strong>: integrated at system level by System RAMS engineer (including HSIA supporting the failure tolerance: observability in-orbit…)</p></li>
 </ul>
@@ -660,10 +685,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <div class="figure align-default" id="figure-5-8">
 <span id="misc-figure4-8"></span><a class="reference internal image-reference" href="../../../_images/figure4_81.png"><img alt="../../../_images/figure4_81.png" src="../../../_images/figure4_81.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Differences between FMEA, DFMEA and PFMEA.</span><a class="headerlink" href="#figure-5-8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.8 </span><span class="caption-text">Differences between FMEA, DFMEA and PFMEA.</span><a class="headerlink" href="#figure-5-8" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#figure-5-8"><span class="std std-numref">Fig. 5.8</span></a> highlights the differences and the commonalities between FMEA, DFMEA and PFMEA.</p>
-<p><a class="reference internal" href="#figure-5-9"><span class="std std-numref">Fig. 5.9</span></a>  provides an example of DFMEA and PFMEA at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in <a class="reference internal" href="#figure-5-8"><span class="std std-numref">Fig. 5.8</span></a>), whereas the right-hand side refers to DFMEA data (green perimeter in <a class="reference internal" href="#figure-5-8"><span class="std std-numref">Fig. 5.8</span></a>).</p>
+<p><a class="reference internal" href="#figure-5-8"><span class="std std-numref">Fig. 8.8</span></a> highlights the differences and the commonalities between FMEA, DFMEA and PFMEA.</p>
+<p><a class="reference internal" href="#figure-5-9"><span class="std std-numref">Fig. 8.9</span></a>  provides an example of DFMEA and PFMEA at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in <a class="reference internal" href="#figure-5-8"><span class="std std-numref">Fig. 8.8</span></a>), whereas the right-hand side refers to DFMEA data (green perimeter in <a class="reference internal" href="#figure-5-8"><span class="std std-numref">Fig. 8.8</span></a>).</p>
 <p>The main outcome is the ranking of every root cause (Design error, Manufacturing error) in</p>
 <ul class="simple">
 <li><p><strong>SEV</strong>erity</p></li>
@@ -673,7 +698,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The Risk Priority Number (RPN), which is derived, is an index reflecting the residual technical risk.</p>
 <div class="figure align-default" id="figure-5-9">
 <span id="misc-figure4-9"></span><a class="reference internal image-reference" href="../../../_images/figure4_101.png"><img alt="../../../_images/figure4_101.png" src="../../../_images/figure4_101.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Differences between FMEA, DFMEA and PFMEA.</span><a class="headerlink" href="#figure-5-9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.9 </span><span class="caption-text">Differences between FMEA, DFMEA and PFMEA.</span><a class="headerlink" href="#figure-5-9" title="Permalink to this image">¶</a></p>
 </div>
 <dl class="glossary simple">
 <dt id="term-SA">SA<a class="headerlink" href="#term-SA" title="Permalink to this term">¶</a></dt><dd><p>Solar Array</p>
@@ -686,7 +711,7 @@ const thebe_selector_output = ".output, .cell_output"
 </dd>
 </dl>
 <span id="misc-table4-6"></span><table class="interactive-table table" id="occurrence-scale-with-10-levels">
-<caption><span class="caption-number">Table 5.6 </span><span class="caption-text">Occurrence scale with 10 levels</span><a class="headerlink" href="#occurrence-scale-with-10-levels" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 8.6 </span><span class="caption-text">Occurrence scale with 10 levels</span><a class="headerlink" href="#occurrence-scale-with-10-levels" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -701,15 +726,15 @@ const thebe_selector_output = ".output, .cell_output"
 </dd>
 </dl>
 <div class="section" id="probability-assessment">
-<span id="misc-5-5-2"></span><h3><span class="section-number">5.4.7.1.1. </span>Probability assessment<a class="headerlink" href="#probability-assessment" title="Permalink to this headline">¶</a></h3>
-<p>The occurrence scale of <a class="reference internal" href="#misc-5-5-2"><span class="std std-numref">Section 5.4.7.1.1</span></a> is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:</p>
+<span id="misc-5-5-2"></span><h3><span class="section-number">8.4.7.1.1. </span>Probability assessment<a class="headerlink" href="#probability-assessment" title="Permalink to this headline">¶</a></h3>
+<p>The occurrence scale of <a class="reference internal" href="#misc-5-5-2"><span class="std std-numref">Section 8.4.7.1.1</span></a> is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:</p>
 <ul class="simple">
 <li><p>In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a RF passive part which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).</p></li>
 <li><p>A probability of occurrence is assigned to every failure mode and the sum provides the probability of occurrence of the item.</p></li>
-<li><p>A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to <span class="math notranslate nohighlight">\(10^{-4}\)</span> as level 4 (<a class="reference internal" href="#occurrence-scale-with-10-levels"><span class="std std-numref">Table 5.6</span></a>) leads to a failure rate of <span class="math notranslate nohighlight">\(1,14 10^{-9}\)</span> for 10 years.</p></li>
+<li><p>A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to <span class="math notranslate nohighlight">\(10^{-4}\)</span> as level 4 (<a class="reference internal" href="#occurrence-scale-with-10-levels"><span class="std std-numref">Table 8.6</span></a>) leads to a failure rate of <span class="math notranslate nohighlight">\(1,14 10^{-9}\)</span> for 10 years.</p></li>
 </ul>
 <p>This represents the basic failure rate or the basic probability of failure.</p>
-<p>Then the general process to adapt this failure rate is described in <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 5.4.5</span></a>.</p>
+<p>Then the general process to adapt this failure rate is described in <a class="reference internal" href="process_reliability_modelling.html#misc-5-5"><span class="std std-numref">Section 8.4.5</span></a>.</p>
 <p>It is noteworthy that this probability ranking needs to be clearly justified and documented.</p>
 </div>
 </div>
@@ -744,13 +769,13 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5.4.6. </span>Use of IOR data and/or tests results</p>
+            <p class="prev-next-title"><span class="section-number">8.4.6. </span>Use of IOR data and/or tests results</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="reliability_data_sm.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.4.8. </span>Reliability Data for Miscellaneous “Standard model”</p>
+        <p class="prev-next-title"><span class="section-number">8.4.8. </span>Reliability Data for Miscellaneous “Standard model”</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
