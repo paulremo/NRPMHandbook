@@ -369,7 +369,7 @@ The reliability targets for component 2 and 5 are obtained from the following eq
 {\hat{R}}_{5} = \min\left( R_{5} + \mathrm{\Delta}R_{5};R_{5,\max} \right)
 ```
 ```{math}
-\mathrm{\text{\ \ \ \ \ }} = \min\left( 0,91613 + 1,35E - 02;0,945 \right) = 0,92963
+= \min\left( 0,91613 + 1,35E - 02;0,945 \right) = 0,92963
 ```
 ````
 

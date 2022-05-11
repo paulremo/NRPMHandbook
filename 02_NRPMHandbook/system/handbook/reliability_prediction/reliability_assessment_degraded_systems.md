@@ -298,7 +298,7 @@ The performance distribution function is obtained by inverting the function $P_{
 ``  
 ```{math}
 :label: Equation 7.86
-P_{x\mathrm{\%}} = P\left\lbrack x > p_{s} \geq 0 \right\rbrack = 1 - P\left\lbrack 100\mathrm{\%} \geq p_{s} \geq x \right\rbrack$ *=*${1 - P}_{\geq x\mathrm{\%}}
+P_{x\mathrm{\%}} = P\left\lbrack x > p_{s} \geq 0 \right\rbrack = 1 - P\left\lbrack 100\mathrm{\%} \geq p_{s} \geq x \right\rbrack={1 - P}_{\geq x\mathrm{\%}}
 ```
 ````
 

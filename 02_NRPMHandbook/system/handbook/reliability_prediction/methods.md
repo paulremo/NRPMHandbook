@@ -410,7 +410,7 @@ The consequences of the event are considered through a series of possible paths.
 ``  
 ```{math}
 :label: Equation 7.13
-P(Outcome 1 | Initiating event) = P(B_{1} \cup B_{2} \cup B_{3} \cup B_{4})
+P(\text{Outcome 1} | \text{Initiating event}) = P(B_{1} \cup B_{2} \cup B_{3} \cup B_{4})
 ```
 ````
 
@@ -787,10 +787,10 @@ Considering a Bayesian network with random variables $X_{1}, X_{2}, ..., X_{n}$ 
 ``  
 ```{math}
 :label: Equation 7.25
-P\left(X_{1},..., X_{n}\right) = \prod^{n}P\left(X_{i}|pa\left(X_{i}\right)\right)
+P\left(X_{1},..., X_{n}\right) = \prod^{n}P\left(X_{i}|\text{pa}\left(X_{i}\right)\right)
 ```
 ````
-where $pa\left(X_{i}\right)$ denotes the set of parents of node $X_{i}$. 
+where $\text{pa}\left(X_{i}\right)$ denotes the set of parents of node $X_{i}$. 
 
 The computation is based on the probabilities of the parents’ states and the conditional probability table. In the following example, two nodes $A$ and $B$, each with two possible states ($S_{1}$ and $S_{2}$) are considered. The associated Bayesian network is shown in {numref}`Figure 7.22`. The a priori probabilities of node A are defined as shown in the following table.
 

@@ -9,19 +9,13 @@ Miss ref just above
 
 An overview on the failure mechanisms covered by the different subsections is found in Table   4 -10. The limit state functions provided in each dedicated subsection are generally applicable with the “full” structural reliability method described in Section 4.6.1 and in Chapter 6 (Part II). Simplified models in the sense of Section 4.6.2, with analytic solutions for the probability of failure calculations, are provided for some failure mechanisms. Failure mechanisms that can be modelled with the aid of simple stress strength methods (as discussed in Section 4.6.3) are also mentioned in Table   4 -10, but will not discussed any further in the present section.
 
-**Table 4.10: Overview on Failure mechanisms covered in Section 10.7.**
+(meca_table4_10)=
+```{list-table} Overview on Failure mechanisms covered in Section 10.7
+:class: interactive-table
+:name: Overview on Failure mechanisms covered in Section 10.7
 
-| **Failure mechanism category (cf. Table 10‑4)** | **Limit state functions provided in Section 10.6.5**                                                             | **Simplified model?** | **Section**      |
-|-------------------|---------------------------|----------|------------------|
-| Distortion                                      | The modelling of distortion is very case specific, but can often be handled with generic stress strength methods |                       | (10.6.1, 10.6.3) |
-| Wear                                            | General (adhesive) wear                                                                                          | Yes                   | 10.7.1.1         |
-|                                                 | Solid lubricant wear                                                                                             | Yes                   | 10.7.1.2         |
-|                                                 | Fluid lubricant wear                                                                                             | Yes                   | 10.7.1.3         |
-| Fracture / Fatigue                              | High cycle fatigue                                                                                               | Yes                   | 10.7.2.1         |
-|                                                 | Fatigue crack growth                                                                                             | No                    | 10.7.2.2         |
-|                                                 | Fracture and low cycle fatigue: stress strength approach                                                         |                       | (10.6.3)         |
-| Corrosion                                       | Stress corrosion cracking                                                                                        | No                    | (10.7.3)         |
-| Material degradation                            | Radiation damage                                                                                                 | Yes                   | 10.7.4.1         |
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_10.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 Failure mechanisms that are not listed in Table   4 -10 need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC’s WARP Error: Reference source not foundor Kowal . The “full” structural reliability method may be applied with any limit state function or failure mechanism model, see Section 4.6.1 for details.
 The following subsections dedicated to each failure mechanism model always follow the same logic: First the failure mechanism is introduced and a generic limit state function is derived that can be used with general structural reliability methods, possibly requiring numerical methods to derive the probability of failure. Closed form solutions (if available) are then discussed separately under the heading “Simplified failure mechanism model”. 
@@ -110,16 +104,13 @@ time unit (the sliding “power”). Thus, $X_{2}$ is defined as the volume
 worn away and $X_{1}$ as the corresponding limiting value. Detailed
 variable definitions are given in Table 10‑11.
 
-**Table 4.10: Overview on Failure mechanisms covered in Section 10.7.**
+(meca_table4_11)=
+```{list-table} Assumed probabilistic models for the simplified adhesive wear model
+:class: interactive-table
+:name: Assumed probabilistic models for the simplified adhesive wear model
 
-| **List of variables** | **Unit** | **Distribution** | **CoV range** |
-|-------------------|---------------------------|----------|------------------|
-|$V_{limit}$ : Limiting value (worn volume)| $[m^{3}]$ | (Lognormal) | $0 \leq \nu_{V_{limit}} \leq 0.3$|
-|$K_{H}$ : Specific wear rate| $[Pa^{-1} = m^{2} / N]$ | Lognormal | $ \nu_{K_{H}} \ge 0$|
-|$n_{p}$ : Number of phases / time intervals| $[-]$ | Deterministic | $-$|
-|$P_{i}$ : Sliding work / time unit in interval i| $Nm/s$ | Lognormal | $ \nu_{P_{i}} \ge 0$|
-|$t_{i}$ : Length of time interval i| $[s]$ | Deterministic | $-$|
-|$\Theta$ : Model uncertainty| $[-]$ | Lognormal | $\nu_{\Theta} = 0.2$|
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_11.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 The expected values and coefficients of variation of  and  are determined as follows:
 
@@ -250,16 +241,13 @@ g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \The
 
 $X_{2}$ is defined as the volume worn away and $X_{1}$ as the corresponding limiting value. Detailed variable definitions are given in Table 10‑12. It should be noted that the parameter $\alpha_{i}$ , defined as the average work of ball/cage interaction forces per bearing revolution, will typically be estimated from tests and is thus dependent on the wear rate $K_{H,i}$ . This is the reason why the wear rate cannot easily be taken out of the sum, as in Eq. {eq}`Equation 3.19` for the general adhesive wear model.
 
-**Table 4.12: Assumed probabilistic models for the simplified solid lubricant wear model.**
+(meca_table4_12)=
+```{list-table} Assumed probabilistic models for the simplified solid lubricant wear model
+:class: interactive-table
+:name: Assumed probabilistic models for the simplified solid lubricant wear model
 
-| **List of variables** | **Unit** | **Distribution** | **CoV range** |
-|-------------------|---------------------------|----------|------------------|
-|$V_{limit}$ : Limiting value (worn volume)| $[m^{3}]$ | (Lognormal) | $0 \leq \nu_{V_{limit}} \leq 0.3$|
-|$K_{H, i}$ : Specific wear rate in interval i| $[Pa^{-1} = m^{2} / N]$ | Lognormal | $ \nu_{K_{H, i}} \ge 0$|
-|$n_{p}$ : Number of phases / time intervals| $[-]$ | Deterministic | $-$|
-|$\alpha_{i}$ : Ball-cage interaction in interval i| $Nm/s$ | Lognormal | $ \nu_{\alpha_{i}} \ge 0$|
-|$rev_{i}$ : Number of revolutions in interval i| $[-]$ | Deterministic | $-$|
-|$\Theta$ : Model uncertainty| $[-]$ | Lognormal | $\nu_{\Theta} = 0.2$|
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_12.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 The expected values and coefficients of variation of $X_{1}$ and $X_{2}$ are determined as follows:
 
@@ -371,20 +359,13 @@ It is furthermore assumed that all variables (except for the number of revolutio
 
 These assumptions allow the application of Eq. {eq}`Equation 3.32` without any further simplifications in the limit state function. Thus, $X_{1} = M_{0} - M_{inactive}$ is defined as the amout of lubricant available and $X_{2}$ as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in \[BR79\]. Detailed variable definitions are reminded in Table 10‑13 below.
 
-**Table 4.13: Assumed probabilistic models for the simplified fluid lubricant wear model.**
+(meca_table4_13)=
+```{list-table} Assumed probabilistic models for the simplified fluid lubricant wear model
+:class: interactive-table
+:name: Assumed probabilistic models for the simplified fluid lubricant wear model
 
-| **List of variables** | **Unit** | **Distribution** | **CoV range** |
-|-------------------|---------------------------|----------|------------------|
-|$M_{0}$ : Initial mass of the lubricant in the bearing| $[g]$ | Deterministic | $-$|
-|$M_{inactive}$ : Mass of lubricant not participating in the contact (e.g. due to evaporation)| $[g]$ | Deterministic | $-$|
-|$K$ : Empirical constant of the lubricant | $[-]$ | Deterministic | $ \nu_{K} > 0$|
-|$N_{b}$ : Number of balls in the bearing| $[-]$ | Lognormal | $-$|
-|$p_{d}$ : Pitch diameter| $[m]$ | Deterministic | $-$|
-|$b_{d}$ : Ball diameter| $[m]$ | Deterministic | $-$|
-|$\vartheta$ : Contact angle| $[rad]$ | Deterministic | $-$|
-|$p_{m}$ : Contact pressure| $[GPa]$ | Deterministic | $-$|
-|$rev$ : Number of revolutions| $[10^{6}]$ | Deterministic | $-$|
-|$\Theta$ : Model uncertainty| $[-]$ | Lognormal | $\nu_{\Theta} = 0.2$|
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_13.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 The mean value of $X_{1}$ is determined as $\mu_{X_{1}} = M_{0} - M_{inactive}$ with coefficient of variation $v_{X_{1}} = 0$. For $X_{2}$, the following equations can be used:
 
@@ -555,18 +536,13 @@ g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \
 
 Thus, $X_{2}$ is defined as accumulated damage, which is calculated based on the S/N curve approach with the Palmgren-Miner accumulation law, and $X_{1}$ as the corresponding limiting value. Detailed variable definitions are reminded in Table 10‑14.
 
-**Table 4.14: Assumed probabilistic models for the simplified high-cycle fatigue model.**
+(meca_table4_14)=
+```{list-table} Assumed probabilistic models for the simplified high-cycle fatigue model
+:class: interactive-table
+:name: Assumed probabilistic models for the simplified high-cycle fatigue model
 
-| **List of variables** | **Unit** | **Distribution** | **CoV range** |
-|-------------------|---------------------------|----------|------------------|
-|$D_{cr}$ : Threshold for accumulated damage| $[-]$ | Lognormal | $ \nu_{D_{cr}} \ge 0$|
-|$A$ : S/N curve parameter : Intercept| $[(log_{10}[N/m^{2}])^{-1}]$ | Normal | $\nu_{A} \ge 0$|
-|$B$ : S/N curve parameter : Slope | $[-]$ | Deterministic | $-$|
-|$SSF$ : Global stress scalling factor| $[-]$ | Lognormal | $\nu_{SSF} \ge 0$|
-|$k$ : Number of bins / load events| $[-]$ | Deterministic | $-$|
-|$N_{j}$ : (Equivalent) number of cycles in load | $[-]$ | Deterministic | $-$|
-|$S_{eq, j}$ : (Equivalent) stress in load event j| $[-]$ | Deterministic | $-$|
-|$\Theta$ : Model uncertainty| $[-]$ | Lognormal | $\nu_{\Theta} = 0.2$|
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_14.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 Without additional information, the expected value of $D_{cr}$ may be assumed to be equal to unity and its coefficient of variation equal to 0.3 (based on JCSS \[BR82\] and Wirsching \[BR83\]). The mean value and coefficient of variation of the stress scaling factor $SSF$ can be determined as follows: First an appropriate coefficient of variation $v_{SSF}$ reflecting all uncertainties associated with the load analysis is chosen, considering the most uncertain load event to be conservative.
 The mean value of the stress scaling factor then depends on the definition of the $S_{eq,j}$ values. Design values for fatigue stresses are typically defined as upper fractile values, leading to the following relationship:
@@ -713,18 +689,13 @@ considering only a single load event, i.e. $k = 1$. The stresses $S_{eq}$ should
 
 To allow for a first quick assessment, some reference values for the coefficients of variation and some mean values are provided in Table 10‑15. The values may be assumed to be applicable or conservative for most practical purposes, especially when considering the additional conservatism that has been introduced by assuming $C = 0$.
 
-**Table 4.15: Assumptions for the application of the simplified fatigue model to low risk items.**
+(meca_table4_15)=
+```{list-table} Assumptions for the application of the simplified fatigue model to low risk items
+:class: interactive-table
+:name: Assumptions for the application of the simplified fatigue model to low risk items
 
-| **List of variables** | **Unit** | **Mean** | **CoV** |
-|-------------------|---------------------------|----------|------------------|
-|$D_{cr}$ : Threshold for accumulated damage| $[-]$ | $E\lbrack D_{cr} \rbrack = 1.0$ | $ \nu_{D_{cr}} = 0.3$|
-|$A$ : S/N curve parameter : Intercept| $[(log_{10}[N/m^{2}])^{-1}]$ | User input | $\nu_{A}  = 0.05$|
-|$B$ : S/N curve parameter : Slope | $[-]$ | User input | $-$|
-|$SSF$ : Global stress scalling factor| $[-]$ | $E\lbrack SSF \rbrack = 0.527$ | $\nu_{SSF} = 0.3$|
-|$k$ : Number of bins / load events| $[-]$ | User input | $-$|
-|$N_{j}$ : (Equivalent) number of cycles in load | $[-]$ | User input | $-$|
-|$S_{eq, j}$ : (Equivalent) stress in load event j| $[-]$ | User input | $-$|
-|$\Theta$ : Model uncertainty| $[-]$ | $E\lbrack \Theta \rbrack = 1.0$ | $\nu_{\Theta} = 0.3$|
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_15.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 ### Fatigue crack growth modelling
 
@@ -1047,17 +1018,13 @@ variables are Weibull or Lognormal distributions. A proposal for the
 probabilistic modelling of Al 7075 T7351 and Ti 6Al 4V material
 properties can be found in Table 10‑16 (taken from \[BR81\]).
 
-**Table 4.16**: robabilistic modelling of material parameters for Al 7075 T7351 and Ti 6Al 4V 
+(meca_table4_16)=
+```{list-table} Probabilistic modelling of material parameters for Al 7075 T7351 and Ti 6Al 4V
+:class: interactive-table
+:name: Probabilistic modelling of material parameters for Al 7075 T7351 and Ti 6Al 4V
 
-|  |  | **Al 7075 T7351** |  |  | **Ti 6 Al 4V** |  |  |
-|----|----|---------------------|----|----|-------------------|----|-----|
-| **Variable** | **Dist.** | **Mean** | **ST. dev** | **COV** \[%\] | **Mean** | **ST. dev** | **COV** \[%\] |
-| C  \[mm/(MPa.mm1/2)n\]| Lognormal | $1.06.10{-10}$ | $2.65.10{-11}$ | $25$ | $4.89.10{-14}$| $1.17.10{-17}$ | $24$ |
-| n | Constant | $2.479$ | $/$ | $/$ | $3.45$| $/$ | $/$ |
-| $K_{lc}$  \[MPa.mm1/2\]| Lognormal | $869$ | $86.9$ | $10$ | $1737$| $173.7$ | $10$ |
-| $\sigma y$  \[MPa\]| Lognormal | $414$ | $41.4$ | $10$ | $931$| $93.1$ | $10$ |
-| $\Delta K_{0}$  \[MPa.mm1/2]| Lognormal | $104$ | $10.4$ | $10$ | $122$| $12.2$ | $10$ |
-
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_16.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 ## Modelling of failures due to corrosion
 
@@ -1155,14 +1122,13 @@ more detailed modelling.
 
 The variable definitions are given in Table 10‑17 below.
 
-**Table 4.17: Assumed probabilistic models for the simplified radiation degradation model.**
+(meca_table4_17)=
+```{list-table} Assumed probabilistic models for the simplified radiation degradation model
+:class: interactive-table
+:name: Assumed probabilistic models for the simplified radiation degradation model
 
-| **List of variables** | **Unit** | **Distribution** | **CoV range** |
-|-------------------|---------------------------|----------|------------------|
-|$D_{A}$ : Allowable radiation dose | $[rad]$ | Deterministic | $-$|
-|$D$ : Calculated radiation dose during mission | $[rad]$ | Deterministic | $-$|
-|$\Theta$ : Model uncertainty| $[-]$ | Lognormal | $\nu_{\Theta} = 0.4$|
-
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_17.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 To account for the uncertainties in choosing the deterministic values
 for $D$ and $D_{A}$, the coefficient of variation for the model

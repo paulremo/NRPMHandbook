@@ -5,15 +5,13 @@ Once it is clear what needs to be considered in the reliability prediction (see 
 ## Categories and combinations of mechanical failure mechanisms
 The method selection for mechanical parts reliability modelling should always take basis in a good understanding of the failure mechanisms that are of relevance for the considered item, especially the predominant ones. To simplify the presentation in the following sections, mechanical failure mechanisms are grouped into five distinct categories listed in Table  4 -4.
 
-**Table 4.4: Categories of mechanical failure mechanisms.**
+(meca_table4_4)=
+```{list-table} Categories of mechanical failure mechanisms
+:class: interactive-table
+:name: Categories of mechanical failure mechanisms
 
-| **Failure mechanism category** | **Examples**                                                    |
-|------------------------|------------------------------------------------|
-| Distortion                     | Creep, elastic deformation, plastic deformation, displacement   |
-| Fracture / Fatigue             | Ductile/brittle fracture, high-cycle fatigue, low-cycle fatigue |
-| Mechanical wear                | Adhesive wear, abrasive wear, lubricated wear                   |
-| Corrosion                      | Stress-corrosion cracking, galvanic corrosion                   |
-| Material degradation           | Thermal degradation, radiation damage                           |
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_4.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 The probability of failure can for some items be driven by several different failure mechanisms. When using PoF methods, the results for the individual mechanisms have to be combined to estimate the overall part reliability. The correct way of doing this depends on whether the different failure mechanisms can be considered as independent processes or events.
 
@@ -21,11 +19,12 @@ For independent failure mechanisms, it is sufficient to consider one process at 
 
 However, independence between different failure mechanisms may not always be a valid assumption, e.g. in case of physical interactions between different failure mechanisms processes. Table   4 -5 gives an overview for which combinations of failure mechanisms such effects may have to be considered. The table distinguishes interactions between different failure mechanisms affecting the same part (left hand side) and between different failure mechanisms affecting different parts (right hand side).
 
-**Table 4.5: Possible interactions between different mechanical failure mechanisms.**
+(meca_table4_5)=
+```{list-table} Possible interactions between different mechanical failure mechanisms
+:class: interactive-table
+:name: Possible interactions between different mechanical failure mechanisms
 
-```{image} ../../pictures/figure4_3.png
-:alt: table 4_5
-:align: center
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_5.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
 <iframe class="ext_content" src="../../../_static/interactivity/html/decision_tree2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
@@ -60,11 +59,11 @@ In Table   4 -6, statistical methods are mentioned only where a prediction based
 Also a combined approach with Bayesian updating of a prior derived from the Physics of Failure, using relevant data even with limited sample size, is generally preferred over a pure Physics of Failure approach, see Sections  and 4.6.5 for guidance.
 
 (meca_table4_6)=
-**Table 4.6: Mechanical part types, associated failure mechanisms and modelling recommendations.**
+```{list-table} Mechanical part types, associated failure mechanisms and modelling recommendations
+:class: interactive-table
+:name: Mechanical part types, associated failure mechanisms and modelling recommendations
 
-```{image} ../../pictures/figure4_4.png
-:alt: table 4_6
-:align: center
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_6.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
 ```{admonition} Todo
