@@ -2,9 +2,18 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: home
 
 parts:
+  - caption: Preface
+    numbered: true
+    chapters:
+    - file: preface/intro
+      title: Introduction
+    - file: preface/documentation
+      title: Documentation
+    - file: preface/terms
+      title: Terms, definitions and abbreviations     
   - caption: EEE chapter
     numbered: true
     chapters:
@@ -67,6 +76,8 @@ parts:
       sections:
       - file: miscellaneous/models/failure_rate_processing
         title: Failure rate processing
+      - file: miscellaneous/models/miscellaneous_reliability_guide
+        title: Guide Miscellaneous
   - caption: System chapter
     numbered: true
     chapters:
