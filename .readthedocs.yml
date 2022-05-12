@@ -25,3 +25,7 @@ sphinx:
   configuration: 02_NRPMHandbook/conf.py
   builder: html
   fail_on_warning: false
+  
+ # Don't forget the interactivity submodule!
+ submodules:
+  include: all
