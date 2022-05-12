@@ -29,3 +29,5 @@ sphinx:
  # Don't forget the interactivity submodule!
  submodules:
   include: all
+  recursive: true
+  
