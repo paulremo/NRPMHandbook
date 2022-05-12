@@ -52,6 +52,8 @@ sphinx:
     bibtex_reference_style  : label
     execution_show_tb: True
     execution_timeout: 60
+  extra_extensions: sphinx_multitoc_numbering # fix, because use_multitoc_numbering doesn't get forwarded to sphinx properly by jupyter book
+  
     
 
 
