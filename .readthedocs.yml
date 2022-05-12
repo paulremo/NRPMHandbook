@@ -27,7 +27,6 @@ sphinx:
   fail_on_warning: false
   
  # Don't forget the interactivity submodule!
- submodules:
+submodules:
   include: all
-  recursive: true
-  
+  recursive: true  
