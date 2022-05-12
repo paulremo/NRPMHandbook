@@ -23,6 +23,12 @@ Reliability Prediction at different levels.
 ```
 
 As shown in {numref}`Figure 7.2`, to establish a system level reliability prediction the reliability data that are evaluated at the different levels are aggregated bottom-up from component level to system level. 
+const InteractType = Object.freeze({
+    Button: 1,
+    Input: 2,
+    Choice: 3
+});
+
 
 Starting point is the reliability prediction at the lowest level (elementary parts). At this stage the failure rates or failure probabilities respectively for a single component are determined under the given environmental and operating conditions for a specific mission profile (see Chapters Error: Reference source not found, Error: Reference source not found and Error: Reference source not found). 
 

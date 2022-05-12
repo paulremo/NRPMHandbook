@@ -35,13 +35,13 @@ To allow for a quick reliability assessment without detailed knowledge of the un
 
 The most important aspects of simplified structural reliability modelling from a user’s perspective are summarized in Table   4 -7 below.
 
-**Table 4.7**: Difference between the use of “full” and simplified structural reliability methods
+(meca_table4_7)=
+```{list-table} Difference between the use of “full” and simplified structural reliability methods
+:class: interactive-table
+:name: Difference between the use of full and simplified structural reliability methods
 
-|                      | **Full method**                                                    | **Simplified methods**                                                    |
-|-----------------|----------------------------|----------------------------|
-| Limit state function | Any functional form (explicit or implicit, e.g. numerical code)    | Simplified, brought into the general format of Eq. {eq}`Equation 3.2`              |
-| Basic variables      | Probability distributions for all variables are chosen by the user | Only mean values and coefficients of variation are required as user input |
-| Interference method  | FORM/SORM or Monte Carlo                                           | Analytic solutions are given                                              |
+* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_7.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```
 
 The resulting models allow users to perform a reliability assessment based on structural reliability theory without detailed knowledge of the underlying probabilistic methods; only very limited user input is required. In the following, the general approach is briefly explained; see Error: Reference source not foundfor more detailed explanations, also on the derivations for each failure mechanism presented in Section 4.7.
 
