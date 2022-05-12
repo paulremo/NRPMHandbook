@@ -7,7 +7,12 @@ Welcome to the repository that stores and tracks the development on the ADS/Matr
 
 # FAQ
 
-## How to publish the jupyter book?
+## Where is the book hosted?
+By default, the book is automatically published and hosted on *readthedocs* at the alias URL http://nrpmhandbook.reliability.space/. The true URL is https://nrpmhandbook.readthedocs.io/. 
+
+### GitHub pages
+It is also possible to host the book on *GitHub Pages* with a URL https://paulremo.github.io/NRPMHandbook/. This needs to be done manually by following the procedure detailed next:
+
 To publish a jupyter book, locally perform the following commands from the main branch root. The following were adapted from [this link](https://jupyterbook.org/start/publish.html)
 
 First build the book HTML:
@@ -21,9 +26,6 @@ ghp-import -n -p -f --cname=nrpmhandbook.reliability.space 02_NRPMHandbook\_buil
 ```
 
 The book is then published as a Git Page with the URL https://paulremo.github.io/NRPMHandbook/.
-
-## Where is the book hosted?
-The book is hosted on *GitHub Pages*. 
 
 ## How do bibliographies work?
 The digital handbook uses a single `.bib` file to store all references. All global bibliography settings are set in the `_config.yml` file.
