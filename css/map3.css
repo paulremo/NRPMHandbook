@@ -1,3 +1,25 @@
+#help{
+    width: 32%;
+    height: 200px;
+}
+
+#astronaut{
+    margin-top: 0%;
+}
+
+.message{
+    margin-left: 20px;
+    background-color: #e4c665;
+    color: black;
+    border-radius: 5px;
+}
+
+.help-message{
+    font-size: 11px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .formula-map {
     background-color: white;
     margin-left: 20px;

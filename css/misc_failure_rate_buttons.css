@@ -1,7 +1,30 @@
+#help{
+    width: 32%;
+    height: 200px;
+}
+
+#astronaut{
+    margin-top: 0%;
+}
+
+.message{
+    margin-left: 20px;
+    background-color: #e4c665;
+    color: black;
+    border-radius: 5px;
+}
+
+.help-message{
+    font-size: 11px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .green-button {
-    padding: 5px 5px;
+    width: 22%;
+    padding: 2px 2px;
     margin: 5px;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
@@ -13,6 +36,10 @@
     box-shadow: 0 5px #666;
 }
 
+.controllers .green-button{
+    width: 15%;
+}
+
 /*.green-button:hover {background-color: #3e8e41}
 
 .green-button:active {
@@ -22,9 +49,10 @@
 }*/
 
 .red-button {
-    padding: 5px 5px;
+    width: 22%;
+    padding: 2px 2px;
     margin: 5px;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
@@ -36,6 +64,10 @@
     box-shadow: 0 5px #666;
 }
 
+.controllers .red-button{
+    width: 15%;
+}
+
 /*.red-button:hover {background-color: #d12500}
 
 .red-button:active {
@@ -45,9 +77,10 @@
 }*/
 
 .yellow-button {
-    padding: 5px 5px;
+    width: 22%;
+    padding: 2px 2px;
     margin: 5px;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
@@ -57,6 +90,10 @@
     border: none;
     /*border-radius: 15px;*/
     box-shadow: 0 5px #666;
+}
+
+.controllers .yellow-button{
+    width: 15%;
 }
 
 /*.yellow-button:hover {background-color: #e1b800}

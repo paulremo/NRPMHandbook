@@ -147,7 +147,8 @@ class Branch {
             }
 
             if (!next_msg.interactive) {
-                setTimeout(() => { this.nextStep() }, 1500);
+                setTimeout(() => { this.nextStep() }, 
+                0);
             }
 
         }
@@ -447,6 +448,23 @@ dataModelsByCategories = new Map([
     )]
 ])
 
+standardComponentFR = new Map([
+    ["TWTA, Single MPM", 200],
+    ["TWTA, Double MPM", 400],
+    ["BATTERY CELL GEO", 5],
+    ["BATTERY CELL LEO", 1],
+    ["SOLAR ARRAY CELL Si", 0.15],
+    ["SOLAR ARRAY CELL GaAs", 0.15],
+    ["SADM (Solar Array drive Mechanism) GEO", 210],
+    ["SADM (Solar Array drive Mechanism) LEO", 213],
+    ["THRUSTER", 82],
+    ["TANK TUBING", 3.27],
+    ["RW (Reaction Wheel) GEO", 250],
+    ["RW (Reaction Wheel) LEO", 140],
+    ["DEPLOYMENT DEVICE Antenna, boom", 0.2],
+    ["DEPLOYMENT DEVICE Solar Array", 0.3],
+]);
+
 let m1 = new Message(null, "Welcome to the failure rate calculation guide for the miscellaneous items !", "other-message", false, false);
 let m2 = new Message(null, "Before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used", "other-message", false, false);
 let m3 = new Message(null, "Is it OK ?", "other-message", false, false);
@@ -488,7 +506,8 @@ let mb2 = new Map([[0, m12], [1, m13]]);
 let mb3 = new Map([[0, m9], [1, m10], [2, m11]]);
 let mb4 = new Map([[0, m14], [1, m15]])
 let mb5 = new Map([[0, m16], [1, m17], [2, m18]]);
-let mb6 = new Map([[0, m19], [1, m20], [2, m21]])
+let mb6 = new Map([[0, m19], [1, m20], [2, m21]]);
+//let mb7 = new Map([[0, m16], [1, m22]]);
 
 let b6 = new Branch(mb6, new Map())
 let b5 = new Branch(mb5, new Map());
