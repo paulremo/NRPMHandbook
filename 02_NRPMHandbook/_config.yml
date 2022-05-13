@@ -32,6 +32,7 @@ html:
             <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
         </div>
   announcement              : "️⚠ This digital handbook is currently under development! Content may change unexpectedly!⚠"
+  search_bar_text           : "Search digital handbook..."
 
 # Information about where the book exists on the web
 repository:
