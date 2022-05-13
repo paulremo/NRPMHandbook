@@ -52,8 +52,9 @@ sphinx:
     bibtex_reference_style  : label
     execution_show_tb       : True
     execution_timeout       : 60
-    html_theme_options      : 
-      search_bar_text       : "Search digital handbook..."
+# The following is currently not possible, because it overwrites the Jupyter Book html_theme_options. There is currently no way to add this option without overwriting.
+#    html_theme_options      : 
+#      search_bar_text       : "Search handbook..."
   extra_extensions: sphinx_multitoc_numbering # fix, because use_multitoc_numbering doesn't get forwarded to sphinx properly by jupyter book
   
     
