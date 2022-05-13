@@ -224,3 +224,33 @@ function process_lambda3() {
     var res = parseFloat(document.getElementById("piOP_value").innerHTML) * parseFloat(document.getElementById("piT_value").innerHTML) * parseFloat(document.getElementById("piC_value").innerHTML) * parseFloat(document.getElementById("piM_value").innerHTML) * parseFloat(document.getElementById("piQ_value").innerHTML) * lambda1Entry.value * lambda2Entry.value;
     document.getElementById("lambda3_value").innerText = res.toFixed(6);
 }
+
+const information = new Map([
+    ["lambda_3", "Hover an element or click it to get information"],
+    ["lambda_1", "The failure rate is referred to as basic failure rate. It is defined at 60% level of confidence and given by the supplier."],
+    ["lambda_2", "The supplier identifies the physical parameters contributing to the reliability and accounting for the item specificities.By default, K<sub>parameters</sub> is set to 1, under the condition that the major contributors are sufficiently close to those defined for the basic failure rate. It is the responsibility of the user (the supplier) to adapt and/or define the K<sub>parameters</sub> as relevant with appropriate technical justification."],
+    ["pi_Q", "This is the QUALITY factor. This factor covers the quality level used to design/manufacture the miscellaneous item. It addresses the quality process, as a whole, as defined in the ECSS framework."],
+    ["pi_M", "This is the MATURITY factor. This factor addresses the maturity level of the supplier."],
+    ["pi_T", "This factor relates to the “technology” supporting the item. “Technology” is considered in a wide sense and is already addressed in the IOR equivalent class from which the basic failure rate is derived. No assumption can really be defined to account for the use of a new technology or a technology slightly different. The supplier justifies with technical arguments the reason why the technology of its product matches the technology accounted in the basic failure rate. If it is not the case, a “non-standard model” is developed by the supplier. e.g. SSPA implements a different technology than TWTA and therefore the reliability model used for TWTA will not be used for SSPA."],
+    ["pi_C", "Reliability depends on the complexity of the item. The assessment of the complexity is difficult. The supplier justifies with technical arguments the reason why the complexity of its product is consistent with the complexity accounted in the basic failure rate. If it is not the case a “non-standard model” is developed by the supplier."],
+    ["pi_OP", "The factor represents the frame of the significant operating conditions of the item. It is item-dependent and relates to Orbit,Temperature,Power,Thermal Cycling,Duty cycle,Other relevant conditions considered as reliability contributor."],
+    ["orbit", "This is the ORBIT value"],
+    ["temperature", "This is the temperature value"],
+    ["power", "This is the power value"],
+    ["thermal_cycling", "This is the thermal cycling value"],
+    ["duty_cycle", "This is the duty cycle value"],
+    ["others", "This is the others value"],
+    ["high_pi_Q", "The technical risk is mitigated / cancelled as necessary. This level refers to the high quality standard used for space (refer to ECSS)."],
+    ["medium_pi_Q", "The technical risk is optimized. This level is an intermediate level between High quality level and Low quality level."],
+    ["low_pi_Q", "The technical risk is mitigated up to the cost target, otherwise accepted."],
+    ["high_pi_M", "The supplier is a specialist providing the space stakeholders with the miscellaneous item"],
+    ["medium_pi_M", "The item is a new development for the supplier"],
+    ["low_pi_M", "The supplier is a newcomer on the market to develop such a product."],
+    ["not_compliant", "The basic failure rate has been derived based on different operating conditions and the parameter is assumed to be a contributor to the reliability with high impact"],
+    ["partially_compliant", "The basic failure rate has been derived based on different operating conditions and the parameter is assumed to be a contributor to the reliability with medium impact"],
+    ["fully_compliant", "The basic failure rate has been derived for the same operating conditions (w.r.t. this parameter)"],
+]);
+
+function update_help(elt){
+    document.getElementById("messagesTrack").innerHTML = information.get(elt);
+}

@@ -11,10 +11,28 @@
 
 <body>
 
+    <div id="help">
+        <table>
+            <tr>
+                <td>
+                    <div id="astronaut">
+                        <img id="astroPicture" src="pictures/astronaut1.png" style="height: 160px;" />
+                    </div>
+                </td>
+                <td>
+                    <div id="messages" class="message">
+                        <p class="help-message" id="messagesTrack">Hover an element or click it to get information</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
     <table class="customed-table">
 
         <tr>
-            <td class="value-type">
+            <td class="value-type" id="lambda_1" onmouseenter="update_help('lambda_1')">
                 <p class="value-type-title">Value of &lambda;<sub>1</sub> (FITs) </p>
             </td>
             <td class="value-processed">
@@ -28,7 +46,7 @@
         </tr>
 
         <tr>
-            <td class="value-type">
+            <td class="value-type" id="lambda_2" onmouseenter="update_help('lambda_2')">
                 <p class="value-type-title">Value of &lambda;<sub>2</sub> (FITs) </p>
             </td>
             <td class="value-processed">
@@ -42,7 +60,7 @@
         </tr>
 
         <tr>
-            <td class="value-type">
+            <td class="value-type" id="pi_Q" onmouseenter="update_help('pi_Q')">
                 <p class="value-type-title">Value of &Pi;<sub>Q</sub> : </p>
             </td>
             <td class="value-processed">
@@ -66,7 +84,7 @@
         </tr>
 
         <tr>
-            <td class="value-type">
+            <td class="value-type" id="pi_M" onmouseenter="update_help('pi_M')">
                 <p class="value-type-title">Value of &Pi;<sub>M</sub> : </p>
             </td>
             <td class="value-processed">
@@ -90,7 +108,7 @@
         </tr>
 
         <tr>
-            <td class="value-type">
+            <td class="value-type" id="pi_T" onmouseenter="update_help('pi_T')">
                 <p class="value-type-title">Value of &Pi;<sub>T</sub> : </p>
             </td>
             <td class="value-processed">
@@ -114,7 +132,7 @@
         </tr>
 
         <tr>
-            <td class="value-type">
+            <td class="value-type" id="pi_C"  onmouseenter="update_help('pi_C')">
                 <p class="value-type-title">Value of &Pi;<sub>C</sub> : </p>
             </td>
             <td class="value-processed">
@@ -138,7 +156,7 @@
         </tr>
 
         <tr>
-            <td class="value-type">
+            <td class="value-type" id="pi_OP" onmouseenter="update_help('pi_OP')">
                 <p class="value-type-title">Value of &Pi;<sub>OP</sub> : </p>
             </td>
             <td class="value-processed">
@@ -147,7 +165,7 @@
             <td>
                 <table class="customed-table">
                     <tr>
-                        <td class="value-type">
+                        <td class="value-type" id="orbit" onmouseenter="update_help('orbit')">
                             <p class="value-type-title">Value of orbit : </p>
                         </td>
                         <td class="value-processed">
@@ -170,7 +188,7 @@
                     </tr>
 
                     <tr>
-                        <td class="value-type">
+                        <td class="value-type" id="temperature" onmouseenter="update_help('temperature')">
                             <p class="value-type-title">Value of temperature : </p>
                         </td>
                         <td class="value-processed">
@@ -194,7 +212,7 @@
                     </tr>
 
                     <tr>
-                        <td class="value-type">
+                        <td class="value-type" id="power" onmouseenter="update_help('power')">
                             <p class="value-type-title">Value of power : </p>
                         </td>
                         <td class="value-processed">
@@ -217,7 +235,7 @@
                     </tr>
 
                     <tr>
-                        <td class="value-type">
+                        <td class="value-type" id="duty_cycle" onmouseenter="update_help('duty_cycle')">
                             <p class="value-type-title">Value of duty cycle : </p>
                         </td>
                         <td class="value-processed">
@@ -240,7 +258,7 @@
                     </tr>
 
                     <tr>
-                        <td class="value-type">
+                        <td class="value-type" id="thermal_cycling" onmouseenter="update_help('thermal_cycling')">
                             <p class="value-type-title">Value of Thermal cycling : </p>
                         </td>
                         <td class="value-processed">
@@ -263,7 +281,7 @@
                     </tr>
 
                     <tr>
-                        <td class="value-type">
+                        <td class="value-type" id="others" onmouseenter="update_help('others')">
                             <p class="value-type-title">Value of others : </p>
                         </td>
                         <td class="value-processed">
