@@ -20,7 +20,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **EEE**
 ^^^^
-<img class="link-image" src="_static/images/eeePicture.png" alt="logo triple e" style="width:200px;margin-left:20%;" onclick="redirect('eee/mainEEE.html')">
+<img class="link-image" src="_static/images/eeePicture.png" alt="logo triple e" onclick="redirect('eee/mainEEE.html')">
 +++
 {badge}`EEE,badge-primary`
 
@@ -30,21 +30,19 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **Mechanical**
 ^^^^
-<img class="link-image" src="_static/images//mecaPicture.png" alt="logo mechanical" style="width:200px;margin-left:20%;" onclick="redirect('mechanical/handbook/introduction.html')">
+<img class="link-image" src="_static/images//mecaPicture.png" alt="logo mechanical" onclick="redirect('mechanical/handbook/introduction.html')">
 +++
 {badge}`Mechanical,badge-primary`
 
 [Go to Mechanical](mechanical/handbook/introduction)
 ````
-
-
 ````{panels}
 :column: col-6
 :card: border-2
 
 **Miscellaneous**
 ^^^^
-<img class="link-image" src="_static/images//miscellaneousPicture.png" alt="logo miscellaneous" style="width:200px;margin-left:20%;" onclick="redirect('miscellaneous/handbook/introduction.html')">
+<img class="link-image" src="_static/images//miscellaneousPicture.png" alt="logo miscellaneous" onclick="redirect('miscellaneous/handbook/introduction.html')">
 +++
 {badge}`Miscellaneous,badge-primary`
 
@@ -54,7 +52,7 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 
 **System**
 ^^^^
-<img class="link-image" src="_static/images//systemPicture.png" alt="logo system" style="width:200px;margin-left:20%;" onclick="redirect('system/handbook/introduction.html')">
+<img class="link-image" src="_static/images//systemPicture.png" alt="logo system" onclick="redirect('system/handbook/introduction.html')">
 +++
 {badge}`System,badge-primary`
 

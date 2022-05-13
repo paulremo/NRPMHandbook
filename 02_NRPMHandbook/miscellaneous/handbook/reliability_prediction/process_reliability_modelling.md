@@ -269,7 +269,7 @@ Let’s denote $T$ as the Time To Failure random variable.
 $T_{RF}$ is the $TTF$ representing Random Failures (constant failure rate for miscellaneous items)
 $T_{RF}$ is modelled by the exponential distribution. 
 $T_{WO}$ is the $TTF$ representing Wear-Out failures (increasing failure rate)
-$T_{WO}$ is modelled by any distribution with increasing failure rate, i.e. Weibull $W(\beta, \eta)$, Normal $N(m, \sigma)$, Log-Normal $\textbf{XXX}$ as relevant (based on the supplier knowledge). 
+$T_{WO}$ is modelled by any distribution with increasing failure rate, i.e. Weibull $W(\beta, \eta)$, Normal $N(m, \sigma)$, Log-Normal $\textbf{m, \sigma}$ as relevant (based on the supplier knowledge). 
 Three models are presented to model include wear-out mechanisms and impacts on the reliability of the item.
 
 * **MODEL 1**: $RF$ model and $WO$ model are combined from $t=0$, based on $T = TTF = min(T_{RF}, T_{WO})$
