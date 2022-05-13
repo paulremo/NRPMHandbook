@@ -301,7 +301,7 @@ class SquidFormula {
                 document.getElementById(this.selectedEntry.id).innerHTML = this.selectedEntry.name + " : " + txt;
                 document.getElementById(this.selectedEntry.id).style.background = "green";
                 this.selectedEntry.value = parseFloat(txt);
-                document.getElementById("entry_k_parameter").style.visibility = "visible";
+                //document.getElementById("entry_k_parameter").style.visibility = "visible";
             }
             else {
                 document.getElementById(this.selectedEntry.id).innerHTML = this.selectedEntry.name + " ! " + txt;
