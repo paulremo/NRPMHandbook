@@ -32,7 +32,6 @@ html:
             <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
         </div>
   announcement              : "️⚠ This digital handbook is currently under development! Content may change unexpectedly!⚠"
-  search_bar_text           : "Search digital handbook..."
 
 # Information about where the book exists on the web
 repository:
@@ -51,8 +50,10 @@ sphinx:
     # modifications of bibtex reference style
     bibtex_default_style    : plain
     bibtex_reference_style  : label
-    execution_show_tb: True
-    execution_timeout: 60
+    execution_show_tb       : True
+    execution_timeout       : 60
+    html_theme_options      : 
+      search_bar_text       : "Search digital handbook..."
   extra_extensions: sphinx_multitoc_numbering # fix, because use_multitoc_numbering doesn't get forwarded to sphinx properly by jupyter book
   
     
