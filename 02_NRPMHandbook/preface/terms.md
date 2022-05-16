@@ -3,13 +3,13 @@
 ## Terms and definitions
 
 ```{glossary}
-ANOMALY (ECSS-S-ST-00-01C_2012)
+ANOMALY
 	 Any deviation from the expected situation. 
 
-BAYESIAN INFERENCE (source : Wikipedia)
+BAYESIAN INFERENCE
     The Bayesian inference is a method of statistical inference in which the Bayes theorem is used to update the probability for a hypothesis as more evidence or information becomes available. 
 
-COMMON CAUSE FAILURE [RD8] 
+COMMON CAUSE FAILURE
 	 Failure of multiple items occurring from a single cause that is common to all of them. 
 
 CONTRIBUTING FACTOR
@@ -21,8 +21,8 @@ DEEP SUB MICRON TECHNOLOGIES
 DEGRADATION (PROGRESSIVE) FAILURE
 	 A progressive failure is characterized by the degradation in time - or equivalent time, such as cycles - of an item’s performances (modification of the design characteristics due to a degradation/wear-out process) up to a definitive failure. 
 
-DFMEA – Design FMEA
-	 FMEA in which the design of product is analysed. All potential failure modes due to design errors are identified, analysed in terms of severity, occurrence and detectability on ground, and actions plans are put into place in order to reduce one of these three characteristics to remain within acceptable limits.  
+DFMEA
+	 Design FMEA : FMEA in which the design of product is analysed. All potential failure modes due to design errors are identified, analysed in terms of severity, occurrence and detectability on ground, and actions plans are put into place in order to reduce one of these three characteristics to remain within acceptable limits.  
 
 EEE PART
 	  A component which performs electrical, electronic or electromechanical (EEE) function and is built with one or more elements assembled together in a manner that they cannot be separated without destroying the component. 
@@ -30,7 +30,7 @@ EEE PART
 EPISTEMIC UNCERTAINTY
 	 The epistemic uncertainties result from our poor understanding of the relevant aspects. They include statistical uncertainties and model uncertainties. 
 
-EQUIPMENT/UNIT [RD8] 
+EQUIPMENT/UNIT
 	 Integrated set of parts and components. 
 
 EXTRINSIC FAILURE
@@ -45,10 +45,10 @@ FAILURE MECHANISM
 FAILURE MODE
 	 The observable effect of the mechanism through which the failure occurs (e.g. open-circuit or short-circuit for EEE parts, fracture or excessive wear for mechanical parts).
 
-FAILURE MODE AND EFFECT ANALYSIS FMEA [RD2] 
+FAILURE MODE AND EFFECT ANALYSIS FMEA
 	 analysis by which each potential failure mode in a product (or function or process) is analysed to determine its effects. Note : The potential failure modes are classified according to their severity.
 
-FAILURE MODE, EFFECT AND CRITICALITY ANALYSIS FMECA [RD2] 
+FAILURE MODE, EFFECT AND CRITICALITY ANALYSIS FMECA
 	 FMEA extended to classify potential failure modes according to their criticality.
 
 FAILURE MODE AND EFFECTS SUMMARY FMES
@@ -63,18 +63,19 @@ HANDBOOK DATA SOURCE
 IN-ORBIT RETURN (IOR) DATA
 	 In-orbit return reliability data correspond to reliability data (Failure rates or mission probability success) obtained through the analysis of in-orbit feedback at different levels.
 
-INTERFACE [RD8] 
+INTERFACE
 	 Boundary where two or more products meet and interact
 
 LEVEL OF CONFIDENCE
 	 The mathematical definition of the level of confidence is as follows
+
 MANUFACTURER DATA
 	 In this study, manufacturer data corresponds to information obtained for a part, a unit or a subsystem through its manufacturing process, its physical production. 
 
 MECHANICAL PART
 	 A non-electronics part, i.e. a piece of hardware which is not electrical, electronic or electromechanical, and which performs a simple elementary function or part of a function in such a way that it can be evaluated as a whole against expected requirements of performance and cannot be disassembled without destroying this capability.
 
-MECHANISM [RD7] 
+MECHANISM
 	 Assembly of parts that are linked together to enable a relative motion. 
 
 MISCELLANEOUS ITEM
@@ -89,7 +90,7 @@ MODEL UNCERTAINTY
 NEW SPACE
 	 A notion first introduced around 2010-2015, corresponding to an ongoing transformation of the space sector, which is driving new ways to develop space product. It concerns several notions, among which the overall cost that should be lower than for the “old” space and the resort to the newest technologies in the limits of their applicability for Space. In practice it is translated through the level of quality of the different elements within the spacecraft – commercial procurement vs space and MIL levels, through the tiers involved at Service, System and Suppliers’ level – newcomers for the space activities as well as historical companies, and through the new concepts developed.
 
-PART/COMPONENT [RD8] 
+PART/COMPONENT
 	 A part is a set of materials, assembled according to defined and controlled processes, which cannot be disassembled without destroying its capability and which performs a simple function that can be evaluated against expected performance requirements. (“part” is preferred when referring to purely mechanical devices, “component” is preferred for EEE devices).
 
 PERTINENCE
@@ -98,12 +99,13 @@ PERTINENCE
 PFMEA - Process FMEA
 	 FMEA considering the analysis of processes such as manufacturing, assembling and integration or pre‐launch operations. All potential failure modes due to process variability and manufacturing errors are identified, analysed in terms of severity, occurrence and detectability on ground, and actions plans are put into place in order to reduce one of these three characteristics to remain within acceptable limits.
 
-PHYSICS OF FAILURE (source
-	 Wikipedia)
+PHYSICS OF FAILURE
+	The physics of failure concept is a technique under the practice of design for reliability that leverages the knowledge and understanding of the processes and mechanisms that induce failure to predict reliability and improve product performance. 
+
 PROBABILITY DENSITY FUNCTION
 	 For a discrete distribution, the probability density function (PDF) is the probability that the variate has the value x. Since for continuous distributions the probability at a single point is zero, the PDF is expressed as the probability for a random variable X to be in the interval [x, x+dx( for dx0.
 
-QUALITY [RD8] 
+QUALITY 
 	 Degree to which a set of characteristics of a product or a process fulfils requirements. 
 
 RANDOM FAILURE
@@ -124,7 +126,7 @@ RELIABILITY PREDICTION MODEL
 RELIABILITY PREDICTION SPACE APPLICATION
 	 Application (of a reliability prediction methodology, method or model) for a system that is intended to operate in space.
 
-REQUIREMENT (IEEE-STD-1220-1998)
+REQUIREMENT
 	 A statement that identifies a product or process operational, functional, or design characteristic or constraint, which is unambiguous, testable or measurable, and necessary for product or process acceptability (by consumers or internal quality assurance guidelines).
 
 RF PASSIVE PART
@@ -136,10 +138,10 @@ SAFE LIFE QUALIFICATION
 SIMPLIFIED STRUCTURAL RELIABILITY METHOD
 	 it corresponds to a simplified form of structural reliability methods, which needs less knowledge of probabilistic methods to be established and can be solved analytically. 
 
-SPACECRAFT [RD8] 
+SPACECRAFT
 	 manned or unmanned vehicle designed to orbit or travel in space. Note A spacecraft is a space segment element.
 
-SPACE SEGMENT [RD8] 
+SPACE SEGMENT
 	 Part of a space system, placed in Space, to fulfil the space mission objectives. 
 
 STATISTICAL METHOD
@@ -154,16 +156,16 @@ STRUCTURAL RELIABILITY METHOD
 SUDDEN FAILURE
 	 A failure is sudden when the transition from the normal state (nominal performances of the elements) to the failed state is instantaneous or is very short.
 
-SYSTEM [RD8] 
+SYSTEM
 	 A system is a set of interrelated or interacting functions constituted to achieve a specified objective.
 
 SYSTEMATIC FAILURE
 	 A Systematic failure is a failure, related in a deterministic way to a certain cause, which can only be eliminated by a modification of the design, the manufacturing process or the operational procedures. 
 
-SYSTEM ENGINEERING (International Council on Systems Engineering INCOSE)
+SYSTEM ENGINEERING
 	 Systems engineering is an interdisciplinary approach and means to enable the realization of successful systems. It focuses on defining customer needs and required functionality early in the development cycle, documenting requirements, and then proceeding with design synthesis and system validation while considering the complete problem: operations, cost and schedule, performance, training and support, test, manufacturing, and disposal.
 
-TEST [RD8] 
+TEST
 	 Measurement of product characteristics, performance or functions under representative environments. 
 
 TEST DATA

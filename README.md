@@ -70,7 +70,7 @@ Delete the `_build` folder and rebuild the book from scratch. This can fix issue
 The digital handbook contains two types of interactive content: javascript-based and python-based content. The two are hosted and accessed differently:
 
 - **Javascript** content is accessible directly through the browser without additional user-action. The source files are stored in `.js`, `.css`, and `.html` files inside the `_static` folder.
-- **Python** content cannot be run on the browser and is instead launched by hovering over the :rocket: on top of the page and selecing *Live Code*. This launches a kernel provided by [mybinder](https://mybinder.org/) and shown in the browser with the [thebe](https://github.com/executablebooks/thebe) interface. 
+- **Python** content cannot be run on the browser and is instead launched by hovering over the :rocket: on top of the page and selecing *Live Code*. This launches a kernel provided by [mybinder](https://mybinder.org/) and shown in the browser with the [thebe](https://github.com/executablebooks/thebe) {term}`INTERFACE`. 
 
 ### Javascript configuration
 Javascript-based interactivity is implemented in `.html` files inside the `_static` folder. Every interactive element has a dedicated `.html` file. These files are included in the jupyter-book through iframe tags. Javascript is used to resize the iframe to its content.

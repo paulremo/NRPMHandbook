@@ -1,6 +1,6 @@
 # Important measures
 
-In case the reliability targets are not met, the design process reconsiders the system architecture in order to improve the reliability. Quantification of system reliability gives only the overall system performance measure, but the reliability assessment can also provide a ranking of components with respect to their significance for system reliability. Several measures of significance have been proposed for the case where the support model is a fault tree or RBD, grouped under the generic designation of "importance measures". The aim of importance measures is to support system design in selecting the most efficient solution through quantitative analysis related to the following questions Error: Reference source not found:
+In case the reliability targets are not met, the design process reconsiders the system architecture in order to improve the reliability. Quantification of system reliability gives only the overall system performance measure, but the reliability assessment can also provide a ranking of components with respect to their significance for system reliability. Several measures of significance have been proposed for the case where the support model is a fault tree or {term}`RBD`, grouped under the generic designation of "importance measures". The aim of importance measures is to support system design in selecting the most efficient solution through quantitative analysis related to the following questions Error: Reference source not found:
 
 ```{admonition} Todo
 :class: todo
@@ -15,7 +15,7 @@ miss ref above
 
 -   Which component is most likely causing the system to fail?
 
-The methods to determine importance measures are based on the Boolean model for system reliability prediction considering independent random failure, e.g. fault tree analysis or reliability block diagram. Hence the following conditions apply:
+The methods to determine importance measures are based on the Boolean model for system {term}`RELIABILITY PREDICTION` considering independent {term}`RANDOM FAILURE`, e.g. fault tree analysis or reliability block diagram. Hence the following conditions apply:
 
 -   The system and its components have two states, functional or failed
 
@@ -249,7 +249,7 @@ In the example the initial failure rate is set to 1.0E-06 1/h for all components
 
 With the initial reliability a system reliability of $R_{S}\left( t \right) = 0,9092$ is obtained. Based on Eq. {eq}`Equation 7.48` the Birnbaum importance is calculated for all components. The results are shown in [Table 4.11](syst_table4_11).
 
-3.  Comparison of the calculated reliability with the system reliability requirement.\
+3.  Comparison of the calculated reliability with the system reliability {term}`REQUIREMENT`.\
     The difference to the required system reliability is given by:
 
 (syst_equation4_59)=

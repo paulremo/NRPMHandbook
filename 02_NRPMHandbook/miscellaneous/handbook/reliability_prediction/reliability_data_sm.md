@@ -13,12 +13,12 @@ Miss ref just above "in ..."
 :class: note
 The failure rate is provided per TWT Channel (mono channel or dual channel). In order to be used for LEO, if adaptation is necessary, it is recommended to use 
 
-1.  by default the following proportion (based on average MIL-HDBK-217 {cite:t}`mis-MIL-HDBK-217F` reliability prediction) of the whole failure rate.
+1.  by default the following proportion (based on average MIL-HDBK-217 {cite:t}`mis-MIL-HDBK-217F` {term}`RELIABILITY PREDICTION`) of the whole failure rate.
     * EPC_common = 36%
     * EPC_channel = 9%
-    * CAMP = 25%
+    * {term}`CAMP` = 25%
     * TWT = 30%
-2. to use the supplier repartition as per its own reliability prediction.
+2. to use the supplier repartition as per its own {term}`RELIABILITY PREDICTION`.
 
 ```{admonition} Todo
 :class: todo

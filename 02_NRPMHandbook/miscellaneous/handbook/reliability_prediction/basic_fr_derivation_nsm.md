@@ -1,43 +1,43 @@
 (misc_5_7)=
 # Basic failure rate derivation for “non-standard model” items
-When the miscellaneous item under consideration does not match the criteria of the miscellaneous equivalent class (e.g. SSPA – Solid State Power Amplifier- cannot be compared to a TWTA in terms of technology), it is necessary to build a reliability model based on engineering/PoF approach as defined hereafter.
+When the {term}`MISCELLANEOUS ITEM` under consideration does not match the criteria of the miscellaneous equivalent class (e.g. {term}`SSPA` – Solid State Power Amplifier- cannot be compared to a {term}`TWTA` in terms of technology), it is necessary to build a reliability model based on engineering/{term}`PoF` approach as defined hereafter.
 
 Once the reliability model is established it can be tailored as necessary based on the approach presented in {numref}`misc_5_5`.
 
-First, it is necessary, to collect/define all technical information about the miscellaneous item in order to characterize it (refer to {numref}`misc_5_5`). Then the basic failure rate $\lambda_{1}$ = $\lambda_{B}$ is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of {numref}`misc_5_5`) corresponding to [step 2](misc_step2) to [7](misc_step7).
+First, it is necessary, to collect/define all technical information about the {term}`MISCELLANEOUS ITEM` in order to characterize it (refer to {numref}`misc_5_5`). Then the basic failure rate $\lambda_{1}$ = $\lambda_{B}$ is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of {numref}`misc_5_5`) corresponding to [step 2](misc_step2) to [7](misc_step7).
 
 
 (misc_5_5_1)=
-## DFMEA / PFMEA
+## {term}`DFMEA – Design FMEA` / {term}`PFMEA - Process FMEA`
 
-After the first item characterization, a DFMEA and a PFMEA are performed in order to assess the failure modes due to 
+After the first item characterization, a {term}`DFMEA – Design FMEA` and a {term}`PFMEA - Process FMEA` are performed in order to assess the {term}`FAILURE MODE`s due to 
 
 1. Design errors and
 2. Manufacturing errors.
 
-It is recommended to use the {cite:t}`mis-SAE_standard, mis-PFMEA` which provides the method to apply for a DFMEA / PFMEA. PFMEA is also specified in {cite:t}`mis-ECSS-Q-ST-30-02C`.
+It is recommended to use the {cite:t}`mis-SAE_standard, mis-{term}`PFMEA - Process FMEA`` which provides the method to apply for a {term}`DFMEA – Design FMEA` / {term}`PFMEA - Process FMEA`. {term}`PFMEA - Process FMEA` is also specified in {cite:t}`mis-ECSS-Q-ST-30-02C`.
 
 **FMEA: Required for every unit**
 
-* Is a tool/method supporting the design of the unit, identifying all the elementary “failure modes” due to “_RANDOM FAILURE” (part intrinsic reliability)_ as defined in the failure mode list (refer to {cite:t}`mis-ECSS-Q-ST-30-02C`). 
+* Is a tool/method supporting the design of the unit, identifying all the elementary “{term}`FAILURE MODE`s” due to “_{term}`RANDOM FAILURE`” (part intrinsic reliability)_ as defined in the {term}`FAILURE MODE` list (refer to {cite:t}`mis-ECSS-Q-ST-30-02C`). 
 * **@unit level**: under supplier responsibility
-* **@system level**: integrated at system level by System RAMS engineer (including HSIA supporting the failure tolerance: observability in-orbit…)
+* **@system level**: integrated at system level by System {term}`RAMS` engineer (including HSIA supporting the failure tolerance: observability in-orbit…)
 
 ```{admonition} Todo
 :class: todo
 miss ref above
 ```
 
-**DFMEA: Required on critical functions only (Risk analysis)**
+**{term}`DFMEA – Design FMEA`: Required on critical functions only (Risk analysis)**
 
-* Is a tool/method supporting the product quality identifying all the elementary failure modes due to DESIGN errors. It includes, as a minimum, the failure modes identified by FMEA.
-* **@unit level**: under unit designer / Quality Assurance responsibility
+* Is a tool/method supporting the product {term}`QUALITY` identifying all the elementary {term}`FAILURE MODE`s due to DESIGN errors. It includes, as a minimum, the {term}`FAILURE MODE`s identified by FMEA.
+* **@unit level**: under unit designer / {term}`QUALITY` Assurance responsibility
 * **@system level**: reviewed by procurement within the unit acceptance process
 
-**PFMEA: Required on critical functions only (Risk analysis)**
+**{term}`PFMEA - Process FMEA`: Required on critical functions only (Risk analysis)**
 
-* Is a tool/Method supporting the product quality identifying all the elementary failure modes due to MANUFACTURING errors.
-* **@unit level**: under unit Quality Assurance responsibility
+* Is a tool/Method supporting the product {term}`QUALITY` identifying all the elementary {term}`FAILURE MODE`s due to MANUFACTURING errors.
+* **@unit level**: under unit {term}`QUALITY` Assurance responsibility
 * **@system level**: reviewed by procurement within the unit acceptance process
 
 (misc_figure4_8)=
@@ -46,20 +46,20 @@ miss ref above
 width: 600px
 name: Figure 5.8
 ---
-Differences between FMEA, DFMEA and PFMEA.
+Differences between FMEA, {term}`DFMEA – Design FMEA` and {term}`PFMEA - Process FMEA`.
 ```
 
-{numref}`Figure 5.8` highlights the differences and the commonalities between FMEA, DFMEA and PFMEA.
+{numref}`Figure 5.8` highlights the differences and the commonalities between FMEA, {term}`DFMEA – Design FMEA` and {term}`PFMEA - Process FMEA`.
 
-{numref}`Figure 5.9`  provides an example of DFMEA and PFMEA at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in {numref}`Figure 5.8`), whereas the right-hand side refers to DFMEA data (green perimeter in {numref}`Figure 5.8`).
+{numref}`Figure 5.9`  provides an example of {term}`DFMEA – Design FMEA` and {term}`PFMEA - Process FMEA` at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in {numref}`Figure 5.8`), whereas the right-hand side refers to {term}`DFMEA – Design FMEA` data (green perimeter in {numref}`Figure 5.8`).
 
 The main outcome is the ranking of every root cause (Design error, Manufacturing error) in
 
-* **SEV**erity
-* **OCC**urrence
-* **DET**ectability
+* **{term}`SEV`**erity
+* **{term}`OCC`**urrence
+* **{term}`DET`**ectability
 
-The Risk Priority Number (RPN), which is derived, is an index reflecting the residual technical risk.
+The Risk Priority Number ({term}`RPN`), which is derived, is an index reflecting the residual technical risk.
 
 (misc_figure4_9)=
 ```{figure} ../../picture/figure4_10.png
@@ -67,7 +67,7 @@ The Risk Priority Number (RPN), which is derived, is an index reflecting the res
 width: 600px
 name: Figure 5.9
 ---
-Differences between FMEA, DFMEA and PFMEA.
+Differences between FMEA, {term}`DFMEA – Design FMEA` and {term}`PFMEA - Process FMEA`.
 ```
 
 ```{glossary}
@@ -77,10 +77,10 @@ SA
 I_SA
   SA current
 
-TM
+{term}`TM`
   Telemetry
 
-SPF
+{term}`SPF`
   Single Point Failure
 ```
 
@@ -104,11 +104,11 @@ TRL
 (misc_5_5_2)=
 ### Probability assessment
 
-The occurrence scale of {numref}`misc_5_5_2` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per failure mode:
+The occurrence scale of {numref}`misc_5_5_2` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per {term}`FAILURE MODE`:
 
-* In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a RF passive part which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
-* A probability of occurrence is assigned to every failure mode and the sum provides the probability of occurrence of the item.
-* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the failure mode, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}`Occurrence scale with 10 levels`) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
+* In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a {term}`RF PASSIVE PART` which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
+* A probability of occurrence is assigned to every {term}`FAILURE MODE` and the sum provides the probability of occurrence of the item.
+* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the {term}`FAILURE MODE`, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}`Occurrence scale with 10 levels`) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
 
 
 This represents the basic failure rate or the basic probability of failure.

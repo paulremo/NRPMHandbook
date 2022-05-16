@@ -1,26 +1,26 @@
 # Structural reliability models and equations
 
-The present section provides limit state functions and guidance for the modelling of several failure mechanisms that are of relevance for mechanical reliability prediction. The content of this Section is largely based on Error: Reference source not found, where some aspects are discussed in more detail.
+The present section provides limit state functions and guidance for the modelling of several {term}`FAILURE MECHANISM`s that are of relevance for mechanical {term}`RELIABILITY PREDICTION`. The content of this Section is largely based on Error: Reference source not found, where some aspects are discussed in more detail.
 
 ```{admonition} Todo
 :class: todo
 Miss ref just above
 ```
 
-An overview on the failure mechanisms covered by the different subsections is found in Table   4 -10. The limit state functions provided in each dedicated subsection are generally applicable with the “full” structural reliability method described in Section 4.6.1 and in Chapter 6 (Part II). Simplified models in the sense of Section 4.6.2, with analytic solutions for the probability of failure calculations, are provided for some failure mechanisms. Failure mechanisms that can be modelled with the aid of simple stress strength methods (as discussed in Section 4.6.3) are also mentioned in Table   4 -10, but will not discussed any further in the present section.
+An overview on the {term}`FAILURE MECHANISM`s covered by the different subsections is found in Table   4 -10. The limit state functions provided in each dedicated subsection are generally applicable with the “full” {term}`STRUCTURAL RELIABILITY METHOD` described in Section 4.6.1 and in Chapter 6 (Part II). Simplified models in the sense of Section 4.6.2, with analytic solutions for the probability of failure calculations, are provided for some {term}`FAILURE MECHANISM`s. {term}`FAILURE MECHANISM`s that can be modelled with the aid of simple stress strength methods (as discussed in Section 4.6.3) are also mentioned in Table   4 -10, but will not discussed any further in the present section.
 
 (meca_table4_10)=
-```{list-table} Overview on Failure mechanisms covered in Section 10.7
+```{list-table} Overview on {term}`FAILURE MECHANISM`s covered in Section 10.7
 :class: interactive-table
-:name: Overview on Failure mechanisms covered in Section 10.7
+:name: Overview on {term}`FAILURE MECHANISM`s covered in Section 10.7
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_10.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
-Failure mechanisms that are not listed in Table   4 -10 need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC’s WARP Error: Reference source not foundor Kowal . The “full” structural reliability method may be applied with any limit state function or failure mechanism model, see Section 4.6.1 for details.
-The following subsections dedicated to each failure mechanism model always follow the same logic: First the failure mechanism is introduced and a generic limit state function is derived that can be used with general structural reliability methods, possibly requiring numerical methods to derive the probability of failure. Closed form solutions (if available) are then discussed separately under the heading “Simplified failure mechanism model”. 
+{term}`FAILURE MECHANISM`s that are not listed in Table   4 -10 need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC’s WARP Error: Reference source not foundor Kowal . The “full” {term}`STRUCTURAL RELIABILITY METHOD` may be applied with any limit state function or {term}`FAILURE MECHANISM` model, see Section 4.6.1 for details.
+The following subsections dedicated to each {term}`FAILURE MECHANISM` model always follow the same logic: First the {term}`FAILURE MECHANISM` is introduced and a generic limit state function is derived that can be used with general {term}`STRUCTURAL RELIABILITY METHOD`s, possibly requiring numerical methods to derive the probability of failure. Closed form solutions (if available) are then discussed separately under the heading “Simplified {term}`FAILURE MECHANISM` model”. 
 
-The derivation of these closed-form solutions is based on several assumptions related to the limit state function and the basic variable modelling, see Section 4.6.3 for a general introduction. The detailed assumptions are specific to the considered failure mechanisms; a short summary is provided together with each simplified model. Note that it is not possible to make a general statement how “exact” the analytic solutions are, e.g. when compared to a “full” structural reliability assessment. However, the assumptions listed can and should be checked to decide whether the simplified model can be used for a given application or whether the “full” structural reliability method is more appropriate.
+The derivation of these closed-form solutions is based on several assumptions related to the limit state function and the basic variable modelling, see Section 4.6.3 for a general introduction. The detailed assumptions are specific to the considered {term}`FAILURE MECHANISM`s; a short summary is provided together with each simplified model. Note that it is not possible to make a general statement how “exact” the analytic solutions are, e.g. when compared to a “full” structural reliability assessment. However, the assumptions listed can and should be checked to decide whether the simplified model can be used for a given application or whether the “full” {term}`STRUCTURAL RELIABILITY METHOD` is more appropriate.
 
 
 ## Modelling of failures due to mechanical wear
@@ -38,7 +38,7 @@ Adhesive, abrasive and fretting wear show common behaviour, and it is commonly a
 
 **Lubricated wear** is related to the degradation of the lubricant or the lubricant reservoir in lubricated contacts. This regime is typical for bearings, with analytical models provided in Section  for solid lubricated bearings (particularly bearing cages), and in Section  for fluid lubricated bearings.
 
-Finally, **fatigue wear** is caused by cyclic loading and corresponding crack formation. It is the dominant bearing failure mechanism in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory  with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the degradation of the lubricant . For this reason, fatigue wear is not discussed any further in the following.
+Finally, **fatigue wear** is caused by cyclic loading and corresponding crack formation. It is the dominant bearing {term}`FAILURE MECHANISM` in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory  with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the degradation of the lubricant . For this reason, fatigue wear is not discussed any further in the following.
 
 ### Adhesive wear
 
@@ -51,11 +51,12 @@ Adhesive wear is considered as governing for many wear failures, and is thus typ
 ``  
 ```{math}
 :label: Equation 3.17
-g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet S(t) \bullet v(t)\text{d}t}
+g\left( \text{X}(t) \right) = X_{1} - \Theta \dot X_{2}(t) = V_{limit} - \Theta \dot \int_{0}^{T}{K_{H}(t) \dot S(t) \dot v(t)\text{d}t}
 ```
 ````
 
-$V_{limit}$ is the limiting value for the volume worn away, $\Sigma$ the model uncertainty for the Archard wear model, $K_{H}$ the specific wear rate, $S$ the normal load, $\nu$ the sliding velocity and $T$ the considered time interval. As an alternative to the limiting value for the volume worn away, the model can also be reformulated in terms of the wear depth $d$:
+$V_{limit}$ is the limiting value for the volume worn away, $\Sigma$ the {term}`     
+MODEL UNCERTAINTY` for the Archard wear model, $K_{H}$ the specific wear rate, $S$ the normal load, $\nu$ the sliding velocity and $T$ the considered time interval. As an alternative to the limiting value for the volume worn away, the model can also be reformulated in terms of the wear depth $d$:
 
 
 ````{admonition} Equation
@@ -64,7 +65,7 @@ $V_{limit}$ is the limiting value for the volume worn away, $\Sigma$ the model u
 ``  
 ```{math}
 :label: Equation 3.18
-g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = d_{limit} - \Theta \bullet \int_{0}^{T}{K_{H}(t) \bullet \frac{S(t)}{A_{app}} \bullet v(t)\text{d}t}
+g\left( \text{X}(t) \right) = X_{1} - \Theta \dot X_{2}(t) = d_{limit} - \Theta \dot \int_{0}^{T}{K_{H}(t) \dot \frac{S(t)}{A_{app}} \dot v(t)\text{d}t}
 ```
 ````
 
@@ -95,11 +96,11 @@ simplified as follows:
 ``  
 ```{math}
 :label: Equation 3.19
-g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet K_{H} \bullet \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}}
+g\left( \text{X}(t) \right) = X_{1} - \Theta \dot X_{2}(t) = V_{limit} - \Theta \dot K_{H} \dot \sum_{i = 1}^{n_{P}}{P_{i} \dot t_{i}}
 ```
 ````
 
-Where $P_{i} = S_{i} \bullet v_{i}$ corresponds to the sliding work per
+Where $P_{i} = S_{i} \dot v_{i}$ corresponds to the sliding work per
 time unit (the sliding “power”). Thus, $X_{2}$ is defined as the volume
 worn away and $X_{1}$ as the corresponding limiting value. Detailed
 variable definitions are given in Table 10‑11.
@@ -134,7 +135,7 @@ are determined as follows:
 ``  
 ```{math}
 :label: Equation 3.21
-\mu_{X_{2}} = \text{E}\left\lbrack K_{H} \right\rbrack \bullet \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}}
+\mu_{X_{2}} = \text{E}\left\lbrack K_{H} \right\rbrack \dot \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \dot t_{i}}
 ```
 ````
 
@@ -154,7 +155,7 @@ are determined as follows:
 ``  
 ```{math}
 :label: Equation 3.23
-\nu_{X_{2}} = \sqrt{\nu_{K_{H}}^{2} + \left( 1 + \nu_{K_{H}}^{2} \right) \bullet \frac{\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack}{\left( \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \bullet t_{i}} \right)^{2}}}
+\nu_{X_{2}} = \sqrt{\nu_{K_{H}}^{2} + \left( 1 + \nu_{K_{H}}^{2} \right) \dot \frac{\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \dot t_{i}} \right\rbrack}{\left( \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \dot t_{i}} \right)^{2}}}
 ```
 ````
 
@@ -164,9 +165,9 @@ are determined as follows:
 ``  
 ```{math}
 :label: Equation 3.24
-\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack = \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack P_{i},P_{j} \right\rbrack \bullet t_{i} \bullet t_{j}}} =
+\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \dot t_{i}} \right\rbrack = \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \dot t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack P_{i},P_{j} \right\rbrack \dot t_{i} \dot t_{j}}} =
 
- \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\rho_{P_{i}P_{j}} \bullet \sqrt{\text{Var}\left\lbrack P_{i} \right\rbrack \bullet \text{Var}\left\lbrack P_{j} \right\rbrack} \bullet t_{i} \bullet t_{j}}}
+ \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \dot t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\rho_{P_{i}P_{j}} \dot \sqrt{\text{Var}\left\lbrack P_{i} \right\rbrack \dot \text{Var}\left\lbrack P_{j} \right\rbrack} \dot t_{i} \dot t_{j}}}
 ```  
 ````                                  
 
@@ -174,7 +175,7 @@ Where $\rho_{P_{i}P_{j}}$ denotes the correlation between the sliding work per t
 
 The approach can be further simplified when considering only one mission
 phase (i.e. $n_{P} = 1$), leading to:
-$\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \bullet t_{i}} \right\rbrack = \text{Var}\lbrack P\rbrack \bullet t^{2}$.
+$\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \dot t_{i}} \right\rbrack = \text{Var}\lbrack P\rbrack \dot t^{2}$.
 In practice, this may also be used as a conservative simplification for $n_{P} > 1$, taking $P$ from the most critical phase and $t$ as the total length of the mission. Another strong simplification is possible if the uncertainty in the sliding work per time unit is negligibly small. In this case, the uncertainty in the sum may be neglected and the variance term in Eq. {eq}`Equation 3.24` becomes zero.
 
 With the distributional assumptions in Table 10‑11, an analytic solution for the probability of failure calculations is derived based on a Lognormal approximation for $X_{2}$:
@@ -186,7 +187,7 @@ With the distributional assumptions in Table 10‑11, an analytic solution for t
 ``  
 ```{math}
 :label: Equation 3.25
-P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]
+P_{f} (t) = P[X_{1} - X_{2}(t) \dot \Theta \leq 0]
 
 = \text{Φ}\left( \frac{\text{ln}\left(\text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left(\frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left(v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) -\text{ln}\left( v_{\Theta}^{2} + 1 \right)\right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left(v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}}\right)
 ```
@@ -197,7 +198,7 @@ summarized as follows:
 
 * The mission - or the considered time interval $t$ - is divided into $n_{P}$ intervals with known (deterministic) duration $t_{i}$.
 * The wear rate $K_{H}$ is constant over the whole mission (all time intervals $i$).
-* The normal load $S_{i}$ and sliding velocity $v_{i}$ (or the sliding work per time unit $P_{i} = S_{i} \bullet v_{i}$) are constant during each time interval $t_{i}$.
+* The normal load $S_{i}$ and sliding velocity $v_{i}$ (or the sliding work per time unit $P_{i} = S_{i} \dot v_{i}$) are constant during each time interval $t_{i}$.
 * The distributions of all basic variables can be represented by the models listed in Table 10‑11. Other models for $K_{H}$ and $P_{i}$ are possible as long as the distribution of $X_{2}$ may still be approximated by a Lognormal distribution.
 * The effect of the Lognormal assumption for $X_{1} = V_{limit}$ has been investigated in \[RD18\] . It may lead to an underestimation of the probability of failure, see {numref}`Figure 3.6` below.
 
@@ -221,8 +222,8 @@ applications where contamination could be an issue, e.g. in optical systems. In 
 
 In the following, solid lubricant wear modelling is described taking example in a ball bearing. The modelling is applicable to other cases of solid lubricant wear; however, the number of revolutions has to be substituted with another suitable measure of sliding distance.
 
-The modelling easily can be adapted from the adhesive wear model given in Section 10.7.1. Wear is realized during cage/ball contact; hence the relation $\int_{0}^{t}{S(t) \bullet v(t)\text{d}t}$ in Eq. {eq}`Equation 3.17` or Eq. {eq}`Equation 3.17` represents the work of the ball/cage interaction forces. For the bearing example, time is replaced by the number of revolutions $rev$. The equality
-$\int_{0}^{t}{S(t) \bullet v(t)\text{d}t} = \int_{0}^{rev}{\alpha(rev)\text{d}rev}$ can be used for experimental evaluation of the average ball/cage interaction forces, defining a new interaction parameter $\alpha$.
+The modelling easily can be adapted from the adhesive wear model given in Section 10.7.1. Wear is realized during cage/ball contact; hence the relation $\int_{0}^{t}{S(t) \dot v(t)\text{d}t}$ in Eq. {eq}`Equation 3.17` or Eq. {eq}`Equation 3.17` represents the work of the ball/cage interaction forces. For the bearing example, time is replaced by the number of revolutions $rev$. The e{term}`QUALITY`
+$\int_{0}^{t}{S(t) \dot v(t)\text{d}t} = \int_{0}^{rev}{\alpha(rev)\text{d}rev}$ can be used for experimental evaluation of the average ball/cage interaction forces, defining a new interaction parameter $\alpha$.
 
 **Simplified solid lubricant wear model**
 
@@ -235,7 +236,7 @@ Using the simplified form of the adhesive wear model in Eq. {eq}`Equation 3.19` 
 ``  
 ```{math}
 :label: Equation 3.26
-g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = V_{limit} - \Theta \bullet \sum_{i = 1}^{n_{P}}{K_{H,i} \bullet \alpha_{i} \bullet {rev}_{i}}
+g\left( \text{X}(t) \right) = X_{1} - \Theta \dot X_{2}(t) = V_{limit} - \Theta \dot \sum_{i = 1}^{n_{P}}{K_{H,i} \dot \alpha_{i} \dot {rev}_{i}}
 ```
 ````
 
@@ -268,7 +269,7 @@ The expected values and coefficients of variation of $X_{1}$ and $X_{2}$ are det
 ``  
 ```{math}
 :label: Equation 3.28
-\mu_{X_{2}} = \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack K_{H,i} \bullet \alpha_{i} \right\rbrack \bullet {rev}_{i}} = \sum_{i = 1}^{n_{P}}{\left( \text{E}\left\lbrack K_{H,i} \right\rbrack \bullet \text{E}\left\lbrack \alpha_{i} \right\rbrack + \text{Cov}\left\lbrack K_{H,i},\alpha_{i} \right\rbrack \right) \bullet {rev}_{i}}
+\mu_{X_{2}} = \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack K_{H,i} \dot \alpha_{i} \right\rbrack \dot {rev}_{i}} = \sum_{i = 1}^{n_{P}}{\left( \text{E}\left\lbrack K_{H,i} \right\rbrack \dot \text{E}\left\lbrack \alpha_{i} \right\rbrack + \text{Cov}\left\lbrack K_{H,i},\alpha_{i} \right\rbrack \right) \dot {rev}_{i}}
 ```
 ````
 
@@ -289,7 +290,7 @@ v_{X_{1}} = v_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\te
 ``  
 ```{math}
 :label: Equation 3.30
-v_{X_{2}} = \frac{1}{\mu_{X_{2}}}\sqrt{\sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack K_{H,i}\alpha_{i} \right\rbrack \bullet {rev}_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack K_{H,i}\alpha_{i},K_{H,j}\alpha_{j} \right\rbrack \bullet {rev}_{i} \bullet {rev}_{j}}}}
+v_{X_{2}} = \frac{1}{\mu_{X_{2}}}\sqrt{\sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack K_{H,i}\alpha_{i} \right\rbrack \dot {rev}_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack K_{H,i}\alpha_{i},K_{H,j}\alpha_{j} \right\rbrack \dot {rev}_{i} \dot {rev}_{j}}}}
 ```
 ````
 
@@ -304,7 +305,7 @@ With the distributional assumptions in Table 10‑12, an analytic solution for t
 ``  
 ```{math}
 :label: Equation 3.31
-P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]
+P_{f} (t) = P[X_{1} - X_{2}(t) \dot \Theta \leq 0]
 
 = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
 ```
@@ -335,11 +336,12 @@ The starting point for the modelling of fluid lubricant wear is the following li
 ``  
 ```{math}
 :label: Equation 3.29
-g\left( \text{X}(t) \right) = X_{1} - \Theta \bullet X_{2}(t) = M_{0} - M_{inactive} - \Theta \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet K \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev(t)
+g\left( \text{X}(t) \right) = X_{1} - \Theta \dot X_{2}(t) = M_{0} - M_{inactive} - \Theta \dot \frac{\frac{N_{b}}{2} \dot \left( 1 - \frac{b_{d}}{p_{d}} \dot \cos\vartheta \right)}{2 \dot K \dot \exp\left( - 3.35p_{m} \right)} \dot rev(t)
 ```
 ````
 
-Here, $M_{0}$ denotes the initial mass of the lubricant, $M_{inactive}$ the mass of lubricant not participating in the contact (e.g. due to evaporation), and $\Theta$ the model uncertainty for the associated term, which represents the model to estimate lubricant life described in \[BR79\]. In this term, $N_{b}$ denotes the number of balls in the bearing, $p_{d}$ the pitch diameter, $b_{d}$ the ball diameter, $\vartheta$ the contact angle, $K$ is an empirical constant, $p_{m}$ the contact pressure and $rev$ the number of revoluations during the considered time interval $t$. The variables related to bearing geometry are illustrated in the figure given below.
+Here, $M_{0}$ denotes the initial mass of the lubricant, $M_{inactive}$ the mass of lubricant not participating in the contact (e.g. due to evaporation), and $\Theta$ the {term}`     
+MODEL UNCERTAINTY` for the associated term, which represents the model to estimate lubricant life described in \[BR79\]. In this term, $N_{b}$ denotes the number of balls in the bearing, $p_{d}$ the pitch diameter, $b_{d}$ the ball diameter, $\vartheta$ the contact angle, $K$ is an empirical constant, $p_{m}$ the contact pressure and $rev$ the number of revoluations during the considered time interval $t$. The variables related to bearing geometry are illustrated in the figure given below.
 
 ```{figure} ../../pictures/figure4_9.png
 ---
@@ -351,7 +353,7 @@ Bearing geometry.
 
 **Simplified fluid lubricant wear model**
 
-For the simplified modelling, it is considered sufficient to model only $\Theta$ and $K$ as random variables; all other variables in Eq. {eq}`Equation 3.32` are assumed to be deterministic. Since the relation for the bearing life from \[BR79\], $K \bullet \text{exp}\left( - 3.35 \bullet p_{m} \right)$, is purely empirical, curve fitting residuals or the distribution of the coefficient $K$ may be used for the probabilistic assessments.
+For the simplified modelling, it is considered sufficient to model only $\Theta$ and $K$ as random variables; all other variables in Eq. {eq}`Equation 3.32` are assumed to be deterministic. Since the relation for the bearing life from \[BR79\], $K \dot \text{exp}\left( - 3.35 \dot p_{m} \right)$, is purely empirical, curve fitting residuals or the distribution of the coefficient $K$ may be used for the probabilistic assessments.
 
 Note that in principle, $M_{inactive}$ may also be treated as stochastic, but its value will generally be only a small fraction of $M_{0}$, typically not exceeding 1-2% when considering only evaporation losses for a bearing with a labyrinth seal under optimal temperature conditions \[BR79\].
 
@@ -376,7 +378,7 @@ The mean value of $X_{1}$ is determined as $\mu_{X_{1}} = M_{0} - M_{inactive}$ 
 ``  
 ```{math}
 :label: Equation 3.33
-\mu_{X_{2}} = \frac{\left( v_{K}^{2} + 1 \right)}{\text{E}\lbrack K\rbrack} \bullet \frac{\frac{N_{b}}{2} \bullet \left( 1 - \frac{b_{d}}{p_{d}} \bullet \cos\vartheta \right)}{2 \bullet \exp\left( - 3.35p_{m} \right)} \bullet rev
+\mu_{X_{2}} = \frac{\left( v_{K}^{2} + 1 \right)}{\text{E}\lbrack K\rbrack} \dot \frac{\frac{N_{b}}{2} \dot \left( 1 - \frac{b_{d}}{p_{d}} \dot \cos\vartheta \right)}{2 \dot \exp\left( - 3.35p_{m} \right)} \dot rev
 ```
 ````
 
@@ -399,7 +401,7 @@ The probability of failure is estimated as follows:
 ``  
 ```{math}
 :label: Equation 3.35
-P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]
+P_{f} (t) = P[X_{1} - X_{2}(t) \dot \Theta \leq 0]
 
 = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5\left( \text{ln}\left( v_{X_{2}}^{2} + 1 \right) + \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
 ```
@@ -416,13 +418,14 @@ model are the following:
 
 * The estimate for the (deterministic) variable $M_{inactive}$ is chosen conservatively, e.g. by determining the amount of lubricant evaporated at the end of the mission based on the model provided in \[BR79\].
 
-* The uncertainty in most of the variables listed in Table 10‑13 (except for the empirical constant of the lubricant life model $K$ and the model uncertainty $\Theta$) can be neglected.
+* The uncertainty in most of the variables listed in Table 10‑13 (except for the empirical constant of the lubricant life model $K$ and the {term}`     
+MODEL UNCERTAINTY` $\Theta$) can be neglected.
 
 * The distributions of $K$ and $\Theta$ can be represented by the models listed in Table 10‑13.
 
 ## Modelling of failures due to fatigue
 
-Fatigue is a failure mechanism incurred by cyclic loading, leading to the initiation and extension of cracks, which degrade the strength of materials and structures. Failures due to fatigue can be considered as the consequence of several steps:
+Fatigue is a {term}`FAILURE MECHANISM` incurred by cyclic loading, leading to the initiation and extension of cracks, which degrade the strength of materials and structures. Failures due to fatigue can be considered as the consequence of several steps:
 
 1.  Formation of the crack (crack initiation)
 
@@ -438,11 +441,11 @@ Two loading conditions are distinguished:
 
 * **Low-Cycle Fatigue**: A low-frequency, high-amplitude loading condition created by thermal, pressure, or structural loads that can propagate flaws to failure.
 
-Failures due to low-cycle fatigue are driven by accumulated plastic deformations, which are typically not allowed (i.e. the design is restricted to elastic regime). If necessary, low-cycle fatigue can be assessed by the ultimate failure criterion, e.g. by means of non-linear finite element analysis with dedicated failure models or dedicated criteria like Manson-Coffin failure criterion. The probability of failure can be assessed using general structural reliability or stress strength methods.
+Failures due to low-cycle fatigue are driven by accumulated plastic deformations, which are typically not allowed (i.e. the design is restricted to elastic regime). If necessary, low-cycle fatigue can be assessed by the ultimate failure criterion, e.g. by means of non-linear finite element analysis with dedicated {term}`FAILURE MODE`ls or dedicated criteria like Manson-Coffin failure criterion. The probability of failure can be assessed using general structural reliability or stress strength methods.
 
 In the remainder of this section, only high-cycle fatigue is considered.
 
-The standard approach to the fracture control for space projects is presented in ECSS-E-ST-32-01C \[BR80\]. Depending on the criticality, different approaches can be used:
+The standard approach to the fracture control for space projects is presented in {term}`ECSS`-E-ST-32-01C \[BR80\]. Depending on the criticality, different approaches can be used:
 
 * **Fail-safe** – damage-tolerance design principle, where a structure has redundancy to ensure that failure of one structural element does not cause general failure of the entire structure during the remaining lifetime.
 
@@ -452,7 +455,7 @@ The standard approach to the fracture control for space projects is presented in
 
 Crack formation analysis is typically performed for the fail-safe approach in order to ensure that failure of one redundant structural element does not cause general failure of the entire structure during the remaining lifetime. This analysis is performed based on the <u>S/N curve</u> approach, whose application for reliability modelling is outlined in Section 10.7.2.1.
 
-The safe life principle implies an assessment of the crack growth using <u>fatigue crack growth</u> models, as discussed in Section 10.7.2.2. Environmental properties can also be considered in these models, allowing the consideration of failure mechanisms due to <u>stress corrosion cracking</u> (SCC).
+The safe life principle implies an assessment of the crack growth using <u>fatigue crack growth</u> models, as discussed in Section 10.7.2.2. Environmental properties can also be considered in these models, allowing the consideration of {term}`FAILURE MECHANISM`s due to <u>stress corrosion cracking</u> ({term}`SCC`).
 
 ### High cycle fatigue modelling with the S/N curve approach
 
@@ -464,7 +467,7 @@ Crack generation due to high cycle fatigue is most commonly modelled using so-ca
 ``  
 ```{math}
 :label: Equation 3.36
-\text{log}_{10}\left( N_{f} \right) = A - B \bullet \text{log}_{10}\left( S_{eq} - C \right)
+\text{log}_{10}\left( N_{f} \right) = A - B \dot \text{log}_{10}\left( S_{eq} - C \right)
 ```
 ````
 
@@ -480,7 +483,7 @@ S_{eq} = S_{\max}(1 - R)^{P} = S_{\max}\left( 1 - \frac{S_{\min}}{S_{\max}} \rig
 ```
 ````
 
-Here, $S_{\min}$ and $S_{\max}$ denoting the minimum and maximum stress during one load cycle and $A$, $B$, $C$ and $P$ are model parameters of the S/N curve model that can be derived from test data, e.g. those presented in MMPDS-12 \[BR66\] or its predecessor, MIL-HDBK-5 \[BR67\]. Of special interest is the parameter $C$, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus $N_{f}(S \leq C) \rightarrow \infty$.
+Here, $S_{\min}$ and $S_{\max}$ denoting the minimum and maximum stress during one load cycle and $A$, $B$, $C$ and $P$ are model parameters of the S/N curve model that can be derived from {term}`TEST DATA`, e.g. those presented in {term}`MMPDS`-12 \[BR66\] or its predecessor, MIL-HDBK-5 \[BR67\]. Of special interest is the parameter $C$, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus $N_{f}(S \leq C) \rightarrow \infty$.
 
 The S/N curve is valid for cyclic loading with constant amplitude or equivalent stress. For cyclic loading with varying stress levels, the S/N curve is combined with the Palmgren-Miner accumulation law to estimate the accumulated damage $D_{tot}$ after $N$ stress cycles:
 
@@ -490,9 +493,9 @@ The S/N curve is valid for cyclic loading with constant amplitude or equivalent 
 ``  
 ```{math} 
 :label: Equation 3.38
-D_{tot} = \sum_{i = 1}^{N}\frac{1}{N_{f,i}} = \sum_{i = 1}^{N}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}
+D_{tot} = \sum_{i = 1}^{N}\frac{1}{N_{f,i}} = \sum_{i = 1}^{N}{10^{- A} \dot \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}
 
-= \ \sum_{j = 1}^{k}{N_{j} \bullet 10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}
+= \ \sum_{j = 1}^{k}{N_{j} \dot 10^{- A} \dot \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}
 ```
 ````
 
@@ -508,11 +511,11 @@ A limit state function for high-cycle fatigue is now derived as follows:
 ``  
 ```{math} 
 :label: Equation 3.39
-g\left(X(t)\right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot}
+g\left(X(t)\right) = X_{1} - \Theta \dot X_{2} = D_{cr} - \Theta \dot D_{tot}
 
-D_{cr} - \Theta \bullet \sum_{i = 1}^{N(t)}{10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}
+D_{cr} - \Theta \dot \sum_{i = 1}^{N(t)}{10^{- A} \dot \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}
 
-= D_{cr} - \Theta \bullet \sum_{j = 1}^{k}{N_{j}(t) \bullet 10^{- A} \bullet \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}
+= D_{cr} - \Theta \dot \sum_{j = 1}^{k}{N_{j}(t) \dot 10^{- A} \dot \left( \text{max}\left\lbrack S_{eq,j} - C;0 \right\rbrack \right)^{B}}
 ```
 ````
 
@@ -530,7 +533,7 @@ The starting point for the simplified model is the limit state function in Eq. {
 ``  
 ```{math}
 :label: Equation 3.40
-g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \bullet X_{2} = D_{cr} - \Theta \bullet D_{tot} = D_{cr} - \Theta \bullet 10^{- A} \bullet {SSF}^{B} \bullet \sum_{j = 1}^{k}{N_{j} \bullet {S_{eq,j}}^{B}}
+g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \dot X_{2} = D_{cr} - \Theta \dot D_{tot} = D_{cr} - \Theta \dot 10^{- A} \dot {SSF}^{B} \dot \sum_{j = 1}^{k}{N_{j} \dot {S_{eq,j}}^{B}}
 ```
 ````
 
@@ -553,11 +556,11 @@ The mean value of the stress scaling factor then depends on the definition of th
 ``  
 ```{math}
 :label: Equation 3.41
-\text{E}\lbrack SSF\rbrack = \frac{\sqrt{v_{SSF}^{2} + 1}}{\text{exp}\left( \Phi^{- 1}(\alpha) \bullet \sqrt{\text{ln}\left( v_{SSF}^{2} + 1 \right)} \right)}
+\text{E}\lbrack SSF\rbrack = \frac{\sqrt{v_{SSF}^{2} + 1}}{\text{exp}\left( \Phi^{- 1}(\alpha) \dot \sqrt{\text{ln}\left( v_{SSF}^{2} + 1 \right)} \right)}
 ```
 ````
 
-Where $\Phi^{- 1}( \bullet )$ denotes the inverse of the Standard Normal distribution function and $\alpha$ is the probability that the stresses will be smaller than $S_{eq,j}$.
+Where $\Phi^{- 1}( \dot )$ denotes the inverse of the Standard Normal distribution function and $\alpha$ is the probability that the stresses will be smaller than $S_{eq,j}$.
 
 Finally, the expected values and coefficients of variation of $X_{1}$ and $X_{2}$ are determined as follows:
 
@@ -577,7 +580,7 @@ Finally, the expected values and coefficients of variation of $X_{1}$ and $X_{2}
 ``  
 ```{math}
 :label: Equation 3.43
-\mu_{X_{2}} = \text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack \bullet \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}}
+\mu_{X_{2}} = \text{E}\left\lbrack 10^{- A} \dot {SSF}^{B} \right\rbrack \dot \sum_{j = 1}^{k}{N_{j} \dot S_{eq,j}^{B}}
 ```
 ````
 
@@ -587,7 +590,7 @@ Finally, the expected values and coefficients of variation of $X_{1}$ and $X_{2}
 ``  
 ```{math}
 :label: Equation 3.44
-\text{E}\left\lbrack 10^{- A} \bullet {SSF}^{B} \right\rbrack = 10^{- E\lbrack A\rbrack + \frac{1}{2}\text{∙ln}(10) \bullet Var\lbrack A\rbrack} \bullet {E\lbrack SSF\rbrack}^{B} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2} - B}
+\text{E}\left\lbrack 10^{- A} \dot {SSF}^{B} \right\rbrack = 10^{- E\lbrack A\rbrack + \frac{1}{2}\text{∙ln}(10) \dot Var\lbrack A\rbrack} \dot {E\lbrack SSF\rbrack}^{B} \dot \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2} - B}
 ```
 ````
 
@@ -607,7 +610,7 @@ v_{X_{1}} = v_{D_{cr}} = \frac{\sqrt{\text{Var}\lbrack D_{cr}\rbrack}}{\text{E}\
 ``  
 ```{math}
 :label: Equation 3.46
-v_{X_{2}} = \sqrt{10^{Var\lbrack A\rbrack\text{∙ln}(10)} \bullet \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2}} - 1}
+v_{X_{2}} = \sqrt{10^{Var\lbrack A\rbrack\text{∙ln}(10)} \dot \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2}} - 1}
 ```
 ````
 
@@ -620,7 +623,7 @@ With the distributional assumptions in Table 10‑14, an analytic solution for t
 ``  
 ```{math} 
 :label: Equation 3.47
-P_{f} (t) = P[X_{1} - X_{2}(t) \bullet \Theta \leq 0]
+P_{f} (t) = P[X_{1} - X_{2}(t) \dot \Theta \leq 0]
 
 = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
 ```
@@ -646,7 +649,7 @@ Where $Var\left\lbrack \ln\left( X_{2} \right) \right\rbrack$ and $\ln\left( \mu
 ``  
 ```{math}
 :label: Equation 3.49
-\text{Var}\lbrack\ln\left(X_{2}\right)\rbrack = \nu_{A}^{2} \bullet \text{E}[A]^{2} \bullet \ln(10)^{2} + B^{2} \bullet \ln \left( \nu_{SSF}^{2} + 1 \right)
+\text{Var}\lbrack\ln\left(X_{2}\right)\rbrack = \nu_{A}^{2} \dot \text{E}[A]^{2} \dot \ln(10)^{2} + B^{2} \dot \ln \left( \nu_{SSF}^{2} + 1 \right)
 ```
 ````
 
@@ -656,9 +659,9 @@ Where $Var\left\lbrack \ln\left( X_{2} \right) \right\rbrack$ and $\ln\left( \mu
 ``  
 ```{math}
 :label: Equation 3.50
-\ln \left( \mu_{X_{2}} \right) = 0.5 \bullet \left( E[A]^{2} \bullet \ln (10)^{2} + (B^{2} - B) \bullet \ln \left( \nu_{SSF}^{2} + 1 \right) \right) 
+\ln \left( \mu_{X_{2}} \right) = 0.5 \dot \left( E[A]^{2} \dot \ln (10)^{2} + (B^{2} - B) \dot \ln \left( \nu_{SSF}^{2} + 1 \right) \right) 
 
-- \text{E}\lbrack A\rbrack \bullet \text{ln}(10) + B \bullet \text{ln}\left( \text{E}\lbrack SSF\rbrack \right) + \text{ln}\left( \sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}} \right)
+- \text{E}\lbrack A\rbrack \dot \text{ln}(10) + B \dot \text{ln}\left( \text{E}\lbrack SSF\rbrack \right) + \text{ln}\left( \sum_{j = 1}^{k}{N_{j} \dot S_{eq,j}^{B}} \right)
 ```
 ````
 
@@ -667,7 +670,7 @@ are the following:
 
 * The distributions of all basic variables can be represented by the models listed in Table 10‑14.
 
-* The failure mechanism is described by the S/N curve approach combined with the Palmgren-Miner accumulation law. Load history effects are neglected.
+* The {term}`FAILURE MECHANISM` is described by the S/N curve approach combined with the Palmgren-Miner accumulation law. Load history effects are neglected.
 
 * Uncertainties associated with the (equivalent) number of load cycles $N_{j}$ in each bin / loading block are neglected.
 
@@ -684,7 +687,7 @@ are the following:
 The probability of failure for parts with low risk of fracture, e.g. with design stresses below the endurance limit $C$, can in principle also be modelledwith the simplified method introduced above. However, in deterministic
 a nalysis for low risk items, it is generally not required to determine the (equivalent) number of cycles $N_{j}$ for each bin, making it difficult to derive the required input even for the simplified method.
 
-To derive a conservative ball park estimate, the sum $\sum_{j = 1}^{k}{N_{j} \bullet S_{eq,j}^{B}}$ may be replaced by
+To derive a conservative ball park estimate, the sum $\sum_{j = 1}^{k}{N_{j} \dot S_{eq,j}^{B}}$ may be replaced by
 considering only a single load event, i.e. $k = 1$. The stresses $S_{eq}$ should then be taken from the most serious bin (in terms of loads). Also, the number of cycles $N$ should be estimated conservatively, e.g. assuming $N = 10^{8}$ or using a rough estimate for the total number of cycles in all load events (including those with lower stresses). If this turns out to be too conservative, the sum must be calculated as in the general S/N curve approach, considering all bins with their respective stresses and (equivalent) number of cycles. A dedicated modelling of the uncertainties associated with $C$ may be required to further improve the analysis
 
 To allow for a first quick assessment, some reference values for the coefficients of variation and some mean values are provided in Table 10‑15. The values may be assumed to be applicable or conservative for most practical purposes, especially when considering the additional conservatism that has been introduced by assuming $C = 0$.
@@ -705,7 +708,7 @@ required deterministic methods are available and implemented in
 specialized Software, such as ESACRACK \[BR84\] / NASGRO \[BR85\]. A
 probabilistic approach based these models is possible and has been
 described by \[BR86\] and \[BR81\], discussing the development and use
-of a probabilistic version of ESACRACK. Developments for NASA in the
+of a probabilistic version of ESACRACK. Developments for {term}`NASA` in the
 field of probabilistic fracture mechanics are discussed in \[BR87\]. In
 the present section, only the generic approach to probabilistic fracture
 analysis is presented together with a short discussion of the required
@@ -875,7 +878,7 @@ model instead of Eq. {eq}`Equation 3.55`.
 Independent of the approach chosen to combine several failure criteria,
 reliability is best assessed using Monte Carlo simulations with variance
 reduction techniques to reduce the number of required simulations.
-FORM/SORM techniques are not recommended due to the iterative nature and
+FORM/{term}`SORM` techniques are not recommended due to the iterative nature and
 nonlinear behaviour of the crack growth model.
 
 To perform a reliability assessment, the following uncertainties have to
@@ -925,8 +928,8 @@ assessing the limit state functions $g_{1}$ and $g_{2}$.
 
 **Uncertainties associated with the initial crack size**
 
-Mechanical parts of space products are usually inspected for defects,
-using one of the available non-destructive evaluation (NDE) techniques.
+{term}`MECHANICAL PART`s of space products are usually inspected for defects,
+using one of the available non-destructive evaluation ({term}`NDE`) techniques.
 Nevertheless, even if no defect was detected during the inspection, it
 cannot be assumed that the inspected part is free of cracks. A
 probabilistic model for the crack size distribution after inspection can
@@ -940,7 +943,7 @@ be derived based on the following assumptions:
 -   The probability distribution of the crack size before inspection is
     ${f'}_{A}(a)$
 
--   The uncertainty associated with the chosen NDE technique can be
+-   The uncertainty associated with the chosen {term}`NDE` technique can be
     described with the aid of a probability of detection curve
     $POD(a)$, see e.g. \[BR90\].
 
@@ -955,7 +958,7 @@ probability distribution of the crack size after inspection \[BR91\]:
 ``  
 ```{math}
 :label: Equation 3.56
-{f''}_{A}(a) = \frac{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)}{\int_{0}^{\infty}{\left( 1 - POD(a) \right) \bullet {f'}_{A}(a)\text{\ d}a}}
+{f''}_{A}(a) = \frac{\left( 1 - POD(a) \right) \dot {f'}_{A}(a)}{\int_{0}^{\infty}{\left( 1 - POD(a) \right) \dot {f'}_{A}(a)\text{\ d}a}}
 ```
 ````
 
@@ -972,7 +975,7 @@ inspection. This approach leads to the same result as Eq. {eq}`Equation 3.56`
 when assuming a noninformative (positive) uniform prior distribution for
 the initial crack size.
 
-Further simplifications are possible if only the NDE limit value is
+Further simplifications are possible if only the {term}`NDE` limit value is
 used, which is usually associated with a POD of 90% at a 95% confidence
 interval. For a given distribution type and coefficient of variation, a
 probabilistic model for the crack size $a$
@@ -1012,7 +1015,7 @@ crack size is close to the critical size \[BR81\].
 A literature survey presented by Mattrand \[BR81\] reports coefficients
 of variation between 5% and 25% for the fracture toughness and yield
 strength of metallic materials (note that some material specific
-information may be found e.g. in MMPDS-12 \[BR66\] or its predecessor,
+information may be found e.g. in {term}`MMPDS`-12 \[BR66\] or its predecessor,
 MIL-HDBK-5 \[BR67\]). Typical distributional assumptions for the two
 variables are Weibull or Lognormal distributions. A proposal for the
 probabilistic modelling of Al 7075 T7351 and Ti 6Al 4V material
@@ -1039,13 +1042,13 @@ has been prepared by Kowal \[BR65\], which includes also a discussion of
 several types of corrosion.
 
 A corrosion mechanism that is closely related to the crack growth
-phenomenon is <u>Stress Corrosion Cracking (SCC)</u>, which is defined
+phenomenon is <u>Stress Corrosion Cracking ({term}`SCC`)</u>, which is defined
 as an environmentally induced formation and growth of cracks in
 materials exposed to a corrosive environment. The standard strategy to
 avoid failures due to this phenomenon is based on the selection of
 suitable materials, making use of a test-based classification by
-susceptibility to SCC. Quantitative reliability prediction for this
-failure mechanism is difficult, even though the effect of the
+susceptibility to {term}`SCC`. Quantitative {term}`RELIABILITY PREDICTION` for this
+{term}`FAILURE MECHANISM` is difficult, even though the effect of the
 environment may in principle be accounted for in crack growth modelling,
 see Section 10.7.2.2 for details.
 
@@ -1063,7 +1066,7 @@ life time extensions beyond the nominal mission.
 <u>Thermal degradation</u> is of relevance mainly for non-metallic
 materials such as polymers or insulation material. Some basic models
 have been reviewed in \[BR65\]. Thermal degradation as an individual
-failure mechanism is not discussed any further in the present chapter.
+{term}`FAILURE MECHANISM` is not discussed any further in the present chapter.
 Note, however, that temperature may have to be considered as a
 contributor or influencing variable during several other failure
 mechanisms, e.g. affecting strength and elasticity parameters for common
@@ -1071,14 +1074,14 @@ materials.
 
 The following subsection provides a brief discussion of <u>radiation
 degradation</u> and proposes a generic modelling approach for its
-modelling in mechanical reliability predictions.
+modelling in mechanical {term}`RELIABILITY PREDICTION`s.
 
 ### Radiation degradation modelling
 
-The spacecraft radiation environment is characterized by the type,
+The {term}`SPACECRAFT` radiation environment is characterized by the type,
 fluence, dose rate, energy spectrum and spatial distribution of nuclear
 radiation at the considered point of interest inside and outside the
-spacecraft for the duration of the mission. However, the response can be
+{term}`SPACECRAFT` for the duration of the mission. However, the response can be
 related directly to the absorbed dose. The dose shall be calculated
 taking both external and internal radiation sources into account.
 
@@ -1104,7 +1107,7 @@ dose $D_{A}$ is used as a limit state function:
 ``  
 ```{math}
 :label: Equation 3.57
-g\left( \text{X} \right) = X_{1} - \Theta \bullet X_{2}(t) = D_{A} - \Theta \bullet D(t)
+g\left( \text{X} \right) = X_{1} - \Theta \dot X_{2}(t) = D_{A} - \Theta \dot D(t)
 ```
 ````
 
@@ -1133,7 +1136,8 @@ The variable definitions are given in Table 10‑17 below.
 To account for the uncertainties in choosing the deterministic values
 for $D$ and $D_{A}$, the coefficient of variation for the model
 uncertainty is larger than for the other simplified models presented in
-Section 10.7.1 to 10.7.2. The model uncertainty CoV can be reduced if
+Section 10.7.1 to 10.7.2. The {term}`     
+MODEL UNCERTAINTY` CoV can be reduced if
 the model is improved by considering $D$ and/or $D_{A}$ as random
 (instead of deterministic) variables with appropriate uncertainty
 quantification.
@@ -1150,7 +1154,7 @@ the probability of failure is derived as follows:
 ``  
 ```{math}
 :label: Equation 3.58
-P_{f}(t) = \text{P}\left\lbrack X_{1} - X_{2}(t) \bullet \Theta \leq 0 \right\rbrack = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5 \bullet \text{ln}\left( v_{\Theta}^{2} + 1 \right)}{\sqrt{\text{ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
+P_{f}(t) = \text{P}\left\lbrack X_{1} - X_{2}(t) \dot \Theta \leq 0 \right\rbrack = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5 \dot \text{ln}\left( v_{\Theta}^{2} + 1 \right)}{\sqrt{\text{ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
 ```
 ````
 
@@ -1159,4 +1163,5 @@ model are the following:
 
 * Failure occurs if the cumulated radiation dose exceeds the allowable dose limit.
 
-* All uncertainties associated with the cumulated and allowable dose and their determination are summarized in the lognormal distributed model uncertainty variable.
+* All uncertainties associated with the cumulated and allowable dose and their determination are summarized in the lognormal distributed {term}`     
+MODEL UNCERTAINTY` variable.

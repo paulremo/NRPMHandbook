@@ -2,11 +2,11 @@
 
 ## Wear-out model on component level
 
-The fact that wear-out can occur at component level and that the failure rates are then no longer constant needs to be considered for the system level reliability prediction. To calculate the reliability of components prone to wear-out, the following three approaches are introduced. In this section the use of these wear-out models for system level reliability prediction is shown.
+The fact that wear-out can occur at component level and that the failure rates are then no longer constant needs to be considered for the system level {term}`RELIABILITY PREDICTION`. To calculate the reliability of components prone to wear-out, the following three approaches are introduced. In this section the use of these wear-out models for system level {term}`RELIABILITY PREDICTION` is shown.
 
 ### Model 1
 
-The failure probability is the sum of random failures and wear-out failures assuming that wear-out can occur throughout the entire service life and not just after qualification life time. With this model the life time of an item can be interpreted as the minimum of the life time based on random or wear-out failures. Random failures are described by an exponential distribution and wear-out by a Weibull distribution. Thus, the following equations are obtained for failure rate and reliability:
+The failure probability is the sum of {term}`RANDOM FAILURE`s and {term}`WEAR-OUT FAILURE`s assuming that wear-out can occur throughout the entire service life and not just after qualification life time. With this model the life time of an item can be interpreted as the minimum of the life time based on random or {term}`WEAR-OUT FAILURE`s. {term}`RANDOM FAILURE`s are described by an exponential distribution and wear-out by a Weibull distribution. Thus, the following equations are obtained for failure rate and reliability:
 
 (syst_equation4_93)=
 ````{admonition} Equation
@@ -37,7 +37,7 @@ Miss factor above
 
 ### Model 2
 
-This model assumes that wear-out failure can only occur after the qualification time $\tau_{1}$, before it no wear-out is considered and only random failures are considered. Thus, to calculate failure rates and reliability a distinction between two cases is made: Time $t$ is below the qualification time $\tau_{1}$ and $t$ is equal to or greater than the qualification time.
+This model assumes that {term}`WEAR-OUT FAILURE` can only occur after the qualification time $\tau_{1}$, before it no wear-out is considered and only {term}`RANDOM FAILURE`s are considered. Thus, to calculate failure rates and reliability a distinction between two cases is made: Time $t$ is below the qualification time $\tau_{1}$ and $t$ is equal to or greater than the qualification time.
 
 (syst_equation4_95)=
 ````{admonition} Equation
@@ -73,7 +73,7 @@ This model assumes that wear-out failure can only occur after the qualification 
 
 ### Model 3
 
-The failure rate $\lambda\left( t \right)$ is the maximum of the random failure rate and the wear-out failure rate, Eq. {eq}`Equation 7.97`. At a certain operating time $t = \tau_{2}$ the failure rate due to wear-out $\lambda_{W}$ equals the constant failure rate of random failure, Eq. {eq}`Equation 7.98`. From that point on the wear-out failure rate is dominating. Thus, the probability density functions are separated in random failures only for$t < \tau_{2}$ and wear-out only for time $t \geq \tau_{2}$
+The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`RANDOM FAILURE` rate and the {term}`WEAR-OUT FAILURE` rate, Eq. {eq}`Equation 7.97`. At a certain operating time $t = \tau_{2}$ the failure rate due to wear-out $\lambda_{W}$ equals the constant failure rate of {term}`RANDOM FAILURE`, Eq. {eq}`Equation 7.98`. From that point on the {term}`WEAR-OUT FAILURE` rate is dominating. Thus, the {term}`PROBABILITY DENSITY FUNCTION`s are separated in {term}`RANDOM FAILURE`s only for$t < \tau_{2}$ and wear-out only for time $t \geq \tau_{2}$
 
 (syst_equation4_97)=
 ````{admonition} Equation
@@ -164,7 +164,7 @@ Where
 -   $T_{i}$ denotes the duration of phase $i$
 ````
 
-The reliability function of the component that is exposed to random failures and also wear-out failures throughout the mission is given in Eq. {eq}`Equation 7.103` (see wear-out first approach in Section Error: Reference source not found).
+The reliability function of the component that is exposed to {term}`RANDOM FAILURE`s and also {term}`WEAR-OUT FAILURE`s throughout the mission is given in Eq. {eq}`Equation 7.103` (see wear-out first approach in Section Error: Reference source not found).
 
 ```{admonition} Todo
 :class: todo
@@ -179,7 +179,7 @@ Miss ref just above
 ``  
 ```{math}
 :label: Equation 7.103
-R_{k}\left( t \right) = e^{\left\lbrack - \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t}{\alpha_{k}} \right)^{\beta_{k}} \right) \right\rbrack} \bullet e^{\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right) \right\rbrack} \bullet e^{\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}}}{\alpha_{i}} \right)^{\beta_{i}} \right) \right\rbrack}
+R_{k}\left( t \right) = e^{\left\lbrack - \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t}{\alpha_{k}} \right)^{\beta_{k}} \right) \right\rbrack} \dot e^{\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right) \right\rbrack} \dot e^{\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}}}{\alpha_{i}} \right)^{\beta_{i}} \right) \right\rbrack}
 ```
 
 Where
@@ -227,7 +227,7 @@ Miss factor just above
 
 For mission phases before qualification time $T_{\text{ck}} < \tau_{1}$, wear-out does not have to be considered and the reliability of the component in phase k is given by Eq. {eq}`Equation 7.30`.
 
-For Model 3, see Section Error: Reference source not found, wear-out is considered only for $T_{\text{ck}} > \tau_{2}$ and for $T_{\text{ck}} < \tau_{2}$ only random failures are taken into account. The following equation is obtained for $T_{\text{ck}} > \tau_{2}$.
+For Model 3, see Section Error: Reference source not found, wear-out is considered only for $T_{\text{ck}} > \tau_{2}$ and for $T_{\text{ck}} < \tau_{2}$ only {term}`RANDOM FAILURE`s are taken into account. The following equation is obtained for $T_{\text{ck}} > \tau_{2}$.
 
 ```{admonition} Todo
 :class: todo
@@ -246,7 +246,7 @@ R_{k}\left( t \right) = {{\exp\left\lbrack - \left( \frac{T_{\text{Ck} - 1} + t 
 
 Where
 
--   $\tau_{2}$ denotes the time at which the wear-out failure rate equals the random failure rate.
+-   $\tau_{2}$ denotes the time at which the {term}`WEAR-OUT FAILURE` rate equals the {term}`RANDOM FAILURE` rate.
 ````
 
 ```{admonition} Todo
@@ -347,7 +347,7 @@ R_{S}\left( t \right) = R_{1}\left( t \right)R_{2}\left( t \right)
 The mission duration shall be extended from 50000 hours by another 10000 hours to 60000 hours. 50000 hours correspond to the qualification time of the components and the system was still in operational state after 50000 hours were accumulated. For the components the following parameters shown in [Table 4.16](syst_table4_16) are given:
 
 (syst_table4_16)=
-**Table 4.16** : Example for parameters for component with random and wear-out failures
+**Table 4.16** : Example for parameters for component with random and {term}`WEAR-OUT FAILURE`s
 
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_16.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
@@ -411,7 +411,7 @@ R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_
 ```
 where:
 
--   $R_{1}$ denotes the reliability and $f_{1}$ the probability density function of the active component.
+-   $R_{1}$ denotes the reliability and $f_{1}$ the {term}`PROBABILITY DENSITY FUNCTION` of the active component.
 
 -   $R_{2,\text{sb}}$ denotes the reliability of the stand-by component in stand-by mode.
 
@@ -449,7 +449,7 @@ R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_
 ```
 where:
 
--   $R_{1}$ denotes the reliability and $f_{1}$ the probability density function of the active component.
+-   $R_{1}$ denotes the reliability and $f_{1}$ the {term}`PROBABILITY DENSITY FUNCTION` of the active component.
 
 -   $R_{2,\text{sb}}$ denotes the reliability of the stand-by component in stand-by mode.
 
