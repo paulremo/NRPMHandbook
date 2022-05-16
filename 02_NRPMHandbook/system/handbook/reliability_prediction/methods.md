@@ -1,6 +1,6 @@
 # System level methods 
 
-This section presents various system reliability modelling techniques such as reliability block diagrams (RBD), fault tree analysis (FTA), Markov models, Petri networks and Bayesian networks. The presented methods have in common that they aim at evaluating system reliability as a function of the constituting elements. All methods could be used for comparison of different design solutions and system architectures. The following table provides an overview of the different methods, indicating when which method should be used and also what limitation are associated with each of them.
+This section presents various system reliability modelling techniques such as reliability block diagrams ({term}`RBD`), fault tree analysis ({term}`FTA`), Markov models, Petri networks and Bayesian networks. The presented methods have in common that they aim at evaluating system reliability as a function of the constituting elements. All methods could be used for comparison of different design solutions and system architectures. The following table provides an overview of the different methods, indicating when which method should be used and also what limitation are associated with each of them.
 
 (syst_table4_2)=
 **Table 4.2** : Overview of system level methods.
@@ -23,7 +23,7 @@ Before starting a system reliability analysis, the following aspects are importa
 
 - Sound understanding of the system to be modelled is a prerequisite. Starting point is the identification of the system functions for which system reliability requirements have been defined and a functional break down of the system. The system architecture and the components allocated to the function needs to be described. 
 - Failure criteria should be clearly defined. The functional failure can be of different nature, e.g. total loss, partial loss, erroneous function (detected or undetected), inadvertent function or degraded performance. Each of them results from different failure modes of contributing components. If more than one definition of failure or success of the system is possible, a separate system level analysis may be required for each. The functional failure analysis provides the input to select the relevant system function and the functional failure that affects system reliability.
-- In order to represent the system behaviour correctly a comprehensive understanding of the implemented fault tolerances, fault recoveries and redundancies is vital. In addition to the system descriptions, the Fault Detection Isolation and Recovery (FDIR) Analysis should be reviewed by the reliability engineer to understand the system behaviour in case of component failures. A detailed description of FDIR is given in ECSS-E-ST-70-11C Error: Reference source not found.
+- In order to represent the system behaviour correctly a comprehensive understanding of the implemented fault tolerances, fault recoveries and redundancies is vital. In addition to the system descriptions, the Fault Detection Isolation and Recovery ({term}`FDIR`) Analysis should be reviewed by the reliability engineer to understand the system behaviour in case of component failures. A detailed description of {term}`FDIR` is given in ECSS-E-ST-70-11C Error: Reference source not found.
 - Environmental and operating considerations: the description of the environmental conditions under which the system is designed to operate should be obtained. A space system is used in more than one environment: on the ground, during flight, in orbit. In such scenarios, reliability evaluation should be carried out using the appropriate failure rates for each environment and dormancy periods for hidden failures. To consider the different phases of the mission in conjunction, a reliability prediction for phased mission should be performed, see Section Error: Reference source not found
 - The relationship between calendar time, operating time, and on/off cycles should be established.
 - For all system components the reliability data (failure rates, reliability, and failure probability) should be available with reference to the environmental and operating conditions, for which these values were established. The FME(C)A are essential input documents for this task. Depending on the reliability requirement and the operational context, the appropriate risk times have to be used in the calculation. The risk time could be a fraction of the mission time if a failure would only be critical when it occurs during a specific time period of the mission. For example, for the failure of an unfolding mechanism the time period until the unfolding is done is the risk time and not the complete mission time. It may also be useful to describe the reliability curve R(t) from t=0 until end of lifetime. 
@@ -42,20 +42,20 @@ miss 4 ref above
 (syst_4_3_1)=
 ## Reliability Block Diagram
 
-The Reliability Block Diagram (RBD) uses a block structure to represent the success logic of the system. It is easy to understand and system success paths can be verified visually. For the purpose of a quantitative reliability analysis, the RBD considers required combinations of system components that are needed to keep the system working. The application of an RBD provides a structured representation of system architecture, and single point failures become quite obvious in the block diagram. Reliability modelling with an RBD is primarily intended for non-repairable systems. The IEC standard IEC 61078:2016 Error: Reference source not found provides the application rules and definitions. 
+The Reliability Block Diagram ({term}`RBD`) uses a block structure to represent the success logic of the system. It is easy to understand and system success paths can be verified visually. For the purpose of a quantitative reliability analysis, the {term}`RBD` considers required combinations of system components that are needed to keep the system working. The application of an {term}`RBD` provides a structured representation of system architecture, and single point failures become quite obvious in the block diagram. Reliability modelling with an {term}`RBD` is primarily intended for non-repairable systems. The {term}`{term}`{term}`IEC``` standard {term}`IEC` 61078:2016 Error: Reference source not found provides the application rules and definitions. 
 
 ```{admonition} Todo
 :class: todo
 miss ref above
 ```
 
-The RBD is created under the assumption that all failures are independent, thus the occurrence rate of an individual block in the RBD is independent of the occurrence of other events in the RBD. Unless the simultaneous failure of redundant components is explicitly represented in the block diagram, like it is done with the beta factor model to evaluate common cause failures in FTA, dependencies cannot be modelled with an RBD. Furthermore, the RBD approach has limitations in considering different failure modes, priority of events and sequencing of failure. For example: a stand-by redundancy for which different failure rates in stand-by mode and active mode are to be considered depending on the occurrence of another failure cannot be modelled using RBD. Repairable components are also not considered in the model.  
+The {term}`RBD` is created under the assumption that all failures are independent, thus the occurrence rate of an individual block in the {term}`RBD` is independent of the occurrence of other events in the {term}`RBD`. Unless the simultaneous failure of redundant components is explicitly represented in the block diagram, like it is done with the beta factor model to evaluate common cause failures in {term}`FTA`, dependencies cannot be modelled with an {term}`RBD`. Furthermore, the {term}`RBD` approach has limitations in considering different failure modes, priority of events and sequencing of failure. For example: a stand-by redundancy for which different failure rates in stand-by mode and active mode are to be considered depending on the occurrence of another failure cannot be modelled using {term}`RBD`. Repairable components are also not considered in the model.  
 
 
 (syst_4_3_1_1)=
 ### Procedure for system reliability prediction using Reliability Block Diagram
 
-The procedure for constructing an RBD is shown in {numref}`Figure 7.3`. 
+The procedure for constructing an {term}`RBD` is shown in {numref}`Figure 7.3`. 
 
 (syst_figure4_3)=
 ```{figure} ../../picture/figure4_3.png
@@ -171,7 +171,7 @@ R_{S}(t) = 1 - \prod_{i=1}^{n} (1-R_{i}(t))
 
 **Combined Serial/Parallel System**
 
-Many complex space systems can be represented as a combination of serial and parallel systems. Through decomposition, the complex system can be simplified to determine its reliability with the before mentioned equations. {numref}`Figure 7.6` presents the RBD of a common system architecture, which can be analysed through decomposition of serial and parallel systems.
+Many complex space systems can be represented as a combination of serial and parallel systems. Through decomposition, the complex system can be simplified to determine its reliability with the before mentioned equations. {numref}`Figure 7.6` presents the {term}`RBD` of a common system architecture, which can be analysed through decomposition of serial and parallel systems.
 
 Before the failure probability and reliability of this particular system consisting of three components (A, B and C) is determined, the system architecture has to be simplified in accordance with the Boolean logic.
 
@@ -224,7 +224,7 @@ R_{S}(t) = R_{A}(t) + R_{B}(t) * R_{C}(t) -  R_{A}(t) * R_{B}(t) * R_{C}(t)
 
 **Approximation by minimal cut sets**
 
-For certain system architectures the RBD cannot be decomposed. {numref}`Figure 7.7` shows an example of such a system architecture (bridge system) that cannot be reduced to a combination of serial and parallel arrangements.
+For certain system architectures the {term}`RBD` cannot be decomposed. {numref}`Figure 7.7` shows an example of such a system architecture (bridge system) that cannot be reduced to a combination of serial and parallel arrangements.
 
 (syst_figure4_7)=
 ```{figure} ../../picture/figure4_7.png
@@ -235,7 +235,7 @@ name: Figure 7.7
 Reliability Block Diagram for a Complex System
 ```
 
-Since no further simplification of the system architecture is possible, alternative methods have to be introduced to determine the failure probability or reliability of such systems. By particularly selecting combinations of component failures that lead to the failure of the entire system, the Minimal Cut (MC) set approach is used to determine an approximation of the failure probability of an arbitrary system.
+Since no further simplification of the system architecture is possible, alternative methods have to be introduced to determine the failure probability or reliability of such systems. By particularly selecting combinations of component failures that lead to the failure of the entire system, the Minimal Cut ({term}`MC`) set approach is used to determine an approximation of the failure probability of an arbitrary system.
 
 Since the removal of any basic component failure would not cause a failure of the entire system, the following combinations of component failures are called a minimal cut set:
 
@@ -244,7 +244,7 @@ $MC_{2} = (C,D)$,
 $MC_{3} = (A,D,E)$,
 $MC_{4} = (B,C,E)$.
 
-{numref}`Figure 7.8` presents the minimal cut set that has been applied on the final scheme of the RBD.
+{numref}`Figure 7.8` presents the minimal cut set that has been applied on the final scheme of the {term}`RBD`.
 
 (syst_figure4_8)=
 ```{figure} ../../picture/figure4_8.png
@@ -286,24 +286,24 @@ For the above-mentioned example, a rigorous solution can be found by analysis of
 (syst_4_3_2)=
 ## Fault Tree Analysis
 
-The Fault Tree Analysis (FTA) is a structured, conclusive failure analysis which is focused on one particular undesired top event and used to identify potential causes of this event. FTA uses identi-cal calculation methods to those applied in the RBD. Therefore, it is widely used as an alternative method for the RBD. By setting up a qualitative model and then evaluating this model, the FTA is representing a "top-down" system evaluation procedure. After the undesired top level event has been identified, the different failure modes of sub-systems and components which could cause this event have to be determined systematically. The individual failures leading to the top event are combined through OR and AND gates, which correspond to serial and parallel arrangements in a RBD. Therefore, FTA is a graphical method that shows the logical relation between each particular failure scenario and the primary elements, component failures or events that can cause it. Guide-lines for FTA can be found in [RD3] .
+The Fault Tree Analysis ({term}`FTA`) is a structured, conclusive failure analysis which is focused on one particular undesired top event and used to identify potential causes of this event. {term}`FTA` uses identi-cal calculation methods to those applied in the {term}`RBD`. Therefore, it is widely used as an alternative method for the {term}`RBD`. By setting up a qualitative model and then evaluating this model, the {term}`FTA` is representing a "top-down" system evaluation procedure. After the undesired top level event has been identified, the different failure modes of sub-systems and components which could cause this event have to be determined systematically. The individual failures leading to the top event are combined through OR and AND gates, which correspond to serial and parallel arrangements in a {term}`RBD`. Therefore, {term}`FTA` is a graphical method that shows the logical relation between each particular failure scenario and the primary elements, component failures or events that can cause it. Guide-lines for {term}`FTA` can be found in [RD3] .
 
 (syst_4_3_2_1)=
-### Procedure to create FTA
+### Procedure to create {term}`FTA`
 
-The procedure to create a FTA is almost identical to that for RBD. The main difference is the graphical representation of the system, starting from the top event (the system failure) where else RDB considered success paths. 
+The procedure to create a {term}`FTA` is almost identical to that for {term}`RBD`. The main difference is the graphical representation of the system, starting from the top event (the system failure) where else RDB considered success paths. 
 
-The following aspects should be considered carefully while carrying out FTA:
+The following aspects should be considered carefully while carrying out {term}`FTA`:
 - To ensure the clarity and ease of identification of events, a standardized format needs to be adopted when giving names in the fault tree for intermediate and basic events. 
 - To avoid double counting and/or complete omission of systems/interfaces/support systems, it is strongly recommended that explicit definitions of boundary conditions should be established and documented.
 - When external events are considered in the Fault Tree, the data source for the occurrence probability should be referred
-- For redundancies used in the FTA (AND gates), in particular for critical function whose failure could result in loss of mission, the independence has to be verified. If simultaneous failure of redundant components due to the same cause can occur, a quantitative analysis of Common Cause Failure needs to be performed, see Section Error: Reference source not found. 
+- For redundancies used in the {term}`FTA` (AND gates), in particular for critical function whose failure could result in loss of mission, the independence has to be verified. If simultaneous failure of redundant components due to the same cause can occur, a quantitative analysis of Common Cause Failure needs to be performed, see Section Error: Reference source not found. 
 
 
-The fault tree analysis has the same limitations as RBD, thus 
+The fault tree analysis has the same limitations as {term}`RBD`, thus 
 - All components/sub-systems are considered to be independent, dependencies are not considered.
 - Sequencing of failures is not taken into account.
-- Repairable components cannot be modelled in the FTA
+- Repairable components cannot be modelled in the {term}`FTA`
 
 
 (syst_4_3_2_1)=
@@ -320,7 +320,7 @@ name: Figure 7.9
 Example Fault Tree of system with two redundant components.
 ```
 
-The calculation is identical to RBD, thus Eq. {eq}`Equation 7.4` and Eq. {eq}`Equation 7.5` apply also for the fault tree. A system with components working in serial arrangement is represented by an OR gate in the fault tree, which means if either component A or B fails the system will fail, see {numref}`Figure 7.10`. 
+The calculation is identical to {term}`RBD`, thus Eq. {eq}`Equation 7.4` and Eq. {eq}`Equation 7.5` apply also for the fault tree. A system with components working in serial arrangement is represented by an OR gate in the fault tree, which means if either component A or B fails the system will fail, see {numref}`Figure 7.10`. 
 
 (syst_figure4_10)=
 ```{figure} ../../picture/figure4_10.png
@@ -331,7 +331,7 @@ name: Figure 7.10
 Example Fault Tree of system with two component working in series.
 ```
 
-For the calculation the same rules apply as for RBD, thus Eq. {eq}`Equation 7.1` and Eq. {eq}`Equation 7.2` are to be used to calculate reliability or failure probability of the fault tree shown in Figure   12 -10. A combination of AND and OR gate, which would correspond to combination of serial and parallel arrangement in RBD is shown in {numref}`Figure 7.11`. The calculation is done similar to RBD by decomposition. 
+For the calculation the same rules apply as for {term}`RBD`, thus Eq. {eq}`Equation 7.1` and Eq. {eq}`Equation 7.2` are to be used to calculate reliability or failure probability of the fault tree shown in Figure   12 -10. A combination of AND and OR gate, which would correspond to combination of serial and parallel arrangement in {term}`RBD` is shown in {numref}`Figure 7.11`. The calculation is done similar to {term}`RBD` by decomposition. 
 
 (syst_figure4_11)=
 ```{figure} ../../picture/figure4_11.png
@@ -367,7 +367,7 @@ R_{S}(t) = \sum_{k}^{n} \frac{n!}{i!(n-i)!}R(t)^{i}(1-R(t))^{n-i}
 (syst_4_3_3)=
 ## Event Tree Analysis
 
-Event Tree Analysis (ETA) is an inductive method which shows all possible outcomes resulting from an initiating event. The event tree models the sequences containing relationships from an initiating event and subsequent responses along with the end states. Various system failure sequences can be identified and the probability of occurrence of each sequence is quantified. 
+Event Tree Analysis ({term}`ETA`) is an inductive method which shows all possible outcomes resulting from an initiating event. The event tree models the sequences containing relationships from an initiating event and subsequent responses along with the end states. Various system failure sequences can be identified and the probability of occurrence of each sequence is quantified. 
 
 The main steps to perform an Event Tree Analysis are Error: Reference source not found:
 - Identify (and define) a relevant initial event that may lead to unwanted consequences with respect to system reliability, e.g. loss of system performance, mission failure etc. 
@@ -477,7 +477,7 @@ Creating a Markov Model includes the following steps:
 
 1. All the system states are to be identified and classified as either operating states or failed states, or another category has to be defined. If each component has two possible states (operating and failed) and if the system has n components, the maximum number of states is $2^{n}$. During the life of the system, failed states can appear due to the existence of failures, or disappear following repairs. 
 2. The possible transitions between the different states are to be listed and the causes of transitions needs to be identified. A transition rate has to be assigned based on theses causes. The causes of the transitions are either failure of one or several subsystem components; in this case the failure rate is representing the transition rate. Or the function of a component is restored and the repair rate is used as transition rate.
-3. The state transition diagram is developed wherein each node represents a state of the system, and each arc represents a transition between states. The guidelines given in IEC 61165 Error: Reference source not found for state transition diagrams should be applied.
+3. The state transition diagram is developed wherein each node represents a state of the system, and each arc represents a transition between states. The guidelines given in {term}`IEC` 61165 Error: Reference source not found for state transition diagrams should be applied.
 4. The probabilities of being in the different states during a certain period in the life are calculated based on the state transition diagram. For a system with $m$ states a set of $m$ differential equations is derived from the state transition diagram. 
 
 
@@ -636,7 +636,7 @@ For complex problems with $n$ components it is more suitable to solve the set of
 (syst_4_3_5)=
 ## Petri Network
 
-Petri nets are a graphical technique for the representation and analysis of complex logical interactions among elements in a system. Petri nets allow describing the behaviour of a system by modelling the relationship between local states and local events Error: Reference source not found. They are able to model the various states of the system and how it evolves from one state to another when events (failures, repairs, periodic tests, mission phases, etc.) occur. A detailed description of Petri networks can be found in IEC 62551:2012  Error: Reference source not found.
+Petri nets are a graphical technique for the representation and analysis of complex logical interactions among elements in a system. Petri nets allow describing the behaviour of a system by modelling the relationship between local states and local events Error: Reference source not found. They are able to model the various states of the system and how it evolves from one state to another when events (failures, repairs, periodic tests, mission phases, etc.) occur. A detailed description of Petri networks can be found in {term}`IEC` 62551:2012  Error: Reference source not found.
 
 ```{admonition} Todo
 :class: todo

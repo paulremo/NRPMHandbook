@@ -1,14 +1,14 @@
 (misc_5_0)=
-# Reliability prediction for miscellaneous items
+# {term}`RELIABILITY PREDICTION` for miscellaneous items
 
 
 The current document defines guidance to model reliability of most of the typical miscellaneous items implemented aboard the satellites:
 
-* A “standard model” is defined, per family of miscellaneous items (generic items), based on IOR data, to provide a framework for the reliability prediction with room for adaptation through tailoring criteria in order to cope with the contributing factors to the reliability. The reliability data are provided in {numref}`Reliability data`.
+* A “standard model” is defined, per family of miscellaneous items (generic items), based on IOR data, to provide a framework for the {term}`RELIABILITY PREDICTION` with room for adaptation through tailoring criteria in order to cope with the {term}`CONTRIBUTING FACTOR`s to the reliability. The reliability data are provided in {numref}`Reliability data`.
 * When there is no “standard model” (specific items), the current document provides general guidance to support the reliability model building based on available technical data. In that case, referred to as “non-standard model”, the reliability model is developed by the user, based on experience and tests results and/or manufacturers data and/or IOR data, as available. The user will formally justify and submit the reliability model to the prime contractor for approval. Refer to {numref}`misc_5_4_2`.
-* When the two previous model categories are not useable, a holistic model can be used, as per existing reliability handbooks and/or literature. It is a general model which does not represent exactly the design of the items and which is generally not applicable for Space systems, which means the level of confidence is not high.
+* When the two previous model categories are not useable, a holistic model can be used, as per existing reliability handbooks and/or literature. It is a general model which does not represent exactly the design of the items and which is generally not applicable for Space systems, which means the {term}`LEVEL OF CONFIDENCE` is not high.
 
-However, whatever the model is, it is the responsibility of the supplier to justify the selected reliability model enriched with any valuable improvement based on available data (tests data, manufacturer data, IOR data).
+However, whatever the model is, it is the responsibility of the supplier to justify the selected reliability model enriched with any valuable improvement based on available data (tests data, {term}`MANUFACTURER DATA`, IOR data).
 
 The process used to define a Miscellaneous (MIS) item reliability model is presented in {numref}`Figure 5.2`.
 
@@ -22,5 +22,5 @@ The process used to define a Miscellaneous (MIS) item reliability model is prese
 width: 600px
 name: Figure 5.2
 ---
-Miscellaneous (MIS) items reliability modelling logic.
+Miscellaneous ({term}`MIS`) items reliability modelling logic.
 ```

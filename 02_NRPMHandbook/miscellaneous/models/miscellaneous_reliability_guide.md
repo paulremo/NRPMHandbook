@@ -1,4 +1,4 @@
-# Miscellaneous Reliability Prediction Guide
+# Miscellaneous {term}`RELIABILITY PREDICTION` Guide
 
 Here you can follow step by step the process to calculate the RP for any item classified in _Miscellaneous_. Each part contains a link to the corresponding Handbook part.
 
