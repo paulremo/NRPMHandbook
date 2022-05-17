@@ -1,4 +1,4 @@
-# {term}`FAILURE MECHANISM`s identification and focus
+# Failure mechanisms identification and focus
 
 A full mechanical {term}`RELIABILITY PREDICTION` looking at all potential {term}`FAILURE MECHANISM`s and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude {term}`FAILURE MECHANISM` that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and {term}`FAILURE MECHANISM`s), before discussing how to model each {term}`FAILURE MECHANISM` in [Section 4.5](method_selection.md) and after.
 

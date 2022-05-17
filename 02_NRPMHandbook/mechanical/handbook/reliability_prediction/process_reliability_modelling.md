@@ -1,4 +1,4 @@
-# Process for mechanical {term}`RELIABILITY PREDICTION`
+# Process for mechanical reliability predicition
 
 The approach for mechanical {term}`RELIABILITY PREDICTION` in space applications presented in this chapter is based on the following three steps, which are described in different Sections:
 
