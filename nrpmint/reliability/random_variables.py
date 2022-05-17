@@ -32,10 +32,14 @@ class MultiRV:
     implicitly assumes a Gaussian copula because it uses the Nataf transform to sample random variates.
     """
     def __init__(self, marginals, corrmat=None):
-        # assert that corrmat is positive definite
-        assert np.all(np.linalg.eigvals(corrmat) > 0)
-        # assert that size of marginals list and corrmat match
-        assert np.all(len(marginals) == len(corrmat))
+        # provide default corrmat, if it is not given
+        if corrmat is None:
+            corrmat = np.eye(len(marginals))
+        else:
+            # assert that corrmat is positive definite
+            assert np.all(np.linalg.eigvals(corrmat) > 0)
+            # assert that size of marginals list and corrmat match
+            assert np.all(len(marginals) == len(corrmat))
 
         self.n_dim = len(marginals)
         self.corrmat = corrmat

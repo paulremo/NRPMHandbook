@@ -76,12 +76,30 @@ def display(reliability_analyses, mult_one_idx, rev_per_hour):
     plt.legend(['Limiting Volume','Volume worn away'])
 
 
-def limit_state_function(Vlim, KH, alpha, MU, nrev, sep_out=False):
+def sample_collective(dist, mu, cov, N, nbins=200):
+    """
+    Samples a collective from the parametric distribution specified by the inputs dist, mu and cov.
+    Sampling is only approximate for speed.
+    """
+    collective_dist = UniRV(dist, mu, cov)
+    stress_min, stress_max = collective_dist.dist.ppf(10**-8), collective_dist.dist.ppf(1-10**-8)
+    stresses = np.linspace(stress_min, stress_max, nbins)
+    stresses_step = stresses[1]-stresses[0]
+    cycles = np.round(collective_dist.dist.pdf(stresses)*N*stresses_step)
+
+    return np.column_stack((stresses, cycles))
+
+def limit_state_function(DCR, A, SSF, MU, B, load_collective, sep_out=False):
     """
     Limit state function used in this model.
     """
-    r = Vlim
-    a = MU * KH * alpha * nrev
+
+    load_collective_sum = []
+    for b in B:
+        load_collective_sum.append(np.sum(load_collective[:,0]**b*load_collective[:,1]))
+
+    r = DCR
+    a = MU * (10**-A) * SSF**B * load_collective_sum
 
     g = r - a
 
@@ -91,27 +109,27 @@ def limit_state_function(Vlim, KH, alpha, MU, nrev, sep_out=False):
         return g
 
 
-def single_analysis(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alpha, E_alpha, CoV_alpha,
-                    Dist_MU, E_MU, CoV_MU, rho_KH_alpha, nrev):
+def single_analysis(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SSF, CoV_SSF, Dist_coll, E_coll, CoV_coll,
+                    Dist_MU, E_MU, CoV_MU, B, N):
     '''
     Wrapper for nrpmint.reliability.form that passes the arguments to the correct dictionary structure and returns the
     reliability analysis.
     '''
 
-    Vlim = {
-        'dist': Dist_Vlim,
-        'E': E_Vlim,
-        'CoV': CoV_Vlim
+    DCR = {
+        'dist': Dist_DCR,
+        'E': E_DCR,
+        'CoV': CoV_DCR
     }
-    KH = {
-        'dist': Dist_KH,
-        'E': E_KH,
-        'CoV': CoV_KH
+    A = {
+        'dist': Dist_A,
+        'E': E_A,
+        'CoV': CoV_A
     }
-    alpha = {
-        'dist': Dist_alpha,
-        'E': E_alpha,
-        'CoV': CoV_alpha
+    SSF = {
+        'dist': Dist_SSF,
+        'E': E_SSF,
+        'CoV': CoV_SSF
     }
     MU = {
         'dist': Dist_MU,
@@ -119,17 +137,14 @@ def single_analysis(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alp
         'CoV': CoV_MU
     }
 
-    # correlation matrix
-    corrmat = [[1.0, 0.0, 0.0, 0.0],
-               [0.0, 1.0, rho_KH_alpha, 0.0],
-               [0.0, rho_KH_alpha, 1.0, 0.0],
-               [0.0, 0.0, 0.0, 1.0]]
+    # sample collective
+    load_collective = sample_collective(Dist_coll, E_coll, CoV_coll, N)
 
     # define limit-state function
-    lsf = lambda Vlim, KH, alpha, MU, nrev: limit_state_function(Vlim, KH, alpha, MU, nrev)
+    lsf = lambda DCR, A, SSF, MU, B: limit_state_function(DCR, A, SSF, MU, B, load_collective)
 
     # run and return form reliability analysis
-    return form(lsf, corrmat=corrmat, Vlim=Vlim, KH=KH, alpha=alpha, MU=MU, nrev=nrev)
+    return form(lsf, DCR=DCR, A=A, SSF=SSF, MU=MU, B=B), load_collective
 
 
 def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
@@ -144,7 +159,7 @@ def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
     for mult in mult_list:
         # run form reliability analysis
         curr_nrev = nrev*mult
-        rel_analysis = single_analysis(Dist_Vlim=Dist_Vlim, E_Vlim=E_Vlim, CoV_Vlim=CoV_Vlim, Dist_KH=Dist_KH, E_KH=E_KH,
+        rel_analysis, _ = single_analysis(Dist_Vlim=Dist_Vlim, E_Vlim=E_Vlim, CoV_Vlim=CoV_Vlim, Dist_KH=Dist_KH, E_KH=E_KH,
                         CoV_KH=CoV_KH, Dist_alpha=Dist_alpha, E_alpha=E_alpha, CoV_alpha=CoV_alpha, Dist_MU=Dist_MU,
                         E_MU=E_MU, CoV_MU=CoV_MU, rho_KH_alpha=rho_KH_alpha, nrev=curr_nrev)
 
