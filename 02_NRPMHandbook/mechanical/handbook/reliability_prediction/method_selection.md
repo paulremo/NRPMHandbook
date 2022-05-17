@@ -1,4 +1,4 @@
-# Method selection for different items and {term}`FAILURE MECHANISM`s
+# Method selection for different items and failure mechanisms
 
 Once it is clear what needs to be considered in the {term}`RELIABILITY PREDICTION` (see Section 4.4), the next step is to decide _how_ each part and {term}`FAILURE MECHANISM` should be modelled. The present section gives guidance on this method selection task.
 
@@ -6,9 +6,9 @@ Once it is clear what needs to be considered in the {term}`RELIABILITY PREDICTIO
 The method selection for {term}`MECHANICAL PART`s reliability modelling should always take basis in a good understanding of the {term}`FAILURE MECHANISM`s that are of relevance for the considered item, especially the predominant ones. To simplify the presentation in the following sections, mechanical {term}`FAILURE MECHANISM`s are grouped into five distinct categories listed in Table  4 -4.
 
 (meca_table4_4)=
-```{list-table} Categories of mechanical {term}`FAILURE MECHANISM`s
+```{list-table} Categories of mechanical failure mechanisms
 :class: interactive-table
-:name: Categories of mechanical {term}`FAILURE MECHANISM`s
+:name: Categories of mechanical failure mechanisms
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_4.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
@@ -20,9 +20,9 @@ For independent {term}`FAILURE MECHANISM`s, it is sufficient to consider one pro
 However, independence between different {term}`FAILURE MECHANISM`s may not always be a valid assumption, e.g. in case of physical interactions between different {term}`FAILURE MECHANISM`s processes. Table   4 -5 gives an overview for which combinations of {term}`FAILURE MECHANISM`s such effects may have to be considered. The table distinguishes interactions between different {term}`FAILURE MECHANISM`s affecting the same part (left hand side) and between different {term}`FAILURE MECHANISM`s affecting different parts (right hand side).
 
 (meca_table4_5)=
-```{list-table} Possible interactions between different mechanical {term}`FAILURE MECHANISM`s
+```{list-table} Possible interactions between different mechanical failure mechanisms
 :class: interactive-table
-:name: Possible interactions between different mechanical {term}`FAILURE MECHANISM`s
+:name: Possible interactions between different mechanical failure mechanisms
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_5.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
@@ -59,9 +59,9 @@ In Table   4 -6, {term}`STATISTICAL METHOD`s are mentioned only where a predicti
 Also a combined approach with {term}`BAYESIAN INFERENCE` updating of a prior derived from the {term}`PHYSICS OF FAILURE`, using relevant data even with limited sample size, is generally preferred over a pure {term}`PHYSICS OF FAILURE` approach, see Sections  and 4.6.5 for guidance.
 
 (meca_table4_6)=
-```{list-table} {term}`MECHANICAL PART` types, associated {term}`FAILURE MECHANISM`s and modelling recommendations
+```{list-table} Mechanical part types, associated failure mechanisms and modelling recommendations
 :class: interactive-table
-:name: {term}`MECHANICAL PART` types, associated {term}`FAILURE MECHANISM`s and modelling recommendations
+:name: Mechanical part types, associated failure mechanisms and modelling recommendations
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_6.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```

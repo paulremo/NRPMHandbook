@@ -1,4 +1,4 @@
-# Modelling of {term}`COMMON CAUSE FAILURE`
+# Modelling of common cause failure
 
 In order to quantitatively assess the influence of {term}`COMMON CAUSE FAILURE` on the system reliability several methods exist, for example Error: Reference source not found:
 
