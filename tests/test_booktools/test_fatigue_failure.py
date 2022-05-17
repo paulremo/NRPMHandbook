@@ -59,19 +59,19 @@ def test_running_model(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E
     assert reliability_analysis.Pf == pytest.approx(Pf_true, rel=5e-1)
 
 
-# @pytest.mark.parametrize(
-#     'Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU, '
-#     'rho_KH_alpha, nrev, rev_per_hour', [
-#         ('LogNormal', 6.5e-8, 0.2, 'LogNormal', 4e-18, 0.66, 'LogNormal', 0.018, 0.2, 'LogNormal', 1.2, 0.2, 0.5, 245e9, 100)
-#     ]
-# )
-# def test_display(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU,
-#                  CoV_MU, rho_KH_alpha, nrev, rev_per_hour):
-#     """
-#     Tests whether the display function works on a reliability analysis by calling the model_wrapper.
-#     """
-#
-#     fatigue_failure.model_wrapper(Dist_Vlim=Dist_Vlim, E_Vlim=E_Vlim, CoV_Vlim=CoV_Vlim,  Dist_KH=Dist_KH,
-#                                        E_KH=E_KH, CoV_KH=CoV_KH, Dist_alpha=Dist_alpha, E_alpha=E_alpha,
-#                                        CoV_alpha=CoV_alpha, Dist_MU=Dist_MU, E_MU=E_MU, CoV_MU=CoV_MU,
-#                                        rho_KH_alpha=rho_KH_alpha, nrev=nrev, rev_per_hour=rev_per_hour)
+@pytest.mark.parametrize(
+    'Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SSF, CoV_SSF, Dist_coll, E_coll, CoV_coll,'
+    'Dist_MU, E_MU, CoV_MU,'
+    'B, N', [
+        ('LogNormal', 1e13, 0.2, 'Normal', 3, 0.3, 'LogNormal', 1, 0.2, 'LogNormal', 200, 0.2, 'LogNormal', 1.2, 0.2, 2, 1e9),
+    ]
+)
+def test_display(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SSF, CoV_SSF, Dist_coll, E_coll, CoV_coll,
+                 Dist_MU, E_MU, CoV_MU, B, N,):
+    """
+    Tests whether the display function works on a reliability analysis by calling the model_wrapper.
+    """
+
+    fatigue_failure.model_wrapper(Dist_DCR=Dist_DCR, E_DCR=E_DCR, CoV_DCR=CoV_DCR, Dist_A=Dist_A, E_A=E_A, CoV_A=CoV_A,
+                                  Dist_SSF=Dist_SSF, E_SSF=E_SSF, CoV_SSF=CoV_SSF, Dist_coll=Dist_coll, E_coll=E_coll,
+                                  CoV_coll=CoV_coll, Dist_MU=Dist_MU, E_MU=E_MU, CoV_MU=CoV_MU, B=B, N=N)

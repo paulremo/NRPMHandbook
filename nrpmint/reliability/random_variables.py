@@ -59,7 +59,19 @@ class MultiRV:
         return x
 
 
-def map_pystra_names(name):
+def stochastic_model_to_multirv(stochastic_model):
     """
-    Maps the pystra name to our local names
+    Transforms a pystra stochastic model to a MultiRV object.
     """
+    marginals = []
+    for var in stochastic_model.variables:
+        dist = stochastic_model.variables[var].dist_type
+        mean = stochastic_model.variables[var].getMean()
+        cov = stochastic_model.variables[var].getStdv() / mean
+
+        marginals.append(UniRV(dist, mean, cov))
+
+    # sample from random variables
+    corrmat = stochastic_model.correlation
+
+    return MultiRV(marginals, corrmat)

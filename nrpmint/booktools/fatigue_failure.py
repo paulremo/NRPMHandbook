@@ -5,75 +5,40 @@ from ipywidgets import interactive, Layout, HBox, VBox
 
 # scientific packages
 from nrpmint.reliability.form import form
-from nrpmint.reliability.random_variables import UniRV, MultiRV
+from nrpmint.reliability.random_variables import UniRV, stochastic_model_to_multirv
 import numpy as np
 from matplotlib import pyplot as plt
 
 
-def display(reliability_analyses, mult_one_idx, rev_per_hour):
+def display(reliability_analyses, load_collective, n_samples=10**5):
     '''Displays the reliability analysis results'''
-    pf_mat, nrev_mat = [], []
-    n_samples = 10**5
-
-    # compute results for the main analysis
-    main_analysis = reliability_analyses[mult_one_idx]
-    stochastic_model = main_analysis.model
-
-    # retrieve distribution properties
-    Vlim = stochastic_model.variables['Vlim']
-    E_Vlim = Vlim.getMean()
-    CoV_Vlim = Vlim.getStdv() / E_Vlim
-    Dist_Vlim = Vlim.dist_type
-    KH = stochastic_model.variables['KH']
-    E_KH = KH.getMean()
-    CoV_KH = KH.getStdv() / E_KH
-    Dist_KH = KH.dist_type
-    alpha = stochastic_model.variables['alpha']
-    E_alpha = alpha.getMean()
-    CoV_alpha = alpha.getStdv() / E_alpha
-    Dist_alpha = alpha.dist_type
-    MU = stochastic_model.variables['MU']
-    E_MU = MU.getMean()
-    CoV_MU = MU.getStdv() / E_MU
-    Dist_MU = MU.dist_type
-
-    nrev = stochastic_model.consts['nrev']
-
-    corrmat = stochastic_model.correlation
+    # extract random vector and constants
+    joint_dist = stochastic_model_to_multirv(reliability_analyses.model)
+    B = reliability_analyses.model.consts['B']
 
     # sample from random variables
-    Vlim_dist = UniRV(Dist_Vlim, E_Vlim, CoV_Vlim)
-    KH_dist = UniRV(Dist_KH, E_KH, CoV_KH)
-    alpha_dist = UniRV(Dist_alpha, E_alpha, CoV_alpha)
-    MU_dist = UniRV(Dist_MU, E_MU, CoV_MU)
-    joint_dist = MultiRV([Vlim_dist, KH_dist, alpha_dist, MU_dist], corrmat)
     x = joint_dist.rvs(n_samples)
 
     # evaluate limit_state function
-    g, r, a = limit_state_function(x[:,0], x[:,1], x[:,2], x[:,3], nrev, sep_out=True)
-
-    # loop over analyses
-    for rel_analysis in reliability_analyses:
-        stochastic_model = rel_analysis.model
-
-        # retrieve failure probability
-        pf_mat.append(rel_analysis.getFailure())
-        nrev_mat.append(stochastic_model.consts['nrev'])
+    g, r, a = limit_state_function(x[:,0], x[:,1], x[:,2], x[:,3], B, load_collective, sep_out=True)
 
     # plots
+    # PDFs
     plt.figure(1)
     plt.hist(r, bins=100, density=True, alpha=0.8)
     plt.hist(a, bins=100, density=True, alpha=0.8)
-    plt.xlabel(r'volume $m^3$')
+    plt.xlabel(r'damage')
     plt.ylabel('probability density function')
-    plt.legend(['Limiting Volume', 'Volume worn away'])
+    plt.legend(['Limiting damage', 'Accumulated damage'])
 
+    # Load collective
+    sorted_load_collective = load_collective[np.argsort(load_collective[:, 0])][::-1]
     plt.figure(2)
-    plt.plot(nrev / (rev_per_hour * 365 * 24), pf_mat[mult_one_idx], 'ro')
-    plt.plot(np.array(nrev_mat) / (rev_per_hour * 365 * 24), pf_mat, 'r--')
-    plt.ylabel('probability of failure')
-    plt.xlabel('years')
-    plt.legend(['Limiting Volume','Volume worn away'])
+    plt.bar(x=np.cumsum(sorted_load_collective[:,1]), height=sorted_load_collective[:,0], width=-sorted_load_collective[:,1], align='edge')
+    plt.ylabel('stress')
+    plt.xlabel('cycles')
+    plt.title('Load collective')
+    plt.xscale('log')
 
 
 def sample_collective(dist, mu, cov, N, nbins=200):
@@ -94,9 +59,13 @@ def limit_state_function(DCR, A, SSF, MU, B, load_collective, sep_out=False):
     Limit state function used in this model.
     """
 
-    load_collective_sum = []
-    for b in B:
-        load_collective_sum.append(np.sum(load_collective[:,0]**b*load_collective[:,1]))
+    # handling vectorized inputs
+    try:
+        load_collective_sum = []
+        for b in B:
+            load_collective_sum.append(np.sum(load_collective[:,0]**b*load_collective[:,1]))
+    except TypeError:
+        load_collective_sum = np.sum(load_collective[:,0]**B*load_collective[:,1])
 
     r = DCR
     a = MU * (10**-A) * SSF**B * load_collective_sum
@@ -147,29 +116,22 @@ def single_analysis(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SS
     return form(lsf, DCR=DCR, A=A, SSF=SSF, MU=MU, B=B), load_collective
 
 
-def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
-                 Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU,
-                 rho_KH_alpha, nrev, rev_per_hour):
+def model_wrapper(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SSF, CoV_SSF, Dist_coll, E_coll, CoV_coll,
+                    Dist_MU, E_MU, CoV_MU, B, N):
     '''Wrapper to be called by ipywidgets to run the reliability analyses and display the outputs.'''
 
-    # do a set of reliability analyses for different nrev
-    mult_list = [0.8, 0.9, 1, 1.1, 1.2]
-    mult_one_idx = mult_list.index(1)
-    reliability_analyses = []
-    for mult in mult_list:
-        # run form reliability analysis
-        curr_nrev = nrev*mult
-        rel_analysis, _ = single_analysis(Dist_Vlim=Dist_Vlim, E_Vlim=E_Vlim, CoV_Vlim=CoV_Vlim, Dist_KH=Dist_KH, E_KH=E_KH,
-                        CoV_KH=CoV_KH, Dist_alpha=Dist_alpha, E_alpha=E_alpha, CoV_alpha=CoV_alpha, Dist_MU=Dist_MU,
-                        E_MU=E_MU, CoV_MU=CoV_MU, rho_KH_alpha=rho_KH_alpha, nrev=curr_nrev)
-
-        reliability_analyses.append(rel_analysis)
+    reliability_analysis, load_collective = single_analysis(Dist_DCR=Dist_DCR, E_DCR=E_DCR, CoV_DCR=CoV_DCR,
+                                                           Dist_A=Dist_A, E_A=E_A, CoV_A=CoV_A,
+                                                           Dist_SSF=Dist_SSF, E_SSF=E_SSF, CoV_SSF=CoV_SSF,
+                                                           Dist_coll=Dist_coll, E_coll=E_coll, CoV_coll=CoV_coll,
+                                                           Dist_MU=Dist_MU, E_MU=E_MU, CoV_MU=CoV_MU,
+                                                           B=B, N=N)
 
     # display
-    display(reliability_analyses, mult_one_idx, rev_per_hour)
+    display(reliability_analysis, load_collective)
 
     # print
-    print(f'The failure probability is {reliability_analyses[mult_one_idx].getFailure()[0]}')
+    print(f'The failure probability is {reliability_analysis.getFailure()[0]}')
 
 
 def web_ui():

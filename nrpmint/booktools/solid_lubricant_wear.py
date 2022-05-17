@@ -5,54 +5,26 @@ from ipywidgets import interactive, Layout, HBox, VBox
 
 # scientific packages
 from nrpmint.reliability.form import form
-from nrpmint.reliability.random_variables import UniRV, MultiRV
+from nrpmint.reliability.random_variables import stochastic_model_to_multirv
 import numpy as np
 from matplotlib import pyplot as plt
 
 
-def display(reliability_analyses, mult_one_idx, rev_per_hour):
+def display(reliability_analyses, mult_one_idx, rev_per_hour, n_samples=10**5):
     '''Displays the reliability analysis results'''
-    pf_mat, nrev_mat = [], []
-    n_samples = 10**5
-
-    # compute results for the main analysis
+    # extract random vector and constants
     main_analysis = reliability_analyses[mult_one_idx]
-    stochastic_model = main_analysis.model
-
-    # retrieve distribution properties
-    Vlim = stochastic_model.variables['Vlim']
-    E_Vlim = Vlim.getMean()
-    CoV_Vlim = Vlim.getStdv() / E_Vlim
-    Dist_Vlim = Vlim.dist_type
-    KH = stochastic_model.variables['KH']
-    E_KH = KH.getMean()
-    CoV_KH = KH.getStdv() / E_KH
-    Dist_KH = KH.dist_type
-    alpha = stochastic_model.variables['alpha']
-    E_alpha = alpha.getMean()
-    CoV_alpha = alpha.getStdv() / E_alpha
-    Dist_alpha = alpha.dist_type
-    MU = stochastic_model.variables['MU']
-    E_MU = MU.getMean()
-    CoV_MU = MU.getStdv() / E_MU
-    Dist_MU = MU.dist_type
-
-    nrev = stochastic_model.consts['nrev']
-
-    corrmat = stochastic_model.correlation
+    joint_dist = stochastic_model_to_multirv(main_analysis.model)
+    nrev = main_analysis.model.consts['nrev']
 
     # sample from random variables
-    Vlim_dist = UniRV(Dist_Vlim, E_Vlim, CoV_Vlim)
-    KH_dist = UniRV(Dist_KH, E_KH, CoV_KH)
-    alpha_dist = UniRV(Dist_alpha, E_alpha, CoV_alpha)
-    MU_dist = UniRV(Dist_MU, E_MU, CoV_MU)
-    joint_dist = MultiRV([Vlim_dist, KH_dist, alpha_dist, MU_dist], corrmat)
     x = joint_dist.rvs(n_samples)
 
     # evaluate limit_state function
     g, r, a = limit_state_function(x[:,0], x[:,1], x[:,2], x[:,3], nrev, sep_out=True)
 
     # loop over analyses
+    pf_mat, nrev_mat = [], []
     for rel_analysis in reliability_analyses:
         stochastic_model = rel_analysis.model
 
