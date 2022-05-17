@@ -4,16 +4,7 @@
 format: jb-book
 root: home
 
-parts:
-  - caption: Preface
-    numbered: true
-    chapters:
-    - file: preface/intro
-      title: Introduction
-    - file: preface/documentation
-      title: Documentation
-    - file: preface/terms
-      title: Terms, definitions and abbreviations     
+parts:   
   - caption: EEE chapter
     numbered: true
     chapters:
