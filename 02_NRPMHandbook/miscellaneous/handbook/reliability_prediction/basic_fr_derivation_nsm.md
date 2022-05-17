@@ -8,14 +8,14 @@ First, it is necessary, to collect/define all technical information about the {t
 
 
 (misc_5_5_1)=
-## {term}`DFMEA – Design FMEA` / {term}`PFMEA - Process FMEA`
+## {term}`DFMEA` / {term}`PFMEA`
 
-After the first item characterization, a {term}`DFMEA – Design FMEA` and a {term}`PFMEA - Process FMEA` are performed in order to assess the {term}`FAILURE MODE`s due to 
+After the first item characterization, a {term}`DFMEA` and a {term}`PFMEA` are performed in order to assess the {term}`FAILURE MODE`s due to 
 
 1. Design errors and
 2. Manufacturing errors.
 
-It is recommended to use the {cite:t}`mis-SAE_standard, mis-{term}`PFMEA - Process FMEA`` which provides the method to apply for a {term}`DFMEA – Design FMEA` / {term}`PFMEA - Process FMEA`. {term}`PFMEA - Process FMEA` is also specified in {cite:t}`mis-ECSS-Q-ST-30-02C`.
+It is recommended to use the {cite:t}`mis-SAE_standard, mis-PFMEA` which provides the method to apply for a {term}`DFMEA` / {term}`PFMEA`. {term}`PFMEA` is also specified in {cite:t}`mis-ECSS-Q-ST-30-02C`.
 
 **FMEA: Required for every unit**
 
@@ -28,13 +28,13 @@ It is recommended to use the {cite:t}`mis-SAE_standard, mis-{term}`PFMEA - Proce
 miss ref above
 ```
 
-**{term}`DFMEA – Design FMEA`: Required on critical functions only (Risk analysis)**
+**{term}`DFMEA`: Required on critical functions only (Risk analysis)**
 
 * Is a tool/method supporting the product {term}`QUALITY` identifying all the elementary {term}`FAILURE MODE`s due to DESIGN errors. It includes, as a minimum, the {term}`FAILURE MODE`s identified by FMEA.
 * **@unit level**: under unit designer / {term}`QUALITY` Assurance responsibility
 * **@system level**: reviewed by procurement within the unit acceptance process
 
-**{term}`PFMEA - Process FMEA`: Required on critical functions only (Risk analysis)**
+**{term}`PFMEA`: Required on critical functions only (Risk analysis)**
 
 * Is a tool/Method supporting the product {term}`QUALITY` identifying all the elementary {term}`FAILURE MODE`s due to MANUFACTURING errors.
 * **@unit level**: under unit {term}`QUALITY` Assurance responsibility
@@ -46,18 +46,18 @@ miss ref above
 width: 600px
 name: Figure 5.8
 ---
-Differences between FMEA, {term}`DFMEA – Design FMEA` and {term}`PFMEA - Process FMEA`.
+Differences between FMEA, {term}`DFMEA` and {term}`PFMEA`.
 ```
 
-{numref}`Figure 5.8` highlights the differences and the commonalities between FMEA, {term}`DFMEA – Design FMEA` and {term}`PFMEA - Process FMEA`.
+{numref}`Figure 5.8` highlights the differences and the commonalities between FMEA, {term}`DFMEA` and {term}`PFMEA`.
 
-{numref}`Figure 5.9`  provides an example of {term}`DFMEA – Design FMEA` and {term}`PFMEA - Process FMEA` at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in {numref}`Figure 5.8`), whereas the right-hand side refers to {term}`DFMEA – Design FMEA` data (green perimeter in {numref}`Figure 5.8`).
+{numref}`Figure 5.9`  provides an example of {term}`DFMEA` and {term}`PFMEA` at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in {numref}`Figure 5.8`), whereas the right-hand side refers to {term}`DFMEA` data (green perimeter in {numref}`Figure 5.8`).
 
 The main outcome is the ranking of every root cause (Design error, Manufacturing error) in
 
-* **{term}`SEV`**erity
-* **{term}`OCC`**urrence
-* **{term}`DET`**ectability
+* {term}`SEV`erity
+* {term}`OCC`urrence
+* {term}`DET`ectability
 
 The Risk Priority Number ({term}`RPN`), which is derived, is an index reflecting the residual technical risk.
 
@@ -67,7 +67,7 @@ The Risk Priority Number ({term}`RPN`), which is derived, is an index reflecting
 width: 600px
 name: Figure 5.9
 ---
-Differences between FMEA, {term}`DFMEA – Design FMEA` and {term}`PFMEA - Process FMEA`.
+Differences between FMEA, {term}`DFMEA` and {term}`PFMEA`.
 ```
 
 ```{glossary}
