@@ -96,8 +96,8 @@ PART/COMPONENT
 PERTINENCE
 	  Pertinence corresponds to the consistency between what has been predicted and what can be observed
 
-PFMEA - Process FMEA
-	 FMEA considering the analysis of processes such as manufacturing, assembling and integration or pre‐launch operations. All potential failure modes due to process variability and manufacturing errors are identified, analysed in terms of severity, occurrence and detectability on ground, and actions plans are put into place in order to reduce one of these three characteristics to remain within acceptable limits.
+PFMEA
+	 Process FMEA : FMEA considering the analysis of processes such as manufacturing, assembling and integration or pre‐launch operations. All potential failure modes due to process variability and manufacturing errors are identified, analysed in terms of severity, occurrence and detectability on ground, and actions plans are put into place in order to reduce one of these three characteristics to remain within acceptable limits.
 
 PHYSICS OF FAILURE
 	The physics of failure concept is a technique under the practice of design for reliability that leverages the knowledge and understanding of the processes and mechanisms that induce failure to predict reliability and improve product performance. 

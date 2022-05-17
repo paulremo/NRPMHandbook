@@ -349,7 +349,7 @@ Example of {term}`WO` distribution calculation (assumption: Weibull distribution
 ``````
 
 (misc_step6)=
-``````{dropdown} **STEP 6 : SYSTEMATIC FAILUREs modelling**
+``````{dropdown} **STEP 6 : Systematic failures modelling**
 The step 6 consists in adding a probability of failure related to {term}`SYSTEMATIC FAILURE`s.
 
 ````{admonition} Equation
@@ -374,7 +374,7 @@ miss ref above
 
 
 (misc_step7)=
-``````{dropdown} **STEP 7 : EXTRINSIC FAILUREs modelling**
+``````{dropdown} **STEP 7 : Extrinsic failures modelling**
 The step 7 consists in adding a probability of failure related to the external particles.
 
 ````{admonition} Equation
@@ -409,12 +409,12 @@ It is up to the discretion of the user to use the result appropriately:
 * Equivalent failure rate derived at a certain time (only valid at this time)
 * Approximation of the probability of failure by $\lambda t$, when $\lambda$ is small regarding $10^{-2}$.
   
-An example of calculation is presented in {numref}`Example of a reliability calculation for a {term}`MISCELLANEOUS ITEM``.
+An example of calculation is presented in {numref}`Example of a reliability calculation for a miscellaneous item`.
 
 (misc_table4_5)=
-```{list-table} Example of a reliability calculation for a {term}`MISCELLANEOUS ITEM`
+```{list-table} Example of a reliability calculation for a miscellaneous item
 :class: interactive-table
-:name: Example of a reliability calculation for a {term}`MISCELLANEOUS ITEM`
+:name: Example of a reliability calculation for a miscellaneous item
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_5.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
