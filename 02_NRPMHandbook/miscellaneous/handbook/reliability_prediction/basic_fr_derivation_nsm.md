@@ -23,11 +23,6 @@ It is recommended to use the {cite:t}`mis-SAE_standard, mis-PFMEA` which provide
 * **@unit level**: under supplier responsibility
 * **@system level**: integrated at system level by System {term}`RAMS` engineer (including HSIA supporting the failure tolerance: observability in-orbit…)
 
-```{admonition} Todo
-:class: todo
-miss ref above
-```
-
 **{term}`DFMEA`: Required on critical functions only (Risk analysis)**
 
 * Is a tool/method supporting the product {term}`QUALITY` identifying all the elementary {term}`FAILURE MODE`s due to DESIGN errors. It includes, as a minimum, the {term}`FAILURE MODE`s identified by FMEA.

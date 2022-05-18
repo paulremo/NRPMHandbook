@@ -4,7 +4,7 @@ The inputs data constitute the basis of any reliability model.
 
 First, building a reliability model requires pertinent data regarding the specificity of the item (technology, complexity, materials, {term}`QUALITY`, qualification…) and the operating conditions in order to characterize the item.
 
-Then, different inputs for reliability characteristics are defined and classified in [Chapter 6 (Part II)]() of the Current document.
+Then, different inputs for reliability characteristics are defined and classified in Chapter 6 {numref}`methodologies` of the Current document.
 
 The order of preference for the use of these inputs for miscellaneous parts {term}`RELIABILITY PREDICTION` is as follows:
 

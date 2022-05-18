@@ -1,5 +1,6 @@
 # System level modelling of wear-out
 
+(syst_4_8_1)=
 ## Wear-out model on component level
 
 The fact that wear-out can occur at component level and that the failure rates are then no longer constant needs to be considered for the system level {term}`RELIABILITY PREDICTION`. To calculate the reliability of components prone to wear-out, the following three approaches are introduced. In this section the use of these wear-out models for system level {term}`RELIABILITY PREDICTION` is shown.
