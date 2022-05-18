@@ -96,3 +96,10 @@ def test_display(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alpha,
                                        E_KH=E_KH, CoV_KH=CoV_KH, Dist_alpha=Dist_alpha, E_alpha=E_alpha,
                                        CoV_alpha=CoV_alpha, Dist_MU=Dist_MU, E_MU=E_MU, CoV_MU=CoV_MU,
                                        rho_KH_alpha=rho_KH_alpha, nrev=nrev, rev_per_hour=rev_per_hour)
+
+
+def test_web_ui():
+    """
+    Tests the current web user interface
+    """
+    solid_lubricant_wear.web_ui()

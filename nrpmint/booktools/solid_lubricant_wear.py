@@ -2,6 +2,7 @@
 import IPython
 import ipywidgets as widgets
 from ipywidgets import interactive, Layout, HBox, VBox
+from nrpmint.interface.web import UI
 
 # scientific packages
 from nrpmint.reliability.form import form
@@ -132,68 +133,131 @@ def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
 def web_ui():
     '''Prepare user interface to interact with reliabilty functions'''
     # prepare sliders and drop downs
-    Dist_Vlim_dd = widgets.Dropdown(options=['LogNormal', 'Normal', 'Gumbel'], value='Gumbel',
-                                    description='Dist $V_{\\text{lim}}$', disabled=False, )
-    E_Vlim_fs = widgets.FloatSlider(value=6.5e-8, min=1e-8, max=1e-7, step=1e-9,
-                                    description='$\\text{E}[V_{\\text{lim}}]$', disabled=False, continuous_update=True,
-                                    orientation='horizontal', readout=True, readout_format='.1e', )
-    CoV_Vlim_fs = widgets.FloatSlider(value=0.2, min=0.05, max=1, step=0.05,
-                                      description='$\\text{C.o.V.}[V_{\\text{lim}}]$', disabled=False,
-                                      continuous_update=True, orientation='horizontal', readout=True,
-                                      readout_format='.2f', )
-    Dist_KH_dd = widgets.Dropdown(options=['LogNormal', 'Normal', 'Gumbel'], value='Normal', description='Dist $K_H$',
-                                  disabled=False, )
-    E_KH_fs = widgets.FloatSlider(value=4e-15, min=1e-15, max=1e-14, step=1e-15, description='$\\text{E}[K_H]$',
-                                  disabled=False, continuous_update=True, orientation='horizontal', readout=True,
-                                  readout_format='.1e', )
-    CoV_KH_fs = widgets.FloatSlider(value=0.65, min=0.05, max=1, step=0.05, description='$\\text{C.o.V.}[K_H]$',
-                                    disabled=False, continuous_update=True, orientation='horizontal', readout=True,
-                                    readout_format='.2f', )
-    Dist_alpha_dd = widgets.Dropdown(options=['LogNormal', 'Normal', 'Gumbel'], value='Gumbel',
-                                     description='Dist $\\alpha$', disabled=False, )
-    E_alpha_fs = widgets.FloatSlider(value=0.018, min=0.01, max=0.1, step=0.001, description='$\\text{E}[\\alpha]$',
-                                     disabled=False, continuous_update=True, orientation='horizontal', readout=True,
-                                     readout_format='.1e', )
-    CoV_alpha_fs = widgets.FloatSlider(value=0.2, min=0.05, max=1, step=0.05, description='$\\text{C.o.V.}[\\alpha]$',
-                                       disabled=False, continuous_update=True, orientation='horizontal', readout=True,
-                                       readout_format='.2f', )
-    Dist_MU_dd = widgets.Dropdown(options=['LogNormal'], value='LogNormal', description='Dist $\Theta$',
-                                  disabled=False, )
-    E_MU_fs = widgets.FloatSlider(value=1, min=0.01, max=1, step=0.01, description='$\\text{E}[\Theta]$',
-                                  disabled=False, continuous_update=True, orientation='horizontal', readout=True,
-                                  readout_format='.1e', )
-    CoV_MU_fs = widgets.FloatSlider(value=0.2, min=0.05, max=1, step=0.05, description='$\\text{C.o.V.}[\Theta]$',
-                                    disabled=False, continuous_update=True, orientation='horizontal', readout=True,
-                                    readout_format='.2f', )
-    rho_KH_alpha_fs = widgets.FloatSlider(value=0.5, min=0, max=1, step=0.01, description='$\\rho_{KH,\\alpha}$',
-                                    disabled=False, continuous_update=True, orientation='horizontal', readout=True,
-                                    readout_format='.1e', )
-    nrev_fs = widgets.FloatSlider(value=2.45e+8, min=1e+8, max=1e+9, step=5e+6, description='$\\text{E}[r]$',
-                                    disabled=False, continuous_update=True, orientation='horizontal', readout=True,
-                                    readout_format='.1e', )
-    rev_per_hour_fs = widgets.FloatSlider(value=1e+6, min=1e6, max=1e+7, step=1e+6, description='$\\text{E}[r_h]$',
-                                          disabled=False, continuous_update=True, orientation='horizontal',
-                                          readout=True, readout_format='.1e', )
+    Dist_Vlim = {
+        'type': 'dropdown',
+        'description': 'Dist $V_{\\text{lim}}$',
+        'value': 'Gumbel',
+        'options': ['LogNormal', 'Normal', 'Gumbel'],
+    }
+    E_Vlim = {
+        'type': 'floatslider',
+        'description': '$\\text{E}[V_{\\text{lim}}]$]',
+        'value': 6.5e-8,
+        'min': 1e-8,
+        'max': 1e-7,
+        'step': 1e-9,
+        'readout_format': '.1e'
+    }
+    CoV_Vlim = {
+        'type': 'floatslider',
+        'description': '$\\text{C.o.V.}[V_{\\text{lim}}]$',
+        'value': 0.2,
+        'min': 0.05,
+        'max': 1,
+        'step': 0.05,
+        'readout_format': '.2f'
+    }
+    Dist_KH = {
+        'type': 'dropdown',
+        'description': 'Dist $K_H$',
+        'value': 'Normal',
+        'options': ['LogNormal', 'Normal', 'Gumbel'],
+    }
+    E_KH = {
+        'type': 'floatslider',
+        'description': '$\\text{E}[K_H]$',
+        'value': 4e-15,
+        'min': 1e-15,
+        'max': 1e-14,
+        'step': 1e-15,
+        'readout_format': '.1e'
+    }
+    CoV_KH = {
+        'type': 'floatslider',
+        'description': '$\\text{C.o.V.}[K_H]$',
+        'value': 0.65,
+        'min': 0.05,
+        'max': 1,
+        'step': 0.05,
+        'readout_format': '.2f'
+    }
+    Dist_alpha = {
+        'type': 'dropdown',
+        'description': 'Dist $\\alpha$',
+        'value': 'Gumbel',
+        'options': ['LogNormal', 'Normal', 'Gumbel'],
+    }
+    E_alpha = {
+        'type': 'floatslider',
+        'description': '$\\text{E}[\\alpha]$',
+        'value': 0.018,
+        'min': 0.01,
+        'max': 0.1,
+        'step': 0.001,
+        'readout_format': '.1e'
+    }
+    CoV_alpha = {
+        'type': 'floatslider',
+        'description': '$\\text{C.o.V.}[\\alpha]$',
+        'value': 0.2,
+        'min': 0.05,
+        'max': 1,
+        'step': 0.05,
+        'readout_format': '.2f'
+    }
+    Dist_MU = {
+        'type': 'dropdown',
+        'description': 'Dist $\Theta$',
+        'value': 'LogNormal',
+        'options': ['LogNormal'],
+    }
+    E_MU = {
+        'type': 'floatslider',
+        'description': '$\\text{E}[\Theta]$',
+        'value': 1,
+        'min': 0.01,
+        'max': 1,
+        'step': 0.01,
+        'readout_format': '.1e'
+    }
+    CoV_MU = {
+        'type': 'floatslider',
+        'description': '$\\text{C.o.V.}[\Theta]$',
+        'value': 0.2,
+        'min': 0.05,
+        'max': 1,
+        'step': 0.05,
+        'readout_format': '.2f'
+    }
+    rho_KH_alpha = {
+        'type': 'floatslider',
+        'description': '$\\rho_{KH,\\alpha}$',
+        'value': 0.5,
+        'min': 0,
+        'max': 1,
+        'step': 0.01,
+        'readout_format': '.1f'
+    }
+    nrev = {
+        'type': 'floatslider',
+        'description': '$\\text{E}[r]$',
+        'value': 2.45e+8,
+        'min': 1e+8,
+        'max': 1e+9,
+        'step': 5e+6,
+        'readout_format': '.1e'
+    }
+    rev_per_hour = {
+        'type': 'floatslider',
+        'description': '$\\text{E}[r_h]$',
+        'value': 1e+6,
+        'min': 1e6,
+        'max': 1e+7,
+        'step': 1e+6,
+        'readout_format': '.1e'
+    }
 
-    # put inside interactive
-    ip = interactive(model_wrapper, Dist_Vlim=Dist_Vlim_dd, E_Vlim=E_Vlim_fs, CoV_Vlim=CoV_Vlim_fs, Dist_KH=Dist_KH_dd,
-                     E_KH=E_KH_fs, CoV_KH=CoV_KH_fs, Dist_alpha=Dist_alpha_dd, E_alpha=E_alpha_fs, CoV_alpha=CoV_alpha_fs,
-                     Dist_MU=Dist_MU_dd, E_MU=E_MU_fs, CoV_MU=CoV_MU_fs, rho_KH_alpha=rho_KH_alpha_fs, nrev=nrev_fs,
-                     rev_per_hour=rev_per_hour_fs)
-
-    ip.children
-    # setup input controls
-    input_controls = ip.children[:-1]
-    column_1 = VBox(input_controls[:7])
-    column_2 = VBox(input_controls[7:])
-    input_box = HBox([column_1, column_2])
-
-    # setup output
-    output_stream = ip.children[-1]
-
-    # display
-    # show input fields
-    IPython.display.display(input_box)
-
-    # show output
-    IPython.display.display(output_stream)
+    # initialize interface
+    UI(model_wrapper, n_cols=2, Dist_Vlim=Dist_Vlim, E_Vlim=E_Vlim, CoV_Vlim=CoV_Vlim, Dist_KH=Dist_KH, E_KH=E_KH,
+       CoV_KH=CoV_KH, Dist_alpha=Dist_alpha, E_alpha=E_alpha, CoV_alpha=CoV_alpha, Dist_MU=Dist_MU, E_MU=E_MU,
+       CoV_MU=CoV_MU, rho_KH_alpha=rho_KH_alpha, nrev=nrev, rev_per_hour=rev_per_hour)

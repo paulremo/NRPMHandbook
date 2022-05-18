@@ -40,9 +40,21 @@ class UI:
             elif value['type'].casefold() == 'floatslider':
                 # remove type key and pass to widget
                 del value['type']
+                # user-specified options
                 widgets_dict[key] = widgets.FloatSlider(**value)
+                # defaults for floatsliders
+                if not 'continuous_update' in widgets_dict[key].keys:
+                    widgets_dict[key]['continuous_update'] = True
+                if not 'orientation' in widgets_dict[key].keys:
+                    widgets_dict[key]['orientation'] = 'horizontal'
+                if not 'readout' in widgets_dict[key].keys:
+                    widgets_dict[key]['readout'] = True
             else:
                 print(f'Provided widget {value["type"]} is not supported!')
+
+            # default options for all widgets
+            if not 'disabled' in widgets_dict[key].keys:
+                widgets_dict[key]['disabled'] = False
 
         # put inside interactive
         ip = interactive(fun, **widgets_dict)
@@ -56,7 +68,7 @@ class UI:
                 end_idx = items_per_column[ii]
                 start_idx = 0
             else:
-                end_idx = items_per_column[ii] + start_idx
+                end_idx += items_per_column[ii]
                 start_idx = items_per_column[ii-1]
 
             columns.append(VBox(input_controls[start_idx:end_idx]))
