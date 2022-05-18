@@ -1,4 +1,4 @@
-# {term}`STRUCTURAL RELIABILITY METHOD`s and inputs
+# Structural reliability methods and inputs
 
 In the following, the use of different methods based on structural reliability theory are briefly discussed in the context of mechanical {term}`RELIABILITY PREDICTION` (Section 4.6.1 to 4.6.3):
 
@@ -36,9 +36,9 @@ To allow for a quick reliability assessment without detailed knowledge of the un
 The most important aspects of simplified structural reliability modelling from a user’s perspective are summarized in Table   4 -7 below.
 
 (meca_table4_7)=
-```{list-table} Difference between the use of “full” and {term}`SIMPLIFIED {term}`STRUCTURAL RELIABILITY METHOD``s
+```{list-table} Difference between the use of “full” and Simplified Structural reliability methods
 :class: interactive-table
-:name: Difference between the use of full and {term}`SIMPLIFIED {term}`STRUCTURAL RELIABILITY METHOD``s
+:name: Difference between the use of “full” and Simplified Structural reliability methods
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_7.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
@@ -65,8 +65,7 @@ g(X) = X_{1} - \Theta X_{2}
 ````
 
 
-Here, $X_{1}$ may be interpreted as the “resistance” (allowable stress, or strength) of the considered part and $X_{2}$ as the “load” (or stress) acting on it. To capture the uncertainties inherent in the applied models, a {term}`     
-MODEL UNCERTAINTY` variable $\Theta$ is introduced. Failure occurs if the load is larger than the resistance, or $\Theta X_{2} > X_{1}$. Thus, the probability of failure is derived from the overlap of the statistical distributions of $X_{1}$ and $\Theta X_{2}$, see {numref}`Figure 3.3` for illustration. 
+Here, $X_{1}$ may be interpreted as the “resistance” (allowable stress, or strength) of the considered part and $X_{2}$ as the “load” (or stress) acting on it. To capture the uncertainties inherent in the applied models, a {term}`MODEL UNCERTAINTY` variable $\Theta$ is introduced. Failure occurs if the load is larger than the resistance, or $\Theta X_{2} > X_{1}$. Thus, the probability of failure is derived from the overlap of the statistical distributions of $X_{1}$ and $\Theta X_{2}$, see {numref}`Figure 3.3` for illustration. 
 
 Time dependence is considered by modelling either $X_{1}$ or $X_{2}$ (or both) as a function of time.
 
@@ -81,8 +80,7 @@ Illustration of {term}`STRUCTURAL RELIABILITY METHOD`s, with probability of fail
 
 Despite its simplicity, the limit state function in Equation 10 -2 is fairly generic, considering that both $X_{1}$ and $X_{2}$ can be a function of several random variables specific to the considered {term}`FAILURE MECHANISM`. In the simplified method, the two variables are defined such that the mean and coefficients of variation of $X_{1}$ and $X_{2}$ as well as the probability of failure $P_{f}$ can be estimated analytically with pre-defined distributional models for the underlying basic variables. The results may easily be updated if new test or operation data becomes available during the course of a space project, see Section 4.6.5 for details.
 
-The distribution of the {term}`     
-MODEL UNCERTAINTY` $\Theta$ is fixed for the simplified models, assuming a coefficient of variation of $\nu_{\Theta} = 0.2$ for most of the models considered in Section 4.7, which are generally empirical models. Setting the mean value to $\mu_{\Theta} = 1$ (assuming that the model or, more precisely, the limit state function is unbiased) is appropriate when realistic predictions are required. 
+The distribution of the {term}`MODEL UNCERTAINTY` $\Theta$ is fixed for the simplified models, assuming a coefficient of variation of $\nu_{\Theta} = 0.2$ for most of the models considered in Section 4.7, which are generally empirical models. Setting the mean value to $\mu_{\Theta} = 1$ (assuming that the model or, more precisely, the limit state function is unbiased) is appropriate when realistic predictions are required. 
 
 When needed, a certain explicit conservatism can be introduced in the simplified method by letting $\mu_{\Theta} > 1$ , which is equivalent to assuming a higher loading or “stress” than estimated by the model (i.e. a biased load and/or resistance model). In accordance with {term}`ECSS`-E-ST-32-10C Error: Reference source not foundwhere a “model factor” is multiplied with the design loads to account for uncertainties in mathematical models, it is recommended to set $\mu_{\Theta} = 1.2$ (or higher), referring to the model factor typically used for {term}`SPACECRAFT`s at the beginning of new developments. The effect of this assumption on the estimated failure probability depends on the distributional assumptions and on the design margin of safety. {numref}`Figure 3.4` shows a comparison between some results for $\mu_{\Theta} = 1.0$ (unbiased) and $\mu_{\Theta} = 1.2$ (conservative bias), assuming Lognormal distributions for all random variables.
 
@@ -97,8 +95,7 @@ Miss ref just above
 width: 600px
 name: Figure 3.4
 ---
-Effect of assuming a conservative bias in the {term}`     
-MODEL UNCERTAINTY` variable ($\mu_{\Theta} > 1$) on the estimated probability of failure.
+Effect of assuming a conservative bias in the {term}`MODEL UNCERTAINTY` variable ($\mu_{\Theta} > 1$) on the estimated probability of failure.
 ```
 
 ### General process for the application of the {term}`SIMPLIFIED {term}`STRUCTURAL RELIABILITY METHOD``
@@ -119,8 +116,7 @@ The application of the simplified {term}`FAILURE MECHANISM` models always follow
 
 ## Stress strength methods for structural items
 
-Another well-known application of the generic limit state function in Equation 10 -2 is the stress-strength method commonly applied for structural components, but also for other applications in mechanical {term}`RELIABILITY PREDICTION` (e.g. to assess motorization performance). Typically, the “strength” or resistance $X_{1}$  and the “stress” or load $X_{2}$ are the only two variables considered, which is equivalent to dropping the {term}`     
-MODEL UNCERTAINTY` variable $\Theta$ in Equation   10 -2. Note that this simplification furthermore implies that only a single stress and resistance is considered, unless e.g. several loads can be combined in a single metric, allowing to reduce a multivariate load distribution to a single random “stress” $X_{2}$ (see also Section 4.6.2). Problems that cannot be reduced to a two-variable problem can be handled using the general {term}`STRUCTURAL RELIABILITY METHOD`s discussed in Section 4.6.1.
+Another well-known application of the generic limit state function in Equation 10 -2 is the stress-strength method commonly applied for structural components, but also for other applications in mechanical {term}`RELIABILITY PREDICTION` (e.g. to assess motorization performance). Typically, the “strength” or resistance $X_{1}$  and the “stress” or load $X_{2}$ are the only two variables considered, which is equivalent to dropping the {term}`MODEL UNCERTAINTY` variable $\Theta$ in Equation   10 -2. Note that this simplification furthermore implies that only a single stress and resistance is considered, unless e.g. several loads can be combined in a single metric, allowing to reduce a multivariate load distribution to a single random “stress” $X_{2}$ (see also Section 4.6.2). Problems that cannot be reduced to a two-variable problem can be handled using the general {term}`STRUCTURAL RELIABILITY METHOD`s discussed in Section 4.6.1.
 
 The modelling of the two basic variables generally has to account for time dependency. In the simplest case without strength degradation, the resistance $X_{1}$ can be considered as time invariant. A time variant load $X_{2}(t)$ may then be transformed into a time invariant random variable by taking the maximum load $X_{2}^{max} = max(X_{2}(t))$ during a specified time period, e.g. the highest load experienced during launch. The probabilistic modelling for the maximum load should then be based on extreme value theory (e.g. by fitting a random variable distribution to the maxima of a random process). More complex cases with time variant strength (e.g. degradation effects) and/or cumulative loading (e.g. fatigue loads) require dedicated considerations using time variant {term}`STRUCTURAL RELIABILITY METHOD`s. In the remainder of this section, these applications will not be discussed any further, the focus will be on time invariant reliability calculations.
 
@@ -321,8 +317,7 @@ F_{T}(t) = P[T \leq t] = P_{f}(t) = P[g(X(t)) \leq 0]
 
 The resulting function may be interpreted as the prior predictive distribution for the sample variable, as all uncertainties (including model uncertainties and uncertainties associated with the basic variables) are already integrated in the assessment.
 
-A straightforward approach for updating this prior is to treat the {term}`     
-MODEL UNCERTAINTY` $\Theta$, which is one of the basic variables in $X$, as the uncertain model parameter of the prior model. The prior distribution for $\Theta$ is then the distribution assumed during the structural reliability assessment and the sampling distribution (likelihood) can be derived by conditioning on $\Theta = \theta$:
+A straightforward approach for updating this prior is to treat the {term}`MODEL UNCERTAINTY` $\Theta$, which is one of the basic variables in $X$, as the uncertain model parameter of the prior model. The prior distribution for $\Theta$ is then the distribution assumed during the structural reliability assessment and the sampling distribution (likelihood) can be derived by conditioning on $\Theta = \theta$:
 
 
 ````{admonition} Equation
@@ -335,8 +330,7 @@ F_{T}(t | \theta) = P[T \leq t | \theta] = P_{f}(t | \theta) = P[g(X(t)) \leq 0 
 ```
 ````
 
-The conditional distribution function $F_{T}(t | \theta)$ defined by Equation   10 -7 can now be used as the sampling distribution for the formulation of the Likelihood, which is combined with a prior for the distribution of the random {term}`     
-MODEL UNCERTAINTY`, $f'_{\Theta}(\theta)$, to apply Bayes rule for updating. In the general case, this will require numerical methods to perform the updating. However, an analytic solution can be derived for the special case of {term}`BAYESIAN INFERENCE` updating for a prior derived from the {term}`SIMPLIFIED {term}`STRUCTURAL RELIABILITY METHOD`` introduced in Section 4.6.2, as will be discussed in the following.
+The conditional distribution function $F_{T}(t | \theta)$ defined by Equation   10 -7 can now be used as the sampling distribution for the formulation of the Likelihood, which is combined with a prior for the distribution of the random {term}`MODEL UNCERTAINTY`, $f'_{\Theta}(\theta)$, to apply Bayes rule for updating. In the general case, this will require numerical methods to perform the updating. However, an analytic solution can be derived for the special case of {term}`BAYESIAN INFERENCE` updating for a prior derived from the {term}`SIMPLIFIED {term}`STRUCTURAL RELIABILITY METHOD`` introduced in Section 4.6.2, as will be discussed in the following.
 
 Using the generic simplified limit state function defined in Equation   10 -2, Equation   10 -7 can be reformulated as follows:
 
@@ -368,7 +362,7 @@ F_{T}(t | \theta) = \Phi \left(\frac{- \ln(p(t)) + \ln(\theta) + 0.5 ( \ln(\nu_{
 
 To proceed, a suitable function $p(t)$ must be defined. For the limit state functions provided with simplified model in Section 4.7, it may be assumed that the mean value parameter $p$ is proportional to $1/t$, although for some {term}`FAILURE MECHANISM`s this may be an approximation only. An alternative approach would be to derive the sampling distribution for $p$ instead of $t$. The data used for updating (observations for $t$) must then be transformed to “observed” mean value parameters $p(t)$.
 
-The following derivation is based on the proportionality assumption mentioned above. In this case, $p(t)$ may be replaced by $p = k \dot 1/t$, where $k$ is a constant specific to the considered item and {term}`FAILURE MECHANISM`. This leads to the following formulation:
+The following derivation is based on the proportionality assumption mentioned above. In this case, $p(t)$ may be replaced by $p = k \cdot 1/t$, where $k$ is a constant specific to the considered item and {term}`FAILURE MECHANISM`. This leads to the following formulation:
 
 
 ````{admonition} Equation
@@ -404,9 +398,7 @@ By comparing this result with the cumulative distribution function of the Lognor
 ```
 ````
 
-For the {term}`BAYESIAN INFERENCE` updating, the „deterministic“ {term}`     
-MODEL UNCERTAINTY` $\theta$ in Equation   10 -11 is now replaced by a random variable $\Theta$. The random {term}`     
-MODEL UNCERTAINTY` is assumed to follow a Lognormal distribution with mean value $E(\Theta) = 1$ (when assuming an unbiased {term}`FAILURE MECHANISM` model, see Section  for discussion) and coefficient of variation $\nu_{\Theta}$ (with specific values proposed for each simplified model presented in Section 4.7). With this, the parameter $\mu_{T}$ is Normal distributed with the following prior (hyper-)parameters:
+For the {term}`BAYESIAN INFERENCE` updating, the „deterministic“ {term}`MODEL UNCERTAINTY` $\theta$ in Equation   10 -11 is now replaced by a random variable $\Theta$. The random {term}`MODEL UNCERTAINTY` is assumed to follow a Lognormal distribution with mean value $E(\Theta) = 1$ (when assuming an unbiased {term}`FAILURE MECHANISM` model, see Section  for discussion) and coefficient of variation $\nu_{\Theta}$ (with specific values proposed for each simplified model presented in Section 4.7). With this, the parameter $\mu_{T}$ is Normal distributed with the following prior (hyper-)parameters:
 
 
 ````{admonition} Equation
@@ -455,7 +447,7 @@ The Normal distribution for the location parameter $\mu_{T}$ is a conjugate prio
 To summarize, a simple {term}`BAYESIAN INFERENCE` updating scheme for reliability estimates derived from the simplified method introduced in Section 4.6.2 may be defined as follows:
 
 * First the prior reliability estimate is derived, including the estimation of $\nu_{X_{1}}$, $\nu_{X_{2}}$ and $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$. The simplified model equations provided in Section 4.7 can be used for this task, using suitable input for the basic variable modelling.
-* The constant $k$ for the function $p(t) = k \dot 1/t$ is derived from the simplified model equations provided in Section 4.7 (time $t$ may have to be replaced by e.g. number of revolutions $rev$ for some {term}`FAILURE MECHANISM`s); the proportionality assumption for the function $p(t) should be checked in this step.
+* The constant $k$ for the function $p(t) = k \cdot 1/t$ is derived from the simplified model equations provided in Section 4.7 (time $t$ may have to be replaced by e.g. number of revolutions $rev$ for some {term}`FAILURE MECHANISM`s); the proportionality assumption for the function $p(t) should be checked in this step.
 * The standard deviation parameter $\sigma_{T}$ of the sampling distribution is calculated from $\nu_{X_{1}}$ and $\nu_{X_{2}}$, using Equation   10 -12. Note that this parameter is assumed to be fixed in the analytic updating approach and will not be affected by the updating.
 * The prior (hyper-)parameters $\mu '$ and $\sigma '$ of the conjugate Normal distribution for the location parameter $\mu_{T}$ are calculated from the input for the simplified method, using Equation   10 -13 and Equation   10 -14 above.
 * With this, the prior is fully defined and the {term}`BAYESIAN INFERENCE` updating can be performed using the formulas for the posterior hyperparameters $\mu ''$ and $\sigma ''$ for the Lognormal sampling distribution.
@@ -466,7 +458,7 @@ The assumptions underlying this approach are summarized as follows:
 * The limit state function for the prior reliability estimate can be brought into the generic format used in Equation   10 -8
 * The variables $X_{1}$, $X_{2}$ and $\Theta$ follow a Lognormal distribution.
 * Only the mean values of $X_{1}$ and $X_{2}$ are a function of time .
-* The mean value parameter $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$ can be modelled as $p(t) = k \dot 1/t$.
+* The mean value parameter $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$ can be modelled as $p(t) = k \cdot 1/t$.
 * The data sample for updating is uncensored, i.e. all items have been observed until failure
 
 
