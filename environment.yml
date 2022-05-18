@@ -1,4 +1,5 @@
 name: nrpmint_environment
 dependencies:
   - python=3.8
-  - pystra=1.0
+  - pip:
+    - pystra==1.0
