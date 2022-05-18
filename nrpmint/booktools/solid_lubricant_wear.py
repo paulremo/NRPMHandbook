@@ -138,7 +138,7 @@ def web_ui():
     }
     E_Vlim = {
         'type': 'floatslider',
-        'description': '$\\text{E}[V_{\\text{lim}}]$]',
+        'description': '$\\text{E}[V_{\\text{lim}}]$',
         'value': 6.5e-8,
         'min': 1e-8,
         'max': 1e-7,
