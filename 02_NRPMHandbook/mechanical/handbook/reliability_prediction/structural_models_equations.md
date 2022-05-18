@@ -214,8 +214,6 @@ Comparison of the analytic solution in Eq. {eq}`Equation 3.25` (adhesive wear mo
 
 ### Solid lubricant wear
 
-<button id="solid_lubricant_button" class="back-forward-button" onclick="redirect('../../models/solid_lubricant_wear.html')">Go to model</button>
-
 Due to the fact that solid lubricants do not evaporate, they are suitable for extreme temperatures (both cold and hot) and for
 applications where contamination could be an issue, e.g. in optical systems. In order to enable on-ground testing and to support the lubrication regime during operations, the lubricant (e.g. sputtered MoS<sub>2</sub>) is stored in special reservoirs such as cages in case of bearings, which are at the same time used to avoid ball collisions in ball bearings. When the lubricant is degraded, new lubricant is provided via the wear of the reservoir.
 
@@ -225,6 +223,8 @@ The modelling easily can be adapted from the adhesive wear model given in Sectio
 $\int_{0}^{t}{S(t) \cdot v(t)\text{d}t} = \int_{0}^{rev}{\alpha(rev)\text{d}rev}$ can be used for experimental evaluation of the average ball/cage interaction forces, defining a new interaction parameter $\alpha$.
 
 **Simplified solid lubricant wear model**
+
+<button id="solid_lubricant_button" class="back-forward-button" onclick="redirect('../../models/solid_lubricant_wear.html')">Go to model</button>
 
 Using the simplified form of the adhesive wear model in Eq. {eq}`Equation 3.19` (assuming constant conditions during each mission phase), a limit state function for solid lubricant wear can be derived as follows:
 
@@ -350,6 +350,8 @@ Bearing geometry.
 ```
 
 **Simplified fluid lubricant wear model**
+
+<button id="fluid_lubricant_button" class="back-forward-button" onclick="redirect('../../models/fluid_lubricant_wear.html')">Go to model</button>
 
 For the simplified modelling, it is considered sufficient to model only $\Theta$ and $K$ as random variables; all other variables in Eq. {eq}`Equation 3.32` are assumed to be deterministic. Since the relation for the bearing life from \[BR79\], $K \cdot \text{exp}\left( - 3.35 \cdot p_{m} \right)$, is purely empirical, curve fitting residuals or the distribution of the coefficient $K$ may be used for the probabilistic assessments.
 
@@ -521,6 +523,8 @@ The time dependent formulation in Eq. {eq}`Equation 3.39` neglects load history 
 ```
 
 **Simplified S/N curve modelling**
+
+<button id="fatigue_failure_button" class="back-forward-button" onclick="redirect('../../models/fatigue_failure.html')">Go to model</button>
 
 The starting point for the simplified model is the limit state function in Eq. {eq}`Equation 3.39`, with load cycles summarized in bins (last row). For the simplified approach, the variables $N_{j}$, $B$ and $C$ are assumed to be deterministic. The uncertainty associated with the loading $S_{eq,j}$ is then the only uncertainty that cannot be taken out of the sum. A simple approach to model this uncertainty is to multiply deterministic values for $S_{eq,j}$ (e.g. taken from design calculations) with a random stress scaling factor $SSF$ that is applied globally, i.e. taking on the same value for all bins \[BR81\]. If it is furthermore assumed that the endurance limit $C$ equals zero (which is conservative for all applications), the limit state function defined in Eq. {eq}`Equation 3.39` can be brought into the following simple expression:
 
