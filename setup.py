@@ -12,5 +12,6 @@ setup(
     author = 'Paul-Remo Wagner',
     author_email = 'wagner@matrisk.com',
     install_requires = install_requires,
+    python_requires='>=3.8',
     packages = find_packages(exclude=['tests*'])
 )
