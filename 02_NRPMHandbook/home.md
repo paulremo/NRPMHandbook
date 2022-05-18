@@ -18,11 +18,30 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 :column: col-6
 :card: border-2
 
+**Methods**
+^^^^
+<img class="link-image" src="_static/images/methodPicture.png" alt="logo methods" onclick="redirect('methods/intro.html')">
++++
+
+[Go to Methods](methods/intro)
+
+---
+
+**Methodologies**
+^^^^
+<img class="link-image" src="_static/images//methodologyPicture.png" alt="logo methodology" onclick="redirect('methodologies/intro.html')">
++++
+
+[Go to Methodologies](methodologies/intro)
+````
+````{panels}
+:column: col-6
+:card: border-2
+
 **EEE**
 ^^^^
 <img class="link-image" src="_static/images/eeePicture.png" alt="logo triple e" onclick="redirect('eee/mainEEE.html')">
 +++
-{badge}`EEE,badge-primary`
 
 [Go to EEE](eee/mainEEE)
 
@@ -32,7 +51,6 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 ^^^^
 <img class="link-image" src="_static/images//mecaPicture.png" alt="logo mechanical" onclick="redirect('mechanical/handbook/introduction.html')">
 +++
-{badge}`Mechanical,badge-primary`
 
 [Go to Mechanical](mechanical/handbook/introduction)
 ````
@@ -44,7 +62,6 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 ^^^^
 <img class="link-image" src="_static/images//miscellaneousPicture.png" alt="logo miscellaneous" onclick="redirect('miscellaneous/handbook/introduction.html')">
 +++
-{badge}`Miscellaneous,badge-primary`
 
 [Go to Miscellaneous](miscellaneous/handbook/introduction)
 
@@ -54,7 +71,6 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 ^^^^
 <img class="link-image" src="_static/images//systemPicture.png" alt="logo system" onclick="redirect('system/handbook/introduction.html')">
 +++
-{badge}`System,badge-primary`
 
 [Go to System](system/handbook/introduction)
 ````
