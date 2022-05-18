@@ -1,4 +1,4 @@
-# Systematic {term}`FAILURE MODE`lling
+# Systematic failure modelling
 
 The present section introduces the modelling of systematic failures using In Orbit Return data. After an introduction to the topic (Section Error: Reference source not found) and the classification of systematic failures (Section Error: Reference source not found), the modelling is explained starting with the data sources and methods used (Section Error: Reference source not found). The description of the model in Section Error: Reference source not found starts with a discussion of is range of applicability, which is related to the applicability of the data source used.
 
@@ -41,29 +41,29 @@ An ideal model for systematic failure or {term}`ANOMALY` modelling considers all
 
 To define and classify systematic failures, it is first necessary to define a sound DESIGN, a sound MANUFACTURING and a sound OPERATION. The related errors are derived accordingly.
 
-***DESIGN** is SOUND when the system *
+_**DESIGN** is SOUND when the system_
 
--   *performs the FUNCTIONS and the PERFORMANCES specified in the Technical Specification *
+-   _performs the FUNCTIONS and the PERFORMANCES specified in the Technical Specification_
 
--   *Is able to sustain / handle all the STRESSES: internal (by design, according to the elements User Manuals) and external ("normal" environment) as specified (= "under given conditions")*
+-   _Is able to sustain / handle all the STRESSES: internal (by design, according to the elements User Manuals) and external ("normal" environment) as specified (= "under given conditions")_
 
-*during the design lifetime, when operated without any misuse (in consistency with the User's Manual).*
+_during the design lifetime, when operated without any misuse (in consistency with the User's Manual)._
 
-*e.g. Design error = weakness in design creating electrical overstresses on electronic parts up to definitive failure of the part.*
+_e.g. Design error = weakness in design creating electrical overstresses on electronic parts up to definitive failure of the part._
 
-***MANUFACTURING** is SOUND when the "as-built" system*
+_**MANUFACTURING** is SOUND when the "as-built" system_
 
--   *respects the DESIGN CHARACTERISTICS, i.e. Key characteristics (design assumed sound), i.e. no defect.*
+-   _respects the DESIGN CHARACTERISTICS, i.e. Key characteristics (design assumed sound), i.e. no defect._
 
-*e.g. Manufacturing Error = defect in a soldering leading to increased impedance inducing increase of voltage drop and reduction of current..*
+_e.g. Manufacturing Error = defect in a soldering leading to increased impedance inducing increase of voltage drop and reduction of current._
 
-***OPERATION** is SOUND when the "as-built" system is used/operated in conformance with the User's Manual (assumed to be sound, User's Manual is considered as part of design)*
+_**OPERATION** is SOUND when the "as-built" system is used/operated in conformance with the User's Manual (assumed to be sound, User's Manual is considered as part of design)_
 
--   *Mission profile consistency*
+-   _Mission profile consistency_
 
--   *as per design DEFINITION, neither overstresses nor additional/external stresses*
+-   _as per design DEFINITION, neither overstresses nor additional/external stresses_
 
-*e.g. Operation Error = 300 000 On/Off cycles over {term}`MISSION LIFETIME` whereas the part is qualified wrt. 100000 On/Off only*
+_e.g. Operation Error = 300 000 On/Off cycles over {term}`MISSION LIFETIME` whereas the part is qualified wrt. 100000 On/Off only_
 
 It should be noted that the term "system" in this context may relate to different levels in the system hierarchy, e.g. equipment, subsystem or spacecraft level.
 
@@ -152,11 +152,11 @@ It should be noted that even though there is no difference in terms of the conse
 
 The repartition of major anomalies by satellite subsystem in which the {term}`ANOMALY` occurred is based on the following classification:
 
--   **AOCS:** Attitude and Orbit Control System
+-   **{term}`AOCS`:** Attitude and Orbit Control System
 
--   **DEP:** Deployment mechanism
+-   **{term}`DEP`:** Deployment mechanism
 
--   **DHS:** Data Handling System (incl. processor, data bus, ...)
+-   **{term}`DHS`:** Data Handling System (incl. processor, data bus, ...)
 
 -   **{term}`PL`:** Payload (e.g. Ku Band communication channels, instrument for Earth Observation)
 
@@ -172,11 +172,11 @@ The repartition of major anomalies by satellite subsystem in which the {term}`AN
 
 -   **{term}`TMI`:** Payload data transmitting channel (esp. for Earth observation and Science missions)
 
--   **TTC:** Telemetry and Telecommand (incl. transmitter, antenna, ...)
+-   **{term}`TTC`:** Telemetry and Telecommand (incl. transmitter, antenna, ...)
 
 -   **{term}`SYS`:** System (when it is not possible to state the subsystem)
 
--   **NN:** Unknown / Unspecified
+-   **{term}`NN`:** Unknown / Unspecified
 
 For the subsystems with {term}`ANOMALY` data, the anomalies are further classified by severity, following the same (mission level) classification as introduced above.
 
@@ -185,20 +185,20 @@ For the subsystems with {term}`ANOMALY` data, the anomalies are further classifi
 In consistency with the taxonomy of failures by {term}`FAILURE ROOT CAUSE` provided in Section Error: Reference source not found above, "systematic" anomalies can now be further classified by distinguishing the following root causes:
 
 -   **Operation**:
-    > **Operation error relates to any {term}`ANOMALY` in the operations plan with respect to the design characteristics. The User's Manual can be used as a reference, which means an operation error is a misuse.\
+    > Operation error relates to any {term}`ANOMALY` in the operations plan with respect to the design characteristics. The User's Manual can be used as a reference, which means an operation error is a misuse.\
     > Note: it is assumed that the User's Manual is error free, otherwise the error is considered as a design error.
 
 -   **Hardware**:
-    > **Hardware error relates to DESIGN errors and /or MANUFACTURING errors at {term}`HW` level.
+    > Hardware error relates to DESIGN errors and /or MANUFACTURING errors at {term}`HW` level.
 
 -   **Software**:
-    > **Software error relates to DESIGN errors (algorithm...) and /or CODING errors (implementation) at {term}`SW` level.
+    > Software error relates to DESIGN errors (algorithm...) and /or CODING errors (implementation) at {term}`SW` level.
 
 -   **System**:
-    > **System error relates to functional design errors (algorithm, celestial configuration...)
+    > System error relates to functional design errors (algorithm, celestial configuration...)
 
 -   **Environment**:
-    > **Environment error relates to extrinsic threats beyond the level specified in the mission profile (i.e. specification underestimated the environmental stresses).
+    > Environment error relates to extrinsic threats beyond the level specified in the mission profile (i.e. specification underestimated the environmental stresses).
 
 As can be seen from this classification, the modelling considers also anomalies due to software errors. A dedicated discussion of software failures in the context of reliability prediction can be found in Section Error: Reference source not found.
 
@@ -253,11 +253,11 @@ where $\eta_{i}$ represent the parameters of the Dirichlet distribution for the 
 
 A non-informative prior is used with
 
-> $f'\left( p_{i} \vee \text{{term}`ANOMALY`} \right)^{}\text{DIR}\left( \eta_{i} = 1 \right)$
+> $f'\left( p_{i} \vee \text{Anomaly} \right)^{}\text{DIR}\left( \eta_{i} = 1 \right)$
 
 Given the count data of anomalies per subsystem $n_{,i}$ the posterior distribution is given by:
 
-> $f'{'\left( p_{i} \vee \text{{term}`ANOMALY`} \right)}^{}\text{DIR}\left( \eta_{i} + n_{,i} \right)$
+> $f'{'\left( p_{i} \vee \text{Anomaly} \right)}^{}\text{DIR}\left( \eta_{i} + n_{,i} \right)$
 
 **{term}`ANOMALY` classification modelling**
 
@@ -265,33 +265,33 @@ In a first step the probability of a hardware failure (Severity 4) and the compl
 
 This probabilities for a hardware failure $p_{1,\text{HW}\text{failure}}$ and no hardware failures $p_{2,\text{no}\text{HW}\text{failure}}$ conditional on an {term}`ANOMALY` is modelled using a multinomial sampling distribution. The conjugate prior is a multivariate generalization of the beta distribution and known as Dirichlet distribution:
 
-> $f\left( p_{i,\text{HW}\text{failure}} \vee \text{{term}`ANOMALY`} \right) = \frac{\Gamma\left( \sum_{i = 1}^{2}\delta_{i} \right)}{\prod_{i = 1}^{2}{\Gamma\left( \delta_{i} \right)}}\prod_{i = 1}^{2}p_{i}^{\delta_{i} - 1}$
+> $f\left( p_{i,\text{HW}\text{failure}} \vee \text{Anomaly} \right) = \frac{\Gamma\left( \sum_{i = 1}^{2}\delta_{i} \right)}{\prod_{i = 1}^{2}{\Gamma\left( \delta_{i} \right)}}\prod_{i = 1}^{2}p_{i}^{\delta_{i} - 1}$
 where
-- $p_{1,\text{HW}\text{failure}} = \Pr\left( \text{hardware}\text{failure} \vee \text{{term}`ANOMALY`} \right)$
-- $p_{2,\text{no}\text{HW}\text{failure}} = \Pr\left( \text{no}\text{hardware}\text{failure} \vee \text{{term}`ANOMALY`} \right) = 1 - p_{1,\text{HW}\text{failure}}$
+- $p_{1,\text{HW}\text{failure}} = \Pr\left( \text{hardware}\text{failure} \vee \text{Anomaly} \right)$
+- $p_{2,\text{no}\text{HW}\text{failure}} = \Pr\left( \text{no}\text{hardware}\text{failure} \vee \text{Anomaly} \right) = 1 - p_{1,\text{HW}\text{failure}}$
 - $\delta_{i}$ represents the parameter of the Dirichlet distribution. The marginal distribution of $p_{i}$ is a beta distribution.
 
 A non-informative prior is used as a prior with
 
-> $f'\left( p_{i} \vee \text{{term}`ANOMALY`} \right)^{}\text{DIR}\left( \delta_{i} = 1 \right)$
+> $f'\left( p_{i} \vee \text{Anomaly} \right)^{}\text{DIR}\left( \delta_{i} = 1 \right)$
 
 Given the count data of hardware failures $n_{c1}$ and no hardware failures $n_{c2}$ the posterior distribution is given by
 
-> $f'{'\left( p_{i} \vee \text{{term}`ANOMALY`} \right)}^{}\text{DIR}\left( \delta_{i} + n_{\text{ci}} \right)$
+> $f'{'\left( p_{i} \vee \text{Anomaly} \right)}^{}\text{DIR}\left( \delta_{i} + n_{\text{ci}} \right)$
 
 **Severity rate modelling**
 
 Given a hardware failure, the probability of observing a specific severity (Severity 1-4) can also be modelled using a Dirichlet distribution:
 
-> $f\left( p_{\text{Severity}i} \vee \text{{term}`ANOMALY`},\text{HW}\text{failure} \right) = \frac{\Gamma\left( \sum_{i = 1}^{4}\theta_{i} \right)}{\prod_{i = 1}^{4}{\Gamma\left( \theta_{i} \right)}}\prod_{i = 1}^{4}p_{i}^{\theta_{i} - 1}$
+> $f\left( p_{\text{Severity}i} \vee \text{Anomaly},\text{HW}\text{failure} \right) = \frac{\Gamma\left( \sum_{i = 1}^{4}\theta_{i} \right)}{\prod_{i = 1}^{4}{\Gamma\left( \theta_{i} \right)}}\prod_{i = 1}^{4}p_{i}^{\theta_{i} - 1}$
 
 For the parameter estimation a non-informative prior is used.
 
-> $f'\left( p_{\text{Severity}i} \vee \text{{term}`ANOMALY`},\text{HW}\text{failure} \right)\text{DIR}\left( \theta_{i} = 1 \right)$
+> $f'\left( p_{\text{Severity}i} \vee \text{Anomaly},\text{HW}\text{failure} \right)\text{DIR}\left( \theta_{i} = 1 \right)$
 
 Using the count data of different severity counts $n_{s1}$ distribution is given by
 
-> $f''\left( p_{\text{Severity}i} \vee \text{{term}`ANOMALY`},\text{HW}\text{failure} \right)\text{DIR}\left( \theta_{i} + n_{\text{si}} \right)$
+> $f''\left( p_{\text{Severity}i} \vee \text{Anomaly},\text{HW}\text{failure} \right)\text{DIR}\left( \theta_{i} + n_{\text{si}} \right)$
 
 Detailed count data is available for modelling HW failure and the associated severity class for each defined subsystem. The analysis is performed for the entire system as well as for the subsystem in the case count data is available. Modelling the subsystems lead to larger uncertainties in the estimation due to larger statistical uncertainties.
 
@@ -309,8 +309,7 @@ In the following, some basic assumptions and resulting limitations of the models
 
 The selected modelling approach is independent of the manufacturer and spacecraft for which the prediction shall be performed, but the data used for modelling is not. In terms of quality assurance levels and manufacturer experience, the model is valid for major satellite prime contractors, and should not be used when lower quality levels must be suspected. see e.g. Lecointe et al. Error: Reference source not found for a comparison between cubesat reliability and traditional {term}`GEO` satellites or Swartwout Error: Reference source not found for a comparison of different cubesat missions implying different quality assurance regimes.
 
-The impact of different spacecraft development strategies (e.g. generic versus non-generic product) and orbits (e.g. {term}`GEO` versus LEO) was investigated based on the data used for the model in Section Error: Reference source not found below, but the results were difficult to interpret and are therefore not shown hereafter. The model provided is based on the overall fleet data, i.e. considering a mix of generic and non-generic products in different orbits. What can be said from the investigations made is that the model is well in line with the results derived for {term}`GEO` satellites. For other types of spacecrafts, it may be used as a first approximation even though implying a somewhat larger implicit {term}`     
-MODEL UNCERTAINTY`.
+The impact of different spacecraft development strategies (e.g. generic versus non-generic product) and orbits (e.g. {term}`GEO` versus LEO) was investigated based on the data used for the model in Section Error: Reference source not found below, but the results were difficult to interpret and are therefore not shown hereafter. The model provided is based on the overall fleet data, i.e. considering a mix of generic and non-generic products in different orbits. What can be said from the investigations made is that the model is well in line with the results derived for {term}`GEO` satellites. For other types of spacecrafts, it may be used as a first approximation even though implying a somewhat larger implicit {term}`MODEL UNCERTAINTY`.
 
 #### Using severity levels in a reliability prediction context
 
@@ -520,6 +519,6 @@ miss 2 ref above
 width: 600px
 name: Figure 7.45
 ---
-Repartition of anomalies whose root cause is classified as "Hardware" by the type of the equipment (EEE, Mechanical -- {term}`MEC`, Miscellaneous -- MIS) involved and the detailed root cause.
+Repartition of anomalies whose root cause is classified as "Hardware" by the type of the equipment ({term}`EEE`, Mechanical -- {term}`MEC`, Miscellaneous -- {term}`MIS`) involved and the detailed root cause.
 ```
 

@@ -195,7 +195,7 @@ The following rules should be applied to Boolean variables belonging to the same
 (syst_table4_8)=
 **Table 4.8** : Boolean Phase Algebra rules
 
-<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_8.html" frameborder="0" onkeyup="resize_iframe()"></iframe>
+<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_8.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 The Boolean phase algebra in [Table 4.8](syst_table4_8) allows identifying the possible scenarios where due to more stringent failure criteria in a later phase the system failure occurs and is described as a latent failure. With application of the Boolean algebra, the performance of a component through different phases is no longer considered separately. Using the Boolean phase algebra, the system reliability over all phases is obtained by the following equation:
 

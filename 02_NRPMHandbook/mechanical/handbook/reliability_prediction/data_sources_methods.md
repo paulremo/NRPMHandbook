@@ -87,9 +87,10 @@ The {term}`NSWC` Handbook for Mechanical Reliability Prediction Error: Reference
 ``  
 ```{math}
 :label: Equation 3.1
-\lambda = \lambda_{ref} \dot \frac{\lambda_{op}}{\lambda} = \lambda_{ref} \dot \frac{MTTF_{ref}}{MTTF} = \lambda_{ref} \dot C
+\lambda = \lambda_{ref} \cdot \frac{\lambda_{op}}{\lambda} = \lambda_{ref} \cdot \frac{MTTF_{ref}}{MTTF} = \lambda_{ref} \cdot C
 ```
 ````
+
 
 The advantage of this approach is the increased flexibility, as generic models for different part “families”, e.g. springs, can be tuned to a wide variety of specific part types and applications. Despite this interesting feature, the direct application of the {term}`NSWC` models for reliability predictions in space applications is not recommended due to the following limitations:
 
@@ -138,7 +139,7 @@ Method selection for mechanical reliability prediction depending on the availabl
 
 In the following subsections, the implementation of the different methods in mechanical domain is briefly discussed, covering all methods listed above. The remainder of this chapter ([Sections 4.4](failure_identification_focus.md) and [following](meca_4_3_2_1)) focuses largely on the {term}`PHYSICS OF FAILURE` as a basis for mechanical reliability prediction.
 
-(meca_4_3_2_1)
+(meca_4_3_2_1)=
 ### Statistical methods
 
 Statistical methods for reliability prediction are in principle domain-independent, and do not require any specific considerations for {term}`MECHANICAL PART`s. However, the following two important reliability characteristics of {term}`MECHANICAL PART`s should be kept in mind when doing the analysis:

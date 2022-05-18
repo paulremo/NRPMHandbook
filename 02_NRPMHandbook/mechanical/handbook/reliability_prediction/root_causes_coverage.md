@@ -3,9 +3,9 @@
 [Table 4 -1](meca_table4_1) gives an overview of the failure categories defined in Chapter 4 (Part I) and their coverage by the methods described in the present chapter. In the following subsections, the interpretation of each failure category within the mechanical chapter is briefly explained.
 
 (meca_table4_1)=
-```{list-table} Coverage of {term}`FAILURE ROOT CAUSE`s by the mechanical {term}`RELIABILITY PREDICTION` methodology presented in this chapter
+```{list-table} Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter
 :class: interactive-table
-:name: Coverage of {term}`FAILURE ROOT CAUSE`s by the mechanical {term}`RELIABILITY PREDICTION` methodology presented in this chapter
+:name: Coverage of failure root causes by the mechanical reliability prediction methodology presented in this chapter
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_1.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
@@ -48,9 +48,9 @@ For mechanical reliability assessment, the following aspects need to be consider
 The extrinsic effects contributing most to mechanical {term}`FAILURE MECHANISM`s are summarized in [Table 4 -2](meca_table4_2). The full list of the environments which might cause {term}`EXTRINSIC FAILURE`s is presented in **Chapter 4 (Part I)**.
 
 (meca_table4_2)=
-```{list-table} Environments with the highest contribution to the {term}`EXTRINSIC FAILURE`s
+```{list-table} Environments with the highest contribution to the extrinsic failures
 :class: interactive-table
-:name: Environments with the highest contribution to the {term}`EXTRINSIC FAILURE`s
+:name: Environments with the highest contribution to the extrinsic failures
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
