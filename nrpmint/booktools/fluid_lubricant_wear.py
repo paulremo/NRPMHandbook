@@ -150,7 +150,7 @@ def web_ui():
     CoV_K = {
         'type': 'floatslider',
         'description': '$\\text{C.o.V.}[K]$',
-        'value': 0.1,
+        'value': 0.75,
         'min': 0.05,
         'max': 0.75,
         'step': 0.05,
@@ -183,20 +183,20 @@ def web_ui():
     M0 = {
         'type': 'floatslider',
         'description': '$M_0$',
-        'value': 6.5e-8,
-        'min': 1e-8,
-        'max': 1e-7,
-        'step': 1e-9,
-        'readout_format': '.1e'
+        'value': 80,
+        'min': 10,
+        'max': 100,
+        'step': 1,
+        'readout_format': '.0f'
     }
     Minact = {
         'type': 'floatslider',
-        'description': '$M_{\\text{inact}}}$',
-        'value': 1.5,
+        'description': '$M_{\\text{inact}}$',
+        'value': 80*0.01,
         'min': 1,
-        'max': 10,
-        'step': 0.2,
-        'readout_format': '.1e'
+        'max': 100,
+        'step': 1,
+        'readout_format': '.0f'
     }
     Nb = {
         'type': 'floatslider',
@@ -239,7 +239,7 @@ def web_ui():
     theta = {
         'type': 'floatslider',
         'description': '$\\theta$',
-        'value': 25,
+        'value': 10,
         'min': 0,
         'max': 45,
         'step': 1,
@@ -248,10 +248,10 @@ def web_ui():
     nrev = {
         'type': 'floatslider',
         'description': '$\\text{E}[r]$',
-        'value': 2.45e+8,
-        'min': 1e+8,
-        'max': 1e+9,
-        'step': 5e+6,
+        'value': 1e+6,
+        'min': 1e+5,
+        'max': 1e+8,
+        'step': 1e+5,
         'readout_format': '.1e'
     }
     rev_per_hour = {
