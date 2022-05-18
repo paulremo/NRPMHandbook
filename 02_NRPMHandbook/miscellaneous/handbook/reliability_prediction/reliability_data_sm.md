@@ -2,12 +2,7 @@
 # Reliability data for miscellaneous “standard model”
 {numref}`Reliability data` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
 
-The meaning of the columns is explained in **XXX**.
-
-```{admonition} Todo
-:class: todo
-Miss ref just above "in ..."
-```
+The meaning of the columns is explained in {numref}`Structure of the reliability data table`.
 
 ````{admonition} Note 1 : MIS_01 TWTA, Single HPA
 :class: note
@@ -19,12 +14,6 @@ The failure rate is provided per TWT Channel (mono channel or dual channel). In 
     * {term}`CAMP` = 25%
     * TWT = 30%
 2. to use the supplier repartition as per its own {term}`RELIABILITY PREDICTION`.
-
-```{admonition} Todo
-:class: todo
-REF ERROR just above in 1.
-```
-````
 
 Reference to a table {numref}`Structure of the reliability data table` and to another table {numref}`Reliability data`.
 

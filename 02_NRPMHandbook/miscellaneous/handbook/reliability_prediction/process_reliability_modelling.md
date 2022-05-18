@@ -275,7 +275,7 @@ Three models are presented to model include wear-out mechanisms and impacts on t
 * **MODEL 1**: ${term}`RF`$ model and $WO$ model are combined from $t=0$, based on $T = TTF = min(T_{RF}, T_{WO})$
 * **MODEL 2**: ${term}`RF`$ model and $WO$ model are combined beyond $\theta$ , assumed to be the qualification time (laps of time defined in accordance with the technical {term}`REQUIREMENT`s –agreed with the customer- in order to demonstrate the capability of an item to withstand the applied stresses all along the specified lifetime without significant degradations preventing from the mission achievement).
 * **MODEL 3**: ${term}`RF`$ distribution and $WO_{PDF}$ are separated @ $\alpha$ ($RF$ before, $WO$ beyond) from $\lambda_{WO}(\alpha)=\lambda_{RF}$
-The three models are presented in **Section Error: Reference source not found**
+The three models are presented in {numref}`syst_4_8_1`.
 All three Models can be defined for every Wear-out {term}`PROBABILITY DENSITY FUNCTION`: Normal, log-Normal, Gamma … with adequate properties.
 
 `````{admonition} Rule
@@ -363,12 +363,7 @@ P(\text{FAILURE}) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \math
 ````
 
 The model is common to all miscellaneous items.
-Refer to **the Chapter Error: Reference source not found** for defining the SF value. 
-
-````{admonition} Todo
-:class: todo
-miss ref above
-````
+Refer to {numref}`introduction_system` for defining the SF value. 
 
 ``````
 
@@ -393,7 +388,7 @@ The probability of {term}`EXTRINSIC FAILURE`s EX is dependent on
 2. The probability to be hit by a particle (refer to µmeteorits flux and characteristics depending on the orbit, on the position on the orbit and on the velocity vector) and 
 3. The shielding for the item protection.
   
-The definition of a model representing the probability to be hit by a debris is out of the scope of the Current document. Refer to Chapter **Error: Reference source not found** for more information.
+The definition of a model representing the probability to be hit by a debris is out of the scope of the Current document. Refer to {numref}`introduction_system` for more information.
 
 ``````
 

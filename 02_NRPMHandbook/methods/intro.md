@@ -1,3 +1,4 @@
+(methods)=
 # Methods
 
 ```{admonition} Todo
