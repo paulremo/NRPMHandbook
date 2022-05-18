@@ -75,3 +75,10 @@ def test_display(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SSF, 
     fatigue_failure.model_wrapper(Dist_DCR=Dist_DCR, E_DCR=E_DCR, CoV_DCR=CoV_DCR, Dist_A=Dist_A, E_A=E_A, CoV_A=CoV_A,
                                   Dist_SSF=Dist_SSF, E_SSF=E_SSF, CoV_SSF=CoV_SSF, Dist_coll=Dist_coll, E_coll=E_coll,
                                   CoV_coll=CoV_coll, Dist_MU=Dist_MU, E_MU=E_MU, CoV_MU=CoV_MU, B=B, N=N)
+
+
+def test_web_ui():
+    """
+    Tests the current web user interface
+    """
+    fatigue_failure.web_ui()

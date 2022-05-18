@@ -44,7 +44,7 @@ class UI:
                 widgets_dict[key] = widgets.FloatSlider(**value)
                 # defaults for floatsliders
                 if not 'continuous_update' in widgets_dict[key].keys:
-                    widgets_dict[key]['continuous_update'] = True
+                    widgets_dict[key]['continuous_update'] = False
                 if not 'orientation' in widgets_dict[key].keys:
                     widgets_dict[key]['orientation'] = 'horizontal'
                 if not 'readout' in widgets_dict[key].keys:

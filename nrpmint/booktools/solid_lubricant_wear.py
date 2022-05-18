@@ -1,7 +1,4 @@
 # display packages
-import IPython
-import ipywidgets as widgets
-from ipywidgets import interactive, Layout, HBox, VBox
 from nrpmint.interface.web import UI
 
 # scientific packages
