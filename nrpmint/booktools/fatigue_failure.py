@@ -137,13 +137,13 @@ def web_ui():
     # prepare sliders and drop downs
     Dist_DCR = {
         'type': 'dropdown',
-        'description': 'Dist $D_{\\text{CR}}$',
+        'description': 'Dist $D_{\\text{cr}}$',
         'value': 'LogNormal',
         'options': ['LogNormal', 'Normal', 'Gumbel'],
     }
     E_DCR = {
         'type': 'floatslider',
-        'description': '$\\text{E}[D_{\\text{CR}}]$',
+        'description': '$\\text{E}[D_{\\text{cr}}]$',
         'value': 1e13,
         'min': 5e12,
         'max': 2e13,
@@ -152,7 +152,7 @@ def web_ui():
     }
     CoV_DCR = {
         'type': 'floatslider',
-        'description': '$\\text{C.o.V.}[D_{\\text{CR}}]$',
+        'description': '$\\text{C.o.V.}[D_{\\text{cr}}]$',
         'value': 0.2,
         'min': 0.05,
         'max': 1,
@@ -209,13 +209,13 @@ def web_ui():
     }
     Dist_coll = {
         'type': 'dropdown',
-        'description': 'Dist coll',
+        'description': 'Dist $S$',
         'value': 'LogNormal',
         'options': ['LogNormal', 'Gumbel'],
     }
     E_coll = {
         'type': 'floatslider',
-        'description': '$\\text{E}[\\text{coll}]$',
+        'description': '$\\text{E}[S]$',
         'value': 200,
         'min': 100,
         'max': 400,
@@ -224,7 +224,7 @@ def web_ui():
     }
     CoV_coll = {
         'type': 'floatslider',
-        'description': '$\\text{C.o.V.}[\\text{coll}]$',
+        'description': '$\\text{C.o.V.}[S]$',
         'value': 0.2,
         'min': 0.05,
         'max': 1,
