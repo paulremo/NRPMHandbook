@@ -38,6 +38,8 @@ parts:
       sections:
       - file: mechanical/models/solid_lubricant_wear
         title: Solid lubricant wear 
+      - file: mechanical/models/fluid_lubricant_wear
+        title: Fluid lubricant wear 
       - file: mechanical/models/fatigue_failure
         title: Fatigue failure
   - caption: Miscellaneous chapter
