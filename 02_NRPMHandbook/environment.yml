@@ -1,3 +1,0 @@
-name: nrpmint_environment
-dependencies:
-  - python=3.8
