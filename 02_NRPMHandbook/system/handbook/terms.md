@@ -1,5 +1,10 @@
 # Terms, definitions and abbreviated terms
 
+```{admonition} Todo
+:class: todo
+Team task
+```
+
 ## Terms from other standards
 
 
