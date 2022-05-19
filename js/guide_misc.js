@@ -529,8 +529,8 @@ let m8 = new DataMessage("componentfail", null, "bb", "other-message");
 let m9 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
 );
 
-let m10 = new ExitMessage(null, "You can go on the handbook page", "other-message", "http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
-let m11 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/models/failure_rate_processing.html");
+let m10 = new ExitMessage(null, "You can go on the handbook page", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
+let m11 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
 
 let m12 = new Message(null, "Maybe we use another name... To which subsystem does your component belong ?", "other-message", false, false);
 let m13 = new DataMessage("categoriesfail", null, "...", "other-message", "categories", dataCategories);
@@ -541,12 +541,12 @@ let m15 = new DataMessage("categoriesfail2", null, "", "other-message", "itemCom
 let m16 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
 );
 
-let m17 = new ExitMessage(null, "You can go on the handbook page", "other-message", "http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
-let m18 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/models/failure_rate_processing.html");
+let m17 = new ExitMessage(null, "You can go on the handbook page", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
+let m18 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
 
 let m19 = new Message(null, "It must be a holistic component", "other-message", false, false);
 let m20 = new Message(null, "There's no standard methodology. ", "other-message", false, false);
-let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/models/failure_rate_processing.html");
+let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
 
 let m22 = new ConfigurableMessage(false, null, "The value of &lambda;&#8321; is ", "other-message", standardComponentFR);
 let m23 = new Message(null, "Don't forget to note this value", "my-message", false, false);
