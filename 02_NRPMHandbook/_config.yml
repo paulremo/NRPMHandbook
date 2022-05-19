@@ -53,7 +53,7 @@ sphinx:
     execution_show_tb       : True
     execution_timeout       : 60
     # turn off jupyter notebook execution
-    jupyter_execute_notebooks: off 
+    jupyter_execute_notebooks: "off" 
 # The following is currently not possible, because it overwrites the Jupyter Book html_theme_options. There is currently no way to add this option without overwriting.
 #    html_theme_options      : 
 #      search_bar_text       : "Search handbook..."
