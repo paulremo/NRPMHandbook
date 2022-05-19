@@ -14,66 +14,42 @@ Here you can find help, calculation processes and fine graphical representations
 If you have trouble with the acronyms, feel free to have a look on the [glossary](glossary_intro)
 ```
 
-````{panels}
-:column: col-6
-:card: border-2
+::::{grid}
+:gutter: 3
 
-**Methods**
-^^^^
+:::{grid-item-card} **Methods**
 <img class="link-image" src="_static/images/methodPicture.png" alt="logo methods" onclick="redirect('methods/intro.html')">
-+++
+:::
 
-[Go to Methods](methods/intro)
-
----
-
-**Methodologies**
-^^^^
+:::{grid-item-card} **Methodologies**
 <img class="link-image" src="_static/images//methodologyPicture.png" alt="logo methodology" onclick="redirect('methodologies/intro.html')">
-+++
+:::
+::::
 
-[Go to Methodologies](methodologies/intro)
-````
-````{panels}
-:column: col-6
-:card: border-2
+::::{grid}
+:gutter: 3
 
-**EEE**
-^^^^
+:::{grid-item-card} **EEE**
 <img class="link-image" src="_static/images/eeePicture.png" alt="logo triple e" onclick="redirect('eee/mainEEE.html')">
-+++
+:::
 
-[Go to EEE](eee/mainEEE)
-
----
-
-**Mechanical**
-^^^^
+:::{grid-item-card} **Mechanical**
 <img class="link-image" src="_static/images//mecaPicture.png" alt="logo mechanical" onclick="redirect('mechanical/handbook/introduction.html')">
-+++
+:::
+::::
 
-[Go to Mechanical](mechanical/handbook/introduction)
-````
-````{panels}
-:column: col-6
-:card: border-2
+::::{grid}
+:gutter: 3
 
-**Miscellaneous**
-^^^^
+:::{grid-item-card} **Miscellaneous**
 <img class="link-image" src="_static/images//miscellaneousPicture.png" alt="logo miscellaneous" onclick="redirect('miscellaneous/handbook/introduction.html')">
-+++
+:::
 
-[Go to Miscellaneous](miscellaneous/handbook/introduction)
-
----
-
-**System**
-^^^^
+:::{grid-item-card} **System**
 <img class="link-image" src="_static/images//systemPicture.png" alt="logo system" onclick="redirect('system/handbook/introduction.html')">
-+++
+:::
+::::
 
-[Go to System](system/handbook/introduction)
-````
 
 The present chapter explains the scope, structure and use of the handbook, with the objective to provide an introduction that is both short and useful from a handbook user’s perspective.
 
