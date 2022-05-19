@@ -246,7 +246,7 @@ def web_ui():
     }
     rev_per_hour = {
         'type': 'floatslider',
-        'description': '$\\text{E}[r_h]$',
+        'description': '\\(\\text{E}[r_h]\\)',
         'value': 1e+6,
         'min': 1e6,
         'max': 1e+7,
