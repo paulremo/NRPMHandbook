@@ -3,3 +3,4 @@ dependencies:
   - python=3.8
   - pip:
     - pystra==1.0
+    - ipywidgets>=8.0.0rc0
