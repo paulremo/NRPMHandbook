@@ -59,6 +59,7 @@ sphinx:
 #      search_bar_text       : "Search handbook..."
   extra_extensions: 
     - sphinx_multitoc_numbering # fix, because use_multitoc_numbering doesn't get forwarded to sphinx properly by jupyter book
+    - sphinx-panels
   
     
 
