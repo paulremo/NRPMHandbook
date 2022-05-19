@@ -1,8 +1,28 @@
+#conversation{
+    width: 100%;
+}
+
+#navigation{
+    width: 100%;
+}
+
+#astroPicture{
+    width: 50%;
+}
+
+#astronautDiv{
+    width: 30%;
+}
+
+#messageDiv{
+    width: 70%;
+}
+
 .scroll {
     margin: 5px;
     padding: 5px;
     /*background-color: rgb(198, 207, 242);*/
-    width: 520px;
+    width: 100%;
     height: 400px;
     overflow: auto;
     display: flex;
@@ -13,34 +33,35 @@
 
 .track {
     /*text-align: justify;*/
-    width: 500px;
+    width: 100%;
     font-family: 'Courier New'
 }
 
 .other-message {
     word-wrap: break-word;
-    width: 300px;
+    width: 80%;
     /*text-align: justify;*/
     background-color: rgb(2, 17, 67);
     color: azure;
     border-radius: 10px;
     padding: 5px;
-    margin-right: 150px;
-    margin-top: 20px;
+    margin-right: 15%;
+    margin-top: 5%;
 }
 
 .my-message {
     word-wrap: break-word;
-    width: 300px;
+    width: 80%;
     /*text-align: justify;*/
     background-color: rgb(219, 167, 36);
     border-radius: 10px;
     padding: 5px;
-    margin-left: 150px;
-    margin-top: 20px;
+    margin-left: 15%;
+    margin-top: 5%;
 }
 
 .extra-bar {
+    min-height: 20px;
     word-wrap: break-word;
     margin-left: 650px;
     margin-top: 20px;
@@ -53,5 +74,31 @@
 
 .button-next{
     background-color: rgb(0, 0, 0);
-    color:white
+    color:white;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.button-next:disabled{
+    background-color: rgb(94, 94, 94);
+    color:white;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#inputComponent{
+    width: 50%;
+    margin-left: 25%;
+}
+
+#inputComponent:disabled{
+    background-color: rgb(94, 94, 94);
+    color:white;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.choice-button:disabled{
+    background-color: rgb(94, 94, 94);
+    color:white;
 }

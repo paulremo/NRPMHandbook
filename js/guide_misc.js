@@ -5,20 +5,20 @@ const InteractType = Object.freeze({
 });
 
 class Conversation {
-    constructor(container, branches, extra_bar) {
+    constructor(container, branches, ) {
         this.container = container;
         this.branches = branches;
-        this.extra_bar = extra_bar;
 
         this.current_branch = this.branches.get("b0");
         this.current_branch.init(this);
 
         this.picture = document.getElementById("astroPicture");
+        this.picture.setAttribute("src", "../html/pictures/astronaut1.png")
     }
 
     next(id) {
-        //console.log("next");
-        //console.log(id);
+        ////console.log("next");
+        ////console.log(id);
         let elt = document.getElementById(id);
         let cls = elt.className;
         if (cls == "button-next") {
@@ -28,37 +28,51 @@ class Conversation {
             let cdn = elt.value;
             let res = this.current_branch.messages.get(this.current_branch.step).getResult(cdn);
             if (res != null) {
-                //console.log("text : " + cdn);
+                ////console.log("text : " + cdn);
                 this.current_branch.nextStep(true, res);
             }
             else {
-                //console.log("nothing");
+                ////console.log("nothing");
                 this.current_branch.nextStep(false);
             }
         }
         else if (cls == "categories") {
             let res = dataModelsByCategories.get(id);
-            console.log(dataModelsByCategories.get("Power"))
-            console.log(id);
-            console.log("res")
-            console.log(res)
+            /*//console.log(dataModelsByCategories.get("Power"))
+            //console.log(id);
+            //console.log("res")
+            //console.log(res)*/
             this.current_branch.nextStep(true, res);
         }
+
+        /*else if (cls == "categories") {
+            let res = dataModelsByCategories.get(id);
+            this.current_branch.nextStep(true, res);
+        }*/
+
         else if (cls == "itemComponents") {
             this.current_branch.nextStep(true, id);
         }
-        else if (id == "failbuttonsearch") {
-            console.log("fail")
+        else if (cls == "button-fail") {
+            //console.log("fail")
             this.current_branch.nextStep(false);
         }
+        else if (this.current_branch.messages.get(this.current_branch.step) instanceof ConfigurableMessage) {
+            //console.log("configure netx")
+            if (this.current_branch.messages.get(this.current_branch.step).configure_next) {
+                //console.log("configure next : " + this.current_branch.messages.get(this.branches.step).final_data)
+                this.current_branch.nextStep(this.current_branch.messages.get(this.branches.step).final_data, id);
+            }
+
+        }
         else {
-            //console.log("else");
+            ////console.log("else");
             this.current_branch.nextStep(true, id);
         }
     }
 
     switchBranch(b, arg) {
-        console.log(b);
+        //console.log("branch : " + b);
         this.current_branch = this.branches.get(b);
         this.current_branch.init(this, arg);
     }
@@ -78,52 +92,56 @@ class Branch {
         this.conversation = conversation
         this.data = arg;
         let msg = this.messages.get(this.step);
+        ////console.log("msg : " + msg)
         if (msg instanceof EmptyMessage) {
-            console.log("empty")
+            //console.log("empty")
         }
         else {
+
             let tr = this.conversation.container.insertRow();
             let td = tr.insertCell(0);
             if (msg.configurable) {
                 msg.configure(this.data)
             }
             td.appendChild(msg.htmlRep);
+            if (msg instanceof ConfigurableMessage) {
+                //console.log("config")
+                msg.configure(this.data)
+                if (msg.configure_next) {
+                    //console.log("configure next : " + this.successors.get(msg.final_data))
+                    this.conversation.switchBranch(this.successors.get(msg.final_data), arg);
+                }
+            }
         }
 
         setTimeout(() => { this.nextStep() }, 1500);
     }
 
     nextStep(new_branch_id = null, arg = null) {
-        //console.log("next step " + arg);
+        ////console.log("next step " + arg);
         this.step += 1;
         if (this.step >= this.messages.size) {
-            //console.log("end of branch : " + arg);
+            //console.log("end of branch : " + arg + new_branch_id);
             if (this.successors.get(new_branch_id) != undefined) {
                 this.conversation.switchBranch(this.successors.get(new_branch_id), arg);
             }
             else {
-                console.log("end of conversation");
+                //console.log("end of conversation");
             }
         }
         else {
-            //console.log("stay on branch : " + arg);
+            ////console.log("stay on branch : " + arg);
             let next_msg = this.messages.get(this.step);
             /*if (next_msg.interactive){
                 this.conversation.picture.setAttribute("src", "../html/pictures/astronaut2.png");
             }
             else{
                 this.conversation.picture.setAttribute("src", "../html/pictures/astronaut1.png");
+            }
+            let children = this.conversation.extra_bar.children;
+            for (let i = 0; i < children.length; i++) {
+                this.conversation.extra_bar.removeChild(children[i])
             }*/
-
-            if (next_msg.extra_intercator != null) {
-                this.conversation.extra_bar.appendChild(next_msg.extra_intercator);
-            }
-            else{
-                let children = this.conversation.extra_bar.children;
-                for (let i = 0; i < children.length; i++) {
-                    this.conversation.extra_bar.removeChild(children[i])
-                  }
-            }
 
             if (next_msg instanceof EmptyMessage) {
 
@@ -135,11 +153,11 @@ class Branch {
                     next_msg.configure(this.data);
                 }
                 if (next_msg instanceof ConfigurableMessage) {
-                    //console.log("configurable message");
+                    ////console.log("configurable message");
                     next_msg.configure(arg);
                 }
                 if (next_msg instanceof ExitMessage) {
-                    //console.log("Exit Message");
+                    ////console.log("Exit Message");
                     next_msg.configure(arg);
                     setTimeout(() => { this.nextStep() }, 1500);
                 }
@@ -147,8 +165,8 @@ class Branch {
             }
 
             if (!next_msg.interactive) {
-                setTimeout(() => { this.nextStep() }, 
-                0);
+                setTimeout(() => { this.nextStep() },
+                    1500);
             }
 
         }
@@ -213,7 +231,7 @@ class SearchMessage extends Message {
     }
 
     getResult(dt) {
-        console.log("get result")
+        //console.log("get result")
         let res = new Set();
         let words = dt.split(" ");
         for (var item of this.data) {
@@ -235,19 +253,21 @@ class SearchMessage extends Message {
 }
 
 class DataMessage extends Message {
-    constructor(extra_intercator, text, sender, classNm = null, data = null, interactor = null, type = null) {
+    constructor(failname, extra_intercator, text, sender, classNm = null, data = null, interactor = null, type = null) {
         super(extra_intercator, text, sender, true, true, interactor, type);
         this.data = data;
         this.classNm = classNm;
+        this.buttons = new Map();
+        this.failname = failname;
     }
 
     configure(data) {
         if (data == null) {
             data = this.data;
         }
-        console.log("data")
-        console.log(data)
-        console.log(this.data)
+        /*//console.log("data")
+        //console.log(data)
+        //console.log(this.data)*/
         for (var item of data) {
             let b = document.createElement("button");
             b.innerHTML = item;
@@ -255,21 +275,50 @@ class DataMessage extends Message {
             if (this.classNm != null) {
                 b.className = this.classNm;
             }
-            b.setAttribute("onclick", "conv.next('" + item + "')")
+            //b.setAttribute("onclick", "conv.next('" + item + "');")
             this.interactor.appendChild(b);
+            this.buttons.set(item, b);
+        }
+        for (var [key, btn] of this.buttons) {
+            var alldisable = ""
+            for (var [k, b] of this.buttons) {
+                alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
+            }
+            alldisable = alldisable + " document.getElementsByClassName('button-fail').map(e => e.disabled  =true)"
+            btn.setAttribute("onclick", "conv.next('" + key + "');" + alldisable)
+        }
+        let fail = document.createElement("button");
+        fail.innerHTML = "I can't find matching component";
+        fail.setAttribute("onclick", "fail")
+        fail.className = "button-fail";
+        fail.setAttribute("id", globalThis.failname);
+        fail.setAttribute("onclick", "conv.next('" + this.id + "')");
+        console.log("fail id : " + fail.id)
+        this.interactor.appendChild(fail);
+
+        for (var [key, btn] of this.buttons) {
+            var alldisable = "this.disabled = true;"
+            for (var [k, b] of this.buttons) {
+                alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
+            }
+            fail.setAttribute("onclick", "conv.next('" + key + "');" + alldisable)
+
         }
     }
 }
 
 class ConfigurableMessage extends Message {
-    constructor(extra_intercator, text, sender, dataset) {
+    constructor(configure_next, extra_intercator, text, sender, dataset) {
         super(extra_intercator, text, sender, true, false);
         this.dataset = dataset;
+        this.configure_next = configure_next;
+        this.final_data;
     }
 
     configure(data) {
-        console.log("data : " + data)
+        //console.log("data : " + data)
         let dt = this.dataset.get(data);
+        this.final_data = dt;
         this.text = this.text + " " + dt;
 
         let div = document.createElement("div");
@@ -307,23 +356,23 @@ let buttonOK = document.createElement("button");
 buttonOK.innerHTML = "OK";
 buttonOK.className = "button-next";
 buttonOK.setAttribute("id", "nextbutton");
-buttonOK.setAttribute("onclick", "conv.next('nextbutton')");
+buttonOK.setAttribute("onclick", "this.disabled = true; conv.next('nextbutton')");
 
 let inputComponent = document.createElement("div");
 let ipt = document.createElement("input");
 ipt.setAttribute("type", "text");
 ipt.setAttribute("id", "inputComponent");
 let sbt = document.createElement("button");
-sbt.setAttribute("onclick", "conv.next('inputComponent')");
+sbt.setAttribute("onclick", "this.disabled = true; document.getElementById('inputComponent').disabled = true; conv.next('inputComponent')");
 sbt.innerHTML = "ok";
 inputComponent.appendChild(ipt);
 inputComponent.appendChild(sbt);
 
-let buttonFail = document.createElement("button");
+/*let buttonFail = document.createElement("button");
 buttonFail.innerHTML = "Can't find component";
 buttonFail.className = "button-fail";
 buttonFail.setAttribute("id", "failbuttonsearch");
-buttonFail.setAttribute("onclick", "conv.next('failbuttonsearch')");
+buttonFail.setAttribute("onclick", "conv.next('failbuttonsearch')");*/
 
 dataComponent = new Set([
     "TWTA, Single MPM",
@@ -468,28 +517,28 @@ standardComponentFR = new Map([
 let m1 = new Message(null, "Welcome to the failure rate calculation guide for the miscellaneous items !", "other-message", false, false);
 let m2 = new Message(null, "Before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used", "other-message", false, false);
 let m3 = new Message(null, "Is it OK ?", "other-message", false, false);
-let m4 = new EmptyMessage(buttonOK, null, "my-message");
+let m4 = new Message(null, null, "my-message", false, true, buttonOK);
 let m4_1 = new Message(null, "ok", "my-message", false, false);
 let m5 = new Message(null, "Awesome ! So can you give me the name of your component ?", "other-message", false, false);
 let m6 = new SearchMessage(null, dataComponent, "Enter the name of the component", "my-message", false, true, inputComponent, InteractType.Input)
 
 let m7 = new Message(null, "I found matching components, chose the right one below", "other-message", false, false);
 
-let m8 = new DataMessage(buttonFail, "bb", "other-message");
+let m8 = new DataMessage("componentfail", null, "bb", "other-message");
 
-let m9 = new ConfigurableMessage(null, "This component is", "other-message", dataComponentType
+let m9 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
 );
 
 let m10 = new ExitMessage(null, "You can go on the handbook page", "other-message", "http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
 let m11 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/models/failure_rate_processing.html");
 
 let m12 = new Message(null, "Maybe we use another name... To which subsystem does your component belong ?", "other-message", false, false);
-let m13 = new DataMessage(null, "...", "other-message", "categories", dataCategories);
+let m13 = new DataMessage("categoriesfail", null, "...", "other-message", "categories", dataCategories);
 
 let m14 = new Message(null, "Is this one of these components ?", "other-message", false, false);
-let m15 = new DataMessage(buttonFail, "", "other-message", "itemComponents");
+let m15 = new DataMessage("categoriesfail2", null, "", "other-message", "itemComponents");
 
-let m16 = new ConfigurableMessage(null, "This component is", "other-message", dataComponentType
+let m16 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
 );
 
 let m17 = new ExitMessage(null, "You can go on the handbook page", "other-message", "http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
@@ -497,25 +546,32 @@ let m18 = new ExitMessage(null, "Or you can go to this page to calculate the fai
 
 let m19 = new Message(null, "It must be a holistic component", "other-message", false, false);
 let m20 = new Message(null, "There's no standard methodology. ", "other-message", false, false);
-let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message","http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/models/failure_rate_processing.html");
+let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "http://127.0.0.1:51500/02_NRPMHandbook/_build/html/miscellaneous/models/failure_rate_processing.html");
 
-let mb0 = new Map([[0, m1], [1, m2], [2, m3], [3, m4], [4, m4_1], [5, m5], [6, m6]]);
-//console.log(mb0);
+let m22 = new ConfigurableMessage(false, null, "The value of &lambda;&#8321; is ", "other-message", standardComponentFR);
+let m23 = new Message(null, "Don't forget to note this value", "my-message", false, false);
+
+let mb0 = new Map([[0, m1], [1, m2], [2, m3], [3, m4], [4, m5], [5, m6]]);
+////console.log(mb0);
 let mb1 = new Map([[0, m7], [1, m8]]);
 let mb2 = new Map([[0, m12], [1, m13]]);
-let mb3 = new Map([[0, m9], [1, m10], [2, m11]]);
+let mb3 = new Map([[0, m9]]);
 let mb4 = new Map([[0, m14], [1, m15]])
 let mb5 = new Map([[0, m16], [1, m17], [2, m18]]);
 let mb6 = new Map([[0, m19], [1, m20], [2, m21]]);
-//let mb7 = new Map([[0, m16], [1, m22]]);
+let mb7 = new Map([[0, m10], [1, m11]]);
+let mb8 = new Map([[0, m22], [1, m23], [2, m17], [3, m18]]);
 
-let b6 = new Branch(mb6, new Map())
+
+let b8 = new Branch(mb8, new Map());
+let b7 = new Branch(mb7, new Map());
+let b6 = new Branch(mb6, new Map());
 let b5 = new Branch(mb5, new Map());
-let b4 = new Branch(mb4, new Map([[true, "b5"],[false, "b6"]]));
-let b3 = new Branch(mb3, new Map())
-let b1 = new Branch(mb1, new Map([[true, "b3"],[false, "b2"]]));
-let b2 = new Branch(mb2, new Map([[true, "b4"],[false, "b2"]]));
+let b4 = new Branch(mb4, new Map([[true, "b5"], [false, "b6"]]));
+let b3 = new Branch(mb3, new Map([["standard", "b8"], ["nonstandard", "b7"]]))
+let b1 = new Branch(mb1, new Map([[true, "b3"], [false, "b2"]]));
+let b2 = new Branch(mb2, new Map([[true, "b4"], [false, "b6"]]));
 let b0 = new Branch(mb0, new Map([[true, "b1"], [false, "b2"]]));
 
-let b = new Map([["b0", b0], ["b1", b1], ["b2", b2], ["b3", b3], ["b4", b4], ["b5", b5], ["b6", b6]]);
-conv = new Conversation(document.getElementById("messagesTrack"), b, document.getElementById("interactors"));
+let b = new Map([["b0", b0], ["b1", b1], ["b2", b2], ["b3", b3], ["b4", b4], ["b5", b5], ["b6", b6], ["b7", b7], ["b8", b8]]);
+conv = new Conversation(document.getElementById("messagesTrack"), b);
