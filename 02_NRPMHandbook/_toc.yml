@@ -5,11 +5,11 @@ format: jb-book
 root: home
 
 parts:   
-  - caption: Methods
+  - caption: Methods chapter
     numbered: true
     chapters:
     - file: methods/intro
-  - caption: Methodologies
+  - caption: Methodologies chapter
     numbered: true
     chapters:
     - file: methodologies/intro
