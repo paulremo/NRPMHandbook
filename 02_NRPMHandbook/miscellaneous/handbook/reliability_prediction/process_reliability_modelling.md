@@ -1,6 +1,6 @@
 (misc_5_5)=
 # Process for reliability modelling
-This Section details how to build a reliability model for {term}`MISCELLANEOUS ITEM`.
+This Section details how to build a reliability model for {term}`miscellaneous item <Miscellaneous item>`.
 
 {numref}`Figure 5.4` provides the general process to apply whatever the basic model is: 
 
@@ -17,10 +17,10 @@ On {numref}`Figure 5.4`, the basic model is a failure rate but it could also be 
 width: 600px
 name: Figure 5.4
 ---
-General process for miscellaneous items {term}`RELIABILITY PREDICTION`.
+General process for miscellaneous items {term}`reliability prediction <Reliability prediction>`.
 ```
 
-First, it is necessary, before starting anything, to collect/define all technical information about the {term}`MISCELLANEOUS ITEM` in order to select the category of {term}`MISCELLANEOUS ITEM` which will be used, if relevant, as a “standard model”:
+First, it is necessary, before starting anything, to collect/define all technical information about the {term}`miscellaneous item <Miscellaneous item>` in order to select the category of {term}`miscellaneous item <Miscellaneous item>` which will be used, if relevant, as a “standard model”:
 
 * Functional analysis: list of all the main functions supported by the item,
 * Technical performances: list of all the specified performances regarding the nominal mission / the reduced mission,
@@ -54,7 +54,7 @@ The supplier justifies the rationale supporting the use of a “model” (functi
 * List of the main functions / main performances
 * Operating conditions range
 
-The failure rate is referred to as basic failure rate $\lambda_{1} = \lambda_{B}$. It is defined at 60% {term}`LEVEL OF CONFIDENCE`.
+The failure rate is referred to as basic failure rate $\lambda_{1} = \lambda_{B}$. It is defined at 60% {term}`level of confidence <Level of confidence>`.
 
 ````{admonition} Equation
 :class: equation
@@ -73,7 +73,7 @@ The failure rate is referred to as basic failure rate $\lambda_{1} = \lambda_{B}
 (misc_step2)=
 ``````{dropdown} **STEP 2 : Normalization of the basic failure rate**
 The major contributors to the reliability are identified in {numref}`Reliability data`.
-In the case the actual parameters are different (either higher or lower {term}`QUALITY` levels, additional stresses, specific technology, specific contributors to the reliability) a tailoring factor is recommended to account for the item’s specificities.
+In the case the actual parameters are different (either higher or lower {term}`quality <Quality>` levels, additional stresses, specific technology, specific contributors to the reliability) a tailoring factor is recommended to account for the item’s specificities.
 
 `````{admonition} Rule
 :class: rule
@@ -103,19 +103,19 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
 
 <button class="back-forward-button" onclick="redirect('../../models/failure_rate_processing.html')">Go to model</button>
 
-* $\Pi_{Q}$ = {term}`QUALITY` factor
+* $\Pi_{Q}$ = {term}`quality <Quality>` factor
   
-  This factor covers the {term}`QUALITY` level used to design/manufacture the {term}`MISCELLANEOUS ITEM`. It addresses the {term}`QUALITY` process, as a whole, as defined in the {term}`ECSS` framework.
+  This factor covers the {term}`quality <Quality>` level used to design/manufacture the {term}`miscellaneous item <Miscellaneous item>`. It addresses the {term}`quality <Quality>` process, as a whole, as defined in the {term}`ECSS` framework.
   A three level scale is used:
-  * **Level 1** = HIGH {term}`QUALITY` (e.g. most of Telecommunications satellites)
+  * **Level 1** = HIGH {term}`quality <Quality>` (e.g. most of Telecommunications satellites)
   
-    The technical risk is mitigated / cancelled as necessary. This level refers to the high {term}`QUALITY` standard used for space (refer to {term}`ECSS`).
+    The technical risk is mitigated / cancelled as necessary. This level refers to the high {term}`quality <Quality>` standard used for space (refer to {term}`ECSS`).
 
-  * **Level 2** = MEDIUM {term}`QUALITY` (e.g. {term}`NEW SPACE` paradigm)
+  * **Level 2** = MEDIUM {term}`quality <Quality>` (e.g. {term}`New space` paradigm)
   
-    The technical risk is optimized. This level is an intermediate level between High {term}`QUALITY` level and Low {term}`QUALITY` level.
+    The technical risk is optimized. This level is an intermediate level between High {term}`quality <Quality>` level and Low {term}`quality <Quality>` level.
 
-  * **Level 3** = LOW {term}`QUALITY` (e.g. {term}`COTS` without {term}`QUALITY` space standard requiring specific qualification)
+  * **Level 3** = LOW {term}`quality <Quality>` (e.g. {term}`COTS` without {term}`quality <Quality>` space standard requiring specific qualification)
   
     The technical risk is mitigated up to the cost target, otherwise accepted.
 
@@ -123,7 +123,7 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
   :class: rule
   **$\bf{JO3_{rule}}$** 
 
-  The supplier justifies with technical argument the {term}`QUALITY` level of the {term}`MISCELLANEOUS ITEM` providing the {term}`QUALITY` reference as define in the Product Assurance .term}`requirement <REQUIREMENT>`s applicable to the {term}`MISCELLANEOUS ITEM`.
+  The supplier justifies with technical argument the {term}`quality <Quality>` level of the {term}`miscellaneous item <Miscellaneous item>` providing the {term}`quality <Quality>` reference as define in the Product Assurance .{term}`Requirements <Requirement>` applicable to the {term}`miscellaneous item <Miscellaneous item>`.
   `````        
 
 * $\Pi_{M}$ = MATURITY factor
@@ -132,13 +132,13 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
   A three level scale is used:
   * **Level 1** = HIGH Maturity
   
-    The supplier is a specialist providing the space stakeholders with the {term}`MISCELLANEOUS ITEM`,
+    The supplier is a specialist providing the space stakeholders with the {term}`miscellaneous item <Miscellaneous item>`,
 
   * **Level 2** = MEDIUM Maturity
   
     The item is a new development for the supplier,
 
-  * **Level 3** = LOW Maturity (e.g. {term}`COTS` without {term}`QUALITY` space standard requiring specific qualification)
+  * **Level 3** = LOW Maturity (e.g. {term}`COTS` without {term}`quality <Quality>` space standard requiring specific qualification)
   
     The supplier is a newcomer on the market to develop such a product.
 
@@ -146,7 +146,7 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
   :class: rule
   **$\bf{JO4_{rule}}$** 
 
-  The supplier justifies with technical arguments the maturity level of the {term}`MISCELLANEOUS ITEM` providing evidences of the related ranking.
+  The supplier justifies with technical arguments the maturity level of the {term}`miscellaneous item <Miscellaneous item>` providing evidences of the related ranking.
   `````        
 
 * $\Pi_{T}$ = TECHNOLOGY factor
@@ -247,7 +247,7 @@ $1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_
 (misc_step4)=
 ``````{dropdown} **STEP 4 : Application of combined approach**
 The step 4 is used to combine the predicted failure rate with IOR data in the case the item is based on a generic product which is already operated in-orbit.
-The method used is the {term}`BAYESIAN INFERENCE` approach as presented in {numref}`misc_5_6_3`.
+The method used is the {term}`Bayesian inference <Bayesian inference>` approach as presented in {numref}`misc_5_6_3`.
 
 ````{admonition} Equation
 :class: equation
@@ -264,19 +264,19 @@ Where $\lambda_{3}^{\gamma}$ is the gamma estimator.
 (misc_step5)=
 ``````{dropdown} **STEP 5 : Wear-out modelling**
 The step 5 incorporates in the reliability model the failures due to potential wear, as necessary.
-The model consists in adding to the constant failure rate (representing {term}`RANDOM FAILURE`s) an increasing failure rate representing the wear-out contribution to the failure of the item.
+The model consists in adding to the constant failure rate (representing {term}`random failures <Random failure>`) an increasing failure rate representing the wear-out contribution to the failure of the item.
 Let’s denote $T$ as the Time To Failure random variable.
-$T_{RF}$ is the $TTF$ representing {term}`RANDOM FAILURE`s (constant failure rate for miscellaneous items)
+$T_{RF}$ is the $TTF$ representing {term}`random failures <Random failure>` (constant failure rate for miscellaneous items)
 $T_{RF}$ is modelled by the exponential distribution. 
-$T_{WO}$ is the $TTF$ representing {term}`WEAR-OUT FAILURE`s (increasing failure rate)
+$T_{WO}$ is the $TTF$ representing {term}`wear-out failures <Wear-out failure>` (increasing failure rate)
 $T_{WO}$ is modelled by any distribution with increasing failure rate, i.e. Weibull $W(\beta, \eta)$, Normal $N(m, \sigma)$, Log-Normal $\textbf{m, \sigma}$ as relevant (based on the supplier knowledge). 
 Three models are presented to model include wear-out mechanisms and impacts on the reliability of the item.
 
 * **MODEL 1**: ${term}`RF`$ model and $WO$ model are combined from $t=0$, based on $T = TTF = min(T_{RF}, T_{WO})$
-* **MODEL 2**: ${term}`RF`$ model and $WO$ model are combined beyond $\theta$ , assumed to be the qualification time (laps of time defined in accordance with the technical .term}`requirement <REQUIREMENT>`s –agreed with the customer- in order to demonstrate the capability of an item to withstand the applied stresses all along the specified lifetime without significant degradations preventing from the mission achievement).
+* **MODEL 2**: ${term}`RF`$ model and $WO$ model are combined beyond $\theta$ , assumed to be the qualification time (laps of time defined in accordance with the technical. {term}`Requirements <Requirement>` –agreed with the customer- in order to demonstrate the capability of an item to withstand the applied stresses all along the specified lifetime without significant degradations preventing from the mission achievement).
 * **MODEL 3**: ${term}`RF`$ distribution and $WO_{PDF}$ are separated @ $\alpha$ ($RF$ before, $WO$ beyond) from $\lambda_{WO}(\alpha)=\lambda_{RF}$
 The three models are presented in {numref}`syst_4_8_1`.
-All three Models can be defined for every Wear-out {term}`PROBABILITY DENSITY FUNCTION`: Normal, log-Normal, Gamma … with adequate properties.
+All three Models can be defined for every Wear-out {term}`probability density function <Probability density function>`: Normal, log-Normal, Gamma … with adequate properties.
 
 `````{admonition} Rule
 :class: rule
@@ -295,7 +295,7 @@ The resulting failure rate is :
 ```
 ````
 
-The {term}`RELIABILITY PREDICTION` of the item is then provided by:
+The {term}`reliability prediction <Reliability prediction>` of the item is then provided by:
 
 ````{admonition} Equation
 :class: equation
@@ -313,7 +313,7 @@ P(\text{FAILURE}) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 
 * Model 1 and model 3 are very close since the constant failure rates used for miscellaneous items are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.
 * Model2 could be considered as optimistic since it addresses wear-out only after the qualification time.
-* Model 1 appears as the most appropriate, summing the failure rate for {term}`RANDOM FAILURE`s modelling and the failure rate for Wear-out {term}`FAILURE MODE`lling. It is recommended to be used except technical arguments support another choice.
+* Model 1 appears as the most appropriate, summing the failure rate for {term}`random failures <Random failure>` modelling and the failure rate for Wear-out failure modelling. It is recommended to be used except technical arguments support another choice.
 
 ````{admonition} Recommendation
 :class: recommendation
@@ -350,7 +350,7 @@ Example of {term}`WO` distribution calculation (assumption: Weibull distribution
 
 (misc_step6)=
 ``````{dropdown} **STEP 6 : Systematic failures modelling**
-The step 6 consists in adding a probability of failure related to {term}`SYSTEMATIC FAILURE`s.
+The step 6 consists in adding a probability of failure related to {term}`systematic failures <Systematic failure>`.
 
 ````{admonition} Equation
 :class: equation
@@ -382,7 +382,7 @@ P(\text{FAILURE}) = 1 - \left(1 - EX\right) * \left(1 - SF\right) * \left(1 - e^
 ```
 ````
 
-The probability of {term}`EXTRINSIC FAILURE`s EX is dependent on 
+The probability of {term}`extrinsic failure <Extrinsic failures>` EX is dependent on 
 
 1. The item location (outside the satellite), 
 2. The probability to be hit by a particle (refer to µmeteorits flux and characteristics depending on the orbit, on the position on the orbit and on the velocity vector) and 

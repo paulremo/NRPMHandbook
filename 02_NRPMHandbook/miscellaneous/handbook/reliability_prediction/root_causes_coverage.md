@@ -1,6 +1,6 @@
 (misc_5_2)=
 # Root causes coverage
-The {term}`FAILURE MECHANISM`s of the miscellaneous parts result from the four categories of {term}`FAILURE ROOT CAUSE`s already introduced and reminded in {numref}`Coverage of failure root causes by the Miscellaneous reliability prediction methodology.`.
+The {term}`failure mechanisms <Failure mechanism>` of the miscellaneous parts result from the four categories of {term}`failure root causes <Failure root cause>` already introduced and reminded in {numref}`Coverage of failure root causes by the Miscellaneous reliability prediction methodology.`.
 
 (misc_table4_3)=
 ```{list-table} Coverage of failure root causes by the Miscellaneous reliability prediction methodology.

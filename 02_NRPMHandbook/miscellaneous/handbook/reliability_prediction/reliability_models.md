@@ -12,7 +12,7 @@ There are three reliability models for miscellaneous items:
 (misc_5_4_1)=
 ### Standard model for generic miscellaneous items
 
-A “generic” {term}`MISCELLANEOUS ITEM` is an item classified as “miscellaneous” (refer to the definition provided at the beginning of this chapter) AND for which a reliability model based on IOR is defined as a reference in this Current document (see {numref}`misc_5_1`).
+A “generic” {term}`miscellaneous item <Miscellaneous item>` is an item classified as “miscellaneous” (refer to the definition provided at the beginning of this chapter) AND for which a reliability model based on IOR is defined as a reference in this Current document (see {numref}`misc_5_1`).
 
 The reliability model is either 
 
@@ -27,11 +27,11 @@ The reliability “standard model” is then calculated based on the process pre
 (misc_5_4_2)=
 ## Non-standard model for specific miscellaneous items
 
-A “specific” {term}`MISCELLANEOUS ITEM` relates to a product which is not fully modelled by {term}`EEE PART`s and/or {term}`MECHANICAL PART`s and which is not listed in the equivalent classes of miscellaneous items in {numref}`misc_5_1`.
+A “specific” {term}`miscellaneous item <Miscellaneous item>` relates to a product which is not fully modelled by {term}`EEE parts <EEE part>` and/or {term}`mechanical parts <Mechanical part>` and which is not listed in the equivalent classes of miscellaneous items in {numref}`misc_5_1`.
 
 e.g. Hold Release Mechanism Low Shock presented in {numref}`Figure 5.3`.
 
-The item is neither a mechanism, nor an assembly of {term}`EEE PART`s. It is constituted by different parts such as spring, glue, expansion unit. Since the design is very specific without any IOR data it is necessary to define a dedicated reliability model.
+The item is neither a mechanism, nor an assembly of {term}`EEE parts <EEE part>`. It is constituted by different parts such as spring, glue, expansion unit. Since the design is very specific without any IOR data it is necessary to define a dedicated reliability model.
 
 The Current document provides general guidance to define such a reliability model: The approach to calculate the basic reliability data is presented in {numref}`misc_5_7`. The “specific” reliability model is then calculated based on the process presented in {numref}`misc_5_8`.
 
@@ -56,6 +56,6 @@ The holistic reliability model is then calculated based on the process presented
 (misc_5_4_4)=
 ## Dormant failures
 
-Currently no reliability model is provided to support {term}`FAILURE MODE`lling in dormant mode for miscellaneous items. The miscellaneous items are from different nature (mix of EEE and mechanics, passive components, tubing, piping…) and it is not relevant to provide a generic rule to derive a dormant failure rate from the active {term}`MISCELLANEOUS ITEM` failure rate.
+Currently no reliability model is provided to support failure modelling in dormant mode for miscellaneous items. The miscellaneous items are from different nature (mix of EEE and mechanics, passive components, tubing, piping…) and it is not relevant to provide a generic rule to derive a dormant failure rate from the active {term}`miscellaneous item <Miscellaneous item>` failure rate.
 
 In case, depending on the mission and on the operations, it is necessary to use a reliability model in dormant mode (no power supply during certain storage duration, no activation for “maintenance”) the user will define a dedicated reliability model (refer to the different methods listed previously) accounting for the specific conditions in storage.

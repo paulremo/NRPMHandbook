@@ -1,16 +1,16 @@
 (misc_5_6)=
 # Use of IOR data and/or tests results
-As presented, a reliability model can be built based on IOR data and/or on {term}`TEST DATA` (manufacturers, user) or combined with IOR data and/or on {term}`TEST DATA` (manufacturers, user).
+As presented, a reliability model can be built based on IOR data and/or on {term}`test data <Test data>` (manufacturers, user) or combined with IOR data and/or on {term}`test data <Test data>` (manufacturers, user).
 
 The basic failure rate or the basic probability of failure in {numref}`Reliability data` is based on such IOR data. The data was compiled from the IOR background in ADS & TAS fleets.
 
-Per miscellaneous items, the anomalies are collected regarding representative products ({term}`QUALITY`, range of operational conditions, orbit as relevant) and the failures are classified in {term}`RANDOM FAILURE`s ($RF$) and {term}`SYSTEMATIC FAILURE`s ($SF$). To avoid duplication of systematic anomalies, they are only counted once. That means that the derived failure rates include as relevant {term}`SYSTEMATIC FAILURE` contribution.
+Per miscellaneous items, the anomalies are collected regarding representative products ({term}`quality <Quality>`, range of operational conditions, orbit as relevant) and the failures are classified in {term}`random failures <Random failure>` ($RF$) and {term}`systematic failures <Systematic failure>` ($SF$). To avoid duplication of systematic anomalies, they are only counted once. That means that the derived failure rates include as relevant {term}`systematic failure <Systematic failure>` contribution.
 
 The IOR data recorded are:
 
-* Reference: {term}`MISCELLANEOUS ITEM` number
+* Reference: {term}`miscellaneous item <Miscellaneous item>` number
 * Satellite subsystem
-* {term}`MISCELLANEOUS ITEM` description (e.g. Li-Ion Battery)
+* {term}`Miscellaneous item <Miscellaneous item>` description (e.g. Li-Ion Battery)
 * Cumulated time in-orbit and/or tests for the relevant sample of items
 * Number of failures
 * Type of failure: random, systematic
@@ -35,20 +35,20 @@ The basic failure rate estimation is a one-sided upper bound interval estimation
 To determine a proportion of failures based on the observation of failures within a sample of n elements (e.g. IOR data for “one-shot” device), it is possible to use:
 
 * Point estimate
-* {term}`BAYESIAN INFERENCE` estimator
+* Bayesian estimator
 * Estimation by interval. 
 
 It is recommended to use the interval estimate, see Chapter 6 {numref}`methodologies` for details.
 
 
 (misc_5_6_3)=
-### Gamma {term}`BAYESIAN INFERENCE` estimator
+### Gamma Bayesian estimator
 
 The failure rate is no longer considered as a real but as a random variable $\Delta$.
 
 In the case of the exponential distribution, a natural prior distribution is the Gamma distribution (conjugate of the exponential distribution), see Chapter 7 {numref}`methodologies` for details.
 
-The {term}`BAYESIAN INFERENCE` estimator is defined as the expected value of the random variable $\Delta$ knowing that a failure has been observed at $t_{1}$, $t_{2}$ … $t_{n}$). Then, with a sample encompassing $n$ items and $n$ associated times to failure:
+The {term}`Bayesian inference <Bayesian inference>` estimator is defined as the expected value of the random variable $\Delta$ knowing that a failure has been observed at $t_{1}$, $t_{2}$ … $t_{n}$). Then, with a sample encompassing $n$ items and $n$ associated times to failure:
 
 ````{admonition} Equation
 :class: equation
@@ -63,7 +63,7 @@ E(\Delta | T_{1} = t_{1}, T_{2} = t_{2}, ..., T_{n} = t_{n}) = \frac{\alpha + n}
 
 The parameters of the gamma prior distribution are selected as per the knowledge of the item.
 
-Let us assume for a certain {term}`MISCELLANEOUS ITEM` that a basic failure rate is calculated.
+Let us assume for a certain {term}`miscellaneous item <Miscellaneous item>` that a basic failure rate is calculated.
 
 Let us assume that there are some items already in flight with a certain cumulated time, not sufficient enough to provide a result in the order of magnitude of the specification (without prior knowledge).
 
@@ -86,7 +86,7 @@ E(\Delta) = \frac{\alpha}{\beta} = \lambda_{0}
 ````
 
 This provides a first equation with $\alpha$ and $\beta$.
-A second equation is provided by the {term}`LEVEL OF CONFIDENCE` "$a$" attributed to the value $\lambda_{0}$:
+A second equation is provided by the {term}`level of confidence <Level of confidence>` "$a$" attributed to the value $\lambda_{0}$:
 
 ````{admonition} Equation
 :class: equation
@@ -99,6 +99,6 @@ F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \f
 ````
 
 
-Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering Eq. {eq}`Equation 5.10`) and one representing an estimate at a given {term}`LEVEL OF CONFIDENCE` (e.g. conservative estimate, entering Eq. {eq}`Equation 5.11`).
+Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering Eq. {eq}`Equation 5.10`) and one representing an estimate at a given {term}`level of confidence <Level of confidence>` (e.g. conservative estimate, entering Eq. {eq}`Equation 5.11`).
 
-Once $\alpha$ and $\beta$ are determined it allows to derive the {term}`BAYESIAN INFERENCE` estimator with n being the number of failures and $\sum t_{i}$ the cumulated time.
+Once $\alpha$ and $\beta$ are determined it allows to derive the {term}`Bayesian inference <Bayesian inference>` estimator with n being the number of failures and $\sum t_{i}$ the cumulated time.
