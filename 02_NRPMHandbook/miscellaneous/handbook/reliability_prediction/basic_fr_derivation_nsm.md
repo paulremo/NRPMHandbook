@@ -7,7 +7,7 @@ Once the reliability model is established it can be tailored as necessary based 
 First, it is necessary, to collect/define all technical information about the {term}`miscellaneous item <Miscellaneous item>` in order to characterize it (refer to {numref}`misc_5_5`). Then the basic failure rate $\lambda_{1}$ = $\lambda_{B}$ is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of {numref}`misc_5_5`) corresponding to [step 2](misc_step2) to [7](misc_step7).
 
 
-(misc_5_5_1)=
+(misc_5_7_1)=
 ## Design FMEA / Process FMEA
 
 After the first item characterization, a {term}`Design FMEA` and a {term}`Process FMEA` are performed in order to assess the {term}`failure modes <Failure mode>` due to 
@@ -80,10 +80,10 @@ Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
 
 - {term}`TRL`
 
-(misc_5_5_2)=
+(misc_5_7_2)=
 ### Probability assessment
 
-The occurrence scale of {numref}`misc_5_5_2` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per {term}`failure mode <Failure mode>`:
+The occurrence scale of {numref}`misc_5_7_2` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per {term}`failure mode <Failure mode>`:
 
 * In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a {term}`HF/RF passive part <HF/RF passive part>` which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
 * A probability of occurrence is assigned to every {term}`failure mode <Failure mode>` and the sum provides the probability of occurrence of the item.
