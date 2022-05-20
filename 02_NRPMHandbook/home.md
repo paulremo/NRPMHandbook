@@ -81,4 +81,4 @@ This digital handbook is supplied in a versioned format powered by [ReadTheDocs]
 - `latest` this is the latest version of the document and might change unexpectedly.
 - `stable` this is the latest official version of the document and corresponds to the last released numbered version.
 
-All versions may also be accessed (and linked to) with the following URL: `https://nrpmhandbook.reliability.space/en/<version>/...` where `<version>` can be replaced by any version of this document. 
+All versions may also be accessed (and linked to) with the following URL: `https://nrpmhandbook.reliability.space/en/<version>/...` where `<version>` can be replaced by any version of this document.
