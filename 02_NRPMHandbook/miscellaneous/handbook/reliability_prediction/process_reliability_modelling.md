@@ -123,7 +123,7 @@ The basic failure rate which is derived from IOR relates to a certain set of ass
   :class: rule
   **$\bf{JO3_{rule}}$** 
 
-  The supplier justifies with technical argument the {term}`QUALITY` level of the {term}`MISCELLANEOUS ITEM` providing the {term}`QUALITY` reference as define in the Product Assurance {term}`REQUIREMENT`s applicable to the {term}`MISCELLANEOUS ITEM`.
+  The supplier justifies with technical argument the {term}`QUALITY` level of the {term}`MISCELLANEOUS ITEM` providing the {term}`QUALITY` reference as define in the Product Assurance .term}`requirement <REQUIREMENT>`s applicable to the {term}`MISCELLANEOUS ITEM`.
   `````        
 
 * $\Pi_{M}$ = MATURITY factor
@@ -273,7 +273,7 @@ $T_{WO}$ is modelled by any distribution with increasing failure rate, i.e. Weib
 Three models are presented to model include wear-out mechanisms and impacts on the reliability of the item.
 
 * **MODEL 1**: ${term}`RF`$ model and $WO$ model are combined from $t=0$, based on $T = TTF = min(T_{RF}, T_{WO})$
-* **MODEL 2**: ${term}`RF`$ model and $WO$ model are combined beyond $\theta$ , assumed to be the qualification time (laps of time defined in accordance with the technical {term}`REQUIREMENT`s –agreed with the customer- in order to demonstrate the capability of an item to withstand the applied stresses all along the specified lifetime without significant degradations preventing from the mission achievement).
+* **MODEL 2**: ${term}`RF`$ model and $WO$ model are combined beyond $\theta$ , assumed to be the qualification time (laps of time defined in accordance with the technical .term}`requirement <REQUIREMENT>`s –agreed with the customer- in order to demonstrate the capability of an item to withstand the applied stresses all along the specified lifetime without significant degradations preventing from the mission achievement).
 * **MODEL 3**: ${term}`RF`$ distribution and $WO_{PDF}$ are separated @ $\alpha$ ($RF$ before, $WO$ beyond) from $\lambda_{WO}(\alpha)=\lambda_{RF}$
 The three models are presented in {numref}`syst_4_8_1`.
 All three Models can be defined for every Wear-out {term}`PROBABILITY DENSITY FUNCTION`: Normal, log-Normal, Gamma … with adequate properties.
