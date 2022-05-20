@@ -80,10 +80,15 @@
 }
 
 .button-next:disabled{
-    background-color: rgb(94, 94, 94);
-    color:white;
+    background-color: rgb(219, 167, 36);
+    color:rgb(0, 0, 0);
     width: 50%;
     margin-left: 25%;
+}
+
+.button-fail:disabled{
+    background-color: rgb(2, 17, 67);
+    color: azure;
 }
 
 #inputComponent{
@@ -92,13 +97,13 @@
 }
 
 #inputComponent:disabled{
-    background-color: rgb(94, 94, 94);
-    color:white;
+    background-color: rgb(219, 167, 36);
+    color:rgb(0, 0, 0);
     width: 50%;
     margin-left: 25%;
 }
 
 .choice-button:disabled{
-    background-color: rgb(94, 94, 94);
-    color:white;
+    background-color: rgb(2, 17, 67);
+    color: azure;
 }

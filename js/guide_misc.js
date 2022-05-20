@@ -253,7 +253,7 @@ class SearchMessage extends Message {
 }
 
 class DataMessage extends Message {
-    constructor(failname, extra_intercator, text, sender, classNm = null, data = null, interactor = null, type = null) {
+    constructor(failname, extra_intercator, text, sender, classNm = "choice-button", data = null, interactor = null, type = null) {
         super(extra_intercator, text, sender, true, true, interactor, type);
         this.data = data;
         this.classNm = classNm;
@@ -284,7 +284,7 @@ class DataMessage extends Message {
             for (var [k, b] of this.buttons) {
                 alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
             }
-            alldisable = alldisable + " document.getElementsByClassName('button-fail').map(e => e.disabled  =true)"
+            alldisable = alldisable + " console.log(document.getElementsByClassName('button-fail')); Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);" + " this.style.backgroundColor = 'rgb(67, 91, 167)'";
             btn.setAttribute("onclick", "conv.next('" + key + "');" + alldisable)
         }
         let fail = document.createElement("button");
@@ -549,10 +549,9 @@ let m20 = new Message(null, "There's no standard methodology. ", "other-message"
 let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
 
 let m22 = new ConfigurableMessage(false, null, "The value of &lambda;&#8321; is ", "other-message", standardComponentFR);
-let m23 = new Message(null, "Don't forget to note this value", "my-message", false, false);
+let m23 = new Message(null, "Don't forget to note this value", "other-message", false, false);
 
 let mb0 = new Map([[0, m1], [1, m2], [2, m3], [3, m4], [4, m5], [5, m6]]);
-////console.log(mb0);
 let mb1 = new Map([[0, m7], [1, m8]]);
 let mb2 = new Map([[0, m12], [1, m13]]);
 let mb3 = new Map([[0, m9]]);
