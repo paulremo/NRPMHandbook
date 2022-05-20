@@ -180,430 +180,642 @@ WEAR-OUT FAILURE
 ```{glossary}
 AC
 	Alternative Current
+
 AD
 	Applicable Document
+
 AEC
 	Automotive Electronic Council
+
 AECMA
 	European Association of Aerospace Industries (Association Européenne des Constructeurs de Matériel Aerospatial)
+
 AEC-Q
 	Automotive Electronic Council Quality
+
 AF
 	Acceleration Factor
+
 ANADEF
 	ANAlyse de DEFaillances
+
 AOCS
 	Attitude and Orbit Control System
+
 AR
 	Acceptance Review
+
 ARINC
 	Aeronautical Radio Incorporated
+
 ASIC
 	Application Specific Integrated Circuits
+
 BGA
 	Ball Grid Array
+
 BiCMOS
 	Bipolar Complementary Metal Oxide Semiconductor
+
 BR
 	Bibliographic Reference
+
 BS
 	British Standard
+
 BTI
 	Bias Temperature Instability 
+
 CAMP
 	Channel Amplifier
+
 CCD
 	Charge Coupled Device
+
 CCF
 	Common Cause Failure
+
 CCS
 	Common Cause Susceptibility Score
+
 CDR
 	Critical Design Review
+
 CECC
 	Cenelec Electronic Components Committee
+
 CERDIP
 	Ceramic Dual Inline Package
+
 CMOS
 	Complementary Metal Oxide Semiconductor
+
 CNES
 	Centre National d'Etudes Spatiales
+
 COTS
 	Component On The Shelf
+
 CoV
 	Coefficient of Variation
+
 CPGA
 	Ceramic Pin Grid Array
+
 CPLD
 	Complex Programmable Logic Device
+
 CRM
 	Classical Reliability Method
+
 CRR
 	Commissioning Results Review
+
 CTE
 	Coefficient of Thermal Expansion
+
 CV
 	Capacitance Voltage
+
 DAG
 	Directed Acyclic Graph
+
 DC
 	Direct Current
+
 DD
 	Displacement Damage
+
 DEP
 	Deployment
+
 DET
 	Detectability
+
 DFMEA
 	Design Failure Mode Effect Analysis
+
 DHS
 	Data Handling System
+
 DOE
 	Design OF Experiment
+
 DRAM
 	Dynamic Random Access Memory
+
 DSM
 	Deep Sub Micron
+
 DSP
 	Digital Signal Processor
+
 Ea 
 	Activation Energy
+
 ECSS
 	European Cooperation for Space Standardization
+
 EEE
 	Electric, Electronic, Electro-mechanical
+
 EEPROM
 	Electrical Erasable Programmable Read Only Memory
+
 EIA
 	Electronic Industries Alliance
+
 ELR
 	End-of-Life Review
+
 EM
 	Electromigration 
+
 EMC
 	Electro Magnetic Compatibility
+
 EPPL
 	ESA Preferred Part List
+
 EPROM
 	Electrical Programmable Read Only Memory
+
 ESA
 	European Space Agency
+
 ESD
 	Electro Static Discharge
+
 ETA
 	Event Tree Analysis
+
 EX
 	Extrinsic failure
+
 FCV
 	Flow Control Valve
+
 FDIR
 	Fault Detection Isolation and Recovery
+
 FET
 	Field Effect Transistor
+
 FIT
 	Failure In Time
+
 FMD
 	Failure Mode/Mechanism Distribution
+
 FMEA
 	Failure Mode Effect Analysis
+
 FMECA
 	Failure Mode Effect and Criticality Analysis
+
 FMES 
 	Failure Mode Effect Summary
+
 FOO
 	Feasibility Of Objectives
+
 FORM
 	First Order Reliability Method
+
 FPGA
 	Field Programmable Gate Array
+
 FR
 	Failure Rate
+
 FRR
 	Flight Readiness Review
+
 FTA
 	Fault Tree Analysis
+
 GaAs
 	Gallium Arseniure
+
 GaN
 	Gallium Nitrure
+
 GEO
 	Geostationary Orbit
+
 HCI
 	Hot Carrier Injection 
+
 HDBK
 	Handbook
+
 HET
 	Hall Effect Thruster
+
 HF 
 	High Frequency
+
 HPA
 	High Power Amplifier
+
 HW
 	Hardware
+
 IC
 	Integrated Circuits
+
 IEC
 	International Electrotechnical Commission
+
 IEEE
 	Institute of Electrical and Electronics Engineers
+
 IGBT
 	Insulated Gate Bipolar Transistor
+
 IOR
 	In Orbit Return
+
 IOT
 	In Orbit Testing
+
 IPC
 	Association Connecting Electronics Industries
+
 JAN
 	Joint Army Navy
+
 JANS
 	 Joint Army Navy Space
+
 JANTX
 	 Joint Army Navy Technical Exchange
+
 JANTXV
 	 Joint Army Navy Technical Exchange
+
 JEDEC
 	Joint Electron Device Engineering Council
+
 JEP
 	JEDEC Publications
+
 JESD
 	JEDEC Standards
+
 JFET
 	Junction Field Effect Transistor
+
 LCD
 	Liquid Crystal Display
+
 LED 
 	Light Emitting Diode
+
 LEO
 	Low Earth Orbit
+
 LMS
 	Least Mean Square Method
+
 LoC
 	Level of Confidence
+
 LRR
 	Launch Readiness Review
+
 LV
 	Latching Valve
+
 MC
 	minimal cut set
+
 MCCV
 	Maximum Common Cause Value
+
 MCM
 	Multi Chip Module 
+
 MCMC
 	Markov Chain Monte Carlo 
 MCR
+
 	Mission Closure Review
 MDR
+
 	Mission Definition Review
 MEC
+
 	Mechanical
 MEO
+
 	Medium Earth Orbit
 MIL
 	MILitary
+
 MIS
 	Miscellaneous
+
 MMIC
 	Microwave Monolithic Integrated Circuits
+
 MMPDS
 	Metallic Materials Properties Development and Standardization
+
 MOS
 	Metal Oxid Semi-conductor
+
 MOSFET
 	Metal Oxide Semiconductor Field Effect Transistor
+
 MPM
 	Microwave Power Module
+
 MTBF
 	Mean Time Between Failure
+
 MTTF
 	Mean Time To Failure
+
 N/A
 	Not Applicable
+
 NaN
 	Not a Number
+
 NAND
 	Not AND
+
 NASA
 	National Aeronautics and Space Administration
+
 NASDA
 	National Space Development Agency of Japan
+
 NDE
 	Non-Destructive Evaluation
+
 NEA
 	Non Explosive Actuator
+
 NIST
 	National Institute of Standards and Technology
+
 NMOS
 	N Channel MOSFET
+
 NOR
 	Not OR
+
 NPRD
 	Non-Electronic Parts Reliability Data
+
 NRPM
 	New Reliability Prediction Methodology
+
 N-STD
 	Non-Standard
+
 NSWC
 	Naval Surface Warfare Center
+
 O
 	Oxygen
+
 O/O
 	On/Off
+
 OCC
 	Occurrence
+
 ORR
 	Operation Readiness Review
+
 PAL
 	Programmable Array Logic
+
 PBGA
 	Plastic Ball Grid Array
+
 PCB
 	Printed Circuit Board
+
 PDF
 	Probability Density Function
+
 PDR
 	Preliminary Design Review
+
 PEN
 	Polyethylene Naphtalate 
+
 PFMEA
 	Process Failure Mode Effect Analysis
+
 PHEMT
 	Pseudomorphic High Electron Mobility Transistor
+
 PL
 	PayLoad
+
 POD
 	Probability Of Detection
+
 PoF
 	Physics of Failure
+
 PPM
 	Parts Per Million
+
 PPS
 	Polyphenylene Sulfide 
+
 PROM
 	Programmable Read Only Memory
+
 PROP
 	Propulsion
+
 PRR
 	Preliminary Requirements Review
+
 PT
 	Pressure Transducer
+
 PTFE
 	Teflon
+
 PTH
 	Pin To Hole
+
 PWR
 	Power
+
 PYRO
 	Pyrotechnics
+
 QA
 	Quality Assurance
+
 QR
 	Qualification Review
+
 RAMS
 	Reliability Availability Maintainability Safety
+
 RBD
 	Reliability Block Diagram
+
 REF
 	Reference
+
 RF
 	Random Failure
+
 RF
 	Radio Frequency
+
 RH
 	Relative Humidity
+
 RP
 	Reliability Prediction
+
 RPDSM
 	Reliability Prediction Data Sources and Methodologies
+
 RPN
 	Risk Priority Number 
+
 RUL
 	Remaining Useful Life
+
 RW
 	Reaction Wheel
+
 S/N
 	Stress / Number of cycles to failure
+
 SA
 	Solar Array
+
 SADM
 	Solar Array Drive mechanism
+
 SAE
 	Society of Automotive Engineering
+
 SCC
 	Stress Corrosion Cracking
+
 SCU
 	Space Computer Unit
+
 SDIP
 	Skinny Dual In Line Package
+
 SEE
 	Single Event Effects
+
 SEP
 	Single Event Phenomena
+
 SEU
 	Single Event Upset
+
 SEV
 	Severity
+
 SF
 	Systematic Failure
+
 Si
 	Silicium
+
 SiGe
 	Silicium Germanium
+
 SM
 	Stress Migration
+
 SMD
 	Surface Mount Device
+
 SnPb
 	Tin-Lead solder
+
 SORM
 	Second Order Reliability Method
+
 SPF
 	Single Point Failure
+
 SRAM
 	Static Random Access Memory
+
 SRM
 	Structural Reliability Method
+
 SRR
 	System Requirements Review
+
 SSPA
 	Solid State Power Amplifier
+
 STD
 	Standard
+
 STN
 	Satellite Telecommunications Network
+
 STRU
 	Structure
+
 SW
 	Software
+
 SYS
 	System
+
 TDDB
 	Time-Dependent Dielectric Breakdown 
+
 TFT
 	Thin Film Transistor
+
 THER
 	Thermal
+
 TID
 	Total Ionizing Dose
+
 TM
 	Telemetry
+
 TMI
 	Payload data transmitting channel
+
 TN
 	Technical Note
+
 TNID
 	Total Non Ionizing Dose
+
 TTF
 	Time To Failure
+
 TVS
 	Transient Voltage Suppressor
+
 TWTA
 	Travelling Wave Tube Amplifier
+
 UTE
 	Union Technique de l'Electricité
+
 UV
 	Ultra Violet
+
 WO
 	Wear-Out failure
 ```
