@@ -129,7 +129,7 @@ def model_wrapper(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SSF,
     display(reliability_analysis, load_collective)
 
     # print
-    print(f'The failure probability is {reliability_analysis.getFailure()[0]}')
+    print(f'The failure probability is {reliability_analysis.getFailure()[0]:.2e} after {N:.2e} load cycles.')
 
 
 def web_ui():

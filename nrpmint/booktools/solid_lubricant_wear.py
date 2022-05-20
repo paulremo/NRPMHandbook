@@ -124,7 +124,7 @@ def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
     display(reliability_analyses, mult_one_idx, rev_per_hour)
 
     # print
-    print(f'The failure probability is {reliability_analyses[mult_one_idx].getFailure()[0]}')
+    print(f'The failure probability is {reliability_analyses[mult_one_idx].getFailure()[0]:.2e} after {nrev:.2e} revolutions.')
 
 
 def web_ui():
