@@ -39,7 +39,7 @@ The classification helps to preliminary identify the {term}`FAILURE MECHANISM`s 
 
 However, the final selection of the dominant {term}`FAILURE MECHANISM`s shall be performed based on the concrete design solution. The identification of the dominant and secondary {term}`FAILURE MECHANISM`s is important as it helps focusing on the key reliability aspects whilst effectively using the schedule. To give an example, it may be sufficient to focus on the dominant ones when making a prediction at an early stage of the development.
 
-Typically, components falling into category III “Non-fluidic structural components” can be considered as “intrinsically reliable” within the design lifetime when the following {term}`REQUIREMENT`s are satisfied: 
+Typically, components falling into category III “Non-fluidic structural components” can be considered as “intrinsically reliable” within the design lifetime when the following .term}`requirement <REQUIREMENT>`s are satisfied: 
 
 * Qualification and design factors ≥ 1.25
 * Material and loading variability within usual ranges
@@ -52,7 +52,7 @@ Typically, components falling into category III “Non-fluidic structural compon
 Miss ref just below x2
 ```
 
-Under these conditions, it may be assumed that the reliability figure for the considered structure is equal to unity for practical purposes (in reality, it is just very close to unity). Note that the listed {term}`REQUIREMENT`s are generally fulfilled for standard structures manufactured with traditional (metallic) materials and manufacturing processes, and using structural factors of safety as defined in {term}`ECSS`-E-ST-32-10C Error: Reference source not found. {term}`RELIABILITY PREDICTION`s using {term}`STRUCTURAL RELIABILITY METHOD`s under these conditions yield very small probabilities of failure (see e.g. the case study in Error: Reference source not found, which is confirmed also by the good performance of structure in orbit. It should be noted that the probability of {term}`SYSTEMATIC FAILURE`s due to gross design, manufacturing or operations errors may not be negligible irrespective of these conclusions, especially in the case of new designs. 
+Under these conditions, it may be assumed that the reliability figure for the considered structure is equal to unity for practical purposes (in reality, it is just very close to unity). Note that the listed .term}`requirement <REQUIREMENT>`s are generally fulfilled for standard structures manufactured with traditional (metallic) materials and manufacturing processes, and using structural factors of safety as defined in {term}`ECSS`-E-ST-32-10C Error: Reference source not found. {term}`Reliability prediction <RELIABILITY PREDICTION>`s using {term}`STRUCTURAL RELIABILITY METHOD`s under these conditions yield very small probabilities of failure (see e.g. the case study in Error: Reference source not found, which is confirmed also by the good performance of structure in orbit. It should be noted that the probability of {term}`SYSTEMATIC FAILURE`s due to gross design, manufacturing or operations errors may not be negligible irrespective of these conclusions, especially in the case of new designs. 
 
 For structures that do not fulfil the abovementioned conditions, reliability figures need to be calculated considering the relevant structural {term}`FAILURE MECHANISM`s. Studies aiming at the reusability of the flight hardware for multiple launches will need additional considerations.
 
