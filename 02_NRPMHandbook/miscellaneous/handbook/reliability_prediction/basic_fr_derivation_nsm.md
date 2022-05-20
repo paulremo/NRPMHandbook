@@ -7,7 +7,7 @@ Once the reliability model is established it can be tailored as necessary based 
 First, it is necessary, to collect/define all technical information about the {term}`miscellaneous item <Miscellaneous item>` in order to characterize it (refer to {numref}`misc_5_5`). Then the basic failure rate $\lambda_{1}$ = $\lambda_{B}$ is defined (step 1) as discussed below. Finally, the tailoring of this basic failure rate follows the “standard model” procedure as presented in the subsections of {numref}`misc_5_5`) corresponding to [step 2](misc_step2) to [7](misc_step7).
 
 
-(misc_5_5_1)=
+(misc_5_7_1)=
 ## Design FMEA / Process FMEA
 
 After the first item characterization, a {term}`Design FMEA` and a {term}`Process FMEA` are performed in order to assess the {term}`failure modes <Failure mode>` due to 
@@ -65,21 +65,10 @@ name: Figure 5.9
 Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
 ```
 
-```{glossary}
-SA
-  Solar Array
-
-I_SA
-  SA current
-
-{term}`TM`
-  Telemetry
-
-{term}`SPF`
-  Single Point Failure
-```
-
-
+- {term}`SA`
+- {term}`I_SA`
+- {term}`TM`
+- {term}`SPF`
 
 (misc_table4_6)=
 ```{list-table} Occurrence scale with 10 levels
@@ -89,17 +78,12 @@ I_SA
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_6.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
+- {term}`TRL`
 
-```{glossary}
-TRL
-  Technology Readiness Level
-```
-
-
-(misc_5_5_2)=
+(misc_5_7_2)=
 ### Probability assessment
 
-The occurrence scale of {numref}`misc_5_5_2` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per {term}`failure mode <Failure mode>`:
+The occurrence scale of {numref}`misc_5_7_2` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per {term}`failure mode <Failure mode>`:
 
 * In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a {term}`HF/RF passive part <HF/RF passive part>` which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
 * A probability of occurrence is assigned to every {term}`failure mode <Failure mode>` and the sum provides the probability of occurrence of the item.

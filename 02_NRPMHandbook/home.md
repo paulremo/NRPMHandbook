@@ -1,28 +1,29 @@
+<<<<<<< HEAD
 (home)=
 # Welcome to the NRPM digital handbook !
 
+=======
+# Welcome to the NRPM digital handbook!
+>>>>>>> 6153853ead8b3bfc27cff26a8aa2b474c12783b8
 
 This is the digital version of the {term}`NRPM` handbook for reliability.space. The handbook is currently under construction, but already offers a large collection of sections to explore, guides to interact with, and models to analyze.
-
-The following sections (and their subsections) are finalized serve as a template for the remaining, unfinished sections:
-
-- {numref}`sec_mech_models`: This sections hosts three tools for advanced interactive reliability assessment.
-- {numref}`sec_misc_handbook`: This sections hosts the digitalized version of the miscellaneous chapter.
-- {numref}`sec_misc_models`: This sections hosts two interactive tools for exploring the miscellaneous chapter of the digital handbook.
-
 
 ```{admonition} Under construction
 :class: todo
 This digital handbook is under construction. Throughout the handbook you will find notes titled *under construction* that warn about content that is not yet finalized.
+
+The following sections (and their subsections) are finalized and serve as a template for the remaining, unfinished sections:
+
+- {numref}`sec_mech_models`: This sections hosts three tools for advanced interactive reliability assessment.
+- {numref}`sec_misc_handbook`: This sections hosts the digitalized version of the miscellaneous chapter.
+- {numref}`sec_misc_models`: This sections hosts two interactive tools for exploring the miscellaneous chapter of the digital handbook.
 ```
 
-The digital handbook is split into six chapters that can be accessed by clicking on the icons below or browsing the table of contents to the left of this page.
+## Objective
 
-Every chapter contains at most two sections:
+The reliability.space 2020 handbook was developed during a {term}`ECSS` study aiming at the development of a {term}`reliability prediction <Reliability prediction>` methodology for space applications. The objective of the handbook is to provide a methodology that is dedicated to space, avoiding the limitations and shortcomings of existing {term}`reliability prediction <Reliability prediction>` methodologies which were largely focussing on ground applications. The present digital handbook is a digitalized version of the reliabililty.space 2020 handbook that offers easier access, interactive content, and a contemporary design.
 
-- *Handbook*: This section hosts the digitalized version of the original handbook. It follows closely the original structure but is enhanced with interactive content (e.g., automatic linking of terms and acronyms, searchable tables, powerful search functionality).
-- *Models*: This section offers interactive elements (interactive guides, advanced reliability assessment).
-
+This digital handbook contains a methodology, a methods and four application-specific chapters for {term}`reliability prediction <Reliability prediction>` in space applications. These chapters can be accessed by clicking on the icons below or browsing the table of contents to the left of this page.
 
 ::::{grid}
 :gutter: 3
@@ -60,64 +61,30 @@ Every chapter contains at most two sections:
 :::
 ::::
 
+{term}`Reliability prediction <Reliability prediction>` is not an end in itself – the ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single {term}`spacecrafts <Spacecraft>` or constellations.
 
-## Objective
+The purpose of the **methodology chapter** ({numref}`methodologies`) is to provide guidance for the use of {term}`reliability prediction <Reliability prediction>` to support such decisions. The ground rules and scope of the prediction are defined accounting for the {term}`RP` objectives and uses as well as for the project life cycle phase in which the predictions are performed. Ultimately, the goal is to select suitable methods and models to perform a prediction in a given context. The **methods chapter** ({numref}`methods`) contains information about the inputs and modelling approaches that can be used to develop models for {term}`reliability predictions <Reliability prediction>` in a given application. The discussion of methods can be used to derive new applications or update existing ones. However, the main purpose of this chapter is to form the basis for the application specific-chapters following it: **EEE chapter** ({numref}`sec_eee_handbook`, {numref}`sec_eee_models`), **mechanical chapter** ({numref}`sec_mech_handbook`, {numref}`sec_mech_models`), **miscellaneous chapter** ({numref}`sec_misc_handbook`, {numref}`sec_misc_models`), **system chapter** ({numref}`sec_sys_handbook`, {numref}`sec_sys_models`).
 
-The reliability.space 2020 handbook was developed during an {term}`ECSS` study aiming at the development of a {term}`reliability prediction <Reliability prediction>` methodology for space applications. The objective of the handbook is to provide a methodology that is dedicated to space, avoiding the limitations and shortcomings of existing {term}`reliability prediction <Reliability prediction>` methodologies which were largely focussing on ground applications. More details on the development of this reliability.space methodology can be found in [Annex A]().
+Even though the handbook targets decision support, the decision-making as such is left to the user; {term}`reliability prediction <Reliability prediction>` is limited to providing the numbers that can be used to decide in a given trade-off situation. Also, the practical implementation and development or choice of suitable software tools is outside the scope of this handbook. As a general rule, models are provided with full detail, allowing the development of tools without any restrictions regarding the information needed to implement them.
 
-## Scope
+## How to use this digital handbook
 
-The objective of this handbook is to provide a methodology, methods and models for {term}`reliability prediction <Reliability prediction>` in space applications. The scope of the handbook can be explained by discussing the following terms:
-- {term}`reliability prediction <Reliability prediction>`
-- Space applications
-- Methodology, methods and models
+### Navigation
 
-### Reliability prediction
+Every chapter contains at most two sections:
 
-The term **{term}`reliability prediction <Reliability prediction>` (RP)** is here understood as the process, or outcome, of estimating (predicting) the reliability of a system or its components, i.e. the probability of success. In the more general context of {term}`RAMS` analyses, making use of qualitative and quantitative techniques, {term}`reliability prediction <Reliability prediction>` is restricted to providing quantitative estimates for the probability of success or failure. The focus of the methodology presented herein is on Reliability in this narrow sense. Specific{term}`requirements <Requirement>` of Availability, Maintainability or Safety analyses have not been considered during the development of the methodology and are out of the handbook’s scope, even though the probabilistic methods provided may of course also be used to support these analyses.
+- **Handbook**: This section hosts the digitalized version of the original handbook. It follows closely the original structure but is enhanced with interactive content (e.g., automatic linking of terms and acronyms, searchable tables, powerful search functionality).
+- **Models**: This section offers interactive elements (interactive guides, advanced reliability assessment).
 
-### Space Applications
+They can be accessed from the navigation panel on the left of this page. The structure of the currently active site can be seen on the right of this page.
 
-For the purpose of the Handbook, the term **Space Applications** refers to {term}`reliability prediction <Reliability prediction>`s for systems that operate in space, e.g. a {term}`spacecraft <Spacecraft>`. While parts of the methodology may also be used to model end-to-end systems including the ground segment, the handbook does not cover aspects specific to ground applications, e.g. related to the effect of ground environmental conditions. In terms of technology coverage, the methodology is limited to unmanned {term}`spacecraft <Spacecraft>` technology.
+At the top of the left navigation panel is a search box that can be used to browse the contents of the whole digital handbook. 
 
-### Methodology, Methods and Models
+### Versioning 
 
-The handbook includes a {term}`reliability prediction <Reliability prediction>` methodology for space applications together with information on the methods and models that can be used to perform the predictions.
+This digital handbook is supplied in a versioned format powered by [ReadTheDocs](https://readthedocs.org/). It is possible to switch between different versions of this document by selecting the desired version from the ReadTheDocs menu at the bottom of the left navigation panel. Besides the numbered versions, two special versions are distinguished:
 
-```{figure} _static/images/figure1.png
----
-width: 600px
-name: Figure 1
----
-Hierarchy of Methodology, Methods, Models and Data for {term}`reliability prediction <Reliability prediction>`s aiming at decision support and trade-offs in space projects. The practical implementation and tooling is not considered in the frame of the handbook.
-```
+- `latest` this is the latest version of the document and might change unexpectedly.
+- `stable` this is the latest official version of the document and corresponds to the last released numbered version.
 
-{term}`Reliability prediction <Reliability prediction>` is not an end in itself – the ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single {term}`spacecraft <Spacecraft>`s or constellations.
-
-The purpose of the handbook’s Methodology section (Part I) is to provide guidance for the use of {term}`reliability prediction <Reliability prediction>` to support such decisions. The ground rules and scope of the prediction are defined accounting for the RP objectives and uses as well as for the project life cycle phase in which the predictions are performed. Ultimately, the goal is to select suitable methods and models to perform a prediction in a given context.
-
-The Methods section of the handbook (Part II) contains information about the inputs and modelling approaches that can be used to develop models for {term}`reliability prediction <Reliability prediction>`s in a given application. The discussion of methods forms the basis for the models presented thereafter, but can also be used to derive new models or update existing ones for future applications.
-Models and data for {term}`reliability prediction <Reliability prediction>` in practical applications can be found in the Models section of the handbook (Part III).
-
-Even though the handbook targets decision support, the decision-making as such is left to the user; {term}`reliability prediction <Reliability prediction>` is limited to providing the numbers that can be used to decide in a given trade-off situation. Also the practical implementation and development or choice of suitable Software tools is out of scope for the handbook. As a general rule, models are provided with full detail, allowing the development of tools without any restrictions regarding the information needed to implement the models.
-
-## How to use the handbook
-
-To simplify its application by the user, the handbook is divided in three volumes and a Preface:
-The Preface contains terms and definitions, abbreviated terms and common nomenclature for all three volumes.
-
-* Part I (Methodology) explains the framework and taxonomy used in this handbook and provides guidance for users that are in charge of planning a prediction.
-
-* Part II (Methods) provides information on different modelling inputs and approaches, allowing to understand each model’s background and limitations, to update existing models with new data and to develop new models in consistency with the handbook philosophy.
-
-* Part III (Models) defines the models and data to be used for {term}`reliability prediction <Reliability prediction>` in space applications.
-
-Each volume has its intended audience, focussing on a specific use of the {term}`reliability prediction <Reliability prediction>` handbook, see {numref}`Figure 2`. for details. The average handbook user whose task is to perform a prediction with the given models will find all required material in Part III, which is divided by technical domain (EEE, Mechanical, Miscellaneous) and level (parts and small assemblies versus systems). It is, however, assumed that the user is familiar with the basic notions and concepts introduced in the other parts, e.g. the taxonomy explained in Part I.
-
-```{figure} _static/images/figure2.png
----
-width: 600px
-name: Figure 2
----
-Overview on the three handbook volumes and their usage by {term}`reliability prediction <Reliability prediction>` task.
-```
+All versions may also be accessed (and linked to) with the following URL: `https://nrpmhandbook.reliability.space/en/<version>/...` where `<version>` can be replaced by any version of this document.

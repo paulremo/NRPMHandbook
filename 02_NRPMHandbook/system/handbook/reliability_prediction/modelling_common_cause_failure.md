@@ -53,7 +53,7 @@ In order to avoid that {term}`common cause failures <Common cause failure>` rest
 
 -   Connect the components in a redundant set to different supporting systems using diverse interconnection configurations
 
-(syst_4_7_2)=
+(syst_4_7_3)=
 ## Basic Parameter model
 
 The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and {term}`common cause failures <Common cause failure>`, as shown in {numref}`Figure 7.31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by Error: Reference source not found
