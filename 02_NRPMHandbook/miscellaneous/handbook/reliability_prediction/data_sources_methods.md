@@ -119,7 +119,7 @@ In some cases, there are valuable data mainly produced by engineering which coul
 A combined approach based on one of the methods listed above and {term}`Bayesian inference <Bayesian inference>` updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.
 
 
-(misc_5_3_5)=
+(misc_5_3_6)=
 ## Reliability handbooks / models
 
 There are no dedicated reliability handbooks really addressing exhaustively miscellaneous items. Therefore, it is not recommended to use such a method, unless when the available data source and the data use is justified.
