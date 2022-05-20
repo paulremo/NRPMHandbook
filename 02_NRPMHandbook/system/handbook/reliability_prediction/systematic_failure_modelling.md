@@ -9,7 +9,7 @@ miss 4 ref above
 
 ## Systematic failures in reliability prediction
 
-According to the classification provided in [Chapter 4 (Part I)](), systematic failures are failures for which the root cause is known and has been identified as a design, manufacturing or operations error. The fact that the root cause is known (at least a posteriori) and can be eliminated is the main difference between systematic and random failures. First priority should thus clearly be to avoid systematic failures rather than modelling their occurrence. However, it is also clear that even though a specific root cause may be eliminated by adapting the design or the process in which the error occurred, experience shows that other root causes will lead to new systematic failures. It is thus possible -- and can be meaningful, depending on the intended use of the prediction -- to derive a statistical model for systematic failures in the same way as for random failures.
+According to the classification provided in {numref}`methods`, systematic failures are failures for which the root cause is known and has been identified as a design, manufacturing or operations error. The fact that the root cause is known (at least a posteriori) and can be eliminated is the main difference between systematic and random failures. First priority should thus clearly be to avoid systematic failures rather than modelling their occurrence. However, it is also clear that even though a specific root cause may be eliminated by adapting the design or the process in which the error occurred, experience shows that other root causes will lead to new systematic failures. It is thus possible -- and can be meaningful, depending on the intended use of the prediction -- to derive a statistical model for systematic failures in the same way as for random failures.
 
 Another major difference to random failures is that systematic {term}`failure root cause <Failure root cause>`s may be introduced at any level of assembly, from part to system. In fact, considering the high quality of parts used in space and the complexity and uniqueness of the assembled systems, one may even assume that the occurrence of part related systematic failures is negligible compared to non-part related failures with root causes introduced at higher levels of assembly.
 
@@ -114,7 +114,7 @@ The following anomalies observed in orbit are classified as major:
 
 ### Classification of anomalies as "systematic"
 
-The models and data presented in this section are consistent with the classification of failures by root cause discussed in [Chapter 4 (Part I)](); the classification of anomalies is based on the same principles. Only major anomalies classified as "systematic" are considered for the modelling. As discussed in Section Error: Reference source not found above, this includes anomalies due to errors in the design (including specification), manufacturing and operation of space systems.
+The models and data presented in this section are consistent with the classification of failures by root cause discussed in {numref}`methods`; the classification of anomalies is based on the same principles. Only major anomalies classified as "systematic" are considered for the modelling. As discussed in Section Error: Reference source not found above, this includes anomalies due to errors in the design (including specification), manufacturing and operation of space systems.
 
 ```{admonition} Todo
 :class: todo
@@ -172,11 +172,11 @@ The repartition of major anomalies by satellite subsystem in which the {term}`an
 
 -   **{term}`TMI`:** Payload data transmitting channel (esp. for Earth observation and Science missions)
 
--   **{term}`TTC`:** Telemetry and Telecommand (incl. transmitter, antenna, ...)
+-   **TTC:** Telemetry and Telecommand (incl. transmitter, antenna, ...)
 
 -   **{term}`SYS`:** System (when it is not possible to state the subsystem)
 
--   **{term}`NN`:** Unknown / Unspecified
+-   **NN:** Unknown / Unspecified
 
 For the subsystems with {term}`anomaly <Anomaly>` data, the anomalies are further classified by severity, following the same (mission level) classification as introduced above.
 

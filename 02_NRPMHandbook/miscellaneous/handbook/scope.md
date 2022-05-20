@@ -1,6 +1,6 @@
 # Scope
 
-This chapter deals with the miscellaneous items which are represented by all parts/item (or sets of parts) which are not fully electrical parts, nor fully {term}`mechanical parts <Mechanical part>` nor fully structural parts. The current reliability models ([{term}`EEE parts <EEE part>`](../../eee/mainEEE.md), [{term}`mechanical parts <Mechanical part>`](../../mechanical/handbook/introduction.md)) are not adapted and are not the preferred way to support {term}`reliability predictions <Reliability prediction>` for these items. Therefore, other ways to provide reliability estimates are proposed in this chapter and are detailed in the next sections.
+This chapter deals with the miscellaneous items which are represented by all parts/item (or sets of parts) which are not fully electrical parts, nor fully {term}`mechanical parts <Mechanical part>` nor fully structural parts. The current reliability models ({term}`EEE parts <EEE part>`, {term}`mechanical parts <Mechanical part>`) are not adapted and are not the preferred way to support {term}`reliability predictions <Reliability prediction>` for these items. Therefore, other ways to provide reliability estimates are proposed in this chapter and are detailed in the next sections.
 
 The {numref}`Figure 5.1` represents examples of some miscellaneous parts/items:
 
