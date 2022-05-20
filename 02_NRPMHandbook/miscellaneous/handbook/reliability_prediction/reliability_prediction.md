@@ -1,5 +1,5 @@
 (misc_5_0)=
-# {term}`reliability prediction <Reliability prediction>` for miscellaneous items
+# Reliability prediction for miscellaneous items
 
 
 The current document defines guidance to model reliability of most of the typical miscellaneous items implemented aboard the satellites:

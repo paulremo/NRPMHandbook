@@ -71,9 +71,9 @@ The objective of this handbook is to provide a methodology, methods and models f
 - Space applications
 - Methodology, methods and models
 
-### {term}`reliability prediction <Reliability prediction>`
+### Reliability prediction
 
-The term **{term}`reliability prediction <Reliability prediction>` (RP)** is here understood as the process, or outcome, of estimating (predicting) the reliability of a system or its components, i.e. the probability of success. In the more general context of {term}`RAMS` analyses, making use of qualitative and quantitative techniques, {term}`reliability prediction <Reliability prediction>` is restricted to providing quantitative estimates for the probability of success or failure. The focus of the methodology presented herein is on Reliability in this narrow sense. Specific .term}`requirement <Requirement>`s of Availability, Maintainability or Safety analyses have not been considered during the development of the methodology and are out of the handbook’s scope, even though the probabilistic methods provided may of course also be used to support these analyses.
+The term **{term}`reliability prediction <Reliability prediction>` (RP)** is here understood as the process, or outcome, of estimating (predicting) the reliability of a system or its components, i.e. the probability of success. In the more general context of {term}`RAMS` analyses, making use of qualitative and quantitative techniques, {term}`reliability prediction <Reliability prediction>` is restricted to providing quantitative estimates for the probability of success or failure. The focus of the methodology presented herein is on Reliability in this narrow sense. Specific{term}`requirements <Requirement>` of Availability, Maintainability or Safety analyses have not been considered during the development of the methodology and are out of the handbook’s scope, even though the probabilistic methods provided may of course also be used to support these analyses.
 
 ### Space Applications
 
@@ -91,7 +91,7 @@ name: Figure 1
 Hierarchy of Methodology, Methods, Models and Data for {term}`reliability prediction <Reliability prediction>`s aiming at decision support and trade-offs in space projects. The practical implementation and tooling is not considered in the frame of the handbook.
 ```
 
-{term}`reliability prediction <Reliability prediction>` is not an end in itself – the ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single {term}`spacecraft <Spacecraft>`s or constellations.
+{term}`Reliability prediction <Reliability prediction>` is not an end in itself – the ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single {term}`spacecraft <Spacecraft>`s or constellations.
 
 The purpose of the handbook’s Methodology section (Part I) is to provide guidance for the use of {term}`reliability prediction <Reliability prediction>` to support such decisions. The ground rules and scope of the prediction are defined accounting for the RP objectives and uses as well as for the project life cycle phase in which the predictions are performed. Ultimately, the goal is to select suitable methods and models to perform a prediction in a given context.
 

@@ -8,7 +8,7 @@ First, it is necessary, to collect/define all technical information about the {t
 
 
 (misc_5_5_1)=
-## {term}`Design FMEA` / {term}`Process FMEA`
+## Design FMEA / Process FMEA
 
 After the first item characterization, a {term}`Design FMEA` and a {term}`Process FMEA` are performed in order to assess the {term}`failure modes <Failure mode>` due to 
 
