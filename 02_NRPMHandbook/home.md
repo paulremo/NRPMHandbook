@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-(home)=
+(home_page)=
 # Welcome to the NRPM digital handbook !
-
-=======
-# Welcome to the NRPM digital handbook!
->>>>>>> 6153853ead8b3bfc27cff26a8aa2b474c12783b8
 
 This is the digital version of the {term}`NRPM` handbook for reliability.space. The handbook is currently under construction, but already offers a large collection of sections to explore, guides to interact with, and models to analyze.
 

@@ -1,3 +1,4 @@
+(syst_4_10)=
 # Consideration of software failures
 
 As has already been discussed in Section Error: Reference source not found, software failures are a special case of {term}`systematic failures <Systematic failure>`. They result either from errors in the software functional {term}`requirements <Requirement>` or from errors in the software development process (software design or coding), and are activated by a specific input or context. The activation of the error in a given context is deterministic (in the sense of a {term}`systematic failure <Systematic failure>`), but it is not known in advance.
