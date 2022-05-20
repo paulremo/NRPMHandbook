@@ -134,13 +134,15 @@ def web_ui():
     # prepare sliders and drop downs
     Dist_K = {
         'type': 'dropdown',
-        'description': 'Dist $K$',
+        #'description': 'Dist $K$',
+        'description': 'Dist K',
         'value': 'Gumbel',
         'options': ['LogNormal', 'Normal', 'Gumbel'],
     }
     E_K = {
         'type': 'floatslider',
-        'description': '$\\text{E}[K]$',
+        #'description': '$\\text{E}[K]$',
+        'description': 'E[K]',
         'value': 1e8,
         'min': 1e6,
         'max': 1e10,
@@ -149,7 +151,8 @@ def web_ui():
     }
     CoV_K = {
         'type': 'floatslider',
-        'description': '$\\text{C.o.V.}[K]$',
+        #'description': '$\\text{C.o.V.}[K]$',
+        'description': 'C.o.V.[K]',
         'value': 0.75,
         'min': 0.05,
         'max': 0.75,
@@ -158,13 +161,15 @@ def web_ui():
     }
     Dist_MU = {
         'type': 'dropdown',
-        'description': 'Dist $\Theta$',
+        #'description': 'Dist $\Theta$',
+        'description': 'Dist Theta',
         'value': 'LogNormal',
         'options': ['LogNormal'],
     }
     E_MU = {
         'type': 'floatslider',
-        'description': '$\\text{E}[\Theta]$',
+        #'description': '$\\text{E}[\Theta]$',
+        'description': 'E[Theta]',
         'value': 1,
         'min': 0.01,
         'max': 1,
@@ -173,7 +178,8 @@ def web_ui():
     }
     CoV_MU = {
         'type': 'floatslider',
-        'description': '$\\text{C.o.V.}[\Theta]$',
+        #'description': '$\\text{C.o.V.}[\Theta]$',
+        'description': 'C.o.V.[Theta]',
         'value': 0.2,
         'min': 0.05,
         'max': 1,
@@ -182,7 +188,8 @@ def web_ui():
     }
     M0 = {
         'type': 'floatslider',
-        'description': '$M_0$',
+        #'description': '$M_0$',
+        'description': 'M_0',
         'value': 80,
         'min': 10,
         'max': 100,
@@ -191,7 +198,8 @@ def web_ui():
     }
     Minact = {
         'type': 'floatslider',
-        'description': '$M_{\\text{inact}}$',
+        #'description': '$M_{\\text{inact}}$',
+        'description': 'M_inact',
         'value': 80*0.01,
         'min': 1,
         'max': 100,
@@ -200,7 +208,8 @@ def web_ui():
     }
     Nb = {
         'type': 'floatslider',
-        'description': '$N_b$',
+        #'description': '$N_b$',
+        'description': 'N_b',
         'value': 25,
         'min': 15,
         'max': 30,
@@ -209,7 +218,8 @@ def web_ui():
     }
     bd = {
         'type': 'floatslider',
-        'description': '$b_d$',
+        #'description': '$b_d$',
+        'description': 'b_d',
         'value': 12.5,
         'min': 5,
         'max': 40,
@@ -218,7 +228,8 @@ def web_ui():
     }
     pd = {
         'type': 'floatslider',
-        'description': '$p_d$',
+        #'description': '$p_d$',
+        'description': 'p_d',
         'value': 50,
         'min': 10,
         'max': 200,
@@ -228,7 +239,8 @@ def web_ui():
     #Check if GPa or MPa
     pm = {
         'type': 'floatslider',
-        'description': '$p_m$',
+        #'description': '$p_m$',
+        'description': 'p_m',
         'value': 0.8,
         'min': 0.1,
         'max': 5,
@@ -238,7 +250,8 @@ def web_ui():
     # Check if rad or degree
     theta = {
         'type': 'floatslider',
-        'description': '$\\theta$',
+        #'description': '$\\theta$',
+        'description': 'theta',
         'value': 10,
         'min': 0,
         'max': 45,
@@ -247,7 +260,8 @@ def web_ui():
     }
     nrev = {
         'type': 'floatslider',
-        'description': '$\\text{E}[r]$',
+        #'description': '$\\text{E}[r]$',
+        'description': 'E[r]',
         'value': 1e+6,
         'min': 1e+5,
         'max': 1e+8,
@@ -256,7 +270,8 @@ def web_ui():
     }
     rev_per_hour = {
         'type': 'floatslider',
-        'description': '$\\text{E}[r_h]$',
+        #'description': '$\\text{E}[r_h]$',
+        'description': 'E[r_h]',
         'value': 1e+6,
         'min': 1e6,
         'max': 1e+7,

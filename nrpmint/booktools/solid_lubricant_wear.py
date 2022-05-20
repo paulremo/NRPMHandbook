@@ -132,22 +132,26 @@ def web_ui():
     # prepare sliders and drop downs
     Dist_Vlim = {
         'type': 'dropdown',
-        'description': 'Dist $V_{\\text{lim}}$',
+        #'description': 'Dist $V_{\\text{lim}}$',
+        'description': 'Dist V_lim',
         'value': 'Gumbel',
         'options': ['LogNormal', 'Normal', 'Gumbel'],
     }
+    scale_units = 1e6
     E_Vlim = {
         'type': 'floatslider',
-        'description': '$\\text{E}[V_{\\text{lim}}]$',
-        'value': 6.5e-8,
-        'min': 1e-8,
-        'max': 1e-7,
-        'step': 1e-9,
+        #'description': '$\\text{E}[V_{\\text{lim}}]$',
+        'description': '$E[V_lim]',
+        'value': 6.5e-8*scale_units,
+        'min': 1e-8*scale_units,
+        'max': 1e-7*scale_units,
+        'step': 1e-9*scale_units,
         'readout_format': '.1e'
     }
     CoV_Vlim = {
         'type': 'floatslider',
-        'description': '$\\text{C.o.V.}[V_{\\text{lim}}]$',
+        #'description': '$\\text{C.o.V.}[V_{\\text{lim}}]$',
+        'description': '$C.o.V.[V_lim]',
         'value': 0.2,
         'min': 0.05,
         'max': 1,
@@ -156,22 +160,26 @@ def web_ui():
     }
     Dist_KH = {
         'type': 'dropdown',
-        'description': 'Dist $K_H$',
+        #'description': 'Dist $K_H$',
+        'description': 'Dist K_H',
         'value': 'Normal',
         'options': ['LogNormal', 'Normal', 'Gumbel'],
     }
+    scale_units = 1e12
     E_KH = {
         'type': 'floatslider',
-        'description': '$\\text{E}[K_H]$',
-        'value': 4e-15,
-        'min': 1e-15,
-        'max': 1e-14,
-        'step': 1e-15,
+        #'description': '$\\text{E}[K_H]$',
+        'description': '$E[K_H]',
+        'value': 4e-15*scale_units,
+        'min': 1e-15*scale_units,
+        'max': 1e-14*scale_units,
+        'step': 1e-15*scale_units,
         'readout_format': '.1e'
     }
     CoV_KH = {
         'type': 'floatslider',
-        'description': '$\\text{C.o.V.}[K_H]$',
+        #'description': '$\\text{C.o.V.}[K_H]$',
+        'description': 'C.o.V[K_H]',
         'value': 0.65,
         'min': 0.05,
         'max': 1,
@@ -180,13 +188,15 @@ def web_ui():
     }
     Dist_alpha = {
         'type': 'dropdown',
-        'description': 'Dist $\\alpha$',
+        #'description': 'Dist $\\alpha$',
+        'description': 'Dist alpha',
         'value': 'Gumbel',
         'options': ['LogNormal', 'Normal', 'Gumbel'],
     }
     E_alpha = {
         'type': 'floatslider',
-        'description': '$\\text{E}[\\alpha]$',
+        #'description': '$\\text{E}[\\alpha]$',
+        'description': 'E[alpha]',
         'value': 0.018,
         'min': 0.01,
         'max': 0.1,
@@ -195,7 +205,8 @@ def web_ui():
     }
     CoV_alpha = {
         'type': 'floatslider',
-        'description': '$\\text{C.o.V.}[\\alpha]$',
+        #'description': '$\\text{C.o.V.}[\\alpha]$',
+        'description': 'C.o.V.[alpha]',
         'value': 0.2,
         'min': 0.05,
         'max': 1,
@@ -204,13 +215,15 @@ def web_ui():
     }
     Dist_MU = {
         'type': 'dropdown',
-        'description': 'Dist $\Theta$',
+        #'description': 'Dist $\Theta$',
+        'description': 'Dist Theta',
         'value': 'LogNormal',
         'options': ['LogNormal'],
     }
     E_MU = {
         'type': 'floatslider',
-        'description': '$\\text{E}[\Theta]$',
+        #'description': '$\\text{E}[\Theta]$',
+        'description': 'E[Theta]',
         'value': 1,
         'min': 0.01,
         'max': 1,
@@ -219,7 +232,8 @@ def web_ui():
     }
     CoV_MU = {
         'type': 'floatslider',
-        'description': '$\\text{C.o.V.}[\Theta]$',
+        #'description': '$\\text{C.o.V.}[\Theta]$',
+        'description': 'C.o.V.[Theta]',
         'value': 0.2,
         'min': 0.05,
         'max': 1,
@@ -228,7 +242,8 @@ def web_ui():
     }
     rho_KH_alpha = {
         'type': 'floatslider',
-        'description': '$\\rho_{KH,\\alpha}$',
+        #'description': '$\\rho_{KH,\\alpha}$',
+        'description': 'rho_{KH,alpha}',
         'value': 0.5,
         'min': 0,
         'max': 1,
@@ -237,7 +252,8 @@ def web_ui():
     }
     nrev = {
         'type': 'floatslider',
-        'description': '$\\text{E}[r]$',
+        #'description': '$\\text{E}[r]$',
+        'description': 'E[r]',
         'value': 2.45e+8,
         'min': 1e+8,
         'max': 1e+9,
@@ -246,7 +262,8 @@ def web_ui():
     }
     rev_per_hour = {
         'type': 'floatslider',
-        'description': '\\(\\text{E}[r_h]\\)',
+        #'description': '$\\text{E}[r_h]$',
+        'description': 'E[r_h]',
         'value': 1e+6,
         'min': 1e6,
         'max': 1e+7,
