@@ -4,7 +4,7 @@
 
 The reliability model derived from IOR data gathers in fact all the elements related to an “equivalent class” and is only valid for this class of miscellaneous items. The related numerical values are provided in {numref}`Reliability data`.
 
-To use the reliability model it is, first, necessary to assess that the {term}`MISCELLANEOUS ITEM` considered falls in the scope of the model definition. The “standard model” refers to a class of {term}`MISCELLANEOUS ITEM` identified by the main functions which are supported, the parameters reflecting the reliability ({term}`QUALITY`…) and the operating conditions.
+To use the reliability model it is, first, necessary to assess that the {term}`miscellaneous item <Miscellaneous item>` considered falls in the scope of the model definition. The “standard model” refers to a class of {term}`miscellaneous item <Miscellaneous item>` identified by the main functions which are supported, the parameters reflecting the reliability ({term}`quality <Quality>`…) and the operating conditions.
 
 {numref}`misc_5_8` provides additional information for the miscellaneous items for which no “standard model” is provided (the list is not exhaustive, refer to {numref}`misc_5_7`).
 

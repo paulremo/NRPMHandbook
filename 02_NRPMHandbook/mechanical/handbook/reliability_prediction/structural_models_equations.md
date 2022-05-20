@@ -1,13 +1,13 @@
 # Structural reliability models and equations
 
-The present section provides limit state functions and guidance for the modelling of several {term}`FAILURE MECHANISM`s that are of relevance for mechanical {term}`RELIABILITY PREDICTION`. The content of this Section is largely based on Error: Reference source not found, where some aspects are discussed in more detail.
+The present section provides limit state functions and guidance for the modelling of several {term}`failure mechanisms <Failure mechanism>` that are of relevance for mechanical {term}`reliability prediction <Reliability prediction>`. The content of this Section is largely based on Error: Reference source not found, where some aspects are discussed in more detail.
 
 ```{admonition} Todo
 :class: todo
 Miss ref just above
 ```
 
-An overview on the {term}`FAILURE MECHANISM`s covered by the different subsections is found in Table   4 -10. The limit state functions provided in each dedicated subsection are generally applicable with the “full” {term}`STRUCTURAL RELIABILITY METHOD` described in Section 4.6.1 and in Chapter 6 (Part II). Simplified models in the sense of Section 4.6.2, with analytic solutions for the probability of failure calculations, are provided for some {term}`FAILURE MECHANISM`s. {term}`FAILURE MECHANISM`s that can be modelled with the aid of simple stress strength methods (as discussed in Section 4.6.3) are also mentioned in Table   4 -10, but will not discussed any further in the present section.
+An overview on the {term}`failure mechanisms <Failure mechanism>` covered by the different subsections is found in Table   4 -10. The limit state functions provided in each dedicated subsection are generally applicable with the “full” {term}`structural reliability method <Structural reliability method>` described in Section 4.6.1 and in Chapter 6 (Part II). Simplified models in the sense of Section 4.6.2, with analytic solutions for the probability of failure calculations, are provided for some {term}`failure mechanisms <Failure mechanism>`. {term}`Failure mechanisms <Failure mechanism>` that can be modelled with the aid of simple stress strength methods (as discussed in Section 4.6.3) are also mentioned in Table   4 -10, but will not discussed any further in the present section.
 
 (meca_table4_10)=
 ```{list-table} Overview on failure mechanisms covered in Section 10.7
@@ -17,10 +17,10 @@ An overview on the {term}`FAILURE MECHANISM`s covered by the different subsectio
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_10.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
-{term}`FAILURE MECHANISM`s that are not listed in Table   4 -10 need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC’s WARP Error: Reference source not foundor Kowal . The “full” {term}`STRUCTURAL RELIABILITY METHOD` may be applied with any limit state function or {term}`FAILURE MECHANISM` model, see Section 4.6.1 for details.
-The following subsections dedicated to each {term}`FAILURE MECHANISM` model always follow the same logic: First the {term}`FAILURE MECHANISM` is introduced and a generic limit state function is derived that can be used with general {term}`STRUCTURAL RELIABILITY METHOD`s, possibly requiring numerical methods to derive the probability of failure. Closed form solutions (if available) are then discussed separately under the heading “Simplified {term}`FAILURE MECHANISM` model”. 
+{term}`Failure mechanisms <Failure mechanism>` that are not listed in Table   4 -10 need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC’s WARP Error: Reference source not foundor Kowal . The “full” {term}`structural reliability method <Structural reliability method>` may be applied with any limit state function or {term}`failure mechanism <Failure mechanism>` model, see Section 4.6.1 for details.
+The following subsections dedicated to each {term}`failure mechanism <Failure mechanism>` model always follow the same logic: First the {term}`failure mechanism <Failure mechanism>` is introduced and a generic limit state function is derived that can be used with general {term}`structural reliability methods <Structural reliability method>`, possibly requiring numerical methods to derive the probability of failure. Closed form solutions (if available) are then discussed separately under the heading “Simplified {term}`failure mechanism <Failure mechanism>` model”. 
 
-The derivation of these closed-form solutions is based on several assumptions related to the limit state function and the basic variable modelling, see Section 4.6.3 for a general introduction. The detailed assumptions are specific to the considered {term}`FAILURE MECHANISM`s; a short summary is provided together with each simplified model. Note that it is not possible to make a general statement how “exact” the analytic solutions are, e.g. when compared to a “full” structural reliability assessment. However, the assumptions listed can and should be checked to decide whether the simplified model can be used for a given application or whether the “full” {term}`STRUCTURAL RELIABILITY METHOD` is more appropriate.
+The derivation of these closed-form solutions is based on several assumptions related to the limit state function and the basic variable modelling, see Section 4.6.3 for a general introduction. The detailed assumptions are specific to the considered {term}`failure mechanisms <Failure mechanism>`; a short summary is provided together with each simplified model. Note that it is not possible to make a general statement how “exact” the analytic solutions are, e.g. when compared to a “full” structural reliability assessment. However, the assumptions listed can and should be checked to decide whether the simplified model can be used for a given application or whether the “full” {term}`structural reliability method <Structural reliability method>` is more appropriate.
 
 
 ## Modelling of failures due to mechanical wear
@@ -38,7 +38,7 @@ Adhesive, abrasive and fretting wear show common behaviour, and it is commonly a
 
 **Lubricated wear** is related to the degradation of the lubricant or the lubricant reservoir in lubricated contacts. This regime is typical for bearings, with analytical models provided in Section  for solid lubricated bearings (particularly bearing cages), and in Section  for fluid lubricated bearings.
 
-Finally, **fatigue wear** is caused by cyclic loading and corresponding crack formation. It is the dominant bearing {term}`FAILURE MECHANISM` in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory  with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the degradation of the lubricant . For this reason, fatigue wear is not discussed any further in the following.
+Finally, **fatigue wear** is caused by cyclic loading and corresponding crack formation. It is the dominant bearing {term}`failure mechanism <Failure mechanism>` in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory  with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the degradation of the lubricant . For this reason, fatigue wear is not discussed any further in the following.
 
 ### Adhesive wear
 
@@ -55,7 +55,7 @@ g\left( \text{X}(t) \right) = X_{1} - \Theta \cdot X_{2}(t) = V_{limit} - \Theta
 ```
 ````
 
-$V_{limit}$ is the limiting value for the volume worn away, $\Sigma$ the {term}`MODEL UNCERTAINTY` for the Archard wear model, $K_{H}$ the specific wear rate, $S$ the normal load, $\nu$ the sliding velocity and $T$ the considered time interval. As an alternative to the limiting value for the volume worn away, the model can also be reformulated in terms of the wear depth $d$:
+$V_{limit}$ is the limiting value for the volume worn away, $\Sigma$ the {term}`model uncertainty <Model uncertainty>` for the Archard wear model, $K_{H}$ the specific wear rate, $S$ the normal load, $\nu$ the sliding velocity and $T$ the considered time interval. As an alternative to the limiting value for the volume worn away, the model can also be reformulated in terms of the wear depth $d$:
 
 
 ````{admonition} Equation
@@ -219,7 +219,7 @@ applications where contamination could be an issue, e.g. in optical systems. In 
 
 In the following, solid lubricant wear modelling is described taking example in a ball bearing. The modelling is applicable to other cases of solid lubricant wear; however, the number of revolutions has to be substituted with another suitable measure of sliding distance.
 
-The modelling easily can be adapted from the adhesive wear model given in Section 10.7.1. Wear is realized during cage/ball contact; hence the relation $\int_{0}^{t}{S(t) \cdot v(t)\text{d}t}$ in Eq. {eq}`Equation 3.17` or Eq. {eq}`Equation 3.17` represents the work of the ball/cage interaction forces. For the bearing example, time is replaced by the number of revolutions $rev$. The e{term}`QUALITY`
+The modelling easily can be adapted from the adhesive wear model given in Section 10.7.1. Wear is realized during cage/ball contact; hence the relation $\int_{0}^{t}{S(t) \cdot v(t)\text{d}t}$ in Eq. {eq}`Equation 3.17` or Eq. {eq}`Equation 3.17` represents the work of the ball/cage interaction forces. For the bearing example, time is replaced by the number of revolutions $rev$. The e{term}`quality <Quality>`
 $\int_{0}^{t}{S(t) \cdot v(t)\text{d}t} = \int_{0}^{rev}{\alpha(rev)\text{d}rev}$ can be used for experimental evaluation of the average ball/cage interaction forces, defining a new interaction parameter $\alpha$.
 
 **Simplified solid lubricant wear model**
@@ -339,7 +339,7 @@ g\left( \text{X}(t) \right) = X_{1} - \Theta \cdot X_{2}(t) = M_{0} - M_{inactiv
 ```
 ````
 
-Here, $M_{0}$ denotes the initial mass of the lubricant, $M_{inactive}$ the mass of lubricant not participating in the contact (e.g. due to evaporation), and $\Theta$ the {term}`MODEL UNCERTAINTY` for the associated term, which represents the model to estimate lubricant life described in \[BR79\]. In this term, $N_{b}$ denotes the number of balls in the bearing, $p_{d}$ the pitch diameter, $b_{d}$ the ball diameter, $\vartheta$ the contact angle, $K$ is an empirical constant, $p_{m}$ the contact pressure and $rev$ the number of revoluations during the considered time interval $t$. The variables related to bearing geometry are illustrated in the figure given below.
+Here, $M_{0}$ denotes the initial mass of the lubricant, $M_{inactive}$ the mass of lubricant not participating in the contact (e.g. due to evaporation), and $\Theta$ the {term}`model uncertainty <Model uncertainty>` for the associated term, which represents the model to estimate lubricant life described in \[BR79\]. In this term, $N_{b}$ denotes the number of balls in the bearing, $p_{d}$ the pitch diameter, $b_{d}$ the ball diameter, $\vartheta$ the contact angle, $K$ is an empirical constant, $p_{m}$ the contact pressure and $rev$ the number of revoluations during the considered time interval $t$. The variables related to bearing geometry are illustrated in the figure given below.
 
 ```{figure} ../../pictures/figure4_9.png
 ---
@@ -418,13 +418,13 @@ model are the following:
 
 * The estimate for the (deterministic) variable $M_{inactive}$ is chosen conservatively, e.g. by determining the amount of lubricant evaporated at the end of the mission based on the model provided in \[BR79\].
 
-* The uncertainty in most of the variables listed in Table 10‑13 (except for the empirical constant of the lubricant life model $K$ and the {term}`MODEL UNCERTAINTY` $\Theta$) can be neglected.
+* The uncertainty in most of the variables listed in Table 10‑13 (except for the empirical constant of the lubricant life model $K$ and the {term}`model uncertainty <Model uncertainty>` $\Theta$) can be neglected.
 
 * The distributions of $K$ and $\Theta$ can be represented by the models listed in Table 10‑13.
 
 ## Modelling of failures due to fatigue
 
-Fatigue is a {term}`FAILURE MECHANISM` incurred by cyclic loading, leading to the initiation and extension of cracks, which degrade the strength of materials and structures. Failures due to fatigue can be considered as the consequence of several steps:
+Fatigue is a {term}`failure mechanism <Failure mechanism>` incurred by cyclic loading, leading to the initiation and extension of cracks, which degrade the strength of materials and structures. Failures due to fatigue can be considered as the consequence of several steps:
 
 1.  Formation of the crack (crack initiation)
 
@@ -440,7 +440,7 @@ Two loading conditions are distinguished:
 
 * **Low-Cycle Fatigue**: A low-frequency, high-amplitude loading condition created by thermal, pressure, or structural loads that can propagate flaws to failure.
 
-Failures due to low-cycle fatigue are driven by accumulated plastic deformations, which are typically not allowed (i.e. the design is restricted to elastic regime). If necessary, low-cycle fatigue can be assessed by the ultimate failure criterion, e.g. by means of non-linear finite element analysis with dedicated {term}`FAILURE MODE`ls or dedicated criteria like Manson-Coffin failure criterion. The probability of failure can be assessed using general structural reliability or stress strength methods.
+Failures due to low-cycle fatigue are driven by accumulated plastic deformations, which are typically not allowed (i.e. the design is restricted to elastic regime). If necessary, low-cycle fatigue can be assessed by the ultimate failure criterion, e.g. by means of non-linear finite element analysis with dedicated {term}`failure mode <Failure mode>`ls or dedicated criteria like Manson-Coffin failure criterion. The probability of failure can be assessed using general structural reliability or stress strength methods.
 
 In the remainder of this section, only high-cycle fatigue is considered.
 
@@ -454,7 +454,7 @@ The standard approach to the fracture control for space projects is presented in
 
 Crack formation analysis is typically performed for the fail-safe approach in order to ensure that failure of one redundant structural element does not cause general failure of the entire structure during the remaining lifetime. This analysis is performed based on the <u>S/N curve</u> approach, whose application for reliability modelling is outlined in Section 10.7.2.1.
 
-The safe life principle implies an assessment of the crack growth using <u>fatigue crack growth</u> models, as discussed in Section 10.7.2.2. Environmental properties can also be considered in these models, allowing the consideration of {term}`FAILURE MECHANISM`s due to <u>stress corrosion cracking</u> ({term}`SCC`).
+The safe life principle implies an assessment of the crack growth using <u>fatigue crack growth</u> models, as discussed in Section 10.7.2.2. Environmental properties can also be considered in these models, allowing the consideration of {term}`failure mechanisms <Failure mechanism>` due to <u>stress corrosion cracking</u> ({term}`SCC`).
 
 ### High cycle fatigue modelling with the S/N curve approach
 
@@ -482,7 +482,7 @@ S_{eq} = S_{\max}(1 - R)^{P} = S_{\max}\left( 1 - \frac{S_{\min}}{S_{\max}} \rig
 ```
 ````
 
-Here, $S_{\min}$ and $S_{\max}$ denoting the minimum and maximum stress during one load cycle and $A$, $B$, $C$ and $P$ are model parameters of the S/N curve model that can be derived from {term}`TEST DATA`, e.g. those presented in {term}`MMPDS`-12 \[BR66\] or its predecessor, MIL-HDBK-5 \[BR67\]. Of special interest is the parameter $C$, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus $N_{f}(S \leq C) \rightarrow \infty$.
+Here, $S_{\min}$ and $S_{\max}$ denoting the minimum and maximum stress during one load cycle and $A$, $B$, $C$ and $P$ are model parameters of the S/N curve model that can be derived from {term}`test data <Test data>`, e.g. those presented in {term}`MMPDS`-12 \[BR66\] or its predecessor, MIL-HDBK-5 \[BR67\]. Of special interest is the parameter $C$, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus $N_{f}(S \leq C) \rightarrow \infty$.
 
 The S/N curve is valid for cyclic loading with constant amplitude or equivalent stress. For cyclic loading with varying stress levels, the S/N curve is combined with the Palmgren-Miner accumulation law to estimate the accumulated damage $D_{tot}$ after $N$ stress cycles:
 
@@ -671,7 +671,7 @@ are the following:
 
 * The distributions of all basic variables can be represented by the models listed in Table 10‑14.
 
-* The {term}`FAILURE MECHANISM` is described by the S/N curve approach combined with the Palmgren-Miner accumulation law. Load history effects are neglected.
+* The {term}`failure mechanism <Failure mechanism>` is described by the S/N curve approach combined with the Palmgren-Miner accumulation law. Load history effects are neglected.
 
 * Uncertainties associated with the (equivalent) number of load cycles $N_{j}$ in each bin / loading block are neglected.
 
@@ -929,7 +929,7 @@ assessing the limit state functions $g_{1}$ and $g_{2}$.
 
 **Uncertainties associated with the initial crack size**
 
-{term}`MECHANICAL PART`s of space products are usually inspected for defects,
+{term}`Mechanical parts <Mechanical part>` of space products are usually inspected for defects,
 using one of the available non-destructive evaluation ({term}`NDE`) techniques.
 Nevertheless, even if no defect was detected during the inspection, it
 cannot be assumed that the inspected part is free of cracks. A
@@ -1048,8 +1048,7 @@ as an environmentally induced formation and growth of cracks in
 materials exposed to a corrosive environment. The standard strategy to
 avoid failures due to this phenomenon is based on the selection of
 suitable materials, making use of a test-based classification by
-susceptibility to {term}`SCC`. Quantitative {term}`RELIABILITY PREDICTION` for this
-{term}`FAILURE MECHANISM` is difficult, even though the effect of the
+susceptibility to {term}`SCC`. Quantitative {term}`reliability prediction <Reliability prediction>` for this {term}`failure mechanism <Failure mechanism>` is difficult, even though the effect of the
 environment may in principle be accounted for in crack growth modelling,
 see Section 10.7.2.2 for details.
 
@@ -1067,7 +1066,7 @@ life time extensions beyond the nominal mission.
 <u>Thermal degradation</u> is of relevance mainly for non-metallic
 materials such as polymers or insulation material. Some basic models
 have been reviewed in \[BR65\]. Thermal degradation as an individual
-{term}`FAILURE MECHANISM` is not discussed any further in the present chapter.
+{term}`failure mechanism <Failure mechanism>` is not discussed any further in the present chapter.
 Note, however, that temperature may have to be considered as a
 contributor or influencing variable during several other failure
 mechanisms, e.g. affecting strength and elasticity parameters for common
@@ -1075,14 +1074,14 @@ materials.
 
 The following subsection provides a brief discussion of <u>radiation
 degradation</u> and proposes a generic modelling approach for its
-modelling in mechanical {term}`RELIABILITY PREDICTION`s.
+modelling in mechanical {term}`reliability predictions <Reliability prediction>`.
 
 ### Radiation degradation modelling
 
-The {term}`SPACECRAFT` radiation environment is characterized by the type,
+The {term}`spacecraft <Spacecraft>` radiation environment is characterized by the type,
 fluence, dose rate, energy spectrum and spatial distribution of nuclear
 radiation at the considered point of interest inside and outside the
-{term}`SPACECRAFT` for the duration of the mission. However, the response can be
+{term}`spacecraft <Spacecraft>` for the duration of the mission. However, the response can be
 related directly to the absorbed dose. The dose shall be calculated
 taking both external and internal radiation sources into account.
 
@@ -1137,7 +1136,7 @@ The variable definitions are given in Table 10‑17 below.
 To account for the uncertainties in choosing the deterministic values
 for $D$ and $D_{A}$, the coefficient of variation for the model
 uncertainty is larger than for the other simplified models presented in
-Section 10.7.1 to 10.7.2. The {term}`MODEL UNCERTAINTY` CoV can be reduced if
+Section 10.7.1 to 10.7.2. The {term}`model uncertainty <Model uncertainty>` CoV can be reduced if
 the model is improved by considering $D$ and/or $D_{A}$ as random
 (instead of deterministic) variables with appropriate uncertainty
 quantification.
@@ -1163,4 +1162,4 @@ model are the following:
 
 * Failure occurs if the cumulated radiation dose exceeds the allowable dose limit.
 
-* All uncertainties associated with the cumulated and allowable dose and their determination are summarized in the lognormal distributed {term}`MODEL UNCERTAINTY` variable.
+* All uncertainties associated with the cumulated and allowable dose and their determination are summarized in the lognormal distributed {term}`model uncertainty <Model uncertainty>` variable.
