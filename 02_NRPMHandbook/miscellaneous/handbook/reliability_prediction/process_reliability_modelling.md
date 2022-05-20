@@ -382,7 +382,7 @@ P(\text{FAILURE}) = 1 - \left(1 - EX\right) * \left(1 - SF\right) * \left(1 - e^
 ```
 ````
 
-The probability of {term}`extrinsic failure <Extrinsic failures>` EX is dependent on 
+The probability of {term}`extrinsic failures <Extrinsic failure>` EX is dependent on 
 
 1. The item location (outside the satellite), 
 2. The probability to be hit by a particle (refer to µmeteorits flux and characteristics depending on the orbit, on the position on the orbit and on the velocity vector) and 
@@ -394,7 +394,7 @@ The definition of a model representing the probability to be hit by a debris is 
 
 
 (misc_5_5_1)=
-### Result after completing step 1 to step 7
+## Result after completing step 1 to step 7
 
 The method allows deriving a reliability function in time as presented here above.
 It is up to the discretion of the user to use the result appropriately:
