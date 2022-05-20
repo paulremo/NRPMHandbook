@@ -21,7 +21,7 @@ class Conversation {
         ////console.log(id);
         let elt = document.getElementById(id);
         let cls = elt.className;
-        if (cls == "button-next") {
+        if (cls.includes("button-next")) {
             this.current_branch.nextStep()
         }
         else if (id == "inputComponent") {
@@ -36,7 +36,7 @@ class Conversation {
                 this.current_branch.nextStep(false);
             }
         }
-        else if (cls == "categories") {
+        else if (cls.includes("categories")) {
             let res = dataModelsByCategories.get(id);
             /*//console.log(dataModelsByCategories.get("Power"))
             //console.log(id);
@@ -50,10 +50,10 @@ class Conversation {
             this.current_branch.nextStep(true, res);
         }*/
 
-        else if (cls == "itemComponents") {
+        else if (cls.includes("itemComponents")) {
             this.current_branch.nextStep(true, id);
         }
-        else if (cls == "button-fail") {
+        else if (cls.includes("button-fail")) {
             //console.log("fail")
             this.current_branch.nextStep(false);
         }
@@ -72,7 +72,7 @@ class Conversation {
     }
 
     switchBranch(b, arg) {
-        //console.log("branch : " + b);
+        console.log("branch : " + b);
         this.current_branch = this.branches.get(b);
         this.current_branch.init(this, arg);
     }
@@ -253,7 +253,7 @@ class SearchMessage extends Message {
 }
 
 class DataMessage extends Message {
-    constructor(failname, extra_intercator, text, sender, classNm = "choice-button", data = null, interactor = null, type = null) {
+    constructor(failname, extra_intercator, text, sender, classNm = null, data = null, interactor = null, type = null) {
         super(extra_intercator, text, sender, true, true, interactor, type);
         this.data = data;
         this.classNm = classNm;
@@ -273,7 +273,7 @@ class DataMessage extends Message {
             b.innerHTML = item;
             b.setAttribute("id", item)
             if (this.classNm != null) {
-                b.className = this.classNm;
+                b.className = "choice-button " + this.classNm;
             }
             //b.setAttribute("onclick", "conv.next('" + item + "');")
             this.interactor.appendChild(b);
@@ -301,9 +301,8 @@ class DataMessage extends Message {
             for (var [k, b] of this.buttons) {
                 alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
             }
-            fail.setAttribute("onclick", "conv.next('" + key + "');" + alldisable)
-
         }
+        fail.setAttribute("onclick", "conv.next('" + this.id + "');" + alldisable)
     }
 }
 
@@ -556,7 +555,7 @@ let mb1 = new Map([[0, m7], [1, m8]]);
 let mb2 = new Map([[0, m12], [1, m13]]);
 let mb3 = new Map([[0, m9]]);
 let mb4 = new Map([[0, m14], [1, m15]])
-let mb5 = new Map([[0, m16], [1, m17], [2, m18]]);
+let mb5 = new Map([[0, m16]]);
 let mb6 = new Map([[0, m19], [1, m20], [2, m21]]);
 let mb7 = new Map([[0, m10], [1, m11]]);
 let mb8 = new Map([[0, m22], [1, m23], [2, m17], [3, m18]]);
@@ -565,9 +564,9 @@ let mb8 = new Map([[0, m22], [1, m23], [2, m17], [3, m18]]);
 let b8 = new Branch(mb8, new Map());
 let b7 = new Branch(mb7, new Map());
 let b6 = new Branch(mb6, new Map());
-let b5 = new Branch(mb5, new Map());
-let b4 = new Branch(mb4, new Map([[true, "b5"], [false, "b6"]]));
-let b3 = new Branch(mb3, new Map([["standard", "b8"], ["nonstandard", "b7"]]))
+let b5 = new Branch(mb5, new Map([["standard", "b8"], ["non-standard", "b7"], [false, "b6"]]));
+let b4 = new Branch(mb4, new Map([[true, "b3"], [false, "b2"]]));
+let b3 = new Branch(mb3, new Map([["standard", "b8"], ["non-standard", "b7"], [false, "b6"]]))
 let b1 = new Branch(mb1, new Map([[true, "b3"], [false, "b2"]]));
 let b2 = new Branch(mb2, new Map([[true, "b4"], [false, "b6"]]));
 let b0 = new Branch(mb0, new Map([[true, "b1"], [false, "b2"]]));
