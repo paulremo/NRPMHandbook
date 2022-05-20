@@ -15,7 +15,7 @@ miss ref above
 
 -   Which component is most likely causing the system to fail?
 
-The methods to determine importance measures are based on the Boolean model for system {term}`RELIABILITY PREDICTION` considering independent {term}`RANDOM FAILURE`, e.g. fault tree analysis or reliability block diagram. Hence the following conditions apply:
+The methods to determine importance measures are based on the Boolean model for system {term}`reliability prediction <Reliability prediction>` considering independent {term}`random failure <Random failure>`, e.g. fault tree analysis or reliability block diagram. Hence the following conditions apply:
 
 -   The system and its components have two states, functional or failed
 
@@ -249,7 +249,7 @@ In the example the initial failure rate is set to 1.0E-06 1/h for all components
 
 With the initial reliability a system reliability of $R_{S}\left( t \right) = 0,9092$ is obtained. Based on Eq. {eq}`Equation 7.48` the Birnbaum importance is calculated for all components. The results are shown in [Table 4.11](syst_table4_11).
 
-3.  Comparison of the calculated reliability with the system reliability .term}`requirement <REQUIREMENT>`.\
+3.  Comparison of the calculated reliability with the system reliability .term}`requirement <Requirement>`.\
     The difference to the required system reliability is given by:
 
 (syst_equation4_59)=

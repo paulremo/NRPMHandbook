@@ -11,7 +11,7 @@ name: Figure 7.24
 Example phased space mission 
 ```
 
-During each mission phase, the system has to accomplish a specified task and may be subject to different stresses as well as different dependability .term}`requirement <REQUIREMENT>`s. Thus, system configuration, success criteria, and component failure behaviour may change from phase to phase. This dynamic behaviour usually requires a distinct model for each phase of the mission in the reliability analysis. Generally, there are two classes of approaches to the evaluation of phased-mission systems: 
+During each mission phase, the system has to accomplish a specified task and may be subject to different stresses as well as different dependability {term}`requirements <Requirement>`. Thus, system configuration, success criteria, and component failure behaviour may change from phase to phase. This dynamic behaviour usually requires a distinct model for each phase of the mission in the reliability analysis. Generally, there are two classes of approaches to the evaluation of phased-mission systems: 
 - Analytical modelling and
 - Simulation. 
 
@@ -38,7 +38,7 @@ Depending on the success criteria the system could include:
 In case of phase independent success criteria, the methods described in Section Error: Reference source not found can be used and no special treatment is required. However, the failure rates of the functional blocks of the system may depend on the phase, as a consequence of different loads applied in different mission phases. Phase dependent component reliability is considered in section Error: Reference source not found. 
 
 There are several reasons for reconfiguration and changes in success criteria from phase to phase Error: Reference source not found, which in the end could result in a situation where some combination of failures of components leads to failure of the system in one phase, whereas the same combination does not lead to failure in another phase.
-- A component is used in all phases but its operational level .term}`requirement <REQUIREMENT>`s may change. In this case, no special treatment is required for this component. The definition of operation or failed state depends on the success criteria.
+- A component is used in all phases but its operational level .term}`requirement <Requirement>`s may change. In this case, no special treatment is required for this component. The definition of operation or failed state depends on the success criteria.
 - A component is used in consecutive phases starting with one phase, and is then not needed for system operation in the remaining phases.
 - A component is required to remain operational for some phase, is not needed for the operation of a few phases and is then required again for system operation.
 - Spare or operational redundant modules corresponding to one subsystem become spare or redundant modules for another subsystem.
