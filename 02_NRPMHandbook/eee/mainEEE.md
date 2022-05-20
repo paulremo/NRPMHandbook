@@ -11,7 +11,9 @@ Try this link [Jupyter Book](https://github.airbus.corp/pages/caroline-c-senaux/
 (toc)=
 **Table of contents**
 
+`````
 ````{dropdown} Click to show the table of contents
 ```{tableofcontents}
 ```
 ````
+`````
