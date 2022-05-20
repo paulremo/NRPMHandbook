@@ -1,3 +1,4 @@
+(meca_5_4_5)=
 # Method selection for different items and failure mechanisms
 
 Once it is clear what needs to be considered in the {term}`reliability prediction <Reliability prediction>` (see Section 4.4), the next step is to decide _how_ each part and {term}`failure mechanism <Failure mechanism>` should be modelled. The present section gives guidance on this method selection task.
