@@ -1,18 +1,27 @@
-# Welcome to the {term}`NRPM` Digital Handbook !
+# Welcome to the NRPM digital handbook !
 
 
-This is the digital version of the [{term}`NRPM`](glossary_intro) handbook for reliability.space.
+This is the digital version of the {term}`NRPM` handbook for reliability.space. The handbook is currently under construction, but already offers a large collection of sections to explore, guides to interact with, and models to analyze.
 
-```{admonition} TIPS
-:class: tip
-You can find the table of contents just here on the left side, or you can look below and find [another one](toc) at the end of the page ! 
+The following sections (and their subsections) are finalized serve as a template for the remaining, unfinished sections:
+
+- {numref}`sec_mech_models`: This sections hosts three tools for advanced interactive reliability assessment.
+- {numref}`sec_misc_handbook`: This sections hosts the digitalized version of the miscellaneous chapter.
+- {numref}`sec_misc_models`: This sections hosts two interactive tools for exploring the miscellaneous chapter of the digital handbook.
+
+
+```{admonition} Under construction
+:class: todo
+This digital handbook is under construction. Throughout the handbook you will find notes titled *under construction* that warn about content that is not yet finalized.
 ```
 
-Here you can find help, calculation processes and fine graphical representations about [EEE](eee/mainEEE), [Mechanical](mechanical/handbook/introduction), [Miscellaneous](miscellaneous/handbook/introduction) and [RP at System Level](system/handbook/introduction) !
+The digital handbook is split into six chapters that can be accessed by clicking on the icons below or browsing the table of contents to the left of this page.
 
-```{note}
-If you have trouble with the acronyms, feel free to have a look on the [glossary](glossary_intro)
-```
+Every chapter contains at most two sections:
+
+- *Handbook*: This section hosts the digitalized version of the original handbook. It follows closely the original structure but is enhanced with interactive content (e.g., automatic linking of terms and acronyms, searchable tables, powerful search functionality).
+- *Models*: This section offers interactive elements (interactive guides, advanced reliability assessment).
+
 
 ::::{grid}
 :gutter: 3
@@ -50,8 +59,6 @@ If you have trouble with the acronyms, feel free to have a look on the [glossary
 :::
 ::::
 
-
-The present chapter explains the scope, structure and use of the handbook, with the objective to provide an introduction that is both short and useful from a handbook user’s perspective.
 
 ## Objective
 
