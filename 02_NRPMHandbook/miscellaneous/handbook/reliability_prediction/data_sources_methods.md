@@ -21,8 +21,8 @@ The added-value of this estimation is that the data represent directly the behav
 
 ```{dropdown} **Analysis of the failure mechanisms**
  - Engineering / {term}`physics of failure <Physics of failure>`: analysis of the {term}`failure mechanisms <Failure mechanism>`,
- - {term}`DFMEA – Design FMEA` (Design FMEA) 
- - and/or {term}`PFMEA - Process FMEA` (Process FMEA).
+ - {term}`Design FMEA – Design FMEA` (Design FMEA) 
+ - and/or {term}`Process FMEA - Process FMEA` (Process FMEA).
 
  The knowledge of the {term}`failure mechanisms <Failure mechanism>` and the processes supporting these {term}`failure mechanisms <Failure mechanism>` provide valuable information to build a reliability model. This information is not easy to collect and to adapt and is subject to criticisms from experts leading to disagreement except when the model is justified by technical arguments.
 ```
@@ -104,7 +104,7 @@ Regarding wear-out, the miscellaneous items should be qualified versus specified
 
 {term}`Physics of failure <Physics of failure>` can be used to identify the dominating {term}`failure mechanisms <Failure mechanism>` of the miscellaneous items. This approach should be used when no data are available and pertinent enough to populate a reliability model with accuracy. It is the case for a new development with innovative technology for which no statistical data exist.
 
-Use of {term}`DFMEA – Design FMEA` / {term}`PFMEA - Process FMEA` could be helpful, and is recommended, to identify the causes (design, manufacturing) of the {term}`failure mechanisms <Failure mechanism>` and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A {term}`RPN` metric (Risk Priority Number) is derived (refer to standard {cite:t}`mis-PFMEA`) and risk mitigation actions set up in order to reduce the {term}`RPN` to an acceptable level, i.e. under a certain level of probability of occurrence.
+Use of {term}`Design FMEA – Design FMEA` / {term}`Process FMEA - Process FMEA` could be helpful, and is recommended, to identify the causes (design, manufacturing) of the {term}`failure mechanisms <Failure mechanism>` and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A {term}`RPN` metric (Risk Priority Number) is derived (refer to standard {cite:t}`mis-Process FMEA`) and risk mitigation actions set up in order to reduce the {term}`RPN` to an acceptable level, i.e. under a certain level of probability of occurrence.
 
 When it is not possible to derive the probability of occurrence of a {term}`failure mechanism <Failure mechanism>` based on {term}`PoF`, engineering judgement, with experts, is recommended with associated justification.
 
