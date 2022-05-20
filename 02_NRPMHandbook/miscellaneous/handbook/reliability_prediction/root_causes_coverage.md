@@ -5,7 +5,7 @@ The {term}`failure mechanisms <Failure mechanism>` of the miscellaneous parts re
 (misc_table4_3)=
 ```{list-table} Coverage of failure root causes by the Miscellaneous reliability prediction methodology.
 :header-rows: 1
-:widths: 20 80
+:widths: 25 75
 :name: Coverage of failure root causes by the Miscellaneous reliability prediction methodology.
 
 *   - Root cause category
