@@ -24,5 +24,5 @@ One of the major characteristics of miscellaneous parts/items is that they are v
 * They can be submitted to Wear-out process (e.g. battery calendar aging) depending on their nature.
 
 ```{note}
-Software is, by nature, a {term}`miscellaneous item <Miscellaneous item>`. Due to its specificity, a dedicated [Section (§12.10)]() in the system chapter addresses software reliability modelling and therefore software reliability is not considered in the present chapter.
+Software is, by nature, a {term}`miscellaneous item <Miscellaneous item>`. Due to its specificity, a dedicated {numref}`syst_4_10` in the system chapter addresses software reliability modelling and therefore software reliability is not considered in the present chapter.
 ```
