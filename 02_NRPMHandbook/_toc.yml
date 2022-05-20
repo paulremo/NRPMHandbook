@@ -5,11 +5,11 @@ format: jb-book
 root: home
 
 parts:   
-  - caption: Methods
+  - caption: Methods chapter
     numbered: true
     chapters:
     - file: methods/intro
-  - caption: Methodologies
+  - caption: Methodologies chapter
     numbered: true
     chapters:
     - file: methodologies/intro
@@ -69,10 +69,7 @@ parts:
         - file: miscellaneous/handbook/reliability_prediction/process_reliability_modelling
         - file: miscellaneous/handbook/reliability_prediction/ior_results
         - file: miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm
-        - file: miscellaneous/handbook/reliability_prediction/reliability_data_sm                       
-      - file: miscellaneous/handbook/conclusion    
-      - file: miscellaneous/handbook/annexA    
-      - file: miscellaneous/handbook/annexB  
+        - file: miscellaneous/handbook/reliability_prediction/reliability_data_sm    
       - file: miscellaneous/handbook/bibliographic_references
     - file: miscellaneous/models/introduction_guide_miscellaneous
       title: Models
