@@ -9,10 +9,12 @@ parts:
     numbered: true
     chapters:
     - file: methods/intro
+      title: Handbook
   - caption: Methodologies chapter
     numbered: true
     chapters:
     - file: methodologies/intro
+      title: Handbook
   - caption: EEE chapter
     numbered: true
     chapters:

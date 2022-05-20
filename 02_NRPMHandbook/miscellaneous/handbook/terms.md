@@ -7,40 +7,25 @@ a. For the purpose of this handbook, the terms and definitions from ECSS-S-ST-00
 
 ```{glossary}
 Anomaly
-
 Common cause failure
-
 Equipment/Unit
-
 Failure
-
 Failure mode
-
 Interface
-
 Mechanical part
-
 Part/component
-
 Quality
-
 Spacecraft
-
 Space segment
-
 System
-
 Test
 ```
-
 
 b. For the purpose of this handbook, the terms and definitions from ECSS-Q-ST-30-02:
 
 ```{glossary}
 Failure mode and effect analysis FMEA
-
 Failure mode, effect and critically analysis FMECA
-
 Process FMECA
 ```
 
@@ -295,9 +280,6 @@ DEP
 DET
 	Detectability
 
-Design FMEA
-	Design Failure Mode Effect Analysis
-
 DHS
 	Data Handling System
 
@@ -444,6 +426,9 @@ IOT
 
 IPC
 	Association Connecting Electronics Industries
+	
+I_SA
+    SA current
 
 JAN
 	Joint Army Navy
@@ -674,10 +659,7 @@ REF
 	Reference
 
 RF
-	Random Failure
-
-RF
-	Radio Frequency
+	Random Failure/Radio Frequency
 
 RH
 	Relative Humidity
@@ -804,6 +786,9 @@ TN
 
 TNID
 	Total Non Ionizing Dose
+	
+TRL
+    Technology Readiness Level
 
 TTF
 	Time To Failure

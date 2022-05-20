@@ -306,7 +306,7 @@ The fault tree analysis has the same limitations as {term}`RBD`, thus
 - Repairable components cannot be modelled in the {term}`FTA`
 
 
-(syst_4_3_2_1)=
+(syst_4_3_2_2)=
 ### Basic system and redundancy schemes
 
 A redundancy in the system is represented as an AND gate in the fault tree, as shown in {numref}`Figure 7.9`. Both component A and B have to fail to cause the system failure. 
