@@ -65,21 +65,10 @@ name: Figure 5.9
 Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
 ```
 
-```{glossary}
-SA
-  Solar Array
-
-I_SA
-  SA current
-
-{term}`TM`
-  Telemetry
-
-{term}`SPF`
-  Single Point Failure
-```
-
-
+- {term}`SA`
+- {term}`I_SA`
+- {term}`TM`
+- {term}`SPF`
 
 (misc_table4_6)=
 ```{list-table} Occurrence scale with 10 levels
@@ -89,12 +78,7 @@ I_SA
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_6.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
-
-```{glossary}
-TRL
-  Technology Readiness Level
-```
-
+- {term}`TRL`
 
 (misc_5_5_2)=
 ### Probability assessment
