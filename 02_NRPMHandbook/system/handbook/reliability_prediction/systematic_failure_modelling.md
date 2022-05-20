@@ -439,7 +439,7 @@ name: Figure 7.40
 Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by severity considered at satellite level.
 ```
 
-The probabilities provided in {numref}`Figure 7.40` are conditional on {term}`ANOMALY` occurrence (Table 12 -18) and on hardware failure (Table 12 -20 for satellite level). When combined with the {term}`ANOMALY` occurrence model, time-dependent occurrence rates can be derived for the different severity categories, as illustrated in {numref}`Figure 7.41` below (the 90% confidence interval now includes the uncertainty inherent in the {term}`ANOMALY` repartition model and the hardware {term}`FAILURE MODE`l).
+The probabilities provided in {numref}`Figure 7.40` are conditional on {term}`ANOMALY` occurrence (Table 12 -18) and on hardware failure (Table 12 -20 for satellite level). When combined with the {term}`ANOMALY` occurrence model, time-dependent occurrence rates can be derived for the different severity categories, as illustrated in {numref}`Figure 7.41` below (the 90% confidence interval now includes the uncertainty inherent in the {term}`ANOMALY` repartition model and the hardware failure model).
 
 ```{figure} ../../picture/figure4_41.png
 ---
