@@ -42,7 +42,7 @@ miss 4 ref above
 (syst_4_3_1)=
 ## Reliability Block Diagram
 
-The Reliability Block Diagram ({term}`RBD`) uses a block structure to represent the success logic of the system. It is easy to understand and system success paths can be verified visually. For the purpose of a quantitative reliability analysis, the {term}`RBD` considers required combinations of system components that are needed to keep the system working. The application of an {term}`RBD` provides a structured representation of system architecture, and single point failures become quite obvious in the block diagram. Reliability modelling with an {term}`RBD` is primarily intended for non-repairable systems. The {term}`{term}`{term}`IEC``` standard {term}`IEC` 61078:2016 Error: Reference source not found provides the application rules and definitions. 
+The Reliability Block Diagram ({term}`RBD`) uses a block structure to represent the success logic of the system. It is easy to understand and system success paths can be verified visually. For the purpose of a quantitative reliability analysis, the {term}`RBD` considers required combinations of system components that are needed to keep the system working. The application of an {term}`RBD` provides a structured representation of system architecture, and single point failures become quite obvious in the block diagram. Reliability modelling with an {term}`RBD` is primarily intended for non-repairable systems. The {term}`IEC` standard {term}`IEC` 61078:2016 Error: Reference source not found provides the application rules and definitions. 
 
 ```{admonition} Todo
 :class: todo
@@ -289,7 +289,7 @@ For the above-mentioned example, a rigorous solution can be found by analysis of
 The Fault Tree Analysis ({term}`FTA`) is a structured, conclusive failure analysis which is focused on one particular undesired top event and used to identify potential causes of this event. {term}`FTA` uses identi-cal calculation methods to those applied in the {term}`RBD`. Therefore, it is widely used as an alternative method for the {term}`RBD`. By setting up a qualitative model and then evaluating this model, the {term}`FTA` is representing a "top-down" system evaluation procedure. After the undesired top level event has been identified, the different failure modes of sub-systems and components which could cause this event have to be determined systematically. The individual failures leading to the top event are combined through OR and AND gates, which correspond to serial and parallel arrangements in a {term}`RBD`. Therefore, {term}`FTA` is a graphical method that shows the logical relation between each particular failure scenario and the primary elements, component failures or events that can cause it. Guide-lines for {term}`FTA` can be found in [RD3] .
 
 (syst_4_3_2_1)=
-### Procedure to create {term}`FTA`
+### Procedure to create FTA
 
 The procedure to create a {term}`FTA` is almost identical to that for {term}`RBD`. The main difference is the graphical representation of the system, starting from the top event (the system failure) where else RDB considered success paths. 
 

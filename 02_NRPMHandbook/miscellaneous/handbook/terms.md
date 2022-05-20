@@ -3,176 +3,176 @@
 ## Terms and definitions
 
 ```{glossary}
-ANOMALY
-	 Any deviation from the expected situation. 
+Anomaly
+	 any deviation from the expected situation. 
 
-BAYESIAN INFERENCE
-    The Bayesian inference is a method of statistical inference in which the Bayes theorem is used to update the probability for a hypothesis as more evidence or information becomes available. 
+Bayesian inference
+    the Bayesian inference is a method of statistical inference in which the Bayes theorem is used to update the probability for a hypothesis as more evidence or information becomes available. 
 
-COMMON CAUSE FAILURE
-	 Failure of multiple items occurring from a single cause that is common to all of them. 
+Common cause failure
+	 failure of multiple items occurring from a single cause that is common to all of them. 
 
-CONTRIBUTING FACTOR
-	 A contributor is an event or condition that may have contributed to the occurrence of an undesired outcome. 
+Contributing factor
+	 a contributor is an event or condition that may have contributed to the occurrence of an undesired outcome. 
 
-DEEP SUB MICRON TECHNOLOGIES
+Deep sub micron technologies
 	 correspond to Integrated Circuits technologies allowing a very high integration of parts but inducing potential new phenomena, e.g. increased sensitivity to radiations and potential decreasing of operating lifetime of the parts. 
 
-DEGRADATION (PROGRESSIVE) FAILURE
-	 A progressive failure is characterized by the degradation in time - or equivalent time, such as cycles - of an item’s performances (modification of the design characteristics due to a degradation/wear-out process) up to a definitive failure. 
+Degradation (progressive) failure
+	 a progressive failure is characterized by the degradation in time - or equivalent time, such as cycles - of an item’s performances (modification of the design characteristics due to a degradation/wear-out process) up to a definitive failure. 
 
 DFMEA
 	 Design FMEA : FMEA in which the design of product is analysed. All potential failure modes due to design errors are identified, analysed in terms of severity, occurrence and detectability on ground, and actions plans are put into place in order to reduce one of these three characteristics to remain within acceptable limits.  
 
-EEE PART
-	  A component which performs electrical, electronic or electromechanical (EEE) function and is built with one or more elements assembled together in a manner that they cannot be separated without destroying the component. 
+EEE part
+	  a component which performs electrical, electronic or electromechanical (EEE) function and is built with one or more elements assembled together in a manner that they cannot be separated without destroying the component. 
 
-EPISTEMIC UNCERTAINTY
-	 The epistemic uncertainties result from our poor understanding of the relevant aspects. They include statistical uncertainties and model uncertainties. 
+Epistemic uncertainty
+	 the epistemic uncertainties result from our poor understanding of the relevant aspects. They include statistical uncertainties and model uncertainties. 
 
-EQUIPMENT/UNIT
-	 Integrated set of parts and components. 
+Equipment/Unit
+	 integrated set of parts and components. 
 
-EXTRINSIC FAILURE
-	 An extrinsic failure is a sudden failure induced by the space environment on the spacecraft elements.
+Extrinsic failure
+	 an extrinsic failure is a sudden failure induced by the space environment on the spacecraft elements.
 
-FAILURE
-	 The termination of the ability to perform a required function or required performances.
+Failure
+	 the termination of the ability to perform a required function or required performances.
 
-FAILURE MECHANISM
-	 The physical process by which an element fails (e.g. electromigration for EEE parts or fracture/fatigue for mechanical parts)
+Failure mechanism
+	 the physical process by which an element fails (e.g. electromigration for EEE parts or fracture/fatigue for mechanical parts)
 
-FAILURE MODE
-	 The observable effect of the mechanism through which the failure occurs (e.g. open-circuit or short-circuit for EEE parts, fracture or excessive wear for mechanical parts).
+Failure mode
+	 the observable effect of the mechanism through which the failure occurs (e.g. open-circuit or short-circuit for EEE parts, fracture or excessive wear for mechanical parts).
 
-FAILURE MODE AND EFFECT ANALYSIS FMEA
+Failure mode and effect analysis FMEA
 	 analysis by which each potential failure mode in a product (or function or process) is analysed to determine its effects. Note : The potential failure modes are classified according to their severity.
 
-FAILURE MODE, EFFECT AND CRITICALITY ANALYSIS FMECA
+Failure mode, effect and critically analysis FMECA
 	 FMEA extended to classify potential failure modes according to their criticality.
 
-FAILURE MODE AND EFFECTS SUMMARY FMES
+Failure mode and effects summary FMES
 	 summary of lower level failure modes with the same effects from the respective lower level FMEAs.
 
-FAILURE ROOT CAUSE
-	 A failure root cause is one of multiple factors (events, conditions or organizational factors) that contributed to or created the proximate cause and subsequent undesired outcome and, if eliminated, or modified would have prevented the undesired outcome. 
+Failure root cause
+	 a failure root cause is one of multiple factors (events, conditions or organizational factors) that contributed to or created the proximate cause and subsequent undesired outcome and, if eliminated, or modified would have prevented the undesired outcome. 
 
-HANDBOOK DATA SOURCE
-	 A data source corresponds to a handbook compiling either models or data to be used for reliability calculations.
+Handbook data source
+	 a data source corresponds to a handbook compiling either models or data to be used for reliability calculations.
 
-IN-ORBIT RETURN (IOR) DATA
-	 In-orbit return reliability data correspond to reliability data (Failure rates or mission probability success) obtained through the analysis of in-orbit feedback at different levels.
+In-orbit return (IOR) data
+	 in-orbit return reliability data correspond to reliability data (Failure rates or mission probability success) obtained through the analysis of in-orbit feedback at different levels.
 
-INTERFACE
-	 Boundary where two or more products meet and interact
+Interface
+	 boundary where two or more products meet and interact
 
-LEVEL OF CONFIDENCE
-	 The mathematical definition of the level of confidence is as follows
+Level of confidence
+	 the mathematical definition of the level of confidence is as follows
 
-MANUFACTURER DATA
-	 In this study, manufacturer data corresponds to information obtained for a part, a unit or a subsystem through its manufacturing process, its physical production. 
+Manufacturer part
+	 in this study, manufacturer data corresponds to information obtained for a part, a unit or a subsystem through its manufacturing process, its physical production. 
 
-MECHANICAL PART
-	 A non-electronics part, i.e. a piece of hardware which is not electrical, electronic or electromechanical, and which performs a simple elementary function or part of a function in such a way that it can be evaluated as a whole against expected requirements of performance and cannot be disassembled without destroying this capability.
+Mechanical part
+	 a non-electronics part, i.e. a piece of hardware which is not electrical, electronic or electromechanical, and which performs a simple elementary function or part of a function in such a way that it can be evaluated as a whole against expected requirements of performance and cannot be disassembled without destroying this capability.
 
-MECHANISM
-	 Assembly of parts that are linked together to enable a relative motion. 
+Mechanism
+	 assembly of parts that are linked together to enable a relative motion. 
 
-MISCELLANEOUS ITEM
-	 In this study, miscellaneous items are either parts or assemblies that can neither be classified as EEE or mechanical parts/units (e.g. due to their EEE-mechanical hybrid aspect or to their complexity). 
+Miscellaneous item
+	 in this study, miscellaneous items are either parts or assemblies that can neither be classified as EEE or mechanical parts/units (e.g. due to their EEE-mechanical hybrid aspect or to their complexity). 
 
-MISSION LIFETIME
-	 The mission lifetime is the time during which the system shall perform the specified mission (functions and performances). 
+Mission lifetime
+	 the mission lifetime is the time during which the system shall perform the specified mission (functions and performances). 
 
-MODEL UNCERTAINTY
-	 Model uncertainties result from modelling assumptions and simplifications made.
+Model uncertainty
+	 model uncertainties result from modelling assumptions and simplifications made.
 
-NEW SPACE
-	 A notion first introduced around 2010-2015, corresponding to an ongoing transformation of the space sector, which is driving new ways to develop space product. It concerns several notions, among which the overall cost that should be lower than for the “old” space and the resort to the newest technologies in the limits of their applicability for Space. In practice it is translated through the level of quality of the different elements within the spacecraft – commercial procurement vs space and MIL levels, through the tiers involved at Service, System and Suppliers’ level – newcomers for the space activities as well as historical companies, and through the new concepts developed.
+New space
+	 a notion first introduced around 2010-2015, corresponding to an ongoing transformation of the space sector, which is driving new ways to develop space product. It concerns several notions, among which the overall cost that should be lower than for the “old” space and the resort to the newest technologies in the limits of their applicability for Space. In practice it is translated through the level of quality of the different elements within the spacecraft – commercial procurement vs space and MIL levels, through the tiers involved at Service, System and Suppliers’ level – newcomers for the space activities as well as historical companies, and through the new concepts developed.
 
-PART/COMPONENT
-	 A part is a set of materials, assembled according to defined and controlled processes, which cannot be disassembled without destroying its capability and which performs a simple function that can be evaluated against expected performance requirements. (“part” is preferred when referring to purely mechanical devices, “component” is preferred for EEE devices).
+Part/component
+	 a part is a set of materials, assembled according to defined and controlled processes, which cannot be disassembled without destroying its capability and which performs a simple function that can be evaluated against expected performance requirements. (“part” is preferred when referring to purely mechanical devices, “component” is preferred for EEE devices).
 
-PERTINENCE
-	  Pertinence corresponds to the consistency between what has been predicted and what can be observed
+Pertinence
+	  pertinence corresponds to the consistency between what has been predicted and what can be observed
 
 PFMEA
 	 Process FMEA : FMEA considering the analysis of processes such as manufacturing, assembling and integration or pre‐launch operations. All potential failure modes due to process variability and manufacturing errors are identified, analysed in terms of severity, occurrence and detectability on ground, and actions plans are put into place in order to reduce one of these three characteristics to remain within acceptable limits.
 
-PHYSICS OF FAILURE
-	The physics of failure concept is a technique under the practice of design for reliability that leverages the knowledge and understanding of the processes and mechanisms that induce failure to predict reliability and improve product performance. 
+Physics of failure
+	the physics of failure concept is a technique under the practice of design for reliability that leverages the knowledge and understanding of the processes and mechanisms that induce failure to predict reliability and improve product performance. 
 
-PROBABILITY DENSITY FUNCTION
-	 For a discrete distribution, the probability density function (PDF) is the probability that the variate has the value x. Since for continuous distributions the probability at a single point is zero, the PDF is expressed as the probability for a random variable X to be in the interval [x, x+dx( for dx0.
+Probability density function
+	 for a discrete distribution, the probability density function (PDF) is the probability that the variate has the value x. Since for continuous distributions the probability at a single point is zero, the PDF is expressed as the probability for a random variable X to be in the interval [x, x+dx( for dx0.
 
-QUALITY 
-	 Degree to which a set of characteristics of a product or a process fulfils requirements. 
+Quality 
+	 degree to which a set of characteristics of a product or a process fulfils requirements. 
 
-RANDOM FAILURE
-	 A Random failure is a failure occurring at a random time due to a residual internal part defect or weakness when submitted to normal operational stresses.
+Random failure
+	 a Random failure is a failure occurring at a random time due to a residual internal part defect or weakness when submitted to normal operational stresses.
 
-RELIABILITY PREDICTION
-	 The process of estimating (predicting) the reliability of a system or its components under specified conditions. Also the outcome of this process, the reliability estimate, can be called a Reliability Prediction. 
+Reliability prediction
+	 the process of estimating (predicting) the reliability of a system or its components under specified conditions. Also the outcome of this process, the reliability estimate, can be called a Reliability Prediction. 
 
-RELIABILITY PREDICTION METHODOLOGY
-	 The RP methodology refers to the reliability prediction process and the selection of suitable methods and models.
+Reliability prediction methodology
+	 the RP methodology refers to the reliability prediction process and the selection of suitable methods and models.
 
-RELIABILITY PREDICTION METHOD
-	 A method or modelling approach to perform a reliability prediction related to a certain failure event (or several events) based on the information available on it.
+Reliability prediction method
+	 a method or modelling approach to perform a reliability prediction related to a certain failure event (or several events) based on the information available on it.
 
-RELIABILITY PREDICTION MODEL
-	 A mathematical representation of the real world that is based on suitable methods, data and information, and ready to perform a reliability prediction related to a certain failure event (or several events).
+Reliability prediction model
+	 a mathematical representation of the real world that is based on suitable methods, data and information, and ready to perform a reliability prediction related to a certain failure event (or several events).
 
-RELIABILITY PREDICTION SPACE APPLICATION
-	 Application (of a reliability prediction methodology, method or model) for a system that is intended to operate in space.
+Reliability prediction space application
+	 application (of a reliability prediction methodology, method or model) for a system that is intended to operate in space.
 
-REQUIREMENT
-	 A statement that identifies a product or process operational, functional, or design characteristic or constraint, which is unambiguous, testable or measurable, and necessary for product or process acceptability (by consumers or internal quality assurance guidelines).
+Requirement
+	 a statement that identifies a product or process operational, functional, or design characteristic or constraint, which is unambiguous, testable or measurable, and necessary for product or process acceptability (by consumers or internal quality assurance guidelines).
 
-RF PASSIVE PART
-	 Part used for radio frequency signal transmission/reception for which there is no external power supply required.
+RF passive part
+	 part used for radio frequency signal transmission/reception for which there is no external power supply required.
 
-SAFE LIFE QUALIFICATION
-	 Qualification of a product regarding its capability to sustain its specified design lifetime (degradation(s) compliant with the specification).
+Safe life qualification
+	 qualification of a product regarding its capability to sustain its specified design lifetime (degradation(s) compliant with the specification).
 
-SIMPLIFIED STRUCTURAL RELIABILITY METHOD
+Simplified structural reliability method
 	 it corresponds to a simplified form of structural reliability methods, which needs less knowledge of probabilistic methods to be established and can be solved analytically. 
 
-SPACECRAFT
+Spacecraft
 	 manned or unmanned vehicle designed to orbit or travel in space. Note A spacecraft is a space segment element.
 
-SPACE SEGMENT
-	 Part of a space system, placed in Space, to fulfil the space mission objectives. 
+Space segment
+	 part of a space system, placed in Space, to fulfil the space mission objectives. 
 
-STATISTICAL METHOD
-	 A statistical method is a method for which RP models are based on what has been observed on an item in terms of functioning/non-functioning, generally through tests or field return, without further analysis of the potential root cause or failure mechanism.
+Statistical method
+	 a statistical method is a method for which RP models are based on what has been observed on an item in terms of functioning/non-functioning, generally through tests or field return, without further analysis of the potential root cause or failure mechanism.
 
-STATISTICAL UNCERTAINTY
-	 The statistical uncertainties result from limited data samples used to derive a model (e.g. cumulated hours, observed failures) used to derive a model.
+Statistical uncertainty
+	 the statistical uncertainties result from limited data samples used to derive a model (e.g. cumulated hours, observed failures) used to derive a model.
 
-STRUCTURAL RELIABILITY METHOD
-	 Structural reliability methods are here defined as a class of Physics of Failure methods which are based on a mathematical model of the  failure mechanism(s) for a specific part or item (not limited to structures) and probabilistic modelling of the uncertainties associated with the relevant physical variables. The well-known stress-strength interference method for structural parts is a simple example for the usage of structural reliability methods.
+Structural reliability method
+	 structural reliability methods are here defined as a class of Physics of Failure methods which are based on a mathematical model of the  failure mechanism(s) for a specific part or item (not limited to structures) and probabilistic modelling of the uncertainties associated with the relevant physical variables. The well-known stress-strength interference method for structural parts is a simple example for the usage of structural reliability methods.
 
-SUDDEN FAILURE
-	 A failure is sudden when the transition from the normal state (nominal performances of the elements) to the failed state is instantaneous or is very short.
+Sudden failure
+	 a failure is sudden when the transition from the normal state (nominal performances of the elements) to the failed state is instantaneous or is very short.
 
-SYSTEM
-	 A system is a set of interrelated or interacting functions constituted to achieve a specified objective.
+System
+	 a system is a set of interrelated or interacting functions constituted to achieve a specified objective.
 
-SYSTEMATIC FAILURE
-	 A Systematic failure is a failure, related in a deterministic way to a certain cause, which can only be eliminated by a modification of the design, the manufacturing process or the operational procedures. 
+Systematic failure
+	 a Systematic failure is a failure, related in a deterministic way to a certain cause, which can only be eliminated by a modification of the design, the manufacturing process or the operational procedures. 
 
-SYSTEM ENGINEERING
-	 Systems engineering is an interdisciplinary approach and means to enable the realization of successful systems. It focuses on defining customer needs and required functionality early in the development cycle, documenting requirements, and then proceeding with design synthesis and system validation while considering the complete problem: operations, cost and schedule, performance, training and support, test, manufacturing, and disposal.
+System engineering
+	 systems engineering is an interdisciplinary approach and means to enable the realization of successful systems. It focuses on defining customer needs and required functionality early in the development cycle, documenting requirements, and then proceeding with design synthesis and system validation while considering the complete problem: operations, cost and schedule, performance, training and support, test, manufacturing, and disposal.
 
-TEST
-	 Measurement of product characteristics, performance or functions under representative environments. 
+Test
+	 measurement of product characteristics, performance or functions under representative environments. 
 
-TEST DATA
-	 Test data corresponds to reliability data obtained through tests. 
+Test data
+	 test data corresponds to reliability data obtained through tests. 
 
-WEAR-OUT FAILURE
-	 A wear-out failure is a definitive failure resulting from progressive degradation of an item’s performances in time due to calendar aging or due to operational and/or environmental stresses.
+Wear-out failure
+	 a wear-out failure is a definitive failure resulting from progressive degradation of an item’s performances in time due to calendar aging or due to operational and/or environmental stresses.
 ```
 
 ## Abbreviated terms
@@ -498,18 +498,19 @@ MCM
 
 MCMC
 	Markov Chain Monte Carlo 
+
 MCR
-
 	Mission Closure Review
+
 MDR
-
 	Mission Definition Review
+
 MEC
-
 	Mechanical
-MEO
 
+MEO
 	Medium Earth Orbit
+
 MIL
 	MILitary
 

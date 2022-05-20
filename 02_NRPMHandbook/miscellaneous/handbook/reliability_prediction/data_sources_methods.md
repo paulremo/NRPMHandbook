@@ -2,57 +2,57 @@
 # Data sources
 The inputs data constitute the basis of any reliability model.
 
-First, building a reliability model requires pertinent data regarding the specificity of the item (technology, complexity, materials, {term}`QUALITY`, qualification…) and the operating conditions in order to characterize the item.
+First, building a reliability model requires pertinent data regarding the specificity of the item (technology, complexity, materials, {term}`quality <Quality>`, qualification…) and the operating conditions in order to characterize the item.
 
 Then, different inputs for reliability characteristics are defined and classified in Chapter 6 {numref}`methodologies` of the Current document.
 
-The order of preference for the use of these inputs for miscellaneous parts {term}`RELIABILITY PREDICTION` is as follows:
+The order of preference for the use of these inputs for miscellaneous parts {term}`reliability prediction <Reliability prediction>` is as follows:
 
 ```{dropdown} **Statistical data**
 - In-orbit return (IOR) or space heritage data
 - Manufacturer reliability data
-- Qualification / Reliability / life {term}`TEST DATA`
+- Qualification / Reliability / life {term}`test data <Test data>`
 
 The added-value of this estimation is that the data represent directly the behaviour of the item under operational conditions w.r.t. failures. There are two major conditions: 
 
-1. The data represent the design/manufacturing characteristics of the {term}`MISCELLANEOUS ITEM` under consideration, 
-2. The cumulated data (time, number of failures) are sufficient enough to provide a realistic {term}`RELIABILITY PREDICTION`.
+1. The data represent the design/manufacturing characteristics of the {term}`miscellaneous item <Miscellaneous item>` under consideration, 
+2. The cumulated data (time, number of failures) are sufficient enough to provide a realistic {term}`reliability prediction <Reliability prediction>`.
 ```
 
 ```{dropdown} **Analysis of the failure mechanisms**
- - Engineering / {term}`PHYSICS OF FAILURE`: analysis of the {term}`FAILURE MECHANISM`s,
+ - Engineering / {term}`physics of failure <Physics of failure>`: analysis of the {term}`failure mechanisms <Failure mechanism>`,
  - {term}`DFMEA – Design FMEA` (Design FMEA) 
  - and/or {term}`PFMEA - Process FMEA` (Process FMEA).
 
- The knowledge of the {term}`FAILURE MECHANISM`s and the processes supporting these {term}`FAILURE MECHANISM`s provide valuable information to build a reliability model. This information is not easy to collect and to adapt and is subject to criticisms from experts leading to disagreement except when the model is justified by technical arguments.
+ The knowledge of the {term}`failure mechanisms <Failure mechanism>` and the processes supporting these {term}`failure mechanisms <Failure mechanism>` provide valuable information to build a reliability model. This information is not easy to collect and to adapt and is subject to criticisms from experts leading to disagreement except when the model is justified by technical arguments.
 ```
 
 
 ```{dropdown} **Combined approach – Bayesian inference updating**
 The initial prediction can be refined, combining prior knowledge and IOR or tests results.
 
-A preliminary model (constant failure rate), either {term}`PoF`-based or an engineering model, provides a failure rate which is, then, assumed to a be a random variable. The distribution of this random variable is the “prior” knowledge. The expected value of the failure rate knowing additional information is the {term}`BAYESIAN INFERENCE` estimator.
+A preliminary model (constant failure rate), either {term}`PoF`-based or an engineering model, provides a failure rate which is, then, assumed to a be a random variable. The distribution of this random variable is the “prior” knowledge. The expected value of the failure rate knowing additional information is the {term}`Bayesian inference <Bayesian inference>` estimator.
 
-This approach allows using prior engineering knowledge combined with IOR data or {term}`TEST DATA` which does not require a large number of cumulated hours of operations. This could be a good solution when the data background is rather reduced.
+This approach allows using prior engineering knowledge combined with IOR data or {term}`test data <Test data>` which does not require a large number of cumulated hours of operations. This could be a good solution when the data background is rather reduced.
 ```
 
 ```{dropdown} **Reliability handbooks methods / supplier Model: existing model**
-The reliability handbooks providing valuable information for miscellaneous items {term}`RELIABILITY PREDICTION` are limited to some technologies or to some specific applications.
+The reliability handbooks providing valuable information for miscellaneous items {term}`reliability prediction <Reliability prediction>` are limited to some technologies or to some specific applications.
 
-Even though it is possible to use such reliability handbooks or existing models (in the literature), most of time the applicability to space domain is inappropriate mainly due to the fact the space designs are very specific with a rigorous {term}`QUALITY` frame.
+Even though it is possible to use such reliability handbooks or existing models (in the literature), most of time the applicability to space domain is inappropriate mainly due to the fact the space designs are very specific with a rigorous {term}`quality <Quality>` frame.
 
 Any reliability model, whatever the data sources are, needs to be justified (with technical arguments) and submitted to system level for approval.
 ```
 
 (misc_5_3_1)=
-## {term}`IN-ORBIT RETURN (IOR) DATA`
+## In-orbit return (IOR) data
 
-For “generic equipment” that is similar from one mission to the other, it is valuable to take benefit from the use of {term}`IN-ORBIT RETURN (IOR) DATA`. This can provide direct statistics on the related items used in a typical environment. No model with theoretical implications would meet such level of relevance as far as the items are “equivalent” to those being used in-orbit.
+For “generic equipment” that is similar from one mission to the other, it is valuable to take benefit from the use of {term}`in-orbit return (IOR) data <In-orbit return (IOR) data>`. This can provide direct statistics on the related items used in a typical environment. No model with theoretical implications would meet such level of relevance as far as the items are “equivalent” to those being used in-orbit.
 
 Consequently, use of in-orbit return constitutes the basis for “miscellaneous items” that meet the following two conditions:
 
-- items involved in generic “miscellaneous” functions, provided they address similar perimeters and under similar operational conditions. Technology, complexity and {term}`QUALITY` (in a wide sense) are other parameters to be checked with accuracy.
-Besides, the use of in-orbit return is possible on a case by case basis, in the frame of the assessment of a given {term}`SPACECRAFT` family for example, where functional features are the same and supported by a generic product.
+- items involved in generic “miscellaneous” functions, provided they address similar perimeters and under similar operational conditions. Technology, complexity and {term}`quality <Quality>` (in a wide sense) are other parameters to be checked with accuracy.
+Besides, the use of in-orbit return is possible on a case by case basis, in the frame of the assessment of a given {term}`spacecraft <Spacecraft>` family for example, where functional features are the same and supported by a generic product.
 
 - items with enough in-orbit return, thus excluding those devices that might have become widely used recently (low cumulated time in operation, new technology). This may also impact the level at which miscellaneous items are defined.
 
@@ -80,11 +80,11 @@ Their reliability is therefore not a function in time (with possible observation
 
 
 (misc_5_3_3)=
-## Reliability {term}`TEST DATA`
+## Reliability test data
 
-{term}`TEST DATA` for miscellaneous items tested under operational conditions would be a relevant source of information for {term}`RELIABILITY PREDICTION`, but is not in most cases available in sufficient quantities to derive any quantitative reliability metrics. Generally, elements constituting the miscellaneous items are tested in larger quantities but do not represent the whole and assembled item. Nevertheless, this information can be valuable in order to derive {term}`CONTRIBUTING FACTOR`s to failure or to confirm design assumptions.
+{term}`Test data <Test data>` for miscellaneous items tested under operational conditions would be a relevant source of information for {term}`reliability prediction <Reliability prediction>`, but is not in most cases available in sufficient quantities to derive any quantitative reliability metrics. Generally, elements constituting the miscellaneous items are tested in larger quantities but do not represent the whole and assembled item. Nevertheless, this information can be valuable in order to derive {term}`contributing factors <Contributing factor>` to failure or to confirm design assumptions.
 
-Physics of {term}`FAILURE MODE`ls may use these elementary tests and resulting data to identify the {term}`FAILURE MECHANISM`s and the related design characteristics. Major {term}`FAILURE MECHANISM`s are identified per {term}`MISCELLANEOUS ITEM` and mastered as necessary through appropriate design rules. All this is qualitative information and is used as support to any reliability model, as relevant
+Physics of failure models may use these elementary tests and resulting data to identify the {term}`failure mechanisms <Failure mechanism>` and the related design characteristics. Major {term}`failure mechanisms <Failure mechanism>` are identified per {term}`miscellaneous item <Miscellaneous item>` and mastered as necessary through appropriate design rules. All this is qualitative information and is used as support to any reliability model, as relevant
 
 
 (misc_5_3_3_1)=
@@ -96,17 +96,17 @@ Several tests are recommended to verify the reliability of the one-shot devices:
 (misc_5_3_3_2)=
 ### Wear-out characterization
 
-Regarding wear-out, the miscellaneous items should be qualified versus specified lifetime and ground lifetime as per {cite:t}`mis-ECSS-E-ST-33-01C`, implementing a safety factor (number of elements, number of tests). The results of these tests are considered as evidence, with a certain {term}`LEVEL OF CONFIDENCE`, that no wear occurs before the end of the specified lifetime (or better that no performances degradation impacts the mission of the item).
+Regarding wear-out, the miscellaneous items should be qualified versus specified lifetime and ground lifetime as per {cite:t}`mis-ECSS-E-ST-33-01C`, implementing a safety factor (number of elements, number of tests). The results of these tests are considered as evidence, with a certain {term}`level of confidence <Level of confidence>`, that no wear occurs before the end of the specified lifetime (or better that no performances degradation impacts the mission of the item).
 
 
 (misc_5_3_4)=
-## Engineering / {term}`PHYSICS OF FAILURE`
+## Engineering / physics of failure
 
-{term}`PHYSICS OF FAILURE` can be used to identify the dominating {term}`FAILURE MECHANISM`s of the miscellaneous items. This approach should be used when no data are available and pertinent enough to populate a reliability model with accuracy. It is the case for a new development with innovative technology for which no statistical data exist.
+{term}`Physics of failure <Physics of failure>` can be used to identify the dominating {term}`failure mechanisms <Failure mechanism>` of the miscellaneous items. This approach should be used when no data are available and pertinent enough to populate a reliability model with accuracy. It is the case for a new development with innovative technology for which no statistical data exist.
 
-Use of {term}`DFMEA – Design FMEA` / {term}`PFMEA - Process FMEA` could be helpful, and is recommended, to identify the causes (design, manufacturing) of the {term}`FAILURE MECHANISM`s and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A {term}`RPN` metric (Risk Priority Number) is derived (refer to standard {cite:t}`mis-{term}`PFMEA - Process FMEA``) and risk mitigation actions set up in order to reduce the {term}`RPN` to an acceptable level, i.e. under a certain level of probability of occurrence.
+Use of {term}`DFMEA – Design FMEA` / {term}`PFMEA - Process FMEA` could be helpful, and is recommended, to identify the causes (design, manufacturing) of the {term}`failure mechanisms <Failure mechanism>` and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A {term}`RPN` metric (Risk Priority Number) is derived (refer to standard {cite:t}`mis-PFMEA`) and risk mitigation actions set up in order to reduce the {term}`RPN` to an acceptable level, i.e. under a certain level of probability of occurrence.
 
-When it is not possible to derive the probability of occurrence of a {term}`FAILURE MECHANISM` based on {term}`PoF`, engineering judgement, with experts, is recommended with associated justification.
+When it is not possible to derive the probability of occurrence of a {term}`failure mechanism <Failure mechanism>` based on {term}`PoF`, engineering judgement, with experts, is recommended with associated justification.
 
 The probability of occurrence ranking defined by categories could be translated in the frame of the operational conditions of the items but there is no suitable method able to support this process. It is the responsibility of engineering to justify the probability ranking.
 
@@ -114,9 +114,9 @@ The probability of occurrence ranking defined by categories could be translated 
 (misc_5_3_5)=
 ## Engineering data combined with observations
 
-In some cases, there are valuable data mainly produced by engineering which could be considered as “prior” data. These data can be combined with either IOR data (reduced cumulated time) or {term}`TEST DATA` to provide “posterior” information.
+In some cases, there are valuable data mainly produced by engineering which could be considered as “prior” data. These data can be combined with either IOR data (reduced cumulated time) or {term}`test data <Test data>` to provide “posterior” information.
 
-A combined approach based on one of the methods listed above and {term}`BAYESIAN INFERENCE` updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.
+A combined approach based on one of the methods listed above and {term}`Bayesian inference <Bayesian inference>` updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.
 
 
 (misc_5_3_5)=
