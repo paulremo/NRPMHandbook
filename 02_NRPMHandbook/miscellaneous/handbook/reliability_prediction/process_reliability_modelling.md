@@ -363,7 +363,7 @@ P(\text{FAILURE}) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \math
 ````
 
 The model is common to all miscellaneous items.
-Refer to {numref}`introduction_system` for defining the SF value. 
+Refer to {numref}`sec_sys_handbook` for defining the SF value. 
 
 ``````
 
@@ -388,7 +388,7 @@ The probability of {term}`extrinsic failures <Extrinsic failure>` EX is dependen
 2. The probability to be hit by a particle (refer to µmeteorits flux and characteristics depending on the orbit, on the position on the orbit and on the velocity vector) and 
 3. The shielding for the item protection.
   
-The definition of a model representing the probability to be hit by a debris is out of the scope of the Current document. Refer to {numref}`introduction_system` for more information.
+The definition of a model representing the probability to be hit by a debris is out of the scope of the Current document. Refer to {numref}`sec_sys_handbook` for more information.
 
 ``````
 
