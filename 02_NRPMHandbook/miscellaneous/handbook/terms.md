@@ -426,7 +426,7 @@ IOT
 
 IPC
 	Association Connecting Electronics Industries
-	
+
 I_SA
     SA current
 
@@ -786,7 +786,7 @@ TN
 
 TNID
 	Total Non Ionizing Dose
-	
+
 TRL
     Technology Readiness Level
 
