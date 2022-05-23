@@ -8,7 +8,7 @@ install_requires = [
 
 setup(
     name = 'nrpmint',
-    version = '0.1',
+    version = '0.1.0',
     author = 'Paul-Remo Wagner',
     author_email = 'wagner@matrisk.com',
     install_requires = install_requires,
