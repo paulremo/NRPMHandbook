@@ -78,8 +78,8 @@ parts:
       sections:
       - file: miscellaneous/models/failure_rate_processing
         title: Failure rate processing
-      - file: miscellaneous/models/miscellaneous_reliability_guide
-        title: Guide Miscellaneous
+      - file: miscellaneous/models/reliability_guide
+        title: Guide
   - caption: System chapter
     numbered: true
     chapters:
