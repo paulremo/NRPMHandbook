@@ -102,9 +102,8 @@ def single_analysis(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alp
     return form(lsf, corrmat=corrmat, Vlim=Vlim, KH=KH, alpha=alpha, MU=MU, nrev=nrev)
 
 
-def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH,
-                 Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU, CoV_MU,
-                 rho_KH_alpha, nrev, rev_per_hour):
+def model_wrapper(Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alpha, E_alpha, CoV_alpha, Dist_MU, E_MU,
+                  CoV_MU, rho_KH_alpha, nrev, rev_per_hour):
     '''Wrapper to be called by ipywidgets to run the reliability analyses and display the outputs.'''
 
     # do a set of reliability analyses for different nrev
@@ -137,15 +136,15 @@ def web_ui():
         'value': 'Gumbel',
         'options': ['LogNormal', 'Normal', 'Gumbel'],
     }
-    scale_units = 1e6
+    E_Vlim_scale_units = 1e6
     E_Vlim = {
         'type': 'floatslider',
         #'description': '$\\text{E}[V_{\\text{lim}}]$',
         'description': 'E[V_lim]',
-        'value': 6.5e-8*scale_units,
-        'min': 1e-8*scale_units,
-        'max': 1e-7*scale_units,
-        'step': 1e-9*scale_units,
+        'value': 6.5e-8*E_Vlim_scale_units,
+        'min': 1e-8*E_Vlim_scale_units,
+        'max': 1e-7*E_Vlim_scale_units,
+        'step': 1e-9*E_Vlim_scale_units,
         'readout_format': '.1e'
     }
     CoV_Vlim = {
@@ -165,15 +164,15 @@ def web_ui():
         'value': 'Normal',
         'options': ['LogNormal', 'Normal', 'Gumbel'],
     }
-    scale_units = 1e12
+    E_KH_scale_units = 1e12
     E_KH = {
         'type': 'floatslider',
         #'description': '$\\text{E}[K_H]$',
         'description': 'E[K_H]',
-        'value': 4e-15*scale_units,
-        'min': 1e-15*scale_units,
-        'max': 1e-14*scale_units,
-        'step': 1e-15*scale_units,
+        'value': 4e-15*E_KH_scale_units,
+        'min': 1e-15*E_KH_scale_units,
+        'max': 1e-14*E_KH_scale_units,
+        'step': 1e-15*E_KH_scale_units,
         'readout_format': '.1e'
     }
     CoV_KH = {
@@ -271,7 +270,14 @@ def web_ui():
         'readout_format': '.1e'
     }
 
+    model_wrapper_scaled = lambda Dist_Vlim, E_Vlim, CoV_Vlim, Dist_KH, E_KH, CoV_KH, Dist_alpha, E_alpha, CoV_alpha, Dist_MU, \
+                           E_MU, CoV_MU, rho_KH_alpha, nrev, rev_per_hour: model_wrapper(Dist_Vlim, E_Vlim/E_Vlim_scale_units,
+                                                                                         CoV_Vlim, Dist_KH, E_KH/E_KH_scale_units,
+                                                                                         CoV_KH, Dist_alpha, E_alpha, CoV_alpha,
+                                                                                         Dist_MU, E_MU, CoV_MU,
+                                                                                         rho_KH_alpha, nrev, rev_per_hour)
+
     # initialize interface
-    UI(model_wrapper, n_cols=2, Dist_Vlim=Dist_Vlim, E_Vlim=E_Vlim, CoV_Vlim=CoV_Vlim, Dist_KH=Dist_KH, E_KH=E_KH,
+    UI(model_wrapper_scaled, n_cols=2, Dist_Vlim=Dist_Vlim, E_Vlim=E_Vlim, CoV_Vlim=CoV_Vlim, Dist_KH=Dist_KH, E_KH=E_KH,
        CoV_KH=CoV_KH, Dist_alpha=Dist_alpha, E_alpha=E_alpha, CoV_alpha=CoV_alpha, Dist_MU=Dist_MU, E_MU=E_MU,
        CoV_MU=CoV_MU, rho_KH_alpha=rho_KH_alpha, nrev=nrev, rev_per_hour=rev_per_hour)
