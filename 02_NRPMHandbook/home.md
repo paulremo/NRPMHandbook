@@ -1,5 +1,5 @@
 (home_page)=
-# Welcome to the NRPM digital handbook !
+# Welcome to the NRPM digital handbook!
 
 This is the digital version of the {term}`NRPM` handbook for reliability.space. The handbook is currently under construction, but already offers a large collection of sections to explore, guides to interact with, and models to analyze.
 
