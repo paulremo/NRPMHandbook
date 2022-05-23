@@ -37,7 +37,7 @@ width: 600px
 name: table4_13
 ```
 
-Based on the elementary states that are linked to a certain system performance level, a Boolean system function $\Phi_{P_{S}}$ can be obtained that describes the top event "system performance level equals $p_{S}$". With $p_{S} = 50%$ the following system function $\Phi_{P_{S}}$ is obtained:
+Based on the elementary states that are linked to a certain system performance level, a Boolean system function $\Phi_{P_{S}}$ can be obtained that describes the top event "system performance level equals $p_{S}$". With $p_{S} = 50\%$ the following system function $\Phi_{P_{S}}$ is obtained:
 
 (syst_equation4_68)=
 ````{admonition} Equation

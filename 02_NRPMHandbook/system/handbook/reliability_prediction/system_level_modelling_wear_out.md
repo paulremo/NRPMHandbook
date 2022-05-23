@@ -51,7 +51,6 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
   \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                                                             
   \lambda\left( t \right) = \lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta - 1} \\                
   \end{matrix}\left\{ \begin{matrix}                                                                                               
-  
   t < \tau_{1} \\                                                                                                     t \geq \tau_{1} \\                                                                                                     \end{matrix} \right.\ 
 ```
 ````
@@ -67,7 +66,6 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
   R\left( t \right) = {\exp\left\lbrack - \lambda_{R}t \right\rbrack}^{} \\                                                                           
   R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta} \right) \right\rbrack}^{}}_{} \\   
   \end{matrix}\left\{ \begin{matrix}                                                                                               
-  
   t < \tau_{1} \\                                                                                                     t \geq \tau_{1} \\                                                                                                     \end{matrix} \right.\ 
 ```
 ````
