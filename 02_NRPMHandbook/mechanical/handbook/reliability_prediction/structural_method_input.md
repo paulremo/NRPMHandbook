@@ -175,7 +175,7 @@ The closed-form solutions in Equation   10 -3 and Equation   10 -4 show that for
 
 The effect of distributional assumptions is illustrated in {numref}`Figure 3.5`, comparing Equation   10 -3 for Normal distributed stress and strength with Equation   10 -4 for Lognormal distributed basic variables. The difference between the two models grows with the coefficients of variation (in {numref}`Figure 3.5`, only $\nu_{X_{2}}$ is varied) and with the central safety factor, and thus with the reliability of the considered part. 
 
-It should be noted that the design factors used in practice, defined as the ratio between the design allowable load and the design limit load, are generally much smaller than the central safety factors depicted on the horizontal axis in {numref}`Figure 3.5`. The reason is that designers usually make use of conservative estimates for stress and strength, which first have to be transformed to mean values before making use of Equation   10 -3 or Equation   10 -4.  To give an example, {term}`ECSS`-E-ST-32C Error: Reference source not founddefines the limit load statistically as the load level not being exceeded with a probability of $99%$ during the service life of a structure. Assuming a Normal distributed load with a coefficient of variation of $0.2$, this fractile value is a factor of 1.5 higher than the corresponding mean value of the same distribution. Additional conservatism is introduced in the strength value (e.g. using A- or B-values for material strength, defined as lower $1%$ or $10%$ fractiles of the strength distribution), and with the aid of explicit margins and/or factors of safety introduced in the design. 
+It should be noted that the design factors used in practice, defined as the ratio between the design allowable load and the design limit load, are generally much smaller than the central safety factors depicted on the horizontal axis in {numref}`Figure 3.5`. The reason is that designers usually make use of conservative estimates for stress and strength, which first have to be transformed to mean values before making use of Equation   10 -3 or Equation   10 -4.  To give an example, {term}`ECSS`-E-ST-32C Error: Reference source not founddefines the limit load statistically as the load level not being exceeded with a probability of $99\%$ during the service life of a structure. Assuming a Normal distributed load with a coefficient of variation of $0.2$, this fractile value is a factor of 1.5 higher than the corresponding mean value of the same distribution. Additional conservatism is introduced in the strength value (e.g. using A- or B-values for material strength, defined as lower $1\%$ or $10\%$ fractiles of the strength distribution), and with the aid of explicit margins and/or factors of safety introduced in the design. 
 
 It is interesting to note that the impact of different distributional assumptions gets smaller when referring to design values for stress and strength, compared to the results shown in {numref}`Figure 3.5`, which are directly based on the central safety factor and thus referring to mean values for both variables. An important prerequisite for robust results is that the transformation between fractiles and mean values is performed based on the same distributional assumptions as the ones used for the reliability calculations.
 
@@ -277,7 +277,7 @@ Four major difficulties may arise during (probabilistic) load analysis
   
     Practical reliability problems generally involve several load and resistance variables that must be described by their joint probability distribution function (possibly including dependencies) if several loads are interacting for the same {term}`failure mechanism <Failure mechanism>`. 
 
-A pragmatic approach to handle the challenges listed above is to take the limit loads used in deterministic design as an upper fractile value with corresponding exceedance probability (e.g. 1% at a 90% confidence level for limit loads defined statistically in consistency with {term}`ECSS`-E-ST-32C  Error: Reference source not found). Together with a rough estimate for the coefficient of variation of the stress distribution, this information can be used to derive the distribution parameters of any two-parameter model.
+A pragmatic approach to handle the challenges listed above is to take the limit loads used in deterministic design as an upper fractile value with corresponding exceedance probability (e.g. $1\%$ at a $90\%$ confidence level for limit loads defined statistically in consistency with {term}`ECSS`-E-ST-32C  Error: Reference source not found). Together with a rough estimate for the coefficient of variation of the stress distribution, this information can be used to derive the distribution parameters of any two-parameter model.
 
 ```{admonition} Under construction
 :class: todo
@@ -430,7 +430,7 @@ The Normal distribution for the location parameter $\mu_{T}$ is a conjugate prio
 ``  
 ```{math}
 :label: Equation 3.15
-\mu '' = (\sigma '')^{2} \left(\frac{\mu '}{\sigma'^{2}} + \frac{\sum_{i=1}^{n} (\\ln(\widehat{t_{i}}))}{\sigma_{T}^{2}}\right)
+\mu '' = (\sigma '')^{2} \left(\frac{\mu '}{\sigma'^{2}} + \frac{\sum_{i=1}^{n} (\ln(\widehat{t_{i}}))}{\sigma_{T}^{2}}\right)
 ```
 ````
 
