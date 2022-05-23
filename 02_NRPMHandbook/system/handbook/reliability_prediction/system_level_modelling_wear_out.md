@@ -31,7 +31,7 @@ R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t}{\a
 ```
 ````
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss factor above
 ```
@@ -167,7 +167,7 @@ Where
 
 The reliability function of the component that is exposed to {term}`random failures <Random failure>` and also {term}`wear-out failures <Wear-out failure>` throughout the mission is given in Eq. {eq}`Equation 7.103` (see wear-out first approach in Section Error: Reference source not found).
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -220,7 +220,7 @@ Where
 -   $\tau_{1}$ denotes the qualification time of the component
 ````
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss factor just above
 ```
@@ -230,7 +230,7 @@ For mission phases before qualification time $T_{\text{ck}} < \tau_{1}$, wear-ou
 
 For Model 3, see Section Error: Reference source not found, wear-out is considered only for $T_{\text{ck}} > \tau_{2}$ and for $T_{\text{ck}} < \tau_{2}$ only {term}`random failures <Random failure>` are taken into account. The following equation is obtained for $T_{\text{ck}} > \tau_{2}$.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -250,7 +250,7 @@ Where
 -   $\tau_{2}$ denotes the time at which the {term}`wear-out failure <Wear-out failure>` rate equals the {term}`random failure <Random failure>` rate.
 ````
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss factor just above
 ```
@@ -299,7 +299,7 @@ R_{S}\left( t \right) = {\exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t
 ```
 ````
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss factor just above
 ```
@@ -378,7 +378,7 @@ R\left( t \middle| T \right) = \frac{\exp\left( - \lambda_{R}T - \left( \frac{t 
 ```
 ````
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss factor just above
 ```
@@ -396,7 +396,7 @@ In the following section, another form of redundancy is presented: standby redun
 
 The reliability of the system at time $t$ can be obtained using the following equation Error: Reference source not found:
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -434,7 +434,7 @@ Stand-by system with switching device
 
 Two scenarios have to be considered to include the reliability of a switch in the analysis with two probabilities can be considered. The first one is the probability of the switch performing the action (i.e., switching) when requested to do so, the Switch Probability per Request, which is expressed as a static probability. The second probability takes into account the possibility that the switch could fail before the active component fails, as the switch might wear out with age due to material degradation. However, a switch failure does not cause the system to fail immediately, but if the active component fails and the switch has also failed, then the system cannot be switched to the standby component and it therefore fails. The reliability of the system including switching is given by the following equation Error: Reference source not found.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```

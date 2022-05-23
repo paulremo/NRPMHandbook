@@ -45,7 +45,7 @@ Another possible use of test data is for the derivation of physical quantities n
 
 Finally, one specific feature of pre-flight acceptance tests should be mentioned: Due to the fact that these tests are performed on the flight item, they can provide relevant information about its strength or resistance against the applied stresses. The fact that the item has passed the tests may be used to exclude lower fractile values of the strength distribution in {term}`PoF` approaches. Note that this “proof load” approach is only valid for {term}`failure mechanism <Failure mechanism>`s resulting from peak load effects, and cannot be applied when cumulative stresses are driving failure. More details on the use of proof load test results for reliability prediction can be found e.g. in Error: Reference source not found, .
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -56,7 +56,7 @@ Two well-known reliability handbooks are presently available providing input dat
 
 **Non-electronic parts reliability data ({term}`NPRD`)**
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just below
 ```
@@ -156,7 +156,7 @@ The use of structural reliability methods for mechanical reliability prediction 
 ### Handbook methods
 The use of existing reliability handbooks and data sources, especially as a stand-alone method, is generally not recommended for the modelling of mechanical items in space applications. Limitations of the {term}`NPRD` Error: Reference source not foundand {term}`NSWC`  Error: Reference source not foundhandbooks are discussed in Section , including some guidance on potential uses of these methods, e.g. to derive ball-park estimates for preliminary design or as a prior for a combined approach using {term}`Bayesian inference <Bayesian inference>` updating.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 missing 2 refs above
 ```

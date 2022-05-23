@@ -2,7 +2,7 @@
 
 The present section introduces the modelling of systematic failures using In Orbit Return data. After an introduction to the topic (Section Error: Reference source not found) and the classification of systematic failures (Section Error: Reference source not found), the modelling is explained starting with the data sources and methods used (Section Error: Reference source not found). The description of the model in Section Error: Reference source not found starts with a discussion of is range of applicability, which is related to the applicability of the data source used.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss 4 ref above
 ```
@@ -21,7 +21,7 @@ Considering the system level effects, it may be said that systematic {term}`fail
 
 To account for these mitigation measures, the modelling presented in this section considers (major) anomalies rather than failures, and works with a classification by severity to model the impact on the mission. Definitions are provided in Section Error: Reference source not found. {numref}`Figure 7.33` illustrates the introduction of flaws during design (including specification) and manufacturing, which -- if undetected before launch -- may lead to failures or anomalies in orbit under operational and/or environmental stresses (Note that operation errors may lead to systematic failures even without the presence of flaws). The severity category depends on the effect propagation in the overall system, and can be reduced by mitigation measures implemented a priori during design, or a posteriori after {term}`anomaly <Anomaly>` investigation.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -116,7 +116,7 @@ The following anomalies observed in orbit are classified as major:
 
 The models and data presented in this section are consistent with the classification of failures by root cause discussed in {numref}`methods`; the classification of anomalies is based on the same principles. Only major anomalies classified as "systematic" are considered for the modelling. As discussed in Section Error: Reference source not found above, this includes anomalies due to errors in the design (including specification), manufacturing and operation of space systems.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -202,7 +202,7 @@ In consistency with the taxonomy of failures by {term}`failure root cause <Failu
 
 As can be seen from this classification, the modelling considers also anomalies due to software errors. A dedicated discussion of software failures in the context of reliability prediction can be found in Section Error: Reference source not found.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -460,7 +460,7 @@ The posterior parameters of the Dirichlet distribution for the different severit
 
 In addition to the information directly used for modelling (Section Error: Reference source not found above), the following information can be useful for the interpretation of the modelling results. The data is taken from the same source as the model input.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -483,7 +483,7 @@ Percentage of major anomalies that were observed during In Orbit Testing at sate
 
 As discussed in Section Error: Reference source not found, systematic failures and anomalies can be further classified by the detailed root cause, from design and manufacturing errors to operations. {numref}`Figure 7.43` shows the classification of observed anomalies by root cause, using the definitions from the data source, as outlined in Section Error: Reference source not found. The repartition by severity category clearly shows that anomalies leading to hardware failures and/or having an impact on the mission (severity 1 to 4) are mainly due to root causes in hardware design or manufacturing. Severe events due to other root causes are rare exceptions, as can be seen also from {numref}`Figure 7.44`. It should be noted that "Hardware failure" is here defined in a wide sense, i.e. all anomalies having an impact on the mission (severity 1 to 3) are considered as failures, even though they may not involve a definitive hardware failure.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss 2 ref above
 ```
@@ -509,7 +509,7 @@ Percentage of anomalies with hardware failure (severity category 1 to 4) for the
 
 The repartition by satellite subsystem already gives a first indication on the relevance of systematic anomalies related to EEE, Mechanical or miscellaneous items. For the anomalies whose root cause is classified as "hardware", {numref}`Figure 7.45` gives further information on the repartition by the type of the equipment involved, and by the details of the root cause (design or manufacturing error). The classification is done at equipment level, considering all satellite subsystems and using the same three classes as outlined in Chapter Error: Reference source not found (EEE), Error: Reference source not found (Mechanical -- {term}`MEC`) and Error: Reference source not found (Miscellaneous -- MIS). It can be seen that the contribution of "Mechanical" anomalies is very low, which may be explained by the fact that many of the most error-prone satellite elements are classified as "miscellaneous items" in this handbook.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss 2 ref above
 ```

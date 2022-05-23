@@ -1,6 +1,6 @@
 # Examples
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
-Miss ref just above
+The content of this page is missing and will be provided in a future version of the NRPM digital handbook.
 ```

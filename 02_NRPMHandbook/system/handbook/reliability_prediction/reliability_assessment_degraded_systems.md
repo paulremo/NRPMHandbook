@@ -92,7 +92,7 @@ Therefore, it is more efficient to use the success paths. For each system perfor
 
 To achieve a system performance of $p_{S}$ ≥ 50% the following condition can be defined, which describes a combination of success paths for which the system performance is at least 50%.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -153,7 +153,7 @@ Where $k$ denotes the index of the success paths and $m$ the total number of suc
 
 With Eq. {eq}`Equation 7.72`, the following expression is obtained for the system state function for the top event "system performance $p_{S}$ ≥ x" Error: Reference source not found.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```

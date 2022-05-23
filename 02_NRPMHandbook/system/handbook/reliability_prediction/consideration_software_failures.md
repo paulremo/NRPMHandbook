@@ -9,7 +9,7 @@ In the following, we distinguish between software{term}`requirement <Requirement
 
 Note that the data set used for the quantitative modelling in Section Error: Reference source not found in principle considers all types of software related major anomalies. The effect of the anomalies at system level is considered with the aid of the {term}`anomaly <Anomaly>` severity classification.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss 3 ref above
 ```
@@ -24,7 +24,7 @@ Conceptually, there is no big difference between {term}`requirements <Requiremen
 
 The focus of existing software {term}`reliability prediction <Reliability prediction>` methods and modelsis on software development errors, introduced during software design and coding (w.r.t. the software environment). Various methods and associated tools are available on the market; see e.g. the reviews presented in {term}`IEEE` Std 1633:2016 Error: Reference source not found, Chu et al. Error: Reference source not found or the RIDE1 study Error: Reference source not found. Models can be set up "a priori" at the beginning of the development phase, or "a posteriori", making refinements based on inputs from testing during the development and production of Software (reliability growth modelling). "A posteriori" methods are based on observing the activation of bugs of a specific software during test or operations, aiming at the prediction of the probability of the (future) activation of residual errors after bug fixing in time. In contrast to this, "a priori" models can only be based on the observation of bugs in other software than the one under analysis, generally making use of some relevant characteristics of the software product and development process to determine the error rate.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -39,14 +39,14 @@ A major concern with all existing models is how to populate them with relevant d
 
 Another problem is related to the fact that the existing software {term}`reliability prediction <Reliability prediction>` models were generally developed to assess software systems with target failure rates around $10^{-3}$ to $10^{-4}$ per hour, which is several orders of magnitude higher than what is considered acceptable for space applications, at least when regarding severe effects such as "loss of mission". The confidence in the prediction of failure rates in the order of $10^{-5}$ to $10^{-6}$ per hour is generally low, which is an important limitation for software {term}`reliability prediction <Reliability prediction>` in space applications and more generally in safety regulated industries, see e.g. Kanoun Error: Reference source not found or Chu et al. Error: Reference source not found.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss 2 ref above
 ```
 
 In summary, it may be concluded that the existing models for software {term}`reliability prediction <Reliability prediction>` may be used to support qualitative processes (e.g. to monitor trends), but cannot be considered mature enough to derive pertinent reliability figures, especially for the low failure rates required in space applications. Considering that the most relevant root causes of software related failures are anyway out of scope for predictions made with the existing models -- see the discussion of software .term}`requirement <Requirement>` errors in Section Error: Reference source not found -- there seems to be no added value in using these predictions to support the software design process in space projects.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -59,7 +59,7 @@ The current {term}`quality <Quality>` assurance processes and design rules for S
 
 A different approach to account for the effects of software at system level is described in ED-153 Error: Reference source not found for safety assurance of software functions in Air Navigation Services (limited to on-ground applications), which allows to select the software assurance level as a function of both the effect severity class and the likelihood of generating such an effect (classified on a qualitative scale with four categories from "Very Possible" to "Extreme Unlikely"). As a result, the required assurance level can be reduced if the likelihood of high severity effects is small, even if they cannot be avoided completely. However, it needs to be emphasized that this approach does not require any {term}`reliability prediction <Reliability prediction>` for the software itself, the focus is rather on the conditional probability of severe (hardware) effects given software failure. Furthermore, it should be noted that ED-153 takes a rather atypical position on this topic, and many Communication, Navigation and Surveillance and Air Traffic Management (CNS/ATM) Systems use ED-109 instead (also known as DO-278, Error: Reference source not found), which takes a similar position on software {term}`reliability prediction <Reliability prediction>` as presented in DO-178C Error: Reference source not found for airborne systems.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss 2 ref above
 ```

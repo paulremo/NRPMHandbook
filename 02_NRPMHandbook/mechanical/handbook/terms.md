@@ -1,7 +1,8 @@
 # Terms, definitions and abbreviated terms
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
-Team task
+The content of this page is missing and will be provided in a future version of the NRPM digital handbook.
+
 ```
 
 ## Terms from other standards

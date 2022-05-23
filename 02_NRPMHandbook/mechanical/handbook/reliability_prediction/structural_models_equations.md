@@ -2,7 +2,7 @@
 
 The present section provides limit state functions and guidance for the modelling of several {term}`failure mechanisms <Failure mechanism>` that are of relevance for mechanical {term}`reliability prediction <Reliability prediction>`. The content of this Section is largely based on Error: Reference source not found, where some aspects are discussed in more detail.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```

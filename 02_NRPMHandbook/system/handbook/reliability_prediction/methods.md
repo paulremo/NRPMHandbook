@@ -7,7 +7,7 @@ This section presents various system reliability modelling techniques such as re
 
 <iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref for categories above
 ```
@@ -34,7 +34,7 @@ Before starting a system reliability analysis, the following aspects are importa
 - The required accuracy and/or confidence level of the results should be defined.
 - To maintain consistency and traceability, all the assumptions and simplifications made during the analysis should be well documented.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss 4 ref above
 ```
@@ -44,7 +44,7 @@ miss 4 ref above
 
 The Reliability Block Diagram ({term}`RBD`) uses a block structure to represent the success logic of the system. It is easy to understand and system success paths can be verified visually. For the purpose of a quantitative reliability analysis, the {term}`RBD` considers required combinations of system components that are needed to keep the system working. The application of an {term}`RBD` provides a structured representation of system architecture, and single point failures become quite obvious in the block diagram. Reliability modelling with an {term}`RBD` is primarily intended for non-repairable systems. The {term}`IEC` standard {term}`IEC` 61078:2016 Error: Reference source not found provides the application rules and definitions. 
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -377,7 +377,7 @@ The main steps to perform an Event Tree Analysis are Error: Reference source not
 - Determine the frequency of the initial event and the (conditional) probabilities of the branches in the event tree
 - Calculate the probabilities/frequencies for the identified consequences (outcomes)
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -424,7 +424,7 @@ The advantages of Event Tree Analysis are the visualization of the chain of even
 
 Markov models are especially suited for the evaluation of system reliability for the following systems Error: Reference source not found:
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -455,7 +455,7 @@ Depending on the objective of the reliability analysis further classes of system
 
 As a guideline, the following questions should be considered to define the boundary conditions of the analysis and the characteristics of the system Error: Reference source not found:
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -467,7 +467,7 @@ Miss ref just above
 
 The fact that the Markov model is based on the representation of system states could make practical application more difficult for large number of components, as the number of possible transitions and system states increases rapidly with the number of components. Another limitation of Markov model is related to the assumption that the future behaviour of the system depends only on the present state of the system, and not on the way the system arrived at this state Error: Reference source not found. Consequently, it has to be ensured that the actual system behaviour is adequately represented with such memory-less Markov models. 
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -638,7 +638,7 @@ For complex problems with $n$ components it is more suitable to solve the set of
 
 Petri nets are a graphical technique for the representation and analysis of complex logical interactions among elements in a system. Petri nets allow describing the behaviour of a system by modelling the relationship between local states and local events Error: Reference source not found. They are able to model the various states of the system and how it evolves from one state to another when events (failures, repairs, periodic tests, mission phases, etc.) occur. A detailed description of Petri networks can be found in {term}`IEC` 62551:2012  Error: Reference source not found.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss 2 ref just above
 ```
@@ -674,7 +674,7 @@ Petri net with inhibitor arc
 
 The different types of transitions within a Petri net can be described as deterministic or as stochastic, as shown [Table 4.4](syst_table4_4) according to Error: Reference source not found. Deterministic transitions include immediate transitions with no delay, or transitions with a delay, where the parameter  denotes the duration of delay. Stochastic transitions are defined by their distribution function modelling the time to transition. 
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -712,7 +712,7 @@ Petri net of a) serial system (OR gate) and b) parallel system (AND gate)
 
 Within a Petri net, the system model can be structured hierarchically by using super nodes representing a sub model and a super transition that represents the transition between sub models connected by super arc, see Error: Reference source not found for details.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -745,7 +745,7 @@ Main steps for system reliability analysis with Petri nets.
 
 Petri nets used for quantitative analysis are primarily based on timed or stochastic state transition diagrams. The quantitative analysis of Petri nets provides the probability of reaching certain states that are relevant for reliability assessment (stationary analysis), as well as the probability of certain transitions (transition analysis). Petri nets that consist exclusively exponential distributed transitions can be converted to its corresponding Markov models. So general stochastic Petri net models containing complex interactions can often be described more easily and with a smaller diagram than using Markov model Error: Reference source not found. In case of arbitrary distributions, Monte Carlo simulation are used to perform transient or stationary analysis. Monte Carlo simulation is also applied to Petri nets if the number of reachable states is too large to solve the corresponding Markov model. The number of manageable states strongly depends on computing performance, however up to 107 states can be regarded as analysable. Besides a quantitative analysis, a qualitative analysis can be performed to determine the possibility to reach certain states (reachability analysis) or to identify invariants, deadlocks and traps (structured analysis). The qualitative analysis is based on an untimed state transition diagram, which means the transitions are not quantified. The following diagram provides an overview of the analysis methods for Petri nets. 
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -863,7 +863,7 @@ P(X,A,B) = P(X|A,B)P(A,B)
 
 The conditional probability of the child node X for a serial system is given by Eq. {eq}`Equation 7.28` Error: Reference source not found:
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -901,7 +901,7 @@ The marginal probability $P(A,B)$ of root node $A$ and $B$ is given by the proba
 
 Another advantage of Bayesian network is that it allows to model dependencies. {numref}`Figure 7.23` shows a Bayesian network for analysing common cause failures. In the example, the failure of the component is caused by an external event or shock (see shock model in Section Error: Reference source not found). While the events $S_{1}$ and $S_{3}$ cause only one component ($A$ or $B$) to fail, the event $S_{2}$ will result in the loss of both components. Thus, component $A$ and $B$ are not independent as their failure could result from a common source. The system states are assigned to $X$. In this case, all the conditional probability matrices (for $A$, $B$, and $X$) are defined equivalent to AND gates.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
