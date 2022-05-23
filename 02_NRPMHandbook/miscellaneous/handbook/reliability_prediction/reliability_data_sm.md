@@ -15,8 +15,6 @@ The failure rate is provided per TWT Channel (mono channel or dual channel). In 
     * TWT = 30%
 2. to use the supplier repartition as per its own {term}`reliability prediction <Reliability prediction>`.
 
-Reference to a table {numref}`Structure of the reliability data table` and to another table {numref}`Reliability data`.
-
 ```{list-table} Structure of the reliability data table
 :class: interactive-table
 :name: Structure of the reliability data table
