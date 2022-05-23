@@ -23,12 +23,12 @@ This digital handbook contains a methodology, a methods and four application-spe
 ::::{grid}
 :gutter: 3
 
-:::{grid-item-card} **Methods**
-<img class="link-image" src="_static/images/methodPicture.png" alt="logo methods" onclick="redirect('methods/intro.html')">
-:::
-
 :::{grid-item-card} **Methodologies**
 <img class="link-image" src="_static/images//methodologyPicture.png" alt="logo methodology" onclick="redirect('methodologies/intro.html')">
+:::
+
+:::{grid-item-card} **Methods**
+<img class="link-image" src="_static/images/methodPicture.png" alt="logo methods" onclick="redirect('methods/intro.html')">
 :::
 ::::
 
@@ -56,9 +56,18 @@ This digital handbook contains a methodology, a methods and four application-spe
 :::
 ::::
 
-{term}`Reliability prediction <Reliability prediction>` (RP) is not an end in itself – the ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single {term}`spacecrafts <Spacecraft>` or constellations.
+{term}`Reliability prediction <Reliability prediction>` ({term}`RP`) is not an end in itself – the ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single {term}`spacecrafts <Spacecraft>` or constellations.
 
 The purpose of the **methodology chapter** ({numref}`methodologies`) is to provide guidance for the use of {term}`reliability prediction <Reliability prediction>` to support such decisions. The ground rules and scope of the prediction are defined accounting for the {term}`RP` objectives and uses as well as for the project life cycle phase in which the predictions are performed. Ultimately, the goal is to select suitable methods and models to perform a prediction in a given context. The **methods chapter** ({numref}`methods`) contains information about the inputs and modelling approaches that can be used to develop models for {term}`reliability predictions <Reliability prediction>` in a given application. The discussion of methods can be used to derive new applications or update existing ones. However, the main purpose of this chapter is to form the basis for the application specific-chapters following it: **EEE chapter** ({numref}`sec_eee_handbook`, {numref}`sec_eee_models`), **mechanical chapter** ({numref}`sec_mech_handbook`, {numref}`sec_mech_models`), **miscellaneous chapter** ({numref}`sec_misc_handbook`, {numref}`sec_misc_models`), **system chapter** ({numref}`sec_sys_handbook`, {numref}`sec_sys_models`).
+
+```{figure} _static/images/overview_hdbk.png
+---
+width: 600px
+name: fig_hdbk
+---
+Tasks in {term}`reliability prediction<Reliability prediction>`.
+```
+
 
 Even though the handbook targets decision support, the decision-making as such is left to the user; {term}`reliability prediction <Reliability prediction>` is limited to providing the numbers that can be used to decide in a given trade-off situation. Also, the practical implementation and development or choice of suitable software tools is outside the scope of this handbook. As a general rule, models are provided with full detail, allowing the development of tools without any restrictions regarding the information needed to implement them.
 
