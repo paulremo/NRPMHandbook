@@ -141,7 +141,7 @@ def web_ui():
     E_Vlim = {
         'type': 'floatslider',
         #'description': '$\\text{E}[V_{\\text{lim}}]$',
-        'description': '$E[V_lim]',
+        'description': 'E[V_lim]',
         'value': 6.5e-8*scale_units,
         'min': 1e-8*scale_units,
         'max': 1e-7*scale_units,
@@ -151,7 +151,7 @@ def web_ui():
     CoV_Vlim = {
         'type': 'floatslider',
         #'description': '$\\text{C.o.V.}[V_{\\text{lim}}]$',
-        'description': '$C.o.V.[V_lim]',
+        'description': 'C.o.V.[V_lim]',
         'value': 0.2,
         'min': 0.05,
         'max': 1,
@@ -169,7 +169,7 @@ def web_ui():
     E_KH = {
         'type': 'floatslider',
         #'description': '$\\text{E}[K_H]$',
-        'description': '$E[K_H]',
+        'description': 'E[K_H]',
         'value': 4e-15*scale_units,
         'min': 1e-15*scale_units,
         'max': 1e-14*scale_units,
