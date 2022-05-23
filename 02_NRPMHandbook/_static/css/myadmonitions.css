@@ -9,8 +9,8 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 .admonition.todo .admonition-title:before {
-    color: rgb(255, 255, 255);
-    content: '\f085';
+    color: rgb(200, 0, 0);
+    content: '⚠';
 }
 
 .admonition.rule {
