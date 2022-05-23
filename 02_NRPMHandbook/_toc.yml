@@ -5,15 +5,15 @@ format: jb-book
 root: home
 
 parts:   
-  - caption: Methods chapter
-    numbered: true
-    chapters:
-    - file: methods/intro
-      title: Handbook
   - caption: Methodologies chapter
     numbered: true
     chapters:
     - file: methodologies/intro
+      title: Handbook
+  - caption: Methods chapter
+    numbered: true
+    chapters:
+    - file: methods/intro
       title: Handbook
   - caption: EEE chapter
     numbered: true
