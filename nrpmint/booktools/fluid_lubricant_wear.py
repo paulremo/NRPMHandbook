@@ -39,8 +39,8 @@ def display(reliability_analyses, mult_one_idx, rev_per_hour, n_samples=10**5):
 
     # plots
     plt.figure(1)
-    plt.hist(r, bins=100, density=True, alpha=0.8)
-    plt.hist(a, bins=100, density=True, alpha=0.8)
+    plt.hist(a, bins=100, density=True, alpha=0.8, color='C1')
+    plt.axvline(r, color='C0')
     plt.xlabel(r'volume $m^3$')
     plt.ylabel('probability density function')
     plt.legend(['Limiting Volume', 'Volume worn away'])
