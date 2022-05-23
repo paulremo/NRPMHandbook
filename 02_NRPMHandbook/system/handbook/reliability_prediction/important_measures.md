@@ -2,7 +2,7 @@
 
 In case the reliability targets are not met, the design process reconsiders the system architecture in order to improve the reliability. Quantification of system reliability gives only the overall system performance measure, but the reliability assessment can also provide a ranking of components with respect to their significance for system reliability. Several measures of significance have been proposed for the case where the support model is a fault tree or {term}`RBD`, grouped under the generic designation of "importance measures". The aim of importance measures is to support system design in selecting the most efficient solution through quantitative analysis related to the following questions Error: Reference source not found:
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -28,7 +28,7 @@ The methods to determine importance measures are based on the Boolean model for 
 
 The so-called Birnbaum or marginal importance indicates how sensitive the system reliability is with regard to changes of the reliability of a certain component. The marginal importance of component $i$ is defined as the [partial derivative] of the system reliability function $R_{S}$ with respect to the reliability of component $i$ Error: Reference source not found.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -171,7 +171,7 @@ I_{\text{RS}}\left( i,r \right) = \frac{1}{{1 - R}_{\text{mi}n}}\int_{R_{\min}}^
 ```
 ````
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss factor at final Ri
 ```
@@ -189,7 +189,7 @@ It can be seen that the relative ranking of the components will be the same for 
 
 The importance measure quantifies the impact of each component on the system reliability. This information can be used to support the allocation of a system reliability target to subsystem or component level, as a general rule Error: Reference source not found:
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -213,7 +213,7 @@ Furthermore, the Birnbaum importance allows to quantify how much the system reli
 
 Thus, the change in system reliability is the weighted sum of changes in component reliability, where the weighting factors are given by the Birnbaum Importance of the components. The change of the system reliability depending on the change of one component reliability can be determined using the Birnbaum importance as shown in the following equation Error: Reference source not found:
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```

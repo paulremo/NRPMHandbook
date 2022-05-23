@@ -14,7 +14,7 @@ In order to quantitatively assess the influence of {term}`common cause failure <
 
 In the following, the {term}`contributing factors <Contributing factor>` to {term}`common cause failures <Common cause failure>` are explained, see Section Error: Reference source not found. The quantitative assessment of {term}`common cause failures <Common cause failure>` will be explained using the example of the basic parameter model, see Section Error: Reference source not found, and the beta-factor model, see Section Error: Reference source not found.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss 4 ref just above
 ```
@@ -58,7 +58,7 @@ In order to avoid that {term}`common cause failures <Common cause failure>` rest
 
 The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and {term}`common cause failures <Common cause failure>`, as shown in {numref}`Figure 7.31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by Error: Reference source not found
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -89,7 +89,7 @@ System failure calculation including {term}`common cause failure <Common cause f
 
 For explanation of the beta factor model, also a system with two identical redundant components A and B is considered. The failure of one component will, with probability $\beta$, cause all components to fail, and with probability $1- \beta$, just involve the given channel. The total failure rate of a channel is obtained by Error: Reference source not found:
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```

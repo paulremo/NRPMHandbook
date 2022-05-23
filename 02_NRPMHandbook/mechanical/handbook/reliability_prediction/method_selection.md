@@ -39,7 +39,7 @@ A simple way to account for such interactions is to select the dominating {term}
 * 
 Finally, it should be noted that besides physical interactions between {term}`failure mechanism <Failure mechanism>`, there are other possible reason for statistical dependence, such as common cause effects due to random physical variables (e.g. temperature, loads), having an effect on different {term}`failure mechanisms <Failure mechanism>` and/or parts. An example for explicit common cause modelling in a redundant bolted {term}`interface <Interface>` with load redistribution can be found in Error: Reference source not found.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -67,7 +67,7 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_6.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Table above to be computed
 ```
@@ -81,7 +81,7 @@ Table above to be computed
 * 
 It should be noted that the {term}`NSWC` Handbook Error: Reference source not foundcontains models also for some items that are better considered as assemblies rather than parts, including e.g. electric motors, solenoids and transducers. For reasons already discussed in Section , the direct use of these models is not recommended for space applications.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```

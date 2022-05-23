@@ -21,7 +21,7 @@ It is relevant to note that the limit state function $g(X)$ must always be relat
 
 Limit state functions for various well-known mechanical {term}`failure mechanisms <Failure mechanism>` are presented in Section 4.7. The list is not complete and dedicated models may be required to account for other {term}`failure mechanisms <Failure mechanism>` in specific applications. The definition of other limit state functions can take basis in models published in the literature (e.g. Error: Reference source not found, ), information from the design process or experimental evidence.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -45,7 +45,7 @@ The most important aspects of simplified structural reliability modelling from a
 
 The resulting models allow users to perform a reliability assessment based on structural reliability theory without detailed knowledge of the underlying probabilistic methods; only very limited user input is required. In the following, the general approach is briefly explained; see Error: Reference source not foundfor more detailed explanations, also on the derivations for each {term}`failure mechanism <Failure mechanism>` presented in Section 4.7.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -84,7 +84,7 @@ The distribution of the {term}`model uncertainty <Model uncertainty>` $\Theta$ i
 
 When needed, a certain explicit conservatism can be introduced in the simplified method by letting $\mu_{\Theta} > 1$ , which is equivalent to assuming a higher loading or “stress” than estimated by the model (i.e. a biased load and/or resistance model). In accordance with {term}`ECSS`-E-ST-32-10C Error: Reference source not foundwhere a “model factor” is multiplied with the design loads to account for uncertainties in mathematical models, it is recommended to set $\mu_{\Theta} = 1.2$ (or higher), referring to the model factor typically used for {term}`spacecrafts <Spacecraft>` at the beginning of new developments. The effect of this assumption on the estimated failure probability depends on the distributional assumptions and on the design margin of safety. {numref}`Figure 3.4` shows a comparison between some results for $\mu_{\Theta} = 1.0$ (unbiased) and $\mu_{\Theta} = 1.2$ (conservative bias), assuming Lognormal distributions for all random variables.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```
@@ -279,7 +279,7 @@ Four major difficulties may arise during (probabilistic) load analysis
 
 A pragmatic approach to handle the challenges listed above is to take the limit loads used in deterministic design as an upper fractile value with corresponding exceedance probability (e.g. 1% at a 90% confidence level for limit loads defined statistically in consistency with {term}`ECSS`-E-ST-32C  Error: Reference source not found). Together with a rough estimate for the coefficient of variation of the stress distribution, this information can be used to derive the distribution parameters of any two-parameter model.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```

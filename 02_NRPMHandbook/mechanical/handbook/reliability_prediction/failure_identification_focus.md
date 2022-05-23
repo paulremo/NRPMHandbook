@@ -30,7 +30,7 @@ Before going into the detailed reliability assessment of a mechanical item, it i
 Note that some of these items may be covered by “standard” Miscellaneous models (Chapter Error: Reference source not found). However, the modelling approaches for Mechanical items provided in the present chapter may be useful in the case the “standard” Miscellaneous model based on IOR is not applicable and a “non-standard” model has to be developed by the user.
 ```
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 miss ref above
 ```
@@ -47,7 +47,7 @@ Typically, components falling into category III “Non-fluidic structural compon
 * Qualification is completed
 * {term}`Quality <Quality>` Assurance program is established
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just below x2
 ```
@@ -87,7 +87,7 @@ Regarding the choice of the test level or duration, it is of course more interes
 
 To summarize, thorough testing of the flight item is a good argument to neglect a certain item or {term}`failure mechanism <Failure mechanism>` during the {term}`reliability prediction <Reliability prediction>`, especially when all or most of the other conditions listed above are true. If the probability of failure shall anyway be quantified, it is possible to consider the fact that the flight item has survived the verification test by adapting the strength distribution when using {term}`structural reliability methods <Structural reliability method>` Error: Reference source not found. A possible application of this approach may be to trade-off between reliability and mass for one-cycle-to-failure items such as tanks.
 
-```{admonition} Todo
+```{admonition} Under construction
 :class: todo
 Miss ref just above
 ```

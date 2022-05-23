@@ -32,14 +32,14 @@ const InteractType = Object.freeze({
 
 Starting point is the {term}`reliability prediction <Reliability prediction>` at the lowest level (elementary parts). At this stage the failure rates or failure probabilities respectively for a single component are determined under the given environmental and operating conditions for a specific mission profile (see Chapters Error: Reference source not found, Error: Reference source not found and Error: Reference source not found). 
 
-````{admonition} Todo
+````{admonition} Under construction
 :class: todo
 miss 3 ref above
 ````
 
 The reliability data at elementary part level are then the input to estimate the reliability at equipment level. It is important to consider the different {term}`failure modes <Failure mode>` and functional failure effects at equipment level as they could contribute to different system failure effects. The {term}`Failure mode and Effect Analysis (FMEA) <Failure mode and Effect Analysis FMEA>` or {term}`Failure mode, effect and critically analysis FMECA <Failure mode, effect and critically analysis FMECA>` are methods to support the reliability analysis at equipment level or system level, as all possible {term}`failure modes <Failure mode>` and the associated probability of occurrence are considered. {term}`ECSS`-Q-ST-30-02C Error: Reference source not foundprovides guideline how to establish Failure mode Effect and (Criticality) Analysis ({term}`FMEA <Failure mode and Effect Analysis FMEA>`/{term}`FMECA`). The {term}`Failure mode and effects summary FMES <Failure mode and effects summary FMES>` is an extract from the respective single failure {term}`FMEA <Failure mode and Effect Analysis FMEA>` in such a way that lower level {term}`failure mode <Failure mode>`s leading to the same effects are summarized. Identical failure effects from the {term}`FMEA <Failure mode and Effect Analysis FMEA>` are categorized as one {term}`failure mode <Failure mode>` in the {term}`FMECA`. The system level analysis uses the FMEA/{term}`FMECA` as input data. It should be noted that FMEA/{term}`FMECA` and {term}`FMECA` are not in the scope of the reliability.space Handbook, but are required as input documents for the system level analysis. Finally, the system level {term}`reliability prediction <Reliability prediction>` model is created. It might be necessary to create more than one system reliability model if different system functions with their own reliability .term}`requirement <Requirement>`s have to be considered. 
 
-````{admonition} Todo
+````{admonition} Under construction
 :class: todo
 miss ref above
 ````
@@ -57,7 +57,7 @@ The process steps of the {term}`reliability prediction <Reliability prediction>`
    - If the reliability target is not achieved, the methods described in Section Error: Reference source not found can be useful to determine for which component the reliability should be improved to increase system reliability.
    - Check the system for potential of {term}`systematic failures <Systematic failure>` or {term}`common cause failures <Common cause failure>`, see Section Error: Reference source not found and Error: Reference source not found.
 
-````{admonition} Todo
+````{admonition} Under construction
 :class: todo
 miss 4 ref above
 ````
