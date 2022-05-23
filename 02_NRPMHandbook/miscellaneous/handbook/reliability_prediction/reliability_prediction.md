@@ -12,9 +12,6 @@ However, whatever the model is, it is the responsibility of the supplier to just
 
 The process used to define a Miscellaneous (MIS) item reliability model is presented in {numref}`Figure 5.2`.
 
-```{note}
-{numref}`Figure 5.2`, below, addresses the miscellaneous chapter sections. e.g. MIS-5.5 refers to {numref}`misc_5_5`
-```
 
 (misc_figure4_2)=
 ```{figure} ../../picture/figure4_2.png
