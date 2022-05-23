@@ -45,7 +45,7 @@ sphinx:
   config:
     # modifications of thebe config (change of the repo URL to the interactivity repo)
     thebe_config:
-      repository_url        : https://github.com/paulremo/NRPMInteractivity/v0.1.0
+      repository_url        : https://github.com/paulremo/NRPMInteractivity
       repository_branch     : python
     # modifications of bibtex reference style
     bibtex_default_style    : plain
