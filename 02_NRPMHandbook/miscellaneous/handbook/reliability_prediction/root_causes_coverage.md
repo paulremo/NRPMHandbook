@@ -1,12 +1,13 @@
 (misc_5_2)=
 # Root causes coverage
-The {term}`failure mechanisms <Failure mechanism>` of the miscellaneous parts result from the four categories of {term}`failure root causes <Failure root cause>` already introduced and reminded in {numref}`Coverage of failure root causes by the Miscellaneous reliability prediction methodology.`.
+The {term}`failure mechanisms <Failure mechanism>` of the miscellaneous parts result from the four categories of {term}`failure root causes <Failure root cause>` already introduced and reminded in {numref}`misc-table4-3`.
 
-(misc_table4_3)=
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc-table4-3')" placeholder="Search table...">
+
 ```{list-table} Coverage of failure root causes by the Miscellaneous reliability prediction methodology.
+:name: misc-table4-3
 :header-rows: 1
 :widths: 25 75
-:name: Coverage of failure root causes by the Miscellaneous reliability prediction methodology.
 
 *   - Root cause category
     - Coverage by the miscellaneous reliability prediction methodology
