@@ -64,10 +64,10 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 * -
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-6')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-6-html')" placeholder="Search table...">
 
 <div class="scroller">
-	<table id="meca-table4-6" class="myTable">
+	<table id="meca-table4-6-html" class="myTable">
 		<thead>
 			<tr class="db-header">
 				<th colspan="5"></th>
