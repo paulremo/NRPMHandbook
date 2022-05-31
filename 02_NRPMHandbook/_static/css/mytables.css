@@ -1,0 +1,57 @@
+.myTable {
+  font-family: sans-serif;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  /*white-space: nowrap;*/
+  background-color: white;
+  overflow: auto;
+}
+
+.myTable tr {
+  border-color: lighten(#34495E, 10%);
+  /*width: 50px;*/
+}
+
+.myTable td, .myTable th{
+  text-align: center;
+  padding: 8px;
+  /*width: 80px;*/
+}
+
+
+.myTable td {
+  border-right: 1px solid #f8f8f8;
+}
+
+.full-span {
+  background-color: rgb(104, 104, 104);
+  color: white;
+}
+
+.myTable thead th {
+  color: #ffffff;
+  background: #74a0c1;
+}
+
+.myTable thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.myTable tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+
+.myTable tr:hover {
+  background-color: #9dc3e1;
+}
+
+.myTable thead th.major-head{
+  color: #ffffff;
+  background: #2d639a;
+}
