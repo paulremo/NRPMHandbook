@@ -55,3 +55,57 @@
   color: #ffffff;
   background: #2d639a;
 }
+
+
+.table {
+  font-family: sans-serif;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  /*white-space: nowrap;*/
+  background-color: white;
+  overflow: auto;
+}
+
+.table tr {
+  border-color: lighten(#34495E, 10%);
+  /*width: 50px;*/
+}
+
+.table td, .table th{
+  text-align: center;
+  padding: 8px;
+  /*width: 80px;*/
+}
+
+
+.table td {
+  border-right: 1px solid #f8f8f8;
+}
+
+.table thead th {
+  color: #ffffff;
+  background: #74a0c1;
+}
+
+.table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+
+.table tr:hover {
+  background-color: #9dc3e1;
+}
+
+.table thead th.major-head{
+  color: #ffffff;
+  background: #2d639a;
+}

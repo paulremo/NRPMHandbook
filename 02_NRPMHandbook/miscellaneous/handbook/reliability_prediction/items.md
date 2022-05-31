@@ -16,15 +16,6 @@ To use the reliability model it is, first, necessary to assess that the {term}`m
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_1.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
-(misc_table4_2)=
-```{list-table} List of miscellaneous items with “non-standard model” (not exhaustive)
-:class: interactive-table
-:name: List of miscellaneous items with “non-standard model” (not exhaustive)
-
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
-```
-
-
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc-tabletest')" placeholder="Search table...">
 
 ```{list-table} test

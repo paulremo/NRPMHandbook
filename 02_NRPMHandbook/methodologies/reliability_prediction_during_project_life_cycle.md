@@ -34,102 +34,154 @@ It should be clear that the assumptions made can have a tremendous impact on the
 
 Any reliability prediction report should provide full information on the assumptions made for the prediction, as listed in {numref}`methodo-table5-3`. This ensures that the required elements of a reliability prediction, as defined in {cite:t}`methodo-IEEE-1413:2010`, Clause 4, are provided with the prediction. The relation between each of these required elements, the assumptions listed in {numref}`methodo-table5-3` and the relevant sections of this handbook is given in {numref}`methodo-table5-4`.
 
+<input type="text" class="myInput" id="myInput5-3" onkeyup="searchTableJupyter(this, 'methodo_table5_3')" placeholder="Search table...">
 
 ```{list-table} List of assumptions to be agreed upon and associated ground rules for predictions at system level (equipment level or higher).
 :name: methodo-table5-3
-:header-rows: 2
-:widths: 10 10 10 10 10 10 10 10 10 10
 
-*   - 1 
-    - Basic information needed to define the assumptions
-    - 2 
-    - Assumptions related to the reliability prediction coverage
-    - 3 
-    - Assumptions related to the reliability prediction input
-    - 4 
-    - Assumptions related to the reliability modelling
-    - 5 
-    - Assumptions related to the reliability prediction outputs
-*   - Assumptions
-    - Ground rules
-    - Assumptions
-    - Ground rules
-    - Assumptions
-    - Ground rules
-    - Assumptions
-    - Ground rules
-    - Assumptions
-    - Ground rules
-*   - System definition
-    - The system or item under analysis shall be clearly defnied with a description of all relevant characteristics needed for perfomring the prediction.
-    - Mission phases coverage
-    - The prediction shall cover all mission phases that affect reliability and are relevant for the supported reliability prediction use cases.
-    - Mission definition
-    - The mission definition shall specify the functions as well as the performance levels (degraded system modes) to be analysed.
-    - Redundancy considerations
-    - Redundancies shall be modelled considering the specific type of redundancy and appropriate input from lower levels
-    - Prediction metrics
-    - The predictionmetrics (e.g. failure rate, reliability in time, probability of failure on demand) shall be consistent with the reliability modelling
-*   - Project life cycle phase
-    - The project life cycle phase during which the prediction is performed as well as the associated reviews shall be clearly defined
-    - Elements coverage
-    - The prediction shall cover all spacecraft elements unless their contribution to overall system (un-)reliability is negligible
-    - Design lifetime
-    - The design life time shall be clearly specified. For life time extensions, the analysis shall account for accumulated time and stresses.
-    - Degraded system modes
-    - Degraded system modes shall be modelled explicitly, considering reliability as a function of the required performance level.
-    - Prediction uncertainties
-    - The most relevant epistemic uncertainties associated with the prediction shall be identified and communicated together with the prediction results.
-*   - Intended use of the prediction
-    - The reliability prediction objectives or intended use (s) of the prediction results shall be clearly defined
-    - Failure modes coverage
-    - The prediction shall cover all falure modes with a relevant effect on the state (or performance) of the overall system.
-    - Operational conditions
-    - In each project phase, the operational conditions shall be denied or updated based on all available information
-    - Dormant phases
-    - Dormant phase modelling shall account for the difference between the stresses in active and passive mode
-    - Conservatism
-    - The required accuracy or conservatism (realistic vs. conservative prediction) shall depend on the intended use of the prediction
-*   - 
-    - 
-    - Failure mechanisms coverage
-    - The prediction shall cover all failure mechanism with a relevant contribution to the occurence of the considered failure modes.
-    - Environmental conditions
-    - In each project phase, the environmental conditions shall be defined or updated based on all available information
-    - Common cause effects
-    - Common cause effects shall be considered accounting for the system layout, use conditions and considered categories of failures
-    - 
-    - 
-*   - 
-    - 
-    - Failure root causes coverage
-    - The coverage in terms of failure root causes shall be defined depending on the reliability prediction use
-    - Product design information
-    - The available product design information, as of the current project phase, shall be used to build or update the reliability model
-    - Distribution functions
-    - the selection of distribution functions to model reliability in time shall be justified considering the technologies and relevant failure mechanisms
-    - 
-    - 
-*   - 
-    - 
-    - 
-    - 
-    - Methods, models
-    - The prediction methods and models shall be selected based on the technologies, use conditions and available information
-    - 
-    - 
-    - 
-    - 
-*   - 
-    - 
-    - 
-    - 
-    - Data
-    - Relevant test or field return data should be used to build or updatethe reliability models (when available)
-    - 
-    - 
-    - 
-    - 
+*   - <table class="myTable" id="methodo_table5_3">
+            <thead>
+                <tr>
+                    <th colspan="2">Assumptions</th>
+                    <th>Ground rules</th>
+                </tr>
+            </thead>
+            <tr>
+                <td class="full-span">1</td>
+                <td colspan="2" class="full-span">Basic information needed to define the assumptions</td>
+            </tr>
+            <tr>
+                <td>1.1</td>
+                <td>System definition</td>
+                <td>The system or item under analysis shall be clearly defnied with a description of all relevant characteristics needed for perfomring the prediction.</td>
+            </tr>
+            <tr>
+                <td>1.2</td>
+                <td>Project life cycle phase</td>
+                <td>The project life cycle phase during which the prediction is performed as well as the associated reviews shall be clearly defined</td>
+            </tr>
+            <tr>
+                <td>1.3</td>
+                <td>Intended use of the prediction</td>
+                <td>The reliability prediction objectives or intended use (s) of the prediction results shall be clearly defined</td>
+            </tr>
+            <tr>
+                <td class="full-span">2</td>
+                <td colspan="2" class="full-span">Assumptions related to the reliability prediction coverage</td>
+            </tr>
+            <tr>
+                <td>2.1</td>
+                <td>Mission phases coverage</td>
+                <td>The prediction shall cover all mission phases that affect reliability and are relevant for the supported reliability prediction use cases.</td>
+            </tr>
+            <tr>
+                <td>2.2</td>
+                <td>Elements coverage</td>
+                <td>The prediction shall cover all spacecraft elements unless their contribution to overall system (un-)reliability is negligible</td>
+            </tr>
+            <tr>
+                <td>2.3</td>
+                <td>Failure modes coverage</td>
+                <td>The prediction shall cover all falure modes with a relevant effect on the state (or performance) of the overall system.</td>
+            </tr>
+            <tr>
+                <td>2.4</td>
+                <td>Failure mechanisms coverage</td>
+                <td>The prediction shall cover all failure mechanism with a relevant contribution to the occurence of the considered failure modes.</td>
+            </tr>
+            <tr>
+                <td>2.5</td>
+                <td>Failure root causes coverage</td>
+                <td>The coverage in terms of failure root causes shall be defined depending on the reliability prediction use</td>
+            </tr>
+            <tr>
+                <td class="full-span">3</td>
+                <td colspan="2" class="full-span">Assumptions related to the reliability prediction input</td>
+            </tr>
+            <tr>
+                <td>3.1</td>
+                <td>Mission definition</td>
+                <td>The mission definition shall specify the functions as well as the performance levels (degraded system modes) to be analysed.</td>
+            </tr>
+            <tr>
+                <td>3.2</td>
+                <td>Design lifetime</td>
+                <td>The design life time shall be clearly specified. For life time extensions, the analysis shall account for accumulated time and stresses.</td>
+            </tr>
+            <tr>
+                <td>3.3</td>
+                <td>Operational conditions</td>
+                <td>In each project phase, the operational conditions shall be denied or updated based on all available information</td>
+            </tr>
+            <tr>
+                <td>3.4</td>
+                <td>Environmental conditions</td>
+                <td>In each project phase, the environmental conditions shall be defined or updated based on all available information</td>
+            </tr>
+            <tr>
+                <td>3.5</td>
+                <td>Product design information</td>
+                <td>The available product design information, as of the current project phase, shall be used to build or update the reliability model</td>
+            </tr>
+            <tr>
+                <td>3.6</td>
+                <td>Methods, models</td>
+                <td>The prediction methods and models shall be selected based on the technologies, use conditions and available information</td>
+            </tr>
+            <tr>
+                <td>3.7</td>
+                <td>Data</td>
+                <td>Relevant test or field return data should be used to build or updatethe reliability models (when available)</td>
+            </tr>
+            <tr>
+                <td class="full-span">4</td>
+                <td colspan="2" class="full-span">Assumptions related to the reliability modelling</td>
+            </tr>
+            <tr>
+                <td>4.1</td>
+                <td>Redundancy considerations</td>
+                <td>Redundancies shall be modelled considering the specific type of redundancy and appropriate input from lower levels</td>
+            </tr>
+            <tr>
+                <td>4.2</td>
+                <td>Degraded system modes</td>
+                <td>Degraded system modes shall be modelled explicitly, considering reliability as a function of the required performance level.</td>
+            </tr>
+            <tr>
+                <td>4.3</td>
+                <td>Dormant phases</td>
+                <td>Dormant phase modelling shall account for the difference between the stresses in active and passive mode</td>
+            </tr>
+            <tr>
+                <td>4.4</td>
+                <td>Common cause effects</td>
+                <td>Common cause effects shall be considered accounting for the system layout, use conditions and considered categories of failures</td>
+            </tr>
+            <tr>
+                <td>4.5</td>
+                <td>Distribution functions</td>
+                <td>The selection of distribution functions to model reliability in time shall be justified considering the technologies and relevant failure mechanisms</td>
+            </tr>
+            <tr>
+                <td class="full-span">5</td>
+                <td colspan="2" class="full-span">Assumptions related to the reliability prediction outputs</td>
+            </tr>
+            <tr>
+                <td>5.1</td>
+                <td>Prediction metrics</td>
+                <td>The predictionmetrics (e.g. failure rate, reliability in time, probability of failure on demand) shall be consistent with the reliability modelling</td>
+            </tr>
+            <tr>
+                <td>5.2</td>
+                <td>Prediction uncertainties</td>
+                <td>The most relevant epistemic uncertainties associated with the prediction shall be identified and communicated together with the prediction results.</td>
+            </tr>
+            <tr>
+                <td>5.3</td>
+                <td>Conservatism</td>
+                <td>The required accuracy or conservatism (realistic vs. conservative prediction) shall depend on the intended use of the prediction</td>
+            </tr>
+        </table>
 ```
 
 ```{list-table} Relation between the assumptions listed in Table 3, the required elements of a prediction according to IEEE 1413:2010 and the relevant sections of this handbook.
@@ -187,6 +239,30 @@ n addition, depending on the intended use of the prediction, there may be no add
 :class: todo
 :name: methodo-table5-5
 Table 5 - 5
+```
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table4-5')" placeholder="Search table...">
+
+```{list-table} Classification of failures into four categories based on the root cause of failure.
+:name: methodo-table4-5
+:header-rows: 1
+:widths: 20 50 30
+
+*   - FAILURE CATEGORY
+    - ROOT CAUSE
+    - MITIGATION
+*   - RANDOM FAILURE (RF)
+    - UNKNOWN RESIDUAL DEFECT / WEAKNESS <ul style="text-align:left;"><li>CONSISTENT WITH QUALITY LEVEL</li><li>UNDER NORMAL STRESSES (REFER TO DATA SHEET)</li><li>ONE-OFF EVENT</li></ul>
+    - <p>Sapce Qualification</p><p>Part quality selection</p><p>Derating</p><p>Redundancy</p><p>FDIR</p>
+*   - SYSTEMATIC FAILURE (SF)
+    - <ul style="text-align:left;"><li>DESIGN ERROR</li><li>MANUFACTURING ERROR</li><li>OPERATIONS ERROr</li></ul>
+    - <p></p><p></p><p></p>
+*   - WEAR-OUT FAILURE (WO)
+    - <ul style="text-align:left;"><li>NORMAL PHYSICAL PROCESS &#8594; TIME/EQUIVALENT TIME <ul style="text-align:left;"><li>OPERATIONS-RELATED (e.g. On/Off, duty cycle)</li></ul><ul><li>ENVIRONMENT-RELATED (e.g. Radiations)</li></ul> </li></ul>
+    - <p></p><p></p><p></p>
+*   - EXTRINSIC FAILURE (EF)
+    - <ul style="text-align:left;"><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV (degradation &#8594; considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>METEORITES</li><li>DEBRIS</li></ul>
+    - <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
 ```
 
 (methodo_5_3_2)=
@@ -288,10 +364,261 @@ The contribution of reliability prediction to each phase and the associated revi
 Table 5 - 8
 ```
 
+
+<input type="text" class="myInput" id="myInput5-8" onkeyup="searchTableJupyter(this, 'methodo_table5_8')" placeholder="Search table...">
+
+```{list-table} Reliability Deliverables per Project Milestones/Reviews
+:name: methodo-table5-8
+
+*   - <table class="myTable" id="methodo_table5_8">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th colspan="13">Phase</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>ECSS Document</th>
+                    <th>0</th>
+                    <th>A</th>
+                    <th colspan="2">B</th>
+                    <th>C</th>
+                    <th colspan="3">D</th>
+                    <th colspan="4">E</th>
+                    <th>F</th>
+                </tr>
+                <tr>
+                    <th>Document Title</th>
+                    <th></th>
+                    <th>MDR</th>
+                    <th>PRR</th>
+                    <th>SRR</th>
+                    <th>PDR</th>
+                    <th>CDR</th>
+                    <th>QR</th>
+                    <th>AR</th>
+                    <th>ORR</th>
+                    <th>FRR</th>
+                    <th>LRR</th>
+                    <th>CRR</th>
+                    <th>ELR</th>
+                    <th>MCR</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Failure modes and effects analysis/ failure modes, effects and criticality analysis (as input for system level analysis, e.g. FTA)</td>
+                <td>ECSS-Q-ST-30-02</td>
+                <td></td>
+                <td></td>
+                <td>*)</td>
+                <td>X</td>
+                <td>X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Fault tree analysis (FTA) (to support reliability prediction)</td>
+                <td>ECSS-Q-ST-40-12C</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Reliability Prediction</td>
+                <td>ECSS-Q-ST-30C</td>
+                <td></td>
+                <td>X *)</td>
+                <td>X *)</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+```
+
+*) Although ECSS-Q-ST-30C mentions a reliability prediction at PRR and SRR, this is not done for all projects and may be used only to assist apportioning of requirements to lower level. A FMEA at SRR may be required for specific missions and can be used e.g. to assist safety analysis.
+
 ```{admonition} Todo
 :class: todo
 :name: methodo-table5-9
 Table 5 - 9
+```
+
+<input type="text" class="myInput" id="myInput5-9" onkeyup="searchTableJupyter(this, 'methodo_table5_9')" placeholder="Search table...">
+
+```{list-table} Contribution of reliability prediction in different mission phases
+:name: methodo-table5-9
+
+*   - <table class="myTable" id="myTable">
+            <thead>
+                <tr>
+                    <th rowspan="2">Main objectives</th>
+                    <th rowspan="2">Associated reviews</th>
+                    <th colspan="3">Involvement of Reliability Prediction</th>
+                </tr>
+                <tr>
+                    <th>Task</th>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tr>
+                <td colspan="5" class="full-span">Phase 0: Mission analysis - needs identification</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Define mission needs and expected performance</p>
+                    <p>Identify constraints and boundary conditions with respect to physical and operational environment</p>
+                    <p>Define possible mission concepts</p>
+                </td>
+                <td>Mission Definition Review (MDR): Definition of mission baseline.</td>
+                <td>
+                    <p>In Phase 0 the reliability prediction activities focus on capturing top level requirements and boundary conditions. The Mission Definition Review (MDR) provides the mission profile that is to be used for reliability prediction. Top level reliability requirements are derived from customer needs. </p>
+                    <p>A first high level reliability prediction could be done, e.g. for quotation </p>
+                </td>
+                <td>
+                    <p>Mission Profile</p>
+                    <p>At this stage of the development process no system architecture is available. </p>
+                    <p>Only data from similar projects</p>
+                </td>
+                <td>
+                    <p>Top level requirements included in preliminary technical specification</p>
+                    <p>First rough reliability estimation</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" class="full-span">Phase A: Feasibility</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Assess the technical and programmatic feasibility of the possible concepts by identifying constraints related to implementation, costs, schedule, organization, operations, maintenance, production and disposal.</p>
+                    <p>Identify critical technologies and propose pre‐development activities.</p>
+                </td>
+                <td>Preliminary Requirement Review (PRR): Assess feasibility of user requirements to allow a solid start of preliminary design.</td>
+                <td>
+                    <p>In Phase A the following points are to be addressed by the reliability activities:</p>
+                    <p>Assessment of feasibility to achieve the system level reliability requirement</p>
+                    <p>Breakdown of system level reliability requirement to lower level to establish a requirement basis to start with preliminary definition in Phase B, which is an input for Preliminary Requirement Review (PRR)</p>
+                </td>
+                <td>The input data for activities in Phase A are based on a concept of the system architecture, as the detailed design is usually not available and also no FMEA/FMECA. To perform a reliability assessment as well as the partitioning of reliability requirements, often historical data of similar systems and components are used as initial values.</td>
+                <td>
+                    <p>System reliability requirements</p>
+                    <p>Reliability requirement breakdown to lower level.</p>
+                    <p>Reliability Prediction in such an early phase may be done as rough estimate to check feasibility and to support apportioning of requirements to lower levels.</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" class="full-span">Phase B: Preliminary definition</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Conduct “trade-off” studies and select the preferred system concept, together with the preferred technical solution(s) for this concept.</p>
+                    <p>Establish a preliminary design definition for the selected system concept and the preferred technical solution(s).</p>
+                </td>
+                <td>
+                    <p>System Requirements Review (SRR): Freeze of high level requirements</p>
+                    <p>Preliminary Design Review (PDR): Freeze of mission baseline and requirements down to subsystem level. Freeze of design concept at system level.</p>
+                </td>
+                <td>
+                    <p>In the early phase of the development, quantitative methods are used to support the definition of the system and to refine the allocation of requirements. During the development activities, decisions and trade-offs are supported by reliability prediction. For each proposed system solution a preliminary reliability prediction is performed as decision basis to support the Preliminary Design Review (PDR).</p>
+                    <p>Preliminary version of FMEA, FMECA are to be prepared as input for system level analysis.</p>
+                </td>
+                <td>
+                    <p>Input data for the preliminary reliability assessment are preliminary system architecture, preliminary versions of FMEA/FMECA and preliminary reliability data on sub-system, equipment and component level.</p>
+                    <p>Top level reliability requirements</p>
+                    <p>System level reliability requirements</p>
+                </td>
+                <td>
+                    <p>The allocation of system level reliability requirements to lower levels is refined as system architecture evolves. For the System Requirements Review (SRR) the reliability requirements are to be validated. </p>
+                    <p>Preliminary reliability prediction including FTA to support PDR.</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" class="full-span">Phase C: Detailed definition</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Completion of the detailed design definition at all levels in the customer‐supplier chain.</p>
+                    <p>Production, development testing and pre‐qualification of selected critical elements and components.</p>
+                    <p>Production and development testing of engineering models, as required by the selected model philosophy and verification approach.</p>
+                </td>
+                <td>Critical Design Review (CDR): Confirmation of detailed design, release of final design. Authorisation to complete qualification and build flight units.</td>
+                <td>
+                    <p>During Phase C, the reliability assessment is updated based on the detailed system definition to demonstrate that reliability requirements are met, supporting Critical Design Review (CDR).</p>
+                    <p>FMEA, FMECA and component reliability prediction are to be prepared based on detailed design</p>
+                </td>
+                <td>Input data based on a detailed system architecture are updated, including FMEA, FMECA, FMES and component level reliability prediction.</td>
+                <td>Reliability Prediction including Fault Tree Analysis or other equivalent methods for system reliability assessment</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="full-span">Phase D: Qualification and production</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Complete qualification testing and associated verification activities.</p>
+                    <p>Complete manufacturing, assembly and testing of flight hardware/software and associated ground support hardware/software.</p>
+                </td>
+                <td>
+                    <p>Qualification Review (QR): Demonstrate that the system meets all requirements and verification proof is complete</p>
+                    <p>Acceptance Review (AR): Acceptance of the System by the Customer</p>
+                    <p>Operation Readiness Review (ORR): Verify readiness of the operational teams and procedures and their compatibility with the flight system.</p>
+                </td>
+                <td>The reliability prediction is updated for customer acceptance considering test results from qualification.</td>
+                <td>Input is based on final system design with updated FMEA, FMECA and FMES.</td>
+                <td>Reliability Prediction including updated Fault Tree Analysis or other equivalent methods for system reliability assessment</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="full-span">Phase E: Operations / Utilization</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Prepare launch of the system</p>
+                    <p>Perform launch and in-orbit testing.</p>
+                    <p>Perform in-orbit operations</p>
+                </td>
+                <td>
+                    <p>Flight Readiness Review (FRR): Verify that the flight and ground segments are ready for launch.</p>
+                    <p>Launch Readiness Review (LRR): Performed right before launch to provide authorization to proceed for launch.</p>
+                    <p>Commissioning Results Review (CRR): Verify system performance after in-orbit testing.</p>
+                    <p>End-of-Life Review (ELR): Verify that the system has completed its useful life, ensure safe disposal</p>
+                </td>
+                <td>
+                    <p>Depending on the result of in-orbit testing during commissioning, for example if redundancies are not available, the reliability assessment may have to be re-evaluated to support CRR.</p>
+                    <p>Update of reliability prediction based on in-orbit feedback.</p>
+                    <p>Reliability assessment for safe disposal.</p>
+                </td>
+                <td>
+                    <p>FMEA, FMES</p>
+                    <p>In-orbit test results</p>
+                    <p>In-orbit reliability data</p>
+                </td>
+                <td>Update reliability prediction with in-orbit data for deorbiting function to support End-of-Life Review (ELR) and decision making on life extension.</td>
+            </tr>
+        </table>
 ```
 
 (methodo_5_4_2)=
@@ -373,13 +700,80 @@ An example of the functional failure analysis for the power supply system is sho
 Table 5 - 12
 ```
 
+<input type="text" class="myInput" id="myInput5-12" onkeyup="searchTableJupyter(this, 'methodo_table5_12')" placeholder="Search table...">
+
+```{list-table} Example Functional Failure Analysis Power Supply
+:name: methodo-table5-12
+
+*   - <table class="myTable" id="methodo_table5_12">
+            <thead>
+                <tr>
+                    <th colspan="3">
+                        <p>Functional Failure Analysis</p>
+                        <p>Function: Provide electrical power</p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Function / Sub-function</th>
+                    <th>Functional failure</th>
+                    <th>Failure effect</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>1. Provide electrical power</td>
+                <td>Total loss of electrical power</td>
+                <td>Total loss of power supply. No data communication. Loss of satellite control.</td>
+            </tr>
+            <tr>
+                <td rowspan="2">1.1 Photovoltaics</td>
+                <td>Total loss of photovoltaics capabilities</td>
+                <td>
+                    <p>Total loss of power supply. No payload</p>
+                    <p>Total loss of satellite</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Partial loss of photovoltaics capabilities</td>
+                <td>Degraded performance, battery not fully charged, power interrupt in Earth's shadow possible. Payload interruptions.</td>
+            </tr>
+            <tr>
+                <td rowspan="2">1.2 Charge Battery</td>
+                <td>Loss of battery charging</td>
+                <td>
+                    <p>No power supply in Earth shadow in one orbit</p>
+                    <p>Interruption of payload</p>
+                    <p>Possible loss of satellite</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Overcharge of battery</td>
+                <td>
+                    <p>Permanent damage of battery possible</p>
+                    <p>No power supply in Earth shadow in one orbit</p>
+                    <p>Interruption of payload</p>
+                    <p>Possible loss of satellite</p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">1.3 Output voltage regulation</td>
+                <td>Erroneous function output regulation - too low</td>
+                <td>Insufficient voltage supply to satellite. No data communication</td>
+            </tr>
+            <tr>
+                <td>Erroneous function output regulation – voltage too high</td>
+                <td>Permanent damage to electronic components possible if no over-voltage protection is implemented</td>
+            </tr>
+        </table>
+
+```
+
 The analysis of functional failures can also be represented with a reliability block diagram. Quantitative methods are used to support the system definition and to refine the allocation of requirements to sub-system level. 
 
 In the following, different approaches for requirement allocation are introduced, including:
 
-    • Equal allocation
-    • Proportional allocation (ARINC method)
-    • Feasibility-Of-Objectives (FOO) Method
+* Equal allocation
+* Proportional allocation (ARINC method)
+* Feasibility-Of-Objectives (FOO) Method
 
 These methods are applicable for a serial system structure only. For more complex system architectures, the reliability allocation should also make use of system level reliability assessment methods (see **Chapter 12 Part III**). 
 
@@ -519,6 +913,93 @@ An example for reliability allocation using FOO method is shown in {numref}`meth
 :class: todo
 :name: methodo-table5-14
 Table 5 - 14
+```
+
+<input type="text" class="myInput" id="myInput5-14" onkeyup="searchTableJupyter(this, 'methodo_table5_14')" placeholder="Search table...">
+
+```{list-table} Example of graded allocation of reliability targets to sub-systems
+:name: methodo-table5-14
+
+*   - <table class="myTable" id="methodo_table5_14">
+            <thead>
+                <tr>
+                    <th rowspan="2">Sub-system</th>
+                    <th colspan="4">Categories grading values \(g_{ij}\)</th>
+                    <th rowspan="2">Weighting Factor \(w_{i}\)</th>
+                    <th rowspan="2">Sub System Target \(\hat{R}_{i}(t)\)</th>
+                </tr>
+                <tr>
+                    <th>Complexity</th>
+                    <th>Technology Level</th>
+                    <th>Operation time</th>
+                    <th>Environmental Conditions</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Power</td>
+                <td>6</td>
+                <td>5</td>
+                <td>5</td>
+                <td>5</td>
+                <td>0.12550</td>
+                <td>0.98686</td>
+            </tr>
+            <tr>
+                <td>Tele-Command/ Telemetry</td>
+                <td>6</td>
+                <td>4</td>
+                <td>7</td>
+                <td>6</td>
+                <td>0.16867</td>
+                <td>0.98239</td>
+            </tr>
+            <tr>
+                <td>Propulsion</td>
+                <td>5</td>
+                <td>6</td>
+                <td>5</td>
+                <td>5</td>
+                <td>0.12550</td>
+                <td>0.98686</td>
+            </tr>
+            <tr>
+                <td>Orbit Control</td>
+                <td>8</td>
+                <td>8</td>
+                <td>5</td>
+                <td>7</td>
+                <td>0.37483</td>
+                <td>0.96128</td>
+            </tr>
+            <tr>
+                <td>Structure</td>
+                <td>4</td>
+                <td>2</td>
+                <td>10</td>
+                <td>8</td>
+                <td>0.10710</td>
+                <td>0.98878</td>
+            </tr>
+            <tr>
+                <td>Pay load</td>
+                <td>7</td>
+                <td>6</td>
+                <td>7</td>
+                <td>2</td>
+                <td>0.09839</td>
+                <td>0.98969</td>
+            </tr>
+            <tr>
+                <td>System level</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1.0</td>
+                <td>0.90</td>
+            </tr>
+        </table>
+
 ```
 
 (methodo_5_4_3)=
