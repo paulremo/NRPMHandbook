@@ -9,7 +9,10 @@ parts:
     numbered: true
     chapters:
     - file: methodologies/intro
-      title: Handbook
+      title: Methodology
+    - file: methodologies/reliability_prediction_taxonomy_handbook_coverage
+    - file: methodologies/reliability_prediction_during_project_life_cycle
+    - file: methodologies/part_I_bibliography
   - caption: Methods chapter
     numbered: true
     chapters:

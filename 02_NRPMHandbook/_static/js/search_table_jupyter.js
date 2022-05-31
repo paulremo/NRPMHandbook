@@ -3,6 +3,7 @@ function searchTableJupyter(input, tableName) {
     var filter, table, tr, td, i, txtValue;
     filter = input.value.toUpperCase();
     table = document.getElementById(tableName);
+    console.log(table)
     tr = table.getElementsByTagName("tr");
     console.log(tr);
     for (i = 1; i < tr.length; i++) {

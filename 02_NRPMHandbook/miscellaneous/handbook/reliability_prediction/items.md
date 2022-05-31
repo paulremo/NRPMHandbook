@@ -23,3 +23,141 @@ To use the reliability model it is, first, necessary to assess that the {term}`m
 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
+
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc-tabletest')" placeholder="Search table...">
+
+```{list-table} test
+:name: test
+
+* - <table id="misc-tabletest" class="myTable">
+        <thead>
+            <tr>
+                <th>REF</th>
+                <th>SUBSYSTEM</th>
+                <th>UNIT / ITEM</th>
+                <th>RELIABILITY DATA</th>
+            </tr>
+        </thead>
+        <tr>
+            <td colspan="4" class="full-span">RF - Radio Frequency</td>
+        </tr>
+        <tr>
+            <td>N-STD_001</td>
+            <td>PAYLOAD</td>
+            <td>RF PASSIVE</td>
+            <td>Refer to user experience</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="full-span">PWR - Power</td>
+        </tr>
+        <tr>
+            <td>N-STD_002</td>
+            <td>POWER</td>
+            <td>CONNECTORS</td>
+            <td>See EEE</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="full-span">PROP - Propulsion</td>
+        </tr>
+        <tr>
+            <td>N-STD_003</td>
+            <td>PROPULSION</td>
+            <td>HET (Hall Effect Thruster)</td>
+            <td>Refer to user experience</td>
+        </tr>
+        <tr>
+            <td>N-STD_004</td>
+            <td>PROPULSION</td>
+            <td>VALVE LV (Latching Valve)</td>
+            <td>Refer to Manufacturer data</td>
+        </tr>
+        <tr>
+            <td>N-STD_005</td>
+            <td>PROPULSION</td>
+            <td>VALVE FCV (MONO STABLE) Flow Control Valve</td>
+            <td>Refer to Manufacturer data</td>
+        </tr>
+        <tr>
+            <td>N-STD_006</td>
+            <td>PROPULSION</td>
+            <td>VALVE PYRO VALVE</td>
+            <td>Refer to Manufacturer data</td>
+        </tr>
+        <tr>
+            <td>N-STD_007</td>
+            <td>PROPULSION</td>
+            <td>PT (Pressure Transducer)</td>
+            <td>Refer to Manufacturer data</td>
+        </tr>
+        <tr>
+            <td>N-STD_008</td>
+            <td>PROPULSION</td>
+            <td>FILTER</td>
+            <td>Refer to Manufacturer data</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="full-span">THER - Thermal</td>
+        </tr>
+        <tr>
+            <td>N-STD_009</td>
+            <td>THERMAL</td>
+            <td>HEAT PIPES</td>
+            <td>Refer to Manufacturer data</td>
+        </tr>
+        <tr>
+            <td>N-STD_010</td>
+            <td>THERMAL</td>
+            <td>THERMO SWITCH</td>
+            <td>Refer to Manufacturer data</td>
+        </tr>
+        <tr>
+            <td>N-STD_011</td>
+            <td>THERMAL</td>
+            <td>HEATER</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4" class="full-span">PYRO - Pyrotechnics</td>
+        </tr>
+        <tr>
+            <td>N-STD_012</td>
+            <td>AOCS</td>
+            <td>Pyro Actuator</td>
+            <td>Based on Tests results (Bruceton, PROBIT, severe, one-shot, Neyer
+                tests)</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="full-span">DEP - Deployment</td>
+        </tr>
+        <tr>
+            <td>N-STD_013</td>
+            <td>NEA</td>
+            <td>Non Explosive Actuator</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4" class="full-span">Other</td>
+        </tr>
+        <tr>
+            <td>N-STD_014</td>
+            <td>PAYLOAD</td>
+            <td>OPTICS</td>
+            <td>
+                <p>Based on Manufacturer data.</p>
+                <p>Mechanical models for structural failure mechanisms and radiation
+                    degradation (wear-out).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>N-STD_015</td>
+            <td>ALL</td>
+            <td>OPTRONICS</td>
+            <td>See EEE</td>
+        </tr>
+    </table>
+```
+
+
+
+
