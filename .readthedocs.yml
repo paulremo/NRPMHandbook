@@ -7,7 +7,7 @@ version: 2
 
 python:
   install:
-    - requirements: readthedocs_requirements.txt
+    - requirements: requirements.txt
 
 # Set the version of Python and other tools you might need
 build:
