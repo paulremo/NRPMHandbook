@@ -6,6 +6,7 @@
 -- Katharina Fischer, Matrisk GmbH
 ```
 
+
 (methodo_5_1)=
 ## Reliability prediction framework underlying this handbook
 
@@ -235,12 +236,6 @@ The objective of reliability predictions is to provide quantitative estimates fo
 
 n addition, depending on the intended use of the prediction, there may be no added value to make a quantitative prediction for a certain root cause, because it does not make a difference for the trade-offs that will be supported by the prediction. These aspects are discussed in the following sections.
 
-```{admonition} Todo
-:class: todo
-:name: methodo-table5-5
-Table 5 - 5
-```
-
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table4-5')" placeholder="Search table...">
 
 ```{list-table} Classification of failures into four categories based on the root cause of failure.
@@ -256,13 +251,13 @@ Table 5 - 5
     - <p>Sapce Qualification</p><p>Part quality selection</p><p>Derating</p><p>Redundancy</p><p>FDIR</p>
 *   - SYSTEMATIC FAILURE (SF)
     - <ul style="text-align:left;"><li>DESIGN ERROR</li><li>MANUFACTURING ERROR</li><li>OPERATIONS ERROr</li></ul>
-    - <p></p><p></p><p></p>
+    - <p>Robust design</p><p>Quality assurance (during design, manufacturing and operations)</p><p>Qualification & verification processes</p>
 *   - WEAR-OUT FAILURE (WO)
     - <ul style="text-align:left;"><li>NORMAL PHYSICAL PROCESS &#8594; TIME/EQUIVALENT TIME <ul style="text-align:left;"><li>OPERATIONS-RELATED (e.g. On/Off, duty cycle)</li></ul><ul><li>ENVIRONMENT-RELATED (e.g. Radiations)</li></ul> </li></ul>
-    - <p></p><p></p><p></p>
+    - <p>Components and materials selection</p><p>Design calculations and margins</p><p>Lifetime qualification with margins</p>
 *   - EXTRINSIC FAILURE (EF)
     - <ul style="text-align:left;"><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV (degradation &#8594; considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>METEORITES</li><li>DEBRIS</li></ul>
-    - <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+    - <p>Components and materials selection</p><p>Design calculation and margins</p><p>Qualification and verfication testing</p><p>Thermal control</p><p>Shielding (thermal, radiation, debris)</p><p>Radiation engineering</p><p>Debris impact predictions</p><p>Avoidance manoeuvres</p><p>...</p>
 ```
 
 (methodo_5_3_2)=
@@ -270,10 +265,34 @@ Table 5 - 5
 
 Different reliability prediction uses become relevant throughout the project life cycle of a space mission; see {numref}`methodo-table5-6` for an overview. The Table includes some classical reliability prediction uses related to the management and verification of reliability requirements or to the support of design trade-off decisions. However, also some new stakes are addressed, e.g. related to the design of constellations or to the safe disposal of satellites.
 
-```{admonition} Todo
-:class: todo
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-6')" placeholder="Search table...">
+
+```{list-table} Possible reliability prediction uses throughout the project life cycle.
 :name: methodo-table5-6
-Table 5 - 6
+:header-rows: 1
+:widths: 40 55 15
+
+*   - Reliability prediction uses
+    - Description
+    - Phases
+*   - *Input to the design, support trade-offs and comparisons*
+    - During the design phase, reliability prediction may be used to compare competing designs or trade-off options, to identify weak parts of the design and to assess the impact of design changes. The level of detail increases with the project phases.
+    - A - D
+*   - *Establishment, management and verification of quantitative reliability requirements*
+    - The purpose of quantitative reliability requirements and their management and verification is to ensure acceptable (as specified) reliability of space products through contractual specification.
+    - 0 - D
+*   - *Support decisions on the choice of engineering design margins*
+    - Reducing excessive margins is one way to reduce cost, but should be justified by an appropriate rationale or analysis. On the other hand, it may sometimes be reasonable to increase a specific margin to avoid a catastrophic single point failure.
+    - A - C
+*   - *Choosing a test strategy at part, equipment or higher levels*
+    - Another way to reduce cost is to reduce the effort dedicated to testing. Additional tests may be useful e.g. to verify a design for identified stresses, to avoid costly redesigns. Also these decisions should be justified by an appropriate rationale or analysis.
+    - D
+*   - *Support business planning for single spacecrafts and for the design of constellations*
+    - Reliability predictions - or specified reliability requirements - form an important input to support space customer’s business planning. This holds particularly for the design of constellations as “system of systems”, e.g. to decide on the number of spares, replenishment scenarios or redundancy management.
+    - 0 - E
+*   - *Health monitoring and decision-making on life time extension vs. safe disposal*
+    - Spacecrafts are designed to be reliable for a specified lifetime and any life time extension needs to be justified based on RP. To support the decision, the reliability prediction needs to be revisited, in particular for the functions relevant for satellite safe disposal (space debris mitigation).
+    - E - F
 ```
 
 The reliability prediction methodology presented in this handbook intends to embrace different reliability prediction uses, although the focus is clearly on the “classical” uses related to the development and design of a single spacecraft. The first use listed in {numref}`methodo-table5-6` - reliability prediction for design support - is considered as the base case. Recommendations on the root cause coverage required for this use are provided in {numref}`methodo_5_3_2_1` , followed by a discussion of the remaining uses in the following subsections.
@@ -285,10 +304,23 @@ Providing input to the design of a spacecraft may be seen as the classical use f
 
 Guidance on the root cause coverage required for this reliability prediction use is given in {numref}`methodo-table5-7` below. It should be noted that the recommendation made for systematic failure modelling is driven by the limitations of the available modelling approaches, which do not account for the relevant decision variables (e.g. impact of maturity category, test strategy). Other design decisions, such as redundancy sizing or the margin policy, are not effective to avoid systematic failures. For these reasons, the added value to consider this failure category for design support is small despite its clear relevance for the overall failure count.
 
-```{admonition} Todo
-:class: todo
-:name: methodo-table5-7
-Table 5 - 7
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-6')" placeholder="Search table...">
+
+```{list-table} Root causes coverage for reliability prediction as input to the design.
+:name: methodo-table5-6
+:header-rows: 1
+:widths: 30 70
+
+*   - Failure category
+    - Required coverage for reliability prediction as design support
+*   - Random failures
+    - Full coverage required
+*   - Systematic failures
+    - Not generally required to cover systematic failures, unless full root causes coverage is needed e.g. to support the design of a constellation ({numref}`methodo_5_3_2_5`).
+*   - Wear-out failures
+    - Wear-out after the specified lifetime is out of scope for this use (see {numref}`methodo_5_3_2_6` for life time extensions). Premature wear-out (excluding systematic failures) needs to be considered for technologies for which safe life qualification is not possible, or not fully effective.
+*   - Extrinsic failures
+    - Relevant stress contributors resulting from the spacecraft environment should be considered in the prediction of random and wear-out failures. Explicit consideration of extrinsic failures with dedicated models is only required if the rate of occurrence of additional failure modes (e.g. destructive SEE, space debris impact) cannot be neglected when compared to the random failure rate.
 ```
 
 The recommendations regarding root causes coverage are generally valid also for preliminary reliability predictions, e.g. for the Preliminary Design Review (PDR). However, the level of detail used in the modelling can be reduced in this context to reduce prediction efforts and to account for limited input availability in early project phases.
@@ -357,13 +389,6 @@ System Life Cycle.
 ```
 
 The contribution of reliability prediction to each phase and the associated reviews are explained as follows in {numref}`methodo-table5-8`. {numref}`methodo-table5-9` gives an overview of reliability documents to be provided per review during the system life cycle. 
-
-```{admonition} Todo
-:class: todo
-:name: methodo-table5-8
-Table 5 - 8
-```
-
 
 <input type="text" class="myInput" id="myInput5-8" onkeyup="searchTableJupyter(this, 'methodo_table5_8')" placeholder="Search table...">
 
@@ -461,12 +486,6 @@ Table 5 - 8
 ```
 
 *) Although ECSS-Q-ST-30C mentions a reliability prediction at PRR and SRR, this is not done for all projects and may be used only to assist apportioning of requirements to lower level. A FMEA at SRR may be required for specific missions and can be used e.g. to assist safety analysis.
-
-```{admonition} Todo
-:class: todo
-:name: methodo-table5-9
-Table 5 - 9
-```
 
 <input type="text" class="myInput" id="myInput5-9" onkeyup="searchTableJupyter(this, 'methodo_table5_9')" placeholder="Search table...">
 
@@ -629,16 +648,56 @@ Table 5 - 9
 
 In the following, the process steps to support the establishment of appropriate reliability requirements will be explained according to **[RD19]** . The first step is the classification of the type of space mission, as shown in {numref}`methodo-table5-10`. Details on the coverage of this handbook in terms of mission types can be found in {numref}`methodo_4_2_1`.
 
-```{admonition} Todo
-:class: todo
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-10')" placeholder="Search table...">
+
+```{list-table} Space Mission Classification
 :name: methodo-table5-10
-Table 5 - 10
+:header-rows: 1
+:widths: 25 75
+
+*   - 
+    - Mission Type
+*   - Class A
+    - Human Flight or Material Transport Flight
+*   - Class B
+    - Telecommunication, Observation and Navigation for application with high integrity requirements
+*   - Class C
+    - Telecommunication, Observation Mission, Space Probe
+*   - Class D
+    - Test and demonstration mission
+*   - Class L
+    - Launcher, Launch base
 ```
 
-```{admonition} Todo
-:class: todo
+Within each class, the missions can be further categorized based on the following criteria **[RD19]** :
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-11')" placeholder="Search table...">
+
+```{list-table} Space Mission Classification
 :name: methodo-table5-11
-Table 5 - 11
+
+*   - <table class="myTable" id="myTable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Category 1</th>
+                    <th>Category 2</th>
+                    <th>Category 3</th>
+                </tr>
+            </thead>
+            <tr>
+                <td class="row-header">Development time</td>
+                <td>More than 2 years</td>
+                <td>More than 2 years</td>
+                <td>Less than 2 years</td>
+            </tr>
+            <tr>
+                <td class="row-header">Criticality to customer strategic objectives</td>
+                <td>High</td>
+                <td>Medium</td>
+                <td>Low</td>
+            </tr>
+        </table>
 ```
 
 The type of mission as well as the categories of mission within each class ({numref}`methodo-table5-11`) should be taken into account for the establishment of reliability requirements. As a general rule, the larger the economic loss a failure of the mission would cause, the more stringent the reliability requirement should be. Furthermore, the criticality of the mission success to the strategic objectives of the customer may justify a higher reliability requirement. 
@@ -693,12 +752,6 @@ The allocation of requirements to lower level starts with the identification of 
 The results of the functional failure analysis allow identifying the functions; those failures would affect the ability to perform the required system function. The cascading of the top-level system reliability requirement to the contributing sub-functions should consider the results of the functional failure analysis. That means, the reliability target allocated to functions and sub-functions should consider the relevant failure modes to ensure functional integrity.
 
 An example of the functional failure analysis for the power supply system is shown in {numref}`methodo-table5-12`. A similar analysis needs to be performed for all functions of the satellite, whereby in early phases of the development the main functions are considered and as design evolves the functional breakdown can be refined and more details are included.
-
-```{admonition} Todo
-:class: todo
-:name: methodo-table5-12
-Table 5 - 12
-```
 
 <input type="text" class="myInput" id="myInput5-12" onkeyup="searchTableJupyter(this, 'methodo_table5_12')" placeholder="Search table...">
 
@@ -869,10 +922,45 @@ w_{i} = \frac{F_{i.old}(t)}{F_{S.old}(t)}
 
 Given that 15% of the system failures are caused by a failure of the power supply sub-system a reliability target of 98,43% is derived for the power supply system using Eq. {eq}`Equation Methodo 1` to achieve a reliability of 90% on system level, as shown in {numref}`methodo-table5-13`. Please note that in the example the failure probabilities of the sub-system were derived from the minimal cut set approximation to simplify the calculation. 
 
-```{admonition} Todo
-:class: todo
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-13')" placeholder="Search table...">
+
+```{list-table} Example of proportional allocation of reliability targets to sub-systems
 :name: methodo-table5-13
-Table 5 - 13
+:header-rows: 1
+:widths: 25 25 25 25
+
+*   - Sub-System
+    - Weighting Factor $w_{i}$
+    - Failure probability Target (approximation)
+    - Reliability target $\hat{R}_{i}(t) = (\hat{R}_{S}(t))^{w_{i}}$
+*   - Power
+    - 0.15
+    - 0.015
+    - 0.9843
+*   - Tele-Command/Telemetry
+    - 0.20
+    - 0.02
+    - 0.9791
+*   - Propulsion
+    - 0.10
+    - 0.01
+    - 0.9895
+*   - Orbit Control
+    - 0.15
+    - 0.015
+    - 0.9843
+*   - Structure
+    - 0.10
+    - 0.01
+    - 0.9895
+*   - Data Communication (Pay load)
+    - 0.30
+    - 0.04
+    - 0.9689
+*   - System level
+    - 100%
+    - 0.1
+    - 0.90
 ```
 
 **Feasibility-Of-Objectives (FOO) Method**
@@ -909,11 +997,6 @@ w_{i} = \frac{\prod_{j}^{n} g_{ij}}{\sum_{i} G_{i}}
 
 An example for reliability allocation using FOO method is shown in {numref}`methodo-table5-14`. The system level reliability target of 0.9 is distributed to sub-systems based on weighting factor obtained from Eq. {eq}`Equation Methodo 7`.
 
-```{admonition} Todo
-:class: todo
-:name: methodo-table5-14
-Table 5 - 14
-```
 
 <input type="text" class="myInput" id="myInput5-14" onkeyup="searchTableJupyter(this, 'methodo_table5_14')" placeholder="Search table...">
 
@@ -1039,3 +1122,6 @@ The following aspects should be considered:
 * The result of in-orbit testing and reliability estimation based on in-orbit feedback have to be taken into account to support decision on life time extension.
 
 It is important to note that the probability of success of safe disposal has to be demonstrated already during the design phase as part of the space debris mitigation requirements. The analysis for safe disposal is then reassessed if the lifetime in-orbit is completed and should be further extended or a failure occurred during the lifetime. That means the requirements for safe disposal determine to what extent a life time extension is possible.
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">

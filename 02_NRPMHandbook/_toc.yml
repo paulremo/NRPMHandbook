@@ -17,7 +17,9 @@ parts:
     numbered: true
     chapters:
     - file: methods/intro
-      title: Handbook
+      title: Method
+    - file: methods/model_development_basic_concept
+    - file: methods/bayesian_method_reliability_prediction_modelling
   - caption: EEE chapter
     numbered: true
     chapters:

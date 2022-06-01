@@ -56,6 +56,11 @@
   background: #2d639a;
 }
 
+.myTable thead td.row-header{
+  color: #ffffff;
+  background: #2d639a;
+}
+
 
 .table {
   font-family: sans-serif;
