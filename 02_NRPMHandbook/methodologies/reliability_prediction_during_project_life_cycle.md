@@ -33,7 +33,7 @@ Thus, sufficient information on these three points should be available before st
 
 It should be clear that the assumptions made can have a tremendous impact on the results. If the main goal is to receive reliability predictions that are comparable (e.g. between different manufacturers or suppliers), one must ensure that the same assumptions are used. At least the key assumptions with the largest impact on the result should be agreed by all parties, and/or specified in the supply chain.
 
-Any reliability prediction report should provide full information on the assumptions made for the prediction, as listed in {numref}`methodo-table5-3`. This ensures that the required elements of a reliability prediction, as defined in {cite:t}`methodo-IEEE-1413:2010`, Clause 4, are provided with the prediction. The relation between each of these required elements, the assumptions listed in {numref}`methodo-table5-3` and the relevant sections of this handbook is given in {numref}`methodo-table5-4`.
+Any reliability prediction report should provide full information on the assumptions made for the prediction, as listed in {numref}`methodo-table5-3`. This ensures that the required elements of a reliability prediction, as defined in **IEEE-1413:2010**, Clause 4, are provided with the prediction. The relation between each of these required elements, the assumptions listed in {numref}`methodo-table5-3` and the relevant sections of this handbook is given in {numref}`methodo-table5-4`.
 
 <input type="text" class="myInput" id="myInput5-3" onkeyup="searchTableJupyter(this, 'methodo_table5_3')" placeholder="Search table...">
 
@@ -190,7 +190,7 @@ Any reliability prediction report should provide full information on the assumpt
 :header-rows: 1
 :widths: 50 30 20
 
-*   - Required element of a reliability prediction ({cite:t}`methodo-IEEE-1413:2010`, Clause 4)
+*   - Required element of a reliability prediction (**IEEE-1413:2010**, Clause 4)
     - {numref}`methodo-table5-3` Assumptions
     - Handbook Chapters
 *   - Identification and description of the item for which the prediction is made and the life cycle phase upon which the prediction is performed
@@ -199,24 +199,24 @@ Any reliability prediction report should provide full information on the assumpt
 *   - Intended use of the prediction results
     - <ul><li>Intended use of the prediction</li></ul>
     - {numref}`methodo_5_3_2`
-*   - RP coverage: No required element in {cite:t}`methodo-IEEE-1413:2010`
+*   - RP coverage: No required element in **IEEE-1413:2010**
     - <ul><li>Mission phase coverage</li><li>Elements coverage</li><li>Failure modes coverage</li><li>Failure mechanisms coverage</li><li>Root causes coverage</li></ul>
-    - {numref}`methodo_4_1`, {numref}`methodo_4_2`, {numref}`methods_6`, {numref}`methodo_4_3`, {numref}`methodo_4_4`
+    - {numref}`methodo_4_1`, {numref}`methodo_4_2`, {numref}`method_6`, {numref}`methodo_4_3`, {numref}`methodo_4_4`
 *   - List of inputs used for the selected methodologies
     - <ul><li>Mission definition</li><li>Design lifetime</li><li>Operational conditions</li><li>Environmental conditions</li><li>Product design information</li><li>Methods, models</li><li>Data</li></ul>
-    - {numref}`methodo_4_3_4`, {numref}`methods_6`
-*   - Modelling: No required element in {cite:t}`methodo-IEEE-1413:2010`
+    - {numref}`methodo_4_3_4`, {numref}`method_6`
+*   - Modelling: No required element in **IEEE-1413:2010**
     - <ul><li>Redundancy considerations</li><li>Degraded system modes</li><li>Dormant phases</li><li>Common cause effects</li><li>Distribution functions</li></ul>
-    - {numref}`methods_12`
+    - **Chapter 12**
 *   - Prediction metrics: Definitions and values
     - <ul><li>Prediction metrics</li></ul>
-    - {numref}`methods_6`
+    - {numref}`method_6`
 *   - Uncertainties and limitations of the prediction
     - <ul><li>Prediction uncertainties</li></ul>
-    - {numref}`methods_8`
+    - {numref}`method_8`
 *   - Statistical confidence in the prediction
     - <ul><li>Conservativism</li></ul>
-    - {numref}`methods_8`
+    - {numref}`method_8`
 ```
 
 (methodo_5_3)=
@@ -238,8 +238,8 @@ n addition, depending on the intended use of the prediction, there may be no add
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table4-5')" placeholder="Search table...">
 
-```{list-table} Classification of failures into four categories based on the root cause of failure.
-:name: methodo-table4-5
+```{list-table} Failure categories (from Table   4 -2) with examples of mitigation measures.
+:name: methodo-table5-5
 :header-rows: 1
 :widths: 20 50 30
 
@@ -304,10 +304,10 @@ Providing input to the design of a spacecraft may be seen as the classical use f
 
 Guidance on the root cause coverage required for this reliability prediction use is given in {numref}`methodo-table5-7` below. It should be noted that the recommendation made for systematic failure modelling is driven by the limitations of the available modelling approaches, which do not account for the relevant decision variables (e.g. impact of maturity category, test strategy). Other design decisions, such as redundancy sizing or the margin policy, are not effective to avoid systematic failures. For these reasons, the added value to consider this failure category for design support is small despite its clear relevance for the overall failure count.
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-6')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-7')" placeholder="Search table...">
 
 ```{list-table} Root causes coverage for reliability prediction as input to the design.
-:name: methodo-table5-6
+:name: methodo-table5-7
 :header-rows: 1
 :widths: 30 70
 

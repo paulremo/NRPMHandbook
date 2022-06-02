@@ -20,6 +20,9 @@ parts:
       title: Method
     - file: methods/model_development_basic_concept
     - file: methods/bayesian_method_reliability_prediction_modelling
+    - file: methods/uncertainties_prediction_results
+    - file: methods/annexII_A
+    - file: methods/annexII_B
   - caption: EEE chapter
     numbered: true
     chapters:
