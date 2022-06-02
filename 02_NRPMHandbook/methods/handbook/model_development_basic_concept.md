@@ -270,11 +270,11 @@ For EEE mainly:
 
 -   **MIL HDBK 338B \[RD13\] Section 7,**
 
--   **The Reliability engineer's toolkit topic D9 by Rome Laboratory \[BR5\]**
+-   {cite:t}`method-reliability-engineers-toolkit`
 
 For both EEE and Mechanical parts:
 
--   **Failure mode Mechanism Distribution FMD by Quanterion \[BR6\],**
+-   {cite:t}`method-FMD-2016`
 
 -   Company internal catalogues,
 
@@ -436,7 +436,7 @@ F_{T}\left( t \right) = \ 1 - exp\left( - \lambda t \right) = 1 - R_{T}\left( t 
 
 The expected time to failure is derived as $E\left\lbrack T \right\rbrack = 1/\lambda$, which allows for a simple conversion between the failure rate and MTTF/MTBF. The standard deviation of $T$ is equal to its mean value.
 
-The Exponential time-to-failure model can also be derived from a homogeneous Poisson process for failure occurrence, assuming a constant failure rate. The constant failure rate assumption can be dropped by referring to a non-homogeneous Poisson process to model the occurrence of failures in time, which is not consistent with the Exponential distribution anymore, see e.g.** \[BR7\]**. Another important assumption of the Poisson process (homogeneous or non-homogeneous) is the implied independence between individual events. This assumption must be questioned if multiple failures during a relatively short time interval may be triggered by potential common-cause effects.
+The Exponential time-to-failure model can also be derived from a homogeneous Poisson process for failure occurrence, assuming a constant failure rate. The constant failure rate assumption can be dropped by referring to a non-homogeneous Poisson process to model the occurrence of failures in time, which is not consistent with the Exponential distribution anymore, see e.g. {cite:t}`method-NUREG-CR-6823-SAND2003-3348P`. Another important assumption of the Poisson process (homogeneous or non-homogeneous) is the implied independence between individual events. This assumption must be questioned if multiple failures during a relatively short time interval may be triggered by potential common-cause effects.
 
 (method_6_4_2_2)=
 #### The Weibull distribution for non-constant failure rates
@@ -504,7 +504,7 @@ Assuming constant $p$ in each demand, the reliability for $n$ demands is calcula
 
 The probability of failure on demand can also depend on certain characteristics of the item under analysis or its use (e.g. the current for a pyrotechnical device, where a Bruceton test is used to determine the probability of success or failure, see **Chapter 11 Part III** for details).
 
-Which of the two models, i.e. standby failures versus failure on demand, is appropriate depends on the physical processes causing failure. It is also possible to combine both models by adding a failure on demand probability $p$ to the time-dependent standby failure probability $\lambdat}$ (when assuming an Exponential model for standby failures), see **\[BR7\]**.
+Which of the two models, i.e. standby failures versus failure on demand, is appropriate depends on the physical processes causing failure. It is also possible to combine both models by adding a failure on demand probability $p$ to the time-dependent standby failure probability $\lambda_{t}$ (when assuming an Exponential model for standby failures), see **\[BR7\]**.
 
 (method_6_4_3)=
 ### Parameter estimation
@@ -521,7 +521,7 @@ Maximum Likelihood estimators have desirable asymptotic (large sample) propertie
 
 Two problems are commonly encountered during the analysis of failure data: Censoring and lack of failures. Both problems are closely related, as will be discussed in the following.
 
-Censoring relates to observations of a random variable that are available only within a certain range, which may be fixed or random. To give an example, data from a reliability test programme with fixed duration provides exact time-to-failure information only for a random number of items that fail during the test; for the items that survived the test it is only known that the failure time is larger than . This situation is sometimes termed Type I Censoring. An alternative test design would require a fixed number of failures, which leads to a random test duration (Type II Censoring). Various methods for dealing with censored data samples have been discussed in the literature, see e.g. **\[BR8\]**. Both the Maximum Likelihood Method and Bayesian parameter estimation allow the explicit consideration of censored data points in the formulation of the likelihood function, see {numref}`method_7_3_2` for details.
+Censoring relates to observations of a random variable that are available only within a certain range, which may be fixed or random. To give an example, data from a reliability test programme with fixed duration provides exact time-to-failure information only for a random number of items that fail during the test; for the items that survived the test it is only known that the failure time is larger than . This situation is sometimes termed Type I Censoring. An alternative test design would require a fixed number of failures, which leads to a random test duration (Type II Censoring). Various methods for dealing with censored data samples have been discussed in the literature, see e.g. {cite:t}`method-engineering-statistics-handbook`. Both the Maximum Likelihood Method and Bayesian parameter estimation allow the explicit consideration of censored data points in the formulation of the likelihood function, see {numref}`method_7_3_2` for details.
 
 When testing high reliability components or collecting in-service data, it is likely that most samples will in fact survive the test, leading to a highly censored data set. Unfortunately, the uncertainty of the reliability estimate depends on the number of observed failures, see e.g. Eq. {eq}`Equation Method 6.14` below. The expected number of failures for a given number of items and a given duration (cumulated hours) is proportional to the failure rate. Thus, very large data samples and/or very long durations are required for high accuracy estimates of small failure rates, which may be impossible to achieve in practice. To overcome this problem, components may be tested at higher than expected stresses in accelerated life testing.
 
@@ -648,7 +648,7 @@ Physics of Failure methods for reliability prediction are based on a mathematica
 
 -   During reliability prediction, the objective is to quantify the probability that the considered failure mechanism(s) will lead to failure for a given design. To achieve this, the relevant uncertainties and variabilities need to be quantified and appropriately considered in a probabilistic analysis.
 
-It is also possible to combine both applications, e.g. in the context of Reliability Based Design Optimization **\[BR9\],\[BR10\]**.
+It is also possible to combine both applications, e.g. in the context of Reliability Based Design Optimization {cite:t}`method-19970017405`, {cite:t}`method-design-space-decomposition`.
 
 The focus of the following discussion will be on the application of Physics of Failure models in the context of reliability prediction. It should be noted that the mathematical models used to describe the failure mechanism process may be the same as the ones used for design; it is the quantification of uncertainties that makes the difference.
 
@@ -769,9 +769,9 @@ Finally, in the third step, a suitable structural reliability method needs to be
 -   *Monte Carlo Simulations*\
     Simulation methods are based on repeated evaluations of the limit state function with simulated realisations of the random vector $\mathrm{X}$. The probability of failure is estimated by dividing the number of failures "observed" in this numerical exercise by the total number of simulations. Different variance reduction techniques are available to improve the accuracy of this estimate with reasonable numerical effort.
 
-Surrogate modelling can be used to complement these different methods if the limit state function is not defined explicitly (i.e. using an analytic formula), but implicitly with the aid of a numerical model. The safe domain can in this case only be defined through repeated numerical analysis with different input values. A surrogate model is an analytic function that approximates the results of the numerical model, allowing to apply FORM/SORM methods and a more efficient use of Monte Carlo Simulations. Various approaches for the construction of surrogate models are discussed in the literature (see e.g. **\[BR11\]**), including Response Surfaces, Kriging, Polynomial Chaos Expansions and Support Vector Machines.
+Surrogate modelling can be used to complement these different methods if the limit state function is not defined explicitly (i.e. using an analytic formula), but implicitly with the aid of a numerical model. The safe domain can in this case only be defined through repeated numerical analysis with different input values. A surrogate model is an analytic function that approximates the results of the numerical model, allowing to apply FORM/SORM methods and a more efficient use of Monte Carlo Simulations. Various approaches for the construction of surrogate models are discussed in the literature (see e.g. {cite:t}`method-meta-models`), including Response Surfaces, Kriging, Polynomial Chaos Expansions and Support Vector Machines.
 
-The different methods available to perform a prediction with structural reliability methods are discussed in comprehensive textbooks (e.g. **\[BR12\],\[BR13\],\[BR14\]**) and have been implemented in various software packages, both commercial **\[BR15\],\[BR16\],\[BR17\]** and freeware **\[BR18\],\[BR19\]**. Here, only the strengths and limitations of each method will be briefly explained.
+The different methods available to perform a prediction with structural reliability methods are discussed in comprehensive textbooks (e.g. {cite:t}`methods-structural-safety`, {cite:t}`structural-reliability-methods`, {cite:t}`structural-reliability-analysis-prediction`) and have been implemented in various software packages, both commercial {cite:t}`strurel`, {cite:t}`nessus`,{cite:t}`uq-lab` and freeware {cite:t}`ferum`, **\[BR19\]**. Here, only the strengths and limitations of each method will be briefly explained.
 
 (method_6_5_4_1)=
 #### Analytic methods strengths and limitations

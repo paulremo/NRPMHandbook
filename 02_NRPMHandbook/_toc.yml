@@ -8,21 +8,27 @@ parts:
   - caption: Methodologies chapter
     numbered: true
     chapters:
-    - file: methodologies/intro
-      title: Methodology
-    - file: methodologies/reliability_prediction_taxonomy_handbook_coverage
-    - file: methodologies/reliability_prediction_during_project_life_cycle
-    - file: methodologies/part_I_bibliography
+    - file: methodologies/handbook/intro
+      title: Handbook
+      sections:
+      - file: methodologies/handbook/reliability_prediction_taxonomy_handbook_coverage
+      - file: methodologies/handbook/reliability_prediction_during_project_life_cycle
+      - file: methodologies/handbook/part_I_bibliography
+    - file: methodologies/models/intro
+      title: Models
   - caption: Methods chapter
     numbered: true
     chapters:
-    - file: methods/intro
-      title: Method
-    - file: methods/model_development_basic_concept
-    - file: methods/bayesian_method_reliability_prediction_modelling
-    - file: methods/uncertainties_prediction_results
-    - file: methods/annexII_A
-    - file: methods/annexII_B
+    - file: methods/handbook/intro
+      title: Handbook
+      sections:
+      - file: methods/handbook/model_development_basic_concept
+      - file: methods/handbook/bayesian_method_reliability_prediction_modelling
+      - file: methods/handbook/uncertainties_prediction_results
+      - file: methods/handbook/annexII_A
+      - file: methods/handbook/annexII_B
+    - file: methods/models/intro
+      title: Models
   - caption: EEE chapter
     numbered: true
     chapters:

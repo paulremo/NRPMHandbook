@@ -1006,10 +1006,10 @@ An example for reliability allocation using FOO method is shown in {numref}`meth
 *   - <table class="myTable" id="methodo_table5_14">
             <thead>
                 <tr>
-                    <th rowspan="2">Sub-system</th>
-                    <th colspan="4">Categories grading values \(g_{ij}\)</th>
-                    <th rowspan="2">Weighting Factor \(w_{i}\)</th>
-                    <th rowspan="2">Sub System Target \(\hat{R}_{i}(t)\)</th>
+                    <th rowspan="2" >Sub-system</th>
+                    <th colspan="4">Categories grading values <span class="math">\(g_{ij}\)</span></th>
+                    <th rowspan="2">Weighting Factor <span class="math">\(w_{i}\)</span></th>
+                    <th rowspan="2">Sub System Target <span class="math">\(\hat{R}_{i}(t)\)</span></th>
                 </tr>
                 <tr>
                     <th>Complexity</th>

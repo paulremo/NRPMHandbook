@@ -144,9 +144,8 @@
   text-align: left;
 }
 
-.table thead th thead.tr{
+.table tr.th.p {
   color: #ffffff;
-  background: #74a0c1;
 }
 
 .table thead th:nth-child(odd) {
