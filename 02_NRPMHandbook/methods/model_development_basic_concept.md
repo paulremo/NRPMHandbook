@@ -104,7 +104,7 @@ The average time until failure occurs, defined as the expected value of the fail
 ``  
 ```{math}
 :label: Equation Method 6.6
-\text{MTTF} = E\left\lbrack T \right\rbrack = \int_{0}^{\infty}{t \bullet f_{T}\left( t \right)\ \mathrm{d}t} = \int_{0}^{\infty}{R_{T}\left( t \right)\ \mathrm{d}t}
+\text{MTTF} = E\left\lbrack T \right\rbrack = \int_{0}^{\infty}{t \cdot f_{T}\left( t \right)\ \mathrm{d}t} = \int_{0}^{\infty}{R_{T}\left( t \right)\ \mathrm{d}t}
 ```
 ````
 
@@ -257,7 +257,7 @@ Knowing and managing the failure mechanisms within parts or systems is generally
 
 The first step is to identify potential failure modes and associated failure mechanisms, e.g. by performing a Design or Process FMEA, or through engineering judgment and/or lessons learnt. The following steps will then consist in determining reliability data linked to the phenomenon identified as most likely responsible for the undesired failure mode. The approach used for analysing in depth the failure mechanisms is the Physics of Failures, see {numref}`method_6_5` for details.
 
-(method_6_2_5)=
+(method_6_2_6)=
 ### Failure mode repartition data
 
 The present handbook generally takes into account all potential failure modes without providing information on the potential failure mode distribution for each part or component.
@@ -420,7 +420,7 @@ In the Exponential model, the probability density function $f_{T}(t)$ and the cu
 ``  
 ```{math}
 :label: Equation Method 6.7
-f_{T}(t) = \ \lambda \bullet exp( - \lambda t)
+f_{T}(t) = \ \lambda \cdot exp( - \lambda t)
 ```
 ````
 
@@ -451,7 +451,7 @@ The most common time-to-failure distribution model with non-constant failure rat
 ``  
 ```{math}
 :label: Equation Method 6.9
-f_{T}(t) = \ \frac{\beta}{\alpha} \bullet \left( \frac{t}{\alpha} \right)^{\beta - 1}\exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack
+f_{T}(t) = \ \frac{\beta}{\alpha} \cdot \left( \frac{t}{\alpha} \right)^{\beta - 1}\exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack
 ```
 ````
 
@@ -521,7 +521,7 @@ Maximum Likelihood estimators have desirable asymptotic (large sample) propertie
 
 Two problems are commonly encountered during the analysis of failure data: Censoring and lack of failures. Both problems are closely related, as will be discussed in the following.
 
-Censoring relates to observations of a random variable that are available only within a certain range, which may be fixed or random. To give an example, data from a reliability test programme with fixed duration provides exact time-to-failure information only for a random number of items that fail during the test; for the items that survived the test it is only known that the failure time is larger than . This situation is sometimes termed Type I Censoring. An alternative test design would require a fixed number of failures, which leads to a random test duration (Type II Censoring). Various methods for dealing with censored data samples have been discussed in the literature, see e.g. **\[BR8\]**. Both the Maximum Likelihood Method and Bayesian parameter estimation allow the explicit consideration of censored data points in the formulation of the likelihood function, see {numred}`method_7_3_2` for details.
+Censoring relates to observations of a random variable that are available only within a certain range, which may be fixed or random. To give an example, data from a reliability test programme with fixed duration provides exact time-to-failure information only for a random number of items that fail during the test; for the items that survived the test it is only known that the failure time is larger than . This situation is sometimes termed Type I Censoring. An alternative test design would require a fixed number of failures, which leads to a random test duration (Type II Censoring). Various methods for dealing with censored data samples have been discussed in the literature, see e.g. **\[BR8\]**. Both the Maximum Likelihood Method and Bayesian parameter estimation allow the explicit consideration of censored data points in the formulation of the likelihood function, see {numref}`method_7_3_2` for details.
 
 When testing high reliability components or collecting in-service data, it is likely that most samples will in fact survive the test, leading to a highly censored data set. Unfortunately, the uncertainty of the reliability estimate depends on the number of observed failures, see e.g. Eq. {eq}`Equation Method 6.14` below. The expected number of failures for a given number of items and a given duration (cumulated hours) is proportional to the failure rate. Thus, very large data samples and/or very long durations are required for high accuracy estimates of small failure rates, which may be impossible to achieve in practice. To overcome this problem, components may be tested at higher than expected stresses in accelerated life testing.
 
@@ -565,7 +565,7 @@ Similar considerations are possible for data collected during operations.
 
 It should be emphasized that Eq. {eq}`Equation Method 6.13` and Eq. {eq}`Equation Method 6.14` are valid only for constant failure rates. Another important assumption is that the observed failure times are from the same population, i.e. the failure rate is the same for all tested parts. The same is true for the alternative estimation methods discussed in the following.
 
-Equations for Bayesian updating with the analytic approach using a conjugate Gamma prior are given in {numref}`method_7_5_1` ({numref}`method-table7-1`). Without prior information, the results are equivalent to Eq. {eq}`Equation Method 6.13` and Eq. {eq}`Equation Method 6.14` above. However, the failure rate is modelled with a Gamma distribution with support for positive values only, which is more consistent that the asymptotic Normal distribution assumption in the Maximum Likelihood method.
+Equations for Bayesian updating with the analytic approach using a conjugate Gamma prior are given in {numref}`method_7_5_1` ({numref}`method-table7-2`). Without prior information, the results are equivalent to Eq. {eq}`Equation Method 6.13` and Eq. {eq}`Equation Method 6.14` above. However, the failure rate is modelled with a Gamma distribution with support for positive values only, which is more consistent that the asymptotic Normal distribution assumption in the Maximum Likelihood method.
 
 Another well-known approach to quantify the statistical uncertainty associated with data-based failure rate estimates is the use of confidence intervals. For the Exponential model, a $1 - \alpha$ confidence interval can be derived analytically, leading to the following interval estimate:
 
@@ -588,7 +588,7 @@ Failure rate estimation with zero observed failures is also discussed in {numref
 (method_6_4_3_2)=
 #### Parameter estimation for the Weibull distribution and other failure time distributions
 
-The Maximum Likelihood Method can be applied also to parameter estimation for the Weibull distribution and other failure time distributions like those listed in {numref}`method-table6-1`. Analytic solutions are available for most two-parameter models, but can generally be applied only with complete time-to-failure data. The same is true for the closed form solutions for Bayesian updating provided in {numref}`method-table7-1` ({numref}`method_7_5_1`); numerical methods are required for Bayesian parameter estimation with censored data samples.
+The Maximum Likelihood Method can be applied also to parameter estimation for the Weibull distribution and other failure time distributions like those listed in {numref}`method-table6-1`. Analytic solutions are available for most two-parameter models, but can generally be applied only with complete time-to-failure data. The same is true for the closed form solutions for Bayesian updating provided in {numref}`method-table7-2` ({numref}`method_7_5_1`); numerical methods are required for Bayesian parameter estimation with censored data samples.
 
 In practice, most data samples include censored observations, which is important to consider appropriately in distribution fitting for non-constant failure rates. The formulation of the likelihood function is usually straight-forward even with censored data sets, see {numref}`method_7_3_2` for details. However, the Maximum Likelihood estimate for the model parameters needs to be derived numerically:
 
@@ -639,7 +639,7 @@ P\left\lbrack \text{Beta}_{\frac{\alpha}{2}}\left( n_{f},\ n - n_{f} + 1 \right)
 
 Where $\text{Beta}_{q}\left( \alpha,\ \beta \right)$ denotes the $q$ Quantile of the Beta distribution, as defined in {numref}`annexII_A`.
 
-(methods_6_5)=
+(method_6_5)=
 ## Physics of failure and structural reliability methods
 
 Physics of Failure methods for reliability prediction are based on a mathematical modelling of the relevant failure mechanisms leading to failure. It is important to make a clear distinction between the use of Physics of Failure models in the context of design versus reliability prediction:
@@ -721,7 +721,7 @@ Reliability estimation with Physics of Failure methods requires that the identif
 
 Various tools and techniques are available to perform this task, from analytic solutions for some basic problems to numerical methods, e.g. using Monte Carlo simulations. An overview on the so-called structural reliability methods is given in the following section.
 
-(method_6_5_3)=
+(method_6_5_4)=
 ### Overview of structural reliability methods
 
 Structural reliability embraces a class of methods that can be used to derive a reliability estimate from a mathematical model describing the Physics of Failure. The starting point is the formulation of a so-called limit state function $g\left( \mathrm{X} \right)$, defined as a function of a random vector $\mathrm{X}$ . The variables in $\mathrm{X}$ (called "basic variables") represent all inputs required to model the physics of failure that are associated with uncertainties. The failure domain is defined as $g\left( \mathrm{X} \right) \leq 0$, bounded by the limit state $g\left( \mathrm{X} \right) = 0$, the "failure surface".
@@ -828,7 +828,7 @@ Unfortunately, the simplicity of crude Monte Carlo comes at a cost, requiring a 
 ``  
 ```{math}
 :label: Equation Method 6.20
-N \geq \left( \frac{2 \bullet \sqrt{P_{f}\left( 1 - P_{f} \right)}}{\alpha \bullet P_{f}} \right)^{2} + 1
+N \geq \left( \frac{2 \cdot \sqrt{P_{f}\left( 1 - P_{f} \right)}}{\alpha \cdot P_{f}} \right)^{2} + 1
 ```
 ````
 
@@ -840,7 +840,7 @@ Another strength of the Monte Carlo approach, when compared to FORM/SORM analysi
 
 In summary, the Monte Carlo method is a viable approach for all reliability estimation problems, provided that enough simulations can be made to derive small probabilities of failure with sufficient accuracy. Variance reduction techniques and surrogate modelling can help to reduce the required numerical effort, but at the cost of a more complex approach requiring more expertise from the user. FORM/SORM methods should thus be considered as an alternative whenever computational effort and thus numerical efficiency is a concern.
 
-(method_6)=
+(method_6_6)=
 ## Combined approach
 
 The discussion of statistical methods and Physics of Failure so far has focused on the application of each of them as a standalone method, making use of probabilistic failure mechanisms modelling *or* statistical data on observed failures. Both methods have their strengths and limitations and can sometimes be difficult to apply in a specific context.
@@ -857,7 +857,7 @@ The second approach uses statistical methods in order to establish a fixed "base
 
 Among the two approaches, the Bayesian approach is generally preferred from an uncertainty quantification point of view, as it allows to consistently account for the amount of information provided by statistics and Physics of Failure (e.g. sample size of the failure data used for updating, degree of belief in the failure mechanism modelling). However, the Bayesian approach may sometimes be difficult to apply in practice, e.g. if aggregated failure rate data is available from a different field of application, but the underlying data that could be used in a Bayesian framework cannot be accessed. In this case, the second approach with statistical base failure rates "tuned" to fit the specific application with the aid of multiplicative PoF factors may be the method of choice from a practical point of view.
 
-(method_7)=
+(method_6_7)=
 ## Process for the development of new models
 
 A major requirement for the sustainability of a reliability prediction methodology is the possibility to account for technological development. Apart from model updating, which is discussed in {numref}`method_7`, this also requires the development of completely new reliability prediction models when innovative technologies are used. The purpose of the present section is to provide practical guidance for the development of such new models, making use of the inputs and methods discussed above in consistency with the philosophy of this handbook.

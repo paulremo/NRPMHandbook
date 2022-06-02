@@ -1,3 +1,4 @@
+(method_7)=
 # Bayesian methods for reliability prediction modelling
 
 ```{epigraph}
@@ -28,7 +29,7 @@ Now let us assume that $n$ independent observations (realisations) of the random
 ``  
 ```{math}
 :label: Equation Method 7.21
-f_{\mathbf{\Theta}}^{''}\left( \mathbf{\theta} \middle| \widehat{\mathbf{x}} \right) = \frac{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right) \bullet f_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)}{\int_{\text{DΘ}}^{}{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right)}{\bullet f}_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)d\mathbf{\theta}}
+f_{\mathbf{\Theta}}^{''}\left( \mathbf{\theta} \middle| \widehat{\mathbf{x}} \right) = \frac{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right) \cdot f_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)}{\int_{\text{DΘ}}^{}{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right)}{\cdot f}_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)d\mathbf{\theta}}
 ```
 ````
 
@@ -84,7 +85,7 @@ Applying Bayesian updating of a reliability estimate with new statistical data g
 
 The final outcome of a Bayesian analysis is the posterior distribution of the model parameters, which may be naturally interpreted to provide credibility ranges for the parameters of the sampling distribution, e.g. for the failure rate in an Exponential model.
 
-(method_7_2)=
+(method_7_3)=
 ## Likelihood formulation
 
 In Bayes rule (Eq. {eq}`Equation Method 7.21`), the likelihood $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}$ contains the information provided by the data sample that is used for updating. The formulation of the likelihood is based on the sampling distribution $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$, which defines also the model parameters $\mathbf{\theta}$ to be updated. This is why the consideration of the sampling distribution is always the first step in a Bayesian analysis.
@@ -362,7 +363,7 @@ In general, when applying Bayes theorem for updating, the prior distribution and
 *   - ***Exponential*** Failure rate $\lambda_{X}$
     - $$\lambda_{X}\sim\text{Gamma}\left( \alpha',\beta' \right)$$
     - $\alpha$ failures in $\beta$ cumulated hours
-    - $$\alpha'' = \alpha'' + n_{f}$$, $\beta'' = \beta'' + T$
+    - $$\alpha'' = \alpha'' + n_{f}, \beta'' = \beta'' + T$$
     - $$\mu_{\lambda_{X}}^{''} = \frac{\alpha''}{\beta''}$$
 *   - ***Binomial*** Probability $p_{X}$
     - $$p_{X}\sim\text{Beta}\left( \alpha',\beta' \right)$$
@@ -442,10 +443,11 @@ The posterior mean and standard deviation of the failure rate are:
 ``  
 ```{math}
 :label: Equation Method 7.32
-\begin{matrix}{\mu''}_{\lambda} = \frac{\alpha''}{\beta''} = \frac{10}{\ 677810} = 1.47\  \bullet 10^{- 5} \\                                
-  {\sigma''}_{\lambda} = \frac{\sqrt{\alpha''}}{\beta''} = \frac{\sqrt{n}}{\sum_{i = 1}^{n}t_{i}} = 4.66\  \bullet 10^{- 6} \\   
+\begin{matrix}{\mu''}_{\lambda} = \frac{\alpha''}{\beta''} = \frac{10}{\ 677810} = 1.47\  \cdot 10^{- 5} \\                                
+  {\sigma''}_{\lambda} = \frac{\sqrt{\alpha''}}{\beta''} = \frac{\sqrt{n}}{\sum_{i = 1}^{n}t_{i}} = 4.66\  \cdot 10^{- 6} \\   
   \end{matrix}
 ```
+````
 
 ```{figure} pictures/method_figure7_9.png
 ---
@@ -455,3 +457,292 @@ name: method_figure7_9
 Posterior probability distribution for the estimated failure rate using a conjugate prior distribution.
 ```
 ````
+
+**Example: Analytical Bayes approach for the Exponential distribution with zero failures**
+
+In practice sometimes no failure event is observed but an estimate of the failure rate still needs to be made. This is in principle possible if operational data is available. Assuming a constant failure rate, the random time to failure is exponential distributed. We are looking for the probability that no failure events have occurred until the moment of the prediction, which can be derived from the Poisson process. The probability that no event occurred during the cumulated hours $T$ is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.33
+\Pr\left( 0,T \right) = 1 - e^{- \lambda T}
+```
+````
+
+And thus,
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.34
+\Pr\left( 0,\sum_{i = 1}^{n}t_{i} \right) = {1 - e}^{- \lambda\sum_{i = 1}^{n}t_{i}}
+```
+````
+
+The (prior) probability that no event has yet occurred is unknown. If the probability is unknown, it can be represented by a uniform distribution, leading to the following non-informative prior.
+
+$$f\left( p \right) = 1\ \ \forall\ \ \ 0 \leq p < 1$$
+
+This assumption results in
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.35
+\lambda_{p} = \frac{- ln\left( 1 - \int_{0}^{p}{f\left( p \right)\text{dp}} \right)}{\sum_{i = 1}^{n}t_{i}}
+```
+````
+
+The failure rate as a function of the operation hours in the case no failure event was observed is shown in {numref}`method_figure7_10`.
+
+```{figure} pictures/method_figure7_10.png
+---
+width: 600px
+name: method_figure7_10
+---
+Estimated failure rate as a function of the operation hours in the case no failure event was observed, using a Bayesian approach with non-informative prior.
+```
+````
+
+The average failure rate can be estimated by
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.36
+E\left\lbrack \lambda \right\rbrack = \int_{0}^{1}\frac{- ln\left( 1 - \int_{0}^{p}{f\left( p \right)\text{dp}} \right)}{\sum_{i = 1}^{n}t_{i}}dp = \frac{1}{\sum_{i = 1}^{n}t_{i}}
+```
+````
+
+This means that in average one failure is expected to be observed during the cumulated hours.
+
+The number of failures corresponding to a median failure rate is calculated by
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.37
+\lambda_{0.5} = \int_{0}^{1}\frac{- ln\left( 1 - \int_{0}^{0.5}{f\left( p \right)\text{dp}} \right)}{\sum_{i = 1}^{n}t_{i}}dp = \frac{- ln(0.5)}{\sum_{i = 1}^{n}t_{i}}
+```
+````
+
+From this equation it is obvious that the failure rate decreases with the number of operating hours without failures.
+
+Another possibility is the estimation of the failure rate using the Chi-Square distribution. The Chi-Square distribution is a special case of the gamma distribution, which represents the conjugate prior distribution of the failure rate.
+
+Using the Chi-Square distribution $\chi_{f,q}^{2}$ with $f$ degrees of freedom, the $q$-quantiles of the uncertain failure rate $\lambda$ can be determined, see also Eq. {eq}`Equation Method 6.15` in {numref}`method_6_4_3_1`. For time truncated records, the following is valid:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.38
+\lambda = \frac{\chi_{2\left( n_{f} + 1 \right),1 - \alpha}^{2}}{2 \cdot \sum_{i = 1}^{n}t_{i}}
+```
+````
+
+Where $n_{f}$ denotes the number of failure events, $\alpha$ the level of confidence and $n$ the number of items observed (with or without failure). The equivalent number of failure events $n_{\text{equi},1 - \alpha}$ at a certain confidence level can be estimated to:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.39
+n_{f,equi,1 - \alpha} = \frac{\chi_{2\left( n_{f} + 1 \right),1 - \alpha}^{2}}{2}
+```
+````
+
+The equivalent number of failure events is the expected number of failures for a certain confidence level during the cumulated hours $\sum_{i = 1}^{n}t_{i}$. This might not be an integer. If the confidence level is set to 50% (corresponding to the median) and no failure is observed so far, then the equivalent number of failures are:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.40
+n_{f,equi,1 - \alpha} = \frac{\chi_{2\left( 0 + 1 \right),1 - 0.5}^{2}}{2} = \frac{1.3863}{2} = 0.6931 = - ln(\alpha) = - ln(0.5)
+```
+````
+
+This corresponds to the median of the posterior distribution. More generally, the equation can be formulated as (still under the assumption that no failure has been observed, i.e. $n_{f} = 0)$:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.41
+n_{equi,1 - \alpha} = \frac{\chi_{2\left( 0 + 1 \right),1 - \alpha}^{2}}{2} = - ln(\alpha)
+```
+````
+
+The Chi-Square estimator is thus for the case that no observation is made equal to the approach with the Bayesian approach assuming a Poisson process and a non-informative prior.
+
+(method_7_5_2)=
+### Numerical approach using Markov Chain Monte Carlo Methods
+
+In case where no analytical solution is available, numerical approaches can be used. In the Bayesian rule (Eq. {eq}`Equation Method 7.21` in {numref}`method_7_1` the likelihood function and the prior density function are known and can be easily calculated. For calculating the posterior function, the denominator needs to be solved which is in general analytically not possible and numerically difficult. This problem is solved by a class of numerical algorithms, the so-called Markov Chain Monte Carlo (MCMC) methods **\[BR25\]**. These methods are independent from the distribution of the prior density function and the formulation of the Likelihood function, and can be applied to a wide class of problems.
+
+Besides offering full flexibility in terms of prior and sampling distributions, MCMC methods can also be used for the development of more complex probabilistic models, such as e.g. hierarchical models to combine different non-homogeneous data samples.
+
+Several MCMC programs and toolboxes are available, e.g. WinBUGS/OpenBUGS **\[BR26\]**, JAGS **\[BR27\]** or Stan **\[BR28\]**, to mention just a few. An introduction and overview on the use of Bayesian methods in a reliability context, using many MCMC examples, can be found in a NASA guide dedicated to Bayesian methods for risk and reliability **\[BR29\]**, including the following topics:
+
+-   Bayesian inference for common time-to-failure models
+
+-   Time-trend models for the failure rate $\lambda$ or binomial probability $p$
+
+-   Treatment of uncertain data and data censoring
+
+-   Using system level information to estimate component-level reliability
+
+-   Bayesian model choice and model validation
+
+In the following a numerical example of the application of the MCMC is shown. In this example the failure hour data set given in {numref}`method-table7-4` is used, allowing a comparison of the results with the analytic solution. Another example for the use of numerical methods can be found in **Chapter 10 (Part III)** for Mechanical reliability prediction, applying Bayesian updating to improve a wear-out model derived from the Physics of Failure with In Orbit Return observations.
+
+**Example: Numerical Bayes approach for the Exponential distribution**
+
+As a model for describing the data, the exponential distribution is used (constant failure rate), assuming a complete record without censoring.
+
+The likelihood is defined by:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.42
+L\left( \widehat{\mathbf{x}}\left| \lambda \right.\  \right) = \prod_{i = 1}^{n}{\lambda \cdot e^{- \lambda x_{i}}}
+```
+````
+
+Where $n$ denotes the number of (here: time-to-failure) observations of the random variable $x$. Now, a prior distribution has to be defined. For the purpose of the example, the Jeffreys prior for the exponential distribution is used, which is a special case of the Gamma distribution:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.43
+{f'}_{}\left( \theta_{} \right){= f'}_{}\left( \lambda \right) = \frac{1}{\lambda}
+```
+````
+
+Further, an initial starting point for the MCMC has to be defined:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.44
+\lambda_{0} = \frac{1}{20'000} = 5 \cdot 10^{- 5}\lbrack/h\rbrack
+```
+````
+
+This starting point is maybe not a good choice knowing the data but it shows that the way back to more realistic values is found during the simulation. The starting point together with the prior information is of importance to obtain a good result.
+
+In general, the Markov chain needs a burn in phase. This burn in phase allows the parameters to converge to the relevant region of interest. The length of the burn in phase depends on several factors and a plot of the Markov chain can help to decide if the choice was appropriate. In the case the chain is non-stationary the choice might not be appropriate. Plotting several chains in one plot also helps to decide if the choice was appropriate.
+
+If the guess of the initial point is already good, then the burn in phase is shorter. The Markov chain for the example is provided in {numref}`method_figure7_11` using the data provided in {numref}`method-table7-4`. It can be seen that it scatters around a value of $1.5\  \cdot 10^{- 5}$, corresponding to the closed-form solution provided in Eq. {eq}`Equation Method 7.32`. After excluding the burn-in phase, the simulated values from the Markov chain are used to numerically represent the posterior distribution of the uncertain failure rate $\lambda$.
+
+The example calculations were performed using the so-called Metropolis algorithm. In the literature further developments can be found such as the Hamiltonian Monte Carlo. These more advanced methods follow in principle the same procedure but they are in general smarter in proposing where to jump next. **\[BR25\]**.
+
+```{figure} pictures/method_figure7_11.png
+---
+width: 600px
+name: method_figure7_11
+---
+MCMC chain for the example of failure rate estimation with non-informative prior, considering the data presented in {numref}`method-table7-4`
+```
+````
+
+From the Markov chain the statistical characteristics of the estimated parameter can be obtained, i.e. the mean value, the standard deviation and the distribution type. In this example, using a burn in phase of 10'000 simulations and 40'000 simulations for the chain, the mean value and the standard deviation are
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation Method 7.45
+\begin{matrix}E\left\lbrack \lambda \right\rbrack = 1.467 \cdot 10^{- 5}\ \ \lbrack 1/h\rbrack \\\text{STD}\left\lbrack \lambda \right\rbrack = 4.731 \cdot 10^{- 6}\ \lbrack 1/h\rbrack\\\\end{matrix}
+```
+````
+
+The distribution of $\lambda$ is the same as shown for the result using the conjugate prior (see {numref}`method_figure7_9`). It can be seen that the $\lambda$ is not normal distributed. The advantage of the MCMC is that no assumption for the distribution type needs to be made and that the credible interval of the estimation is coming for free in this method.
+
+(method_7_6)=
+## Practical guidance for Bayesian updating in specific applications
+
+In the following, some practical guidance is provided, mainly focussed on the definition of informative priors, for different applications of Bayesian updating in a reliability context.
+
+(method_7_6_1)=
+### Updating of estimates from previous statistical analysis
+
+Bayesian updating for a prior derived from a previous statistical analysis on an independent data set is the most straight-forward case for the definition of a prior distribution. The parameters of the prior distribution (the hyperparameters) are in this case simply derived from the existing ("prior") data set. The advantage of Bayesian updating in this context is that information from a previous analysis can still be considered even without having access to the original data sample. Note, however, that this requires that not only a point estimate for the model parameters, but also some information on the statistical uncertainty associated with the parameter estimate is available.
+
+It is important to note that priors derived with the aid of statistical estimation methods provide information only on statistical uncertainty resulting from sample size limitations. A more general view on various modelling uncertainties is taken in **Chapter 8** of this handbook, including a discussion of different sources of uncertainty. The analyst may choose to increase the variance of the prior distribution to account for additional uncertainty sources, e.g. if the prior data does not exactly represent the considered technology or operating conditions. An increased variance of the prior is equivalent to reducing the "equivalent sample size" of the prior data set and thus reducing the weight of the prior, and giving more weight to the new data. Obviously, this is only justified if the new data set does not introduce large additional uncertainties as well.
+
+(method_7_6_2)=
+### Updating of reliability estimates derived from reliability handbooks
+
+Bayesian updating of estimates derived from reliability handbooks in principle follows the same approach as outlined above. However, the prior now has to be derived based on the information provided in the handbook. In the following, the basic steps to perform a Bayesian updating in this context are briefly discussed.
+
+As a general rule, the probabilistic model for the likelihood (sampling distribution) should be consistent with the time-to-failure distribution assumed in the handbook. Many handbooks assume an Exponential distribution for the random time to failure (constant failure rate assumption), even though this may not be appropriate for certain applications, e.g. for mechanical parts.
+
+A simple approach to transform an Exponential model provided by a reliability handbook to a Weibull model that is equivalent in terms of average failure rates is to make an assumption on the Weibull shape parameter $\beta_{X}$, allowing to derive the scale parameter $\alpha_{X}$ from the constant failure rate estimates provided by the handbook **\[RD14\]** . As an alternative, the Weibull shape parameter $\beta_{X}$ may be derived from new data, or updated together with the scale parameter $\alpha_{X}$. The prior distribution of $\beta_{X}$ then has to be defined based on expert judgement or assuming a mean value $E\left\lbrack \beta_{X} \right\rbrack = 1$ (together with some standard deviation), for consistency with the Exponential distribution assumed by the handbook.
+
+Once the distributional models have been chosen (e.g. Exponential or Weibull sampling distribution, with associated priors), the parameters of the prior distribution have to be defined based on the information given in a handbook. This will typically require some additional assumptions, as most handbooks only provide point estimates for the failure rate without a detailed discussion of their uncertainty.
+
+As a first step, the statistical background and methodology underlying a handbook needs to be reviewed in order to determine whether the prediction may be seen as a mean value or rather as conservative estimate such as an upper confidence bound for the failure rate. Unfortunately, this is not always clearly defined in the handbooks. A common assumption is to take the handbook values as 60% confidence estimates for the failure rate if no alternative definition is available (see e.g. ECSS-Q-HB-30-08A **\[RD4\]** ).
+
+In addition, the uncertainty of the predicted failure rate needs to be quantified based on the information given in a handbook and/or expert judgement. Many handbooks do not provide confidence bounds for the failure rate, as the estimates are based on a combination of various data sets and not all uncertainties associated with the prediction are of statistical origin. An alternative approach is to treat the ratio between the "observed" and the "predicted" (based on a handbook) failure rate as a random variable, covering all uncertainties associated with the prediction method. Quantitative estimates for this ratio are provided e.g. in the NPRD data handbook **\[RD14\]** , in 217plus **\[RD11\]** , and in **\[BR30\]** for calculations based on the FIDES guide **\[RD10\]** . The figures provided may serve as rough approximation for the "model uncertainty" of the considered handbook methods and possibly also for other, similar reliability handbooks.
+
+(method_7_6_3)=
+### Prior definition based on expert elicitation
+
+Formulating probabilistic models from expert judgment is called elicitation. Elicitation generally entails consulting one or multiple experts. The goal of elicitation for the definition of a prior distribution in a Bayesian analysis is twofold:
+
+-   Identify a prior probability distribution family, and
+
+-   estimate parameters for the prior distribution.
+
+To achieve this, the expert(s) can be asked questions regarding both the central tendency and the variation of the prior distribution parameter. Possible questions might include:
+
+-   What are the minimal and maximal values you expect for the parameter?
+
+-   What do you expect the mean, median or mode of the parameter to be?
+
+-   With what probability do you expect the parameter to be smaller or larger than a certain value?
+
+In addition to an answer for each question, the expert's confidence in the answer should be registered. In translating the answers into parameter estimations, possible cognitive biases which may "distort" the expert's answers also need to be considered. The quality of the parameter assessment might be improved by consulting multiple experts.
+
+The results can be used to decide between possible candidate distribution families, and to derive the (hyper-)parameters of the selected prior distribution.
+
+For the selection and evaluation of experts, several methodologies are available, see **\[BR31\]**. For a thorough and formal description of elicitation processes refer to the following literature: A detailed method for elicitation is described in **\[BR32\]**. Further literature on the formulation of prior distributions is found in **\[BR29\], \[BR32\] and \[BR33\]**. An online tool for elicitation is described in **\[BR34\]**. An approach focussing on the definition of a prior for a constant failure rates is described in **\[BR8\]**.
+
+(method_7_6_4)=
+### Bayesian updating with Physics of Failure methods
+
+Bayesian updating can also be used in combination with Physics of Failure methods, e.g. the structural reliability methods discussed in {numref}`method_6_5`. Different applications are possible in this context:
+
+-   Bayesian updating of basic variable distributions that are required for an appropriate uncertainty quantification in Physics of Failure approaches ({numref}`method_6_5_2`).
+
+-   Bayesian updating of reliability estimates derived from the Physics of Failure, using failure in a combined approach ({numref}`method_6_6`)
+
+The first application considers the distribution of physical variables, such as loads and material characteristics, which can be directly or indirectly observed during tests or operations. The selected probabilistic models should be updated whenever new data becomes available. The approach for updating of these basic variable distribution follows the same principles as discussed above. Also in this context, the prior may be defined based on alternative data sources, literature values, handbook data or expert judgement.
+
+A different situation occurs if a data sample with information on failures and successes (e.g. individual time-to-failure records for several items) is used to update a prior reliability estimate that has been derived using Physics of Failure methods. The advantage of this approach is that several sources of information can be combined consistently, allowing to make use of limited data samples which would not be sufficient for a pure statistical approach. The details of Bayesian updating for a prior derived from structural reliability methods is discussed in **Chapter 10 (Part III)** for Mechanical reliability prediction, including also some examples illustrating the use of this combined approach in practice. However, the basic principles and mathematical formulas are of course applicable also outside the mechanical domain.
+

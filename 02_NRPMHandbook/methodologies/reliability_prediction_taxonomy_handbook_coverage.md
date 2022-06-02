@@ -100,7 +100,7 @@ The handbook is generally applicable to all spacecraft missions, although limite
 
 Due to the environments and technologies considered, it is not recommended to directly use the handbook for other types of space products, such as launchers or ground segments, even though parts of the methodology can still be applicable. Also, it should be noted that the focus is on systems that are non-repairable, possibly requiring additional considerations for repairable systems.
 
-Finally, it should be noted that the handbook generally assumes a level of quality assurance as usual for spacecrafts manufactured by major satellite prime contractors. The methodology and methods can of course be used also in other applications such as microsats or for “New Space” applications. However, the models, background data and underlying assumptions may not be fully applicable, especially when dealing with process and quality related contributions to unreliability, e.g. for reliability prediction of EEE components and assemblies {numref}`methodo_9` or when modelling systematic failures based on IOR ({numref}`methodo_12`).
+Finally, it should be noted that the handbook generally assumes a level of quality assurance as usual for spacecrafts manufactured by major satellite prime contractors. The methodology and methods can of course be used also in other applications such as microsats or for “New Space” applications. However, the models, background data and underlying assumptions may not be fully applicable, especially when dealing with process and quality related contributions to unreliability, e.g. for reliability prediction of EEE components and assemblies **Chapter 9** or when modelling systematic failures based on IOR (**Chapter 12**).
 
 (methodo_4_2_2)=
 ### Levels of assembly from part to system
@@ -266,12 +266,12 @@ The following subsections give a brief overview on the coverage in terms of spac
 
 To simplify the application of the handbook for users in practice, {numref}`methods` is structured based on the technical domains introduced in {numref}`methodo_4_2_3`:
 
-* {numref}`methods_9` for the modelling of **EEE** components and assemblies
-* {numref}`methods_10` for the modelling of **Mechanical** and structural parts and assemblies
-* {numref}`methods_11` for the modelling of **Miscellaneous** items
-* {numref}`methods_12` for **System level** considerations, independent of the technical domains
+* **Chapter 9** for the modelling of **EEE** components and assemblies
+* **Chapter 10** for the modelling of **Mechanical** and structural parts and assemblies
+* **Chapter 11** for the modelling of **Miscellaneous** items
+* **Chapter 12** for **System level** considerations, independent of the technical domains
 
-In terms of levels, {numref}`methods_9` to {numref}`methods_11` focus on elementary reliability modelling for parts or low levels of assemblies (up to function / equipment level) in each technical domain, whereas the approaches discussed in {numref}`methods_12` can be applied at any level to systems in the generic sense.
+In terms of levels, **Chapter 9** to **Chapter 11** focus on elementary reliability modelling for parts or low levels of assemblies (up to function / equipment level) in each technical domain, whereas the approaches discussed in **Chapter 12** can be applied at any level to systems in the generic sense.
 
 (methodo_4_4_2)=
 ### Root cause coverage
