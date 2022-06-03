@@ -27,6 +27,7 @@ parts:
       - file: methods/handbook/uncertainties_prediction_results
       - file: methods/handbook/annexII_A
       - file: methods/handbook/annexII_B
+      - file: methods/handbook/partII_bibliography      
     - file: methods/models/intro
       title: Models
   - caption: EEE chapter
