@@ -33,7 +33,7 @@ Thus, sufficient information on these three points should be available before st
 
 It should be clear that the assumptions made can have a tremendous impact on the results. If the main goal is to receive reliability predictions that are comparable (e.g. between different manufacturers or suppliers), one must ensure that the same assumptions are used. At least the key assumptions with the largest impact on the result should be agreed by all parties, and/or specified in the supply chain.
 
-Any reliability prediction report should provide full information on the assumptions made for the prediction, as listed in {numref}`methodo-table5-3`. This ensures that the required elements of a reliability prediction, as defined in **IEEE-1413:2010**, Clause 4, are provided with the prediction. The relation between each of these required elements, the assumptions listed in {numref}`methodo-table5-3` and the relevant sections of this handbook is given in {numref}`methodo-table5-4`.
+Any reliability prediction report should provide full information on the assumptions made for the prediction, as listed in {numref}`methodo-table5-3`. This ensures that the required elements of a reliability prediction, as defined in {cite:t}`methodo-IEEE-Std-1413TM`, Clause 4, are provided with the prediction. The relation between each of these required elements, the assumptions listed in {numref}`methodo-table5-3` and the relevant sections of this handbook is given in {numref}`methodo-table5-4`.
 
 <input type="text" class="myInput" id="myInput5-3" onkeyup="searchTableJupyter(this, 'methodo_table5_3')" placeholder="Search table...">
 
@@ -54,7 +54,7 @@ Any reliability prediction report should provide full information on the assumpt
             <tr>
                 <td>1.1</td>
                 <td>System definition</td>
-                <td>The system or item under analysis shall be clearly defnied with a description of all relevant characteristics needed for perfomring the prediction.</td>
+                <td>The system or item under analysis shall be clearly defined with a description of all relevant characteristics needed for performing the prediction.</td>
             </tr>
             <tr>
                 <td>1.2</td>
@@ -83,12 +83,12 @@ Any reliability prediction report should provide full information on the assumpt
             <tr>
                 <td>2.3</td>
                 <td>Failure modes coverage</td>
-                <td>The prediction shall cover all falure modes with a relevant effect on the state (or performance) of the overall system.</td>
+                <td>The prediction shall cover all failure modes with a relevant effect on the state (or performance) of the overall system.</td>
             </tr>
             <tr>
                 <td>2.4</td>
                 <td>Failure mechanisms coverage</td>
-                <td>The prediction shall cover all failure mechanism with a relevant contribution to the occurence of the considered failure modes.</td>
+                <td>The prediction shall cover all failure mechanism with a relevant contribution to the occurrence of the considered failure modes.</td>
             </tr>
             <tr>
                 <td>2.5</td>
@@ -132,7 +132,7 @@ Any reliability prediction report should provide full information on the assumpt
             <tr>
                 <td>3.7</td>
                 <td>Data</td>
-                <td>Relevant test or field return data should be used to build or updatethe reliability models (when available)</td>
+                <td>Relevant test or field return data should be used to build or update the reliability models (when available)</td>
             </tr>
             <tr>
                 <td class="full-span">4</td>
@@ -170,7 +170,7 @@ Any reliability prediction report should provide full information on the assumpt
             <tr>
                 <td>5.1</td>
                 <td>Prediction metrics</td>
-                <td>The predictionmetrics (e.g. failure rate, reliability in time, probability of failure on demand) shall be consistent with the reliability modelling</td>
+                <td>The prediction metrics (e.g. failure rate, reliability in time, probability of failure on demand) shall be consistent with the reliability modelling</td>
             </tr>
             <tr>
                 <td>5.2</td>
