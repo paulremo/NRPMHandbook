@@ -190,7 +190,7 @@ Any reliability prediction report should provide full information on the assumpt
 :header-rows: 1
 :widths: 50 30 20
 
-*   - Required element of a reliability prediction (**IEEE-1413:2010**, Clause 4)
+*   - Required element of a reliability prediction ({cite:t}`methodo-IEEE-Std-1413TM`, Clause 4)
     - {numref}`methodo-table5-3` Assumptions
     - Handbook Chapters
 *   - Identification and description of the item for which the prediction is made and the life cycle phase upon which the prediction is performed
@@ -199,15 +199,15 @@ Any reliability prediction report should provide full information on the assumpt
 *   - Intended use of the prediction results
     - <ul><li>Intended use of the prediction</li></ul>
     - {numref}`methodo_5_3_2`
-*   - RP coverage: No required element in **IEEE-1413:2010**
+*   - RP coverage: No required element in {cite:t}`methodo-IEEE-Std-1413TM`
     - <ul><li>Mission phase coverage</li><li>Elements coverage</li><li>Failure modes coverage</li><li>Failure mechanisms coverage</li><li>Root causes coverage</li></ul>
     - {numref}`methodo_4_1`, {numref}`methodo_4_2`, {numref}`method_6`, {numref}`methodo_4_3`, {numref}`methodo_4_4`
 *   - List of inputs used for the selected methodologies
     - <ul><li>Mission definition</li><li>Design lifetime</li><li>Operational conditions</li><li>Environmental conditions</li><li>Product design information</li><li>Methods, models</li><li>Data</li></ul>
     - {numref}`methodo_4_3_4`, {numref}`method_6`
-*   - Modelling: No required element in **IEEE-1413:2010**
+*   - Modelling: No required element in {cite:t}`methodo-IEEE-Std-1413TM`
     - <ul><li>Redundancy considerations</li><li>Degraded system modes</li><li>Dormant phases</li><li>Common cause effects</li><li>Distribution functions</li></ul>
-    - **Chapter 12**
+    - {numref}`sec_sys_handbook`
 *   - Prediction metrics: Definitions and values
     - <ul><li>Prediction metrics</li></ul>
     - {numref}`method_6`
@@ -248,15 +248,15 @@ n addition, depending on the intended use of the prediction, there may be no add
     - MITIGATION
 *   - RANDOM FAILURE (RF)
     - UNKNOWN RESIDUAL DEFECT / WEAKNESS <ul style="text-align:left;"><li>CONSISTENT WITH QUALITY LEVEL</li><li>UNDER NORMAL STRESSES (REFER TO DATA SHEET)</li><li>ONE-OFF EVENT</li></ul>
-    - <p>Sapce Qualification</p><p>Part quality selection</p><p>Derating</p><p>Redundancy</p><p>FDIR</p>
+    - <p>Space Qualification</p><p>Part quality selection</p><p>Derating</p><p>Redundancy</p><p>FDIR</p>
 *   - SYSTEMATIC FAILURE (SF)
-    - <ul style="text-align:left;"><li>DESIGN ERROR</li><li>MANUFACTURING ERROR</li><li>OPERATIONS ERROr</li></ul>
+    - <ul style="text-align:left;"><li>DESIGN ERROR</li><li>MANUFACTURING ERROR</li><li>OPERATIONS ERROR</li></ul>
     - <p>Robust design</p><p>Quality assurance (during design, manufacturing and operations)</p><p>Qualification & verification processes</p>
 *   - WEAR-OUT FAILURE (WO)
     - <ul style="text-align:left;"><li>NORMAL PHYSICAL PROCESS &#8594; TIME/EQUIVALENT TIME <ul style="text-align:left;"><li>OPERATIONS-RELATED (e.g. On/Off, duty cycle)</li></ul><ul><li>ENVIRONMENT-RELATED (e.g. Radiations)</li></ul> </li></ul>
     - <p>Components and materials selection</p><p>Design calculations and margins</p><p>Lifetime qualification with margins</p>
 *   - EXTRINSIC FAILURE (EF)
-    - <ul style="text-align:left;"><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV (degradation &#8594; considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>METEORITES</li><li>DEBRIS</li></ul>
+    - <ul style="text-align:left;"><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV (degradation &#8594; considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>MICROMETEORITES</li><li>DEBRIS</li></ul>
     - <p>Components and materials selection</p><p>Design calculation and margins</p><p>Qualification and verfication testing</p><p>Thermal control</p><p>Shielding (thermal, radiation, debris)</p><p>Radiation engineering</p><p>Debris impact predictions</p><p>Avoidance manoeuvres</p><p>...</p>
 ```
 
@@ -646,7 +646,7 @@ The contribution of reliability prediction to each phase and the associated revi
 (methodo_5_4_2_1)=
 #### Establishment of reliability requirements
 
-In the following, the process steps to support the establishment of appropriate reliability requirements will be explained according to **[RD19]** . The first step is the classification of the type of space mission, as shown in {numref}`methodo-table5-10`. Details on the coverage of this handbook in terms of mission types can be found in {numref}`methodo_4_2_1`.
+In the following, the process steps to support the establishment of appropriate reliability requirements will be explained according to {cite:t}`methodo-TASF-RAMS-0010` . The first step is the classification of the type of space mission, as shown in {numref}`methodo-table5-10`. Details on the coverage of this handbook in terms of mission types can be found in {numref}`methodo_4_2_1`.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-10')" placeholder="Search table...">
 
@@ -828,12 +828,7 @@ In the following, different approaches for requirement allocation are introduced
 * Proportional allocation (ARINC method)
 * Feasibility-Of-Objectives (FOO) Method
 
-These methods are applicable for a serial system structure only. For more complex system architectures, the reliability allocation should also make use of system level reliability assessment methods (see **Chapter 12 Part III**). 
-
-```{admonition} Todo
-:class: todo
-find what chapter 12 Part II refers to
-```
+These methods are applicable for a serial system structure only. For more complex system architectures, the reliability allocation should also make use of system level reliability assessment methods (see {numref}`sec_sys_handbook`). 
 
 The apportionment of the system level reliability target to sub systems is based on the following relation for serial system. 
 
@@ -855,7 +850,7 @@ It is obvious that for different values for $R_{i}(t)$ the same system reliabili
 
 **Equal Allocation**
 
-This method equally distributes the system reliability on all the sub-systems below the system level **[RD13]** . The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by 
+This method equally distributes the system reliability on all the sub-systems below the system level {cite:t}`MIL-HDBK-338B` . The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by 
 
 (misc_equation5_2)=
 ````{admonition} Equation
@@ -965,7 +960,7 @@ Given that 15% of the system failures are caused by a failure of the power suppl
 
 **Feasibility-Of-Objectives (FOO) Method**
 
-The FOO method allows users to assign grading factors to sub-systems and their components in order to determine how reliability targets are cascaded from top level to lower level. A sub-system with high grading factors is allocated a lower reliability than a sub-system with low grading factors. Default grading categories are complexity, technical level (state of art), operating time and environmental condition. Users may change these categories. Each rank is based on a scale from 1 to 10 and is estimated using both design engineering and expert judgment **[RD13]** : 
+The FOO method allows users to assign grading factors to sub-systems and their components in order to determine how reliability targets are cascaded from top level to lower level. A sub-system with high grading factors is allocated a lower reliability than a sub-system with low grading factors. Default grading categories are complexity, technical level (state of art), operating time and environmental condition. Users may change these categories. Each rank is based on a scale from 1 to 10 and is estimated using both design engineering and expert judgment {cite:t}`MIL-HDBK-338B` : 
 
 1. System Complexity. Complexity is evaluated by considering the probable number of parts or components making up the sub system and also is judged by the assembled intricacy of these parts or components. The least complex sub system is rated at 1, and a highly complex sub system is rated at 10.
 2. Technology level. The state of present engineering progress in all fields is considered. The least developed design or method receives a value of 10, and the most highly developed is assigned a value of 1.
@@ -1094,21 +1089,22 @@ The outcome of the conceptual design phase are concepts that will be implemented
 * Presentation of the pros and cons of the design solution, and 
 * Identification of the technical and programmatic risks. 
 
-The reliability prediction is an important part of the trade-off studies and could be applied to support system engineering, subsystem engineering and equipment level design engineering. It provides a quantitative assessment of alternative design solutions regarding the achievement of reliability requirements. In the trade-off study, a sensitivity analysis can support system engineering through quantifying how reliability on system level changes if certain parameters change. Importance measures (see **Chapter 12 Part III**) could be used to perform such a sensitivity analysis. Furthermore, the reliability prediction for the trade-off should identify the equipment failure modes that significantly impact the system reliability. If the correlation between equipment failure modes and system reliability can be established, the aim of system reliability improvement is to eliminate or significantly reduced these failure modes by improving equipment quality or reconfiguring the system architecture. Different design concepts may cause different types of failure modes. The system designers should be aware of the underlying failure causes to achieve a robust design. To achieve the desired quality, the development process should be accompanied by an appropriate quality assurance procedure, see e.g. {cite:t}`methodo-ECSS-Q-ST-10C`.
+The reliability prediction is an important part of the trade-off studies and could be applied to support system engineering, subsystem engineering and equipment level design engineering. It provides a quantitative assessment of alternative design solutions regarding the achievement of reliability requirements. In the trade-off study, a sensitivity analysis can support system engineering through quantifying how reliability on system level changes if certain parameters change. Importance measures (see {numref}`sec_sys_handbook`) could be used to perform such a sensitivity analysis. Furthermore, the reliability prediction for the trade-off should identify the equipment failure modes that significantly impact the system reliability. If the correlation between equipment failure modes and system reliability can be established, the aim of system reliability improvement is to eliminate or significantly reduced these failure modes by improving equipment quality or reconfiguring the system architecture. Different design concepts may cause different types of failure modes. The system designers should be aware of the underlying failure causes to achieve a robust design. To achieve the desired quality, the development process should be accompanied by an appropriate quality assurance procedure, see e.g. {cite:t}`methodo-ECSS-Q-ST-10C`.
 
 (methodo_5_4_4)=
 ### Reliability requirement verification for compliance demonstration
 
 The verification activities should demonstrate that the design and architecture is compliant with the reliability requirements for the corresponding level. This includes to demonstrate that: 
 
-All requirements have been taken into account and that the design is compliant with the requirements.
+* All requirements have been taken into account and that the design is compliant with the requirements.
 
-There is sufficient confidence that the final product will meet the requirements.
-There is sufficient confidence in the correctness of the design on system level so that the specification and design of the next lower level can progress. 
+* There is sufficient confidence that the final product will meet the requirements.
 
-The verification activities should demonstrate that the design and architecture is compliant with the reliability requirements for the corresponding level. But the verification should also demonstrate that the sub-systems on the next lower level are compliant with the requirements for the next lower level. It is important that compliance of each building block with the requirements is substantiated and that potential non-compliances are identified. 
+* There is sufficient confidence in the correctness of the design on system level so that the specification and design of the next lower level can progress. 
 
-For reliability requirements, the verification is performed through quantitative analysis, see **Chapter 12 Part III**. To finally demonstrate compliance with the top level reliability requirements, the final reliability prediction should be performed when the data for the sub-systems and component failure behaviour are available. Depending on the performance requirements, a consideration of degraded system operability might be useful.
+* The verification activities should demonstrate that the design and architecture is compliant with the reliability requirements for the corresponding level. But the verification should also demonstrate that the sub-systems on the next lower level are compliant with the requirements for the next lower level. It is important that compliance of each building block with the requirements is substantiated and that potential non-compliances are identified. 
+
+* For reliability requirements, the verification is performed through quantitative analysis, see {numref}`sec_sys_handbook`. To finally demonstrate compliance with the top level reliability requirements, the final reliability prediction should be performed when the data for the sub-systems and component failure behaviour are available. Depending on the performance requirements, a consideration of degraded system operability might be useful.
 
 (methodo_5_4_5)=
 ### Reliability assessment for life time extension and safe disposal
