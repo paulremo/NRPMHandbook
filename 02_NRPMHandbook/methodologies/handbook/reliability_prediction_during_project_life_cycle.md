@@ -850,7 +850,7 @@ It is obvious that for different values for $R_{i}(t)$ the same system reliabili
 
 **Equal Allocation**
 
-This method equally distributes the system reliability on all the sub-systems below the system level {cite:t}`MIL-HDBK-338B` . The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by 
+This method equally distributes the system reliability on all the sub-systems below the system level ``{cite:t}`MIL-HDBK-338B` ``. The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by 
 
 (misc_equation5_2)=
 ````{admonition} Equation
@@ -960,7 +960,7 @@ Given that 15% of the system failures are caused by a failure of the power suppl
 
 **Feasibility-Of-Objectives (FOO) Method**
 
-The FOO method allows users to assign grading factors to sub-systems and their components in order to determine how reliability targets are cascaded from top level to lower level. A sub-system with high grading factors is allocated a lower reliability than a sub-system with low grading factors. Default grading categories are complexity, technical level (state of art), operating time and environmental condition. Users may change these categories. Each rank is based on a scale from 1 to 10 and is estimated using both design engineering and expert judgment {cite:t}`MIL-HDBK-338B` : 
+The FOO method allows users to assign grading factors to sub-systems and their components in order to determine how reliability targets are cascaded from top level to lower level. A sub-system with high grading factors is allocated a lower reliability than a sub-system with low grading factors. Default grading categories are complexity, technical level (state of art), operating time and environmental condition. Users may change these categories. Each rank is based on a scale from 1 to 10 and is estimated using both design engineering and expert judgment ``{cite:t}`MIL-HDBK-338B` ``: 
 
 1. System Complexity. Complexity is evaluated by considering the probable number of parts or components making up the sub system and also is judged by the assembled intricacy of these parts or components. The least complex sub system is rated at 1, and a highly complex sub system is rated at 10.
 2. Technology level. The state of present engineering progress in all fields is considered. The least developed design or method receives a value of 10, and the most highly developed is assigned a value of 1.
