@@ -37,7 +37,7 @@
 
 .myTable thead th {
   color: #ffffff;
-  background: #74a0c1;
+  background: #362b48;
 }
 
 .myTable thead th:nth-child(odd) {
@@ -56,12 +56,12 @@
 
 .myTable thead th.major-head{
   color: #ffffff;
-  background: #2d639a;
+  background: #362b48;
 }
 
 .myTable thead td.row-header{
   color: #ffffff;
-  background: #2d639a;
+  background: #362b48;
 }
 
 
@@ -147,13 +147,18 @@
   text-align: left;
 }
 
-.table tr.th.p {
-  color: #ffffff;
+.table thead th {
+  border-color: lighten(#ffffff, 10%);
+  background: #362b48;
 }
 
 .table thead th:nth-child(odd) {
   color: #ffffff;
   background: #324960;
+}
+
+.head p {
+  color: #ffffff;
 }
 
 .table tr:nth-child(even) {
