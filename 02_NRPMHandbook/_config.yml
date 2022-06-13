@@ -28,8 +28,8 @@ html:
   favicon: _static/images/favicon.ico
   extra_navbar: |
         <div>
-            <img src="/_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;">
-            <img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;">
+            <a href="https://matrisk.com/"><img src="/_static/images/logo_matrisk.png" alt="Matrisk logo" style="width:40%;height:40%;"></a>
+            <a href="https://www.airbus.com/en/products-services/space/"><img src="/_static/images/logo_airbus.png" alt="Airbus logo" style="width:50%;height:50%;margin-left:10px;"></a>
         </div>
   announcement              : "️⚠ This digital handbook is currently under development! Content may change unexpectedly!⚠"
 
