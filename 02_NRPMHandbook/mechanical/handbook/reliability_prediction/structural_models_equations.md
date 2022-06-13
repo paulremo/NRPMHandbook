@@ -104,17 +104,17 @@ time unit (the sliding “power”). Thus, $X_{2}$ is defined as the volume
 worn away and $X_{1}$ as the corresponding limiting value. Detailed
 variable definitions are given in Table 10‑11.
 
-(meca_table4_11)=
-```{list-table} Assumed probabilistic models for the simplified adhesive wear model
-:class: interactive-table
-:name: Assumed probabilistic models for the simplified adhesive wear model
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-11')" placeholder="Search table...">
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_11.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Assumed probabilistic models for the simplified adhesive wear model
+:name: meca-table4-11
+
+* - 
 ```
 
 The expected values and coefficients of variation of  and  are determined as follows:
 
-he expected values and coefficients of variation of $X_{1}$ and $X_{2}$
+The expected values and coefficients of variation of $X_{1}$ and $X_{2}$
 are determined as follows:
 
 
@@ -241,12 +241,12 @@ g\left( \text{X}(t) \right) = X_{1} - \Theta \cdot X_{2}(t) = V_{limit} - \Theta
 
 $X_{2}$ is defined as the volume worn away and $X_{1}$ as the corresponding limiting value. Detailed variable definitions are given in Table 10‑12. It should be noted that the parameter $\alpha_{i}$ , defined as the average work of ball/cage interaction forces per bearing revolution, will typically be estimated from tests and is thus dependent on the wear rate $K_{H,i}$ . This is the reason why the wear rate cannot easily be taken out of the sum, as in Eq. {eq}`Equation 3.19` for the general adhesive wear model.
 
-(meca_table4_12)=
-```{list-table} Assumed probabilistic models for the simplified solid lubricant wear model
-:class: interactive-table
-:name: Assumed probabilistic models for the simplified solid lubricant wear model
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-12')" placeholder="Search table...">
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_12.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Assumed probabilistic models for the simplified solid lubricant wear model
+:name: meca-table4-12
+
+* - 
 ```
 
 The expected values and coefficients of variation of $X_{1}$ and $X_{2}$ are determined as follows:
@@ -361,12 +361,12 @@ It is furthermore assumed that all variables (except for the number of revolutio
 
 These assumptions allow the application of Eq. {eq}`Equation 3.32` without any further simplifications in the limit state function. Thus, $X_{1} = M_{0} - M_{inactive}$ is defined as the amout of lubricant available and $X_{2}$ as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in \[BR79\]. Detailed variable definitions are reminded in Table 10‑13 below.
 
-(meca_table4_13)=
-```{list-table} Assumed probabilistic models for the simplified fluid lubricant wear model
-:class: interactive-table
-:name: Assumed probabilistic models for the simplified fluid lubricant wear model
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-13')" placeholder="Search table...">
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_13.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Assumed probabilistic models for the simplified fluid lubricant wear model
+:name: meca-table4-13
+
+* - 
 ```
 
 The mean value of $X_{1}$ is determined as $\mu_{X_{1}} = M_{0} - M_{inactive}$ with coefficient of variation $v_{X_{1}} = 0$. For $X_{2}$, the following equations can be used:
@@ -540,12 +540,12 @@ g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \cdot X_{2} = D_{cr} - \Theta \cd
 
 Thus, $X_{2}$ is defined as accumulated damage, which is calculated based on the S/N curve approach with the Palmgren-Miner accumulation law, and $X_{1}$ as the corresponding limiting value. Detailed variable definitions are reminded in Table 10‑14.
 
-(meca_table4_14)=
-```{list-table} Assumed probabilistic models for the simplified high-cycle fatigue model
-:class: interactive-table
-:name: Assumed probabilistic models for the simplified high-cycle fatigue model
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-14')" placeholder="Search table...">
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_14.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Assumed probabilistic models for the simplified high-cycle fatigue model
+:name: meca-table4-14
+
+* - 
 ```
 
 Without additional information, the expected value of $D_{cr}$ may be assumed to be equal to unity and its coefficient of variation equal to 0.3 (based on JCSS \[BR82\] and Wirsching \[BR83\]). The mean value and coefficient of variation of the stress scaling factor $SSF$ can be determined as follows: First an appropriate coefficient of variation $v_{SSF}$ reflecting all uncertainties associated with the load analysis is chosen, considering the most uncertain load event to be conservative.
@@ -693,12 +693,12 @@ considering only a single load event, i.e. $k = 1$. The stresses $S_{eq}$ should
 
 To allow for a first quick assessment, some reference values for the coefficients of variation and some mean values are provided in Table 10‑15. The values may be assumed to be applicable or conservative for most practical purposes, especially when considering the additional conservatism that has been introduced by assuming $C = 0$.
 
-(meca_table4_15)=
-```{list-table} Assumptions for the application of the simplified fatigue model to low risk items
-:class: interactive-table
-:name: Assumptions for the application of the simplified fatigue model to low risk items
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-15')" placeholder="Search table...">
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_15.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Assumptions for the application of the simplified fatigue model to low risk items
+:name: meca-table4-15
+
+* - 
 ```
 
 ### Fatigue crack growth modelling
@@ -1022,12 +1022,12 @@ variables are Weibull or Lognormal distributions. A proposal for the
 probabilistic modelling of Al 7075 T7351 and Ti 6Al 4V material
 properties can be found in Table 10‑16 (taken from \[BR81\]).
 
-(meca_table4_16)=
-```{list-table} Probabilistic modelling of material parameters for Al 7075 T7351 and Ti 6Al 4V
-:class: interactive-table
-:name: Probabilistic modelling of material parameters for Al 7075 T7351 and Ti 6Al 4V
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-16')" placeholder="Search table...">
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_16.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Probabilistic modelling of material parameters for Al 7075 T7351 and Ti 6Al 4V
+:name: meca-table4-16
+
+* - 
 ```
 
 ## Modelling of failures due to corrosion
@@ -1125,12 +1125,12 @@ more detailed modelling.
 
 The variable definitions are given in Table 10‑17 below.
 
-(meca_table4_17)=
-```{list-table} Assumed probabilistic models for the simplified radiation degradation model
-:class: interactive-table
-:name: Assumed probabilistic models for the simplified radiation degradation model
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-17')" placeholder="Search table...">
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_17.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Assumed probabilistic models for the simplified radiation degradation model
+:name: meca-table4-17
+
+* - 
 ```
 
 To account for the uncertainties in choosing the deterministic values

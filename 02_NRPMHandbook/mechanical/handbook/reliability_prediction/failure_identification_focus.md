@@ -16,12 +16,45 @@ The first step before starting a reliability assessment is a clear definition of
 
 Before going into the detailed reliability assessment of a mechanical item, it is helpful to identify its main working principle using the classifications presented in  below. 
 
-(meca_table4_3)=
-```{list-table} Classification of mechanical items based on their working principle
-:class: interactive-table
-:name: Classification of mechanical items based on their working principle
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca_table4_3')" placeholder="Search table...">
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_3.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Classification of mechanical items based on their working principle
+:name: meca-table4-3
+
+* - <table class="myTable" id="meca_table4_3">
+        <thead>
+            <tr>
+                <th colspan="2">Category</th>
+                <th>Description</th>
+                <th>Examples</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>I</td>
+            <td>Active mechanisms</td>
+            <td>Mechanisms employing electric motors and actuators</td>
+            <td>Deployment and pointing mechanisms, scanner, inertial measurement units</td>
+        </tr>
+        <tr>
+            <td>II</td>
+            <td>Passive and pyro actuated mechanisms</td>
+            <td>Mechanisms actuated by pre-stressed springs or pyro charges</td>
+            <td>Release and separation mechanisms, clamp bands, hinges</td>
+        </tr>
+        <tr>
+            <td>III</td>
+            <td>Non-fluidic structural components</td>
+            <td>Components realizing the structural architecture</td>
+            <td>Primary and secondary structure, housings, harness</td>
+        </tr>
+        <tr>
+            <td>IV</td>
+            <td>Fluidic structural components</td>
+            <td>Components containing fluids or gases</td>
+            <td>Pressurized vessels, heat pipes, loop heat pipes, tubing</td>
+        </tr>
+    </table>
+
 ```
 
 
