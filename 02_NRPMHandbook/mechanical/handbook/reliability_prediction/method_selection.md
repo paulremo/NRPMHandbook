@@ -14,6 +14,39 @@ The method selection for {term}`mechanical parts <Mechanical part>` reliability 
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_4.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
+```{list-table} Categories of mechanical failure mechanisms
+:name: meca-table4-4
+
+* - <table class="myTable" id="meca_table4_4">
+		<thead>
+			<tr>
+				<th>Failure mechanism category</th>
+				<th>Examples</th>
+			</tr>
+		</thead>
+		<tr>
+			<td>Distortion</td>
+			<td>Creep, elastic deformation, plastic deformation, displacement</td>
+		</tr>
+		<tr>
+			<td>Fracture / Fatigue</td>
+			<td>Ductile/brittle fracture, high-cycle fatigue, low-cycle fatigue</td>
+		</tr>
+		<tr>
+			<td>Mechanical wear</td>
+			<td>Adhesive wear, abrasive wear, lubricated wear</td>
+		</tr>
+		<tr>
+			<td>Corrosion</td>
+			<td>Stress-corrosion cracking, galvanic corrosion</td>
+		</tr>
+		<tr>
+			<td>Material degradation</td>
+			<td>Thermal degradation, radiation damage</td>
+		</tr>
+	</table>
+```
+
 The probability of failure can for some items be driven by several different {term}`failure mechanisms <Failure mechanism>`. When using {term}`PoF` methods, the results for the individual mechanisms have to be combined to estimate the overall part reliability. The correct way of doing this depends on whether the different {term}`failure mechanisms <Failure mechanism>` can be considered as independent processes or events.
 
 For independent {term}`failure mechanisms <Failure mechanism>`, it is sufficient to consider one process at once, and to combine the results using normal probability calculus.
@@ -28,7 +61,15 @@ However, independence between different {term}`failure mechanisms <Failure mecha
 * - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_5.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 ```
 
-<iframe class="ext_content" src="../../../_static/interactivity/html/decision_tree2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca_table4_5')" placeholder="Search table...">
+
+```{list-table} Possible interactions between different mechanical failure mechanisms
+:name: meca-table4-5
+
+* - 
+```
+
+<!--<iframe class="ext_content" src="../../../_static/interactivity/html/decision_tree2.html" frameborder="0" onload="resize_iframe(this)"></iframe>-->
 
 A simple way to account for such interactions is to select the dominating {term}`failure mechanism <Failure mechanism>` (e.g. the one with the highest probability of failure) and to consider the effect of other {term}`failure mechanism(s) <Failure mechanism>` on the dominating {term}`failure mechanism <Failure mechanism>`. When using {term}`structural reliability methods <Structural reliability method>`, this can be achieved by adapting the basic variable distributions to account for physical effects related to other {term}`failure mechanism <Failure mechanism>` processes. The assessment then requires the following steps:
 
@@ -59,15 +100,12 @@ In Table   4 -6, {term}`statistical methods <Statistical method>` are mentioned 
 
 Also a combined approach with {term}`Bayesian inference <Bayesian inference>` updating of a prior derived from the {term}`physics of failure <Physics of failure>`, using relevant data even with limited sample size, is generally preferred over a pure {term}`physics of failure <Physics of failure>` approach, see Sections  and 4.6.5 for guidance.
 
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca_table4_6')" placeholder="Search table...">
+
 ```{list-table} Mechanical part types, associated failure mechanisms and modelling recommendations
 :name: meca-table4-6
-* -
-```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-6-html')" placeholder="Search table...">
-
-<div class="scroller">
-	<table id="meca-table4-6-html" class="myTable">
+* - <table id="meca_table4_6" class="myTable">
 		<thead>
 			<tr class="db-header">
 				<th colspan="5"></th>
@@ -339,11 +377,6 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 			<td>NA</td>
 		</tr>
 	</table>
-</div>
-
-```{admonition} Under construction
-:class: todo
-Table above to be computed
 ```
 
 ## Selection of methods for assembly level mechanical reliability prediction

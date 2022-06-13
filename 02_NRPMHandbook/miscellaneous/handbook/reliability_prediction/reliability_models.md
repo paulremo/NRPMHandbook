@@ -19,7 +19,7 @@ The reliability model is either
 1. an exponential distribution (constant failure rate) or 
 2. a constant probability of success or constant probability of failure ( = 1- Probability of success) supported by Binomial model, depending on the nature of the item.
 
-The basic reliability data are provided in {numref}`Reliability data` with the associated framework.
+The basic reliability data are provided in {numref}`misc_table4_8` with the associated framework.
 
 The reliability “standard model” is then calculated based on the process presented in {numref}`misc_5_5`.
 

@@ -70,12 +70,14 @@ Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
 - {term}`TM`
 - {term}`SPF`
 
-(misc_table4_6)=
 ```{list-table} Occurrence scale with 10 levels
-:class: interactive-table
-:name: Occurrence scale with 10 levels
+:name: misc_table4_6
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/misc_table4_6.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+* - <table id="misc-tabletest" class="myTable">
+        <tr>
+            <td><img src="../../picture/table4_6.png" alt="Table 6 Miscellaneous" style="height: 600px;"></td>
+        </tr>
+    </table>
 ```
 
 - {term}`TRL`
@@ -87,7 +89,7 @@ The occurrence scale of {numref}`misc_5_7_2` is used to derive, based on enginee
 
 * In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a {term}`HF/RF passive part <HF/RF passive part>` which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
 * A probability of occurrence is assigned to every {term}`failure mode <Failure mode>` and the sum provides the probability of occurrence of the item.
-* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the {term}`failure mode <Failure mode>`, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}`Occurrence scale with 10 levels`) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
+* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the {term}`failure mode <Failure mode>`, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}`misc_table4_6`) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
 
 
 This represents the basic failure rate or the basic probability of failure.

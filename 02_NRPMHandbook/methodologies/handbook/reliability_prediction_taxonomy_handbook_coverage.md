@@ -18,11 +18,6 @@ Space projects are typically divided in seven life cycle phases from 0 to F, as 
 
 The duration of the mission is determined by the specified lifetime, counting from launch to end-of-life (disposal) of a spacecraft; sometimes the disposal phase is included to consider deorbiting / reorbiting success calculations. Possible lifetime extensions increase the duration of operations in-orbit. In addition, also information about mission phases prior to launch may need to be considered as an input for reliability prediction, e.g. to consider design and manufacturing process contributions, or to account for stresses experienced during verification testing.
 
-```{admonition} Todo
-:class: todo
-Miss reference in bibliography
-```
-
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table4-1')" placeholder="Search table...">
 
 ```{list-table} Project life cycle and mission phases for typical space projects.
@@ -72,11 +67,6 @@ Early life failures are avoided with the aid of screening, testing and quality c
 
 Wear-out failures are considered during the design of a space system, e.g. by selecting suitable components or materials for the design life time and conditions of use. The objective is to ensure that all components remain within their useful life during the specified lifetime of the system; typically, a margin is considered to account for variability and uncertainties in the prediction of the component’s life expectation. Modelling wear-out effects, requiring a departure from the constant failure rate assumption, becomes relevant for items that exhibit an increasing failure rate already during the design lifetime (safe life qualification not possible, or not fully effective), or more broadly in the case of a life time extension, see {numref}`methodo_5_3_2_6` for details.
 
-```{admonition} Todo
-:class: todo
-Refer to section above
-```
-
 (methodo_4_2)=
 ## Classification of space systems and spacecraft elements
 
@@ -100,7 +90,7 @@ The handbook is generally applicable to all spacecraft missions, although limite
 
 Due to the environments and technologies considered, it is not recommended to directly use the handbook for other types of space products, such as launchers or ground segments, even though parts of the methodology can still be applicable. Also, it should be noted that the focus is on systems that are non-repairable, possibly requiring additional considerations for repairable systems.
 
-Finally, it should be noted that the handbook generally assumes a level of quality assurance as usual for spacecrafts manufactured by major satellite prime contractors. The methodology and methods can of course be used also in other applications such as microsats or for “New Space” applications. However, the models, background data and underlying assumptions may not be fully applicable, especially when dealing with process and quality related contributions to unreliability, e.g. for reliability prediction of EEE components and assemblies **Chapter 9** or when modelling systematic failures based on IOR (**Chapter 12**).
+Finally, it should be noted that the handbook generally assumes a level of quality assurance as usual for spacecrafts manufactured by major satellite prime contractors. The methodology and methods can of course be used also in other applications such as microsats or for “New Space” applications. However, the models, background data and underlying assumptions may not be fully applicable, especially when dealing with process and quality related contributions to unreliability, e.g. for reliability prediction of EEE components and assemblies {numref}`sec_eee_handbook` or when modelling systematic failures based on IOR ({numref}`sec_sys_handbook`).
 
 (methodo_4_2_2)=
 ### Levels of assembly from part to system
@@ -264,14 +254,14 @@ The following subsections give a brief overview on the coverage in terms of spac
 (methodo_4_4_1)=
 ### Elements coverage
 
-To simplify the application of the handbook for users in practice, {numref}`methods` is structured based on the technical domains introduced in {numref}`methodo_4_2_3`:
+To simplify the application of the handbook for users in practice, {numref}`sec_eee_handbook`, {numref}`sec_mech_handbook`, {numref}`sec_misc_handbook`, {numref}`sec_sys_handbook` are structured based on the technical domains introduced in {numref}`methodo_4_2_3`:
 
-* **Chapter 9** for the modelling of **EEE** components and assemblies
-* **Chapter 10** for the modelling of **Mechanical** and structural parts and assemblies
-* **Chapter 11** for the modelling of **Miscellaneous** items
-* **Chapter 12** for **System level** considerations, independent of the technical domains
+* **{numref}`sec_eee_handbook`** for the modelling of **EEE** components and assemblies
+* **{numref}`sec_mech_handbook`** for the modelling of **Mechanical** and structural parts and assemblies
+* **{numref}`sec_misc_handbook`** for the modelling of **Miscellaneous** items
+* **{numref}`sec_sys_handbook`** for **System level** considerations, independent of the technical domains
 
-In terms of levels, **Chapter 9** to **Chapter 11** focus on elementary reliability modelling for parts or low levels of assemblies (up to function / equipment level) in each technical domain, whereas the approaches discussed in **Chapter 12** can be applied at any level to systems in the generic sense.
+In terms of levels, {numref}`sec_eee_handbook` to {numref}`sec_misc_handbook` focus on elementary reliability modelling for parts or low levels of assemblies (up to function / equipment level) in each technical domain, whereas the approaches discussed in {numref}`sec_sys_handbook` can be applied at any level to systems in the generic sense.
 
 (methodo_4_4_2)=
 ### Root cause coverage
@@ -292,5 +282,5 @@ Each chapter in {numref}`methods` of the handbook (Models) provides information 
     * For Miscellaneous items, the methodology includes the consideration of wear‐out failures, modelled beyond the mission lifetime based on an increasing failure rate and with model parameters related to the lifetime qualification of the items. 
     * System level considerations of wear-out modelling can be found in the system chapter, including approaches for the combination of a constant failure rate for random failures with a separate wear-out model implying increasing failure rates.
 * EXTRINSIC FAILURES: Many of the environmental stresses considered for the definition of extrinsic failures are in fact part of the normal environment for a spacecraft and its components. Some of them are thus considered as “stress contributors” for the random failure modelling. Others are assumed to be covered and effectively avoided by different design disciplines and thus excluded from the base methodology.
-    * A dedicated discussion of Extrinsic root causes by technical domain can be found in each of the three chapters related to reliability prediction for EEE, Mechanical and Miscellaneous items.
+    * A dedicated discussion of Extrinsic root causes by technical domain can be found in each of the three following chapters : {ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>`.
 
