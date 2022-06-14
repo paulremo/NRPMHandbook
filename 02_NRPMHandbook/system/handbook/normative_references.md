@@ -1,6 +1,6 @@
 # Normative References
-
-```{admonition} Under construction
-:class: todo
-The content of this page is missing and will be provided in a future version of the NRPM digital handbook.
+```{bibliography}
+:filter: keywords % "nr"
+:labelprefix: NR_SYS_
+:keyprefix: sys-
 ```
