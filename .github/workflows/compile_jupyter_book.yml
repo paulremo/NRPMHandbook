@@ -34,4 +34,4 @@ jobs:
         run: jupyter-book build -W 02_NRPMHandbook
 
       - name: validate HTML links
-        run: linkchecker 02_NRPMHandbook\_build\html\home.html
+        run: linkchecker 02_NRPMHandbook/_build/html/home.html
