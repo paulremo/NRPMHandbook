@@ -235,11 +235,7 @@ For operating conditions it is necessary to define the weights per contributor a
 ```{list-table} Values of factors per their ranking
 :name: misc_table4_4
 
-* - <table id="misc-tabletest" class="myTable">
-        <tr>
-            <td><img src="../../picture/table4_4.png" alt="Table 4 Miscellaneous" style="height: 600px;"></td>
-        </tr>
-    </table>
+* - ![Table 4 Miscellaneous](../../picture/table4_4.png)
 ```
 
 The column _“value”_ provides the factors depending on the classification (column _“scale”_).
@@ -412,9 +408,5 @@ An example of calculation is presented in {numref}`misc_table4_5`.
 ```{list-table} Example of a reliability calculation for a miscellaneous item
 :name: misc_table4_5
 
-* - <table id="misc-tabletest" class="myTable">
-        <tr>
-            <td><img src="../../picture/table4_5.png" alt="Table 5 Miscellaneous" style="height: 600px;"></td>
-        </tr>
-    </table>
+* - ![Table 5 Miscellaneous](../../picture/table4_5.png)
 ```
