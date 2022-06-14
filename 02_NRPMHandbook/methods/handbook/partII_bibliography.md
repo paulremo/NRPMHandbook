@@ -7,3 +7,10 @@
 :labelprefix: BR_METHOD_
 :keyprefix: method-
 ```
+
+
+```{bibliography}
+:filter: keywords % "nr-method"
+:labelprefix: NR_METHOD_
+:keyprefix: method-
+```

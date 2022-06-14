@@ -1,15 +1,10 @@
 (method_8)=
 # Uncertainties in the prediction results
 
-```{epigraph}
-
--- Katharina Fischer, Matrisk GmbH
-```
-
 (method_8_1)=
 ## Uncertainties of reliability estimates based on Part III models
 
-Unless otherwise stated, the prediction models provided in **Part III** of the handbook aim at providing realistic estimates, similar to average values observed in orbit. Nevertheless, the predictions will never perfectly match reality. It is the purpose of the present chapter to discuss various sources of uncertainties affecting the prediction results and how these are considered in the methodology. {numref}`method_8_3_2` at the end of this Chapter provides a practical approach that can be used for the identification of the most important uncertainties associated with a prediction, which should be communicated together with the prediction result.
+Unless otherwise stated, the prediction models provided in {ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>` aim at providing realistic estimates, similar to average values observed in orbit. Nevertheless, the predictions will never perfectly match reality. It is the purpose of the present chapter to discuss various sources of uncertainties affecting the prediction results and how these are considered in the methodology. {numref}`method_8_3_2` at the end of this Chapter provides a practical approach that can be used for the identification of the most important uncertainties associated with a prediction, which should be communicated together with the prediction result.
 
 Obviously, aiming at realistic estimates also requires realistic model input. Assumptions made during model usage should be clearly marked and justified by the user. Model usage uncertainties will also be discussed in the following
 
@@ -116,7 +111,7 @@ To assess the uncertainties associated with a prediction model or method and its
 
 Based on the discussion in {numref}`method_8_2`, the identification of uncertainty sources will not be limited to statistical uncertainties, but considering epistemic uncertainties in a more general sense. Statistical uncertainties (focussing on those still relevant at system level) are considered only as one potential uncertainty source and the distinction between statistical and model uncertainties will not be stressed any further. Instead, the questionnaires will distinguish between model development uncertainties (including statistical uncertainties) and model usage uncertainties.
 
-Answers to the questionnaires assessing the model development uncertainties associated with the models used in **Part III** of this handbook are collected in {numref}`annexII_B`.
+Answers to the questionnaires assessing the model development uncertainties associated with the models used in {ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>` are collected in {numref}`annexII_B`.
 
 (method_8_3_1)=
 ### Model development uncertainties
@@ -280,7 +275,7 @@ Models from handbooks and published data sources are assessed using the same app
 
 *   - <table class="easy-table" id="method_table8_6">
             <tr>
-                <td class="full-span" colspan="3">1 Physic of failure : Inputs</td>
+                <td class="full-span" colspan="3">1 Physics of failure : Inputs</td>
             </tr>
             <tr>
                 <td rowspan="5">1.1</td>
@@ -379,7 +374,7 @@ Models from handbooks and published data sources are assessed using the same app
 (method_8_3_2)=
 ### Model usage uncertainties
 
-Model usage uncertainties are introduced by the model user, e.g. when making assumptions for the model input. Also in this case the relevant sources of uncertainties should be identified and the most important ones (having the largest impact on the prediction) should be communicated together with the prediction. The questionnaire given in Table 8‑3 can be used for this purpose.
+Model usage uncertainties are introduced by the model user, e.g. when making assumptions for the model input. Also in this case the relevant sources of uncertainties should be identified and the most important ones (having the largest impact on the prediction) should be communicated together with the prediction. The questionnaire given in {numref}`method-table8-7` can be used for this purpose.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_7')" placeholder="Search table...">
 
@@ -506,7 +501,7 @@ For an efficient usage of the questionnaire in {numref}`method-table8-7`, in con
 
     -   Relevant uncertainty sources introduced at system level are likely to have a larger impact on the prediction that uncertainties introduced at lower levels.
 
-    -   The last question in **Section 1.2`** of the questionnaire, related to the uncertainties inherent in predictions at lower levels, may remain unanswered in the first iteration. To proceed with the next steps, it is only relevant to identify the components (systems or parts) having the largest contribution to overall unreliability
+    -   The last question in Section 1.2 of the questionnaire, related to the uncertainties inherent in predictions at lower levels, may remain unanswered in the first iteration. To proceed with the next steps, it is only relevant to identify the components (systems or parts) having the largest contribution to overall unreliability
 
 -   Apply the questionnaire to assess the uncertainties associated with predictions at the next lower level, focusing on the components having the largest contribution
 

@@ -1,11 +1,6 @@
 (method_7)=
 # Bayesian methods for reliability prediction modelling
 
-```{epigraph}
-
--- Katharina Fischer, Matrisk GmbH
-```
-
 (method_7_1)= 
 ## The Bayes rule and its application for estimation and model updating
 
@@ -64,11 +59,13 @@ To apply Bayesian methods for parameter estimation, the prior distribution ${f'}
 
 Applying Bayesian updating of a reliability estimate with new statistical data generally requires the following steps:
 
--   **Formulation of the likelihood\
-    **As a first step, a distribution type representing the observed data must be selected, e.g. Exponential, Weibull or another Time-to-failure distribution if the data contains observations of the time to failure (or number of cycles to failure) during several tests. The choice of the sampling distribution and the definition of the likelihood is discussed in {numref}`method_7_3`. In the likelihood formulation it also has to be considered if the data set is censored and if the distribution is truncated.
+-   **Formulation of the likelihood**
+    
+    As a first step, a distribution type representing the observed data must be selected, e.g. Exponential, Weibull or another Time-to-failure distribution if the data contains observations of the time to failure (or number of cycles to failure) during several tests. The choice of the sampling distribution and the definition of the likelihood is discussed in {numref}`method_7_3`. In the likelihood formulation it also has to be considered if the data set is censored and if the distribution is truncated.
 
--   **Formulation of the prior distribution\
-    **In a Bayesian analysis, one or several parameters of the sampling distribution are treated as random variables. The prior distribution should represent the available prior knowledge on these parameters, leading to an informative prior. A non-informative prior can be used if no prior information is available and the Bayesian analysis is used as an estimation method. Two steps are required to define the prior distribution
+-   **Formulation of the prior distribution**
+    
+    In a Bayesian analysis, one or several parameters of the sampling distribution are treated as random variables. The prior distribution should represent the available prior knowledge on these parameters, leading to an informative prior. A non-informative prior can be used if no prior information is available and the Bayesian analysis is used as an estimation method. Two steps are required to define the prior distribution
 
     -   Selection of the distribution type, e.g. considering the natural constraints of the distribution parameters. A conjugate prior may be selected to simplify the analysis
 
@@ -76,8 +73,9 @@ Applying Bayesian updating of a reliability estimate with new statistical data g
 
         The general principles of the prior definition are discussed in {numref}`method_7_4`, with some more practical guidance for specific applications provided in {numref}`method_7_6`.
 
--   **Bayesian updating with new data:***\
-    *Updating the prior with data leads to a new, posterior distribution for the parameters of the sampling distribution.
+-   **Bayesian updating with new data:**
+    
+    Updating the prior with data leads to a new, posterior distribution for the parameters of the sampling distribution.
 
     -   With a conjugate prior, analytic formulas are available to perform this step
 
@@ -199,7 +197,7 @@ Guidance on the selection of a censored and or truncated likelihood.
 
 In a Bayesian analysis, the distribution parameters $\mathbf{\theta}$ of the sampling distribution -- e.g. the failure rate in the case of an Exponential time-to-failure model -- are considered as random variables. The prior distribution represents the available knowledge for each model parameter, prior to the consideration of the new data set used for updating.
 
-Bayesian methods can be used with informative or non-informative priors. Guidance on the principle selection of a prior is provided in Figure 7‑3. In general, if an existing model is available and the aim is to update this prior, then the prior is called informative. If no data-based prior is available then it should be checked whether other information, like engineering knowledge or handbook data, is available and can be used to build an informative prior. Only in the case that no information is available except for the new data, a non-informative prior should be used.
+Bayesian methods can be used with informative or non-informative priors. Guidance on the principle selection of a prior is provided in {numref}`method_figure7_7`. In general, if an existing model is available and the aim is to update this prior, then the prior is called informative. If no data-based prior is available then it should be checked whether other information, like engineering knowledge or handbook data, is available and can be used to build an informative prior. Only in the case that no information is available except for the new data, a non-informative prior should be used.
 
 ```{figure} pictures/method_figure7_7.png
 ---
@@ -261,7 +259,7 @@ The reference prior is used e.g. for the Weibull distribution:
 ``  
 ```{math}
 :label: Equation Method 7.29
-{f'}_{\Theta}\left( \theta \right) \propto \frac{1}{\text{\alpha\beta}}
+{f'}_{\Theta}\left( \theta \right) \propto \frac{1}{\alpha \beta}
 ```
 ````
 
@@ -319,32 +317,32 @@ In general, when applying Bayes theorem for updating, the prior distribution and
 *   - ***Exponential*** Failure rate $\lambda_{X}$  
     - $\lambda_{X}\sim\text{Gamma}\left( \alpha',\beta' \right)$
     - $\alpha$ time-to-failure observations that sum to $\beta$ cumulated hours
-    - $$\alpha'' = \alpha' + n$$$$\mu_{\lambda_{X}}^{''} = \frac{\alpha''}{\beta''}$$ 
+    - $$\alpha'' = \alpha' + n, \mu_{\lambda_{X}}^{''} = \frac{\alpha''}{\beta''}$$ 
     - $\mu_{\lambda_{X}}^{''} = \frac{\alpha''}{\beta''}$
 *   - ***Gamma*** Rate $\beta_{X}$, Shape $\alpha_{X}$
     - $\beta_{X}\sim\text{Gamma}\left( \alpha',\beta' \right)$
     - $\alpha$ time-to-failure observations that sum to $\beta$ cumulated hours 
-    - $$\alpha'' = \alpha' + n \cdot \alpha_{X}$$ $$\beta'' = \beta' + \sum_{i = 1}^{n}{\widehat{x}}_{i}$$
+    - $$\alpha'' = \alpha' + n \cdot \alpha_{X}, \beta'' = \beta' + \sum_{i = 1}^{n}{\widehat{x}}_{i}$$
     - $\mu_{\beta_{X}}^{''} = \frac{\alpha''}{\beta''}$
 *   - ***Normal*** Mean $\mu_{X}$, Standard dev. $\sigma_{X}$ 
     - $\mu_{X}\sim\text{Normal}\left( \mu',\sigma' \right)$, $\sigma_{X}$ assumed to be known
     - Sample mean $\mu$ of time-to-failure data, standard deviation of sample mean $\sigma$ 
-    - $$\mu'' = \left( \sigma'' \right)^{2} \cdot \left( \frac{\mu'}{\sigma'^{2}} + \frac{\sum_{i = 1}^{n}{\widehat{x}}_{i}}{\sigma_{X}^{2}} \right)$$, $$\sigma'' = \left( \frac{1}{\sigma'^{2}} + \frac{n}{\sigma_{X}^{2}} \right)^{- \frac{1}{2}}$$
+    - $$\mu'' = \left( \sigma'' \right)^{2} \cdot \left( \frac{\mu'}{\sigma'^{2}} + \frac{\sum_{i = 1}^{n}{\widehat{x}}_{i}}{\sigma_{X}^{2}} \right), \sigma'' = \left( \frac{1}{\sigma'^{2}} + \frac{n}{\sigma_{X}^{2}} \right)^{- \frac{1}{2}}$$
     - $\mu_{\mu_{X}}^{''} = \mu''$
 *   - ***Lognormal*** Mean $\mu_{X}$, Standard dev. $\sigma_{X}$
     - $\mu_{X}\sim\text{Normal}\left( \mu',\sigma' \right)$, $\sigma_{X}$ assumed to be known 
     - Sample mean $\mu$ of logarithmic data, standard deviation of sample mean $\sigma$
-    - $\mu'' = {\sigma''}^{2} \cdot \left( \frac{\mu'}{\sigma'^{2}} + \frac{\sum_{i = 1}^{n}{\ln{\widehat{x}}_{i}}}{\sigma_{X}^{2}} \right)$, $$\sigma'' = \left( \frac{1}{\sigma'^{2}} + \frac{n}{\sigma_{X}^{2}} \right)^{- \frac{1}{2}}$$                                                  
+    - $\mu'' = {\sigma''}^{2} \cdot \left( \frac{\mu'}{\sigma'^{2}} + \frac{\sum_{i = 1}^{n}{\ln{\widehat{x}}_{i}}}{\sigma_{X}^{2}} \right), \sigma'' = \left( \frac{1}{\sigma'^{2}} + \frac{n}{\sigma_{X}^{2}} \right)^{- \frac{1}{2}}$$                                                  
     - $\mu_{\mu_{X}}^{''} = \mu''$
 *   - ***Weibull*** Scale $\alpha_{X}$, Shape $\beta_{X}$
     - $\frac{1}{{\alpha_{X}}^{\beta_{X}}}\sim\text{Gamma}\left( \alpha',\beta' \right)$, $\beta_{X}$ assumed to be known
     - $\text{α\ }$observations with sum $\beta$ of the $\beta_{X}$th power of each observation
-    - $$\alpha'' = \alpha' + n$$, $$\beta' = \beta' + \sum_{i = 1}^{n}{\widehat{x}}_{i}^{\beta_{X}}$$
+    - $$\alpha'' = \alpha' + n, \beta' = \beta' + \sum_{i = 1}^{n}{\widehat{x}}_{i}^{\beta_{X}}$$
     - $\mu_{\alpha_{X}}^{''}$ can be estimated numerically
 *   - ***Geometric*** Probability $p_{X}$  
     - $p_{X}\sim\text{Beta}\left( \alpha',\beta' \right)$
     - $\alpha$ demands-to failure observations that sum to $\beta$ total demands 
-    - $$\alpha'' = \alpha' + n$$, $$\beta'' = \beta' + \sum_{i = 1}^{n}{\widehat{x}}_{i}$$
+    - $$\alpha'' = \alpha' + n, \beta'' = \beta' + \sum_{i = 1}^{n}{\widehat{x}}_{i}$$
     - $\mu_{p_{X}}^{''} = \frac{\alpha''}{\alpha^{''} + \beta''}$
 ```
 
@@ -368,7 +366,7 @@ In general, when applying Bayes theorem for updating, the prior distribution and
 *   - ***Binomial*** Probability $p_{X}$
     - $$p_{X}\sim\text{Beta}\left( \alpha',\beta' \right)$$
     - $\alpha$ failures versus $\beta$ successes
-    - $$\alpha'' = \alpha' + n_{f}$$, $$\beta^{''} = \beta^{'} - N \minuso n_{f}$$
+    - $$\alpha'' = \alpha' + n_{f}, \beta^{''} = \beta^{'} - N - n_{f}$$
     - $$\mu_{p_{X}}^{''} = \frac{\alpha''}{\alpha^{''} + \beta''}$$
 ```
 
@@ -456,7 +454,6 @@ name: method_figure7_9
 ---
 Posterior probability distribution for the estimated failure rate using a conjugate prior distribution.
 ```
-````
 
 **Example: Analytical Bayes approach for the Exponential distribution with zero failures**
 
@@ -509,7 +506,6 @@ name: method_figure7_10
 ---
 Estimated failure rate as a function of the operation hours in the case no failure event was observed, using a Bayesian approach with non-informative prior.
 ```
-````
 
 The average failure rate can be estimated by
 
@@ -610,7 +606,7 @@ Several MCMC programs and toolboxes are available, e.g. WinBUGS/OpenBUGS **\[BR2
 
 -   Bayesian model choice and model validation
 
-In the following a numerical example of the application of the MCMC is shown. In this example the failure hour data set given in {numref}`method-table7-4` is used, allowing a comparison of the results with the analytic solution. Another example for the use of numerical methods can be found in **Chapter 10 (Part III)** for Mechanical reliability prediction, applying Bayesian updating to improve a wear-out model derived from the Physics of Failure with In Orbit Return observations.
+In the following a numerical example of the application of the MCMC is shown. In this example the failure hour data set given in {numref}`method-table7-4` is used, allowing a comparison of the results with the analytic solution. Another example for the use of numerical methods can be found in {numref}`sec_mech_handbook` for Mechanical reliability prediction, applying Bayesian updating to improve a wear-out model derived from the Physics of Failure with In Orbit Return observations.
 
 **Example: Numerical Bayes approach for the Exponential distribution**
 
@@ -667,7 +663,6 @@ name: method_figure7_11
 ---
 MCMC chain for the example of failure rate estimation with non-informative prior, considering the data presented in {numref}`method-table7-4`
 ```
-````
 
 From the Markov chain the statistical characteristics of the estimated parameter can be obtained, i.e. the mean value, the standard deviation and the distribution type. In this example, using a burn in phase of 10'000 simulations and 40'000 simulations for the chain, the mean value and the standard deviation are
 
@@ -693,7 +688,7 @@ In the following, some practical guidance is provided, mainly focussed on the de
 
 Bayesian updating for a prior derived from a previous statistical analysis on an independent data set is the most straight-forward case for the definition of a prior distribution. The parameters of the prior distribution (the hyperparameters) are in this case simply derived from the existing ("prior") data set. The advantage of Bayesian updating in this context is that information from a previous analysis can still be considered even without having access to the original data sample. Note, however, that this requires that not only a point estimate for the model parameters, but also some information on the statistical uncertainty associated with the parameter estimate is available.
 
-It is important to note that priors derived with the aid of statistical estimation methods provide information only on statistical uncertainty resulting from sample size limitations. A more general view on various modelling uncertainties is taken in **Chapter 8** of this handbook, including a discussion of different sources of uncertainty. The analyst may choose to increase the variance of the prior distribution to account for additional uncertainty sources, e.g. if the prior data does not exactly represent the considered technology or operating conditions. An increased variance of the prior is equivalent to reducing the "equivalent sample size" of the prior data set and thus reducing the weight of the prior, and giving more weight to the new data. Obviously, this is only justified if the new data set does not introduce large additional uncertainties as well.
+It is important to note that priors derived with the aid of statistical estimation methods provide information only on statistical uncertainty resulting from sample size limitations. A more general view on various modelling uncertainties is taken in {numref}`methods` of this handbook, including a discussion of different sources of uncertainty. The analyst may choose to increase the variance of the prior distribution to account for additional uncertainty sources, e.g. if the prior data does not exactly represent the considered technology or operating conditions. An increased variance of the prior is equivalent to reducing the "equivalent sample size" of the prior data set and thus reducing the weight of the prior, and giving more weight to the new data. Obviously, this is only justified if the new data set does not introduce large additional uncertainties as well.
 
 (method_7_6_2)=
 ### Updating of reliability estimates derived from reliability handbooks
@@ -702,13 +697,13 @@ Bayesian updating of estimates derived from reliability handbooks in principle f
 
 As a general rule, the probabilistic model for the likelihood (sampling distribution) should be consistent with the time-to-failure distribution assumed in the handbook. Many handbooks assume an Exponential distribution for the random time to failure (constant failure rate assumption), even though this may not be appropriate for certain applications, e.g. for mechanical parts.
 
-A simple approach to transform an Exponential model provided by a reliability handbook to a Weibull model that is equivalent in terms of average failure rates is to make an assumption on the Weibull shape parameter $\beta_{X}$, allowing to derive the scale parameter $\alpha_{X}$ from the constant failure rate estimates provided by the handbook **\[RD14\]** . As an alternative, the Weibull shape parameter $\beta_{X}$ may be derived from new data, or updated together with the scale parameter $\alpha_{X}$. The prior distribution of $\beta_{X}$ then has to be defined based on expert judgement or assuming a mean value $E\left\lbrack \beta_{X} \right\rbrack = 1$ (together with some standard deviation), for consistency with the Exponential distribution assumed by the handbook.
+A simple approach to transform an Exponential model provided by a reliability handbook to a Weibull model that is equivalent in terms of average failure rates is to make an assumption on the Weibull shape parameter $\beta_{X}$, allowing to derive the scale parameter $\alpha_{X}$ from the constant failure rate estimates provided by the handbook {cite:t}`method-NPRD-16` . As an alternative, the Weibull shape parameter $\beta_{X}$ may be derived from new data, or updated together with the scale parameter $\alpha_{X}$. The prior distribution of $\beta_{X}$ then has to be defined based on expert judgement or assuming a mean value $E\left\lbrack \beta_{X} \right\rbrack = 1$ (together with some standard deviation), for consistency with the Exponential distribution assumed by the handbook.
 
 Once the distributional models have been chosen (e.g. Exponential or Weibull sampling distribution, with associated priors), the parameters of the prior distribution have to be defined based on the information given in a handbook. This will typically require some additional assumptions, as most handbooks only provide point estimates for the failure rate without a detailed discussion of their uncertainty.
 
-As a first step, the statistical background and methodology underlying a handbook needs to be reviewed in order to determine whether the prediction may be seen as a mean value or rather as conservative estimate such as an upper confidence bound for the failure rate. Unfortunately, this is not always clearly defined in the handbooks. A common assumption is to take the handbook values as 60% confidence estimates for the failure rate if no alternative definition is available (see e.g. ECSS-Q-HB-30-08A **\[RD4\]** ).
+As a first step, the statistical background and methodology underlying a handbook needs to be reviewed in order to determine whether the prediction may be seen as a mean value or rather as conservative estimate such as an upper confidence bound for the failure rate. Unfortunately, this is not always clearly defined in the handbooks. A common assumption is to take the handbook values as 60% confidence estimates for the failure rate if no alternative definition is available (see e.g. {cite:t}`method-ECSS-Q-ST-30C`).
 
-In addition, the uncertainty of the predicted failure rate needs to be quantified based on the information given in a handbook and/or expert judgement. Many handbooks do not provide confidence bounds for the failure rate, as the estimates are based on a combination of various data sets and not all uncertainties associated with the prediction are of statistical origin. An alternative approach is to treat the ratio between the "observed" and the "predicted" (based on a handbook) failure rate as a random variable, covering all uncertainties associated with the prediction method. Quantitative estimates for this ratio are provided e.g. in the NPRD data handbook **\[RD14\]** , in 217plus **\[RD11\]** , and in **\[BR30\]** for calculations based on the FIDES guide **\[RD10\]** . The figures provided may serve as rough approximation for the "model uncertainty" of the considered handbook methods and possibly also for other, similar reliability handbooks.
+In addition, the uncertainty of the predicted failure rate needs to be quantified based on the information given in a handbook and/or expert judgement. Many handbooks do not provide confidence bounds for the failure rate, as the estimates are based on a combination of various data sets and not all uncertainties associated with the prediction are of statistical origin. An alternative approach is to treat the ratio between the "observed" and the "predicted" (based on a handbook) failure rate as a random variable, covering all uncertainties associated with the prediction method. Quantitative estimates for this ratio are provided e.g. in the NPRD data handbook {cite:t}`method-NPRD-16` , in {cite:t}`method-HDBK-217Plus` , and in **\[BR30\]** for calculations based on the FIDES guide {cite:t}`method-UTE-C80-811` . The figures provided may serve as rough approximation for the "model uncertainty" of the considered handbook methods and possibly also for other, similar reliability handbooks.
 
 (method_7_6_3)=
 ### Prior definition based on expert elicitation
@@ -744,5 +739,5 @@ Bayesian updating can also be used in combination with Physics of Failure method
 
 The first application considers the distribution of physical variables, such as loads and material characteristics, which can be directly or indirectly observed during tests or operations. The selected probabilistic models should be updated whenever new data becomes available. The approach for updating of these basic variable distribution follows the same principles as discussed above. Also in this context, the prior may be defined based on alternative data sources, literature values, handbook data or expert judgement.
 
-A different situation occurs if a data sample with information on failures and successes (e.g. individual time-to-failure records for several items) is used to update a prior reliability estimate that has been derived using Physics of Failure methods. The advantage of this approach is that several sources of information can be combined consistently, allowing to make use of limited data samples which would not be sufficient for a pure statistical approach. The details of Bayesian updating for a prior derived from structural reliability methods is discussed in **Chapter 10 (Part III)** for Mechanical reliability prediction, including also some examples illustrating the use of this combined approach in practice. However, the basic principles and mathematical formulas are of course applicable also outside the mechanical domain.
+A different situation occurs if a data sample with information on failures and successes (e.g. individual time-to-failure records for several items) is used to update a prior reliability estimate that has been derived using Physics of Failure methods. The advantage of this approach is that several sources of information can be combined consistently, allowing to make use of limited data samples which would not be sufficient for a pure statistical approach. The details of Bayesian updating for a prior derived from structural reliability methods is discussed in {numref}`sec_mech_handbook` for Mechanical reliability prediction, including also some examples illustrating the use of this combined approach in practice. However, the basic principles and mathematical formulas are of course applicable also outside the mechanical domain.
 

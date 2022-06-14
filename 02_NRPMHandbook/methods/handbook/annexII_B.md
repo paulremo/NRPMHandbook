@@ -1,19 +1,19 @@
 (annexII_B)=
 # II.B Prediction uncertainties for Part III models
 
-In the following, the model development uncertainties associated with the prediction models presented in **Part III** of this handbook are summarized, using the format proposed in {numref}`method_8_3_1`. Note that the uncertainty of the prediction results depends not only on the uncertainties inherent in the model, but also on the use of these models, see {numref}`method_8_3_2` for details.
+In the following, the model development uncertainties associated with the prediction models presented in {ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>` are summarized, using the format proposed in {numref}`method_8_3_1`. Note that the uncertainty of the prediction results depends not only on the uncertainties inherent in the model, but also on the use of these models, see {numref}`method_8_3_2` for details.
 
 **Model development uncertainties associated with the EEE models**
 
-The models provided in **Chapter 9 (Part III)** are based on the FIDES **[RD10]**  approach, making use of a combined method with base failure rates derived from statistics (field return from on-ground applications) and scaling factors derived from the Physics of Failure. {numref}`method-table8-8` and {numref}`method-table8-9` summarize the uncertainties associated with these two modelling aspects.
+The models provided in {numref}`sec_eee_handbook`, are based on the {cite:t}`method-UTE-C80-811`  approach, making use of a combined method with base failure rates derived from statistics (field return from on-ground applications) and scaling factors derived from the Physics of Failure. {numref}`method-table8-8` and {numref}`method-table8-9` summarize the uncertainties associated with these two modelling aspects.
 
 **Model development uncertainties associated with the Mechanical models**
 
-Besides providing own models based on Structural Reliability Methods, **Chapter 10 (Part III)** makes reference also to external data sources such as the NPRD **\[RD14\]** and the NSWC **\[RD15\]** , which is based on a combined method using both statistics and Physics of Failure. The limitations of these data sources when used for space applications are discussed more in detail in **Chapter 10 (Part III)**. Here, only a quick overview is given using the common checklist format for the assessment of model development uncertainties from {numref}`method_8_3_1`.
+Besides providing own models based on Structural Reliability Methods, {numref}`sec_eee_handbook` makes reference also to external data sources such as {cite:t}`method-NPRD-16` and the {cite:t}`method-NSWC-11`, which is based on a combined method using both statistics and Physics of Failure. The limitations of these data sources when used for space applications are discussed more in detail in {numref}`sec_mech_handbook`. Here, only a quick overview is given using the common checklist format for the assessment of model development uncertainties from {numref}`method_8_3_1`.
 
 **Model development uncertainties associated with the models for Miscellaneous items**
 
-The “standard” model for Miscellaneous items, as defined in **Chapter 11 (Part III)**, has been developed based on IOR for an equivalent class of items. Model development uncertainties associated with this approach are listed in {numref}`method-table8-14`. For “non-standard” items only a general process for model development is provided and the model development uncertainties have to be assessed by the user.
+The “standard” model for Miscellaneous items, as defined in {numref}`sec_misc_handbook`, has been developed based on IOR for an equivalent class of items. Model development uncertainties associated with this approach are listed in {numref}`method-table8-14`. For “non-standard” items only a general process for model development is provided and the model development uncertainties have to be assessed by the user.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_8')" placeholder="Search table...">
 
