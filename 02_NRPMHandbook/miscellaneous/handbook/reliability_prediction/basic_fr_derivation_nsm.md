@@ -73,11 +73,7 @@ Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
 ```{list-table} Occurrence scale with 10 levels
 :name: misc_table4_6
 
-* - <table id="misc-tabletest" class="myTable">
-        <tr>
-            <td><img src="../../picture/table4_6.png" alt="Table 6 Miscellaneous" style="height: 600px;"></td>
-        </tr>
-    </table>
+* - ![Table 6 Miscellaneous](../../picture/table4_6.png)
 ```
 
 - {term}`TRL`

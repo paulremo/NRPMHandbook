@@ -850,11 +850,7 @@ It is obvious that for different values for $R_{i}(t)$ the same system reliabili
 
 **Equal Allocation**
 
-<<<<<<< HEAD
-This method equally distributes the system reliability on all the sub-systems below the system level {cite:t}`methodo-MIL-HDBK-338B` . The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by 
-=======
-This method equally distributes the system reliability on all the sub-systems below the system level ``{cite:t}`MIL-HDBK-338B` ``. The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by 
->>>>>>> fe1b61dd578ccebb207cefeecf27fde2255297a9
+This method equally distributes the system reliability on all the sub-systems below the system level ``{cite:t}`MIL-HDBK-338B` ``. The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by
 
 (misc_equation5_2)=
 ````{admonition} Equation

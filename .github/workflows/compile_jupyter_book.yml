@@ -24,6 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       - name: install dependencies
         run: |
@@ -32,3 +34,6 @@ jobs:
 
       - name: Build jupyter book (fail on warnings)
         run: jupyter-book build -W 02_NRPMHandbook
+
+      - name: validate HTML links
+        run: linkchecker 02_NRPMHandbook/_build/html/home.html
