@@ -13,7 +13,7 @@
 The following list is repeated from the Handbook Preface, using the same numbering of Reference Documents across all Parts.
 
 ```{bibliography}
-:filter: keywords % "nr-methodo"
+:filter: keywords % "nr"
 :labelprefix: NR_METHODO_
 :keyprefix: methodo-
 ```

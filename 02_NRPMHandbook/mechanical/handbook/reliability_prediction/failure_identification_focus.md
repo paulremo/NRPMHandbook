@@ -1,6 +1,7 @@
+(meca_4_4)=
 # Failure mechanisms identification and focus
 
-A full mechanical {term}`reliability prediction <Reliability prediction>` looking at all potential {term}`failure mechanisms <Failure mechanism>` and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude {term}`failure mechanism <Failure mechanism>` that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and {term}`failure mechanisms <Failure mechanism>`), before discussing how to model each {term}`failure mechanism <Failure mechanism>` in [Section 4.5](method_selection.md) and after.
+A full mechanical {term}`reliability prediction <Reliability prediction>` looking at all potential {term}`failure mechanisms <Failure mechanism>` and modes can require substantial efforts as well as inputs that may not be available especially in early phases of a space project. It is therefore reasonable to focus on what is dominating the probability of failure, and to exclude {term}`failure mechanism <Failure mechanism>` that are very unlikely to occur (compared to the dominating ones). The present section describes a step-wise procedure supporting the decision what should be modelled (i.e. which items/parts and {term}`failure mechanisms <Failure mechanism>`), before discussing how to model each {term}`failure mechanism <Failure mechanism>` in {numref}`meca_4_5` and after.
 
 To implement this procedure in practice, early interaction between design and reliability engineers is required. In particular, the following information exchange is necessary:
 
@@ -12,9 +13,9 @@ To implement this procedure in practice, early interaction between design and re
 (meca_4_4_1)=
 ## Failure dominance and focus of the prediction
 
-The first step before starting a reliability assessment is a clear definition of its objective and scope, i.e. the question and the associated boundary conditions shall be clearly stated and understood, see **Chapter 5 (Part I)** for details. Knowing the objective and scope is important also because it implicitly defines which events and consequently {term}`failure mechanisms <Failure mechanism>` need to be considered.
+The first step before starting a reliability assessment is a clear definition of its objective and scope, i.e. the question and the associated boundary conditions shall be clearly stated and understood, see {numref}`methodologies` for details. Knowing the objective and scope is important also because it implicitly defines which events and consequently {term}`failure mechanisms <Failure mechanism>` need to be considered.
 
-Before going into the detailed reliability assessment of a mechanical item, it is helpful to identify its main working principle using the classifications presented in  below. 
+Before going into the detailed reliability assessment of a mechanical item, it is helpful to identify its main working principle using the classifications presented in {numref}`meca-table4-3` below. 
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca_table4_3')" placeholder="Search table...">
 
@@ -60,12 +61,7 @@ Before going into the detailed reliability assessment of a mechanical item, it i
 
 ```{admonition} Note
 :class: note
-Note that some of these items may be covered by “standard” Miscellaneous models (Chapter Error: Reference source not found). However, the modelling approaches for Mechanical items provided in the present chapter may be useful in the case the “standard” Miscellaneous model based on IOR is not applicable and a “non-standard” model has to be developed by the user.
-```
-
-```{admonition} Under construction
-:class: todo
-miss ref above
+Note that some of these items may be covered by “standard” Miscellaneous models ({numref}`sec_misc_handbook`). However, the modelling approaches for Mechanical items provided in the present chapter may be useful in the case the “standard” Miscellaneous model based on IOR is not applicable and a “non-standard” model has to be developed by the user.
 ```
 
 The classification helps to preliminary identify the {term}`failure mechanisms <Failure mechanism>` that are most relevant at assembly level. For example, as soon as motorization is present, increase of friction due to lubrication wear or distortion play a dominant role for the overall item’s reliability. For passive and {term}`PYRO` mechanisms, fatigue and aging are expected to define the reliability. 
@@ -80,20 +76,16 @@ Typically, components falling into category III “Non-fluidic structural compon
 * Qualification is completed
 * {term}`Quality <Quality>` Assurance program is established
 
-```{admonition} Under construction
-:class: todo
-Miss ref just below x2
-```
-
-Under these conditions, it may be assumed that the reliability figure for the considered structure is equal to unity for practical purposes (in reality, it is just very close to unity). Note that the listed. {term}`Requirements <Requirement>` are generally fulfilled for standard structures manufactured with traditional (metallic) materials and manufacturing processes, and using structural factors of safety as defined in {term}`ECSS`-E-ST-32-10C Error: Reference source not found. {term}`Reliability predictions <Reliability prediction>` using {term}`structural reliability methods <Structural reliability method>` under these conditions yield very small probabilities of failure (see e.g. the case study in Error: Reference source not found, which is confirmed also by the good performance of structure in orbit. It should be noted that the probability of {term}`systematic failures <Systematic failure>` due to gross design, manufacturing or operations errors may not be negligible irrespective of these conclusions, especially in the case of new designs. 
+Under these conditions, it may be assumed that the reliability figure for the considered structure is equal to unity for practical purposes (in reality, it is just very close to unity). Note that the listed. {term}`Requirements <Requirement>` are generally fulfilled for standard structures manufactured with traditional (metallic) materials and manufacturing processes, and using structural factors of safety as defined in {term}`ECSS`-E-ST-32-10C {cite:t}`mec-ECSS-E-ST-32-10C`. {term}`Reliability predictions <Reliability prediction>` using {term}`structural reliability methods <Structural reliability method>` under these conditions yield very small probabilities of failure (see e.g. the case study in {cite:t}`mec-AO-1-8017-14-NL-KM`, which is confirmed also by the good performance of structure in orbit. It should be noted that the probability of {term}`systematic failures <Systematic failure>` due to gross design, manufacturing or operations errors may not be negligible irrespective of these conclusions, especially in the case of new designs. 
 
 For structures that do not fulfil the abovementioned conditions, reliability figures need to be calculated considering the relevant structural {term}`failure mechanism <Failure mechanism>`s. Studies aiming at the reusability of the flight hardware for multiple launches will need additional considerations.
 
+(meca_4_4_2)=
 ## Failure mechanisms completion
 
 The final step involves an assessment of relevant qualitative {term}`RAMS` data (e.g. FMEA reports, non-compliances reports, design review data packages, and history data) to identify critical {term}`failure modes <Failure mode>` and related {term}`failure mechanisms <Failure mechanism>`. The outcome shall be used to cross-check the conclusions from the previous steps and to consider additional {term}`failure mechanisms <Failure mechanism>` as relevant.
 
-Similar to the considerations made for the structural category in [Section 4.4.1](meca_4_4_1), it can be justified to exclude certain parts and {term}`failure mechanisms <Failure mechanism>` from the analysis, provided that all or most of the following conditions are fulfilled:
+Similar to the considerations made for the structural category in {numref}`meca_4_4_1`, it can be justified to exclude certain parts and {term}`failure mechanisms <Failure mechanism>` from the analysis, provided that all or most of the following conditions are fulfilled:
 
 * High factors of safety and/or low variability 
 * Space qualified components
@@ -118,12 +110,7 @@ For some items and/or {term}`failure mechanisms <Failure mechanism>`, e.g. one-s
 
 Regarding the choice of the test level or duration, it is of course more interesting to test at higher levels (ideally up to failure), and there is no disbenefit from a reliability perspective as long as it is not the flight item that is tested. However, this requires good understanding of the relevant {term}`failure mechanisms <Failure mechanism>`. For example, to screen for premature failure (infant mortality) of parts prone to fatigue or wear, it can be necessary to reach a certain number of cycles with substantial loading while keeping cumulated damage as low as possible; aging effects might affect explosive devices which might be critical for long duration missions. Finally, it should be controlled that the test environment is representative.
 
-To summarize, thorough testing of the flight item is a good argument to neglect a certain item or {term}`failure mechanism <Failure mechanism>` during the {term}`reliability prediction <Reliability prediction>`, especially when all or most of the other conditions listed above are true. If the probability of failure shall anyway be quantified, it is possible to consider the fact that the flight item has survived the verification test by adapting the strength distribution when using {term}`structural reliability methods <Structural reliability method>` Error: Reference source not found. A possible application of this approach may be to trade-off between reliability and mass for one-cycle-to-failure items such as tanks.
+To summarize, thorough testing of the flight item is a good argument to neglect a certain item or {term}`failure mechanism <Failure mechanism>` during the {term}`reliability prediction <Reliability prediction>`, especially when all or most of the other conditions listed above are true. If the probability of failure shall anyway be quantified, it is possible to consider the fact that the flight item has survived the verification test by adapting the strength distribution when using {term}`structural reliability methods <Structural reliability method>` {cite:t}`mec-AO-1-8017-14-NL-KM`. A possible application of this approach may be to trade-off between reliability and mass for one-cycle-to-failure items such as tanks.
 
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
-
-If it is not possible to test the flight item, assuming a reliability of one needs to be further justified, ideally with the aid of quantitative {term}`reliability prediction <Reliability prediction>`. Using the {term}`structural reliability method <Structural reliability method>`s discussed in Section 4.6, it is straightforward to account for the factors of safety applied during design, and space heritage without failures and/or extensive testing can easily be considered with {term}`statistical method <Statistical method>`s, or with the aid of {term}`Bayesian inference <Bayesian inference>` updating of preliminary reliability estimates (Section 4.6.5 and Chapter 7 Part II) if the sample size is not large enough.
+If it is not possible to test the flight item, assuming a reliability of one needs to be further justified, ideally with the aid of quantitative {term}`reliability prediction <Reliability prediction>`. Using the {term}`structural reliability method <Structural reliability method>`s discussed in {numref}`meca_4_6`, it is straightforward to account for the factors of safety applied during design, and space heritage without failures and/or extensive testing can easily be considered with {term}`statistical method <Statistical method>`s, or with the aid of {term}`Bayesian inference <Bayesian inference>` updating of preliminary reliability estimates ({numref}`meca_4_6_5` and {numref}`methods`) if the sample size is not large enough.
 
