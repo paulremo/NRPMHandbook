@@ -1085,7 +1085,7 @@ An example for reliability allocation using FOO method is shown in {numref}`meth
 ```
 
 (methodo_5_4_3)=
-### Reliability assessment for system architecture development during conceptual design 
+## Reliability assessment for system architecture development during conceptual design 
 
 The outcome of the conceptual design phase are concepts that will be implemented during the next stages of the system development. The selection of the preferred system architecture is essentially a trade-off among the various architecture options. According to {cite:t}`methodo-ECSS-E-ST-10C`, a trade-report should contain the result of the evaluation of every identified alternative design solution with regard to the key technical requirements. For each alternative design solution, the following should be performed: 
 
