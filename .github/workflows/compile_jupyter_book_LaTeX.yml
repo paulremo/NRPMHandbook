@@ -40,3 +40,5 @@ jobs:
         with:
           root_file: 02_NRPMHandbook/_build/latex/book.tex
           latexmk_use_xelatex: true
+        env:
+          TEXINPUTS: ".:./02_NRPMHandbook/_build/latex//:"
