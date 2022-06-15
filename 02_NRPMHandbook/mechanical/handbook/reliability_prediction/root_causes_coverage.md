@@ -20,7 +20,7 @@
     - Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in-orbit (e.g. temperature) should be considered as stress contributors in the modelling of random and wear-out failures, see {numref}`meca-table4-2` in {numref}`meca_4_2_3` for the most relevant interactions. A separate modelling may be required if the probability of additional failure mechanisms induced by the space environment cannot be neglected – e.g. space debris impact, see {numref}`meca_4_2_3` for details.
 *   - Systematic failures
     - Process related failures due to minor design and manufacturing weaknesses can be considered with the methods described in {numref}`meca_4_5`, provided that the failure process or mechanism remains unchanged (cf. random failures). 
-    Gross design or manufacturing errors must be considered separately, see {numref}`sys_4_9` in the System level chapter.
+    Gross design or manufacturing errors must be considered separately, see {numref}`syst_4_9` in the System level chapter.
 ```
 
 (meca_4_2_1)=
@@ -96,6 +96,6 @@ Space debris and micro meteoroid impact will not be discussed any further in the
 (meca_4_2_4)=
 ## Systematic failures
 
-Failures due to design and manufacturing weaknesses can to a certain extent be considered with the methodology presented in this chapter, provided that the failure process or mechanism remains unchanged. Failures due to gross errors during design, manufacturing or operations are discussed in {numref}`sys_4_9`. They are out of scope for the present chapter.
+Failures due to design and manufacturing weaknesses can to a certain extent be considered with the methodology presented in this chapter, provided that the failure process or mechanism remains unchanged. Failures due to gross errors during design, manufacturing or operations are discussed in {numref}`syst_4_9`. They are out of scope for the present chapter.
 
 
