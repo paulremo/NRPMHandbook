@@ -61,7 +61,6 @@ For mechanical reliability assessment, the following aspects need to be consider
   
 The extrinsic effects contributing most to mechanical {term}`failure mechanisms <Failure mechanism>` are summarized in {numref}`meca_4_2_1`. The full list of the environments which might cause {term}`extrinsic failures <Extrinsic failure>` is presented in {numref}`methodologies`.
 
-(meca_table4_2)=
 ```{list-table} Environments with the highest contribution to the extrinsic failures
 :name: meca-table4-2
 :header-rows: 1

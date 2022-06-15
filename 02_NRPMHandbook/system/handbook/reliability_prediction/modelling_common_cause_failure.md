@@ -1,6 +1,7 @@
+(syst_4_7)=
 # Modelling of common cause failure
 
-In order to quantitatively assess the influence of {term}`common cause failure <Common cause failure>` on the system reliability several methods exist, for example Error: Reference source not found:
+In order to quantitatively assess the influence of {term}`common cause failure <Common cause failure>` on the system reliability several methods exist, for example {cite:t}`sys-Jones2012CommonCF`:
 
 -   **Basic Parameter Model** -- uses direct probability of the {term}`common cause failure <Common cause failure>` event.
 
@@ -12,17 +13,12 @@ In order to quantitatively assess the influence of {term}`common cause failure <
 
 -   **Shock Model** -- Assumes that {term}`common cause failure <Common cause failure>` results from external events or shocks that occur with an average rate.
 
-In the following, the {term}`contributing factors <Contributing factor>` to {term}`common cause failures <Common cause failure>` are explained, see Section Error: Reference source not found. The quantitative assessment of {term}`common cause failures <Common cause failure>` will be explained using the example of the basic parameter model, see Section Error: Reference source not found, and the beta-factor model, see Section Error: Reference source not found.
+In the following, the {term}`contributing factors <Contributing factor>` to {term}`common cause failures <Common cause failure>` are explained, see {numref}`syst_4_7_1`. The quantitative assessment of {term}`common cause failures <Common cause failure>` will be explained using the example of the basic parameter model, see {numref}`syst_4_7_2`, and the beta-factor model, see {numref}`syst_4_7_3`.
 
-```{admonition} Under construction
-:class: todo
-Miss 4 ref just above
-```
-
-(syst_4_7_2)=
+(syst_4_7_1)=
 ## Contributing factors to common cause failure
 
-In order to quantify the possibility of {term}`common cause failure <Common cause failure>` the significant contributors that affect the coupling mechanisms will be reviewed. The significant contributors are described by the following areas Error: Reference source not found:
+In order to quantify the possibility of {term}`common cause failure <Common cause failure>` the significant contributors that affect the coupling mechanisms will be reviewed. The significant contributors are described by the following areas {cite:t}`sys-Hark2015CommonCF`:
 
 -   **Separation/segregation**
     > Redundant component installed in close proximity to each other can make the system susceptible to common cause fault resulting from physical interference between components. Such {term}`common cause failure <Common cause failure>` can result from a failure of a single component when the physical effects are not limited to one component, e.g. fragments resulting from disintegration of pressure vessel could impact with other components. The more segregation of redundant components can be achieved, the less this factor influences {term}`common cause failures <Common cause failure>`. It should be noted that for space applications there are volume constrains which leads to limitations of separation and segregation of system components.
@@ -53,15 +49,10 @@ In order to avoid that {term}`common cause failures <Common cause failure>` rest
 
 -   Connect the components in a redundant set to different supporting systems using diverse interconnection configurations
 
-(syst_4_7_3)=
+(syst_4_7_2)=
 ## Basic Parameter model
 
-The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and {term}`common cause failures <Common cause failure>`, as shown in {numref}`Figure 7.31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by Error: Reference source not found
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
+The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and {term}`common cause failures <Common cause failure>`, as shown in {numref}`Figure 7.31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by {cite:t}`sys-Jones2012CommonCF`
 
 (syst_equation4_87)=
 ````{admonition} Equation
@@ -85,14 +76,10 @@ name: Figure 7.31
 System failure calculation including {term}`common cause failure <Common cause failure>` – Basic Parameter Model. 
 ```
 
+(syst_4_7_3)=
 ## Beta Factor model
 
-For explanation of the beta factor model, also a system with two identical redundant components A and B is considered. The failure of one component will, with probability $\beta$, cause all components to fail, and with probability $1- \beta$, just involve the given channel. The total failure rate of a channel is obtained by Error: Reference source not found:
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
+For explanation of the beta factor model, also a system with two identical redundant components A and B is considered. The failure of one component will, with probability $\beta$, cause all components to fail, and with probability $1- \beta$, just involve the given channel. The total failure rate of a channel is obtained by {cite:t}`sys-Hark2015CommonCF`:
 
 (syst_equation4_88)=
 ````{admonition} Equation
@@ -126,7 +113,7 @@ In order to estimate the factor $\beta$, the {term}`contributing factors <Contri
 
 ## Estimation of Common Cause Beta Factor
 
-With the categories of significant contributors to {term}`CCF` shown in section Error: Reference source not found, the common cause beta factor can be estimated, starting with an assessment of each of the common cause susceptibility categories and for each, assigning a susceptibility score 1, 5 or 10 corresponding to the susceptibility, where 1 represents a low susceptibility to {term}`common cause failure <Common cause failure>` in this category. For example, a susceptibility score of 1 assigned to the category "diversity" would correspond to a system that consists of redundant component using different design concepts with no common hard- or software, whereas a susceptibility score of 10 indicates a high susceptibility to {term}`common cause failure <Common cause failure>`, for example redundancies consists of identical {term}`COTS` components. Susceptibility score 5 corresponds to medium susceptibility to {term}`common cause failure <Common cause failure>`. The sum over all categories provides the total Common Cause Score.
+With the categories of significant contributors to {term}`CCF` shown in {numref}`syst_4_7_1`, the common cause beta factor can be estimated, starting with an assessment of each of the common cause susceptibility categories and for each, assigning a susceptibility score 1, 5 or 10 corresponding to the susceptibility, where 1 represents a low susceptibility to {term}`common cause failure <Common cause failure>` in this category. For example, a susceptibility score of 1 assigned to the category "diversity" would correspond to a system that consists of redundant component using different design concepts with no common hard- or software, whereas a susceptibility score of 10 indicates a high susceptibility to {term}`common cause failure <Common cause failure>`, for example redundancies consists of identical {term}`COTS` components. Susceptibility score 5 corresponds to medium susceptibility to {term}`common cause failure <Common cause failure>`. The sum over all categories provides the total Common Cause Score.
 
 (syst_equation4_90)=
 ````{admonition} Equation
@@ -139,7 +126,7 @@ With the categories of significant contributors to {term}`CCF` shown in section 
 ```
 ````
 
-The next step is to assess the maximum common cause value {term}`MCCV`. According to Error: Reference source not found one of three possible values 10%, 20% or 30% should be selected for the {term}`MCCV` based on experience of maximum {term}`common cause failure <Common cause failure>` in the industry. For example, for an industry with a strong safety culture and established methods to analyse and mitigate {term}`common cause failure <Common cause failure>` as it is the case for the space industry, the lowest value of {term}`MCCV` is selected.
+The next step is to assess the maximum common cause value {term}`MCCV`. According to {cite:t}`sys-Hark2015CommonCF` one of three possible values 10%, 20% or 30% should be selected for the {term}`MCCV` based on experience of maximum {term}`common cause failure <Common cause failure>` in the industry. For example, for an industry with a strong safety culture and established methods to analyse and mitigate {term}`common cause failure <Common cause failure>` as it is the case for the space industry, the lowest value of {term}`MCCV` is selected.
 
 The beta factor is calculated as follows
 
@@ -156,7 +143,7 @@ The beta factor is calculated as follows
 
 Where $\text{CCS}_{\max}$ denotes the maximum possible Common Cause Susceptibility Score, assigning 10 to each category.
 
-As shown in the example in [Table 4.15](syst_table4_15) the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (*CCS*) of 32. With 7 categories, $\text{CCS}_{\max}$ is 70. If the lowest value of 10% for $\text{MCCV}$ is selected, the following $\beta$ value is obtained from Eq. {eq}`Equation 7.91`.
+As shown in the example in {numref}`syst-table4-15` the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (*CCS*) of 32. With 7 categories, $\text{CCS}_{\max}$ is 70. If the lowest value of 10% for $\text{MCCV}$ is selected, the following $\beta$ value is obtained from Eq. {eq}`Equation 7.91`.
 
 (syst_equation4_92)=
 ````{admonition} Equation
@@ -172,6 +159,31 @@ As shown in the example in [Table 4.15](syst_table4_15) the assigned Susceptibil
 (syst_table4_15)=
 **Table 4.15** : Example for the evaluation of a Common Cause Beta Factor
 
-<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_15.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst_table4_15')" placeholder="Search table...">
+
+```{list-table} Example for the evaluation of a Common Cause Beta Factor
+:name: syst-table4-15
+:header-rows: 1
+:widths: 75 25
+
+*   - Category
+    - Susceptibility Score $CCS_{i}$
+*   - Separation/segregation
+    - 5
+*   - Diversity/ redundancy
+    - 10
+*   - Complexity/maturity of design/experience
+    - 5
+*   - Use of assessments/ analysis and feedback data
+    - 1
+*   - Procedures/ human interface (e.g. maintenance/testing)
+    - 1
+*   - Competence/ training/ safety culture
+    - 5
+*   - Environmental testing
+    - 5
+*   - Sum
+    - 32
+```
 
 

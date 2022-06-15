@@ -1,3 +1,4 @@
+(syst_4_8)=
 # System level modelling of wear-out
 
 (syst_4_8_1)=
@@ -163,13 +164,7 @@ Where
 -   $T_{i}$ denotes the duration of phase $i$
 ````
 
-The reliability function of the component that is exposed to {term}`random failures <Random failure>` and also {term}`wear-out failures <Wear-out failure>` throughout the mission is given in Eq. {eq}`Equation 7.103` (see wear-out first approach in Section Error: Reference source not found).
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
-
+The reliability function of the component that is exposed to {term}`random failures <Random failure>` and also {term}`wear-out failures <Wear-out failure>` throughout the mission is given in Eq. {eq}`Equation 7.103` (see wear-out first approach in {numref}`syst_4_8_1`.
 
 (syst_equation4_103)=
 ````{admonition} Equation
@@ -200,7 +195,6 @@ Where
 -   $\beta_{i}$ denotes the shape parameter of the Weibull distribution in phase $i$
 ````
 
-
 If wear-out occurs only after the qualification time $\tau$ is reached (second approach) Eq. {eq}`Equation 7.103` can be adapted accordingly and for $T_{\text{ck}} > \tau$ the following equation is obtained.
 
 (syst_equation4_104)=
@@ -218,20 +212,9 @@ Where
 -   $\tau_{1}$ denotes the qualification time of the component
 ````
 
-```{admonition} Under construction
-:class: todo
-Miss factor just above
-```
-
-
 For mission phases before qualification time $T_{\text{ck}} < \tau_{1}$, wear-out does not have to be considered and the reliability of the component in phase k is given by Eq. {eq}`Equation 7.30`.
 
-For Model 3, see Section Error: Reference source not found, wear-out is considered only for $T_{\text{ck}} > \tau_{2}$ and for $T_{\text{ck}} < \tau_{2}$ only {term}`random failures <Random failure>` are taken into account. The following equation is obtained for $T_{\text{ck}} > \tau_{2}$.
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
+For Model 3, see {numref}`syst_4_8_1`, wear-out is considered only for $T_{\text{ck}} > \tau_{2}$ and for $T_{\text{ck}} < \tau_{2}$ only {term}`random failures <Random failure>` are taken into account. The following equation is obtained for $T_{\text{ck}} > \tau_{2}$.
 
 (syst_equation4_105)=
 ````{admonition} Equation
@@ -240,7 +223,7 @@ Miss ref just above
 ``  
 ```{math}
 :label: Equation 7.105
-R_{k}\left( t \right) = {{\exp\left\lbrack - \left( \frac{T_{\text{Ck} - 1} + t - \tau_{2}}{\alpha_{k}} \right)^{\beta_{k}} \right\rbrack}^{}{\exp\left\lbrack - \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{2}}{\alpha_{i}} \right)^{\beta_{i}} \right\rbrack}^{}}_{}
+R_{k}\left( t \right) = {{\exp\left\lbrack - \left( \frac{T_{\text{Ck} - 1} + t - \tau_{2}}{\alpha_{k}} \right)^{\beta_{k}} \right\rbrack}^{}{\exp\left\lbrack - \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{2}}{\alpha_{i}} \right)^{\beta_{i}} \right\rbrack}^{}}
 ```
 
 Where
@@ -248,14 +231,9 @@ Where
 -   $\tau_{2}$ denotes the time at which the {term}`wear-out failure <Wear-out failure>` rate equals the {term}`random failure <Random failure>` rate.
 ````
 
-```{admonition} Under construction
-:class: todo
-Miss factor just above
-```
-
-
 For $T_{\text{ck}} < \tau_{2}$ the reliability function of the component in phase k is also given by Eq. {eq}`Equation 7.30`.
 
+(syst_4_8_3)=
 ## Reliability of serial and parallel systems considering wear-out
 
 The system reliability function for a serial system is given by:
@@ -293,14 +271,9 @@ In order to consider wear-out of the components the corresponding reliability fu
 ``  
 ```{math}
 :label: Equation 7.108
-R_{S}\left( t \right) = {\exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack\exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack}_{}
+R_{S}\left( t \right) = {\exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack\exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack}
 ```
 ````
-
-```{admonition} Under construction
-:class: todo
-Miss factor just above
-```
 
 For a parallel system the following expression is obtained:
 
@@ -315,6 +288,7 @@ R_{S}\left( t \right) = e^{\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{
 ```
 ````
 
+(syst_4_8_4)=
 ## Conditional reliability
 
 The conditional reliability is the probability of a system successfully completing another mission phase knowing that it has not failed during previous phases. This conditional reliability is of particular relevance for life time extensions. The fact that a component was working correctly without a failure over a certain period of the mission needs to be considered to estimate the reliability over the following phases of the mission. The system\'s conditional reliability function is given by:
@@ -343,12 +317,35 @@ R_{S}\left( t \right) = R_{1}\left( t \right)R_{2}\left( t \right)
 ```
 ````
 
-The mission duration shall be extended from 50000 hours by another 10000 hours to 60000 hours. 50000 hours correspond to the qualification time of the components and the system was still in operational state after 50000 hours were accumulated. For the components the following parameters shown in [Table 4.16](syst_table4_16) are given:
+The mission duration shall be extended from 50000 hours by another 10000 hours to 60000 hours. 50000 hours correspond to the qualification time of the components and the system was still in operational state after 50000 hours were accumulated. For the components the following parameters shown in {numref}`syst-table4-16` are given:
 
-(syst_table4_16)=
-**Table 4.16** : Example for parameters for component with random and {term}`wear-out failures <Wear-out failure>`
+```{list-table} Example for parameters for component with random and wear-out failures
+:name: syst-table4-16
+:header-rows: 1
+:widths: 20 40 40
 
-<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_16.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+*   - Parameter
+    - Component 1
+    - Component 2
+*   - $\lambda_{R}$
+    - 1,00E-06 1/h
+    - 1,00E-06 1/h
+*   - $\beta$
+    - 3,2
+    - 3,2
+*   - $\alpha$
+    - 150000 h
+    - 150000 h
+*   - $\Tau$
+    - 50000 h
+    - 50000 h
+*   - $t$
+    - 10000 h
+    - 10000 h
+*   - $\tau_{1}$
+    - 50000 h
+    - 50000 h
+```
 
 Eq. {eq}`Equation 7.112` provides the reliability for a mission extension of a duration *t* giving that *T* hours of successful operation have already been accumulated up to the start of the mission extension. The system reliability is evaluated to assure that it will complete the next mission extension successfully.
 
@@ -372,22 +369,56 @@ If the Model 2 is applied for example to consider the wear-out of the components
 ``  
 ```{math}
 :label: Equation 7.113
-R\left( t \middle| T \right) = \frac{\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)}{{\exp\left( - \lambda_{R}T \right)\exp\left( - \lambda_{R}T \right)}^{}}_{}
+R\left( t \middle| T \right) = \frac{\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)}{{\exp\left( - \lambda_{R}T \right)\exp\left( - \lambda_{R}T \right)}^{}}
 ```
 ````
 
-```{admonition} Under construction
-:class: todo
-Miss factor just above
+
+With the three wear-out models the following results shown in {numref}`syst-table4-17` are obtained. It can be seen that the first approach provides the most conservative results, as it takes wear-out already from *t*=0 into account.
+
+```{list-table} Phase transition scenarios in phased mission
+:name: syst-table4-17
+:header-rows: 1
+:widths: 10 30 20 20 20
+
+*   - 
+    - 
+    - Model 1
+    - Model 2
+    - Model 3
+*   - $R_{1} (T)$
+    - Reliability comp. 1 at T=50000 h
+    - 0,9234
+    - 0,9512
+    - 0,9707
+*   - $R_{1} (T + t)$
+    - Reliability comp. 1 at T+t=60000 h
+    - 0,8929
+    - 0,9416
+    - 0,9481
+*   - $R_{2} (T)$
+    - Reliability comp. 2 at T=50000 h
+    - 0,9234
+    - 0,9512
+    - 0,9707
+*   - $R_{2} (T + t)$
+    - Reliability comp. 2 at T+t=60000 h
+    - 0,8929
+    - 0,9416
+    - 0,9481
+*   - $R_{S} (t|T)$
+    - Conditional system reliability T+t if no failure occurred at T
+    - 0,9351
+    - 0,9799
+    - 0,9540
 ```
 
-With the three wear-out models the following results shown in [Table 4.17](syst_table4_17) are obtained. It can be seen that the first approach provides the most conservative results, as it takes wear-out already from *t*=0 into account.
+```{admonition} Under construction
+:class: todo
+table to be filled
+```
 
-(syst_table4_17)=
-**Table 4.17** : Conditional probability for different wear-out models
-
-<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_17.html" frameborder="0" onload="resize_iframe(this)"></iframe>
-
+(syst_4_8_5)=
 ## Reliability of standby systems with and without a switching device
 
 In the following section, another form of redundancy is presented: standby redundancy. In standby redundancy the components have two states: an active state and a standby state. The stand-by component is exposed to reduced loads while not needed and under the operating load when they are activated. Consequently, components in standby redundancy have two failure distributions, one for each state. In the case that both stand-by and active failure distributions are the same, the units are in a simple parallel configuration (also called a hot standby configuration). When the failure rate of the standby component is lower than in active mode that is called a warm standby configuration. When the rate of failure of the standby component is zero (i.e., the component cannot fail when in standby), it is called a cold standby configuration.
@@ -430,12 +461,7 @@ name: Figure 7.32
 Stand-by system with switching device
 ```
 
-Two scenarios have to be considered to include the reliability of a switch in the analysis with two probabilities can be considered. The first one is the probability of the switch performing the action (i.e., switching) when requested to do so, the Switch Probability per Request, which is expressed as a static probability. The second probability takes into account the possibility that the switch could fail before the active component fails, as the switch might wear out with age due to material degradation. However, a switch failure does not cause the system to fail immediately, but if the active component fails and the switch has also failed, then the system cannot be switched to the standby component and it therefore fails. The reliability of the system including switching is given by the following equation Error: Reference source not found.
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
+Two scenarios have to be considered to include the reliability of a switch in the analysis with two probabilities can be considered. The first one is the probability of the switch performing the action (i.e., switching) when requested to do so, the Switch Probability per Request, which is expressed as a static probability. The second probability takes into account the possibility that the switch could fail before the active component fails, as the switch might wear out with age due to material degradation. However, a switch failure does not cause the system to fail immediately, but if the active component fails and the switch has also failed, then the system cannot be switched to the standby component and it therefore fails. The reliability of the system including switching is given by the following equation {cite:t}`sys-time-dependent-system-reliability`.
 
 (syst_equation4_115)=
 ````{admonition} Equation

@@ -1,3 +1,4 @@
+(syst_4_6)=
 # Reliability assessment of degraded systems
 
 Depending on the system architecture and the functions of its components the loss of some single components in redundant system architectures does not necessarily lead to the total loss of a function, but results in a degraded system performance. For the reliability assessment, usually 100% performance is defined, and any deviation is considered as a system failure. From a risk assessment perspective, it is also interesting to know how much the actual performance deviates from the specified one and if some residual performance can be maintained. Not only failure scenarios leading to total loss are relevant, another important criterion is whether a certain performance level can be achieved or not. To allow for the calculation of occurrence probabilities for degraded modes of system performance, a relative contribution to system performance at component level is assigned. The method is based on the evaluation of reliability block diagrams described through its success path. The system performances are linked to a minimum set of resources and modelled accordingly as {term}`RBD`.
@@ -6,18 +7,15 @@ To illustrate the concept of performance degradation, the fictive example of the
 
 The system can be described through the following success paths.
 
-(syst_table4_12)=
-**Table 4.12** : Success paths and their relative performance contribution
+```{list-table} Success paths and their relative performance contribution
+:name: syst-table4-12
 
-```{figure} ../../picture/figure4_12.png
----
-width: 600px
-name: table4_12
+*   - ![Table 12 System](../../picture/table4_12.png)
 ```
 
 Where $M_{i}$ denotes a success path, i.e. a combination of components for which the system is in operable state if all components of the success path are operational. The success path is represented by conjunctive terms of indicator variables $X_{i}$. At least one minimal success path is required to get a working system.
 
-In this example, if all three solar panels are working, an electrical power of 1kW is provided. In the following, a relative contribution to the system performance is assigned to the different solar panels. To component 3 a relative contribution of 50% is assigned, that means if the success path that contains the component 3 is functioning, 50% of the total system performance are available. In this case, 50% of electrical power. Component 4 has a relative contribution of 30% and 20% are assigned to component 5. In [Table 4.13](syst_table4_13) all system states with a system performance \> 0% are listed. To each elementary state the contributing success path is listed in [Table 4.13](syst_table4_13). Depending on the availability of the success path that contains one of the service providing units 3, 4 or 5, a certain level of system performance $p_{S}$ can be achieved.
+In this example, if all three solar panels are working, an electrical power of 1kW is provided. In the following, a relative contribution to the system performance is assigned to the different solar panels. To component 3 a relative contribution of 50% is assigned, that means if the success path that contains the component 3 is functioning, 50% of the total system performance are available. In this case, 50% of electrical power. Component 4 has a relative contribution of 30% and 20% are assigned to component 5. In {numref}`syst-table4-12` all system states with a system performance \> 0% are listed. To each elementary state the contributing success path is listed in {numref}`syst-table4-12`. Depending on the availability of the success path that contains one of the service providing units 3, 4 or 5, a certain level of system performance $p_{S}$ can be achieved.
 
 (syst_figure4_30)=
 ```{figure} ../../picture/figure4_30.png
@@ -28,13 +26,10 @@ name: Figure 7.30
 Example Reliability Block Diagram - System with degraded performance.
 ```
 
-(syst_table4_13)=
-**Table 4.13** : System states with degraded system performance
+```{list-table} System states with degraded system performancen
+:name: syst-table4-13
 
-```{figure} ../../picture/figure4_13.png
----
-width: 600px
-name: table4_13
+*   - ![Table 13 System](../../picture/table4_13.png)
 ```
 
 Based on the elementary states that are linked to a certain system performance level, a Boolean system function $\Phi_{P_{S}}$ can be obtained that describes the top event "system performance level equals $p_{S}$". With $p_{S} = 50\%$ the following system function $\Phi_{P_{S}}$ is obtained:
@@ -78,7 +73,7 @@ With this method, the occurrence probability for all system performance levels a
 
 It should be noted that for practical reasons, the applicability of this method using elementary system states is limited to systems with a small number of components, since the number of states grows exponentially with the number of components. For *n* components $2^{n}$ states have to be considered.
 
-Therefore, it is more efficient to use the success paths. For each system performance level, the correlated success paths have to be generated. In addition, auxiliary conditions are defined that describe the logical combination of the performance determining components that are required to achieve performance levels equal to or greater than $p_{S}$. This will be explained using the example shown in {numref}`Figure 7.30` and [Table 4.13](syst_table4_13). The analysis of degraded systems consists of the following steps Error: Reference source not found:
+Therefore, it is more efficient to use the success paths. For each system performance level, the correlated success paths have to be generated. In addition, auxiliary conditions are defined that describe the logical combination of the performance determining components that are required to achieve performance levels equal to or greater than $p_{S}$. This will be explained using the example shown in {numref}`Figure 7.30` and {numref}`syst-table4-13`. The analysis of degraded systems consists of the following steps {cite:t}`sys-vahl1998interaktive`:
 
 -   Identification of all possible system performance levels through combination of the performance contributing components.
 
@@ -92,10 +87,6 @@ Therefore, it is more efficient to use the success paths. For each system perfor
 
 To achieve a system performance of $p_{S}$ ≥ 50% the following condition can be defined, which describes a combination of success paths for which the system performance is at least 50%.
 
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
 
 (syst_equation4_71)=
 ````{admonition} Equation
@@ -151,12 +142,7 @@ The system state function can be defined as follows:
 
 Where $k$ denotes the index of the success paths and $m$ the total number of success path.
 
-With Eq. {eq}`Equation 7.72`, the following expression is obtained for the system state function for the top event "system performance $p_{S}$ ≥ x" Error: Reference source not found.
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
+With Eq. {eq}`Equation 7.72`, the following expression is obtained for the system state function for the top event "system performance $p_{S}$ ≥ x" {cite:t}`sys-vahl1998interaktive`.
 
 (syst_equation4_75)=
 ````{admonition} Equation
@@ -219,7 +205,7 @@ P_{\geq 50\mathrm{\%}} = R_{1}R_{2}R_{3} \vee R_{1}R_{2}{\overline{F}}_{3}R_{4}R
 ```
 ````
 
-In order to calculate the occurrence probability for all possible system performance levels, the before mentioned calculation has to be repeated for the different combinations of available solar panels resulting in different performance levels. The following auxiliary conditions are obtained from [Table 4.13](syst_table4_13) for the different system performance levels.
+In order to calculate the occurrence probability for all possible system performance levels, the before mentioned calculation has to be repeated for the different combinations of available solar panels resulting in different performance levels. The following auxiliary conditions are obtained from {numref}`syst-table4-13` for the different system performance levels.
 
 (syst_equation4_80)=
 ````{admonition} Equation
@@ -302,14 +288,35 @@ P_{x\mathrm{\%}} = P\left\lbrack x > p_{s} \geq 0 \right\rbrack = 1 - P\left\lbr
 ```
 ````
 
-The occurrence probabilities for the different system performance levels are shown in [Table 4.14](syst_table4_14).
+The occurrence probabilities for the different system performance levels are shown in {numref}`syst-table4-14`.
 
-(syst_table4_14)=
-**Table 4.14** : Occurrence probability of degraded system performance states
+```{list-table} Occurrence probability of degraded system performance states
+:name: syst-table4-14
+:header-rows: 2
+:widths: 30 40 30
 
-```{figure} ../../picture/figure4_14.png
----
-width: 600px
-name: table4_14
+*   - 
+    - Occurrence Probability
+    - 
+*   - Performance Level
+    - $P_{< x %}$
+    - $P_{\geq x %>}$
+*   - 0%
+    - 3,00E-03
+    - 99,7%
+*   - 20%
+    - 9,17E-02
+    - 91%
+*   - 30%
+    - 9,43E-02
+    - 91%
+*   - 50%
+    - 1,54E-01
+    - 85%
+*   - 70%
+    - 2,12E-01
+    - 79%
+*   - 80%
+    - 2,46E-01
+    - 75%
 ```
-
