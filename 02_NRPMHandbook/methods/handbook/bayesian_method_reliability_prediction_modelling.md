@@ -672,7 +672,7 @@ From the Markov chain the statistical characteristics of the estimated parameter
 ``  
 ```{math}
 :label: Equation Method 7.45
-\begin{matrix}E\left\lbrack \lambda \right\rbrack = 1.467 \cdot 10^{- 5}\ \ \lbrack 1/h\rbrack \\\text{STD}\left\lbrack \lambda \right\rbrack = 4.731 \cdot 10^{- 6}\ \lbrack 1/h\rbrack\\\\end{matrix}
+\begin{matrix}E\left\lbrack \lambda \right\rbrack = 1.467 \cdot 10^{- 5}\ \ \lbrack 1/h\rbrack \\\text{STD}\left\lbrack \lambda \right\rbrack = 4.731 \cdot 10^{- 6}\ \lbrack 1/h\rbrack \end{matrix}
 ```
 ````
 
