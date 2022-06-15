@@ -1,6 +1,6 @@
-# This workflow typesets the jupyter book
+# This workflow typesets the jupyter book to HTML files
 
-name: compile_jupyter_book
+name: compile_jupyter_book_html
 
 # Controls when the workflow will run
 on:
