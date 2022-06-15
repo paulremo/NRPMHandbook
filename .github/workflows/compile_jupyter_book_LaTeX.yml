@@ -7,8 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-#    tags:
-#      - 'v*'
+    tags:
+      - 'v*'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,23 +22,25 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-
-      - name: install dependencies
+      
+      - name: install python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: build jupyter book latex (no fail on warnings)
-        run: jupyter-book build 02_NRPMHandbook --builder latex
-
-      - name: compile latex document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: 02_NRPMHandbook/_build/latex/book.tex
-          latexmk_use_xelatex: true
-        env:
-          TEXINPUTS: ".:./02_NRPMHandbook/_build/latex//:"
+          
+    - name: Install latex dependencies
+      run: |
+        sudo apt-get -qq update
+        sudo apt-get install -y     \
+          texlive-latex-recommended \
+          texlive-latex-extra       \
+          texlive-fonts-extra       \
+          fonts-freefont-otf        \
+          texlive-xetex             \
+          latexmk                   \
+          xindy
+          
+    - name: Build PDF from LaTeX (Docs)
+      run: |
+        jupyter-book build 02_NRPMHandbook --builder pdflatex
