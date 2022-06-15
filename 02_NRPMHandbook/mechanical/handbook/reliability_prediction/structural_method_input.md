@@ -315,25 +315,43 @@ Four major difficulties may arise during (probabilistic) load analysis
 A pragmatic approach to handle the challenges listed above is to take the limit loads used in deterministic design as an upper fractile value with corresponding exceedance probability (e.g. $1\%$ at a $90\%$ confidence level for limit loads defined statistically in consistency with {cite:t}`mec-ECSS-E-ST-32C`). Together with a rough estimate for the coefficient of variation of the stress distribution, this information can be used to derive 
 the distribution parameters of any two-parameter model.
 
-Distributional assumptions should nevertheless be backed by an engineering understanding of the load analysis process. To give an example, random vibration loads may be assumed to follow a Normal distribution when looking at the instantaneous (point-in-time) distribution of the random process. Assuming a linear response of the {term}`spacecraft <Spacecraft>` structure, this assumption is still valid for the point-in-time distribution of the response spectrum. However, the peak response during a certain load event follows a Rayleigh distribution, or an extreme value distribution with parameters depending on the duration of the random vibration . It should be noted that also the exceedance probability of a “three sigma” peak response, often used as limit load for design purposes, depends on the duration of the loading, and cannot be derived directly from the Normal distribution.
+Distributional assumptions should nevertheless be backed by an engineering understanding of the load analysis process. To give an example, random vibration loads may be assumed to follow a Normal distribution when looking at the instantaneous (point-in-time) distribution of the random process. Assuming a linear response of the {term}`spacecraft <Spacecraft>` structure, this assumption is still valid for the point-in-time distribution of the response spectrum. However, the peak response during a certain load event follows a Rayleigh distribution, or an extreme value distribution with parameters depending on the duration of the random vibration {cite:t}`mec-peak-response`. It should be noted that also the exceedance probability of a “three sigma” peak response, often used as limit load for design purposes, depends on the duration of the loading, and cannot be derived directly from the Normal distribution.
 
-Reference values for usual dispersions of applied stresses are provided in Table   4 -9, which is based on PSS-01-306 Draft 1 . The original source of the data dates back to 1987 , considering the knowledge and technology available at that time. With the development of new launchers ( refers to data collected for Ariane I to III, STS and Delta), much of this information must be considered as outdated, though probably conservative. Some of the highest values in Table   4 -9 are a direct result of the limited sample size of flight measurements in the same configuration that were available for the analysis. Moreover, it should be noted that the coefficients of variation have been derived, and traditionally been used, assuming normal distributed stress and strength. Also, for some loads it is not clear how the values provided are related to the underlying random process, e.g. whether the coefficient of variation for acoustic vibrations relates to the point-in-time response distribution, to the peak response, or to the resulting fatigue loading.
+Reference values for usual dispersions of applied stresses are provided in {numref}`meca-table4-9`, which is based on PSS-01-306 Draft 1 {cite:t}`mec-ESA-PSS-01-306`. The original source of the data dates back to 1987 {cite:t}`mec-evaluation-design-test-safety-factors`, considering the knowledge and technology available at that time. With the development of new launchers ({cite:t}`mec-evaluation-design-test-safety-factors` refers to data collected for Ariane I to III, STS and Delta), much of this information must be considered as outdated, though probably conservative. Some of the highest values in {numref}`meca-table4-9` are a direct result of the limited sample size of flight measurements in the same configuration that were available for the analysis. Moreover, it should be noted that the coefficients of variation have been derived, and traditionally been used, assuming normal distributed stress and strength. Also, for some loads it is not clear how the values provided are related to the underlying random process, e.g. whether the coefficient of variation for acoustic vibrations relates to the point-in-time response distribution, to the peak response, or to the resulting fatigue loading.
 
 (meca_table4_9)=
 ```{list-table} Reference values for usual dispersions (Coefficients of Variation) of loads
-:class: interactive-table
 :name: meca-table4-9
+:header-rows: 1
+:widths: 75 25
 
-* - <iframe class="ext_content" src="../../../_static/interactivity/html/meca_table4_9.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+*   - Type of loading
+    - CoV
+*   - Launch vehicle thrust
+    - 5%
+*   - Launch vehicle other static loads
+    - 30%
+*   - Transient loads
+    - 50%
+*   - <p>Thermo-elastic loads: correlated temperatures</p><p>Thermo-elastic loads: uncorrelated temperatures</p>
+    - <p>7.5%</p><p>20%</p>
+*   - Deployment shocks
+    - 10%
+*   - Thruster loads
+    - 2%
+*   - Acoustic vibration loads
+    - 40%
+*   - Sine vibration loads
+    - 20%
 ```
 
 (meca_4_6_5)=
 ## Bayesian inference updating of structural reliability estimates
-Apart from the use of {term}`Bayesian inference <Bayesian inference>` updating for basic variable distributions (Section 4.6.4), the Bayes approach can also be applied to improve prior reliability estimates derived with {term}`structural reliability methods <Structural reliability method>`, making use of data samples with individual time-to-failure records of several items. Also small data samples can be used for this purpose. 
+Apart from the use of {term}`Bayesian inference <Bayesian inference>` updating for basic variable distributions ({numref}`meca_4_6_4`), the Bayes approach can also be applied to improve prior reliability estimates derived with {term}`structural reliability methods <Structural reliability method>`, making use of data samples with individual time-to-failure records of several items. Also small data samples can be used for this purpose. 
 
-An example for {term}`Bayesian inference <Bayesian inference>` updating of a prior structural reliability estimate is given in Section 4.8.2 (analytic approach) Section 4.8.3 (numerical approach using {term}`MCMC`).
+An example for {term}`Bayesian inference <Bayesian inference>` updating of a prior structural reliability estimate is given in {numref}`meca_4_8` (analytic approach & numerical approach using {term}`MCMC`).
 
-The general principles of {term}`Bayesian inference <Bayesian inference>` updating in a reliability context are discussed in Chapter 7 (Part II). For {term}`Bayesian inference <Bayesian inference>` updating in the present context, the prior has to be defined based on the considered limit state function and the corresponding basic variable distributions. The limit state function can usually explicitly or implicitly be defined as a function of time $t$ (or number of cycles / revolutions). Thus, the cumulative distribution function of the random time to failure can be derived by estimating the probability of failure as a function of $t$:
+The general principles of {term}`Bayesian inference <Bayesian inference>` updating in a reliability context are discussed in {numref}`methods`. For {term}`Bayesian inference <Bayesian inference>` updating in the present context, the prior has to be defined based on the considered limit state function and the corresponding basic variable distributions. The limit state function can usually explicitly or implicitly be defined as a function of time $t$ (or number of cycles / revolutions). Thus, the cumulative distribution function of the random time to failure can be derived by estimating the probability of failure as a function of $t$:
 
 
 ````{admonition} Equation
@@ -361,9 +379,9 @@ F_{T}(t | \theta) = P[T \leq t | \theta] = P_{f}(t | \theta) = P[g(X(t)) \leq 0 
 ```
 ````
 
-The conditional distribution function $F_{T}(t | \theta)$ defined by Equation   10 -7 can now be used as the sampling distribution for the formulation of the Likelihood, which is combined with a prior for the distribution of the random {term}`model uncertainty <Model uncertainty>`, $f'_{\Theta}(\theta)$, to apply Bayes rule for updating. In the general case, this will require numerical methods to perform the updating. However, an analytic solution can be derived for the special case of {term}`Bayesian inference <Bayesian inference>` updating for a prior derived from the {term}`Simplified structural reliability methods <Simplified structural reliability method>` introduced in Section 4.6.2, as will be discussed in the following.
+The conditional distribution function $F_{T}(t | \theta)$ defined by Eq. {eq}`Equation 3.7` can now be used as the sampling distribution for the formulation of the Likelihood, which is combined with a prior for the distribution of the random {term}`model uncertainty <Model uncertainty>`, $f'_{\Theta}(\theta)$, to apply Bayes rule for updating. In the general case, this will require numerical methods to perform the updating. However, an analytic solution can be derived for the special case of {term}`Bayesian inference <Bayesian inference>` updating for a prior derived from the {term}`Simplified structural reliability methods <Simplified structural reliability method>` introduced in {numref}`meca_4_6_2`, as will be discussed in the following.
 
-Using the generic simplified limit state function defined in Equation   10 -2, Equation   10 -7 can be reformulated as follows:
+Using the generic simplified limit state function defined in Eq. {eq}`Equation 3.2`, Eq. {eq}`Equation 3.7` can be reformulated as follows:
 
 
 ````{admonition} Equation
@@ -376,9 +394,9 @@ F_{T}(t | \theta) = P[X_{1}(t) - \theta X_{2}(t) \leq 0] = P[p(t) X'_{1} - \thet
 ```
 ````
 
-Here, $X_{1}(t)$ denotes the random “resistance” (or strength) of the considered part against the random “load” (or stress) $X_{2}(t)$. Both random variables are normalized (variables with prime) such that $E(X'_{1}) = E(X'_{2}) = 1$. The mean value information is then summarized in the parameter $p = E(X_{1})/E(X_{2})$. In Equation   10 -8 it is assumed that only the expected values of $X_{1}$ and $X_{2}$ are a function of time, while the coefficients of variation $\nu_{X_{1}}$ and $\nu_{X_{2}}$ remain constant.
+Here, $X_{1}(t)$ denotes the random “resistance” (or strength) of the considered part against the random “load” (or stress) $X_{2}(t)$. Both random variables are normalized (variables with prime) such that $E(X'_{1}) = E(X'_{2}) = 1$. The mean value information is then summarized in the parameter $p = E(X_{1})/E(X_{2})$. In Eq. {eq}`Equation 3.8` it is assumed that only the expected values of $X_{1}$ and $X_{2}$ are a function of time, while the coefficients of variation $\nu_{X_{1}}$ and $\nu_{X_{2}}$ remain constant.
 
-The analytic method for {term}`Bayesian inference <Bayesian inference>` updating is based on the assumption that all random variables in Equation   10 -8 (i.e. $X_{1}$ and $X_{2}$ or $X'_{1}$ and $X'_{2}$) are Lognormal distributed. With this assumption, the sampling distribution $F_{T}(t |\theta)$ is derived as follows:
+The analytic method for {term}`Bayesian inference <Bayesian inference>` updating is based on the assumption that all random variables inEq. {eq}`Equation 3.8` (i.e. $X_{1}$ and $X_{2}$ or $X'_{1}$ and $X'_{2}$) are Lognormal distributed. With this assumption, the sampling distribution $F_{T}(t |\theta)$ is derived as follows:
 
 
 ````{admonition} Equation
@@ -391,7 +409,7 @@ F_{T}(t | \theta) = \Phi \left(\frac{- \ln(p(t)) + \ln(\theta) + 0.5 ( \ln(\nu_{
 ```
 ````
 
-To proceed, a suitable function $p(t)$ must be defined. For the limit state functions provided with simplified model in Section 4.7, it may be assumed that the mean value parameter $p$ is proportional to $1/t$, although for some {term}`failure mechanisms <Failure mechanism>` this may be an approximation only. An alternative approach would be to derive the sampling distribution for $p$ instead of $t$. The data used for updating (observations for $t$) must then be transformed to “observed” mean value parameters $p(t)$.
+To proceed, a suitable function $p(t)$ must be defined. For the limit state functions provided with simplified model in {numref}`meca_4_7`, it may be assumed that the mean value parameter $p$ is proportional to $1/t$, although for some {term}`failure mechanisms <Failure mechanism>` this may be an approximation only. An alternative approach would be to derive the sampling distribution for $p$ instead of $t$. The data used for updating (observations for $t$) must then be transformed to “observed” mean value parameters $p(t)$.
 
 The following derivation is based on the proportionality assumption mentioned above. In this case, $p(t)$ may be replaced by $p = k \cdot 1/t$, where $k$ is a constant specific to the considered item and {term}`failure mechanism <Failure mechanism>`. This leads to the following formulation:
 
@@ -429,7 +447,7 @@ By comparing this result with the cumulative distribution function of the Lognor
 ```
 ````
 
-For the {term}`Bayesian inference <Bayesian inference>` updating, the „deterministic“ {term}`model uncertainty <Model uncertainty>` $\theta$ in Equation   10 -11 is now replaced by a random variable $\Theta$. The random {term}`model uncertainty <Model uncertainty>` is assumed to follow a Lognormal distribution with mean value $E(\Theta) = 1$ (when assuming an unbiased {term}`failure mechanism <Failure mechanism>` model, see Section  for discussion) and coefficient of variation $\nu_{\Theta}$ (with specific values proposed for each simplified model presented in Section 4.7). With this, the parameter $\mu_{T}$ is Normal distributed with the following prior (hyper-)parameters:
+For the {term}`Bayesian inference <Bayesian inference>` updating, the „deterministic“ {term}`model uncertainty <Model uncertainty>` $\theta$ in Eq. {eq}`Equation 3.11` is now replaced by a random variable $\Theta$. The random {term}`model uncertainty <Model uncertainty>` is assumed to follow a Lognormal distribution with mean value $E(\Theta) = 1$ (when assuming an unbiased {term}`failure mechanism <Failure mechanism>` model, see Section  for discussion) and coefficient of variation $\nu_{\Theta}$ (with specific values proposed for each simplified model presented in {numref}`meca_4_7`). With this, the parameter $\mu_{T}$ is Normal distributed with the following prior (hyper-)parameters:
 
 
 ````{admonition} Equation
@@ -475,23 +493,23 @@ The Normal distribution for the location parameter $\mu_{T}$ is a conjugate prio
 ```
 ````
 
-To summarize, a simple {term}`Bayesian inference <Bayesian inference>` updating scheme for reliability estimates derived from the simplified method introduced in Section 4.6.2 may be defined as follows:
+To summarize, a simple {term}`Bayesian inference <Bayesian inference>` updating scheme for reliability estimates derived from the simplified method introduced in {numref}`meca_4_6_2` may be defined as follows:
 
-* First the prior reliability estimate is derived, including the estimation of $\nu_{X_{1}}$, $\nu_{X_{2}}$ and $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$. The simplified model equations provided in Section 4.7 can be used for this task, using suitable input for the basic variable modelling.
-* The constant $k$ for the function $p(t) = k \cdot 1/t$ is derived from the simplified model equations provided in Section 4.7 (time $t$ may have to be replaced by e.g. number of revolutions $rev$ for some {term}`failure mechanisms <Failure mechanism>`); the proportionality assumption for the function $p(t) should be checked in this step.
-* The standard deviation parameter $\sigma_{T}$ of the sampling distribution is calculated from $\nu_{X_{1}}$ and $\nu_{X_{2}}$, using Equation   10 -12. Note that this parameter is assumed to be fixed in the analytic updating approach and will not be affected by the updating.
-* The prior (hyper-)parameters $\mu '$ and $\sigma '$ of the conjugate Normal distribution for the location parameter $\mu_{T}$ are calculated from the input for the simplified method, using Equation   10 -13 and Equation   10 -14 above.
+* First the prior reliability estimate is derived, including the estimation of $\nu_{X_{1}}$, $\nu_{X_{2}}$ and $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$. The simplified model equations provided in {numref}`meca_4_7` can be used for this task, using suitable input for the basic variable modelling.
+* The constant $k$ for the function $p(t) = k \cdot 1/t$ is derived from the simplified model equations provided in {numref}`meca_4_7` (time $t$ may have to be replaced by e.g. number of revolutions $rev$ for some {term}`failure mechanisms <Failure mechanism>`); the proportionality assumption for the function $p(t) should be checked in this step.
+* The standard deviation parameter $\sigma_{T}$ of the sampling distribution is calculated from $\nu_{X_{1}}$ and $\nu_{X_{2}}$, using Eq. {eq}`Equation 3.12`. Note that this parameter is assumed to be fixed in the analytic updating approach and will not be affected by the updating.
+* The prior (hyper-)parameters $\mu '$ and $\sigma '$ of the conjugate Normal distribution for the location parameter $\mu_{T}$ are calculated from the input for the simplified method, using Eq. {eq}`Equation 3.13` and Eq. {eq}`Equation 3.14` above.
 * With this, the prior is fully defined and the {term}`Bayesian inference <Bayesian inference>` updating can be performed using the formulas for the posterior hyperparameters $\mu ''$ and $\sigma ''$ for the Lognormal sampling distribution.
 
 
 The assumptions underlying this approach are summarized as follows:
 
-* The limit state function for the prior reliability estimate can be brought into the generic format used in Equation   10 -8
+* The limit state function for the prior reliability estimate can be brought into the generic format used in Eq. {eq}`Equation 3.8`.
 * The variables $X_{1}$, $X_{2}$ and $\Theta$ follow a Lognormal distribution.
 * Only the mean values of $X_{1}$ and $X_{2}$ are a function of time .
 * The mean value parameter $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$ can be modelled as $p(t) = k \cdot 1/t$.
 * The data sample for updating is uncensored, i.e. all items have been observed until failure
 
 
-As has been discussed below Equation   10 -9, the approach may be adapted by considering $p$ instead of $t$ as the “observed” variable, allowing the use of more general functions for $p(t)$; An analytic solution is still possible in this case. More general distribution types for $X_{1}$, $X_{2}$ and/or $\Theta$ may possibly be approximated by Lognormal distributions. For more general applications, it is very unlikely that an analytic solution based on conjugate priors can be derived. Numerical methods are then required to solve the problem of updating a structural reliability estimates with observations for the random time to failure, see Chapter 7 (Part II) for details. The same is true if the data set is strongly censored, i.e. the items have not been observed until failure. It should be noted that Equation   10 -6 and Equation   10 -7 can still be used as the starting point for the formulation of the prior probabilistic model, even if the analytic solution derived above is not applicable.
+As has been discussed below Eq. {eq}`Equation 3.9`, the approach may be adapted by considering $p$ instead of $t$ as the “observed” variable, allowing the use of more general functions for $p(t)$; An analytic solution is still possible in this case. More general distribution types for $X_{1}$, $X_{2}$ and/or $\Theta$ may possibly be approximated by Lognormal distributions. For more general applications, it is very unlikely that an analytic solution based on conjugate priors can be derived. Numerical methods are then required to solve the problem of updating a structural reliability estimates with observations for the random time to failure, see {numref}`methods` for details. The same is true if the data set is strongly censored, i.e. the items have not been observed until failure. It should be noted that Eq. {eq}`Equation 3.6` and Eq. {eq}`Equation 3.7` can still be used as the starting point for the formulation of the prior probabilistic model, even if the analytic solution derived above is not applicable.
 
