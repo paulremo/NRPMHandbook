@@ -26,14 +26,17 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: recursive
-          
-      - name: get access to TeXLive environment
-        uses: xu-cheng/latex-action@v2
 
       - name: install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Build jupyter book (no fail on warnings)
-        run: jupyter-book build 02_NRPMHandbook --builder pdflatex
+      - name: build jupyter book latex (no fail on warnings)
+        run: jupyter-book build 02_NRPMHandbook --builder latex
+
+      - name: compile latex document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: 02_NRPMHandbook/_build/latex/book.tex
+          latexmk_use_xelatex: true
