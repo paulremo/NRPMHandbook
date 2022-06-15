@@ -649,7 +649,7 @@ S_{eq} = S_{\max}(1 - R)^{P} = S_{\max}\left( 1 - \frac{S_{\min}}{S_{\max}} \rig
 ```
 ````
 
-Here, $S_{\min}$ and $S_{\max}$ denoting the minimum and maximum stress during one load cycle and $A$, $B$, $C$ and $P$ are model parameters of the S/N curve model that can be derived from {term}`test data <Test data>`, e.g. those presented in {cite:t}`mec-MMPDS` or its predecessor,{cite:t}`mec-MIL-HDBK-5`. Of special interest is the parameter $C$, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus $N_{f}(S \leq C) \rightarrow \infty$.
+Here, $S_{\min}$ and $S_{\max}$ denoting the minimum and maximum stress during one load cycle and $A$, $B$, $C$ and $P$ are model parameters of the S/N curve model that can be derived from {term}`test data <Test data>`, e.g. those presented in {cite:t}`mec-MMPDS` or its predecessor,{cite:t}`mec-MIL-HDBK-5J`. Of special interest is the parameter $C$, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus $N_{f}(S \leq C) \rightarrow \infty$.
 
 The S/N curve is valid for cyclic loading with constant amplitude or equivalent stress. For cyclic loading with varying stress levels, the S/N curve is combined with the Palmgren-Miner accumulation law to estimate the accumulated damage $D_{tot}$ after $N$ stress cycles:
 
@@ -1249,31 +1249,30 @@ be assessed based on experimental data. The sensitivity of these
 variables on the overall result depends on the loading and the initial
 crack size. To give an example, the uncertainty associated with the
 threshold stress intensity factor range $\mathrm{\Delta}K_{th}$ (e.g.
-derived from the distribution of $\mathrm{\Delta}K_{0}$ in Table 10‑16)
+derived from the distribution of $\mathrm{\Delta}K_{0}$ in {numref}`meca-table4-16`)
 may be neglected if the loading does not contain a large number of
 cycles with stress intensity factor ranges below this threshold. At the
 upper limit, uncertainty in the fracture toughness ($K_{Ic}$ or
 $K_{instability}$) and flow stress $\sigma_{flow}$ (or yield stress
 $\sigma_{y}$) may be expected to play a major role only if the initial
-crack size is close to the critical size \[BR81\].
+crack size is close to the critical size {cite:t}`mec-TEC-MCS`.
 
-A literature survey presented by Mattrand \[BR81\] reports coefficients
+A literature survey presented by Mattrand {cite:t}`mec-TEC-MCS` reports coefficients
 of variation between 5% and 25% for the fracture toughness and yield
 strength of metallic materials (note that some material specific
-information may be found e.g. in {term}`MMPDS`-12 \[BR66\] or its predecessor,
-MIL-HDBK-5 \[BR67\]). Typical distributional assumptions for the two
+information may be found e.g. in MMPDS-12 {cite:t}`mec-MMPDS` or its predecessor,
+MIL-HDBK-5 {cite:t}`mec-MIL-HDBK-5J`). Typical distributional assumptions for the two
 variables are Weibull or Lognormal distributions. A proposal for the
 probabilistic modelling of Al 7075 T7351 and Ti 6Al 4V material
-properties can be found in Table 10‑16 (taken from \[BR81\]).
-
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-16')" placeholder="Search table...">
+properties can be found in {numref}`meca-table4-16` (taken from {cite:t}`mec-TEC-MCS`).
 
 ```{list-table} Probabilistic modelling of material parameters for Al 7075 T7351 and Ti 6Al 4V
 :name: meca-table4-16
 
-* - 
+* - ![Table 16 Miscellaneous](../../pictures/table4_16.png)
 ```
 
+(meca_4_7_3)=
 ## Modelling of failures due to corrosion
 
 Compared to terrestrial applications, the relevance of mechanical
@@ -1283,7 +1282,7 @@ ensured by specific storage conditions. Special types of corrosion that
 that are of relevance only for specific parts, e.g. in the propulsion
 subsystem, are not discussed in the present handbook. The reader is
 referred to the compendium of limit states for space applications that
-has been prepared by Kowal \[BR65\], which includes also a discussion of
+has been prepared by Kowal {cite:t}`mec-Kowal1994MechanicalSR`, which includes also a discussion of
 several types of corrosion.
 
 A corrosion mechanism that is closely related to the crack growth
@@ -1294,8 +1293,9 @@ avoid failures due to this phenomenon is based on the selection of
 suitable materials, making use of a test-based classification by
 susceptibility to {term}`SCC`. Quantitative {term}`reliability prediction <Reliability prediction>` for this {term}`failure mechanism <Failure mechanism>` is difficult, even though the effect of the
 environment may in principle be accounted for in crack growth modelling,
-see Section 10.7.2.2 for details.
+see {numref}`meca_4_7_2_2` for details.
 
+(meca_4_7_4)=
 ## Modelling of failures due to material degradation
 
 Material degradation is a time-dependent process leading to a reduced
@@ -1309,7 +1309,7 @@ life time extensions beyond the nominal mission.
 
 <u>Thermal degradation</u> is of relevance mainly for non-metallic
 materials such as polymers or insulation material. Some basic models
-have been reviewed in \[BR65\]. Thermal degradation as an individual
+have been reviewed in {cite:t}`mec-Kowal1994MechanicalSR`. Thermal degradation as an individual
 {term}`failure mechanism <Failure mechanism>` is not discussed any further in the present chapter.
 Note, however, that temperature may have to be considered as a
 contributor or influencing variable during several other failure
@@ -1320,6 +1320,7 @@ The following subsection provides a brief discussion of <u>radiation
 degradation</u> and proposes a generic modelling approach for its
 modelling in mechanical {term}`reliability predictions <Reliability prediction>`.
 
+(meca_4_7_4_1)=
 ### Radiation degradation modelling
 
 The {term}`spacecraft <Spacecraft>` radiation environment is characterized by the type,
@@ -1334,7 +1335,7 @@ strength and ultimate stress, creep, fatigue, thermal conductivity,
 hardness, optical properties etc. Metallic materials are rather
 unaffected by radiation, but degradation needs to be considered for
 optical materials (e.g. darkening of glass) and for organic materials
-such as plastics and polymers \[BR92\]. Due to the complexity of the
+such as plastics and polymers {cite:t}`mec-Bouquet1979DesignersGT`. Due to the complexity of the
 phenomena, a quantitative estimation of the radiation effects is
 difficult. Therefore, a simplified assessment of the radiation hardness
 is performed during the design, taking its basis in an allowable
@@ -1367,7 +1368,7 @@ in Eq. {eq}`Equation 3.57` as deterministic variables. The resulting simplified
 model should be seen mainly as a starting point or placeholder for a
 more detailed modelling.
 
-The variable definitions are given in Table 10‑17 below.
+The variable definitions are given in {numref}`meca-table4-17` below.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-17')" placeholder="Search table...">
 
@@ -1381,18 +1382,27 @@ The variable definitions are given in Table 10‑17 below.
     - Unit
     - Distribution
     - CoV range
- *  - 
-    - 
-    - 
-    - 
-    - 
+ *  - $D_{A}$
+    - Allowable radiation dose
+    - [rad]
+    - Deterministic
+    - $-$
+ *  - $D$
+    - Calculated radiation dose during mission
+    - [rad]
+    - [rad]
+    - $-$
+ *  - $\Theta$
+    - Model uncertainty
+    - [$-$]
+    - Lognormal
+    - $\nu_{\Theta} = 0.4$
 ```
 
 To account for the uncertainties in choosing the deterministic values
 for $D$ and $D_{A}$, the coefficient of variation for the model
 uncertainty is larger than for the other simplified models presented in
-Section 10.7.1 to 10.7.2. The {term}`model uncertainty <Model uncertainty>` CoV can be reduced if
-the model is improved by considering $D$ and/or $D_{A}$ as random
+{numref}`meca_4_7_1` to {numref}`meca_4_7_2`. The {term}`model uncertainty <Model uncertainty>` CoV can be reduced if the model is improved by considering $D$ and/or $D_{A}$ as random
 (instead of deterministic) variables with appropriate uncertainty
 quantification.
 
