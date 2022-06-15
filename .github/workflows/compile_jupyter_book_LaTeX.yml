@@ -1,0 +1,45 @@
+# This workflow typesets the jupyter book to single PDF using LaTeX
+
+name: compile_jupyter_book_latex
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    tags:
+      - 'v*'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: install python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: Install latex dependencies
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get install -y     \
+            texlive-latex-recommended \
+            texlive-latex-extra       \
+            texlive-fonts-extra       \
+            fonts-freefont-otf        \
+            texlive-xetex             \
+            latexmk                   \
+            xindy
+          
+      - name: Build PDF from LaTeX (Docs)
+        run: |
+          jupyter-book build 02_NRPMHandbook --builder pdflatex
