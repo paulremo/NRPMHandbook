@@ -1,3 +1,4 @@
+(syst_4_4)=
 # Reliability assessment of phased missions
 
 The operation of missions encountered in space involves several different tasks or phases that must be accomplished in sequence. Systems used like this are usually called phased-mission systems. {numref}`Figure 7.24` shows an example of a phased mission of a space satellite system.
@@ -24,9 +25,10 @@ Simulation offers greater generality in system representation. On the other hand
 
 In the following the analytical approach based on the combinatorial method and state space based model using Markov will be introduced. 
 
+(syst_4_4_1)=
 ## Mission phase success criteria
 
-To analyse a phased mission, it is important to understand the functional relation of system components in each phase, which can be represented through the methods shown in Section Error: Reference source not found, e.g. {term}`RBD` or {term}`FTA`. In general, two cases have to be considered.
+To analyse a phased mission, it is important to understand the functional relation of system components in each phase, which can be represented through the methods shown in {numref}`syst_4_3`, e.g. {term}`RBD` or {term}`FTA`. In general, two cases have to be considered.
 - Success criteria for the system are phase independent, which means the same functional relation and thus the same reliability block diagram can be used for all phases. 
 - Success criteria for the system are phase dependent, thus for each individual phase a different functional relation between the functional blocks of the system has to be considered. 
 
@@ -35,26 +37,35 @@ Depending on the success criteria the system could include:
 - Phase failure combinations, which means failure combinations leading to system failure are specific to one phase and are described by probability of occurrence specific to the phase.
 
 
-In case of phase independent success criteria, the methods described in Section Error: Reference source not found can be used and no special treatment is required. However, the failure rates of the functional blocks of the system may depend on the phase, as a consequence of different loads applied in different mission phases. Phase dependent component reliability is considered in section Error: Reference source not found. 
+In case of phase independent success criteria, the methods described in {numref}`syst_4_3` can be used and no special treatment is required. However, the failure rates of the functional blocks of the system may depend on the phase, as a consequence of different loads applied in different mission phases. Phase dependent component reliability is considered in {numref}`syst_4_4_2`. 
 
-There are several reasons for reconfiguration and changes in success criteria from phase to phase Error: Reference source not found, which in the end could result in a situation where some combination of failures of components leads to failure of the system in one phase, whereas the same combination does not lead to failure in another phase.
+There are several reasons for reconfiguration and changes in success criteria from phase to phase {cite:t}`sys-Somani1994PhasedmissionSA`, which in the end could result in a situation where some combination of failures of components leads to failure of the system in one phase, whereas the same combination does not lead to failure in another phase.
 - A component is used in all phases but its operational level .term}`requirement <Requirement>`s may change. In this case, no special treatment is required for this component. The definition of operation or failed state depends on the success criteria.
 - A component is used in consecutive phases starting with one phase, and is then not needed for system operation in the remaining phases.
 - A component is required to remain operational for some phase, is not needed for the operation of a few phases and is then required again for system operation.
 - Spare or operational redundant modules corresponding to one subsystem become spare or redundant modules for another subsystem.
 
 
-To derive the appropriate success criteria for the reliability analysis of phased mission the phase transition needs to be considered. Depending on the success criteria of the consecutive phase there could be cases where the system state may change at the time of phase transition. The following scenarios of phase transitions could be considered Error: Reference source not found:
+To derive the appropriate success criteria for the reliability analysis of phased mission the phase transition needs to be considered. Depending on the success criteria of the consecutive phase there could be cases where the system state may change at the time of phase transition. The following scenarios of phase transitions could be considered {cite:t}`sys-Somani1994PhasedmissionSA`:
 
-```{admonition} Under construction
-:class: todo
-Miss 4 ref just above
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst_table4_7')" placeholder="Search table...">
+
+```{list-table} Phase transition scenarios in phased mission
+:name: syst-table4-7
+:header-rows: 1
+:widths: 45 55
+
+*   - Phase transition scenarios
+    - Success Criteria
+*   - A combination of failures does not lead to system failure in both phases $i$ and $i+1$.
+    - Success criterion does not change from phase $i$ to $i+1$. E.g. same RBD or FTA.
+*   - A combination of failures leads to system failure in both phases $i$ and $i+1$.
+    - Success criteria do not change from phase $i$ to $i+1$. E.g. same RBD or FTA.
+*   - A combination of component failures does not imply system failure in phase $i$ but is treated as system failure in phase $i+1$.
+    - This case should be treated as latent failures in the earlier phase $i$ as well. This is because such combinations, once present during a phase are bound to lead to the system failure eventually at the transition time when the system enters the later phase $i+1$.
+*   - A combination of component failures implies system failure in phase $i$ but does not imply system failure in phase $i+1$.
+    - We need to account for the probability of occurrence of these failure combinations only until phase $i$. Any probability attributed to such combinations of component failures in later phases does not contribute towards system unreliability.
 ```
-
-(syst_table4_7)=
-**Table 4.7** : Phase transition scenarios in phased mission
-
-<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_7.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 (syst_4_4_2)=
 ## Mission phase dependent failure rates
@@ -77,23 +88,12 @@ R_{k}(t) = \text{exp}\left(-\lambda_{k}t\right)\text{exp}\left(-\sum_{i=1}^{i=k-
 - $\lambda_{i}$ denotes the failure rate of the component in phase $i$
 ````
 
+If wear-out has to be considered please refer to {numref}`syst_4_8`.
 
-
-If wear-out has to be considered please refer to Section Error: Reference source not found.
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
-
+(syst_4_4_3)=
 ## Combinatorial methods for phased mission based on mini-components
 
-The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms Error: Reference source not found proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in {numref}`Figure 7.25`. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases. 
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
+The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms {cite:t}`sys-Esary1975ReliabilityAO` proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in {numref}`Figure 7.25`. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases. 
 
 (syst_figure4_25)=
 ```{figure} ../../picture/figure4_25.png
@@ -126,12 +126,7 @@ name: Figure 7.27
 Single phase mission model
 ```
 
-The initial configurations for the three phases have been transformed to a single reliability block diagram comprising three sub-systems in a series arrangement. Since the subsystems will generally have components in common, they will not function independently Error: Reference source not found. The reliability of each phase is obtained from the following equations:
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
+The initial configurations for the three phases have been transformed to a single reliability block diagram comprising three sub-systems in a series arrangement. Since the subsystems will generally have components in common, they will not function independently {cite:t}`sys-Somani1994PhasedmissionSA`. The reliability of each phase is obtained from the following equations:
 
 (syst_equation4_31)=
 ````{admonition} Equation
@@ -182,22 +177,39 @@ q_{ij} = P\left(x_{i}\left(t_{j}\right) = 1 | x_{i}\left(t_{j-1}\right) = 1\righ
 (syst_4_4_4)=
 ## Boolean phase algebra
 
-The before mentioned methods consider the failure of components in different phases separately. To overcome this limitation and to handle the dependencies of component states used in various mission phases, a set of Boolean algebraic laws to represent combinations of component behaviour can be applied to phased mission systems. A basic event A may be represented in the following way Error: Reference source not found:
+The before mentioned methods consider the failure of components in different phases separately. To overcome this limitation and to handle the dependencies of component states used in various mission phases, a set of Boolean algebraic laws to represent combinations of component behaviour can be applied to phased mission systems. A basic event A may be represented in the following way {cite:t}`sys-Somani1994PhasedmissionSA`:
 - $A_{1}=1$ denotes the event that component A is operational during the interval from the start of the mission until the end of phase $i$. This automatically implies that the component is operational during all earlier phases as well.
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
 
 The following rules should be applied to Boolean variables belonging to the same component to simplify the Boolean expression, with $j>i$. 
 
-(syst_table4_8)=
-**Table 4.8** : Boolean Phase Algebra rules
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst_table4_8')" placeholder="Search table...">
 
-<iframe class="ext_content" src="../../../_static/interactivity/html/syst_table4_8.html" frameborder="0" onload="resize_iframe(this)"></iframe>
+```{list-table} Boolean Phase Algebra rules
+:name: syst-table4-8
+:header-rows: 1
+:widths: 45 55
 
-The Boolean phase algebra in [Table 4.8](syst_table4_8) allows identifying the possible scenarios where due to more stringent failure criteria in a later phase the system failure occurs and is described as a latent failure. With application of the Boolean algebra, the performance of a component through different phases is no longer considered separately. Using the Boolean phase algebra, the system reliability over all phases is obtained by the following equation:
+*   - Phase Algebra Rule
+    - Explanation
+*   - $A_{i} \cap A_{j} \rightarrow A_{j}$
+    - The event “A is operational in phase i and the later phase j” is equivalent to the event “A is operational in the later phase j”
+*   - $\overline{A_{i}} \cap \overline{A_{j}} \rightarrow \overline{A_{i}}$
+    - The event “A has failed in phase i and the later phase j” is equivalent to the event “A has failed in phase i”
+*   - $\overline{A_{i}} \cap A_{j} \rightarrow 0$
+    - The event “A has failed in phase i, but is operational in the later phase j does not exist for a non-repairable phase mission system
+*   - $A_{i} \cup A_{j} \rightarrow A_{i}$
+    - The event “A is operational in phase i or in the later phase j” is equivalent to the event “A is operational in the phase i”
+*   - $\overline{A_{i}} \cup \overline{A_{j}} \rightarrow \overline{A_{j}}$
+    - The event “A has failed in phase i or in the later phase j“ is equivalent to the event “A has failed in phase j”
+*   - $A_{i} \cup \overline{A_{j}} \rightarrow 1$
+    - The event “A is operational in phase i or failed in the later phase j” is equivalent to certain event 1
+*   - $\overline{A_{i}} \cup A_{j} \rightarrow \overline{A_{i}} \cup A_{j}$
+    - The event “A has failed in phase i, or is operational in the later phase j” cannot be simplified any further
+*   - $A_{i} \cap \overline{A_{j}} \rightarrow A_{i} \cap \overline{A_{j}}$
+    - The event “A is operational in phase i and failed in the later phase j” cannot be simplified any further
+```
+
+The Boolean phase algebra in {numref}`syst-table4-8` allows identifying the possible scenarios where due to more stringent failure criteria in a later phase the system failure occurs and is described as a latent failure. With application of the Boolean algebra, the performance of a component through different phases is no longer considered separately. Using the Boolean phase algebra, the system reliability over all phases is obtained by the following equation:
 
 (syst_equation4_35)=
 ````{admonition} Equation
@@ -308,7 +320,7 @@ P\left( \text{PFC} \middle| 2 \right) = P
 ```
 ````
 
-The phase algebra rules in [Table 4.8](syst_table4_8) are applied for phase 2 and the following is obtained:
+The phase algebra rules in {numref}`syst-table4-8` are applied for phase 2 and the following is obtained:
 
 (syst_equation4_43)=
 ````{admonition} Equation
@@ -343,7 +355,7 @@ P\left( \text{PFC} \middle| 2 \right) = P
 ```
 ````
 
-In Eq. {eq}`Equation 7.45` it can be seen that both component A and B are failed in phase 2 but operational in phase 3, which is not possible for non-repairable system according to the Boolean phase algebra rules in [Table 4.8](syst_table4_8). Thus with $\overline{A_{2}} \cap A_{3} \rightarrow 0$ and $\overline{B_{2}} \cap B_{3} \rightarrow 0$, the phase failure combination $\text{PFC}_{2}$ is empty. The same is obtained for $\text{PFC}_{1}$.
+In Eq. {eq}`Equation 7.45` it can be seen that both component A and B are failed in phase 2 but operational in phase 3, which is not possible for non-repairable system according to the Boolean phase algebra rules in {numref}`syst-table4-8`. Thus with $\overline{A_{2}} \cap A_{3} \rightarrow 0$ and $\overline{B_{2}} \cap B_{3} \rightarrow 0$, the phase failure combination $\text{PFC}_{2}$ is empty. The same is obtained for $\text{PFC}_{1}$.
 
 (syst_equation4_46)=
 ````{admonition} Equation
@@ -372,7 +384,7 @@ R_{S}\left( t \right) = 1 - P\left( E \middle| 3 \right) = 1 - P\left( {\overlin
 (syst_4_4_5)=
 ## State space model of phased mission
 
-The phased mission system can also be analysed based on a state space model using Markov model. Smotherman and Zemoudeh Error: Reference source not found used a single non-homogeneous Markov chain model to perform the reliability analysis of a phased mission system. The behaviour of the system in each phase is represented using a different Markov chain, which may contain a different subset of states. The state transitions are described in terms of time dependent rates to include phase changes. Thus, state-dependent phase changes, random phase durations as well as time varying failure and repair behaviour can be easily modelled.
+The phased mission system can also be analysed based on a state space model using Markov model. Smotherman and Zemoudeh {cite:t}`sys-Esary1975ReliabilityAO` used a single non-homogeneous Markov chain model to perform the reliability analysis of a phased mission system. The behaviour of the system in each phase is represented using a different Markov chain, which may contain a different subset of states. The state transitions are described in terms of time dependent rates to include phase changes. Thus, state-dependent phase changes, random phase durations as well as time varying failure and repair behaviour can be easily modelled.
 
 The example shown in {numref}`Figure 7.26` is shown as Markov chain in {numref}`Figure 7.28`, where the failure of components A, B and C are given by the associated failure rates $\lambda_{a}$, $\lambda_{b}$ and $\lambda_{c}$. Each component can have two states, failed or operational. An identifier is assigned to each system state where, e.g."011" indicates A failed, B and C operational. The transition from phase 1 to phase 2 is given by the time dependent rate $h_{1}\left( t \right)$ and $h_{2}\left( t \right)$ denotes the rate of change from phase 2 to phase 3.
 
@@ -384,17 +396,7 @@ The main advantage of this model is that it includes the configurations for all 
 width: 600px
 name: Figure 7.28
 ---
-Phased mission Markov model approach by Smotherman and Zemoudeh Error: Reference source not found
+Phased mission Markov model approach by Smotherman and Zemoudeh {cite:t}`sys-Esary1975ReliabilityAO`
 ```
 
-```{admonition} Under construction
-:class: todo
-miss ref above
-```
-
-As shown before, two classes of approaches have been developed to analyse phased missions, the combinatorial approach and the Markov chain approach. The combinatorial approaches are computationally efficient, but are applicable only when each phase is a static phase, in which all components are functionally independent and the order in which failures occur does not matter. Markov based approaches are able to capture the functional dependencies among components and the required order of failures, or dynamic failure criteria. On the other hand, the size of the Markov model may increase such it become not feasible to be solved. Therefore, a modular approach that combines combinatorial and Markov chain approach as appropriate can also be used to analyse phased mission systems Error: Reference source not found.
-
-```{admonition} Under construction
-:class: todo
-miss ref above
-```
+As shown before, two classes of approaches have been developed to analyse phased missions, the combinatorial approach and the Markov chain approach. The combinatorial approaches are computationally efficient, but are applicable only when each phase is a static phase, in which all components are functionally independent and the order in which failures occur does not matter. Markov based approaches are able to capture the functional dependencies among components and the required order of failures, or dynamic failure criteria. On the other hand, the size of the Markov model may increase such it become not feasible to be solved. Therefore, a modular approach that combines combinatorial and Markov chain approach as appropriate can also be used to analyse phased mission systems {cite:t}`sys-Esary1975ReliabilityAO`.

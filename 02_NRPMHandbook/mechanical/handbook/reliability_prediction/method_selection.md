@@ -53,7 +53,7 @@ However, independence between different {term}`failure mechanisms <Failure mecha
 * - 
 ```
 
-<!--<iframe class="ext_content" src="../../../_static/interactivity/html/decision_tree2.html" frameborder="0" onload="resize_iframe(this)"></iframe>-->
+<iframe class="ext_content" src="../../../_static/interactivity/html/decision_tree2.html" frameborder="0" onload="resize_iframe(this)"></iframe>
 
 A simple way to account for such interactions is to select the dominating {term}`failure mechanism <Failure mechanism>` (e.g. the one with the highest probability of failure) and to consider the effect of other {term}`failure mechanism(s) <Failure mechanism>` on the dominating {term}`failure mechanism <Failure mechanism>`. When using {term}`structural reliability methods <Structural reliability method>`, this can be achieved by adapting the basic variable distributions to account for physical effects related to other {term}`failure mechanism <Failure mechanism>` processes. The assessment then requires the following steps:
 
