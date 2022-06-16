@@ -488,7 +488,7 @@ let m8 = new DataMessage("componentfail", null, "bb", "other-message");
 let m9 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
 );
 
-let m10 = new ExitMessage(null, "You can go on the handbook page", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
+let m10 = new ExitMessage(null, "You can go on the handbook page", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
 let m11 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
 
 let m12 = new Message(null, "Maybe we use another name... To which subsystem does your component belong ?", "other-message", false, false);
