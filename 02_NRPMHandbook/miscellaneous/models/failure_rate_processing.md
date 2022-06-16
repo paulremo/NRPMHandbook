@@ -2,6 +2,6 @@
 
 Here you can calculate the failure rate $\lambda_{3}$ with the interactive interface !
 
-<button class="back-forward-button" onclick="redirect('../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise')">Go to handbook</button>
+<a href="../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise" class="back-forward-button">Go to model</a>
 
 <iframe class="ext_content" src="../../_static/interactivity/html/misc_failure_rate_buttons.html" frameBorder="0" onload="resize_iframe(this)"></iframe>
