@@ -363,12 +363,12 @@ Where a quantitative prediction is required, the scope of the prediction needs t
 (methodo_5_4)=
 ## Reliability prediction during project life cycle
 
-This section explains how the system reliability prediction process interacts with the system development process and which activities and deliverables should be performed throughout the system life cycle. The typical system life cycle of space products according to {cite:t}`methodo-ECSS-M-ST-10C` consists of seven phases, as shown in {numref}`Figure Methodo 2` (see also {numref}`methodo_4_1_1`).
+This section explains how the system reliability prediction process interacts with the system development process and which activities and deliverables should be performed throughout the system life cycle. The typical system life cycle of space products according to {cite:t}`methodo-ECSS-M-ST-10C` consists of seven phases, as shown in {numref}`Figure_methodo_2` (see also {numref}`methodo_4_1_1`).
 
 ```{figure} pictures/methodo_figure5_2.png
 ---
 width: 600px
-name: Figure Methodo 2
+name: Figure_methodo_2
 ---
 Interaction of the reliability process with the system life cycle
 ```
@@ -378,12 +378,12 @@ The establishment and cascading of reliability requirements will be explained in
 (methodo_5_4_1)=
 ### Deliverables of the reliability prediction process during Life Cycle
 
-The scope and aim of each system life cycle phase, is highlighted in {numref}`Figure Methodo 2`, taken from {cite:t}`methodo-ECSS-M-ST-10C`.
+The scope and aim of each system life cycle phase, is highlighted in {numref}`Figure_methodo_2`, taken from {cite:t}`methodo-ECSS-M-ST-10C`.
 
 ```{figure} pictures/methodo_figure5_3.png
 ---
 width: 600px
-name: Figure Methodo 3
+name: Figure_methodo_3
 ---
 System Life Cycle.
 ```
@@ -838,7 +838,7 @@ The apportionment of the system level reliability target to sub systems is based
 ``
 ``  
 ```{math}
-:label: Equation Methodo 1
+:label: Equation_methodo_1
 \hat{R}_{i}(t) = (\hat{R}_{S}(t))^{w_{i}}
 ```
 - $\hat{R}_{S}(t)$ denotes the reliability target on system level
@@ -858,7 +858,7 @@ This method equally distributes the system reliability on all the sub-systems be
 ``
 ``  
 ```{math}
-:label: Equation Methodo 2
+:label: Equation_methodo_2
 \hat{R}_{i}(t) = (\hat{R}_{S}(t))^{\frac{1}{n}}
 ```
 - $\hat{R}_{S}(t)$ denotes the reliability target on system level
@@ -874,7 +874,7 @@ For example, a reliability target of 0.9 on system level would result in a targe
 ``
 ``  
 ```{math}
-:label: Equation Methodo 3
+:label: Equation_methodo_3
 \hat{F}_{i}(t) = \frac{\hat{F}_{S}(t)}{n}
 ```
 - $\hat{F}_{S}(t)$ denotes the failure probability target on system level
@@ -888,7 +888,7 @@ For example, a reliability target of 0.9 on system level would result in a targe
 ``
 ``  
 ```{math}
-:label: Equation Methodo 4
+:label: Equation_methodo_4
 \hat{\lambda}_{i}(t) = \frac{\hat{\lambda}_{S}(t)}{n}
 ```
 - $\hat{\lambda}_{S}(t)$ denotes the failure rate target on system level
@@ -900,7 +900,7 @@ The equal allocation is very easy to apply, but does not consider the technical 
 
 **Proportional Allocation (ARINC Method)**
 
-The proportional allocation also known as ARINC method takes historical data on sub-system reliability into account to distribute the reliability to sub-system level. The weighting factor is determined by the ratio of the observed sub-system failure probability to the total system failure probability, as shown in Eq. {eq}`Equation Methodo 5`. The new reliability target is allocated to sub-system proportional to this factor.
+The proportional allocation also known as ARINC method takes historical data on sub-system reliability into account to distribute the reliability to sub-system level. The weighting factor is determined by the ratio of the observed sub-system failure probability to the total system failure probability, as shown in Eq. {eq}`Equation_methodo_5`. The new reliability target is allocated to sub-system proportional to this factor.
 
 (misc_equation5_5)=
 ````{admonition} Equation
@@ -908,14 +908,14 @@ The proportional allocation also known as ARINC method takes historical data on 
 ``
 ``  
 ```{math}
-:label: Equation Methodo 5
+:label: Equation_methodo_5
 w_{i} = \frac{F_{i.old}(t)}{F_{S.old}(t)}
 ```
 - $F_{S.old}(t)$ denotes the historical failure probability on system level
 - $F_{i.old}(t)$ denotes the historical failure probability on sub-system level
 ````
 
-Given that 15% of the system failures are caused by a failure of the power supply sub-system a reliability target of 98,43% is derived for the power supply system using Eq. {eq}`Equation Methodo 1` to achieve a reliability of 90% on system level, as shown in {numref}`methodo-table5-13`. Please note that in the example the failure probabilities of the sub-system were derived from the minimal cut set approximation to simplify the calculation. 
+Given that 15% of the system failures are caused by a failure of the power supply sub-system a reliability target of 98,43% is derived for the power supply system using Eq. {eq}`Equation_methodo_1` to achieve a reliability of 90% on system level, as shown in {numref}`methodo-table5-13`. Please note that in the example the failure probabilities of the sub-system were derived from the minimal cut set approximation to simplify the calculation. 
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-13')" placeholder="Search table...">
 
@@ -975,7 +975,7 @@ The first stage for this allocation method is to calculate the total grading val
 ``
 ``  
 ```{math}
-:label: Equation Methodo 6
+:label: Equation_methodo_6
 G_{i} = \prod_{j}^{n} g_{ij}
 ```
 ````
@@ -985,12 +985,12 @@ G_{i} = \prod_{j}^{n} g_{ij}
 ``
 ``  
 ```{math}
-:label: Equation Methodo 7
+:label: Equation_methodo_7
 w_{i} = \frac{\prod_{j}^{n} g_{ij}}{\sum_{i} G_{i}}
 ```
 ````
 
-An example for reliability allocation using FOO method is shown in {numref}`methodo-table5-14`. The system level reliability target of 0.9 is distributed to sub-systems based on weighting factor obtained from Eq. {eq}`Equation Methodo 7`.
+An example for reliability allocation using FOO method is shown in {numref}`methodo-table5-14`. The system level reliability target of 0.9 is distributed to sub-systems based on weighting factor obtained from Eq. {eq}`Equation_methodo_7`.
 
 
 <input type="text" class="myInput" id="myInput5-14" onkeyup="searchTableJupyter(this, 'methodo_table5_14')" placeholder="Search table...">
