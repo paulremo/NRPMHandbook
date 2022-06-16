@@ -262,7 +262,7 @@ Where $\lambda_{3}^{\gamma}$ is the gamma estimator.
 
 (misc_step5)=
 ``````{dropdown} **STEP 5 : Wear-out modelling**
-The step 5 incorporates in the reliability model the failures due to potential wear, as necessary.
+Step 5 incorporates in the reliability model the failures due to potential wear, as necessary.
 The model consists in adding to the constant failure rate (representing {term}`random failures <Random failure>`) an increasing failure rate representing the wear-out contribution to the failure of the item.
 Let’s denote $T$ as the Time To Failure random variable.
 $T_{RF}$ is the $TTF$ representing {term}`random failures <Random failure>` (constant failure rate for miscellaneous items)
@@ -311,12 +311,12 @@ P(\text{FAILURE}) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 {numref}`Figure 5.5` presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.
 
 * Model 1 and model 3 are very close since the constant failure rates used for miscellaneous items are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.
-* Model2 could be considered as optimistic since it addresses wear-out only after the qualification time.
+* Model 2 could be considered as optimistic since it addresses wear-out only after the qualification time.
 * Model 1 appears as the most appropriate, summing the failure rate for {term}`random failures <Random failure>` modelling and the failure rate for Wear-out failure modelling. It is recommended to be used except technical arguments support another choice.
 
 ````{admonition} Recommendation
 :class: recommendation
-The model 1 is recommended as it combines a constant failure rate model with an increasing failure rate model. Other models could be used when appropriate justification is provided by the user.
+Model 1 is recommended as it combines a constant failure rate model with an increasing failure rate model. Other models could be used when appropriate justification is provided by the user.
 ````
 
 (misc_figure4_5)=
@@ -327,6 +327,34 @@ name: Figure 5.5
 ---
 Failure rates for the three Wear-out models (Exponential, Weibull)
 ```
+
+**Guidance to derive the Wear Out distribution characteristics**
+
+In the case there is no data to support the selection of a wear-out failure time distribution and the associated parameters it is recommend to apply the following process.
+
+The first assumption is to consider a normal distribution. The user should have to determine:
+
+* the Qualification time (e.g. 10 years or equivalent) $\text{t}_{\text{Q}}$ , by default it is the specified lifetime.
+* a level a of quality (a=1, 2 or 3) represented by 
+  * 1$\sigma$: P(T> m-1$\sigma$) = 84,1%
+  * 2$\sigma$: P(T> m-2$\sigma$) = 97,7% 
+  * 3$\sigma$: P(T> m-3$\sigma$) = 99,85%
+depending on the level of quality of the qualification.
+* a ratio $v = \sigma/m (\sigma=vm)$ representing the variability of the manufacturing process, 10% is recommended by default (to be justified considering the quality of the manufacturing process),
+
+
+Then the characteristics are calculated:
+$m – a\sigma=m-avm =t_{Q}$
+$m = t_{Q}/(1-av)$
+$\sigma= vm$
+
+Knowing $m$ and $\sigma$, the distribution $N(m,\sigma)$ is completely defined and the resulting functions $\text{R}_{\text{WO}}(t)$, $\text{F}_\text{T}(t)$, $\text{f}_\text{T}(t)$ and $\lambda_{\text{WO}}(t)=\text{f}_\text{T}(t)/\text{R}_{\text{WO}}(t)$ are defined likewise.
+
+It is possible also to derive a Weibull distribution, similarly to the Normal distribution by adapting the two parameters $\beta$ and $\alpha$ of the Weibull distribution in order to match the expected value m and the standard-deviation $\sigma$.
+
+Then the probability $\text{P} (\text{T} > \text{t}_{\text{Q}})$ provides the level of Confidence (LoC), i.e. $\text{R}_{\text{WO}}(t) (\text{t}_{\text{Q}})$
+
+It is noteworthy that when the parameters are consistent the reliability function is similar between the normal distribution and the Weibull distribution. {numref}`Figure 5.6` (resp. {numref}`Figure 5.7`) presents an example of such calculation with normal law (resp. Weibull).
 
 (misc_figure4_6)=
 ```{figure} ../../picture/figure4_6.png
@@ -391,9 +419,7 @@ The definition of a model representing the probability to be hit by a debris is 
 
 ``````
 
-
-(misc_5_5_1)=
-## Result after completing step 1 to step 7
+**Result after completing step 1 to step 7**
 
 The method allows deriving a reliability function in time as presented here above.
 It is up to the discretion of the user to use the result appropriately:

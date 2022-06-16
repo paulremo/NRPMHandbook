@@ -79,7 +79,7 @@ Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
 - {term}`TRL`
 
 (misc_5_7_2)=
-### Probability assessment
+## Probability assessment
 
 The occurrence scale of {numref}`misc_5_7_2` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per {term}`failure mode <Failure mode>`:
 

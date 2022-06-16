@@ -26,7 +26,7 @@ The IOR data recorded are:
 (misc_5_6_1)=
 ## Failure rate estimator
 
-The basic failure rate estimation is a one-sided upper bound interval estimation, see Chapter 6 {numref}`methodologies` for details.
+The basic failure rate estimation is a one-sided upper bound interval estimation, see {numref}`methods` for details.
 
 
 (misc_5_6_2)=
@@ -42,11 +42,11 @@ It is recommended to use the interval estimate, see Chapter 6 {numref}`methodolo
 
 
 (misc_5_6_3)=
-### Gamma Bayesian estimator
+## Gamma Bayesian estimator
 
 The failure rate is no longer considered as a real but as a random variable $\Delta$.
 
-In the case of the exponential distribution, a natural prior distribution is the Gamma distribution (conjugate of the exponential distribution), see Chapter 7 {numref}`methodologies` for details.
+In the case of the exponential distribution, a natural prior distribution is the Gamma distribution (conjugate of the exponential distribution), see {numref}`methods` for details.
 
 The {term}`Bayesian inference <Bayesian inference>` estimator is defined as the expected value of the random variable $\Delta$ knowing that a failure has been observed at $t_{1}$, $t_{2}$ … $t_{n}$). Then, with a sample encompassing $n$ items and $n$ associated times to failure:
 

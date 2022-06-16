@@ -4,7 +4,7 @@ The inputs data constitute the basis of any reliability model.
 
 First, building a reliability model requires pertinent data regarding the specificity of the item (technology, complexity, materials, {term}`quality <Quality>`, qualification…) and the operating conditions in order to characterize the item.
 
-Then, different inputs for reliability characteristics are defined and classified in Chapter 6 {numref}`methodologies` of the Current document.
+Then, different inputs for reliability characteristics are defined and classified in {numref}`methods` of the current document.
 
 The order of preference for the use of these inputs for miscellaneous parts {term}`reliability prediction <Reliability prediction>` is as follows:
 
@@ -21,8 +21,8 @@ The added-value of this estimation is that the data represent directly the behav
 
 ```{dropdown} **Analysis of the failure mechanisms**
  - Engineering / {term}`physics of failure <Physics of failure>`: analysis of the {term}`failure mechanisms <Failure mechanism>`,
- - {term}`Design FMEA` (Design FMEA) 
- - and/or {term}`Process FMEA` (Process FMEA).
+ - {term}`DFMEA <Design FMEA>` (Design FMEA) 
+ - and/or {term}`PFMEA <Process FMEA>` (Process FMEA).
 
  The knowledge of the {term}`failure mechanisms <Failure mechanism>` and the processes supporting these {term}`failure mechanisms <Failure mechanism>` provide valuable information to build a reliability model. This information is not easy to collect and to adapt and is subject to criticisms from experts leading to disagreement except when the model is justified by technical arguments.
 ```
@@ -66,9 +66,7 @@ As designers, the suppliers have a deep knowledge of their products and it is th
 
 Any relevant data (e.g. failure events, nominal behaviour, cumulated time under tests) should be considered to support the item reliability modelling. A balance should be found between generic IOR data (Current document data) and dedicated manufacturers’ data.
 
-
-(misc_5_3_2_1)=
-### The case of one-shot devices
+**The case of one-shot devices**
 
 A “one-shot” device is defined as a product that can be used only once.
 
