@@ -832,7 +832,6 @@ These methods are applicable for a serial system structure only. For more comple
 
 The apportionment of the system level reliability target to sub systems is based on the following relation for serial system. 
 
-(misc_equation5_1)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -852,7 +851,6 @@ It is obvious that for different values for $R_{i}(t)$ the same system reliabili
 
 This method equally distributes the system reliability on all the sub-systems below the system level ``{cite:t}`MIL-HDBK-338B` ``. The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by
 
-(misc_equation5_2)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -868,7 +866,6 @@ This method equally distributes the system reliability on all the sub-systems be
 
 For example, a reliability target of 0.9 on system level would result in a target of 0.9826 for each sub system, if the system consists of 6 sub-systems. If the target on system level is given as failure probability or failure rate the target on subsystem level is obtained from the following equations. 
 
-(misc_equation5_3)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -882,7 +879,6 @@ For example, a reliability target of 0.9 on system level would result in a targe
 - $n$ denotes the number of sub-systems.
 ````
 
-(misc_equation5_4)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -902,7 +898,6 @@ The equal allocation is very easy to apply, but does not consider the technical 
 
 The proportional allocation also known as ARINC method takes historical data on sub-system reliability into account to distribute the reliability to sub-system level. The weighting factor is determined by the ratio of the observed sub-system failure probability to the total system failure probability, as shown in Eq. {eq}`Equation_methodo_5`. The new reliability target is allocated to sub-system proportional to this factor.
 
-(misc_equation5_5)=
 ````{admonition} Equation
 :class: equation
 ``

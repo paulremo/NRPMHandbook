@@ -24,7 +24,6 @@ The methods to determine importance measures are based on the Boolean model for 
 
 The so-called Birnbaum or marginal importance indicates how sensitive the system reliability is with regard to changes of the reliability of a certain component. The marginal importance of component $i$ is defined as the [partial derivative] of the system reliability function $R_{S}$ with respect to the reliability of component $i$ {cite:t}`sys-Birnbaum1968ONTI`.
 
-(syst_equation4_48)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -37,7 +36,6 @@ I_{m}\left( i \right) = \frac{\partial R_{S}}{\partial R_{i}}
 
 Instead of the partial derivation, the Birnbaum importance can be obtained, as shown in Eq. {eq}`Equation_7_49`, by calculating the difference in the system reliability if the reliability of component $i$ is set to 1 and 0,
 
-(syst_equation4_49)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -50,7 +48,6 @@ I_{m}\left( i \right) = R_{S}
 
 Where $r$ denotes the ordered list of component reliabilities for *i*= 1 to *n*. The component reliability $R_{i}$ is varied and set to 1 and zero, whereas all other component reliabilities in vector $r$ remain unchanged.
 
-(syst_equation4_50)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -63,7 +60,6 @@ r : = \left( R_{i}\left( t \right),\ldots R_{n}\left( t \right) \right)
 
 In the following, to demonstrate the calculation of the Birnbaum importance a fictive example of a power supply system as shown in {numref}`Figure_7_29` is considered. It consists of three solar arrays of different size to provide electrical power. Two larger solar arrays are charging the battery. A power converter is implemented to provide the required voltage levels to the satellite systems.
 
-(syst_figure4_29)=
 ```{figure} ../../picture/figure4_29.png
 ---
 width: 600px
@@ -74,7 +70,6 @@ Reliability Block diagram Power Supply System (fictive example)
 
 The system structure function of this example is given by
 
-(syst_equation4_51)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -88,7 +83,6 @@ The system structure function of this example is given by
 The disjunctive terms in Eq. {eq}`Equation_7_51` are derived from minimal success paths and are not mutually exclusive terms. To simplify the calculation of the expected value Eq. {eq}`Equation_7_51` is transformed such that it consists of mutually exclusive terms only.
 
 
-(syst_equation4_52)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -102,7 +96,6 @@ The disjunctive terms in Eq. {eq}`Equation_7_51` are derived from minimal succes
 The system reliability function is then given by:
 
 
-(syst_equation4_53)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -113,7 +106,6 @@ R_{S} = E\left( \Phi\left( x \right) \right) = P
 ```
 ````
 
-(syst_equation4_54)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -126,7 +118,6 @@ R_{S} = R_{1}\left( 1 - R_{2} \right)R_{5} + R_{1}R_{2}R_{3}\left( 1 - R_{4} \ri
 
 Using Eq. {eq}`Equation_7_49`, the following expression is obtained for Birnbaum importance of component 1.
 
-(syst_equation4_55)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -177,7 +168,6 @@ Typical structural importance measures are using a reliability of 0.5 for all co
 
 This assumption is not realistic for space systems. The relevant range of component reliabilities for highly reliable space systems is much smaller. Even if the failure rates for the components are not known, a conservative assumption about the order of magnitude of the worst case failure rates allows defining a relevant interval. To account for this, the reduced structural importance has been defined as mean value of the Birnbaum importance for component reliability in the range between $R_{\min}$ and 1. It is assumed that all components of the system have reliability equal to or greater than $R_{\min}$ at the end of the considered time interval, although the exact failure rates are not known, but only the rough order of magnitude {cite:t}`sys-vahl1998interaktive`. That means, for each component the reliability is set to $R_{\min}$ and to 1 for the lower and upper boundary.
 
-(syst_equation4_56)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -239,7 +229,6 @@ The importance measure quantifies the impact of each component on the system rel
 
 Furthermore, the Birnbaum importance allows to quantify how much the system reliability changes if the reliability of a component changes using the following equation.
 
-(syst_equation4_57)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -252,7 +241,6 @@ Furthermore, the Birnbaum importance allows to quantify how much the system reli
 
 Thus, the change in system reliability is the weighted sum of changes in component reliability, where the weighting factors are given by the Birnbaum Importance of the components. The change of the system reliability depending on the change of one component reliability can be determined using the Birnbaum importance as shown in the following equation {cite:t}`sys-Si2019SystemRA`:
 
-(syst_equation4_58)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -281,7 +269,6 @@ From the example in {numref}`syst-table4-10`, it can be seen that the power conv
    With the initial reliability a system reliability of $R_{S}\left( t \right) = 0,9092$ is obtained. Based on Eq. {eq}`Equation_7_48` the Birnbaum importance is calculated for all components. The results are shown in {numref}`syst-table4-11`.
 3. Comparison of the calculated reliability with the system reliability {term}`requirement <Requirement>`. The difference to the required system reliability is given by:
 
-(syst_equation4_59)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -296,7 +283,6 @@ From the example in {numref}`syst-table4-10`, it can be seen that the power conv
 
 With Eq. {eq}`Equation_7_58` the change of the system reliability depending on the change of component reliability can be calculated using the Birnbaum importance. This equation can be transformed such that the change of component reliability to achieve a defined change in system reliability can be calculated.
 
-(syst_equation4_60)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -309,7 +295,6 @@ With Eq. {eq}`Equation_7_58` the change of the system reliability depending on t
 
 The reliability target is given by the minimum of the initial reliability plus $\mathrm{\Delta}R_{i}$ and the maximum achievable reliability $R_{i,\max}$.
 
-(syst_equation4_61)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -322,7 +307,6 @@ The reliability target is given by the minimum of the initial reliability plus $
 
 In order to allocate the reliability targets efficiently, the components are grouped such that the Birnbaum importance of the components are in the same order of magnitude, as shown in {numref}`syst-table4-11`. As starting point, the group with the highest Birnbaum importance is selected as candidates for reliability improvement as an improvement of these components has the biggest influence on system reliability. In the example, group I consists of one component only. The required reliability target improvement for component 1 is calculated based on the following equation.
 
-(syst_equation4_62)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -335,7 +319,6 @@ In order to allocate the reliability targets efficiently, the components are gro
 
 With a maximum achievable reliability of $R_{1,\max} = 0.955$ the reliability target of component 1 is given by:
 
-(syst_equation4_63)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -350,7 +333,6 @@ As the required improvement would exceed the maximum achievable reliability, the
 
 The components in group II are now considered for allocation of new reliability targets. It is assumed that the system reliability increase is equally distributed over the two components in this group. The required reliability improvements for component 2 and 5 are given as follows:
 
-(syst_equation4_64)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -361,7 +343,6 @@ The components in group II are now considered for allocation of new reliability 
 ```
 ````
 
-(syst_equation4_65)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -374,7 +355,6 @@ The components in group II are now considered for allocation of new reliability 
 
 The reliability targets for component 2 and 5 are obtained from the following equations:
 
-(syst_equation4_66)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -385,7 +365,6 @@ The reliability targets for component 2 and 5 are obtained from the following eq
 ```
 ````
 
-(syst_equation4_67)=
 ````{admonition} Equation
 :class: equation
 ``

@@ -3,7 +3,6 @@
 
 The operation of missions encountered in space involves several different tasks or phases that must be accomplished in sequence. Systems used like this are usually called phased-mission systems. {numref}`Figure_7_24` shows an example of a phased mission of a space satellite system.
 
-(syst_figure4_24)=
 ```{figure} ../../picture/figure4_24.png
 ---
 width: 600px
@@ -72,7 +71,6 @@ To derive the appropriate success criteria for the reliability analysis of phase
 
 During the different phases of the space mission different load levels might be applied on the components. Vibration and acceleration loads are reaching the peak during launch phase, and in-orbit acceleration loads are significantly lower but radiation is high. This can be considered by phase specific failure rates for the system elements. For constant failure rates, the reliability function of a component in phase  can be expressed as shown in Eq. {eq}`Equation_7_30`.
 
-(syst_equation4_30)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -95,7 +93,6 @@ If wear-out has to be considered please refer to {numref}`syst_4_8`.
 
 The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms {cite:t}`sys-Esary1975ReliabilityAO` proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in {numref}`Figure_7_25`. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases. 
 
-(syst_figure4_25)=
 ```{figure} ../../picture/figure4_25.png
 ---
 width: 600px
@@ -106,7 +103,6 @@ Example for mini components representing component A in three phases
 
 The concept of mini components is shown in the following, using an example of a multi-phase mission with three component $A$, $B$ and $C$. The interaction of the system components in order to successfully complete the individual phases is represented through the reliability block diagram for each phase, as shown in {numref}`Figure_7_26`.
 
-(syst_figure4_26)=
 ```{figure} ../../picture/figure4_26.png
 ---
 width: 600px
@@ -117,7 +113,6 @@ Reliability block diagram for individual phases of a multi-phase mission
 
 From the multi-phase mission shown in {numref}`Figure_7_26`, a single-phase mission model as shown in {numref}`Figure_7_27` is obtained with the application of mini components.
 
-(syst_figure4_27)=
 ```{figure} ../../picture/figure4_27.png
 ---
 width: 600px
@@ -128,7 +123,6 @@ Single phase mission model
 
 The initial configurations for the three phases have been transformed to a single reliability block diagram comprising three sub-systems in a series arrangement. Since the subsystems will generally have components in common, they will not function independently {cite:t}`sys-Somani1994PhasedmissionSA`. The reliability of each phase is obtained from the following equations:
 
-(syst_equation4_31)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -139,7 +133,6 @@ R_{1}(t) = 1 - (1-q_{A_{1}})(1-q_{B_{1}})(1-q_{C_{1}})
 ```
 ````
 
-(syst_equation4_32)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -150,7 +143,6 @@ R_{2}(t) = q_{A_{1}}q_{A_{2}}\left(q_{B_{1}}q_{B_{2}} + q_{C_{1}}q_{C_{2}} - q_{
 ```
 ````
 
-(syst_equation4_33)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -163,7 +155,6 @@ R_{3}(t) = q_{A_{1}}q_{A_{2}}q_{A_{3}}q_{B_{1}}q_{B_{2}}q_{B_{3}}q_{C_{1}}q_{C_{
 
 Where $q_{ij}$ denotes the conditional reliability of component $i$ in phase $j$ given that it has not failed in the previous phase, which is obtained from the following equation.
 
-(syst_equation4_34)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -211,7 +202,6 @@ The following rules should be applied to Boolean variables belonging to the same
 
 The Boolean phase algebra in {numref}`syst-table4-8` allows identifying the possible scenarios where due to more stringent failure criteria in a later phase the system failure occurs and is described as a latent failure. With application of the Boolean algebra, the performance of a component through different phases is no longer considered separately. Using the Boolean phase algebra, the system reliability over all phases is obtained by the following equation:
 
-(syst_equation4_35)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -229,7 +219,6 @@ Where
 
 The system reliability of the system shown in {numref}`Figure_7_26` is given by
 
-(syst_equation4_36)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -242,7 +231,6 @@ R_{s} = 1 - \left( P\left( E_{3} \right) + P\left( \text{PFC}_{2} \right) + P\le
 
 The failure combinations for the 3 phases are given by:
 
-(syst_equation4_37)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -253,7 +241,6 @@ E_{1} = {\overline{A}}_{1} \cap {\overline{B}}_{1} \cap {\overline{C}}_{1}
 ```
 ````
 
-(syst_equation4_38)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -264,7 +251,6 @@ E_{2} = {\overline{A}}_{2} \cup {\overline{B}}_{2} \cap {\overline{C}}_{2}
 ```
 ````
 
-(syst_equation4_39)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -279,7 +265,6 @@ Where $E_{i}$ denotes the failure combination leading to system failure in phase
 
 With Eq. {eq}`Equation_7_39` the following is obtained for the failure probability in phase 3.
 
-(syst_equation4_40)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -292,7 +277,6 @@ P\left( E \middle| 3 \right) = P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3
 
 The failure probability in phase 1 and 2 is given by the following equations.
 
-(syst_equation4_41)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -306,7 +290,6 @@ P\left( \text{PFC} \middle| 1 \right) = P
 ```
 ````
 
-(syst_equation4_42)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -322,7 +305,6 @@ P\left( \text{PFC} \middle| 2 \right) = P
 
 The phase algebra rules in {numref}`syst-table4-8` are applied for phase 2 and the following is obtained:
 
-(syst_equation4_43)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -333,7 +315,6 @@ P\left( \text{PFC} \middle| 2 \right) = P
 ```
 ````
 
-(syst_equation4_44)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -344,7 +325,6 @@ P\left( \text{PFC} \middle| 2 \right) = P\left( \left( {\overline{A}}_{2} \cup {
 ```
 ````
 
-(syst_equation4_45)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -357,7 +337,6 @@ P\left( \text{PFC} \middle| 2 \right) = P
 
 In Eq. {eq}`Equation_7_45` it can be seen that both component A and B are failed in phase 2 but operational in phase 3, which is not possible for non-repairable system according to the Boolean phase algebra rules in {numref}`syst-table4-8`. Thus with $\overline{A_{2}} \cap A_{3} \rightarrow 0$ and $\overline{B_{2}} \cap B_{3} \rightarrow 0$, the phase failure combination $\text{PFC}_{2}$ is empty. The same is obtained for $\text{PFC}_{1}$.
 
-(syst_equation4_46)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -370,7 +349,6 @@ P\left( \text{PFC} \middle| 1 \right) = P
 
 Thus, the reliability of the phase mission system is given by Eq. {eq}`Equation_7_47`. It can be seen that the system reliability over all phases is determined by the availability of the components in the last phase.
 
-(syst_equation4_47)=
 ````{admonition} Equation
 :class: equation
 ``
