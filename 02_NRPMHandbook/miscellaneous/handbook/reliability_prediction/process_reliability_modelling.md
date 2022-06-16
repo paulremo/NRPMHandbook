@@ -101,7 +101,7 @@ It is the responsibility of the user (the supplier) to adapt and/or define the $
 ``````{dropdown} **STEP 3 : Consideration of reliability contributors**
 The basic failure rate which is derived from IOR relates to a certain set of assumptions likely to impact the reliability. It is therefore necessary to amend as relevant the basic failure rate to account for the real conditions of the item under consideration.
 
-<button class="back-forward-button" onclick="redirect('../../models/failure_rate_processing.html')">Go to model</button>
+<a href="../../models/failure_rate_processing.html" class="back-forward-button">Go to model</a>
 
 * $\Pi_{Q}$ = {term}`quality <Quality>` factor
   
