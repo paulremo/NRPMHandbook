@@ -35,7 +35,6 @@ The item is neither a mechanism, nor an assembly of {term}`EEE parts <EEE part>`
 
 The Current document provides general guidance to define such a reliability model: The approach to calculate the basic reliability data is presented in {numref}`misc_5_7`. The “specific” reliability model is then calculated based on the process presented in {numref}`misc_5_8`.
 
-(misc_figure4_3)=
 ```{figure} ../../picture/figure4_3.png
 ---
 width: 600px

@@ -54,7 +54,6 @@ In order to avoid that {term}`common cause failures <Common cause failure>` rest
 
 The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and {term}`common cause failures <Common cause failure>`, as shown in {numref}`Figure_7_31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by {cite:t}`sys-Jones2012CommonCF`
 
-(syst_equation4_87)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -67,7 +66,6 @@ Q_{S} = Q_{I}^{2} + Q_{C}
 
 The direct basic parameter model requires estimating all possible failure event probabilities, which could be obtained from {term}`in-orbit return (IOR) data <In-orbit return (IOR) data>` of {term}`common cause failures <Common cause failure>` but also from expert knowledge and engineering judgement.
 
-(syst_figure4_31)=
 ```{figure} ../../picture/figure4_31.png
 ---
 width: 600px
@@ -81,7 +79,6 @@ System failure calculation including {term}`common cause failure <Common cause f
 
 For explanation of the beta factor model, also a system with two identical redundant components A and B is considered. The failure of one component will, with probability $\beta$, cause all components to fail, and with probability $1- \beta$, just involve the given channel. The total failure rate of a channel is obtained by {cite:t}`sys-Hark2015CommonCF`:
 
-(syst_equation4_88)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -98,7 +95,6 @@ $\lambda_{C} = \beta\lambda_{T}$ denotes the failure rate of {term}`common cause
 
 The factor $\beta$ is defined as the ratio of the failure rate due to common cause to the total failure rate.
 
-(syst_equation4_89)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -115,7 +111,6 @@ In order to estimate the factor $\beta$, the {term}`contributing factors <Contri
 
 With the categories of significant contributors to {term}`CCF` shown in {numref}`syst_4_7_1`, the common cause beta factor can be estimated, starting with an assessment of each of the common cause susceptibility categories and for each, assigning a susceptibility score 1, 5 or 10 corresponding to the susceptibility, where 1 represents a low susceptibility to {term}`common cause failure <Common cause failure>` in this category. For example, a susceptibility score of 1 assigned to the category "diversity" would correspond to a system that consists of redundant component using different design concepts with no common hard- or software, whereas a susceptibility score of 10 indicates a high susceptibility to {term}`common cause failure <Common cause failure>`, for example redundancies consists of identical {term}`COTS` components. Susceptibility score 5 corresponds to medium susceptibility to {term}`common cause failure <Common cause failure>`. The sum over all categories provides the total Common Cause Score.
 
-(syst_equation4_90)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -130,7 +125,6 @@ The next step is to assess the maximum common cause value {term}`MCCV`. Accordin
 
 The beta factor is calculated as follows
 
-(syst_equation4_91)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -145,7 +139,6 @@ Where $\text{CCS}_{\max}$ denotes the maximum possible Common Cause Susceptibili
 
 As shown in the example in {numref}`syst-table4-15` the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (*CCS*) of 32. With 7 categories, $\text{CCS}_{\max}$ is 70. If the lowest value of 10% for $\text{MCCV}$ is selected, the following $\beta$ value is obtained from Eq. {eq}`Equation_7_91`.
 
-(syst_equation4_92)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -155,9 +148,6 @@ As shown in the example in {numref}`syst-table4-15` the assigned Susceptibility 
 \beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV} = \frac{32}{70} \times 0.10 = 0.0471
 ```
 ````
-
-(syst_table4_15)=
-**Table 4.15** : Example for the evaluation of a Common Cause Beta Factor
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst_table4_15')" placeholder="Search table...">
 

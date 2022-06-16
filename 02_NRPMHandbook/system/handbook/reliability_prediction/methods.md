@@ -258,7 +258,6 @@ The {term}`RBD` is created under the assumption that all failures are independen
 
 The procedure for constructing an {term}`RBD` is shown in {numref}`Figure_7_3`. 
 
-(syst_figure4_3)=
 ```{figure} ../../picture/figure4_3.png
 ---
 width: 600px
@@ -276,7 +275,6 @@ In the following, the calculation of some basic system architecture schemes usin
 
 In case of a serial system, each component is required to operate error-free in order to fulfil the system's function successfully ({numref}`Figure_7_4`).
 
-(syst_figure4_4)=
 ```{figure} ../../picture/figure4_4.png
 ---
 width: 600px
@@ -287,7 +285,6 @@ Reliability Block Diagram for a Serial System
 
 The following rules apply for the calculation of the Failure Probability or Reliability of serial systems under the assumption that the components are independent:
 
-(syst_equation4_1)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -298,7 +295,6 @@ R_{S}(t) = R_{A}(t) * R_{B}(t)
 ```
 ````
 
-(syst_equation4_2)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -311,7 +307,6 @@ F_{S}(t) = F_{A}(t) + F_{B}(t) - F_{A}(t) * F_{B}(t)
 
 In general, the following rule applies for a serial system with $n$ components:
 
-(syst_equation4_3)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -326,7 +321,6 @@ R_{S}(t) = \sum_{i = 1}^{n} R_{i}(t)
 
 In case of a parallel system, at least one component is required to operate error-free in order to fulfil the system function ({numref}`Figure_7_5`). The failure of one component is tolerable as the system is still functioning, thus redundancy is implemented in the system. 
 
-(syst_figure4_5)=
 ```{figure} ../../picture/figure4_5.png
 ---
 width: 600px
@@ -337,7 +331,6 @@ Reliability Block Diagram for a Parallel System
 
 For parallel systems, the following mathematical rules for the calculation of the Failure Probability or Reliability apply under the assumption that both components are independent:
 
-(syst_equation4_4)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -348,7 +341,6 @@ R_{S}(t) = R_{A}(t) + R_{B}(t) - R_{A}(t) * R_{B}(t)
 ```
 ````
 
-(syst_equation4_5)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -359,7 +351,6 @@ F_{S}(t) = F_{A}(t) * F_{B}(t)
 ```
 ````
 
-(syst_equation4_6)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -377,7 +368,6 @@ Many complex space systems can be represented as a combination of serial and par
 Before the failure probability and reliability of this particular system consisting of three components (A, B and C) is determined, the system architecture has to be simplified in accordance with the Boolean logic.
 
 
-(syst_figure4_6)=
 ```{figure} ../../picture/figure4_6.png
 ---
 width: 600px
@@ -388,7 +378,6 @@ Decomposition of a System Architecture
 
 In the first step, the summary of the serial connection between the failure of component B and C is obtained by the following equation:
 
-(syst_equation4_7)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -401,7 +390,6 @@ R_{B \vee C}(t) = R_{B}(t) * R_{C}(t)
 
 In the second and final step, the combination of the parallel arrangement described in the transitional scheme yields:
 
-(syst_equation4_8)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -412,7 +400,6 @@ R_{S}(t) = R_{A}(t) + R_{B \vee C}(t) -  R_{A}(t) * R_{B \vee C}(t)
 ```
 ````
 
-(syst_equation4_9)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -427,7 +414,6 @@ R_{S}(t) = R_{A}(t) + R_{B}(t) * R_{C}(t) -  R_{A}(t) * R_{B}(t) * R_{C}(t)
 
 For certain system architectures the {term}`RBD` cannot be decomposed. {numref}`Figure_7_7` shows an example of such a system architecture (bridge system) that cannot be reduced to a combination of serial and parallel arrangements.
 
-(syst_figure4_7)=
 ```{figure} ../../picture/figure4_7.png
 ---
 width: 600px
@@ -447,7 +433,6 @@ $MC_{4} = (B,C,E)$.
 
 {numref}`Figure_7_8` presents the minimal cut set that has been applied on the final scheme of the {term}`RBD`.
 
-(syst_figure4_8)=
 ```{figure} ../../picture/figure4_8.png
 ---
 width: 600px
@@ -458,7 +443,6 @@ Minimal Cut Sets
 
 The failure probability of the entire system can be approximated by adding the failure probabilities of the minimal cut sets. For each minimal cut set the failure probability is obtained by multiplying the failure probabilities of all its components.
 
-(syst_equation4_10)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -471,7 +455,6 @@ F_{S}(t) \cong F_{A}(t)F_{B}(t) + F_{C}(t)F_{D}(t) + F_{A}(t)F_{D}(t)F_{E}(t) + 
 
 The system reliability is then given by Eq. {eq}`Equation_7_11`.
 
-(syst_equation4_11)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -512,7 +495,6 @@ The fault tree analysis has the same limitations as {term}`RBD`, thus
 
 A redundancy in the system is represented as an AND gate in the fault tree, as shown in {numref}`Figure_7_9`. Both component A and B have to fail to cause the system failure. 
 
-(syst_figure4_9)=
 ```{figure} ../../picture/figure4_9.png
 ---
 width: 600px
@@ -523,7 +505,6 @@ Example Fault Tree of system with two redundant components.
 
 The calculation is identical to {term}`RBD`, thus Eq. {eq}`Equation_7_4` and Eq. {eq}`Equation_7_5` apply also for the fault tree. A system with components working in serial arrangement is represented by an OR gate in the fault tree, which means if either component A or B fails the system will fail, see {numref}`Figure_7_10`. 
 
-(syst_figure4_10)=
 ```{figure} ../../picture/figure4_10.png
 ---
 width: 600px
@@ -534,7 +515,6 @@ Example Fault Tree of system with two component working in series.
 
 For the calculation the same rules apply as for {term}`RBD`, thus Eq. {eq}`Equation_7_1` and Eq. {eq}`Equation_7_2` are to be used to calculate reliability or failure probability of the fault tree shown in Figure   12 -10. A combination of AND and OR gate, which would correspond to combination of serial and parallel arrangement in {term}`RBD` is shown in {numref}`Figure_7_11`. The calculation is done similar to {term}`RBD` by decomposition. 
 
-(syst_figure4_11)=
 ```{figure} ../../picture/figure4_11.png
 ---
 width: 600px
@@ -545,7 +525,6 @@ Example Fault Tree with OR and AND gates.
 
 A system consisting of n components or sub-systems, of which only k need to be functioning for system success, is called a “k-out-of-n” configuration. For such a system, k is less than n. The associated fault tree is represented with a voting gate, the figure indicates the number of basic events that are required for the top event. Given that the system components are identical and statistically independent the system reliability is given by the Binomial distribution in Eq. {eq}`Equation_7_12`.
 
-(syst_figure4_12)=
 ```{figure} ../../picture/figure4_12.png
 ---
 width: 600px
@@ -554,7 +533,6 @@ name: Figure_7_12
 Example Fault Tree with Vote gate (2 out of 3 logic).
 ```
 
-(syst_equation4_12)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -587,7 +565,6 @@ The initiating event is normally anticipated during the system development and t
 
 {numref}`Figure_7_13` shows an example of a generic event tree to illustrate how the initiating event evolves. Starting point for the creation of the event tree is the initiating event. Then the event tree is constructed considering the timing and the sequence of further events and failures that are leading to the outcome. Therefore, failure or success of barriers, mitigations means and additional events that are relevant for a specific initiating event are considered in the sequence in which they will be activated. Such additional events could be for example further component failures or external events. In the sequence of the event tree in most applications only two alternatives (“true” and “false”) are considered. It is, however, possible to have three or more alternatives. 
 
-(syst_figure4_13)=
 ```{figure} ../../picture/figure4_13.png
 ---
 width: 600px
@@ -598,7 +575,6 @@ Example of a generic event tree
 
 The consequences of the event are considered through a series of possible paths. Each path is assigned a probability of occurrence and thus the probability of the various possible outcomes can be calculated. For example, the quantitative assessment of the probability that outcome 1 occurs given the initiating event has occurred is given by: 
 
-(syst_equation4_13)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -670,7 +646,6 @@ In the following, the Markov model for a system with two components working in a
 
 The state transition rates are given by the failure rates for component $A$ and $B$, $\lambda_{A}$ and $\lambda_{B}$. {numref}`Figure_7_14` shows the corresponding state transition diagram. 
 
-(syst_figure4_14)=
 ```{figure} ../../picture/figure4_14.png
 ---
 width: 600px
@@ -681,7 +656,6 @@ State transition diagram of system with two redundant components
 
 A set of differential equations can be obtained from the state transition diagram in {numref}`Figure_7_14`. Each differential equation describes the change in the probability of being in one state, which can be formulated in the general equation, given in Eq. {eq}`Equation_7_14`. 
 
-(syst_equation4_14)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -694,7 +668,6 @@ A set of differential equations can be obtained from the state transition diagra
 
 The following set of differential equations is obtained from the state transition diagram in {numref}`Figure_7_14`
 
-(syst_equation4_15)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -705,8 +678,6 @@ The following set of differential equations is obtained from the state transitio
 ```
 ````
 
-
-(syst_equation4_16)=
 ````{admonition} Equation
 :class: equation
 ``  
@@ -717,7 +688,6 @@ The following set of differential equations is obtained from the state transitio
 ```
 ````
 
-(syst_equation4_17)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -728,7 +698,6 @@ The following set of differential equations is obtained from the state transitio
 ```
 ````
 
-(syst_equation4_18)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -741,7 +710,6 @@ The following set of differential equations is obtained from the state transitio
 
 Where $P_{1}(t)$ denotes the probability of being in state $S_{1}$, and $P_{2}(t)$ denotes the probability of being in state $S_{2}$ and so on. The system of differential equations can be represented as follows:
 
-(syst_equation4_19)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -754,7 +722,6 @@ Where $P_{1}(t)$ denotes the probability of being in state $S_{1}$, and $P_{2}(t
 
 For a system with $m$ states, the square matrix $A$ has $m$ rows and $m$ columns. The sum of all possible system states must be 1 at all times. 
 
-(syst_equation4_20)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -767,7 +734,6 @@ For a system with $m$ states, the square matrix $A$ has $m$ rows and $m$ columns
 
 To solve the differential equations, the initial state probabilities at $t = 0$ have to be defined, in this case both components are operable at $t=0$, thus $P_{1}(t) = 1$ and the other state probabilities are zero. From the solution of the system of differential equations, the following is obtained: 
 
-(syst_equation4_21)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -778,7 +744,6 @@ P_{1}(t) = \text{exp}\left(-\left(\lambda_{A} + \lambda_{B} \right)t\right)
 ```
 ````
 
-(syst_equation4_22)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -789,7 +754,6 @@ P_{2}(t) = \text{exp}\left(-\lambda_{A}t\right)
 ```
 ````
 
-(syst_equation4_23)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -800,7 +764,6 @@ P_{3}(t) = \text{exp}\left(-\lambda_{B}t\right)
 ```
 ````
 
-(syst_equation4_24)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -832,7 +795,6 @@ Within the Petri net, tokens are dynamic elements used to indicate the system st
 
 The multiplicity assigned to an arc in the Petri net specifies the number of tokens that an arc delivers at a time, whereby multiplicity of $1$ is usually not explicitly defined in the Petri net. A transition is enabled if the number of tokens in each of its inputs is equal to or greater than the multiplicity of the associated arcs. This concept allows to indicate if state transition is enabled or not, as shown in {numref}`Figure_7_15`. In the example, a multiplicity of $2$ is assigned to the arc from $p_{2}$, thus only with two tokens in $p_{2}$, the transition $t_{1}$ is enabled.
 
-(syst_figure4_15)=
 ```{figure} ../../picture/figure4_15.png
 ---
 width: 600px
@@ -843,7 +805,6 @@ Petri net before and after firing
 
 Similar to enabling a transition, the inverse function to inhibit a transition can also be modelled in the Petri net, represented by an inhibition arc. In the example in {numref}`Figure_7_16` the transition is inhibited as long as one token is in place $p_{2}$. 
 
-(syst_figure4_16)=
 ```{figure} ../../picture/figure4_16.png
 ---
 width: 600px
@@ -862,7 +823,6 @@ The different types of transitions within a Petri net can be described as determ
 
 A single repairable component that can obtain two states (operable or failed); can be represented by a Petri net as shown in {numref}`Figure_7_17`. The places $p_{1}$ and $p_{2}$ are representing the two states of the component and the failure or restoration of the component is shown as transitions $t_{1}$ and $t_{2}$ in the Petri net. 
 
-(syst_figure4_17)=
 ```{figure} ../../picture/figure4_17.png
 ---
 width: 600px
@@ -873,7 +833,6 @@ Petri net of single element
 
 The Petri nets corresponding to failure of a serial system and a parallel system are shown in {numref}`Figure_7_18`.
 
-(syst_figure4_18)=
 ```{figure} ../../picture/figure4_18.png
 ---
 width: 600px
@@ -898,7 +857,6 @@ As the model that is to be developed depends on the complexity of the system and
 5. Refine the model until the required level of detail is achieved. This involves iteration of step 3 and 4 
 6. Analysis of the model
 
-(syst_figure4_19)=
 ```{figure} ../../picture/figure4_19.png
 ---
 width: 600px
@@ -912,7 +870,6 @@ Main steps for system reliability analysis with Petri nets.
 
 Petri nets used for quantitative analysis are primarily based on timed or stochastic state transition diagrams. The quantitative analysis of Petri nets provides the probability of reaching certain states that are relevant for reliability assessment (stationary analysis), as well as the probability of certain transitions (transition analysis). Petri nets that consist exclusively exponential distributed transitions can be converted to its corresponding Markov models. So general stochastic Petri net models containing complex interactions can often be described more easily and with a smaller diagram than using Markov model {cite:t}`sys-IEC-61165:2006`. In case of arbitrary distributions, Monte Carlo simulation are used to perform transient or stationary analysis. Monte Carlo simulation is also applied to Petri nets if the number of reachable states is too large to solve the corresponding Markov model. The number of manageable states strongly depends on computing performance, however up to 107 states can be regarded as analysable. Besides a quantitative analysis, a qualitative analysis can be performed to determine the possibility to reach certain states (reachability analysis) or to identify invariants, deadlocks and traps (structured analysis). The qualitative analysis is based on an untimed state transition diagram, which means the transitions are not quantified. The following diagram provides an overview of the analysis methods for Petri nets. 
 
-(syst_figure4_20)=
 ```{figure} ../../picture/figure4_20.png
 ---
 width: 600px
@@ -930,7 +887,6 @@ Bayesian networks are directed acyclic graphs DAG, in which the nodes represent 
 The graph can be regarded as a probabilistic expert system, whereby the reasoning is based on dependency relations: fault-symptoms, cause-effects, and hypothesis-evidence. Every fault and symptom is modelled by random variables with a finite range of possible values. An example of a basic Bayesian network is shown in {numref}`Figure_7_21`.
 
 
-(syst_figure4_21)=
 ```{figure} ../../picture/figure4_21.png
 ---
 width: 200px
@@ -942,7 +898,6 @@ Example of a basic Bayesian network
 Considering a Bayesian network with random variables $X_{1}, X_{2}, ..., X_{n}$ by applying the chain rule of probability theory, the joint probability given in Eq. {eq}`Equation_7_27` can be expressed as follows: 
 
 
-(syst_equation4_25)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -972,7 +927,6 @@ The probability distribution for the states of $B$ given the states of $A$ are d
 
 The marginal distribution $P\left(B=S_{B_{1}}\right)$ is obtained from Bayesian network inference as follows:
 
-(syst_equation4_26)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -995,7 +949,6 @@ An advantage of Bayesian networks for system reliability estimation is the fact 
 
 The reliability analysis based on Bayesian networks starts with identifying the set of random variables to describe the network. In a Bayesian network, each node represents a random variable and the connections between nodes indicate the causal relationships between variables. The conditional probability table needs to be defined to represent this relationship and thus to represent the system architecture that is to be analysed. In the following, the Bayesian network and associated conditional probability table is shown for serial system, {numref}`Figure_7_22`. It should be noted that for a serial and parallel system the Bayesian network is the same but with different probability tables.
 
-(syst_figure4_22)=
 ```{figure} ../../picture/figure4_22.png
 ---
 width: 200px
@@ -1006,7 +959,6 @@ Bayesian network of a serial system
 
 The joint probability of the serial system is given by
 
-(syst_equation4_27)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -1019,7 +971,6 @@ P(X,A,B) = P(X|A,B)P(A,B)
 
 The conditional probability of the child node X for a serial system is given by Eq. {eq}`Equation_7_28` {cite:t}`sys-bayesian-networks`:
 
-(syst_equation4_28)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -1052,7 +1003,6 @@ The marginal probability $P(A,B)$ of root node $A$ and $B$ is given by the proba
 
 Another advantage of Bayesian network is that it allows to model dependencies. {numref}`Figure_7_23` shows a Bayesian network for analysing common cause failures. In the example, the failure of the component is caused by an external event or shock (see shock model in {numref}`syst_4_7`). While the events $S_{1}$ and $S_{3}$ cause only one component ($A$ or $B$) to fail, the event $S_{2}$ will result in the loss of both components. Thus, component $A$ and $B$ are not independent as their failure could result from a common source. The system states are assigned to $X$. In this case, all the conditional probability matrices (for $A$, $B$, and $X$) are defined equivalent to AND gates.
 
-(syst_figure4_23)=
 ```{figure} ../../picture/figure4_23.png
 ---
 width: 600px
