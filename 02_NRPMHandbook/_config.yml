@@ -52,8 +52,16 @@ sphinx:
     bibtex_reference_style  : label
     execution_show_tb       : True
     execution_timeout       : 60
+    
     # turn off jupyter notebook execution
     jupyter_execute_notebooks: "off" 
+    
+    # for LaTeX compilation, protect hyperlinks to allow references inside captions
+    latex_elements : 
+      'preamble': 
+        \let\originalhyperlink\hyperlink
+        \renewcommand\hyperlink[2]{\protect\originalhyperlink{#1}{#2}}
+    
 # The following is currently not possible, because it overwrites the Jupyter Book html_theme_options. There is currently no way to add this option without overwriting.
 #    html_theme_options      : 
 #      search_bar_text       : "Search handbook..."
