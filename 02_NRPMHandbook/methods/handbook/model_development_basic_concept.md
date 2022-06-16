@@ -20,14 +20,14 @@ The probability that the system or component does not fail and performs its inte
 ``
 ``  
 ```{math}
-:label: Equation Method 6.1
+:label: Equation_method_6_1
 R_{T}\left( t \right) = P\left\lbrack T > t \right\rbrack = 1 - \int_{0}^{t}{f_{T}\left( t \right)\mathrm{d}t} = 1 - F_{T}\left( t \right) = \mathrm{\exp}\left( - \int_{0}^{t}{\lambda\left( x \right)\text{dx}} \right)
 ```
 ````
 
 The reliability function $R\left( t \right) = R_{T}\left( t \right)$ is thus defined as the probability of survival until time $t$.
 
-Eq. {eq}`Equation Method 6.1` also defines the relation to the probability of failure $F_{T}\left( t \right)$, the failure density $f_{T}\left( t \right)$, and to the failure rate $\lambda\left( t \right)$, which are defined hereafter.
+Eq. {eq}`Equation_method_6_1` also defines the relation to the probability of failure $F_{T}\left( t \right)$, the failure density $f_{T}\left( t \right)$, and to the failure rate $\lambda\left( t \right)$, which are defined hereafter.
 
 **Failure Probability *$F(t)$***
 
@@ -38,7 +38,7 @@ The probability that a failure occurs and the system or component cannot perform
 ``
 ``  
 ```{math}
-:label: Equation Method 6.2
+:label: Equation_method_6_2
 F_{T}\left( t \right) = P\left\lbrack T \leq t \right\rbrack = \int_{0}^{t}{f_{T}\left( t \right)\mathrm{d}t} = 1 - R_{T}\left( t \right) = 1 - \mathrm{\exp}\left( - \int_{0}^{t}{\lambda\left( x \right)\mathrm{d}x} \right)
 ```
 ````
@@ -52,7 +52,7 @@ Following Boolean logic, each system and its components can have two possible st
 ``
 ``  
 ```{math}
-:label: Equation Method 6.3
+:label: Equation_method_6_3
 R\left( t \right) + F\left( t \right) = 1\ .0
 ```
 ````
@@ -66,7 +66,7 @@ The first derivative of the failure probability at time $t$.
 ``
 ``  
 ```{math}
-:label: Equation Method 6.4
+:label: Equation_method_6_4
 f_{T}\left( t \right) = \frac{\mathrm{d}F_{T}\left( t \right)}{\mathrm{d}t}
 ```
 ````
@@ -82,7 +82,7 @@ The failure rate $\lambda\left( t \right)$ describes the probability that a fail
 ``
 ``  
 ```{math}
-:label: Equation Method 6.5
+:label: Equation_method_6_5
 \lambda\left( t \right) = \lim_{\Delta t \rightarrow 0}\left( \frac{F_{T}\left( t + \Delta t \right) - F_{T}(t)}{\text{Δt}}*\frac{1}{R_{T}(t)} \right) = \frac{f_{T}(t)}{R_{T}(t)}
 ```
 ````
@@ -98,7 +98,7 @@ The average time until failure occurs, defined as the expected value of the fail
 ``
 ``  
 ```{math}
-:label: Equation Method 6.6
+:label: Equation_method_6_6
 \text{MTTF} = E\left\lbrack T \right\rbrack = \int_{0}^{\infty}{t \cdot f_{T}\left( t \right)\ \mathrm{d}t} = \int_{0}^{\infty}{R_{T}\left( t \right)\ \mathrm{d}t}
 ```
 ````
@@ -414,7 +414,7 @@ In the Exponential model, the probability density function $f_{T}(t)$ and the cu
 ``
 ``  
 ```{math}
-:label: Equation Method 6.7
+:label: Equation_method_6_7
 f_{T}(t) = \ \lambda \cdot exp( - \lambda t)
 ```
 ````
@@ -424,7 +424,7 @@ f_{T}(t) = \ \lambda \cdot exp( - \lambda t)
 ``
 ``  
 ```{math}
-:label: Equation Method 6.8
+:label: Equation_method_6_8
 F_{T}\left( t \right) = \ 1 - exp\left( - \lambda t \right) = 1 - R_{T}\left( t \right)
 ```
 ````
@@ -445,7 +445,7 @@ The most common time-to-failure distribution model with non-constant failure rat
 ``
 ``  
 ```{math}
-:label: Equation Method 6.9
+:label: Equation_method_6_9
 f_{T}(t) = \ \frac{\beta}{\alpha} \cdot \left( \frac{t}{\alpha} \right)^{\beta - 1}\exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack
 ```
 ````
@@ -455,7 +455,7 @@ f_{T}(t) = \ \frac{\beta}{\alpha} \cdot \left( \frac{t}{\alpha} \right)^{\beta -
 ``
 ``  
 ```{math}
-:label: Equation Method 6.10
+:label: Equation_method_6_10
 F_{T}\left( t \right) = \ 1 - exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack
 ```
 ````
@@ -475,7 +475,7 @@ The expected time to failure is a function of both distribution parameters and m
 ``
 ``  
 ```{math}
-:label: Equation Method 6.11
+:label: Equation_method_6_11
 \Gamma\left( x \right) = \int_{0}^{\infty}{t^{x - 1}\mathrm{\exp}\left( - t \right)\text{\ dt}}
 ```
 ````
@@ -500,7 +500,7 @@ A Bernoulli trial is an experiment with only two possible mutually exclusive out
 ``
 ``  
 ```{math}
-:label: Equation Method 6.12
+:label: Equation_method_6_12
 p_{Y}\left( Y = y \right) = \ \begin{pmatrix}n\\y\\\end{pmatrix}p^{y}\left( 1 - p \right)^{n - y} = \frac{n!}{y!\left( n - y \right)!}p^{y}\left( 1 - p \right)^{n - y}
 ```
 ````
@@ -528,7 +528,7 @@ Two problems are commonly encountered during the analysis of failure data: Censo
 
 Censoring relates to observations of a random variable that are available only within a certain range, which may be fixed or random. To give an example, data from a reliability test programme with fixed duration provides exact time-to-failure information only for a random number of items that fail during the test; for the items that survived the test it is only known that the failure time is larger than . This situation is sometimes termed Type I Censoring. An alternative test design would require a fixed number of failures, which leads to a random test duration (Type II Censoring). Various methods for dealing with censored data samples have been discussed in the literature, see e.g. {cite:t}`method-engineering-statistics-handbook`. Both the Maximum Likelihood Method and Bayesian parameter estimation allow the explicit consideration of censored data points in the formulation of the likelihood function, see {numref}`method_7_3_2` for details.
 
-When testing high reliability components or collecting in-service data, it is likely that most samples will in fact survive the test, leading to a highly censored data set. Unfortunately, the uncertainty of the reliability estimate depends on the number of observed failures, see e.g. Eq. {eq}`Equation Method 6.14` below. The expected number of failures for a given number of items and a given duration (cumulated hours) is proportional to the failure rate. Thus, very large data samples and/or very long durations are required for high accuracy estimates of small failure rates, which may be impossible to achieve in practice. To overcome this problem, components may be tested at higher than expected stresses in accelerated life testing.
+When testing high reliability components or collecting in-service data, it is likely that most samples will in fact survive the test, leading to a highly censored data set. Unfortunately, the uncertainty of the reliability estimate depends on the number of observed failures, see e.g. Eq. {eq}`Equation_method_6_14` below. The expected number of failures for a given number of items and a given duration (cumulated hours) is proportional to the failure rate. Thus, very large data samples and/or very long durations are required for high accuracy estimates of small failure rates, which may be impossible to achieve in practice. To overcome this problem, components may be tested at higher than expected stresses in accelerated life testing.
 
 In the following, some basic information is provided regarding parameter estimation for the Exponential, Weibull and Binomial distribution.
 
@@ -542,7 +542,7 @@ Parameter estimation is rather simple for the Exponential distribution, the cons
 ``
 ``  
 ```{math}
-:label: Equation Method 6.13
+:label: Equation_method_6_13
 \widehat{\lambda} = E\left\lbrack \lambda \right\rbrack = \frac{n_{f}}{\sum_{i = 1}^{n}t_{i}}
 ```
 ````
@@ -555,7 +555,7 @@ Where $n_{f}$ denotes the number of observed failures, $n$ the number of items t
 ``
 ``  
 ```{math}
-:label: Equation Method 6.14
+:label: Equation_method_6_14
 \text{CoV}\left\lbrack \lambda \right\rbrack = \frac{\sqrt{\text{Var}\left\lbrack \lambda \right\rbrack}}{E\left\lbrack \lambda \right\rbrack} = \frac{1}{\sqrt{n_{f}}}
 ```
 ````
@@ -568,9 +568,9 @@ For homogeneous data samples (failure rate assumed to be constant both in time a
 
 Similar considerations are possible for data collected during operations.
 
-It should be emphasized that Eq. {eq}`Equation Method 6.13` and Eq. {eq}`Equation Method 6.14` are valid only for constant failure rates. Another important assumption is that the observed failure times are from the same population, i.e. the failure rate is the same for all tested parts. The same is true for the alternative estimation methods discussed in the following.
+It should be emphasized that Eq. {eq}`Equation_method_6_13` and Eq. {eq}`Equation_method_6_14` are valid only for constant failure rates. Another important assumption is that the observed failure times are from the same population, i.e. the failure rate is the same for all tested parts. The same is true for the alternative estimation methods discussed in the following.
 
-Equations for Bayesian updating with the analytic approach using a conjugate Gamma prior are given in {numref}`method_7_5_1` ({numref}`method-table7-2`). Without prior information, the results are equivalent to Eq. {eq}`Equation Method 6.13` and Eq. {eq}`Equation Method 6.14` above. However, the failure rate is modelled with a Gamma distribution with support for positive values only, which is more consistent that the asymptotic Normal distribution assumption in the Maximum Likelihood method.
+Equations for Bayesian updating with the analytic approach using a conjugate Gamma prior are given in {numref}`method_7_5_1` ({numref}`method-table7-2`). Without prior information, the results are equivalent to Eq. {eq}`Equation_method_6_13` and Eq. {eq}`Equation_method_6_14` above. However, the failure rate is modelled with a Gamma distribution with support for positive values only, which is more consistent that the asymptotic Normal distribution assumption in the Maximum Likelihood method.
 
 Another well-known approach to quantify the statistical uncertainty associated with data-based failure rate estimates is the use of confidence intervals. For the Exponential model, a $1 - \alpha$ confidence interval can be derived analytically, leading to the following interval estimate:
 
@@ -579,14 +579,14 @@ Another well-known approach to quantify the statistical uncertainty associated w
 ``
 ``  
 ```{math}
-:label: Equation Method 6.15
+:label: Equation_method_6_15
 P\left\lbrack \frac{\chi_{f,\frac{\alpha}{2}}^{2}}{2\sum_{i}^{n}t_{i}} \leq \lambda \leq \frac{\chi_{f,1 - \frac{\alpha}{2}}^{2}}{2\sum_{i}^{n}t_{i}} \right\rbrack = 1 - \alpha
 ```
 ````
 
 Here, $\chi_{f,\frac{\alpha}{2}}^{2}$ and $\chi_{f,1 - \frac{\alpha}{2}}^{2}$ are quantiles of a Chi-Square distribution with $f$ degrees of freedom. For a time truncated test (Type I Censoring), $f = 2n_{f} + 2$, whereas $f = 2n_{f}$ becomes relevant for a failure truncated test (Type II Censoring).
 
-Note that Eq. {eq}`Equation Method 6.15` is based on the mathematical relationship between the Exponential, Gamma and Chi-Square distribution and fully equivalent with the Bayesian approach using a Gamma conjugate prior, see {numref}`method_7_5_1` for details.
+Note that Eq. {eq}`Equation_method_6_15` is based on the mathematical relationship between the Exponential, Gamma and Chi-Square distribution and fully equivalent with the Bayesian approach using a Gamma conjugate prior, see {numref}`method_7_5_1` for details.
 
 Failure rate estimation with zero observed failures is also discussed in {numref}`method_7_5_1`.
 
@@ -602,14 +602,14 @@ In practice, most data samples include censored observations, which is important
 ``
 ``  
 ```{math}
-:label: Equation Method 6.16
+:label: Equation_method_6_16
 \widehat{\mathbf{\theta}} = \min_{\mathbf{\theta}}\left\lbrack - l(\mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\ ) \right\rbrack = \min_{\mathbf{\theta}}\left\lbrack - \mathrm{\ln}\left( L(\mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\ ) \right) \right\rbrack
 ```
 ````
 
 Here, $L\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ denotes the Likelihood of a parameter set $\mathbf{\theta}$ conditional on the data $\widehat{\mathbf{x}}$ (see {numref}`method_7_3`for details), and $l\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ is the corresponding log-Likelihood.
 
-The statistical uncertainty and covariance between the different parameters can be evaluated with the aid of the Fisher information matrix, which is derived from the Hessian matrix; the Hessian is usually determined as a by-product of the optimization routine used to solve Eq. {eq}`Equation Method 6.16`.
+The statistical uncertainty and covariance between the different parameters can be evaluated with the aid of the Fisher information matrix, which is derived from the Hessian matrix; the Hessian is usually determined as a by-product of the optimization routine used to solve Eq. {eq}`Equation_method_6_16`.
 
 In practice, it may be sufficient to know that at least for standard distribution models and usual sampling characteristics, analytic and numerical approaches for Maximum Likelihood Estimations are implemented in various software tools for statistical and/or reliability analysis.
 
@@ -623,7 +623,7 @@ The Maximum Likelihood Estimate for the probability of failure in the Binomial m
 ``
 ``  
 ```{math}
-:label: Equation Method 6.17
+:label: Equation_method_6_17
 \widehat{p} = E\left\lbrack p \right\rbrack = \frac{n_{f}}{n}
 ```
 ````
@@ -637,7 +637,7 @@ The number of failures determines the statistical uncertainty associated with th
 ``
 ``  
 ```{math}
-:label: Equation Method 6.18
+:label: Equation_method_6_18
 P\left\lbrack \text{Beta}_{\frac{\alpha}{2}}\left( n_{f},\ n - n_{f} + 1 \right) \leq p \leq \text{Beta}_{\frac{\alpha}{2}}\left( n_{f} + 1,\ n - n_{f} \right) \right\rbrack = 1 - \alpha
 ```
 ````
@@ -746,7 +746,7 @@ To clarify the link to statistical methods for reliability prediction, it is imp
 ``
 ``  
 ```{math}
-:label: Equation Method 6.19
+:label: Equation_method_6_19
 R_{T}\left( t \right) = 1 - F_{T}\left( t \right) = 1 - P_{f}\left( t \right) = 1 - \ P\left\lbrack g\left( \mathrm{X}\left( t \right) \right) \leq 0 \right\rbrack
 ```
 ````
@@ -832,7 +832,7 @@ Unfortunately, the simplicity of crude Monte Carlo comes at a cost, requiring a 
 ``
 ``  
 ```{math}
-:label: Equation Method 6.20
+:label: Equation_method_6_20
 N \geq \left( \frac{2 \cdot \sqrt{P_{f}\left( 1 - P_{f} \right)}}{\alpha \cdot P_{f}} \right)^{2} + 1
 ```
 ````

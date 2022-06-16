@@ -23,12 +23,12 @@ Now let us assume that $n$ independent observations (realisations) of the random
 ``
 ``  
 ```{math}
-:label: Equation Method 7.21
+:label: Equation_method_7_21
 f_{\mathbf{\Theta}}^{''}\left( \mathbf{\theta} \middle| \widehat{\mathbf{x}} \right) = \frac{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right) \cdot f_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)}{\int_{\text{DΘ}}^{}{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right)}{\cdot f}_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)d\mathbf{\theta}}
 ```
 ````
 
-where $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}$ is the likelihood of the given observations assuming that the distribution parameters are equal to $\mathbf{\theta}$. The denominator of Eq. {eq}`Equation Method 7.21` is a normalizing constant, which ensures that the posterior density function ${f''}_{\mathbf{\Theta}}\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ integrates to unity. To understand Bayesian updating it is sufficient to know that ${f''}_{\mathbf{\Theta}}\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right) \propto L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right){f'}_{\mathbf{\Theta}}\left( \mathbf{\theta} \right)$.
+where $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}$ is the likelihood of the given observations assuming that the distribution parameters are equal to $\mathbf{\theta}$. The denominator of Eq. {eq}`Equation_method_7_21` is a normalizing constant, which ensures that the posterior density function ${f''}_{\mathbf{\Theta}}\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ integrates to unity. To understand Bayesian updating it is sufficient to know that ${f''}_{\mathbf{\Theta}}\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right) \propto L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right){f'}_{\mathbf{\Theta}}\left( \mathbf{\theta} \right)$.
 
 In a reliability context, $X$ may be for example the random time to failure of an item with a failure rate $\mathbf{\theta}\mathbf{=}\lambda$, assumed to be constant in time. The conditional density function $f_{X}\left( x\left| \lambda \right.\  \right)$ (also called "sampling distribution") is in this case defined by the Exponential distribution, conditional on the failure rate $\lambda$. The prior distribution for the failure rate, ${f'}_{\Lambda}\left( \lambda \right)$, may be derived e.g. from a handbook estimate, and can be updated with new time-to-failure data.
 
@@ -50,7 +50,7 @@ Bayesian updating of a prior estimate for a constant failure rate $\lambda$ with
 (method_7_1_2)=
 ### Bayes rule as estimation method
 
-As has been discussed in {numref}`method_6_4`, Bayesian statistics can also be used as a method for the estimation of model parameters from statistical data, without consideration of prior knowledge. When compared correctly, the point estimates derived from a Bayesian analysis are generally equivalent to the Maximum Likelihood Method, which takes basis in the same Likelihood function $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right)$ as used by Eq. {eq}`Equation Method 7.21`. However, the uncertainty quantification provided by Bayes rule is more consistent than the Normal approximation used by the Maximum Likelihood Method.
+As has been discussed in {numref}`method_6_4`, Bayesian statistics can also be used as a method for the estimation of model parameters from statistical data, without consideration of prior knowledge. When compared correctly, the point estimates derived from a Bayesian analysis are generally equivalent to the Maximum Likelihood Method, which takes basis in the same Likelihood function $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right)$ as used by Eq. {eq}`Equation_method_7_21`. However, the uncertainty quantification provided by Bayes rule is more consistent than the Normal approximation used by the Maximum Likelihood Method.
 
 To apply Bayesian methods for parameter estimation, the prior distribution ${f'}_{\mathbf{\Theta}}\left( \mathbf{\theta} \right)$ should be selected as a non-informative prior, see {numref}`method_7_4_2` for details. Examples for Bayesian updating with non-informative priors can be found in {numref}`method_7_5`.
 
@@ -86,7 +86,7 @@ The final outcome of a Bayesian analysis is the posterior distribution of the mo
 (method_7_3)=
 ## Likelihood formulation
 
-In Bayes rule (Eq. {eq}`Equation Method 7.21`), the likelihood $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}$ contains the information provided by the data sample that is used for updating. The formulation of the likelihood is based on the sampling distribution $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$, which defines also the model parameters $\mathbf{\theta}$ to be updated. This is why the consideration of the sampling distribution is always the first step in a Bayesian analysis.
+In Bayes rule (Eq. {eq}`Equation_method_7_21`), the likelihood $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}$ contains the information provided by the data sample that is used for updating. The formulation of the likelihood is based on the sampling distribution $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$, which defines also the model parameters $\mathbf{\theta}$ to be updated. This is why the consideration of the sampling distribution is always the first step in a Bayesian analysis.
 
 (method_7_3_1)=
 ### Distributional model for the sampling distribution
@@ -100,7 +100,7 @@ In a Bayesian analysis, the sampling distribution is needed for the formulation 
 ``
 ``  
 ```{math}
-:label: Equation Method 7.22
+:label: Equation_method_7_22
 L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}
 ```
 ````
@@ -131,7 +131,7 @@ The likelihood $L$ for a right censored data set is:
 ``
 ``  
 ```{math}
-:label: Equation Method 7.23
+:label: Equation_method_7_23
 L \propto \ \prod_{i = 1}^{n}{f\left( \widehat{\mathbf{x}_{\mathbf{i}}}|\theta \right) \cdot \prod_{j = 1}^{m}\left( 1 - F\left( \widehat{\mathbf{x}_{\mathbf{\text{up}}}}|\theta \right) \right)}
 ```
 ````
@@ -143,7 +143,7 @@ Where $\widehat{\mathbf{x}_{\mathbf{\text{up}}}}$ is the upper censoring point, 
 ``
 ``  
 ```{math}
-:label: Equation Method 7.24
+:label: Equation_method_7_24
 L \propto \ \prod_{i = 1}^{n}{f\left( \widehat{\mathbf{x}_{\mathbf{i}}}|\theta \right) \cdot \prod_{j = 1}^{m}\left( F\left( \widehat{\mathbf{x}_{\mathbf{\text{iow}}}}|\theta \right) \right)}
 ```
 ````
@@ -155,7 +155,7 @@ Where $\widehat{\mathbf{x}_{\mathbf{\text{iow}}}}$ is the lower censoring point.
 ``
 ``  
 ```{math}
-:label: Equation Method 7.25
+:label: Equation_method_7_25
 L \propto \ \prod_{j = 1}^{m}\left( F\left( \widehat{\mathbf{x}_{\mathbf{up,i}}}|\theta \right) - F\left( \widehat{\mathbf{x}_{\mathbf{low,i}}}|\theta \right) \right)
 ```
 ````
@@ -167,7 +167,7 @@ For the situation where the likelihood needs to be truncated, right, left or int
 ``
 ``  
 ```{math}
-:label: Equation Method 7.26
+:label: Equation_method_7_26
 L \propto \ \prod_{i = 1}^{n}\frac{f\left( \widehat{\mathbf{x}_{\mathbf{i}}}|\theta \right)}{F\left( x_{\text{up}}|\theta \right)}
 ```
 ````
@@ -179,7 +179,7 @@ The likelihood formulation in the case of left truncation is
 ``
 ``  
 ```{math}
-:label: Equation Method 7.27
+:label: Equation_method_7_27
 L \propto \ \prod_{i = 1}^{n}\frac{f\left( \widehat{\mathbf{x}_{\mathbf{i}}}|\theta \right)}{1 - F\left( x_{\text{low}}|\theta \right)}
 ```
 ````
@@ -246,7 +246,7 @@ An example for the use of a Jeffreys prior for Bayesian updating in the case of 
 ``
 ``  
 ```{math}
-:label: Equation Method 7.28
+:label: Equation_method_7_28
 {f'}_{\Theta}\left( \theta \right) \propto \frac{1}{\lambda}
 ```
 ````
@@ -258,7 +258,7 @@ The reference prior is used e.g. for the Weibull distribution:
 ``
 ``  
 ```{math}
-:label: Equation Method 7.29
+:label: Equation_method_7_29
 {f'}_{\Theta}\left( \theta \right) \propto \frac{1}{\alpha \beta}
 ```
 ````
@@ -414,7 +414,7 @@ The parameters of the posterior gamma distribution for the failure rate $\lambda
 ``
 ``  
 ```{math}
-:label: Equation Method 7.30
+:label: Equation_method_7_30
 \begin{matrix} \beta'' = \sum_{i = 1}^{n}{t_{i} = 677810} \\   \alpha^{''} = n = 10 \\\end{matrix}
 ```
 ````
@@ -426,7 +426,7 @@ Assuming that a vague (improper) prior is used for the gamma distribution:
 ``
 ``  
 ```{math}
-:label: Equation Method 7.31
+:label: Equation_method_7_31
 \begin{matrix}\beta' = 0 \\ \alpha^{'} = 0 \\ \end{matrix}
 ```
 ````
@@ -440,7 +440,7 @@ The posterior mean and standard deviation of the failure rate are:
 ``
 ``  
 ```{math}
-:label: Equation Method 7.32
+:label: Equation_method_7_32
 \begin{matrix}{\mu''}_{\lambda} = \frac{\alpha''}{\beta''} = \frac{10}{\ 677810} = 1.47\  \cdot 10^{- 5} \\                                
   {\sigma''}_{\lambda} = \frac{\sqrt{\alpha''}}{\beta''} = \frac{\sqrt{n}}{\sum_{i = 1}^{n}t_{i}} = 4.66\  \cdot 10^{- 6} \\   
   \end{matrix}
@@ -464,7 +464,7 @@ In practice sometimes no failure event is observed but an estimate of the failur
 ``
 ``  
 ```{math}
-:label: Equation Method 7.33
+:label: Equation_method_7_33
 \Pr\left( 0,T \right) = 1 - e^{- \lambda T}
 ```
 ````
@@ -476,7 +476,7 @@ And thus,
 ``
 ``  
 ```{math}
-:label: Equation Method 7.34
+:label: Equation_method_7_34
 \Pr\left( 0,\sum_{i = 1}^{n}t_{i} \right) = {1 - e}^{- \lambda\sum_{i = 1}^{n}t_{i}}
 ```
 ````
@@ -492,7 +492,7 @@ This assumption results in
 ``
 ``  
 ```{math}
-:label: Equation Method 7.35
+:label: Equation_method_7_35
 \lambda_{p} = \frac{- ln\left( 1 - \int_{0}^{p}{f\left( p \right)\text{dp}} \right)}{\sum_{i = 1}^{n}t_{i}}
 ```
 ````
@@ -514,7 +514,7 @@ The average failure rate can be estimated by
 ``
 ``  
 ```{math}
-:label: Equation Method 7.36
+:label: Equation_method_7_36
 E\left\lbrack \lambda \right\rbrack = \int_{0}^{1}\frac{- ln\left( 1 - \int_{0}^{p}{f\left( p \right)\text{dp}} \right)}{\sum_{i = 1}^{n}t_{i}}dp = \frac{1}{\sum_{i = 1}^{n}t_{i}}
 ```
 ````
@@ -528,7 +528,7 @@ The number of failures corresponding to a median failure rate is calculated by
 ``
 ``  
 ```{math}
-:label: Equation Method 7.37
+:label: Equation_method_7_37
 \lambda_{0.5} = \int_{0}^{1}\frac{- ln\left( 1 - \int_{0}^{0.5}{f\left( p \right)\text{dp}} \right)}{\sum_{i = 1}^{n}t_{i}}dp = \frac{- ln(0.5)}{\sum_{i = 1}^{n}t_{i}}
 ```
 ````
@@ -537,14 +537,14 @@ From this equation it is obvious that the failure rate decreases with the number
 
 Another possibility is the estimation of the failure rate using the Chi-Square distribution. The Chi-Square distribution is a special case of the gamma distribution, which represents the conjugate prior distribution of the failure rate.
 
-Using the Chi-Square distribution $\chi_{f,q}^{2}$ with $f$ degrees of freedom, the $q$-quantiles of the uncertain failure rate $\lambda$ can be determined, see also Eq. {eq}`Equation Method 6.15` in {numref}`method_6_4_3_1`. For time truncated records, the following is valid:
+Using the Chi-Square distribution $\chi_{f,q}^{2}$ with $f$ degrees of freedom, the $q$-quantiles of the uncertain failure rate $\lambda$ can be determined, see also Eq. {eq}`Equation_method_6_15` in {numref}`method_6_4_3_1`. For time truncated records, the following is valid:
 
 ````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
-:label: Equation Method 7.38
+:label: Equation_method_7_38
 \lambda = \frac{\chi_{2\left( n_{f} + 1 \right),1 - \alpha}^{2}}{2 \cdot \sum_{i = 1}^{n}t_{i}}
 ```
 ````
@@ -556,7 +556,7 @@ Where $n_{f}$ denotes the number of failure events, $\alpha$ the level of confid
 ``
 ``  
 ```{math}
-:label: Equation Method 7.39
+:label: Equation_method_7_39
 n_{f,equi,1 - \alpha} = \frac{\chi_{2\left( n_{f} + 1 \right),1 - \alpha}^{2}}{2}
 ```
 ````
@@ -568,7 +568,7 @@ The equivalent number of failure events is the expected number of failures for a
 ``
 ``  
 ```{math}
-:label: Equation Method 7.40
+:label: Equation_method_7_40
 n_{f,equi,1 - \alpha} = \frac{\chi_{2\left( 0 + 1 \right),1 - 0.5}^{2}}{2} = \frac{1.3863}{2} = 0.6931 = - ln(\alpha) = - ln(0.5)
 ```
 ````
@@ -580,7 +580,7 @@ This corresponds to the median of the posterior distribution. More generally, th
 ``
 ``  
 ```{math}
-:label: Equation Method 7.41
+:label: Equation_method_7_41
 n_{equi,1 - \alpha} = \frac{\chi_{2\left( 0 + 1 \right),1 - \alpha}^{2}}{2} = - ln(\alpha)
 ```
 ````
@@ -590,7 +590,7 @@ The Chi-Square estimator is thus for the case that no observation is made equal 
 (method_7_5_2)=
 ### Numerical approach using Markov Chain Monte Carlo Methods
 
-In case where no analytical solution is available, numerical approaches can be used. In the Bayesian rule (Eq. {eq}`Equation Method 7.21` in {numref}`method_7_1` the likelihood function and the prior density function are known and can be easily calculated. For calculating the posterior function, the denominator needs to be solved which is in general analytically not possible and numerically difficult. This problem is solved by a class of numerical algorithms, the so-called Markov Chain Monte Carlo (MCMC) methods **\[BR25\]**. These methods are independent from the distribution of the prior density function and the formulation of the Likelihood function, and can be applied to a wide class of problems.
+In case where no analytical solution is available, numerical approaches can be used. In the Bayesian rule (Eq. {eq}`Equation_method_7_21` in {numref}`method_7_1` the likelihood function and the prior density function are known and can be easily calculated. For calculating the posterior function, the denominator needs to be solved which is in general analytically not possible and numerically difficult. This problem is solved by a class of numerical algorithms, the so-called Markov Chain Monte Carlo (MCMC) methods **\[BR25\]**. These methods are independent from the distribution of the prior density function and the formulation of the Likelihood function, and can be applied to a wide class of problems.
 
 Besides offering full flexibility in terms of prior and sampling distributions, MCMC methods can also be used for the development of more complex probabilistic models, such as e.g. hierarchical models to combine different non-homogeneous data samples.
 
@@ -619,7 +619,7 @@ The likelihood is defined by:
 ``
 ``  
 ```{math}
-:label: Equation Method 7.42
+:label: Equation_method_7_42
 L\left( \widehat{\mathbf{x}}\left| \lambda \right.\  \right) = \prod_{i = 1}^{n}{\lambda \cdot e^{- \lambda x_{i}}}
 ```
 ````
@@ -631,7 +631,7 @@ Where $n$ denotes the number of (here: time-to-failure) observations of the rand
 ``
 ``  
 ```{math}
-:label: Equation Method 7.43
+:label: Equation_method_7_43
 {f'}_{}\left( \theta_{} \right){= f'}_{}\left( \lambda \right) = \frac{1}{\lambda}
 ```
 ````
@@ -643,7 +643,7 @@ Further, an initial starting point for the MCMC has to be defined:
 ``
 ``  
 ```{math}
-:label: Equation Method 7.44
+:label: Equation_method_7_44
 \lambda_{0} = \frac{1}{20'000} = 5 \cdot 10^{- 5}\lbrack/h\rbrack
 ```
 ````
@@ -652,7 +652,7 @@ This starting point is maybe not a good choice knowing the data but it shows tha
 
 In general, the Markov chain needs a burn in phase. This burn in phase allows the parameters to converge to the relevant region of interest. The length of the burn in phase depends on several factors and a plot of the Markov chain can help to decide if the choice was appropriate. In the case the chain is non-stationary the choice might not be appropriate. Plotting several chains in one plot also helps to decide if the choice was appropriate.
 
-If the guess of the initial point is already good, then the burn in phase is shorter. The Markov chain for the example is provided in {numref}`method_figure7_11` using the data provided in {numref}`method-table7-4`. It can be seen that it scatters around a value of $1.5\  \cdot 10^{- 5}$, corresponding to the closed-form solution provided in Eq. {eq}`Equation Method 7.32`. After excluding the burn-in phase, the simulated values from the Markov chain are used to numerically represent the posterior distribution of the uncertain failure rate $\lambda$.
+If the guess of the initial point is already good, then the burn in phase is shorter. The Markov chain for the example is provided in {numref}`method_figure7_11` using the data provided in {numref}`method-table7-4`. It can be seen that it scatters around a value of $1.5\  \cdot 10^{- 5}$, corresponding to the closed-form solution provided in Eq. {eq}`Equation_method_7_32`. After excluding the burn-in phase, the simulated values from the Markov chain are used to numerically represent the posterior distribution of the uncertain failure rate $\lambda$.
 
 The example calculations were performed using the so-called Metropolis algorithm. In the literature further developments can be found such as the Hamiltonian Monte Carlo. These more advanced methods follow in principle the same procedure but they are in general smarter in proposing where to jump next. **\[BR25\]**.
 
@@ -671,7 +671,7 @@ From the Markov chain the statistical characteristics of the estimated parameter
 ``
 ``  
 ```{math}
-:label: Equation Method 7.45
+:label: Equation_method_7_45
 \begin{matrix}E\left\lbrack \lambda \right\rbrack = 1.467 \cdot 10^{- 5}\ \ \lbrack 1/h\rbrack \\\text{STD}\left\lbrack \lambda \right\rbrack = 4.731 \cdot 10^{- 6}\ \lbrack 1/h\rbrack \end{matrix}
 ```
 ````
