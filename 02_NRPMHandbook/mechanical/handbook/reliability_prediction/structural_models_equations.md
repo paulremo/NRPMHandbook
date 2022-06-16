@@ -296,7 +296,7 @@ The modelling easily can be adapted from the adhesive wear model given in {numre
 
 **Simplified solid lubricant wear model**
 
-<button id="solid_lubricant_button" class="back-forward-button" onclick="redirect('../../models/solid_lubricant_wear.html')">Go to model</button>
+<a href="../../models/solid_lubricant_wear.html" class="back-forward-button">Go to model</a>
 
 Using the simplified form of the adhesive wear model in Eq. {eq}`Equation_3_19` (assuming constant conditions during each mission phase), a limit state function for solid lubricant wear can be derived as follows:
 
@@ -460,7 +460,7 @@ Bearing geometry.
 
 **Simplified fluid lubricant wear model**
 
-<button id="fluid_lubricant_button" class="back-forward-button" onclick="redirect('../../models/fluid_lubricant_wear.html')">Go to model</button>
+<a href="../../models/fluid_lubricant_wear.html" class="back-forward-button">Go to model</a>
 
 For the simplified modelling, it is considered sufficient to model only $\Theta$ and $K$ as random variables; all other variables in Eq. {eq}`Equation_3_32` are assumed to be deterministic. Since the relation for the bearing life from {cite:t}`mec-Palladino2011LIFEPO`, $K \cdot \text{exp}\left( - 3.35 \cdot p_{m} \right)$, is purely empirical, curve fitting residuals or the distribution of the coefficient $K$ may be used for the probabilistic assessments.
 
@@ -691,7 +691,7 @@ The time dependent formulation in Eq. {eq}`Equation_3_39` neglects load history 
 
 **Simplified S/N curve modelling**
 
-<button id="fatigue_failure_button" class="back-forward-button" onclick="redirect('../../models/fatigue_failure.html')">Go to model</button>
+<a href="../../models/fatigue_failure.html" class="back-forward-button">Go to model</a>
 
 The starting point for the simplified model is the limit state function in Eq. {eq}`Equation_3_39`, with load cycles summarized in bins (last row). For the simplified approach, the variables $N_{j}$, $B$ and $C$ are assumed to be deterministic. The uncertainty associated with the loading $S_{eq,j}$ is then the only uncertainty that cannot be taken out of the sum. A simple approach to model this uncertainty is to multiply deterministic values for $S_{eq,j}$ (e.g. taken from design calculations) with a random stress scaling factor $SSF$ that is applied globally, i.e. taking on the same value for all bins {cite:t}`mec-TEC-MCS`. If it is furthermore assumed that the endurance limit $C$ equals zero (which is conservative for all applications), the limit state function defined in Eq. {eq}`Equation_3_39` can be brought into the following simple expression:
 
