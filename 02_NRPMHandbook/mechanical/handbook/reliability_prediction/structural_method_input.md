@@ -44,7 +44,7 @@ The most important aspects of simplified structural reliability modelling from a
     - Simplified methods
 *   - Limit state function
     - Any functional form (explicit or implicit, e.g. numerical code)
-    - Simplified, brought into the general format of Eq. {eq}`Equation 3.2`
+    - Simplified, brought into the general format of Eq. {eq}`Equation_3_2`
 *   - Basic variables
     - Probability distributions for all variables are chosen by the user
     - Only mean values and coefficients of variation are required as user input
@@ -66,13 +66,13 @@ The simplified approach is based on a generic limit state function with the foll
 ``
 ``  
 ```{math}
-:label: Equation 3.2
+:label: Equation_3_2
 g(X) = X_{1} - \Theta X_{2}
 ```
 ````
 
 
-Here, $X_{1}$ may be interpreted as the “resistance” (allowable stress, or strength) of the considered part and $X_{2}$ as the “load” (or stress) acting on it. To capture the uncertainties inherent in the applied models, a {term}`model uncertainty <Model uncertainty>` variable $\Theta$ is introduced. Failure occurs if the load is larger than the resistance, or $\Theta X_{2} > X_{1}$. Thus, the probability of failure is derived from the overlap of the statistical distributions of $X_{1}$ and $\Theta X_{2}$, see {numref}`Figure 3.3` for illustration. 
+Here, $X_{1}$ may be interpreted as the “resistance” (allowable stress, or strength) of the considered part and $X_{2}$ as the “load” (or stress) acting on it. To capture the uncertainties inherent in the applied models, a {term}`model uncertainty <Model uncertainty>` variable $\Theta$ is introduced. Failure occurs if the load is larger than the resistance, or $\Theta X_{2} > X_{1}$. Thus, the probability of failure is derived from the overlap of the statistical distributions of $X_{1}$ and $\Theta X_{2}$, see {numref}`Figure_3_3` for illustration. 
 
 Time dependence is considered by modelling either $X_{1}$ or $X_{2}$ (or both) as a function of time.
 
@@ -80,22 +80,22 @@ Time dependence is considered by modelling either $X_{1}$ or $X_{2}$ (or both) a
 ```{figure} ../../pictures/figure4_5.png
 ---
 width: 600px
-name: Figure 3.3
+name: Figure_3_3
 ---
 Illustration of {term}`structural reliability methods <Structural reliability method>`, with probability of failure resulting from the overlap of the statistical distribution for the “load” and the “resistance” (statistical interference).
 ```
 
-Despite its simplicity, the limit state function in Eq. {eq}`Equation 3.2` is fairly generic, considering that both $X_{1}$ and $X_{2}$ can be a function of several random variables specific to the considered {term}`failure mechanism <Failure mechanism>`. In the simplified method, the two variables are defined such that the mean and coefficients of variation of $X_{1}$ and $X_{2}$ as well as the probability of failure $P_{f}$ can be estimated analytically with pre-defined distributional models for the underlying basic variables. The results may easily be updated if new test or operation data becomes available during the course of a space project, see {numref}`meca_4_6_5` for details.
+Despite its simplicity, the limit state function in Eq. {eq}`Equation_3_2` is fairly generic, considering that both $X_{1}$ and $X_{2}$ can be a function of several random variables specific to the considered {term}`failure mechanism <Failure mechanism>`. In the simplified method, the two variables are defined such that the mean and coefficients of variation of $X_{1}$ and $X_{2}$ as well as the probability of failure $P_{f}$ can be estimated analytically with pre-defined distributional models for the underlying basic variables. The results may easily be updated if new test or operation data becomes available during the course of a space project, see {numref}`meca_4_6_5` for details.
 
 The distribution of the {term}`model uncertainty <Model uncertainty>` $\Theta$ is fixed for the simplified models, assuming a coefficient of variation of $\nu_{\Theta} = 0.2$ for most of the models considered in {numref}`meca_4_7`, which are generally empirical models. Setting the mean value to $\mu_{\Theta} = 1$ (assuming that the model or, more precisely, the limit state function is unbiased) is appropriate when realistic predictions are required. 
 
-When needed, a certain explicit conservatism can be introduced in the simplified method by letting $\mu_{\Theta} > 1$ , which is equivalent to assuming a higher loading or “stress” than estimated by the model (i.e. a biased load and/or resistance model). In accordance with {cite:t}`mec-ECSS-E-ST-32-10C ` where a “model factor” is multiplied with the design loads to account for uncertainties in mathematical models, it is recommended to set $\mu_{\Theta} = 1.2$ (or higher), referring to the model factor typically used for {term}`spacecrafts <Spacecraft>` at the beginning of new developments. The effect of this assumption on the estimated failure probability depends on the distributional assumptions and on the design margin of safety. {numref}`Figure 3.4` shows a comparison between some results for $\mu_{\Theta} = 1.0$ (unbiased) and $\mu_{\Theta} = 1.2$ (conservative bias), assuming Lognormal distributions for all random variables.
+When needed, a certain explicit conservatism can be introduced in the simplified method by letting $\mu_{\Theta} > 1$ , which is equivalent to assuming a higher loading or “stress” than estimated by the model (i.e. a biased load and/or resistance model). In accordance with {cite:t}`mec-ECSS-E-ST-32-10C ` where a “model factor” is multiplied with the design loads to account for uncertainties in mathematical models, it is recommended to set $\mu_{\Theta} = 1.2$ (or higher), referring to the model factor typically used for {term}`spacecrafts <Spacecraft>` at the beginning of new developments. The effect of this assumption on the estimated failure probability depends on the distributional assumptions and on the design margin of safety. {numref}`Figure_3_4` shows a comparison between some results for $\mu_{\Theta} = 1.0$ (unbiased) and $\mu_{\Theta} = 1.2$ (conservative bias), assuming Lognormal distributions for all random variables.
 
 (meca_figure4_4)=
 ```{figure} ../../pictures/figure4_6.png
 ---
 width: 600px
-name: Figure 3.4
+name: Figure_3_4
 ---
 Effect of assuming a conservative bias in the {term}`model uncertainty <Model uncertainty>` variable ($\mu_{\Theta} > 1$) on the estimated probability of failure.
 ```
@@ -119,7 +119,7 @@ The application of the simplified {term}`failure mechanism <Failure mechanism>` 
 (meca_4_6_3)=
 ## Stress strength methods for structural items
 
-Another well-known application of the generic limit state function in Eq. {eq}`Equation 3.2` is the stress-strength method commonly applied for structural components, but also for other applications in mechanical {term}`reliability prediction <Reliability prediction>` (e.g. to assess motorization performance). Typically, the “strength” or resistance $X_{1}$  and the “stress” or load $X_{2}$ are the only two variables considered, which is equivalent to dropping the {term}`model uncertainty <Model uncertainty>` variable $\Theta$ in Eq. {eq}`Equation 3.2`. Note that this simplification furthermore implies that only a single stress and resistance is considered, unless e.g. several loads can be combined in a single metric, allowing to reduce a multivariate load distribution to a single random “stress” $X_{2}$ (see also {numref}`meca_4_6_2`). Problems that cannot be reduced to a two-variable problem can be handled using the general {term}`structural reliability methods <Structural reliability method>` discussed in {numref}`meca_4_6_1`.
+Another well-known application of the generic limit state function in Eq. {eq}`Equation_3_2` is the stress-strength method commonly applied for structural components, but also for other applications in mechanical {term}`reliability prediction <Reliability prediction>` (e.g. to assess motorization performance). Typically, the “strength” or resistance $X_{1}$  and the “stress” or load $X_{2}$ are the only two variables considered, which is equivalent to dropping the {term}`model uncertainty <Model uncertainty>` variable $\Theta$ in Eq. {eq}`Equation_3_2`. Note that this simplification furthermore implies that only a single stress and resistance is considered, unless e.g. several loads can be combined in a single metric, allowing to reduce a multivariate load distribution to a single random “stress” $X_{2}$ (see also {numref}`meca_4_6_2`). Problems that cannot be reduced to a two-variable problem can be handled using the general {term}`structural reliability methods <Structural reliability method>` discussed in {numref}`meca_4_6_1`.
 
 The modelling of the two basic variables generally has to account for time dependency. In the simplest case without strength degradation, the resistance $X_{1}$ can be considered as time invariant. A time variant load $X_{2}(t)$ may then be transformed into a time invariant random variable by taking the maximum load $X_{2}^{max} = max(X_{2}(t))$ during a specified time period, e.g. the highest load experienced during launch. The probabilistic modelling for the maximum load should then be based on extreme value theory (e.g. by fitting a random variable distribution to the maxima of a random process). More complex cases with time variant strength (e.g. degradation effects) and/or cumulative loading (e.g. fatigue loads) require dedicated considerations using time variant {term}`structural reliability methods <Structural reliability method>`. In the remainder of this section, these applications will not be discussed any further, the focus will be on time invariant reliability calculations.
 
@@ -139,12 +139,12 @@ The probability of failure for the Normal distribution assumption is derived as 
 ``
 ``  
 ```{math}
-:label: Equation 3.3
+:label: Equation_3_3
 P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi \left(\frac{- \mu_{X_{1}} - \mu_{X_{2}}}{\sqrt{\sigma_{X_{1}}^{2} + \sigma_{X_{2}}^{2}}}\right) = \Phi \left(\frac{- p - 1}{\sqrt{p^{2} \nu_{X_{1}}^{2} + \nu_{X_{2}}^{2}}}\right)
 ```
 ````
 
-Where $\mu_{X}$, $\sigma_{X}$ and $\nu_{X}$ represent the mean value, standard deviation and coefficient of variation of the random variables $X_{1}$ and $X_{2}$ and $\Phi$ denotes the cumulative distribution function of the standard Normal distribution. On the right-hand side of Eq. {eq}`Equation 3.3`, the probability of failure is derived as a function of the so-called central safety factor, $p = \mu_{X_{1}} / \mu_{X_{2}}$.
+Where $\mu_{X}$, $\sigma_{X}$ and $\nu_{X}$ represent the mean value, standard deviation and coefficient of variation of the random variables $X_{1}$ and $X_{2}$ and $\Phi$ denotes the cumulative distribution function of the standard Normal distribution. On the right-hand side of Eq. {eq}`Equation_3_3`, the probability of failure is derived as a function of the so-called central safety factor, $p = \mu_{X_{1}} / \mu_{X_{2}}$.
 
 For the Lognormal distribution case we get:
 
@@ -154,7 +154,7 @@ For the Lognormal distribution case we get:
 ``
 ``  
 ```{math}
-:label: Equation 3.4
+:label: Equation_3_4
 P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi \left(\frac{- \ln(p) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
 ```
 ````
@@ -167,26 +167,26 @@ Finally, in the third case, the probability of failure is simply derived from th
 ``
 ``  
 ```{math}
-:label: Equation 3.5
+:label: Equation_3_5
 P_{f} \cong F_{X_{1}}(\widehat{X_{2}})  or  P_{f} \cong 1 - F_{X_{2}}(\widehat{X_{1}})
 ```
 ````
 
-Where $\widehat{X_{1}}$ or $\widehat{X_{2}}$ represents a point estimate of the variable whose dispersion is neglected. It is relevant to note that, even though the references values for the usual dispersion of strength variables provided in {numref}`meca-table4-8` are generally smaller than the values provided in {numref}`meca-table4-9` for the dispersion of loads, the strength dispersion is not negligible, and the closed-form solution in Eq. {eq}`Equation 3.5` cannot be used as an approximation for these cases.
+Where $\widehat{X_{1}}$ or $\widehat{X_{2}}$ represents a point estimate of the variable whose dispersion is neglected. It is relevant to note that, even though the references values for the usual dispersion of strength variables provided in {numref}`meca-table4-8` are generally smaller than the values provided in {numref}`meca-table4-9` for the dispersion of loads, the strength dispersion is not negligible, and the closed-form solution in Eq. {eq}`Equation_3_5` cannot be used as an approximation for these cases.
 
-The closed-form solutions in Eq. {eq}`Equation 3.3` and Eq. {eq}`Equation 3.4` show that for given distributional models, reliability is fully determined by the coefficients of variation $\nu_{X_{1}}$ and $\nu_{X_{2}}$ and the central safety factor $p = \mu_{X_{1}} / \mu_{X_{2}}$ representing the ratio between the mean values of strength and stress. Note that this conclusion holds also for other distributional assumptions without analytic solution. However, the quantitative relationship between the central safety factor and the probability of failure is rather sensitive to the distributional assumptions, as interference takes place only in the tails of the stress and strength distributions.
+The closed-form solutions in Eq. {eq}`Equation_3_3` and Eq. {eq}`Equation_3_4` show that for given distributional models, reliability is fully determined by the coefficients of variation $\nu_{X_{1}}$ and $\nu_{X_{2}}$ and the central safety factor $p = \mu_{X_{1}} / \mu_{X_{2}}$ representing the ratio between the mean values of strength and stress. Note that this conclusion holds also for other distributional assumptions without analytic solution. However, the quantitative relationship between the central safety factor and the probability of failure is rather sensitive to the distributional assumptions, as interference takes place only in the tails of the stress and strength distributions.
 
-The effect of distributional assumptions is illustrated in {numref}`Figure 3.5`, comparing Eq. {eq}`Equation 3.3` for Normal distributed stress and strength with Eq. {eq}`Equation 3.4` for Lognormal distributed basic variables. The difference between the two models grows with the coefficients of variation (in {numref}`Figure 3.5`, only $\nu_{X_{2}}$ is varied) and with the central safety factor, and thus with the reliability of the considered part. 
+The effect of distributional assumptions is illustrated in {numref}`Figure_3_5`, comparing Eq. {eq}`Equation_3_3` for Normal distributed stress and strength with Eq. {eq}`Equation_3_4` for Lognormal distributed basic variables. The difference between the two models grows with the coefficients of variation (in {numref}`Figure_3_5`, only $\nu_{X_{2}}$ is varied) and with the central safety factor, and thus with the reliability of the considered part. 
 
-It should be noted that the design factors used in practice, defined as the ratio between the design allowable load and the design limit load, are generally much smaller than the central safety factors depicted on the horizontal axis in {numref}`Figure 3.5`. The reason is that designers usually make use of conservative estimates for stress and strength, which first have to be transformed to mean values before making use of Eq. {eq}`Equation 3.3` or Eq. {eq}`Equation 3.4`.  To give an example, {cite:t}`mec-ECSS-E-ST-32C` defines the limit load statistically as the load level not being exceeded with a probability of $99\%$ during the service life of a structure. Assuming a Normal distributed load with a coefficient of variation of $0.2$, this fractile value is a factor of 1.5 higher than the corresponding mean value of the same distribution. Additional conservatism is introduced in the strength value (e.g. using A- or B-values for material strength, defined as lower $1\%$ or $10\%$ fractiles of the strength distribution), and with the aid of explicit margins and/or factors of safety introduced in the design. 
+It should be noted that the design factors used in practice, defined as the ratio between the design allowable load and the design limit load, are generally much smaller than the central safety factors depicted on the horizontal axis in {numref}`Figure_3_5`. The reason is that designers usually make use of conservative estimates for stress and strength, which first have to be transformed to mean values before making use of Eq. {eq}`Equation_3_3` or Eq. {eq}`Equation_3_4`.  To give an example, {cite:t}`mec-ECSS-E-ST-32C` defines the limit load statistically as the load level not being exceeded with a probability of $99\%$ during the service life of a structure. Assuming a Normal distributed load with a coefficient of variation of $0.2$, this fractile value is a factor of 1.5 higher than the corresponding mean value of the same distribution. Additional conservatism is introduced in the strength value (e.g. using A- or B-values for material strength, defined as lower $1\%$ or $10\%$ fractiles of the strength distribution), and with the aid of explicit margins and/or factors of safety introduced in the design. 
 
-It is interesting to note that the impact of different distributional assumptions gets smaller when referring to design values for stress and strength, compared to the results shown in {numref}`Figure 3.5`, which are directly based on the central safety factor and thus referring to mean values for both variables. An important prerequisite for robust results is that the transformation between fractiles and mean values is performed based on the same distributional assumptions as the ones used for the reliability calculations.
+It is interesting to note that the impact of different distributional assumptions gets smaller when referring to design values for stress and strength, compared to the results shown in {numref}`Figure_3_5`, which are directly based on the central safety factor and thus referring to mean values for both variables. An important prerequisite for robust results is that the transformation between fractiles and mean values is performed based on the same distributional assumptions as the ones used for the reliability calculations.
 
 (meca_figure4_5)=
 ```{figure} ../../pictures/figure4_7.png
 ---
 width: 600px
-name: Figure 3.5
+name: Figure_3_5
 ---
 Effect of distributional assumptions on the relationship between the probability of failure and the central safety factor, defined as the ration between the mean values of strength and stress.
 ```
@@ -359,7 +359,7 @@ The general principles of {term}`Bayesian inference <Bayesian inference>` updati
 ``
 ``  
 ```{math}
-:label: Equation 3.6
+:label: Equation_3_6
 F_{T}(t) = P[T \leq t] = P_{f}(t) = P[g(X(t)) \leq 0]
 ```
 ````
@@ -374,14 +374,14 @@ A straightforward approach for updating this prior is to treat the {term}`model 
 ``
 ``  
 ```{math}
-:label: Equation 3.7
+:label: Equation_3_7
 F_{T}(t | \theta) = P[T \leq t | \theta] = P_{f}(t | \theta) = P[g(X(t)) \leq 0 | \Theta = \theta]
 ```
 ````
 
-The conditional distribution function $F_{T}(t | \theta)$ defined by Eq. {eq}`Equation 3.7` can now be used as the sampling distribution for the formulation of the Likelihood, which is combined with a prior for the distribution of the random {term}`model uncertainty <Model uncertainty>`, $f'_{\Theta}(\theta)$, to apply Bayes rule for updating. In the general case, this will require numerical methods to perform the updating. However, an analytic solution can be derived for the special case of {term}`Bayesian inference <Bayesian inference>` updating for a prior derived from the {term}`Simplified structural reliability methods <Simplified structural reliability method>` introduced in {numref}`meca_4_6_2`, as will be discussed in the following.
+The conditional distribution function $F_{T}(t | \theta)$ defined by Eq. {eq}`Equation_3_7` can now be used as the sampling distribution for the formulation of the Likelihood, which is combined with a prior for the distribution of the random {term}`model uncertainty <Model uncertainty>`, $f'_{\Theta}(\theta)$, to apply Bayes rule for updating. In the general case, this will require numerical methods to perform the updating. However, an analytic solution can be derived for the special case of {term}`Bayesian inference <Bayesian inference>` updating for a prior derived from the {term}`Simplified structural reliability methods <Simplified structural reliability method>` introduced in {numref}`meca_4_6_2`, as will be discussed in the following.
 
-Using the generic simplified limit state function defined in Eq. {eq}`Equation 3.2`, Eq. {eq}`Equation 3.7` can be reformulated as follows:
+Using the generic simplified limit state function defined in Eq. {eq}`Equation_3_2`, Eq. {eq}`Equation_3_7` can be reformulated as follows:
 
 
 ````{admonition} Equation
@@ -389,14 +389,14 @@ Using the generic simplified limit state function defined in Eq. {eq}`Equation 3
 ``
 ``  
 ```{math}
-:label: Equation 3.8
+:label: Equation_3_8
 F_{T}(t | \theta) = P[X_{1}(t) - \theta X_{2}(t) \leq 0] = P[p(t) X'_{1} - \theta X'_{2} \leq 0]
 ```
 ````
 
-Here, $X_{1}(t)$ denotes the random “resistance” (or strength) of the considered part against the random “load” (or stress) $X_{2}(t)$. Both random variables are normalized (variables with prime) such that $E(X'_{1}) = E(X'_{2}) = 1$. The mean value information is then summarized in the parameter $p = E(X_{1})/E(X_{2})$. In Eq. {eq}`Equation 3.8` it is assumed that only the expected values of $X_{1}$ and $X_{2}$ are a function of time, while the coefficients of variation $\nu_{X_{1}}$ and $\nu_{X_{2}}$ remain constant.
+Here, $X_{1}(t)$ denotes the random “resistance” (or strength) of the considered part against the random “load” (or stress) $X_{2}(t)$. Both random variables are normalized (variables with prime) such that $E(X'_{1}) = E(X'_{2}) = 1$. The mean value information is then summarized in the parameter $p = E(X_{1})/E(X_{2})$. In Eq. {eq}`Equation_3_8` it is assumed that only the expected values of $X_{1}$ and $X_{2}$ are a function of time, while the coefficients of variation $\nu_{X_{1}}$ and $\nu_{X_{2}}$ remain constant.
 
-The analytic method for {term}`Bayesian inference <Bayesian inference>` updating is based on the assumption that all random variables inEq. {eq}`Equation 3.8` (i.e. $X_{1}$ and $X_{2}$ or $X'_{1}$ and $X'_{2}$) are Lognormal distributed. With this assumption, the sampling distribution $F_{T}(t |\theta)$ is derived as follows:
+The analytic method for {term}`Bayesian inference <Bayesian inference>` updating is based on the assumption that all random variables inEq. {eq}`Equation_3_8` (i.e. $X_{1}$ and $X_{2}$ or $X'_{1}$ and $X'_{2}$) are Lognormal distributed. With this assumption, the sampling distribution $F_{T}(t |\theta)$ is derived as follows:
 
 
 ````{admonition} Equation
@@ -404,7 +404,7 @@ The analytic method for {term}`Bayesian inference <Bayesian inference>` updating
 ``
 ``  
 ```{math}
-:label: Equation 3.9
+:label: Equation_3_9
 F_{T}(t | \theta) = \Phi \left(\frac{- \ln(p(t)) + \ln(\theta) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
 ```
 ````
@@ -419,7 +419,7 @@ The following derivation is based on the proportionality assumption mentioned ab
 ``
 ``  
 ```{math}
-:label: Equation 3.10
+:label: Equation_3_10
 F_{T}(t | \theta) = \Phi \left(\frac{- \ln(t) - \ln(k) + \ln(\theta) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
 ```
 ````
@@ -432,7 +432,7 @@ By comparing this result with the cumulative distribution function of the Lognor
 ``
 ``  
 ```{math}
-:label: Equation 3.11
+:label: Equation_3_11
 \mu_{T} = \ln(k) - \ln(\theta) + 0.5 (-\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1))
 ```
 ````
@@ -447,7 +447,7 @@ By comparing this result with the cumulative distribution function of the Lognor
 ```
 ````
 
-For the {term}`Bayesian inference <Bayesian inference>` updating, the „deterministic“ {term}`model uncertainty <Model uncertainty>` $\theta$ in Eq. {eq}`Equation 3.11` is now replaced by a random variable $\Theta$. The random {term}`model uncertainty <Model uncertainty>` is assumed to follow a Lognormal distribution with mean value $E(\Theta) = 1$ (when assuming an unbiased {term}`failure mechanism <Failure mechanism>` model, see Section  for discussion) and coefficient of variation $\nu_{\Theta}$ (with specific values proposed for each simplified model presented in {numref}`meca_4_7`). With this, the parameter $\mu_{T}$ is Normal distributed with the following prior (hyper-)parameters:
+For the {term}`Bayesian inference <Bayesian inference>` updating, the „deterministic“ {term}`model uncertainty <Model uncertainty>` $\theta$ in Eq. {eq}`Equation_3_11` is now replaced by a random variable $\Theta$. The random {term}`model uncertainty <Model uncertainty>` is assumed to follow a Lognormal distribution with mean value $E(\Theta) = 1$ (when assuming an unbiased {term}`failure mechanism <Failure mechanism>` model, see Section  for discussion) and coefficient of variation $\nu_{\Theta}$ (with specific values proposed for each simplified model presented in {numref}`meca_4_7`). With this, the parameter $\mu_{T}$ is Normal distributed with the following prior (hyper-)parameters:
 
 
 ````{admonition} Equation
@@ -455,7 +455,7 @@ For the {term}`Bayesian inference <Bayesian inference>` updating, the „determi
 ``
 ``  
 ```{math}
-:label: Equation 3.13
+:label: Equation_3_13
 \mu ' = \ln(k) - \ln(E(\theta)) + 0.5 (\ln(\nu_{\Theta}^{2} + 1) - \ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1))
 ```
 ````
@@ -465,7 +465,7 @@ For the {term}`Bayesian inference <Bayesian inference>` updating, the „determi
 ``
 ``  
 ```{math}
-:label: Equation 3.14
+:label: Equation_3_14
 \sigma ' = \sqrt{\ln(\nu_{\Theta}^{2} + 1)}
 ```
 ````
@@ -478,7 +478,7 @@ The Normal distribution for the location parameter $\mu_{T}$ is a conjugate prio
 ``
 ``  
 ```{math}
-:label: Equation 3.15
+:label: Equation_3_15
 \mu '' = (\sigma '')^{2} \left(\frac{\mu '}{\sigma'^{2}} + \frac{\sum_{i=1}^{n} (\ln(\widehat{t_{i}}))}{\sigma_{T}^{2}}\right)
 ```
 ````
@@ -488,7 +488,7 @@ The Normal distribution for the location parameter $\mu_{T}$ is a conjugate prio
 ``
 ``  
 ```{math}
-:label: Equation 3.16
+:label: Equation_3_16
 \sigma '' = (1 / \sigma'^{2} + n / \sigma_{T}^{2})^{1/2}
 ```
 ````
@@ -498,18 +498,18 @@ To summarize, a simple {term}`Bayesian inference <Bayesian inference>` updating 
 * First the prior reliability estimate is derived, including the estimation of $\nu_{X_{1}}$, $\nu_{X_{2}}$ and $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$. The simplified model equations provided in {numref}`meca_4_7` can be used for this task, using suitable input for the basic variable modelling.
 * The constant $k$ for the function $p(t) = k \cdot 1/t$ is derived from the simplified model equations provided in {numref}`meca_4_7` (time $t$ may have to be replaced by e.g. number of revolutions $rev$ for some {term}`failure mechanisms <Failure mechanism>`); the proportionality assumption for the function $p(t) should be checked in this step.
 * The standard deviation parameter $\sigma_{T}$ of the sampling distribution is calculated from $\nu_{X_{1}}$ and $\nu_{X_{2}}$, using Eq. {eq}`Equation 3.12`. Note that this parameter is assumed to be fixed in the analytic updating approach and will not be affected by the updating.
-* The prior (hyper-)parameters $\mu '$ and $\sigma '$ of the conjugate Normal distribution for the location parameter $\mu_{T}$ are calculated from the input for the simplified method, using Eq. {eq}`Equation 3.13` and Eq. {eq}`Equation 3.14` above.
+* The prior (hyper-)parameters $\mu '$ and $\sigma '$ of the conjugate Normal distribution for the location parameter $\mu_{T}$ are calculated from the input for the simplified method, using Eq. {eq}`Equation_3_13` and Eq. {eq}`Equation_3_14` above.
 * With this, the prior is fully defined and the {term}`Bayesian inference <Bayesian inference>` updating can be performed using the formulas for the posterior hyperparameters $\mu ''$ and $\sigma ''$ for the Lognormal sampling distribution.
 
 
 The assumptions underlying this approach are summarized as follows:
 
-* The limit state function for the prior reliability estimate can be brought into the generic format used in Eq. {eq}`Equation 3.8`.
+* The limit state function for the prior reliability estimate can be brought into the generic format used in Eq. {eq}`Equation_3_8`.
 * The variables $X_{1}$, $X_{2}$ and $\Theta$ follow a Lognormal distribution.
 * Only the mean values of $X_{1}$ and $X_{2}$ are a function of time .
 * The mean value parameter $p(t) = E[X_{1}(t)] / E[X_{2}(t)]$ can be modelled as $p(t) = k \cdot 1/t$.
 * The data sample for updating is uncensored, i.e. all items have been observed until failure
 
 
-As has been discussed below Eq. {eq}`Equation 3.9`, the approach may be adapted by considering $p$ instead of $t$ as the “observed” variable, allowing the use of more general functions for $p(t)$; An analytic solution is still possible in this case. More general distribution types for $X_{1}$, $X_{2}$ and/or $\Theta$ may possibly be approximated by Lognormal distributions. For more general applications, it is very unlikely that an analytic solution based on conjugate priors can be derived. Numerical methods are then required to solve the problem of updating a structural reliability estimates with observations for the random time to failure, see {numref}`methods` for details. The same is true if the data set is strongly censored, i.e. the items have not been observed until failure. It should be noted that Eq. {eq}`Equation 3.6` and Eq. {eq}`Equation 3.7` can still be used as the starting point for the formulation of the prior probabilistic model, even if the analytic solution derived above is not applicable.
+As has been discussed below Eq. {eq}`Equation_3_9`, the approach may be adapted by considering $p$ instead of $t$ as the “observed” variable, allowing the use of more general functions for $p(t)$; An analytic solution is still possible in this case. More general distribution types for $X_{1}$, $X_{2}$ and/or $\Theta$ may possibly be approximated by Lognormal distributions. For more general applications, it is very unlikely that an analytic solution based on conjugate priors can be derived. Numerical methods are then required to solve the problem of updating a structural reliability estimates with observations for the random time to failure, see {numref}`methods` for details. The same is true if the data set is strongly censored, i.e. the items have not been observed until failure. It should be noted that Eq. {eq}`Equation_3_6` and Eq. {eq}`Equation_3_7` can still be used as the starting point for the formulation of the prior probabilistic model, even if the analytic solution derived above is not applicable.
 
