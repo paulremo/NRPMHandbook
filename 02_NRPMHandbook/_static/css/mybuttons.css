@@ -1,11 +1,24 @@
-.back-forward-button{
+.back-forward-button {
     background-color: #424141;
     color: #ecfffb;
-    width:33%;
+    width: 33%;
     margin-left: 33%;
 }
 
-.back-forward-anchor{
+.back-forward-anchor {
     color: whitesmoke;
     text-decoration: none;
+}
+
+.back-forward-button {
+    background-color: #424141;
+    border: none;
+    width: 33%;
+    color: #ecfffb;
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none !important;;
+    display: inline-block;
+    margin-left: 33%;
+    cursor: pointer;
 }
