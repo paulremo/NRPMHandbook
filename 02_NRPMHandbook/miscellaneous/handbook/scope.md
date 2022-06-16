@@ -4,7 +4,6 @@ This chapter deals with the miscellaneous items which are represented by all par
 
 The {numref}`Figure 5.1` represents examples of some miscellaneous parts/items:
 
-(misc_figure4_1)=
 ```{figure} ../picture/figure4_1.png
 ---
 width: 600px

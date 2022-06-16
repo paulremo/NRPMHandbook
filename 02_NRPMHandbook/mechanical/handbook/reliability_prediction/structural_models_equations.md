@@ -6,7 +6,6 @@ The present section provides limit state functions and guidance for the modellin
 
 An overview on the {term}`failure mechanisms <Failure mechanism>` covered by the different subsections is found in {numref}`meca-table4-10`. The limit state functions provided in each dedicated subsection are generally applicable with the “full” {term}`structural reliability method <Structural reliability method>` described in {numref}`meca_4_6_1` and in {numref}`methods`. Simplified models in the sense of {numref}`meca_4_6_2`, with analytic solutions for the probability of failure calculations, are provided for some {term}`failure mechanisms <Failure mechanism>`. {term}`Failure mechanisms <Failure mechanism>` that can be modelled with the aid of simple stress strength methods (as discussed in {numref}`meca_4_6_3`) are also mentioned in {numref}`meca-table4-10`, but will not discussed any further in the present section.
 
-(meca_table4_10)=
 ```{list-table} Overview on failure mechanisms covered in Section 10.7
 :name: meca-table4-10
 :header-rows: 1
@@ -276,7 +275,6 @@ summarized as follows:
 
 Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of $X_{1} = V_{limit}$ is larger than $0.3$.
 
-(meca_figure4_6)=
 ```{figure} ../../pictures/figure4_8.png
 ---
 width: 600px
@@ -1031,7 +1029,6 @@ Typically fatigue crack growth data has three regions, as depicted in
     region is modelled by the factor
     $\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}$
 
-(meca_figure4_8)=
 ```{figure} ../../pictures/figure4_10.png
 ---
 width: 600px

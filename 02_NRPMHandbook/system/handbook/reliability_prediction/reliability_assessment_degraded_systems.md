@@ -17,7 +17,6 @@ Where $M_{i}$ denotes a success path, i.e. a combination of components for which
 
 In this example, if all three solar panels are working, an electrical power of 1kW is provided. In the following, a relative contribution to the system performance is assigned to the different solar panels. To component 3 a relative contribution of 50% is assigned, that means if the success path that contains the component 3 is functioning, 50% of the total system performance are available. In this case, 50% of electrical power. Component 4 has a relative contribution of 30% and 20% are assigned to component 5. In {numref}`syst-table4-12` all system states with a system performance \> 0% are listed. To each elementary state the contributing success path is listed in {numref}`syst-table4-12`. Depending on the availability of the success path that contains one of the service providing units 3, 4 or 5, a certain level of system performance $p_{S}$ can be achieved.
 
-(syst_figure4_30)=
 ```{figure} ../../picture/figure4_30.png
 ---
 width: 600px
@@ -34,7 +33,6 @@ Example Reliability Block Diagram - System with degraded performance.
 
 Based on the elementary states that are linked to a certain system performance level, a Boolean system function $\Phi_{P_{S}}$ can be obtained that describes the top event "system performance level equals $p_{S}$". With $p_{S} = 50\%$ the following system function $\Phi_{P_{S}}$ is obtained:
 
-(syst_equation4_68)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -47,7 +45,6 @@ Based on the elementary states that are linked to a certain system performance l
 
 Since the elementary states are mutually exclusive, the probability of occurrence can be calculated based on the system state function in Eq. {eq}`Equation_7_68`.
 
-(syst_equation4_69)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -60,7 +57,6 @@ P\left\lbrack \Phi \middle| 50\mathrm{\%} = 1 \right\rbrack = {P_{50\mathrm{\%}}
 
 With this method, the occurrence probability for all system performance levels at the end of the mission duration can be calculated, where the following definition applies:
 
-(syst_equation4_70)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -88,7 +84,6 @@ Therefore, it is more efficient to use the success paths. For each system perfor
 To achieve a system performance of $p_{S}$ ≥ 50% the following condition can be defined, which describes a combination of success paths for which the system performance is at least 50%.
 
 
-(syst_equation4_71)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -101,7 +96,6 @@ To achieve a system performance of $p_{S}$ ≥ 50% the following condition can b
 
 Generally, the condition can be formulated as:
 
-(syst_equation4_72)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -116,7 +110,6 @@ Where $g_{\max}$ denotes the number of component state variables of the conjunct
 
 Eq. {eq}`Equation_7_71` can be simplified and the following term is obtained:
 
-(syst_equation4_73)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -129,7 +122,6 @@ Eq. {eq}`Equation_7_71` can be simplified and the following term is obtained:
 
 The system state function can be defined as follows:
 
-(syst_equation4_74)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -144,7 +136,6 @@ Where $k$ denotes the index of the success paths and $m$ the total number of suc
 
 With Eq. {eq}`Equation_7_72`, the following expression is obtained for the system state function for the top event "system performance $p_{S}$ ≥ x" {cite:t}`sys-vahl1998interaktive`.
 
-(syst_equation4_75)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -157,7 +148,6 @@ With Eq. {eq}`Equation_7_72`, the following expression is obtained for the syste
 
 Where $h$ denotes the index of the success path. Each success path can contain of set of state variables $X_{g}$ with $g$ from $1$ to $g_{\max}$. With Eq. {eq}`Equation_7_75` and Eq. {eq}`Equation_7_73`, the following system state function is obtained that represents the top event "system performance $p_{S}$ ≥ 50%".
 
-(syst_equation4_76)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -168,7 +158,6 @@ Where $h$ denotes the index of the success path. Each success path can contain o
 ```
 ````
 
-(syst_equation4_77)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -181,7 +170,6 @@ Where $h$ denotes the index of the success path. Each success path can contain o
 
 Through orthogonalization, Eq. {eq}`Equation_7_77` can be transformed from a Boolean conjunctive normal form to an orthogonal conjunctive normal form, Eq. {eq}`Equation_7_78`.
 
-(syst_equation4_78)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -194,7 +182,6 @@ Through orthogonalization, Eq. {eq}`Equation_7_77` can be transformed from a Boo
 
 Thus, Eq. {eq}`Equation_7_78` represents mutually exclusive events and the probability of a system performance greater than or equal to 50% can be directly obtained by replacing indicator variables by the component reliabilities or failure probabilities respectively.
 
-(syst_equation4_79)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -207,7 +194,6 @@ P_{\geq 50\mathrm{\%}} = R_{1}R_{2}R_{3} \vee R_{1}R_{2}{\overline{F}}_{3}R_{4}R
 
 In order to calculate the occurrence probability for all possible system performance levels, the before mentioned calculation has to be repeated for the different combinations of available solar panels resulting in different performance levels. The following auxiliary conditions are obtained from {numref}`syst-table4-13` for the different system performance levels.
 
-(syst_equation4_80)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -218,7 +204,6 @@ In order to calculate the occurrence probability for all possible system perform
 ```
 ````
 
-(syst_equation4_81)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -229,7 +214,6 @@ In order to calculate the occurrence probability for all possible system perform
 ```
 ````
 
-(syst_equation4_82)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -240,7 +224,6 @@ In order to calculate the occurrence probability for all possible system perform
 ```
 ````
 
-(syst_equation4_83)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -251,7 +234,6 @@ In order to calculate the occurrence probability for all possible system perform
 ```
 ````
 
-(syst_equation4_84)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -264,7 +246,6 @@ In order to calculate the occurrence probability for all possible system perform
 
 The probability that the system performance is within the interval \[0, x\] is defined as the performance distribution function.
 
-(syst_equation4_85)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -277,7 +258,6 @@ P_{x\mathrm{\%}} = P\left\lbrack x > p_{s} \geq 0 \right\rbrack
 
 The performance distribution function is obtained by inverting the function $P_{\geq x\mathrm{\%}}.$
 
-(syst_equation4_86)=
 ````{admonition} Equation
 :class: equation
 ``

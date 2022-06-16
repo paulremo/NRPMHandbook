@@ -13,7 +13,6 @@ However, whatever the model is, it is the responsibility of the supplier to just
 The process used to define a Miscellaneous (MIS) item reliability model is presented in {numref}`Figure_5_2`.
 
 
-(misc_figure4_2)=
 ```{figure} ../../picture/figure4_2.png
 ---
 width: 600px

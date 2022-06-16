@@ -126,7 +126,6 @@ The following methods can be used for the derivation of reliability estimates fo
 Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the {term}`physics of failure <Physics of failure>`. General guidance on method selection is presented in {numref}`Figure_3_2` below. The upper row in the matrix represents statistical methods, the middle row a combined approach with {term}`Bayesian inference <Bayesian inference>` updating, and the lower row either handbook methods or data ({term}`NPRD`, {term}`NSWC`) or – generally preferred in the absence of statistical data – structural reliability methods ({term}`SRM`) based on the {term}`physics of failure <Physics of failure>`s.
 More specific recommendations are given in {numref}`meca_4_5`.
 
-(meca_figure4_2)=
 ```{figure} ../../pictures/figure4_2.png
 ---
 width: 600px

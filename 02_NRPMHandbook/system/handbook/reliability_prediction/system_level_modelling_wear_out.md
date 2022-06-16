@@ -10,7 +10,6 @@ The fact that wear-out can occur at component level and that the failure rates a
 
 The failure probability is the sum of {term}`random failures <Random failure>` and {term}`wear-out failures <Wear-out failure>` assuming that wear-out can occur throughout the entire service life and not just after qualification life time. With this model the life time of an item can be interpreted as the minimum of the life time based on random or {term}`wear-out failures <Wear-out failure>`. {term}`Random failures <Random failure>` are described by an exponential distribution and wear-out by a Weibull distribution. Thus, the following equations are obtained for failure rate and reliability:
 
-(syst_equation4_93)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -21,7 +20,6 @@ The failure probability is the sum of {term}`random failures <Random failure>` a
 ```
 ````
 
-(syst_equation4_94)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -36,7 +34,6 @@ R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t}{\a
 
 This model assumes that {term}`wear-out failure <Wear-out failure>` can only occur after the qualification time $\tau_{1}$, before it no wear-out is considered and only {term}`random failures <Random failure>` are considered. Thus, to calculate failure rates and reliability a distinction between two cases is made: Time $t$ is below the qualification time $\tau_{1}$ and $t$ is equal to or greater than the qualification time.
 
-(syst_equation4_95)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -51,7 +48,6 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
 ```
 ````
 
-(syst_equation4_96)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -70,7 +66,6 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
 
 The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random failure <Random failure>` rate and the {term}`wear-out failure <Wear-out failure>` rate, Eq. {eq}`Equation_7_97`. At a certain operating time $t = \tau_{2}$ the failure rate due to wear-out $\lambda_{W}$ equals the constant failure rate of {term}`random failure <Random failure>`, Eq. {eq}`Equation_7_98`. From that point on the {term}`wear-out failure <Wear-out failure>` rate is dominating. Thus, the {term}`probability density functions <Probability density function>` are separated in {term}`random failures <Random failure>` only for$t < \tau_{2}$ and wear-out only for time $t \geq \tau_{2}$
 
-(syst_equation4_97)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -81,7 +76,6 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ```
 ````
 
-(syst_equation4_98)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -92,7 +86,6 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ```
 ````
 
-(syst_equation4_99)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -109,7 +102,6 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ```
 ````
 
-(syst_equation4_100)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -128,7 +120,6 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 
 The time $\tau_{2}$ can be obtained from Eq. {eq}`Equation_7_101`.
 
-(syst_equation4_101)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -143,7 +134,6 @@ The time $\tau_{2}$ can be obtained from Eq. {eq}`Equation_7_101`.
 
 For components used in phased missions, the failure rates may not only depend on the stress levels applied in different phases, but also on the age of the component. Consequently, the time duration of each phase cannot be considered independently. If wear-out and age of the components are relevant to determine the component reliability the accumulated mission time has to be considered, which is given by:
 
-(syst_equation4_102)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -161,7 +151,6 @@ Where
 
 The reliability function of the component that is exposed to {term}`random failures <Random failure>` and also {term}`wear-out failures <Wear-out failure>` throughout the mission is given in Eq. {eq}`Equation_7_103` (see wear-out first approach in {numref}`syst_4_8_1`.
 
-(syst_equation4_103)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -192,7 +181,6 @@ Where
 
 If wear-out occurs only after the qualification time $\tau$ is reached (second approach) Eq. {eq}`Equation_7_103` can be adapted accordingly and for $T_{\text{ck}} > \tau$ the following equation is obtained.
 
-(syst_equation4_104)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -211,7 +199,6 @@ For mission phases before qualification time $T_{\text{ck}} < \tau_{1}$, wear-ou
 
 For Model 3, see {numref}`syst_4_8_1`, wear-out is considered only for $T_{\text{ck}} > \tau_{2}$ and for $T_{\text{ck}} < \tau_{2}$ only {term}`random failures <Random failure>` are taken into account. The following equation is obtained for $T_{\text{ck}} > \tau_{2}$.
 
-(syst_equation4_105)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -233,7 +220,6 @@ For $T_{\text{ck}} < \tau_{2}$ the reliability function of the component in phas
 
 The system reliability function for a serial system is given by:
 
-(syst_equation4_106)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -246,7 +232,6 @@ R_{S}\left( t \right) = R_{A}\left( t \right) \ast R_{B}\left( t \right)
 
 The reliability for a parallel system in hot redundancy, thus all components in use and same load is applied is given by
 
-(syst_equation4_107)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -259,7 +244,6 @@ R_{S}\left( t \right) = R_{A}\left( t \right) + R_{B}\left( t \right) - R_{A}\le
 
 In order to consider wear-out of the components the corresponding reliability function of the wear-out model is to be used. If for example the first approach for wear out modelling is used for both components, given by Eq. {eq}`Equation_7_94`, the following is obtained for a serial system.
 
-(syst_equation4_108)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -272,7 +256,6 @@ R_{S}\left( t \right) = {\exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t
 
 For a parallel system the following expression is obtained:
 
-(syst_equation4_109)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -288,7 +271,6 @@ R_{S}\left( t \right) = e^{\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{
 
 The conditional reliability is the probability of a system successfully completing another mission phase knowing that it has not failed during previous phases. This conditional reliability is of particular relevance for life time extensions. The fact that a component was working correctly without a failure over a certain period of the mission needs to be considered to estimate the reliability over the following phases of the mission. The system\'s conditional reliability function is given by:
 
-(syst_equation4_110)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -301,7 +283,6 @@ R_{S}\left( t \middle| T \right) = \frac{R_{S}\left( T + t \right)}{R_{S}\left( 
 
 In the following an example of a serial system that consists of two components is considered. The system reliability is given by:
 
-(syst_equation4_111)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -344,7 +325,6 @@ The mission duration shall be extended from 50000 hours by another 10000 hours t
 
 Eq. {eq}`Equation_7_112` provides the reliability for a mission extension of a duration *t* giving that *T* hours of successful operation have already been accumulated up to the start of the mission extension. The system reliability is evaluated to assure that it will complete the next mission extension successfully.
 
-(syst_equation4_112)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -357,7 +337,6 @@ R_{S}\left( t \middle| T \right) = \frac{R_{1}\left( T + t \right)R_{2}\left( T 
 
 If the Model 2 is applied for example to consider the wear-out of the components, the following equation is obtained:
 
-(syst_equation4_113)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -415,7 +394,6 @@ In the following section, another form of redundancy is presented: standby redun
 
 The reliability of the system at time $t$ can be obtained using the following equation {cite:t}`sys-time-dependent-system-reliability`:
 
-(syst_equation4_114)=
 ````{admonition} Equation
 :class: equation
 ``
@@ -437,7 +415,6 @@ Eq. {eq}`Equation_7_114` can be solved by numerical integration.
 
 The previous example assumes perfect switching, i.e. activation of the stand-by component is certain once the active component fails. In reality in many cases a switching device is implemented in the system to activate the stand-by component when the active component fails. Therefore, the failure properties of the switch must also be included in the analysis as imperfect switching.
 
-(syst_figure4_32)=
 ```{figure} ../../picture/figure4_32.png
 ---
 width: 600px
@@ -448,7 +425,6 @@ Stand-by system with switching device
 
 Two scenarios have to be considered to include the reliability of a switch in the analysis with two probabilities can be considered. The first one is the probability of the switch performing the action (i.e., switching) when requested to do so, the Switch Probability per Request, which is expressed as a static probability. The second probability takes into account the possibility that the switch could fail before the active component fails, as the switch might wear out with age due to material degradation. However, a switch failure does not cause the system to fail immediately, but if the active component fails and the switch has also failed, then the system cannot be switched to the standby component and it therefore fails. The reliability of the system including switching is given by the following equation {cite:t}`sys-time-dependent-system-reliability`.
 
-(syst_equation4_115)=
 ````{admonition} Equation
 :class: equation
 ``
