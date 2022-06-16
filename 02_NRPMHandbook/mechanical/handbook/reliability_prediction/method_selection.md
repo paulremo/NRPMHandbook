@@ -3,6 +3,7 @@
 
 Once it is clear what needs to be considered in the {term}`reliability prediction <Reliability prediction>` (see {numref}`meca_4_4`), the next step is to decide _how_ each part and {term}`failure mechanism <Failure mechanism>` should be modelled. The present section gives guidance on this method selection task.
 
+(meca_4_5_1)=
 ## Categories and combinations of mechanical failure mechanisms
 The method selection for {term}`mechanical parts <Mechanical part>` reliability modelling should always take basis in a good understanding of the {term}`failure mechanisms <Failure mechanism>` that are of relevance for the considered item, especially the predominant ones. To simplify the presentation in the following sections, mechanical {term}`failure mechanisms <Failure mechanism>` are grouped into five distinct categories listed in {numref}`meca-table4-4`.
 
@@ -44,8 +45,6 @@ The probability of failure can for some items be driven by several different {te
 For independent {term}`failure mechanisms <Failure mechanism>`, it is sufficient to consider one process at once, and to combine the results using normal probability calculus.
 
 However, independence between different {term}`failure mechanisms <Failure mechanism>` may not always be a valid assumption, e.g. in case of physical interactions between different {term}`failure mechanisms <Failure mechanism>` processes. {numref}`meca-table4-5` gives an overview for which combinations of {term}`failure mechanisms <Failure mechanism>` such effects may have to be considered. The table distinguishes interactions between different {term}`failure mechanisms <Failure mechanism>` affecting the same part (left hand side) and between different {term}`failure mechanisms <Failure mechanism>` affecting different parts (right hand side).
-
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca_table4_5')" placeholder="Search table...">
 
 ```{list-table} Possible interactions between different mechanical failure mechanisms
 :name: meca-table4-5

@@ -83,7 +83,7 @@ The {term}`NSWC` Handbook for Mechanical Reliability Prediction {cite:t}`mec-NSW
 ``
 ``  
 ```{math}
-:label: Equation 3.1
+:label: Equation_3_1
 \lambda = \lambda_{ref} \cdot \frac{\lambda_{op}}{\lambda} = \lambda_{ref} \cdot \frac{MTTF_{ref}}{MTTF} = \lambda_{ref} \cdot C
 ```
 ````
@@ -123,14 +123,14 @@ The following methods can be used for the derivation of reliability estimates fo
 * **Handbook methods** are not the recommended choice for mechanical reliability prediction in space applications, as has been discussed in {numref}`meca_4_3_1_5`, addressing {term}`NPRD` and {term}`NSWC`. 
 * **A combined approach** based on one of the methods listed above and {term}`Bayesian inference <Bayesian inference>` updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.
 
-Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the {term}`physics of failure <Physics of failure>`. General guidance on method selection is presented in {numref}`Figure 3.2` below. The upper row in the matrix represents statistical methods, the middle row a combined approach with {term}`Bayesian inference <Bayesian inference>` updating, and the lower row either handbook methods or data ({term}`NPRD`, {term}`NSWC`) or – generally preferred in the absence of statistical data – structural reliability methods ({term}`SRM`) based on the {term}`physics of failure <Physics of failure>`s.
+Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the {term}`physics of failure <Physics of failure>`. General guidance on method selection is presented in {numref}`Figure_3_2` below. The upper row in the matrix represents statistical methods, the middle row a combined approach with {term}`Bayesian inference <Bayesian inference>` updating, and the lower row either handbook methods or data ({term}`NPRD`, {term}`NSWC`) or – generally preferred in the absence of statistical data – structural reliability methods ({term}`SRM`) based on the {term}`physics of failure <Physics of failure>`s.
 More specific recommendations are given in {numref}`meca_4_5`.
 
 (meca_figure4_2)=
 ```{figure} ../../pictures/figure4_2.png
 ---
 width: 600px
-name: Figure 3.2
+name: Figure_3_2
 ---
 Method selection for mechanical reliability prediction depending on the available input.
 ```
