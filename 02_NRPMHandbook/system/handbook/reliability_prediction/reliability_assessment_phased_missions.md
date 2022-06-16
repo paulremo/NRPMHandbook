@@ -390,7 +390,6 @@ The example shown in {numref}`Figure_7_26` is shown as Markov chain in {numref}`
 
 The main advantage of this model is that it includes the configurations for all phases as well as the phase changes. But on the other side, as the number of components increases this approach results in a large model as the number of states increases rapidly.
 
-(syst_figure4_28)=
 ```{figure} ../../picture/figure4_28.png
 ---
 width: 600px
