@@ -12,7 +12,7 @@ There are three reliability models for miscellaneous items:
 (misc_5_4_1)=
 ## Standard model for generic miscellaneous items
 
-A “generic” {term}`miscellaneous item <Miscellaneous item>` is an item classified as “miscellaneous” (refer to the definition provided at the beginning of this chapter) AND for which a reliability model based on IOR is defined as a reference in this Current document (see {numref}`misc_5_1`).
+A “generic” {term}`miscellaneous item <Miscellaneous item>` is an item classified as “miscellaneous” (refer to the definition provided at the beginning of this chapter) AND for which a reliability model based on IOR is defined as a reference in this Current document (see {numref}`misc_table4_1`).
 
 The reliability model is either 
 
