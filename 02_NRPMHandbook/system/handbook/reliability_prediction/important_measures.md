@@ -30,12 +30,12 @@ The so-called Birnbaum or marginal importance indicates how sensitive the system
 ``
 ``  
 ```{math}
-:label: Equation 7.48
+:label: Equation_7_48
 I_{m}\left( i \right) = \frac{\partial R_{S}}{\partial R_{i}}
 ```
 ````
 
-Instead of the partial derivation, the Birnbaum importance can be obtained, as shown in Eq. {eq}`Equation 7.49`, by calculating the difference in the system reliability if the reliability of component $i$ is set to 1 and 0,
+Instead of the partial derivation, the Birnbaum importance can be obtained, as shown in Eq. {eq}`Equation_7_49`, by calculating the difference in the system reliability if the reliability of component $i$ is set to 1 and 0,
 
 (syst_equation4_49)=
 ````{admonition} Equation
@@ -43,7 +43,7 @@ Instead of the partial derivation, the Birnbaum importance can be obtained, as s
 ``
 ``  
 ```{math}
-:label: Equation 7.49
+:label: Equation_7_49
 I_{m}\left( i \right) = R_{S}
 ```
 ````
@@ -56,18 +56,18 @@ Where $r$ denotes the ordered list of component reliabilities for *i*= 1 to *n*.
 ``
 ``  
 ```{math}
-:label: Equation 7.50
+:label: Equation_7_50
 r : = \left( R_{i}\left( t \right),\ldots R_{n}\left( t \right) \right)
 ```
 ````
 
-In the following, to demonstrate the calculation of the Birnbaum importance a fictive example of a power supply system as shown in {numref}`Figure 7.29` is considered. It consists of three solar arrays of different size to provide electrical power. Two larger solar arrays are charging the battery. A power converter is implemented to provide the required voltage levels to the satellite systems.
+In the following, to demonstrate the calculation of the Birnbaum importance a fictive example of a power supply system as shown in {numref}`Figure_7_29` is considered. It consists of three solar arrays of different size to provide electrical power. Two larger solar arrays are charging the battery. A power converter is implemented to provide the required voltage levels to the satellite systems.
 
 (syst_figure4_29)=
 ```{figure} ../../picture/figure4_29.png
 ---
 width: 600px
-name: Figure 7.29
+name: Figure_7_29
 ---
 Reliability Block diagram Power Supply System (fictive example)
 ```
@@ -80,12 +80,12 @@ The system structure function of this example is given by
 ``
 ``  
 ```{math}
-:label: Equation 7.51
+:label: Equation_7_51
 \Phi\left( x \right) = \left( x \middle| 1 \land x_{5} \right) \vee \left( x \middle| 1 \land x_{2} \land x_{3} \right) \vee \left( x \middle| 1{\land x}_{2}{\land x}_{4} \right)
 ```
 ````
 
-The disjunctive terms in Eq. {eq}`Equation 7.51` are derived from minimal success paths and are not mutually exclusive terms. To simplify the calculation of the expected value Eq. {eq}`Equation 7.51` is transformed such that it consists of mutually exclusive terms only.
+The disjunctive terms in Eq. {eq}`Equation_7_51` are derived from minimal success paths and are not mutually exclusive terms. To simplify the calculation of the expected value Eq. {eq}`Equation_7_51` is transformed such that it consists of mutually exclusive terms only.
 
 
 (syst_equation4_52)=
@@ -94,7 +94,7 @@ The disjunctive terms in Eq. {eq}`Equation 7.51` are derived from minimal succes
 ``
 ``  
 ```{math}
-:label: Equation 7.52
+:label: Equation_7_52
 \Phi\left( x \right) = \left( x \middle| 1 \land {\overline{x}}_{2} \land x_{5} \right) \vee \left( x \middle| 1 \land x_{2} \land x_{3} \land {\overline{x}}_{4} \right) \vee \left( x \middle| 1{\land x}_{2} \land {\overline{x}}_{3}{\land x}_{4} \right)
 ```
 ````
@@ -108,7 +108,7 @@ The system reliability function is then given by:
 ``
 ``  
 ```{math}
-:label: Equation 7.53
+:label: Equation_7_53
 R_{S} = E\left( \Phi\left( x \right) \right) = P
 ```
 ````
@@ -119,12 +119,12 @@ R_{S} = E\left( \Phi\left( x \right) \right) = P
 ``
 ``  
 ```{math}
-:label: Equation 7.54
+:label: Equation_7_54
 R_{S} = R_{1}\left( 1 - R_{2} \right)R_{5} + R_{1}R_{2}R_{3}\left( 1 - R_{4} \right) + R_{1}R_{2}\left( 1 - R \middle| 3 \right)R_{4}
 ```
 ````
 
-Using Eq. {eq}`Equation 7.49`, the following expression is obtained for Birnbaum importance of component 1.
+Using Eq. {eq}`Equation_7_49`, the following expression is obtained for Birnbaum importance of component 1.
 
 (syst_equation4_55)=
 ````{admonition} Equation
@@ -132,7 +132,7 @@ Using Eq. {eq}`Equation 7.49`, the following expression is obtained for Birnbaum
 ``
 ``  
 ```{math}
-:label: Equation 7.55
+:label: Equation_7_55
 I_{m1} = XXX
 ```
 ````
@@ -183,12 +183,12 @@ This assumption is not realistic for space systems. The relevant range of compon
 ``
 ``  
 ```{math}
-:label: Equation 7.56
+:label: Equation_7_56
 I_{\text{RS}}\left( i,r \right) = \frac{1}{{1 - R}_{\text{mi}n}}\int_{R_{\min}}^{1}{\frac{\partial R_{s}\left( r \right)}{\partial R_{i}}dR_{i}} = \frac{1}{{1 - R}_{\text{mi}n}}{\int_{R_{\min}}^{1}{I_{m}\left( i,r \right)dR_{i}}}
 ```
 ````
 
-The reduced structural importance allows assessing the influence of individual components on the system reliability already in early phases of the development, when the system architecture is available but no component failure rates. {numref}`syst-table4-10` shows a comparison of Birnbaum and reduced structural importance for the system architecture shown in {numref}`Figure 7.29`. For this example, it is assumed that all failure rates of the system are below 1.0E-06 1/h, and with 10 years mission duration a minimum component reliability $R_{\min}$ of 0.916 is obtained.
+The reduced structural importance allows assessing the influence of individual components on the system reliability already in early phases of the development, when the system architecture is available but no component failure rates. {numref}`syst-table4-10` shows a comparison of Birnbaum and reduced structural importance for the system architecture shown in {numref}`Figure_7_29`. For this example, it is assumed that all failure rates of the system are below 1.0E-06 1/h, and with 10 years mission duration a minimum component reliability $R_{\min}$ of 0.916 is obtained.
 
 It can be seen that the relative ranking of the components will be the same for the Birnbaum importance and the reduced structural importance, because the system architecture is the determining factor for the importance of the individual components rather than the failure rates. The absolute values of importance measures are different and with the reduced structural importance the potential system reliability improvement cannot be quantified, but it provides a qualitative assessment where reliability improvement has the biggest impact on system reliability.
 
@@ -245,7 +245,7 @@ Furthermore, the Birnbaum importance allows to quantify how much the system reli
 ``
 ``  
 ```{math}
-:label: Equation 7.57
+:label: Equation_7_57
 \text{dR}_{S}\left( r \right) = \sum_{i = 1}^{n}{\frac{\partial R_{S}}{\partial R_{i}}dR_{i}}
 ```
 ````
@@ -258,7 +258,7 @@ Thus, the change in system reliability is the weighted sum of changes in compone
 ``
 ``  
 ```{math}
-:label: Equation 7.58
+:label: Equation_7_58
 {\mathrm{\Delta}R}_{S} = \sum_{i = 1}^{n}{I_{m}\left( i,r \right)\mathrm{\Delta}R_{i}}
 ```
 ````
@@ -269,7 +269,7 @@ Where:
 
 * $\mathrm{\Delta}R_{S}$ denotes the change of the system reliability
 
-In the following, the system architecture shown in {numref}`Figure 7.29` is considered as an example to demonstrate the use of importance measures for reliability allocation. Let's assume the following reliability target for the system is given:
+In the following, the system architecture shown in {numref}`Figure_7_29` is considered as an example to demonstrate the use of importance measures for reliability allocation. Let's assume the following reliability target for the system is given:
 
 *The reliability of the system shall be at least 0.95 after 10 years mission duration (87600 hours).*
 
@@ -278,7 +278,7 @@ From the example in {numref}`syst-table4-10`, it can be seen that the power conv
 1.  Assign initial values to component reliability r.
     In the example the initial failure rate is set to 1.0E-06 1/h for all components, with a mission duration of ten years this results in an initial reliability of 0,916 for all components.
 2. Calculation of system reliability and Birnbaum importance.
-   With the initial reliability a system reliability of $R_{S}\left( t \right) = 0,9092$ is obtained. Based on Eq. {eq}`Equation 7.48` the Birnbaum importance is calculated for all components. The results are shown in {numref}`syst-table4-11`.
+   With the initial reliability a system reliability of $R_{S}\left( t \right) = 0,9092$ is obtained. Based on Eq. {eq}`Equation_7_48` the Birnbaum importance is calculated for all components. The results are shown in {numref}`syst-table4-11`.
 3. Comparison of the calculated reliability with the system reliability {term}`requirement <Requirement>`. The difference to the required system reliability is given by:
 
 (syst_equation4_59)=
@@ -287,14 +287,14 @@ From the example in {numref}`syst-table4-10`, it can be seen that the power conv
 ``
 ``  
 ```{math}
-:label: Equation 7.59
+:label: Equation_7_59
 \mathrm{\Delta}R_{S} = {\hat{R}}_{S}\left( t \right) - R_{S}\left( t \right)
 ```
 ````
 
 1.  Calculation of component reliability targets using Birnbaum importance measures, as described in the following.
 
-With Eq. {eq}`Equation 7.58` the change of the system reliability depending on the change of component reliability can be calculated using the Birnbaum importance. This equation can be transformed such that the change of component reliability to achieve a defined change in system reliability can be calculated.
+With Eq. {eq}`Equation_7_58` the change of the system reliability depending on the change of component reliability can be calculated using the Birnbaum importance. This equation can be transformed such that the change of component reliability to achieve a defined change in system reliability can be calculated.
 
 (syst_equation4_60)=
 ````{admonition} Equation
@@ -302,7 +302,7 @@ With Eq. {eq}`Equation 7.58` the change of the system reliability depending on t
 ``
 ``  
 ```{math}
-:label: Equation 7.60
+:label: Equation_7_60
 \mathrm{\Delta}R_{i} = \frac{{\mathrm{\Delta}R}_{S}}{I_{m}\left( i,r \right)}
 ```
 ````
@@ -315,7 +315,7 @@ The reliability target is given by the minimum of the initial reliability plus $
 ``
 ``  
 ```{math}
-:label: Equation 7.61
+:label: Equation_7_61
 {\hat{R}}_{i} = \min\left( R_{i} + \mathrm{\Delta}R_{i};R_{i,\max} \right)
 ```
 ````
@@ -328,7 +328,7 @@ In order to allocate the reliability targets efficiently, the components are gro
 ``
 ``  
 ```{math}
-:label: Equation 7.62
+:label: Equation_7_62
 \mathrm{\Delta}R_{1} = \frac{{\mathrm{\Delta}R}_{S}}{I_{m}\left( 1,r \right)} = \frac{0,04081}{0,992} = 0,0411
 ```
 ````
@@ -341,7 +341,7 @@ With a maximum achievable reliability of $R_{1,\max} = 0.955$ the reliability ta
 ``
 ``  
 ```{math}
-:label: Equation 7.63
+:label: Equation_7_63
 {\hat{R}}_{1} = \min\left( R_{1} + \mathrm{\Delta}R_{1};R_{1,\max} \right) = \min\left( 0,91613 + 0,0411;0,955 \right)
 ```
 ````
@@ -356,7 +356,7 @@ The components in group II are now considered for allocation of new reliability 
 ``
 ``  
 ```{math}
-:label: Equation 7.64
+:label: Equation_7_64
 \mathrm{\Delta}R_{2} = \frac{0,5{\mathrm{\Delta}R}_{S}}{I_{m}\left( 2,r \right)} = \frac{1,117E - 03}{4,14603E - 02} = 1,46E - 02
 ```
 ````
@@ -367,7 +367,7 @@ The components in group II are now considered for allocation of new reliability 
 ``
 ``  
 ```{math}
-:label: Equation 7.65
+:label: Equation_7_65
 \mathrm{\Delta}R_{5} = \frac{0,5{\mathrm{\Delta}R}_{S}}{I_{m}\left( 5,r \right)} = \frac{1,117E - 03}{6,4029E - 02} = 1,35E - 02
 ```
 ````
@@ -380,7 +380,7 @@ The reliability targets for component 2 and 5 are obtained from the following eq
 ``
 ``  
 ```{math}
-:label: Equation 7.66
+:label: Equation_7_66
 {\hat{R}}_{2} = \min\left( R_{2} + \mathrm{\Delta}R_{2};R_{2,\max} \right) = \min\left( 0,91613 + 1,46E - 02;0,945 \right) = 0,93077
 ```
 ````
@@ -391,7 +391,7 @@ The reliability targets for component 2 and 5 are obtained from the following eq
 ``
 ``  
 ```{math}
-:label: Equation 7.67
+:label: Equation_7_67
 {\hat{R}}_{5} = \min\left( R_{5} + \mathrm{\Delta}R_{5};R_{5,\max} \right)
 ```
 ```{math}

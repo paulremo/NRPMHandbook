@@ -55,7 +55,7 @@ The {term}`Bayesian inference <Bayesian inference>` estimator is defined as the 
 ``
 ``  
 ```{math}
-:label: Equation 5.9
+:label: Equation_5_9
 E(\Delta | T_{1} = t_{1}, T_{2} = t_{2}, ..., T_{n} = t_{n}) = \frac{\alpha + n}{\beta + \sum_{i} (t_{i})} = \frac{\frac{\alpha}{n}}{\frac{\beta}{n} + \frac{\sum_{i} (t_{i})}{n}}
 ```
 ````
@@ -80,7 +80,7 @@ We determine $\alpha$ so that the expected value of the gamma distribution is $\
 ``
 ``  
 ```{math}
-:label: Equation 5.10
+:label: Equation_5_10
 E(\Delta) = \frac{\alpha}{\beta} = \lambda_{0}
 ```
 ````
@@ -93,12 +93,12 @@ A second equation is provided by the {term}`level of confidence <Level of confid
 ``
 ``  
 ```{math}
-:label: Equation 5.11
+:label: Equation_5_11
 F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a
 ```
 ````
 
 
-Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering Eq. {eq}`Equation 5.10`) and one representing an estimate at a given {term}`level of confidence <Level of confidence>` (e.g. conservative estimate, entering Eq. {eq}`Equation 5.11`).
+Ideally, the prior should be defined based on two different estimates for the failure rate $\lambda_{0}$, one representing an “average” value (point estimate, entering Eq. {eq}`Equation_5_10`) and one representing an estimate at a given {term}`level of confidence <Level of confidence>` (e.g. conservative estimate, entering Eq. {eq}`Equation_5_11`).
 
 Once $\alpha$ and $\beta$ are determined it allows to derive the {term}`Bayesian inference <Bayesian inference>` estimator with n being the number of failures and $\sum t_{i}$ the cumulated time.

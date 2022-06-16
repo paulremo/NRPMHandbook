@@ -16,7 +16,7 @@ The failure probability is the sum of {term}`random failures <Random failure>` a
 ``
 ``  
 ```{math}
-:label: Equation 7.93
+:label: Equation_7_93
 \lambda\left( t \right) = \lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1}
 ```
 ````
@@ -27,7 +27,7 @@ The failure probability is the sum of {term}`random failures <Random failure>` a
 ``
 ``  
 ```{math}
-:label: Equation 7.94
+:label: Equation_7_94
 R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t}{\alpha} \right)^{\beta} \right) \right\rbrack}^{}}_{}
 ```
 ````
@@ -42,7 +42,7 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
 ``
 ``  
 ```{math}
-:label: Equation 7.95
+:label: Equation_7_95
 \begin{matrix}                                                                                                 
   \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                                                             
   \lambda\left( t \right) = \lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta - 1} \\                
@@ -57,7 +57,7 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
 ``
 ``  
 ```{math}
-:label: Equation 7.96
+:label: Equation_7_96
 \begin{matrix}                                                                                                 
   R\left( t \right) = {\exp\left\lbrack - \lambda_{R}t \right\rbrack}^{} \\                                                                           
   R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta} \right) \right\rbrack}^{}}_{} \\   
@@ -68,7 +68,7 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
 
 ### Model 3
 
-The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random failure <Random failure>` rate and the {term}`wear-out failure <Wear-out failure>` rate, Eq. {eq}`Equation 7.97`. At a certain operating time $t = \tau_{2}$ the failure rate due to wear-out $\lambda_{W}$ equals the constant failure rate of {term}`random failure <Random failure>`, Eq. {eq}`Equation 7.98`. From that point on the {term}`wear-out failure <Wear-out failure>` rate is dominating. Thus, the {term}`probability density functions <Probability density function>` are separated in {term}`random failures <Random failure>` only for$t < \tau_{2}$ and wear-out only for time $t \geq \tau_{2}$
+The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random failure <Random failure>` rate and the {term}`wear-out failure <Wear-out failure>` rate, Eq. {eq}`Equation_7_97`. At a certain operating time $t = \tau_{2}$ the failure rate due to wear-out $\lambda_{W}$ equals the constant failure rate of {term}`random failure <Random failure>`, Eq. {eq}`Equation_7_98`. From that point on the {term}`wear-out failure <Wear-out failure>` rate is dominating. Thus, the {term}`probability density functions <Probability density function>` are separated in {term}`random failures <Random failure>` only for$t < \tau_{2}$ and wear-out only for time $t \geq \tau_{2}$
 
 (syst_equation4_97)=
 ````{admonition} Equation
@@ -76,7 +76,7 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ``
 ``  
 ```{math}
-:label: Equation 7.97
+:label: Equation_7_97
 \lambda\left( t \right) = \max\left( \lambda_{R},\lambda_{W} \right)
 ```
 ````
@@ -87,7 +87,7 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ``
 ``  
 ```{math}
-:label: Equation 7.98
+:label: Equation_7_98
 \lambda_{R} = \lambda_{W}\left( \tau_{2} \right)
 ```
 ````
@@ -98,7 +98,7 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ``
 ``  
 ```{math}
-:label: Equation 7.99
+:label: Equation_7_99
 \begin{matrix}
   \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                       
   \lambda\left( t \right) = \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1} \\   
@@ -115,7 +115,7 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ``
 ``  
 ```{math}
-:label: Equation 7.100
+:label: Equation_7_100
 \begin{matrix}
   R\left( t \right) = {\exp\left\lbrack - \lambda_{R}t \right\rbrack}^{} \\                                     
   R\left( t \right) = {\exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack}^{} \\          
@@ -126,7 +126,7 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ```
 ````
 
-The time $\tau_{2}$ can be obtained from Eq. {eq}`Equation 7.101`.
+The time $\tau_{2}$ can be obtained from Eq. {eq}`Equation_7_101`.
 
 (syst_equation4_101)=
 ````{admonition} Equation
@@ -134,7 +134,7 @@ The time $\tau_{2}$ can be obtained from Eq. {eq}`Equation 7.101`.
 ``
 ``  
 ```{math}
-:label: Equation 7.101
+:label: Equation_7_101
 \tau_{2} = \alpha\left( \frac{\lambda_{R}\alpha}{\beta} \right)^{\frac{1}{\beta - 1}}
 ```
 ````
@@ -149,7 +149,7 @@ For components used in phased missions, the failure rates may not only depend on
 ``
 ``  
 ```{math}
-:label: Equation 7.102
+:label: Equation_7_102
 T_{\text{Ck}} = \sum_{i = 1}^{i = k}T_{i}
 ```
 Where
@@ -159,7 +159,7 @@ Where
 -   $T_{i}$ denotes the duration of phase $i$
 ````
 
-The reliability function of the component that is exposed to {term}`random failures <Random failure>` and also {term}`wear-out failures <Wear-out failure>` throughout the mission is given in Eq. {eq}`Equation 7.103` (see wear-out first approach in {numref}`syst_4_8_1`.
+The reliability function of the component that is exposed to {term}`random failures <Random failure>` and also {term}`wear-out failures <Wear-out failure>` throughout the mission is given in Eq. {eq}`Equation_7_103` (see wear-out first approach in {numref}`syst_4_8_1`.
 
 (syst_equation4_103)=
 ````{admonition} Equation
@@ -167,7 +167,7 @@ The reliability function of the component that is exposed to {term}`random failu
 ``
 ``  
 ```{math}
-:label: Equation 7.103
+:label: Equation_7_103
 R_{k}\left( t \right) = e^{\left\lbrack - \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t}{\alpha_{k}} \right)^{\beta_{k}} \right) \right\rbrack} \cdot e^{\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right) \right\rbrack} \cdot e^{\left\lbrack - \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}}}{\alpha_{i}} \right)^{\beta_{i}} \right) \right\rbrack}
 ```
 
@@ -190,7 +190,7 @@ Where
 -   $\beta_{i}$ denotes the shape parameter of the Weibull distribution in phase $i$
 ````
 
-If wear-out occurs only after the qualification time $\tau$ is reached (second approach) Eq. {eq}`Equation 7.103` can be adapted accordingly and for $T_{\text{ck}} > \tau$ the following equation is obtained.
+If wear-out occurs only after the qualification time $\tau$ is reached (second approach) Eq. {eq}`Equation_7_103` can be adapted accordingly and for $T_{\text{ck}} > \tau$ the following equation is obtained.
 
 (syst_equation4_104)=
 ````{admonition} Equation
@@ -198,7 +198,7 @@ If wear-out occurs only after the qualification time $\tau$ is reached (second a
 ``
 ``  
 ```{math}
-:label: Equation 7.104
+:label: Equation_7_104
 R_{k}\left( t \right) = {e^{- \left( \lambda_{k}t + \left( \frac{T_{\text{Ck} - 1} + t - \tau_{1}}{\alpha_{k}} \right)^{\beta_{k}} \right)}e^{- \left( \sum_{i = 1}^{i = k - 1}{\lambda_{i}T_{i}} \right)}e^{- \left( \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{1}}{\alpha_{i}} \right)^{\beta_{i}} \right)}}_{}
 ```
 
@@ -207,7 +207,7 @@ Where
 -   $\tau_{1}$ denotes the qualification time of the component
 ````
 
-For mission phases before qualification time $T_{\text{ck}} < \tau_{1}$, wear-out does not have to be considered and the reliability of the component in phase k is given by Eq. {eq}`Equation 7.30`.
+For mission phases before qualification time $T_{\text{ck}} < \tau_{1}$, wear-out does not have to be considered and the reliability of the component in phase k is given by Eq. {eq}`Equation_7_30`.
 
 For Model 3, see {numref}`syst_4_8_1`, wear-out is considered only for $T_{\text{ck}} > \tau_{2}$ and for $T_{\text{ck}} < \tau_{2}$ only {term}`random failures <Random failure>` are taken into account. The following equation is obtained for $T_{\text{ck}} > \tau_{2}$.
 
@@ -217,7 +217,7 @@ For Model 3, see {numref}`syst_4_8_1`, wear-out is considered only for $T_{\text
 ``
 ``  
 ```{math}
-:label: Equation 7.105
+:label: Equation_7_105
 R_{k}\left( t \right) = {{\exp\left\lbrack - \left( \frac{T_{\text{Ck} - 1} + t - \tau_{2}}{\alpha_{k}} \right)^{\beta_{k}} \right\rbrack}^{}{\exp\left\lbrack - \sum_{i = 1}^{i = k - 1}\left( \frac{T_{\text{Ci}} - \tau_{2}}{\alpha_{i}} \right)^{\beta_{i}} \right\rbrack}^{}}
 ```
 
@@ -226,7 +226,7 @@ Where
 -   $\tau_{2}$ denotes the time at which the {term}`wear-out failure <Wear-out failure>` rate equals the {term}`random failure <Random failure>` rate.
 ````
 
-For $T_{\text{ck}} < \tau_{2}$ the reliability function of the component in phase k is also given by Eq. {eq}`Equation 7.30`.
+For $T_{\text{ck}} < \tau_{2}$ the reliability function of the component in phase k is also given by Eq. {eq}`Equation_7_30`.
 
 (syst_4_8_3)=
 ## Reliability of serial and parallel systems considering wear-out
@@ -239,7 +239,7 @@ The system reliability function for a serial system is given by:
 ``
 ``  
 ```{math}
-:label: Equation 7.106
+:label: Equation_7_106
 R_{S}\left( t \right) = R_{A}\left( t \right) \ast R_{B}\left( t \right)
 ```
 ````
@@ -252,12 +252,12 @@ The reliability for a parallel system in hot redundancy, thus all components in 
 ``
 ``  
 ```{math}
-:label: Equation 7.107
+:label: Equation_7_107
 R_{S}\left( t \right) = R_{A}\left( t \right) + R_{B}\left( t \right) - R_{A}\left( t \right)R_{B}\left( t \right)
 ```
 ````
 
-In order to consider wear-out of the components the corresponding reliability function of the wear-out model is to be used. If for example the first approach for wear out modelling is used for both components, given by Eq. {eq}`Equation 7.94`, the following is obtained for a serial system.
+In order to consider wear-out of the components the corresponding reliability function of the wear-out model is to be used. If for example the first approach for wear out modelling is used for both components, given by Eq. {eq}`Equation_7_94`, the following is obtained for a serial system.
 
 (syst_equation4_108)=
 ````{admonition} Equation
@@ -265,7 +265,7 @@ In order to consider wear-out of the components the corresponding reliability fu
 ``
 ``  
 ```{math}
-:label: Equation 7.108
+:label: Equation_7_108
 R_{S}\left( t \right) = {\exp\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack\exp\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack}
 ```
 ````
@@ -278,7 +278,7 @@ For a parallel system the following expression is obtained:
 ``
 ``  
 ```{math}
-:label: Equation 7.109
+:label: Equation_7_109
 R_{S}\left( t \right) = e^{\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack} + e^{\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack} - e^{\left\lbrack - \left( \lambda_{1}t + \left( \frac{t}{\alpha_{1}} \right)^{\beta_{1}} \right) \right\rbrack} e^{\left\lbrack - \left( \lambda_{2}t + \left( \frac{t}{\alpha_{2}} \right)^{\beta_{2}} \right) \right\rbrack}
 ```
 ````
@@ -294,7 +294,7 @@ The conditional reliability is the probability of a system successfully completi
 ``
 ``  
 ```{math}
-:label: Equation 7.110
+:label: Equation_7_110
 R_{S}\left( t \middle| T \right) = \frac{R_{S}\left( T + t \right)}{R_{S}\left( T \right)}
 ```
 ````
@@ -307,7 +307,7 @@ In the following an example of a serial system that consists of two components i
 ``
 ``  
 ```{math}
-:label: Equation 7.111
+:label: Equation_7_111
 R_{S}\left( t \right) = R_{1}\left( t \right)R_{2}\left( t \right)
 ```
 ````
@@ -342,7 +342,7 @@ The mission duration shall be extended from 50000 hours by another 10000 hours t
     - 50000 h
 ```
 
-Eq. {eq}`Equation 7.112` provides the reliability for a mission extension of a duration *t* giving that *T* hours of successful operation have already been accumulated up to the start of the mission extension. The system reliability is evaluated to assure that it will complete the next mission extension successfully.
+Eq. {eq}`Equation_7_112` provides the reliability for a mission extension of a duration *t* giving that *T* hours of successful operation have already been accumulated up to the start of the mission extension. The system reliability is evaluated to assure that it will complete the next mission extension successfully.
 
 (syst_equation4_112)=
 ````{admonition} Equation
@@ -350,7 +350,7 @@ Eq. {eq}`Equation 7.112` provides the reliability for a mission extension of a d
 ``
 ``  
 ```{math}
-:label: Equation 7.112
+:label: Equation_7_112
 R_{S}\left( t \middle| T \right) = \frac{R_{1}\left( T + t \right)R_{2}\left( T + t \right)}{R_{1}\left( T \right)R_{2}\left( T \right)}
 ```
 ````
@@ -363,7 +363,7 @@ If the Model 2 is applied for example to consider the wear-out of the components
 ``
 ``  
 ```{math}
-:label: Equation 7.113
+:label: Equation_7_113
 R\left( t \middle| T \right) = \frac{\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)\exp\left( - \lambda_{R}T - \left( \frac{t + T - \tau_{1}}{\alpha} \right)^{\beta} \right)}{{\exp\left( - \lambda_{R}T \right)\exp\left( - \lambda_{R}T \right)}^{}}
 ```
 ````
@@ -421,7 +421,7 @@ The reliability of the system at time $t$ can be obtained using the following eq
 ``
 ``  
 ```{math}
-:label: Equation 7.114
+:label: Equation_7_114
 R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_{2,\text{sb}}\left( x \right)R_{2,A}\left( t - x \right)\text{dx}}
 ```
 where:
@@ -433,7 +433,7 @@ where:
 -   $R_{2,A}$ denotes the reliability of the stand-by component in active mode.
 ````
 
-Eq. {eq}`Equation 7.114` can be solved by numerical integration.
+Eq. {eq}`Equation_7_114` can be solved by numerical integration.
 
 The previous example assumes perfect switching, i.e. activation of the stand-by component is certain once the active component fails. In reality in many cases a switching device is implemented in the system to activate the stand-by component when the active component fails. Therefore, the failure properties of the switch must also be included in the analysis as imperfect switching.
 
@@ -441,7 +441,7 @@ The previous example assumes perfect switching, i.e. activation of the stand-by 
 ```{figure} ../../picture/figure4_32.png
 ---
 width: 600px
-name: Figure 7.32
+name: Figure_7_32
 ---
 Stand-by system with switching device
 ```
@@ -454,7 +454,7 @@ Two scenarios have to be considered to include the reliability of a switch in th
 ``
 ``  
 ```{math}
-:label: Equation 7.115
+:label: Equation_7_115
 R\left( t \right) = R_{1}\left( t \right) + \int_{0}^{t}{f_{1}\left( x \right)R_{2,\text{sb}}\left( x \right)R_{2,A}\left( t - x \right)R_{\text{SW}}\left( x \right)R_{\text{SWREQ}}\text{dx}}
 ```
 where:
