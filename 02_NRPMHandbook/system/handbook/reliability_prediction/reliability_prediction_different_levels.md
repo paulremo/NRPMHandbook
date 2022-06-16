@@ -1,29 +1,29 @@
 (syst_4_1)=
 # Reliability prediction at different levels
 
-Following the definition of a system in preface, a system is considered in the generic sense, and can be defined at any level as a set of components or functions that are interrelated or interact to achieve a specified objective. In this respect, within the scope of system level {term}`reliability prediction <Reliability prediction>` the term component is not limited to elementary parts, but is considered more generally as the elements the system consists of, which could be parts, pieces of equipment or sub-systems. The system level {term}`reliability prediction <Reliability prediction>` requires various input data; component level reliability data, the system architecture, system functions, the operational context, the {term}`failure mode <Failure mode>` and Effect Analysis (FMEA), Failure Mode Effect and Criticality Analysis ({term}`FMECA`) and the Failure Mode and Effect Summary ({term}`FMES`), as shown in {numref}`Figure 7.1`. 
+Following the definition of a system in preface, a system is considered in the generic sense, and can be defined at any level as a set of components or functions that are interrelated or interact to achieve a specified objective. In this respect, within the scope of system level {term}`reliability prediction <Reliability prediction>` the term component is not limited to elementary parts, but is considered more generally as the elements the system consists of, which could be parts, pieces of equipment or sub-systems. The system level {term}`reliability prediction <Reliability prediction>` requires various input data; component level reliability data, the system architecture, system functions, the operational context, the {term}`failure mode <Failure mode>` and Effect Analysis (FMEA), Failure Mode Effect and Criticality Analysis ({term}`FMECA`) and the Failure Mode and Effect Summary ({term}`FMES`), as shown in {numref}`Figure_7_1`. 
 
 (syst_figure4_1)=
 ```{figure} ../../picture/figure4_1.png
 ---
 width: 600px
-name: Figure 7.1
+name: Figure_7_1
 ---
 Input and Output data of system {term}`reliability prediction <Reliability prediction>`
 ```
 
-The {term}`reliability prediction <Reliability prediction>` activities are performed at different levels of integration, starting from component level up to system level {term}`reliability prediction <Reliability prediction>`, as shown in {numref}`Figure 7.2`. The system level reliability analysis aims to demonstrate that the system level reliability {term}`requirements <Requirement>` are achieved. The system level reliability {term}`requirements <Requirement>` is cascaded to lower levels to define sub-system, equipment level {term}`requirements <Requirement>` and derive an architecture that is capable of meeting the {term}`requirements <Requirement>`. To support the cascading of reliability {term}`requirements <Requirement>` from system to lower levels a preliminary system level reliability model could be used. 
+The {term}`reliability prediction <Reliability prediction>` activities are performed at different levels of integration, starting from component level up to system level {term}`reliability prediction <Reliability prediction>`, as shown in {numref}`Figure_7_2`. The system level reliability analysis aims to demonstrate that the system level reliability {term}`requirements <Requirement>` are achieved. The system level reliability {term}`requirements <Requirement>` is cascaded to lower levels to define sub-system, equipment level {term}`requirements <Requirement>` and derive an architecture that is capable of meeting the {term}`requirements <Requirement>`. To support the cascading of reliability {term}`requirements <Requirement>` from system to lower levels a preliminary system level reliability model could be used. 
 
 (syst_figure4_2)=
 ```{figure} ../../picture/figure4_2.png
 ---
 width: 600px
-name: Figure 7.2
+name: Figure_7_2
 ---
 {term}`reliability prediction <Reliability prediction>` at different levels.
 ```
 
-As shown in {numref}`Figure 7.2`, to establish a system level {term}`reliability prediction <Reliability prediction>` the reliability data that are evaluated at the different levels are aggregated bottom-up from component level to system level. 
+As shown in {numref}`Figure_7_2`, to establish a system level {term}`reliability prediction <Reliability prediction>` the reliability data that are evaluated at the different levels are aggregated bottom-up from component level to system level. 
 
 Starting point is the {term}`reliability prediction <Reliability prediction>` at the lowest level (elementary parts). At this stage the failure rates or failure probabilities respectively for a single component are determined under the given environmental and operating conditions for a specific mission profile (see {numref}`sec_eee_handbook`, {numref}`sec_mech_handbook` and {numref}`sec_misc_handbook`). 
 

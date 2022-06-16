@@ -52,7 +52,7 @@ In order to avoid that {term}`common cause failures <Common cause failure>` rest
 (syst_4_7_2)=
 ## Basic Parameter model
 
-The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and {term}`common cause failures <Common cause failure>`, as shown in {numref}`Figure 7.31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by {cite:t}`sys-Jones2012CommonCF`
+The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and {term}`common cause failures <Common cause failure>`, as shown in {numref}`Figure_7_31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by {cite:t}`sys-Jones2012CommonCF`
 
 (syst_equation4_87)=
 ````{admonition} Equation
@@ -60,7 +60,7 @@ The basic parameter model is called a direct model because the probabilities of 
 ``
 ``  
 ```{math}
-:label: Equation 7.87
+:label: Equation_7_87
 Q_{S} = Q_{I}^{2} + Q_{C}
 ```
 ````
@@ -71,7 +71,7 @@ The direct basic parameter model requires estimating all possible failure event 
 ```{figure} ../../picture/figure4_31.png
 ---
 width: 600px
-name: Figure 7.31
+name: Figure_7_31
 ---
 System failure calculation including {term}`common cause failure <Common cause failure>` – Basic Parameter Model. 
 ```
@@ -87,7 +87,7 @@ For explanation of the beta factor model, also a system with two identical redun
 ``
 ``  
 ```{math}
-:label: Equation 7.88
+:label: Equation_7_88
 \lambda_{T} = \lambda_{I} + \lambda_{C}
 ```
 ````
@@ -104,7 +104,7 @@ The factor $\beta$ is defined as the ratio of the failure rate due to common cau
 ``
 ``  
 ```{math}
-:label: Equation 7.89
+:label: Equation_7_89
 \beta = \frac{\lambda_{C}}{\lambda_{T}}
 ```
 ````
@@ -121,7 +121,7 @@ With the categories of significant contributors to {term}`CCF` shown in {numref}
 ``
 ``  
 ```{math}
-:label: Equation 7.90
+:label: Equation_7_90
 \text{CCS} = \sum_{i}^{}{\text{CC}S_{i}}
 ```
 ````
@@ -136,14 +136,14 @@ The beta factor is calculated as follows
 ``
 ``  
 ```{math}
-:label: Equation 7.91
+:label: Equation_7_91
 \beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV}
 ```
 ````
 
 Where $\text{CCS}_{\max}$ denotes the maximum possible Common Cause Susceptibility Score, assigning 10 to each category.
 
-As shown in the example in {numref}`syst-table4-15` the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (*CCS*) of 32. With 7 categories, $\text{CCS}_{\max}$ is 70. If the lowest value of 10% for $\text{MCCV}$ is selected, the following $\beta$ value is obtained from Eq. {eq}`Equation 7.91`.
+As shown in the example in {numref}`syst-table4-15` the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (*CCS*) of 32. With 7 categories, $\text{CCS}_{\max}$ is 70. If the lowest value of 10% for $\text{MCCV}$ is selected, the following $\beta$ value is obtained from Eq. {eq}`Equation_7_91`.
 
 (syst_equation4_92)=
 ````{admonition} Equation
@@ -151,7 +151,7 @@ As shown in the example in {numref}`syst-table4-15` the assigned Susceptibility 
 ``
 ``  
 ```{math}
-:label: Equation 7.92
+:label: Equation_7_92
 \beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV} = \frac{32}{70} \times 0.10 = 0.0471
 ```
 ````

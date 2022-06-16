@@ -2,20 +2,20 @@
 # Process for reliability modelling
 This Section details how to build a reliability model for {term}`miscellaneous item <Miscellaneous item>`.
 
-{numref}`Figure 5.4` provides the general process to apply whatever the basic model is: 
+{numref}`Figure_5_4` provides the general process to apply whatever the basic model is: 
 
 1. the “standard model”, or 
 2. the “non-standard model” or even 
 3. the “holistic model”.
 
 ```{note}
-On {numref}`Figure 5.4`, the basic model is a failure rate but it could also be a probability of failure.
+On {numref}`Figure_5_4`, the basic model is a failure rate but it could also be a probability of failure.
 ```
 
 ```{figure} ../../picture/figure4_4.png
 ---
 width: 600px
-name: Figure 5.4
+name: Figure_5_4
 ---
 General process for miscellaneous items {term}`reliability prediction <Reliability prediction>`.
 ```
@@ -61,7 +61,7 @@ The failure rate is referred to as basic failure rate $\lambda_{1} = \lambda_{B}
 ``
 ``  
 ```{math}
-:label: Equation 5.1
+:label: Equation_5_1
 \lambda_{1} = \lambda_{B}
 ```
 ````
@@ -87,7 +87,7 @@ The resulting failure rate is:
 ``
 ``  
 ```{math}
-:label: Equation 5.2
+:label: Equation_5_2
 \lambda_{2} = \lambda_{1} * K_{parameters}
 ```
 ````
@@ -215,7 +215,7 @@ The resulting failure rate is
 ``
 ``  
 ```{math}
-:label: Equation 5.3
+:label: Equation_5_3
 \lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}
 ```
 ````
@@ -253,7 +253,7 @@ The method used is the {term}`Bayesian inference <Bayesian inference>` approach 
 ``
 ``  
 ```{math}
-:label: Equation 5.4
+:label: Equation_5_4
 \lambda_{3}^{\gamma} = \lambda_{3}
 ```
 Where $\lambda_{3}^{\gamma}$ is the gamma estimator.
@@ -289,7 +289,7 @@ The resulting failure rate is :
 ``
 ``  
 ```{math}
-:label: Equation 5.5
+:label: Equation_5_5
 \lambda_{4}(t) = \lambda_{3}^{\gamma} + \lambda_{WO}(t)
 ```
 ````
@@ -301,14 +301,14 @@ The {term}`reliability prediction <Reliability prediction>` of the item is then 
 ``
 ``  
 ```{math}
-:label: Equation 5.6
+:label: Equation_5_6
 P(\text{FAILURE}) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 ```
 ````
 `````
 
 **Discussion about the three models**
-{numref}`Figure 5.5` presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.
+{numref}`Figure_5_5` presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.
 
 * Model 1 and model 3 are very close since the constant failure rates used for miscellaneous items are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.
 * Model 2 could be considered as optimistic since it addresses wear-out only after the qualification time.
@@ -323,7 +323,7 @@ Model 1 is recommended as it combines a constant failure rate model with an incr
 ```{figure} ../../picture/figure4_5.png
 ---
 width: 600px
-name: Figure 5.5
+name: Figure_5_5
 ---
 Failure rates for the three Wear-out models (Exponential, Weibull)
 ```
@@ -354,13 +354,13 @@ It is possible also to derive a Weibull distribution, similarly to the Normal di
 
 Then the probability $\text{P} (\text{T} > \text{t}_{\text{Q}})$ provides the level of Confidence (LoC), i.e. $\text{R}_{\text{WO}}(t) (\text{t}_{\text{Q}})$
 
-It is noteworthy that when the parameters are consistent the reliability function is similar between the normal distribution and the Weibull distribution. {numref}`Figure 5.6` (resp. {numref}`Figure 5.7`) presents an example of such calculation with normal law (resp. Weibull).
+It is noteworthy that when the parameters are consistent the reliability function is similar between the normal distribution and the Weibull distribution. {numref}`Figure_5_6` (resp. {numref}`Figure_5_7`) presents an example of such calculation with normal law (resp. Weibull).
 
 (misc_figure4_6)=
 ```{figure} ../../picture/figure4_6.png
 ---
 width: 600px
-name: Figure 5.6
+name: Figure_5_6
 ---
 Example of {term}`WO` distribution calculation (assumption: Normal distribution)
 ```
@@ -369,7 +369,7 @@ Example of {term}`WO` distribution calculation (assumption: Normal distribution)
 ```{figure} ../../picture/figure4_7.png
 ---
 width: 600px
-name: Figure 5.7
+name: Figure_5_7
 ---
 Example of {term}`WO` distribution calculation (assumption: Weibull distribution)
 ```
@@ -384,7 +384,7 @@ The step 6 consists in adding a probability of failure related to {term}`systema
 ``
 ``  
 ```{math}
-:label: Equation 5.7
+:label: Equation_5_7
 P(\text{FAILURE}) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})
 ```
 ````
@@ -404,7 +404,7 @@ The step 7 consists in adding a probability of failure related to the external p
 ``
 ``  
 ```{math}
-:label: Equation 5.8
+:label: Equation_5_8
 P(\text{FAILURE}) = 1 - \left(1 - EX\right) * \left(1 - SF\right) * \left(1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}\right)
 ```
 ````

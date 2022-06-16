@@ -1,13 +1,13 @@
 (syst_4_4)=
 # Reliability assessment of phased missions
 
-The operation of missions encountered in space involves several different tasks or phases that must be accomplished in sequence. Systems used like this are usually called phased-mission systems. {numref}`Figure 7.24` shows an example of a phased mission of a space satellite system.
+The operation of missions encountered in space involves several different tasks or phases that must be accomplished in sequence. Systems used like this are usually called phased-mission systems. {numref}`Figure_7_24` shows an example of a phased mission of a space satellite system.
 
 (syst_figure4_24)=
 ```{figure} ../../picture/figure4_24.png
 ---
 width: 600px
-name: Figure 7.24
+name: Figure_7_24
 ---
 Example phased space mission 
 ```
@@ -70,7 +70,7 @@ To derive the appropriate success criteria for the reliability analysis of phase
 (syst_4_4_2)=
 ## Mission phase dependent failure rates
 
-During the different phases of the space mission different load levels might be applied on the components. Vibration and acceleration loads are reaching the peak during launch phase, and in-orbit acceleration loads are significantly lower but radiation is high. This can be considered by phase specific failure rates for the system elements. For constant failure rates, the reliability function of a component in phase  can be expressed as shown in Eq. {eq}`Equation 7.30`.
+During the different phases of the space mission different load levels might be applied on the components. Vibration and acceleration loads are reaching the peak during launch phase, and in-orbit acceleration loads are significantly lower but radiation is high. This can be considered by phase specific failure rates for the system elements. For constant failure rates, the reliability function of a component in phase  can be expressed as shown in Eq. {eq}`Equation_7_30`.
 
 (syst_equation4_30)=
 ````{admonition} Equation
@@ -78,7 +78,7 @@ During the different phases of the space mission different load levels might be 
 ``
 ``  
 ```{math}
-:label: Equation 7.30
+:label: Equation_7_30
 R_{k}(t) = \text{exp}\left(-\lambda_{k}t\right)\text{exp}\left(-\sum_{i=1}^{i=k-1}\lambda_{i}T_{i}\right)
 ```
 - $R_{k}$ denotes the reliability of the component in phase $k$
@@ -93,35 +93,35 @@ If wear-out has to be considered please refer to {numref}`syst_4_8`.
 (syst_4_4_3)=
 ## Combinatorial methods for phased mission based on mini-components
 
-The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms {cite:t}`sys-Esary1975ReliabilityAO` proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in {numref}`Figure 7.25`. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases. 
+The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms {cite:t}`sys-Esary1975ReliabilityAO` proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in {numref}`Figure_7_25`. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases. 
 
 (syst_figure4_25)=
 ```{figure} ../../picture/figure4_25.png
 ---
 width: 600px
-name: Figure 7.25
+name: Figure_7_25
 ---
 Example for mini components representing component A in three phases
 ```
 
-The concept of mini components is shown in the following, using an example of a multi-phase mission with three component $A$, $B$ and $C$. The interaction of the system components in order to successfully complete the individual phases is represented through the reliability block diagram for each phase, as shown in {numref}`Figure 7.26`.
+The concept of mini components is shown in the following, using an example of a multi-phase mission with three component $A$, $B$ and $C$. The interaction of the system components in order to successfully complete the individual phases is represented through the reliability block diagram for each phase, as shown in {numref}`Figure_7_26`.
 
 (syst_figure4_26)=
 ```{figure} ../../picture/figure4_26.png
 ---
 width: 600px
-name: Figure 7.26
+name: Figure_7_26
 ---
 Reliability block diagram for individual phases of a multi-phase mission
 ```
 
-From the multi-phase mission shown in {numref}`Figure 7.26`, a single-phase mission model as shown in {numref}`Figure 7.27` is obtained with the application of mini components.
+From the multi-phase mission shown in {numref}`Figure_7_26`, a single-phase mission model as shown in {numref}`Figure_7_27` is obtained with the application of mini components.
 
 (syst_figure4_27)=
 ```{figure} ../../picture/figure4_27.png
 ---
 width: 600px
-name: Figure 7.27
+name: Figure_7_27
 ---
 Single phase mission model
 ```
@@ -134,7 +134,7 @@ The initial configurations for the three phases have been transformed to a singl
 ``
 ``  
 ```{math}
-:label: Equation 7.31
+:label: Equation_7_31
 R_{1}(t) = 1 - (1-q_{A_{1}})(1-q_{B_{1}})(1-q_{C_{1}})
 ```
 ````
@@ -145,7 +145,7 @@ R_{1}(t) = 1 - (1-q_{A_{1}})(1-q_{B_{1}})(1-q_{C_{1}})
 ``
 ``  
 ```{math}
-:label: Equation 7.32
+:label: Equation_7_32
 R_{2}(t) = q_{A_{1}}q_{A_{2}}\left(q_{B_{1}}q_{B_{2}} + q_{C_{1}}q_{C_{2}} - q_{B_{1}}q_{B_{2}}q_{C_{1}}q_{C_{2}}\right)
 ```
 ````
@@ -156,7 +156,7 @@ R_{2}(t) = q_{A_{1}}q_{A_{2}}\left(q_{B_{1}}q_{B_{2}} + q_{C_{1}}q_{C_{2}} - q_{
 ``
 ``  
 ```{math}
-:label: Equation 7.33
+:label: Equation_7_33
 R_{3}(t) = q_{A_{1}}q_{A_{2}}q_{A_{3}}q_{B_{1}}q_{B_{2}}q_{B_{3}}q_{C_{1}}q_{C_{2}}q_{C_{3}}
 ```
 ````
@@ -169,7 +169,7 @@ Where $q_{ij}$ denotes the conditional reliability of component $i$ in phase $j$
 ``
 ``  
 ```{math}
-:label: Equation 7.34
+:label: Equation_7_34
 q_{ij} = P\left(x_{i}\left(t_{j}\right) = 1 | x_{i}\left(t_{j-1}\right) = 1\right)
 ```
 ````
@@ -217,7 +217,7 @@ The Boolean phase algebra in {numref}`syst-table4-8` allows identifying the poss
 ``
 ``  
 ```{math}
-:label: Equation 7.35
+:label: Equation_7_35
 R_{S} = 1 - \left(P\left(E_{P} \right) + \sum_{i=1}^{i=p-1}P\left(PFC_{i}\right) \right)
 ```
 Where
@@ -227,7 +227,7 @@ Where
 
 **Example :**
 
-The system reliability of the system shown in {numref}`Figure 7.26` is given by
+The system reliability of the system shown in {numref}`Figure_7_26` is given by
 
 (syst_equation4_36)=
 ````{admonition} Equation
@@ -235,7 +235,7 @@ The system reliability of the system shown in {numref}`Figure 7.26` is given by
 ``
 ``  
 ```{math}
-:label: Equation 7.36
+:label: Equation_7_36
 R_{s} = 1 - \left( P\left( E_{3} \right) + P\left( \text{PFC}_{2} \right) + P\left( \text{PFC}_{1} \right) \right)
 ```
 ````
@@ -248,7 +248,7 @@ The failure combinations for the 3 phases are given by:
 ``
 ``  
 ```{math}
-:label: Equation 7.37
+:label: Equation_7_37
 E_{1} = {\overline{A}}_{1} \cap {\overline{B}}_{1} \cap {\overline{C}}_{1}
 ```
 ````
@@ -259,7 +259,7 @@ E_{1} = {\overline{A}}_{1} \cap {\overline{B}}_{1} \cap {\overline{C}}_{1}
 ``
 ``  
 ```{math}
-:label: Equation 7.38
+:label: Equation_7_38
 E_{2} = {\overline{A}}_{2} \cup {\overline{B}}_{2} \cap {\overline{C}}_{2}
 ```
 ````
@@ -270,14 +270,14 @@ E_{2} = {\overline{A}}_{2} \cup {\overline{B}}_{2} \cap {\overline{C}}_{2}
 ``
 ``  
 ```{math}
-:label: Equation 7.39
+:label: Equation_7_39
 E_{3} = {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3}
 ```
 ````
 
 Where $E_{i}$ denotes the failure combination leading to system failure in phase $i$ given as Boolean logic expression.
 
-With Eq. {eq}`Equation 7.39` the following is obtained for the failure probability in phase 3.
+With Eq. {eq}`Equation_7_39` the following is obtained for the failure probability in phase 3.
 
 (syst_equation4_40)=
 ````{admonition} Equation
@@ -285,7 +285,7 @@ With Eq. {eq}`Equation 7.39` the following is obtained for the failure probabili
 ``
 ``  
 ```{math}
-:label: Equation 7.40
+:label: Equation_7_40
 P\left( E \middle| 3 \right) = P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)
 ```
 ````
@@ -298,7 +298,7 @@ The failure probability in phase 1 and 2 is given by the following equations.
 ``
 ``  
 ```{math}
-:label: Equation 7.41
+:label: Equation_7_41
 P\left( \text{PFC} \middle| 1 \right) = P\left( \left( E_{1} \cap {\overline{E}}_{2} \right) \cap {\overline{E}}_{3} \right)
 ```
 ```{math}
@@ -312,7 +312,7 @@ P\left( \text{PFC} \middle| 1 \right) = P
 ``
 ``  
 ```{math}
-:label: Equation 7.42
+:label: Equation_7_42
 P\left( \text{PFC} \middle| 2 \right) = P\left( E_{2} \cap {\overline{E}}_{3} \right)
 ```
 ```{math}
@@ -328,7 +328,7 @@ The phase algebra rules in {numref}`syst-table4-8` are applied for phase 2 and t
 ``
 ``  
 ```{math}
-:label: Equation 7.43
+:label: Equation_7_43
 P\left( \text{PFC} \middle| 2 \right) = P
 ```
 ````
@@ -339,7 +339,7 @@ P\left( \text{PFC} \middle| 2 \right) = P
 ``
 ``  
 ```{math}
-:label: Equation 7.44
+:label: Equation_7_44
 P\left( \text{PFC} \middle| 2 \right) = P\left( \left( {\overline{A}}_{2} \cup {\overline{B}}_{2}{\overline{\cap C}}_{2} \right) \cap \left( A_{3} \cap B_{3} \cap C_{3} \right) \right)
 ```
 ````
@@ -350,12 +350,12 @@ P\left( \text{PFC} \middle| 2 \right) = P\left( \left( {\overline{A}}_{2} \cup {
 ``
 ``  
 ```{math}
-:label: Equation 7.45
+:label: Equation_7_45
 P\left( \text{PFC} \middle| 2 \right) = P
 ```
 ````
 
-In Eq. {eq}`Equation 7.45` it can be seen that both component A and B are failed in phase 2 but operational in phase 3, which is not possible for non-repairable system according to the Boolean phase algebra rules in {numref}`syst-table4-8`. Thus with $\overline{A_{2}} \cap A_{3} \rightarrow 0$ and $\overline{B_{2}} \cap B_{3} \rightarrow 0$, the phase failure combination $\text{PFC}_{2}$ is empty. The same is obtained for $\text{PFC}_{1}$.
+In Eq. {eq}`Equation_7_45` it can be seen that both component A and B are failed in phase 2 but operational in phase 3, which is not possible for non-repairable system according to the Boolean phase algebra rules in {numref}`syst-table4-8`. Thus with $\overline{A_{2}} \cap A_{3} \rightarrow 0$ and $\overline{B_{2}} \cap B_{3} \rightarrow 0$, the phase failure combination $\text{PFC}_{2}$ is empty. The same is obtained for $\text{PFC}_{1}$.
 
 (syst_equation4_46)=
 ````{admonition} Equation
@@ -363,12 +363,12 @@ In Eq. {eq}`Equation 7.45` it can be seen that both component A and B are failed
 ``
 ``  
 ```{math}
-:label: Equation 7.46
+:label: Equation_7_46
 P\left( \text{PFC} \middle| 1 \right) = P
 ```
 ````
 
-Thus, the reliability of the phase mission system is given by Eq. {eq}`Equation 7.47`. It can be seen that the system reliability over all phases is determined by the availability of the components in the last phase.
+Thus, the reliability of the phase mission system is given by Eq. {eq}`Equation_7_47`. It can be seen that the system reliability over all phases is determined by the availability of the components in the last phase.
 
 (syst_equation4_47)=
 ````{admonition} Equation
@@ -376,7 +376,7 @@ Thus, the reliability of the phase mission system is given by Eq. {eq}`Equation 
 ``
 ``  
 ```{math}
-:label: Equation 7.47
+:label: Equation_7_47
 R_{S}\left( t \right) = 1 - P\left( E \middle| 3 \right) = 1 - P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)
 ```
 ````
@@ -386,7 +386,7 @@ R_{S}\left( t \right) = 1 - P\left( E \middle| 3 \right) = 1 - P\left( {\overlin
 
 The phased mission system can also be analysed based on a state space model using Markov model. Smotherman and Zemoudeh {cite:t}`sys-Esary1975ReliabilityAO` used a single non-homogeneous Markov chain model to perform the reliability analysis of a phased mission system. The behaviour of the system in each phase is represented using a different Markov chain, which may contain a different subset of states. The state transitions are described in terms of time dependent rates to include phase changes. Thus, state-dependent phase changes, random phase durations as well as time varying failure and repair behaviour can be easily modelled.
 
-The example shown in {numref}`Figure 7.26` is shown as Markov chain in {numref}`Figure 7.28`, where the failure of components A, B and C are given by the associated failure rates $\lambda_{a}$, $\lambda_{b}$ and $\lambda_{c}$. Each component can have two states, failed or operational. An identifier is assigned to each system state where, e.g."011" indicates A failed, B and C operational. The transition from phase 1 to phase 2 is given by the time dependent rate $h_{1}\left( t \right)$ and $h_{2}\left( t \right)$ denotes the rate of change from phase 2 to phase 3.
+The example shown in {numref}`Figure_7_26` is shown as Markov chain in {numref}`Figure_7_28`, where the failure of components A, B and C are given by the associated failure rates $\lambda_{a}$, $\lambda_{b}$ and $\lambda_{c}$. Each component can have two states, failed or operational. An identifier is assigned to each system state where, e.g."011" indicates A failed, B and C operational. The transition from phase 1 to phase 2 is given by the time dependent rate $h_{1}\left( t \right)$ and $h_{2}\left( t \right)$ denotes the rate of change from phase 2 to phase 3.
 
 The main advantage of this model is that it includes the configurations for all phases as well as the phase changes. But on the other side, as the number of components increases this approach results in a large model as the number of states increases rapidly.
 
@@ -394,7 +394,7 @@ The main advantage of this model is that it includes the configurations for all 
 ```{figure} ../../picture/figure4_28.png
 ---
 width: 600px
-name: Figure 7.28
+name: Figure_7_28
 ---
 Phased mission Markov model approach by Smotherman and Zemoudeh {cite:t}`sys-Esary1975ReliabilityAO`
 ```
