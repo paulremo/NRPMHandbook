@@ -5,7 +5,7 @@ const InteractType = Object.freeze({
 });
 
 class Conversation {
-    constructor(container, branches, ) {
+    constructor(container, branches,) {
         this.container = container;
         this.branches = branches;
 
@@ -17,8 +17,6 @@ class Conversation {
     }
 
     next(id) {
-        ////console.log("next");
-        ////console.log(id);
         let elt = document.getElementById(id);
         let cls = elt.className;
         if (cls.includes("button-next")) {
@@ -28,51 +26,35 @@ class Conversation {
             let cdn = elt.value;
             let res = this.current_branch.messages.get(this.current_branch.step).getResult(cdn);
             if (res != null) {
-                ////console.log("text : " + cdn);
                 this.current_branch.nextStep(true, res);
             }
             else {
-                ////console.log("nothing");
                 this.current_branch.nextStep(false);
             }
         }
         else if (cls.includes("categories")) {
             let res = dataModelsByCategories.get(id);
-            /*//console.log(dataModelsByCategories.get("Power"))
-            //console.log(id);
-            //console.log("res")
-            //console.log(res)*/
             this.current_branch.nextStep(true, res);
         }
-
-        /*else if (cls == "categories") {
-            let res = dataModelsByCategories.get(id);
-            this.current_branch.nextStep(true, res);
-        }*/
 
         else if (cls.includes("itemComponents")) {
             this.current_branch.nextStep(true, id);
         }
         else if (cls.includes("button-fail")) {
-            //console.log("fail")
             this.current_branch.nextStep(false);
         }
         else if (this.current_branch.messages.get(this.current_branch.step) instanceof ConfigurableMessage) {
-            //console.log("configure netx")
             if (this.current_branch.messages.get(this.current_branch.step).configure_next) {
-                //console.log("configure next : " + this.current_branch.messages.get(this.branches.step).final_data)
                 this.current_branch.nextStep(this.current_branch.messages.get(this.branches.step).final_data, id);
             }
 
         }
         else {
-            ////console.log("else");
             this.current_branch.nextStep(true, id);
         }
     }
 
     switchBranch(b, arg) {
-        console.log("branch : " + b);
         this.current_branch = this.branches.get(b);
         this.current_branch.init(this, arg);
     }
@@ -92,7 +74,6 @@ class Branch {
         this.conversation = conversation
         this.data = arg;
         let msg = this.messages.get(this.step);
-        ////console.log("msg : " + msg)
         if (msg instanceof EmptyMessage) {
             //console.log("empty")
         }
@@ -105,10 +86,8 @@ class Branch {
             }
             td.appendChild(msg.htmlRep);
             if (msg instanceof ConfigurableMessage) {
-                //console.log("config")
                 msg.configure(this.data)
                 if (msg.configure_next) {
-                    //console.log("configure next : " + this.successors.get(msg.final_data))
                     this.conversation.switchBranch(this.successors.get(msg.final_data), arg);
                 }
             }
@@ -118,10 +97,8 @@ class Branch {
     }
 
     nextStep(new_branch_id = null, arg = null) {
-        ////console.log("next step " + arg);
         this.step += 1;
         if (this.step >= this.messages.size) {
-            //console.log("end of branch : " + arg + new_branch_id);
             if (this.successors.get(new_branch_id) != undefined) {
                 this.conversation.switchBranch(this.successors.get(new_branch_id), arg);
             }
@@ -130,18 +107,7 @@ class Branch {
             }
         }
         else {
-            ////console.log("stay on branch : " + arg);
             let next_msg = this.messages.get(this.step);
-            /*if (next_msg.interactive){
-                this.conversation.picture.setAttribute("src", "../html/pictures/astronaut2.png");
-            }
-            else{
-                this.conversation.picture.setAttribute("src", "../html/pictures/astronaut1.png");
-            }
-            let children = this.conversation.extra_bar.children;
-            for (let i = 0; i < children.length; i++) {
-                this.conversation.extra_bar.removeChild(children[i])
-            }*/
 
             if (next_msg instanceof EmptyMessage) {
 
@@ -153,20 +119,18 @@ class Branch {
                     next_msg.configure(this.data);
                 }
                 if (next_msg instanceof ConfigurableMessage) {
-                    ////console.log("configurable message");
                     next_msg.configure(arg);
                 }
                 if (next_msg instanceof ExitMessage) {
-                    ////console.log("Exit Message");
                     next_msg.configure(arg);
-                    setTimeout(() => { this.nextStep() }, 1500);
+                    setTimeout(() => { this.nextStep() }, 2500);
                 }
                 td.appendChild(next_msg.htmlRep);
             }
 
             if (!next_msg.interactive) {
                 setTimeout(() => { this.nextStep() },
-                    1500);
+                2500);
             }
 
         }
@@ -204,14 +168,12 @@ class Message {
         }
         else {
             let par = document.createElement("p");
-            par.innerHTML = this.text;
+            //par.innerHTML = this.text;
             div.appendChild(par);
+            writeMessage(par, this.text);
         }
 
         this.htmlRep = div;
-
-
-
     }
 
 
@@ -231,7 +193,6 @@ class SearchMessage extends Message {
     }
 
     getResult(dt) {
-        //console.log("get result")
         let res = new Set();
         let words = dt.split(" ");
         for (var item of this.data) {
@@ -265,9 +226,6 @@ class DataMessage extends Message {
         if (data == null) {
             data = this.data;
         }
-        /*//console.log("data")
-        //console.log(data)
-        //console.log(this.data)*/
         for (var item of data) {
             let b = document.createElement("button");
             b.innerHTML = item;
@@ -275,7 +233,9 @@ class DataMessage extends Message {
             if (this.classNm != null) {
                 b.className = "choice-button " + this.classNm;
             }
-            //b.setAttribute("onclick", "conv.next('" + item + "');")
+            else {
+                b.className = "choice-button";
+            }
             this.interactor.appendChild(b);
             this.buttons.set(item, b);
         }
@@ -284,7 +244,7 @@ class DataMessage extends Message {
             for (var [k, b] of this.buttons) {
                 alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
             }
-            alldisable = alldisable + " console.log(document.getElementsByClassName('button-fail')); Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);" + " this.style.backgroundColor = 'rgb(67, 91, 167)'";
+            alldisable = alldisable + " Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);" + " this.style.backgroundColor = 'rgb(67, 91, 167)'";
             btn.setAttribute("onclick", "conv.next('" + key + "');" + alldisable)
         }
         let fail = document.createElement("button");
@@ -293,7 +253,6 @@ class DataMessage extends Message {
         fail.className = "button-fail";
         fail.setAttribute("id", globalThis.failname);
         fail.setAttribute("onclick", "conv.next('" + this.id + "')");
-        console.log("fail id : " + fail.id)
         this.interactor.appendChild(fail);
 
         for (var [key, btn] of this.buttons) {
@@ -302,7 +261,7 @@ class DataMessage extends Message {
                 alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
             }
         }
-        fail.setAttribute("onclick", "conv.next('" + this.id + "');" + alldisable)
+        fail.setAttribute("onclick", "conv.next('" + this.id + "');" + alldisable + " this.style.backgroundColor = 'rgb(67, 91, 167)'")
     }
 }
 
@@ -315,7 +274,6 @@ class ConfigurableMessage extends Message {
     }
 
     configure(data) {
-        //console.log("data : " + data)
         let dt = this.dataset.get(data);
         this.final_data = dt;
         this.text = this.text + " " + dt;
@@ -323,8 +281,10 @@ class ConfigurableMessage extends Message {
         let div = document.createElement("div");
         div.setAttribute("class", this.sender);
         let par = document.createElement("p");
-        par.innerHTML = this.text;
+        
+        //par.innerHTML = this.text;
         div.appendChild(par);
+        writeMessage(par, this.text);
         this.htmlRep = div;
     }
 
@@ -339,15 +299,20 @@ class ExitMessage extends Message {
         let div = document.createElement("div");
         div.setAttribute("class", this.sender);
         let par = document.createElement("button");
-        par.innerHTML = this.text;
+        //par.innerHTML = this.text;
         par.setAttribute("onclick", "window.location.href = '" + this.destination + "';");
         par.className = this.sender;
         div.style.borderColor = "#383b3a";
         div.appendChild(par);
+        writeMessage(par, this.text);
         this.htmlRep = div;
     }
 }
 
+function writeMessage(message, txt){
+    var i = 0;
+    setInterval(function ()  {message.innerHTML += txt.charAt(i); i++;}, 20);
+}
 
 let conv;
 
@@ -367,11 +332,6 @@ sbt.innerHTML = "ok";
 inputComponent.appendChild(ipt);
 inputComponent.appendChild(sbt);
 
-/*let buttonFail = document.createElement("button");
-buttonFail.innerHTML = "Can't find component";
-buttonFail.className = "button-fail";
-buttonFail.setAttribute("id", "failbuttonsearch");
-buttonFail.setAttribute("onclick", "conv.next('failbuttonsearch')");*/
 
 dataComponent = new Set([
     "TWTA, Single MPM",
@@ -540,12 +500,12 @@ let m15 = new DataMessage("categoriesfail2", null, "", "other-message", "itemCom
 let m16 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
 );
 
-let m17 = new ExitMessage(null, "You can go on the handbook page", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
+let m17 = new ExitMessage(null, "You can go on the handbook page", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
 let m18 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
 
 let m19 = new Message(null, "It must be a holistic component", "other-message", false, false);
 let m20 = new Message(null, "There's no standard methodology. ", "other-message", false, false);
-let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
+let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
 
 let m22 = new ConfigurableMessage(false, null, "The value of &lambda;&#8321; is ", "other-message", standardComponentFR);
 let m23 = new Message(null, "Don't forget to note this value", "other-message", false, false);
