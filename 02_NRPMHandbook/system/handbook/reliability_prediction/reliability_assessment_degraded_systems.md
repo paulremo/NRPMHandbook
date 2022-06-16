@@ -3,7 +3,7 @@
 
 Depending on the system architecture and the functions of its components the loss of some single components in redundant system architectures does not necessarily lead to the total loss of a function, but results in a degraded system performance. For the reliability assessment, usually 100% performance is defined, and any deviation is considered as a system failure. From a risk assessment perspective, it is also interesting to know how much the actual performance deviates from the specified one and if some residual performance can be maintained. Not only failure scenarios leading to total loss are relevant, another important criterion is whether a certain performance level can be achieved or not. To allow for the calculation of occurrence probabilities for degraded modes of system performance, a relative contribution to system performance at component level is assigned. The method is based on the evaluation of reliability block diagrams described through its success path. The system performances are linked to a minimum set of resources and modelled accordingly as {term}`RBD`.
 
-To illustrate the concept of performance degradation, the fictive example of the power supply system is extended such that the contribution of each solar panel is also taken into account. Solar panel \#1 (component 3) provides 500W, solar panel \#2 (component 4) provides 300W and solar panel \#3 (component 5) provides 200W electrical power. The corresponding reliability block diagram is shown in {numref}`Figure 7.30`.
+To illustrate the concept of performance degradation, the fictive example of the power supply system is extended such that the contribution of each solar panel is also taken into account. Solar panel \#1 (component 3) provides 500W, solar panel \#2 (component 4) provides 300W and solar panel \#3 (component 5) provides 200W electrical power. The corresponding reliability block diagram is shown in {numref}`Figure_7_30`.
 
 The system can be described through the following success paths.
 
@@ -21,7 +21,7 @@ In this example, if all three solar panels are working, an electrical power of 1
 ```{figure} ../../picture/figure4_30.png
 ---
 width: 600px
-name: Figure 7.30
+name: Figure_7_30
 ---
 Example Reliability Block Diagram - System with degraded performance.
 ```
@@ -40,12 +40,12 @@ Based on the elementary states that are linked to a certain system performance l
 ``
 ``  
 ```{math}
-:label: Equation 7.68
+:label: Equation_7_68
 \Phi_{50\mathrm{\%}} = X_{1}X_{2}\overline{X_{3}}X_{4}X_{5} \vee X_{1}X_{2}X_{3}\overline{X_{4}}\overline{X_{5}}
 ```
 ````
 
-Since the elementary states are mutually exclusive, the probability of occurrence can be calculated based on the system state function in Eq. {eq}`Equation 7.68`.
+Since the elementary states are mutually exclusive, the probability of occurrence can be calculated based on the system state function in Eq. {eq}`Equation_7_68`.
 
 (syst_equation4_69)=
 ````{admonition} Equation
@@ -53,7 +53,7 @@ Since the elementary states are mutually exclusive, the probability of occurrenc
 ``
 ``  
 ```{math}
-:label: Equation 7.69
+:label: Equation_7_69
 P\left\lbrack \Phi \middle| 50\mathrm{\%} = 1 \right\rbrack = {P_{50\mathrm{\%}} = R}_{1}R_{2}F_{3}R_{4}R_{5} + {R_{1}R}_{2}R_{3}F_{4}F_{5}
 ```
 ````
@@ -66,14 +66,14 @@ With this method, the occurrence probability for all system performance levels a
 ``
 ``  
 ```{math}
-:label: Equation 7.70
+:label: Equation_7_70
 \sum_{i = 0\mathrm{\%}}^{100\mathrm{\%}}P_{i} = 1
 ```
 ````
 
 It should be noted that for practical reasons, the applicability of this method using elementary system states is limited to systems with a small number of components, since the number of states grows exponentially with the number of components. For *n* components $2^{n}$ states have to be considered.
 
-Therefore, it is more efficient to use the success paths. For each system performance level, the correlated success paths have to be generated. In addition, auxiliary conditions are defined that describe the logical combination of the performance determining components that are required to achieve performance levels equal to or greater than $p_{S}$. This will be explained using the example shown in {numref}`Figure 7.30` and {numref}`syst-table4-13`. The analysis of degraded systems consists of the following steps {cite:t}`sys-vahl1998interaktive`:
+Therefore, it is more efficient to use the success paths. For each system performance level, the correlated success paths have to be generated. In addition, auxiliary conditions are defined that describe the logical combination of the performance determining components that are required to achieve performance levels equal to or greater than $p_{S}$. This will be explained using the example shown in {numref}`Figure_7_30` and {numref}`syst-table4-13`. The analysis of degraded systems consists of the following steps {cite:t}`sys-vahl1998interaktive`:
 
 -   Identification of all possible system performance levels through combination of the performance contributing components.
 
@@ -94,7 +94,7 @@ To achieve a system performance of $p_{S}$ ≥ 50% the following condition can b
 ``
 ``  
 ```{math}
-:label: Equation 7.71
+:label: Equation_7_71
 \Gamma_{\geq 50\mathrm{\%}} = X_{3}X_{4}X_{5} \vee X_{3}X_{4} \vee X_{3}X_{5} \vee X_{4}X_{5} \vee X_{3}
 ```
 ````
@@ -107,14 +107,14 @@ Generally, the condition can be formulated as:
 ``
 ``  
 ```{math}
-:label: Equation 7.72
+:label: Equation_7_72
 \Gamma_{50\mathrm{\%}} = \bigvee_{f = 1}^{f_{max}} \left\lbrack \bigwedge_{g = 1}^{g_{max}} X_{g} \right\rbrack
 ```
 ````
 
 Where $g_{\max}$ denotes the number of component state variables of the conjunctive terms of the auxiliary condition and $f_{\max}$ denotes the number of disjunctive terms
 
-Eq. {eq}`Equation 7.71` can be simplified and the following term is obtained:
+Eq. {eq}`Equation_7_71` can be simplified and the following term is obtained:
 
 (syst_equation4_73)=
 ````{admonition} Equation
@@ -122,7 +122,7 @@ Eq. {eq}`Equation 7.71` can be simplified and the following term is obtained:
 ``
 ``  
 ```{math}
-:label: Equation 7.73
+:label: Equation_7_73
 \Gamma_{50\mathrm{\%}} = X_{4}X_{5} \vee X_{3}
 ```
 ````
@@ -135,14 +135,14 @@ The system state function can be defined as follows:
 ``
 ``  
 ```{math}
-:label: Equation 7.74
+:label: Equation_7_74
 \Phi = \bigvee_{k = 1}^{m} M_{k}
 ```
 ````
 
 Where $k$ denotes the index of the success paths and $m$ the total number of success path.
 
-With Eq. {eq}`Equation 7.72`, the following expression is obtained for the system state function for the top event "system performance $p_{S}$ ≥ x" {cite:t}`sys-vahl1998interaktive`.
+With Eq. {eq}`Equation_7_72`, the following expression is obtained for the system state function for the top event "system performance $p_{S}$ ≥ x" {cite:t}`sys-vahl1998interaktive`.
 
 (syst_equation4_75)=
 ````{admonition} Equation
@@ -150,12 +150,12 @@ With Eq. {eq}`Equation 7.72`, the following expression is obtained for the syste
 ``
 ``  
 ```{math}
-:label: Equation 7.75
+:label: Equation_7_75
 \Phi = \bigvee_{f = 1}^{f_{max}} \left\lbrack \bigwedge_{g = 1}^{g_{max}} \left ( \bigvee_{h = 1}^{h_{max}} M_{h} \right) \right \rbrack
 ```
 ````
 
-Where $h$ denotes the index of the success path. Each success path can contain of set of state variables $X_{g}$ with $g$ from $1$ to $g_{\max}$. With Eq. {eq}`Equation 7.75` and Eq. {eq}`Equation 7.73`, the following system state function is obtained that represents the top event "system performance $p_{S}$ ≥ 50%".
+Where $h$ denotes the index of the success path. Each success path can contain of set of state variables $X_{g}$ with $g$ from $1$ to $g_{\max}$. With Eq. {eq}`Equation_7_75` and Eq. {eq}`Equation_7_73`, the following system state function is obtained that represents the top event "system performance $p_{S}$ ≥ 50%".
 
 (syst_equation4_76)=
 ````{admonition} Equation
@@ -163,7 +163,7 @@ Where $h$ denotes the index of the success path. Each success path can contain o
 ``
 ``  
 ```{math}
-:label: Equation 7.76
+:label: Equation_7_76
 \Phi_{\geq 50\mathrm{\%}} = M_{1} \vee \left( M_{2} \land M_{3} \right)
 ```
 ````
@@ -174,12 +174,12 @@ Where $h$ denotes the index of the success path. Each success path can contain o
 ``
 ``  
 ```{math}
-:label: Equation 7.77
+:label: Equation_7_77
 \Phi_{\geq 50\mathrm{\%}} = X_{1}X_{2}X_{3} \vee X_{1}X_{2}X_{4}X_{5}
 ```
 ````
 
-Through orthogonalization, Eq. {eq}`Equation 7.77` can be transformed from a Boolean conjunctive normal form to an orthogonal conjunctive normal form, Eq. {eq}`Equation 7.78`.
+Through orthogonalization, Eq. {eq}`Equation_7_77` can be transformed from a Boolean conjunctive normal form to an orthogonal conjunctive normal form, Eq. {eq}`Equation_7_78`.
 
 (syst_equation4_78)=
 ````{admonition} Equation
@@ -187,12 +187,12 @@ Through orthogonalization, Eq. {eq}`Equation 7.77` can be transformed from a Boo
 ``
 ``  
 ```{math}
-:label: Equation 7.78
+:label: Equation_7_78
 \Phi_{\geq 50\mathrm{\%}} = X_{1}X_{2}X_{3} \vee X_{1}X_{2}{\overline{X}}_{3}X_{4}X_{5}
 ```
 ````
 
-Thus, Eq. {eq}`Equation 7.78` represents mutually exclusive events and the probability of a system performance greater than or equal to 50% can be directly obtained by replacing indicator variables by the component reliabilities or failure probabilities respectively.
+Thus, Eq. {eq}`Equation_7_78` represents mutually exclusive events and the probability of a system performance greater than or equal to 50% can be directly obtained by replacing indicator variables by the component reliabilities or failure probabilities respectively.
 
 (syst_equation4_79)=
 ````{admonition} Equation
@@ -200,7 +200,7 @@ Thus, Eq. {eq}`Equation 7.78` represents mutually exclusive events and the proba
 ``
 ``  
 ```{math}
-:label: Equation 7.79
+:label: Equation_7_79
 P_{\geq 50\mathrm{\%}} = R_{1}R_{2}R_{3} \vee R_{1}R_{2}{\overline{F}}_{3}R_{4}R_{5}
 ```
 ````
@@ -213,7 +213,7 @@ In order to calculate the occurrence probability for all possible system perform
 ``
 ``  
 ```{math}
-:label: Equation 7.80
+:label: Equation_7_80
 \Gamma_{\geq 20\mathrm{\%}} = X_{5}
 ```
 ````
@@ -224,7 +224,7 @@ In order to calculate the occurrence probability for all possible system perform
 ``
 ``  
 ```{math}
-:label: Equation 7.81
+:label: Equation_7_81
 \Gamma_{\geq 30\mathrm{\%}} = X_{4}
 ```
 ````
@@ -235,7 +235,7 @@ In order to calculate the occurrence probability for all possible system perform
 ``
 ``  
 ```{math}
-:label: Equation 7.82
+:label: Equation_7_82
 \Gamma_{\geq 70\mathrm{\%}} = X_{3}X_{5}
 ```
 ````
@@ -246,7 +246,7 @@ In order to calculate the occurrence probability for all possible system perform
 ``
 ``  
 ```{math}
-:label: Equation 7.83
+:label: Equation_7_83
 \Gamma_{\geq 80\mathrm{\%}} = X_{3}X_{4}
 ```
 ````
@@ -257,7 +257,7 @@ In order to calculate the occurrence probability for all possible system perform
 ``
 ``  
 ```{math}
-:label: Equation 7.84
+:label: Equation_7_84
 \Gamma_{100\mathrm{\%}} = X_{3}X_{4}X_{5}
 ```
 ````
@@ -270,7 +270,7 @@ The probability that the system performance is within the interval \[0, x\] is d
 ``
 ``  
 ```{math}
-:label: Equation 7.85
+:label: Equation_7_85
 P_{x\mathrm{\%}} = P\left\lbrack x > p_{s} \geq 0 \right\rbrack
 ```
 ````
@@ -283,7 +283,7 @@ The performance distribution function is obtained by inverting the function $P_{
 ``
 ``  
 ```{math}
-:label: Equation 7.86
+:label: Equation_7_86
 P_{x\mathrm{\%}} = P\left\lbrack x > p_{s} \geq 0 \right\rbrack = 1 - P\left\lbrack 100\mathrm{\%} \geq p_{s} \geq x \right\rbrack={1 - P}_{\geq x\mathrm{\%}}
 ```
 ````

@@ -29,7 +29,7 @@ The reliability “standard model” is then calculated based on the process pre
 
 A “specific” {term}`miscellaneous item <Miscellaneous item>` relates to a product which is not fully modelled by {term}`EEE parts <EEE part>` and/or {term}`mechanical parts <Mechanical part>` and which is not listed in the equivalent classes of miscellaneous items in {numref}`misc_5_1`.
 
-e.g. Hold Release Mechanism Low Shock presented in {numref}`Figure 5.3`.
+e.g. Hold Release Mechanism Low Shock presented in {numref}`Figure_5_3`.
 
 The item is neither a mechanism, nor an assembly of {term}`EEE parts <EEE part>`. It is constituted by different parts such as spring, glue, expansion unit. Since the design is very specific without any IOR data it is necessary to define a dedicated reliability model.
 
@@ -39,7 +39,7 @@ The Current document provides general guidance to define such a reliability mode
 ```{figure} ../../picture/figure4_3.png
 ---
 width: 600px
-name: Figure 5.3
+name: Figure_5_3
 ---
 Miscellaneous (MIS) items reliability modelling logic.
 ```

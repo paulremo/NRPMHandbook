@@ -16,18 +16,18 @@ The modelling approach followed in the present section avoids these difficulties
 
 Considering the system level effects, it may be said that systematic {term}`failure root causes <Failure root cause>` are generally more likely to lead to severe consequences at spacecraft level than random failures, whose effect can be modelled and mitigated by redundancy and Fault Detection Isolation and Recovery (FDIR). However, this does not mean that each systematic failure immediately leads to the collapse of the overall system in the sense of a single point failure. Redundancy, robust design and failure detection and recovery can help in the case of systematic failures as well, and workarounds may be implemented from ground by uploading software updates and/or adapting operational procedures.
 
-To account for these mitigation measures, the modelling presented in this section considers (major) anomalies rather than failures, and works with a classification by severity to model the impact on the mission. Definitions are provided in {numref}`syst_4_9_3_1`. {numref}`Figure 7.33` illustrates the introduction of flaws during design (including specification) and manufacturing, which -- if undetected before launch -- may lead to failures or anomalies in orbit under operational and/or environmental stresses (Note that operation errors may lead to systematic failures even without the presence of flaws). The severity category depends on the effect propagation in the overall system, and can be reduced by mitigation measures implemented a priori during design, or a posteriori after {term}`anomaly <Anomaly>` investigation.
+To account for these mitigation measures, the modelling presented in this section considers (major) anomalies rather than failures, and works with a classification by severity to model the impact on the mission. Definitions are provided in {numref}`syst_4_9_3_1`. {numref}`Figure_7_33` illustrates the introduction of flaws during design (including specification) and manufacturing, which -- if undetected before launch -- may lead to failures or anomalies in orbit under operational and/or environmental stresses (Note that operation errors may lead to systematic failures even without the presence of flaws). The severity category depends on the effect propagation in the overall system, and can be reduced by mitigation measures implemented a priori during design, or a posteriori after {term}`anomaly <Anomaly>` investigation.
 
 (syst_figure4_33)=
 ```{figure} ../../picture/figure4_33.png
 ---
 width: 600px
-name: Figure 7.33
+name: Figure_7_33
 ---
 Root causes and effects of systematic failures.
 ```
 
-An ideal model for systematic failure or {term}`anomaly <Anomaly>` modelling considers all the aspects shown in {numref}`Figure 7.33`, including not only the root causes of failure, but also the effect of mitigation measures implemented to avoid the occurrence of systematic failures and to mitigate their effect on the mission. In the present section, a first step is made, focussing on the occurrence and severity of anomalies in orbit. The resulting model provides global quantitative figures that are already useful for reliability prediction in a top down approach, but it is does not allow to quantify the effect of the various mitigation measures that have already been implemented before launch.
+An ideal model for systematic failure or {term}`anomaly <Anomaly>` modelling considers all the aspects shown in {numref}`Figure_7_33`, including not only the root causes of failure, but also the effect of mitigation measures implemented to avoid the occurrence of systematic failures and to mitigate their effect on the mission. In the present section, a first step is made, focussing on the occurrence and severity of anomalies in orbit. The resulting model provides global quantitative figures that are already useful for reliability prediction in a top down approach, but it is does not allow to quantify the effect of the various mitigation measures that have already been implemented before launch.
 
 (syst_4_9_2)=
 ## Systematic failures classification
@@ -319,35 +319,35 @@ As discussed in {numref}`syst_4_9_3_2`, the modelling provides an {term}`anomaly
 
 **Anomaly occurrence model**
 
-The data base used for the estimation of the parameters is illustrated in {numref}`Figure 7.34`. The portfolio of satellites is almost equally distributed over the time which indicates that the number of launches in each year does not vary too much in the considered time. Per satellite an {term}`anomaly <Anomaly>` can occur several times within one satellite (repeated events). The total number of anomalies is thus larger than the number of satellites in the portfolio.
+The data base used for the estimation of the parameters is illustrated in {numref}`Figure_7_34`. The portfolio of satellites is almost equally distributed over the time which indicates that the number of launches in each year does not vary too much in the considered time. Per satellite an {term}`anomaly <Anomaly>` can occur several times within one satellite (repeated events). The total number of anomalies is thus larger than the number of satellites in the portfolio.
 
 (syst_figure4_34)=
 ```{figure} ../../picture/figure4_34.png
 ---
 width: 600px
-name: Figure 7.34
+name: Figure_7_34
 ---
 Data base for modelling the time dependent {term}`anomaly <Anomaly>` occurrence rate.
 ```
 
-The rate of {term}`anomaly <Anomaly>` occurrence (all severities) derived from the Poisson/Weibull model fitted to the data is shown in {numref}`Figure 7.35`. Markov Chain Monte Carlo simulations were used to determine the posterior distribution of the model parameters $\alpha$ and $\beta$. As can be seen from the 90% confidence interval, the statistical uncertainty associated with the model is rather small due to the fact that also minor anomalies are considered in the data sample, leading to a considerable sample size.
+The rate of {term}`anomaly <Anomaly>` occurrence (all severities) derived from the Poisson/Weibull model fitted to the data is shown in {numref}`Figure_7_35`. Markov Chain Monte Carlo simulations were used to determine the posterior distribution of the model parameters $\alpha$ and $\beta$. As can be seen from the 90% confidence interval, the statistical uncertainty associated with the model is rather small due to the fact that also minor anomalies are considered in the data sample, leading to a considerable sample size.
 
 (syst_figure4_35)=
 ```{figure} ../../picture/figure4_35.png
 ---
 width: 600px
-name: Figure 7.35
+name: Figure_7_35
 ---
 Time dependent {term}`anomaly <Anomaly>` occurrence rate due to systematic root causes based on the Poisson/Weibull model for anomalies observed at satellite level (all severities).
 ```
 
-The bivariate distribution of the model parameters after convergence of the {term}`MCMC` simulation is illustrated in {numref}`Figure 7.36`. It can be seen that the shape parameter of the Weibull model is clearly below unity, implying a decreasing failure rate as shown in {numref}`Figure 7.35`. The parameters of the Weibull distribution are highly correlated. This correlation needs to be considered when calculating the failure rate. The joint distribution of the Weibull parameters can be approximated here by a bivariate normal distribution.
+The bivariate distribution of the model parameters after convergence of the {term}`MCMC` simulation is illustrated in {numref}`Figure_7_36`. It can be seen that the shape parameter of the Weibull model is clearly below unity, implying a decreasing failure rate as shown in {numref}`Figure_7_35`. The parameters of the Weibull distribution are highly correlated. This correlation needs to be considered when calculating the failure rate. The joint distribution of the Weibull parameters can be approximated here by a bivariate normal distribution.
 
 (syst_figure4_36)=
 ```{figure} ../../picture/figure4_36.png
 ---
 width: 600px
-name: Figure 7.36
+name: Figure_7_36
 ---
 Posterior distribution of the model parameters for the Poisson/Weibull {term}`anomaly <Anomaly>` occurrence model, based on the {term}`MCMC` chains \[10'000 post burn in simulations\].
 ```
@@ -376,13 +376,13 @@ Posterior distribution of the model parameters for the Poisson/Weibull {term}`an
 
 **Anomaly repartition by subsystem**
 
-The posterior marginal probabilities for the repartition of the anomalies by subsystem is provided in {numref}`Figure 7.37`. The marginal probability distributions follow beta distribution. Samples from the multivariate probability distribution are correlated and can be generated by using the parameters of the Dirichlet distribution provided in {numref}`syst-table4-19`.
+The posterior marginal probabilities for the repartition of the anomalies by subsystem is provided in {numref}`Figure_7_37`. The marginal probability distributions follow beta distribution. Samples from the multivariate probability distribution are correlated and can be generated by using the parameters of the Dirichlet distribution provided in {numref}`syst-table4-19`.
 
 (syst_figure4_37)=
 ```{figure} ../../picture/figure4_37.png
 ---
 width: 600px
-name: Figure 7.37
+name: Figure_7_37
 ---
 Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by subsystem.
 ```
@@ -424,17 +424,17 @@ These probabilities can be combined with the overall {term}`anomaly <Anomaly>` o
 
 **Anomaly repartition by hardware failure**
 
-Based on the model provided in {numref}`syst_4_9_3_2` the marginal posterior probability of hardware failure conditional on an {term}`anomaly <Anomaly>` is shown in {numref}`Figure 7.38`. The parameters of the Dirichlet distribution are given in {numref}`syst-table4-19` (satellite level).
+Based on the model provided in {numref}`syst_4_9_3_2` the marginal posterior probability of hardware failure conditional on an {term}`anomaly <Anomaly>` is shown in {numref}`Figure_7_38`. The parameters of the Dirichlet distribution are given in {numref}`syst-table4-19` (satellite level).
 
 Since the model is a bivariate Dirichlet distribution the two outcomes are fully negativly correlated and can thus be fully represented by a 2-parameter beta distribution.
 
-The marginal posterior probability of hardware failure conditional on an {term}`anomaly <Anomaly>` for all subsystems can be sampled from the Dirichlet distribution using the parameters provided in {numref}`syst-table4-19`. The corresponding marginal posterior distributions for all subsystems are provided in {numref}`Figure 7.39`.
+The marginal posterior probability of hardware failure conditional on an {term}`anomaly <Anomaly>` for all subsystems can be sampled from the Dirichlet distribution using the parameters provided in {numref}`syst-table4-19`. The corresponding marginal posterior distributions for all subsystems are provided in {numref}`Figure_7_39`.
 
 (syst_figure4_38)=
 ```{figure} ../../picture/figure4_38.png
 ---
 width: 600px
-name: Figure 7.38
+name: Figure_7_38
 ---
 Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by hardware failures on satellite level.
 ```
@@ -443,7 +443,7 @@ Posterior marginal distributions of the conditional probabilities for the repart
 ```{figure} ../../picture/figure4_39.png
 ---
 width: 600px
-name: Figure 7.39
+name: Figure_7_39
 ---
 Posterior marginal distributions of the conditional probabilities for the repartition of anomalies for the subsystems(a={term}`anomaly <Anomaly>`).
 ```
@@ -501,22 +501,22 @@ Posterior marginal distributions of the conditional probabilities for the repart
 
 The repartition of anomalies by severity category is modelled with the following set of conditional probabilities fitted to the data:
 
-The marginal distributions of the four probabilities, representing statistical uncertainty due to the limited sample size used for modelling, are shown in {numref}`Figure 7.40`.
+The marginal distributions of the four probabilities, representing statistical uncertainty due to the limited sample size used for modelling, are shown in {numref}`Figure_7_40`.
 
 ```{figure} ../../picture/figure4_40.png
 ---
 width: 600px
-name: Figure 7.40
+name: Figure_7_40
 ---
 Posterior marginal distributions of the conditional probabilities for the repartition of anomalies by severity considered at satellite level.
 ```
 
-The probabilities provided in {numref}`Figure 7.40` are conditional on {term}`anomaly <Anomaly>` occurrence ({numref}`syst-table4-18`) and on hardware failure ({numref}`syst-table4-20` for satellite level). When combined with the {term}`anomaly <Anomaly>` occurrence model, time-dependent occurrence rates can be derived for the different severity categories, as illustrated in {numref}`Figure 7.41` below (the 90% confidence interval now includes the uncertainty inherent in the {term}`anomaly <Anomaly>` repartition model and the hardware failure model).
+The probabilities provided in {numref}`Figure_7_40` are conditional on {term}`anomaly <Anomaly>` occurrence ({numref}`syst-table4-18`) and on hardware failure ({numref}`syst-table4-20` for satellite level). When combined with the {term}`anomaly <Anomaly>` occurrence model, time-dependent occurrence rates can be derived for the different severity categories, as illustrated in {numref}`Figure_7_41` below (the 90% confidence interval now includes the uncertainty inherent in the {term}`anomaly <Anomaly>` repartition model and the hardware failure model).
 
 ```{figure} ../../picture/figure4_41.png
 ---
 width: 600px
-name: Figure 7.41
+name: Figure_7_41
 ---
 {term}`Anomaly <Anomaly>` occurrence rate for different severity categories, considered at satellite level.
 ```
@@ -607,26 +607,26 @@ In addition to the information directly used for modelling ({numref}`syst_4_9_4_
 
 **Major anomalies during In Orbit Testing**
 
-The data sample used for modelling summarizes in orbit return collected during the whole mission. {numref}`Figure 7.42` shows the percentage of major anomalies that have been observed during In Orbit Testing at the beginning of a satellite mission, both at satellite level (red horizontal line) and for the different subsystems (bar chart). The red numbers indicate whether the percentage of anomalies during {term}`IOT` is larger (factor \> 1.0) or smaller than the average at satellite level (red line, 17.5%). For subsystems without bar, the black data labels indicate whether there were no major anomalies at all ("{term}`NaN`") or only during {term}`IOT` ("0.0%).
+The data sample used for modelling summarizes in orbit return collected during the whole mission. {numref}`Figure_7_42` shows the percentage of major anomalies that have been observed during In Orbit Testing at the beginning of a satellite mission, both at satellite level (red horizontal line) and for the different subsystems (bar chart). The red numbers indicate whether the percentage of anomalies during {term}`IOT` is larger (factor \> 1.0) or smaller than the average at satellite level (red line, 17.5%). For subsystems without bar, the black data labels indicate whether there were no major anomalies at all ("{term}`NaN`") or only during {term}`IOT` ("0.0%).
 
-The variation by subsystem is another indication that the distribution of the random time to {term}`anomaly <Anomaly>` occurrence should actually depend on the subsystem, which represents an important limitation of the {term}`anomaly <Anomaly>` occurrence model developed at satellite level (see also {numref}`syst_4_9_4_1` for discussion). The percentages and factors provided in {numref}`Figure 7.42` can be used as a reference when the occurrence of subsystem anomalies during {term}`IOT` is of interest. However, it should be noted that the In Orbit Testing phase is more than just a time slot at the beginning of a satellite mission, and its duration is variable (although usually in the range of 1 to several months).
+The variation by subsystem is another indication that the distribution of the random time to {term}`anomaly <Anomaly>` occurrence should actually depend on the subsystem, which represents an important limitation of the {term}`anomaly <Anomaly>` occurrence model developed at satellite level (see also {numref}`syst_4_9_4_1` for discussion). The percentages and factors provided in {numref}`Figure_7_42` can be used as a reference when the occurrence of subsystem anomalies during {term}`IOT` is of interest. However, it should be noted that the In Orbit Testing phase is more than just a time slot at the beginning of a satellite mission, and its duration is variable (although usually in the range of 1 to several months).
 
 ```{figure} ../../picture/figure4_42.png
 ---
 width: 600px
-name: Figure 7.42
+name: Figure_7_42
 ---
 Percentage of major anomalies that were observed during In Orbit Testing at satellite level (red line) and for the different subsystems (bar chart).
 ```
 
 **Classification by root cause and severity**
 
-As discussed in {numref}`syst_4_9_2`, systematic failures and anomalies can be further classified by the detailed root cause, from design and manufacturing errors to operations. {numref}`Figure 7.43` shows the classification of observed anomalies by root cause, using the definitions from the data source, as outlined in {numref}`syst_4_9_3_1`. The repartition by severity category clearly shows that anomalies leading to hardware failures and/or having an impact on the mission (severity 1 to 4) are mainly due to root causes in hardware design or manufacturing. Severe events due to other root causes are rare exceptions, as can be seen also from {numref}`Figure 7.44`. It should be noted that "Hardware failure" is here defined in a wide sense, i.e. all anomalies having an impact on the mission (severity 1 to 3) are considered as failures, even though they may not involve a definitive hardware failure.
+As discussed in {numref}`syst_4_9_2`, systematic failures and anomalies can be further classified by the detailed root cause, from design and manufacturing errors to operations. {numref}`Figure_7_43` shows the classification of observed anomalies by root cause, using the definitions from the data source, as outlined in {numref}`syst_4_9_3_1`. The repartition by severity category clearly shows that anomalies leading to hardware failures and/or having an impact on the mission (severity 1 to 4) are mainly due to root causes in hardware design or manufacturing. Severe events due to other root causes are rare exceptions, as can be seen also from {numref}`Figure_7_44`. It should be noted that "Hardware failure" is here defined in a wide sense, i.e. all anomalies having an impact on the mission (severity 1 to 3) are considered as failures, even though they may not involve a definitive hardware failure.
 
 ```{figure} ../../picture/figure4_43.png
 ---
 width: 600px
-name: Figure 7.43
+name: Figure_7_43
 ---
 Classification of major anomalies by severity category and root cause (Operations OPS, Hardware design/manufacturing HW, Software error {term}`SW`, System design/manufacturing {term}`SYS`, Environmental design ENVT).
 
@@ -635,19 +635,19 @@ Classification of major anomalies by severity category and root cause (Operation
 ```{figure} ../../picture/figure4_44.png
 ---
 width: 600px
-name: Figure 7.44
+name: Figure_7_44
 ---
-Percentage of anomalies with hardware failure (severity category 1 to 4) for the different root causes (see {numref}`Figure 7.43` for definitions). The percentage in this figure relates to the total number of major anomalies (with or without Hardware failure) attributed to a specific root cause.
+Percentage of anomalies with hardware failure (severity category 1 to 4) for the different root causes (see {numref}`Figure_7_43` for definitions). The percentage in this figure relates to the total number of major anomalies (with or without Hardware failure) attributed to a specific root cause.
 ```
 
 **Classification by technical domain (EEE, Mechanical, Miscellaneous)**
 
-The repartition by satellite subsystem already gives a first indication on the relevance of systematic anomalies related to EEE, Mechanical or miscellaneous items. For the anomalies whose root cause is classified as "hardware", {numref}`Figure 7.45` gives further information on the repartition by the type of the equipment involved, and by the details of the root cause (design or manufacturing error). The classification is done at equipment level, considering all satellite subsystems and using the same three classes as outlined in {numref}`sec_eee_handbook`, {numref}`sec_mech_handbook` and {numref}`sec_misc_handbook`. It can be seen that the contribution of "Mechanical" anomalies is very low, which may be explained by the fact that many of the most error-prone satellite elements are classified as "miscellaneous items" in this handbook.
+The repartition by satellite subsystem already gives a first indication on the relevance of systematic anomalies related to EEE, Mechanical or miscellaneous items. For the anomalies whose root cause is classified as "hardware", {numref}`Figure_7_45` gives further information on the repartition by the type of the equipment involved, and by the details of the root cause (design or manufacturing error). The classification is done at equipment level, considering all satellite subsystems and using the same three classes as outlined in {numref}`sec_eee_handbook`, {numref}`sec_mech_handbook` and {numref}`sec_misc_handbook`. It can be seen that the contribution of "Mechanical" anomalies is very low, which may be explained by the fact that many of the most error-prone satellite elements are classified as "miscellaneous items" in this handbook.
 
 ```{figure} ../../picture/figure4_45.png
 ---
 width: 600px
-name: Figure 7.45
+name: Figure_7_45
 ---
 Repartition of anomalies whose root cause is classified as "Hardware" by the type of the equipment ({term}`EEE`, Mechanical -- {term}`MEC`, Miscellaneous -- {term}`MIS`) involved and the detailed root cause.
 ```

@@ -10,14 +10,14 @@ The current document defines guidance to model reliability of most of the typica
 
 However, whatever the model is, it is the responsibility of the supplier to justify the selected reliability model enriched with any valuable improvement based on available data (tests data, {term}`manufacturer data <Manufacturer part>`, IOR data).
 
-The process used to define a Miscellaneous (MIS) item reliability model is presented in {numref}`Figure 5.2`.
+The process used to define a Miscellaneous (MIS) item reliability model is presented in {numref}`Figure_5_2`.
 
 
 (misc_figure4_2)=
 ```{figure} ../../picture/figure4_2.png
 ---
 width: 600px
-name: Figure 5.2
+name: Figure_5_2
 ---
 Miscellaneous ({term}`MIS`) items reliability modelling logic.
 ```
