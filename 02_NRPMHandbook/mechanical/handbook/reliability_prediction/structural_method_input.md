@@ -76,7 +76,6 @@ Here, $X_{1}$ may be interpreted as the “resistance” (allowable stress, or s
 
 Time dependence is considered by modelling either $X_{1}$ or $X_{2}$ (or both) as a function of time.
 
-(meca_figure4_3)=
 ```{figure} ../../pictures/figure4_5.png
 ---
 width: 600px
@@ -91,7 +90,6 @@ The distribution of the {term}`model uncertainty <Model uncertainty>` $\Theta$ i
 
 When needed, a certain explicit conservatism can be introduced in the simplified method by letting $\mu_{\Theta} > 1$ , which is equivalent to assuming a higher loading or “stress” than estimated by the model (i.e. a biased load and/or resistance model). In accordance with {cite:t}`mec-ECSS-E-ST-32-10C ` where a “model factor” is multiplied with the design loads to account for uncertainties in mathematical models, it is recommended to set $\mu_{\Theta} = 1.2$ (or higher), referring to the model factor typically used for {term}`spacecrafts <Spacecraft>` at the beginning of new developments. The effect of this assumption on the estimated failure probability depends on the distributional assumptions and on the design margin of safety. {numref}`Figure_3_4` shows a comparison between some results for $\mu_{\Theta} = 1.0$ (unbiased) and $\mu_{\Theta} = 1.2$ (conservative bias), assuming Lognormal distributions for all random variables.
 
-(meca_figure4_4)=
 ```{figure} ../../pictures/figure4_6.png
 ---
 width: 600px
@@ -182,7 +180,6 @@ It should be noted that the design factors used in practice, defined as the rati
 
 It is interesting to note that the impact of different distributional assumptions gets smaller when referring to design values for stress and strength, compared to the results shown in {numref}`Figure_3_5`, which are directly based on the central safety factor and thus referring to mean values for both variables. An important prerequisite for robust results is that the transformation between fractiles and mean values is performed based on the same distributional assumptions as the ones used for the reliability calculations.
 
-(meca_figure4_5)=
 ```{figure} ../../pictures/figure4_7.png
 ---
 width: 600px
@@ -249,7 +246,6 @@ With a given distributional assumption, the final step involves the estimation o
 
 Reference values for usual dispersions of material strength are provided in {numref}`meca-table4-8`, which is based on PSS-01-306 Draft 1 {cite:t}`mec-ESA-PSS-01-306`. The original source of the data dates back to 1987 {cite:t}`mec-evaluation-design-test-safety-factors`, considering test results and publications available at that time. It should be noted that the coefficients of variation have been derived, and traditionally been used, assuming normal distributed stress and strength variables.
 
-(meca_table4_8)=
 ```{list-table} Reference values for usual dispersions (Coefficients of Variation) of strength variables
 :name: meca-table4-8
 :header-rows: 1
@@ -319,7 +315,6 @@ Distributional assumptions should nevertheless be backed by an engineering under
 
 Reference values for usual dispersions of applied stresses are provided in {numref}`meca-table4-9`, which is based on PSS-01-306 Draft 1 {cite:t}`mec-ESA-PSS-01-306`. The original source of the data dates back to 1987 {cite:t}`mec-evaluation-design-test-safety-factors`, considering the knowledge and technology available at that time. With the development of new launchers ({cite:t}`mec-evaluation-design-test-safety-factors` refers to data collected for Ariane I to III, STS and Delta), much of this information must be considered as outdated, though probably conservative. Some of the highest values in {numref}`meca-table4-9` are a direct result of the limited sample size of flight measurements in the same configuration that were available for the analysis. Moreover, it should be noted that the coefficients of variation have been derived, and traditionally been used, assuming normal distributed stress and strength. Also, for some loads it is not clear how the values provided are related to the underlying random process, e.g. whether the coefficient of variation for acoustic vibrations relates to the point-in-time response distribution, to the peak response, or to the resulting fatigue loading.
 
-(meca_table4_9)=
 ```{list-table} Reference values for usual dispersions (Coefficients of Variation) of loads
 :name: meca-table4-9
 :header-rows: 1

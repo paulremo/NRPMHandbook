@@ -319,7 +319,6 @@ P(\text{FAILURE}) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 Model 1 is recommended as it combines a constant failure rate model with an increasing failure rate model. Other models could be used when appropriate justification is provided by the user.
 ````
 
-(misc_figure4_5)=
 ```{figure} ../../picture/figure4_5.png
 ---
 width: 600px
@@ -356,7 +355,6 @@ Then the probability $\text{P} (\text{T} > \text{t}_{\text{Q}})$ provides the le
 
 It is noteworthy that when the parameters are consistent the reliability function is similar between the normal distribution and the Weibull distribution. {numref}`Figure_5_6` (resp. {numref}`Figure_5_7`) presents an example of such calculation with normal law (resp. Weibull).
 
-(misc_figure4_6)=
 ```{figure} ../../picture/figure4_6.png
 ---
 width: 600px
@@ -365,7 +363,6 @@ name: Figure_5_6
 Example of {term}`WO` distribution calculation (assumption: Normal distribution)
 ```
 
-(misc_figure4_7)=
 ```{figure} ../../picture/figure4_7.png
 ---
 width: 600px

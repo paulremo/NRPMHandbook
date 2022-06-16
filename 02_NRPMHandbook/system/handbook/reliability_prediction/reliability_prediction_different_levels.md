@@ -3,7 +3,6 @@
 
 Following the definition of a system in preface, a system is considered in the generic sense, and can be defined at any level as a set of components or functions that are interrelated or interact to achieve a specified objective. In this respect, within the scope of system level {term}`reliability prediction <Reliability prediction>` the term component is not limited to elementary parts, but is considered more generally as the elements the system consists of, which could be parts, pieces of equipment or sub-systems. The system level {term}`reliability prediction <Reliability prediction>` requires various input data; component level reliability data, the system architecture, system functions, the operational context, the {term}`failure mode <Failure mode>` and Effect Analysis (FMEA), Failure Mode Effect and Criticality Analysis ({term}`FMECA`) and the Failure Mode and Effect Summary ({term}`FMES`), as shown in {numref}`Figure_7_1`. 
 
-(syst_figure4_1)=
 ```{figure} ../../picture/figure4_1.png
 ---
 width: 600px
@@ -14,7 +13,6 @@ Input and Output data of system {term}`reliability prediction <Reliability predi
 
 The {term}`reliability prediction <Reliability prediction>` activities are performed at different levels of integration, starting from component level up to system level {term}`reliability prediction <Reliability prediction>`, as shown in {numref}`Figure_7_2`. The system level reliability analysis aims to demonstrate that the system level reliability {term}`requirements <Requirement>` are achieved. The system level reliability {term}`requirements <Requirement>` is cascaded to lower levels to define sub-system, equipment level {term}`requirements <Requirement>` and derive an architecture that is capable of meeting the {term}`requirements <Requirement>`. To support the cascading of reliability {term}`requirements <Requirement>` from system to lower levels a preliminary system level reliability model could be used. 
 
-(syst_figure4_2)=
 ```{figure} ../../picture/figure4_2.png
 ---
 width: 600px

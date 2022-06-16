@@ -35,7 +35,6 @@ It is recommended to use the {cite:t}`mis-SAE_standard, mis-PFMEA` which provide
 * **@unit level**: under unit {term}`quality <Quality>` Assurance responsibility
 * **@system level**: reviewed by procurement within the unit acceptance process
 
-(misc_figure4_8)=
 ```{figure} ../../picture/figure4_8.png
 ---
 width: 600px
@@ -56,7 +55,6 @@ The main outcome is the ranking of every root cause (Design error, Manufacturing
 
 The Risk Priority Number ({term}`RPN`), which is derived, is an index reflecting the residual technical risk.
 
-(misc_figure4_9)=
 ```{figure} ../../picture/figure4_10.png
 ---
 width: 600px
