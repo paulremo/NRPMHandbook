@@ -24,11 +24,11 @@ This digital handbook contains a methodology, a methods and four application-spe
 :gutter: 3
 
 :::{grid-item-card} **Methodologies**
-<img class="link-image" src="_static/images/methodologyPicture.png" alt="logo methodology" onclick="redirect('methodologies/handbook/intro.html')">
+<a href="methodologies/handbook/intro.html"><img class="link-image" src="_static/images/methodologyPicture.png" alt="logo methodologies"></a>
 :::
 
 :::{grid-item-card} **Methods**
-<img class="link-image" src="_static/images/methodPicture.png" alt="logo methods" onclick="redirect('methods/handbook/intro.html')">
+<a href="methods/handbook/intro.html"><img class="link-image" src="_static/images/methodPicture.png" alt="logo methods"></a>
 :::
 ::::
 
@@ -36,11 +36,11 @@ This digital handbook contains a methodology, a methods and four application-spe
 :gutter: 3
 
 :::{grid-item-card} **EEE**
-<img class="link-image" src="_static/images/eeePicture.png" alt="logo triple e" onclick="redirect('eee/mainEEE.html')">
+<a href="eee/mainEEE.html"><img class="link-image" src="_static/images/eeePicture.png" alt="logo eee"></a>
 :::
 
 :::{grid-item-card} **Mechanical**
-<img class="link-image" src="_static/images/mecaPicture.png" alt="logo mechanical" onclick="redirect('mechanical/handbook/introduction.html')">
+<a href="mechanical/handbook/introduction.html"><img class="link-image" src="_static/images/mecaPicture.png" alt="logo mechanical"></a>
 :::
 ::::
 
@@ -48,11 +48,11 @@ This digital handbook contains a methodology, a methods and four application-spe
 :gutter: 3
 
 :::{grid-item-card} **Miscellaneous**
-<img class="link-image" src="_static/images/miscellaneousPicture.png" alt="logo miscellaneous" onclick="redirect('miscellaneous/handbook/introduction.html')">
+<a href="miscellaneous/handbook/introduction.html"><img class="link-image" src="_static/images/miscellaneousPicture.png" alt="logo miscellaneous"></a>
 :::
 
 :::{grid-item-card} **System**
-<img class="link-image" src="_static/images/systemPicture.png" alt="logo system" onclick="redirect('system/handbook/introduction.html')">
+<a href="system/handbook/introduction.html"><img class="link-image" src="_static/images/systemPicture.png" alt="logo system"></a>
 :::
 ::::
 
