@@ -108,7 +108,7 @@ Generally, the condition can be formulated as:
 ``  
 ```{math}
 :label: Equation 7.72
-\Gamma_{} = f = 1f_{\max}\left\lbrack g = 1 \middle| g_{\max}X_{g} \right\rbrack
+\Gamma_{50\mathrm{\%}} = \bigvee_{f = 1}^{f_{max}} \left\lbrack \bigwedge_{g = 1}^{g_{max}} X_{g} \right\rbrack
 ```
 ````
 
@@ -136,7 +136,7 @@ The system state function can be defined as follows:
 ``  
 ```{math}
 :label: Equation 7.74
-\Phi = k = 1mM_{k}
+\Phi = \bigvee_{k = 1}^{m} M_{k}
 ```
 ````
 
@@ -151,7 +151,7 @@ With Eq. {eq}`Equation 7.72`, the following expression is obtained for the syste
 ``  
 ```{math}
 :label: Equation 7.75
-\Phi = f = 1f_{\max}\left\lbrack g = 1 \middle| g_{\max}\left( h = 1 \middle| h_{\max}M_{h} \right) \right\rbrack
+\Phi = \bigvee_{f = 1}^{f_{max}} \left\lbrack \bigwedge_{g = 1}^{g_{max}} \left ( \bigvee_{h = 1}^{h_{max}} M_{h} \right) \right \rbrack
 ```
 ````
 
@@ -299,8 +299,8 @@ The occurrence probabilities for the different system performance levels are sho
     - Occurrence Probability
     - 
 *   - Performance Level
-    - $P_{< x %}$
-    - $P_{\geq x %>}$
+    - $P_{ < x \% }$
+    - $P_{\geq x \% }$
 *   - 0%
     - 3,00E-03
     - 99,7%

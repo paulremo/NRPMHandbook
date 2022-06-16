@@ -32,11 +32,6 @@ R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t}{\a
 ```
 ````
 
-```{admonition} Under construction
-:class: todo
-Miss factor above
-```
-
 ### Model 2
 
 This model assumes that {term}`wear-out failure <Wear-out failure>` can only occur after the qualification time $\tau_{1}$, before it no wear-out is considered and only {term}`random failures <Random failure>` are considered. Thus, to calculate failure rates and reliability a distinction between two cases is made: Time $t$ is below the qualification time $\tau_{1}$ and $t$ is equal to or greater than the qualification time.
@@ -336,7 +331,7 @@ The mission duration shall be extended from 50000 hours by another 10000 hours t
 *   - $\alpha$
     - 150000 h
     - 150000 h
-*   - $\Tau$
+*   - $T$
     - 50000 h
     - 50000 h
 *   - $t$
@@ -413,22 +408,12 @@ With the three wear-out models the following results shown in {numref}`syst-tabl
     - 0,9540
 ```
 
-```{admonition} Under construction
-:class: todo
-table to be filled
-```
-
 (syst_4_8_5)=
 ## Reliability of standby systems with and without a switching device
 
 In the following section, another form of redundancy is presented: standby redundancy. In standby redundancy the components have two states: an active state and a standby state. The stand-by component is exposed to reduced loads while not needed and under the operating load when they are activated. Consequently, components in standby redundancy have two failure distributions, one for each state. In the case that both stand-by and active failure distributions are the same, the units are in a simple parallel configuration (also called a hot standby configuration). When the failure rate of the standby component is lower than in active mode that is called a warm standby configuration. When the rate of failure of the standby component is zero (i.e., the component cannot fail when in standby), it is called a cold standby configuration.
 
-The reliability of the system at time $t$ can be obtained using the following equation Error: Reference source not found:
-
-```{admonition} Under construction
-:class: todo
-Miss ref just above
-```
+The reliability of the system at time $t$ can be obtained using the following equation {cite:t}`sys-time-dependent-system-reliability`:
 
 (syst_equation4_114)=
 ````{admonition} Equation
