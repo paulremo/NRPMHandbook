@@ -276,14 +276,10 @@ In the following, the system architecture shown in {numref}`Figure 7.29` is cons
 From the example in {numref}`syst-table4-10`, it can be seen that the power conversion should have the highest reliability target as it has the biggest influences on the system reliability. A lower reliability value could be assigned to solar panel \#1 and \#2 since they have a significantly lower impact on the system reliability. The allocation of reliability targets to components consists of the following steps:
 
 1.  Assign initial values to component reliability r.
-
-In the example the initial failure rate is set to 1.0E-06 1/h for all components, with a mission duration of ten years this results in an initial reliability of 0,916 for all components.
-
-2.  Calculation of system reliability and Birnbaum importance.
-
-With the initial reliability a system reliability of $R_{S}\left( t \right) = 0,9092$ is obtained. Based on Eq. {eq}`Equation 7.48` the Birnbaum importance is calculated for all components. The results are shown in {numref}`syst-table4-11`.
-
-3.  Comparison of the calculated reliability with the system reliability .term}`requirement <Requirement>`. The difference to the required system reliability is given by:
+    In the example the initial failure rate is set to 1.0E-06 1/h for all components, with a mission duration of ten years this results in an initial reliability of 0,916 for all components.
+2. Calculation of system reliability and Birnbaum importance.
+   With the initial reliability a system reliability of $R_{S}\left( t \right) = 0,9092$ is obtained. Based on Eq. {eq}`Equation 7.48` the Birnbaum importance is calculated for all components. The results are shown in {numref}`syst-table4-11`.
+3. Comparison of the calculated reliability with the system reliability {term}`requirement <Requirement>`. The difference to the required system reliability is given by:
 
 (syst_equation4_59)=
 ````{admonition} Equation
@@ -296,7 +292,7 @@ With the initial reliability a system reliability of $R_{S}\left( t \right) = 0,
 ```
 ````
 
-4.  Calculation of component reliability targets using Birnbaum importance measures, as described in the following.
+1.  Calculation of component reliability targets using Birnbaum importance measures, as described in the following.
 
 With Eq. {eq}`Equation 7.58` the change of the system reliability depending on the change of component reliability can be calculated using the Birnbaum importance. This equation can be transformed such that the change of component reliability to achieve a defined change in system reliability can be calculated.
 
@@ -385,10 +381,7 @@ The reliability targets for component 2 and 5 are obtained from the following eq
 ``  
 ```{math}
 :label: Equation 7.66
-{\hat{R}}_{2} = \min\left( R_{2} + \mathrm{\Delta}R_{2};R_{2,\max} \right)
-```
-```{math}
-\mathrm{\text{\ \ \ \ \ }} = \min\left( 0,91613 + 1,46E - 02;0,945 \right) = 0,93077
+{\hat{R}}_{2} = \min\left( R_{2} + \mathrm{\Delta}R_{2};R_{2,\max} \right) = \min\left( 0,91613 + 1,46E - 02;0,945 \right) = 0,93077
 ```
 ````
 

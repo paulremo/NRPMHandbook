@@ -117,6 +117,5 @@ parts:
         - file: system/handbook/reliability_prediction/system_level_modelling_wear_out    
         - file: system/handbook/reliability_prediction/systematic_failure_modelling  
         - file: system/handbook/reliability_prediction/consideration_software_failures
-      - file: system/handbook/conclusion
     - file: system/models/intro_models
       title: Models
