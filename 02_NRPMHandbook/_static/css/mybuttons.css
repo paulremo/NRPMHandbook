@@ -7,10 +7,10 @@
     background-color: #424141;
     border: none;
     width: 33%;
-    color: #ecfffb;
-    padding: 20px 34px;
+    color: #ecfffb !important;
+    padding: 10px 10px;
     text-align: center;
-    text-decoration: none !important;;
+    text-decoration: none !important;
     display: inline-block;
     margin-left: 33%;
     cursor: pointer;
