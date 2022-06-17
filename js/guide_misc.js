@@ -314,7 +314,29 @@ function writeMessage(message, txt) {
     setInterval(function () { message.innerHTML += txt.charAt(i); i++; }, 20);
 }
 
-$(document).ready(function () {
+window.onload = function () {
+
+    /*let conversationdiv = document.createElement("div");
+    conversationdiv.setAttribute("id", "conversation");
+
+    let mainTable = document.createElement("table");
+    let trTable = document.createElement("tr");
+
+    let astronautDiv = document.createElement("td");
+    astronautDiv.setAttribute("id", "astronautDiv");
+
+    let astronaut_div = document.createElement("div");
+    astronaut_div.setAttribute("id", "astronaut");
+
+    let astroPicture = document.createElement("img");
+    astroPicture.setAttribute("id", "astroPicture");
+
+    astronaut_div.appendChild(astroPicture);
+    astronautDiv.appendChild(astronaut_div);
+    trTable.appendChild(astronautDiv);*/
+
+
+
 
     let conv;
 
