@@ -342,7 +342,7 @@ window.onload = function () {
     buttonOK.innerHTML = "OK";
     buttonOK.className = "button-next";
     buttonOK.setAttribute("id", "nextbutton");
-    buttonOK.setAttribute("onclick", "this.disabled = true; conv.next('nextbutton')");
+    buttonOK.setAttribute("onclick", "this.disabled = true; console.log(conv); conv.next('nextbutton')");
 
     let inputComponent = document.createElement("div");
     let ipt = document.createElement("input");
