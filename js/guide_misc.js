@@ -240,12 +240,19 @@ class DataMessage extends Message {
             this.buttons.set(item, b);
         }
         for (var [key, btn] of this.buttons) {
-            var alldisable = ""
+            /*var alldisable = ""
             for (var [k, b] of this.buttons) {
                 alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
             }
-            alldisable = alldisable + " Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);" + " this.style.backgroundColor = 'rgb(67, 91, 167)'";
-            btn.setAttribute("onclick", "conv.next('" + key + "');" + alldisable)
+            alldisable = alldisable + " Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);" + " this.style.backgroundColor = 'rgb(67, 91, 167)'";*/
+            btn.onclick = function() {
+                for (var [k, b] of this.buttons) {
+                    document.getElementById('" + k + "').disabled = true;
+                }
+                Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);
+                this.style.backgroundColor = 'rgb(67, 91, 167)'
+                conv.next('" + key + "');
+            }
         }
         let fail = document.createElement("button");
         fail.innerHTML = "I can't find matching component";
@@ -346,6 +353,12 @@ window.onload = function () {
     }
 
     function clickButtonInput(button){
+        button.disabled = true;
+        document.getElementById('inputComponent').disabled = true;
+        conv.next('inputComponent')
+    }
+
+    function clickButtonData(button){
         button.disabled = true;
         document.getElementById('inputComponent').disabled = true;
         conv.next('inputComponent')
