@@ -119,6 +119,7 @@ window.onload = function () {
         let div = document.createElement("div");
         div.setAttribute("class", "other-message");
         let par = document.createElement("p");
+        par.style.color = "white";
         par.innerHTML = "Welcome to the failure rate calculation guide for the miscellaneous items !";
         div.appendChild(par);
         conv_container.appendChild(div);
@@ -127,6 +128,7 @@ window.onload = function () {
             let div = document.createElement("div");
             div.setAttribute("class", "other-message");
             let par = document.createElement("p");
+            par.style.color = "white";
             par.innerHTML = "Before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used";
             div.appendChild(par);
             conv_container.appendChild(div);
@@ -155,6 +157,7 @@ window.onload = function () {
         let div = document.createElement("div");
         div.setAttribute("class", "other-message");
         let par = document.createElement("p");
+        par.style.color = "white";
         par.innerHTML = "Awesome ! So can you give me the name of your component ?";
         div.appendChild(par);
         conv_container.appendChild(div);
@@ -223,6 +226,7 @@ window.onload = function () {
 
         else {
             let par = document.createElement("p");
+            par.style.color = "white";
             par.innerHTML = "Maybe we use another name... To which subsystem does your component belong ?";
             div.appendChild(par);
             conv_container.appendChild(div);
@@ -244,6 +248,7 @@ window.onload = function () {
             let div = document.createElement("div");
             div.setAttribute("class", "other-message");
             let par = document.createElement("p");
+            par.style.color = "white";
             par.innerHTML = "This component is standard";
             div.appendChild(par);
             conv_container.appendChild(div);
@@ -252,13 +257,15 @@ window.onload = function () {
                 let div = document.createElement("div");
                 div.setAttribute("class", "other-message");
                 let par = document.createElement("p");
-                par.innerHTML = "The value of &lambda;&#8321; is " + value + ".";
+                par.style.color = "white";
+                par.innerHTML = "The value of &lambda;&#8323; is " + value + ".";
                 div.appendChild(par);
                 conv_container.appendChild(div);
                 setTimeout(() => {
                     let div = document.createElement("div");
                     div.setAttribute("class", "other-message");
                     let par = document.createElement("p");
+                    par.style.color = "white";
                     par.innerHTML = "Don't forget to note this value";
                     div.appendChild(par);
                     conv_container.appendChild(div);
@@ -266,6 +273,7 @@ window.onload = function () {
                         let div = document.createElement("div");
                         div.setAttribute("class", "other-message");
                         let par = document.createElement("p");
+                        par.style.color = "white";
                         par.innerHTML = "You can go on the handbook page";
                         par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#standard-model-for-generic-miscellaneous-items';");
                         div.appendChild(par);
@@ -280,6 +288,7 @@ window.onload = function () {
             let div = document.createElement("div");
             div.setAttribute("class", "other-message");
             let par = document.createElement("p");
+            par.style.color = "white";
             par.innerHTML = "This component is non-standard";
             div.appendChild(par);
             conv_container.appendChild(div);
@@ -287,6 +296,7 @@ window.onload = function () {
                 let div = document.createElement("div");
                 div.setAttribute("class", "other-message");
                 let par = document.createElement("p");
+                par.style.color = "white";
                 par.innerHTML = "You can go on the handbook page";
                 par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#non-standard-model-for-specific-miscellaneous-items';");
                 div.appendChild(par);
@@ -295,6 +305,7 @@ window.onload = function () {
                     let div = document.createElement("div");
                     div.setAttribute("class", "other-message");
                     let par = document.createElement("p");
+                    par.style.color = "white";
                     par.innerHTML = "Or you can go to this page to calculate the failure rate";
                     par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/failure_rate_processing.html';");
                     div.appendChild(par);
@@ -311,6 +322,7 @@ window.onload = function () {
         let div = document.createElement("div");
         div.setAttribute("class", "other-message");
         let par = document.createElement("p");
+        par.style.color = "white";
         par.innerHTML = "Maybe we use another name... To which subsystem does your component belong ?";
         div.appendChild(par);
         conv_container.appendChild(div);
@@ -386,6 +398,7 @@ window.onload = function () {
         let div = document.createElement("div");
         div.setAttribute("class", "other-message");
         let par = document.createElement("p");
+        par.style.color = "white";
         par.innerHTML = "It must be a holistic component";
         div.appendChild(par);
         conv_container.appendChild(div);
@@ -393,6 +406,7 @@ window.onload = function () {
             let div = document.createElement("div");
             div.setAttribute("class", "other-message");
             let par = document.createElement("p");
+            par.style.color = "white";
             par.innerHTML = "There's no standard methodology.";
             div.appendChild(par);
             conv_container.appendChild(div);
@@ -400,6 +414,7 @@ window.onload = function () {
                 let div = document.createElement("div");
                 div.setAttribute("class", "other-message");
                 let par = document.createElement("p");
+                par.style.color = "white";
                 par.innerHTML = "You can go on the handbook page to find more information";
                 par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/reliability_models.html#holistic-model';");
                 div.appendChild(par);
