@@ -1,4 +1,7 @@
 window.onload = function () {
+
+    console.log("there");
+
     WIDTH = 105;
     HEIGHT = 30;
 
@@ -367,5 +370,4 @@ window.onload = function () {
     this.canvas.addEventListener('click', event => {
         testTree.clickLevel(event);
     });
-
 }
