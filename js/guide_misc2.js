@@ -95,6 +95,54 @@ window.onload = function () {
         "Other"
     ]);
 
+    dataModelsByCategories = new Map([
+        ["Radio Frequency", new Set(
+            ["TWTA, Single MPM",
+                "TWTA, Double MPM",
+                "RF PASSIVE",]
+        )],
+        ["Power", new Set(
+            ["CONNECTORS",
+                "BATTERY CELL GEO",
+                "BATTERY CELL LEO",
+                "SOLAR ARRAY CELL Si",
+                "SOLAR ARRAY CELL GaAs",
+                "SADM (Solar Array drive Mechanism) GEO",
+                "SADM (Solar Array drive Mechanism) LEO",]
+        )],
+        ["Propulsion", new Set(
+            ["THRUSTER",
+                "TANK TUBING",
+                "HET (Hall Effect Thruster)",
+                "VALVE LV (Latching Valve)",
+                "VALVE FCV (MONO STABLE) Flow Control Valve",
+                "VALVE PYRO VALVE",
+                "PT (Pressure Transducer)",
+                "FILTER",]
+        )],
+        ["Attitude and Orbit Control System", new Set(
+            ["RW (Reaction Wheel) GEO",
+                "RW (Reaction Wheel) LEO",
+                "DEPLOYMENT DEVICE Antenna, boom",
+                "DEPLOYMENT DEVICE Solar Array",]
+        )],
+        ["Thermal", new Set(
+            ["HEAT PIPES",
+                "THERMO SWITCH",
+                "HEATER",]
+        )],
+        ["Pyrotechnics", new Set(
+            ["Pyro Actuator",]
+        )],
+        ["Deployment", new Set(
+            ["Non Explosive Actuator",]
+        )],
+        ["Other", new Set(
+            ["OPTICS",
+                "OPTRONICS",]
+        )]
+    ])
+
     function getResult(elt, data) {
         let res = new Set();
         let words = elt.split(" ");
