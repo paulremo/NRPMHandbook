@@ -335,14 +335,21 @@ window.onload = function () {
     astronautDiv.appendChild(astronaut_div);
     trTable.appendChild(astronautDiv);*/
 
-
     let conv;
+
+    function clickButtonOk(button){
+        button.disabled = true;
+        console.log('ici');
+        console.log(conv);
+        console.log('ici');
+        conv.next('nextbutton')
+    }
 
     let buttonOK = document.createElement("button");
     buttonOK.innerHTML = "OK";
     buttonOK.className = "button-next";
     buttonOK.setAttribute("id", "nextbutton");
-    buttonOK.setAttribute("onclick", "this.disabled = true; console.log('ici'); console.log(conv); console.log('ici'); conv.next('nextbutton')");
+    buttonOK.setAttribute("onclick", "clickButtonOk(this)");
 
     let inputComponent = document.createElement("div");
     let ipt = document.createElement("input");
