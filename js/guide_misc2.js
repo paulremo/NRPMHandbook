@@ -1,5 +1,5 @@
-
-let conv_container = document.getElementById("messagesTrack");
+window.onload = function () {
+    let conv_container = document.getElementById("messagesTrack");
 
 dataComponent = new Set([
     "TWTA, Single MPM",
@@ -161,3 +161,4 @@ function runB2() {
 }
 
 runB0();
+}
