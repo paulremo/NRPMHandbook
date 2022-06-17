@@ -345,6 +345,12 @@ window.onload = function () {
         conv.next('nextbutton')
     }
 
+    function clickButtonInput(button){
+        button.disabled = true;
+        document.getElementById('inputComponent').disabled = true;
+        conv.next('inputComponent')
+    }
+
     let buttonOK = document.createElement("button");
     buttonOK.innerHTML = "OK";
     buttonOK.className = "button-next";
@@ -356,7 +362,7 @@ window.onload = function () {
     ipt.setAttribute("type", "text");
     ipt.setAttribute("id", "inputComponent");
     let sbt = document.createElement("button");
-    sbt.setAttribute("onclick", "this.disabled = true; document.getElementById('inputComponent').disabled = true; conv.next('inputComponent')");
+    sbt.onclick = function () {clickButtonInput(this)};
     sbt.innerHTML = "ok";
     inputComponent.appendChild(ipt);
     inputComponent.appendChild(sbt);
