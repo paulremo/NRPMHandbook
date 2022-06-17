@@ -361,7 +361,7 @@ window.onload = function () {
 
     console.log("here")
 
-    let canvas = document.getElementById("canvas");
+    let canvas = document.getElementById("canvasDecisionTree");
     let context = canvas.getContext('2d');
 
     let testTree = new DecisionTree("testTree", levelsTest, canvas, context);
