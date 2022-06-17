@@ -333,6 +333,7 @@ window.onload = function () {
                         par.innerHTML = "You can go on the handbook page";
                         par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#standard-model-for-generic-miscellaneous-items';");
                         par.style.cursor = "pointer";
+                        par.style.color = "blue";
                         div.appendChild(par);
                         conv_container.appendChild(div);
                         document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
@@ -359,6 +360,7 @@ window.onload = function () {
                 par.innerHTML = "You can go on the handbook page";
                 par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#non-standard-model-for-specific-miscellaneous-items';");
                 par.style.cursor = "pointer";
+                par.style.color = "blue";
                 div.appendChild(par);
                 conv_container.appendChild(div);
                 document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
@@ -370,6 +372,7 @@ window.onload = function () {
                     par.innerHTML = "Or you can go to this page to calculate the failure rate";
                     par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/failure_rate_processing.html';");
                     par.style.cursor = "pointer";
+                    par.style.color = "blue";
                     div.appendChild(par);
                     conv_container.appendChild(div);
                     document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
@@ -486,6 +489,7 @@ window.onload = function () {
                 par.innerHTML = "You can go on the handbook page to find more information";
                 par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/reliability_models.html#holistic-model';");
                 par.style.cursor = "pointer";
+                par.style.color = "blue";
                 div.appendChild(par);
                 conv_container.appendChild(div);
                 document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
