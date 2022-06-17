@@ -1,384 +1,379 @@
-const InteractType = Object.freeze({
-    Button: 1,
-    Input: 2,
-    Choice: 3
-});
-
-class Conversation {
-    constructor(container, branches,) {
-        this.container = container;
-        this.branches = branches;
-
-        this.current_branch = this.branches.get("b0");
-        this.current_branch.init(this);
-
-        this.picture = document.getElementById("astroPicture");
-        //this.picture.setAttribute("src", "../html/pictures/astronaut1.png")
-    }
-
-    next(id) {
-        let elt = document.getElementById(id);
-        let cls = elt.className;
-        if (cls.includes("button-next")) {
-            this.current_branch.nextStep()
-        }
-        else if (id == "inputComponent") {
-            let cdn = elt.value;
-            let res = this.current_branch.messages.get(this.current_branch.step).getResult(cdn);
-            if (res != null) {
-                this.current_branch.nextStep(true, res);
-            }
-            else {
-                this.current_branch.nextStep(false);
-            }
-        }
-        else if (cls.includes("categories")) {
-            let res = dataModelsByCategories.get(id);
-            this.current_branch.nextStep(true, res);
-        }
-
-        else if (cls.includes("itemComponents")) {
-            this.current_branch.nextStep(true, id);
-        }
-        else if (cls.includes("button-fail")) {
-            this.current_branch.nextStep(false);
-        }
-        else if (this.current_branch.messages.get(this.current_branch.step) instanceof ConfigurableMessage) {
-            if (this.current_branch.messages.get(this.current_branch.step).configure_next) {
-                this.current_branch.nextStep(this.current_branch.messages.get(this.branches.step).final_data, id);
-            }
-
-        }
-        else {
-            this.current_branch.nextStep(true, id);
-        }
-    }
-
-    switchBranch(b, arg) {
-        this.current_branch = this.branches.get(b);
-        this.current_branch.init(this, arg);
-    }
-}
-
-class Branch {
-    constructor(messages, successors, exitType = null) {
-        this.messages = messages;
-        this.successors = successors;
-        this.exitType = exitType;
-        this.step = 0;
-        this.data = null;
-        this.conversation = null;
-    }
-
-    init(conversation, arg = null) {
-        this.conversation = conversation
-        this.data = arg;
-        let msg = this.messages.get(this.step);
-        if (msg instanceof EmptyMessage) {
-            //console.log("empty")
-        }
-        else {
-
-            let tr = this.conversation.container.insertRow();
-            let td = tr.insertCell(0);
-            if (msg.configurable) {
-                msg.configure(this.data)
-            }
-            td.appendChild(msg.htmlRep);
-            if (msg instanceof ConfigurableMessage) {
-                msg.configure(this.data)
-                if (msg.configure_next) {
-                    this.conversation.switchBranch(this.successors.get(msg.final_data), arg);
-                }
-            }
-        }
-
-        setTimeout(() => { this.nextStep() }, 1500);
-    }
-
-    nextStep(new_branch_id = null, arg = null) {
-        this.step += 1;
-        if (this.step >= this.messages.size) {
-            if (this.successors.get(new_branch_id) != undefined) {
-                this.conversation.switchBranch(this.successors.get(new_branch_id), arg);
-            }
-            else {
-                //console.log("end of conversation");
-            }
-        }
-        else {
-            let next_msg = this.messages.get(this.step);
-
-            if (next_msg instanceof EmptyMessage) {
-
-            }
-            else {
-                let tr = this.conversation.container.insertRow();
-                let td = tr.insertCell(0);
-                if (next_msg instanceof DataMessage) {
-                    next_msg.configure(this.data);
-                }
-                if (next_msg instanceof ConfigurableMessage) {
-                    next_msg.configure(arg);
-                }
-                if (next_msg instanceof ExitMessage) {
-                    next_msg.configure(arg);
-                    setTimeout(() => { this.nextStep() }, 2500);
-                }
-                td.appendChild(next_msg.htmlRep);
-            }
-
-            if (!next_msg.interactive) {
-                setTimeout(() => { this.nextStep() },
-                    2500);
-            }
-
-        }
-
-
-    }
-}
-
-class Message {
-    constructor(extra_intercator, text, sender, configurable, interactive, interactor = null, type = null) {
-        this.text = text;
-        this.sender = sender;
-        this.type = type;
-        this.configurable = configurable;
-        this.interactive = interactive;
-        this.interactor = interactor;
-        this.extra_intercator = extra_intercator;
-
-        this.htmlRep = null;
-
-        this.init();
-
-    }
-
-    init(table) {
-        let div = document.createElement("div");
-        div.setAttribute("class", this.sender);
-
-        if (this.interactive && this.interactor != null) {
-            div.appendChild(this.interactor);
-        }
-        else if (this.interactive && this.interactor == null) {
-            this.interactor = document.createElement("div");
-            div.appendChild(this.interactor);
-        }
-        else {
-            let par = document.createElement("p");
-            //par.innerHTML = this.text;
-            div.appendChild(par);
-            writeMessage(par, this.text);
-        }
-
-        this.htmlRep = div;
-    }
-
-
-}
-
-class EmptyMessage extends Message {
-    constructor(extra_intercator, data, sender) {
-        super(extra_intercator, "", sender, false, true);
-        this.data = data;
-    }
-}
-
-class SearchMessage extends Message {
-    constructor(extra_intercator, data, text, sender, configurable, interactive, interactor = null, type = null) {
-        super(extra_intercator, text, sender, configurable, interactive, interactor, type);
-        this.data = data;
-    }
-
-    getResult(dt) {
-        let res = new Set();
-        let words = dt.split(" ");
-        for (var item of this.data) {
-            words.forEach(element => {
-                if (item.toLowerCase().includes(element.toLowerCase()) && !res.has(item)) {
-                    res.add(item);
-                }
-            });
-
-        }
-        if (res.size == 0) {
-            return null
-        }
-        else {
-            return (res);
-        }
-
-    }
-}
-
-class DataMessage extends Message {
-    constructor(failname, extra_intercator, text, sender, classNm = null, data = null, interactor = null, type = null) {
-        super(extra_intercator, text, sender, true, true, interactor, type);
-        this.data = data;
-        this.classNm = classNm;
-        this.buttons = new Map();
-        this.failname = failname;
-    }
-
-    configure(data) {
-        if (data == null) {
-            data = this.data;
-        }
-        for (var item of data) {
-            let b = document.createElement("button");
-            b.innerHTML = item;
-            b.setAttribute("id", item)
-            if (this.classNm != null) {
-                b.className = "choice-button " + this.classNm;
-            }
-            else {
-                b.className = "choice-button";
-            }
-            this.interactor.appendChild(b);
-            this.buttons.set(item, b);
-        }
-        for (var [key, btn] of this.buttons) {
-            /*var alldisable = ""
-            for (var [k, b] of this.buttons) {
-                alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
-            }
-            alldisable = alldisable + " Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);" + " this.style.backgroundColor = 'rgb(67, 91, 167)'";*/
-            let btns = this.buttons;
-            btn.onclick = function() {
-                clickButtonData(this, btns)
-            }
-        }
-        let fail = document.createElement("button");
-        fail.innerHTML = "I can't find matching component";
-        fail.setAttribute("onclick", "fail")
-        fail.className = "button-fail";
-        fail.setAttribute("id", globalThis.failname);
-        fail.setAttribute("onclick", "conv.next('" + this.id + "')");
-        this.interactor.appendChild(fail);
-
-        for (var [key, btn] of this.buttons) {
-            var alldisable = "this.disabled = true;"
-            for (var [k, b] of this.buttons) {
-                alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
-            }
-        }
-        fail.setAttribute("onclick", "conv.next('" + this.id + "');" + alldisable + " this.style.backgroundColor = 'rgb(67, 91, 167)'")
-    }
-}
-
-class ConfigurableMessage extends Message {
-    constructor(configure_next, extra_intercator, text, sender, dataset) {
-        super(extra_intercator, text, sender, true, false);
-        this.dataset = dataset;
-        this.configure_next = configure_next;
-        this.final_data;
-    }
-
-    configure(data) {
-        let dt = this.dataset.get(data);
-        this.final_data = dt;
-        this.text = this.text + " " + dt;
-
-        let div = document.createElement("div");
-        div.setAttribute("class", this.sender);
-        let par = document.createElement("p");
-
-        //par.innerHTML = this.text;
-        div.appendChild(par);
-        writeMessage(par, this.text);
-        this.htmlRep = div;
-    }
-
-}
-
-class ExitMessage extends Message {
-    constructor(extra_intercator, text, sender, destination) {
-        super(extra_intercator, text, sender, true, true);
-        this.destination = destination;
-    }
-    configure(data) {
-        let div = document.createElement("div");
-        div.setAttribute("class", this.sender);
-        let par = document.createElement("button");
-        //par.innerHTML = this.text;
-        par.setAttribute("onclick", "window.location.href = '" + this.destination + "';");
-        par.className = this.sender;
-        div.style.borderColor = "#383b3a";
-        div.appendChild(par);
-        writeMessage(par, this.text);
-        this.htmlRep = div;
-    }
-}
-
-function writeMessage(message, txt) {
-    var i = 0;
-    setInterval(function () { message.innerHTML += txt.charAt(i); i++; }, 20);
-}
-
 window.onload = function () {
 
-    /*let conversationdiv = document.createElement("div");
-    conversationdiv.setAttribute("id", "conversation");
+    const InteractType = Object.freeze({
+        Button: 1,
+        Input: 2,
+        Choice: 3
+    });
 
-    let mainTable = document.createElement("table");
-    let trTable = document.createElement("tr");
+    class Conversation {
+        constructor(container, branches,) {
+            this.container = container;
+            this.branches = branches;
 
-    let astronautDiv = document.createElement("td");
-    astronautDiv.setAttribute("id", "astronautDiv");
+            this.current_branch = this.branches.get("b0");
+            this.current_branch.init(this);
 
-    let astronaut_div = document.createElement("div");
-    astronaut_div.setAttribute("id", "astronaut");
+            this.picture = document.getElementById("astroPicture");
+            this.picture.setAttribute("src", "../html/pictures/astronaut1.png")
+        }
 
-    let astroPicture = document.createElement("img");
-    astroPicture.setAttribute("id", "astroPicture");
+        next(id) {
+            ////console.log("next");
+            ////console.log(id);
+            let elt = document.getElementById(id);
+            let cls = elt.className;
+            if (cls.includes("button-next")) {
+                this.current_branch.nextStep()
+            }
+            else if (id == "inputComponent") {
+                let cdn = elt.value;
+                let res = this.current_branch.messages.get(this.current_branch.step).getResult(cdn);
+                if (res != null) {
+                    ////console.log("text : " + cdn);
+                    this.current_branch.nextStep(true, res);
+                }
+                else {
+                    ////console.log("nothing");
+                    this.current_branch.nextStep(false);
+                }
+            }
+            else if (cls.includes("categories")) {
+                let res = dataModelsByCategories.get(id);
+                /*//console.log(dataModelsByCategories.get("Power"))
+                //console.log(id);
+                //console.log("res")
+                //console.log(res)*/
+                this.current_branch.nextStep(true, res);
+            }
 
-    astronaut_div.appendChild(astroPicture);
-    astronautDiv.appendChild(astronaut_div);
-    trTable.appendChild(astronautDiv);*/
+            /*else if (cls == "categories") {
+                let res = dataModelsByCategories.get(id);
+                this.current_branch.nextStep(true, res);
+            }*/
+
+            else if (cls.includes("itemComponents")) {
+                this.current_branch.nextStep(true, id);
+            }
+            else if (cls.includes("button-fail")) {
+                //console.log("fail")
+                this.current_branch.nextStep(false);
+            }
+            else if (this.current_branch.messages.get(this.current_branch.step) instanceof ConfigurableMessage) {
+                //console.log("configure netx")
+                if (this.current_branch.messages.get(this.current_branch.step).configure_next) {
+                    //console.log("configure next : " + this.current_branch.messages.get(this.branches.step).final_data)
+                    this.current_branch.nextStep(this.current_branch.messages.get(this.branches.step).final_data, id);
+                }
+
+            }
+            else {
+                ////console.log("else");
+                this.current_branch.nextStep(true, id);
+            }
+        }
+
+        switchBranch(b, arg) {
+            console.log("branch : " + b);
+            this.current_branch = this.branches.get(b);
+            this.current_branch.init(this, arg);
+        }
+    }
+
+    class Branch {
+        constructor(messages, successors, exitType = null) {
+            this.messages = messages;
+            this.successors = successors;
+            this.exitType = exitType;
+            this.step = 0;
+            this.data = null;
+            this.conversation = null;
+        }
+
+        init(conversation, arg = null) {
+            this.conversation = conversation
+            this.data = arg;
+            let msg = this.messages.get(this.step);
+            ////console.log("msg : " + msg)
+            if (msg instanceof EmptyMessage) {
+                //console.log("empty")
+            }
+            else {
+
+                let tr = this.conversation.container.insertRow();
+                let td = tr.insertCell(0);
+                if (msg.configurable) {
+                    msg.configure(this.data)
+                }
+                td.appendChild(msg.htmlRep);
+                if (msg instanceof ConfigurableMessage) {
+                    //console.log("config")
+                    msg.configure(this.data)
+                    if (msg.configure_next) {
+                        //console.log("configure next : " + this.successors.get(msg.final_data))
+                        this.conversation.switchBranch(this.successors.get(msg.final_data), arg);
+                    }
+                }
+            }
+
+            setTimeout(() => { this.nextStep() }, 1500);
+        }
+
+        nextStep(new_branch_id = null, arg = null) {
+            ////console.log("next step " + arg);
+            this.step += 1;
+            if (this.step >= this.messages.size) {
+                //console.log("end of branch : " + arg + new_branch_id);
+                if (this.successors.get(new_branch_id) != undefined) {
+                    this.conversation.switchBranch(this.successors.get(new_branch_id), arg);
+                }
+                else {
+                    //console.log("end of conversation");
+                }
+            }
+            else {
+                ////console.log("stay on branch : " + arg);
+                let next_msg = this.messages.get(this.step);
+                /*if (next_msg.interactive){
+                    this.conversation.picture.setAttribute("src", "../html/pictures/astronaut2.png");
+                }
+                else{
+                    this.conversation.picture.setAttribute("src", "../html/pictures/astronaut1.png");
+                }
+                let children = this.conversation.extra_bar.children;
+                for (let i = 0; i < children.length; i++) {
+                    this.conversation.extra_bar.removeChild(children[i])
+                }*/
+
+                if (next_msg instanceof EmptyMessage) {
+
+                }
+                else {
+                    let tr = this.conversation.container.insertRow();
+                    let td = tr.insertCell(0);
+                    if (next_msg instanceof DataMessage) {
+                        next_msg.configure(this.data);
+                    }
+                    if (next_msg instanceof ConfigurableMessage) {
+                        ////console.log("configurable message");
+                        next_msg.configure(arg);
+                    }
+                    if (next_msg instanceof ExitMessage) {
+                        ////console.log("Exit Message");
+                        next_msg.configure(arg);
+                        setTimeout(() => { this.nextStep() }, 1500);
+                    }
+                    td.appendChild(next_msg.htmlRep);
+                }
+
+                if (!next_msg.interactive) {
+                    setTimeout(() => { this.nextStep() },
+                        1500);
+                }
+
+            }
+
+
+        }
+    }
+
+    class Message {
+        constructor(extra_intercator, text, sender, configurable, interactive, interactor = null, type = null) {
+            this.text = text;
+            this.sender = sender;
+            this.type = type;
+            this.configurable = configurable;
+            this.interactive = interactive;
+            this.interactor = interactor;
+            this.extra_intercator = extra_intercator;
+
+            this.htmlRep = null;
+
+            this.init();
+
+        }
+
+        init(table) {
+            let div = document.createElement("div");
+            div.setAttribute("class", this.sender);
+
+            if (this.interactive && this.interactor != null) {
+                div.appendChild(this.interactor);
+            }
+            else if (this.interactive && this.interactor == null) {
+                this.interactor = document.createElement("div");
+                div.appendChild(this.interactor);
+            }
+            else {
+                let par = document.createElement("p");
+                par.innerHTML = this.text;
+                div.appendChild(par);
+            }
+
+            this.htmlRep = div;
+
+
+
+        }
+
+
+    }
+
+    class EmptyMessage extends Message {
+        constructor(extra_intercator, data, sender) {
+            super(extra_intercator, "", sender, false, true);
+            this.data = data;
+        }
+    }
+
+    class SearchMessage extends Message {
+        constructor(extra_intercator, data, text, sender, configurable, interactive, interactor = null, type = null) {
+            super(extra_intercator, text, sender, configurable, interactive, interactor, type);
+            this.data = data;
+        }
+
+        getResult(dt) {
+            //console.log("get result")
+            let res = new Set();
+            let words = dt.split(" ");
+            for (var item of this.data) {
+                words.forEach(element => {
+                    if (item.toLowerCase().includes(element.toLowerCase()) && !res.has(item)) {
+                        res.add(item);
+                    }
+                });
+
+            }
+            if (res.size == 0) {
+                return null
+            }
+            else {
+                return (res);
+            }
+
+        }
+    }
+
+    class DataMessage extends Message {
+        constructor(failname, extra_intercator, text, sender, classNm = null, data = null, interactor = null, type = null) {
+            super(extra_intercator, text, sender, true, true, interactor, type);
+            this.data = data;
+            this.classNm = classNm;
+            this.buttons = new Map();
+            this.failname = failname;
+        }
+
+        configure(data) {
+            if (data == null) {
+                data = this.data;
+            }
+            /*//console.log("data")
+            //console.log(data)
+            //console.log(this.data)*/
+            for (var item of data) {
+                let b = document.createElement("button");
+                b.innerHTML = item;
+                b.setAttribute("id", item)
+                if (this.classNm != null) {
+                    b.className = "choice-button " + this.classNm;
+                }
+                //b.setAttribute("onclick", "conv.next('" + item + "');")
+                this.interactor.appendChild(b);
+                this.buttons.set(item, b);
+            }
+            for (var [key, btn] of this.buttons) {
+                var alldisable = ""
+                for (var [k, b] of this.buttons) {
+                    alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
+                }
+                alldisable = alldisable + " console.log(document.getElementsByClassName('button-fail')); Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);" + " this.style.backgroundColor = 'rgb(67, 91, 167)'";
+                btn.setAttribute("onclick", "conv.next('" + key + "');" + alldisable)
+            }
+            let fail = document.createElement("button");
+            fail.innerHTML = "I can't find matching component";
+            fail.setAttribute("onclick", "fail")
+            fail.className = "button-fail";
+            fail.setAttribute("id", globalThis.failname);
+            fail.setAttribute("onclick", "conv.next('" + this.id + "')");
+            console.log("fail id : " + fail.id)
+            this.interactor.appendChild(fail);
+
+            for (var [key, btn] of this.buttons) {
+                var alldisable = "this.disabled = true;"
+                for (var [k, b] of this.buttons) {
+                    alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
+                }
+            }
+            fail.setAttribute("onclick", "conv.next('" + this.id + "');" + alldisable)
+        }
+    }
+
+    class ConfigurableMessage extends Message {
+        constructor(configure_next, extra_intercator, text, sender, dataset) {
+            super(extra_intercator, text, sender, true, false);
+            this.dataset = dataset;
+            this.configure_next = configure_next;
+            this.final_data;
+        }
+
+        configure(data) {
+            //console.log("data : " + data)
+            let dt = this.dataset.get(data);
+            this.final_data = dt;
+            this.text = this.text + " " + dt;
+
+            let div = document.createElement("div");
+            div.setAttribute("class", this.sender);
+            let par = document.createElement("p");
+            par.innerHTML = this.text;
+            div.appendChild(par);
+            this.htmlRep = div;
+        }
+
+    }
+
+    class ExitMessage extends Message {
+        constructor(extra_intercator, text, sender, destination) {
+            super(extra_intercator, text, sender, true, true);
+            this.destination = destination;
+        }
+        configure(data) {
+            let div = document.createElement("div");
+            div.setAttribute("class", this.sender);
+            let par = document.createElement("button");
+            par.innerHTML = this.text;
+            par.setAttribute("onclick", "window.location.href = '" + this.destination + "';");
+            par.className = this.sender;
+            div.style.borderColor = "#383b3a";
+            div.appendChild(par);
+            this.htmlRep = div;
+        }
+    }
+
 
     let conv;
-
-    function clickButtonOk(button){
-        button.disabled = true;
-        console.log('ici');
-        console.log(conv);
-        console.log('ici');
-        conv.next('nextbutton')
-    }
-
-    function clickButtonInput(button){
-        button.disabled = true;
-        document.getElementById('inputComponent').disabled = true;
-        conv.next('inputComponent')
-    }
-
-    function clickButtonData(button, btns){
-        for (var [k, b] of btns) {
-            document.getElementById('" + k + "').disabled = true;
-        }
-        button.disabled = true;
-        document.getElementById('inputComponent').disabled = true;
-        conv.next('inputComponent')
-    }
 
     let buttonOK = document.createElement("button");
     buttonOK.innerHTML = "OK";
     buttonOK.className = "button-next";
     buttonOK.setAttribute("id", "nextbutton");
-    buttonOK.onclick = function () {clickButtonOk(this)};
+    buttonOK.setAttribute("onclick", "this.disabled = true; conv.next('nextbutton')");
 
     let inputComponent = document.createElement("div");
     let ipt = document.createElement("input");
     ipt.setAttribute("type", "text");
     ipt.setAttribute("id", "inputComponent");
     let sbt = document.createElement("button");
-    sbt.onclick = function () {clickButtonInput(this)};
+    sbt.setAttribute("onclick", "this.disabled = true; document.getElementById('inputComponent').disabled = true; conv.next('inputComponent')");
     sbt.innerHTML = "ok";
     inputComponent.appendChild(ipt);
     inputComponent.appendChild(sbt);
 
+    /*let buttonFail = document.createElement("button");
+    buttonFail.innerHTML = "Can't find component";
+    buttonFail.className = "button-fail";
+    buttonFail.setAttribute("id", "failbuttonsearch");
+    buttonFail.setAttribute("onclick", "conv.next('failbuttonsearch')");*/
 
     dataComponent = new Set([
         "TWTA, Single MPM",
@@ -535,7 +530,7 @@ window.onload = function () {
     let m9 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
     );
 
-    let m10 = new ExitMessage(null, "You can go on the handbook page", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
+    let m10 = new ExitMessage(null, "You can go on the handbook page", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
     let m11 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
 
     let m12 = new Message(null, "Maybe we use another name... To which subsystem does your component belong ?", "other-message", false, false);
@@ -547,12 +542,12 @@ window.onload = function () {
     let m16 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
     );
 
-    let m17 = new ExitMessage(null, "You can go on the handbook page", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
+    let m17 = new ExitMessage(null, "You can go on the handbook page", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
     let m18 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
 
     let m19 = new Message(null, "It must be a holistic component", "other-message", false, false);
     let m20 = new Message(null, "There's no standard methodology. ", "other-message", false, false);
-    let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
+    let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "../handbook/reliability_prediction/process_reliability_modelling.html#back_from_misc_failure_rate_processing_balise");
 
     let m22 = new ConfigurableMessage(false, null, "The value of &lambda;&#8321; is ", "other-message", standardComponentFR);
     let m23 = new Message(null, "Don't forget to note this value", "other-message", false, false);
@@ -579,11 +574,7 @@ window.onload = function () {
     let b0 = new Branch(mb0, new Map([[true, "b1"], [false, "b2"]]));
 
     let b = new Map([["b0", b0], ["b1", b1], ["b2", b2], ["b3", b3], ["b4", b4], ["b5", b5], ["b6", b6], ["b7", b7], ["b8", b8]]);
-    
     conv = new Conversation(document.getElementById("messagesTrack"), b);
-
-    console.log("conv");
-    console.log(conv);
 
 };
 
