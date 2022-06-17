@@ -361,13 +361,18 @@ window.onload = function () {
 
     console.log("here")
 
-    let canvas = document.getElementById("canvasDecisionTree");
-    let context = canvas.getContext('2d');
+    function run() {
+        let canvas = document.getElementById("canvasDecisionTree");
+        let context = canvas.getContext('2d');
 
-    let testTree = new DecisionTree("testTree", levelsTest, canvas, context);
+        let testTree = new DecisionTree("testTree", levelsTest, canvas, context);
 
 
-    this.canvas.addEventListener('click', event => {
-        testTree.clickLevel(event);
-    });
+        testTree.canvas.addEventListener('click', event => {
+            testTree.clickLevel(event);
+        });
+    }
+
+    run();
+
 }
