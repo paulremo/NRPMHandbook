@@ -245,14 +245,9 @@ class DataMessage extends Message {
                 alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
             }
             alldisable = alldisable + " Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);" + " this.style.backgroundColor = 'rgb(67, 91, 167)'";*/
+            let btns = this.buttons;
             btn.onclick = function() {
-                setButtons(this.buttons);
-                for (var [k, b] of buttons) {
-                    document.getElementById('" + k + "').disabled = true;
-                }
-                Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);
-                this.style.backgroundColor = 'rgb(67, 91, 167)'
-                conv.next('" + key + "');
+                clickButtonData(this, btns)
             }
         }
         let fail = document.createElement("button");
@@ -359,13 +354,10 @@ window.onload = function () {
         conv.next('inputComponent')
     }
 
-    let buttons;
-
-    function setButtons(btn){
-        buttons = btn;
-    }
-
-    function clickButtonData(button){
+    function clickButtonData(button, btns){
+        for (var [k, b] of btns) {
+            document.getElementById('" + k + "').disabled = true;
+        }
         button.disabled = true;
         document.getElementById('inputComponent').disabled = true;
         conv.next('inputComponent')
