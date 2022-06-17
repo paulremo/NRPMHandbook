@@ -13,7 +13,7 @@ class Conversation {
         this.current_branch.init(this);
 
         this.picture = document.getElementById("astroPicture");
-        this.picture.setAttribute("src", "../html/pictures/astronaut1.png")
+        //this.picture.setAttribute("src", "../html/pictures/astronaut1.png")
     }
 
     next(id) {
@@ -334,8 +334,6 @@ window.onload = function () {
     astronaut_div.appendChild(astroPicture);
     astronautDiv.appendChild(astronaut_div);
     trTable.appendChild(astronautDiv);*/
-
-
 
 
     let conv;
