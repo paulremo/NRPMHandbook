@@ -1,6 +1,8 @@
 window.onload = function () {
     let conv_container = document.getElementById("messagesTrack");
 
+    let buttons = new Map();
+
     dataComponent = new Set([
         "TWTA, Single MPM",
         "TWTA, Double MPM",
@@ -31,6 +33,66 @@ window.onload = function () {
         "Non Explosive Actuator",
         "OPTICS",
         "OPTRONICS",
+    ]);
+
+    dataComponentType = new Map([
+        ["TWTA, Single MPM", "standard"],
+        ["TWTA, Double MPM", "standard"],
+        ["BATTERY CELL GEO", "standard"],
+        ["BATTERY CELL LEO", "standard"],
+        ["SOLAR ARRAY CELL Si", "standard"],
+        ["SOLAR ARRAY CELL GaAs", "standard"],
+        ["SADM (Solar Array drive Mechanism) GEO", "standard"],
+        ["SADM (Solar Array drive Mechanism) LEO", "standard"],
+        ["THRUSTER", "standard"],
+        ["TANK TUBING", "standard"],
+        ["RW (Reaction Wheel) GEO", "standard"],
+        ["RW (Reaction Wheel) LEO", "standard"],
+        ["DEPLOYMENT DEVICE Antenna, boom", "standard"],
+        ["DEPLOYMENT DEVICE Solar Array", "standard"],
+        ["RF PASSIVE", "non-standard"],
+        ["CONNECTORS", "non-standard"],
+        ["HET (Hall Effect Thruster)", "non-standard"],
+        ["VALVE LV (Latching Valve)", "non-standard"],
+        ["VALVE FCV (MONO STABLE) Flow Control Valve", "non-standard"],
+        ["VALVE PYRO VALVE", "non-standard"],
+        ["PT (Pressure Transducer)", "non-standard"],
+        ["FILTER", "non-standard"],
+        ["HEAT PIPES", "non-standard"],
+        ["THERMO SWITCH", "non-standard"],
+        ["HEATER", "non-standard"],
+        ["Pyro Actuator", "non-standard"],
+        ["Non Explosive Actuator", "non-standard"],
+        ["OPTICS", "non-standard"],
+        ["OPTRONICS", "non-standard"],
+    ])
+
+    standardComponentFR = new Map([
+        ["TWTA, Single MPM", 200],
+        ["TWTA, Double MPM", 400],
+        ["BATTERY CELL GEO", 5],
+        ["BATTERY CELL LEO", 1],
+        ["SOLAR ARRAY CELL Si", 0.15],
+        ["SOLAR ARRAY CELL GaAs", 0.15],
+        ["SADM (Solar Array drive Mechanism) GEO", 210],
+        ["SADM (Solar Array drive Mechanism) LEO", 213],
+        ["THRUSTER", 82],
+        ["TANK TUBING", 3.27],
+        ["RW (Reaction Wheel) GEO", 250],
+        ["RW (Reaction Wheel) LEO", 140],
+        ["DEPLOYMENT DEVICE Antenna, boom", 0.2],
+        ["DEPLOYMENT DEVICE Solar Array", 0.3],
+    ]);
+
+    dataCategories = new Set([
+        "Radio Frequency",
+        "Power",
+        "Propulsion",
+        "Attitude and Orbit Control System",
+        "Thermal",
+        "Pyrotechnics",
+        "Deployment",
+        "Other"
     ]);
 
     function getResult(elt, data) {
@@ -111,8 +173,8 @@ window.onload = function () {
             div.appendChild(inputComponent);
             conv_container.appendChild(div);
             sbt.onclick = function () {
-                this.disabled = true; 
-                document.getElementById('inputComponent').disabled = true; 
+                this.disabled = true;
+                document.getElementById('inputComponent').disabled = true;
                 runB2();
             }
 
@@ -126,7 +188,139 @@ window.onload = function () {
         let div = document.createElement("div");
         div.setAttribute("class", "other-message");
 
-        let buttons = new Map();
+
+        if (data != null) {
+
+            for (var item of data) {
+                let b = document.createElement("button");
+                b.innerHTML = item;
+                b.setAttribute("id", item)
+                if (this.classNm != null) {
+                    b.className = "choice-button " + this.classNm;
+                }
+                div.appendChild(b);
+                buttons.set(item, b);
+            }
+
+            for (var [key, btn] of buttons) {
+                btn.onclick = function () {
+                    runB3(this.id);
+                }
+            }
+
+            let fail = document.createElement("button");
+            fail.innerHTML = "I can't find matching component";
+            fail.setAttribute("onclick", "fail")
+            fail.className = "button-fail";
+            fail.onclick = function () {
+                this.disabled = true;
+                runB4();
+            }
+
+            div.appendChild(fail);
+            conv_container.appendChild(div);
+        }
+
+        else {
+            let par = document.createElement("p");
+            par.innerHTML = "Maybe we use another name... To which subsystem does your component belong ?";
+            div.appendChild(par);
+            conv_container.appendChild(div);
+            setTimeout(() => { runB5() }, 1500);
+        }
+
+    }
+
+    function runB3(key) {
+        for (var [k, b] of buttons) {
+            document.getElementById(k).disabled = true;
+        }
+        Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled = true);
+        document.getElementById(key).style.backgroundColor = 'rgb(67, 91, 167)';
+
+        let dtType = dataComponentType.get(key);
+
+        if (dtType == "standard") {
+            let div = document.createElement("div");
+            div.setAttribute("class", "other-message");
+            let par = document.createElement("p");
+            par.innerHTML = "This component is standard";
+            div.appendChild(par);
+            conv_container.appendChild(div);
+            setTimeout(() => {
+                let value = standardComponentFR.get(key);
+                let div = document.createElement("div");
+                div.setAttribute("class", "other-message");
+                let par = document.createElement("p");
+                par.innerHTML = "The value of &lambda;&#8321; is " + value + ".";
+                div.appendChild(par);
+                conv_container.appendChild(div);
+                setTimeout(() => {
+                    let div = document.createElement("div");
+                    div.setAttribute("class", "other-message");
+                    let par = document.createElement("p");
+                    par.innerHTML = "Don't forget to note this value";
+                    div.appendChild(par);
+                    conv_container.appendChild(div);
+                    setTimeout(() => {
+                        let div = document.createElement("div");
+                        div.setAttribute("class", "other-message");
+                        let par = document.createElement("p");
+                        par.innerHTML = "You can go on the handbook page";
+                        par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#standard-model-for-generic-miscellaneous-items';");
+                        div.appendChild(par);
+                        conv_container.appendChild(div);
+                    }, 1500);
+                }, 1500);
+            }
+                , 1500
+            )
+        }
+        else {
+            let div = document.createElement("div");
+            div.setAttribute("class", "other-message");
+            let par = document.createElement("p");
+            par.innerHTML = "This component is non-standard";
+            div.appendChild(par);
+            conv_container.appendChild(div);
+            setTimeout(() => {
+                let div = document.createElement("div");
+                div.setAttribute("class", "other-message");
+                let par = document.createElement("p");
+                par.innerHTML = "You can go on the handbook page";
+                par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#non-standard-model-for-specific-miscellaneous-items';");
+                div.appendChild(par);
+                conv_container.appendChild(div);
+                setTimeout(() => {
+                    let div = document.createElement("div");
+                    div.setAttribute("class", "other-message");
+                    let par = document.createElement("p");
+                    par.innerHTML = "Or you can go to this page to calculate the failure rate";
+                    par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/failure_rate_processing.html';");
+                    div.appendChild(par);
+                    conv_container.appendChild(div);
+                }, 1500);
+            }, 1500);
+        }
+    }
+
+    function runB4() {
+        for (var [k, b] of buttons) {
+            document.getElementById(k).disabled = true;
+        }
+        let div = document.createElement("div");
+        div.setAttribute("class", "other-message");
+        let par = document.createElement("p");
+        par.innerHTML = "Maybe we use another name... To which subsystem does your component belong ?";
+        div.appendChild(par);
+        conv_container.appendChild(div);
+        setTimeout(() => { runB5() }, 1500);
+    }
+    function runB5() {
+        let data = dataCategories;
+
+        let div = document.createElement("div");
+        div.setAttribute("class", "other-message");
 
         for (var item of data) {
             let b = document.createElement("button");
@@ -140,13 +334,36 @@ window.onload = function () {
         }
 
         for (var [key, btn] of buttons) {
-            /*var alldisable = ""
-            for (var [k, b] of buttons) {
-                alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
+            btn.onclick = function () {
+                runB6(this.id);
             }
-            alldisable = alldisable + " console.log(document.getElementsByClassName('button-fail')); Array.from(document.getElementsByClassName('button-fail')).map(e => e.disabled  =true);" + " this.style.backgroundColor = 'rgb(67, 91, 167)'";*/
-            btn.setAttribute.onclick = function () {
-                runB3('" + key + "');
+        }
+
+        conv_container.appendChild(div);
+
+    }
+
+    function runB6(choice) {
+
+        let data = dataModelsByCategories.get(choice);
+
+        let div = document.createElement("div");
+        div.setAttribute("class", "other-message");
+
+        for (var item of data) {
+            let b = document.createElement("button");
+            b.innerHTML = item;
+            b.setAttribute("id", item)
+            if (this.classNm != null) {
+                b.className = "choice-button " + this.classNm;
+            }
+            div.appendChild(b);
+            buttons.set(item, b);
+        }
+
+        for (var [key, btn] of buttons) {
+            btn.onclick = function () {
+                runB3(this.id);
             }
         }
 
@@ -154,26 +371,42 @@ window.onload = function () {
         fail.innerHTML = "I can't find matching component";
         fail.setAttribute("onclick", "fail")
         fail.className = "button-fail";
-        fail.setAttribute.onclick = function () {
-            runB4();
+        fail.onclick = function () {
+            this.disabled = true;
+            runB7();
         }
-
-        /*for (var [key, btn] of this.buttons) {
-            var alldisable = "this.disabled = true;"
-            for (var [k, b] of this.buttons) {
-                alldisable = alldisable + " document.getElementById('" + k + "').disabled = true;"
-            }
-        }
-        fail.setAttribute("onclick", "conv.next('" + this.id + "');" + alldisable)*/
 
         div.appendChild(fail);
 
         conv_container.appendChild(div);
+
     }
 
-    function runB3(){}
-
-    function runB4(){}
+    function runB7() {
+        let div = document.createElement("div");
+        div.setAttribute("class", "other-message");
+        let par = document.createElement("p");
+        par.innerHTML = "It must be a holistic component";
+        div.appendChild(par);
+        conv_container.appendChild(div);
+        setTimeout(() => {
+            let div = document.createElement("div");
+            div.setAttribute("class", "other-message");
+            let par = document.createElement("p");
+            par.innerHTML = "There's no standard methodology.";
+            div.appendChild(par);
+            conv_container.appendChild(div);
+            setTimeout(() => {
+                let div = document.createElement("div");
+                div.setAttribute("class", "other-message");
+                let par = document.createElement("p");
+                par.innerHTML = "You can go on the handbook page to find more information";
+                par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/reliability_models.html#holistic-model';");
+                div.appendChild(par);
+                conv_container.appendChild(div);
+            }, 1500);
+        }, 1500);
+    }
 
     runB0();
 }
