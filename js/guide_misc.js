@@ -1,4 +1,4 @@
-window.onload = function () {
+/*window.onload = function () {
 
     const InteractType = Object.freeze({
         Button: 1,
@@ -40,17 +40,12 @@ window.onload = function () {
             }
             else if (cls.includes("categories")) {
                 let res = dataModelsByCategories.get(id);
-                /*//console.log(dataModelsByCategories.get("Power"))
+                //console.log(dataModelsByCategories.get("Power"))
                 //console.log(id);
                 //console.log("res")
-                //console.log(res)*/
+                //console.log(res)
                 this.current_branch.nextStep(true, res);
             }
-
-            /*else if (cls == "categories") {
-                let res = dataModelsByCategories.get(id);
-                this.current_branch.nextStep(true, res);
-            }*/
 
             else if (cls.includes("itemComponents")) {
                 this.current_branch.nextStep(true, id);
@@ -134,16 +129,6 @@ window.onload = function () {
             else {
                 ////console.log("stay on branch : " + arg);
                 let next_msg = this.messages.get(this.step);
-                /*if (next_msg.interactive){
-                    this.conversation.picture.setAttribute("src", "../html/pictures/astronaut2.png");
-                }
-                else{
-                    this.conversation.picture.setAttribute("src", "../html/pictures/astronaut1.png");
-                }
-                let children = this.conversation.extra_bar.children;
-                for (let i = 0; i < children.length; i++) {
-                    this.conversation.extra_bar.removeChild(children[i])
-                }*/
 
                 if (next_msg instanceof EmptyMessage) {
 
@@ -267,9 +252,7 @@ window.onload = function () {
             if (data == null) {
                 data = this.data;
             }
-            /*//console.log("data")
-            //console.log(data)
-            //console.log(this.data)*/
+
             for (var item of data) {
                 let b = document.createElement("button");
                 b.innerHTML = item;
@@ -368,12 +351,6 @@ window.onload = function () {
     sbt.innerHTML = "ok";
     inputComponent.appendChild(ipt);
     inputComponent.appendChild(sbt);
-
-    /*let buttonFail = document.createElement("button");
-    buttonFail.innerHTML = "Can't find component";
-    buttonFail.className = "button-fail";
-    buttonFail.setAttribute("id", "failbuttonsearch");
-    buttonFail.setAttribute("onclick", "conv.next('failbuttonsearch')");*/
 
     dataComponent = new Set([
         "TWTA, Single MPM",
@@ -576,5 +553,5 @@ window.onload = function () {
     let b = new Map([["b0", b0], ["b1", b1], ["b2", b2], ["b3", b3], ["b4", b4], ["b5", b5], ["b6", b6], ["b7", b7], ["b8", b8]]);
     conv = new Conversation(document.getElementById("messagesTrack"), b);
 
-};
+};*/
 
