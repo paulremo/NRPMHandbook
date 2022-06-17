@@ -130,7 +130,7 @@ class Branch {
 
             if (!next_msg.interactive) {
                 setTimeout(() => { this.nextStep() },
-                2500);
+                    2500);
             }
 
         }
@@ -281,7 +281,7 @@ class ConfigurableMessage extends Message {
         let div = document.createElement("div");
         div.setAttribute("class", this.sender);
         let par = document.createElement("p");
-        
+
         //par.innerHTML = this.text;
         div.appendChild(par);
         writeMessage(par, this.text);
@@ -309,227 +309,232 @@ class ExitMessage extends Message {
     }
 }
 
-function writeMessage(message, txt){
+function writeMessage(message, txt) {
     var i = 0;
-    setInterval(function ()  {message.innerHTML += txt.charAt(i); i++;}, 20);
+    setInterval(function () { message.innerHTML += txt.charAt(i); i++; }, 20);
 }
 
-let conv;
+$(document).ready(function () {
 
-let buttonOK = document.createElement("button");
-buttonOK.innerHTML = "OK";
-buttonOK.className = "button-next";
-buttonOK.setAttribute("id", "nextbutton");
-buttonOK.setAttribute("onclick", "this.disabled = true; conv.next('nextbutton')");
+    let conv;
 
-let inputComponent = document.createElement("div");
-let ipt = document.createElement("input");
-ipt.setAttribute("type", "text");
-ipt.setAttribute("id", "inputComponent");
-let sbt = document.createElement("button");
-sbt.setAttribute("onclick", "this.disabled = true; document.getElementById('inputComponent').disabled = true; conv.next('inputComponent')");
-sbt.innerHTML = "ok";
-inputComponent.appendChild(ipt);
-inputComponent.appendChild(sbt);
+    let buttonOK = document.createElement("button");
+    buttonOK.innerHTML = "OK";
+    buttonOK.className = "button-next";
+    buttonOK.setAttribute("id", "nextbutton");
+    buttonOK.setAttribute("onclick", "this.disabled = true; conv.next('nextbutton')");
 
-
-dataComponent = new Set([
-    "TWTA, Single MPM",
-    "TWTA, Double MPM",
-    "BATTERY CELL GEO",
-    "BATTERY CELL LEO",
-    "SOLAR ARRAY CELL Si",
-    "SOLAR ARRAY CELL GaAs",
-    "SADM (Solar Array drive Mechanism) GEO",
-    "SADM (Solar Array drive Mechanism) LEO",
-    "THRUSTER",
-    "TANK TUBING",
-    "RW (Reaction Wheel) GEO",
-    "RW (Reaction Wheel) LEO",
-    "DEPLOYMENT DEVICE Antenna, boom",
-    "DEPLOYMENT DEVICE Solar Array",
-    "RF PASSIVE",
-    "CONNECTORS",
-    "HET (Hall Effect Thruster)",
-    "VALVE LV (Latching Valve)",
-    "VALVE FCV (MONO STABLE) Flow Control Valve",
-    "VALVE PYRO VALVE",
-    "PT (Pressure Transducer)",
-    "FILTER",
-    "HEAT PIPES",
-    "THERMO SWITCH",
-    "HEATER",
-    "Pyro Actuator",
-    "Non Explosive Actuator",
-    "OPTICS",
-    "OPTRONICS",
-])
-
-dataComponentType = new Map([
-    ["TWTA, Single MPM", "standard"],
-    ["TWTA, Double MPM", "standard"],
-    ["BATTERY CELL GEO", "standard"],
-    ["BATTERY CELL LEO", "standard"],
-    ["SOLAR ARRAY CELL Si", "standard"],
-    ["SOLAR ARRAY CELL GaAs", "standard"],
-    ["SADM (Solar Array drive Mechanism) GEO", "standard"],
-    ["SADM (Solar Array drive Mechanism) LEO", "standard"],
-    ["THRUSTER", "standard"],
-    ["TANK TUBING", "standard"],
-    ["RW (Reaction Wheel) GEO", "standard"],
-    ["RW (Reaction Wheel) LEO", "standard"],
-    ["DEPLOYMENT DEVICE Antenna, boom", "standard"],
-    ["DEPLOYMENT DEVICE Solar Array", "standard"],
-    ["RF PASSIVE", "non-standard"],
-    ["CONNECTORS", "non-standard"],
-    ["HET (Hall Effect Thruster)", "non-standard"],
-    ["VALVE LV (Latching Valve)", "non-standard"],
-    ["VALVE FCV (MONO STABLE) Flow Control Valve", "non-standard"],
-    ["VALVE PYRO VALVE", "non-standard"],
-    ["PT (Pressure Transducer)", "non-standard"],
-    ["FILTER", "non-standard"],
-    ["HEAT PIPES", "non-standard"],
-    ["THERMO SWITCH", "non-standard"],
-    ["HEATER", "non-standard"],
-    ["Pyro Actuator", "non-standard"],
-    ["Non Explosive Actuator", "non-standard"],
-    ["OPTICS", "non-standard"],
-    ["OPTRONICS", "non-standard"],
-])
-
-dataCategories = new Set([
-    "Radio Frequency",
-    "Power",
-    "Propulsion",
-    "Attitude and Orbit Control System",
-    "Thermal",
-    "Pyrotechnics",
-    "Deployment",
-    "Other"
-]);
-
-dataModelsByCategories = new Map([
-    ["Radio Frequency", new Set(
-        ["TWTA, Single MPM",
-            "TWTA, Double MPM",
-            "RF PASSIVE",]
-    )],
-    ["Power", new Set(
-        ["CONNECTORS",
-            "BATTERY CELL GEO",
-            "BATTERY CELL LEO",
-            "SOLAR ARRAY CELL Si",
-            "SOLAR ARRAY CELL GaAs",
-            "SADM (Solar Array drive Mechanism) GEO",
-            "SADM (Solar Array drive Mechanism) LEO",]
-    )],
-    ["Propulsion", new Set(
-        ["THRUSTER",
-            "TANK TUBING",
-            "HET (Hall Effect Thruster)",
-            "VALVE LV (Latching Valve)",
-            "VALVE FCV (MONO STABLE) Flow Control Valve",
-            "VALVE PYRO VALVE",
-            "PT (Pressure Transducer)",
-            "FILTER",]
-    )],
-    ["Attitude and Orbit Control System", new Set(
-        ["RW (Reaction Wheel) GEO",
-            "RW (Reaction Wheel) LEO",
-            "DEPLOYMENT DEVICE Antenna, boom",
-            "DEPLOYMENT DEVICE Solar Array",]
-    )],
-    ["Thermal", new Set(
-        ["HEAT PIPES",
-            "THERMO SWITCH",
-            "HEATER",]
-    )],
-    ["Pyrotechnics", new Set(
-        ["Pyro Actuator",]
-    )],
-    ["Deployment", new Set(
-        ["Non Explosive Actuator",]
-    )],
-    ["Other", new Set(
-        ["OPTICS",
-            "OPTRONICS",]
-    )]
-])
-
-standardComponentFR = new Map([
-    ["TWTA, Single MPM", 200],
-    ["TWTA, Double MPM", 400],
-    ["BATTERY CELL GEO", 5],
-    ["BATTERY CELL LEO", 1],
-    ["SOLAR ARRAY CELL Si", 0.15],
-    ["SOLAR ARRAY CELL GaAs", 0.15],
-    ["SADM (Solar Array drive Mechanism) GEO", 210],
-    ["SADM (Solar Array drive Mechanism) LEO", 213],
-    ["THRUSTER", 82],
-    ["TANK TUBING", 3.27],
-    ["RW (Reaction Wheel) GEO", 250],
-    ["RW (Reaction Wheel) LEO", 140],
-    ["DEPLOYMENT DEVICE Antenna, boom", 0.2],
-    ["DEPLOYMENT DEVICE Solar Array", 0.3],
-]);
-
-let m1 = new Message(null, "Welcome to the failure rate calculation guide for the miscellaneous items !", "other-message", false, false);
-let m2 = new Message(null, "Before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used", "other-message", false, false);
-let m3 = new Message(null, "Is it OK ?", "other-message", false, false);
-let m4 = new Message(null, null, "my-message", false, true, buttonOK);
-let m4_1 = new Message(null, "ok", "my-message", false, false);
-let m5 = new Message(null, "Awesome ! So can you give me the name of your component ?", "other-message", false, false);
-let m6 = new SearchMessage(null, dataComponent, "Enter the name of the component", "my-message", false, true, inputComponent, InteractType.Input)
-
-let m7 = new Message(null, "I found matching components, chose the right one below", "other-message", false, false);
-
-let m8 = new DataMessage("componentfail", null, "bb", "other-message");
-
-let m9 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
-);
-
-let m10 = new ExitMessage(null, "You can go on the handbook page", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
-let m11 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
-
-let m12 = new Message(null, "Maybe we use another name... To which subsystem does your component belong ?", "other-message", false, false);
-let m13 = new DataMessage("categoriesfail", null, "...", "other-message", "categories", dataCategories);
-
-let m14 = new Message(null, "Is this one of these components ?", "other-message", false, false);
-let m15 = new DataMessage("categoriesfail2", null, "", "other-message", "itemComponents");
-
-let m16 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
-);
-
-let m17 = new ExitMessage(null, "You can go on the handbook page", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
-let m18 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
-
-let m19 = new Message(null, "It must be a holistic component", "other-message", false, false);
-let m20 = new Message(null, "There's no standard methodology. ", "other-message", false, false);
-let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
-
-let m22 = new ConfigurableMessage(false, null, "The value of &lambda;&#8321; is ", "other-message", standardComponentFR);
-let m23 = new Message(null, "Don't forget to note this value", "other-message", false, false);
-
-let mb0 = new Map([[0, m1], [1, m2], [2, m3], [3, m4], [4, m5], [5, m6]]);
-let mb1 = new Map([[0, m7], [1, m8]]);
-let mb2 = new Map([[0, m12], [1, m13]]);
-let mb3 = new Map([[0, m9]]);
-let mb4 = new Map([[0, m14], [1, m15]])
-let mb5 = new Map([[0, m16]]);
-let mb6 = new Map([[0, m19], [1, m20], [2, m21]]);
-let mb7 = new Map([[0, m10], [1, m11]]);
-let mb8 = new Map([[0, m22], [1, m23], [2, m17], [3, m18]]);
+    let inputComponent = document.createElement("div");
+    let ipt = document.createElement("input");
+    ipt.setAttribute("type", "text");
+    ipt.setAttribute("id", "inputComponent");
+    let sbt = document.createElement("button");
+    sbt.setAttribute("onclick", "this.disabled = true; document.getElementById('inputComponent').disabled = true; conv.next('inputComponent')");
+    sbt.innerHTML = "ok";
+    inputComponent.appendChild(ipt);
+    inputComponent.appendChild(sbt);
 
 
-let b8 = new Branch(mb8, new Map());
-let b7 = new Branch(mb7, new Map());
-let b6 = new Branch(mb6, new Map());
-let b5 = new Branch(mb5, new Map([["standard", "b8"], ["non-standard", "b7"], [false, "b6"]]));
-let b4 = new Branch(mb4, new Map([[true, "b3"], [false, "b2"]]));
-let b3 = new Branch(mb3, new Map([["standard", "b8"], ["non-standard", "b7"], [false, "b6"]]))
-let b1 = new Branch(mb1, new Map([[true, "b3"], [false, "b2"]]));
-let b2 = new Branch(mb2, new Map([[true, "b4"], [false, "b6"]]));
-let b0 = new Branch(mb0, new Map([[true, "b1"], [false, "b2"]]));
+    dataComponent = new Set([
+        "TWTA, Single MPM",
+        "TWTA, Double MPM",
+        "BATTERY CELL GEO",
+        "BATTERY CELL LEO",
+        "SOLAR ARRAY CELL Si",
+        "SOLAR ARRAY CELL GaAs",
+        "SADM (Solar Array drive Mechanism) GEO",
+        "SADM (Solar Array drive Mechanism) LEO",
+        "THRUSTER",
+        "TANK TUBING",
+        "RW (Reaction Wheel) GEO",
+        "RW (Reaction Wheel) LEO",
+        "DEPLOYMENT DEVICE Antenna, boom",
+        "DEPLOYMENT DEVICE Solar Array",
+        "RF PASSIVE",
+        "CONNECTORS",
+        "HET (Hall Effect Thruster)",
+        "VALVE LV (Latching Valve)",
+        "VALVE FCV (MONO STABLE) Flow Control Valve",
+        "VALVE PYRO VALVE",
+        "PT (Pressure Transducer)",
+        "FILTER",
+        "HEAT PIPES",
+        "THERMO SWITCH",
+        "HEATER",
+        "Pyro Actuator",
+        "Non Explosive Actuator",
+        "OPTICS",
+        "OPTRONICS",
+    ])
 
-let b = new Map([["b0", b0], ["b1", b1], ["b2", b2], ["b3", b3], ["b4", b4], ["b5", b5], ["b6", b6], ["b7", b7], ["b8", b8]]);
-conv = new Conversation(document.getElementById("messagesTrack"), b);
+    dataComponentType = new Map([
+        ["TWTA, Single MPM", "standard"],
+        ["TWTA, Double MPM", "standard"],
+        ["BATTERY CELL GEO", "standard"],
+        ["BATTERY CELL LEO", "standard"],
+        ["SOLAR ARRAY CELL Si", "standard"],
+        ["SOLAR ARRAY CELL GaAs", "standard"],
+        ["SADM (Solar Array drive Mechanism) GEO", "standard"],
+        ["SADM (Solar Array drive Mechanism) LEO", "standard"],
+        ["THRUSTER", "standard"],
+        ["TANK TUBING", "standard"],
+        ["RW (Reaction Wheel) GEO", "standard"],
+        ["RW (Reaction Wheel) LEO", "standard"],
+        ["DEPLOYMENT DEVICE Antenna, boom", "standard"],
+        ["DEPLOYMENT DEVICE Solar Array", "standard"],
+        ["RF PASSIVE", "non-standard"],
+        ["CONNECTORS", "non-standard"],
+        ["HET (Hall Effect Thruster)", "non-standard"],
+        ["VALVE LV (Latching Valve)", "non-standard"],
+        ["VALVE FCV (MONO STABLE) Flow Control Valve", "non-standard"],
+        ["VALVE PYRO VALVE", "non-standard"],
+        ["PT (Pressure Transducer)", "non-standard"],
+        ["FILTER", "non-standard"],
+        ["HEAT PIPES", "non-standard"],
+        ["THERMO SWITCH", "non-standard"],
+        ["HEATER", "non-standard"],
+        ["Pyro Actuator", "non-standard"],
+        ["Non Explosive Actuator", "non-standard"],
+        ["OPTICS", "non-standard"],
+        ["OPTRONICS", "non-standard"],
+    ])
+
+    dataCategories = new Set([
+        "Radio Frequency",
+        "Power",
+        "Propulsion",
+        "Attitude and Orbit Control System",
+        "Thermal",
+        "Pyrotechnics",
+        "Deployment",
+        "Other"
+    ]);
+
+    dataModelsByCategories = new Map([
+        ["Radio Frequency", new Set(
+            ["TWTA, Single MPM",
+                "TWTA, Double MPM",
+                "RF PASSIVE",]
+        )],
+        ["Power", new Set(
+            ["CONNECTORS",
+                "BATTERY CELL GEO",
+                "BATTERY CELL LEO",
+                "SOLAR ARRAY CELL Si",
+                "SOLAR ARRAY CELL GaAs",
+                "SADM (Solar Array drive Mechanism) GEO",
+                "SADM (Solar Array drive Mechanism) LEO",]
+        )],
+        ["Propulsion", new Set(
+            ["THRUSTER",
+                "TANK TUBING",
+                "HET (Hall Effect Thruster)",
+                "VALVE LV (Latching Valve)",
+                "VALVE FCV (MONO STABLE) Flow Control Valve",
+                "VALVE PYRO VALVE",
+                "PT (Pressure Transducer)",
+                "FILTER",]
+        )],
+        ["Attitude and Orbit Control System", new Set(
+            ["RW (Reaction Wheel) GEO",
+                "RW (Reaction Wheel) LEO",
+                "DEPLOYMENT DEVICE Antenna, boom",
+                "DEPLOYMENT DEVICE Solar Array",]
+        )],
+        ["Thermal", new Set(
+            ["HEAT PIPES",
+                "THERMO SWITCH",
+                "HEATER",]
+        )],
+        ["Pyrotechnics", new Set(
+            ["Pyro Actuator",]
+        )],
+        ["Deployment", new Set(
+            ["Non Explosive Actuator",]
+        )],
+        ["Other", new Set(
+            ["OPTICS",
+                "OPTRONICS",]
+        )]
+    ])
+
+    standardComponentFR = new Map([
+        ["TWTA, Single MPM", 200],
+        ["TWTA, Double MPM", 400],
+        ["BATTERY CELL GEO", 5],
+        ["BATTERY CELL LEO", 1],
+        ["SOLAR ARRAY CELL Si", 0.15],
+        ["SOLAR ARRAY CELL GaAs", 0.15],
+        ["SADM (Solar Array drive Mechanism) GEO", 210],
+        ["SADM (Solar Array drive Mechanism) LEO", 213],
+        ["THRUSTER", 82],
+        ["TANK TUBING", 3.27],
+        ["RW (Reaction Wheel) GEO", 250],
+        ["RW (Reaction Wheel) LEO", 140],
+        ["DEPLOYMENT DEVICE Antenna, boom", 0.2],
+        ["DEPLOYMENT DEVICE Solar Array", 0.3],
+    ]);
+
+    let m1 = new Message(null, "Welcome to the failure rate calculation guide for the miscellaneous items !", "other-message", false, false);
+    let m2 = new Message(null, "Before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used", "other-message", false, false);
+    let m3 = new Message(null, "Is it OK ?", "other-message", false, false);
+    let m4 = new Message(null, null, "my-message", false, true, buttonOK);
+    let m4_1 = new Message(null, "ok", "my-message", false, false);
+    let m5 = new Message(null, "Awesome ! So can you give me the name of your component ?", "other-message", false, false);
+    let m6 = new SearchMessage(null, dataComponent, "Enter the name of the component", "my-message", false, true, inputComponent, InteractType.Input)
+
+    let m7 = new Message(null, "I found matching components, chose the right one below", "other-message", false, false);
+
+    let m8 = new DataMessage("componentfail", null, "bb", "other-message");
+
+    let m9 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
+    );
+
+    let m10 = new ExitMessage(null, "You can go on the handbook page", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
+    let m11 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
+
+    let m12 = new Message(null, "Maybe we use another name... To which subsystem does your component belong ?", "other-message", false, false);
+    let m13 = new DataMessage("categoriesfail", null, "...", "other-message", "categories", dataCategories);
+
+    let m14 = new Message(null, "Is this one of these components ?", "other-message", false, false);
+    let m15 = new DataMessage("categoriesfail2", null, "", "other-message", "itemComponents");
+
+    let m16 = new ConfigurableMessage(true, null, "This component is", "other-message", dataComponentType
+    );
+
+    let m17 = new ExitMessage(null, "You can go on the handbook page", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
+    let m18 = new ExitMessage(null, "Or you can go to this page to calculate the failure rate", "other-message", "failure_rate_processing.html");
+
+    let m19 = new Message(null, "It must be a holistic component", "other-message", false, false);
+    let m20 = new Message(null, "There's no standard methodology. ", "other-message", false, false);
+    let m21 = new ExitMessage(null, "You can go to the forum and get help from other users", "other-message", "https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/reliability_guide.html#back_from_misc_failure_rate_processing_balise");
+
+    let m22 = new ConfigurableMessage(false, null, "The value of &lambda;&#8321; is ", "other-message", standardComponentFR);
+    let m23 = new Message(null, "Don't forget to note this value", "other-message", false, false);
+
+    let mb0 = new Map([[0, m1], [1, m2], [2, m3], [3, m4], [4, m5], [5, m6]]);
+    let mb1 = new Map([[0, m7], [1, m8]]);
+    let mb2 = new Map([[0, m12], [1, m13]]);
+    let mb3 = new Map([[0, m9]]);
+    let mb4 = new Map([[0, m14], [1, m15]])
+    let mb5 = new Map([[0, m16]]);
+    let mb6 = new Map([[0, m19], [1, m20], [2, m21]]);
+    let mb7 = new Map([[0, m10], [1, m11]]);
+    let mb8 = new Map([[0, m22], [1, m23], [2, m17], [3, m18]]);
+
+
+    let b8 = new Branch(mb8, new Map());
+    let b7 = new Branch(mb7, new Map());
+    let b6 = new Branch(mb6, new Map());
+    let b5 = new Branch(mb5, new Map([["standard", "b8"], ["non-standard", "b7"], [false, "b6"]]));
+    let b4 = new Branch(mb4, new Map([[true, "b3"], [false, "b2"]]));
+    let b3 = new Branch(mb3, new Map([["standard", "b8"], ["non-standard", "b7"], [false, "b6"]]))
+    let b1 = new Branch(mb1, new Map([[true, "b3"], [false, "b2"]]));
+    let b2 = new Branch(mb2, new Map([[true, "b4"], [false, "b6"]]));
+    let b0 = new Branch(mb0, new Map([[true, "b1"], [false, "b2"]]));
+
+    let b = new Map([["b0", b0], ["b1", b1], ["b2", b2], ["b3", b3], ["b4", b4], ["b5", b5], ["b6", b6], ["b7", b7], ["b8", b8]]);
+    conv = new Conversation(document.getElementById("messagesTrack"), b);
+
+});
+
