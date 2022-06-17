@@ -349,7 +349,7 @@ window.onload = function () {
     buttonOK.innerHTML = "OK";
     buttonOK.className = "button-next";
     buttonOK.setAttribute("id", "nextbutton");
-    buttonOK.setAttribute("onclick", "clickButtonOk(this)");
+    buttonOK.onclick = clickButtonOk(this);
 
     let inputComponent = document.createElement("div");
     let ipt = document.createElement("input");
