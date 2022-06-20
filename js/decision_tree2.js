@@ -8,6 +8,8 @@ window.onload = function () {
 
     function clickLeaf(leaf){
 
+        console.log("click");
+
         for (var l of document.getElementsByClassName("leaf-item")){
             if (l.id.split("-")[1] <= leaf.id.split("-")[1] && l != leaf && l.innerHTML != first_node && l.innerHTML != last_node){
                 l.style.backgroundColor = "black";
@@ -97,7 +99,6 @@ window.onload = function () {
     }
 
     for (var l of document.getElementsByClassName("leaf-item")){
-        console.log(l.id);
         l.onclick = function () {
             clickLeaf(this);
         }
