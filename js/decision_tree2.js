@@ -97,6 +97,7 @@ window.onload = function () {
     }
 
     for (var l of document.getElementsByClassName("leaf-item")){
+        console.log(l.id);
         l.onclick = function () {
             clickLeaf(this);
         }
