@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    console.log("initiate decision tree")
+
     let last_level = 1;
 
     let first_node;
