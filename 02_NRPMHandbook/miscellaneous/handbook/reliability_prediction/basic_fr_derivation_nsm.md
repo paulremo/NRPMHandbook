@@ -49,9 +49,9 @@ Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
 
 The main outcome is the ranking of every root cause (Design error, Manufacturing error) in
 
-* {term}`SEV`erity
-* {term}`OCC`urrence
-* {term}`DET`ectability
+* Severity ({term}`SEV`)
+* Occurrence ({term}`OCC`)
+* Detectability ({term}`DET`)
 
 The Risk Priority Number ({term}`RPN`), which is derived, is an index reflecting the residual technical risk.
 

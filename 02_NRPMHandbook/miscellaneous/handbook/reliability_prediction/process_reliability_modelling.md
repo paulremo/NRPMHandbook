@@ -214,6 +214,7 @@ The resulting failure rate is
 :class: equation
 ``
 ``  
+
 ```{math}
 :label: Equation_5_3
 \lambda_{3} = \lambda_{2} * \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}
