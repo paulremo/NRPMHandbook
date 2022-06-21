@@ -70,7 +70,6 @@ Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
 
 
 ```{list-table} Occurrence scale with 10 levels
-{term}`TRL` : Technology Readiness Level
 :name: misc_table4_6
 
 * - ![Table 6 Miscellaneous](../../picture/table4_6.png)
