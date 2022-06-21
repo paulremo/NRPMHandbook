@@ -61,15 +61,16 @@ width: 600px
 name: Figure_5_9
 ---
 Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
-```
-
 - {term}`SA` : Solar Array
 - {term}`I_SA` : SA current
 - {term}`TM` : Telemetry
 - {term}`SPF` : Single Point Failure
-- {term}`TRL` : Technology Readiness Level
+```
+
+
 
 ```{list-table} Occurrence scale with 10 levels
+{term}`TRL` : Technology Readiness Level
 :name: misc_table4_6
 
 * - ![Table 6 Miscellaneous](../../picture/table4_6.png)
