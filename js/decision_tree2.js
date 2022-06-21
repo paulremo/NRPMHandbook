@@ -1,5 +1,7 @@
 console.log("initiate decision tree");
-window.onload = function () {
+
+
+function runDT() {
 
     console.log("initiate decision tree")
 
