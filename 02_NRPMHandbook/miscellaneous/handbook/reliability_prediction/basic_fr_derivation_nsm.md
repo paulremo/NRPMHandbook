@@ -60,11 +60,7 @@ The Risk Priority Number ({term}`RPN`), which is derived, is an index reflecting
 width: 600px
 name: Figure_5_9
 ---
-Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
-- {term}`SA` : Solar Array
-- {term}`I_SA` : SA current
-- {term}`TM` : Telemetry
-- {term}`SPF` : Single Point Failure
+Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`. The following terms are mentioned in this figure: Solar Array ({term}`SA`), SA current ({term}`I_SA`), Telemetry ({term}`TM`) and Single Point Failure ({term}`SPF`).
 ```
 
 
