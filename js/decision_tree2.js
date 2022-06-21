@@ -1,3 +1,4 @@
+console.log("initiate decision tree");
 window.onload = function () {
 
     console.log("initiate decision tree")
