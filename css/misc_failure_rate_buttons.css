@@ -1,20 +1,26 @@
-#help{
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+}
+
+#help {
     width: 100%;
     height: 200px;
 }
 
-#astronaut{
+#astronaut {
     margin-top: 0%;
 }
 
-.message{
+.message {
     margin-left: 20px;
     background-color: #e4c665;
     color: black;
     border-radius: 5px;
 }
 
-.help-message{
+.help-message {
     font-size: 11px;
     padding: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,7 +42,7 @@
     box-shadow: 0 5px #666;
 }
 
-.controllers .green-button{
+.controllers .green-button {
     width: 15%;
 }
 
@@ -64,7 +70,7 @@
     box-shadow: 0 5px #666;
 }
 
-.controllers .red-button{
+.controllers .red-button {
     width: 15%;
 }
 
@@ -92,7 +98,7 @@
     box-shadow: 0 5px #666;
 }
 
-.controllers .yellow-button{
+.controllers .yellow-button {
     width: 15%;
 }
 
@@ -161,6 +167,6 @@
     margin-left: 10px;
     padding-left: 10px;
     width: 130px;
-    resize:none;
+    resize: none;
     font-size: 10px;
 }
