@@ -1,4 +1,3 @@
-(sec_eee_handbook)=
 # Welcome to the EEE chapter!
 
 ```{admonition} Under construction
