@@ -5,7 +5,6 @@ function searchTableJupyter(input, tableName) {
     table = document.getElementById(tableName);
     console.log(table)
     tr = table.getElementsByTagName("tr");
-    console.log(tr);
     for (i = 1; i < tr.length; i++) {
         if (tr[i].className != "db-header") {
             found = false;

@@ -72,7 +72,7 @@ The failure rate is referred to as basic failure rate $\lambda_{1} = \lambda_{B}
 
 (misc_step2)=
 ``````{dropdown} **STEP 2 : Normalization of the basic failure rate**
-The major contributors to the reliability are identified in {numref}`misc_table4_8`.
+The major contributors to the reliability are identified in {numref}`misc-table4-8`.
 In the case the actual parameters are different (either higher or lower {term}`quality <Quality>` levels, additional stresses, specific technology, specific contributors to the reliability) a tailoring factor is recommended to account for the item’s specificities.
 
 `````{admonition} Rule
@@ -229,12 +229,12 @@ For operating conditions it is necessary to define the weights per contributor a
 * To define the category for each condition
 * To calculate the resulting factor to be added.
 
-{numref}`misc_table4_4` provides an example of such a calculation.
+{numref}`misc-table4-4` provides an example of such a calculation.
 ```
 ``````
 
 ```{list-table} Values of factors per their ranking
-:name: misc_table4_4
+:name: misc-table4-4
 
 * - ![Table 4 Miscellaneous](../../picture/table4_4.png)
 ```
@@ -427,10 +427,10 @@ It is up to the discretion of the user to use the result appropriately:
 * Equivalent failure rate derived at a certain time (only valid at this time)
 * Approximation of the probability of failure by $\lambda t$, when $\lambda$ is small regarding $10^{-2}$.
   
-An example of calculation is presented in {numref}`misc_table4_5`.
+An example of calculation is presented in {numref}`misc-table4-5`.
 
 ```{list-table} Example of a reliability calculation for a miscellaneous item
-:name: misc_table4_5
+:name: misc-table4-5
 
 * - ![Table 5 Miscellaneous](../../picture/table4_5.png)
 ```

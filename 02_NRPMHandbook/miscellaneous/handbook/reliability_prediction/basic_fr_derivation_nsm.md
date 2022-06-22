@@ -63,12 +63,79 @@ name: Figure_5_9
 Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`. The following terms are mentioned in this figure: Solar Array ({term}`SA`), SA current ({term}`I_SA`), Telemetry ({term}`TM`) and Single Point Failure ({term}`SPF`).
 ```
 
-
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc-table4-6')" placeholder="Search table...">
 
 ```{list-table} Occurrence scale with 10 levels
-:name: misc_table4_6
+:name: misc-table4-6
+:header-rows: 1
+:widths: 10 20 20 30 10 10
 
-* - ![Table 6 Miscellaneous](../../picture/table4_6.png)
+*   - Rank
+    - Category
+    - Occurence of cause
+    - Explanation
+    - {term}`TRL`
+    - %
+*   - 10
+    - Certain and unpredictable
+    - Failure is unpredictable
+    - New technology / new design no history
+    - 
+    - 1/10
+*   - 9
+    - Inevitable
+    - Failure is almost inevitable & persistent
+    - Failure is inevitable with new design, new inevitable & application, or change in duty cycle/operating persistent conditions.
+    - TRL1
+    - 1/20
+*   - 8
+    - Almost certain
+    - Failure is almost certain
+    - Failure is likely with new design, new application, orchange in duty cycle/operating conditions.
+    - TRL2
+    - 1/50
+*   - 7
+    - Frequent
+    - Frequent failures
+    - Failure is uncertain with new design, new application, or change in duty cycle/operating conditions.
+    - TRL3
+    - 1/100
+*   - 6
+    - Repeated
+    - Repeated failures
+    - Limited number of failures associated (identical design, simulation and testing). Use of Factor of Safety or Margin of Safety
+    - TRL4
+    - 1/500
+*   - 5
+    - Occasional
+    - Occasional failures
+    - Limited number of failures associated (identical design, simulation and testing). Use of Factor of Safety or Margin of Safety
+    - TRL5
+    - 1/2000
+*   - 4
+    - Infrequent
+    - Limited failures 
+    - Limited number of failures associated (identical design, simulation and testing). Use of Factor of Safety or Margin of Safety
+    - TRL6
+    - 1/10000
+*   - 3
+    - Isolated failure
+    - Relatively loaded failures
+    - Limited number of failures associated (identical design, simulation and testing). Use of Factor of Safety or Margin of Safety
+    - TRL7
+    - 1/100000
+*   - 2
+    - Unlikely
+    - Very isolated failures
+    - No observed failures (identical design, simulation and testing). Reduce stress-strength interference
+    - TRL8
+    - 1/1000000
+*   - 1
+    - Remote
+    - Failure is highly unlikely
+    - Failure is eliminated through preventive-type design control Use of proven design guidelines/Standards. Use of field lessons learned
+    - TRL9
+    - $\epsilon$
 ```
 
 (misc_5_7_2)=
@@ -78,7 +145,7 @@ The occurrence scale of {numref}`misc_5_7_2` is used to derive, based on enginee
 
 * In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a {term}`HF/RF passive part <HF/RF passive part>` which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
 * A probability of occurrence is assigned to every {term}`failure mode <Failure mode>` and the sum provides the probability of occurrence of the item.
-* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the {term}`failure mode <Failure mode>`, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}`misc_table4_6`) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
+* A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the {term}`failure mode <Failure mode>`, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}`misc-table4-6`) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
 
 
 This represents the basic failure rate or the basic probability of failure.

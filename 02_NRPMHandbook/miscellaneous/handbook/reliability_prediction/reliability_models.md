@@ -12,14 +12,14 @@ There are three reliability models for miscellaneous items:
 (misc_5_4_1)=
 ## Standard model for generic miscellaneous items
 
-A “generic” {term}`miscellaneous item <Miscellaneous item>` is an item classified as “miscellaneous” (refer to the definition provided at the beginning of this chapter) AND for which a reliability model based on IOR is defined as a reference in this Current document (see {numref}`misc_table4_1`).
+A “generic” {term}`miscellaneous item <Miscellaneous item>` is an item classified as “miscellaneous” (refer to the definition provided at the beginning of this chapter) AND for which a reliability model based on IOR is defined as a reference in this Current document (see {numref}`misc-table4-1`).
 
 The reliability model is either 
 
 1. an exponential distribution (constant failure rate) or 
 2. a constant probability of success or constant probability of failure ( = 1- Probability of success) supported by Binomial model, depending on the nature of the item.
 
-The basic reliability data are provided in {numref}`misc_table4_8` with the associated framework.
+The basic reliability data are provided in {numref}`misc-table4-8` with the associated framework.
 
 The reliability “standard model” is then calculated based on the process presented in {numref}`misc_5_5`.
 
