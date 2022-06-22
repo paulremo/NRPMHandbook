@@ -1,3 +1,11 @@
 p {
     text-align: justify;
 }
+
+caption {
+    caption-side: top;
+}
+
+figcaption{
+    caption-side: bottom;
+}
