@@ -2,7 +2,7 @@
 # Use of IOR data and/or tests results
 As presented, a reliability model can be built based on IOR data and/or on {term}`test data <Test data>` (manufacturers, user) or combined with IOR data and/or on {term}`test data <Test data>` (manufacturers, user).
 
-The basic failure rate or the basic probability of failure in {numref}`misc_table4_8` is based on such IOR data. The data was compiled from the IOR background in ADS & TAS fleets.
+The basic failure rate or the basic probability of failure in {numref}`misc-table4-8` is based on such IOR data. The data was compiled from the IOR background in ADS & TAS fleets.
 
 Per miscellaneous items, the anomalies are collected regarding representative products ({term}`quality <Quality>`, range of operational conditions, orbit as relevant) and the failures are classified in {term}`random failures <Random failure>` ($RF$) and {term}`systematic failures <Systematic failure>` ($SF$). To avoid duplication of systematic anomalies, they are only counted once. That means that the derived failure rates include as relevant {term}`systematic failure <Systematic failure>` contribution.
 

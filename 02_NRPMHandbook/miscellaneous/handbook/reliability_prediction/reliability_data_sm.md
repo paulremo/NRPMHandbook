@@ -1,8 +1,8 @@
 (misc_5_8)=
 # Reliability data for miscellaneous “standard model”
-{numref}`misc_table4_8` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
+{numref}`misc-table4-8` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
 
-The meaning of the columns is explained in {numref}`misc_table4_7`.
+The meaning of the columns is explained in {numref}`misc-table4-7`.
 
 ````{admonition} Note 1 : MIS_01 TWTA, Single HPA
 :class: note
@@ -17,12 +17,12 @@ The failure rate is provided per TWT Channel (mono channel or dual channel). In 
 
 ````
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc-table4-7')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc_table4_7')" placeholder="Search table...">
 
 ```{list-table} Structure of the reliability data table
-:name: misc_table4_7
+:name: misc-table4-7
 
-* - <table class="large-table" id="misc-table4-7">
+* - <table class="large-table" id="misc_table4_7">
         <thead>
             <tr>
                 <th>Column</th>
@@ -116,12 +116,12 @@ The failure rate is provided per TWT Channel (mono channel or dual channel). In 
     </table>
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc-table4-8')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc_table4_8')" placeholder="Search table...">
 
 ```{list-table} Reliability data
-:name: misc_table4_8
+:name: misc-table4-8
 
-* - <table class="myTable" id="misc-table4-8">
+* - <table class="myTable" id="misc_table4_8">
         <thead>
             <tr>
                 <th>REF</th>
