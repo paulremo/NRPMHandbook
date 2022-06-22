@@ -86,55 +86,55 @@ Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`. The foll
     - Inevitable
     - Failure is almost inevitable & persistent
     - Failure is inevitable with new design, new inevitable & application, or change in duty cycle/operating persistent conditions.
-    - TRL1
+    - {term}`TRL`1
     - 1/20
 *   - 8
     - Almost certain
     - Failure is almost certain
     - Failure is likely with new design, new application, orchange in duty cycle/operating conditions.
-    - TRL2
+    - {term}`TRL`2
     - 1/50
 *   - 7
     - Frequent
     - Frequent failures
     - Failure is uncertain with new design, new application, or change in duty cycle/operating conditions.
-    - TRL3
+    - {term}`TRL`3
     - 1/100
 *   - 6
     - Repeated
     - Repeated failures
     - Limited number of failures associated (identical design, simulation and testing). Use of Factor of Safety or Margin of Safety
-    - TRL4
+    - {term}`TRL`4
     - 1/500
 *   - 5
     - Occasional
     - Occasional failures
     - Limited number of failures associated (identical design, simulation and testing). Use of Factor of Safety or Margin of Safety
-    - TRL5
+    - {term}`TRL`5
     - 1/2000
 *   - 4
     - Infrequent
     - Limited failures 
     - Limited number of failures associated (identical design, simulation and testing). Use of Factor of Safety or Margin of Safety
-    - TRL6
+    - {term}`TRL`6
     - 1/10000
 *   - 3
     - Isolated failure
     - Relatively loaded failures
     - Limited number of failures associated (identical design, simulation and testing). Use of Factor of Safety or Margin of Safety
-    - TRL7
+    - {term}`TRL`7
     - 1/100000
 *   - 2
     - Unlikely
     - Very isolated failures
     - No observed failures (identical design, simulation and testing). Reduce stress-strength interference
-    - TRL8
+    - {term}`TRL`8
     - 1/1000000
 *   - 1
     - Remote
     - Failure is highly unlikely
     - Failure is eliminated through preventive-type design control Use of proven design guidelines/Standards. Use of field lessons learned
-    - TRL9
+    - {term}`TRL`9
     - $\epsilon$
 ```
 
