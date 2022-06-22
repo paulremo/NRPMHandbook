@@ -33,8 +33,24 @@ parts:
   - caption: EEE chapter
     numbered: true
     chapters:
-    - file: eee/mainEEE
+    - file: eee/handbook/intro
       title: Handbook
+      sections:
+      - file: eee/handbook/scope
+      - file: eee/handbook/normative_references
+      - file: eee/handbook/terms
+      - file: eee/handbook/reliability_prediction/reliability_prediction
+        sections:
+        - file: eee/handbook/reliability_prediction/strategy_data_source_methods
+        - file: eee/handbook/reliability_prediction/failure_type_coverage
+        - file: eee/handbook/reliability_prediction/random_failure/random_failure
+          sections:
+          - file: eee/handbook/reliability_prediction/random_failure/mission_profile
+          - file: eee/handbook/reliability_prediction/random_failure/process_factors
+          - file: eee/handbook/reliability_prediction/random_failure/quality_factors
+          - file: eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families
+          - file: eee/handbook/reliability_prediction/random_failure/families_part_count_methods
+      - file: eee/handbook/bibliography
     - file: eee/models/intro_models
       title: Models
   - caption: Mechanical chapter
