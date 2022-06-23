@@ -313,7 +313,7 @@ In general, the following rule applies for a serial system with $n$ components:
 ``  
 ```{math}
 :label: Equation_7_3
-R_{S}(t) = \sum_{i = 1}^{n} R_{i}(t)
+R_{S}(t) = \prod_{i = 1}^{n} R_{i}(t)
 ```
 ````
 
