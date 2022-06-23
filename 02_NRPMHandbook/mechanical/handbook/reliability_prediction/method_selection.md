@@ -154,9 +154,9 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca_table4_6')" placeholder="Search table...">
 
 ```{list-table} Mechanical part types, associated failure mechanisms and modelling recommendations
-:name: meca-table4-6
+:name: meca-table4-200
 
-* - <table id="meca_table4_6" class="myTable">
+* - <table id="meca_table4_6" class="myTable" overflowY="scroll">
 		<thead>
 			<tr class="db-header">
 				<th colspan="5"></th>
@@ -429,6 +429,127 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 		</tr>
 	</table>
 ```
+
+```{list-table} Mechanical part types, associated failure mechanisms and modelling recommendations
+:name: meca-table4-6
+:header-rows: 1
+:widths: 10 10 10 10 10 10 10 10 10 10
+
+*   - Part type
+    - Description
+    - Mechanical item category
+    - Predominant failure mechanism
+    - Modelling recommendation
+	- Structural reliability methods - Potential failure mechanisms
+	- Structural reliability methods - Limit state function
+	- Structural reliability methods - Simplified method
+	- NSWG 2011 handbook - Model available
+	- NSWG 2011 handbook - Space relevance of NSWC method
+*   - Bearings
+    - A device that constrains relative motion to only the I Active desired motion, and reduces friction between moving parts
+    - I Active
+    - Lubrication wear
+    - Structural reliability methods
+	- <p><u>wear</u></p><p>fatigue &fracture</p><p>distortion</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-check" style="color:green"></i></p><p>generic</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p>
+	- method not applicable due to predominance of lubrication wear over fatigue in space
+*   - Springs
+    - An elastic object that stores mechanical energy, II Passive used to exert forces or to provide flexibility.
+    - II Passive
+    - Load loss, creep (distortion)
+    - Statistical methods, NSWC adjusted, or Structural (but  difficult to model creep)
+	- <p>fatigue &fracture</p><p><u>distortion</u></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p>
+	- depends on the type and application; fatigue/fracture less relevant in space
+*   - Gears and splines
+    - A toothed machine part such as a wheel or cylinder I Active that meshes with another toothed part to transmit motion or to change speed or direction
+    - I Active
+    - Lubrication wear
+    - Structural reliability methods
+	- <p><u>wear</u></p><p>fatigue &fracture</p><p>distortion</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-check" style="color:green"></i></p><p>generic</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p>
+	- application questionable due to space specific lubrication and rotation speeds
+*   - Shafts
+    - A rotating device, usually of circular cross section that transmits torque from one part to another
+    - I Active
+    - Wear (when contact is present),otherwise fatigue
+    - Structural reliability methods
+	- <p><u>wear</u></p><p>fatigue &fracture</p><p>distortion</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-check" style="color:green"></i></p><p>generic</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p>
+	- method is maintenance related and thus not applicable to space
+*   - Hinges
+    - Ajoint that holds two parts together such that one II Passive can swing relative to the other
+    - II Passive
+    - Increased friction or kinematic issues
+    - Structural reliability methods
+	- <p><u>distortion</u></p><p>wear</p>
+	- <p>generic</p><p><i class="fa fa-check" style="color:green"></i></p>
+	- <p><i class="fa fa-times" style="color:red"></i></p><p><i class="fa fa-check" style="color:green"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p>
+	- only some general considerations in NSWC
+*   - Mirrors and lenses
+    - A piece of glass or similar material designed to reflect (mirror), or to concentrate or disperse light rays.
+    - IV Structural
+    - Fracture
+    - Structural reliability methods
+	- <p><u>fatigue &fracture</u></p><p>distortion</p><p>degradation</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p>generic</p><p><i class="fa fa-check" style="color:green"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p><p><i class="fa fa-check" style="color:green"></i></p>
+	- <p><i class="fa fa-times" style="color:red"></i></p>
+	- NA
+*   - Flexural pivots
+    - A flexure which is engineered to be compliant in one or more angular degrees of freedom.
+    - <p>I Active</p><p>II Passive</p>
+    - Fatigue
+    - Structural reliability methods
+	- <p><u>fatigue &fracture</u></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p>
+	- <p><i class="fa fa-times" style="color:red"></i></p>
+	- NA
+*   - Fusible Wires
+    - A device consisting of metal strips soldered with a fusible alloy that melts at a specific temperature, allowing the pieces to separate
+    - II Passive
+    - Quality issue or random failure
+    - Statistical methods
+	- <p>fatigue &fracture</p><p>distortion</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p>generic</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
+	- <p><i class="fa fa-times" style="color:red"></i></p>
+	- NA
+*   - Seals and Gaskets
+    - A device placed between two surfaces to prevent the flow of gas or fluid from one region to another
+    - <p>I Active</p><p>II Passive</p><p>III Fluidic</p>
+    - Wear, degradation, installation damage
+    - NSWC adjusted, Statistical methods or Structural reliability methods
+	- <p><u>wear</u></p><p>distortion</p><p>degradation</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p>generic</p><p><i class="fa fa-times" style="color:red"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
+	- <p><i class="fa fa-check" style="color:green"></i></p>
+	- method may be applicable but requires base failure rate adjustment
+*   - Structural component (ind.threaded fasteners,inserts, brackets)
+    - A mechanical component designed to sustain loads or pressures, provide stiffness or stability, orprovide support or containment.
+    - IV Structural
+    - Fracture
+	- Structural reliability methods
+    - <p><u>fatigue &fracture</u></p><p>distortion</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p>generic</p>
+	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
+	- <p><i class="fa fa-times" style="color:red"></i></p>
+	- NA
+```
+
+<script>
+	document.getElementById("meca-table4-6").overflowY="scroll";
+</script>
 
 (meca_4_5_3)=
 ## Selection of methods for assembly level mechanical reliability prediction
