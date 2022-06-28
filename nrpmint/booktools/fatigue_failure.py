@@ -187,6 +187,7 @@ def display(reliability_analyses, load_collective, n_samples=10**5):
     plt.hist(a, bins=100, density=True, alpha=0.8)
     plt.grid()
     plt.xscale('log')
+    plt.yscale('log')
     plt.xlabel(r'damage')
     plt.ylabel('probability density function')
     plt.legend(['Limiting damage', 'Accumulated damage'])
