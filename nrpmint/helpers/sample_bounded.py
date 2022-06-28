@@ -17,6 +17,9 @@ def sample(inputs, N, skip=[], seed=2312):
                 elif input['type'] == 'floatslider':
                     # sample uniformly between min and max
                     curr_dict[key] = my_rng.uniform(input['min'], input['max'], size=1)[0]
+                elif input['type'] == 'floatlogslider':
+                    # sample uniformly between min and max
+                    curr_dict[key] = 10**my_rng.uniform(input['min'], input['max'], size=1)[0]
                 else:
                     raise ValueError('The passed input type is not implemented yet.')
         sample.append(curr_dict)

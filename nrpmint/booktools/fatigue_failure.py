@@ -32,7 +32,7 @@ def get_inputs(value_default='mean'):
             # 'description': '$\\text{C.o.V.}[D_{\\text{cr}}]$',
             'description': 'C.o.V.[D_cr]',
             'min': 0.05,
-            'max': 0.5,
+            'max': 0.3,
             'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
@@ -59,7 +59,7 @@ def get_inputs(value_default='mean'):
             # 'description': '$\\text{C.o.V.}[A]$',
             'description': 'C.o.V.[A]',
             'min': 0.05,
-            'max': 0.5,
+            'max': 0.3,
             'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
@@ -85,7 +85,7 @@ def get_inputs(value_default='mean'):
             # 'description': '$\\text{C.o.V.}[\\text{SSF}]$',
             'description': 'C.o.V.[SSF]',
             'min': 0.05,
-            'max': 0.5,
+            'max': 0.3,
             'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
@@ -139,7 +139,7 @@ def get_inputs(value_default='mean'):
             # 'description': '$\\text{C.o.V.}[\Theta]$',
             'description': 'C.o.V.[Theta]',
             'min': 0.05,
-            'max': 0.5,
+            'max': 0.3,
             'step': 0.01,
             'readout_format': '.2f',
             'value': value_default

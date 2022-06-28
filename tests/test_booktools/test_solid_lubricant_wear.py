@@ -68,7 +68,7 @@ def compute_Pf_true(n_mcs = 10**6, **kwargs):
 
         Pf_true = np.mean((x[:, 0] - x[:, 3] * x[:, 1] * x[:, 2] * nrev) < 0)
 
-        return Pf_true
+    return Pf_true
 
 @pytest.mark.parametrize(
     'N, Pf_given', [(20, False)]

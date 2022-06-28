@@ -85,6 +85,29 @@ class UI:
                             value['value'] = value['max']
                 # user-specified options
                 widgets_dict[key] = widgets.FloatSlider(**value)
+            elif value['type'].casefold() == 'floatlogslider':
+                # remove type key and pass to widget
+                del value['type']
+                # defaults for floatsliders
+                if not 'continuous_update' in value.keys():
+                    value['continuous_update'] = False
+                if not 'orientation' in value.keys():
+                    value['orientation'] = 'horizontal'
+                if not 'readout' in value.keys():
+                    value['readout'] = True
+                if not 'layout' in value.keys():
+                    value['layout'] = widget_layout_slider
+                if 'value' in value.keys():
+                    if isinstance(value['value'], str):
+                        # value is string, assign either mean, max, or min
+                        if value['value'] == 'mean':
+                            value['value'] = (value['min']+value['max'])/2
+                        elif value['value'] == 'min':
+                            value['value'] = value['min']
+                        elif value['value'] == 'max':
+                            value['value'] = value['max']
+                # user-specified options
+                widgets_dict[key] = widgets.FloatLogSlider(**value)
             else:
                 print(f'Provided widget {value["type"]} is not supported!')
 

@@ -59,8 +59,8 @@ def get_inputs(value_default = 'mean'):
             #'description': '$\\text{C.o.V.}[\Theta]$',
             'description': 'C.o.V.[Theta]',
             'min': 0.05,
-            'max': 1,
-            'step': 0.05,
+            'max': 0.3,
+            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -135,22 +135,22 @@ def get_inputs(value_default = 'mean'):
             'value': value_default
         },
         'nrev': {
-            'type': 'floatslider',
+            'type': 'floatlogslider',
             #'description': '$r$',
-            'description': 'Er',
-            'min': 1e5,
-            'max': 1e7,
-            'step': 1e5,
+            'description': 'r',
+            'min': 5,
+            'max': 7,
+            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         },
         'rev_per_hour': {
-            'type': 'floatslider',
-            #'description': '$r_h$',
+            'type': 'floatlogslider',
+            # 'description': '$r_h$',
             'description': 'r_h',
-            'min': 1e6,
-            'max': 1e+7,
-            'step': 1e+6,
+            'min': 2,
+            'max': 5,
+            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         }
