@@ -56,6 +56,9 @@ sphinx:
     # turn off jupyter notebook execution
     jupyter_execute_notebooks: "off" 
     
+    # change figure numbering
+    numfig_secnum_depth: 2
+    
     # for LaTeX compilation, protect hyperlinks to allow references inside captions
     latex_elements : 
       'preamble': 
