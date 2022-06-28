@@ -313,7 +313,7 @@ In general, the following rule applies for a serial system with $n$ components:
 ``  
 ```{math}
 :label: Equation_7_3
-R_{S}(t) = \sum_{i = 1}^{n} R_{i}(t)
+R_{S}(t) = \prod_{i = 1}^{n} R_{i}(t)
 ```
 ````
 
@@ -475,7 +475,7 @@ The Fault Tree Analysis ({term}`FTA`) is a structured, conclusive failure analys
 (syst_4_3_2_1)=
 ### Procedure to create FTA
 
-The procedure to create a {term}`FTA` is almost identical to that for {term}`RBD`. The main difference is the graphical representation of the system, starting from the top event (the system failure) where else RDB considered success paths. 
+The procedure to create a {term}`FTA` is almost identical to that for {term}`RBD`. The main difference is the graphical representation of the system, starting from the top event (the system failure) where else RBD considered success paths. 
 
 The following aspects should be considered carefully while carrying out {term}`FTA`:
 - To ensure the clarity and ease of identification of events, a standardized format needs to be adopted when giving names in the fault tree for intermediate and basic events. 
