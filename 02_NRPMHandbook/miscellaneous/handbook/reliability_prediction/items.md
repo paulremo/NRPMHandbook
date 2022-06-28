@@ -108,7 +108,7 @@ To use the reliability model it is, first, necessary to assess that the {term}`m
             <td>Constant failure rate</td>
         </tr>
         <tr>
-            <td colspan="4">DEP - Deployment</td>
+            <td colspan="4" class="full-span">DEP - Deployment</td>
         </tr>
         <tr>
             <td>STD_013</td>
