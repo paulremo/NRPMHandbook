@@ -40,6 +40,7 @@ class UI:
                                        width='90%')
         button_layout = widgets.Layout(display='flex',
                                        align_items='center',
+                                       justify_content='center',
                                        width='30%')
 
         # initialize widgets
@@ -101,7 +102,7 @@ class UI:
                     if isinstance(value['value'], str):
                         # value is string, assign either mean, max, or min
                         if value['value'] == 'mean':
-                            value['value'] = (value['min']+value['max'])/2
+                            value['value'] = 10**((value['min']+value['max'])/2)
                         elif value['value'] == 'min':
                             value['value'] = value['min']
                         elif value['value'] == 'max':
@@ -123,6 +124,7 @@ class UI:
         controls = ip.children[:-1]
         input_controls = controls[:-1]
         run_button = controls[-1]
+        run_button.style.button_color = '#424141'
         run_button.layout = button_layout
 
         # specify number of items per columns

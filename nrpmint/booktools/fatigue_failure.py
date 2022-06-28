@@ -155,12 +155,12 @@ def get_inputs(value_default='mean'):
             'value': value_default
         },
         'N': {
-            'type': 'floatslider',
+            'type': 'floatlogslider',
             # 'description': '$N$',
             'description': 'N',
-            'min': 1e7,
-            'max': 1e+9,
-            'step': 1e+7,
+            'min': 7,
+            'max': 9,
+            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         }
