@@ -8,6 +8,156 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
+def get_inputs(value_default = 'mean'):
+    inputs = {
+        'Dist_K': {
+            'type': 'dropdown',
+            #'description': 'Dist $K$',
+            'description': 'Dist K',
+            'options': ['LogNormal', 'Normal', 'Gumbel'],
+            'value': value_default
+        },
+        'E_K': {
+            'type': 'floatslider',
+            #'description': '$\\text{E}[K]$',
+            'description': 'E[K]',
+            'min': 1e5,
+            'max': 1e7,
+            'step': 1e5,
+            'readout_format': '.1e',
+            'value': value_default
+        },
+        'CoV_K': {
+            'type': 'floatslider',
+            #'description': '$\\text{C.o.V.}[K]$',
+            'description': 'C.o.V.[K]',
+            'min': 0.01,
+            'max': 0.1,
+            'step': 0.01,
+            'readout_format': '.2f',
+            'value': value_default
+        },
+        'Dist_MU': {
+            'type': 'dropdown',
+            #'description': 'Dist $\Theta$',
+            'description': 'Dist Theta',
+            'options': ['LogNormal'],
+            'value': value_default
+        },
+        'E_MU': {
+            'type': 'floatslider',
+            #'description': '$\\text{E}[\Theta]$',
+            'description': 'E[Theta]',
+            'min': 0.5,
+            'max': 1.5,
+            'step': 0.01,
+            'readout_format': '.2f',
+            'value': value_default
+        },
+        'CoV_MU': {
+            'type': 'floatslider',
+            #'description': '$\\text{C.o.V.}[\Theta]$',
+            'description': 'C.o.V.[Theta]',
+            'min': 0.05,
+            'max': 1,
+            'step': 0.05,
+            'readout_format': '.2f',
+            'value': value_default
+        },
+        'M0': {
+            'type': 'floatslider',
+            #'description': '$M_0$',
+            'description': 'M_0',
+            'min': 25,
+            'max': 160,
+            'step': 1,
+            'readout_format': '.0f',
+            'value': value_default
+        },
+        'Minact': {
+            'type': 'floatslider',
+            #'description': '$M_{\\text{inact}}$',
+            'description': 'M_inact',
+            'min': 0,
+            'max': 30,
+            'step': 1,
+            'readout_format': '.0f',
+            'value': value_default
+        },
+        'Nb': {
+            'type': 'floatslider',
+            #'description': '$N_b$',
+            'description': 'N_b',
+            'min': 10,
+            'max': 30,
+            'step': 1,
+            'readout_format': '.0f',
+            'value': value_default
+        },
+        'bd': {
+            'type': 'floatslider',
+            #'description': '$b_d$',
+            'description': 'b_d',
+            'min': 6,
+            'max': 10,
+            'step': 0.1,
+            'readout_format': '.1f',
+            'value': value_default
+        },
+        'pd': {
+            'type': 'floatslider',
+            #'description': '$p_d$',
+            'description': 'p_d',
+            'min': 10,
+            'max': 200,
+            'step': 1,
+            'readout_format': '.0f',
+            'value': value_default
+        },
+        'pm': {
+            'type': 'floatslider',
+            #'description': '$p_m$',
+            'description': 'p_m',
+            'min': 0.5,
+            'max': 1.5,
+            'step': 0.1,
+            'readout_format': '.0f',
+            'value': value_default
+        },
+        'theta': {
+            'type': 'floatslider',
+            #'description': '$\\theta$',
+            'description': 'theta',
+            'min': 10,
+            'max': 30,
+            'step': 1,
+            'readout_format': '.0f',
+            'value': value_default
+        },
+        'nrev': {
+            'type': 'floatslider',
+            #'description': '$r$',
+            'description': 'Er',
+            'min': 1e5,
+            'max': 1e7,
+            'step': 1e5,
+            'readout_format': '.1e',
+            'value': value_default
+        },
+        'rev_per_hour': {
+            'type': 'floatslider',
+            #'description': '$r_h$',
+            'description': 'r_h',
+            'min': 1e6,
+            'max': 1e+7,
+            'step': 1e+6,
+            'readout_format': '.1e',
+            'value': value_default
+        }
+    }
+
+    return inputs
+
 def display(reliability_analyses, mult_one_idx, rev_per_hour, n_samples=10**5):
     '''Displays the reliability analysis results'''
     # extract random vector and constants
@@ -41,6 +191,8 @@ def display(reliability_analyses, mult_one_idx, rev_per_hour, n_samples=10**5):
     plt.figure(1)
     plt.hist(a, bins=100, density=True, alpha=0.8, color='C1')
     plt.axvline(r, color='C0')
+    plt.grid()
+    plt.xlim(left=0)
     plt.xlabel(r'volume $m^3$')
     plt.ylabel('probability density function')
     plt.legend(['Limiting Volume', 'Volume worn away'])
@@ -48,6 +200,7 @@ def display(reliability_analyses, mult_one_idx, rev_per_hour, n_samples=10**5):
     plt.figure(2)
     plt.plot(nrev / (rev_per_hour * 365 * 24), pf_mat[mult_one_idx], 'ro')
     plt.plot(np.array(nrev_mat) / (rev_per_hour * 365 * 24), pf_mat, 'r--')
+    plt.grid()
     plt.ylabel('probability of failure ')
     plt.xlabel('years')
     plt.legend(['pf @ limiting fluid lubricant','fluid lubricant worn away'])
@@ -71,7 +224,7 @@ def limit_state_function(K, MU, Nb, M0, Minact, bd, pd, pm, theta, nrev, sep_out
     #nrev - number of revolutions
     #K -Empirical constant of the lubricant life model / Lognormal
 
-    a = MU * (Nb/2*(1-(bd/pd)*np.cos(theta)))/(2*K*np.exp(-3.35*pm))* nrev
+    a = MU * (Nb/2*(1-(bd/pd)*np.cos(np.radians(theta))))/(2*K*np.exp(-3.35*pm))* nrev
 
     # Limit state function
     g = r - a
@@ -107,178 +260,38 @@ def single_analysis(Dist_K, E_K, CoV_K, Dist_MU, E_MU, CoV_MU, M0, Minact, Nb, b
     return form(lsf, M0=M0, Minact=Minact, K=K, Nb=Nb, MU=MU, bd=bd, pd=pd, pm=pm, theta=theta, nrev=nrev)
 
 
-def model_wrapper(Dist_K, E_K, CoV_K, Dist_MU, E_MU, CoV_MU, M0, Minact, Nb, bd, pd, pm,theta, nrev, rev_per_hour):
+def model_wrapper(**kwargs):
     '''Wrapper to be called by ipywidgets to run the reliability analyses and display the outputs.'''
 
     # do a set of reliability analyses for different nrev
     mult_list = [0.8, 0.9, 1, 1.1, 1.2]
     mult_one_idx = mult_list.index(1)
     reliability_analyses = []
+    curr_args = {i:kwargs[i] for i in kwargs if i!='rev_per_hour'}
     for mult in mult_list:
         # run form reliability analysis
-        curr_nrev = nrev*mult
-        rel_analysis = single_analysis(Dist_K=Dist_K, E_K=E_K, CoV_K=CoV_K, Dist_MU=Dist_MU, E_MU=E_MU, CoV_MU=CoV_MU,
-                                       M0=M0, Minact=Minact, Nb=Nb, bd=bd, pd=pd, pm=pm, theta=theta, nrev=curr_nrev)
+        curr_args['nrev'] = kwargs['nrev']*mult
+        rel_analysis = single_analysis(**curr_args)
 
         reliability_analyses.append(rel_analysis)
 
-    # display
-    display(reliability_analyses, mult_one_idx, rev_per_hour)
+    # ensure that failure probability is not NaN:
+    if np.isnan(reliability_analyses[mult_one_idx].getFailure()[0]):
+        # print
+        print(
+            f'The algorithm failed because the failure probability is too small, change the input parameters and try again...')
+    else:
+        # display
+        display(reliability_analyses, mult_one_idx, kwargs['rev_per_hour'])
 
-    # print
-    print(f'The failure probability is {reliability_analyses[mult_one_idx].getFailure()[0]:.2e} after {nrev:.2e} revolutions.')
+        # print
+        print(f'The failure probability is {reliability_analyses[mult_one_idx].getFailure()[0]:.2e} after {kwargs["nrev"]:.2e} revolutions.')
 
 
 def web_ui():
     '''Prepare user interface to interact with reliabilty functions'''
     # prepare sliders and drop downs
-    Dist_K = {
-        'type': 'dropdown',
-        #'description': 'Dist $K$',
-        'description': 'Dist K',
-        'value': 'Gumbel',
-        'options': ['LogNormal', 'Normal', 'Gumbel'],
-    }
-    E_K = {
-        'type': 'floatslider',
-        #'description': '$\\text{E}[K]$',
-        'description': 'E[K]',
-        'value': 1e8,
-        'min': 1e6,
-        'max': 1e10,
-        'step': 1e5,
-        'readout_format': '.1e'
-    }
-    CoV_K = {
-        'type': 'floatslider',
-        #'description': '$\\text{C.o.V.}[K]$',
-        'description': 'C.o.V.[K]',
-        'value': 0.75,
-        'min': 0.05,
-        'max': 0.75,
-        'step': 0.05,
-        'readout_format': '.2f'
-    }
-    Dist_MU = {
-        'type': 'dropdown',
-        #'description': 'Dist $\Theta$',
-        'description': 'Dist Theta',
-        'value': 'LogNormal',
-        'options': ['LogNormal'],
-    }
-    E_MU = {
-        'type': 'floatslider',
-        #'description': '$\\text{E}[\Theta]$',
-        'description': 'E[Theta]',
-        'value': 1,
-        'min': 0.01,
-        'max': 1,
-        'step': 0.01,
-        'readout_format': '.1e'
-    }
-    CoV_MU = {
-        'type': 'floatslider',
-        #'description': '$\\text{C.o.V.}[\Theta]$',
-        'description': 'C.o.V.[Theta]',
-        'value': 0.2,
-        'min': 0.05,
-        'max': 1,
-        'step': 0.05,
-        'readout_format': '.2f'
-    }
-    M0 = {
-        'type': 'floatslider',
-        #'description': '$M_0$',
-        'description': 'M_0',
-        'value': 80,
-        'min': 10,
-        'max': 100,
-        'step': 1,
-        'readout_format': '.0f'
-    }
-    Minact = {
-        'type': 'floatslider',
-        #'description': '$M_{\\text{inact}}$',
-        'description': 'M_inact',
-        'value': 80*0.01,
-        'min': 1,
-        'max': 100,
-        'step': 1,
-        'readout_format': '.0f'
-    }
-    Nb = {
-        'type': 'floatslider',
-        #'description': '$N_b$',
-        'description': 'N_b',
-        'value': 25,
-        'min': 15,
-        'max': 30,
-        'step': 0.5,
-        'readout_format': '.1f'
-    }
-    bd = {
-        'type': 'floatslider',
-        #'description': '$b_d$',
-        'description': 'b_d',
-        'value': 12.5,
-        'min': 5,
-        'max': 40,
-        'step': 0.1,
-        'readout_format': '.1f'
-    }
-    pd = {
-        'type': 'floatslider',
-        #'description': '$p_d$',
-        'description': 'p_d',
-        'value': 50,
-        'min': 10,
-        'max': 200,
-        'step': 1,
-        'readout_format': '.0f'
-    }
-    #Check if GPa or MPa
-    pm = {
-        'type': 'floatslider',
-        #'description': '$p_m$',
-        'description': 'p_m',
-        'value': 0.8,
-        'min': 0.1,
-        'max': 5,
-        'step': 0.1,
-        'readout_format': '.0f'
-    }
-    # Check if rad or degree
-    theta = {
-        'type': 'floatslider',
-        #'description': '$\\theta$',
-        'description': 'theta',
-        'value': 10,
-        'min': 0,
-        'max': 45,
-        'step': 1,
-        'readout_format': '.0f'
-    }
-    nrev = {
-        'type': 'floatslider',
-        #'description': '$\\text{E}[r]$',
-        'description': 'E[r]',
-        'value': 1e+6,
-        'min': 1e+5,
-        'max': 1e+8,
-        'step': 1e+5,
-        'readout_format': '.1e'
-    }
-    rev_per_hour = {
-        'type': 'floatslider',
-        #'description': '$\\text{E}[r_h]$',
-        'description': 'E[r_h]',
-        'value': 1e+6,
-        'min': 1e6,
-        'max': 1e+7,
-        'step': 1e+6,
-        'readout_format': '.1e'
-    }
+    inputs = get_inputs(value_default = 'mean')
 
     # initialize interface
-    UI(model_wrapper, n_cols=2, Dist_K=Dist_K, E_K=E_K, CoV_K=CoV_K, Dist_MU=Dist_MU, E_MU=E_MU, CoV_MU=CoV_MU, M0=M0,
-       Minact=Minact, Nb=Nb, bd=bd, pd=pd, pm=pm, theta=theta, nrev=nrev, rev_per_hour=rev_per_hour)
+    UI(model_wrapper, n_cols=2, **inputs)

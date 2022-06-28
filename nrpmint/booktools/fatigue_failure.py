@@ -2,11 +2,171 @@
 from nrpmint.interface.web import UI
 
 # scientific packages
-from nrpmint.reliability.form import form
+from nrpmint.reliability.form import form, mcs
 from nrpmint.reliability.random_variables import UniRV, stochastic_model_to_multirv
 import numpy as np
 from matplotlib import pyplot as plt
 
+
+def get_inputs(value_default='mean'):
+    inputs = {
+        'Dist_DCR': {
+            'type': 'dropdown',
+            # 'description': 'Dist $D_{\\text{cr}}$',
+            'description': 'Dist D_cr',
+            'options': ['LogNormal', 'Normal', 'Gumbel'],
+            'value': value_default
+        },
+        'E_DCR': {
+            'type': 'floatslider',
+            # 'description': '$\\text{E}[D_{\\text{cr}}]$',
+            'description': 'E[D_cr]',
+            'min': 5e12,
+            'max': 2e13,
+            'step': 1e10,
+            'readout_format': '.1e',
+            'value': value_default
+        },
+        'CoV_DCR': {
+            'type': 'floatslider',
+            # 'description': '$\\text{C.o.V.}[D_{\\text{cr}}]$',
+            'description': 'C.o.V.[D_cr]',
+            'min': 0.05,
+            'max': 1,
+            'step': 0.05,
+            'readout_format': '.2f',
+            'value': value_default
+        },
+        'Dist_A': {
+            'type': 'dropdown',
+            # 'description': 'Dist $A$',
+            'description': 'Dist A',
+            'options': ['LogNormal', 'Normal', 'Gumbel'],
+            'value': value_default
+        },
+        'E_A': {
+            'type': 'floatslider',
+            # 'description': '$\\text{E}[A]$',
+            'description': 'E[A]',
+            'min': 1,
+            'max': 5,
+            'step': 0.1,
+            'readout_format': '.1f',
+            'value': value_default
+        },
+        'CoV_A': {
+            'type': 'floatslider',
+            # 'description': '$\\text{C.o.V.}[A]$',
+            'description': 'C.o.V.[A]',
+            'min': 0.05,
+            'max': 1,
+            'step': 0.05,
+            'readout_format': '.2f',
+            'value': value_default
+        },
+        'Dist_SSF': {
+            'type': 'dropdown',
+            'description': 'Dist SSF',
+            'options': ['LogNormal', 'Gumbel', 'Normal'],
+            'value': value_default
+        },
+        'E_SSF': {
+            'type': 'floatslider',
+            # 'description': '$\\text{E}[\\text{SSF}]$',
+            'description': 'E[SSF]',
+            'min': 0.5,
+            'max': 2,
+            'step': 0.01,
+            'readout_format': '.1f',
+            'value': value_default
+        },
+        'CoV_SSF': {
+            'type': 'floatslider',
+            # 'description': '$\\text{C.o.V.}[\\text{SSF}]$',
+            'description': 'C.o.V.[SSF]',
+            'min': 0.05,
+            'max': 1,
+            'step': 0.05,
+            'readout_format': '.2f',
+            'value': value_default
+        },
+        'Dist_coll': {
+            'type': 'dropdown',
+            # 'description': 'Dist $S$',
+            'description': 'Dist S',
+            'options': ['LogNormal', 'Gumbel'],
+            'value': value_default
+        },
+        'E_coll': {
+            'type': 'floatslider',
+            # 'description': '$\\text{E}[S]$',
+            'description': 'E[S]',
+            'min': 100,
+            'max': 400,
+            'step': 1,
+            'readout_format': '.0f',
+            'value': value_default
+        },
+        'CoV_coll': {
+            'type': 'floatslider',
+            # 'description': '$\\text{C.o.V.}[S]$',
+            'description': 'C.o.V.[S]',
+            'min': 0.05,
+            'max': 0.3,
+            'step': 0.01,
+            'readout_format': '.2f',
+            'value': value_default
+        },
+        'Dist_MU': {
+            'type': 'dropdown',
+            # 'description': 'Dist $\Theta$',
+            'description': 'Dist Theta',
+            'options': ['LogNormal'],
+            'value': value_default
+        },
+        'E_MU': {
+            'type': 'floatslider',
+            # 'description': '$\\text{E}[\Theta]$',
+            'description': 'E[Theta]',
+            'min': 0.5,
+            'max': 1.5,
+            'step': 0.01,
+            'readout_format': '.2f',
+            'value': value_default
+        },
+        'CoV_MU': {
+            'type': 'floatslider',
+            # 'description': '$\\text{C.o.V.}[\Theta]$',
+            'description': 'C.o.V.[Theta]',
+            'min': 0.05,
+            'max': 1,
+            'step': 0.05,
+            'readout_format': '.2f',
+            'value': value_default
+        },
+        'B': {
+            'type': 'floatslider',
+            # 'description': '$B$',
+            'description': 'B',
+            'min': 1,
+            'max': 3,
+            'step': 0.1,
+            'readout_format': '.1f',
+            'value': value_default
+        },
+        'N': {
+            'type': 'floatslider',
+            # 'description': '$N$',
+            'description': 'N',
+            'min': 1e7,
+            'max': 1e+9,
+            'step': 1e+7,
+            'readout_format': '.1e',
+            'value': value_default
+        }
+    }
+
+    return inputs
 
 def display(reliability_analyses, load_collective, n_samples=10**5):
     '''Displays the reliability analysis results'''
@@ -25,6 +185,7 @@ def display(reliability_analyses, load_collective, n_samples=10**5):
     plt.figure(1)
     plt.hist(r, bins=100, density=True, alpha=0.8)
     plt.hist(a, bins=100, density=True, alpha=0.8)
+    plt.grid()
     plt.xlabel(r'damage')
     plt.ylabel('probability density function')
     plt.legend(['Limiting damage', 'Accumulated damage'])
@@ -33,6 +194,7 @@ def display(reliability_analyses, load_collective, n_samples=10**5):
     sorted_load_collective = load_collective[np.argsort(load_collective[:, 0])][::-1]
     plt.figure(2)
     plt.bar(x=np.cumsum(sorted_load_collective[:,1]), height=sorted_load_collective[:,0], width=-sorted_load_collective[:,1], align='edge')
+    plt.grid()
     plt.ylabel('stress')
     plt.xlabel('cycles')
     plt.title('Load collective')
@@ -111,186 +273,35 @@ def single_analysis(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SS
     lsf = lambda DCR, A, SSF, MU, B: limit_state_function(DCR, A, SSF, MU, B, load_collective)
 
     # run and return form reliability analysis
-    return form(lsf, DCR=DCR, A=A, SSF=SSF, MU=MU, B=B), load_collective
+    form_thresh = 0.1
+    reliability_analysis = form(lsf, DCR=DCR, A=A, SSF=SSF, MU=MU, B=B)
+    if reliability_analysis.Pf > form_thresh:
+        # for large failure probabilites, switch to MCS
+        reliability_analysis = mcs(lsf, DCR=DCR, A=A, SSF=SSF, MU=MU, B=B)
+    return reliability_analysis, load_collective
 
 
-def model_wrapper(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SSF, CoV_SSF, Dist_coll, E_coll, CoV_coll,
-                    Dist_MU, E_MU, CoV_MU, B, N):
+def model_wrapper(**kwargs):
     '''Wrapper to be called by ipywidgets to run the reliability analyses and display the outputs.'''
 
-    reliability_analysis, load_collective = single_analysis(Dist_DCR=Dist_DCR, E_DCR=E_DCR, CoV_DCR=CoV_DCR,
-                                                           Dist_A=Dist_A, E_A=E_A, CoV_A=CoV_A,
-                                                           Dist_SSF=Dist_SSF, E_SSF=E_SSF, CoV_SSF=CoV_SSF,
-                                                           Dist_coll=Dist_coll, E_coll=E_coll, CoV_coll=CoV_coll,
-                                                           Dist_MU=Dist_MU, E_MU=E_MU, CoV_MU=CoV_MU,
-                                                           B=B, N=N)
+    reliability_analysis, load_collective = single_analysis(**kwargs)
 
-    # display
-    display(reliability_analysis, load_collective)
+    # ensure that failure probability is not NaN:
+    if np.isnan(reliability_analysis.getFailure()[0]):
+        # print
+        print(f'The algorithm failed because the failure probability is too small, change the input parameters and try again...')
+    else:
+        # display
+        display(reliability_analysis, load_collective)
 
-    # print
-    print(f'The failure probability is {reliability_analysis.getFailure()[0]:.2e} after {N:.2e} load cycles.')
+        # print
+        print(f'The failure probability is {reliability_analysis.getFailure()[0]:.2e} after {kwargs["N"]:.2e} load cycles.')
 
 
 def web_ui():
     '''Prepare user interface to interact with reliabilty functions'''
     # prepare sliders and drop downs
-    Dist_DCR = {
-        'type': 'dropdown',
-        #'description': 'Dist $D_{\\text{cr}}$',
-        'description': 'Dist D_cr',
-        'value': 'LogNormal',
-        'options': ['LogNormal', 'Normal', 'Gumbel'],
-    }
-    E_DCR = {
-        'type': 'floatslider',
-        #'description': '$\\text{E}[D_{\\text{cr}}]$',
-        'description': 'E[D_cr]',
-        'value': 1e13,
-        'min': 5e12,
-        'max': 2e13,
-        'step': 1e10,
-        'readout_format': '.1e'
-    }
-    CoV_DCR = {
-        'type': 'floatslider',
-        #'description': '$\\text{C.o.V.}[D_{\\text{cr}}]$',
-        'description': 'C.o.V.[D_cr]',
-        'value': 0.2,
-        'min': 0.05,
-        'max': 1,
-        'step': 0.05,
-        'readout_format': '.2f'
-    }
-    Dist_A = {
-        'type': 'dropdown',
-        #'description': 'Dist $A$',
-        'description': 'Dist A',
-        'value': 'Normal',
-        'options': ['LogNormal', 'Normal', 'Gumbel'],
-    }
-    E_A = {
-        'type': 'floatslider',
-        #'description': '$\\text{E}[A]$',
-        'description': 'E[A]',
-        'value': 3,
-        'min': 1,
-        'max': 5,
-        'step': 0.1,
-        'readout_format': '.1f'
-    }
-    CoV_A = {
-        'type': 'floatslider',
-        #'description': '$\\text{C.o.V.}[A]$',
-        'description': 'C.o.V.[A]',
-        'value': 0.3,
-        'min': 0.05,
-        'max': 1,
-        'step': 0.05,
-        'readout_format': '.2f'
-    }
-    Dist_SSF = {
-        'type': 'dropdown',
-        'description': 'Dist SSF',
-        'value': 'LogNormal',
-        'options': ['LogNormal', 'Gumbel', 'Normal'],
-    }
-    E_SSF = {
-        'type': 'floatslider',
-        #'description': '$\\text{E}[\\text{SSF}]$',
-        'description': 'E[SSF]',
-        'value': 1,
-        'min': 0.5,
-        'max': 2,
-        'step': 0.01,
-        'readout_format': '.1f'
-    }
-    CoV_SSF = {
-        'type': 'floatslider',
-        #'description': '$\\text{C.o.V.}[\\text{SSF}]$',
-        'description': 'C.o.V.[SSF]',
-        'value': 0.2,
-        'min': 0.05,
-        'max': 1,
-        'step': 0.05,
-        'readout_format': '.2f'
-    }
-    Dist_coll = {
-        'type': 'dropdown',
-        #'description': 'Dist $S$',
-        'description': 'Dist S',
-        'value': 'LogNormal',
-        'options': ['LogNormal', 'Gumbel'],
-    }
-    E_coll = {
-        'type': 'floatslider',
-        #'description': '$\\text{E}[S]$',
-        'description': 'E[S]',
-        'value': 200,
-        'min': 100,
-        'max': 400,
-        'step': 1,
-        'readout_format': '.0f'
-    }
-    CoV_coll = {
-        'type': 'floatslider',
-        #'description': '$\\text{C.o.V.}[S]$',
-        'description': 'C.o.V.[S]',
-        'value': 0.2,
-        'min': 0.05,
-        'max': 1,
-        'step': 0.05,
-        'readout_format': '.2f'
-    }
-    Dist_MU = {
-        'type': 'dropdown',
-        #'description': 'Dist $\Theta$',
-        'description': 'Dist Theta',
-        'value': 'LogNormal',
-        'options': ['LogNormal'],
-    }
-    E_MU = {
-        'type': 'floatslider',
-        #'description': '$\\text{E}[\Theta]$',
-        'description': 'E[Theta]',
-        'value': 1.2,
-        'min': 0.01,
-        'max': 2,
-        'step': 0.01,
-        'readout_format': '.1e'
-    }
-    CoV_MU = {
-        'type': 'floatslider',
-        #'description': '$\\text{C.o.V.}[\Theta]$',
-        'description': 'C.o.V.[Theta]',
-        'value': 0.2,
-        'min': 0.05,
-        'max': 1,
-        'step': 0.05,
-        'readout_format': '.2f'
-    }
-    B = {
-        'type': 'floatslider',
-        #'description': '$B$',
-        'description': 'B',
-        'value': 2,
-        'min': 1,
-        'max': 3,
-        'step': 0.1,
-        'readout_format': '.1f'
-    }
-    N = {
-        'type': 'floatslider',
-        #'description': '$N$',
-        'description': 'N',
-        'value': 1e9,
-        'min': 1e7,
-        'max': 1e+9,
-        'step': 1e+7,
-        'readout_format': '.1e'
-    }
+    inputs = get_inputs(value_default = 'mean')
 
     # initialize interface
-    UI(model_wrapper, n_cols=2, Dist_DCR=Dist_DCR, E_DCR=E_DCR, CoV_DCR=CoV_DCR, Dist_A=Dist_A, E_A=E_A, CoV_A=CoV_A,
-       Dist_SSF=Dist_SSF, E_SSF=E_SSF, CoV_SSF=CoV_SSF, Dist_coll=Dist_coll, E_coll=E_coll, CoV_coll=CoV_coll,
-       Dist_MU=Dist_MU, E_MU=E_MU, CoV_MU=CoV_MU, B=B, N=N)
+    UI(model_wrapper, n_cols=2, **inputs)

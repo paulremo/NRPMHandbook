@@ -1,25 +1,9 @@
 # display packages
 import pystra
 
-def form(lsf, corrmat=None, **kwargs):
-    '''Wrapper for pystra FORM reliability analysis
 
-    Arguments:
-    lsf -- handle to the limit-state-function. All function arguments must be provided as optional aruments.
-    corrmat -- correlation matrix (optional, default=None)
-
-    Optional key-value pair arguments:
-    Sequence of dictionaries or numerical values that represent the arguments to lsf. The key must match the
-    required lsf argument. The value can be either
-
-    - dictionaries for random variables with keys:
-        - dist -- distribution type
-        - E -- random variable expectation
-        - CoV -- random variable coefficient of variation
-
-    - numerical values for constants
-    '''
-
+def get_stochastic_model(corrmat, **kwargs):
+    '''Initializes and returns the stochastic model'''
     # define the pystra stochastic model
     stochastic_model = pystra.StochasticModel()
     # loop over kwargs to add variables or constants
@@ -41,6 +25,30 @@ def form(lsf, corrmat=None, **kwargs):
     if not corrmat is None:
         stochastic_model.setCorrelation(pystra.CorrelationMatrix(corrmat))
 
+    return stochastic_model
+
+
+def form(lsf, corrmat=None, **kwargs):
+    '''Wrapper for pystra FORM reliability analysis
+
+    Arguments:
+    lsf -- handle to the limit-state-function. All function arguments must be provided as optional aruments.
+    corrmat -- correlation matrix (optional, default=None)
+
+    Optional key-value pair arguments:
+    Sequence of dictionaries or numerical values that represent the arguments to lsf. The key must match the
+    required lsf argument. The value can be either
+
+    - dictionaries for random variables with keys:
+        - dist -- distribution type
+        - E -- random variable expectation
+        - CoV -- random variable coefficient of variation
+
+    - numerical values for constants
+    '''
+    # get stochastic model
+    stochastic_model = get_stochastic_model(corrmat, **kwargs)
+
     # Set FORM options
     options = pystra.AnalysisOptions()
     options.printResults(False)
@@ -50,6 +58,41 @@ def form(lsf, corrmat=None, **kwargs):
 
     # Performe FORM analysis
     my_reliability_analysis = pystra.Form(analysis_options=options, stochastic_model=stochastic_model,
+                                          limit_state=limit_state)
+
+    return my_reliability_analysis
+
+
+def mcs(lsf, corrmat=None, **kwargs):
+    '''Wrapper for pystra MCS reliability analysis
+
+    Arguments:
+    lsf -- handle to the limit-state-function. All function arguments must be provided as optional aruments.
+    corrmat -- correlation matrix (optional, default=None)
+
+    Optional key-value pair arguments:
+    Sequence of dictionaries or numerical values that represent the arguments to lsf. The key must match the
+    required lsf argument. The value can be either
+
+    - dictionaries for random variables with keys:
+        - dist -- distribution type
+        - E -- random variable expectation
+        - CoV -- random variable coefficient of variation
+
+    - numerical values for constants
+    '''
+    # get stochastic model
+    stochastic_model = get_stochastic_model(corrmat, **kwargs)
+
+    # Set MCS options
+    options = pystra.AnalysisOptions()
+    options.printResults(False)
+
+    # Define limit state function
+    limit_state = pystra.LimitState(lsf)
+
+    # Performe FORM analysis
+    my_reliability_analysis = pystra.CrudeMonteCarlo(analysis_options=options, stochastic_model=stochastic_model,
                                           limit_state=limit_state)
 
     return my_reliability_analysis
