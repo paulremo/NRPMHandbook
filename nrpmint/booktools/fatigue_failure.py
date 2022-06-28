@@ -32,8 +32,8 @@ def get_inputs(value_default='mean'):
             # 'description': '$\\text{C.o.V.}[D_{\\text{cr}}]$',
             'description': 'C.o.V.[D_cr]',
             'min': 0.05,
-            'max': 1,
-            'step': 0.05,
+            'max': 0.5,
+            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -59,15 +59,15 @@ def get_inputs(value_default='mean'):
             # 'description': '$\\text{C.o.V.}[A]$',
             'description': 'C.o.V.[A]',
             'min': 0.05,
-            'max': 1,
-            'step': 0.05,
+            'max': 0.5,
+            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
         'Dist_SSF': {
             'type': 'dropdown',
             'description': 'Dist SSF',
-            'options': ['LogNormal', 'Gumbel', 'Normal'],
+            'options': ['LogNormal'],
             'value': value_default
         },
         'E_SSF': {
@@ -85,8 +85,8 @@ def get_inputs(value_default='mean'):
             # 'description': '$\\text{C.o.V.}[\\text{SSF}]$',
             'description': 'C.o.V.[SSF]',
             'min': 0.05,
-            'max': 1,
-            'step': 0.05,
+            'max': 0.5,
+            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -112,7 +112,7 @@ def get_inputs(value_default='mean'):
             # 'description': '$\\text{C.o.V.}[S]$',
             'description': 'C.o.V.[S]',
             'min': 0.05,
-            'max': 0.3,
+            'max': 0.2,
             'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
@@ -139,8 +139,8 @@ def get_inputs(value_default='mean'):
             # 'description': '$\\text{C.o.V.}[\Theta]$',
             'description': 'C.o.V.[Theta]',
             'min': 0.05,
-            'max': 1,
-            'step': 0.05,
+            'max': 0.5,
+            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -186,6 +186,7 @@ def display(reliability_analyses, load_collective, n_samples=10**5):
     plt.hist(r, bins=100, density=True, alpha=0.8)
     plt.hist(a, bins=100, density=True, alpha=0.8)
     plt.grid()
+    plt.xscale('log')
     plt.xlabel(r'damage')
     plt.ylabel('probability density function')
     plt.legend(['Limiting damage', 'Accumulated damage'])
@@ -278,6 +279,7 @@ def single_analysis(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SS
     if reliability_analysis.Pf > form_thresh:
         # for large failure probabilites, switch to MCS
         reliability_analysis = mcs(lsf, DCR=DCR, A=A, SSF=SSF, MU=MU, B=B)
+        reliability_analysis.Pf = [reliability_analysis.Pf]
     return reliability_analysis, load_collective
 
 

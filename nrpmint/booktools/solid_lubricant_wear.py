@@ -293,12 +293,12 @@ def web_ui():
     inputs['E_Vlim']['step'] = inputs['E_Vlim']['step']* E_Vlim_scale_units
 
 
-    model_wrapper_scaled = lambda **kwargs: model_wrapper(kwargs['Dist_Vlim'], kwargs['E_Vlim']/E_Vlim_scale_units,
-                                                          kwargs['CoV_Vlim'], kwargs['Dist_KH'], kwargs['E_KH']/E_KH_scale_units,
-                                                          kwargs['CoV_KH'], kwargs['Dist_alpha'], kwargs['E_alpha'],
-                                                          kwargs['CoV_alpha'], kwargs['Dist_MU'], kwargs['E_MU'],
-                                                          kwargs['CoV_MU'], kwargs['rho_KH_alpha'], kwargs['nrev'],
-                                                          kwargs['rev_per_hour'])
+    model_wrapper_scaled = lambda **kwargs: model_wrapper(Dist_Vlim=kwargs['Dist_Vlim'], E_Vlim=kwargs['E_Vlim']/E_Vlim_scale_units,
+                                                          CoV_Vlim=kwargs['CoV_Vlim'], Dist_KH=kwargs['Dist_KH'], E_KH=kwargs['E_KH']/E_KH_scale_units,
+                                                          CoV_KH=kwargs['CoV_KH'], Dist_alpha=kwargs['Dist_alpha'], E_alpha=kwargs['E_alpha'],
+                                                          CoV_alpha=kwargs['CoV_alpha'], Dist_MU=kwargs['Dist_MU'], E_MU=kwargs['E_MU'],
+                                                          CoV_MU=kwargs['CoV_MU'], rho_KH_alpha=kwargs['rho_KH_alpha'], nrev=kwargs['nrev'],
+                                                          rev_per_hour=kwargs['rev_per_hour'])
 
     # initialize interface
     UI(model_wrapper_scaled, n_cols=2, **inputs)
