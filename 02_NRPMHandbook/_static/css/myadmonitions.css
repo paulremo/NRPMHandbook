@@ -14,45 +14,49 @@
 }
 
 .admonition.rule {
-    border-left-color: rgb(151, 0, 55);
+    border-left-color: #73163a;
 }
 .admonition.rule .admonition-title {
-    background-color: rgba(199, 77, 124, 0.742);
+    background-color: #C74D7C;
+    color: #050A05;
 }
 .admonition.rule .admonition-title:before {
-    color: rgb(255, 255, 255);
+    color: #050A05;
     content: '\f197';
 }
 
 .admonition.recommendation {
-    border-left-color: rgb(2, 91, 76);
+    border-left-color: #5b5511;
 }
 .admonition.recommendation .admonition-title {
-    background-color: rgba(4, 174, 137, 0.742);
+    background-color: #C7BE61;
+    color: #000000;
 }
 .admonition.recommendation .admonition-title:before {
-    color: rgb(255, 255, 255);
+    color: #000000;
     content: '\f091';
 }
 
 .admonition.remark {
-    border-left-color: rgb(39, 3, 78);
+    border-left-color: #390f1f;
 }
 .admonition.remark .admonition-title {
-    background-color: rgba(110, 41, 200, 0.814);
+    background-color: #7A2345;
+    color: #FFFFFA;
 }
 .admonition.remark .admonition-title:before {
-    color: rgb(255, 255, 255);
+    color: #FFFFFA;
     content: '\f0a4';
 }
 
 .admonition.equation {
-    border-left-color: rgb(8, 8, 168);
+    border-left-color: #0d3c47;
 }
 .admonition.equation .admonition-title {
-    background-color: rgba(71, 89, 230, 0.814);
+    background-color: #2A6C7A;
+    color: #FFFFFA;
 }
 .admonition.equation .admonition-title:before {
-    color: rgb(255, 255, 255);
+    color: #FFFFFA;
     content: '\f12b';
 }
