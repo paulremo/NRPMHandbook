@@ -987,8 +987,6 @@ initially documented by Forman and Mettu {cite:t}`mec-Forman1992BehaviorOS`. It 
 :label: Equation_3_51
 \frac{da}{dN} = C\left\lbrack \left( \frac{1 - f}{1 - R} \right)\mathrm{\Delta}K \right\rbrack^{n}\frac{\left( 1 - \frac{\Delta K_{th}}{\mathrm{\Delta}K} \right)^{p}}{\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}}
 ```
-````
-
 With the following variable definitions:
 
 * $N$ number of applied fatigue cycles
@@ -1008,6 +1006,9 @@ With the following variable definitions:
 * $K_{c}$ critical stress intensity factor (empirical relation, depending on the crack geometry)
 
 * $C,n,p,q$ empirical constants of the crack growth model
+````
+
+
 
 Typically fatigue crack growth data has three regions, as depicted in
 {numref}`Figure_3_8`:
