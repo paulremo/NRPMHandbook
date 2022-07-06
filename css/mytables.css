@@ -70,7 +70,7 @@
 
 .myTable thead th.major-head{
   color: #ffffff;
-  background: #2d639a;
+  background: #0d3c47;
 }
 
 
@@ -104,12 +104,7 @@
 
 .large-table thead th {
   color: #ffffff;
-  background: #2D639A;
-}
-
-.large-table thead th:nth-child(odd) {
-  color: #ffffff;
-  background: #324960;
+  background: #0d3c47;
 }
 
 .large-table tr:nth-child(even) {
@@ -160,12 +155,7 @@
 
 .static-table thead th {
   color: #ffffff;
-  background: #2D639A;
-}
-
-.static-table thead th:nth-child(odd) {
-  color: #ffffff;
-  background: #324960;
+  background: #0d3c47;
 }
 
 .static-table tr:nth-child(even) {
@@ -179,5 +169,5 @@
 
 .static-table thead th.major-head{
   color: #ffffff;
-  background: #2d639a;
+  background: #0d3c47;
 }
