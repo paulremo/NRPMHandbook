@@ -66,7 +66,7 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
 
 ### Model 3
 
-The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random failure <Random failure>` rate and the {term}`wear-out failure <Wear-out failure>` rate, Eq. {eq}`Equation_7_97`. At a certain operating time $t = \tau_{2}$ the failure rate due to wear-out $\lambda_{W}$ equals the constant failure rate of {term}`random failure <Random failure>`, Eq. {eq}`Equation_7_98`. From that point on the {term}`wear-out failure <Wear-out failure>` rate is dominating. Thus, the {term}`probability density functions <Probability density function>` are separated in {term}`random failures <Random failure>` only for$t < \tau_{2}$ and wear-out only for time $t \geq \tau_{2}$
+The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random failure <Random failure>` rate and the {term}`wear-out failure <Wear-out failure>` rate, Eq. {eq}`Equation_7_97`. At a certain operating time $t = \tau_{2}$ the failure rate due to wear-out $\lambda_{W}$ equals the constant failure rate of {term}`random failure <Random failure>`, Eq. {eq}`Equation_7_98`. From that point on the {term}`wear-out failure <Wear-out failure>` rate is dominating. Thus, the {term}`probability density functions <Probability density function>` are separated in {term}`random failures <Random failure>` only for $t < \tau_{2}$ and wear-out only for time $t \geq \tau_{2}$
 
 ````{admonition} Equation
 :class: equation
