@@ -61,6 +61,8 @@ parts:
     - file: mechanical/models/introduction
       title: Models
       sections:
+      - file: mechanical/models/stress_strength
+        title: Stress strength 
       - file: mechanical/models/solid_lubricant_wear
         title: Solid lubricant wear 
       - file: mechanical/models/fluid_lubricant_wear
