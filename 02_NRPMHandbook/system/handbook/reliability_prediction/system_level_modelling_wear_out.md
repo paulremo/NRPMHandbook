@@ -6,6 +6,8 @@
 
 The fact that wear-out can occur at component level and that the failure rates are then no longer constant needs to be considered for the system level {term}`reliability prediction <Reliability prediction>`. To calculate the reliability of components prone to wear-out, the following three approaches are introduced. In this section the use of these wear-out models for system level {term}`reliability prediction <Reliability prediction>` is shown.
 
+<a href="../../models/wear_out.html" class="back-forward-button">Go to model</a>
+
 ### Model 1
 
 The failure probability is the sum of {term}`random failures <Random failure>` and {term}`wear-out failures <Wear-out failure>` assuming that wear-out can occur throughout the entire service life and not just after qualification life time. With this model the life time of an item can be interpreted as the minimum of the life time based on random or {term}`wear-out failures <Wear-out failure>`. {term}`Random failures <Random failure>` are described by an exponential distribution and wear-out by a Weibull distribution. Thus, the following equations are obtained for failure rate and reliability:
