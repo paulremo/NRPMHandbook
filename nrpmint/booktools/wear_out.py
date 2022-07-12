@@ -45,11 +45,11 @@ def get_inputs(value_default='mean'):
             'value': value_default
         },
         'alpha': {
-            'type': 'floatslider',
+            'type': 'floatlogslider',
             # 'description': '$\\alpha$',
             'description': 'alpha',
-            'min': 0.1,
-            'max': 5,
+            'min': -2,
+            'max': 6,
             'step': 0.1,
             'readout_format': '.2f',
             'value': value_default
@@ -58,7 +58,7 @@ def get_inputs(value_default='mean'):
             'type': 'floatslider',
             # 'description': '$\\beta$',
             'description': 'beta',
-            'min': 1,
+            'min': 0.1,
             'max': 10,
             'step': 0.1,
             'readout_format': '.2f',
@@ -103,8 +103,8 @@ def single_analysis(model_type, t_max, tau, lambda_r, alpha, beta, n_timesteps =
     # add tau
     idx = np.searchsorted(t, tau)
     t = np.insert(t, idx, tau)
-    t_1 = t[t < tau]
-    t_2 = t[t >= tau]
+    t_1 = t[t <= tau]
+    t_2 = t[t > tau]
 
 
     if model_type == 'Model 1':
