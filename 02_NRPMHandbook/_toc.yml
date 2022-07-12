@@ -50,6 +50,9 @@ parts:
           - file: eee/handbook/reliability_prediction/random_failure/quality_factors
           - file: eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families
           - file: eee/handbook/reliability_prediction/random_failure/families_part_count_methods
+        - file: eee/handbook/reliability_prediction/models_specific_component_types
+        - file: eee/handbook/reliability_prediction/systematic_failures
+        - file: eee/handbook/reliability_prediction/wear_out_failures
       - file: eee/handbook/bibliography
     - file: eee/models/intro_models
       title: Models

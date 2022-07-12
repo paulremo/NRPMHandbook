@@ -4331,7 +4331,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}
 
 The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
 
-**Summary for the Fuses family 06**
+**Summary for the Filters family 06**
 
 <table class="myTable">
     <thead>
@@ -5421,7 +5421,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}
 
 The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
 
-**Summary for the Fuses family 06**
+**Summary for the Inductors family 06**
 
 <table class="myTable">
     <thead>
@@ -7572,15 +7572,16 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
     - 0.021
 ```
 
-<!--The basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{OTCyCase}}$, $\lambda_{\text{OTCySolderjoints}}$ and $\lambda_{\text{Mech}}$ are calculated through two constants *a* and *b* considering the type of package and the number of pins. The formula to apply is:
+The basic failure rate $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending on the type of components.
+
 
 ````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
-:label: Equation_1_114
-\lambda_{0_{\text{constraint}}} = exp\left( - a \right) \cdot {N_{p}}^{b}
+:label: Equation_1_123
+\lambda_{0_{\text{constraint}}} = exp\left( - a \right) \bullet {N_{p}}^{b}
 ```
 ````
 
@@ -7598,10 +7599,10 @@ All packages have been split into the following six categories:
 
 -   Ceramic SMD without leads.
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-97')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-110')" placeholder="Search table...">
 
 ```{list-table} Families of packages for plastic PTH.
-:name: eee-table4-97
+:name: eee-table4-110
 :header-rows: 1
 :widths: 50 50
 
@@ -7619,10 +7620,10 @@ All packages have been split into the following six categories:
     - Single In Line Package
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-98')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-111')" placeholder="Search table...">
 
 ```{list-table} Families of packages for ceramic PTH.
-:name: eee-table4-98
+:name: eee-table4-111
 :header-rows: 1
 :widths: 50 50
 
@@ -7636,10 +7637,10 @@ All packages have been split into the following six categories:
     - Plastic dual in line package
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-99')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-112')" placeholder="Search table...">
 
 ```{list-table} Families of packages for plastic SMD with leads.
-:name: eee-table4-99
+:name: eee-table4-112
 :header-rows: 1
 :widths: 50 50
 
@@ -7679,10 +7680,10 @@ All packages have been split into the following six categories:
     - Heat Sink Enhanced SOP
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-100')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-113')" placeholder="Search table...">
 
 ```{list-table} Families of packages for plastic SMD with leads.
-:name: eee-table4-100
+:name: eee-table4-113
 :header-rows: 1
 :widths: 50 50
 
@@ -7742,10 +7743,10 @@ All packages have been split into the following six categories:
     - Very thin ChipArray BGA
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-101')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-114')" placeholder="Search table...">
 
 ```{list-table} Families of packages for plastic SMD with leads.
-:name: eee-table4-101
+:name: eee-table4-114
 :header-rows: 1
 :widths: 50 50
 
@@ -7761,10 +7762,10 @@ All packages have been split into the following six categories:
     -  Ceramic Column Grid Array
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-102')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-115')" placeholder="Search table...">
 
 ```{list-table} Families of packages for plastic SMD with leads.
-:name: eee-table4-102
+:name: eee-table4-115
 :header-rows: 1
 :widths: 50 50
 
@@ -7786,13 +7787,13 @@ For each stress $\lambda_{\text{ORH}}$, $\lambda_{\text{OTCyCase}}$, $\lambda_{\
 
 For components with 0 to 256 leads, the recommendation for the parameters *a* and *b* is the following:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_103')"
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_116')"
     placeholder="Search table...">
 
 ```{list-table} Parameters a and b for components with 0 to 256 leads.
-:name: eee-table4-103
+:name: eee-table4-116
 
-* - <table class="myTable" id="eee_table4_103">
+* - <table class="myTable" id="eee_table4_116">
         <thead>
             <tr>
                 <th rowspan="2"><strong>Family</strong></th>
@@ -7883,13 +7884,13 @@ For components with 0 to 256 leads, the recommendation for the parameters *a* an
 
 For components with more than 256 leads, the recommendation for the parameters *a* and *b* is the following:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_104')"
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_117')"
     placeholder="Search table...">
 
 ```{list-table} Parameters a and b for components with 0 to 256 leads.
-:name: eee-table4-104
+:name: eee-table4-117
 
-* - <table class="myTable" id="eee_table4_104">
+* - <table class="myTable" id="eee_table4_117">
         <thead>
             <tr>
                 <th rowspan="2"><strong>Family</strong></th>
@@ -7967,20 +7968,14 @@ For components with more than 256 leads, the recommendation for the parameters *
     </table>
 ```
 
-```{admonition} Note
-:class: note
-
-In the 2021 issue of FIDES, some evolution concerning the inclusing of underfill has been added. Hence, In Note 4 p127 in the Integrated Circuits paragraph, it is indicated that in case of underfill, $\lambda_{\text{OTCySolderjoints}}$ and $\lambda_{\text{Mech}}$ should be divided by 3. This needs to be assessed before being recommended in the frame of this handbook.
-```
-
-**Physical stresses for the inductors family:**
+**Physical stresses for integrated circuits:**
 
 ````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
-:label: Equation_1_115
+:label: Equation_1_124
 \Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
@@ -7995,7 +7990,7 @@ All other parameters are issued from the mission profile.
 ``
 ``  
 ```{math}
-:label: Equation_1_116
+:label: Equation_1_125
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
@@ -8005,7 +8000,7 @@ All other parameters are issued from the mission profile.
 ``
 ``  
 ```{math}
-:label: Equation_1_117
+:label: Equation_1_126
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
@@ -8016,7 +8011,7 @@ All other parameters are issued from the mission profile.
 ``
 ``  
 ```{math}
-:label: Equation_1_118
+:label: Equation_1_127
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
 ```
 ````
@@ -8027,7 +8022,7 @@ All other parameters are issued from the mission profile.
 ``
 ``  
 ```{math}
-:label: Equation_1_119
+:label: Equation_1_128
 \Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
@@ -8043,7 +8038,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``
 ``  
 ```{math}
-:label: Equation_1_120
+:label: Equation_1_129
 \Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
@@ -8052,10 +8047,10 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-105')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-118')" placeholder="Search table...">
 
 ```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
-:name: eee-table4-105
+:name: eee-table4-118
 :header-rows: 1
 :widths: 70 30
 
@@ -8081,13 +8076,13 @@ $\Pi_{application}$ represents the influence of the type of application and the 
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_106')"
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_119')"
     placeholder="Search table...">
 
 ```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
-:name: eee-table4-106
+:name: eee-table4-119
 
-* - <table class="myTable" id="eee_table4_106">
+* - <table class="myTable" id="eee_table4_119">
         <thead>
             <th>
                 <p><strong>Criterion</strong></p>
@@ -8305,7 +8300,7 @@ The ruggedising factor is determined through a 16 questions audit ensuring the e
 The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
 
 ```{list-table} nduced factor coefficient of sensitivity for integrated circuits.
-:name: eee-table4-94
+:name: eee-table4-120
 :header-rows: 1
 :widths: 70 30
 
@@ -8335,7 +8330,7 @@ These parameters are determined through tables available in FIDES.
 
 -  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-108`
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-121`
 
 -   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
 
@@ -8343,10 +8338,10 @@ These parameters are determined through tables available in FIDES.
 
 Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-108')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-121')" placeholder="Search table...">
 
 ```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for integrated circuits and ASICs.
-:name: eee-table4-108
+:name: eee-table4-121
 :header-rows: 1
 :widths: 60 25 15
 
@@ -8371,4 +8366,6428 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}
 
 The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
 
--->
+**Summary for the Integrated Circuits family 08**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td>08</td>
+        <td>Integrated Circuits</td>
+        <td>
+            <p>Merge of the models for integrated circuits and ASIC components</p>
+            <p>Consideration of 6 categories of packages</p>
+            <p>Values of basic failure rates λ<sub>0RH</sub>, λ<sub>0TcyCase</sub>, λ<sub>0TcySolderjoints</sub> and λ<sub>0Mech</sub> defined according to the 6 categories of packages</p>
+            <p>2021: Underfill & DSM considerations</p>
+            <p>2021: GaN MMIC inclusion</p>
+        </td>
+    </tr>
+</table>
+
+```{admonition} Note
+:class: note
+
+In the 2021 issue of FIDES, new types of packages and associated values have been included; the impact needs to be evaluated.
+```
+
+(eee_4_3_4_9)=
+## Relays (family 09)
+
+Relays are classified as family 09 in EPPL {cite:t}`eee-EPPL007-37`. 
+
+All relays used for Space applications can be modelled through FIDES, directly or indirectly. The pages where the models can be found in the two versions of the FIDES guide
+
+The following table presents the different subfamilies and the corresponding models with the FIDES method.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_122')"
+    placeholder="Search table...">
+
+```{list-table} Groups of relays.
+:name: eee-table4-122
+
+* - <table class="myTable" id="eee_table4_122">
+        <thead>
+            <tr>
+                <th rowspan="2"><strong>Groups of relays</strong></th>
+                <th colspan="2"><strong>Models in FIDES 2009</strong></th>
+                <th rowspan="2"><strong>Proposed models in FIDES</strong></th>
+                <th rowspan="2"><strong>Remarks</strong></th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>2021</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>01 Mono-stable relay (non latching)</td>
+            <td>p148</td>
+            <td>p164</td>
+            <td>“Mono-stable relay”</td>
+            <td>ECPL</td>
+        </tr>
+        <tr>
+            <td>02 Bi-stable relay (latching)</td>
+            <td>No/Yes</td>
+            <td>No/Yes</td>
+            <td>As “Mono-stable relay”</td>
+            <td>ECPL</td>
+        </tr>
+    </table>
+```
+
+**General model for the relays family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_130
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_131
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Relay}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{Electrical}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+````
+
+$\lambda_{O_{\text{Relay}}}$ is equal to 1.1.
+
+For space applications, $\Pi_{\text{Chemical}}$ is equal to 0, $\Pi_{\text{manoeuvres}}$ is equal to 1.
+
+```{admonition} Todo
+:class: todo
+
+error in equation 131, miss Pi chamical and manoeuvre"
+```
+
+**Physical stresses for the relays family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_132
+\Pi_{\text{Thermal}} = 0.29 \bullet \Pi_{\text{TH\ contact}} \bullet \Pi_{\text{TH\ breaking}} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{313} - \frac{1}{273 + T^{'}} \right) \right\rbrack
+```
+````
+
+$E_{a}$ = 0.25eV;
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_133
+T^{'} = \left\{ \begin{matrix}                                                                                         
+  40 - \frac{85}{55} \bullet \left( T_{board\_ ref} + \Delta T \right) & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T \leq 0{^\circ}C \\   
+  40{^\circ}C & \mathrm{\text{if}}\ {0{^\circ}C < T}_{board\_ ref} + \Delta T \leq 40{^\circ}C \\                                            
+  T_{board\_ ref} + \Delta T & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T > 40{^\circ}C \\                                               
+  \end{matrix} \right.\ 
+```
+````
+
+$\Pi_{\text{TH\ contact}}$ is equal to:
+
+-   1 for temperatures $T_{board\_ ref} + \Delta T \leq 125{^\circ}C$;
+
+-   $\Pi_{\text{MEcontact}} \bullet \Pi_{\text{pole}}$ for temperatures higher than 125°C
+
+-   With $\Pi_{\text{Pole}}$ depending on the type of relay (for SPST $\Pi_{\text{Pole}}$= 1, for DPDT $\Pi_{\text{Pole}}$= 3, for 3PDT $\Pi_{\text{Pole}}$= 4.25 and for 4PDT $\Pi_{\text{Pole}}$= 5.5).
+
+$\Pi_{\text{ME\ contact}}$ is equal to:
+
+-   1.5 for gold plated contact;
+
+-   1.0 for silver plated contact.
+
+$\Pi_{\text{TH\ breaking}}$ is equal to:
+
+-   1.8 for a breaking capacity \< 2A;
+
+-   1.2 for a breaking capacity ≥ 2A;
+
+All other parameters are issued from the mission profile.
+
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_134
+\Pi_{\text{Electrical}} = 0.55 \bullet \Pi_{\text{pole}} \bullet \Pi_{\text{EL\ breaking}} \bullet \Pi_{\text{load\ type}} \bullet {S_{V}}^{m_{1}} \bullet {S_{I}}^{m_{2}} \bullet \left( \frac{U_{\text{nominal}}}{U_{\text{coil}}} \right)
+```
+````
+
+$\Pi_{\text{Pole}}$ depending on the type of relay (for SPST $\Pi_{\text{Pole}}$= 1, for DPDT $\Pi_{\text{Pole}}$= 3, for 3PDT $\Pi_{\text{Pole}}$= 4.25 and for 4PDT $\Pi_{\text{Pole}}$= 5.5).
+
+$\Pi_{\text{EL\ breaking}}$ is equal to:
+
+-   1.5 for a breaking capacity \< 2A;
+
+-   1.2 for a breaking capacity ≥ 2A;
+
+$\Pi_{\text{load\ type}}$, $S_{V}$ and $S_{I}$ are equal to:
+
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-123')" placeholder="Search table...">
+
+```{list-table} Electrical parameters of relays.
+:name: eee-table4-123
+:header-rows: 1
+:widths: 40 20 20 20
+
+*   - Load type
+    - $\Pi_{\text{load\ type}}$
+    - $S_{V}$
+    - $S_{I}$
+*   - Resistive
+    - 0.3
+    - 1
+    - $I_{\text{contact}}/I_{\text{nominal}}$
+*   - Inductive
+    - 8
+    - 1
+    - $I_{\text{contact}}/I_{\text{nominal}}$
+*   - Incandescent lamp
+    - 4
+    - $V_{\text{contact}}/V_{\text{nominal}}$
+    - $I_{\text{contact}}/I_{\text{nominal}}$
+*   - Capacitive
+    - 6
+    - $V_{\text{contact}}/V_{\text{nominal}}$
+    - 1
+```
+
+$m_{1}$ and $m_{2}$ are equal to:
+
+```{list-table} Power parameters of relays.
+:name: eee-table4-124
+:header-rows: 1
+:widths: 25 25 25 25
+
+*   - $V_{\text{contact}}/V_{\text{nominal}}$
+    - $m_{1}$
+    - $I_{\text{contact}}/I_{\text{nominal}}$
+    - $m_{2}$
+*   - ≤1
+    - 3
+    - ≤1
+    - 3
+*   - >1
+    - 8.8
+    - >1
+    - 5.9
+```
+
+All other parameters are issued from the mission profile.
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_135
+\Pi_{\text{Tcy}} = 0.02 \bullet \Pi_{\text{prot\ TCY}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+$\Pi_{\text{prot\ TCY}}$ depends on the relay protection level:
+
+-   1 for hermetic relays;
+
+-   3 for sealed or not sealed relays.
+
+All other parameters are issued from the mission profile.
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_136
+\Pi_{\text{Mechanical}} = 0.05 \bullet \Pi_{\text{pole}} \bullet \Pi_{\text{ME\ contact}} \bullet \Pi_{\text{ME\ breaking}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+$\Pi_{\text{pole}}$= 4.25 and for 4PDT $\Pi_{\text{pole}}$= 5.5).
+
+$\Pi_{\text{ME\ contact}}$ is equal to:
+
+-   1.5 for gold plated contact;
+
+-   1 for silver plated contact.
+
+$\Pi_{\text{ME\ breaking}}$ is equal to:
+
+-   3 for a breaking capacity \< 2A;
+
+-   1 for a breaking capacity ≥ 2A.
+
+All other parameters are issued from the mission profile.
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_137
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-125')" placeholder="Search table...">
+
+```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+:name: eee-table4-125
+:header-rows: 1
+:widths: 70 30
+
+*   - Description of the placement influence
+    - $\Pi_{placement\_ i}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.6
+*   - Analog low-level non-interface function (<1A)
+    - 1.3
+*   - Analog low-level interface function (<1A)
+    - 2.0
+*   - Analog power non-interface function (≥1A)
+    - 1.6
+*   - Analog power interface function (≥1A)
+    - 2.5
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_126')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-126
+
+* - <table class="myTable" id="eee_table4_126">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for relays.
+:name: eee-table4-127
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - Relays
+    - 7.55
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, this value has been updated to 7.43.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-128`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-128')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for electromechanical relays.
+:name: eee-table4-128
+:header-rows: 1
+:widths: 60 25 15
+
+*   - Electromechanical relays: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: ESCC 360x, NASDA-QTS-39016A or specific manufacturer specifications based on ESCC
+    - Higher
+    - 3
+*   - Qualification according to one of the following standards: MIL-PRF-39016 (or 83536 or 6106) level R, MIL-PRF-39016 (or 83536 or 6106) level P, NASDA-QTS-6106A
+    - Equivalent
+    - 2
+*   - Qualification according to one of the following approved EIA, IEC, SAE, BS
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+**Summary or the Relays family 09**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>
+            <p>Addition of the model for bi-stable relays (identical to the model for mono-stable relays)</p>
+            <p>Value of Π<sub>Chemical</sub> equal to 0</p>
+            <p>Value of Π<sub>manoeuvres</sub> equal to 1</p>
+            <p>Removal of the humidity stress</p>
+        </td>
+    </tr>
+</table>
+
+(eee_4_3_4_10)=
+## Resistors (family 10)
+
+Resistors are classified as family 10 in EPPL {cite:t}`eee-EPPL007-37`. 
+
+All resistors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+
+The following table presents the different subfamilies and the corresponding models with the FIDES method.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_129')"
+    placeholder="Search table...">
+
+```{list-table} Groups of resistors.
+:name: eee-table4-129
+
+* - <table class="myTable" id="eee_table4_129">
+        <thead>
+            <tr>
+                <th rowspan="2"><strong>Groups of resistors</strong></th>
+                <th colspan="2"><strong>Models in FIDES 2009</strong></th>
+                <th rowspan="2"><strong>Proposed models in FIDES</strong></th>
+                <th rowspan="2"><strong>Remarks</strong></th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>2021</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>01 Metal Oxide</td>
+            <td>
+                <p>p130</p>
+                <p>p130</p>
+                <p>p130</p>
+            </td>
+            <td>
+                <p>p146</p>
+                <p>p146</p>
+                <p>p146</p>
+            </td>
+            <td>
+                <p>No more present in the EPPL but recommendation to use</p>
+                <p>“High stability bulk metal foil accuracy resistor”,</p>
+                <p>“Power film resistor” and</p>
+                <p>“Minimelf high stability (RS) common (RC) low power film resistor”</p>
+            </td>
+            <td>
+                <p>ECRE_08</p>
+                <p>ECRE_02</p>
+                <p>ECRE_01</p>
+            </td>
+        </tr>
+        <tr>
+            <td>02 Wirewound Precision (including Surface Mount)</td>
+            <td>p130</td>
+            <td>p146</td>
+            <td>No more present in the EPPL but recommendation to use “Power wirewound resistor”</td>
+            <td>ECRE_04</td>
+        </tr>
+        <tr>
+            <td>03 Wirewound Chassis Mounted</td>
+            <td>p130</td>
+            <td>p146</td>
+            <td>No more present in the EPPL but recommendation to use “Power wirewound resistor”</td>
+            <td>ECRE_04</td>
+        </tr>
+        <tr>
+            <td>04 Variables (trimmer)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>As trimmers are not allowed for space applications according to ECSS-Q-60, no model is provided for this
+                group</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>05 Composition</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No more present in the EPPL</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>07 Shunt</td>
+            <td>
+                <p>p130</p>
+                <p>p130</p>
+            </td>
+            <td>
+                <p>p146</p>
+                <p>p146</p>
+            </td>
+            <td>
+                <p>For power shunt: “Power wirewound resistor”</p>
+                <p>For current sensor low power shunt: “High stability bulk metal foil accuracy resistor”</p>
+            </td>
+            <td>
+                <p>ECRE_04</p>
+                <p>ECRE_08</p>
+            </td>
+        </tr>
+        <tr>
+            <td>08 Metal Film</td>
+            <td>
+                <p>p130</p>
+                <p>p130</p>
+                <p>p130</p>
+            </td>
+            <td>
+                <p>p146</p>
+                <p>p146</p>
+                <p>p146</p>
+            </td>
+            <td>
+                <p>“High stability bulk metal foil accuracy resistor”,</p>
+                <p>“Power film resistor” and</p>
+                <p>“Minimelf high stability (RS) common (RC) low power film resistor”</p>
+            </td>
+            <td>
+                <p>ECRE_08</p>
+                <p>ECRE_02</p>
+                <p>ECRE_01</p>
+            </td>
+        </tr>
+        <tr>
+            <td>09 Chip (all)</td>
+            <td>p130</td>
+            <td>p146</td>
+            <td>“Resistive chip”</td>
+            <td>ECRE_06</td>
+        </tr>
+        <tr>
+            <td>10 Network (all)</td>
+            <td>p130</td>
+            <td>p146</td>
+            <td>“SMD resistive network”</td>
+            <td>ECRE_07</td>
+        </tr>
+        <tr>
+            <td>11 Heaters, Flexible</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Heaters and flexibles are not modelled in any standard</td>
+            <td>NA</td>
+        </tr>
+    </table>
+```
+
+```{admonition} Note
+:class: note
+
+HFRF resistors can also be modelled with FIDES, with the HFRF model.
+```
+
+**General model for the resistors family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_138
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+With process factor $\Pi_{\text{Process}}$ according to Paragraph {numref}`eee_4_3_2_1`.
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_139
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Resistor}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+````
+
+$\lambda_{O_{\text{Resistor}}}$ corresponds to the basic failure rate defined for sub-groups within the mentioned groups:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-130')" placeholder="Search table...">
+
+```{list-table} Basic failure rates for resistors.
+:name: eee-table4-130
+:header-rows: 1
+:widths: 30 40 30
+
+*   - Groups
+    - Type of resistor
+    - $\lambda_{O_{\text{Resistor}}}$
+*   - 1, 8, 9b
+    - Power film
+    - 0.4
+*   - 2, 3
+    - Power wirewound
+    - 0.4
+*   - 1, 8, 9a
+    - High stability
+    - from 0.14 to 0.25 in FIDES xx page 131
+*   - 1, 8, 9c
+    - Minimelf
+    - 0.1
+*   - 10
+    - SMD resistive network
+    - x $\sqrt{N_{R}}$
+```
+
+With $N_{R}$ as the number of resistors in the network.
+
+**Physical stresses for the resistors family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_140
+\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \bullet \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
+```
+````
+
+$E_{a}$ = 0.15eV;
+
+$\gamma_{TH\_ EL}$ and $A$ depend on the type of resistors:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-131')" placeholder="Search table...">
+
+```{list-table} Values of $\gamma_{TH\_ EL}$ for resistors.
+:name: eee-table4-131
+:header-rows: 1
+:widths: 20 40 20 20
+
+*   - Groups
+    - Type of resistor
+    - $A$
+    - $\gamma_{TH\_ EL}$
+*   - 1, 8, 9b
+    - Power film
+    - 130
+    - 0.04
+*   - 2, 3
+    - Power wirewound
+    - 130
+    - 0.01
+*   - 1, 8, 9a
+    - High stability
+    - 85
+    - from 0.07 to 0.18 in FIDES xx page 131
+*   - 1, 8, 9c
+    - Minimelf
+    - 85
+    - 0.04
+*   - 10
+    - SMD resistive network
+    - 70
+    - 0.01
+```
+
+All other parameters are issued from the mission profile.
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_141
+\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+$\gamma_{\text{TCy}}$ depends on the type of resistors:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-132')" placeholder="Search table...">
+
+```{list-table} Values of $\gamma_{\text{TCy}}$ for resistors.
+:name: eee-table4-132
+:header-rows: 1
+:widths: 30 40 30
+
+*   - Groups
+    - Type of resistor
+    - $\gamma_{\text{TCy}}$
+*   - 1, 8, 9b
+    - Power film
+    - 0.89
+*   - 2, 3
+    - Power wirewound
+    - 0.97
+*   - 1, 8, 9a
+    - High stability
+    - from 0.43 to 0.55 in FIDES xx page 131
+*   - 1, 8, 9c
+    - Minimelf
+    - 0.89
+*   - 10
+    - SMD resistive network
+    - 0.97
+```
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_142
+\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+$\gamma_{\text{Mech}}$ depends on the type of resistors:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-133')" placeholder="Search table...">
+
+```{list-table} Values of $\gamma_{\text{Mech}}$ for resistors.
+:name: eee-table4-133
+:header-rows: 1
+:widths: 30 40 30
+
+*   - Groups
+    - Type of resistor
+    - $\gamma_{\text{Mech}}$
+*   - 1, 8, 9b
+    - Power film
+    - 0.01
+*   - 2, 3
+    - Power wirewound
+    - 0.01
+*   - 1, 8, 9a
+    - High stability
+    - from 0.05 to 0.08 in FIDES xx page 131
+*   - 1, 8, 9c
+    - Minimelf
+    - 0.01
+*   - 10
+    - SMD resistive network
+    - 0.01
+```
+
+All other parameters are issued from the mission profile. 
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_143
+\Pi_{\text{RH}} = {\gamma_{\text{RH}} \bullet \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.9 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \bullet \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
+```
+````
+
+$\gamma_{\text{RH}}$ depends on the type of resistors:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-134')" placeholder="Search table...">
+
+```{list-table} Values of $\gamma_{\text{RH}}$ for resistors.
+:name: eee-table4-134
+:header-rows: 1
+:widths: 30 40 30
+
+*   - Groups
+    - Type of resistor
+    - $\gamma_{\text{RH}}$
+*   - 1, 8, 9b
+    - Power film
+    - 0.06
+*   - 2, 3
+    - Power wirewound
+    - 0.01
+*   - 1, 8, 9a
+    - High stability
+    - from 0.26 to 0.41 in FIDES xx page 131
+*   - 1, 8, 9c
+    - Minimelf
+    - 0.06
+*   - 10
+    - SMD resistive network
+    - 0.01
+```
+
+All other parameters are issued from the mission profile. 
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_144
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-135')" placeholder="Search table...">
+
+```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+:name: eee-table4-135
+:header-rows: 1
+:widths: 70 30
+
+*   - Description of the placement influence
+    - $\Pi_{placement\_ i}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.6
+*   - Analog low-level non-interface function (<1A)
+    - 1.3
+*   - Analog low-level interface function (<1A)
+    - 2.0
+*   - Analog power non-interface function (≥1A)
+    - 1.6
+*   - Analog power interface function (≥1A)
+    - 2.5
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_136')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-136
+
+* - <table class="myTable" id="eee_table4_136">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for resistors.
+:name: eee-table4-137
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - Power film
+    - 2.25
+*   - Power wirewound
+    - 2.25
+*   - High stability
+    - 5.80
+*   - Minimelf
+    - 3.85
+*   - SMD resistive network
+    - 4.25
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, these values have been updated, as well the overall denomination of the categories of resistors.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-138`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-138')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for resistors.
+:name: eee-table4-138
+:header-rows: 1
+:widths: 60 25 15
+
+*   - Resistors: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: AEC Q200, MIL-PRF-xxxx level T, MIL-PRF-xxxx level S, MIL-PRF-xxxx level R, ESCC 400x, NASDA-QTS-xxxx class I (JAXA-QTS-2050D)
+    - Higher
+    - 3
+*   - Qualification according to one of the following standards: MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved CECC standards.
+    - Equivalent
+    - 2
+*   - Qualification according to MIL-PRF-xxxx level M, or qualification program internal to the manufacturer and unidentified manufacturing sites
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+**Summary for the Resistors family 10**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td>10</td>
+        <td>Resistors</td>
+        <td>
+            <p>-</p>
+        </td>
+    </tr>
+</table>
+
+
+
+(eee_4_3_4_11)=
+## Thermistors (family 11)
+
+Thermistors are classified as family 11 in EPPL {cite:t}`eee-EPPL007-37`. 
+
+FIDES does not present models for thermistors, hence the models detailed hereafter as based on resistors models.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_139')"
+    placeholder="Search table...">
+
+```{list-table} Groups of thermistors.
+:name: eee-table4-139
+
+* - <table class="myTable" id="eee_table4_139">
+        <thead>
+            <tr>
+                <th rowspan="2"><strong>Groups of thermistors</strong></th>
+                <th colspan="2"><strong>Models in FIDES 2009</strong></th>
+                <th rowspan="2"><strong>Proposed models in FIDES</strong></th>
+                <th rowspan="2"><strong>Remarks</strong></th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>2021</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>01 Temperature compensating</td>
+            <td>
+                <p>No/Yes</p>
+                <p>p130</p>
+            </td>
+            <td>
+                <p>No/Yes</p>
+                <p>p146</p>
+            </td>
+            <td>
+                <p>"“Minimelf" high stability (RS) common (RC) low power film resistor”,</p>
+                <p>“Low power wirewound accuracy resistor”,</p>
+                <p>“High stability bulk metal foil accuracy resistor”</p>
+            </td>
+            <td>
+                <p>ECRE_01</p>
+                <p>ECRE_03</p>
+                <p>ECRE_08</p>
+            </td>
+        </tr>
+        <tr>
+            <td>02 Temperature measuring</td>
+            <td>
+                <p>No/Yes</p>
+                <p>p130</p>
+            </td>
+            <td>
+                <p>No/Yes</p>
+                <p>p146</p>
+            </td>
+            <td>
+                <p>"“Minimelf" high stability (RS) common (RC) low power film resistor”,</p>
+                <p>“Low power wirewound accuracy resistor”,</p>
+                <p>“High stability bulk metal foil accuracy resistor”</p>
+            </td>
+            <td>
+                <p>ECRE_01</p>
+                <p>ECRE_03</p>
+                <p>ECRE_08</p>
+            </td>
+        </tr>
+        <tr>
+            <td>03 Temperature sensor</td>
+            <td>
+                <p>No/Yes</p>
+                <p>p130</p>
+            </td>
+            <td>
+                <p>No/Yes</p>
+                <p>p146</p>
+            </td>
+            <td>
+                <p>"“Minimelf" high stability (RS) common (RC) low power film resistor”,</p>
+                <p>“Low power wirewound accuracy resistor”,</p>
+                <p>“High stability bulk metal foil accuracy resistor”</p>
+            </td>
+            <td>
+                <p>ECRE_01</p>
+                <p>ECRE_03</p>
+                <p>ECRE_08</p>
+            </td>
+        </tr>
+    </table>
+```
+
+**General model for the thermistors family**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_145
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see Paragraph {numref}`eee_4_3_2_1`,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+All this being based on a mission profile to be defined for the whole unit.
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_146
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Thermistor}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+````
+
+$\lambda_{O_{\text{Thermistor}}}$ corresponds to the basic failure rate defined for sub-groups within the mentioned groups:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-140')" placeholder="Search table...">
+
+```{list-table} Basic failure rates for thermistors.
+:name: eee-table4-140
+:header-rows: 1
+:widths: 30 40 30
+
+*   - Groups
+    - Type of resistor
+    - $\lambda_{O_{\text{Thermistor}}}$
+*   - 1, 2, 3
+    - Low power wirewound
+    - 0.3
+*   - 1, 2, 3
+    - High stability
+    - from 0.14 to 0.25 in FIDES page 131
+*   - 1, 2, 3
+    - Minimelf
+    - 0.1
+```
+
+**Physical stresses for the thermistors family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_147
+\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \bullet \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
+```
+````
+
+$E_{a}$ = 0.15eV;
+
+$\gamma_{TH\_ EL}$ and $A$ depend on the type of thermistors:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-131')" placeholder="Search table...">
+
+```{list-table} Values of $\gamma_{TH\_ EL}$ for thermistors.
+:name: eee-table4-141
+:header-rows: 1
+:widths: 20 40 20 20
+
+*   - Groups
+    - Type of resistor
+    - $A$
+    - $\gamma_{TH\_ EL}$
+*   - 1, 2, 3
+    - Low power wirewound
+    - 30
+    - 0.02
+*   - 1, 2, 3
+    - High stability
+    - 85
+    - from 0.07 to 0.18 in FIDES page 131
+*   - 1, 2, 3
+    - Minimelf
+    - 85
+    - 0.04
+```
+
+All other parameters are issued from the mission profile.
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_148
+\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+$\gamma_{\text{TCy}}$ depends on the type of thermistors:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-142')" placeholder="Search table...">
+
+```{list-table} Values of $\gamma_{\text{TCy}}$ for thermistors.
+:name: eee-table4-142
+:header-rows: 1
+:widths: 30 40 30
+
+*   - Groups
+    - Type of resistor
+    - $\gamma_{\text{TCy}}$
+*   - 1, 2, 3
+    - Low power wirewound
+    - 0.96
+*   - 1, 2, 3
+    - High stability
+    - from 0.43 to 0.55 in FIDES p131
+*   - 1, 2, 3
+    - Minimelf
+    - 0.89
+```
+
+All other parameters are issued from the mission profile. 
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_149
+\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+$\gamma_{\text{Mech}}$ depends on the type of thermistors:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-143')" placeholder="Search table...">
+
+```{list-table} Values of $\gamma_{\text{Mech}}$ for thermistors.
+:name: eee-table4-143
+:header-rows: 1
+:widths: 30 40 30
+
+*   - Groups
+    - Type of resistor
+    - $\gamma_{\text{Mech}}$
+*   - 1, 2, 3
+    - Low power wirewound
+    - 0.01
+*   - 1, 2, 3
+    - High stability
+    - from 0.05 to 0.08 in FIDES p131
+*   - 1, 2, 3
+    - Minimelf
+    - 0.01
+```
+
+All other parameters are issued from the mission profile. 
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_150
+Pi_{\text{RH}} = {\gamma_{\text{RH}} \bullet \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.9 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \bullet \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
+```
+````
+
+$\gamma_{\text{RH}}$ depends on the type of thermistors:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-144')" placeholder="Search table...">
+
+```{list-table} Values of $\gamma_{\text{RH}}$ for thermistors.
+:name: eee-table4-144
+:header-rows: 1
+:widths: 30 40 30
+
+*   - Groups
+    - Type of resistor
+    - $\gamma_{\text{RH}}$
+*   - 1, 2, 3
+    - Low power wirewound
+    - 0.01
+*   - 1, 2, 3
+    - High stability
+    - from 0.26 to 0.41 in FIDES p131
+*   - 1, 2, 3
+    - Minimelf
+    - 0.06
+```
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_151
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-145')" placeholder="Search table...">
+
+```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+:name: eee-table4-145
+:header-rows: 1
+:widths: 70 30
+
+*   - Description of the placement influence
+    - $\Pi_{placement\_ i}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.6
+*   - Analog low-level non-interface function (<1A)
+    - 1.3
+*   - Analog low-level interface function (<1A)
+    - 2.0
+*   - Analog power non-interface function (≥1A)
+    - 1.6
+*   - Analog power interface function (≥1A)
+    - 2.5
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_146')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-146
+
+* - <table class="myTable" id="eee_table4_146">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for thermistors.
+:name: eee-table4-147
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - Low power wirewound
+    - 1.75
+*   - High stability
+    - 5.80
+*   - Minimelf
+    - 3.85
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, these values have been updated to 1.83, 4.95 and 3.55.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-138`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-148')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for thermistors.
+:name: eee-table4-148
+:header-rows: 1
+:widths: 60 25 15
+
+*   - Thermistors: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: AEC Q200, MIL-PRF-xxxx level T, MIL-PRF-xxxx level S, MIL-PRF-xxxx level R, ESCC 400x, NASDA-QTS-xxxx class I (JAXA-QTS-2050D)
+    - Higher
+    - 3
+*   - Qualification according to one of the following standards: MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved CECC standards.
+    - Equivalent
+    - 2
+*   - Qualification according to MIL-PRF-xxxx level M, or qualification program internal to the manufacturer and unidentified manufacturing sites
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+**Summary for the Thermistors family 10**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td>11</td>
+        <td>Thermistors</td>
+        <td>
+            <p>Addition of the model for thermistors</p>
+        </td>
+    </tr>
+</table>
+
+(eee_4_3_4_12)=
+## Transistors (family 12)
+
+General transistors and RF HF transistors are classified as family 12 in EPPL {cite:t}`eee-EPPL007-37`. 
+
+All transistors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
+
+The following table presents the different subfamilies and the corresponding models with the FIDES method.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_149')"
+    placeholder="Search table...">
+
+```{list-table} Groups of transistors.
+:name: eee-table4-149
+
+* - <table class="myTable" id="eee_table4_149">
+        <thead>
+            <tr>
+                <th rowspan="2"><strong>Groups of transistors</strong></th>
+                <th colspan="2"><strong>Models in FIDES 2009</strong></th>
+                <th rowspan="2"><strong>Proposed models in FIDES</strong></th>
+                <th rowspan="2"><strong>Remarks</strong></th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>2021</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>01 Low Power, NPN (&lt; 2watts)</td>
+            <td>p120</td>
+            <td>p133</td>
+            <td>Low power Transistors “Silicon bipolar &lt; 5W”</td>
+            <td>ECDS_20</td>
+        </tr>
+        <tr>
+            <td>02 Low Power, PNP (&lt; 2watts)</td>
+            <td>p120</td>
+            <td>p133</td>
+            <td>Low power Transistors “Silicon bipolar &lt; 5W”</td>
+            <td>ECDS_20</td>
+        </tr>
+        <tr>
+            <td>03 High Power, NPN (&gt; 2watts)</td>
+            <td>p120</td>
+            <td>p133</td>
+            <td>Power Transistors “Silicon bipolar &gt; 5W”</td>
+            <td>ECDS_21</td>
+        </tr>
+        <tr>
+            <td>04 High Power, PNP (&gt; 2watts)</td>
+            <td>p120</td>
+            <td>p133</td>
+            <td>Power Transistors “Silicon bipolar &gt; 5W”</td>
+            <td>ECDS_21</td>
+        </tr>
+        <tr>
+            <td>05 FET N Channel</td>
+            <td>p120</td>
+            <td>p133</td>
+            <td>
+                <p>Low power Transistors</p>
+                <p>“Silicon MOS &lt; 5W”,</p>
+                <p>“Silicon JFET &lt; 5W”</p>
+            </td>
+            <td>
+                <p>ECDS_19</p>
+                <p>ECDS_18</p>
+            </td>
+        </tr>
+        <tr>
+            <td>06 FET P Channel</td>
+            <td>p120</td>
+            <td>p133</td>
+            <td>
+                <p>Low power Transistors</p>
+                <p>“Silicon MOS &lt; 5W”,</p>
+                <p>“Silicon JFET &lt; 5W”</p>
+            </td>
+            <td>
+                <p>ECDS_19</p>
+                <p>ECDS_18</p>
+            </td>
+        </tr>
+        <tr>
+            <td>10 RF/microwave Npn Low Power / Low Noise</td>
+            <td>p185</td>
+            <td>p211</td>
+            <td>
+                <p>RF HF Low power Transistors</p>
+                <p>“Silicon Bipolar &lt; 5W”,</p>
+                <p>“SiGe, bipolar &lt; 1W”</p>
+            </td>
+            <td>
+                <p>HFDI_02</p>
+                <p>HFDI_03</p>
+            </td>
+        </tr>
+        <tr>
+            <td>11 RF/microwave Pnp Low Power / Low Noise</td>
+            <td>p185</td>
+            <td>p211</td>
+            <td>
+                <p>RF HF Low power Transistors</p>
+                <p>“Silicon Bipolar &lt; 5W”,</p>
+                <p>“SiGe, bipolar &lt; 1W”</p>
+            </td>
+            <td>
+                <p>HFDI_02</p>
+                <p>HFDI_03</p>
+            </td>
+        </tr>
+        <tr>
+            <td>13 RF/microwave Bipolar Power</td>
+            <td>p185</td>
+            <td>p211</td>
+            <td>RF HF Power Transistors “Silicon Bipolar &gt; 5W”</td>
+            <td>HFDI_05</td>
+        </tr>
+        <tr>
+            <td>12 RF/microwave FET N-channel/ P-channel</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No more present in the EPPL</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>14 RF/microwave FET Power (Si)</td>
+            <td>p185</td>
+            <td>p211</td>
+            <td>No more present in the EPPL but recommendation to use RF HF Power Transistors “Silicon MOS &gt; 5W”</td>
+            <td>HFDI_06</td>
+        </tr>
+        <tr>
+            <td>15 Microwave Power (GaAs)</td>
+            <td>p185</td>
+            <td>p211</td>
+            <td>No more present in the EPPL but recommendation to use RF HF Power Transistors “GaAs&gt;1W”</td>
+            <td>HFDI_07</td>
+        </tr>
+        <tr>
+            <td>16 Microwave Low Noise (GaAs)</td>
+            <td>p185</td>
+            <td>p211</td>
+            <td>
+                <p>No more present in the EPPL but recommendation to use</p>
+                <p>RF HF Low power Transistors “GaAs&lt;1W”,</p>
+                <p>RF HF Power Transistors “GaAs&gt;1W”</p>
+            </td>
+            <td>
+                <p>HFDI_04</p>
+                <p>HFDI_07</p>
+            </td>
+        </tr>
+        <tr>
+            <td>08 Multiple</td>
+            <td>No/Yes</td>
+            <td>No/Yes</td>
+            <td>No more present in the EPPL but recommendation to model as the sum of all individual transistors</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>09 Switching</td>
+            <td>p120</td>
+            <td>p133</td>
+            <td>No more present in the EPPL but recommendation to use Low power Transistors “Silicon bipolar &lt; 5W”</td>
+            <td>ECDS_20</td>
+        </tr>
+        <tr>
+            <td>17 Chopper</td>
+            <td>p120</td>
+            <td>p133</td>
+            <td>
+                <p>Low power Transistors</p>
+                <p>“Silicon bipolar &lt; 5W”,</p>
+                <p>“Silicon MOS &lt; 5W”,</p>
+                <p>“Silicon JFET &lt; 5W”</p>
+            </td>
+            <td>
+                <p>ECDS_20</p>
+                <p>ECDS_19</p>
+                <p>ECDS_18</p>
+            </td>
+        </tr>
+    </table>
+```
+
+(eee_4_3_4_12_1)=
+### HF/RF Transistors (10, 11, 13, 14, 15 families)
+
+**General model for the general transistors and the HF/RF transistors family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_152
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessRFHF}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
+
+-   $\Pi_{\text{ProcessRFHF}}$ the quality and technical control over the development, manufacturing and use process for the RFHF item,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+All this being based on a mission profile to be defined for the whole unit.
+
+With process factor $\Pi_{\text{Process}}$ according to Paragraph {numref}`eee_4_3_2_1` and HF/RF process factor $\Pi_{\text{ProcessRFHF}}$ according to Paragraph {numref}`eee_4_3_2_5`.
+
+```{admonition} Note
+:class: note
+
+In the 2021 issue of FIDES, a GaN Transistor model has been included. The detail is provided in {numref}`eee_4_4_2_3`, as it has not yet been assessed and is just a proposition for the user.
+```
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_153
+\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \begin{pmatrix} 
+  {\lambda_{\text{OTH}} \bullet \Pi}_{\text{Thermal}} \\                                                                                        
+  {+ \lambda_{\text{OTCyCase}} \bullet \Pi}_{\text{TCyCase}} \\                                                                                 
+  \begin{matrix}                                                                                                                                
+  {+ \lambda_{\text{OTCySolderjoints}} \bullet \Pi}_{\text{TCySolderjoints}} \\                                                                 
+   + \lambda_{\text{OMech}} \bullet \Pi_{\text{Mech}} \\                                                                                        
+  \end{matrix} \\                                                                                                                               
+  \end{pmatrix}_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+````
+
+The basic failure rates $\lambda_{\text{OTCyCase}}$, $\lambda_{\text{OTCySolderjoints}}$ and $\lambda_{\text{OMech}}$ are provided in the following table according for the packages SODxx and TOxx specifically used in space applications:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-150')" placeholder="Search table...">
+
+```{list-table} Basic failure rates $\lambda_{0}$ for transistors.
+:name: eee-table4-150
+:header-rows: 1
+:widths: 16 20 16 16 16 16
+
+*   - Case
+    - Equivalent name
+    - Description
+    - $\lambda_{\text{OTCyCase}}$
+    - $\lambda_{\text{OTCySolderjoints}}$
+    - $\lambda_{\text{OMech}}$
+*   - SOD80
+    - Mini-MELF, DO213AA
+    - SMD, Hermetically sealed glass
+    - 0.00781
+    - 0.03905
+    - 0.00078
+*   - SOD87
+    - MELF, DO213AB
+    - SMD, Hermetically sealed glass
+    - 0.00781
+    - 0.03905
+    - 0.00078
+*   - TO18
+    - TO71, TO72, SOT31, SOT18
+    - Through hole, metal
+    - 0.0101
+    - 0.0505
+    - 0.00101
+*   - TO39
+    - SOT5
+    - Through hole, metal
+    - 0.0101
+    - 0.0505
+    - 0.00101
+*   - TO52
+    - 
+    - Through hole, metal
+    - 0.0101
+    - 0.0505
+    - 0.00101
+```
+
+$\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the type of components.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-151')" placeholder="Search table...">
+
+```{list-table} Basic failure rates $\lambda_{\text{OTH}}$ for RF/HF transistors.
+:name: eee-table4-151
+:header-rows: 1
+:widths: 70 30
+
+*   - Type
+    - $\lambda_{\text{OTH}}$
+*   - Power HF/RF transistor – GaAs > 1W
+    - 0.0927*
+*   - Low power HF/RF transistor – GaAs < 1W
+    - 0.0488*
+*   - Power HF/RF transistor – Silicon Bipole > 5W
+    - 0.0478
+*   - Power HF/RF transistor – Silicon MOS > 5W
+    - 0.0202
+*   - Low power HF/RF transistor –
+    - 0.0138
+```
+
+```{admonition} Note
+:class: note
+
+$\lambda_{\text{OTH}}$ for Power HF/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
+```
+
+**Physical stresses for the general transistors and the RF HF transistors family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_154
+\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```
+````
+
+$E_{a}$ = 0.7eV;
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_155
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_156
+\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \bullet N}_{cy\_ annual}}{t_{\text{annual}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_157
+\Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+All parameters are issued from the mission profile.
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_158
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-152')" placeholder="Search table...">
+
+```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+:name: eee-table4-152
+:header-rows: 1
+:widths: 70 30
+
+*   - Description of the placement influence
+    - $\Pi_{placement\_ i}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.6
+*   - Analog low-level non-interface function (<1A)
+    - 1.3
+*   - Analog low-level interface function (<1A)
+    - 2.0
+*   - Analog power non-interface function (≥1A)
+    - 1.6
+*   - Analog power interface function (≥1A)
+    - 2.5
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_153')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-153
+
+* - <table class="myTable" id="eee_table4_153">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for thermistors.
+:name: eee-table4-154
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - Si or SiGe RF transistors
+    - 6.30
+*   - GaAs RF transistors
+    - 7.40
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, these values have not been updated.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{36}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-155`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-155')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for transistors.
+:name: eee-table4-155
+:header-rows: 1
+:widths: 60 25 15
+
+*   - Transistors: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: AEC Q101, AEC Q102, MIL-PRF-19500 JANS, ESCC 5000, ESCC 5010 level B, NASDA-QTS-xxxx class I, JAXA-QTS Class I (NASDA-QTS-2030)
+    - Higher
+    - 3
+*   - Qualification according to one of the following standards: MIL-PRF-19500 JANTX or JANTXV, ESCC 5010 level C, NASDA-QTS-xxxx class II, JAXA-QTS Class II
+    - Equivalent
+    - 2
+*   - Qualification according to one of the following standards: MIL-PRF-19500 JAN or qualification program internal to the manufacturer and unidentified manufacturing sites
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+(eee_4_3_4_12_2)=
+### Transistors (other)
+
+**General model for the general transistors and the transistors family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_159
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessLF}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+All this being based on a mission profile to be defined for the whole unit.
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_160
+\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \begin{pmatrix} 
+  {\lambda_{\text{OTH}} \bullet \Pi}_{\text{Thermal}} \\                                                                                        
+  {+ \lambda_{\text{OTCyCase}} \bullet \Pi}_{\text{TCyCase}} \\                                                                                 
+  \begin{matrix}                                                                                                                                
+  {+ \lambda_{\text{OTCySolderjoints}} \bullet \Pi}_{\text{TCySolderjoints}} \\                                                                 
+   + \lambda_{\text{OMech}} \bullet \Pi_{\text{Mech}} \\                                                                                        
+  \end{matrix} \\                                                                                                                               
+  \end{pmatrix}_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+````
+
+The basic failure rates $\lambda_{\text{OTCyCase}}$, $\lambda_{\text{OTCySolderjoints}}$ and $\lambda_{\text{OMech}}$ are provided in the following table according for the packages SODxx and TOxx specifically used in space applications:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-156')" placeholder="Search table...">
+
+```{list-table} Basic failure rates $\lambda_{0}$ for transistors.
+:name: eee-table4-156
+:header-rows: 1
+:widths: 16 20 16 16 16 16
+
+*   - Case
+    - Equivalent name
+    - Description
+    - $\lambda_{\text{OTCyCase}}$
+    - $\lambda_{\text{OTCySolderjoints}}$
+    - $\lambda_{\text{OMech}}$
+*   - SOD80
+    - Mini-MELF, DO213AA
+    - SMD, Hermetically sealed glass
+    - 0.00781
+    - 0.03905
+    - 0.00078
+*   - SOD87
+    - MELF, DO213AB
+    - SMD, Hermetically sealed glass
+    - 0.00781
+    - 0.03905
+    - 0.00078
+*   - TO18
+    - TO71, TO72, SOT31, SOT18
+    - Through hole, metal
+    - 0.0101
+    - 0.0505
+    - 0.00101
+*   - TO39
+    - SOT5
+    - Through hole, metal
+    - 0.0101
+    - 0.0505
+    - 0.00101
+*   - TO52
+    - Through hole, metal
+    - 
+    - 0.0101
+    - 0.0505
+    - 0.00101
+```
+
+$\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the type of components.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-157')" placeholder="Search table...">
+
+```{list-table} Basic failure rates $\lambda_{\text{OTH}}$ for RF/HF transistors.
+:name: eee-table4-157
+:header-rows: 1
+:widths: 70 30
+
+*   - Type
+    - $\lambda_{\text{OTH}}$
+*   - Power HF/RF transistor – GaAs > 1W
+    - 0.0927*
+*   - Low power HF/RF transistor – GaAs < 1W
+    - 0.0488*
+*   - Power HF/RF transistor – Silicon Bipole > 5W
+    - 0.0478
+*   - Power HF/RF transistor – Silicon MOS > 5W
+    - 0.0202
+*   - Low power HF/RF transistor –
+    - 0.0138
+```
+
+```{admonition} Note
+:class: note
+
+$\lambda_{\text{OTH}}$ for Power HF/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
+```
+
+**Physical stresses for the general transistors and the RF HF transistors family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_161
+\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```
+````
+
+$E_{a}$ = 0.7eV;
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_162
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_163
+\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \bullet N}_{cy\_ annual}}{t_{\text{annual}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_164
+\Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+All parameters are issued from the mission profile.
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_165
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-158')" placeholder="Search table...">
+
+```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+:name: eee-table4-158
+:header-rows: 1
+:widths: 70 30
+
+*   - Description of the placement influence
+    - $\Pi_{placement\_ i}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.6
+*   - Analog low-level non-interface function (<1A)
+    - 1.3
+*   - Analog low-level interface function (<1A)
+    - 2.0
+*   - Analog power non-interface function (≥1A)
+    - 1.6
+*   - Analog power interface function (≥1A)
+    - 2.5
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_159')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-159
+
+* - <table class="myTable" id="eee_table4_159">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for transistors.
+:name: eee-table4-160
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - Regular transistors
+    - 5.20
+```
+
+```{admonition} Note
+:class: note
+
+Note: For the 2021 issue of FIDES, this value has been updated to 5.20.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{36}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-161`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-161')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for thermistors.
+:name: eee-table4-161
+:header-rows: 1
+:widths: 60 25 15
+
+*   - Transistors: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: AEC Q101, AEC Q102, MIL-PRF-19500 JANS, ESCC 5000, ESCC 5010 level B, NASDA-QTS-xxxx class I, JAXA-QTS Class I (NASDA-QTS-2030)
+    - Higher
+    - 3
+*   - Qualification according to one of the following standards: MIL-PRF-19500 JANTX or JANTXV, ESCC 5010 level C, NASDA-QTS-xxxx class II, JAXA-QTS Class II
+    - Equivalent
+    - 2
+*   - Qualification according to one of the following standards: MIL-PRF-19500 JAN or qualification program internal to the manufacturer and unidentified manufacturing sites
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+
+**Summary for the Transistors family 12**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td>12</td>
+        <td>Transistors</td>
+        <td>
+            <p>Consideration of packages SODxx and TOxx only</p>
+            <p>Removal of the humidity stress Π<sub>RH</sub></p>
+        </td>
+    </tr>
+</table>
+
+
+(eee_4_3_4_13)=
+## Transformers (family 13)
+
+Transformers are classified as family 13 in EPPL {cite:t}`eee-EPPL007-37`. 
+
+All transformers used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
+
+The following table presents the different subfamilies and the corresponding models with the FIDES method.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_162')"
+    placeholder="Search table...">
+
+```{list-table} Groups of transformers.
+:name: eee-table4-162
+
+* - <table class="myTable" id="eee_table4_162">
+        <thead>
+            <tr>
+                <th rowspan="2"><strong>Groups of transformers</strong></th>
+                <th colspan="2"><strong>Models in FIDES 2009</strong></th>
+                <th rowspan="2"><strong>Proposed models in FIDES</strong></th>
+                <th rowspan="2"><strong>Remarks</strong></th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>2021</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>01 Power</td>
+            <td>p142</td>
+            <td>p160</td>
+            <td>“Transformer, High Power”</td>
+        </tr>
+        <tr>
+            <td>02 Signal</td>
+            <td>p142</td>
+            <td>p160</td>
+            <td>“Transformer, Low Power (or Low Level)”</td>
+        </tr>
+    </table>
+```
+
+**General model for the transformers family**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_166
+\lambda = \lambda_{\text{Physical}} \bullet \Pi_{\text{PM}} \bullet \Pi_{\text{Process}} \bullet \Pi_{\text{LF}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see Paragraph {numref}`eee_4_3_2_1`,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_167
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Magnetic}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+with:
+
+- $\lambda_{OTH}$ : Base thermal failure rate
+- $\Pi_{\text{thermo-electrical}}$ : Thermo-electrical factor
+- $\Pi_{\text{TCy}}$ : Cycling factor
+- $\Pi_{\text{Mechanical}}$ : Mechanical factor
+- $\Pi_{\text{induced}}$ : Induced factor
+- $\Pi_{\text{PM}}$ : Part Manufacturing factor
+- $\Pi_{\text{P}}$ : Process factor
+````
+
+$\lambda_{O_{\text{Magnetic}}}$ mentioned groups:
+
+-   For low power (or low level) transformers (lower than 100W or 100VA), $\lambda_{O_{\text{Magnetic}}}$ is equal to 0.125;
+
+-   For high power transformers (equal to or higher than 100W or 100VA), $\lambda_{O_{\text{Magnetic}}}$ is equal to 0.25.
+
+**Physical stresses for the thermistors family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_168
+\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```
+````
+
+$E_{a}$ = 0.15eV;
+
+$\gamma_{TH\_ EL}$ depends on the type of transformers:
+
+-   For low power (or low level) transformers (lower than 100W or 100VA), $\gamma_{TH\_ EL}$ is equal to 0.01;
+
+-   For high power transformers (equal to or higher than 100W or 100VA), $\gamma_{TH\_ EL}$ is equal to 0.15.
+
+All other parameters are issued from the mission profile.
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_169
+\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+$\gamma_{\text{TCy}}$ depends on the type of transformers:
+
+-   For low power (or low level) transformers (lower than 100W or 100VA), $\gamma_{\text{TCy}}$ is equal to 0.73;
+
+-   For high power transformers (equal to or higher than 100W or 100VA), $\gamma_{\text{TCy}}$ is equal to 0.69.
+
+All other parameters are issued from the mission profile.
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_170
+\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+$\gamma_{\text{Mech}}$ depends on the type of transformers:
+
+-   For low power (or low level) transformers (lower than 100W or 100VA), $\gamma_{\text{Mech}}$ is equal to 0.26;
+
+-   For high power transformers (equal to or higher than 100W or 100VA), $\gamma_{\text{Mech}}$ is equal to 0.16.
+
+All other parameters are issued from the mission profile.
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_171
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-163')" placeholder="Search table...">
+
+```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+:name: eee-table4-163
+:header-rows: 1
+:widths: 70 30
+
+*   - Description of the placement influence
+    - $\Pi_{placement\_ i}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.6
+*   - Analog low-level non-interface function (<1A)
+    - 1.3
+*   - Analog low-level interface function (<1A)
+    - 2.0
+*   - Analog power non-interface function (≥1A)
+    - 1.6
+*   - Analog power interface function (≥1A)
+    - 2.5
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_164')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-164
+
+* - <table class="myTable" id="eee_table4_164">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for transformers.
+:name: eee-table4-165
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - For low power (or low level) transformers (lower than 100W or 100VA)
+    - 6.90
+*   - For high power transformers (equal to or higher than 100W or 100VA)
+    - 6.80
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, these values have been updated to 5.63 and 6.13.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-166`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-166')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for thermistors.
+:name: eee-table4-166
+:header-rows: 1
+:widths: 60 25 15
+
+*   - Thermistors: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: AEC Q200, MIL-STD-981 class S, MIL-PRF-xxx level T, ESCC 320x, NASDA-QTS-xxxx class I
+    - Higher
+    - 3
+*   - Qualification according to one of the following standards: MIL-STD-981 class B, MIL-PRF-xxx level M, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved CECC standards.
+    - Equivalent
+    - 2
+*   - Qualification according to one of the following MIL-PRF-xxxx level C, or qualification program internal to the manufacturer and unidentified manufacturing sites
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+**Summary for the Transformers family 13**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td>13</td>
+        <td>Transformers</td>
+        <td>
+            <p>Definition of the limit between low power and high power transformers</p>
+        </td>
+    </tr>
+</table>
+
+(eee_4_3_4_14)=
+## Switches (family 14)
+
+Switches are classified as family 14 in EPPL {cite:t}`eee-EPPL007-37`. 
+
+Most of the switches used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+
+The following table presents the different subfamilies and the corresponding models with the FIDES method.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_167')"
+    placeholder="Search table...">
+
+```{list-table} Groups of switches.
+:name: eee-table4-167
+
+* - <table class="myTable" id="eee_table4_167">
+        <thead>
+            <tr>
+                <th rowspan="2"><strong>Groups of switches</strong></th>
+                <th colspan="2"><strong>Models in FIDES 2009</strong></th>
+                <th rowspan="2"><strong>Proposed models in FIDES</strong></th>
+                <th rowspan="2"><strong>Remarks</strong></th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>2021</th>
+            </tr>
+        </thead>
+       <tr>
+            <td>01 Standard DC/AC power toggle</td>
+            <td>p150</td>
+            <td>p168</td>
+            <td>“Toggle”</td>
+            <td>ECSW</td>
+        </tr>
+        <tr>
+            <td>02 Circuit breaker</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Not used in space applications</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>03 RF switch</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Based on the number of operations of the part</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>04 Microswitch</td>
+            <td>No/Yes</td>
+            <td>No/Yes</td>
+            <td>Recommendation to use “Toggle”</td>
+            <td>ECSW</td>
+        </tr>
+        <tr>
+            <td>05 Reed switch</td>
+            <td>No/Yes</td>
+            <td>No/Yes</td>
+            <td>Recommendation to use “Toggle”</td>
+            <td>ECSW</td>
+        </tr>
+    </table>
+```
+
+**General model for the switches family**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_172
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see Paragraph {numref}`eee_4_3_2_1`,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_173
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Switch}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{Electrical}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+````
+
+$\lambda_{O_{\text{Switch}}}$ is equal to 0.85 whatever the switch.
+
+For space applications, $\Pi_{\text{Chemical}}$ is equal to 0, $\Pi_{\text{manoeuvres}}$ is equal to 1.
+
+**Physical stresses for the switches family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_174
+\Pi_{\text{Thermal}} = 0.21 \bullet C_{\text{TH}} \bullet \Pi_{\text{TH\ contact}} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{313} - \frac{1}{273 + T^{'}} \right) \right\rbrack
+```
+````
+
+$E_{a}$ = 0.25eV;
+$C_{\text{TH}}$ = 1.11;
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_175
+T^{'} = \left\{ \begin{matrix}                                                                                        
+  40 - \frac{85}{55} \bullet \left( T_{board\_ ref} + \Delta T \right) & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T \leq 0{^\circ}C \\   
+  40{^\circ}C & \mathrm{\text{if}}\ {0{^\circ}C < T}_{board\_ ref} + \Delta T \leq 40{^\circ}C \\                                            
+  T_{board\_ ref} + \Delta T & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T > 40{^\circ}C \\                                               
+  \end{matrix} \right.\ 
+```
+````
+
+$\Pi_{\text{TH\ contact}}$ is equal to:
+
+-   1 for temperatures $T_{board\_ ref} + \mathrm{\Delta}T \leq 125{^\circ}C$;
+
+-   $\Pi_{\text{MEcontact}} \bullet \Pi_{\text{pole}}$ for temperatures higher than 125°C;
+
+-   With $\Pi_{\text{pole}}$ depending on the type of switch (for SPST $\Pi_{\text{pole}}$= 1, for DPDT $\Pi_{\text{pole}}$= 3, for 3PDT $\Pi_{\text{pole}}$= 4.25 and for 4PDT $\Pi_{\text{pole}}$= 5.5).
+
+$\Pi_{\text{ME\ contact}}$ is equal to:
+
+-   1.5 for gold plated contact;
+
+-   1.0 for silver plated contact.
+
+All other parameters are issued from the mission profile.
+
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_176
+\Pi_{\text{Electrical}} = 0.59 \bullet {C_{\text{EL}} \bullet \Pi}_{\text{pole}} \bullet \Pi_{\text{EL\ breaking}} \bullet \Pi_{\text{load\ type}} \bullet {S_{V}}^{m_{1}} \bullet {S_{I}}^{m_{2}}
+```
+````
+
+${C_{\text{EL}}$ = 0.56;
+
+$\Pi_{\text{pole}}$ depending on the type of switch (for SPST $\Pi_{\text{pole}}$= 1, for DPDT $\Pi_{\text{pole}}$=3, for 3PDT $\Pi_{\text{pole}}$=4.25 and for 4PDT $\Pi_{\text{pole}}$=5.5).
+
+$\Pi_{\text{EL\ breaking}}$ is equal to:
+
+-   1.5 for a breaking capacity \< 2A;
+
+-   1.2 for a breaking capacity ≥ 2A;
+
+$\Pi_{\text{load\ type}}$, $S_{V}$ and $S_{I}$ are equal to:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-168')" placeholder="Search table...">
+
+```{list-table} Electrical parameters of switches.
+:name: eee-table4-168
+:header-rows: 1
+:widths: 40 20 20 20
+
+*   - Load type
+    - $\Pi_{\text{load\ type}}$
+    - $S_{V}$
+    - $S_{I}$
+*   - Resistive
+    - 0.3
+    - 1
+    - $I_{\text{contact}}/I_{\text{nominal}}$
+*   - Inductive
+    - 8
+    - 1
+    - $I_{\text{contact}}/I_{\text{nominal}}$
+*   - Incandescent lamp
+    - 4
+    - $V_{\text{contact}}/V_{\text{nominal}}$
+    - $I_{\text{contact}}/I_{\text{nominal}}$
+*   - Capacitive
+    - 6
+    - $V_{\text{contact}}/V_{\text{nominal}}$
+    - 1
+```
+
+$m_{1}$ and $m_{2}$ are equal to:
+
+```{list-table} Power parameters of switches.
+:name: eee-table4-169
+:header-rows: 1
+:widths: 25 25 25 25
+
+*   - $V_{\text{contact}}/V_{\text{nominal}}$
+    - $m_{1}$
+    - $I_{\text{contact}}/I_{\text{nominal}}$
+    - $m_{2}$
+*   - ≤1
+    - 3
+    - ≤1
+    - 3
+*   - \>1
+    - 8.8
+    - \>1
+    - 5.9
+```
+
+All other parameters are issued from the mission profile. 
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_177
+\Pi_{\text{Tcy}} = 0.02 \bullet \Pi_{\text{prot\ TCY}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+$C_{\text{TCy}}$ = 0.56;
+
+$\Pi_{\text{pole}}$ depends on the type of switch (for SPST $\Pi_{\text{pole}}$= 1, for DPDT $\Pi_{\text{pole}}$= 3, for 3PDT $\Pi_{\text{pole}}$= 4.25 and for 4PDT $\Pi_{\text{pole}}$= 5.5).
+
+$\Pi_{\text{prot\ TCY}}$ depends on the switch protection level:
+
+-   1 for hermetic switch;
+
+-   3 for sealed or not sealed switch.
+
+All other parameters are issued from the mission profile.
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_178
+\Pi_{\text{Mechanical}} = 0.06 \bullet C_{\text{MECH}} \bullet \Pi_{\text{pole}} \bullet \Pi_{\text{ME\ contact}} \bullet \Pi_{\text{ME\ breaking}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+$C_{\text{MECH}}$ = 1.11;
+
+$\Pi_{\text{pole}}$ depending on the type of switch (for SPST $\Pi_{\text{pole}}$= 1, for DPDT $\Pi_{\text{pole}}$= 3, for 3PDT $\Pi_{\text{pole}}$= 4.25 and for 4PDT $\Pi_{\text{pole}}$= 5.5).
+
+$\Pi_{\text{ME\ contact}}$ is equal to:
+
+-   1.5 for gold plated contact;
+
+-   1 for silver plated contact.
+
+$\Pi_{\text{ME\ breaking}}$ is equal to:
+
+-   3 for a breaking capacity \< 2A;
+
+-   1 for a breaking capacity ≥ 2A.
+
+All other parameters are issued from the mission profile.
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_179
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-170')" placeholder="Search table...">
+
+```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+:name: eee-table4-170
+:header-rows: 1
+:widths: 70 30
+
+*   - Description of the placement influence
+    - $\Pi_{placement\_ i}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.6
+*   - Analog low-level non-interface function (<1A)
+    - 1.3
+*   - Analog low-level interface function (<1A)
+    - 2.0
+*   - Analog power non-interface function (≥1A)
+    - 1.6
+*   - Analog power interface function (≥1A)
+    - 2.5
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_171')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-171
+
+* - <table class="myTable" id="eee_table4_171">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for switches.
+:name: eee-table4-172
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - Switches
+    - 7.45
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, this value has not updated to 7.38.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-173`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-173')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for switches.
+:name: eee-table4-173
+:header-rows: 1
+:widths: 60 25 15
+
+*   - Switches: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: ESCC 370x, MIL-PRF-8805
+    - Higher
+    - 3
+*   - Qualification according to one of the following standards: MIL-PRF-24236, MIL-C-xxxx
+    - Equivalent
+    - 2
+*   - Qualification according to one of the following approved EIA, IEC, SAE, BS
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+**Summary for the Switches family 14**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td>14</td>
+        <td>Switches</td>
+        <td>
+            <p>Parameters for “Toggle” switch only</p>
+            <p>Value of Π<sub>Chemical</sub> equal to 0</p>
+            <p>Value of Π<sub>manoeuvres</sub> equal to 1</p>
+            <p>Removal of the humidity stress Π<sub>RH</sub></p>
+        </td>
+    </tr>
+</table>
+
+
+(eee_4_3_4_15)=
+## Opto-electronics (family 18)
+
+Opto-electronics are classified as family 18 in EPPL {cite:t}`eee-EPPL007-37`. 
+
+Some of the opto-electronics components used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+
+The following table presents the different subfamilies and the corresponding models with the FIDES method.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_174')"
+    placeholder="Search table...">
+
+```{list-table} Groups of opto-electronics.
+:name: eee-table4-174
+
+* - <table class="myTable" id="eee_table4_174">
+        <thead>
+            <tr>
+                <th rowspan="2"><strong>Groups of opto-electronics</strong></th>
+                <th colspan="2"><strong>Models in FIDES 2009</strong></th>
+                <th rowspan="2"><strong>Proposed models in FIDES</strong></th>
+                <th rowspan="2"><strong>Remarks</strong></th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>2021</th>
+            </tr>
+        </thead>
+       <tr>
+            <td>01 Optocoupler</td>
+            <td>p128</td>
+            <td>p144</td>
+            <td>
+                <p>“Optocoupler with photodiode”</p>
+                <p>“Optocouple with phototransistor”</p>
+            </td>
+            <td>
+                <p>ECOP_01</p>
+                <p>ECOP_02</p>
+            </td>
+        </tr>
+        <tr>
+            <td>02 LED</td>
+            <td>p125</td>
+            <td>p141</td>
+            <td>“LED” but not much used in space applications</td>
+            <td>ECLE</td>
+        </tr>
+        <tr>
+            <td>03 Phototransistor</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Telcordia SR-332 : “phototransistor” after investigation and assessment according to Paragraph 4.4.1</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>04 Photodiode</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Telcordia SR-332 : “photodiode” after investigation and assessment according to Paragraph 4.4.1</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>05 Laser diode</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Telcordia SR-332 : “Single LED/LCD Segment” after investigation and assessment according to Paragraph 4.4.1
+            </td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>06 CCD</td>
+            <td>No</td>
+            <td>No</td>
+            <td>“ASIC, Silicon bipolar, BiCMOS, Digital ASIC”</td>
+            <td>ECAS</td>
+        </tr>
+        <tr>
+            <td>07 LCD screen</td>
+            <td>p206</td>
+            <td>p232</td>
+            <td>“LCD screens (TFT, STN)” but not used in space applications</td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>Laser detector</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Telcordia SR-332 : “Laser Module - CW Laser” after investigation and assessment according to Paragraph 4.4.1
+            </td>
+            <td>NA</td>
+        </tr>
+        <tr>
+            <td>Laser transceiver</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Telcordia SR-332: “Laser Module - CW Laser” after investigation and assessment according to Paragraph 4.4.1
+            </td>
+            <td>NA</td>
+        </tr>
+    </table>
+```
+
+(eee_4_3_4_15_1)=
+### LED
+
+**General model for the opto-electronics family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_180
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see Paragraph {numref}`eee_4_3_2_1`,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_181
+\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \begin{pmatrix} 
+  {\lambda_{\text{OTH}} \bullet \Pi}_{\text{Thermal}} \\                                                                                        
+  {+ \lambda_{\text{OTCyCase}} \bullet \Pi}_{\text{TCyCase}} \\                                                                                 
+  \begin{matrix}                                                                                                                                
+  {+ \lambda_{\text{OTCySolderjoints}} \bullet \Pi}_{\text{TCySolderjoints}} \\                                                                 
+  {+ \lambda_{\text{ORH}} \bullet \Pi}_{\text{RH}} \\                                                                                           
+   + \lambda_{\text{OMech}} \bullet \Pi_{\text{Mech}} \\                                                                                        
+  \end{matrix} \\                                                                                                                               
+  \end{pmatrix}_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+````
+
+For LEDs, the basic failure rates $\lambda_{\text{OTH}}$ are fixed values depending on the colour of the LED:
+
+```{list-table} Basic failure rates $\lambda_{\text{OTH}}$ for LEDs.
+:name: eee-table4-175
+:header-rows: 1
+:widths: 70 30
+
+*   - Component description
+    - $\lambda_{\text{OTH}}$
+*   - White colour
+    - 0.05
+*   - Other colours
+    - 0.01
+```
+
+All other basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}$, $\lambda_{\text{0TcySolderJoints}}$ and $\lambda_{\text{0Mech}}$ depend on the maximum direct current, whether the part is feedthrough or SMD, and on the case type as follows:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_176')"
+    placeholder="Search table...">
+
+```{list-table} Basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}$, $\lambda_{\text{0TcySolderJoints}}$ and $\lambda_{\text{0Mech}}$ for LEDs.
+:name: eee-table4-176
+
+* - <table class="myTable" id="eee_table4_176">
+        <thead>
+            <th><strong>Direct current IF maximum</strong></th>
+            <th><strong>SMD or Through hole</strong></th>
+            <th colspan="2"><strong>Case type</strong></th>
+            <th><strong>Number of pins</strong></th>
+            <th><strong>λ<sub>ORH</sub></strong></th>
+            <th><strong>λ<sub>0TcyCase</sub></strong></th>
+            <th><strong>λ<sub>0TcySolderJoint</sub></strong></th>
+            <th><strong>λ<sub>0Mech</sub></strong></th>
+        </thead>
+        <tr>
+            <td rowspan="13">IF &lt; 150mA</td>
+            <td rowspan="13">Through SMD</td>
+            <td>T1-x</td>
+            <td rowspan="7">Plastic</td>
+            <td>2 to 4</td>
+            <td rowspan="13">0.0034</td>
+            <td rowspan="13">0.0104</td>
+            <td rowspan="8">0.0520</td>
+            <td rowspan="8">0.0052</td>
+        </tr>
+        <tr>
+            <td>High flux</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Chip</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td rowspan="5">PLCC</td>
+            <td>Min 2</td>
+        </tr>
+        <tr>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Round</td>
+            <td>2</td>
+            <td>0.1560</td>
+            <td>0.0624</td>
+        </tr>
+        <tr>
+            <td rowspan="2">LGA</td>
+            <td>Plastic</td>
+            <td rowspan="2">2</td>
+            <td>0.2080</td>
+            <td>0.0832</td>
+        </tr>
+        <tr>
+            <td>Ceramic</td>
+            <td>0.3640</td>
+            <td>0.1820</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Other</td>
+            <td>Plastic</td>
+            <td rowspan="2">In-different</td>
+            <td>0.1560</td>
+            <td>0.0624</td>
+        </tr>
+        <tr>
+            <td>Ceramic</td>
+            <td>0.3640</td>
+            <td>0.1820</td>
+        </tr>
+        <tr>
+            <td rowspan="2">IF ≥ 150mA</td>
+            <td rowspan="2">SMD</td>
+            <td colspan="2">Plastic</td>
+            <td rowspan="2">In-different</td>
+            <td rowspan="2">0.0031</td>
+            <td rowspan="2">0.0042</td>
+            <td>0.0420</td>
+            <td>0.0064</td>
+        </tr>
+        <tr>
+            <td colspan="2">Ceramic</td>
+            <td>0.1470</td>
+            <td>0.0735</td>
+        </tr>
+    </table>
+```
+
+
+**Physical stresses for the opto-electronics family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_182
+\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```
+````
+
+$E_{a}$ = 0.4eV for LEDs.
+All other parameters are issued from the mission profile. 
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_183
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_184
+\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_185
+\Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_186
+\Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.9 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```
+````
+
+All other parameters are issued from the mission profile.
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_187
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-177')" placeholder="Search table...">
+
+```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+:name: eee-table4-177
+:header-rows: 1
+:widths: 70 30
+
+*   - Description of the placement influence
+    - $\Pi_{placement\_ i}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.6
+*   - Analog low-level non-interface function (<1A)
+    - 1.3
+*   - Analog low-level interface function (<1A)
+    - 2.0
+*   - Analog power non-interface function (≥1A)
+    - 1.6
+*   - Analog power interface function (≥1A)
+    - 2.5
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_178')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-178
+
+* - <table class="myTable" id="eee_table4_178">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for opto-electronics.
+:name: eee-table4-179
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - LEDs
+    - 4.85
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, this value has been updated to 5.68.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-180`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-180')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for opto-electronics.
+:name: eee-table4-180
+:header-rows: 1
+:widths: 60 25 15
+
+*   - Optocouplers, LEDs: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: AEC Q101, AEC Q102, MIL-PRF-19500 JANS, ESCC 5000, ESCC 5010 level B, NASDA-QTS-xxxx class I, JAXA-QTS Class I (NASDA-QTS-2030)
+    - Higher
+    - 3
+*   - Qualification according to one of the following standards: MIL-PRF-19500 JANTX or JANTXV, ESCC 5010 level C, NASDA-QTS-xxxx class II, JAXA-QTS Class II
+    - Equivalent
+    - 2
+*   - Qualification according to one of the following standards: MIL-PRF-19500 JAN or qualification program internal to the manufacturer and unidentified manufacturing sites
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+(eee_4_3_4_15_2)=
+### Opto (other)
+
+**General model for the opto-electronics family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_188
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see Paragraph {numref}`eee_4_3_2_1`,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_189
+\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \begin{pmatrix}
+  {\lambda_{\text{OTH}} \bullet \Pi}_{\text{Thermal}} \\                                                                                        
+  {+ \lambda_{\text{OTCyCase}} \bullet \Pi}_{\text{TCyCase}} \\                                                                                 
+  \begin{matrix}                                                                                                                                
+  {+ \left( \lambda_{\text{OTCySolderjoints}} + \lambda_{\text{OTCyChip}} \right) \bullet \Pi}_{\text{TCySolderjoints}} \\                      
+  {+ \lambda_{\text{ORH}} \bullet \Pi}_{\text{RH}} \\                                                                                           
+   + \left( \lambda_{\text{OCaseMech}} + \lambda_{\text{OChipMech}} \right) \bullet \Pi_{\text{Mech}} \\                                        
+  \end{matrix} \\                                                                                                                               
+  \end{pmatrix}_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+````
+
+For optocouplers, the basic failure rates $\lambda_{\text{OTH}}$, $\lambda_{\text{OTCyChip}}$ and $\lambda_{\text{OCaseMech}}$ are fixed values depending on the type of components:
+
+```{list-table} Basic failure rates $\lambda_{\text{OTH}}$, $\lambda_{\text{OTCyChip}}$ and $\lambda_{\text{OCaseMech}}$ for optocouplers.
+:name: eee-table4-181
+:header-rows: 1
+:widths: 40 20 20 20
+
+*   - Component description
+    - $\lambda_{\text{OTH}}$
+    - $\lambda_{\text{OTCyChip}}$
+    - $\lambda_{\text{OCaseMech}}$
+*   - Optocoupler with photodiode
+    - 0.05
+    - 0.01
+    - 0.005
+*   - Optocoupler with phototransistor
+    - 0.11
+    - 0.021
+    - 0.011
+```
+
+According to the different types of packages defined in {numref}`eee-table4-84` to {numref}`eee-table4-89`, the basic failure rates $\lambda_{\text{0TcyCase}}$, $\lambda_{\text{OTCySolderjoints}}$, $\lambda_{\text{OCaseMech}}$ and $\lambda_{\text{ORH}}$ are similar to the basic failure rates of packages of integrated circuits available in {numref}`eee-table4-90`.
+
+**Physical stresses for the opto-electronics family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_190
+\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```
+````
+
+$E_{a}$ = 0.7eV for optocouplers;
+All other parameters are issued from the mission profile. 
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_191
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_192
+\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_193
+\Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_194
+\Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.9 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```
+````
+
+All other parameters are issued from the mission profile.
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_195
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+The induced factor $C_{\text{sensitivity}} is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for opto-electronics.
+:name: eee-table4-182
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - Optocouplers
+    - 5.20
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, this value has been updated to 5.63.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-183`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-183')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for opto-electronics.
+:name: eee-table4-183
+:header-rows: 1
+:widths: 60 25 15
+
+*   - Optocouplers, LEDs: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: AEC Q101, AEC Q102, MIL-PRF-19500 JANS, ESCC 5000, ESCC 5010 level B, NASDA-QTS-xxxx class I, JAXA-QTS Class I (NASDA-QTS-2030)
+    - Higher
+    - 3
+*   - Qualification according to one of the following standards: MIL-PRF-19500 JANTX or JANTXV, ESCC 5010 level C, NASDA-QTS-xxxx class II, JAXA-QTS Class II
+    - Equivalent
+    - 2
+*   - Qualification according to one of the following standards: MIL-PRF-19500 JAN or qualification program internal to the manufacturer and unidentified manufacturing sites
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+**Summary for the Opto-electronics family 18**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td>18</td>
+        <td>Optoelectronics</td>
+        <td>
+            <p>Merge of the models of optocouplers and LEDs</p>
+        </td>
+    </tr>
+</table>
+
+(eee_4_3_4_16)=
+## PCB
+
+PCB are not classified as family in EPPL but as an important part of electronics units modelling, they are considered in this handbook. They are modelled in FIDES as seen in the following table:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_184')"
+    placeholder="Search table...">
+
+```{list-table} Groups of PCBs.
+:name: eee-table4-184
+
+* - <table class="myTable" id="eee_table4_184">
+        <thead>
+            <tr>
+                <th rowspan="2"><strong>Groups of PCBs</strong></th>
+                <th colspan="2"><strong>Models in FIDES 2009</strong></th>
+                <th rowspan="2"><strong>Proposed models in FIDES</strong></th>
+                <th rowspan="2"><strong>Remarks</strong></th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>2021</th>
+            </tr>
+        </thead>
+       <tr>
+            <td>PCB</td>
+            <td>p155</td>
+            <td>p173</td>
+            <td>“Printed circuit board (PCB)”</td>
+            <td>ECPC</td>
+        </tr>
+    </table>
+```
+
+**General model for the PCB family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_196
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
+```
+-   $\lambda_{\text{Physical}}$ the physical contribution for each component,
+
+-   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
+
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
+
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see paragraph {numref}`eee_4_3`).
+````
+
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{Physical}}$**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_197
+\lambda_{\text{Physical}} = \lambda_{\text{OPCB}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} + \Pi_{\text{Chemical}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+```
+````
+
+For space applications, $\Pi_{\text{Chemical}}$ is equal to 0, $\Pi_{\text{TV}}$ is equal to 1 because the temperature of the board is always lower than 110°C.
+
+$\lambda_{\text{OPCB}}$ is issued from the following equation:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_198
+\lambda_{O_{\text{PCB}}} = 5.10^{- 4} \bullet \left( N_{\text{layers}} \right)^{\frac{1}{2}} \bullet \left( \frac{N_{\text{connection}}}{2} \right) \bullet \Pi_{\text{Class}} \bullet \Pi_{Techno\_ PCB}
+```
+````
+
+The value $\Pi_{Techno\_ PCB}$ reflects the effect on reliability prediction of holes and via on the PCB according to this table:
+
+```{list-table} Values of $\Pi_{Techno\_ PCB}$ depending on the technology of holes and via.
+:name: eee-table4-185
+:header-rows: 1
+:widths: 70 30
+
+*   - Printed circuit technology identification
+    - Value of $\Pi_{Techno\_ PCB}$
+*   - Through holes
+    - 0.25
+*   - Blind holes
+    - 0.5
+*   - Micro-via technology
+    - 1
+*   - Pad on via technology
+    - 2.5
+```
+
+In case of mixing technologies of holes and via on the same PCB, the calculation can be done either:
+
+-   by considering the value $\Pi_{Techno\_ PCB}$ as the maximum value of $\Pi_{Techno\_ PCB}$ corresponding to each different technology,
+
+-   or by doing a specific calculation of $\lambda_{\text{OPCB}}$ for each different technology and weighting the results with the area on the PCB of each considered technology.
+
+The value $\Pi_{\text{Class}}$ reflects the effect on the reliability prediction of the distance between conductors. The table defining this value has been modified with additional values of distance from 800µm to 50µm according to this table:
+
+```{list-table} Values of $\Pi_{\text{Class}}$ depending on the distance between conductors.
+:name: eee-table4-186
+:header-rows: 1
+:widths: 70 30
+
+*   - Minimum conductor width (µm)/ Minimum spacing between conductors or pads (µm)
+    - Value of $\Pi_{\text{Class}}$
+*   - 800 / 800
+    - 1
+*   - 500 / 500
+    - 1
+*   - 310 / 310
+    - 2
+*   - 210 / 210
+    - 3
+*   - 150 / 150
+    - 4
+*   - 125 / 125
+    - 5
+*   - 100 / 100
+    - 6
+*   - 80 / 80
+    - 7
+*   - 70 / 70
+    - 8
+*   - 60 / 60
+    - 9
+*   - 50 / 50
+    - 10
+```
+
+**Physical stresses for the PCB family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_199
+\Pi_{\text{Tcy}} = 0.6 \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_200
+\Pi_{\text{Mechanical}} = 0.2 \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+````
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_201
+\Pi_{\text{RH}} = 0.18 \bullet \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.8 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```
+````
+
+All other parameters are issued from the mission profile.
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_202
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-187')" placeholder="Search table...">
+
+```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+:name: eee-table4-187
+:header-rows: 1
+:widths: 70 30
+
+*   - Description of the placement influence
+    - $\Pi_{placement\_ i}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.6
+*   - Analog low-level non-interface function (<1A)
+    - 1.3
+*   - Analog low-level interface function (<1A)
+    - 2.0
+*   - Analog power non-interface function (≥1A)
+    - 1.6
+*   - Analog power interface function (≥1A)
+    - 2.5
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_188')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-188
+
+* - <table class="myTable" id="eee_table4_188">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for PCB.
+:name: eee-table4-189
+:header-rows: 1
+:widths: 70 30
+
+*   - Technologies
+    - $C_{\text{sensitivity}}$
+*   - PCB
+    - 6.50
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, this value has been updated to 5.55.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in {numref}`eee-table4-190`
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-190')" placeholder="Search table...">
+
+```{list-table} Recommendation for definition of parameter $\text{QA}_{\text{component}}$ for PCB.
+:name: eee-table4-190
+:header-rows: 1
+:widths: 60 25 15
+
+*   - PCB: Component quality assurance level
+    - Position relative to the state of the art
+    - $\text{QA}_{\text{component}}$
+*   - Qualification according to one of the following standards: MIL-PRF-31032, MIL-PRF-55110, MIL-PRF-50884, ESCC-Q-ST-70-10, JAXA-QTS-2140
+    - Higher
+    - 3
+*   - Qualification according to following standard: IPC-9701 with identification of manufacturing sites for these standards
+    - Equivalent
+    - 2
+*   - Qualification according to one of the following standard: BS CECC 23000, IEC 61189-6 or qualification program internal to the manufacturer and unidentified manufacturing sites
+    - Lower
+    - 1
+*   - No information
+    - Much
+    - 0
+```
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+**Summary for the PCB family**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td>NA</td>
+        <td>PCB</td>
+        <td>
+            <p>Definition of a methodology for mixing technologies of holes and via</p>
+            <p>Consideration of minimum conductor width from 50 to 800µm</p>
+            <p>Value of Π<sub>Chemical</sub> equal to 0</p>
+            <p>Value of Π<sub>TV</sub> equal to 1</p>
+        </td>
+    </tr>
+</table>
+
+(eee_4_3_4_17)=
+## Hybrids (family 40)
+
+Hybrids are classified as family 40 in EPPL  {cite:t}`eee-EPPL007-37`.. They can be modelled with FIDES, as presented in the following table, for FIDES 2009 and 2021.
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_191')"
+    placeholder="Search table...">
+
+```{list-table} Groups of Hybrids.
+:name: eee-table4-191
+
+* - <table class="myTable" id="eee_table4_191">
+        <thead>
+            <tr>
+                <th rowspan="2"><strong>Groups of Hybrids</strong></th>
+                <th colspan="2"><strong>Models in FIDES 2009</strong></th>
+                <th rowspan="2"><strong>Proposed models in FIDES</strong></th>
+                <th rowspan="2"><strong>Remarks</strong></th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>2021</th>
+            </tr>
+        </thead>
+       <tr>
+            <td>Hybrid</td>
+            <td>p161</td>
+            <td>p180</td>
+            <td>Hybrids and Multi Chip Modules</td>
+            <td>Hybrid and multichip module</td>
+        </tr>
+    </table>
+```
+
+**General model for the Hybrids and Multi Chip Modules family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_203
+\lambda_{H\& M} = \sum_{\text{µcomponents}}^{}\left( \lambda_{\text{µcomponent}} \bullet \Pi_{PM_{\text{µcomponent}}} \right) \bullet \Pi_{Process\_ H\& M} \bullet \Pi_{\text{Process}} 
+ + \left( \lambda_{\text{wiring}} + \lambda_{Case + Substrate} + \lambda_{External\_ connections} \right) \bullet \Pi_{Process\_ H\& M} \bullet \Pi_{\text{Process}}
+```
+````
+
+> **a) Mission profile**
+
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See paragraph {numref}`eee_4_3_1` for details.
+
+> **b) Calculation of $\lambda_{\text{element}}$**
+
+For each basic element (microcomponent, wiring, case-substrate, external connections), the general equation is the standard equation:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_204
+\lambda_{\text{element}} = \sum_{i}^{\text{Phases}}\left\lbrack \frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \sum_{\text{stresses}}^{}\left( \lambda_{0stress} \bullet \Pi_{\text{stress}} \right) \right)_{i} \bullet \left( \Pi_{\text{induced}} \right)_{i} \right\rbrack
+```
+````
+
+with
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_205
+\lambda_{\text{element}} = \lambda_{\text{µcomponent}}\ \mathrm{\text{or}}\ \lambda_{\text{wiring}}\ \mathrm{\text{or}}\ \lambda_{Case + Substrate}\ \mathrm{\text{or}}\ \lambda_{External\_ connections}
+```
+````
+
+For microcomponents associated with bare chips (integrated circuits, transistors or diodes), the failure rate is reduced to:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_206
+\lambda_{\text{µcomponent}} = \lambda_{\text{Chip}} = \left( \lambda_{\text{OTH}} \bullet \Pi_{\text{Thermique}} \right) + \left( C_{\text{moulding}} \bullet C_{chip\_ area} \bullet \lambda_{0\_ Chip\_ TCy} \bullet \Pi_{TCy\_ case} \right)
+```
+````
+
+$\lambda_{\text{OTH}}$ and $\Pi_{\text{Thermique}}$ are corresponding to the basic thermal failure rates as defined in the models corresponding to the type of chip considered, either integrated circuits in paragraph 0 or discrete semiconductors in paragraphs 0 and 0;
+
+The factor $C_{\text{moulding}}$ is defined as follows for chips:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-192')"
+    placeholder="Search table...">
+
+```{list-table} Values of $C_{\text{moulding}}$ for Hybrids and Multi Chip Modules.
+:name: eee-table4-192
+:header-rows: 1
+:widths: 70 30
+
+*   - Type of moulding
+    - $C_{\text{moulding}}$
+*   - Hermetic non-moulded circuit
+    - 1.0
+*   - Moulded circuit silicon type embedding
+    - 1.4
+*   - Moulded circuit polyurethane type embedding
+    - 1.6
+*   - Moulded circuit epoxy type embedding
+    - 2.0
+```
+
+The factor $C_{chip\_ area}$ is defined as follows for chips:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_207
+C_{Surface\_ chip} = \left( 1 + S^{d} \right)
+```
+````
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-193')"
+    placeholder="Search table...">
+
+```{list-table} Values of d for Hybrids and Multi Chip Modules.
+:name: eee-table4-193
+:header-rows: 1
+:widths: 70 30
+
+*   - Type of chip
+    - $d$
+*   - Numeric Si integrated circuits (MOS, Bipolar and BiCMOS)
+    - 0.35
+*   - Analogue Si integrated circuits (MOS, Bipolar and BiCMOS)
+    - 0.2
+*   - Discrete circuits
+    - 0.1
+```
+If the surface of the chip is not known, the following default values are used for the factor $S$:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-194')"
+    placeholder="Search table...">
+
+```{list-table} Values of $S$ for Hybrids and Multi Chip Modules.
+:name: eee-table4-194
+:header-rows: 1
+:widths: 70 30
+
+*   - Type of chip
+    - $S$ (mm²)
+*   - Logical
+    - 75
+*   - Analogue
+    - 4
+*   - Weak signal discrete
+    - 0.8
+*   - Power discrete
+    - 3
+```
+
+The factor $\lambda_{0T\_chip\_TCy}$ is equal to 0.011 for Hybrids and Multi Chip Modules.
+
+**Physical stresses for the Hybrids and Multi Chip Modules family:**
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_208
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```
+````
+
+The FIDES guide also gives methods to calculate the failure rates for all kind of micro components inside the Multi Chip Modules, such as resistive networks, resistive SMD chips, deposited resistors, capacitors, and multi-layer inductors. It also gives formula for wiring, case, substrate and external connections.
+
+The chemical factor $\Pi_{\text{Chemical}}$ is calculated for different pollution levels. However, as the Hybrids and Multi Chip Modules are hermetic in space due to the absence of humidity, the chemical factor $\Pi_{\text{Chemical}}$ is equal to 0.
+
+**Induced factor $\Pi_{\text{induced}}$**
+
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in paragraph {numref}`eee_4_3_1`. Its formula is:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_209
+\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+```
+````
+
+> $\Pi_{placement}$
+
+The placement factor $\Pi_{placement}$ and induced factors $C_{\text{sensitivity}}$ are provided in the following tables:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-195')" placeholder="Search table...">
+
+```{list-table} Values of $\Pi_{placement}$ for Hybrids and Multi Chip Modules.
+:name: eee-table4-195
+:header-rows: 1
+:widths: 70 30
+
+*   - Placement of the Hybrids / Multi Chip Modules
+    - $\Pi_{placement}$
+*   - Digital non-interface function
+    - 1.0
+*   - Digital interface function
+    - 1.3
+*   - Analog low-level non-interface function (<1A)
+    - 1.2
+*   - Analog low-level interface function (<1A)
+    - 1.5
+*   - Analog power non-interface function (≥1A)
+    - 1.3
+*   - Analog power interface function (≥1A)
+    - 1.8
+```
+
+> $\Pi_{application}$
+
+$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_196')"
+    placeholder="Search table...">
+
+```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+:name: eee-table4-196
+
+* - <table class="myTable" id="eee_table4_196">
+        <thead>
+            <th>
+                <p><strong>Criterion</strong></p>
+            </th>
+            <th>
+                <p><strong>Description</strong></p>
+            </th>
+            <th>
+                <p><strong>Levels</strong></p>
+            </th>
+            <th>
+                <p><strong>Examples and comments</strong></p>
+            </th>
+            <th>
+                <p><strong>Weight</strong></p>
+                <p><strong>POS</strong></p>
+            </th>
+        </thead>
+        <tr>
+            <td>
+                <p>User type in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the capability to respect procedures, facing operational constraints.</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Industry</strong></p>
+                <p>1: General public</p>
+                <p>2: Military</p>
+                <p>The most severe level must be adopted for military applications</p>
+            </td>
+            <td>
+                <p>20</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>User qualification level in the phase considered</p>
+            </td>
+            <td>
+                <p>Represents the level of control of the user or the worker regarding an operational context</p>
+            </td>
+            <td>
+                <p><strong>0: Favourable</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Unfavourable</p>
+            </td>
+            <td>
+                <p><strong>0: Highly qualified</strong></p>
+                <p>1: Qualified</p>
+                <p>2: Slightly qualified or with little experience</p>
+                <p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
+            </td>
+            <td>
+                <p>10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>System mobility</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to possibilities of the system being moved</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Few contingencies (fixed or stable environment)</strong></p>
+                <p>1: Moderate contingencies</p>
+                <p>2: Severe contingencies, large variability (automobile)</p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product manipulation</p>
+            </td>
+            <td>
+                <p>Represents the possibility of false manipulations, shocks, drops, etc .</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Not manipulated</strong></p>
+                <p>1: Manipulation without displacement or disassembly</p>
+                <p>2: Manipulation with displacement or disassembly</p>
+                <p>The severe level should be adopted if maintenance on the product is possible in the phase
+                    considered</p>
+            </td>
+            <td>
+                <p>15</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Type of electrical network for the system</p>
+            </td>
+            <td>
+                <p>Represents the level of electrical disturbance expected on power supplies, signals and electrical
+                    lines: power on, switching, power supply, connection/disconnection</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Undisturbed network (dedicated regulated power supply)</strong></p>
+                <p>1: Slightly disturbed network</p>
+                <p>2: Network subject to disturbances (on board network)</p>
+                <p>The network type is a system data but that can be broken down and related to specific products
+                </p>
+            </td>
+            <td>
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to human activity</p>
+            </td>
+            <td>
+                <p>Represents exposure to contingencies related to human activity: shock, change in final use, etc.
+                </p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Uninhabitable zone</strong></p>
+                <p>1: Possible activity in the product zone</p>
+                <p>2: Normal activity in the product zone</p>
+                <p>The product can be exposed to human activity even if it is not handled itself during normal use
+                </p>
+            </td>
+            <td>
+                <p>8</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to machine disturbances</p>
+            </td>
+            <td>
+                <p>Represents contingencies related to operation of machines, engines, actuators: shock,
+                    overheating, electrical disturbances, pollutants, etc.</p>
+            </td>
+            <td>
+                <p>0:Non aggressive</p>
+                <p><strong>1: Moderate</strong></p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p>0: Null (telephone)</p>
+                <p><strong>1: Indirect exposure (product in compartment)</strong></p>
+                <p>2: Strong or direct exposure (product in engine area)</p>
+            </td>
+            <td>
+                <p>3</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Product exposure to the weather</p>
+            </td>
+            <td>
+                <p>Represents exposure to rain, hail, frost, sandstorm, lightning, dust</p>
+            </td>
+            <td>
+                <p><strong>0:Non aggressive</strong></p>
+                <p>1: Moderate</p>
+                <p>2: Severe</p>
+            </td>
+            <td>
+                <p><strong>0: Null (home)</strong></p>
+                <p>1: Indirect exposure (compartment, station hall)</p>
+                <p>2: Outdoors (automobile engine)</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+        </tr>
+    </table>
+```
+
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+
+```{admonition} Note
+:class: note
+
+In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
+```
+
+> $\Pi_{\text{ruggedising}}$
+
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See paragraph {numref}`eee_4_3_1_17`.
+
+> $C_{\text{sensitivity}}$
+
+The induced factor $C_{\text{sensitivity}}$ presented in paragraph {numref}`eee_4_3_1_21` is provided in the following table:
+
+```{list-table} Induced factor coefficient of sensitivity for Hybrids and Multi Chip Modules.
+:name: eee-table4-197
+:header-rows: 1
+:widths: 70 30
+
+*   - Type of Hybrids / Multi Chip Modules
+    - $C_{\text{sensitivity}}$
+*   - Metal case, Ceramic case, Ceramic substrate
+    - 5.5
+*   - Glass-epoxy substrate with moulding
+    - 4.1
+*   - Glass-epoxy substrate without moulding
+    - 4.8
+```
+
+```{admonition} Note
+:class: note
+
+For the 2021 issue of FIDES, these values have not been updated.
+```
+
+> **c) Component manufacturing factor $\Pi_{\text{PM}}$**
+
+The Part\_Manufacturing factor presented in paragraph {numref}`eee_4_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+
+Its high level formula is
+
+${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+
+With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+
+These parameters are determined through tables available in FIDES.
+
+-  $\text{QA}_{\text{manufacturer}}$ is presented in paragraph {numref}`eee_4_3_3_2`
+
+-   $\text{QA}_{\text{component}}$ is presented in paragraph {numref}`eee_4_3_3_3` and defined in the different table in each paragraph dedicated to the components
+
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_4_3_3_4`
+
+-   $\epsilon$  is presented in paragraph {numref}`eee_4_3_3_7`
+
+Component manufacturing factor $\pi_{\text{PM}}$ according to paragraph {numref}`eee_4_3_3` and calculated using the calculation method described to determinate the $\pi_{\text{PM}}$ of the corresponding components (integrated circuits and discrete semiconductors, resistors, capacitors, inductors).
+
+> **d) Determination of the $\Pi_{\text{Process}}$ factor**
+
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in paragraph {numref}`eee_4_3_2_3`.
+
+**Summary for Hybrids**
+
+<table class="myTable">
+    <thead>
+        <th><strong>Section</strong></th>
+        <th><strong>Component types</strong></th>
+        <th><strong>Modifications and adaptations for space applications</strong></th>
+    </thead>
+    <tr>
+        <td>40</td>
+        <td>Hybrids</td>
+        <td>
+            <p>Value of Π<sub>Chemical</sub> equal to 0</p>
+        </td>
+    </tr>
+</table>
+
+(eee_4_3_4_18)=
+## Model of COTS boards for space applications 
+
+COTS board are electronic and off-the-shelf boards generally supplied from specific manufacturers with very little to no information provided on their content. These COTS boards are generally designed to perform a generic or standard functionality such as input / output, memory storage, specific signal data processing or communication protocols. For space applications, they are currently only used for on-ground systems. However, with the development of nanosatellites for "new space", the request to use these boards is increasing to minimize costs and to reduce development time.
+
+There is presently no existing reliability prediction model for COTS boards adapted to space applications. The methodology proposed in the following is based on the data from manufacturer and especially datasheet and parts list of the boards. In case of no information available from the manufacturers, a possible solution is to perform a reverse engineering of the board and to use the families or part count method to estimate the reliability prediction. This method is clearly not recommended. In fact, only life tests on a sufficiently large amount of COTS boards are suitable to estimate the COTS board reliability when no data are available from the manufacturer.
+
+(eee_4_3_4_19)=
+## Reliability prediction of COTS boards done by manufacturers
+
+Some manufacturers of COTS boards do provide a reliability prediction for their COTS boards and publish this information inside the datasheet. An assessment of this estimation could be made to appreciate its applicability to space applications. Elements, such as the level of confidence, the methodology applied, number of tested boards, number of failed boards and root cause of failure analysis should be provided by the manufacturers of COTS boards to justify their estimations and to provide rationales of their confidence.
+
+(eee_4_3_4_20)=
+## Reliability prediction of COTS boards with raw data provided by manufacturers
+
+If the manufacturer agrees to provide a datasheet and a parts list, the best solution is to perform a complete reliability calculation with the methodology provided in this handbook based on this data. This data could provide references of the EEE components, manufacturers of the EEE components, and derating computed by the manufacturer. In the unlikely event that the manufacturers fill the Pi Process questionnaire themselves, the resulting *Π~Process~* issued from the questionnaire is used to complete the reliability prediction. If not, as it is difficult to fill in the questionnaire for the manufacturer, an alternate solution is to use a recommended value for *Π~Process~* of 4.0 if suppliers of COTS boards have no experience with space applications. In case of manufacturers of COTS boards applying the quality process of space industry and having experience with satellites in orbit, this recommended value can be reduced to 2.5. Consequently, it is difficult to justify a value lower than 2.5 without justified rationales from the COTS boards' manufacturers.
+
+(eee_4_3_4_21)=
+
+## Reliability prediction of COTS boards without data provided by manufacturers
+
+Unfortunately, manufacturers of COTS boards usually do not provide any information. One possible solution to overcome this situation is to identify the EEE components of the board and to reconstruct the parts list by reverse engineering, through visual inspection for instance. As it is not possible to identify all characteristics of the components and to estimate the deratings, a simple and fast calculation based on a families count or part count methods is suggested instead of doing a complete part stress calculation.
+
+The families count prediction method considers all the components without distinguishing the different technologies. The part count prediction method considers all types of components with their various technologies. The method for calculating the reliability prediction of COTS boards with the families count and part count method is provided in paragraph {numref}`eee_4_3_5`.
+
+If it is not possible to apply the families or part count method due to specific concerns such as boards with potting or boards encapsulated in other systems, a reliability prediction based on calculation is not possible. The alternative is to perform the reliability prediction based on life tests of the COTS boards.
+
+The determination of the number of boards to be tested is done from the χ² law:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_210
+\lambda = \frac{\chi_{2n_{f} + 2,1 - CL}^{2}}{2 \bullet t \bullet AF \bullet n}
+```
+where:
+
+-   $\lambda$: objective failure rate of the COTS board in FIT;
+
+-   $CL$: confidence level in %;
+
+-   $n_{f}$: number of failed parts;
+
+-   $t$: test duration in hours;
+
+-   $AF$: acceleration factor defined depending on the acceleration law;
+
+-   $n$: quantity of tested parts.
+````
+
+From a fixed failure rate objective $\lambda$ and with a test with no failure $n_{f}$=0, two possible ways to determine the parameters can be followed:
+
+-   If a fixed number of parts $n$ is available, the test duration $t$ is determined from the χ² law; by similarity with other industrial domains and to avoid a too long test duration, a minimum of $n$=30 parts is requested for the tests;
+
+-   If the test duration $t$ is fixed, the quantity of parts $n$ to be tested is determined from the χ² law.
+
+For space applications as for other type of applications, the minimum confidence level to use is 60%. With this confidence level, the test duration can last several years or the quantity of parts to test can be huge. So, there is often a compromise to find in order to get an acceptable quantity of parts to test and an acceptable duration of the test.
