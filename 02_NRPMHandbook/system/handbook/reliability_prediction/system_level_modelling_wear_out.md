@@ -42,11 +42,11 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
 ``  
 ```{math}
 :label: Equation_7_95
-\begin{matrix}                                                                                                 
-  \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                                                             
-  \lambda\left( t \right) = \lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta - 1} \\                
-  \end{matrix}\left\{ \begin{matrix}                                                                                               
-  t < \tau_{1} \\                                                                                                     t \geq \tau_{1} \\                                                                                                     \end{matrix} \right.\ 
+\lambda(t) = 
+\begin{cases}
+\lambda_{R}, &\text{if} \qquad t \le \tau_1\\
+\lambda_{R} + \left( \frac{\beta}{\alpha} \right)\left( \frac{t - \tau_1}{\alpha} \right)^{\beta - 1}, &\text{if} \qquad t > \tau_1
+\end{cases}
 ```
 ````
 
@@ -56,11 +56,11 @@ This model assumes that {term}`wear-out failure <Wear-out failure>` can only occ
 ``  
 ```{math}
 :label: Equation_7_96
-\begin{matrix}                                                                                                 
-  R\left( t \right) = {\exp\left\lbrack - \lambda_{R}t \right\rbrack}^{} \\                                                                           
-  R\left( t \right) = {{\exp\left\lbrack - \left( \lambda_{R} + \left( \frac{t - \tau_{1}}{\alpha} \right)^{\beta} \right) \right\rbrack}^{}}_{} \\   
-  \end{matrix}\left\{ \begin{matrix}                                                                                               
-  t < \tau_{1} \\                                                                                                     t \geq \tau_{1} \\                                                                                                     \end{matrix} \right.\ 
+R(t) =
+\begin{cases}
+\exp\left( - \lambda_{R} t \right), &\text{if} \qquad t \le \tau_1\\
+\exp\left( - \left( \lambda_{R} + \left( \frac{t - \tau_1}{\alpha} \right)^{\beta} \right) \right)&\text{if} \qquad t > \tau_1
+\end{cases}
 ```
 ````
 
@@ -94,13 +94,11 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ``  
 ```{math}
 :label: Equation_7_99
-\begin{matrix}
-  \lambda\left( t \right) = \lambda_{R} = \text{const} \\                                                       
-  \lambda\left( t \right) = \left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1} \\   
-  \end{matrix}\left\{ \begin{matrix}                                                                            
-  t < \tau_{2} \\                                                                                               
-  t \geq \tau_{2} \\                                                                                            
-  \end{matrix} \right.\ 
+\lambda(t) = 
+\begin{cases}
+\lambda_{R}, &\text{if} \qquad t \le \tau_2\\
+\left( \frac{\beta}{\alpha} \right)\left( \frac{t}{\alpha} \right)^{\beta - 1}, &\text{if} \qquad t > \tau_2
+\end{cases}
 ```
 ````
 
@@ -110,13 +108,11 @@ The failure rate $\lambda\left( t \right)$ is the maximum of the {term}`random f
 ``  
 ```{math}
 :label: Equation_7_100
-\begin{matrix}
-  R\left( t \right) = {\exp\left\lbrack - \lambda_{R}t \right\rbrack}^{} \\                                     
-  R\left( t \right) = {\exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack}^{} \\          
-  \end{matrix}\left\{ \begin{matrix}                                                                            
-  t < \tau_{2} \\                                                                                               
-  t \geq \tau_{2} \\                                                                                            
-  \end{matrix} \right.\ 
+R(t) =
+\begin{cases}
+\exp\left( - \lambda_{R}t \right), &\text{if} \qquad t \le \tau_2\\
+\exp\left( - \left( \frac{t}{\alpha} \right)^{\beta} \right) &\text{if} \qquad t > \tau_2
+\end{cases}
 ```
 ````
 
