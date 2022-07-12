@@ -51,7 +51,7 @@ def get_inputs(value_default='mean'):
             'min': -2,
             'max': 6,
             'step': 0.1,
-            'readout_format': '.2f',
+            'readout_format': '.1e',
             'value': value_default
         },
         'beta': {
