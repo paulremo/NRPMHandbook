@@ -6,7 +6,11 @@
 
 #help {
     width: 100%;
-    height: 200px;
+    height: 8em;
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1;
 }
 
 #astronaut {
@@ -18,6 +22,7 @@
     background-color: #e4c665;
     color: black;
     border-radius: 5px;
+    display:none;
 }
 
 .help-message {
@@ -30,7 +35,7 @@
     width: 22%;
     padding: 2px 2px;
     margin: 5px;
-    font-size: 12px;
+    font-size: 0.8em;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
@@ -119,6 +124,7 @@
     margin-bottom: 1px;
     margin-left: 5px;
     margin-right: 5px;
+    cursor: help;
 }
 
 .value-type-title {
@@ -129,6 +135,7 @@
     margin-bottom: 1px;
     margin-left: 5px;
     margin-right: 5px;
+    cursor: help;
 }
 
 .value-type-subtitle {
@@ -139,10 +146,12 @@
     margin-bottom: 1px;
     margin-left: 5px;
     margin-right: 5px;
+    cursor: help;
 }
 
 .customed-table {
     border-collapse: collapse;
+    margin-top: 8em;
 }
 
 .value-type {
@@ -151,6 +160,7 @@
     text-align: center;
     width: 80px;
     height: 60px;
+    cursor: help;
 }
 
 .value-processed {

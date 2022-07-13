@@ -308,4 +308,17 @@ const information = new Map([
 
 function update_help(elt){
     document.getElementById("messagesTrack").innerHTML = information.get(elt);
+    //document.getElementById("help").style.height = document.getElementById("messages").style.height;
+    //document.getElementById("customed-table").style.height = document.getElementById("help").style.height;
+}
+
+document.getElementById("astroPicture").onclick = function() {
+    if (this.src.includes("speak")){
+        document.getElementById("messages").style.display = "none";
+        this.src = "pictures/new_astronaut.svg";
+    }
+    else{
+        document.getElementById("messages").style.display = "block";
+        this.src = "pictures/new_astronaut_speaks.svg";
+    }
 }

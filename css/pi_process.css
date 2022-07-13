@@ -1,0 +1,250 @@
+.icon-bar {
+    width: 80%;
+    /* Full-width */
+    overflow: auto;
+    /* Overflow due to float */
+    margin-inline: 10%;
+    margin-top: 1%;
+}
+
+.icon-bar a {
+    float: left;
+    /* Float links side by side */
+    text-align: center;
+    /* Center-align text */
+    width: 14%;
+    /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0;
+    /* Some top and bottom padding */
+    transition: all 0.3s ease;
+    /* Add transition for hover effects */
+    color: black;
+    /* White text color */
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+    color: white;
+}
+
+.icon-bar a:focus {
+    background-color: #000;
+    color: white;
+    /* Add a hover color */
+}
+
+.planetPicture {
+    width: 50%;
+}
+
+.quizz {
+    width: 80%;
+    /* Full-width */
+    /*overflow: auto;*/
+    /* Overflow due to float */
+    height: fit-content;
+    margin-top: 2%;
+    margin-inline: 10%;
+    background-color: seashell;
+    border-radius: 10px;
+    border-width: 5%;
+    border-color: #000;
+    border-style: double;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.information {
+    width: 100%;
+    margin-inline: 15%;
+}
+
+.informationGrid {
+    width: 100%;
+}
+
+.informationGrid td {
+    height: 150px;
+}
+
+#questionBox {
+    width: 65%;
+}
+
+#questionBox p {
+    font-size: medium;;
+    font-weight: bold;
+}
+
+#astronautPicture {
+    height: 150%;
+    margin-top: 1%;
+}
+
+#learnMore {
+    width: 15%;
+    font-size: 1vw;
+    border-radius: 0.5em;
+    background-color: #0b025a;
+    color: white;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    width: 60%;
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-color: #000;
+    border-style: double;
+    font-size: 1vw;
+}
+
+#learnMore:before {
+    content: "\003F";
+    margin-right: 10%;
+    color: white;
+}
+
+.choices {
+    width: 100%;
+    margin-inline: 15%;
+    height: fit-content;
+    /*padding-block: 5px;
+    padding-inline: 10px;*/
+}
+
+.choice-option {
+    width: 80%;
+    height: fit-content;
+    padding-block: 5px;
+    padding-inline: 10px;
+    margin: 2%;
+}
+
+.choice-level {
+    width: 10%;
+    font-size: 1vw;
+}
+
+.choice-description {
+    font-size: medium;
+    font-weight: bold;
+    width: 80%;
+    display: inline-block;
+    padding: .5em;
+    background-color: #eae8e8;
+    color: #555555;
+    margin-left: 2em;
+    text-decoration: none;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0 1px #ABABAB,
+        0 0 0 9px #CBCBCB,
+        0 0 0 11px #fff,
+        0 0 0 14px #777,
+        2px 5px 15px 8px #555;
+}
+
+.choice-description:hover {
+    /*background-color: #076a78;
+    color: antiquewhite;*/
+    cursor: pointer;
+}
+
+#not-applicable{
+    margin-left: 5%;
+    width:66%;
+    height: fit-content;
+    font-size: medium;;
+    background-color: #000;
+    color: #eee;
+    padding: 0.5%;
+    cursor: pointer;
+}
+
+#pages{
+    width:80%;
+    margin-inline: 10%;
+    margin-top: 1%;
+}
+
+#pages td{
+    background-color: #006597;
+    color: #eee;
+    font-size: 1vw;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+#navigation-button-box{
+    width: 80%;
+    margin-inline: 20%;
+}
+
+#right-box{
+    text-align: right;
+}
+
+#left-button{
+    margin-left: 10%;
+}
+
+#right-button{
+    margin-right: 10%;
+}
+
+.nav-button{
+    font-size: 2vw;
+    width: 20%;
+    background-color: #0b025a;
+    color: white;
+    box-shadow: 0 0 0 1px #ABABAB,
+        0 0 0 9px #CBCBCB,
+        2px 5px 15px 8px #555;
+}
+
+.nav-button:hover{
+    background-color: #006597;
+    cursor: pointer;
+}
+
+#category-title{
+    font-size: 1vw;
+    background-color: #0b025a;
+    color: #eee;
+    width:40%;
+    text-align: center;
+}
+
+#pi-process-box{
+    margin-left: 10%;
+    width: 20%;
+    background-color: darkslategrey;
+    color: #eee;
+    box-shadow: 0 0 0 3px #CBCBCB;
+    padding: 5px;
+    font-size: x-large;
+}
