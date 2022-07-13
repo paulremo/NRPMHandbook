@@ -468,7 +468,7 @@ Here, $\beta$ is called the shape parameter and $\alpha$ the scale parameter or 
 
 -   $\beta > 1$ increasing failure rate
 
-The expected time to failure is a function of both distribution parameters and may be determined as $E\left\lbrack T \right\rbrack = \alpha \bullet \Gamma\left( 1 + 1/\beta \right)$, where $\Gamma(x)$ is the gamma function:
+The expected time to failure is a function of both distribution parameters and may be determined as $E\left\lbrack T \right\rbrack = \alpha \cdot \Gamma\left( 1 + 1/\beta \right)$, where $\Gamma(x)$ is the gamma function:
 
 ````{admonition} Equation
 :class: equation

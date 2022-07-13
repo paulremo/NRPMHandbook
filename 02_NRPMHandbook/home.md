@@ -36,7 +36,7 @@ This digital handbook contains a methodology, a methods and four application-spe
 :gutter: 3
 
 :::{grid-item-card} **EEE**
-<a href="eee/mainEEE.html"><img class="link-image" src="_static/images/eeePicture.png" alt="logo eee"></a>
+<a href="eee/handbook/intro.html"><img class="link-image" src="_static/images/eeePicture.png" alt="logo eee"></a>
 :::
 
 :::{grid-item-card} **Mechanical**
