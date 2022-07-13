@@ -1,6 +1,10 @@
 import IPython
 import ipywidgets as widgets
 from ipywidgets import interactive, Layout, HBox, VBox
+import warnings
+
+# hide warnings
+warnings.filterwarnings('ignore')
 
 class UI:
     """

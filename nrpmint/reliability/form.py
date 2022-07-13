@@ -51,7 +51,6 @@ def form(lsf, corrmat=None, **kwargs):
 
     # Set FORM options
     options = pystra.AnalysisOptions()
-    options.printResults(False)
 
     # Define limit state function
     limit_state = pystra.LimitState(lsf)
@@ -59,6 +58,7 @@ def form(lsf, corrmat=None, **kwargs):
     # Performe FORM analysis
     my_reliability_analysis = pystra.Form(analysis_options=options, stochastic_model=stochastic_model,
                                           limit_state=limit_state)
+    my_reliability_analysis.run()
 
     return my_reliability_analysis
 
@@ -86,7 +86,6 @@ def mcs(lsf, corrmat=None, **kwargs):
 
     # Set MCS options
     options = pystra.AnalysisOptions()
-    options.printResults(False)
 
     # Define limit state function
     limit_state = pystra.LimitState(lsf)
@@ -94,5 +93,6 @@ def mcs(lsf, corrmat=None, **kwargs):
     # Performe FORM analysis
     my_reliability_analysis = pystra.CrudeMonteCarlo(analysis_options=options, stochastic_model=stochastic_model,
                                           limit_state=limit_state)
+    my_reliability_analysis.run()
 
     return my_reliability_analysis

@@ -12,15 +12,15 @@ def get_inputs(value_default = 'mean'):
     inputs = {
         'Dist_X1': {
             'type': 'dropdown',
-            # 'description': 'Dist $R$',
-            'description': 'Dist R',
+            # 'description': 'Dist $X_1$',
+            'description': 'Dist X1',
             'options': ['LogNormal'],
             'value': value_default
         },
         'E_X1': {
             'type': 'floatslider',
-            # 'description': '$\\text{E}[R]$',
-            'description': 'E[R]',
+            # 'description': '$\\text{E}[X_1]$',
+            'description': 'E[X1]',
             'min': 0.1,
             'max': 100,
             'step': 0.1,
@@ -29,8 +29,8 @@ def get_inputs(value_default = 'mean'):
         },
         'CoV_X1': {
             'type': 'floatslider',
-            # 'description': '$\\text{C.o.V.}[R]$',
-            'description': 'C.o.V.[R]',
+            # 'description': '$\\text{C.o.V.}[X_1]$',
+            'description': 'C.o.V.[X1]',
             'min': 0.05,
             'max': 0.3,
             'step': 0.01,
@@ -39,15 +39,15 @@ def get_inputs(value_default = 'mean'):
         },
         'Dist_X2': {
             'type': 'dropdown',
-            # 'description': 'Dist $A$',
-            'description': 'Dist A',
+            # 'description': 'Dist $X_2$',
+            'description': 'Dist X2',
             'options': ['LogNormal', 'Normal', 'Gumbel'],
             'value': value_default
         },
         'E_X2': {
             'type': 'floatslider',
-            # 'description': '$\\text{E}[A]$',
-            'description': 'E[A]',
+            # 'description': '$\\text{E}[X_2]$',
+            'description': 'E[X2]',
             'min': 0.1,
             'max': 60,
             'step': 0.1,
@@ -56,8 +56,8 @@ def get_inputs(value_default = 'mean'):
         },
         'CoV_X2': {
             'type': 'floatslider',
-            # 'description': '$\\text{C.o.V.}[A]$',
-            'description': 'C.o.V.[A]',
+            # 'description': '$\\text{C.o.V.}[X_2]$',
+            'description': 'C.o.V.[X2]',
             'min': 0.05,
             'max': 0.3,
             'step': 0.01,
@@ -66,11 +66,11 @@ def get_inputs(value_default = 'mean'):
         },
         'rho_X1_X2': {
             'type': 'floatslider',
-            # 'description': '$\\rho_{R,A}$',
+            # 'description': '$\\rho_{X_1,X_2}$',
             'description': 'rho_X1_X2',
-            'min': 0.05,
-            'max': 0.8,
-            'step': 0.01,
+            'min': -0.9,
+            'max': 0.9,
+            'step': 0.05,
             'readout_format': '.2f',
             'value': value_default
         }

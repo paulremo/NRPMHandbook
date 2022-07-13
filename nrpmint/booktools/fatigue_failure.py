@@ -277,6 +277,7 @@ def single_analysis(Dist_DCR, E_DCR, CoV_DCR, Dist_A, E_A, CoV_A, Dist_SSF, E_SS
     # run and return form reliability analysis
     form_thresh = 0.1
     reliability_analysis = form(lsf, DCR=DCR, A=A, SSF=SSF, MU=MU, B=B)
+    reliability_analysis.run()
     if reliability_analysis.Pf > form_thresh:
         # for large failure probabilites, switch to MCS
         reliability_analysis = mcs(lsf, DCR=DCR, A=A, SSF=SSF, MU=MU, B=B)
