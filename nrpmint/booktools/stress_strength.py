@@ -105,8 +105,8 @@ def display(reliability_analysis, n_samples=10**5):
     diagonal_limits = np.array([0, 1])*np.max((r,a))
     plt.plot(diagonal_limits, diagonal_limits, linewidth=2, linestyle='--', color='black')
     plt.grid()
-    plt.ylabel('Strength')
-    plt.xlabel('Stress')
+    plt.xlabel('Strength')
+    plt.ylabel('Stress')
     plt.legend(['Realizations','Limit state function $g(X_1,X_2)=0$'])
 
 
