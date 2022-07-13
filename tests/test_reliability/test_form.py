@@ -35,11 +35,7 @@ def test_univariate(dist_type):
 
 @pytest.mark.parametrize('dist_type_r, dist_type_a, Pf_true', [
     ('Normal', 'LogNormal', 3.804e-05),
-<<<<<<< HEAD
     ('LogNormal', 'Gumbel', 4.144e-05)
-=======
-    ('LogNormal', 'Gumbel', 0.00023707)
->>>>>>> fcf632412fcdd1e056483ff185fe8ef42d08bb3a
 ])
 def test_multivariate(dist_type_r, dist_type_a, Pf_true):
     """
