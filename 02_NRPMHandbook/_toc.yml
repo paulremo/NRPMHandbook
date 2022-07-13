@@ -61,6 +61,8 @@ parts:
     - file: mechanical/models/introduction
       title: Models
       sections:
+      - file: mechanical/models/stress_strength
+        title: Stress strength 
       - file: mechanical/models/solid_lubricant_wear
         title: Solid lubricant wear 
       - file: mechanical/models/fluid_lubricant_wear
@@ -117,5 +119,8 @@ parts:
         - file: system/handbook/reliability_prediction/system_level_modelling_wear_out    
         - file: system/handbook/reliability_prediction/systematic_failure_modelling  
         - file: system/handbook/reliability_prediction/consideration_software_failures
-    - file: system/models/intro_models
+    - file: system/models/introduction
       title: Models
+      sections:
+      - file: system/models/wear_out
+        title: Wear-out 
