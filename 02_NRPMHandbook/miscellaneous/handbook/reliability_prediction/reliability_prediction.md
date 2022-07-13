@@ -1,4 +1,4 @@
-(misc_5_0)=
+(misc_5)=
 # Reliability prediction for miscellaneous items
 
 
