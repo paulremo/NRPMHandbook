@@ -141,7 +141,7 @@ Each recommendation is weighted by a specific $Recom\_ Weight_{i}$. The value of
 ``  
 ```{math}
 :label: Equation_1_18
-Audit\_ Mark_{j} = \sum_{i = 1}^{n}{{Recom\_ Weight}_{i} \bullet}{Satisfaction\_ mark}_{i}
+Audit\_ Mark_{j} = \sum_{i = 1}^{n}{{Recom\_ Weight}_{i} \cdot}{Satisfaction\_ mark}_{i}
 ```
 ````
 
@@ -153,7 +153,7 @@ A calibration is necessary to neutralise questions about activities that are not
 ``  
 ```{math}
 :label: Equation_1_19
-Max\_ Audit\_ Mark_{j} = \sum_{i = 1}^{n}{{Recom\_ Weight}_{i} \bullet 3}
+Max\_ Audit\_ Mark_{j} = \sum_{i = 1}^{n}{{Recom\_ Weight}_{i} \cdot 3}
 ```
 ````
 
@@ -165,7 +165,7 @@ The process factor is calculated as follows:
 ``  
 ```{math}
 :label: Equation_1_20
-\Pi_{\text{Process}} = exp\left\lbrack 2.079 \bullet \left( 1 - Process\_ Grade \right) \right\rbrack
+\Pi_{\text{Process}} = exp\left\lbrack 2.079 \cdot \left( 1 - Process\_ Grade \right) \right\rbrack
 ```
 ````
 
@@ -177,7 +177,7 @@ with
 ``  
 ```{math}
 :label: Equation_1_21
-Process\_ Grade = \sum_{j = 1}^{7}\left( {Contribution\_ Phase}_{j} \bullet \frac{Audit\_ Mark_{j}}{Max\_ Audit\_ Mark_{j}} \right)
+Process\_ Grade = \sum_{j = 1}^{7}\left( {Contribution\_ Phase}_{j} \cdot \frac{Audit\_ Mark_{j}}{Max\_ Audit\_ Mark_{j}} \right)
 ```
 ````
 
@@ -245,11 +245,11 @@ $\Pi_{\text{ProcessRFHF}}$is issued from the following equations and questionnai
 ``  
 ```{math}
 :label: Equation_1_22
-Pi_{\text{ProcessRFHF}} = exp\left\lbrack 1.39 \bullet \left( 1 - RFHF\_ grade \right) \right\rbrack
+Pi_{\text{ProcessRFHF}} = exp\left\lbrack 1.39 \cdot \left( 1 - RFHF\_ grade \right) \right\rbrack
 ```  
 ```{math}
 :label: Equation_1_23
-RFHF\_ grade = \frac{\sum_{}^{}\text{Values\ in\ the\ following\ table}}{\text{Maximum\ applicable\ mark}}
+RFHF\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maximum applicable mark}}
 ```
 ````
 
@@ -323,11 +323,11 @@ $\Pi_{\text{ProcessASIC}}$ is issued from the following equations and questionna
 ``  
 ```{math}
 :label: Equation_1_24
-\Pi_{\text{ProcessASIC}} = exp\left\lbrack 1.39 \bullet \left( 1 - ASIC\_ grade \right) \right\rbrack
+\Pi_{\text{ProcessASIC}} = exp\left\lbrack 1.39 \cdot \left( 1 - ASIC\_ grade \right) \right\rbrack
 ```  
 ```{math}
 :label: Equation_1_25
-ASIC\_ grade = \frac{\sum_{}^{}\text{Values\ in\ the\ following\ table}}{\text{Maximum\ applicable\ mark}}
+ASIC\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maximum applicable mark}}
 ```
 ````
 
@@ -437,18 +437,18 @@ $\Pi_{\text{Process\_ H&M}}$ is issued from the following equations and question
 ``  
 ```{math}
 :label: Equation_1_26
-\Pi_{Process\_ H\& M} = exp\left\lbrack 1.39 \bullet \left( 1 - H\& M\_ process\_ grade \right) \right\rbrack
+\Pi_{Process\_ H\& M} = exp\left\lbrack 1.39 \cdot \left( 1 - H\& M\_ process\_ grade \right) \right\rbrack
 ```  
 ```{math}
 :label: Equation_1_27
-H\& M\_ process\_ grade = \frac{\sum_{}^{}\text{Values\ in\ the\ following\ table}}{\text{Maximum\ applicable\ mark}}
+H\& M\_ process\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maximum applicable mark}}
 ```
 ````
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-12')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-14')" placeholder="Search table...">
 
 ```{list-table} Factors influencing the $\Pi_{\text{Process\_ H&M}}$
-:name: eee-table4-12
+:name: eee-table4-14
 :header-rows: 1
 :widths: 10 70 10 10
 

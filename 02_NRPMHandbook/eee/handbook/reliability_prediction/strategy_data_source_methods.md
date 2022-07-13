@@ -29,7 +29,7 @@ In order for this kind of information to be usable, it is necessary to make sur 
 
 In some case, the data obtained this way at component level can be used as a maximum value to be considered as a Worst Case if no other data source is available.
 
-In addition, it is possible to mix these data with data coming from standards or handbooks by the Bayesian method as presented in {numref}`misc_4_6`.
+In addition, it is possible to mix these data with data coming from standards or handbooks by the Bayesian method as presented in {numref}`misc_5_6`.
 
 **Model from reliability.space approach for EEE items**
 
@@ -77,10 +77,10 @@ It is important before taking into account these data to assess its potential ap
 
 If no data is available from manufacturers, the user of the EEE components under consideration can perform their own reliability tests on these components by using acceleration laws, if the activation energy $\text{E_{a}}$ is known.
 
-The methodology is strictly the same as for performing a life test, generally limited in time and then estimating by interval the failure rate with the $\Chi^{2}$ formula. The limitation is generally the quantity of parts to be tested if a low failure rate needs to be addressed. Indeed, the manufacturers of components can cumulate numerous components of the same technology and address failure rates lower than 10 FITs. But for some users, it is more complicated to test large quantities of components for an extensive time so the calculated reliability prediction obtained that way sometimes does not match the targeted reliability figure. Furthermore, each test generally only addresses one or two failure mechanisms while a specific failure mechanism with different activation energy $\text{E_{a}}$, not considered by the test, can happen during the mission with different stresses and constraints.
+The methodology is strictly the same as for performing a life test, generally limited in time and then estimating by interval the failure rate with the $\chi^{2}$ formula. The limitation is generally the quantity of parts to be tested if a low failure rate needs to be addressed. Indeed, the manufacturers of components can cumulate numerous components of the same technology and address failure rates lower than 10 FITs. But for some users, it is more complicated to test large quantities of components for an extensive time so the calculated reliability prediction obtained that way sometimes does not match the targeted reliability figure. Furthermore, each test generally only addresses one or two failure mechanisms while a specific failure mechanism with different activation energy $\text{E_{a}}$, not considered by the test, can happen during the mission with different stresses and constraints.
 
 **Estimation of reliability through engineering judgment**
 
 If the implementation of reliability tests is impossible due to cost or planning for instance, engineering judgment can be used as a last resort. For instance, it is possible to extrapolate the unknown reliability prediction of a component from a known one if both components are using a similar technology. When using this method, it is important to note and record all assumptions that have been made.
 
-An example of how this engineering judgment can be applied is provided in {numref}`misc_4`, non-standard and holistic methods.
+An example of how this engineering judgment can be applied is provided in {numref}`misc_5`, non-standard and holistic methods.

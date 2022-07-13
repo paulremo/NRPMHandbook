@@ -70,7 +70,9 @@ After that, the mission profile should provide the following data for each phase
             <td>Quantification of temperature data</td>
             <td colspan="4">Quantification of temperature cycling data</td>
         </tr>
-        <thead>
+	</table>	
+    <table id="eee_table4_2b" class="myTable">
+		<thead>
 			<tr class="db-header">
 				<th colspan="3"></th>
                 <th>Humidity</th>
@@ -623,7 +625,7 @@ For transport and storage phases of the mission profile, the recommendation for 
 	- 2
 ```
 
-Based on the marks given in {numref}`eee-table4-5` and calculation with {numref}`Equation_1_14`, the recommendation for space applications for transport and storage phases is to use the value of 1.00 for the calculation of $\Pi_{application\_ i}$ in all applications.
+Based on the marks given in {numref}`eee-table4-5` and calculation with {eq}`Equation_1_14`, the recommendation for space applications for transport and storage phases is to use the value of 1.00 for the calculation of $\Pi_{application\_ i}$ in all applications.
 
 ````{admonition} Equation
 :class: equation
