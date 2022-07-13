@@ -90,7 +90,7 @@ def mcs(lsf, corrmat=None, **kwargs):
     # Define limit state function
     limit_state = pystra.LimitState(lsf)
 
-    # Performe FORM analysis
+    # Performe MCS analysis
     my_reliability_analysis = pystra.CrudeMonteCarlo(analysis_options=options, stochastic_model=stochastic_model,
                                           limit_state=limit_state)
     my_reliability_analysis.run()
