@@ -14,8 +14,6 @@ parts:
       - file: methodologies/handbook/reliability_prediction_taxonomy_handbook_coverage
       - file: methodologies/handbook/reliability_prediction_during_project_life_cycle
       - file: methodologies/handbook/part_I_bibliography
-    - file: methodologies/models/intro
-      title: Models
   - caption: Methods chapter
     numbered: true
     chapters:
@@ -28,8 +26,6 @@ parts:
       - file: methods/handbook/annexII_A
       - file: methods/handbook/annexII_B
       - file: methods/handbook/partII_bibliography      
-    - file: methods/models/intro
-      title: Models
   - caption: EEE chapter
     numbered: true
     chapters:
