@@ -53,7 +53,10 @@ parts:
         - file: eee/handbook/reliability_prediction/models_specific_component_types
         - file: eee/handbook/reliability_prediction/systematic_failures
         - file: eee/handbook/reliability_prediction/wear_out_failures
+        - file: eee/handbook/reliability_prediction/extrinsic_failures
       - file: eee/handbook/bibliography
+      - file: eee/handbook/annex_a
+      - file: eee/handbook/annex_c
     - file: eee/models/intro_models
       title: Models
   - caption: Mechanical chapter

@@ -20,7 +20,7 @@ The FIDES families count and part count reliability model for all components is 
 ``  
 ```{math}
 :label: Equation_1_211
-\lambda = \lambda_{\text{Physical}} \bullet \Pi_{\text{PM}} \bullet \Pi_{\text{Process}} \bullet \Pi_{\text{LF}}
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}}
 ```
 ````
 
@@ -32,16 +32,16 @@ with:
 ``  
 ```{math}
 :label: Equation_1_212
-{\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \lambda_{\text{ECU}} \right)_{i}} 
-  }{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  + \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \begin{pmatrix}                  
-  \lambda_{\text{TH}} \bullet \Pi_{\text{Thermal}} + \\                                                                                                                   
-  \lambda_{\text{TCyB}} \bullet \Pi_{\text{TcyCase}} + \\                                                                                                                 
+{\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \lambda_{\text{ECU}} \right)_{i}} 
+  }{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  + \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix}                  
+  \lambda_{\text{TH}} \cdot \Pi_{\text{Thermal}} + \\                                                                                                                   
+  \lambda_{\text{TCyB}} \cdot \Pi_{\text{TcyCase}} + \\                                                                                                                 
   \begin{matrix}                                                                                                                                                          
-  \lambda_{\text{TCyJB}} \bullet \Pi_{TcySolder\_ Joints} + \\                                                                                                            
-  \lambda_{M} \bullet \Pi_{\text{Mechanical}} + \\                                                                                                                        
-  \lambda_{\text{RH}} \bullet \Pi_{\text{RH}} \\                                                                                                                          
+  \lambda_{\text{TCyJB}} \cdot \Pi_{TcySolder\_ Joints} + \\                                                                                                            
+  \lambda_{M} \cdot \Pi_{\text{Mechanical}} + \\                                                                                                                        
+  \lambda_{\text{RH}} \cdot \Pi_{\text{RH}} \\                                                                                                                          
   \end{matrix} \\                                                                                                                                                         
-  \end{pmatrix}_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}}
+  \end{pmatrix}_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}}
 ```
 ````
 
@@ -56,7 +56,7 @@ with:
 ``  
 ```{math}
 :label: Equation_1_213
-\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \bullet E_{\text{aTH}} \bullet \left( \frac{1}{T_{0} + 273} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T \bullet exp( - \alpha \bullet T_{board\_ ref})} \right) \right\rbrack
+\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{\text{aTH}} \cdot \left( \frac{1}{T_{0} + 273} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T \cdot exp( - \alpha \cdot T_{board\_ ref})} \right) \right\rbrack
 ```
 ````
 
@@ -68,7 +68,7 @@ with:
 ``  
 ```{math}
 :label: Equation_1_214
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ annual}}{t_{\text{annual}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{B}} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{B}} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -80,7 +80,7 @@ with:
 ``  
 ```{math}
 :label: Equation_1_215
-\Pi_{TcySolder\_ Joints} = \left( \frac{{12 \bullet N}_{cy\_ annual}}{t_{\text{annual}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{\text{JB}}} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{TcySolder\_ Joints} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{\text{JB}}} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -105,7 +105,7 @@ with:
 ```{math}
 :label: Equation_1_217
 {\Pi_{\text{RH}} = \left( \frac{\text{RH}_{\text{boar}d_{\text{ref}}}}{70} \right)^{4.4} 
-  }{\ \ \ \ \ \ \ \ \ \ \ \  \bullet \ exp\left\lbrack 11604 \bullet E_{\text{aRH}} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T \bullet exp( - \alpha \bullet T_{board\_ ref})} \right) \right\rbrack}
+  }{\ \ \ \ \ \ \ \ \ \ \ \  \cdot \ exp\left\lbrack 11604 \cdot E_{\text{aRH}} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T \cdot exp( - \alpha \cdot T_{board\_ ref})} \right) \right\rbrack}
 ```
 ````
 

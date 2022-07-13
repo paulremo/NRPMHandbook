@@ -1505,7 +1505,7 @@ For space applications, where the number of cycles (mating/demating) per year is
 ``  
 ```{math}
 :label: Equation_1_55
-\Pi_{\text{Tcy}} = 0.04 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack\
+\Pi_{\text{Tcy}} = 0.04 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -2013,11 +2013,11 @@ $\lambda_{0_{\text{piezoelectric}}}$ corresponds to the basic failure rate defin
 ```
 ````
 
-${\gamma_{TH - EL}$ depends on the type of piezo electrical devices.
+$\gamma_{TH - EL}$ depends on the type of piezo electrical devices.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-44')" placeholder="Search table...">
 
-```{list-table} ${\gamma_{TH - EL}$ for piezo electric devices.
+```{list-table} $\gamma_{TH - EL}$ for piezo electric devices.
 :name: eee-table4-44
 :header-rows: 1
 :widths: 70 30
@@ -2050,16 +2050,13 @@ $\Pi_{rating\_ EL\_ i}$ follows the rule:
 
 All other parameters are issued from the mission profile.
 
-
-All other parameters are issued from the mission profile.
-
 ````{admonition} Equation
 :class: equation
 ``
 ``  
 ```{math}
 :label: Equation_1_63
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack\
+\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -7581,7 +7578,7 @@ The basic failure rate $\lambda_{\text{OTH}}$ is a fixed value given in the foll
 ``  
 ```{math}
 :label: Equation_1_123
-\lambda_{0_{\text{constraint}}} = exp\left( - a \right) \bullet {N_{p}}^{b}
+\lambda_{0_{\text{constraint}}} = exp\left( - a \right) \cdot {N_{p}}^{b}
 ```
 ````
 
@@ -8469,7 +8466,7 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_131
-\lambda_{\text{Physical}} = \lambda_{O_{\text{Relay}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{Electrical}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Relay}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{Electrical}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 ````
 
@@ -8491,7 +8488,7 @@ error in equation 131, miss Pi chamical and manoeuvre"
 ``  
 ```{math}
 :label: Equation_1_132
-\Pi_{\text{Thermal}} = 0.29 \bullet \Pi_{\text{TH\ contact}} \bullet \Pi_{\text{TH\ breaking}} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{313} - \frac{1}{273 + T^{'}} \right) \right\rbrack
+\Pi_{\text{Thermal}} = 0.29 \cdot \Pi_{\text{TH\ contact}} \cdot \Pi_{\text{TH\ breaking}} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{313} - \frac{1}{273 + T^{'}} \right) \right\rbrack
 ```
 ````
 
@@ -8504,7 +8501,7 @@ $E_{a}$ = 0.25eV;
 ```{math}
 :label: Equation_1_133
 T^{'} = \left\{ \begin{matrix}                                                                                         
-  40 - \frac{85}{55} \bullet \left( T_{board\_ ref} + \Delta T \right) & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T \leq 0{^\circ}C \\   
+  40 - \frac{85}{55} \cdot \left( T_{board\_ ref} + \Delta T \right) & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T \leq 0{^\circ}C \\   
   40{^\circ}C & \mathrm{\text{if}}\ {0{^\circ}C < T}_{board\_ ref} + \Delta T \leq 40{^\circ}C \\                                            
   T_{board\_ ref} + \Delta T & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T > 40{^\circ}C \\                                               
   \end{matrix} \right.\ 
@@ -8515,7 +8512,7 @@ $\Pi_{\text{TH\ contact}}$ is equal to:
 
 -   1 for temperatures $T_{board\_ ref} + \Delta T \leq 125{^\circ}C$;
 
--   $\Pi_{\text{MEcontact}} \bullet \Pi_{\text{pole}}$ for temperatures higher than 125°C
+-   $\Pi_{\text{MEcontact}} \cdot \Pi_{\text{pole}}$ for temperatures higher than 125°C
 
 -   With $\Pi_{\text{Pole}}$ depending on the type of relay (for SPST $\Pi_{\text{Pole}}$= 1, for DPDT $\Pi_{\text{Pole}}$= 3, for 3PDT $\Pi_{\text{Pole}}$= 4.25 and for 4PDT $\Pi_{\text{Pole}}$= 5.5).
 
@@ -8540,7 +8537,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_134
-\Pi_{\text{Electrical}} = 0.55 \bullet \Pi_{\text{pole}} \bullet \Pi_{\text{EL\ breaking}} \bullet \Pi_{\text{load\ type}} \bullet {S_{V}}^{m_{1}} \bullet {S_{I}}^{m_{2}} \bullet \left( \frac{U_{\text{nominal}}}{U_{\text{coil}}} \right)
+\Pi_{\text{Electrical}} = 0.55 \cdot \Pi_{\text{pole}} \cdot \Pi_{\text{EL\ breaking}} \cdot \Pi_{\text{load\ type}} \cdot {S_{V}}^{m_{1}} \cdot {S_{I}}^{m_{2}} \cdot \left( \frac{U_{\text{nominal}}}{U_{\text{coil}}} \right)
 ```
 ````
 
@@ -8613,7 +8610,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_135
-\Pi_{\text{Tcy}} = 0.02 \bullet \Pi_{\text{prot\ TCY}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} = 0.02 \cdot \Pi_{\text{prot\ TCY}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -8631,7 +8628,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_136
-\Pi_{\text{Mechanical}} = 0.05 \bullet \Pi_{\text{pole}} \bullet \Pi_{\text{ME\ contact}} \bullet \Pi_{\text{ME\ breaking}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+\Pi_{\text{Mechanical}} = 0.05 \cdot \Pi_{\text{pole}} \cdot \Pi_{\text{ME\ contact}} \cdot \Pi_{\text{ME\ breaking}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
 ```
 ````
 
@@ -9194,7 +9191,7 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_139
-\lambda_{\text{Physical}} = \lambda_{O_{\text{Resistor}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Resistor}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 ````
 
@@ -9237,7 +9234,7 @@ With $N_{R}$ as the number of resistors in the network.
 ``  
 ```{math}
 :label: Equation_1_140
-\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \bullet \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
+\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \cdot \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
 ```
 ````
 
@@ -9286,7 +9283,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_141
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -9325,7 +9322,7 @@ $\gamma_{\text{TCy}}$ depends on the type of resistors:
 ``  
 ```{math}
 :label: Equation_1_142
-\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
 ```
 ````
 
@@ -9366,7 +9363,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_143
-\Pi_{\text{RH}} = {\gamma_{\text{RH}} \bullet \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.9 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \bullet \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
+\Pi_{\text{RH}} = {\gamma_{\text{RH}} \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \cdot \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
 ```
 ````
 
@@ -9890,7 +9887,7 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_146
-\lambda_{\text{Physical}} = \lambda_{O_{\text{Thermistor}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Thermistor}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 ````
 
@@ -9925,7 +9922,7 @@ $\lambda_{O_{\text{Thermistor}}}$ corresponds to the basic failure rate defined 
 ``  
 ```{math}
 :label: Equation_1_147
-\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \bullet \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
+\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \cdot \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
 ```
 ````
 
@@ -9966,7 +9963,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_148
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -10001,7 +9998,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_149
-\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
 ```
 ````
 
@@ -10036,7 +10033,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_150
-Pi_{\text{RH}} = {\gamma_{\text{RH}} \bullet \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.9 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \bullet \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
+Pi_{\text{RH}} = {\gamma_{\text{RH}} \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \cdot \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
 ```
 ````
 
@@ -10654,14 +10651,14 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_153
-\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \begin{pmatrix} 
-  {\lambda_{\text{OTH}} \bullet \Pi}_{\text{Thermal}} \\                                                                                        
-  {+ \lambda_{\text{OTCyCase}} \bullet \Pi}_{\text{TCyCase}} \\                                                                                 
+\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
+  {\lambda_{\text{OTH}} \cdot \Pi}_{\text{Thermal}} \\                                                                                        
+  {+ \lambda_{\text{OTCyCase}} \cdot \Pi}_{\text{TCyCase}} \\                                                                                 
   \begin{matrix}                                                                                                                                
-  {+ \lambda_{\text{OTCySolderjoints}} \bullet \Pi}_{\text{TCySolderjoints}} \\                                                                 
-   + \lambda_{\text{OMech}} \bullet \Pi_{\text{Mech}} \\                                                                                        
+  {+ \lambda_{\text{OTCySolderjoints}} \cdot \Pi}_{\text{TCySolderjoints}} \\                                                                 
+   + \lambda_{\text{OMech}} \cdot \Pi_{\text{Mech}} \\                                                                                        
   \end{matrix} \\                                                                                                                               
-  \end{pmatrix}_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+  \end{pmatrix}_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 ````
 
@@ -10749,7 +10746,7 @@ $\lambda_{\text{OTH}}$ for Power HF/RF has been updated in the 2021 issue of the
 ``  
 ```{math}
 :label: Equation_1_154
-\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
 
@@ -10761,7 +10758,7 @@ $E_{a}$ = 0.7eV;
 ``  
 ```{math}
 :label: Equation_1_155
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -10771,7 +10768,7 @@ $E_{a}$ = 0.7eV;
 ``  
 ```{math}
 :label: Equation_1_156
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \bullet N}_{cy\_ annual}}{t_{\text{annual}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -11162,14 +11159,14 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_160
-\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \begin{pmatrix} 
-  {\lambda_{\text{OTH}} \bullet \Pi}_{\text{Thermal}} \\                                                                                        
-  {+ \lambda_{\text{OTCyCase}} \bullet \Pi}_{\text{TCyCase}} \\                                                                                 
+\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
+  {\lambda_{\text{OTH}} \cdot \Pi}_{\text{Thermal}} \\                                                                                        
+  {+ \lambda_{\text{OTCyCase}} \cdot \Pi}_{\text{TCyCase}} \\                                                                                 
   \begin{matrix}                                                                                                                                
-  {+ \lambda_{\text{OTCySolderjoints}} \bullet \Pi}_{\text{TCySolderjoints}} \\                                                                 
-   + \lambda_{\text{OMech}} \bullet \Pi_{\text{Mech}} \\                                                                                        
+  {+ \lambda_{\text{OTCySolderjoints}} \cdot \Pi}_{\text{TCySolderjoints}} \\                                                                 
+   + \lambda_{\text{OMech}} \cdot \Pi_{\text{Mech}} \\                                                                                        
   \end{matrix} \\                                                                                                                               
-  \end{pmatrix}_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+  \end{pmatrix}_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 ````
 
@@ -11257,7 +11254,7 @@ $\lambda_{\text{OTH}}$ for Power HF/RF has been updated in the 2021 issue of the
 ``  
 ```{math}
 :label: Equation_1_161
-\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
 
@@ -11269,7 +11266,7 @@ $E_{a}$ = 0.7eV;
 ``  
 ```{math}
 :label: Equation_1_162
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -11279,7 +11276,7 @@ $E_{a}$ = 0.7eV;
 ``  
 ```{math}
 :label: Equation_1_163
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \bullet N}_{cy\_ annual}}{t_{\text{annual}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -11703,7 +11700,7 @@ The following table presents the different subfamilies and the corresponding mod
 ``  
 ```{math}
 :label: Equation_1_166
-\lambda = \lambda_{\text{Physical}} \bullet \Pi_{\text{PM}} \bullet \Pi_{\text{Process}} \bullet \Pi_{\text{LF}}
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}}
 ```
 -   $\lambda_{\text{Physical}}$ the physical contribution for each component,
 
@@ -11727,7 +11724,7 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_167
-\lambda_{\text{Physical}} = \lambda_{O_{\text{Magnetic}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Magnetic}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 with:
 
@@ -11754,7 +11751,7 @@ $\lambda_{O_{\text{Magnetic}}}$ mentioned groups:
 ``  
 ```{math}
 :label: Equation_1_168
-\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
 
@@ -11774,7 +11771,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_169
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -11792,7 +11789,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_170
-\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
 ```
 ````
 
@@ -12258,7 +12255,7 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_173
-\lambda_{\text{Physical}} = \lambda_{O_{\text{Switch}}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{Thermal}} + \Pi_{\text{Electrical}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+\lambda_{\text{Physical}} = \lambda_{O_{\text{Switch}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{Electrical}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 ````
 
@@ -12274,7 +12271,7 @@ For space applications, $\Pi_{\text{Chemical}}$ is equal to 0, $\Pi_{\text{manoe
 ``  
 ```{math}
 :label: Equation_1_174
-\Pi_{\text{Thermal}} = 0.21 \bullet C_{\text{TH}} \bullet \Pi_{\text{TH\ contact}} \bullet exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{313} - \frac{1}{273 + T^{'}} \right) \right\rbrack
+\Pi_{\text{Thermal}} = 0.21 \cdot C_{\text{TH}} \cdot \Pi_{\text{TH\ contact}} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{313} - \frac{1}{273 + T^{'}} \right) \right\rbrack
 ```
 ````
 
@@ -12288,7 +12285,7 @@ $C_{\text{TH}}$ = 1.11;
 ```{math}
 :label: Equation_1_175
 T^{'} = \left\{ \begin{matrix}                                                                                        
-  40 - \frac{85}{55} \bullet \left( T_{board\_ ref} + \Delta T \right) & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T \leq 0{^\circ}C \\   
+  40 - \frac{85}{55} \cdot \left( T_{board\_ ref} + \Delta T \right) & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T \leq 0{^\circ}C \\   
   40{^\circ}C & \mathrm{\text{if}}\ {0{^\circ}C < T}_{board\_ ref} + \Delta T \leq 40{^\circ}C \\                                            
   T_{board\_ ref} + \Delta T & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T > 40{^\circ}C \\                                               
   \end{matrix} \right.\ 
@@ -12299,7 +12296,7 @@ $\Pi_{\text{TH\ contact}}$ is equal to:
 
 -   1 for temperatures $T_{board\_ ref} + \mathrm{\Delta}T \leq 125{^\circ}C$;
 
--   $\Pi_{\text{MEcontact}} \bullet \Pi_{\text{pole}}$ for temperatures higher than 125°C;
+-   $\Pi_{\text{MEcontact}} \cdot \Pi_{\text{pole}}$ for temperatures higher than 125°C;
 
 -   With $\Pi_{\text{pole}}$ depending on the type of switch (for SPST $\Pi_{\text{pole}}$= 1, for DPDT $\Pi_{\text{pole}}$= 3, for 3PDT $\Pi_{\text{pole}}$= 4.25 and for 4PDT $\Pi_{\text{pole}}$= 5.5).
 
@@ -12318,7 +12315,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_176
-\Pi_{\text{Electrical}} = 0.59 \bullet {C_{\text{EL}} \bullet \Pi}_{\text{pole}} \bullet \Pi_{\text{EL\ breaking}} \bullet \Pi_{\text{load\ type}} \bullet {S_{V}}^{m_{1}} \bullet {S_{I}}^{m_{2}}
+\Pi_{\text{Electrical}} = 0.59 \cdot {C_{\text{EL}} \cdot \Pi}_{\text{pole}} \cdot \Pi_{\text{EL\ breaking}} \cdot \Pi_{\text{load\ type}} \cdot {S_{V}}^{m_{1}} \cdot {S_{I}}^{m_{2}}
 ```
 ````
 
@@ -12392,7 +12389,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_177
-\Pi_{\text{Tcy}} = 0.02 \bullet \Pi_{\text{prot\ TCY}} \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} = 0.02 \cdot \Pi_{\text{prot\ TCY}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -12414,7 +12411,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_178
-\Pi_{\text{Mechanical}} = 0.06 \bullet C_{\text{MECH}} \bullet \Pi_{\text{pole}} \bullet \Pi_{\text{ME\ contact}} \bullet \Pi_{\text{ME\ breaking}} \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+\Pi_{\text{Mechanical}} = 0.06 \cdot C_{\text{MECH}} \cdot \Pi_{\text{pole}} \cdot \Pi_{\text{ME\ contact}} \cdot \Pi_{\text{ME\ breaking}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
 ```
 ````
 
@@ -12932,15 +12929,15 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_181
-\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \begin{pmatrix} 
-  {\lambda_{\text{OTH}} \bullet \Pi}_{\text{Thermal}} \\                                                                                        
-  {+ \lambda_{\text{OTCyCase}} \bullet \Pi}_{\text{TCyCase}} \\                                                                                 
+\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
+  {\lambda_{\text{OTH}} \cdot \Pi}_{\text{Thermal}} \\                                                                                        
+  {+ \lambda_{\text{OTCyCase}} \cdot \Pi}_{\text{TCyCase}} \\                                                                                 
   \begin{matrix}                                                                                                                                
-  {+ \lambda_{\text{OTCySolderjoints}} \bullet \Pi}_{\text{TCySolderjoints}} \\                                                                 
-  {+ \lambda_{\text{ORH}} \bullet \Pi}_{\text{RH}} \\                                                                                           
-   + \lambda_{\text{OMech}} \bullet \Pi_{\text{Mech}} \\                                                                                        
+  {+ \lambda_{\text{OTCySolderjoints}} \cdot \Pi}_{\text{TCySolderjoints}} \\                                                                 
+  {+ \lambda_{\text{ORH}} \cdot \Pi}_{\text{RH}} \\                                                                                           
+   + \lambda_{\text{OMech}} \cdot \Pi_{\text{Mech}} \\                                                                                        
   \end{matrix} \\                                                                                                                               
-  \end{pmatrix}_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+  \end{pmatrix}_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 ````
 
@@ -13070,7 +13067,7 @@ All other basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}
 ``  
 ```{math}
 :label: Equation_1_182
-\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
 
@@ -13083,7 +13080,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_183
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -13093,7 +13090,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_184
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -13113,7 +13110,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_186
-\Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.9 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
 
@@ -13491,15 +13488,15 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_189
-\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \begin{pmatrix}
-  {\lambda_{\text{OTH}} \bullet \Pi}_{\text{Thermal}} \\                                                                                        
-  {+ \lambda_{\text{OTCyCase}} \bullet \Pi}_{\text{TCyCase}} \\                                                                                 
+\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix}
+  {\lambda_{\text{OTH}} \cdot \Pi}_{\text{Thermal}} \\                                                                                        
+  {+ \lambda_{\text{OTCyCase}} \cdot \Pi}_{\text{TCyCase}} \\                                                                                 
   \begin{matrix}                                                                                                                                
-  {+ \left( \lambda_{\text{OTCySolderjoints}} + \lambda_{\text{OTCyChip}} \right) \bullet \Pi}_{\text{TCySolderjoints}} \\                      
-  {+ \lambda_{\text{ORH}} \bullet \Pi}_{\text{RH}} \\                                                                                           
-   + \left( \lambda_{\text{OCaseMech}} + \lambda_{\text{OChipMech}} \right) \bullet \Pi_{\text{Mech}} \\                                        
+  {+ \left( \lambda_{\text{OTCySolderjoints}} + \lambda_{\text{OTCyChip}} \right) \cdot \Pi}_{\text{TCySolderjoints}} \\                      
+  {+ \lambda_{\text{ORH}} \cdot \Pi}_{\text{RH}} \\                                                                                           
+   + \left( \lambda_{\text{OCaseMech}} + \lambda_{\text{OChipMech}} \right) \cdot \Pi_{\text{Mech}} \\                                        
   \end{matrix} \\                                                                                                                               
-  \end{pmatrix}_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+  \end{pmatrix}_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 ````
 
@@ -13534,7 +13531,7 @@ According to the different types of packages defined in {numref}`eee-table4-84` 
 ``  
 ```{math}
 :label: Equation_1_190
-\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \bullet E_{a} \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
 
@@ -13547,7 +13544,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_191
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -13557,7 +13554,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_192
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -13577,7 +13574,7 @@ All other parameters are issued from the mission profile.
 ``  
 ```{math}
 :label: Equation_1_194
-\Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.9 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
 
@@ -13749,7 +13746,7 @@ In order to model the reliability for each component of a unit, it is necessary 
 ``  
 ```{math}
 :label: Equation_1_197
-\lambda_{\text{Physical}} = \lambda_{\text{OPCB}} \bullet \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} + \Pi_{\text{Chemical}} \right)_{i}} \bullet \left( \Pi_{\text{induced}} \right)_{i}
+\lambda_{\text{Physical}} = \lambda_{\text{OPCB}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} + \Pi_{\text{Chemical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
 ````
 
@@ -13763,7 +13760,7 @@ $\lambda_{\text{OPCB}}$ is issued from the following equation:
 ``  
 ```{math}
 :label: Equation_1_198
-\lambda_{O_{\text{PCB}}} = 5.10^{- 4} \bullet \left( N_{\text{layers}} \right)^{\frac{1}{2}} \bullet \left( \frac{N_{\text{connection}}}{2} \right) \bullet \Pi_{\text{Class}} \bullet \Pi_{Techno\_ PCB}
+\lambda_{O_{\text{PCB}}} = 5.10^{- 4} \cdot \left( N_{\text{layers}} \right)^{\frac{1}{2}} \cdot \left( \frac{N_{\text{connection}}}{2} \right) \cdot \Pi_{\text{Class}} \cdot \Pi_{Techno\_ PCB}
 ```
 ````
 
@@ -13833,7 +13830,7 @@ The value $\Pi_{\text{Class}}$ reflects the effect on the reliability prediction
 ``  
 ```{math}
 :label: Equation_1_199
-\Pi_{\text{Tcy}} = 0.6 \bullet \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} = 0.6 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -13843,7 +13840,7 @@ The value $\Pi_{\text{Class}}$ reflects the effect on the reliability prediction
 ``  
 ```{math}
 :label: Equation_1_200
-\Pi_{\text{Mechanical}} = 0.2 \bullet \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+\Pi_{\text{Mechanical}} = 0.2 \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
 ```
 ````
 
@@ -13853,7 +13850,7 @@ The value $\Pi_{\text{Class}}$ reflects the effect on the reliability prediction
 ``  
 ```{math}
 :label: Equation_1_201
-\Pi_{\text{RH}} = 0.18 \bullet \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \bullet \ exp\left\lbrack 11604 \bullet 0.8 \bullet \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{RH}} = 0.18 \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.8 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
 ````
 
@@ -14258,8 +14255,8 @@ Hybrids are classified as family 40 in EPPL  {cite:t}`eee-EPPL007-37`.. They can
 ``  
 ```{math}
 :label: Equation_1_203
-\lambda_{H\& M} = \sum_{\text{µcomponents}}^{}\left( \lambda_{\text{µcomponent}} \bullet \Pi_{PM_{\text{µcomponent}}} \right) \bullet \Pi_{Process\_ H\& M} \bullet \Pi_{\text{Process}} 
- + \left( \lambda_{\text{wiring}} + \lambda_{Case + Substrate} + \lambda_{External\_ connections} \right) \bullet \Pi_{Process\_ H\& M} \bullet \Pi_{\text{Process}}
+\lambda_{H\& M} = \sum_{\text{µcomponents}}^{}\left( \lambda_{\text{µcomponent}} \cdot \Pi_{PM_{\text{µcomponent}}} \right) \cdot \Pi_{Process\_ H\& M} \cdot \Pi_{\text{Process}} 
+ + \left( \lambda_{\text{wiring}} + \lambda_{Case + Substrate} + \lambda_{External\_ connections} \right) \cdot \Pi_{Process\_ H\& M} \cdot \Pi_{\text{Process}}
 ```
 ````
 
@@ -14277,7 +14274,7 @@ For each basic element (microcomponent, wiring, case-substrate, external connect
 ``  
 ```{math}
 :label: Equation_1_204
-\lambda_{\text{element}} = \sum_{i}^{\text{Phases}}\left\lbrack \frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \bullet \left( \sum_{\text{stresses}}^{}\left( \lambda_{0stress} \bullet \Pi_{\text{stress}} \right) \right)_{i} \bullet \left( \Pi_{\text{induced}} \right)_{i} \right\rbrack
+\lambda_{\text{element}} = \sum_{i}^{\text{Phases}}\left\lbrack \frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \sum_{\text{stresses}}^{}\left( \lambda_{0stress} \cdot \Pi_{\text{stress}} \right) \right)_{i} \cdot \left( \Pi_{\text{induced}} \right)_{i} \right\rbrack
 ```
 ````
 
@@ -14301,7 +14298,7 @@ For microcomponents associated with bare chips (integrated circuits, transistors
 ``  
 ```{math}
 :label: Equation_1_206
-\lambda_{\text{µcomponent}} = \lambda_{\text{Chip}} = \left( \lambda_{\text{OTH}} \bullet \Pi_{\text{Thermique}} \right) + \left( C_{\text{moulding}} \bullet C_{chip\_ area} \bullet \lambda_{0\_ Chip\_ TCy} \bullet \Pi_{TCy\_ case} \right)
+\lambda_{\text{µcomponent}} = \lambda_{\text{Chip}} = \left( \lambda_{\text{OTH}} \cdot \Pi_{\text{Thermique}} \right) + \left( C_{\text{moulding}} \cdot C_{chip\_ area} \cdot \lambda_{0\_ Chip\_ TCy} \cdot \Pi_{TCy\_ case} \right)
 ```
 ````
 
@@ -14390,7 +14387,7 @@ The factor $\lambda_{0T\_chip\_TCy}$ is equal to 0.011 for Hybrids and Multi Chi
 ``  
 ```{math}
 :label: Equation_1_208
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \bullet N}_{cy\_ phase}}{t_{\text{phase}}} \right) \bullet \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \bullet exp\left\lbrack 1414 \bullet \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -14767,7 +14764,7 @@ The determination of the number of boards to be tested is done from the χ² law
 ``  
 ```{math}
 :label: Equation_1_210
-\lambda = \frac{\chi_{2n_{f} + 2,1 - CL}^{2}}{2 \bullet t \bullet AF \bullet n}
+\lambda = \frac{\chi_{2n_{f} + 2,1 - CL}^{2}}{2 \cdot t \cdot AF \cdot n}
 ```
 where:
 
