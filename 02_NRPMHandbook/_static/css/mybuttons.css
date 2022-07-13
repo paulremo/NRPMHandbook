@@ -3,8 +3,8 @@
     text-decoration: none;
 }
 
-.back-forward-button {
-    background-color: #424141;
+.back-forward-button, .jupyter-button{
+    background-color: #424141 !important;
     border: none;
     width: 33%;
     color: #ecfffb !important;
