@@ -14,7 +14,7 @@ def get_inputs(value_default = 'mean'):
             'type': 'dropdown',
             # 'description': 'Dist $X_1$',
             'description': 'Dist X1',
-            'options': ['LogNormal'],
+            'options': ['LogNormal', 'Normal'],
             'value': value_default
         },
         'E_X1': {
