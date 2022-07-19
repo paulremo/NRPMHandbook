@@ -23,7 +23,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'E[K]',
             'min': 1e5,
             'max': 1e7,
-            'step': 1e5,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -33,7 +32,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'C.o.V.[K]',
             'min': 0.01,
             'max': 0.1,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -41,7 +39,7 @@ def get_inputs(value_default = 'mean'):
             'type': 'dropdown',
             #'description': 'Dist $\Theta$',
             'description': 'Dist Theta',
-            'options': ['LogNormal'],
+            'options': ['LogNormal', 'Normal'],
             'value': value_default
         },
         'E_MU': {
@@ -50,7 +48,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'E[Theta]',
             'min': 0.5,
             'max': 1.5,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -60,7 +57,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'C.o.V.[Theta]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -70,7 +66,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'M_0',
             'min': 25,
             'max': 160,
-            'step': 1,
             'readout_format': '.0f',
             'value': value_default
         },
@@ -80,7 +75,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'M_inact',
             'min': 0,
             'max': 30,
-            'step': 1,
             'readout_format': '.0f',
             'value': value_default
         },
@@ -90,7 +84,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'N_b',
             'min': 10,
             'max': 30,
-            'step': 1,
             'readout_format': '.0f',
             'value': value_default
         },
@@ -100,7 +93,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'b_d',
             'min': 6,
             'max': 10,
-            'step': 0.1,
             'readout_format': '.1f',
             'value': value_default
         },
@@ -110,7 +102,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'p_d',
             'min': 10,
             'max': 200,
-            'step': 1,
             'readout_format': '.0f',
             'value': value_default
         },
@@ -120,7 +111,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'p_m',
             'min': 0.5,
             'max': 1.5,
-            'step': 0.1,
             'readout_format': '.0f',
             'value': value_default
         },
@@ -130,7 +120,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'theta',
             'min': 10,
             'max': 30,
-            'step': 1,
             'readout_format': '.0f',
             'value': value_default
         },
@@ -140,7 +129,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'r',
             'min': 5,
             'max': 7,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -150,7 +138,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'r_h',
             'min': 2,
             'max': 5,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         }

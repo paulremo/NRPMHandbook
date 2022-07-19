@@ -14,7 +14,7 @@ def get_inputs(value_default = 'mean'):
             'type': 'dropdown',
             # 'description': 'Dist $V_{\\text{lim}}$',
             'description': 'Dist V_lim',
-            'options': ['LogNormal'],
+            'options': ['LogNormal','Normal'],
             'value': value_default
         },
         'E_Vlim': {
@@ -23,7 +23,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'E[V_lim]',
             'min': 1e-8,
             'max': 1e-7,
-            'step': 1e-9,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -33,7 +32,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'C.o.V.[V_lim]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -50,7 +48,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'E[K_H]',
             'min': 1e-15,
             'max': 1e-14,
-            'step': 1e-15,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -60,7 +57,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'C.o.V[K_H]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -77,7 +73,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'E[alpha]',
             'min': 0.01,
             'max': 0.1,
-            'step': 0.001,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -87,7 +82,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'C.o.V.[alpha]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -95,7 +89,7 @@ def get_inputs(value_default = 'mean'):
             'type': 'dropdown',
             # 'description': 'Dist $\Theta$',
             'description': 'Dist Theta',
-            'options': ['LogNormal'],
+            'options': ['LogNormal','Normal'],
             'value': value_default
         },
         'E_MU': {
@@ -104,7 +98,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'E[Theta]',
             'min': 0.5,
             'max': 1.5,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -114,7 +107,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'C.o.V.[Theta]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -124,7 +116,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'rho_{KH,alpha}',
             'min': 0,
             'max': 0.9,
-            'step': 0.01,
             'readout_format': '.1f',
             'value': value_default
         },
@@ -134,7 +125,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'r',
             'min': 1e+8,
             'max': 1e+9,
-            'step': 5e+6,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -144,7 +134,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'r_h',
             'min': 2,
             'max': 5,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         }
@@ -287,10 +276,8 @@ def web_ui():
     E_KH_scale_units = 1e12
     inputs['E_KH']['min'] = inputs['E_KH']['min']* E_KH_scale_units
     inputs['E_KH']['max'] = inputs['E_KH']['max']* E_KH_scale_units
-    inputs['E_KH']['step'] = inputs['E_KH']['step']* E_KH_scale_units
     inputs['E_Vlim']['min'] = inputs['E_Vlim']['min']* E_Vlim_scale_units
     inputs['E_Vlim']['max'] = inputs['E_Vlim']['max']* E_Vlim_scale_units
-    inputs['E_Vlim']['step'] = inputs['E_Vlim']['step']* E_Vlim_scale_units
 
 
     model_wrapper_scaled = lambda **kwargs: model_wrapper(Dist_Vlim=kwargs['Dist_Vlim'], E_Vlim=kwargs['E_Vlim']/E_Vlim_scale_units,

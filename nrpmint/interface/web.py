@@ -88,6 +88,12 @@ class UI:
                             value['value'] = value['min']
                         elif value['value'] == 'max':
                             value['value'] = value['max']
+                # stepsize
+                if not 'step' in value.keys():
+                    if value['min'] != 0:
+                        value['step'] = 0.01*abs(value['min'])
+                    else:
+                        value['step'] = 0.01*abs(value['max'])
                 # user-specified options
                 widgets_dict[key] = widgets.FloatSlider(**value)
             elif value['type'].casefold() == 'floatlogslider':

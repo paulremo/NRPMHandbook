@@ -20,7 +20,6 @@ def get_inputs(value_default='mean'):
             'description': 't_max',
             'min': 1,
             'max': 7,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -30,7 +29,6 @@ def get_inputs(value_default='mean'):
             'description': 'tau',
             'min': 1,
             'max': 7,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -40,7 +38,6 @@ def get_inputs(value_default='mean'):
             'description': 'lambda_r',
             'min': 0,
             'max': 10,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -50,7 +47,6 @@ def get_inputs(value_default='mean'):
             'description': 'alpha',
             'min': -2,
             'max': 6,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -60,7 +56,6 @@ def get_inputs(value_default='mean'):
             'description': 'beta',
             'min': 0.1,
             'max': 10,
-            'step': 0.1,
             'readout_format': '.2f',
             'value': value_default
         }

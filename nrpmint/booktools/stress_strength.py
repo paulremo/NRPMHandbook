@@ -23,7 +23,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'E[X1]',
             'min': 0.1,
             'max': 100,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -33,7 +32,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'C.o.V.[X1]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -50,7 +48,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'E[X2]',
             'min': 0.1,
             'max': 60,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -60,7 +57,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'C.o.V.[X2]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -70,7 +66,6 @@ def get_inputs(value_default = 'mean'):
             'description': 'rho_X1_X2',
             'min': -0.9,
             'max': 0.9,
-            'step': 0.05,
             'readout_format': '.2f',
             'value': value_default
         }

@@ -23,7 +23,6 @@ def get_inputs(value_default='mean'):
             'description': 'E[D_cr]',
             'min': 5e12,
             'max': 2e13,
-            'step': 1e10,
             'readout_format': '.1e',
             'value': value_default
         },
@@ -33,7 +32,6 @@ def get_inputs(value_default='mean'):
             'description': 'C.o.V.[D_cr]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -50,7 +48,6 @@ def get_inputs(value_default='mean'):
             'description': 'E[A]',
             'min': 1,
             'max': 5,
-            'step': 0.1,
             'readout_format': '.1f',
             'value': value_default
         },
@@ -60,14 +57,13 @@ def get_inputs(value_default='mean'):
             'description': 'C.o.V.[A]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
         'Dist_SSF': {
             'type': 'dropdown',
             'description': 'Dist SSF',
-            'options': ['LogNormal'],
+            'options': ['LogNormal', 'Normal'],
             'value': value_default
         },
         'E_SSF': {
@@ -76,7 +72,6 @@ def get_inputs(value_default='mean'):
             'description': 'E[SSF]',
             'min': 0.5,
             'max': 2,
-            'step': 0.01,
             'readout_format': '.1f',
             'value': value_default
         },
@@ -86,7 +81,6 @@ def get_inputs(value_default='mean'):
             'description': 'C.o.V.[SSF]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -103,7 +97,6 @@ def get_inputs(value_default='mean'):
             'description': 'E[S]',
             'min': 100,
             'max': 400,
-            'step': 1,
             'readout_format': '.0f',
             'value': value_default
         },
@@ -113,7 +106,6 @@ def get_inputs(value_default='mean'):
             'description': 'C.o.V.[S]',
             'min': 0.05,
             'max': 0.2,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -121,7 +113,7 @@ def get_inputs(value_default='mean'):
             'type': 'dropdown',
             # 'description': 'Dist $\Theta$',
             'description': 'Dist Theta',
-            'options': ['LogNormal'],
+            'options': ['LogNormal', 'Normal'],
             'value': value_default
         },
         'E_MU': {
@@ -130,7 +122,6 @@ def get_inputs(value_default='mean'):
             'description': 'E[Theta]',
             'min': 0.5,
             'max': 1.5,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -140,7 +131,6 @@ def get_inputs(value_default='mean'):
             'description': 'C.o.V.[Theta]',
             'min': 0.05,
             'max': 0.3,
-            'step': 0.01,
             'readout_format': '.2f',
             'value': value_default
         },
@@ -150,7 +140,6 @@ def get_inputs(value_default='mean'):
             'description': 'B',
             'min': 1,
             'max': 3,
-            'step': 0.1,
             'readout_format': '.1f',
             'value': value_default
         },
@@ -160,7 +149,6 @@ def get_inputs(value_default='mean'):
             'description': 'N',
             'min': 7,
             'max': 9,
-            'step': 0.1,
             'readout_format': '.1e',
             'value': value_default
         }
