@@ -174,11 +174,11 @@ def display(reliability_analyses, mult_one_idx, rev_per_hour, n_samples=10**5):
     plt.legend(['Limiting Volume', 'Volume worn away'])
 
     plt.figure(2)
-    plt.plot(nrev / (rev_per_hour * 365 * 24), pf_mat[mult_one_idx], 'ro')
-    plt.plot(np.array(nrev_mat) / (rev_per_hour * 365 * 24), pf_mat, 'r--')
+    plt.plot(nrev / (rev_per_hour), pf_mat[mult_one_idx], 'ro')
+    plt.plot(np.array(nrev_mat) / (rev_per_hour), pf_mat, 'r--')
     plt.grid()
     plt.ylabel('probability of failure')
-    plt.xlabel('years')
+    plt.xlabel('hours')
     plt.legend(['Limiting Volume','Volume worn away'])
 
 
@@ -263,7 +263,7 @@ def model_wrapper(**kwargs):
         display(reliability_analyses, mult_one_idx, kwargs['rev_per_hour'])
 
         # print
-        print(f'The failure probability is {reliability_analyses[mult_one_idx].getFailure()[0]:.2e} after {kwargs["nrev"]:.2e} revolutions.')
+        print(f'The failure probability is {reliability_analyses[mult_one_idx].getFailure()[0]:.2e} after {kwargs["nrev"]/kwargs["rev_per_hour"]:.2e} hours.')
 
 
 def web_ui():
