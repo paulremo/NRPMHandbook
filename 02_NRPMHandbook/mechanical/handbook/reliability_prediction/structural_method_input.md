@@ -6,7 +6,7 @@ In the following, the use of different methods based on structural reliability t
 * General {term}`structural reliability methods <Structural reliability method>`, as introduced in {numref}`methods`
 * {term}`Simplified structural reliability methods <Simplified structural reliability method>`, with analytic solutions for the probability of failure
 * Stress-Strength methods with or without analytic solutions, as a special case of {term}`Simplified structural reliability methods <Simplified structural reliability method>`
-* 
+
 Finally, {numref}`meca_4_6_4` discusses the probabilistic modelling of random variables required as an input for {term}`structural reliability methods <Structural reliability method>` (with given {term}`failure mechanism <Failure mechanism>` model, see e.g. the models presented in {numref}`meca_4_7`). {term}`Bayesian inference <Bayesian inference>` updating of structural reliability estimates with new (failure) data is discussed in {numref}`meca_4_6_5`.
 
 (meca_4_6_1)=
@@ -18,7 +18,7 @@ The general principles of structural {term}`reliability prediction <Reliability 
 * Formulation of a limit state function $g(X)$ based on a mathematical model for the considered {term}`failure mechanism <Failure mechanism>`, defining the failure domain as $g(X) \leq 0$
 * Probabilistic modelling (distribution type and parameters) of the physical variables $X$ entering the limit state function (“basic variables”)
 * Derivation of the failure probability $P(g(X) \leq 0)$ using suitable methods.
-* 
+
 It is relevant to note that the limit state function $g(X)$ must always be related to a certain time interval (e.g. the duration of the mission) or event (e.g. launch). To derive a time-to-failure distribution, the limit state function and/or the basic variables in $X$ must be explicitly modelled as a function of time, requiring repeated evaluations of the probability of failure.
 
 Limit state functions for various well-known mechanical {term}`failure mechanisms <Failure mechanism>` are presented in {numref}`meca_4_7`. The list is not complete and dedicated models may be required to account for other {term}`failure mechanisms <Failure mechanism>` in specific applications. The definition of other limit state functions can take basis in models published in the literature (e.g. {cite:t}`mec-RiAC`, {cite:t}`mec-Kowal1994MechanicalSR`), information from the design process or experimental evidence.
