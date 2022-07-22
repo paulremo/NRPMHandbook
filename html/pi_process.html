@@ -13,34 +13,76 @@
 
 <body>
 
+    <div id="overlay">
+        <div class="quizz">
+            <table class="informationGrid">
+                <tr>
+                    <td width="30%">
+                        <img src="pictures/new_astronaut_happy.svg" width="80%" style="margin-top: 20%;" />
+                    </td>
+                    <td width="70%">
+                        <div id="text">
+                            <p>Welcome to the Π<sub>process</sub> calculation interface !</p>
+                            <p>Here you can aswer the different questions to calculate the value of the factor Π<sub>process</sub> by selecting one of the four options</p>
+                            <p>Click the planets <a><img src="pictures/pi_process/emptyPlanet.svg" width="5%"/></a> at the top to access the different categories.</p>
+                            <p>Click the button <a><button type="button" class="collapsible" style="width: 20%;font-size: 1vw;border-radius: 0.5em;background-color: #0b025a;color: white;">Learn more ></button></a> to get more information on the question (FIDES reference, recommendation, weight).</p>
+                            <p>You can find a navigation bar at the bottom and two navigation buttons <a><button style="font-size: 2vw; width: 8%;background-color: #0b025a;color: white;">&larr;</button></a> to navigate through the questions.</p>
+                            <p>The symbole <a style="color:darkgoldenrod;font-size:x-large;">★</a> indicates the recommended level for your application</p>
+                            <p>You can save your answers by clicking the pink button "Copy answers". This will copy your answers in the clipboard. Please make sure to properly paste the answers and to save it in a dedicated text file. Do not modify data unless they may compromise the results. Then you can load the answers by pasting this value in the text input below</p>
+                            <div>
+                                <p>Before starting, please chose your configuration below:</p>
+                                <button class="pill-button" id="mode-button">SUBCONTRACTOR</button>
+                                <button class="pill-button" id="application-button">NEW SPACE</button>
+                            </div>
+                            <div>
+                                <input type="text" id="question-load"/><button onclick="document.getElementById('question-load').value = ''">Erase</button><a style="margin-left: 5px">Paste copied answers to load your saved answers</a>
+                            </div>
+                            <div>
+                                <button id="start" style="width: 20%;font-size: 1.5vw;border-radius: 0.5em;background-color: #006a23;color: white; margin-top: 1em;cursor: pointer;">Start</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
     <div class="icon-bar">
-        <a class="planet"><img src="pictures/pi_process/emptyPlanet.svg" id="planet1" class="planetPicture" />
-            <p id="cat-name-1">SPECIFICATION</p>
-        </a>
-        <a class="planet"><img src="pictures/pi_process/emptyPlanet.svg" id="planet2" class="planetPicture" />
-            <p id="cat-name-2">DESIGN</p>
-        </a>
-        <a class="planet"><img src="pictures/pi_process/emptyPlanet.svg" id="planet3" class="planetPicture" />
-            <p id="cat-name-3">MANUFACTURING OF BOARD - SUBASSEMBLY</p>
-        </a>
-        <a class="planet"><img src="pictures/pi_process/emptyPlanet.svg" id="planet4" class="planetPicture" />
-            <p id="cat-name-4">INTEGRATION INTO EQUIPMENT</p>
-        </a>
-        <a class="planet"><img src="pictures/pi_process/emptyPlanet.svg" id="planet5" class="planetPicture" />
-            <p id="cat-name-5">INTEGRATION INTO SYSTEM</p>
-        </a>
-        <a class="planet"><img src="pictures/pi_process/emptyPlanet.svg" id="planet6" class="planetPicture" />
-            <p id="cat-name-6">OPERATION AND MAINTENANCE</p>
-        </a>
-        <a class="planet"><img src="pictures/pi_process/emptyPlanet.svg" id="planet7" class="planetPicture" />
-            <p id="cat-name-7">SUPPORT ACTIVITIES</p>
-        </a>
+        <a class="planet" id="planetBox1"><img src="pictures/pi_process/emptyPlanet.svg" id="planet1"
+                class="planetPicture" />
+            <br>SPECIFICATION</a>
+        <a class="planet" id="planetBox2"><img src="pictures/pi_process/emptyPlanet.svg" id="planet2"
+                class="planetPicture" />
+            <br>DESIGN</a>
+        <a class="planet" id="planetBox3"><img src="pictures/pi_process/emptyPlanet.svg" id="planet3"
+                class="planetPicture" />
+            <br>MANUFACTURING OF BOARD - SUBASSEMBLY</a>
+        <a class="planet" id="planetBox4"><img src="pictures/pi_process/emptyPlanet.svg" id="planet4"
+                class="planetPicture" />
+            <br>INTEGRATION INTO EQUIPMENT</a>
+        <a class="planet" id="planetBox5"><img src="pictures/pi_process/emptyPlanet.svg" id="planet5"
+                class="planetPicture" />
+            <br>INTEGRATION INTO SYSTEM</a>
+        <a class="planet" id="planetBox6"><img src="pictures/pi_process/emptyPlanet.svg" id="planet6"
+                class="planetPicture" />
+            <br>OPERATION AND MAINTENANCE</a>
+        <a class="planet" id="planetBox7"><img src="pictures/pi_process/emptyPlanet.svg" id="planet7"
+                class="planetPicture" />
+            <br>SUPPORT ACTIVITIES</a>
     </div>
 
-    <div id="pi-process-box">
-        Pi Process : 1
+    <div>
+        <table class="parameters-box">
+            <tr>
+                <td class="leftBox">
+                    <div id="pi-process-box">
+                        Pi Process : 1
+                    </div><a><button id="copyAnswers" class="pill-button">Copy answers</button></a>
+                </td>
+            </tr>
+        </table>
     </div>
+
 
     <div class="quizz">
 
@@ -60,7 +102,7 @@
                     <td rowspan="2" width="10%">
                         <img src="pictures/new_astronaut.svg" id="astronautPicture" />
                     </td>
-                    <td width="90%">
+                    <td width="90%" id="questionBoxDiv">
                         <div id="questionBox"></div>
                     </td>
                 </tr>
@@ -75,8 +117,8 @@
                                         <td id="number"></td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Recommendation</strong></td>
-                                        <td id="recommandation"></td>
+                                        <td><strong>Recom</strong></td>
+                                        <td id="recommandation" style="margin-left:1em"></td>
                                     </tr>
                                     <tr>
                                         <td><strong>Weight</strong></td>
@@ -93,32 +135,35 @@
         </div>
         <div class="choices">
             <div class="choice-option">
-                <a class="choice-level">L4</a><a class="choice-description" id="choice4">This is choice 4</a>
+                <a class="choice-level">L4</a><a class="choice-description" id="choice4">This is choice 4</a><a
+                    class="recom" id="recommendation4"></a>
             </div>
             <div class="choice-option">
-                <a class="choice-level">L3</a><a class="choice-description" id="choice3">This is choice 3</a>
+                <a class="choice-level">L3</a><a class="choice-description" id="choice3">This is choice 3</a><a
+                    class="recom" id="recommendation3"></a>
             </div>
             <div class="choice-option">
-                <a class="choice-level">L2</a><a class="choice-description" id="choice2">This is choice 2</a>
+                <a class="choice-level">L2</a><a class="choice-description" id="choice2">This is choice 2</a><a
+                    class="recom" id="recommendation2"></a>
             </div>
             <div class="choice-option">
-                <a class="choice-level">L1</a><a class="choice-description" id="choice1">This is choice 1</a>
+                <a class="choice-level">L1</a><a class="choice-description" id="choice1">This is choice 1</a><a
+                    class="recom" id="recommendation1"></a>
             </div>
-            <button id="not-applicable">NOT APPLICABLE</button>
+            <button id="not-applicable">NOT APPLICABLE</button><a
+            class="recom" id="recommendationNA"></a>
         </div>
     </div>
 
     <div>
         <table id="pages">
-            <tr id="pages-box">
-                <!--<td class="pageNumber" id="page1">1</td>
-                <td class="pageNumber" id="page2">2</td>
-                <td class="pageNumber" id="page3">3</td>-->
-            </tr>
+            <tr id="pages-box"></tr>
         </table>
     </div>
 
     <script type="text/javascript" src="../js/questions.js"></script>
+    <script type="text/javascript" src="../js/comments.js"></script>
+    <script type="text/javascript" src="../js/recom.js"></script>
     <script type="text/javascript" src="../js/pi_process.js"></script>
     <script type="text/javascript">runPiProcess();</script>
 

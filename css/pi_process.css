@@ -1,3 +1,7 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .icon-bar {
     width: 80%;
     /* Full-width */
@@ -36,17 +40,18 @@
 }
 
 .planetPicture {
-    width: 50%;
+    width: 30%;
 }
 
 .quizz {
-    width: 80%;
+    width: 96;
     /* Full-width */
     /*overflow: auto;*/
     /* Overflow due to float */
     height: fit-content;
     margin-top: 2%;
-    margin-inline: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     background-color: seashell;
     border-radius: 10px;
     border-width: 5%;
@@ -54,11 +59,12 @@
     border-style: double;
     padding-top: 1%;
     padding-bottom: 2%;
+    overflow-x: auto;
 }
 
 .information {
     width: 100%;
-    margin-inline: 15%;
+    margin-left: 18%;
 }
 
 .informationGrid {
@@ -66,16 +72,18 @@
 }
 
 .informationGrid td {
-    height: 150px;
+    height: 100px;
 }
 
 #questionBox {
-    width: 65%;
+    width: 90%;
 }
 
 #questionBox p {
-    font-size: medium;;
+    width: 80%;
+    font-size: 1em;
     font-weight: bold;
+    overflow-wrap: break-word;
 }
 
 #astronautPicture {
@@ -84,8 +92,8 @@
 }
 
 #learnMore {
-    width: 15%;
-    font-size: 1vw;
+    width: 12em;
+    font-size: 0.8em;
     border-radius: 0.5em;
     background-color: #0b025a;
     color: white;
@@ -97,7 +105,7 @@
     color: #444;
     cursor: pointer;
     padding: 18px;
-    width: 50%;
+    width: 40%;
     border: none;
     text-align: left;
     outline: none;
@@ -111,7 +119,7 @@
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-    width: 60%;
+    width: 40%;
     padding: 0 18px;
     background-color: white;
     max-height: 0;
@@ -129,30 +137,30 @@
 }
 
 .choices {
-    width: 100%;
-    margin-inline: 15%;
+    width: 95%;
+    margin-left: 15%;
     height: fit-content;
     /*padding-block: 5px;
     padding-inline: 10px;*/
 }
 
 .choice-option {
-    width: 80%;
+    width: 100%;
     height: fit-content;
     padding-block: 5px;
     padding-inline: 10px;
-    margin: 2%;
+    margin-bottom: 1em;
 }
 
 .choice-level {
-    width: 10%;
+    width: 2em;
     font-size: 1vw;
 }
 
 .choice-description {
     font-size: medium;
     font-weight: bold;
-    width: 80%;
+    width: 70%;
     display: inline-block;
     padding: .5em;
     background-color: #eae8e8;
@@ -168,83 +176,216 @@
 }
 
 .choice-description:hover {
-    /*background-color: #076a78;
-    color: antiquewhite;*/
     cursor: pointer;
 }
 
-#not-applicable{
-    margin-left: 5%;
-    width:66%;
-    height: fit-content;
-    font-size: medium;;
-    background-color: #000;
-    color: #eee;
-    padding: 0.5%;
+#not-applicable {
+    font-size: medium;
+    font-weight: bold;
+    width: 70%;
+    display: inline-block;
+    padding: .5em;
+    background-color: #000000;
+    color: #ffffff;
+    margin-left: 4em;
+    margin-top: 1em;
+    text-decoration: none;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0 1px #ABABAB,
+        0 0 0 9px #CBCBCB,
+        0 0 0 11px #fff,
+        0 0 0 14px #777,
+        2px 5px 15px 8px #555;
     cursor: pointer;
 }
 
-#pages{
-    width:80%;
-    margin-inline: 10%;
+#pages {
+    width: 95%;
+    margin-left: 2%;
     margin-top: 1%;
+    overflow-x: auto;
 }
 
-#pages td{
+#pages td {
     background-color: #006597;
     color: #eee;
-    font-size: 1vw;
+    font-size: 0.8vw;
     text-align: center;
     cursor: pointer;
-    
+
 }
 
-#navigation-button-box{
+#navigation-button-box {
     width: 80%;
     margin-inline: 20%;
 }
 
-#right-box{
+#right-box {
     text-align: right;
 }
 
-#left-button{
+#left-button {
     margin-left: 10%;
 }
 
-#right-button{
+#left-button {
+    margin-left: 10%;
+}
+
+#right-button {
     margin-right: 10%;
 }
 
-.nav-button{
+#cat-button{
+    margin-right: 10%;
+    display: none;
+}
+
+.nav-button {
     font-size: 2vw;
     width: 20%;
     background-color: #0b025a;
     color: white;
-    box-shadow: 0 0 0 1px #ABABAB,
-        0 0 0 9px #CBCBCB,
-        2px 5px 15px 8px #555;
+    border-radius: 0.5em;
+    box-shadow: 2px 3px 3px 3px #555;
 }
 
-.nav-button:hover{
+.nav-button:disabled {
+    background-color: #353535;
+    color: white;
+}
+
+.nav-button:disabled:hover {
+    cursor: not-allowed; 
+    background-color: #353535;
+    color: white;
+}
+
+.nav-button:hover {
     background-color: #006597;
     cursor: pointer;
 }
 
-#category-title{
-    font-size: 1vw;
+#category-title {
+    font-size: 1em;
     background-color: #0b025a;
     color: #eee;
-    width:40%;
+    width: 40%;
     text-align: center;
 }
 
-#pi-process-box{
-    margin-left: 10%;
+#pi-process-box {
     width: 20%;
-    background-color: darkslategrey;
-    color: #eee;
+    background-color: rgb(108, 108, 108);
+    color: rgb(189, 189, 189);
     box-shadow: 0 0 0 3px #CBCBCB;
     padding: 5px;
     font-size: x-large;
 }
+
+.recom {
+    font-size: 3em;
+    margin-left: 0.5em;
+    font-weight: bolder;
+    color: darkgoldenrod;
+    text-align: center;
+}
+
+.parameters-box {
+    width: 80%;
+    margin-inline: 10%;
+}
+
+.parameters-box td {
+    width: 50%;
+}
+
+.parameters-box .rightBox {
+    text-align: right;
+}
+
+.pill-button {
+    position: relative;
+    border: none;
+    font-size: 28px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 16px;
+    height: fit-content;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#mode-button{
+    background-color: #002f72;
+    color: #FFFFFF;
+}
+
+#application-button{
+    background-color: #ffe100;
+    color: #000000;
+}
+
+.pill-button:after {
+    content: "";
+    background: #d6d6d6;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .pill-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+
+  #overlay {
+    position: fixed; /* Sit on top of the page content */
+    overflow-y: auto;
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  }
+
+  #text{
+    width: 80%;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+  }
+
+  #question-load{
+      height: fit-content;
+      margin-top: 2em;
+      width: fit-content;
+      max-width: 50em;
+      max-height: 4em;
+      background-color: #d6d6d6;
+      color: #0b025a;
+      font-size: 1em;
+  }
+
+  #copyAnswers{
+      background-color: crimson;
+      color: #000;
+      margin-right: 5%;
+  }
