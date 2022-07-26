@@ -322,3 +322,26 @@ document.getElementById("astroPicture").onclick = function() {
         this.src = "pictures/new_astronaut_speaks.svg";
     }
 }
+
+document.onmousemove = function(e){
+    //console.log(e.pageY)
+    if (e.pageY > 140){
+        document.getElementById("helpMFR").style.top = (e.pageY -140 - 100) + "px";
+    }
+    if (parseInt(document.getElementById("helpMFR").style.top.substring(-2)) < 0){
+        document.getElementById("helpMFR").style.top = "0px";
+    }
+}
+
+document.onwheel = function(e){
+    /*document.getElementById("helpMFR").style.top = parseInt(document.getElementById("helpMFR").style.top.substring(-2)) + e.deltaY + "px";
+    if (parseInt(document.getElementById("helpMFR").style.top.substring(-2)) < 0){
+        document.getElementById("helpMFR").style.top = "0px";
+    }  */
+    if (e.pageY > 140){
+        document.getElementById("helpMFR").style.top = (e.pageY -140 - 100) + "px";
+    }
+    if (parseInt(document.getElementById("helpMFR").style.top.substring(-2)) < 0){
+        document.getElementById("helpMFR").style.top = "0px";
+    }
+}
