@@ -126,7 +126,7 @@
     cursor: help;
 }
 
-.value-type-title {
+.value-type-mfr-title {
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
     font-weight: bold;
@@ -137,7 +137,7 @@
     cursor: help;
 }
 
-.value-type-subtitle {
+.value-type-mfr-subtitle {
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
     font-weight: bold;
@@ -153,7 +153,7 @@
     margin-top: 8em;
 }
 
-.value-type {
+.value-type-mfr {
     background-color: #383b3a;
     color: #ffffff;
     text-align: center;

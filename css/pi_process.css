@@ -17,12 +17,12 @@
     bottom: 0;
 }
 
-.topnav {
+.topnav-pi-process {
     width: 100%;
     background-color: #333;
 }
 
-.topnav td {
+.topnav-pi-process td {
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
@@ -34,12 +34,12 @@
     cursor: pointer;
 }
 
-.topnav td:hover {
+.topnav-pi-process td:hover {
     background-color: #ddd;
     color: black;
 }
 
-.topnav td.active {
+.topnav-pi-process td.active {
     background-color: #04AA6D;
     color: white;
 }
@@ -158,7 +158,7 @@
     margin-top: 0.5em;
 }
 
-.collapsible-help-help {
+.collapsible-help {
     background-color: #777;
     color: white;
     cursor: pointer;
