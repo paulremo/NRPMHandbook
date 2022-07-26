@@ -32,7 +32,7 @@ function runPiProcess() {
         ["Integration into equipment", 0.15],
         ["Integration into system", 0.15],
         ["Operation and Maintenance", 0.10],
-        ["Support Activities", 0.9]
+        ["Support Activities", 0.09]
     ])
 
     let delta_2 = 2.079;
@@ -58,44 +58,39 @@ function runPiProcess() {
 
     /* CONFIGURE ONCLICK EVENTS */
 
-    document.getElementById("mode-button").onclick = function () {
-        if (modeSubco) {
-            this.style.backgroundColor = "#002f72"
-            this.innerHTML = "PRIME";
-            modeSubco = false;
-        }
-        else {
-            this.style.backgroundColor = "#730f00"
-            this.innerHTML = "SUBCONTRACTOR";
-            modeSubco = true;
-        }
+    document.getElementById("mode-choice-subco").onclick = function () {
+        modeSubco = true;
+        document.getElementById("mode-choice-prime").checked = false;
+    }
+    document.getElementById("mode-choice-subco").checked = true;
+
+    document.getElementById("mode-choice-prime").onclick = function () {
+        modeSubco = false;
+        document.getElementById("mode-choice-subco").checked = false;
     }
 
-    document.getElementById("application-button").onclick = function () {
-        if (appliNS) {
-            this.style.backgroundColor = "#ff8eea"
-            this.innerHTML = "CLASSIK";
-            appliNS = false;
-        }
-        else {
-            this.style.backgroundColor = "#ffe100"
-            this.innerHTML = "NEW SPACE";
-            appliNS = true;
-        }
+    document.getElementById("application-choice-yes").onclick = function () {
+        appliNS = true;
+        document.getElementById("application-choice-no").checked = false;
+    }
+    document.getElementById("application-choice-yes").checked = true;
+
+    document.getElementById("application-choice-no").onclick = function () {
+        appliNS = false;
+        document.getElementById("application-choice-yes").checked = false;
     }
 
     let modeKey;
     let appliDico;
     document.getElementById("start").onclick = function () {
         document.getElementById('overlay').style.display = 'none';
-        console.log(document.getElementById("question-load").value)
         if (document.getElementById("question-load").value != "") {
-            if (document.getElementById("question-load").value.substring(0,13) == "Specification"){
+            if (document.getElementById("question-load").value.substring(0, 13) == "Specification") {
                 let ans_dico = generate_saved_answers_collection(document.getElementById("question-load").value);
-                if (ans_dico.size == 7){
+                if (ans_dico.size == 7) {
                     currentAnswers = ans_dico;
                 }
-                else{
+                else {
                     alert("Values corrupted, please verify your data and try again");
                     for (const [key, value] of new_dico) {
                         let ct_dict = new Map();
@@ -113,7 +108,6 @@ function runPiProcess() {
                                 appliDico = recomCL
                             }
                             let recoms = appliDico.get(new_dico.get(key).get(parseInt(q)).get("id")).get(modeKey);
-                            //console.log(key, q, modeKey, recoms.values().next().value);
                             if (recoms.values().next().value == 'NA') {
                                 ct_dict.set(q, "NA");
                             }
@@ -125,7 +119,7 @@ function runPiProcess() {
                     }
                 }
             }
-            else{
+            else {
                 alert("Values corrupted, please verify your data and try again");
                 for (const [key, value] of new_dico) {
                     let ct_dict = new Map();
@@ -143,7 +137,6 @@ function runPiProcess() {
                             appliDico = recomCL
                         }
                         let recoms = appliDico.get(new_dico.get(key).get(parseInt(q)).get("id")).get(modeKey);
-                        //console.log(key, q, modeKey, recoms.values().next().value);
                         if (recoms.values().next().value == 'NA') {
                             ct_dict.set(q, "NA");
                         }
@@ -154,7 +147,7 @@ function runPiProcess() {
                     currentAnswers.set(key, ct_dict);
                 }
             }
-            
+
         }
         else {
             for (const [key, value] of new_dico) {
@@ -173,7 +166,6 @@ function runPiProcess() {
                         appliDico = recomCL
                     }
                     let recoms = appliDico.get(new_dico.get(key).get(parseInt(q)).get("id")).get(modeKey);
-                    //console.log(key, q, modeKey, recoms.values().next().value);
                     if (recoms.values().next().value == 'NA') {
                         ct_dict.set(q, "NA");
                     }
@@ -186,27 +178,26 @@ function runPiProcess() {
 
         }
 
+        document.getElementById("mode-indication").innerHTML = modeKey;
+
         document.getElementById("planetBox1").click();
 
         calculate_process_factor();
     }
 
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
+    var coll = document.getElementsByClassName("collapsible");
+    var i_coll;
+
+    for (i_coll = 0; i_coll < coll.length; i_coll++) {
+        coll[i_coll].addEventListener("click", function () {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                document.getElementById("astronautPicture").src = "pictures/new_astronaut.svg";
             } else {
-                content.style.maxHeight = "fit-content";
-            }
-            if (info_displayed) {
-                document.getElementById("astronautPicture").src = astronaut;
-                info_displayed = false;
-            }
-            else {
-                document.getElementById("astronautPicture").src = speaking_astronaut;
-                info_displayed = true;
+                content.style.display = "block";
+                document.getElementById("astronautPicture").src = "pictures/new_astronaut_speaks.svg";
             }
         });
     }
@@ -245,6 +236,21 @@ function runPiProcess() {
         }
     }
 
+    function minmax(dataset) {
+        const [first] = dataset;
+        let mn = first;
+        let mx = first;
+        for (var e of dataset) {
+            if (e > mx) {
+                mx = e
+            }
+            else if (e < mn) {
+                mn = e
+            }
+        }
+        return new Map([["mx", mx], ["mn", mn]]);
+    }
+
     function transformName(name) {
         let trueName;
         if (name == "MANUFACTURING OF BOARD - SUBASSEMBLY") {
@@ -265,7 +271,6 @@ function runPiProcess() {
 
     function saveAnswers() {
         let ans = "";
-        //console.log(ans);
         for ([cat, value] of currentAnswers) {
             ans = ans + cat + ":"
             for ([q, v] of currentAnswers.get(cat)) {
@@ -273,7 +278,7 @@ function runPiProcess() {
                     ans = ans + q + "," + 'NA';
                 }
                 else if (currentAnswers.get(cat).get(q) == null) {
-                    ans = ans + q + "," +  'null';
+                    ans = ans + q + "," + 'null';
                 }
                 else {
                     ans = ans + q + "," + currentAnswers.get(cat).get(q);
@@ -282,39 +287,108 @@ function runPiProcess() {
             }
             ans = ans.substring(0, ans.length - 1) + "!"
         }
-        console.log(ans);
+        download("savedPiProcess.txt",ans.substring(0, ans.length - 1));
         return ans.substring(0, ans.length - 1);
     }
 
-    function generate_saved_answers_collection(answer_str){
+    function generate_saved_answers_collection(answer_str) {
         let loaded_answers = new Map();
         let categories = answer_str.split("!");
-        console.log(categories)
-        for (c of categories){
+        for (c of categories) {
             let questions_answers = c.split(":")[1];
             let cat_name = c.split(":")[0];
-            console.log(cat_name)
             loaded_answers.set(cat_name, new Map());
-            for (q_a of questions_answers.split(";")){
+            for (q_a of questions_answers.split(";")) {
                 let id_q_a = parseInt(q_a.split(",")[0]);
                 let ans_q_a = q_a.split(",")[1];
-                if (ans_q_a == "null"){
+                if (ans_q_a == "null") {
                     ans_q_a = null;
                 }
                 loaded_answers.get(cat_name).set(id_q_a, ans_q_a);
             }
         }
-        console.log(loaded_answers);
         return loaded_answers
     }
-    
+
+    function updateQuestionId() {
+        let q_id = new_dico.get(current_category).get(parseInt(current_question)).get("id");
+        let q_total = new_dico.get(current_category).size;
+        let q_na = 0;
+        let q_ans = 0;
+        for (const [key, v] of currentAnswers.get(current_category)) {
+            if (v == 'NA') {
+                q_na = q_na + 1;
+            }
+            else if (v != null) {
+                q_ans = q_ans + 1
+            }
+        }
+        document.getElementById("qId").innerHTML = q_id;
+        document.getElementById("qCount").innerHTML = parseInt(q_ans) + 1;
+        document.getElementById("qTotal").innerHTML = q_total - q_na;
+    }
+
+    function updateProgressBar() {
+        let q_na = 0;
+        let q_ans = 0;
+        let q_total = new_dico.get(current_category).size;
+        for (const [key, v] of currentAnswers.get(current_category)) {
+            if (v == 'NA') {
+                q_na = q_na + 1;
+            }
+            else if (v != null) {
+                q_ans = q_ans + 1;
+            }
+        }
+        let filled = 100 * q_ans / (q_total - q_na);
+        //console.log(filled)
+        document.getElementById("myBar").style.width = Math.trunc(filled) + "%";
+    }
+
+    function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+      
+        element.style.display = 'none';
+        document.body.appendChild(element);
+      
+        element.click();
+      
+        document.body.removeChild(element);
+      }
+
+    function saveSumUp() {
+        let ans = "";
+        for ([cat, value] of currentAnswers) {
+            ans = ans + cat + ",,\n"
+            for ([q, v] of currentAnswers.get(cat)) {
+                let qDescription = new_dico.get(cat).get(q).get("question").replaceAll(',', ' ');
+                if (currentAnswers.get(cat).get(q) == 'NA') {
+                    ans = ans + new_dico.get(cat).get(q).get("id") + "," + qDescription + "," + 'NA';
+                }
+                else if (currentAnswers.get(cat).get(q) == null) {
+                    ans = ans + new_dico.get(cat).get(q).get("id") + "," + qDescription + "," + 'Not answered';
+                }
+                else {
+                    let lvlDescription = new_dico.get(cat).get(q).get("levels").get(currentAnswers.get(cat).get(q)).replaceAll(',', ' ');
+                    ans = ans + new_dico.get(cat).get(q).get("id") + "," + qDescription + "," + currentAnswers.get(cat).get(q) + " : " + lvlDescription;
+                }
+                ans = ans + "\n"
+            }
+        }
+        download("sumedUpPiProcess.csv",ans);
+    }
+
+    document.getElementById("sumUpAnswers").onclick = function() {
+        saveSumUp();
+    }
 
     /* Configure interface according to the selected category */
 
     function configureCategory(cat) {
         current_category = cat;
         let cat_dico = currentAnswers.get(cat)
-        console.log(cat_dico)
         pagesCollection = new Map();
         document.getElementById("pages-box").remove();
         let newPageBox = document.createElement("tr");
@@ -322,7 +396,6 @@ function runPiProcess() {
         document.getElementById("pages").appendChild(newPageBox);
 
         for (const [key, value] of cat_dico) {
-            console.log(key)
             let page_num = document.createElement("td");
             let id = parseInt(new_dico.get(current_category).get(key).get("id"));
             if (id < 10) {
@@ -369,6 +442,8 @@ function runPiProcess() {
             checkCategoryFilled(ct);
         }
 
+        checkAllCategoryFilled();
+
         document.getElementById("category-title").innerHTML = cat.toUpperCase();
 
         let first = findFirstApplicable(cat);
@@ -382,6 +457,7 @@ function runPiProcess() {
 
 
         calculate_process_factor();
+        updateProgressBar();
 
     }
 
@@ -414,20 +490,7 @@ function runPiProcess() {
         let n3 = q_information.get('levels').get('N3');
         let n4 = q_information.get('levels').get('N4');
 
-        let text_divided = text.split('?');
-        document.getElementById("questionBox").remove();
-        let div = document.createElement("div");
-        div.id = "questionBox";
-        document.getElementById("questionBoxDiv").appendChild(div);
-        //clearElement(document.getElementById("questionBox"));
-
-        for (q_element of text_divided) {
-            if (q_element.length > 3) {
-                let new_p = document.createElement("p");
-                new_p.innerHTML = q_element + " ?";
-                document.getElementById("questionBox").appendChild(new_p);
-            }
-        }
+        document.getElementById("questionBox").innerHTML = text;
 
         document.getElementById("choice1").innerHTML = n1;
         document.getElementById("choice2").innerHTML = n2;
@@ -469,42 +532,58 @@ function runPiProcess() {
             rec.innerHTML = "";
         }
         document.getElementById("recommendationNA").innerHTML = "";
+
+        let maxinfo = minmax(recoms);
+        let lvlMax = maxinfo.get("mx");
+        let lvlMin = maxinfo.get("mn");
+        //console.log(lvlMax, lvlMin)
         if (recoms != null) {
             for (var el of recoms) {
+                //console.log(el)
                 if (el == 'NA') {
-                    document.getElementById("recommendationNA").innerHTML = "★";
+                    document.getElementById("recommendationNA").innerHTML = "FXD";
+                }
+                else if (lvlMax == lvlMin) {
+                    document.getElementById("recommendation" + el).innerHTML = "FXD";
                 }
                 else {
-                    document.getElementById("recommendation" + el).innerHTML = "★";
+                    if (el == lvlMax) {
+                        document.getElementById("recommendation" + el).innerHTML = "MAX";
+                    }
+                    else if (el == lvlMin) {
+                        document.getElementById("recommendation" + el).innerHTML = "MIN";
+                    }
+                    else {
+                        document.getElementById("recommendation" + el).innerHTML = "|";
+                    }
                 }
             }
         }
 
-
+        updateQuestionId();
     }
 
     /* NAVIGATION FUNCTIONS */
 
     function nextQuestion() {
         if (parseInt(current_question) < currentAnswers.get(current_category).size) {
-            let nextQuestion = parseInt(current_question) + 1;
-            while (currentAnswers.get(current_category).get(nextQuestion) == 'NA' && parseInt(current_question) < currentAnswers.get(current_category).size) {
-                nextQuestion = nextQuestion + 1;
+            let nxtQuestion = parseInt(current_question) + 1;
+            while (currentAnswers.get(current_category).get(nxtQuestion) == 'NA' && parseInt(current_question) < currentAnswers.get(current_category).size) {
+                nxtQuestion = nxtQuestion + 1;
             }
-            if (nextQuestion > currentAnswers.get(current_category).size - 1) {
-                console.log(categoryIcons.get(current_category).substring(6))
-                if (parseInt(categoryIcons.get(current_category).substring(6)) + 1 < 8) {
+            if (nxtQuestion > currentAnswers.get(current_category).size - 1) {
+                if (parseInt(categoryIcons.get(current_category).substring(6)) < 7) {
                     let nextCat = parseInt(categoryIcons.get(current_category).substring(6)) + 1;
                     document.getElementById("planet" + nextCat).click();
                 }
                 else {
                     document.getElementById("page" + current_question).click();
-                    document.getElementById("right-button").disabled = true;
+                    document.getElementById("right-button").className = "nav-button disabled-nav";
                 }
 
             }
             else {
-                document.getElementById("page" + nextQuestion).click();
+                document.getElementById("page" + nxtQuestion).click();
             }
 
         }
@@ -512,14 +591,14 @@ function runPiProcess() {
 
     function previousQuestion() {
         if (parseInt(current_question) > 0) {
-            let nextQuestion = parseInt(current_question) - 1;
-            while (currentAnswers.get(current_category).get(nextQuestion) == 'NA' && parseInt(current_question) >= 0) {
-                nextQuestion = nextQuestion - 1;
+            let prevQuestion = parseInt(current_question) - 1;
+            while (currentAnswers.get(current_category).get(prevQuestion) == 'NA' && parseInt(current_question) >= 0) {
+                prevQuestion = prevQuestion - 1;
             }
-            if (nextQuestion == 0) {
-                nextQuestion = parseInt(current_question);
+            if (prevQuestion == -1) {
+                prevQuestion = parseInt(current_question);
             }
-            document.getElementById("page" + nextQuestion).click();
+            document.getElementById("page" + prevQuestion).click();
         }
     }
 
@@ -530,18 +609,19 @@ function runPiProcess() {
         let optDescr = opt.id.substr(-1);
         optionsCollection.set(optDescr, true);
         currentAnswers.get(current_category).set(parseInt(current_question), "N" + optDescr)
-        for ([cat, value] of new_dico) {
+        /*for ([cat, value] of new_dico) {
             for ([q, v] of new_dico.get(cat)) {
                 if (new_dico.get(cat).get(q).get("id") == new_dico.get(current_category).get(parseInt(current_question)).get("id")) {
                     currentAnswers.get(cat).set(q, "N" + optDescr)
                 }
             }
-        }
+        }*/
         let last_astronaut = document.getElementById("astronautPicture").src
         document.getElementById("astronautPicture").src = happy_astronaut;
         window.setTimeout(() => {
             document.getElementById("astronautPicture").src = last_astronaut;
         }, "500")
+        updateProgressBar();
     }
 
     function setOptionUnclicked(opt) {
@@ -570,7 +650,7 @@ function runPiProcess() {
     function setCategoryClicked(plt) {
         let num = plt.id.substr(-1);
         categoriesCollection.set(num, true);
-        let catName = plt.innerHTML.split('<br>')[1];
+        let catName = document.getElementById("cat-name-" + num).innerHTML;
         configureCategory(transformName(catName));
     }
 
@@ -590,19 +670,25 @@ function runPiProcess() {
 
 
     function setCategoryUnclicked(plt) {
-        let num = plt.childNodes[0].id.substr(-1);
+        let num = plt.id.substr(-1);
         categoriesCollection.set(num, false);
     }
 
     function setUnclickedCategoryStyle(plt) {
         plt.style.backgroundColor = "";
+        plt.style.color = "#f2f2f2";
+    }
+
+    function setHoveredCategoryStyle(plt) {
+        let num = plt.id.substr(-1);
+        plt.style.backgroundColor = "#ddd";
         plt.style.color = "black";
     }
 
     function setClickedCategoryStyle(plt) {
-        let num = plt.childNodes[0].id.substr(-1);
-        plt.style.backgroundColor = "black";
-        plt.style.color = "white";
+        let num = plt.id.substr(-1);
+        plt.style.backgroundColor = "#04AA6D";
+        plt.style.color = "black";
     }
 
     function setPageClicked(pg) {
@@ -610,12 +696,17 @@ function runPiProcess() {
 
         pagesCollection.set(num, true);
         if (num == "0") {
-            document.getElementById("left-button").disabled = true;
-            document.getElementById("right-button").disabled = false;
+            document.getElementById("left-button").className = "nav-button disabled-nav";
+            document.getElementById("right-button").className = "nav-button";
+        }
+        else if (parseInt(num) == new_dico.get(current_category.size - 2)) {
+            document.getElementById("left-button").className = "nav-button";
+            document.getElementById("right-button").className = "nav-button";
+            document.getElementById("right-button").style.backgroundColor = "#04AA6D";
         }
         else {
-            document.getElementById("left-button").disabled = false;
-            document.getElementById("right-button").disabled = false;
+            document.getElementById("left-button").className = "nav-button";
+            document.getElementById("right-button").className = "nav-button";
         }
         configureQuestion(num)
 
@@ -655,8 +746,56 @@ function runPiProcess() {
             }
         }
         if (filled) {
-            document.getElementById(categoryIcons.get(current_category)).src = "pictures/pi_process/" + categoryIcons.get(current_category) + ".svg"
+            document.getElementById(categoryIcons.get(current_category)).src = "pictures/pi_process/" + categoryIcons.get(current_category) + ".svg";
+            let nb_filled = countCategoryFilled();
+            //document.getElementById("star" + nb_filled).style.color = "blue";
         }
+    }
+
+    function countCategoryFilled() {
+        let count = 0;
+        for (var [cat, content] of categoryIcons) {
+            let filled = true;
+            for (const [key, v] of currentAnswers.get(cat)) {
+                if (v == null) {
+                    filled = false
+                }
+            }
+
+            if (filled) {
+                count = count + 1;
+            }
+        }
+        return count
+    }
+
+    function checkAllCategoryFilled() {
+        all_filled = true;
+        for (var [cat, content] of new_dico) {
+            let filled = true;
+            //console.log(cat)
+            for (const [key, v] of currentAnswers.get(cat)) {
+                if (v == null) {
+                    filled = false
+                }
+            }
+
+            if (!filled) {
+                all_filled = false;
+            }
+        }
+        //console.log("all filled : " + all_filled);
+        if (all_filled) {
+
+            //console.log("ok");
+            document.getElementById("pi-process-box").disabled = false;
+            document.getElementById("sumUpAnswers").disabled = false;
+        }
+        else {
+            document.getElementById("pi-process-box").disabled = true;
+            document.getElementById("sumUpAnswers").disabled = true;
+        }
+
     }
 
     /* Process the pi process value */
@@ -665,7 +804,7 @@ function runPiProcess() {
         let process_grade = 0;
         for (var [key, value] of currentAnswers) {
             let n_audit = 0;
-            let n_audit_max = 1;
+            let n_audit_max = 0;
             for (const [k, v] of value) {
                 if (v == null) {
                     n_audit = n_audit + 0 * parseInt(new_dico.get(key).get(k).get('weight'));
@@ -678,8 +817,13 @@ function runPiProcess() {
                     n_audit_max = n_audit_max + 3 * parseInt(new_dico.get(key).get(k).get('weight'));
                 }
             }
-
-            process_grade = process_grade + categoryContribution.get(key) * n_audit / n_audit_max;
+            if (n_audit_max == 0){
+                process_grade = process_grade + categoryContribution.get(key) * n_audit;
+            }
+            else{
+                process_grade = process_grade + categoryContribution.get(key) * n_audit / n_audit_max;
+            }
+            
 
         }
 
@@ -715,12 +859,19 @@ function runPiProcess() {
             setCategoryClicked(this);
         }
         p.onmouseenter = function () {
-            setClickedCategoryStyle(this);
+            let num = this.id.substr(-1);
+            if (!categoriesCollection.get(num)) {
+                setHoveredCategoryStyle(this);
+            }
+
         }
         p.onmouseleave = function () {
-            let num = this.childNodes[0].id.substr(-1);
+            let num = this.id.substr(-1);
             if (!categoriesCollection.get(num)) {
                 setUnclickedCategoryStyle(this);
+            }
+            else {
+                setClickedCategoryStyle(this);
             }
         }
     }
@@ -735,6 +886,7 @@ function runPiProcess() {
             setOptionClicked(this);
             setClickedOptionStyle(this);
             checkCategoryFilled(current_category);
+            checkAllCategoryFilled();
             calculate_process_factor();
         }
         opt.onmouseenter = function () {
@@ -772,6 +924,19 @@ function runPiProcess() {
         let ans = saveAnswers();
         navigator.clipboard.writeText(ans);
         alert("Copied the answers. Please make sure to properly paste the answers and to save it in a dedicated text file. Do not modify data unless they may compromise the results");
+    }
+
+    document.getElementById("resume").onclick = function(){
+        document.getElementById("overlay").style.display = "none";
+    }
+
+    document.getElementById("helpPiProcess").onclick = function(){
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("modeInput").style.display = "none";
+        document.getElementById("answersInput").style.display = "none";
+        document.getElementById("start").style.display = "none";
+        document.getElementById("resume").style.display = "block";
+
     }
 
 }
