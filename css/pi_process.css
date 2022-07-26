@@ -1,4 +1,4 @@
-/*
+
 #mainDiv {
     position: fixed;
     overflow-x: auto;
@@ -83,6 +83,19 @@
     background-color: rgb(17, 68, 119);
 }
 
+
+.extra-interactor:disabled {
+    background-color: rgb(57, 80, 104);
+    color: rgb(196, 195, 195);
+    cursor: not-allowed;
+}
+
+.extra-interactor:disabled:hover {
+    background-color: rgb(57, 80, 104);
+    color: rgb(196, 195, 195);
+    cursor: not-allowed;
+}
+
 #quiz {
     width: 100%;
     border-width: 0;
@@ -165,7 +178,7 @@
     margin-inline: 5%;
 }
 
-.active, .collapsible-help:hover {
+.collapsible-help.active:hover, .collapsible-help:hover {
     background-color: #555;
 }
 
@@ -380,4 +393,3 @@
 .progress-star{
     font-size: 1.2em;
 }
-*/

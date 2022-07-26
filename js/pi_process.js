@@ -11,7 +11,7 @@ function runPiProcess() {
     let idea_astronaut = "pictures/new_astronaut_idea.svg";
     let speaking_astronaut = "pictures/new_astronaut_speaks.svg";
 
-    var coll = document.getElementsByClassName("collapsible");
+    var coll = document.getElementsByClassName("collapsible-help");
 
     let new_dico = question_dico;
 
@@ -185,7 +185,6 @@ function runPiProcess() {
         calculate_process_factor();
     }
 
-    var coll = document.getElementsByClassName("collapsible");
     var i_coll;
 
     for (i_coll = 0; i_coll < coll.length; i_coll++) {
@@ -378,10 +377,6 @@ function runPiProcess() {
             }
         }
         download("sumedUpPiProcess.csv",ans);
-    }
-
-    document.getElementById("sumUpAnswers").onclick = function() {
-        saveSumUp();
     }
 
     /* Configure interface according to the selected category */
@@ -938,5 +933,10 @@ function runPiProcess() {
         document.getElementById("resume").style.display = "block";
 
     }
+
+    document.getElementById("sumUpAnswers").onclick = function() {
+        saveSumUp();
+    }
+
 
 }
