@@ -104,7 +104,6 @@
   color: white;
 }
 
-
 .table thead th p {
   color: #ffffff;
 }
@@ -112,7 +111,6 @@
 .table tr:nth-child(even) {
   background: #F8F8F8;
 }
-
 
 .table tr:hover {
   background-color: #9dc3e1;
