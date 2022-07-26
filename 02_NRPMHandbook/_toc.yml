@@ -50,7 +50,7 @@ parts:
         - file: eee/handbook/reliability_prediction/systematic_failures
         - file: eee/handbook/reliability_prediction/wear_out_failures
         - file: eee/handbook/reliability_prediction/extrinsic_failures
-      - file: eee/handbook/bibliography
+      - file: eee/handbook/bibliographic_references
       - file: eee/handbook/annex_a
       - file: eee/handbook/annex_c
     - file: eee/models/intro_models
