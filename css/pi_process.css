@@ -158,7 +158,7 @@
     margin-top: 0.5em;
 }
 
-.collapsible {
+.collapsible-help-help {
     background-color: #777;
     color: white;
     cursor: pointer;
@@ -172,7 +172,7 @@
     margin-inline: 5%;
 }
 
-.active, .collapsible:hover {
+.active, .collapsible-help:hover {
     background-color: #555;
 }
 
