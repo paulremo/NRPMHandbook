@@ -116,5 +116,5 @@ ESA contract `No. 4000135482/21/NL/AR/va` consortium:
 - [Airbus Defence and Space](https://www.airbus.com/en/products-services/space/)
 
 ### Copyright
-© [Matrisk GmbH](https://matrisk.com/) 2020\
+© [Matrisk GmbH](https://matrisk.com/) 2022\
 The copyright in this document is vested in [Matrisk GmbH](https://matrisk.com/). This document may only be reproduced in whole or in part, or stored in a retrieval system, or transmitted in any form, or by any means electronic, mechanical, photocopying or otherwise, either with the prior permission of [Matrisk GmbH](https://matrisk.com/) or in accordance with the terms of ESA Contract `No. 4000121065/17/NL/PS`.
