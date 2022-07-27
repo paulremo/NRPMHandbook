@@ -11,6 +11,7 @@ parts:
     - file: methodologies/handbook/intro
       title: Handbook
       sections:
+      - file: methodologies/handbook/terms
       - file: methodologies/handbook/reliability_prediction_taxonomy_handbook_coverage
       - file: methodologies/handbook/reliability_prediction_during_project_life_cycle
       - file: methodologies/handbook/part_I_bibliography
@@ -20,6 +21,7 @@ parts:
     - file: methods/handbook/intro
       title: Handbook
       sections:
+      - file: methods/handbook/terms
       - file: methods/handbook/model_development_basic_concept
       - file: methods/handbook/bayesian_method_reliability_prediction_modelling
       - file: methods/handbook/uncertainties_prediction_results

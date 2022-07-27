@@ -1,16 +1,5 @@
 # Terms, definitions and abbreviated terms
-```{admonition} Under construction
-:class: todo
-The content of this page is missing and will be provided in a future version of the NRPM digital handbook.
-
+```{admonition} Remark
+:class: remark
+The terms and definitions of the entire digital handbook are listed in {numref}`terms`.
 ```
-
-## Terms from other standards
-
-
-## Terms specific for the present handbook
-
-
-
-## Abbreviated Terms and Symbols
-
