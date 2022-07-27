@@ -95,7 +95,7 @@ All versions may also be accessed (and linked to) with the following URL: `https
 
 
 (imprint)=
-### Imprint
+## Imprint
 
 The content of this digital handbook has been developed within the [European Space Agency](https://www.esa.int/) (ESA) project _New reliability prediction aimed at space applications_ (NRPM) under ESA contract `No. 4000121065/17/NL/PS` (2017-2020).
 As part of the ESA project _Adaptation of the NRPM Handbook into an ESA Handbook following the ECSS_ (2021-2022) under ESA contract `No. 4000135482/21/NL/AR/va`, updated information on the PISTIS project has been added. Otherwise, no material changes have been made to the content.
@@ -115,6 +115,6 @@ ESA contract `No. 4000135482/21/NL/AR/va` consortium:
 - [Matrisk GmbH](https://matrisk.com/) (lead)
 - [Airbus Defence and Space](https://www.airbus.com/en/products-services/space/)
 
-#### Copyright
+### Copyright
 © [Matrisk GmbH](https://matrisk.com/) 2020\
 The copyright in this document is vested in [Matrisk GmbH](https://matrisk.com/). This document may only be reproduced in whole or in part, or stored in a retrieval system, or transmitted in any form, or by any means electronic, mechanical, photocopying or otherwise, either with the prior permission of [Matrisk GmbH](https://matrisk.com/) or in accordance with the terms of ESA Contract `No. 4000121065/17/NL/PS`.
