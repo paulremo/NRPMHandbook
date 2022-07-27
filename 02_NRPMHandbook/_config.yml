@@ -4,7 +4,7 @@
 title: NRPM digital handbook
 author: <a href='/home.html#imprint'>Matrisk GmbH | Airbus Defence & Space</a>
 logo: _static/images/reliabilityspace_logo_vector.png
-copyright: "2020"
+copyright: "2022"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
