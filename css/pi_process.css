@@ -12,7 +12,7 @@
 
 .topnav-pi-process {
     width: 100%;
-    background-color: #333;
+    background-color: #092B33;
 }
 
 .topnav-pi-process td {
@@ -70,7 +70,7 @@
 
 .extra-interactor {
     width: fit-content;
-    background-color: DodgerBlue;
+    background-color: #26B4D4;
     border: none;
     color: white;
     padding: 12px 30px;
@@ -80,18 +80,18 @@
 }
 
 .extra-interactor:hover {
-    background-color: rgb(17, 68, 119);
+    background-color: #1B7E94;
 }
 
 
 .extra-interactor:disabled {
-    background-color: rgb(57, 80, 104);
+    background-color: #0F4754;
     color: rgb(196, 195, 195);
     cursor: not-allowed;
 }
 
 .extra-interactor:disabled:hover {
-    background-color: rgb(57, 80, 104);
+    background-color: #0F4754;
     color: rgb(196, 195, 195);
     cursor: not-allowed;
 }
@@ -102,7 +102,7 @@
 }
 
 .nav-button {
-    background-color: black;
+    background-color: #092B33;
     color: white;
     text-align: center;
     width: 2%;
@@ -147,14 +147,14 @@
 
 #myProgress {
     width: 100%;
-    background-color: #000050;
+    background-color: #0F4754;
     text-align: center;
   }
   
   #myBar {
     width: 1%;
     height: 10px;
-    background-color: green;
+    background-color: #26B4D4;
   }
 
 #astronautPicture {
@@ -165,7 +165,7 @@
 }
 
 .collapsible-help {
-    background-color: #777;
+    background-color: #1B7E94;
     color: white;
     cursor: pointer;
     padding: 5px;
@@ -179,7 +179,7 @@
 }
 
 .collapsible-help.active:hover, .collapsible-help:hover {
-    background-color: #555;
+    background-color: #25a9c6;
 }
 
 .content {
@@ -257,7 +257,7 @@
 }
 
 #pages td {
-    background-color: #006597;
+    background-color: #1B7E94;
     color: #eee;
     font-size: 0.8vw;
     text-align: center;

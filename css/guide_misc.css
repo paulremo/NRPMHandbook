@@ -41,7 +41,7 @@
     word-wrap: break-word;
     width: 80%;
     /*text-align: justify;*/
-    background-color: rgb(2, 17, 67);
+    background-color: #0F4754;
     color: azure;
     border-radius: 10px;
     padding: 5px;
@@ -53,7 +53,7 @@
     word-wrap: break-word;
     width: 80%;
     /*text-align: justify;*/
-    background-color: rgb(219, 167, 36);
+    background-color: #26B4D4;
     border-radius: 10px;
     padding: 5px;
     margin-left: 15%;
@@ -80,14 +80,14 @@
 }
 
 .button-next:disabled{
-    background-color: rgb(219, 167, 36);
+    background-color: #26B4D4;
     color:rgb(0, 0, 0);
     width: 50%;
     margin-left: 25%;
 }
 
 .button-fail:disabled{
-    background-color: rgb(2, 17, 67);
+    background-color: #0D3C47;
     color: azure;
 }
 
@@ -97,13 +97,13 @@
 }
 
 #inputComponent:disabled{
-    background-color: rgb(219, 167, 36);
+    background-color: #26B4D4;
     color:rgb(0, 0, 0);
     width: 50%;
     margin-left: 25%;
 }
 
 .choice-button:disabled{
-    background-color: rgb(2, 17, 67);
+    background-color: #0D3C47;
     color: azure;
 }

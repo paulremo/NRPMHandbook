@@ -89,6 +89,7 @@ function runPiProcess() {
                 let ans_dico = generate_saved_answers_collection(document.getElementById("question-load").value);
                 if (ans_dico.size == 7) {
                     currentAnswers = ans_dico;
+
                 }
                 else {
                     alert("Values corrupted, please verify your data and try again");
@@ -286,13 +287,30 @@ function runPiProcess() {
             }
             ans = ans.substring(0, ans.length - 1) + "!"
         }
-        download("savedPiProcess.txt",ans.substring(0, ans.length - 1));
-        return ans.substring(0, ans.length - 1);
+        ans = ans.substring(0, ans.length - 1);
+        ans = ans + "@" + modeSubco + "@" + appliNS;
+        download("savedPiProcess.txt",ans);
+        return ans;
     }
 
     function generate_saved_answers_collection(answer_str) {
         let loaded_answers = new Map();
-        let categories = answer_str.split("!");
+        let ans = answer_str.split("@");
+        if (ans[1]=="false"){
+            modeSubco = false;
+            modeKey = "prime";
+        }
+        else{
+            modeSubco = true;
+            modeKey = "subco";
+        }
+        if (ans[2]=="false"){
+            appliNS = false;
+        }
+        else{
+            appliNS = true;
+        }
+        let categories = ans[0].split("!");
         for (c of categories) {
             let questions_answers = c.split(":")[1];
             let cat_name = c.split(":")[0];
@@ -323,7 +341,7 @@ function runPiProcess() {
             }
         }
         document.getElementById("qId").innerHTML = q_id;
-        document.getElementById("qCount").innerHTML = parseInt(q_ans) + 1;
+        document.getElementById("qCount").innerHTML = parseInt(q_ans);
         document.getElementById("qTotal").innerHTML = q_total - q_na;
     }
 
@@ -617,6 +635,7 @@ function runPiProcess() {
             document.getElementById("astronautPicture").src = last_astronaut;
         }, "500")
         updateProgressBar();
+        updateQuestionId();
     }
 
     function setOptionUnclicked(opt) {
@@ -632,13 +651,13 @@ function runPiProcess() {
 
     function setHoveredOptionStyle(opt) {
         let optDescr = opt;
-        optDescr.style.backgroundColor = "#076a78";
+        optDescr.style.backgroundColor = "#1B7E94";
         optDescr.style.color = "#eee";
     }
 
     function setClickedOptionStyle(opt) {
         let optDescr = opt;
-        optDescr.style.backgroundColor = "#720154";
+        optDescr.style.backgroundColor = "#0F4754";
         optDescr.style.color = "#eee";
     }
 
@@ -651,7 +670,7 @@ function runPiProcess() {
 
     function setNonApplicableClicked() {
         let btn = document.getElementById("not-applicable");
-        btn.style.backgroundColor = "#720154";
+        btn.style.backgroundColor = "#0D3C47";
         btn.style.color = "#eee";
         currentAnswers.get(current_category).set(parseInt(current_question), "NA");
     }
@@ -676,13 +695,13 @@ function runPiProcess() {
 
     function setHoveredCategoryStyle(plt) {
         let num = plt.id.substr(-1);
-        plt.style.backgroundColor = "#ddd";
+        plt.style.backgroundColor = "#1B7E94";
         plt.style.color = "black";
     }
 
     function setClickedCategoryStyle(plt) {
         let num = plt.id.substr(-1);
-        plt.style.backgroundColor = "#04AA6D";
+        plt.style.backgroundColor = "#26B4D4";
         plt.style.color = "black";
     }
 
@@ -721,13 +740,13 @@ function runPiProcess() {
             pg.style.backgroundColor = "gray";
         }
         else {
-            pg.style.backgroundColor = "#006597";
+            pg.style.backgroundColor = "#1B7E94";
         }
         pg.style.color = "white";
     }
 
     function setClickedPageStyle(pg) {
-        pg.style.backgroundColor = "#7fd3fc";
+        pg.style.backgroundColor = "#26B4D4";
         pg.style.color = "black";
     }
 
