@@ -330,7 +330,7 @@ window.onload = function () {
                         div.setAttribute("class", "other-message");
                         let par = document.createElement("p");
                         par.style.color = "white";
-                        par.innerHTML = "You can go on the handbook page";
+                        par.innerHTML = "<u>You can go on the handbook page</u>";
                         par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#standard-model-for-generic-miscellaneous-items';");
                         par.style.cursor = "pointer";
                         par.style.color = "white";
@@ -357,7 +357,7 @@ window.onload = function () {
                 div.setAttribute("class", "other-message");
                 let par = document.createElement("p");
                 par.style.color = "white";
-                par.innerHTML = "You can go on the handbook page";
+                par.innerHTML = "<u>You can go on the handbook page</u>";
                 par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/process_reliability_modelling.html#non-standard-model-for-specific-miscellaneous-items';");
                 par.style.cursor = "pointer";
                 par.style.color = "white";
@@ -369,7 +369,7 @@ window.onload = function () {
                     div.setAttribute("class", "other-message");
                     let par = document.createElement("p");
                     par.style.color = "white";
-                    par.innerHTML = "Or you can go to this page to calculate the failure rate";
+                    par.innerHTML = "<u>Or you can go to this page to calculate the failure rate</u>";
                     par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/models/failure_rate_processing.html';");
                     par.style.cursor = "pointer";
                     par.style.color = "white";
@@ -486,7 +486,7 @@ window.onload = function () {
                 div.setAttribute("class", "other-message");
                 let par = document.createElement("p");
                 par.style.color = "white";
-                par.innerHTML = "You can go on the handbook page to find more information";
+                par.innerHTML = "<u>You can go on the handbook page to find more information</u>";
                 par.setAttribute("onclick", "window.location.href = 'https://nrpmhandbook.reliability.space/en/latest/miscellaneous/handbook/reliability_prediction/reliability_models.html#holistic-model';");
                 par.style.cursor = "pointer";
                 par.style.color = "white";
