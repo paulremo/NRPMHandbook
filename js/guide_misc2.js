@@ -180,7 +180,7 @@ window.onload = function () {
             par.innerHTML = "Before starting anything, to collect/define all technical information about the miscellaneous item in order to select the category of miscellaneous item which will be used";
             div.appendChild(par);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
 
             setTimeout(() => {
                 let buttonOK = document.createElement("button");
@@ -196,7 +196,7 @@ window.onload = function () {
                 div.setAttribute("class", "my-message");
                 div.appendChild(buttonOK);
                 conv_container.appendChild(div);
-                document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut2.png");
+                document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut.svg");
 
             }, 1500);
 
@@ -211,7 +211,7 @@ window.onload = function () {
         par.innerHTML = "Awesome ! So can you give me the name of your component ?";
         div.appendChild(par);
         conv_container.appendChild(div);
-        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
 
         setTimeout(() => {
             let div = document.createElement("div");
@@ -226,7 +226,7 @@ window.onload = function () {
             inputComponent.appendChild(sbt);
             div.appendChild(inputComponent);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut2.png");
+            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut.svg");
             sbt.onclick = function () {
                 this.disabled = true;
                 document.getElementById('inputComponent').disabled = true;
@@ -274,7 +274,7 @@ window.onload = function () {
 
             div.appendChild(fail);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
         }
 
         else {
@@ -283,7 +283,7 @@ window.onload = function () {
             par.innerHTML = "Maybe we use another name... To which subsystem does your component belong ?";
             div.appendChild(par);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
             setTimeout(() => { runB5() }, 1500);
         }
 
@@ -306,7 +306,7 @@ window.onload = function () {
             par.innerHTML = "This component is standard";
             div.appendChild(par);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
             setTimeout(() => {
                 let value = standardComponentFR.get(key);
                 let div = document.createElement("div");
@@ -324,7 +324,7 @@ window.onload = function () {
                     par.innerHTML = "Don't forget to note this value";
                     div.appendChild(par);
                     conv_container.appendChild(div);
-                    document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+                    document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
                     setTimeout(() => {
                         let div = document.createElement("div");
                         div.setAttribute("class", "other-message");
@@ -336,7 +336,7 @@ window.onload = function () {
                         par.style.color = "white";
                         div.appendChild(par);
                         conv_container.appendChild(div);
-                        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+                        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
                     }, 1500);
                 }, 1500);
             }
@@ -351,7 +351,7 @@ window.onload = function () {
             par.innerHTML = "This component is non-standard";
             div.appendChild(par);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
             setTimeout(() => {
                 let div = document.createElement("div");
                 div.setAttribute("class", "other-message");
@@ -363,7 +363,7 @@ window.onload = function () {
                 par.style.color = "white";
                 div.appendChild(par);
                 conv_container.appendChild(div);
-                document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+                document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
                 setTimeout(() => {
                     let div = document.createElement("div");
                     div.setAttribute("class", "other-message");
@@ -375,7 +375,7 @@ window.onload = function () {
                     par.style.color = "white";
                     div.appendChild(par);
                     conv_container.appendChild(div);
-                    document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+                    document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
                 }, 1500);
             }, 1500);
         }
@@ -392,7 +392,7 @@ window.onload = function () {
         par.innerHTML = "Maybe we use another name... To which subsystem does your component belong ?";
         div.appendChild(par);
         conv_container.appendChild(div);
-        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
         setTimeout(() => { runB5() }, 1500);
     }
     function runB5() {
@@ -419,7 +419,7 @@ window.onload = function () {
         }
 
         conv_container.appendChild(div);
-        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
 
     }
 
@@ -459,7 +459,7 @@ window.onload = function () {
         div.appendChild(fail);
 
         conv_container.appendChild(div);
-        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
 
     }
 
@@ -471,7 +471,7 @@ window.onload = function () {
         par.innerHTML = "It must be a holistic component";
         div.appendChild(par);
         conv_container.appendChild(div);
-        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+        document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
         setTimeout(() => {
             let div = document.createElement("div");
             div.setAttribute("class", "other-message");
@@ -480,7 +480,7 @@ window.onload = function () {
             par.innerHTML = "There's no standard methodology.";
             div.appendChild(par);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+            document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
             setTimeout(() => {
                 let div = document.createElement("div");
                 div.setAttribute("class", "other-message");
@@ -492,7 +492,7 @@ window.onload = function () {
                 par.style.color = "white";
                 div.appendChild(par);
                 conv_container.appendChild(div);
-                document.getElementById("astroPicture").setAttribute("src", "../../_static/images/astronaut1.png");
+                document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
             }, 1500);
         }, 1500);
     }
