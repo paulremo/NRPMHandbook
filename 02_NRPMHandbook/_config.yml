@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: NRPM digital handbook
-author: Matrisk | Airbus Defence & Space
+author: <a href='/home.html#imprint'>Matrisk GmbH | Airbus Defence & Space</a>
 logo: _static/images/reliabilityspace_logo_vector.png
 copyright: "2022"
 
