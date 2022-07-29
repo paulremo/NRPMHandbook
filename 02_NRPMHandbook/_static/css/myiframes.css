@@ -2,3 +2,9 @@
 	width: 100%;
 	overflow-y: hidden !important;
 }
+
+.ext_content.no-x-scroll {
+	width: 100%;
+	overflow-y: hidden !important;
+	overflow-x: hidden;
+}
