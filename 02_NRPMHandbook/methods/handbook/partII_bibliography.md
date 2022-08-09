@@ -1,6 +1,4 @@
-# Part II Bibliography
-
-## Bibliographic references for Part II
+# Bibliographic references
 
 ```{bibliography}
 :filter: keywords % "br-method"
@@ -8,9 +6,3 @@
 :keyprefix: method-
 ```
 
-
-```{bibliography}
-:filter: keywords % "nr"
-:labelprefix: NR_METHOD_
-:keyprefix: method-
-```

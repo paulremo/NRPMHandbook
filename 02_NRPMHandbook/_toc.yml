@@ -11,6 +11,7 @@ parts:
     - file: methodologies/handbook/intro
       title: Handbook
       sections:
+      - file: methodologies/handbook/normative_references
       - file: methodologies/handbook/terms
       - file: methodologies/handbook/reliability_prediction_taxonomy_handbook_coverage
       - file: methodologies/handbook/reliability_prediction_during_project_life_cycle
@@ -21,6 +22,7 @@ parts:
     - file: methods/handbook/intro
       title: Handbook
       sections:
+      - file: methods/handbook/normative_references
       - file: methods/handbook/terms
       - file: methods/handbook/model_development_basic_concept
       - file: methods/handbook/bayesian_method_reliability_prediction_modelling
@@ -139,6 +141,7 @@ parts:
         - file: system/handbook/reliability_prediction/system_level_modelling_wear_out    
         - file: system/handbook/reliability_prediction/systematic_failure_modelling  
         - file: system/handbook/reliability_prediction/consideration_software_failures
+      - file: system/handbook/bibliographic_references
     - file: system/models/introduction
       title: Models
       sections:
