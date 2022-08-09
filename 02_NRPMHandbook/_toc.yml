@@ -56,6 +56,7 @@ parts:
         - file: eee/handbook/reliability_prediction/extrinsic_failures
       - file: eee/handbook/bibliographic_references
       - file: eee/handbook/annex_a
+      - file: eee/handbook/annex_b
       - file: eee/handbook/annex_c
     - file: eee/models/intro_models
       title: Models
