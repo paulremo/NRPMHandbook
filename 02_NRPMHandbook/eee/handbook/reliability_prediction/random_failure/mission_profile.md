@@ -10,7 +10,7 @@ The consideration of the mission profile allows offering different reliability p
 
 In particular, modelling for different mission profiles means taking into account the thermal cycling specific to the orbit considered.
 
-The objective of this chapter is to provide a methodology to define the mission profile of a satellite. Some examples of mission profiles for the most common space applications: geostationary telecommunication satellites and Low Earth Orbit satellites are presented in {numref}`eee_annex_A`.
+The objective of this chapter is to provide a methodology to define the mission profile of a satellite. Some examples of mission profiles for the most common space applications: geostationary telecommunication satellites and Low Earth Orbit satellites are presented in {ref}`eee_annex_a`.
 
 (eee_4_3_1_2)=
 ## Methodology to define a mission profile for space applications
@@ -29,7 +29,7 @@ A preliminary simplified mission profile can be defined early in the development
 
 -   a previous mission profile from a similar and preceding mission;
 
--   a mission profile for comparison purpose based on examples provided in {numref}`eee_annex_A` (with precautions).
+-   a mission profile for comparison purpose based on examples provided in {ref}`eee_annex_a` (with precautions).
 
 With the development of the project, thermal simulations are made available by thermal architects and should be used as the basis for the mission profile determination, as much as possible without considering the margins.
 
@@ -640,7 +640,7 @@ Based on the marks given in {numref}`eee-table4-5` and calculation with {eq}`Equ
 (eee_4_3_1_20)=
 ## Influence of the policy for over-stresses
 
-$\Pi_{ruggedising}$ represents the influence of the policy for considering over-stresses in the product development and is based on 17 different questions. Some of the answers of these questions are common to all space applications. Questions n° 157, 158, 159, 160, 161, 163, 167 and 169 have been partly modified to consider specificities of space applications, mainly because maintenance of the products is not possible on satellites. The modification of the recommendations, descriptions and criteria of these modified questions are listed in {numref}`eee_annex_A`. Moreover, question n°168 is not directly applicable to space applications also due to its maintenance purpose and is removed from the questionnaire.
+$\Pi_{ruggedising}$ represents the influence of the policy for considering over-stresses in the product development and is based on 17 different questions. Some of the answers of these questions are common to all space applications. Questions n° 157, 158, 159, 160, 161, 163, 167 and 169 have been partly modified to consider specificities of space applications, mainly because maintenance of the products is not possible on satellites. The modification of the recommendations, descriptions and criteria of these modified questions are listed in {ref}`eee_annex_a`. Moreover, question n°168 is not directly applicable to space applications also due to its maintenance purpose and is removed from the questionnaire.
 
 ```{admonition} Recommendation
 :class: recommendation

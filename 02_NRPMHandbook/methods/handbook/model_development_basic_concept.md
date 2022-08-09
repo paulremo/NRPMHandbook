@@ -366,7 +366,7 @@ Expert or engineering knowledge about the failure process is another valuable so
 
 {numref}`method-table6-1` provides an overview over some standard distribution models commonly used in the context of reliability prediction. The column "Derivation" provides information on the theoretical background for each model, which can be used to support the choice of distribution function. This is especially helpful if a selection purely based on data is not possible.
 
-The probability distribution and density functions for the different models are defined in {numref}`annexII_A` at the end of {numref}`methods`. The two most well-known time-to-failure distribution, the Exponential and the Weibull model will be discussed in more detail in the following subsections. The modelling of standby components and one-shot items is discussed separately in {numref}`method_6_4_2_3`.
+The probability distribution and density functions for the different models are defined in {ref}`annexII_A` at the end of {numref}`methods`. The two most well-known time-to-failure distribution, the Exponential and the Weibull model will be discussed in more detail in the following subsections. The modelling of standby components and one-shot items is discussed separately in {numref}`method_6_4_2_3`.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table6-1')" placeholder="Search table...">
 
@@ -642,7 +642,7 @@ P\left\lbrack \text{Beta}_{\frac{\alpha}{2}}\left( n_{f},\ n - n_{f} + 1 \right)
 ```
 ````
 
-Where $\text{Beta}_{q}\left( \alpha,\ \beta \right)$ denotes the $q$ Quantile of the Beta distribution, as defined in {numref}`annexII_A`.
+Where $\text{Beta}_{q}\left( \alpha,\ \beta \right)$ denotes the $q$ Quantile of the Beta distribution, as defined in {ref}`annexII_A`.
 
 (method_6_5)=
 ## Physics of failure and structural reliability methods

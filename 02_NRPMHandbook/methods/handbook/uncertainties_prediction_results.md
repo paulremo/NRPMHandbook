@@ -111,7 +111,7 @@ To assess the uncertainties associated with a prediction model or method and its
 
 Based on the discussion in {numref}`method_8_2`, the identification of uncertainty sources will not be limited to statistical uncertainties, but considering epistemic uncertainties in a more general sense. Statistical uncertainties (focussing on those still relevant at system level) are considered only as one potential uncertainty source and the distinction between statistical and model uncertainties will not be stressed any further. Instead, the questionnaires will distinguish between model development uncertainties (including statistical uncertainties) and model usage uncertainties.
 
-Answers to the questionnaires assessing the model development uncertainties associated with the models used in {ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>` are collected in {numref}`annexII_B`.
+Answers to the questionnaires assessing the model development uncertainties associated with the models used in {ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>` are collected in {ref}`annexII_B`.
 
 (method_8_3_1)=
 ### Model development uncertainties
