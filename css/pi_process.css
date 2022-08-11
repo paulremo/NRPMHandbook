@@ -1,4 +1,4 @@
-
+/* 
 #mainDiv {
     position: fixed;
     overflow-x: auto;
@@ -19,7 +19,7 @@
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 0.8em;
     width: fit-content;
     height: 3em;
     padding-inline: 1em;
@@ -99,21 +99,22 @@
 #quiz {
     width: 100%;
     border-width: 0;
+    border-collapse: collapse;
 }
 
 .nav-button {
     background-color: #092B33;
     color: white;
     text-align: center;
-    width: 2%;
+    width: fit-content;
     min-width: fit-content;
-    font-size: 1.5em;
+    font-size: min(1.5em,1.5vw);
     padding: 2em 1em;
     cursor: pointer;
 }
 
 .nav-button:hover {
-    background-color: rgb(85, 85, 85);
+    background-color: #88b2c1
 }
 
 .nav-button.disabled-nav {
@@ -254,15 +255,17 @@
     margin-left: 2%;
     margin-top: 1%;
     overflow-x: auto;
+    border-collapse: collapse;
 }
 
 #pages td {
-    background-color: #1B7E94;
-    color: #eee;
-    font-size: 0.8vw;
+    height: 3em;
+    background-color: white;
+    color: #0F4754;
+    font-size: 2vw;
     text-align: center;
     cursor: pointer;
-
+    border-radius: 2em;
 }
 
 .pill-button {
@@ -333,6 +336,10 @@
     color: rgb(0, 0, 0);
 }
 
+#overlay-close-mp{
+    color: #730f00;
+}
+
 #question-load {
     height: fit-content;
     margin-top: 2em;
@@ -393,3 +400,4 @@
 .progress-star{
     font-size: 1.2em;
 }
+ */
