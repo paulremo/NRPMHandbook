@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mission profile NRPM</title>
+    <link rel="stylesheet" href="../css/mission_profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div id="overlay-mp">
+        <div class="infoBox-mp">
+            <table class="informationGrid-mp">
+                <tr>
+                    <td></td>
+                    <td style="text-align: right;"><button id="overlay-close-mp"><i class="fa fa-close"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%">
+                        <img src="pictures/new_astronaut_idea.svg" width="80%" style="margin-top: 20%;" />
+                    </td>
+                    <td width="70%">
+                        <div id="text-mp">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <table class="topnav-mission-profile">
+        <tr class="topnav">
+            <td class="cat-name-mp" id="cat-name-1">
+                <img style="height: 2.5em;display: block;margin-left: auto;margin-right: auto;"
+                    src="pictures/mission_profile/general_information_blank.svg">
+                <p>general information</p>
+            </td>
+            <td rowspan="5" class="tab-mission-profile">
+                <div class="entry-card" id="entry-card-0" style="display: block;">
+                    The mission profile, or life profile, is an important step to consider when using the
+                    reliability.space method.
+                    <br><br>
+                    For space applications, mission profiles are based on the same main phases. Furthermore, the stress applied on electronic equipment of satellites is mainly linked to the temperature, in addition to the electrical stresses dealt with directly at part level. From the regular mission profile definitions from FIDES, the other stresses such as vibrations, humidity and chemical pollution are considered, but they are mainly present only during the launch phase.
+                    <br><br>
+                    So, to define accurately the mission profile, it is necessary to know:
+
+                    <ul>
+                        <li>the type of mission of the satellite such as geostationary, Low Earth orbit, middle orbit, science satellite or other mission;</li>
+                        <li>the different phases of use (on) and no use (off) of the equipment;</li>
+                        <li>the location of the equipment on the platform or on the payload in order to estimate all the relevant stresses.</li>
+                    </ul>
+
+                    You can navigate through categories by clicking them on the left. Make sure to validate you entries at the end of each category (<button>Validate parameters</button>) otherwise they will be deleted.
+                    <br>
+                    Once all categories are filled, you can validate the phase click the <button>Validate phase</button> button. You can edit a phase by double-clicking it from the sum-up table below.
+                </div>
+                <div class="entry-card" id="entry-card-1" style="display: none;">
+                    <table>
+                        <tr id="phase-name-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-phase name"></i></a>
+                                <label for="phase-name-entry"> Phase name :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <input type="text" id="phase-name-entry" class="name-entry-mission-profile"
+                                    placeholder="Enter phase name" />
+                                <span id="indication-validity-phase-name-entry" style="display: none;">This name is not
+                                    conform or already exists. Please chose another one or add ON/OFF indication.</span>
+                            </td>
+                        </tr>
+                        <tr id="phase-type-choices-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-phase type"></i></a>
+                                <label for="phase-type-choices"> Phase type : </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <div id="phase-type-choices">
+                                    <div class="radio-phase-type-box"
+                                        title="A phase during which the product is stored and kept steady. For space application, this may include numeral static test of the electronics on-bord. To consider if the storage phase last a considerable amount of time.">
+                                        <img style="height: 4em;display: block;margin-left: auto;margin-right: auto;"
+                                            src="pictures/mission_profile/storage.svg">
+                                        <label class="phase-type-label">Storage</label><br>
+                                        <input type="radio" class="phase-type-entry-mp" id="radio-storage-mp" />
+                                    </div>
+                                    <div class="radio-phase-type-box"
+                                        title="A phase during which the product is shipped to its final destination. For space application, this phase may include some stress for the product if the environment changes during transport e.g. temperature, humidity, vibration">
+                                        <img style="height: 4em;display: block;margin-left: auto;margin-right: auto;"
+                                            src="pictures/mission_profile/transport.svg">
+                                        <label class="phase-type-label">Transport</label><br>
+                                        <input type="radio" class="phase-type-entry-mp" id="radio-transport-mp" />
+                                    </div>
+                                    <div class="radio-phase-type-box"
+                                        title="A critical mechanical phase which involves a lot of vibrations for the product. Its impact is rather limited on the overall reliability due to it's very short duration time.">
+                                        <img style="height: 4em;display: block;margin-left: auto;margin-right: auto;"
+                                            src="pictures/mission_profile/lauch.svg">
+                                        <label class="phase-type-label">Launch</label><br>
+                                        <input type="radio" class="phase-type-entry-mp" id="radio-launch-mp" />
+                                    </div>
+                                    <div class="radio-phase-type-box"
+                                        title="Also called 'Orbit raising', this phase may might have a noticeable impact on the overall reliability of the product. Depending on the propulsion technology, it can last a considerable amount of time. This phase very often include ON and OFF phase of the unit onboard.">
+                                        <img style="height: 4em;display: block;margin-left: auto;margin-right: auto;"
+                                            src="pictures/mission_profile/reaching_orbit.svg">
+                                        <label class="phase-type-label">Reaching orbit</label><br>
+                                        <input type="radio" class="phase-type-entry-mp" id="radio-reaching-orbit-mp" />
+                                    </div>
+                                    <div class="radio-phase-type-box"
+                                        title="Also called 'station keeping', this phase is predominant in overall reliability. Being the rated use phase of a mission, its duration is very often far above the other phases. This phase mostly depends on the variable thermal stress of the life profile.">
+                                        <img style="height: 4em;display: block;margin-left: auto;margin-right: auto;"
+                                            src="pictures/mission_profile/orbit.svg">
+                                        <label class="phase-type-label">In-orbit</label><br>
+                                        <input type="radio" class="phase-type-entry-mp" id="radio-in-orbit-mp" />
+                                    </div>
+                                    <div class="radio-phase-type-box"
+                                        title="Any phase that would not fit in the other categories. It can be used to modelize the deorbitation of the product, though its reliability should not be taken into account for the rated use of the mission.">
+                                        <img style="height: 4em;display: block;margin-left: auto;margin-right: auto;"
+                                            src="pictures/mission_profile/other.svg">
+                                        <label class="phase-type-label">Other<br></label><br>
+                                        <input type="radio" class="phase-type-entry-mp" id="radio-other-mp" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="on-off-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-unit onboard"></i></a>
+                                <label for="on-off-entry"> Unit onboard : </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <a style="margin-right: 0.5em;">OFF</a>
+                                <label class="switch">
+                                    <input class="switch-check" type="checkbox" id="on-off-entry-mp">
+                                    <span class="switch-slider" id="on-off-switch-mp"></span>
+                                </label>
+                                <a style="margin-left: 0.5em;">ON</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button class="validate-mp-cat" id="validate-mp-cat-1">Validate parameters</button></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="entry-card" id="entry-card-2" style="display: none;">
+                    <table>
+                        <tr id="calendar-time-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-calendar time"></i></a>
+                                <label for="calendar-time-entry"> Calendar time (h)
+                                    :</label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <input type="number" id="calendar-time-entry" min="0" step="0.1" />
+                                <button class="calculate-time-information-mp"
+                                    id="calculate-calendar-time">Calculate</button>
+                                <span id="indication-validity-calendar-time-entry" style="display: none;">Wrong value,
+                                    please enter float</span>
+                            </td>
+                        </tr>
+                        <tr id="cycle-duration-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-cycle duration"></i></a>
+                                <label for="cycle-duration-entry"> Cycle duration (h)
+                                    :</label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <input type="number" id="cycle-duration-entry" min="0" step="0.1" />
+                                <button class="calculate-time-information-mp"
+                                    id="calculate-cycle-duration">Calculate</button>
+                                <span id="indication-validity-cycle-duration-entry" style="display: none;">Wrong value,
+                                    please enter float</span>
+                            </td>
+                        </tr>
+                        <tr id="number-cycles-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-number of cycles"></i></a>
+                                <label for="number-cycles-entry"> Number of cycles :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <input type="number" id="number-cycles-entry" min="0" step="1" />
+                                <button class="calculate-time-information-mp"
+                                    id="calculate-number-cycles">Calculate</button>
+                                <span id="indication-validity-number-cycles-entry" style="display: none;">Wrong value,
+                                    please enter int</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button class="validate-mp-cat" id="validate-mp-cat-2">Validate parameters</button></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="entry-card" id="entry-card-3" style="display: none;">
+                    <table>
+                        <tr id="delta-t-entries-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-delta t"></i></a>
+                                <label> &Delta;T</label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <div>
+                                    <label for="temperature-mode-selection"
+                                        class="parameter-title-mission-profile">Calculate
+                                        &Delta;T mean </label>
+                                    <input type="checkbox" id="temperature-mode-selection" />
+                                </div>
+                                <div id="delta-t-entries-box-mp">
+                                    <div>
+                                        <input type="number" id="delta-T-entry-1" class="delta-T-entry-mp" min="0"
+                                            step="0.1" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="add-delta-t-mp" disabled>Add value</button>
+                                </div>
+                                <p id="delta-t-value-mp">Value : </p>
+                            </td>
+                        </tr>
+                        <tr id="ambient-temperature-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-ambient temperature"></i></a>
+                                <label for="ambient-temperature-entry"> Ambient
+                                    Temperature (&deg;C) :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <input type="number" id="ambient-temperature-entry" min="-55" step="0.5" max="125" />
+                                <span id="indication-validity-ambient-temperature-entry" style="display: none;">Wrong
+                                    value, please enter float &le; max temperature</span>
+                            </td>
+                        </tr>
+                        <tr id="max-temperature-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-max temperature"></i></a>
+                                <label for="max-temperature-entry"> Max
+                                    temperature (&deg;C)
+                                    :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <input type="number" id="max-temperature-entry" max="180" step="0.1" />
+                                <span id="indication-validity-max-temperature-entry" style="display: none;">Wrong value,
+                                    please enter a float &ge; ambient temperature </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button class="validate-mp-cat" id="validate-mp-cat-3">Validate parameters</button></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="entry-card" id="entry-card-4" style="display: none;">
+                    <table>
+                        <tr id="random-vibration-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-random vibration"></i></a>
+                                <label for="random-vibration-entry"> Random Vibrations (Grms) :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <input type="number" id="random-vibration-entry" min="0" step="0.1" />
+                                <span id="indication-validity-random-vibration-entry" style="display: none;">Wrong
+                                    value, please enter float</span>
+                            </td>
+                        </tr>
+                        <tr id="humidity-rate-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-humidity rate"></i></a>
+                                <label for="humidity-rate-entry"> Humidity Rate (%) :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <input type="number" id="humidity-rate-entry" min="0" step="0.1" />
+                                <span id="indication-validity-humidity-rate-entry" style="display: none;">Wrong
+                                    value, please enter float</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button class="validate-mp-cat" id="validate-mp-cat-4">Validate parameters</button></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="entry-card" id="entry-card-5" style="display: none;">
+                    <table>
+                        <tr id="saline-pollution-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-saline pollution"></i></a>
+                                <label for="saline-pollution-entry"> Saline Pollution :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <div>
+                                    <table class="steps-mp-2">
+                                        <tr>
+                                            <td class="step0-mp-3" onmouseenter="this.innerHTML='Low'"
+                                                onmouseleave="this.innerHTML='L'">L</td>
+                                            <td class="step1-mp-2" onmouseenter="this.innerHTML='High'"
+                                                onmouseleave="this.innerHTML='H'">H</td>
+                                        </tr>
+                                    </table>
+                                    <input id="saline-pollution-entry" type="range" class="step-range-mp-2" step="100">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="environment-pollution-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-environment pollution"></i></a>
+                                <label for="environment-pollution-entry"> Environment Pollution :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <div>
+                                    <table class="steps-mp-3">
+                                        <tr>
+                                            <td class="step0-mp-3" onmouseenter="this.innerHTML='Low'"
+                                                onmouseleave="this.innerHTML='L'">L</td>
+                                            <td class="step1-mp-3" onmouseenter="this.innerHTML='Moderate'"
+                                                onmouseleave="this.innerHTML='M'">M</td>
+                                            <td class="step2-mp-3" onmouseenter="this.innerHTML='High'"
+                                                onmouseleave="this.innerHTML='H'">H</td>
+                                        </tr>
+                                    </table>
+                                    <input id="environment-pollution-entry" type="range" class="step-range-mp-3"
+                                        step="50">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="application-pollution-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-application pollution"></i></a>
+                                <label for="application-pollution-entry"> Application Pollution :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <div>
+                                    <table class="steps-mp-3">
+                                        <tr>
+                                            <td class="step0-mp-3" onmouseenter="this.innerHTML='Low'"
+                                                onmouseleave="this.innerHTML='L'">L</td>
+                                            <td class="step1-mp-3" onmouseenter="this.innerHTML='Moderate'"
+                                                onmouseleave="this.innerHTML='M'">M</td>
+                                            <td class="step2-mp-3" onmouseenter="this.innerHTML='High'"
+                                                onmouseleave="this.innerHTML='H'">H</td>
+                                        </tr>
+                                    </table>
+                                    <input id="application-pollution-entry" type="range" class="step-range-mp-3"
+                                        step="50">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="protection-level-entry-box">
+                            <td class="parameter-title-mission-profile">
+                                <a class="info-button-mp"><i class="fa fa-info-circle"
+                                        id="info-button-mp-protection level"></i></a>
+                                <label for="protection-level-entry"> Protection Level :
+                                </label>
+                            </td>
+                            <td class="mission-profile-selector">
+                                <div>
+                                    <table class="steps-mp-2">
+                                        <tr>
+                                            <td class="step0-mp-2" onmouseenter="this.innerHTML='Hermetic'"
+                                                onmouseleave="this.innerHTML='H'">H</td>
+                                            <td class="step1-mp-2" onmouseenter="this.innerHTML='Non Hermetic'"
+                                                onmouseleave="this.innerHTML='NH'">NH</td>
+                                        </tr>
+                                    </table>
+                                    <input id="protection-level-entry" type="range" class="step-range-mp-2" step="100">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button class="validate-mp-cat" id="validate-mp-cat-5">Validate parameters</button></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td rowspan="5" class="recom-part-mission-profile">
+                <div class="recom-card-mp">
+                    <img style="height: 5em;display: block;margin-left: auto;margin-right: auto;"
+                        src="pictures/new_astronaut.svg">
+                    <p id="mp-recoms-text">Hi ! I'm here to help you enter the corect values. Here you can find the different available recommendations, and you can click the <i class="fa fa-info-circle"></i> to learn more about a parameter.<br> <b>Click on category on the left to start !</b></p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="cat-name-mp" id="cat-name-2">
+                <img style="vertical-align:middle; height: 2.5em;"
+                    src="pictures/mission_profile/time_information_blank.svg">
+                <p>time information</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="cat-name-mp" id="cat-name-3">
+                <img style="vertical-align:middle; height: 2.5em;"
+                    src="pictures/mission_profile/temperature_information_blank.svg">
+                <p>temperature information</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="cat-name-mp" id="cat-name-4">
+                <img style="vertical-align:middle; height: 2.5em;"
+                    src="pictures/mission_profile/mechanical_information_blank.svg">
+                <p>mechanical information</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="cat-name-mp" id="cat-name-5">
+                <img style="vertical-align:middle; height: 2.5em;"
+                    src="pictures/mission_profile/chemical_information_blank.svg">
+                <p>chemical information</p>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <button id="validate-phase-MP" disabled>Validate phase</button>
+    </div>
+
+    <table id="phases-sum-up-mission-profile">
+        <thead>
+            <tr>
+                <th colspan="15" style="background-color: #333;">SUM UP</th>
+            </tr>
+            <tr>
+                <th>Phase Type</th>
+                <th>Phase Name</th>
+                <th>Unit Onboard</th>
+                <th>Calendar Time</th>
+                <th>Ambient Temperature</th>
+                <th>&Delta;T</th>
+                <th>Cycle duration</th>
+                <th>Number of cycles</th>
+                <th>Max Temperature</th>
+                <th>Humidity Rate</th>
+                <th>Random Vibrations</th>
+                <th>Saline Pollution</th>
+                <th>Environment Pollution</th>
+                <th>Application Pollution</th>
+                <th>Protection Level</th>
+            </tr>
+
+        </thead>
+    </table>
+
+    <script type="text/javascript" src="../js/recom_mp.js"></script>
+    <script type="text/javascript" src="../js/mission_profile.js"></script>
+    <script type="text/javascript">runMissionprofile();</script>
+
+</body>
+
+</html>
