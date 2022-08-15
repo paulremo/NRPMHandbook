@@ -4,7 +4,7 @@
   font-weight: normal;
   border-color: #0d3c47;
   border-collapse: collapse;
-  width: 80%;
+  width: 100%;
   /*white-space: nowrap;*/
   background-color: white;
   overflow: auto;
@@ -112,7 +112,7 @@
   background: #F8F8F8;
 }
 
-.table tr:hover {
+.table.table tr:hover {
   background-color: #9dc3e1;
 }
 

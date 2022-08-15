@@ -1,5 +1,5 @@
 (annexII_A)=
-# II.A Probability distributions
+# Annex A Probability distributions
 
 In the following, the parametrization of the probability distributions introduced in Section 6.4 (Model development: Statistical methods) and used in Chapter 7 (Bayesian methods) is given as a common reference.
 

@@ -2,7 +2,7 @@
 # Random failure
 
 
-The reliability.space approach for EEE items provides models for reliability predictions for the EEE components which are used in space applications. The conventional component types refer to the components which are defined in the EPPL list {cite:t}`eee-EPPL007-37` and the PCB as expressed in {numref}`eee_annex_A`.
+The reliability.space approach for EEE items provides models for reliability predictions for the EEE components which are used in space applications. The conventional component types refer to the components which are defined in the EPPL list {cite:t}`eee-EPPL007-37` and the PCB as expressed in {ref}`eee_annex_a`.
 
 The reliability.space approach covering the random failures for EEE items is described in this part of the handbook. This methodology is based on the FIDES methodology, 2009 version.
 

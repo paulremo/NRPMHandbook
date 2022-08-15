@@ -2,3 +2,7 @@
 	width: 100%;
 	overflow-y: hidden !important;
 }
+
+.no-x-scroll {
+	overflow-x: hidden;
+}

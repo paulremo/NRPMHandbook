@@ -8,7 +8,7 @@ Here you can follow step by step the process to calculate the RP for any item cl
         <tr>
             <td id="astronautDiv">
                 <div id="astronaut">
-                    <img id="astroPicture" src="../../_static/images/astronaut1.png"/>
+                    <img id="astroPicture" src="../../_static/images/new_astronaut.svg"/>
                 </div>
             </td>
             <td id="messageDiv">
