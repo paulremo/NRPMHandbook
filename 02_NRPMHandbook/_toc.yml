@@ -60,6 +60,7 @@ parts:
       - file: eee/handbook/annex_c
     - file: eee/models/intro_models
       title: Models
+      - file: eee/models/pi_process_model
   - caption: Mechanical chapter
     numbered: true
     chapters:
