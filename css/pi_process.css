@@ -1,6 +1,5 @@
 
 #mainDiv {
-    position: fixed;
     overflow-x: auto;
     width: 100%;
     height: fit-content;
@@ -52,10 +51,10 @@
     background-color: red;
     border: none;
     color: white;
-    padding: 12px 30px;
+    padding: 0.3em 1em;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2vw;
+    font-size: 0.8em;
 }
 
 .badge:disabled {
@@ -69,10 +68,10 @@
     background-color: #26B4D4;
     border: none;
     color: white;
-    padding: 12px 30px;
+    padding: 0.3em 1em;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2vw;
+    font-size: 0.8em;
 }
 
 .extra-interactor:hover {
