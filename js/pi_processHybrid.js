@@ -87,15 +87,7 @@ function runPiProcessHybrid() {
                 all_filled = false;
             }
             if (slider_switch.checked) {
-                if (slider_switch.id.split("_")[1] == "1" || slider_switch.id.split("_")[1] == "2" || slider_switch.id.split("_")[1] == "3" || slider_switch.id.split("_")[1] == "4" || slider_switch.id.split("_")[1] == "10") {
-                    hybrid_grade = hybrid_grade + 10 / 100;
-                }
-                else if (slider_switch.id.split("_")[1] == "9" || slider_switch.id.split("_")[1] == "1") {
-                    hybrid_grade = hybrid_grade + 15 / 100;
-                }
-                else {
-                    hybrid_grade = hybrid_grade + 5 / 100;
-                }
+                hybrid_grade = hybrid_grade + answers_points_Hybrid.get(slider_switch.id.split("_")[1]) / 140;
             }
         }
         if (all_filled) {
