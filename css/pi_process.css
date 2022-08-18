@@ -19,10 +19,10 @@
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 1.5vw;
     width: fit-content;
     height: 3em;
-    padding-inline: 1em;
+    padding-inline: 0.5em;
     border-radius: 5px;
     cursor: pointer;
 }

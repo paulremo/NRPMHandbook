@@ -426,15 +426,6 @@ function runPiProcess() {
         for (const [key, value] of cat_dico) {
             let page_num = document.createElement("td");
             let id = parseInt(new_dico.get(current_category).get(key).get("id"));
-            /*if (id < 10) {
-                page_num.innerHTML = "00" + (id);
-            }
-            else if (id < 100) {
-                page_num.innerHTML = "0" + (id);
-            }
-            else {
-                page_num.innerHTML = id;
-            }*/
             page_num.innerHTML = '<i class="fa fa-circle"></i>';
             page_num.id = "page" + key;
             page_num.className = "pageNumber";
@@ -477,10 +468,10 @@ function runPiProcess() {
                 if (this.id != currentPage) {
                     hideCurrentPage();
                 }
-                if (id < 10) {
+                if (id < 9) {
                     this.innerHTML = "00" + (id+1);
                 }
-                else if (id < 100) {
+                else if (id < 99) {
                     this.innerHTML = "0" + (id+1);
                 }
                 else {
