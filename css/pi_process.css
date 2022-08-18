@@ -4,10 +4,6 @@
     overflow-x: auto;
     width: 100%;
     height: fit-content;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 
 .topnav-pi-process {
@@ -59,7 +55,7 @@
     padding: 12px 30px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.2vw;
 }
 
 .badge:disabled {
@@ -76,7 +72,7 @@
     padding: 12px 30px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.2vw;
 }
 
 .extra-interactor:hover {
