@@ -62,6 +62,9 @@ parts:
       title: Models
       sections:
       - file: eee/models/pi_process_model
+      - file: eee/models/pi_process_RFHF
+      - file: eee/models/pi_process_ASIC
+      - file: eee/models/pi_process_Hybrid
   - caption: Mechanical chapter
     numbered: true
     chapters:
