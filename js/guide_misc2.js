@@ -1,4 +1,4 @@
-window.onload = function () {
+function runMiscellaneousGuide() {
     let conv_container = document.getElementById("messagesTrack");
 
     let buttons = new Map();
