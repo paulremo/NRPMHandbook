@@ -1,6 +1,3 @@
-console.log("initiate decision tree");
-
-
 function runDT() {
 
     console.log("initiate decision tree")
