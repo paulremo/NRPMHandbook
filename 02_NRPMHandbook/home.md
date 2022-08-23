@@ -25,10 +25,14 @@ This digital handbook contains a methodology, a methods and four application-spe
 
 :::{grid-item-card} **Methodologies**
 <a href="methodologies/handbook/intro.html"><img class="link-image" src="_static/images/methodologyPicture.png" alt="logo methodologies"></a>
+^^^
+Methodologies description
 :::
 
 :::{grid-item-card} **Methods**
 <a href="methods/handbook/intro.html"><img class="link-image" src="_static/images/methodPicture.png" alt="logo methods"></a>
+^^^
+Methods description
 :::
 ::::
 
@@ -37,10 +41,14 @@ This digital handbook contains a methodology, a methods and four application-spe
 
 :::{grid-item-card} **EEE**
 <a href="eee/handbook/intro.html"><img class="link-image" src="_static/images/eeePicture.png" alt="logo eee"></a>
+^^^
+EEE description
 :::
 
 :::{grid-item-card} **Mechanical**
 <a href="mechanical/handbook/introduction.html"><img class="link-image" src="_static/images/mecaPicture.png" alt="logo mechanical"></a>
+^^^
+Mechanical description
 :::
 ::::
 
@@ -49,10 +57,14 @@ This digital handbook contains a methodology, a methods and four application-spe
 
 :::{grid-item-card} **Miscellaneous**
 <a href="miscellaneous/handbook/introduction.html"><img class="link-image" src="_static/images/miscellaneousPicture.png" alt="logo miscellaneous"></a>
+^^^
+Miscellaneous description
 :::
 
 :::{grid-item-card} **System**
 <a href="system/handbook/introduction.html"><img class="link-image" src="_static/images/systemPicture.png" alt="logo system"></a>
+^^^
+System description
 :::
 ::::
 

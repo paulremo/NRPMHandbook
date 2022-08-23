@@ -19,3 +19,5 @@ Here you can follow step by step the process to calculate the RP for any item cl
         </tr>
     </table>
 </div>
+
+<script type="text/javascript">runMiscellaneousGuide()</script>
