@@ -1,18 +1,7 @@
 (home_page)=
 # Welcome to the NRPM digital handbook!
 
-This is the digital version of the {term}`NRPM` handbook for reliability.space. The handbook is currently under construction, but already offers a large collection of sections to explore, guides to interact with, and models to analyze.
-
-```{admonition} Under construction
-:class: todo
-This digital handbook is under construction. Throughout the handbook you will find notes titled *under construction* that warn about content that is not yet finalized.
-
-The following sections (and their subsections) are finalized and serve as a template for the remaining, unfinished sections:
-
-- {numref}`sec_mech_models`: This sections hosts three tools for advanced interactive reliability assessment.
-- {numref}`sec_misc_handbook`: This sections hosts the digitalized version of the miscellaneous chapter.
-- {numref}`sec_misc_models`: This sections hosts two interactive tools for exploring the miscellaneous chapter of the digital handbook.
-```
+This is the digital version of the {term}`NRPM` handbook for reliability.space. The handbook offers technical content in the [Handbook](methodologies) sections and interactive content in the [Models](sec_eee_models) sections.
 
 ## Objective
 
