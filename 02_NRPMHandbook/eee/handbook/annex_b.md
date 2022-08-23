@@ -462,10 +462,10 @@ Generally, each question is dedicated to either the prime contractor or the sub-
     - L3 L4
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-c')" placeholder="Search table...">
 
 ```{list-table} Questions and answers to process questionnaire - DESIGN
-:name: eee-table4-127-
+:name: eee-table4-127-c
 :header-rows: 1
 :widths: 3 30 20 7 10 10 10 10
 
@@ -487,10 +487,10 @@ Generally, each question is dedicated to either the prime contractor or the sub-
     - 
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-c')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-d')" placeholder="Search table...">
 
 ```{list-table} Questions and answers to process questionnaire - MANUFACTURING OF BOARD - SUBASSEMBLY
-:name: eee-table4-127-c
+:name: eee-table4-127-d
 :header-rows: 1
 :widths: 3 30 20 7 10 10 10 10
 
@@ -936,10 +936,10 @@ Generally, each question is dedicated to either the prime contractor or the sub-
     - 
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-e')" placeholder="Search table...">
 
 ```{list-table} Questions and answers to process questionnaire - DESIGN
-:name: eee-table4-127-
+:name: eee-table4-127-e
 :header-rows: 1
 :widths: 3 30 20 7 10 10 10 10
 
@@ -961,10 +961,10 @@ Generally, each question is dedicated to either the prime contractor or the sub-
     - 
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-f')" placeholder="Search table...">
 
 ```{list-table} Questions and answers to process questionnaire - DESIGN
-:name: eee-table4-127-
+:name: eee-table4-127-f
 :header-rows: 1
 :widths: 3 30 20 7 10 10 10 10
 
@@ -986,10 +986,10 @@ Generally, each question is dedicated to either the prime contractor or the sub-
     - 
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-127-g')" placeholder="Search table...">
 
 ```{list-table} Questions and answers to process questionnaire - DESIGN
-:name: eee-table4-127-
+:name: eee-table4-127-g
 :header-rows: 1
 :widths: 3 30 20 7 10 10 10 10
 
