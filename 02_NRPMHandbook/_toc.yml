@@ -58,7 +58,7 @@ parts:
       - file: eee/handbook/annex_a
       - file: eee/handbook/annex_b
       - file: eee/handbook/annex_c
-    - file: eee/models/intro_models
+    - file: eee/models/intro
       title: Models
       sections:
       - file: eee/models/pi_process_model
@@ -68,7 +68,7 @@ parts:
   - caption: Mechanical chapter
     numbered: true
     chapters:
-    - file: mechanical/handbook/introduction
+    - file: mechanical/handbook/intro
       title: Handbook
       sections:
       - file: mechanical/handbook/scope
@@ -86,7 +86,7 @@ parts:
         - file: mechanical/handbook/reliability_prediction/structural_models_equations
         - file: mechanical/handbook/reliability_prediction/examples                        
       - file: mechanical/handbook/bibliographic_references  
-    - file: mechanical/models/introduction
+    - file: mechanical/models/intro
       title: Models
       sections:
       - file: mechanical/models/stress_strength
@@ -100,7 +100,7 @@ parts:
   - caption: Miscellaneous chapter
     numbered: true
     chapters:
-    - file: miscellaneous/handbook/introduction
+    - file: miscellaneous/handbook/intro
       title: Handbook
       sections:
       - file: miscellaneous/handbook/scope
@@ -118,7 +118,7 @@ parts:
         - file: miscellaneous/handbook/reliability_prediction/basic_fr_derivation_nsm
         - file: miscellaneous/handbook/reliability_prediction/reliability_data_sm    
       - file: miscellaneous/handbook/bibliographic_references
-    - file: miscellaneous/models/introduction
+    - file: miscellaneous/models/intro
       title: Models
       sections:
       - file: miscellaneous/models/failure_rate_processing
@@ -128,7 +128,7 @@ parts:
   - caption: System chapter
     numbered: true
     chapters:
-    - file: system/handbook/introduction
+    - file: system/handbook/intro
       title: Handbook
       sections:
       - file: system/handbook/scope
@@ -148,7 +148,7 @@ parts:
         - file: system/handbook/reliability_prediction/systematic_failure_modelling  
         - file: system/handbook/reliability_prediction/consideration_software_failures
       - file: system/handbook/bibliographic_references
-    - file: system/models/introduction
+    - file: system/models/intro
       title: Models
       sections:
       - file: system/models/wear_out

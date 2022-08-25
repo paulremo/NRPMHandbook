@@ -24,7 +24,7 @@ The results of the PISTIS project have been released after the development of th
 ```{admonition} Proposition
 :class: recommendation
 
-The reliability.space consortium has not been able to apply the models presented in this paragraph so it is only proposed to the users to apply these models for their designs.
+The reliability.space consortium has not been able to apply the models presented in this section so it is only proposed to the users to apply these models for their designs.
 ```
 
 (eee_4_4_2_1)=

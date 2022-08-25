@@ -258,9 +258,9 @@ In the classification of Chapter 2, the physical failure rate $\lambda_{\text{Ph
 
 -   The basic failure rates $\lambda_{0}$ based on statistics;
 
--   The physical contributions $\Pi_{\text{acceleration}}$ which are based on the physics of failures, as described in paragraphs {numref}`eee_4_3_1_13`, {numref}`eee_4_3_1_14`, {numref}`eee_4_3_1_15`, {numref}`eee_4_3_1_16`.
+-   The physical contributions $\Pi_{\text{acceleration}}$ which are based on the physics of failures, as described in {numref}`eee_4_3_1_13`, {numref}`eee_4_3_1_14`, {numref}`eee_4_3_1_15`, {numref}`eee_4_3_1_16`.
 
--   The contributions of specific over-stresses $\Pi_{\text{induced}}$ not considered by the mission profile, as described in paragraph {numref}`eee_4_3_1_20`.
+-   The contributions of specific over-stresses $\Pi_{\text{induced}}$ not considered by the mission profile, as described in {numref}`eee_4_3_1_20`.
 
 ````{admonition} Equation
 :class: equation
@@ -423,7 +423,7 @@ When computing the vibration input in the mission profile, for phases with no vi
 (eee_4_3_1_17)=
 ## Recommended values for over-stresses of EEE components for space applications
 
-Reliability.space directly considers the contribution of mechanical, electrical or thermal over-stresses on components as described in paragraph {numref}`eee_4_3_1_13`. An additional factor, the induced factor $\Pi_{\text{induced}\_i}$ is a parameter representing the contribution of other specific over-stresses not considered by the mission profile. This induced factor is based on four different contributors according to the following equation:
+Reliability.space directly considers the contribution of mechanical, electrical or thermal over-stresses on components as described in {numref}`eee_4_3_1_13`. An additional factor, the induced factor $\Pi_{\text{induced}\_i}$ is a parameter representing the contribution of other specific over-stresses not considered by the mission profile. This induced factor is based on four different contributors according to the following equation:
 
 ````{admonition} Equation
 :class: equation
@@ -783,10 +783,10 @@ recom_{grade} = \frac{1}{213} \cdot \sum_{i}^{\text{Recommendations}}{{\text{Rec
 (eee_4_3_1_21)=
 ## Coefficient of sensitivity to over-stresses
 
-$C_{sensitivity}$ represents the coefficient of sensitivity to over-stresses inherent to the item technology considered. Sensitivities related to Electrical OverStress, Thermal OverStress and Mechanical OverStress are given to show the relative sensitivity of EEE components to the different types of overstresses. The coefficient $C_{sensitivity}$ is an exponential factor in the $\Pi_{induced\_ i}$ formula and specific to each component technology. The values for each technology are provided in paragraph {numref}`eee_4_3_4`.
+$C_{sensitivity}$ represents the coefficient of sensitivity to over-stresses inherent to the item technology considered. Sensitivities related to Electrical OverStress, Thermal OverStress and Mechanical OverStress are given to show the relative sensitivity of EEE components to the different types of overstresses. The coefficient $C_{sensitivity}$ is an exponential factor in the $\Pi_{induced\_ i}$ formula and specific to each component technology. The values for each technology are provided in {numref}`eee_4_3_4`.
 
 ```{admonition} Note
 :class: note
 
-For the 2021 issue of FIDES, these actors have been modified. The detail is also given in paragraph {numref}`eee_4_3_4`.
+For the 2021 issue of FIDES, these actors have been modified. The detail is also given in {numref}`eee_4_3_4`.
 ```

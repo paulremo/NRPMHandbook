@@ -17,7 +17,7 @@ A 2021 version of FIDES have been issued including some of the updates proposed 
 ```{admonition} Note 2
 :class: note
 
-It is recommended to read this paragraph carefully before modelling the reliability of the different component families (from {numref}`eee_4_3_4_1`). But within these individual paragraphs, the full process is clearly described again within each paragraph, with links to common features ({numref}`eee_4_3_1` and {numref}`eee_4_3_3`).
+It is recommended to read this section carefully before modelling the reliability of the different component families (from {numref}`eee_4_3_4_1`). But within these individual sections, the full process is clearly described again within each section, with links to common features ({numref}`eee_4_3_1` and {numref}`eee_4_3_3`).
 ```
 
 The FIDES approach consists in putting a special attention on the following aspects:
@@ -40,11 +40,11 @@ The reliability.space approach is performed by considering each of these three a
 
 -   adaptation of a mission profile as defined in {numref}`eee_4_3_1` with some specificities of the space applications such as thermal management by conduction, cyclic variations of temperature, level of humidity and vibrations in space;
 
--   use of the reliability models built for each technology of EEE components based on the Physics of Failure with some adaptations described in {numref}`eee_4_3_4` each component model; the preferred use is the part stress method as described in the paragraph.
+-   use of the reliability models built for each technology of EEE components based on the Physics of Failure with some adaptations described in {numref}`eee_4_3_4` each component model; the preferred use is the part stress method as described in the section.
 
 -   consideration of the process during the phases of development, integration into the equipment, integration into the satellite and operations by evaluating a process factor as defined in {numref}`eee_4_3_2_1`.
 
--   use of acceleration factors as described in paragraph {numref}`eee_4_3_1_12` to Vibration stress by considering the duration of each phase $t_{text{phase}}$ according to the total life duration of the satellite
+-   use of acceleration factors as described in {numref}`eee_4_3_1_12` to Vibration stress by considering the duration of each phase $t_{text{phase}}$ according to the total life duration of the satellite
 
 -   recommendation of default values for some of the factors defining the induced factor $\Pi_{\text{induced}\_i}$ as described in {numref}`eee_4_3_1_17`, such as the influence of the usage environment $\Pi_{\text{application}\_i}$ and the influence of the policy for over-stresses $\Pi_{\text{ruggedising}}$;
 

@@ -89,7 +89,7 @@ Sometimes, some of the components are manufactured in different manufacturing si
 (eee_4_3_3_3)=
 ## Component quality assurance for space applications
 
-The $\text{QA}_{\text{component}}$ factor corresponds to the procurement quality level for each component of a program. This is presented in tables different for each family; these will be presented in each subparagraph of {numref}`eee_4_3_4`.
+The $\text{QA}_{\text{component}}$ factor corresponds to the procurement quality level for each component of a program. This is presented in tables different for each family; these will be presented in each subsection of {numref}`eee_4_3_4`.
 
 (eee_4_3_3_4)=
 ## Results and severity of tests for space applications

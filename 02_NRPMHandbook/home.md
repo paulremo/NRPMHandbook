@@ -15,13 +15,13 @@ This digital handbook contains a methodology, a methods and four application-spe
 :::{grid-item-card} **Methodologies**
 <a href="methodologies/handbook/intro.html"><img class="link-image" src="_static/images/methodologyPicture.png" alt="logo methodologies"></a>
 ^^^
-Methodologies description
+Explains the framework and taxonomy used in the {term}`NRPM` handbook and links it to the reliability prediction process and usage, and provides guidance for users that are in charge of planning a prediction.
 :::
 
 :::{grid-item-card} **Methods**
 <a href="methods/handbook/intro.html"><img class="link-image" src="_static/images/methodPicture.png" alt="logo methods"></a>
 ^^^
-Methods description
+Provides information on different inputs and reliability prediction inputs and methods, allowing to understand the background of the models defined in the following chapters.
 :::
 ::::
 
@@ -31,13 +31,13 @@ Methods description
 :::{grid-item-card} **EEE**
 <a href="eee/handbook/intro.html"><img class="link-image" src="_static/images/eeePicture.png" alt="logo eee"></a>
 ^^^
-EEE description
+Explains the modelling of EEE components based on the FIDES methodology
 :::
 
 :::{grid-item-card} **Mechanical**
 <a href="mechanical/handbook/introduction.html"><img class="link-image" src="_static/images/mecaPicture.png" alt="logo mechanical"></a>
 ^^^
-Mechanical description
+Introduces different inputs and methods for mechanical reliability prediction and presents elementary reliability modelling of mechanical items.
 :::
 ::::
 
@@ -47,13 +47,13 @@ Mechanical description
 :::{grid-item-card} **Miscellaneous**
 <a href="miscellaneous/handbook/introduction.html"><img class="link-image" src="_static/images/miscellaneousPicture.png" alt="logo miscellaneous"></a>
 ^^^
-Miscellaneous description
+Introduces methods to treat parts that are difficult to classify into either EEE or mechanical.
 :::
 
 :::{grid-item-card} **System**
 <a href="system/handbook/introduction.html"><img class="link-image" src="_static/images/systemPicture.png" alt="logo system"></a>
 ^^^
-System description
+Provides an overview of existing methods for system applications and consideration of specific aspects relevant to space applications.
 :::
 ::::
 

@@ -225,9 +225,9 @@ Some components more specific to the space domain can be defined with equivalent
 
 The part manufacturing factor $\Pi_{\text{PM}}$ is related to the quality of EEE components and the recommendation is to use a fixed value determined by the values listed in the FIDES guide on page 229.
 
-The process factor $\Pi_{\text{Process}}$ is related to the development process of electronic equipment and the recommendation is to either use a typical $\Pi_{\text{Process}}$ previously calculated for the same kind of application or in case no information is available, to use the maximum value issued from the questionnaire adapted to space applications and described in Paragraph {numref}`eee_4_3_2_1`.
+The process factor $\Pi_{\text{Process}}$ is related to the development process of electronic equipment and the recommendation is to either use a typical $\Pi_{\text{Process}}$ previously calculated for the same kind of application or in case no information is available, to use the maximum value issued from the questionnaire adapted to space applications and described in {numref}`eee_4_3_2_1`.
 
-The induced factor $\Pi_{\text{Induced_i}}$, has some parameters directly fixed for space applications as described in paragraph {numref}`eee_4_3_1`.
+The induced factor $\Pi_{\text{Induced_i}}$, has some parameters directly fixed for space applications as described in {numref}`eee_4_3_1`.
 
 ```{admonition} Recommendation
 :class: recommendation

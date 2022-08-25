@@ -1,5 +1,5 @@
 (annexII_B)=
-# Annexe B Prediction uncertainties for Part III models
+# Annex B Prediction uncertainties for Part III models
 
 In the following, the model development uncertainties associated with the prediction models presented in {ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>` are summarized, using the format proposed in {numref}`method_8_3_1`. Note that the uncertainty of the prediction results depends not only on the uncertainties inherent in the model, but also on the use of these models, see {numref}`method_8_3_2` for details.
 

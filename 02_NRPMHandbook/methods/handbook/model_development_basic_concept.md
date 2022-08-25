@@ -518,7 +518,7 @@ Once a suitable distribution law has been selected, the data sample can be used 
 
 -   The *Maximum Likelihood Method* or *Bayesian methods with non-informative prior* can be applied if the considered data sample is the only information used for modelling.
 
--   *Bayesian methods with informative prior* become relevant to combine different data samples or sources of information (paragraph 5).
+-   *Bayesian methods with informative prior* become relevant to combine different data samples or sources of information ({numref}`method_7`).
 
 Other methods, e.g. the Method of Moments, can be equivalent in terms of the point estimate derived for the parameters of usual time-to-failure distributions, but require additional considerations to quantify statistical uncertainties.
 
