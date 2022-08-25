@@ -113,7 +113,7 @@ Probability density function
 	 for a discrete distribution, it corresponds to the potential cases for which the variate has the value x
 
 Random failure
-	 a failure occurring at a unexpected time due to a residual internal part defect or weakness when submitted to normal operational stresses
+	 a failure occurring at an unexpected time due to a residual internal part defect or weakness when submitted to normal operational stresses
 
 Reliability prediction
 	 the process of estimating the reliability of a system or its components under specified conditions or the result of the analysis 
