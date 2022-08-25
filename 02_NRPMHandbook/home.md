@@ -35,7 +35,7 @@ Explains the modelling of EEE components based on the FIDES methodology
 :::
 
 :::{grid-item-card} **Mechanical**
-<a href="mechanical/handbook/introduction.html"><img class="link-image" src="_static/images/mecaPicture.png" alt="logo mechanical"></a>
+<a href="mechanical/handbook/intro.html"><img class="link-image" src="_static/images/mecaPicture.png" alt="logo mechanical"></a>
 ^^^
 Introduces different inputs and methods for mechanical reliability prediction and presents elementary reliability modelling of mechanical items.
 :::
@@ -45,13 +45,13 @@ Introduces different inputs and methods for mechanical reliability prediction an
 :gutter: 3
 
 :::{grid-item-card} **Miscellaneous**
-<a href="miscellaneous/handbook/introduction.html"><img class="link-image" src="_static/images/miscellaneousPicture.png" alt="logo miscellaneous"></a>
+<a href="miscellaneous/handbook/intro.html"><img class="link-image" src="_static/images/miscellaneousPicture.png" alt="logo miscellaneous"></a>
 ^^^
 Introduces methods to treat parts that are difficult to classify into either EEE or mechanical.
 :::
 
 :::{grid-item-card} **System**
-<a href="system/handbook/introduction.html"><img class="link-image" src="_static/images/systemPicture.png" alt="logo system"></a>
+<a href="system/handbook/intro.html"><img class="link-image" src="_static/images/systemPicture.png" alt="logo system"></a>
 ^^^
 Provides an overview of existing methods for system applications and consideration of specific aspects relevant to space applications.
 :::
