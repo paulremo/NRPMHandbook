@@ -1,7 +1,7 @@
 (meca_4_1)=
 # Process for mechanical reliability predicition
 
-The approach for mechanical {term}`reliability prediction <Reliability prediction>` in space applications presented in this chapter is based on the following three steps, which are described in different Sections:
+The approach for mechanical {term}`reliability prediction <Reliability prediction>` in space applications presented in this chapter is based on the following three steps, which are described in different sections:
 
 * {term}`failure mechanism <Failure mechanism>` identification and focus ({numref}`meca_4_4`)
 The goal of this step is to decide what needs to be modelled, allowing to focus the analysis on items and {term}`failure mechanisms <Failure mechanism>` with non-negligible probability of failure.
