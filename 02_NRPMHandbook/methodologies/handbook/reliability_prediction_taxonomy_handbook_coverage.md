@@ -3,7 +3,6 @@
 
 ```{epigraph}
 
--- Katharina Fischer, Matrisk GmbH
 ```
 
 (methodo_4_1)=
