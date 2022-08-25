@@ -785,7 +785,7 @@ A Petri net consists of the following basic elements:
 - Places: Circles used to model local states or conditions (e.g. failed or functioning).
 - Transitions: Bars used to model local events (e.g. failure or restoration).
 - Arcs: Directed arcs that link places and transitions.
-- 
+
 Within the Petri net, tokens are dynamic elements used to indicate the system state at a certain point in time. Petri nets containing tokens are referred to as marked Petri nets. Firing is an event where one or more tokens move from one place to another.  
 
 The multiplicity assigned to an arc in the Petri net specifies the number of tokens that an arc delivers at a time, whereby multiplicity of $1$ is usually not explicitly defined in the Petri net. A transition is enabled if the number of tokens in each of its inputs is equal to or greater than the multiplicity of the associated arcs. This concept allows to indicate if state transition is enabled or not, as shown in {numref}`Figure_7_15`. In the example, a multiplicity of $2$ is assigned to the arc from $p_{2}$, thus only with two tokens in $p_{2}$, the transition $t_{1}$ is enabled.
