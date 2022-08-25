@@ -728,9 +728,12 @@ The following table lists the 6 categories that cover the Tantalum Capacitor sub
 
 * - <table class="myTable" id="eee_table4_28">
         <thead>
-            <th>Wet tantalum capacitor silver case sealed by elastomer</th>
-            <th>ECTC_01</th>
+            <th colspan="2">ECTC - Tantalum capacitors</th>
         </thead>
+        <tr>
+            <td>Wet tantalum capacitor silver case sealed by elastomer</th>
+            <td>ECTC_01</th>
+        </tr>
         <tr>
             <td>Wet tantalum capacitor silver case sealed by glass beads</td>
             <td>ECTC_02</td>
@@ -993,7 +996,10 @@ The following table lists the 5 categories that cover the Plastic Metallized Cap
 ```{list-table} Detail for Plastic Metallized capacitors
 :name: eee-table4-32
 
-* - <table class="myTable" id="">
+* - <table class="myTable" id="eee_table4_32">
+        <thead>
+            <th colspan="2">ECFC - Plastic Metallized capacitors</th>
+        </thead>
         <tr>
             <td>Polypropylene film capacitor (PP)</td>
             <td>ECFC_01</td>
@@ -1074,7 +1080,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$ given in 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_33')"
     placeholder="Search table...">
 
-```{list-table} Detail for Plastic Metallized capacitors
+```{list-table} Parameters for physical stresses of plastic film capacitors.
 :name: eee-table4-33
 
 * - <table class="myTable" id="eee_table4_33">
