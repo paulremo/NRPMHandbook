@@ -31,7 +31,7 @@ Provides information on different inputs and reliability prediction inputs and m
 :::{grid-item-card} **EEE**
 <a href="eee/handbook/intro.html"><img class="link-image" src="_static/images/eeePicture.png" alt="logo eee"></a>
 ^^^
-Explains the modelling of EEE components based on the FIDES methodology
+Explains the modelling of EEE components based on the FIDES methodology.
 :::
 
 :::{grid-item-card} **Mechanical**

@@ -1,7 +1,7 @@
 (sec_eee_models)=
-# Intro
+# EEE models
 
-```{admonition} Under construction
-:class: todo
-The content of this page is missing and will be provided in a future version of the NRPM digital handbook.
+This section hosts a set of interactive reliability assessment tools related to the {ref}`sec_eee_handbook`.
+
+```{tableofcontents}
 ```

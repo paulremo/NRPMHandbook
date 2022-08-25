@@ -1,7 +1,7 @@
 (sec_mech_models)=
-# Interactive models
+# Mechanical models
 
-This section hosts a set of interactive reliability assessment tools.
+This section hosts a set of interactive reliability assessment tools related to the {ref}`sec_mech_handbook`.
 
 ```{tableofcontents}
 ```
