@@ -1,9 +1,6 @@
 (methodo_4)=
 # Reliability prediction taxonomy and handbook coverage
 
-```{epigraph}
-
-```
 
 (methodo_4_1)=
 ## Project phases and reliability in time
