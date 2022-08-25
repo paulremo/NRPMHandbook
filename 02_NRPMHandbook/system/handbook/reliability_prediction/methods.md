@@ -781,11 +781,6 @@ For complex problems with $n$ components it is more suitable to solve the set of
 
 Petri nets are a graphical technique for the representation and analysis of complex logical interactions among elements in a system. Petri nets allow describing the behaviour of a system by modelling the relationship between local states and local events {cite:t}`sys-IEC-62551`. They are able to model the various states of the system and how it evolves from one state to another when events (failures, repairs, periodic tests, mission phases, etc.) occur. A detailed description of Petri networks can be found in {cite:t}`sys-IEC-62551`.
 
-```{admonition} Under construction
-:class: todo
-Miss 2 ref just above
-```
-
 A Petri net consists of the following basic elements:
 - Places: Circles used to model local states or conditions (e.g. failed or functioning).
 - Transitions: Bars used to model local events (e.g. failure or restoration).
