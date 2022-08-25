@@ -1,10 +1,6 @@
 (methodo_5)=
 # Reliability prediction during project life cycle
 
-```{epigraph}
-
-
-```
 
 
 (methodo_5_1)=
