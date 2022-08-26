@@ -1,4 +1,4 @@
-# Normative reference
+# Normative references
 
 ```{bibliography}
 :filter: keywords % "nr-eee"
