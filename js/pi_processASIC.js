@@ -24,6 +24,15 @@ function runPiProcessASIC() {
             else {
                 document.getElementById(this.id + "_switch").style.backgroundColor = "red";
             }
+            document.getElementById(this.id + "_switch").getElementsByClassName("inner-span-switch")[0].className = document.getElementById(this.id + "_switch").getElementsByClassName("inner-span-switch")[0].className.replace(" inner-span-switch-start", "");
+                console.log(document.getElementById(this.id + "_switch").getElementsByClassName("inner-span-switch")[0].className)
+            if (this.checked) {
+                document.getElementById(this.id + "_switch").getElementsByClassName("inner-span-switch")[0].className += " inner-span-switch-on"
+            }
+            else {
+                document.getElementById(this.id + "_switch").getElementsByClassName("inner-span-switch")[0].className = document.getElementById(this.id + "_switch").getElementsByClassName("inner-span-switch")[0].className.replace(" inner-span-switch-on", "");
+                console.log(document.getElementById(this.id + "_switch").getElementsByClassName("inner-span-switch")[0].className)
+            }
         }
     }
 

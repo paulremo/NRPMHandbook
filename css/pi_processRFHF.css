@@ -57,7 +57,7 @@
     transition: .4s;
 }
 
-.switch-slider:before {
+.inner-span-switch {
     position: absolute;
     content: "";
     height: 26px;
@@ -77,10 +77,14 @@
     box-shadow: 0 0 1px #098324;
 }
 
-.switch-check:checked+.switch-slider:before {
+.inner-span-switch-on {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+}
+
+.inner-span-switch-start {
+    left: 17px;
 }
 
 #pi_process_RFHF_table{
