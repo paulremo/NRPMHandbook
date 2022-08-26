@@ -1,4 +1,3 @@
-
 (meca_4_7)=
 # Structural reliability models and equations
 
