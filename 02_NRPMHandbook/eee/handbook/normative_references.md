@@ -1,7 +1,7 @@
-# Normative reference
+# Normative references
 
 ```{bibliography}
-:filter: keywords % "nr"
+:filter: keywords % "nr-eee"
 :labelprefix: NR_EEE_
 :keyprefix: eee-
 ```

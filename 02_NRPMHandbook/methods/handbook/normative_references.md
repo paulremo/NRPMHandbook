@@ -2,7 +2,7 @@
 
 
 ```{bibliography}
-:filter: keywords % "nr"
+:filter: keywords % "nr-method"
 :labelprefix: NR_METHOD_
 :keyprefix: method-
 ```
