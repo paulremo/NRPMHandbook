@@ -448,7 +448,7 @@ function runPiProcess() {
                         p.style.color = "black";
                     }
                     else if (currentAnswers.get(current_category).get(parseInt(p.id.substring(4))) != null) {
-                        p.style.color = "rgb(93, 93, 93)";
+                        p.style.color = "#b3b3b3";
                     }
                     else {
                         p.style.color = "#26B4D4";
@@ -466,7 +466,7 @@ function runPiProcess() {
                     this.innerHTML = "0" + (id + 1);
                 }
                 else {
-                    this.innerHTML = id + 1;
+                    this.innerHTML = id + 1; 
                 }
                 if (this.id == currentPage) {
                     this.style.backgroundColor = "red";
@@ -476,7 +476,7 @@ function runPiProcess() {
                         this.style.backgroundColor = "black";
                     }
                     else if (currentAnswers.get(current_category).get(parseInt(this.id.substring(4))) != null) {
-                        this.style.backgroundColor = "rgb(93, 93, 93)";
+                        this.style.backgroundColor = "#b3b3b3";
                     }
                     else {
                         this.style.backgroundColor = "#26B4D4";
@@ -532,7 +532,7 @@ function runPiProcess() {
                     this.style.color = "black";
                 }
                 else if (currentAnswers.get(current_category).get(this.id.substring(4)) != null) {
-                    this.style.color = "rgb(93, 93, 93)";
+                    this.style.color = "#b3b3b3";
                 }
                 else {
                     this.style.color = "#26B4D4";
@@ -591,7 +591,7 @@ function runPiProcess() {
                 p.style.color = "black";
             }
             else if (currentAnswers.get(current_category).get(parseInt(p.id.substring(4))) != null) {
-                p.style.color = "rgb(93, 93, 93)";
+                p.style.color = "#b3b3b3";
             }
             else {
                 p.style.color = "#26B4D4";
@@ -1105,7 +1105,7 @@ function runPiProcess() {
     document.getElementById("copyAnswers").onclick = function () {
         let ans = saveAnswers();
         navigator.clipboard.writeText(ans);
-        alert("Copied the answers. Please make sure to properly paste the answers and to save it in a dedicated text file. Do not modify data unless they may compromise the results");
+        alert("Copied the answers. Please make sure to properly paste the answers and to save it in a dedicated text file. Modifying the data might compromise the results.");
     }
 
     document.getElementById("resume").onclick = function () {
