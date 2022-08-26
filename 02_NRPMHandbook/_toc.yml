@@ -11,6 +11,7 @@ parts:
     - file: methodologies/handbook/intro
       title: Handbook
       sections:
+      - file: methodologies/handbook/scope
       - file: methodologies/handbook/normative_references
       - file: methodologies/handbook/terms
       - file: methodologies/handbook/reliability_prediction_taxonomy_handbook_coverage
@@ -22,6 +23,7 @@ parts:
     - file: methods/handbook/intro
       title: Handbook
       sections:
+      - file: methods/handbook/scope
       - file: methods/handbook/normative_references
       - file: methods/handbook/terms
       - file: methods/handbook/model_development_basic_concept
