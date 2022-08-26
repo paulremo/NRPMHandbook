@@ -2668,8 +2668,7 @@ The following table presents the different subfamilies and the corresponding mod
             <td>11 Microwave varactor (GaAs)</td>
             <td>No/Yes</td>
             <td>No/Yes</td>
-            <td>Not usually used in space applications, no more present in the EPPL list Error: Reference source not
-                found but recommendation to use “PIN, Schottky, Tunnel, varactor diodes (RF HF)”</td>
+            <td>Not usually used in space applications, no more present in the EPPL list  but recommendation to use “PIN, Schottky, Tunnel, varactor diodes (RF HF)”</td>
             <td>HFDI_01</td>
         </tr>
         <tr>
@@ -5487,7 +5486,7 @@ The following table presents the different subfamilies and the corresponding mod
             <td>21 Memory DRAM/SDRAM</td>
             <td>p111</td>
             <td>p123</td>
-            <td>No more present in the EPPL list Error: Reference source not found but recommendation to use “DRAM”</td>
+            <td>No more present in the EPPL list  but recommendation to use “DRAM”</td>
             <td>ECIC_62</td>
         </tr>
         <tr>
@@ -5613,7 +5612,7 @@ The following table presents the different subfamilies and the corresponding mod
             <td>57 Linear Timer</td>
             <td>p111</td>
             <td>p123</td>
-            <td>No more present in the EPPL list Error: Reference source not found but recommendation to use “Analogue and
+            <td>No more present in the EPPL list  but recommendation to use “Analogue and
                 hybrid circuit (MOS, bipolar, BiCMOS)”</td>
             <td>ECIS_58</td>
         </tr>
@@ -5621,7 +5620,7 @@ The following table presents the different subfamilies and the corresponding mod
             <td>58 Linear Multiplier</td>
             <td>p111</td>
             <td>p123</td>
-            <td>No more present in the EPPL list Error: Reference source not found but recommendation to use “Analogue and
+            <td>No more present in the EPPL list  but recommendation to use “Analogue and
                 hybrid circuit (MOS, bipolar, BiCMOS)”</td>
             <td>ECIS_58</td>
         </tr>
@@ -5629,7 +5628,7 @@ The following table presents the different subfamilies and the corresponding mod
             <td>59 Linear Switches</td>
             <td>p111</td>
             <td>p123</td>
-            <td>No more present in the EPPL list Error: Reference source not found but recommendation to use “Analogue and
+            <td>No more present in the EPPL list  but recommendation to use “Analogue and
                 hybrid circuit (MOS, bipolar, BiCMOS)”</td>
             <td>ECIS_58</td>
         </tr>
