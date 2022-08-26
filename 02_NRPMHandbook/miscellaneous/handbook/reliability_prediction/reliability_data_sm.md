@@ -145,7 +145,6 @@ The failure rate is provided per TWT Channel (mono channel or dual channel). In 
             <td>STD_001</td>
             <td>
                 <p>TWTA, Single HPA</p>
-                <p>(refer to note 1)</p>
             </td>
             <td>200</td>
             <td>n/a</td>
