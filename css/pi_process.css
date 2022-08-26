@@ -313,10 +313,10 @@
 
 #overlay {
     position: fixed;
-    overflow-y: auto;
+    overflow-y: hidden;
     display: block;
     width: 100%;
-    height: auto;
+    height: fit-content;
     top: 0;
     left: 0;
     right: 0;
