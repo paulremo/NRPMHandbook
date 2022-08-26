@@ -21,21 +21,21 @@
                         <td width="70%">
                             <div id="text">
                                 <p>Welcome to the Π<sub>process</sub> calculation interface !</p>
-                                <p>Here you can aswer the different questions to calculate the value of the factor
+                                <p class="help-message-pi-process" style="display: none;">Here you can aswer the different questions to calculate the value of the factor
                                     Π<sub>process</sub> by selecting one of the four options</p>
-                                <p>Click the planets <a><img src="pictures/pi_process/emptyPlanet.svg" width="20em" /></a>
+                                <p class="help-message-pi-process" style="display: none;">Click the planets <a><img src="pictures/pi_process/emptyPlanet.svg" width="20em" /></a>
                                     at
                                     the top to access the different categories.</p>
-                                <p>Click the button "Learn more" to get more information on the question (FIDES
+                                <p class="help-message-pi-process" style="display: none;">Click the button "Learn more" to get more information on the question (FIDES
                                     reference,
                                     recommendation, weight).</p>
-                                <p>The indications <a style="color:darkgoldenrod;">MAX, |, MIN and FXD</a> indicate the
+                                <p class="help-message-pi-process" style="display: none;">The indications <a style="color:darkgoldenrod;">MAX, |, MIN and FXD</a> indicate the
                                     recommended level(s) for your application</p>
-                                <p>You can save your answers by clicking the pink button "Save answers". This will copy
+                                <p class="help-message-pi-process" style="display: none;">You can save your answers by clicking the pink button "Save answers". This will copy
                                     your
                                     answers in the clipboard and save a txt file containing your answers.
                                     Then you can load the answers by pasting this value in the text input below</p>
-                                <p>You can also download a csv sum up file of your answers</p>
+                                <p class="help-message-pi-process" style="display: none;">You can also download a csv sum up file of your answers</p>
                                 <div id="modeInput">
                                     <p>Before starting, please chose your configuration below:</p>
                                     <table id="parameter-table">
@@ -68,8 +68,7 @@
                                 <div class="answers-input" id="answersInput">
                                     <a style="margin-left: 5px; font-size: 1.2em;">Paste copied answers to load your
                                         saved answers</a><input type="text" id="question-load"
-                                        placeholder="Paste answers here" /><button
-                                        onclick="document.getElementById('question-load').value = ''">Erase</button>
+                                        placeholder="Paste answers here" /><button id="question-load-button">Load</button>
                                 </div>
                                 <div>
                                     <button id="start"
