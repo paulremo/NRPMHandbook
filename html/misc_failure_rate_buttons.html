@@ -31,85 +31,85 @@
     <table class="customed-table">
 
         <tr>
-            <td class="value-type-mfr" id="lambda_1" onmouseenter="update_help('lambda_1')">
+            <td class="value-type-mfr" id="lambda_1">
                 <p class="value-type-mfr-title">Value of &lambda;<sub>1</sub> (FITs) </p>
             </td>
             <td class="value-processed">
                 <p id="lambda1_value"></p>
             </td>
             <td class="controllers">   
-                <textarea class="text-entry" id="lambda1_entry" name="story" rows="1" cols="6" onchange="lambda12Entry.onLambdachanged()"></textarea><a style="margin-left: 50px;" id="lambda1_message"></a>
+                <textarea class="text-entry" id="lambda1_entry" name="story" rows="1" cols="6"></textarea><a style="margin-left: 50px;" id="lambda1_message"></a>
             </td>
         </tr>
 
         <tr>
-            <td class="value-type-mfr" id="lambda_2" onmouseenter="update_help('lambda_2')">
-                <p class="value-type-mfr-title">Value of &lambda;<sub>2</sub> (FITs) </p>
+            <td class="value-type-mfr" id="lambda_2">
+                <p class="value-type-mfr-title">Value of K<sub>parameter</sub></p>
             </td>
             <td class="value-processed">
                 <p id="lambda2_value"></p>
             </td>
             <td class="controllers">   
-                <textarea class="text-entry" id="lambda2_entry" name="story" rows="1" cols="12" onchange="lambda12Entry.onLambdachanged()"></textarea><a style="margin-left: 50px;font-size: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="lambda2_message"></a>
+                <textarea class="text-entry" id="lambda2_entry" name="story" rows="1" cols="12"></textarea><a style="margin-left: 50px;font-size: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="lambda2_message"></a>
             </td>
         </tr>
 
         <tr>
-            <td class="value-type-mfr" id="pi_Q" onmouseenter="update_help('pi_Q')">
+            <td class="value-type-mfr" id="pi_Q">
                 <p class="value-type-mfr-title">Value of &Pi;<sub>Q</sub></p>
             </td>
             <td class="value-processed">
                 <p id="piQ_value"></p>
             </td>
             <td class="controllers">
-                <button class="red-button" id="low_piQ_button" onclick = "redButtonPiQ.clicked()" onmouseenter="update_help('low_pi_Q')">LOW</button>
-                <button class="yellow-button" id="medium_piQ_button" onclick = "yellowButtonPiQ.clicked()" onmouseenter="update_help('medium_pi_Q')">MEDIUM</button>
-                <button class="green-button" id="high_piQ_button" onclick = "greenButtonPiQ.clicked()" onmouseenter="update_help('high_pi_Q')">HIGH</button>
+                <button class="red-button" id="low_piQ_button">LOW</button>
+                <button class="yellow-button" id="medium_piQ_button">MEDIUM</button>
+                <button class="green-button" id="high_piQ_button">HIGH</button>
             </td>
         </tr>
 
         <tr>
-            <td class="value-type-mfr" id="pi_M" onmouseenter="update_help('pi_M')">
+            <td class="value-type-mfr" id="pi_M">
                 <p class="value-type-mfr-title">Value of &Pi;<sub>M</sub></p>
             </td>
             <td class="value-processed">
                 <p id="piM_value"></p>
             </td>
             <td class="controllers">
-                <button class="red-button" id="low_piM_button" onclick = "redButtonPiM.clicked()" onmouseenter="update_help('low_pi_M')">LOW</button>
-                <button class="yellow-button" id="medium_piM_button" onclick = "yellowButtonPiM.clicked()" onmouseenter="update_help('medium_pi_M')">MEDIUM</button>
-                <button class="green-button" id="high_piM_button" onclick = "greenButtonPiM.clicked()" onmouseenter="update_help('high_pi_M')">HIGH</button>
+                <button class="red-button" id="low_piM_button">LOW</button>
+                <button class="yellow-button" id="medium_piM_button">MEDIUM</button>
+                <button class="green-button" id="high_piM_button">HIGH</button>
             </td>
         </tr>
 
         <tr>
-            <td class="value-type-mfr" id="pi_T" onmouseenter="update_help('pi_T')">
+            <td class="value-type-mfr" id="pi_T">
                 <p class="value-type-mfr-title">Value of &Pi;<sub>T</sub></p>
             </td>
             <td class="value-processed">
                 <p id="piT_value"></p>
             </td>
             <td>
-                <input type="checkbox" id="piT_checkbox" onclick="checkboxPiT.change_check()">
+                <input type="checkbox" id="piT_checkbox">
                 <label for="piT_checkbox">Applicable</label>
             </td>
         </tr>
 
         <tr>
-            <td class="value-type-mfr" id="pi_C"  onmouseenter="update_help('pi_C')">
+            <td class="value-type-mfr" id="pi_C">
                 <p class="value-type-mfr-title">Value of &Pi;<sub>C</sub></p>
             </td>
             <td class="value-processed">
                 <p id="piC_value"></p>
             </td>
             <td>
-                <input type="checkbox" id="piC_checkbox" onclick="checkboxPiC.change_check()">
+                <input type="checkbox" id="piC_checkbox">
                 <label for="piC_checkbox">Applicable</label>
             </td>
         </tr>
 
         <tr>
-            <td class="value-type-mfr" id="pi_OP" onmouseenter="update_help('pi_OP')">
+            <td class="value-type-mfr" id="pi_OP">
                 <p class="value-type-mfr-title">Value of &Pi;<sub>OP</sub></p>
             </td>
             <td class="value-processed">
@@ -118,80 +118,80 @@
             <td>
                 <table class="customed-table">
                     <tr>
-                        <td class="value-type-mfr" id="orbit" onmouseenter="update_help('orbit')">
+                        <td class="value-type-mfr" id="orbit">
                             <p class="value-type-mfr-subtitle">Value of orbit</p>
                         </td>
                         <td class="value-processed">
                             <p id="orbit_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_orbit_button" onclick = "redButtonOrbit.clicked()" onmouseenter="update_help('not_compliant')">NO COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_orbit_button" onclick = "yellowButtonOrbit.clicked()" onmouseenter="update_help('partially_compliant')">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_orbit_button" onclick = "greenButtonOrbit.clicked()" onmouseenter="update_help('fully_compliant')">FULL COMPLIANCE</button>
+                            <button class="red-button" id="low_orbit_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_orbit_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_orbit_button">FULL COMPLIANCE</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="value-type-mfr" id="temperature" onmouseenter="update_help('temperature')">
+                        <td class="value-type-mfr" id="temperature">
                             <p class="value-type-mfr-subtitle">Value of temperature</p>
                         </td>
                         <td class="value-processed">
                             <p id="temperature_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_temperature_button" onclick = "redButtonTemperature.clicked()" onmouseenter="update_help('not_compliant')">NO COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_temperature_button" onclick = "yellowButtonTemperature.clicked()" onmouseenter="update_help('partially_compliant')">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_temperature_button" onclick = "greenButtonTemperature.clicked()" onmouseenter="update_help('fully_compliant')">FULL COMPLIANCE</button>
+                            <button class="red-button" id="low_temperature_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_temperature_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_temperature_button">FULL COMPLIANCE</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="value-type-mfr" id="power" onmouseenter="update_help('power')">
+                        <td class="value-type-mfr" id="power">
                             <p class="value-type-mfr-subtitle">Value of power</p>
                         </td>
                         <td class="value-processed">
                             <p id="power_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_power_button" onclick = "redButtonPower.clicked()" onmouseenter="update_help('not_compliant')">NO COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_power_button" onclick = "yellowButtonPower.clicked()" onmouseenter="update_help('partially_compliant')">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_power_button" onclick = "greenButtonPower.clicked()" onmouseenter="update_help('fully_compliant')">FULL COMPLIANCE</button>
+                            <button class="red-button" id="low_power_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_power_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_power_button">FULL COMPLIANCE</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="value-type-mfr" id="thermal_cycling" onmouseenter="update_help('thermal_cycling')">
+                        <td class="value-type-mfr" id="thermal_cycling">
                             <p class="value-type-mfr-subtitle">Value of thermal cycling</p>
                         </td>
                         <td class="value-processed">
                             <p id="tc_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_tc_button" onclick = "redButtonTC.clicked()" onmouseenter="update_help('not_compliant')">NO COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_tc_button" onclick = "yellowButtonTC.clicked()" onmouseenter="update_help('partially_compliant')">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_tc_button" onclick = "greenButtonTC.clicked()" onmouseenter="update_help('fully_compliant')">FULL COMPLIANCE</button>
+                            <button class="red-button" id="low_tc_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_tc_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_tc_button">FULL COMPLIANCE</button>
                         </td>
                     </tr>
                     <tr>
-                        <td class="value-type-mfr" id="duty_cycle" onmouseenter="update_help('duty_cycle')">
+                        <td class="value-type-mfr" id="duty_cycle">
                             <p class="value-type-mfr-subtitle">Value of duty cycle</p>
                         </td>
                         <td class="value-processed">
                             <p id="dc_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_dc_button" onclick = "redButtonDC.clicked()" onmouseenter="update_help('not_compliant')">NO COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_dc_button" onclick = "yellowButtonDC.clicked()" onmouseenter="update_help('partially_compliant')">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_dc_button" onclick = "greenButtonDC.clicked()" onmouseenter="update_help('fully_compliant')">FULL COMPLIANCE</button>
+                            <button class="red-button" id="low_dc_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_dc_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_dc_button">FULL COMPLIANCE</button>
                     </tr>
                     <tr>
-                        <td class="value-type-mfr" id="others" onmouseenter="update_help('others')">
+                        <td class="value-type-mfr" id="others">
                             <p class="value-type-mfr-subtitle">Value of others</p>
                         </td>
                         <td class="value-processed">
                             <p id="others_value"></p>
                         </td>
                         <td>
-                            <button class="red-button" id="low_others_button" onclick = "redButtonOthers.clicked()" onmouseenter="update_help('not_compliant')">NO COMPLIANCE</button>
-                            <button class="yellow-button" id="medium_others_button" onclick = "yellowButtonOthers.clicked()" onmouseenter="update_help('partially_compliant')">PARTIAL COMPLIANCE</button>
-                            <button class="green-button" id="high_others_button" onclick = "greenButtonOthers.clicked()" onmouseenter="update_help('fully_compliant')">FULL COMPLIANCE</button>
+                            <button class="red-button" id="low_others_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_others_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_others_button">FULL COMPLIANCE</button>
                         </td>
                     </tr>
                 </table>

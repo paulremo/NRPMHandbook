@@ -19,10 +19,8 @@ function runMFRbuttons() {
         check_content() {
             const numberCheck = new RegExp('[0-9]+([\\.][0-9]*)?');
             //var numberCheck = /([0-9]*[\.])?[0-9]+/;
-            //console.log(numberCheck.test(this.text_entry.value) && !this.text_entry.value.includes("-") && !this.text_entry.value.includes(","));
             if (numberCheck.test(this.text_entry.value) && !this.text_entry.value.includes("-") && !this.text_entry.value.includes(",")) {
                 this.text_entry.color = "green";
-                //console.log(parseFloat(this.text_entry.value));
                 this.message.innerHTML = this.success_message;
                 this.changeValue(true);
             }
@@ -58,7 +56,6 @@ function runMFRbuttons() {
         }
 
         changeValue(condition) {
-            console.log(this.lambda1.value);
             if (condition) {
                 this.value = parseFloat(this.text_entry.value) * this.lambda1.value;
             }
@@ -85,7 +82,6 @@ function runMFRbuttons() {
     class ChoiceButton {
 
         constructor(name, value, button, color_selected, color_unselected, description = "", hauteur = 40, largeur = 120) {
-            //console.log("creates button");
             this.hauteur = hauteur;
             this.largeur = largeur;
             this.value = value;
@@ -115,7 +111,6 @@ function runMFRbuttons() {
         }
 
         associate_buttons(b1, b2) {
-            //console.log("associates button");
             this.associated_button1 = b1;
             this.associated_button2 = b2;
         }
@@ -130,7 +125,6 @@ function runMFRbuttons() {
         }
 
         go_unselected() {
-            //console.log('clicked');
             //this.button.style.backgroundColor = this.color_unselected;
             this.button.style.boxShadow = "0 5px #666";
             this.button.style.transform = "translateY(4px)";
@@ -143,7 +137,6 @@ function runMFRbuttons() {
         }
 
         go_selected() {
-            //console.log('unclicked');
             //this.button.style.backgroundColor = this.color_selected;
             this.button.style.boxShadow = "0 9px #999";
             this.button.style.transform = "translateY(-4px)";
@@ -272,7 +265,6 @@ function runMFRbuttons() {
 
     function process_pi_op() {
         var res = parseFloat(document.getElementById("others_value").innerHTML) + parseFloat(document.getElementById("dc_value").innerHTML) + parseFloat(document.getElementById("tc_value").innerHTML) + parseFloat(document.getElementById("power_value").innerHTML) + parseFloat(document.getElementById("temperature_value").innerHTML) + parseFloat(document.getElementById("orbit_value").innerHTML);
-        console.log(res.toFixed(2))
         document.getElementById("piOP_value").innerText = res.toFixed(2);
     }
 
@@ -316,6 +308,267 @@ function runMFRbuttons() {
         //document.getElementById("customed-table").style.height = document.getElementById("help").style.height;
     }
 
+    document.getElementById("lambda_1").onmouseenter = function(){
+        update_help('lambda_1');
+    }
+
+    document.getElementById("lambda_2").onmouseenter = function(){
+        update_help('lambda_2');
+    }
+
+    document.getElementById("pi_Q").onmouseenter = function(){
+        update_help('pi_Q');
+    }
+
+    document.getElementById("low_piQ_button").onmouseenter = function(){
+        update_help('low_pi_Q');
+    }
+
+    document.getElementById("low_piQ_button").onclick = function(){
+        redButtonPiQ.clicked();
+    }
+
+    document.getElementById("medium_piQ_button").onmouseenter = function(){
+        update_help('medium_pi_Q');
+    }
+
+    document.getElementById("medium_piQ_button").onclick = function(){
+        yellowButtonPiQ.clicked();
+    }
+
+    document.getElementById("high_piQ_button").onmouseenter = function(){
+        update_help('high_pi_Q');
+    }
+
+    document.getElementById("high_piQ_button").onclick = function(){
+        greenButtonPiQ.clicked();
+    }
+
+    document.getElementById("pi_M").onmouseenter = function(){
+        update_help('pi_M');
+    }
+
+    document.getElementById("low_piM_button").onmouseenter = function(){
+        update_help('low_pi_M');
+    }
+
+    document.getElementById("low_piM_button").onclick = function(){
+        redButtonPiM.clicked();
+    }
+
+    document.getElementById("medium_piM_button").onmouseenter = function(){
+        update_help('medium_pi_M');
+    }
+
+    document.getElementById("medium_piM_button").onclick = function(){
+        yellowButtonPiM.clicked();
+    }
+
+    document.getElementById("high_piM_button").onmouseenter = function(){
+        update_help('high_pi_M');
+    }
+
+    document.getElementById("high_piM_button").onclick = function(){
+        greenButtonPiM.clicked();
+    }
+
+    document.getElementById("pi_T").onmouseenter = function(){
+        update_help('pi_T');
+    }
+
+    document.getElementById("pi_C").onmouseenter = function(){
+        update_help('pi_C');
+    }
+
+    document.getElementById("pi_OP").onmouseenter = function(){
+        update_help('pi_OP');
+    }
+
+    document.getElementById("orbit").onmouseenter = function(){
+        update_help('orbit');
+    }
+
+    document.getElementById("low_orbit_button").onmouseenter = function(){
+        update_help('not_compliant');
+    }
+
+    document.getElementById("low_orbit_button").onclick = function(){
+        redButtonOrbit.clicked();
+    }
+
+    document.getElementById("medium_orbit_button").onmouseenter = function(){
+        update_help('partially_compliant');
+    }
+
+    document.getElementById("medium_orbit_button").onclick = function(){
+        yellowButtonOrbit.clicked();
+    }
+
+    document.getElementById("high_orbit_button").onmouseenter = function(){
+        update_help('fully_compliant');
+    }
+
+    document.getElementById("high_orbit_button").onclick = function(){
+        greenButtonOrbit.clicked();
+    }
+
+    document.getElementById("temperature").onmouseenter = function(){
+        update_help('temperature');
+    }
+
+    document.getElementById("low_temperature_button").onmouseenter = function(){
+        update_help('not_compliant');
+    }
+
+    document.getElementById("low_temperature_button").onclick = function(){
+        redButtonTemperature.clicked();
+    }
+
+    document.getElementById("medium_temperature_button").onmouseenter = function(){
+        update_help('partially_compliant');
+    }
+
+    document.getElementById("medium_temperature_button").onclick = function(){
+        yellowButtonTemperature.clicked();
+    }
+
+    document.getElementById("high_temperature_button").onmouseenter = function(){
+        update_help('fully_compliant');
+    }
+
+    document.getElementById("high_temperature_button").onclick = function(){
+        greenButtonTemperature.clicked();
+    }
+
+    document.getElementById("power").onmouseenter = function(){
+        update_help('power');
+    }
+
+    document.getElementById("low_power_button").onmouseenter = function(){
+        update_help('not_compliant');
+    }
+
+    document.getElementById("low_power_button").onclick = function(){
+        redButtonPower.clicked();
+    }
+
+    document.getElementById("medium_power_button").onmouseenter = function(){
+        update_help('partially_compliant');
+    }
+
+    document.getElementById("medium_power_button").onclick = function(){
+        yellowButtonPower.clicked();
+    }
+
+    document.getElementById("high_power_button").onmouseenter = function(){
+        update_help('fully_compliant');
+    }
+
+    document.getElementById("high_power_button").onclick = function(){
+        greenButtonPower.clicked();
+    }
+
+    document.getElementById("thermal_cycling").onmouseenter = function(){
+        update_help('thermal_cycling');
+    }
+
+    document.getElementById("low_tc_button").onmouseenter = function(){
+        update_help('not_compliant');
+    }
+
+    document.getElementById("low_tc_button").onclick = function(){
+        redButtonTC.clicked();
+    }
+
+    document.getElementById("medium_tc_button").onmouseenter = function(){
+        update_help('partially_compliant');
+    }
+
+    document.getElementById("medium_tc_button").onclick = function(){
+        yellowButtonTC.clicked();
+    }
+
+    document.getElementById("high_tc_button").onmouseenter = function(){
+        update_help('fully_compliant');
+    }
+
+    document.getElementById("high_tc_button").onclick = function(){
+        greenButtonTC.clicked();
+    }
+
+    document.getElementById("duty_cycle").onmouseenter = function(){
+        update_help('duty_cycle');
+    }
+
+    document.getElementById("low_dc_button").onmouseenter = function(){
+        update_help('not_compliant');
+    }
+
+    document.getElementById("low_dc_button").onclick = function(){
+        redButtonDC.clicked();
+    }
+
+    document.getElementById("medium_dc_button").onmouseenter = function(){
+        update_help('partially_compliant');
+    }
+
+    document.getElementById("medium_dc_button").onclick = function(){
+        yellowButtonDC.clicked();
+    }
+
+    document.getElementById("high_dc_button").onmouseenter = function(){
+        update_help('fully_compliant');
+    }
+
+    document.getElementById("high_dc_button").onclick = function(){
+        greenButtonDC.clicked();
+    }
+
+    document.getElementById("others").onmouseenter = function(){
+        update_help('others');
+    }
+
+    document.getElementById("low_others_button").onmouseenter = function(){
+        update_help('not_compliant');
+    }
+
+    document.getElementById("low_others_button").onclick = function(){
+        redButtonOthers.clicked();
+    }
+
+    document.getElementById("medium_others_button").onmouseenter = function(){
+        update_help('partially_compliant');
+    }
+
+    document.getElementById("medium_others_button").onclick = function(){
+        yellowButtonOthers.clicked();
+    }
+
+    document.getElementById("high_others_button").onmouseenter = function(){
+        update_help('fully_compliant');
+    }
+
+    document.getElementById("high_others_button").onclick = function(){
+        greenButtonOthers.clicked();
+    }
+
+    document.getElementById("lambda1_entry").onchange = function(){
+        lambda12Entry.onLambdachanged();
+    }
+
+    document.getElementById("lambda2_entry").onchange = function(){
+        lambda12Entry.onLambdachanged();
+    }
+
+    document.getElementById("piT_checkbox").onclick = function(){
+        checkboxPiT.change_check();
+    }
+
+    document.getElementById("piC_checkbox").onclick = function(){
+        checkboxPiC.change_check();
+    }
+
+
     document.getElementById("astroPicture").onclick = function () {
         if (this.src.includes("speak")) {
             document.getElementById("messages").style.display = "none";
@@ -328,7 +581,6 @@ function runMFRbuttons() {
     }
 
     document.onmousemove = function (e) {
-        //console.log(e.pageY)
         if (e.pageY > 140) {
             document.getElementById("helpMFR").style.top = (e.pageY - 140 - 100) + "px";
         }
