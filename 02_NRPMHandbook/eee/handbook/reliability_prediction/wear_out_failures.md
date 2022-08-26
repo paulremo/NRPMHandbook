@@ -624,7 +624,7 @@ where:
 -   $q$: coefficient related to cycling frequency = 0.3.
 ````
 
-For the failure mechanisms of solder joints, the value of the activation energy $E_{a}$ is 0.1216eV, the coefficient related to the components $m$ is 2 for tin lead solder and 2.6 for lead free alloy. For other materials, different studies have been performed to determine the coefficient related to the components $m$. These studies are presented in the following table:
+For the failure mechanisms of solder joints, the value of the activation energy $E_{a}$ is 0.1216eV, the coefficient related to the components $m$ is 2 for tin lead solder and 2.6 for lead free alloy. For other materials, different studies have been performed to determine the coefficient related to the components $m$. These studies are resumed in documents {cite:t}`SSB-1.003` and {cite:t}`Livingston2000` and presented in the following table:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-205')" placeholder="Search table...">
 

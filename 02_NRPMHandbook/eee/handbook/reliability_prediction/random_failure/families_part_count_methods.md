@@ -47,7 +47,7 @@ with:
 
 **Physical stresses:**
 
--   $\Pi_{\text{Thermal}}$ Thermo-electrical stress:
+-   $\Pi_{\text{Thermal}}$ Thermo-electrical stress from {numref}`eee_4_3_1_13`:
 
 
 ````{admonition} Equation
@@ -84,7 +84,7 @@ with:
 ```
 ````
 
--   $\Pi_{\text{Mechanical}}$ Mechanical stress:
+-   $\Pi_{\text{Mechanical}}$ Mechanical stress from {numref}`eee_4_3_1_16`:
 
 ````{admonition} Equation
 :class: equation
