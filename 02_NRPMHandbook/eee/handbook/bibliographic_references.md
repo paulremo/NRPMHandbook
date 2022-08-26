@@ -1,7 +1,7 @@
 # Bibliographic references
 
 ```{bibliography}
-:filter: keywords % "br-eee" 
+:filter: keywords % "br-eee"
 :labelprefix: BR_EEE_
 :keyprefix: eee-
 ```

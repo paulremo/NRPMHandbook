@@ -1,5 +1,5 @@
 # Scope
 
-The modeling of EEE parts for space systems is particularly important since they contribute significantly to reliability of considered systems. In this chapter, the basics for reliability prediction of EEE parts are compiled. These are based on the models of the FIDES approach {cite:p}`UTE-C80-811`, which has been customized and extended.
+The modeling of EEE parts for space systems is particularly important since they contribute significantly to reliability of considered systems. In this chapter, the basics for reliability prediction of EEE parts are compiled. These are based on the models of the FIDES approach {cite:p}`eee-UTE-C80-811`, which has been customized and extended.
 
 The models are based on a combined approach of *physics of failures* and *data*. The models consider temperature, humidity, thermal cycling, vibration, and electrical stress established from the *physics of failures* of EEE components. The data is used to estimate the basic failure rate of all EEE components. Data originates from in orbit return feedback, from manufacturer data or from data collection of reliability data sources.
