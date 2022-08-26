@@ -1,4 +1,4 @@
-/* function runMissionprofile() {
+function runMissionprofile() {
 
     let existing_phase_mp = null;
 
@@ -506,6 +506,18 @@
         document.getElementById("delta-t-entries-box-mp").appendChild(entry);
     }
 
+    document.getElementById("save-button-mp").onclick = function () {
+        saveAnswersMP();
+    }
+
+    document.getElementById("export-button-mp").onclick = function () {
+        exportAnswersMP();
+    }
+
+    document.getElementById("load-answers-mp").onclick = function () {
+        loadAnswers();
+    }
+
     for (validation_button of document.getElementsByClassName("validate-mp-cat")) {
         validation_button.onclick = function () {
             validate_category_mp();
@@ -604,14 +616,14 @@
                 ["phase type", convert_picture_to_phase(phase_nodes[0].getElementsByTagName("img")[0].src)],
                 ["phase name", phase_nodes[1].innerHTML],
                 ["unit onboard", phase_nodes[2].innerHTML],
-                ["calendar time", phase_nodes[3].innerHTML],
-                ["ambient temperature", phase_nodes[4].innerHTML],
-                ["delta t", phase_nodes[5].innerHTML],
-                ["cycle duration", phase_nodes[6].innerHTML],
+                ["calendar time", phase_nodes[3].innerHTML.replace(" h", "")],
+                ["ambient temperature", phase_nodes[4].innerHTML.replace(" °C", "")],
+                ["delta t", phase_nodes[5].innerHTML.replace(" °C", "")],
+                ["cycle duration", phase_nodes[6].innerHTML.replace(" h", "")],
                 ["number of cycles", phase_nodes[7].innerHTML],
-                ["max temperature", phase_nodes[8].innerHTML],
-                ["humidity rate", phase_nodes[9].innerHTML],
-                ["random vibrations", phase_nodes[10].innerHTML],
+                ["max temperature", phase_nodes[8].innerHTML.replace(" °C", "")],
+                ["humidity rate", phase_nodes[9].innerHTML.replace(" %", "")],
+                ["random vibrations", phase_nodes[10].innerHTML.replace(" Grms", "")],
                 ["saline pollution", phase_nodes[11].innerHTML],
                 ["environment pollution", phase_nodes[12].innerHTML],
                 ["application pollution", phase_nodes[13].innerHTML],
@@ -754,9 +766,10 @@
             }
         }
         else if (current_category_mp.substring(11) == "2") {
+            console.log("cldt : " + current_phase.get("calendar time"))
             current_answers_mp.set("calendar time", current_phase.get("calendar time"));
             if (current_phase.get("calendar time") != null) {
-                document.getElementById("calendar-time-entry").value = 0;
+                document.getElementById("calendar-time-entry").value = current_phase.get("calendar time");
             }
             current_answers_mp.set("cycle duration", current_phase.get("cycle duration"));
             if (current_phase.get("cycle duration") != null) {
@@ -933,14 +946,15 @@
     function fillInformationTableMP() {
         let new_line = document.createElement("tr");
         new_line.id = current_phase.get("phase name") + "-tabline-mp";
+        new_line.className = "phase-information-line";
         new_line.addEventListener('dblclick', function (e) {
             edit_phase(this.id)
         })
 
         let new_parameter = document.createElement("td");
         let phase_icone = document.createElement("img");
-        phase_icone.className = "sumup-icon-phase-mp"
-        phase_icone.src = phase_type_images_mp.get(current_phase.get("phase type"));
+        phase_icone.className = "sumup-icon-phase-mp";
+        phase_icone.src = phase_type_images_mp.get(current_phase.get("phase type").replace(" ", ""));
         new_parameter.appendChild(phase_icone);
         new_line.appendChild(new_parameter);
 
@@ -953,19 +967,19 @@
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("calendar time");
+        new_parameter.innerHTML = current_phase.get("calendar time") + " h";
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("ambient temperature");
+        new_parameter.innerHTML = current_phase.get("ambient temperature") + " &deg;C";
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("delta t");
+        new_parameter.innerHTML = current_phase.get("delta t") + " &deg;C";
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("cycle duration");
+        new_parameter.innerHTML = current_phase.get("cycle duration") + " h";
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
@@ -973,15 +987,15 @@
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("max temperature");
+        new_parameter.innerHTML = current_phase.get("max temperature") + " &deg;C";
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("humidity rate");
+        new_parameter.innerHTML = current_phase.get("humidity rate") + " %";
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("random vibrations");
+        new_parameter.innerHTML = current_phase.get("random vibrations") + " Grms";
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
@@ -1010,15 +1024,15 @@
         phase_nodes[0].getElementsByTagName("img")[0].src = phase_type_images_mp.get(current_phase.get("phase type"));
         phase_nodes[1].innerHTML = current_phase.get("phase name")
         phase_nodes[2].innerHTML = current_phase.get("unit onboard");
-        phase_nodes[3].innerHTML = current_phase.get("calendar time");
-        phase_nodes[4].innerHTML = current_phase.get("ambient temperature");
-        phase_nodes[5].innerHTML = current_phase.get("delta t");
-        phase_nodes[6].innerHTML = current_phase.get("cycle duration");
-        phase_nodes[7].innerHTML = current_phase.get("cycle duration");
-        phase_nodes[8].innerHTML = current_phase.get("number of cycles");
-        phase_nodes[9].innerHTML = current_phase.get("max temperature");
-        phase_nodes[10].innerHTML = current_phase.get("humidity rate");
-        phase_nodes[11].innerHTML = current_phase.get("random vibrations");
+        phase_nodes[3].innerHTML = current_phase.get("calendar time") + " h";
+        phase_nodes[4].innerHTML = current_phase.get("ambient temperature") + " &deg;C";
+        phase_nodes[5].innerHTML = current_phase.get("delta t") + " &deg;C";
+        phase_nodes[6].innerHTML = current_phase.get("cycle duration") + " h";
+        phase_nodes[7].innerHTML = current_phase.get("number of cycles");
+        phase_nodes[8].innerHTML = current_phase.get("max temperature") + " &deg;C";
+        phase_nodes[9].innerHTML = current_phase.get("humidity rate") + " %";
+        phase_nodes[10].innerHTML = current_phase.get("random vibrations") + " Grms";
+        phase_nodes[11].innerHTML = current_phase.get("saline pollution");
         phase_nodes[12].innerHTML = current_phase.get("environment pollution");
         phase_nodes[13].innerHTML = current_phase.get("application pollution");
         phase_nodes[14].innerHTML = current_phase.get("protection level");
@@ -1029,6 +1043,145 @@
         })
     }
 
+    function getByKey(map, value) {
+        for (var element of map) {
+            if (map[element] == value) {
+                return map[element];
+            }
+        }
+        return null;
+    }
+
+
+
+    function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    }
+
+
+    function saveAnswersMP() {
+
+        let data = "phase type,phase name,unit onboard,calendar time,ambient temperature,delta t,cycle duration,number of cycles,max temperature,humidity rate,random vibrations,saline pollution,environment pollution,application pollution,protection level;";
+
+        for (var line of document.getElementsByClassName("phase-information-line")) {
+
+            data = data + "\n";
+
+            let phase_nodes = line.getElementsByTagName("td");
+
+            let phase_type = convert_picture_to_phase(phase_nodes[0].getElementsByTagName("img")[0].src);
+            data = data + phase_type + ",";
+            data = data + phase_nodes[1].innerHTML + ",";
+            data = data + phase_nodes[2].innerHTML + ",";
+            data = data + phase_nodes[3].innerHTML.replace(" h", "") + ",";
+            data = data + phase_nodes[4].innerHTML.replace(" °C", "") + ",";
+            data = data + phase_nodes[5].innerHTML.replace(" °C", "") + ",";
+            data = data + phase_nodes[6].innerHTML.replace(" h", "") + ",";
+            data = data + phase_nodes[7].innerHTML + ",";
+            data = data + phase_nodes[8].innerHTML.replace(" °C", "") + ",";
+            data = data + phase_nodes[9].innerHTML.replace(" %", "") + ",";
+            data = data + phase_nodes[10].innerHTML.replace(" Grms", "") + ",";
+            data = data + phase_nodes[11].innerHTML + ",";
+            data = data + phase_nodes[12].innerHTML + ",";
+            data = data + phase_nodes[13].innerHTML + ",";
+            data = data + phase_nodes[14].innerHTML + ";";
+        }
+
+        download("mission_profile_data.csv", data);
+
+    }
+
+
+    function exportAnswersMP() {
+
+        let data = "";
+
+        for (var line of document.getElementsByClassName("phase-information-line")) {
+
+            data = data + "\n";
+
+            let phase_nodes = line.getElementsByTagName("td");
+
+            data = data + phase_nodes[1].innerHTML + ",";
+            data = data + phase_nodes[2].innerHTML.toUpperCase() + ",";
+            data = data + phase_nodes[3].innerHTML + ",";
+            data = data + ",";
+            data = data + phase_nodes[4].innerHTML + ",";
+            data = data + ",";
+            data = data + phase_nodes[5].innerHTML + ",";
+            data = data + phase_nodes[6].innerHTML + ",";
+            data = data + phase_nodes[7].innerHTML + ",";
+            data = data + phase_nodes[8].innerHTML + ",";
+            data = data + ",";
+            data = data + phase_nodes[9].innerHTML.replace(" %", "") + ",";
+            data = data + ",";
+            data = data + phase_nodes[10].innerHTML + ",";
+            data = data + ",";
+            data = data + phase_nodes[11].innerHTML[0].toUpperCase() + phase_nodes[11].innerHTML.substring(1) + ",";
+            data = data + phase_nodes[12].innerHTML[0].toUpperCase() + phase_nodes[12].innerHTML.substring(1) + ",";
+            data = data + phase_nodes[13].innerHTML[0].toUpperCase() + phase_nodes[13].innerHTML.substring(1) + ",";
+            data = data + phase_nodes[14].innerHTML[0].toUpperCase() + phase_nodes[14].innerHTML.substring(1);
+        }
+
+        download("mission_profile_expertool.csv", data);
+
+    }
+
+    function loadAnswers() {
+        for (var line of document.getElementsByClassName("phase-information-line")) {
+            line.remove();
+        }
+        let data = document.getElementById("question-load-mp").value;
+        let first = true;
+        if (data.includes("phase type,phase name,unit onboard,calendar time,ambient temperature,delta t,cycle duration,number of cycles,max temperature,humidity rate,random vibrations,saline pollution,environment pollution,application pollution,protection level;")) {
+            for (var dt of data.split(";")) {
+                if (!first && dt != "") {
+                    let values = dt.split(",");
+                    if (values.length == 15) {
+                        current_phase = new Map([
+                            ["phase type", values[0][0].toUpperCase() + values[0].substring(1)],
+                            ["phase name", values[1]],
+                            ["unit onboard", values[2]],
+                            ["calendar time", values[3]],
+                            ["ambient temperature", values[4]],
+                            ["delta t", values[5]],
+                            ["cycle duration", values[6]],
+                            ["number of cycles", values[7]],
+                            ["max temperature", values[8]],
+                            ["humidity rate", values[9]],
+                            ["random vibrations", values[10]],
+                            ["saline pollution", values[11]],
+                            ["environment pollution", values[12]],
+                            ["application pollution", values[13]],
+                            ["protection level", values[14]]
+                        ])
+                        fillInformationTableMP();
+                    }
+                    else{
+                        alert("Data are not regular, please check they are not corrupted.")
+                    }
+                }
+                else {
+                    first = false;
+                }
+            }
+            document.getElementById("load-answers-mp").disabled = true;
+        }
+        else{
+            alert("Data are not regular, please check they are not corrupted.")
+        }
+
+    }
+
 }
 
-//#26B4D4; #1B7E94; #0D3C47; #0F4754; #092B33 */
+//#26B4D4; #1B7E94; #0D3C47; #0F4754; #092B33
