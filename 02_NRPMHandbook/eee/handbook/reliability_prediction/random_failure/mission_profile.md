@@ -317,7 +317,7 @@ For some components that are sensitive to failure mechanisms linked to electrica
 (eee_4_3_1_14)=
 ## Thermo-mechanical stress
 
-The thermo-mechanical stress is associated with the thermal cycling of the equipment. It is considered by the physics of failures with the Norris-Landzberg's model defined in document **Erreur ! Source du renvoi introuvable.**. This model is based on the thermo-mechanical effects based on the Coffin-Manson model.
+The thermo-mechanical stress is associated with the thermal cycling of the equipment. It is considered by the physics of failures with the Norris-Landzberg's model. This model is based on the thermo-mechanical effects based on the Coffin-Manson model.
 
 ````{admonition} Equation
 :class: equation

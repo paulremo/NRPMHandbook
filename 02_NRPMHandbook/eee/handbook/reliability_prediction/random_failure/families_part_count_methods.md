@@ -47,7 +47,7 @@ with:
 
 **Physical stresses:**
 
--   $\Pi_{\text{Thermal}}$ Thermo-electrical stress from **Erreur ! Source du renvoi introuvable.**:
+-   $\Pi_{\text{Thermal}}$ Thermo-electrical stress:
 
 
 ````{admonition} Equation
@@ -84,7 +84,7 @@ with:
 ```
 ````
 
--   $\Pi_{\text{Mechanical}}$ Mechanical stress from **Erreur ! Source du renvoi introuvable.**:
+-   $\Pi_{\text{Mechanical}}$ Mechanical stress:
 
 ````{admonition} Equation
 :class: equation
