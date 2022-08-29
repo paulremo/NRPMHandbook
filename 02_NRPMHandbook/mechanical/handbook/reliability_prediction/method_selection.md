@@ -61,7 +61,7 @@ A simple way to account for such interactions is to select the dominating {term}
 * Identification of other {term}`failure mechanisms <Failure mechanism>` that may interact with the dominating {term}`failure mechanism <Failure mechanism>` using {numref}`meca-table4-5` - e.g. distortion of the membrane compressing the bearing.
 * Identification of physical variables used by the model for the dominating {term}`failure mechanism <Failure mechanism>` that may be affected by the interaction - e.g. increase of the contact pressure in the bearing.
 * Adjustment of the identified basic variables distributional models to account for the effect of the interaction - e.g. by considering the increased contact pressure.
-* 
+
 Finally, it should be noted that besides physical interactions between {term}`failure mechanism <Failure mechanism>`, there are other possible reason for statistical dependence, such as common cause effects due to random physical variables (e.g. temperature, loads), having an effect on different {term}`failure mechanisms <Failure mechanism>` and/or parts. An example for explicit common cause modelling in a redundant bolted {term}`interface <Interface>` with load redistribution can be found in {cite:t}`mec-AO-1-8017-14-NL-KM`.
 
 (meca_4_5_2)=
