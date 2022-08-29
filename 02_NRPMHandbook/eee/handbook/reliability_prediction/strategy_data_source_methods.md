@@ -13,7 +13,7 @@ Strategy for reliability modelling.
 
 **In-Orbit Return experience**
 
-In-Orbit Return data provide the best information concerning failure rates and failure root causes. As it is difficult to obtain reliable data at component level from In-Orbit Return, it is not possible to use this data for EEE components except in specific cases.
+In-Orbit Return data provide the best information concerning failure rates and {term}`failure root causes <Failure root cause>`. As it is difficult to obtain reliable data at component level from In-Orbit Return, it is not possible to use this data for EEE components except in specific cases.
 
 The main limitations are the following:
 
@@ -35,7 +35,7 @@ In addition, it is possible to mix these data with data coming from standards or
 
 This corresponds to the information obtained through the present handbook. The main methodology used is the FIDES method with some adaptations proposed in each subfamily section.
 
-See {numref}`eee_4_3` for the Random Failures calculations through FIDES, {numref}`eee_4_5` for the Systematic failures, {numref}`eee_4_6` for the wear-out failures and {numref}`eee_4_7` for the extrinsic failures.
+See {numref}`eee_4_3` for the Random Failures calculations through FIDES, {numref}`eee_4_5` for the Systematic failures, {numref}`eee_4_6` for the wear-out failures and {numref}`eee_4_7` for the {term}`extrinsic failures <Extrinsic failure>`.
 
 **Model from other methodologies**
 
@@ -47,7 +47,7 @@ For the missing models, a possible solution is to use models developed by other 
 
 It is up to each entity to analyse the possibility to use the models issued from such data sources in the space context.
 
-In addition, if a model coming from a source different from the sources mentioned in this handbook needs to be assessed, it is up to the user to determine its level of applicability for space and the level of confidence.
+In addition, if a model coming from a source different from the sources mentioned in this handbook needs to be assessed, it is up to the user to determine its level of applicability for space and the {term}`level of confidence <Level of confidence>`.
 
 **Use of test data from manufacturers**
 
@@ -61,7 +61,7 @@ The failure rates provided by the manufacturers are relevant for the steady stat
 
 The failure rate is calculated with the χ² formula according to the methodology described in the JEDEC document for semiconductor components.
 
-This methodology can be used by similarity for any type of EEE components. The confidence level generally used by component manufacturers is 60% and can be 90 or 95% in very specific cases when a higher level of confidence is required.
+This methodology can be used by similarity for any type of EEE components. The confidence level generally used by component manufacturers is 60% and can be 90 or 95% in very specific cases when a higher {term}`level of confidence <Level of confidence>` is required.
 
 Using manufacturer data presents some limitations though:
 
@@ -71,13 +71,13 @@ Using manufacturer data presents some limitations though:
 
 -   Information concerning failure rates for specific stresses such as vibrations is generally not available or only upon specific request.
 
-It is important before taking into account these data to assess its potential applicability for the component considered; indeed, sometimes tests results concern a type of technology that is too wide for the specific need, or the contributing factors for which it has been modelled might not be the main ones in the specific conditions of use. And it is important to know in which context (environment) these tests have been performed in order to interpret the results as accurately as possible.
+It is important before taking into account these data to assess its potential applicability for the component considered; indeed, sometimes tests results concern a type of technology that is too wide for the specific need, or the {term}`contributing factors <Contributing factor>` for which it has been modelled might not be the main ones in the specific conditions of use. And it is important to know in which context (environment) these tests have been performed in order to interpret the results as accurately as possible.
 
 **Estimation of reliability from reliability tests**
 
 If no data is available from manufacturers, the user of the EEE components under consideration can perform their own reliability tests on these components by using acceleration laws, if the activation energy $\text{E}_{a}$ is known.
 
-The methodology is strictly the same as for performing a life test, generally limited in time and then estimating by interval the failure rate with the $\chi^{2}$ formula. The limitation is generally the quantity of parts to be tested if a low failure rate needs to be addressed. Indeed, the manufacturers of components can cumulate numerous components of the same technology and address failure rates lower than 10 FITs. But for some users, it is more complicated to test large quantities of components for an extensive time so the calculated reliability prediction obtained that way sometimes does not match the targeted reliability figure. Furthermore, each test generally only addresses one or two failure mechanisms while a specific failure mechanism with different activation energy $\text{E}_{a}$, not considered by the test, can happen during the mission with different stresses and constraints.
+The methodology is strictly the same as for performing a life test, generally limited in time and then estimating by interval the failure rate with the $\chi^{2}$ formula. The limitation is generally the quantity of parts to be tested if a low failure rate needs to be addressed. Indeed, the manufacturers of components can cumulate numerous components of the same technology and address failure rates lower than 10 FITs. But for some users, it is more complicated to test large quantities of components for an extensive time so the calculated reliability prediction obtained that way sometimes does not match the targeted reliability figure. Furthermore, each test generally only addresses one or two {term}`failure mechanisms <Failure mechanism>` while a specific {term}`failure mechanism <Failure mechanism>`with different activation energy $\text{E}_{a}$, not considered by the test, can happen during the mission with different stresses and constraints.
 
 **Estimation of reliability through engineering judgment**
 

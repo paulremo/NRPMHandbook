@@ -34,7 +34,7 @@ Among components which are proposed by ESA in its EPPL {cite:t}`eee-EPPL007-37`,
 
 -   Relays and switches such as non-latching relays, latching relays and switches: these components can be subjected to a limited number of switching or number of hours depending on the number of operations.
 
--   Optoelectronics such as LED, laser diodes, optocouplers: these components can be subjected to a limited number of hours of functioning due to brightness degradation of their optical parts.
+-   Optoelectronics such as LED, laser diodes, optocouplers: these components can be subjected to a limited number of hours of functioning due to brightness {term}`degradation <Degradation>` of their optical parts.
 
 -   Power Mosfets: these components can be subjected to a limited cumulated time depending on their design and technologies especially for GaN technology; the standard ECSS-Q-ST-30-11C {cite:t}`eee-ECSS-Q-ST-30-11C` provides values of derating in drain to source voltage, gate to source voltage, gate to drain voltage, drain current, power dissipation and maximum junction temperature.
 
@@ -44,7 +44,7 @@ Among components which are proposed by ESA in its EPPL {cite:t}`eee-EPPL007-37`,
 
 In all these cases, the design, the component selection and the qualification should be done according to each technology depending on the stresses of the mission profile. The design should be done to ensure no occurrence of any failure during the life duration.
 
-Creating models of wear-out is necessary to estimate the degradation of the equipment and the Remaining Useful Life.
+Creating models of wear-out is necessary to estimate the {term}`degradation <Degradation>` of the equipment and the Remaining Useful Life.
 
 (eee_4_6_4)=
 ## Models for wear-out failures for components and sub-assemblies
@@ -83,7 +83,7 @@ On page 50 of document IEC TR 62380, the wear-out model for laser diodes is main
 (eee_4_6_5_1)=
 ### Radiations as a factor of wear-out
 
-In space, radiations are one of the sources for degradation and wear-out of EEE components. The Total Ionizing Dose (TID) or Displacement Damage (DD) due to non-ionizing elements such as proton, electrons and neutrons are the key factors for the degradation of EEE components. The components dedicated to space are developed during their design phase to tolerate space radiations with design for a margin of 2 on the total cumulated dose. The commercial components are generally not designed for the requirements of space industry. So, these components are qualified with an estimation of the total dose received by the EEE component during the life of the satellite. A minimum margin factor of 2 on the total cumulated dose measured during qualification is used as a basis for acceptance of these commercial components. This margin is used to consider uncertainties of components and variations in the total radiations dose. If the margin is set between 1.2 and 2, additional qualifications and a risk analysis are generally performed. If the margin is lower than 1.2, components are rejected and not used.
+In space, radiations are one of the sources for {term}`degradation <Degradation>` and wear-out of EEE components. The Total Ionizing Dose (TID) or Displacement Damage (DD) due to non-ionizing elements such as proton, electrons and neutrons are the key factors for the {term}`degradation <Degradation>` of EEE components. The components dedicated to space are developed during their design phase to tolerate space radiations with design for a margin of 2 on the total cumulated dose. The commercial components are generally not designed for the requirements of space industry. So, these components are qualified with an estimation of the total dose received by the EEE component during the life of the satellite. A minimum margin factor of 2 on the total cumulated dose measured during qualification is used as a basis for acceptance of these commercial components. This margin is used to consider uncertainties of components and variations in the total radiations dose. If the margin is set between 1.2 and 2, additional qualifications and a risk analysis are generally performed. If the margin is lower than 1.2, components are rejected and not used.
 
 **Model of wear-out for radiations**
 
@@ -130,7 +130,7 @@ In space, the single atomic oxygen is present and can generate corrosion on sate
 (eee_4_6_6)=
 ## Methodology to estimate the wear-out of EEE components by testing
 
-In case of insufficient data from the manufacturers or no data available, reliability tests could be performed to evaluate the wear-out of EEE components. The objective is to perform tailored life tests on components until having a minimum number of parts that fail and ideally 100% of failed parts. The test duration can last several hundred hours to several months or years. Different types of life tests can be performed depending on the failure mechanisms that should be revealed. For active EEE components with semiconductors, most of the basics are developed in JEDEC standards {cite:t}`eee-JESD-37A`, {cite:t}`eee-ESD-94B` and {cite:t}`eee-JEP148B`. The methods used are generally deterministic.
+In case of insufficient data from the manufacturers or no data available, reliability tests could be performed to evaluate the wear-out of EEE components. The objective is to perform tailored life tests on components until having a minimum number of parts that fail and ideally 100% of failed parts. The test duration can last several hundred hours to several months or years. Different types of life tests can be performed depending on the {term}`failure mechanisms <Failure mechanism>` that should be revealed. For active EEE components with semiconductors, most of the basics are developed in JEDEC standards {cite:t}`eee-JESD-37A`, {cite:t}`eee-ESD-94B` and {cite:t}`eee-JEP148B`. The methods used are generally deterministic.
 
 To assess the wear-out of EEE components, it is required to set up a methodology with a global strategy that should be adapted according to the type of technology of the component. This methodology is issued from multiple standards and publications such as {cite:t}`eee-ECSS-Q-ST-30-11C`, {cite:t}`eee-Harper1997PassiveEC` and {cite:t}`eee-robusteness-validation-knowledge-matrix`. The following chart explains the methodology used to estimate wear-out of components and each step of the methodology is explained in details hereafter.
 
@@ -152,9 +152,9 @@ The first step is to get a clear definition of the mission profile considering a
 
 The objective is to identify the technologies sensitive to constraints identified in the mission profile, and leading to possible failures. This risk analysis can be done through construction analysis for identifying the materials of the components, the interfaces inside the components, by using guides such as the JEDEC publications and standards.
 
-For each technology, the possible failure mechanisms which can occur on the components should be listed.
+For each technology, the possible {term}`failure mechanisms <Failure mechanism>` which can occur on the components should be listed.
 
-The following table provides the most common failure mechanisms of EEE components submitted to wear-out. The failure mechanisms of active components are taken from the standard. For failure mechanisms of passive components, the publications and documents are not so consistent. Information can be found in book {cite:t}`eee-robusteness-validation-knowledge-matrix` or in the robustness matrix. The following table lists the main failure mechanisms of EEE components listed in the EPPL which can be affected by wear-out. This matrix is not exhaustive, it indicates some main failures mechanisms which can lead to wear-out of EEE components, but other failure mechanisms can occur.
+The following table provides the most common {term}`failure mechanisms <Failure mechanism>` of EEE components submitted to wear-out. The {term}`failure mechanisms <Failure mechanism>` of active components are taken from the standard. For {term}`failure mechanisms <Failure mechanism>` of passive components, the publications and documents are not so consistent. Information can be found in book {cite:t}`eee-robusteness-validation-knowledge-matrix` or in the robustness matrix. The following table lists the main {term}`failure mechanisms <Failure mechanism>` of EEE components listed in the EPPL which can be affected by wear-out. This matrix is not exhaustive, it indicates some main failures mechanisms which can lead to wear-out of EEE components, but other {term}`failure mechanisms <Failure mechanism>` can occur.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-201')" placeholder="Search table...">
 
@@ -293,7 +293,7 @@ The following table provides the most common failure mechanisms of EEE component
     - (x)
 ```
 
-The datasheet of the components and other information from the component manufacturer could be used to get information about the failure mechanisms. Particularly, the application notes, the possible use of reliability models and the tests performed are a good basis for evaluating the risk of wear-out. It could be difficult to get such information from the manufacturer. Only the qualification test results are available generally using trunked test, often limited to 1000 hours. In such a case, only the estimation of the constant failure rate is available, considering the flat part of the bathtub curve. For integrated circuits qualified with AEC-Q automotive grade, the standard {cite:t}`eee-Black1978ElectromigrationOA` describes specific tests that must be done when a new technology of semiconductor is introduced. However, this information is generally only available upon request to the manufacturer. The failures mechanisms covered are the Hot Carrier Injection (HCI), the Negative Bias Temperature Instability (NBTI) and the Stress Migration (SM) specific to semiconductors. The following table is an extract from standard {cite:t}`eee-Black1978ElectromigrationOA` listing the tests to perform for some failure mechanisms. The manufacturer has to fill the cells with number of tested parts, number of lots, test method and test acceptance criteria.
+The datasheet of the components and other information from the component manufacturer could be used to get information about the {term}`failure mechanisms <Failure mechanism>`. Particularly, the application notes, the possible use of reliability models and the tests performed are a good basis for evaluating the risk of wear-out. It could be difficult to get such information from the manufacturer. Only the qualification test results are available generally using trunked test, often limited to 1000 hours. In such a case, only the estimation of the constant failure rate is available, considering the flat part of the bathtub curve. For integrated circuits qualified with AEC-Q automotive grade, the standard {cite:t}`eee-Black1978ElectromigrationOA` describes specific tests that must be done when a new technology of semiconductor is introduced. However, this information is generally only available upon request to the manufacturer. The failures mechanisms covered are the Hot Carrier Injection (HCI), the Negative Bias Temperature Instability (NBTI) and the Stress Migration (SM) specific to semiconductors. The following table is an extract from standard {cite:t}`eee-Black1978ElectromigrationOA` listing the tests to perform for some {term}`failure mechanisms <Failure mechanism>`. The manufacturer has to fill the cells with number of tested parts, number of lots, test method and test acceptance criteria.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_202')"
     placeholder="Search table...">
@@ -363,7 +363,7 @@ When new technologies of solder, substrate or components packaging are introduce
 (eee_4_6_6_3)=
 ### Tailored reliability life test definition and realization of tests
 
-According to the failure mechanisms underlined during the risk analysis and the mission profile study, the goal of this analysis is to define a set of tests that follow this pattern:
+According to the {term}`failure mechanisms <Failure mechanism>` underlined during the risk analysis and the mission profile study, the goal of this analysis is to define a set of tests that follow this pattern:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_203')"
     placeholder="Search table...">
@@ -444,12 +444,12 @@ When possible, the tests should be done with accelerated conditions versus the c
 (eee_4_6_7)=
 ## Calculation of acceleration factors
 
-The acceleration factors use degradation laws generally well known for EEE components and described in document {cite:t}`eee-JEP122H`. The general laws with a single parameter can be used for most of the more useful stresses such as the Arrhenius' law for temperature, the Eyring's law and the inverse power laws for voltage and current. The Coffin-Manson's law is used for thermal and mechanical stresses. More complex laws with more than one parameter can also be used such as Peck's model for both temperature and humidity, the Norris-Landzberg's law for solder joints and the Black's law for electromigration {cite:t}`eee-SSB-1.003`.
+The acceleration factors use {term}`degradation <Degradation>` laws generally well known for EEE components and described in document {cite:t}`eee-JEP122H`. The general laws with a single parameter can be used for most of the more useful stresses such as the Arrhenius' law for temperature, the Eyring's law and the inverse power laws for voltage and current. The Coffin-Manson's law is used for thermal and mechanical stresses. More complex laws with more than one parameter can also be used such as Peck's model for both temperature and humidity, the Norris-Landzberg's law for solder joints and the Black's law for electromigration {cite:t}`eee-SSB-1.003`.
 
 (eee_4_6_7_1)=
 ### Inverse power law
 
-When temperature does not operate on a failure mechanism, an inverse power law is generally used. The inverse power law is an empirical law with general formulation:
+When temperature does not operate on a {term}`failure mechanism <Failure mechanism>`, an inverse power law is generally used. The inverse power law is an empirical law with general formulation:
 
 ````{admonition} Equation
 :class: equation
@@ -504,7 +504,7 @@ The High Temperature Operating Life test is a test that combines high temperatur
 ```
 where:
 
--   $E_{a}$: activation energy of the desired failure mechanism in eV;
+-   $E_{a}$: activation energy of the desired {term}`failure mechanism <Failure mechanism>` in eV;
 
 -   $k$: Boltzmann constant equal to 8.62.10^-5^;
 
@@ -513,7 +513,7 @@ where:
 -   $T_{u}$: stress test temperature in °C.
 ````
 
-As the activation energy $E_{a}$ is often unknown, some studies such as the documents {cite:t}`eee-JEP122H`, {cite:t}`eee-Livingston2000` and {cite:t}`eee-JESD-202` provide the activation energies $E_{a}$ of most common failure mechanisms. Otherwise, the value of $E_{a}$=0.7eV is generally used as a default value. This assumption could be validated by tests according to {numref}`eee_4_6_8`.
+As the activation energy $E_{a}$ is often unknown, some studies such as the documents {cite:t}`eee-JEP122H`, {cite:t}`eee-Livingston2000` and {cite:t}`eee-JESD-202` provide the activation energies $E_{a}$ of most common {term}`failure mechanisms <Failure mechanism>`. Otherwise, the value of $E_{a}$=0.7eV is generally used as a default value. This assumption could be validated by tests according to {numref}`eee_4_6_8`.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_204')"
     placeholder="Search table...">
@@ -603,7 +603,7 @@ The Thermal Variation test is a test with rapid change of temperature of the com
 ```
 where:
 
--   $E_{a}$: activation energy of the desired failure mechanism in eV;
+-   $E_{a}$: activation energy of the desired {term}`failure mechanism <Failure mechanism>` in eV;
 
 -   $k$: Boltzmann constant equal to 8.62.10^-5^;
 
@@ -624,7 +624,7 @@ where:
 -   $q$: coefficient related to cycling frequency = 0.3.
 ````
 
-For the failure mechanisms of solder joints, the value of the activation energy $E_{a}$ is 0.1216eV, the coefficient related to the components $m$ is 2 for tin lead solder and 2.6 for lead free alloy. For other materials, different studies have been performed to determine the coefficient related to the components $m$. These studies are resumed in documents {cite:t}`eee-SSB-1.003` and {cite:t}`eee-Livingston2000` and presented in the following table:
+For the {term}`failure mechanisms <Failure mechanism>` of solder joints, the value of the activation energy $E_{a}$ is 0.1216eV, the coefficient related to the components $m$ is 2 for tin lead solder and 2.6 for lead free alloy. For other materials, different studies have been performed to determine the coefficient related to the components $m$. These studies are resumed in documents {cite:t}`eee-SSB-1.003` and {cite:t}`eee-Livingston2000` and presented in the following table:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-205')" placeholder="Search table...">
 
@@ -713,7 +713,7 @@ The Damp Heat test is a test with a combination of temperature and humidity, gen
 ```
 where:
 
--   $E_{a}$: activation energy of the desired failure mechanism in eV;
+-   $E_{a}$: activation energy of the desired {term}`failure mechanism <Failure mechanism>` in eV;
 
 -   $k$: Boltzmann constant equal to 8.62.10^-5^;
 
@@ -745,7 +745,7 @@ With this law described in document {cite:t}`eee-SSB-1.003`, the main difficulty
 ```
 where:
 
--   $E_{a}$: activation energy of the desired failure mechanism in eV;
+-   $E_{a}$: activation energy of the desired {term}`failure mechanism <Failure mechanism>` in eV;
 
 -   $k$: Boltzmann constant equal to 8.62.10^-5^;
 
@@ -766,22 +766,22 @@ where:
 (eee_4_6_8_1)=
 ### Degradation model analysis
 
-On a reliability life test, it is essential to validate the degradation laws and their related parameters. The main degradation models for EEE components are detailed in the previous {numref}`eee_4_6_6_3`. The model is related to the failure mechanisms but the parameters of the model are related to the stress.
+On a reliability life test, it is essential to validate the {term}`degradation <Degradation>` laws and their related parameters. The main {term}`degradation <Degradation>` models for EEE components are detailed in the previous {numref}`eee_4_6_6_3`. The model is related to the {term}`failure mechanisms <Failure mechanism>` but the parameters of the model are related to the stress.
 
-Thus, each failure should be physically analysed in order to identify the failure mechanism. However, different cases can occur:
+Thus, each failure should be physically analysed in order to identify the {term}`failure mechanism <Failure mechanism>`. However, different cases can occur:
 
--   If the failure mechanism is the one which is expected in the test definition, the chosen model is validated;
+-   If the {term}`failure mechanism <Failure mechanism>` is the one which is expected in the test definition, the chosen model is validated;
 
--   If the failure mechanism is different from the one which is expected but the related degradation model and parameters are known, the parameters previously defined in the test plan should be reviewed;
+-   If the {term}`failure mechanism <Failure mechanism>` is different from the one which is expected but the related {term}`degradation <Degradation>` model and parameters are known, the parameters previously defined in the test plan should be reviewed;
 
--   If the failure mechanism is undefined but the degradation law is suspected to be sound, a second test should be carried out with a different stress level;
+-   If the {term}`failure mechanism <Failure mechanism>` is undefined but the {term}`degradation <Degradation>` law is suspected to be sound, a second test should be carried out with a different stress level;
 
-In any cases, the determination of the parameters of the model is realized by analysing the results of the tests by considering the deterministic models as described in {numref}`eee_4_6_8_2`. However, if neither the mechanism nor the degradation model is accepted, an experimental model should be defined and determined as described in {numref}`eee_4_6_8_3`.
+In any cases, the determination of the parameters of the model is realized by analysing the results of the tests by considering the deterministic models as described in {numref}`eee_4_6_8_2`. However, if neither the mechanism nor the {term}`degradation <Degradation>` model is accepted, an experimental model should be defined and determined as described in {numref}`eee_4_6_8_3`.
 
 (eee_4_6_8_2)=
 ### Deterministic models
 
-If the degradation model is presumed to be an inverse power law or an Arrhenius' law, so with one parameter to determine, the experimentation is based on the replication of the life test with two different stress levels. Then, considering that the assumption of the degradation model is strictly the same for the two tests, the parameters of the model can be identified.
+If the {term}`degradation <Degradation>` model is presumed to be an inverse power law or an Arrhenius' law, so with one parameter to determine, the experimentation is based on the replication of the life test with two different stress levels. Then, considering that the assumption of the {term}`degradation <Degradation>` model is strictly the same for the two tests, the parameters of the model can be identified.
 
 For the Arrhenius' law, the activation energy $E_{a}$ can be found with the formula:
 
@@ -830,9 +830,9 @@ Two stress levels deterministic-probabilistic approach.
 (eee_4_6_8_3)=
 ### Experimental models
 
-When the failure mechanism and the degradation model are unknown, the degradation should be followed during the test and the results, drift or failures, plotted in the most suitable mathematical model.
+When the {term}`failure mechanism <Failure mechanism>` and the {term}`degradation <Degradation>` model are unknown, the {term}`degradation <Degradation>` should be followed during the test and the results, drift or failures, plotted in the most suitable mathematical model.
 
-The potential two-parameter models for EEE components degradation are:
+The potential two-parameter models for EEE components {term}`degradation <Degradation>` are:
 
 -   The linear model:
 
@@ -882,7 +882,7 @@ The potential two-parameter models for EEE components degradation are:
 ```
 ````
 
-A third parameter can be useful for degradation models: the time shift. This parameter is added when the degradation starts after a time delay $\tau$. The models become:
+A third parameter can be useful for {term}`degradation <Degradation>` models: the time shift. This parameter is added when the {term}`degradation <Degradation>` starts after a time delay $\tau$. The models become:
 
 ````{admonition} Equation
 :class: equation
@@ -903,9 +903,9 @@ Once the tests have shown wear-out failures, a suitable failure distribution whi
 
 The third part of the bathtub curve can be represented by several potential distributions, see {numref}`methodologies` for details. The most common used distributions for the wear-out of EEE components are the Weibull distribution with two or three parameters (introducing a shift *τ* in the two-parameter model $f(t-\tau)$), and the Lognormal distribution.
 
-The Weibull distribution is often used to model "weakest link" failures such as dielectric breakdown and thermo mechanical failures due to solder joints degradation {cite:t}`eee-JEP122H`. The complete methodology to define a Weibull distribution model is provided in document \[BR-EEE-29\].
+The Weibull distribution is often used to model "weakest link" failures such as dielectric breakdown and thermo mechanical failures due to solder joints {term}`degradation <Degradation>` {cite:t}`eee-JEP122H`. The complete methodology to define a Weibull distribution model is provided in document \[BR-EEE-29\].
 
-For the Lognormal distribution, the failure rate starts increasing exponentially up to a maximum and then decreases. The Lognormal distribution is generally used for chemical degradation such as corrosion or for some semiconductor failure mechanisms as electromigration (EM). Due to its mathematical formula, the MTTF of a Lognormal distribution is always longer than the MTTF of a Weibull distribution. Documents {cite:t}`eee-JEP122H` and {cite:t}`eee-JESD-37A` provide the methodology to define the Lognormal distribution.
+For the Lognormal distribution, the failure rate starts increasing exponentially up to a maximum and then decreases. The Lognormal distribution is generally used for chemical {term}`degradation <Degradation>` such as corrosion or for some semiconductor failure mechanisms as electromigration (EM). Due to its mathematical formula, the MTTF of a Lognormal distribution is always longer than the MTTF of a Weibull distribution. Documents {cite:t}`eee-JEP122H` and {cite:t}`eee-JESD-37A` provide the methodology to define the Lognormal distribution.
 
 **Combination of distributions**
 
@@ -926,7 +926,7 @@ Functional block diagram of Operational amplifier OP27.
 
 The measurements of the input bias currents $Ib+$ and $Ib-$ on pins 3 and 2 are inside the specification of ±40ns until reaching a total dose of 20krad. After this threshold, the values are diverting with the accumulation of dose. However, the behaviour of changes is considerably different if the parts are biased or unbiased during the tests. The conclusion of these tests is that transistors Q1A, Q1B, Q2A and Q2B of operational amplifier OP27 are sensitive to radiations, especially when they are not power supplied. As the inverting and not inverting voltages are compensating each other, there is no impact on the output gains of the operational amplifiers. In fact, the gains $Avs+$ and $Avs-$ are always higher than the minimum value of 120dB, but gains are not changing much with the accumulation of dose as their values are always inside the limits of 120 and 135dB.
 
-To estimate the wear-out of the operational amplifier OP27 with accumulation of dose, a model of degradation is realized depending on the total dose. The extrapolation is based on the degradation of the operational amplifier based on the following equation:
+To estimate the wear-out of the operational amplifier OP27 with accumulation of dose, a model of {term}`degradation <Degradation>` is realized depending on the total dose. The extrapolation is based on the {term}`degradation <Degradation>` of the operational amplifier based on the following equation:
 
 ````{admonition} Equation
 :class: equation
@@ -1125,7 +1125,7 @@ name: Figure_1_12
 Degradation of input current of operational amplifier OP27.
 ```
 
-The most convenient degradation model is clearly based on an evolution of the exponential model. The other models such as the linear, power and logarithmic model cannot fit to these curves. The degradation model is the following:
+The most convenient {term}`degradation <Degradation>` model is clearly based on an evolution of the exponential model. The other models such as the linear, power and logarithmic model cannot fit to these curves. The {term}`degradation <Degradation>` model is the following:
 
 ````{admonition} Equation
 :class: equation
@@ -1137,7 +1137,7 @@ The most convenient degradation model is clearly based on an evolution of the ex
 ```
 ````
 
-```{list-table} Characteristics of the exponential model to the degradation data.
+```{list-table} Characteristics of the exponential model to the {term}`degradation <Degradation>` data.
 :name: eee-table4-207
 :header-rows: 1
 :widths: 25 25 25 25
@@ -1156,7 +1156,7 @@ The most convenient degradation model is clearly based on an evolution of the ex
     - 0.02
 ```
 
-For the exponential model, the equations of degradation in percentage for each unit are the following:
+For the exponential model, the equations of {term}`degradation <Degradation>` in percentage for each unit are the following:
 
 ````{admonition} Equation
 :class: equation
@@ -1185,12 +1185,12 @@ Drawing of the efficiency based on these exponential models provides the followi
 width: 600px
 name: Figure_1_13
 ---
-Estimation of the degradation of input current of operational amplifier OP27.
+Estimation of the {term}`degradation <Degradation>` of input current of operational amplifier OP27.
 ```
 
-The wear-out of the operational amplifier is considered as not acceptable for a certain level of degradation. This level of degradation is depending on the satellite and its application. In this example, not acceptable levels of degradation of 10% to 99% are considered. For each level and for biased and unbiased operational amplifiers, the predicted dose of radiation to get failure is calculated in the following table:
+The wear-out of the operational amplifier is considered as not acceptable for a certain level of {term}`degradation <Degradation>`. This level of {term}`degradation <Degradation>` is depending on the satellite and its application. In this example, not acceptable levels of {term}`degradation <Degradation>` of 10% to 99% are considered. For each level and for biased and unbiased operational amplifiers, the predicted dose of radiation to get failure is calculated in the following table:
 
-```{list-table} Predicted dose of radiation to failure for each level of degradation.
+```{list-table} Predicted dose of radiation to failure for each level of {term}`degradation <Degradation>`.
 :name: eee-table4-208
 
 * - <table class="myTable" id="eee_table4_208">
@@ -1198,7 +1198,7 @@ The wear-out of the operational amplifier is considered as not acceptable for a 
             <tr>
                 <th rowspan="2"><strong>Operational amplifier</strong></th>
                 <th colspan="10"><strong>Predicted dose of radiation to failure in krad for percentage of
-                        degradation</strong></th>
+                        {term}`degradation <Degradation>`</strong></th>
             </tr>
             <tr>
                 <th><strong>10%</strong></th>

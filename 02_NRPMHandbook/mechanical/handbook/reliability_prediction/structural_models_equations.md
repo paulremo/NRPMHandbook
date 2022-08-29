@@ -46,13 +46,13 @@ An overview on the {term}`failure mechanisms <Failure mechanism>` covered by the
     - Stress corrosion cracking
     - No
     - {numref}`meca_4_7_3`
-*   - Material degradation
+*   - Material {term}`degradation <Degradation>`
     - Radiation damage
     - Yes
     - {numref}`meca_4_7_4_1`
 ```
 
-{term}`Failure mechanisms <Failure mechanism>` that are not listed in {numref}`meca-table4-10` need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC’s WARP {cite:t}`mec-RiAC` or Kowal {cite:t}`mec-19970017405`. The “full” {term}`structural reliability method <Structural reliability method>` may be applied with any limit state function or {term}`failure mechanism <Failure mechanism>` model, see {numref}`meca_4_6_1` for details.
+{term}`Failure mechanisms <Failure mechanism>` that are not listed in {numref}`meca-table4-10` need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC's WARP {cite:t}`mec-RiAC` or Kowal {cite:t}`mec-19970017405`. The “full” {term}`structural reliability method <Structural reliability method>` may be applied with any limit state function or {term}`failure mechanism <Failure mechanism>` model, see {numref}`meca_4_6_1` for details.
 The following subsections dedicated to each {term}`failure mechanism <Failure mechanism>` model always follow the same logic: First the {term}`failure mechanism <Failure mechanism>` is introduced and a generic limit state function is derived that can be used with general {term}`structural reliability methods <Structural reliability method>`, possibly requiring numerical methods to derive the probability of failure. Closed form solutions (if available) are then discussed separately under the heading “Simplified {term}`failure mechanism <Failure mechanism>` model”. 
 
 The derivation of these closed-form solutions is based on several assumptions related to the limit state function and the basic variable modelling, see {numref}`meca_4_6_3` for a general introduction. The detailed assumptions are specific to the considered {term}`failure mechanisms <Failure mechanism>`; a short summary is provided together with each simplified model. Note that it is not possible to make a general statement how “exact” the analytic solutions are, e.g. when compared to a “full” structural reliability assessment. However, the assumptions listed can and should be checked to decide whether the simplified model can be used for a given application or whether the “full” {term}`structural reliability method <Structural reliability method>` is more appropriate.
@@ -71,9 +71,9 @@ Wear is a complex phenomenon related to the erosion or displacement of material 
 
 Adhesive, abrasive and fretting wear show common behaviour, and it is commonly agreed that for these types the adhesive wear mechanism plays a dominant role. A general wear model with a focus on **adhesive wear** is presented in {numref}`meca_4_7_1_1`.
 
-**Lubricated wear** is related to the degradation of the lubricant or the lubricant reservoir in lubricated contacts. This regime is typical for bearings, with analytical models provided in {numref}`meca_4_7_1_2` for solid lubricated bearings (particularly bearing cages), and in {numref}`meca_4_7_1_3` for fluid lubricated bearings.
+**Lubricated wear** is related to the {term}`degradation <Degradation>` of the lubricant or the lubricant reservoir in lubricated contacts. This regime is typical for bearings, with analytical models provided in {numref}`meca_4_7_1_2` for solid lubricated bearings (particularly bearing cages), and in {numref}`meca_4_7_1_3` for fluid lubricated bearings.
 
-Finally, **fatigue wear** is caused by cyclic loading and corresponding crack formation. It is the dominant bearing {term}`failure mechanism <Failure mechanism>` in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory {cite:t}`mec-PalmgrenDieLV` with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the degradation of the lubricant {cite:t}`mec-TEC-MSM`. For this reason, fatigue wear is not discussed any further in the following.
+Finally, **fatigue wear** is caused by cyclic loading and corresponding crack formation. It is the dominant bearing {term}`failure mechanism <Failure mechanism>` in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory {cite:t}`mec-PalmgrenDieLV` with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the {term}`degradation <Degradation>` of the lubricant {cite:t}`mec-TEC-MSM`. For this reason, fatigue wear is not discussed any further in the following.
 
 (meca_4_7_1_1)=
 ### Adhesive wear
@@ -1293,9 +1293,9 @@ environment may in principle be accounted for in crack growth modelling,
 see {numref}`meca_4_7_2_2` for details.
 
 (meca_4_7_4)=
-## Modelling of failures due to material degradation
+## Modelling of failures due to material {term}`degradation <Degradation>`
 
-Material degradation is a time-dependent process leading to a reduced
+Material {term}`degradation <Degradation>` is a time-dependent process leading to a reduced
 performance of materials (deterioration of the physical properties)
 under the influence of environmental actions such as temperature or
 radiation. For normal mission durations, these effects can usually be
@@ -1304,9 +1304,9 @@ However, a dedicated modelling may be required for specific
 applications, or more broadly for wear-out modelling in the context of
 life time extensions beyond the nominal mission.
 
-<u>Thermal degradation</u> is of relevance mainly for non-metallic
+<u>Thermal {term}`degradation <Degradation>`</u> is of relevance mainly for non-metallic
 materials such as polymers or insulation material. Some basic models
-have been reviewed in {cite:t}`mec-Kowal1994MechanicalSR`. Thermal degradation as an individual
+have been reviewed in {cite:t}`mec-Kowal1994MechanicalSR`. Thermal {term}`degradation <Degradation>` as an individual
 {term}`failure mechanism <Failure mechanism>` is not discussed any further in the present chapter.
 Note, however, that temperature may have to be considered as a
 contributor or influencing variable during several other failure
@@ -1314,11 +1314,11 @@ mechanisms, e.g. affecting strength and elasticity parameters for common
 materials.
 
 The following subsection provides a brief discussion of <u>radiation
-degradation</u> and proposes a generic modelling approach for its
+{term}`degradation <Degradation>`</u> and proposes a generic modelling approach for its
 modelling in mechanical {term}`reliability predictions <Reliability prediction>`.
 
 (meca_4_7_4_1)=
-### Radiation degradation modelling
+### Radiation {term}`degradation <Degradation>` modelling
 
 The {term}`spacecraft <Spacecraft>` radiation environment is characterized by the type,
 fluence, dose rate, energy spectrum and spatial distribution of nuclear
@@ -1330,7 +1330,7 @@ taking both external and internal radiation sources into account.
 Radiation affects a variety of material parameters including yield
 strength and ultimate stress, creep, fatigue, thermal conductivity,
 hardness, optical properties etc. Metallic materials are rather
-unaffected by radiation, but degradation needs to be considered for
+unaffected by radiation, but {term}`degradation <Degradation>` needs to be considered for
 optical materials (e.g. darkening of glass) and for organic materials
 such as plastics and polymers {cite:t}`mec-Bouquet1979DesignersGT`. Due to the complexity of the
 phenomena, a quantitative estimation of the radiation effects is
@@ -1356,7 +1356,7 @@ g\left( \text{X} \right) = X_{1} - \Theta \cdot X_{2}(t) = D_{A} - \Theta \cdot 
 Thus, $X_{1}$ is defined as the allowable radiation dose $D_{A}$ and
 $X_{2}$ as the cumulated dose $D$ determined as a function of time $t$.
 
-**Simplified radiation degradation model**
+**Simplified radiation {term}`degradation <Degradation>` model**
 
 A strongly simplified assessment can be achieved by summarizing all
 uncertainties associated with the radiation modelling in the model
@@ -1369,7 +1369,7 @@ The variable definitions are given in {numref}`meca-table4-17` below.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-17')" placeholder="Search table...">
 
-```{list-table} Assumed probabilistic models for the simplified radiation degradation model
+```{list-table} Assumed probabilistic models for the simplified radiation {term}`degradation <Degradation>` model
 :name: meca-table4-17
 :header-rows: 1
 :widths: 10 30 20 20 20
@@ -1419,7 +1419,7 @@ P_{f}(t) = \text{P}\left\lbrack X_{1} - X_{2}(t) \cdot \Theta \leq 0 \right\rbra
 ```
 ````
 
-The main assumptions underlying the simplified radiation degradation
+The main assumptions underlying the simplified radiation {term}`degradation <Degradation>`
 model are the following:
 
 * Failure occurs if the cumulated radiation dose exceeds the allowable dose limit.

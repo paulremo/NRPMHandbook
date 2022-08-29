@@ -143,7 +143,7 @@ Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`. The foll
 
 The occurrence scale of {numref}`misc_5_7_2` is used to derive, based on engineering judgement, either a failure rate or a probability of failure, per {term}`failure mode <Failure mode>`:
 
-* In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no degradation in time is expected (e.g.  if a particle inside a {term}`HF/RF passive part <HF/RF passive part>` which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
+* In the case Detectability (i.e. the capacity to detect on ground the defect) is certain, the probability of failure is set to 0 under the condition that no {term}`degradation <Degradation>` in time is expected (e.g.  if a particle inside a {term}`HF/RF passive part <HF/RF passive part>` which originates from manufacturing is necessarily detected on ground with no possibility to get a particle during the mission, then the associated probability of failure is set to 0).
 * A probability of occurrence is assigned to every {term}`failure mode <Failure mode>` and the sum provides the probability of occurrence of the item.
 * A failure rate could be derived assuming the probability of occurrence on the specified lifetime is equal to the probability assigned to the {term}`failure mode <Failure mode>`, e.g. probability assessed to $10^{-4}$ as level 4 ({numref}`misc-table4-6`) leads to a failure rate of $1,14 10^{-9}$ for 10 years.
 

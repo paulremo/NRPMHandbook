@@ -17,7 +17,7 @@ The objective of this chapter is to provide a methodology to define the mission 
 
 The mission profile, or life profile, is an important step to consider when using the reliability.space method.
 
-The mission profile allows taking into account the use, which is one of the three items with technology and process on which the reliability prediction of any electronic equipment is based. The mission profile should be as accurate and as pertinent as necessary to get the desired level of confidence in the reliability prediction.
+The mission profile allows taking into account the use, which is one of the three items with technology and process on which the reliability prediction of any electronic equipment is based. The mission profile should be as accurate and as pertinent as necessary to get the desired {term}`level of confidence <Level of confidence>` in the reliability prediction.
 
 The stress values defined for each phase of the mission profile are used as input parameters describing the physical stresses acting on the EEE components. More specifically, the values of temperature, temperature cycling, vibration and humidity are directly used in the physics of failures equations used in the models for EEE components. The chemical values are used in the consideration of over-stresses with the induced factor $\Pi_{\text{induced}\_i}$ defined in {numref}`eee_4_3_1_17`.
 
@@ -208,9 +208,9 @@ The humidity stress is required for the reliability prediction of sensitive comp
 (eee_4_3_1_7)=
 ## Quantification of vibrations
 
-The vibrations are mainly present during the launch phase. Once the satellite is in space, there is only little vibration and failures due to vibrations are considered as random failures. So, vibrations are mainly considered in the mission profile during the launch phase and can be considered as extrinsic failures. The value of vibrations depends on the position of the electronic equipment inside the satellite, on the maximum vibrations endured by the satellite during the launch, and on the launcher. This value is estimated by measurements or mechanical simulations. Even if the influence of vibrations can be small due to the low duration of this phase, the vibrations have to be considered.
+The vibrations are mainly present during the launch phase. Once the satellite is in space, there is only little vibration and failures due to vibrations are considered as random failures. So, vibrations are mainly considered in the mission profile during the launch phase and can be considered as {term}`extrinsic failures <Extrinsic failure>`. The value of vibrations depends on the position of the electronic equipment inside the satellite, on the maximum vibrations endured by the satellite during the launch, and on the launcher. This value is estimated by measurements or mechanical simulations. Even if the influence of vibrations can be small due to the low duration of this phase, the vibrations have to be considered.
 
-Whatever the estimated reliability prediction due to vibrations, as the risk of extrinsic failures due to vibrations is still present, specific qualifications of the equipment should be done to ensure that vibrations cannot affect the behaviour of the electronic equipment.
+Whatever the estimated reliability prediction due to vibrations, as the risk of {term}`extrinsic failures <Extrinsic failure>` due to vibrations is still present, specific qualifications of the equipment should be done to ensure that vibrations cannot affect the behaviour of the electronic equipment.
 
 (eee_4_3_1_8)=
 ## Quantification of chemical stresses
@@ -235,14 +235,14 @@ The contributions of over-stresses in the mission profile on components are defi
 (eee_4_3_1_10)=
 ## Specific stresses not considered in the mission profile
 
-Some of the stresses are not considered to the real level of influence that they can have in space applications compared to other applications. The failures due to ON / OFF cycles and due to radiations are classified as wear-out failures as they affect the degradation of the equipment.
+Some of the stresses are not considered to the real level of influence that they can have in space applications compared to other applications. The failures due to ON / OFF cycles and due to radiations are classified as wear-out failures as they affect the {term}`degradation <Degradation>` of the equipment.
 
 (eee_4_3_1_11)=
 ## ON / OFF cycles
 
 The equipment is generally switched off when it is not used to limit as much as possible the consumption of energy. In the mission profile, the impact on EEE components of the frequent ON / OFF cycles is considered only by the thermal variations due to the self-heating of electronic equipment in the model. The influence of frequent switching on and switching off on the reliability of electronic equipment is not perfectly apprehended and not correctly considered.
 
-A transmitter of a Low Earth Orbit satellite being switched off when out of the scope of the reception stations can occur up to 100 000 times over the mission lifetime without having any failures. For this specific constraint, no potential impacts have been currently found with experience of In-Orbit Return. Consequently, the impact of these frequent ON / OFF cycles is considered as a wear-out phenomenon of EEE components and is discussed in {numref}`eee_4_6_5`.
+A transmitter of a Low Earth Orbit satellite being switched off when out of the scope of the reception stations can occur up to 100 000 times over the {term}`mission lifetime <Mission lifetime>` without having any failures. For this specific constraint, no potential impacts have been currently found with experience of In-Orbit Return. Consequently, the impact of these frequent ON / OFF cycles is considered as a wear-out phenomenon of EEE components and is discussed in {numref}`eee_4_6_5`.
 
 (eee_4_3_1_12)=
 ## Radiations
@@ -308,10 +308,10 @@ where:
 
 -   $p$: accelerating power for the electrical stress, defined in the formula for each type of component;
 
--   $E_{a}$ : The value of the activation energy which depends on the technology and main contributing failure mechanism considered.
+-   $E_{a}$ : The value of the activation energy which depends on the technology and main contributing {term}`failure mechanism <Failure mechanism>` considered.
 ````
 
-For some components that are sensitive to failure mechanisms linked to electrical operation, the contribution of electrical stress is considered as a multiplicative factor. This electrical stress is determined based on the ratio between applied stress and rated stress, elevated to an accelerating power $p$. The considered stresses are voltage and current. The accelerating power $p$ is derived based on publications or by engineering judgment.
+For some components that are sensitive to {term}`failure mechanisms <Failure mechanism>` linked to electrical operation, the contribution of electrical stress is considered as a multiplicative factor. This electrical stress is determined based on the ratio between applied stress and rated stress, elevated to an accelerating power $p$. The considered stresses are voltage and current. The accelerating power $p$ is derived based on publications or by engineering judgment.
 
 
 (eee_4_3_1_14)=

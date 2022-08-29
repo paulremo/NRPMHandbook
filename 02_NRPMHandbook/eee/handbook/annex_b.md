@@ -108,8 +108,8 @@ Generally, each question is dedicated to either the prime contractor or the sub-
     - L4
     - NA
 *   - 53
-    - Make use of feedback from operations obtained from similar products used in similar environments so as to achieve a good level of confidence in maintenance of reliability performances. Feedback from operations is also used to calibrate or check predictive reliability methods. These studies require a large amount of time to collect operational data and precise recording of anomalies encountered. Input data comprise<ul><li>records of observed anomalies,</li><li>conditions for use of the product (life profile, operational environment, usage duration),</li><li>analysis of the cause of the failure (that may or may not be due to the manufacturer). Output data comprise: Operational reliability that may be extrapolated for different environments and life profiles by models output from the system engineering.
-    - Is feedback from operations used to maintain a good level of confidence in achieving reliability performances?
+    - Make use of feedback from operations obtained from similar products used in similar environments so as to achieve a good {term}`level of confidence <Level of confidence>` in maintenance of reliability performances. Feedback from operations is also used to calibrate or check predictive reliability methods. These studies require a large amount of time to collect operational data and precise recording of anomalies encountered. Input data comprise<ul><li>records of observed anomalies,</li><li>conditions for use of the product (life profile, operational environment, usage duration),</li><li>analysis of the cause of the failure (that may or may not be due to the manufacturer). Output data comprise: Operational reliability that may be extrapolated for different environments and life profiles by models output from the system engineering.
+    - Is feedback from operations used to maintain a good {term}`level of confidence <Level of confidence>` in achieving reliability performances?
     - 8.5
     - NA
     - L1 L2 L3 L4

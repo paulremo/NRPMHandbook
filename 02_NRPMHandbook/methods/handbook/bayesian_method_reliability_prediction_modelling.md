@@ -549,7 +549,7 @@ Using the Chi-Square distribution $\chi_{f,q}^{2}$ with $f$ degrees of freedom, 
 ```
 ````
 
-Where $n_{f}$ denotes the number of failure events, $\alpha$ the level of confidence and $n$ the number of items observed (with or without failure). The equivalent number of failure events $n_{\text{equi},1 - \alpha}$ at a certain confidence level can be estimated to:
+Where $n_{f}$ denotes the number of failure events, $\alpha$ the {term}`level of confidence <Level of confidence>` and $n$ the number of items observed (with or without failure). The equivalent number of failure events $n_{\text{equi},1 - \alpha}$ at a certain confidence level can be estimated to:
 
 ````{admonition} Equation
 :class: equation
@@ -596,7 +596,7 @@ Besides offering full flexibility in terms of prior and sampling distributions, 
 
 Several MCMC programs and toolboxes are available, e.g. WinBUGS/OpenBUGS **\[BR26\]**, JAGS **\[BR27\]** or Stan **\[BR28\]**, to mention just a few. An introduction and overview on the use of Bayesian methods in a reliability context, using many MCMC examples, can be found in a NASA guide dedicated to Bayesian methods for risk and reliability **\[BR29\]**, including the following topics:
 
--   Bayesian inference for common time-to-failure models
+-   {term}`Bayesian inference <Bayesian inference>` for common time-to-failure models
 
 -   Time-trend models for the failure rate $\lambda$ or binomial probability $p$
 

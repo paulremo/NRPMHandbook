@@ -3,7 +3,7 @@
 
 This chapter of the handbook deals with the EEE components and assemblies identified in the EEPL list of components presented in {ref}`eee_annex_a`,
 
-{numref}`eee_4_1` will allow introducing the main concepts and strategy for data sources and methods selections for EEE components and assemblies modelling. And {numref}`eee_4_2` will introduce the notion of failure coverage (Random Failures, Systematic Failures, Extrinsic Failures and Wear-out failures) for EEE components in the context of Space applications.
+{numref}`eee_4_1` will allow introducing the main concepts and strategy for data sources and methods selections for EEE components and assemblies modelling. And {numref}`eee_4_2` will introduce the notion of failure coverage (Random Failures, Systematic Failures, {term}`Extrinsic Failures <Extrinsic failure>` and Wear-out failures) for EEE components in the context of Space applications.
 
 Then in the following sections ({numref}`eee_4_3` to {numref}`eee_4_6`), these four aspects are considered for all families and subfamilies.
 

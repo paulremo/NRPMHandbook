@@ -1,12 +1,12 @@
 (misc_5_4)=
 # Reliability models for miscellaneous items
-There are three reliability models for miscellaneous items:
+There are three reliability models for {term}`miscellaneous items <Miscellaneous item>`:
 
-* “Standard model”, for generic miscellaneous items,
+* “Standard model”, for generic {term}`miscellaneous items <Miscellaneous item>`,
 
-* “Non-standard model”, for specific miscellaneous items.
+* “Non-standard model”, for specific {term}`miscellaneous items <Miscellaneous item>`.
 
-* “Holistic model”, for miscellaneous items which are not supported by “standard model” nor by a “non-standard model”.
+* “Holistic model”, for {term}`miscellaneous items <Miscellaneous item>` which are not supported by “standard model” nor by a “non-standard model”.
 
 
 (misc_5_4_1)=
@@ -27,7 +27,7 @@ The reliability “standard model” is then calculated based on the process pre
 (misc_5_4_2)=
 ## Non-standard model for specific miscellaneous items
 
-A “specific” {term}`miscellaneous item <Miscellaneous item>` relates to a product which is not fully modelled by {term}`EEE parts <EEE part>` and/or {term}`mechanical parts <Mechanical part>` and which is not listed in the equivalent classes of miscellaneous items in {numref}`misc_5_1`.
+A “specific” {term}`miscellaneous item <Miscellaneous item>` relates to a product which is not fully modelled by {term}`EEE parts <EEE part>` and/or {term}`mechanical parts <Mechanical part>` and which is not listed in the equivalent classes of {term}`miscellaneous items <Miscellaneous item>` in {numref}`misc_5_1`.
 
 e.g. Hold Release Mechanism Low Shock presented in {numref}`Figure_5_3`.
 
@@ -55,6 +55,6 @@ The holistic reliability model is then calculated based on the process presented
 (misc_5_4_4)=
 ## Dormant failures
 
-Currently no reliability model is provided to support failure modelling in dormant mode for miscellaneous items. The miscellaneous items are from different nature (mix of EEE and mechanics, passive components, tubing, piping…) and it is not relevant to provide a generic rule to derive a dormant failure rate from the active {term}`miscellaneous item <Miscellaneous item>` failure rate.
+Currently no reliability model is provided to support failure modelling in dormant mode for {term}`miscellaneous items <Miscellaneous item>`. The {term}`miscellaneous items <Miscellaneous item>` are from different nature (mix of EEE and mechanics, passive components, tubing, piping…) and it is not relevant to provide a generic rule to derive a dormant failure rate from the active {term}`miscellaneous item <Miscellaneous item>` failure rate.
 
 In case, depending on the mission and on the operations, it is necessary to use a reliability model in dormant mode (no power supply during certain storage duration, no activation for “maintenance”) the user will define a dedicated reliability model (refer to the different methods listed previously) accounting for the specific conditions in storage.

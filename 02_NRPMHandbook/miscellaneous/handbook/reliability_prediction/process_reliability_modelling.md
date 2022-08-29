@@ -265,8 +265,8 @@ Where $\lambda_{3}^{\gamma}$ is the gamma estimator.
 ``````{dropdown} **STEP 5 : Wear-out modelling**
 Step 5 incorporates in the reliability model the failures due to potential wear, as necessary.
 The model consists in adding to the constant failure rate (representing {term}`random failures <Random failure>`) an increasing failure rate representing the wear-out contribution to the failure of the item.
-Let’s denote $T$ as the Time To Failure random variable.
-$T_{RF}$ is the $TTF$ representing {term}`random failures <Random failure>` (constant failure rate for miscellaneous items)
+Let's denote $T$ as the Time To Failure random variable.
+$T_{RF}$ is the $TTF$ representing {term}`random failures <Random failure>` (constant failure rate for {term}`miscellaneous items <Miscellaneous item>`)
 $T_{RF}$ is modelled by the exponential distribution. 
 $T_{WO}$ is the $TTF$ representing {term}`wear-out failures <Wear-out failure>` (increasing failure rate)
 $T_{WO}$ is modelled by any distribution with increasing failure rate, i.e. Weibull $W(\beta, \eta)$, Normal $N(m, \sigma)$, Log-Normal $\textbf{m, \sigma}$ as relevant (based on the supplier knowledge). 
@@ -311,7 +311,7 @@ P(\text{FAILURE}) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 **Discussion about the three models**
 {numref}`Figure_5_5` presents the differences on the reliability and on the failure rates per model 1, 2, 3, using the example of the Weibull distribution as a wear-out model.
 
-* Model 1 and model 3 are very close since the constant failure rates used for miscellaneous items are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.
+* Model 1 and model 3 are very close since the constant failure rates used for {term}`miscellaneous items <Miscellaneous item>` are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.
 * Model 2 could be considered as optimistic since it addresses wear-out only after the qualification time.
 * Model 1 appears as the most appropriate, summing the failure rate for {term}`random failures <Random failure>` modelling and the failure rate for Wear-out failure modelling. It is recommended to be used except technical arguments support another choice.
 
@@ -352,7 +352,7 @@ Knowing $m$ and $\sigma$, the distribution $N(m,\sigma)$ is completely defined a
 
 It is possible also to derive a Weibull distribution, similarly to the Normal distribution by adapting the two parameters $\beta$ and $\alpha$ of the Weibull distribution in order to match the expected value m and the standard-deviation $\sigma$.
 
-Then the probability $\text{P} (\text{T} > \text{t}_{\text{Q}})$ provides the level of Confidence (LoC), i.e. $\text{R}_{\text{WO}}(t) (\text{t}_{\text{Q}})$
+Then the probability $\text{P} (\text{T} > \text{t}_{\text{Q}})$ provides the {term}`Level of Confidence <Level of confidence>` (LoC), i.e. $\text{R}_{\text{WO}}(t) (\text{t}_{\text{Q}})$
 
 It is noteworthy that when the parameters are consistent the reliability function is similar between the normal distribution and the Weibull distribution. {numref}`Figure_5_6` (resp. {numref}`Figure_5_7`) presents an example of such calculation with normal law (resp. Weibull).
 
@@ -387,7 +387,7 @@ P(\text{FAILURE}) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \math
 ```
 ````
 
-The model is common to all miscellaneous items.
+The model is common to all {term}`miscellaneous items <Miscellaneous item>`.
 Refer to {numref}`sec_sys_handbook` for defining the SF value. 
 
 ``````

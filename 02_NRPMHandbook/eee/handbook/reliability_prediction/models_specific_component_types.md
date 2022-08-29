@@ -30,9 +30,9 @@ The reliability.space consortium has not been able to apply the models presented
 (eee_4_4_2_1)=
 ### DSM components
 
-DSM (Deep Sub Micron) components are a generic denomination for electronic components for which the size of engraving is smaller than for current commercial components. No clear standard is defined for the size limit under which a component is considered as a DSM, but generally this limit is fixed to around 60nm. These components are interesting for space applications because they have a higher power of calculation and can store more data while requiring less room on the board. With the reduction of size, failure mechanisms can generally occur with a higher probability and some of the failure mechanisms which are quite seldom can occur on DSM components with a higher frequency. A challenge for the future is to better identify these failure mechanisms and this is an objective of the PISTIS project.
+DSM ({term}`Deep Sub Micron <Deep Sub Micron>`) components are a generic denomination for electronic components for which the size of engraving is smaller than for current commercial components. No clear standard is defined for the size limit under which a component is considered as a DSM, but generally this limit is fixed to around 60nm. These components are interesting for space applications because they have a higher power of calculation and can store more data while requiring less room on the board. With the reduction of size, {term}`failure mechanisms <Failure mechanism>` can generally occur with a higher probability and some of the {term}`failure mechanisms <Failure mechanism>` which are quite seldom can occur on DSM components with a higher frequency. A challenge for the future is to better identify these {term}`failure mechanisms <Failure mechanism>` and this is an objective of the PISTIS project.
 
-The PISTIS has performed perform long duration tests in order to get failures on tested DSM components, to identify the failure mechanisms and then to perform a validated model for the 2021 issue of FIDES. The following tests have been realised:
+The PISTIS has performed perform long duration tests in order to get failures on tested DSM components, to identify the {term}`failure mechanisms <Failure mechanism>` and then to perform a validated model for the 2021 issue of FIDES. The following tests have been realised:
 
 -   Test in hot temperature of +25°C, +90°C and +115°C on FPGA: important drifts after 5 000 hours have been noticed on most of the components due to the Negative Bias Temperature Instability;
 
@@ -48,7 +48,7 @@ The PISTIS has performed perform long duration tests in order to get failures on
 
 The model proposed in the 2021 issue of FIDES focusses on the main changes vs other Integrated Circuits, ie the wear out failures type.
 
-The BTI mechanism has been identified as the main contributor for degradation of DSMs.
+The BTI mechanism has been identified as the main contributor for {term}`degradation <Degradation>` of DSMs.
 
 -   Up to 100°C junction temperature with a duty cycle of 100%, the FR related to BTI is negligible -\> it remains below 0.1 FIT after 50 years of use.
 
@@ -78,7 +78,7 @@ Note: In the 2021 issue of the FIDES guide, some update (Pi Process HF/RF, $\lam
 
 GaN components are used mainly for power applications, optical applications, microwave and radio-frequency applications. These components provide great opportunities because they allow mixing components of different technologies for specific system architectures.
 
-The 2009 issue of the FIDES guide does not include GaN components for power and radio-frequency. In order to provide models, the PISTIS project is currently on the way to perform long duration tests in order to get failures on their tested GaN radio-frequency components to identify the failure mechanisms and then to derive a validated model for the 2021 release of FIDES. A synthesis of data from manufacturers of GaN components has provided an activation energy of 1.6eV for GaN components dedicated to radio-frequency. Tests have been performed with a total duration of more than 60 000 hours at a high temperature of +120°C. Components are still functioning and no failure has been detected yet. The next step is to continue the tests with the aim to get some failures or observations of parameter drift and to identify the failure or wear-out mechanisms. Afterwards, the basic failure rates of these GaN components will be estimated with data issued from publications and academic studies.
+The 2009 issue of the FIDES guide does not include GaN components for power and radio-frequency. In order to provide models, the PISTIS project is currently on the way to perform long duration tests in order to get failures on their tested GaN radio-frequency components to identify the {term}`failure mechanisms <Failure mechanism>` and then to derive a validated model for the 2021 release of FIDES. A synthesis of data from manufacturers of GaN components has provided an activation energy of 1.6eV for GaN components dedicated to radio-frequency. Tests have been performed with a total duration of more than 60 000 hours at a high temperature of +120°C. Components are still functioning and no failure has been detected yet. The next step is to continue the tests with the aim to get some failures or observations of parameter drift and to identify the failure or wear-out mechanisms. Afterwards, the basic failure rates of these GaN components will be estimated with data issued from publications and academic studies.
 
 The models for both GaN MMICs and GaN transistors are introduced hereafter:
 

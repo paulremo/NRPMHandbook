@@ -137,7 +137,7 @@ For EEE reliability prediction, the following preference ordering applies:
 
 4.  Handbook data
 
-5.  Failure mechanism analysis
+5.  {term}`Failure mechanism <Failure mechanism>` analysis
 
 The preference ordering changes in case of doubts regarding the applicability of existing handbooks for space application, e.g. in the context of mechanical reliability prediction:
 
@@ -147,7 +147,7 @@ The preference ordering changes in case of doubts regarding the applicability of
 
 3.  Test data
 
-4.  Failure mechanism analysis
+4.  {term}`Failure mechanism <Failure mechanism>` analysis
 
 5.  Handbook data
 
@@ -178,7 +178,7 @@ In case only the first condition is not fulfilled, i.e. the IOR data is relevant
 There are two types of manufacturer data:
 
 -   *Manufacturer general data*\
-    It corresponds to the information that can be used to perform reliability calculations. The data can be related, for example, to the quality level or the qualification of a subsystem, a unit or a part, to the package information or to the complexity of a die for a EEE part, to the physical characteristics of the material for mechanical parts, to the constituting components for miscellaneous items, or the FMEA or RBDs at system or subsystem level.\
+    It corresponds to the information that can be used to perform reliability calculations. The data can be related, for example, to the quality level or the qualification of a subsystem, a unit or a part, to the package information or to the complexity of a die for a {term}`EEE part <EEE part>`, to the physical characteristics of the material for mechanical parts, to the constituting components for miscellaneous items, or the FMEA or RBDs at system or subsystem level.\
     These data are either requested by the project as part of the deliverable documentation (e.g. in the form of a technical note or a datasheet), provided within the elements of the data packages or available publicly (e.g. on the manufacturer's website).
 
 -   *Manufacturer reliability data*\
@@ -192,7 +192,7 @@ Manufacturer general data are needed as a general input for the prediction, inde
 
 -   if the data comes from a test, the conditions listed in {numref}`method_6_2_3` apply.
 
--   If the data is taken from another handbook data source, it should be consistent with the recommendations made in **Part III** of this handbook.
+-   If the data is taken from another {term}`handbook data source <Handbook data source>`, it should be consistent with the recommendations made in **Part III** of this handbook.
 
 (method_6_2_3)=
 ### Test results
@@ -243,14 +243,14 @@ If the test is used only for an order of magnitude estimation, approximations, i
 (method_6_2_4)=
 ### Handbook data sources
 
-There are a number of existing handbook data sources available that either present models (e.g. {cite:t}`method-UTE-C80-811` ) or reliability data (e.g. {cite:t}`method-NPRD-16`) at parts level. The Chapters for each domain ({ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>`) in this handbook specify whether and for which conditions some of the existing data sources can be used for reliability prediction in space applications.
+There are a number of existing {term}`handbook data sources <Handbook data source>` available that either present models (e.g. {cite:t}`method-UTE-C80-811` ) or reliability data (e.g. {cite:t}`method-NPRD-16`) at parts level. The Chapters for each domain ({ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>`) in this handbook specify whether and for which conditions some of the existing data sources can be used for reliability prediction in space applications.
 
 (metho_6_2_5)=
-### Failure mechanisms analysis
+### {term}`failure mechanisms <Failure mechanism>` analysis
 
-Knowing and managing the failure mechanisms within parts or systems is generally a good starting point to perform a reliability prediction. From a practical point of view, it becomes even more interesting when no other data are available to perform the reliability prediction of a part, a unit or a subsystem, and the last resort for the reliability engineer is to analyse the failure mechanisms of the item under consideration.
+Knowing and managing the {term}`{term}`failure mechanisms <Failure mechanism>` <Failure mechanism>` within parts or systems is generally a good starting point to perform a reliability prediction. From a practical point of view, it becomes even more interesting when no other data are available to perform the reliability prediction of a part, a unit or a subsystem, and the last resort for the reliability engineer is to analyse the {term}`{term}`failure mechanisms <Failure mechanism>` <Failure mechanism>` of the item under consideration.
 
-The first step is to identify potential failure modes and associated failure mechanisms, e.g. by performing a Design or Process FMEA, or through engineering judgment and/or lessons learnt. The following steps will then consist in determining reliability data linked to the phenomenon identified as most likely responsible for the undesired failure mode. The approach used for analysing in depth the failure mechanisms is the Physics of Failures, see {numref}`method_6_5` for details.
+The first step is to identify potential failure modes and associated {term}`{term}`failure mechanisms <Failure mechanism>` <Failure mechanism>`, e.g. by performing a Design or Process FMEA, or through engineering judgment and/or lessons learnt. The following steps will then consist in determining reliability data linked to the phenomenon identified as most likely responsible for the undesired failure mode. The approach used for analysing in depth the {term}`{term}`failure mechanisms <Failure mechanism>` <Failure mechanism>` is the Physics of Failures, see {numref}`method_6_5` for details.
 
 (method_6_2_6)=
 ### Failure mode repartition data
@@ -286,14 +286,14 @@ Different approaches can be followed to develop reliability models. For elementa
     Starting with observations of an item's behaviour under certain conditions (data from on-ground testing or operational feedback), a reliability model is derived using statistical methods. The mathematical tools and methods from classical reliability theory can be used for this purpose.
 
 -   **Physics of Failure:**
-    A reliability model is derived from a mathematical representation of the dominating failure mechanisms with due consideration of the relevant contributors (environmental and use conditions) and the associated uncertainties. Mathematical tools and methods may be taken e.g. from structural reliability theory, encompassing stress-strength interference methods but also methods to account for more complex failure mechanisms.
+    A reliability model is derived from a mathematical representation of the dominating {term}`failure mechanisms <Failure mechanism>` with due consideration of the relevant contributors (environmental and use conditions) and the associated uncertainties. Mathematical tools and methods may be taken e.g. from structural reliability theory, encompassing stress-strength interference methods but also methods to account for more complex {term}`failure mechanisms <Failure mechanism>`.
 
 
 -   **Combined approach:** By combination of statistical and Physics of Failure approaches, the strengths of both approaches are combined, while mitigating their weaknesses. Mathematical methods for combining different sources of information are available e.g. from the field of Bayesian statistics, allowing also the consideration of limited data samples by making use of additional information from Physics of Failure modelling.
 
-To a certain extent, the same methods can also be applied at higher levels of assembly, in particular the statistical approach which is in principle applicable at any level from part to system, provided that suitable and sufficient data is available for the item under consideration. Physics of Failure models, on the other hand, are generally developed bottom-up, focussing on the failure mechanisms of parts or relatively small assemblies. Methods for combining elementary reliability models in system level reliability prediction are described in {numref}`sec_sys_handbook`.
+To a certain extent, the same methods can also be applied at higher levels of assembly, in particular the statistical approach which is in principle applicable at any level from part to system, provided that suitable and sufficient data is available for the item under consideration. Physics of Failure models, on the other hand, are generally developed bottom-up, focussing on the {term}`failure mechanisms <Failure mechanism>` of parts or relatively small assemblies. Methods for combining elementary reliability models in system level reliability prediction are described in {numref}`sec_sys_handbook`.
 
-Each approach makes use of different pieces of information to estimate the reliability of the considered item, see {numref}`method_figure6_1` for illustration. The statistical approach uses relevant failure data to estimate the reliability of an item, whereas the Physics of Failure approach combines the analysis of the relevant failure mechanisms with information on the variability of the physical variables driving the process. Both approaches can be combined, e.g. with the aid of Bayesian updating, making best use of all available information.
+Each approach makes use of different pieces of information to estimate the reliability of the considered item, see {numref}`method_figure6_1` for illustration. The statistical approach uses relevant failure data to estimate the reliability of an item, whereas the Physics of Failure approach combines the analysis of the relevant {term}`failure mechanisms <Failure mechanism>` with information on the variability of the physical variables driving the process. Both approaches can be combined, e.g. with the aid of Bayesian updating, making best use of all available information.
 
 ```{figure} pictures/method_figure6_1.png
 ---
@@ -337,7 +337,7 @@ Before starting a statistical analysis, the relevant characteristics of the avai
 
 -   Data representativeness: Is the sample representative for the technology and application?
 
--   Failure characteristics: Which failures (root causes, failure mechanisms/modes) are included?
+-   Failure characteristics: Which failures (root causes, {term}`failure mechanisms <Failure mechanism>`/modes) are included?
 
 -   Acceleration: What was the rationale behind acceleration factors applied in testing (if any)?
 
@@ -389,7 +389,7 @@ The probability distribution and density functions for the different models are 
     - Sum of Exponential distributed failure times
 *   - Lognormal
     - Increasing or decreasing
-    - Product of independent random variables; degradation modelling with random increments proportional to the current degradation
+    - Product of independent random variables; {term}`degradation <Degradation>` modelling with random increments proportional to the current {term}`degradation <Degradation>`
     Sum of independent positive failure times (Central Limit Theorem for the sum of positive independent random variables)
 *   - Normal
     - Increasing
@@ -647,47 +647,47 @@ Where $\text{Beta}_{q}\left( \alpha,\ \beta \right)$ denotes the $q$ Quantile of
 (method_6_5)=
 ## Physics of failure and structural reliability methods
 
-Physics of Failure methods for reliability prediction are based on a mathematical modelling of the relevant failure mechanisms leading to failure. It is important to make a clear distinction between the use of Physics of Failure models in the context of design versus reliability prediction:
+Physics of Failure methods for reliability prediction are based on a mathematical modelling of the relevant {term}`failure mechanisms <Failure mechanism>` leading to failure. It is important to make a clear distinction between the use of Physics of Failure models in the context of design versus reliability prediction:
 
--   During design, the objective is to model and account for anticipated failure mechanisms in order to avoid failures, and thus to improve reliability (design for reliability). The analysis is in most cases deterministic, using margins to account for uncertainty and variability. The probabilities of success or failure are generally not quantified.
+-   During design, the objective is to model and account for anticipated {term}`failure mechanisms <Failure mechanism>` in order to avoid failures, and thus to improve reliability (design for reliability). The analysis is in most cases deterministic, using margins to account for uncertainty and variability. The probabilities of success or failure are generally not quantified.
 
 -   During reliability prediction, the objective is to quantify the probability that the considered failure mechanism(s) will lead to failure for a given design. To achieve this, the relevant uncertainties and variabilities need to be quantified and appropriately considered in a probabilistic analysis.
 
 It is also possible to combine both applications, e.g. in the context of Reliability Based Design Optimization {cite:t}`method-19970017405`, {cite:t}`method-design-space-decomposition`.
 
-The focus of the following discussion will be on the application of Physics of Failure models in the context of reliability prediction. It should be noted that the mathematical models used to describe the failure mechanism process may be the same as the ones used for design; it is the quantification of uncertainties that makes the difference.
+The focus of the following discussion will be on the application of Physics of Failure models in the context of reliability prediction. It should be noted that the mathematical models used to describe the {term}`failure mechanism <Failure mechanism>` process may be the same as the ones used for design; it is the quantification of uncertainties that makes the difference.
 
-Thus, a sound Physics of Failure method requires a combination of physical laws describing mathematically the relevant failure mechanisms with probabilistic models that account for variability and uncertainty in the manufacturing of items and their use (e.g. the distribution laws used in the Stress Strength method). Statistical observations can be used for this task, and often are the preferred input for the required probabilistic modelling. Nevertheless, in the frame of this handbook, an approach is classified as "pure" Physics of Failure as long as no reliability data is used for the quantification (see {numref}`method_figure6_1`).
+Thus, a sound Physics of Failure method requires a combination of physical laws describing mathematically the relevant {term}`failure mechanisms <Failure mechanism>` with probabilistic models that account for variability and uncertainty in the manufacturing of items and their use (e.g. the distribution laws used in the Stress Strength method). Statistical observations can be used for this task, and often are the preferred input for the required probabilistic modelling. Nevertheless, in the frame of this handbook, an approach is classified as "pure" Physics of Failure as long as no reliability data is used for the quantification (see {numref}`method_figure6_1`).
 
-An important prerequisite for the successful use of Physics of Failure methods is that the physical process leading to failure needs to be well understood and the uncertainty quantification has to account for the relevant failure root causes. This can be rather straightforward in some cases, e.g. for the modelling of wear-out failures, but may be a challenge in other applications. In particular the consideration of random failures with a pure physics-based approach is certainly more difficult due to the fact that (by definition) the root cause of these failures is not known. To overcome this limitation, some existing methodologies (e.g. {cite:t}`method-UTE-C80-811` for EEE parts, {cite:t}`method-NSWC-11` ) combine Physics of Failure considerations with field return data to derive pertinent models that can be used for a wide range of applications. Note that such "combined" approaches, making use of both Physics of Failure and reliability data, are discussed separately in {numref}`method_6_6`.
+An important prerequisite for the successful use of Physics of Failure methods is that the physical process leading to failure needs to be well understood and the uncertainty quantification has to account for the relevant {term}`failure root causes <Failure root cause>`. This can be rather straightforward in some cases, e.g. for the modelling of wear-out failures, but may be a challenge in other applications. In particular the consideration of random failures with a pure physics-based approach is certainly more difficult due to the fact that (by definition) the root cause of these failures is not known. To overcome this limitation, some existing methodologies (e.g. {cite:t}`method-UTE-C80-811` for {term}`EEE parts <EEE part>`, {cite:t}`method-NSWC-11` ) combine Physics of Failure considerations with field return data to derive pertinent models that can be used for a wide range of applications. Note that such "combined" approaches, making use of both Physics of Failure and reliability data, are discussed separately in {numref}`method_6_6`.
 
 The following subsections provide guidance on the use of "pure" Physics of Failure reliability prediction methods, with some more details on the class of structural reliability methods provided in {numref}`method_6_5_4`. A rather simple application of structural reliability methods is for the analysis of structures using the well-known stress-strength approach (see {numref}`sec_mech_handbook` for details). However, the mathematical methods are well applicable to any Physics of Failure reliability prediction problem, not only for structures and including much more complex model formulations.
 
 (method_6_5_1)=
 ### Failure mechanisms identification and modelling
 
-Applying the Physics of Failure approach first requires the understanding of the failure mechanisms contributing to the predominant failure modes for an item. Possible ways to initiate a failure mechanism analysis can be based on the following pieces of information:
+Applying the Physics of Failure approach first requires the understanding of the {term}`failure mechanisms <Failure mechanism>` contributing to the predominant failure modes for an item. Possible ways to initiate a {term}`failure mechanism <Failure mechanism>` analysis can be based on the following pieces of information:
 
 -   Engineering analysis and judgment from design and reliability experts
 
 -   Lessons learnt from previous missions
 
--   Results from a Design FMEA (DFMEA) or Process FMEA (PFMEA)
+-   Results from a {term}`Design FMEA <Design FMEA>` (DFMEA) or Process FMEA (PFMEA)
 
-Besides gaining knowledge about all failure mechanisms that may potentially cause the item under analysis to fail, it is also relevant to know which are the dominating ones for the considered design and application. A good, though still qualitative, understanding how much different failure mechanisms may contribute (or not) to overall unreliability can help to focus the analysis and to strongly reduce the effort required by the Physics of Failure approach.
+Besides gaining knowledge about all {term}`failure mechanisms <Failure mechanism>` that may potentially cause the item under analysis to fail, it is also relevant to know which are the dominating ones for the considered design and application. A good, though still qualitative, understanding how much different {term}`failure mechanisms <Failure mechanism>` may contribute (or not) to overall unreliability can help to focus the analysis and to strongly reduce the effort required by the Physics of Failure approach.
 
-The next step is to define a mathematical model describing the failure mechanisms identified in the first step. Note that a model in this context may be an analytic function or a numerical model; the only requirement is that the failure state is clearly defined as a function of the relevant physical variables.
+The next step is to define a mathematical model describing the {term}`failure mechanisms <Failure mechanism>` identified in the first step. Note that a model in this context may be an analytic function or a numerical model; the only requirement is that the failure state is clearly defined as a function of the relevant physical variables.
 
-The effort required to develop a new failure mechanism model can be considerable. It is thus highly recommended to start by a search for published models from similar applications. A collection of models for various failure mechanisms can be found in the RiAC's Web-Accessible Repository of Physics-based Models ({cite:t}`method-RiAC`), which has been set up to foster the use of Physics of Failure methods in practical applications. Models used by the design engineers are another valuable source of information.
+The effort required to develop a new {term}`failure mechanism <Failure mechanism>` model can be considerable. It is thus highly recommended to start by a search for published models from similar applications. A collection of models for various {term}`failure mechanisms <Failure mechanism>` can be found in the RiAC's Web-Accessible Repository of Physics-based Models ({cite:t}`method-RiAC`), which has been set up to foster the use of Physics of Failure methods in practical applications. Models used by the design engineers are another valuable source of information.
 
 (method_6_5_2)=
 ### Quantification of variable and model uncertainties
 
-The failure mechanism model defines which variables need to be known to identify whether an item is in the failed or in the safe state. First deterministic estimates for each variable may often be derived from design information, typically giving a positive margin when the failure mechanism model is used with this input.
+The {term}`failure mechanism <Failure mechanism>` model defines which variables need to be known to identify whether an item is in the failed or in the safe state. First deterministic estimates for each variable may often be derived from design information, typically giving a positive margin when the {term}`failure mechanism <Failure mechanism>` model is used with this input.
 
 To perform a reliability calculation, it is now necessary to quantify the uncertainties associated with each variable. To reduce the effort required by this step, some variables may be considered as deterministic, provided that at least one of the following conditions is fulfilled (both criteria may be assessed relative to the other variables' impact and uncertainty):
 
--   The variable's impact on the failure mechanism model is negligible and/or
+-   The variable's impact on the {term}`failure mechanism <Failure mechanism>` model is negligible and/or
 
 -   The variability and uncertainty associated with the quantitative estimate is small
 
@@ -707,7 +707,7 @@ After selecting an appropriate model, the distribution parameters need to be est
 
 -   Statistical data, if available in sufficient quantity
 
--   Design values, together with a statistical definition or interpretation (e.g. A- and B- value of material strength, typically defined as 1% and 10% fractile values, at 95% level of confidence)
+-   Design values, together with a statistical definition or interpretation (e.g. A- and B- value of material strength, typically defined as 1% and 10% fractile values, at 95% {term}`level of confidence <Level of confidence>`)
 
 -   Estimates (e.g. based on engineering judgement) for the mean value and/or coefficient of variation of the random variable distribution
 
@@ -717,12 +717,12 @@ It should be noted that a good fit of the distribution (both in terms of the sel
 
 When judging about the variability of a random variable, e.g. to estimate the coefficient of variation, it is important to know which root causes need to be considered in the prediction. To give an example, uncertainties and variability in the design and manufacturing process may increase the variability of an item's strength, but also that of the stresses acting on it.
 
-Finally, it should be mentioned that also the mathematical model used to represent the failure mechanism may be associated with (model) uncertainties. Depending on the level of accuracy and sophistication of the model (e.g. simple empirical correlations versus detailed finite element code), it may be relevant to explicitly account for these model uncertainties in the reliability prediction.
+Finally, it should be mentioned that also the mathematical model used to represent the {term}`failure mechanism <Failure mechanism>` may be associated with (model) uncertainties. Depending on the level of accuracy and sophistication of the model (e.g. simple empirical correlations versus detailed finite element code), it may be relevant to explicitly account for these model uncertainties in the reliability prediction.
 
 (method_6_5_3)=
 ### Uncertainty propagation and reliability estimation
 
-Reliability estimation with Physics of Failure methods requires that the identified uncertainties are propagated through the failure mechanisms model to assess the probability of failure due to unfavourable combinations of random variable realizations. With the information from the previous steps, this is basically a mathematical question.
+Reliability estimation with Physics of Failure methods requires that the identified uncertainties are propagated through the {term}`failure mechanisms <Failure mechanism>` model to assess the probability of failure due to unfavourable combinations of random variable realizations. With the information from the previous steps, this is basically a mathematical question.
 
 Various tools and techniques are available to perform this task, from analytic solutions for some basic problems to numerical methods, e.g. using Monte Carlo simulations. An overview on the so-called structural reliability methods is given in the following section.
 
@@ -733,7 +733,7 @@ Structural reliability embraces a class of methods that can be used to derive a 
 
 The following steps, each corresponding to one of the previous subsections ({numref}`method_6_5_1` to {numref}`method_6_5_3`), are required to perform a structural reliability analysis:
 
-1)  Formulation of the limit state function $g\left( \mathrm{X} \right)$, defining failure as a function of all physical variables that are relevant for the considered failure mechanism ("basic variables", vector $\mathrm{X}$).
+1)  Formulation of the limit state function $g\left( \mathrm{X} \right)$, defining failure as a function of all physical variables that are relevant for the considered {term}`failure mechanism <Failure mechanism>` ("basic variables", vector $\mathrm{X}$).
 
 2)  Choice of suitable probabilistic models (distribution type and parameters, and dependence modelling) for these basic variables, defining the joint probability density function for the random vector $\mathrm{X}$.
 
@@ -751,7 +751,7 @@ R_{T}\left( t \right) = 1 - F_{T}\left( t \right) = 1 - P_{f}\left( t \right) = 
 ```
 ````
 
-The Physics of Failure model has to consider the dominating failure mechanism(s) contributing most to the item's unreliability (see {numref}`method_6_5_1`). The limit state function $g\left( \mathrm{X} \right)$ used for this purpose can be of any functional form, or represented by a numerical model. The straight line shown in {numref}`method_figure6_3` represents the failure surface for the so-called "fundamental case" with $g\left( \mathrm{X} \right) = X_{1} - X_{2}$, where failure occurs if the random "resistance" or strength $X_{1}$ of an item is smaller than the "load" or stress $X_{2}$ acting on it. The well-known stress-strength interference methods may thus be considered as a subclass of structural reliability methods ({numref}`sec_mech_handbook`). More general models can be derived by considering more than two basic variables, nonlinear limit state functions and/or or numerical models defining the failure domain.
+The Physics of Failure model has to consider the dominating {term}`failure mechanism(s) <Failure mechanism>` contributing most to the item's unreliability (see {numref}`method_6_5_1`). The limit state function $g\left( \mathrm{X} \right)$ used for this purpose can be of any functional form, or represented by a numerical model. The straight line shown in {numref}`method_figure6_3` represents the failure surface for the so-called "fundamental case" with $g\left( \mathrm{X} \right) = X_{1} - X_{2}$, where failure occurs if the random "resistance" or strength $X_{1}$ of an item is smaller than the "load" or stress $X_{2}$ acting on it. The well-known stress-strength interference methods may thus be considered as a subclass of structural reliability methods ({numref}`sec_mech_handbook`). More general models can be derived by considering more than two basic variables, nonlinear limit state functions and/or or numerical models defining the failure domain.
 
 ```{figure} pictures/method_figure6_3.png
 ---
@@ -848,9 +848,9 @@ In summary, the Monte Carlo method is a viable approach for all reliability esti
 (method_6_6)=
 ## Combined approach
 
-The discussion of statistical methods and Physics of Failure so far has focused on the application of each of them as a standalone method, making use of probabilistic failure mechanisms modelling *or* statistical data on observed failures. Both methods have their strengths and limitations and can sometimes be difficult to apply in a specific context.
+The discussion of statistical methods and Physics of Failure so far has focused on the application of each of them as a standalone method, making use of probabilistic {term}`failure mechanisms <Failure mechanism>` modelling *or* statistical data on observed failures. Both methods have their strengths and limitations and can sometimes be difficult to apply in a specific context.
 
-The basic idea of the combined approach is to make use of all available information, combining suitable failure data with Physics of Failure modelling to derive models that are backed both by the available statistics and by the consideration of the driving failure mechanisms and the associated contributing factors. Two different approaches are distinguished in this handbook:
+The basic idea of the combined approach is to make use of all available information, combining suitable failure data with Physics of Failure modelling to derive models that are backed both by the available statistics and by the consideration of the driving {term}`failure mechanisms <Failure mechanism>` and the associated contributing factors. Two different approaches are distinguished in this handbook:
 
 -   Bayesian updating of Physics of Failure models, using relevant failure data
 
@@ -860,7 +860,7 @@ The first approach, using Bayesian updating, uses Physics of Failure considerati
 
 The second approach uses statistical methods in order to establish a fixed "base failure rate" for a certain item or family of items, and the Physics of Failure is then used to determine acceleration factors depending on the considered design, its use conditions and the environment. Models based on this approach are provided e.g. in the FIDES guide {cite:t}`method-UTE-C80-811` , which is considered as a basis for EEE reliability prediction in this handbook ({numref}`sec_eee_handbook`), or in the NSWC handbook for Mechanical reliability prediction {cite:t}`method-NSWC-11` , see {numref}`sec_mech_handbook` for discussion.
 
-Among the two approaches, the Bayesian approach is generally preferred from an uncertainty quantification point of view, as it allows to consistently account for the amount of information provided by statistics and Physics of Failure (e.g. sample size of the failure data used for updating, degree of belief in the failure mechanism modelling). However, the Bayesian approach may sometimes be difficult to apply in practice, e.g. if aggregated failure rate data is available from a different field of application, but the underlying data that could be used in a Bayesian framework cannot be accessed. In this case, the second approach with statistical base failure rates "tuned" to fit the specific application with the aid of multiplicative PoF factors may be the method of choice from a practical point of view.
+Among the two approaches, the Bayesian approach is generally preferred from an uncertainty quantification point of view, as it allows to consistently account for the amount of information provided by statistics and Physics of Failure (e.g. sample size of the failure data used for updating, degree of belief in the {term}`failure mechanism <Failure mechanism>` modelling). However, the Bayesian approach may sometimes be difficult to apply in practice, e.g. if aggregated failure rate data is available from a different field of application, but the underlying data that could be used in a Bayesian framework cannot be accessed. In this case, the second approach with statistical base failure rates "tuned" to fit the specific application with the aid of multiplicative PoF factors may be the method of choice from a practical point of view.
 
 (method_6_7)=
 ## Process for the development of new models
@@ -883,15 +883,15 @@ The general process for the development of new reliability prediction models is 
 
     -   The intended use of the prediction model
 
-    -   The coverage by failure root cause
+    -   The coverage by {term}`failure root cause <Failure root cause>`
 
 -   **Search for similar applications with or without existing model**
-    Information from similar applications can help to understand the problem, and may even be considered as possible modelling inputs. Examples could be data from on-ground applications for technologies that are not (yet) used in space, models for similar technologies in space applications, or approaches to cover a specific failure root cause in a different application. Searching for similarities should always go hand in hand with understanding the differences, which is essential for evaluating the usefulness of the collected information.
+    Information from similar applications can help to understand the problem, and may even be considered as possible modelling inputs. Examples could be data from on-ground applications for technologies that are not (yet) used in space, models for similar technologies in space applications, or approaches to cover a specific {term}`failure root cause <Failure root cause>` in a different application. Searching for similarities should always go hand in hand with understanding the differences, which is essential for evaluating the usefulness of the collected information.
 
 -   **Collect information from available data sources**
     All kinds of information that can be made available as a basis for modelling needs to be collected, considering all categories of inputs listed in {numref}`method_6_2`. The search may be widened to consider also information from relevant similar applications if the available information for the specified modelling scope is insufficient.
 
--   **Gain understanding of the relevant failure modes, failure mechanisms and root causes**
+-   **Gain understanding of the relevant failure modes, {term}`failure mechanisms <Failure mechanism>` and root causes**
     Expertise from designers, test engineers and RAMS experts should be brought together to understand what are the potential and relevant failure causes, processes and symptoms. The Physics of Failure as well as the uncertainties and variabilities inherent in the design and manufacturing process need to be well understood in this step, even if this information is not explicitly used for modelling in the next steps.
 
 -   **Select an appropriate method to do the modelling**
@@ -913,6 +913,6 @@ The process for the development of new reliability models is applicable to all t
 
 -   **EEE:** New reliability prediction models for EEE items can be derived using different inputs, as discussed in {numref}`sec_eee_handbook`. For new technologies there is no data available from IOR, making it necessary to rely on manufacturer data or dedicated testing.
 
--   **Mechanical:** The general process for the development of new reliability prediction models is essentially equivalent to the approach for mechanical reliability prediction presented in {numref}`sec_mech_handbook`, where a strong focus is set on the relevant failure mechanisms and the associated Physics of Failure. Bayesian methods for model updating allow the consideration of available data (e.g. test data), even with limited sample size.
+-   **Mechanical:** The general process for the development of new reliability prediction models is essentially equivalent to the approach for mechanical reliability prediction presented in {numref}`sec_mech_handbook`, where a strong focus is set on the relevant {term}`failure mechanisms <Failure mechanism>` and the associated Physics of Failure. Bayesian methods for model updating allow the consideration of available data (e.g. test data), even with limited sample size.
 
 -   **Miscellaneous:** {numref}`sec_misc_handbook` provides reliability models and data for commonly used miscellaneous items with sufficient IOR data. The reliability of \"non-standard model\" items, requiring a new dedicated model, can be considered based on Engineering/PoF approaches mainly based on DFMEA/PFMEA

@@ -108,7 +108,7 @@ At each level of assembly, different types of elements can be used as a part of 
 
 * **EEE**
 
-    A EEE component performs an electrical, electronic or electromechanical function. At equipment level, an electrical unit is considered as a set of EEE parts assembled in a single package with structure, boards, wires and connectors to support the specified functions.
+    A EEE component performs an electrical, electronic or electromechanical function. At equipment level, an electrical unit is considered as a set of {term}`EEE parts <EEE part>` assembled in a single package with structure, boards, wires and connectors to support the specified functions.
 
 * **Mechanical**
   
@@ -147,14 +147,14 @@ The four classes of failure listed in {numref}`methodo-table4-2` are defined to 
     - <ul><li>NORMAL PHYSICAL PROCESS &#8594; TIME/EQUIVALENT TIME <ul><li>OPERATIONS-RELATED (e.g. On/Off, duty cycle)</li></ul><ul><li>ENVIRONMENT-RELATED (e.g. Radiations)</li></ul> </li></ul>
     - Considered as SYSTEMATIC FAILURE when failure occurs (loss of mission/performances) before the design lifetime
 *   - EXTRINSIC FAILURE (EF)
-    - <ul><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV (degradation &#8594; considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>METEORITES</li><li>DEBRIS</li></ul>
+    - <ul><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV ({term}`degradation <Degradation>` &#8594; considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>METEORITES</li><li>DEBRIS</li></ul>
     - <p>Space environment phenomena inducing external failure causes </p> <p>Considered as SYSTEMATIC FAILURE when the extrinsic effects are underestimated before the design lifetime</p>
 ```
 
 (methodo_4_3_1)=
 ### Random failures
 
-For the purpose of this handbook, random failures are defined as failures due to residual physical defects (or weaknesses) at part level that have not been identified during screening. The physical root cause (the defect) is either unknown or considered as one-off after investigation. Therefore, whereas the origin of systematic, wear-out and extrinsic failures can be identified, the random failures represent the failures that can occur at a rate to be determined without understanding what triggered them. We may say that the root cause of random failures is unknown.
+For the purpose of this handbook, random failures are defined as failures due to residual physical defects (or weaknesses) at part level that have not been identified during screening. The physical root cause (the defect) is either unknown or considered as one-off after investigation. Therefore, whereas the origin of systematic, wear-out and {term}`extrinsic failures <Extrinsic failure>` can be identified, the random failures represent the failures that can occur at a rate to be determined without understanding what triggered them. We may say that the root cause of random failures is unknown.
 
 Obviously, every failure has a root cause, and – at least in theory – we might be able to classify each random failure as either systematic, wear-out or extrinsic. It is, however, not realistic to achieve this in practice nor is it required from a modelling perspective.  
 
@@ -186,11 +186,11 @@ Examples of systematic failures:
 (methodo_4_3_3)=
 ### Wear-out failures
 
-Wear-out failures result from time dependent physical processes due to calendar aging or driven by operational and/or environmental stresses. The root cause is a degradation process (modification of the design characteristics) at part level.
+Wear-out failures result from time dependent physical processes due to calendar aging or driven by operational and/or environmental stresses. The root cause is a {term}`degradation <Degradation>` process (modification of the design characteristics) at part level.
 
-Space system design aims at avoiding wear-out failures by ensuring that limited-lifetime items are “safe life” qualified, which means that these items are designed to withstand the design lifetime (with acceptable performances degradation) and qualified by tests, generally with a safety factor. Therefore, no failure due to wear-out is expected before the end of the specified lifetime. Failures due to “early” degradation before this point are classified either as systematic in the case of a design or manufacturing error, or as random if an unknown residual part defect has accelerated the degradation process.
+Space system design aims at avoiding wear-out failures by ensuring that limited-lifetime items are “safe life” qualified, which means that these items are designed to withstand the design lifetime (with acceptable performances {term}`degradation <Degradation>`) and qualified by tests, generally with a safety factor. Therefore, no failure due to wear-out is expected before the end of the specified lifetime. Failures due to “early” {term}`degradation <Degradation>` before this point are classified either as systematic in the case of a design or manufacturing error, or as random if an unknown residual part defect has accelerated the {term}`degradation <Degradation>` process.
 
-In case of a lifetime extension beyond the specified design life, the safe life qualification is no longer valid and wear-out failures may need to be considered in the prediction. The same holds true for technologies or items that already show (moderate) degradation during the normal design life, such as e.g. in the case of various mechanical parts. Reliability models used for these items need to consider increasing failure rates due to the non-negligible impact of internal wear-out processes.
+In case of a lifetime extension beyond the specified design life, the safe life qualification is no longer valid and wear-out failures may need to be considered in the prediction. The same holds true for technologies or items that already show (moderate) {term}`degradation <Degradation>` during the normal design life, such as e.g. in the case of various mechanical parts. Reliability models used for these items need to consider increasing failure rates due to the non-negligible impact of internal wear-out processes.
 
 The different stresses that may lead to wear-out failures are classified as follows:
 
@@ -199,18 +199,18 @@ The different stresses that may lead to wear-out failures are classified as foll
 
 To ensure mutually exclusive categories, and as a matter of convention, failures resulting from wear-out due to environmental effects are classified as Wear-out (not Extrinsic) failures.
 
-When modelling wear-out, it is important to be clear about the definition of “failure”. The time dependent physical degradation of an item as such is not considered as a failure before a critical threshold is surpassed, leading either to a definitive failure at part level or to a failure at system level without part level failure. An example for a definitive wear-out failure would be fracture of a mechanical part after successive crack growth due to cyclic loading, whereas in the case of battery discharge due to calendar aging failure is better defined at system level by specifying a performance threshold for the battery capacity (Ah).
+When modelling wear-out, it is important to be clear about the definition of “failure”. The time dependent physical {term}`degradation <Degradation>` of an item as such is not considered as a failure before a critical threshold is surpassed, leading either to a definitive failure at part level or to a failure at system level without part level failure. An example for a definitive wear-out failure would be fracture of a mechanical part after successive crack growth due to cyclic loading, whereas in the case of battery discharge due to calendar aging failure is better defined at system level by specifying a performance threshold for the battery capacity (Ah).
 
 Examples of wear-out failures:
 
-* Progressive parameter drift at EEE parts level due to cumulated radiation effects, displacement charge effects (TID/TNID)
+* Progressive parameter drift at {term}`EEE parts <EEE part>` level due to cumulated radiation effects, displacement charge effects (TID/TNID)
 * Mechanical bearing failure due to lubricant wear leading to mechanism failure
 * Energy and/or power loss (below specified threshold) in batteries due to calendar ageing
 
 (methodo_4_3_4)=
 ### Extrinsic failures
 
-Extrinsic failures are sudden failures induced by the space environment on the spacecraft elements. The root cause is the environment, imposing the following stresses:
+{term}`Extrinsic failures <Extrinsic failure>` are sudden failures induced by the space environment on the spacecraft elements. The root cause is the environment, imposing the following stresses:
 
 * Physical conditions (defined in the technical specification)
   * *Vacuum*: outgassing, cold welding, heat transfer
@@ -234,7 +234,7 @@ Failures due to cumulated extrinsic effects are (by convention) classified as We
 
 Finally, failures due to extrinsic effects that were underestimated during the design are classified as Systematic, as the root cause is a design error rather than the space environment alone.
 
-Examples of extrinsic failures:
+Examples of {term}`extrinsic failures <Extrinsic failure>`:
 
 * Destructive Single Event Effects (e.g. Single Event Lath up or Single Event Burnout)
 * Non-destructive SEE causing a non-detected corruption of data used in a system control loop
@@ -245,7 +245,7 @@ Examples of extrinsic failures:
 (methodo_4_4)=
 ## Coverage of spacecraft elements and failures in this handbook
 
-The following subsections give a brief overview on the coverage in terms of spacecraft elements and failure root causes provided in the handbook’s model part ({numref}`methods`).
+The following subsections give a brief overview on the coverage in terms of spacecraft elements and {term}`failure root causes <Failure root cause>` provided in the handbook's model part ({numref}`methods`).
 
 (methodo_4_4_1)=
 ### Elements coverage
@@ -270,13 +270,13 @@ Each chapter in {numref}`methods` of the handbook (Models) provides information 
 * SYSTEMATIC FAILURES: The models provided in this handbook do not guarantee a complete coverage of all systematic failures for all spacecraft elements. 
     * For EEE items, a certain coverage of systematic failures is achieved with the aid of process factors adapted to space applications.
     * For Mechanical items, the methodology allows the consideration of failures due to minor design uncertainties and manufacturing variability. Gross errors require a dedicated modelling at system level.
-    * For Miscellaneous items, the methodology allows the consideration of systematic failures from a simple statistical perspective, referring to the modelling at system level as well. 
+    * For {term}`Miscellaneous items <Miscellaneous item>`, the methodology allows the consideration of systematic failures from a simple statistical perspective, referring to the modelling at system level as well. 
     * General considerations for systematic failure modelling are given in the system level chapter, including a statistical model based on IOR data.
 * WEAR-OUT FAILURES: Also wear-out failures are not completely covered by the models provided in this handbook:
     * For EEE items, the models provided generally assume constant failure rates during the useful life of a component, but a methodology for the separate consideration of wear-out failures is proposed in case an explicit wear-out modelling is needed, e.g. in the context of a life time extension.
     * The methodology for Mechanical reliability prediction includes an explicit consideration of relevant wear-out failure mechanisms, which may be used to model premature failures before the end-of-life, as well as wear-out failures during a potential life time extension.
-    * For Miscellaneous items, the methodology includes the consideration of wear‐out failures, modelled beyond the mission lifetime based on an increasing failure rate and with model parameters related to the lifetime qualification of the items. 
+    * For {term}`Miscellaneous items <Miscellaneous item>`, the methodology includes the consideration of wear-out failures, modelled beyond the {term}`mission lifetime <Mission lifetime>` based on an increasing failure rate and with model parameters related to the lifetime qualification of the items. 
     * System level considerations of wear-out modelling can be found in the system chapter, including approaches for the combination of a constant failure rate for random failures with a separate wear-out model implying increasing failure rates.
-* EXTRINSIC FAILURES: Many of the environmental stresses considered for the definition of extrinsic failures are in fact part of the normal environment for a spacecraft and its components. Some of them are thus considered as “stress contributors” for the random failure modelling. Others are assumed to be covered and effectively avoided by different design disciplines and thus excluded from the base methodology.
+* EXTRINSIC FAILURES: Many of the environmental stresses considered for the definition of {term}`extrinsic failures <Extrinsic failure>` are in fact part of the normal environment for a spacecraft and its components. Some of them are thus considered as “stress contributors” for the random failure modelling. Others are assumed to be covered and effectively avoided by different design disciplines and thus excluded from the base methodology.
     * A dedicated discussion of Extrinsic root causes by technical domain can be found in each of the three following chapters : {ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>`.
 

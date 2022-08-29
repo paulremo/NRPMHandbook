@@ -37,7 +37,7 @@ This approach allows using prior engineering knowledge combined with IOR data or
 ```
 
 ```{dropdown} **Reliability handbooks methods / supplier Model: existing model**
-The reliability handbooks providing valuable information for miscellaneous items {term}`reliability prediction <Reliability prediction>` are limited to some technologies or to some specific applications.
+The reliability handbooks providing valuable information for {term}`miscellaneous items <Miscellaneous item>` {term}`reliability prediction <Reliability prediction>` are limited to some technologies or to some specific applications.
 
 Even though it is possible to use such reliability handbooks or existing models (in the literature), most of time the applicability to space domain is inappropriate mainly due to the fact the space designs are very specific with a rigorous {term}`quality <Quality>` frame.
 
@@ -49,18 +49,18 @@ Any reliability model, whatever the data sources are, needs to be justified (wit
 
 For “generic equipment” that is similar from one mission to the other, it is valuable to take benefit from the use of {term}`in-orbit return (IOR) data <In-orbit return (IOR) data>`. This can provide direct statistics on the related items used in a typical environment. No model with theoretical implications would meet such level of relevance as far as the items are “equivalent” to those being used in-orbit.
 
-Consequently, use of in-orbit return constitutes the basis for “miscellaneous items” that meet the following two conditions:
+Consequently, use of in-orbit return constitutes the basis for “{term}`miscellaneous items <Miscellaneous item>`” that meet the following two conditions:
 
 - items involved in generic “miscellaneous” functions, provided they address similar perimeters and under similar operational conditions. Technology, complexity and {term}`quality <Quality>` (in a wide sense) are other parameters to be checked with accuracy.
 Besides, the use of in-orbit return is possible on a case by case basis, in the frame of the assessment of a given {term}`spacecraft <Spacecraft>` family for example, where functional features are the same and supported by a generic product.
 
-- items with enough in-orbit return, thus excluding those devices that might have become widely used recently (low cumulated time in operation, new technology). This may also impact the level at which miscellaneous items are defined.
+- items with enough in-orbit return, thus excluding those devices that might have become widely used recently (low cumulated time in operation, new technology). This may also impact the level at which {term}`miscellaneous items <Miscellaneous item>`are defined.
 
 
 (misc_5_3_2)=
 ## Manufacturer reliability data
 
-miscellaneous items are designed, manufactured and procured by suppliers generally specialized in space domain and for some categories of miscellaneous products, e.g. Solar Array cells manufacturer.
+{term}`Miscellaneous items <Miscellaneous item>` are designed, manufactured and procured by suppliers generally specialized in space domain and for some categories of miscellaneous products, e.g. Solar Array cells manufacturer.
 
 As designers, the suppliers have a deep knowledge of their products and it is their interest to master the reliability, especially in the case of product streamlined with a long heritage. However, the behaviour of these items in-orbit is better known by the prime contractors and the customers (and insurers as well) than by the manufacturers. Nevertheless, apart these operational data, the items are qualified and specific reliability tests may be conducted on ground prior to any development.
 
@@ -80,7 +80,7 @@ Their reliability is therefore not a function in time (with possible observation
 (misc_5_3_3)=
 ## Reliability test data
 
-{term}`Test data <Test data>` for miscellaneous items tested under operational conditions would be a relevant source of information for {term}`reliability prediction <Reliability prediction>`, but is not in most cases available in sufficient quantities to derive any quantitative reliability metrics. Generally, elements constituting the miscellaneous items are tested in larger quantities but do not represent the whole and assembled item. Nevertheless, this information can be valuable in order to derive {term}`contributing factors <Contributing factor>` to failure or to confirm design assumptions.
+{term}`Test data <Test data>` for {term}`miscellaneous items <Miscellaneous item>` tested under operational conditions would be a relevant source of information for {term}`reliability prediction <Reliability prediction>`, but is not in most cases available in sufficient quantities to derive any quantitative reliability metrics. Generally, elements constituting the {term}`miscellaneous items <Miscellaneous item>` are tested in larger quantities but do not represent the whole and assembled item. Nevertheless, this information can be valuable in order to derive {term}`contributing factors <Contributing factor>` to failure or to confirm design assumptions.
 
 Physics of failure models may use these elementary tests and resulting data to identify the {term}`failure mechanisms <Failure mechanism>` and the related design characteristics. Major {term}`failure mechanisms <Failure mechanism>` are identified per {term}`miscellaneous item <Miscellaneous item>` and mastered as necessary through appropriate design rules. All this is qualitative information and is used as support to any reliability model, as relevant
 
@@ -94,13 +94,13 @@ Several tests are recommended to verify the reliability of the one-shot devices:
 (misc_5_3_3_2)=
 ### Wear-out characterization
 
-Regarding wear-out, the miscellaneous items should be qualified versus specified lifetime and ground lifetime as per {cite:t}`mis-ECSS-E-ST-33-01C`, implementing a safety factor (number of elements, number of tests). The results of these tests are considered as evidence, with a certain {term}`level of confidence <Level of confidence>`, that no wear occurs before the end of the specified lifetime (or better that no performances degradation impacts the mission of the item).
+Regarding wear-out, the {term}`miscellaneous items <Miscellaneous item>` should be qualified versus specified lifetime and ground lifetime as per {cite:t}`mis-ECSS-E-ST-33-01C`, implementing a safety factor (number of elements, number of tests). The results of these tests are considered as evidence, with a certain {term}`level of confidence <Level of confidence>`, that no wear occurs before the end of the specified lifetime (or better that no performances {term}`degradation <Degradation>` impacts the mission of the item).
 
 
 (misc_5_3_4)=
 ## Engineering / physics of failure
 
-{term}`Physics of failure <Physics of failure>` can be used to identify the dominating {term}`failure mechanisms <Failure mechanism>` of the miscellaneous items. This approach should be used when no data are available and pertinent enough to populate a reliability model with accuracy. It is the case for a new development with innovative technology for which no statistical data exist.
+{term}`Physics of failure <Physics of failure>` can be used to identify the dominating {term}`failure mechanisms <Failure mechanism>` of the {term}`miscellaneous items <Miscellaneous item>`. This approach should be used when no data are available and pertinent enough to populate a reliability model with accuracy. It is the case for a new development with innovative technology for which no statistical data exist.
 
 Use of {term}`Design FMEA` / {term}`Process FMEA` could be helpful, and is recommended, to identify the causes (design, manufacturing) of the {term}`failure mechanisms <Failure mechanism>` and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A {term}`RPN` metric (Risk Priority Number) is derived (refer to standard {cite:t}`mis-PFMEA`) and risk mitigation actions set up in order to reduce the {term}`RPN` to an acceptable level, i.e. under a certain level of probability of occurrence.
 
@@ -120,4 +120,4 @@ A combined approach based on one of the methods listed above and {term}`Bayesian
 (misc_5_3_6)=
 ## Reliability handbooks / models
 
-There are no dedicated reliability handbooks really addressing exhaustively miscellaneous items. Therefore, it is not recommended to use such a method, unless when the available data source and the data use is justified.
+There are no dedicated reliability handbooks really addressing exhaustively {term}`miscellaneous items <Miscellaneous item>`. Therefore, it is not recommended to use such a method, unless when the available data source and the data use is justified.

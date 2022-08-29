@@ -13,7 +13,7 @@ Besides providing own models based on Structural Reliability Methods, {numref}`s
 
 **Model development uncertainties associated with the models for Miscellaneous items**
 
-The “standard” model for Miscellaneous items, as defined in {numref}`sec_misc_handbook`, has been developed based on IOR for an equivalent class of items. Model development uncertainties associated with this approach are listed in {numref}`method-table8-14`. For “non-standard” items only a general process for model development is provided and the model development uncertainties have to be assessed by the user.
+The “standard” model for {term}`Miscellaneous items <Miscellaneous item>`, as defined in {numref}`sec_misc_handbook`, has been developed based on IOR for an equivalent class of items. Model development uncertainties associated with this approach are listed in {numref}`method-table8-14`. For “non-standard” items only a general process for model development is provided and the model development uncertainties have to be assessed by the user.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_8')" placeholder="Search table...">
 

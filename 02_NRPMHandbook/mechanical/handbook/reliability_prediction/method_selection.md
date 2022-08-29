@@ -34,8 +34,8 @@ The method selection for {term}`mechanical parts <Mechanical part>` reliability 
 			<td>Stress-corrosion cracking, galvanic corrosion</td>
 		</tr>
 		<tr>
-			<td>Material degradation</td>
-			<td>Thermal degradation, radiation damage</td>
+			<td>Material {term}`degradation <Degradation>`</td>
+			<td>Thermal {term}`degradation <Degradation>`, radiation damage</td>
 		</tr>
 	</table>
 ```
@@ -128,10 +128,10 @@ However, independence between different {term}`failure mechanisms <Failure mecha
 
 A simple way to account for such interactions is to select the dominating {term}`failure mechanism <Failure mechanism>` (e.g. the one with the highest probability of failure) and to consider the effect of other {term}`failure mechanism(s) <Failure mechanism>` on the dominating {term}`failure mechanism <Failure mechanism>`. When using {term}`structural reliability methods <Structural reliability method>`, this can be achieved by adapting the basic variable distributions to account for physical effects related to other {term}`failure mechanism <Failure mechanism>` processes. The assessment then requires the following steps:
 
-* Selection of the dominating {term}`failure mechanism <Failure mechanism>` – e.g. wear of a lubricated bearing.
-* Identification of other {term}`failure mechanisms <Failure mechanism>` that may interact with the dominating {term}`failure mechanism <Failure mechanism>` using {numref}`meca-table4-5` – e.g. distortion of the membrane compressing the bearing.
-* Identification of physical variables used by the model for the dominating {term}`failure mechanism <Failure mechanism>` that may be affected by the interaction – e.g. increase of the contact pressure in the bearing.
-* Adjustment of the identified basic variables distributional models to account for the effect of the interaction – e.g. by considering the increased contact pressure.
+* Selection of the dominating {term}`failure mechanism <Failure mechanism>` - e.g. wear of a lubricated bearing.
+* Identification of other {term}`failure mechanisms <Failure mechanism>` that may interact with the dominating {term}`failure mechanism <Failure mechanism>` using {numref}`meca-table4-5` - e.g. distortion of the membrane compressing the bearing.
+* Identification of physical variables used by the model for the dominating {term}`failure mechanism <Failure mechanism>` that may be affected by the interaction - e.g. increase of the contact pressure in the bearing.
+* Adjustment of the identified basic variables distributional models to account for the effect of the interaction - e.g. by considering the increased contact pressure.
 * 
 Finally, it should be noted that besides physical interactions between {term}`failure mechanism <Failure mechanism>`, there are other possible reason for statistical dependence, such as common cause effects due to random physical variables (e.g. temperature, loads), having an effect on different {term}`failure mechanisms <Failure mechanism>` and/or parts. An example for explicit common cause modelling in a redundant bolted {term}`interface <Interface>` with load redistribution can be found in {cite:t}`mec-AO-1-8017-14-NL-KM`.
 
@@ -310,7 +310,7 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 			<td>
 				<p><u>fatigue &fracture</u></p>
 				<p>distortion</p>
-				<p>degradation</p>
+				<p>{term}`degradation <Degradation>`</p>
 			</td>
 			<td>
 				<p><i class="fa fa-check" style="color:green"></i></p>
@@ -381,12 +381,12 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 				<p>II Passive</p>
 				<p>III Fluidic</p>
 			</td>
-			<td>Wear, degradation, installation damage</td>
+			<td>Wear, {term}`degradation <Degradation>`, installation damage</td>
 			<td>NSWC adjusted, Statistical methods or Structural reliability methods</td>
 			<td>
 				<p><u>wear</u></p>
 				<p>distortion</p>
-				<p>degradation</p>
+				<p>{term}`degradation <Degradation>`</p>
 			</td>
 			<td>
 				<p><i class="fa fa-check" style="color:green"></i></p>
@@ -438,9 +438,9 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 *   - Part type
     - Description
     - Mechanical item category
-    - Predominant failure mechanism
+    - Predominant {term}`failure mechanism <Failure mechanism>`
     - Modelling recommendation
-	- Structural reliability methods - Potential failure mechanisms
+	- Structural reliability methods - Potential {term}`failure mechanisms <Failure mechanism>`
 	- Structural reliability methods - Limit state function
 	- Structural reliability methods - Simplified method
 	- NSWG 2011 handbook - Model available
@@ -500,7 +500,7 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
     - IV Structural
     - Fracture
     - Structural reliability methods
-	- <p><u>fatigue &fracture</u></p><p>distortion</p><p>degradation</p>
+	- <p><u>fatigue &fracture</u></p><p>distortion</p><p>{term}`degradation <Degradation>`</p>
 	- <p><i class="fa fa-check" style="color:green"></i></p><p>generic</p><p><i class="fa fa-check" style="color:green"></i></p>
 	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p><p><i class="fa fa-check" style="color:green"></i></p>
 	- <p><i class="fa fa-times" style="color:red"></i></p>
@@ -528,9 +528,9 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 *   - Seals and Gaskets
     - A device placed between two surfaces to prevent the flow of gas or fluid from one region to another
     - <p>I Active</p><p>II Passive</p><p>III Fluidic</p>
-    - Wear, degradation, installation damage
+    - Wear, {term}`degradation <Degradation>`, installation damage
     - NSWC adjusted, Statistical methods or Structural reliability methods
-	- <p><u>wear</u></p><p>distortion</p><p>degradation</p>
+	- <p><u>wear</u></p><p>distortion</p><p>{term}`degradation <Degradation>`</p>
 	- <p><i class="fa fa-check" style="color:green"></i></p><p>generic</p><p><i class="fa fa-times" style="color:red"></i></p>
 	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
 	- <p><i class="fa fa-check" style="color:green"></i></p>

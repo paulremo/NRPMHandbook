@@ -14744,7 +14744,7 @@ There is presently no existing reliability prediction model for COTS boards adap
 (eee_4_3_4_19)=
 ## Reliability prediction of COTS boards done by manufacturers
 
-Some manufacturers of COTS boards do provide a reliability prediction for their COTS boards and publish this information inside the datasheet. An assessment of this estimation could be made to appreciate its applicability to space applications. Elements, such as the level of confidence, the methodology applied, number of tested boards, number of failed boards and root cause of failure analysis should be provided by the manufacturers of COTS boards to justify their estimations and to provide rationales of their confidence.
+Some manufacturers of COTS boards do provide a reliability prediction for their COTS boards and publish this information inside the datasheet. An assessment of this estimation could be made to appreciate its applicability to space applications. Elements, such as the {term}`level of confidence <Level of confidence>`, the methodology applied, number of tested boards, number of failed boards and root cause of failure analysis should be provided by the manufacturers of COTS boards to justify their estimations and to provide rationales of their confidence.
 
 (eee_4_3_4_20)=
 ## Reliability prediction of COTS boards with raw data provided by manufacturers

@@ -228,7 +228,7 @@ The required coverage in terms of root causes (failure categories, see {numref}`
 
 Achieving a high reliability product is an important objective during the design and production of any space system. Considering all root causes of failure is a prerequisite, and different mitigation processes are in place to avoid the occurrence of each of them, see {numref}`methodo-table5-5` for examples. Apart from measures to avoid the different root causes, system level design aims at mitigating the effect of lower level failures on the success of the mission.
 
-The objective of reliability predictions is to provide quantitative estimates for the (remaining) probability of failure despite the implementation of these measures. Some of the mitigation measures are explicitly considered in the prediction, e.g. quality level of EEE parts, or redundancy at system level. Others may be used as a justification to neglect certain root causes in the prediction, provided that the mitigation measures are sufficiently effective to avoid their occurrence. To give an example, calculations from radiation engineering may provide evidence that the rate of destructive Single Event Effects is negligible compared to the random failure rate. Similar considerations become relevant for wear-out failures of EEE components, which can in most cases be effectively avoided by safe life qualification (with appropriate margins), at least when the prediction is limited to the specified design lifetime.
+The objective of reliability predictions is to provide quantitative estimates for the (remaining) probability of failure despite the implementation of these measures. Some of the mitigation measures are explicitly considered in the prediction, e.g. quality level of {term}`EEE parts <EEE part>`, or redundancy at system level. Others may be used as a justification to neglect certain root causes in the prediction, provided that the mitigation measures are sufficiently effective to avoid their occurrence. To give an example, calculations from radiation engineering may provide evidence that the rate of destructive Single Event Effects is negligible compared to the random failure rate. Similar considerations become relevant for wear-out failures of EEE components, which can in most cases be effectively avoided by safe life qualification (with appropriate margins), at least when the prediction is limited to the specified design lifetime.
 
 n addition, depending on the intended use of the prediction, there may be no added value to make a quantitative prediction for a certain root cause, because it does not make a difference for the trade-offs that will be supported by the prediction. These aspects are discussed in the following sections.
 
@@ -252,7 +252,7 @@ n addition, depending on the intended use of the prediction, there may be no add
     - <ul style="text-align:left;"><li>NORMAL PHYSICAL PROCESS &#8594; TIME/EQUIVALENT TIME <ul style="text-align:left;"><li>OPERATIONS-RELATED (e.g. On/Off, duty cycle)</li></ul><ul><li>ENVIRONMENT-RELATED (e.g. Radiations)</li></ul> </li></ul>
     - <p>Components and materials selection</p><p>Design calculations and margins</p><p>Lifetime qualification with margins</p>
 *   - EXTRINSIC FAILURE (EF)
-    - <ul style="text-align:left;"><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV (degradation &#8594; considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>MICROMETEORITES</li><li>DEBRIS</li></ul>
+    - <ul style="text-align:left;"><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV ({term}`degradation <Degradation>` &#8594; considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>MICROMETEORITES</li><li>DEBRIS</li></ul>
     - <p>Components and materials selection</p><p>Design calculation and margins</p><p>Qualification and verfication testing</p><p>Thermal control</p><p>Shielding (thermal, radiation, debris)</p><p>Radiation engineering</p><p>Debris impact predictions</p><p>Avoidance manoeuvres</p><p>...</p>
 ```
 
@@ -316,7 +316,7 @@ Guidance on the root cause coverage required for this reliability prediction use
 *   - Wear-out failures
     - Wear-out after the specified lifetime is out of scope for this use (see {numref}`methodo_5_3_2_6` for life time extensions). Premature wear-out (excluding systematic failures) needs to be considered for technologies for which safe life qualification is not possible, or not fully effective.
 *   - Extrinsic failures
-    - Relevant stress contributors resulting from the spacecraft environment should be considered in the prediction of random and wear-out failures. Explicit consideration of extrinsic failures with dedicated models is only required if the rate of occurrence of additional failure modes (e.g. destructive SEE, space debris impact) cannot be neglected when compared to the random failure rate.
+    - Relevant stress contributors resulting from the spacecraft environment should be considered in the prediction of random and wear-out failures. Explicit consideration of {term}`extrinsic failures <Extrinsic failure>` with dedicated models is only required if the rate of occurrence of additional failure modes (e.g. destructive SEE, space debris impact) cannot be neglected when compared to the random failure rate.
 ```
 
 The recommendations regarding root causes coverage are generally valid also for preliminary reliability predictions, e.g. for the Preliminary Design Review (PDR). However, the level of detail used in the modelling can be reduced in this context to reduce prediction efforts and to account for limited input availability in early project phases.
@@ -713,7 +713,7 @@ The probability that the satellite achieves its performance requirements shall b
 
 Each quantitative requirement should be linked to an explanation to ensure correct interpretation. This includes definition of the scope, principles and boundary conditions that are to be applied for the reliability prediction, as discussed with the ground rules and assumptions for reliability prediction in {numref}`methodo_5_2`.
 
-The reliability requirements could also be defined considering partial losses leading to reduced functional capability and graceful degradation, for example:
+The reliability requirements could also be defined considering partial losses leading to reduced functional capability and graceful {term}`degradation <Degradation>`, for example:
 
 ```{epigraph}
 The probability that at least $k$ out of $n$ antenna links are operative after $y$ years in orbit shall be greater than 98%. 

@@ -6,11 +6,11 @@ The following sections provide some examples for the application of the methods 
 (meca_4_8_1)=
 ## Simplified wear modelling: Solid lubricant wear
 
-In this example the simplified method presented in {numref}`meca_4_7_1` is utilized to model the reliability of a bearing. The considered failure mechanism is solid lubricant wear.
+In this example the simplified method presented in {numref}`meca_4_7_1` is utilized to model the reliability of a bearing. The considered {term}`failure mechanism <Failure mechanism>` is solid lubricant wear.
 
 (meca_example_1_given)=
 ````{dropdown} **Given**
-A solid lubricated ball bearing is considered. The basic variables, necessary to model the failure mechanism, are modelled as follows (please note that the values indicated in the following table serve as an illustrative example).
+A solid lubricated ball bearing is considered. The basic variables, necessary to model the {term}`failure mechanism <Failure mechanism>`, are modelled as follows (please note that the values indicated in the following table serve as an illustrative example).
 
 ```{list-table} Variables considered in the example
 :name: meca-examples-table-1
