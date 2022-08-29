@@ -40,7 +40,7 @@ In-orbit return failure data provides valuable information on the in-service rel
 (meca_4_3_1_3)=
 ### Manufacturer reliability data
 
-Mechanical space equipment suppliers are highly specialized companies, delivering their products for many different missions. Manufacturer reliability data can thus be a highly relevant source of information for mechanical reliability prediction. This holds especially for standardized items with a long space heritage, where manufacturer’s in-orbit return (considered in {numref}`meca_4_3_1_2) can be used for the reliability prediction. Also {term}`test data <Test data>` available on the manufacturer’s side may be considered. Manufacturer reliability data derived from analysis should be checked for consistency with the methodology presented in this handbook.
+Mechanical space equipment suppliers are highly specialized companies, delivering their products for many different missions. Manufacturer reliability data can thus be a highly relevant source of information for mechanical reliability prediction. This holds especially for standardized items with a long space heritage, where manufacturer’s in-orbit return (considered in {numref}`meca_4_3_1_2`) can be used for the reliability prediction. Also {term}`test data <Test data>` available on the manufacturer’s side may be considered. Manufacturer reliability data derived from analysis should be checked for consistency with the methodology presented in this handbook.
 
 Apart from this, more general {term}`manufacturer data <Manufacturer part>`, such as design information, material specifications, or equipment level FMEA analyses are also important inputs for reliability predictions of {term}`mechanical part <Mechanical part>`s. 
 
