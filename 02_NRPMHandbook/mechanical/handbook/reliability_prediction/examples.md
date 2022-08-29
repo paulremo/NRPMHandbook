@@ -183,7 +183,7 @@ The coefficients of variation $v_{X_1}$ and $v_{X_2}$ have already been determin
 
 ```{math}
 :label: eq_example_11
-\sigma_{\text{rev}}=\sqrt{ln\left(v_{X_1}^2+1\right)+ln\left(v_{X_2}^2+1\right)}=\sqrt{ln\left(0.2_^2+1\right)+ln\left(0.577_^2+1\right)}=0.571.
+\sigma_{\text{rev}}=\sqrt{ln\left(v_{X_1}^2+1\right)+ln\left(v_{X_2}^2+1\right)}=\sqrt{ln\left(0.2^2+1\right)+ln\left(0.577^2+1\right)}=0.571.
 ```
 
 The location parameter $\mu_{\text{rev}}$ is considered uncertain and is modelled with a Normal distribution (conjugate prior, see {numref}`methods`).
@@ -207,9 +207,9 @@ k=\frac{E\left[V_{\text{limit}}\right]}{E\left[K_H\cdot\alpha\right]}=\frac{6\cd
 The prior hyperparameters for the distribution of $\mu_{\text{rev}}$ are estimated according to Eq. {eq}`Equation_3_13` and Eq. {eq}`Equation_3_14`:
 ```{math}
 :label: eq_example_15
-\begin{algin}
+\begin{align}
 \mu\prime&=ln\left(k\right)-ln\left(E\left[\Theta\right]\right)+0.5\cdot\left(ln\left(v_\Theta^2+1\right)-ln\left(v_{X_1}^2+1\right)+ln\left(v_{X_2}^2+1\right)\right)\\
-&=ln\left(4.29\cdot10^8\right)-ln\left(1.2\right)+0.5\cdot\left(ln\left(0.2_^2+1\right)-ln\left(0.2_^2+1\right)+ln\left(0.577_^2+1\right)\right)\\
+&=ln\left(4.29\cdot10^8\right)-ln\left(1.2\right)+0.5\cdot\left(ln\left(0.2^2+1\right)-ln\left(0.2^2+1\right)+ln\left(0.577^2+1\right)\right)\\
 &=19.84
 \end{align}
 ```
