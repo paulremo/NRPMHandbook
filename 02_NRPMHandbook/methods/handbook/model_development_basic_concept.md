@@ -248,9 +248,9 @@ There are a number of existing {term}`handbook data sources <Handbook data sourc
 (metho_6_2_5)=
 ### {term}`failure mechanisms <Failure mechanism>` analysis
 
-Knowing and managing the {term}`{term}`failure mechanisms <Failure mechanism>` <Failure mechanism>` within parts or systems is generally a good starting point to perform a reliability prediction. From a practical point of view, it becomes even more interesting when no other data are available to perform the reliability prediction of a part, a unit or a subsystem, and the last resort for the reliability engineer is to analyse the {term}`{term}`failure mechanisms <Failure mechanism>` <Failure mechanism>` of the item under consideration.
+Knowing and managing the {term}`failure mechanisms <Failure mechanism>` within parts or systems is generally a good starting point to perform a reliability prediction. From a practical point of view, it becomes even more interesting when no other data are available to perform the reliability prediction of a part, a unit or a subsystem, and the last resort for the reliability engineer is to analyse the {term}`failure mechanisms <Failure mechanism>` of the item under consideration.
 
-The first step is to identify potential failure modes and associated {term}`{term}`failure mechanisms <Failure mechanism>` <Failure mechanism>`, e.g. by performing a Design or Process FMEA, or through engineering judgment and/or lessons learnt. The following steps will then consist in determining reliability data linked to the phenomenon identified as most likely responsible for the undesired failure mode. The approach used for analysing in depth the {term}`{term}`failure mechanisms <Failure mechanism>` <Failure mechanism>` is the Physics of Failures, see {numref}`method_6_5` for details.
+The first step is to identify potential failure modes and associated {term}`failure mechanisms <Failure mechanism>`, e.g. by performing a Design or Process FMEA, or through engineering judgment and/or lessons learnt. The following steps will then consist in determining reliability data linked to the phenomenon identified as most likely responsible for the undesired failure mode. The approach used for analysing in depth the {term}`failure mechanisms <Failure mechanism>` is the Physics of Failures, see {numref}`method_6_5` for details.
 
 (method_6_2_6)=
 ### Failure mode repartition data
@@ -856,7 +856,7 @@ The basic idea of the combined approach is to make use of all available informat
 
 -   Statistical base failure rates with multiplicative factors derived from the Physics of Failure
 
-The first approach, using Bayesian updating, uses Physics of Failure considerations to derive a prior reliability estimate, which is then updated using statistical data in order to reduce model uncertainty and to derive more realistic results. Bayesian methods for model updating are discussed more detail in {numref}`method_7` of this handbook.
+The first approach, using Bayesian updating, uses Physics of Failure considerations to derive a prior reliability estimate, which is then updated using statistical data in order to reduce {term}`model uncertainty <Model uncertainty>` and to derive more realistic results. Bayesian methods for model updating are discussed more detail in {numref}`method_7` of this handbook.
 
 The second approach uses statistical methods in order to establish a fixed "base failure rate" for a certain item or family of items, and the Physics of Failure is then used to determine acceleration factors depending on the considered design, its use conditions and the environment. Models based on this approach are provided e.g. in the FIDES guide {cite:t}`method-UTE-C80-811` , which is considered as a basis for EEE reliability prediction in this handbook ({numref}`sec_eee_handbook`), or in the NSWC handbook for Mechanical reliability prediction {cite:t}`method-NSWC-11` , see {numref}`sec_mech_handbook` for discussion.
 

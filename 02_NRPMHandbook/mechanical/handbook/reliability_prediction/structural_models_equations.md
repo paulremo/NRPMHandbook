@@ -1369,7 +1369,7 @@ The variable definitions are given in {numref}`meca-table4-17` below.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-17')" placeholder="Search table...">
 
-```{list-table} Assumed probabilistic models for the simplified radiation {term}`degradation <Degradation>` model
+```{list-table} Assumed probabilistic models for the simplified radiation degradation model
 :name: meca-table4-17
 :header-rows: 1
 :widths: 10 30 20 20 20
