@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (meca_4_7)=
 # Structural reliability models and equations
 

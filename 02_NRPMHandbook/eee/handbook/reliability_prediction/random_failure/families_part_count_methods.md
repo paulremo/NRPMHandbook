@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (eee_4_3_5)=
 # Families count and part count methods
 

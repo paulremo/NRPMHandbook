@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (misc_5_3)=
 # Data sources
 The inputs data constitute the basis of any reliability model.

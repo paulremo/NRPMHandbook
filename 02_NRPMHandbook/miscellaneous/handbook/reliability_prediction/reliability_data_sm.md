@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (misc_5_8)=
 # Reliability data for miscellaneous “standard model”
 {numref}`misc-table4-8` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 

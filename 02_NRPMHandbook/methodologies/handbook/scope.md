@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 # Scope
 
 The reliability.space handbook was developed during an ESA study aiming at the development of a *new reliability prediction methodology* ({term}`NRPM`) for space applications. The objective of the handbook was to provide a reliability methodology that can be used for space applications, without the limitations and shortcomings of existing reliability prediction methodologies that are mainly focussed on ground applications. 

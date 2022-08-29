@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (process_factor_calculation)=
 # Process factor calculation 
 

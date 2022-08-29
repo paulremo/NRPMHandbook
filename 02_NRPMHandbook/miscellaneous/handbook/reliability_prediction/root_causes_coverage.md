@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (misc_5_2)=
 # Root causes coverage
 The {term}`failure mechanisms <Failure mechanism>` of the miscellaneous parts result from the four categories of {term}`failure root causes <Failure root cause>` already introduced and reminded in {numref}`misc-table4-3`.

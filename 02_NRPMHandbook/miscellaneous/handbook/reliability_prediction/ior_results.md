@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (misc_5_6)=
 # Use of IOR data and/or tests results
 As presented, a reliability model can be built based on IOR data and/or on {term}`test data <Test data>` (manufacturers, user) or combined with IOR data and/or on {term}`test data <Test data>` (manufacturers, user).

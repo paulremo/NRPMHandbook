@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (eee_4_3_4)=
 # Reliability model proposed for all EEE families
 

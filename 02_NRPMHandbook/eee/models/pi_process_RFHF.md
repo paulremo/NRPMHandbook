@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (pi_process_RFHF)=
 # Process factor for RF/HF components model
 

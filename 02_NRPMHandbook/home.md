@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (home_page)=
 # Welcome to the NRPM digital handbook!
 

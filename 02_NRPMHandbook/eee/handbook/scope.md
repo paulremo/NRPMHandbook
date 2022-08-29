@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 # Scope
 
 The modeling of {term}`EEE parts <EEE part>` for space systems is particularly important since they contribute significantly to reliability of considered systems. In this chapter, the basics for reliability prediction of {term}`EEE parts <EEE part>` are compiled. These are based on the models of the FIDES approach {cite:p}`eee-UTE-C80-811`, which has been customized and extended.

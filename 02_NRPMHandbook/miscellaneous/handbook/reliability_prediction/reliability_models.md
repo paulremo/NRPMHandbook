@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (misc_5_4)=
 # Reliability models for miscellaneous items
 There are three reliability models for {term}`miscellaneous items <Miscellaneous item>`:

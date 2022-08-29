@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (sec_misc_models)=
 # Miscellaneous models
 

@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (misc_5_1)=
 # List of miscellaneous items
 {numref}`misc-table4-1` presents the {term}`miscellaneous items <Miscellaneous item>` for which a reliability “standard model” is defined (refer to {numref}`misc_5_7` and {numref}`misc_5_8`).

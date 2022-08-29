@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (eee_4_2)=
 # Failure type coverage
 

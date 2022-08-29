@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (pi_process_ASIC)=
 # Process factor for ASIC components model
 
