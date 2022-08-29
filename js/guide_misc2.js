@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 function runMiscellaneousGuide() {
     let conv_container = document.getElementById("messagesTrack");
 

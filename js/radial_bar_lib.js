@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 function radial_bar(div_id, data){
     // Radial Bar Chart
     

@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 function draw_circle(id, data){
     d3.select(id)
     .append("div")

@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 let recoms_mp = new Map([
     ["phase type", ""],
     ["phase name", "Two phases cannnot have the same name. You can add the 'ON/OFF' indication to differentiate two similar phases. <br>Enter a name starting with a lowercase letter, with no space and no punctuation except for the underscore '_' that can be added to seprate terms"],
