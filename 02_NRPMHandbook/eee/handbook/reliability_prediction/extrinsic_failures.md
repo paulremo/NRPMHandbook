@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (eee_4_7)=
 # Extrinsic failures of EEE components
 

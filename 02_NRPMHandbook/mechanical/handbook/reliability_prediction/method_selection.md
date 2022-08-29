@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (meca_4_5)=
 # Method selection for different items and failure mechanisms
 

@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (meca_4_1)=
 # Process for mechanical reliability predicition
 

@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 # Scope
 
 In order to harmonize the methodologies for different applications, {term}`NRPM` starts with the formulation of an overall framework formed by the **methodologies** ({numref}`methodologies`) and **methods chapters**. The framework merges all aspects of reliability prediction, even though these may be handled by different methods and thus provides a basis and background for the models (**EEE chapter** ({numref}`sec_eee_handbook`, {numref}`sec_eee_models`), **mechanical chapter** ({numref}`sec_mech_handbook`, {numref}`sec_mech_models`), **miscellaneous chapter** ({numref}`sec_misc_handbook`, {numref}`sec_misc_models`), **system chapter** ({numref}`sec_sys_handbook`, {numref}`sec_sys_models`)) 

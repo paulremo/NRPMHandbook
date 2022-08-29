@@ -1,9 +1,7 @@
 # NRPMHandbook
-Welcome to the repository that stores and tracks the development on the ADS/Matrisk project for developing a jupyter book of the NRPM digital handbook. The repository contains three subfolders.
+Welcome to the repository that stores and tracks the development on the ADS/Matrisk project for developing a jupyter book of the NRPM digital handbook. The repository contains many setup files and one subfolder.
 
-- `01_Resources` This folder hosts general resources of the project such as shared documents, related project documentation, pictures, etc.
 - `02_NRPMHandbook` This is the main folder for the digital handbook. All jupyter files are stored in this folder.
-- `.binder` This folder holds the binder configuration, i.e. requirements for the binder kernels.
 
 # FAQ
 
@@ -89,3 +87,6 @@ If changes in the submodule are pulled, they need to be committed to the main re
 
 ### Python configuration
 The python-based content requires a package called `nrpmin` from a seperate [github repository](https://github.com/paulremo/NRPMInteractivity/). To launch thebe in the correct repository, special configuration options have to be passed to [sphinx-thebe](https://sphinx-thebe.readthedocs.io/en/latest/configure.html). These settings are stored in the `_config.yml` file of this repo.
+
+## What about copyrigths?
+Content and ideas have been developed within ESA contract `No. 4000121065/17/NL/PS` and `4000135482/21/NL/AR/va`. See the `LICENSE` file for more information.

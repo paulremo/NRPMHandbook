@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (syst_4_4)=
 # Reliability assessment of phased missions
 

@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (pi_process_Hybrid)=
 # Process factor for hybrids and multi chip modules model
 

@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 # Failure rate processing
 
 Here you can calculate the failure rate $\lambda_{3}$ with the interactive interface !

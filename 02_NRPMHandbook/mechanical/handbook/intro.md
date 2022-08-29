@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (sec_mech_handbook)=
 # Mechanical handbook
 

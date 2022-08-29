@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (misc_5)=
 # Reliability prediction for miscellaneous items
 

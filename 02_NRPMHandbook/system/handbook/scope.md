@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 # Scope
 
 The focus of the present chapter is the selection and use of system level reliability methods. The reliability of all components (EEE, MEC, MIS) are considered in the context of the system. In early project phases (Phases 0, A and B as defined in {cite:p}`sys-ECSS-M-ST-10C`) a system level reliability target for the space mission is defined. As systems are made of many interacting components, system target reliability has to be allocated to individual component target reliabilities (top-down analysis).

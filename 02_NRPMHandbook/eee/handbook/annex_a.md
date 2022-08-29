@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (eee_annex_a)=
 # Annex A : example of mission profiles for space applications
 

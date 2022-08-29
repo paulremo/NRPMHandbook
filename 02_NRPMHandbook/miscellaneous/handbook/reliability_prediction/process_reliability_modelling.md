@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (misc_5_5)=
 # Process for reliability modelling
 This Section details how to build a reliability model for {term}`miscellaneous item <Miscellaneous item>`.

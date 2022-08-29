@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (methodo_5)=
 # Reliability prediction during project life cycle
 

@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (meca_4_8)=
 # Examples
 
@@ -215,7 +217,7 @@ The prior hyperparameters for the distribution of $\mu_{\text{rev}}$ are estimat
 ```
 ```{math}
 :label: eq_example_16
-\sigma\prime=\sqrt{ln\left(v_\Theta^2+1\right)}=\sqrt{ln\left(0.2_^2+1\right)}=0.198
+\sigma\prime=\sqrt{ln\left(v_\Theta^2+1\right)}=\sqrt{ln\left(0.2^2+1\right)}=0.198
 ```
 ````
 

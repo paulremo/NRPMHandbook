@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (syst_4_6)=
 # Reliability assessment of degraded systems
 

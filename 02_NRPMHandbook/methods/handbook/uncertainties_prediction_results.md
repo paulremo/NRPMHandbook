@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (method_8)=
 # Uncertainties in the prediction results
 

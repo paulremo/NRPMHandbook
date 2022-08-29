@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (methodo_4)=
 # Reliability prediction taxonomy and handbook coverage
 

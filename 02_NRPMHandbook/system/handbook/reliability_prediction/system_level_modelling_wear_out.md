@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (syst_4_8)=
 # System level modelling of wear-out
 

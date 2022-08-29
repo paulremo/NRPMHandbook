@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (method_7)=
 # Bayesian methods for reliability prediction modelling
 

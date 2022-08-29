@@ -1,3 +1,5 @@
+<!--- Copyright (C) Matrisk GmbH 2022 -->
+
 (syst_4_7)=
 # Modelling of common cause failure
 
