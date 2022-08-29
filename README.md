@@ -1,9 +1,7 @@
 # NRPMHandbook
-Welcome to the repository that stores and tracks the development on the ADS/Matrisk project for developing a jupyter book of the NRPM digital handbook. The repository contains three subfolders.
+Welcome to the repository that stores and tracks the development on the ADS/Matrisk project for developing a jupyter book of the NRPM digital handbook. The repository contains many setup files and one subfolder.
 
-- `01_Resources` This folder hosts general resources of the project such as shared documents, related project documentation, pictures, etc.
 - `02_NRPMHandbook` This is the main folder for the digital handbook. All jupyter files are stored in this folder.
-- `.binder` This folder holds the binder configuration, i.e. requirements for the binder kernels.
 
 # FAQ
 
