@@ -1,21 +1,21 @@
-MIT License
+The content of this digital handbook has been developed within the [European Space Agency](https://www.esa.int/) (ESA) project _New reliability prediction aimed at space applications_ (NRPM) under ESA contract `No. 4000121065/17/NL/PS` (2017-2020).
+As part of the ESA project _Adaptation of the NRPM Handbook into an ESA Handbook following the ECSS_ (2021-2022) under ESA contract `No. 4000135482/21/NL/AR/va`, updated information on the PISTIS project has been added. Otherwise, no material changes have been made to the content.
+ 
+As part of the ESA project _Adaptation of the NRPM Handbook into an ESA Handbook following the ECSS_ the contents of the handbook were structured to meet the requirements for ESA handbooks.
+ 
+In the context of the digitalization and possibilities of the digital world, within the ESA project _Adaptation of the NRPM Handbook into an ESA Handbook following the ECSS_ the consortium under the ESA contract `No. 4000135482/21/NL/AR/va` developed the idea to create a digital interactive version besides the classical handbook version. In the project, the digital version was developed with the aim to show which interactive possibilities exist for books and to conduct a feasibility study for the implementation.
+ 
+ESA contract `No. 4000121065/17/NL/PS` consortium:
+- [Matrisk GmbH](https://matrisk.ch/en/) (lead)
+- [Airbus Defence and Space](https://www.airbus.com/en/products-services/space/)
+- [Thales Alenia Space](https://www.thalesgroup.com/en/global/activities/space)
+- [Serma Technologies](https://www.serma-technologies.com/)
+- [Sarel Consult](https://www.sarel-consult.de/)
+ 
+ESA contract `No. 4000135482/21/NL/AR/va` consortium:
+- [Matrisk GmbH](https://matrisk.ch/en/) (lead)
+- [Airbus Defence and Space](https://www.airbus.com/en/products-services/space/)
 
-Copyright (c) 2022 paulremo
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### Copyright
+© [Matrisk GmbH](https://matrisk.ch/en/) 2022\
+The copyright in this document is vested in [Matrisk GmbH](https://matrisk.ch/en/). This document may only be reproduced in whole or in part, or stored in a retrieval system, or transmitted in any form, or by any means electronic, mechanical, photocopying or otherwise, either with the prior permission of [Matrisk GmbH](https://matrisk.ch/en/) or in accordance with the terms of ESA Contract `No. 4000121065/17/NL/PS`.
