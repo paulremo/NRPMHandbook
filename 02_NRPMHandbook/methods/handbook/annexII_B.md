@@ -5,11 +5,11 @@ In the following, the model development uncertainties associated with the predic
 
 **Model development uncertainties associated with the EEE models**
 
-The models provided in {numref}`sec_eee_handbook`, are based on the {cite:t}`method-UTE-C80-811`  approach, making use of a combined method with base failure rates derived from statistics (field return from on-ground applications) and scaling factors derived from the Physics of Failure. {numref}`method-table8-8` and {numref}`method-table8-9` summarize the uncertainties associated with these two modelling aspects.
+The models provided in {numref}`sec_eee_handbook`, are based on the {cite:t}`method-UTE-C80-811`  approach, making use of a combined method with base failure rates derived from statistics (field return from on-ground applications) and scaling factors derived from the {term}`Physics of Failure <Physics of failure>`. {numref}`method-table8-8` and {numref}`method-table8-9` summarize the uncertainties associated with these two modelling aspects.
 
 **Model development uncertainties associated with the Mechanical models**
 
-Besides providing own models based on Structural Reliability Methods, {numref}`sec_eee_handbook` makes reference also to external data sources such as {cite:t}`method-NPRD-16` and the {cite:t}`method-NSWC-11`, which is based on a combined method using both statistics and Physics of Failure. The limitations of these data sources when used for space applications are discussed more in detail in {numref}`sec_mech_handbook`. Here, only a quick overview is given using the common checklist format for the assessment of model development uncertainties from {numref}`method_8_3_1`.
+Besides providing own models based on {term}`Structural Reliability Methods <Structural reliability method>`, {numref}`sec_eee_handbook` makes reference also to external data sources such as {cite:t}`method-NPRD-16` and the {cite:t}`method-NSWC-11`, which is based on a combined method using both statistics and {term}`Physics of Failure <Physics of failure>`. The limitations of these data sources when used for space applications are discussed more in detail in {numref}`sec_mech_handbook`. Here, only a quick overview is given using the common checklist format for the assessment of model development uncertainties from {numref}`method_8_3_1`.
 
 **Model development uncertainties associated with the models for Miscellaneous items**
 

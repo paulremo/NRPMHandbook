@@ -82,7 +82,7 @@ Their reliability is therefore not a function in time (with possible observation
 
 {term}`Test data <Test data>` for {term}`miscellaneous items <Miscellaneous item>` tested under operational conditions would be a relevant source of information for {term}`reliability prediction <Reliability prediction>`, but is not in most cases available in sufficient quantities to derive any quantitative reliability metrics. Generally, elements constituting the {term}`miscellaneous items <Miscellaneous item>` are tested in larger quantities but do not represent the whole and assembled item. Nevertheless, this information can be valuable in order to derive {term}`contributing factors <Contributing factor>` to failure or to confirm design assumptions.
 
-Physics of failure models may use these elementary tests and resulting data to identify the {term}`failure mechanisms <Failure mechanism>` and the related design characteristics. Major {term}`failure mechanisms <Failure mechanism>` are identified per {term}`miscellaneous item <Miscellaneous item>` and mastered as necessary through appropriate design rules. All this is qualitative information and is used as support to any reliability model, as relevant
+{term}`Physics of Failure <Physics of failure>` models may use these elementary tests and resulting data to identify the {term}`failure mechanisms <Failure mechanism>` and the related design characteristics. Major {term}`failure mechanisms <Failure mechanism>` are identified per {term}`miscellaneous item <Miscellaneous item>` and mastered as necessary through appropriate design rules. All this is qualitative information and is used as support to any reliability model, as relevant
 
 
 (misc_5_3_3_1)=

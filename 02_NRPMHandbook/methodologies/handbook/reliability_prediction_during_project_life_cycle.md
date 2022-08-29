@@ -228,7 +228,7 @@ The required coverage in terms of root causes (failure categories, see {numref}`
 
 Achieving a high reliability product is an important objective during the design and production of any space system. Considering all root causes of failure is a prerequisite, and different mitigation processes are in place to avoid the occurrence of each of them, see {numref}`methodo-table5-5` for examples. Apart from measures to avoid the different root causes, system level design aims at mitigating the effect of lower level failures on the success of the mission.
 
-The objective of reliability predictions is to provide quantitative estimates for the (remaining) probability of failure despite the implementation of these measures. Some of the mitigation measures are explicitly considered in the prediction, e.g. quality level of {term}`EEE parts <EEE part>`, or redundancy at system level. Others may be used as a justification to neglect certain root causes in the prediction, provided that the mitigation measures are sufficiently effective to avoid their occurrence. To give an example, calculations from radiation engineering may provide evidence that the rate of destructive Single Event Effects is negligible compared to the random failure rate. Similar considerations become relevant for wear-out failures of EEE components, which can in most cases be effectively avoided by safe life qualification (with appropriate margins), at least when the prediction is limited to the specified design lifetime.
+The objective of reliability predictions is to provide quantitative estimates for the (remaining) probability of failure despite the implementation of these measures. Some of the mitigation measures are explicitly considered in the prediction, e.g. quality level of {term}`EEE parts <EEE part>`, or redundancy at system level. Others may be used as a justification to neglect certain root causes in the prediction, provided that the mitigation measures are sufficiently effective to avoid their occurrence. To give an example, calculations from radiation engineering may provide evidence that the rate of destructive Single Event Effects is negligible compared to the random failure rate. Similar considerations become relevant for {term}`wear-out failures <Wear-out failure>` of EEE components, which can in most cases be effectively avoided by {term}`safe life qualification <Safe life qualification>` (with appropriate margins), at least when the prediction is limited to the specified design lifetime.
 
 n addition, depending on the intended use of the prediction, there may be no added value to make a quantitative prediction for a certain root cause, because it does not make a difference for the trade-offs that will be supported by the prediction. These aspects are discussed in the following sections.
 
@@ -242,13 +242,13 @@ n addition, depending on the intended use of the prediction, there may be no add
 *   - FAILURE CATEGORY
     - ROOT CAUSE
     - MITIGATION
-*   - RANDOM FAILURE (RF)
+*   - {term}`RANDOM FAILURE <Random failure>` (RF)
     - UNKNOWN RESIDUAL DEFECT / WEAKNESS <ul style="text-align:left;"><li>CONSISTENT WITH QUALITY LEVEL</li><li>UNDER NORMAL STRESSES (REFER TO DATA SHEET)</li><li>ONE-OFF EVENT</li></ul>
     - <p>Space Qualification</p><p>Part quality selection</p><p>Derating</p><p>Redundancy</p><p>FDIR</p>
 *   - SYSTEMATIC FAILURE (SF)
     - <ul style="text-align:left;"><li>DESIGN ERROR</li><li>MANUFACTURING ERROR</li><li>OPERATIONS ERROR</li></ul>
     - <p>Robust design</p><p>Quality assurance (during design, manufacturing and operations)</p><p>Qualification & verification processes</p>
-*   - WEAR-OUT FAILURE (WO)
+*   - {term}`WEAR-OUT FAILURE <Wear-out failure>` (WO)
     - <ul style="text-align:left;"><li>NORMAL PHYSICAL PROCESS &#8594; TIME/EQUIVALENT TIME <ul style="text-align:left;"><li>OPERATIONS-RELATED (e.g. On/Off, duty cycle)</li></ul><ul><li>ENVIRONMENT-RELATED (e.g. Radiations)</li></ul> </li></ul>
     - <p>Components and materials selection</p><p>Design calculations and margins</p><p>Lifetime qualification with margins</p>
 *   - EXTRINSIC FAILURE (EF)
@@ -291,14 +291,14 @@ Different reliability prediction uses become relevant throughout the project lif
     - E - F
 ```
 
-The reliability prediction methodology presented in this handbook intends to embrace different reliability prediction uses, although the focus is clearly on the “classical” uses related to the development and design of a single spacecraft. The first use listed in {numref}`methodo-table5-6` - reliability prediction for design support - is considered as the base case. Recommendations on the root cause coverage required for this use are provided in {numref}`methodo_5_3_2_1` , followed by a discussion of the remaining uses in the following subsections.
+The {term}`reliability prediction methodology <Reliability prediction methodology>` presented in this handbook intends to embrace different reliability prediction uses, although the focus is clearly on the “classical” uses related to the development and design of a single spacecraft. The first use listed in {numref}`methodo-table5-6` - reliability prediction for design support - is considered as the base case. Recommendations on the root cause coverage required for this use are provided in {numref}`methodo_5_3_2_1` , followed by a discussion of the remaining uses in the following subsections.
 
 (methodo_5_3_2_1)=
 #### Reliability prediction as input to the design 
 
 Providing input to the design of a spacecraft may be seen as the classical use for reliability predictions in space applications, and is the focus of this handbook. To be useful for design, the methodology needs to account for the relevant design variables in order to support the required trade-offs, and for the affected categories of failures. 
 
-Guidance on the root cause coverage required for this reliability prediction use is given in {numref}`methodo-table5-7` below. It should be noted that the recommendation made for systematic failure modelling is driven by the limitations of the available modelling approaches, which do not account for the relevant decision variables (e.g. impact of maturity category, test strategy). Other design decisions, such as redundancy sizing or the margin policy, are not effective to avoid systematic failures. For these reasons, the added value to consider this failure category for design support is small despite its clear relevance for the overall failure count.
+Guidance on the root cause coverage required for this reliability prediction use is given in {numref}`methodo-table5-7` below. It should be noted that the recommendation made for {term}`systematic failure <Systematic failure>` modelling is driven by the limitations of the available modelling approaches, which do not account for the relevant decision variables (e.g. impact of maturity category, test strategy). Other design decisions, such as redundancy sizing or the margin policy, are not effective to avoid {term}`systematic failures <Systematic failure>`. For these reasons, the added value to consider this failure category for design support is small despite its clear relevance for the overall failure count.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-7')" placeholder="Search table...">
 
@@ -309,14 +309,14 @@ Guidance on the root cause coverage required for this reliability prediction use
 
 *   - Failure category
     - Required coverage for reliability prediction as design support
-*   - Random failures
+*   - {term}`Random failures <Random failure>`
     - Full coverage required
-*   - Systematic failures
-    - Not generally required to cover systematic failures, unless full root causes coverage is needed e.g. to support the design of a constellation ({numref}`methodo_5_3_2_5`).
-*   - Wear-out failures
-    - Wear-out after the specified lifetime is out of scope for this use (see {numref}`methodo_5_3_2_6` for life time extensions). Premature wear-out (excluding systematic failures) needs to be considered for technologies for which safe life qualification is not possible, or not fully effective.
+*   - {term}`Systematic failures <Systematic failure>`
+    - Not generally required to cover {term}`systematic failures <Systematic failure>`, unless full root causes coverage is needed e.g. to support the design of a constellation ({numref}`methodo_5_3_2_5`).
+*   - {term}`Wear-out failures <Wear-out failure>`
+    - Wear-out after the specified lifetime is out of scope for this use (see {numref}`methodo_5_3_2_6` for life time extensions). Premature wear-out (excluding {term}`systematic failures <Systematic failure>`) needs to be considered for technologies for which {term}`safe life qualification <Safe life qualification>` is not possible, or not fully effective.
 *   - Extrinsic failures
-    - Relevant stress contributors resulting from the spacecraft environment should be considered in the prediction of random and wear-out failures. Explicit consideration of {term}`extrinsic failures <Extrinsic failure>` with dedicated models is only required if the rate of occurrence of additional failure modes (e.g. destructive SEE, space debris impact) cannot be neglected when compared to the random failure rate.
+    - Relevant stress contributors resulting from the spacecraft environment should be considered in the prediction of random and {term}`wear-out failures <Wear-out failure>`. Explicit consideration of {term}`extrinsic failures <Extrinsic failure>` with dedicated models is only required if the rate of occurrence of additional failure modes (e.g. destructive SEE, space debris impact) cannot be neglected when compared to the {term}`random failure <Random failure>` rate.
 ```
 
 The recommendations regarding root causes coverage are generally valid also for preliminary reliability predictions, e.g. for the Preliminary Design Review (PDR). However, the level of detail used in the modelling can be reduced in this context to reduce prediction efforts and to account for limited input availability in early project phases.
@@ -328,24 +328,24 @@ To allow for a meaningful verification, the specification of quantitative reliab
 
 The recommendations on root cause coverage for design support in {numref}`methodo-table5-7` may be used also in this context. The quantitative reliability requirements specified between customers, prime contractors and suppliers can then directly be used as a design driver, with the goal to find the best architecture and detailed design to comply with the requirements under the given schedule and budget constraints. 
 
-After completion of the detailed design, the prediction may be extended to account for systematic failures as well, e.g. when full root causes coverage is needed to support the business planning for the owner of a single satellite or a satellite constellation ({numref}`methodo_5_3_2_5`). 
+After completion of the detailed design, the prediction may be extended to account for {term}`systematic failures <Systematic failure>` as well, e.g. when full root causes coverage is needed to support the business planning for the owner of a single satellite or a satellite constellation ({numref}`methodo_5_3_2_5`). 
 
 (methodo_5_3_2_3)=
 #### Reliability prediction supporting the choice of engineering design margins 
 
-The recommendations made in {numref}`methodo-table5-7` are based on the assumption that the occurrence of certain root causes is effectively reduced by different mitigation measures, as listed in {numref}`methodo-table5-5`. However, one possible use of quantitative reliability predictions is to assess the risk associated with a reduction of design margins, or the benefit of increasing a specific margin. The reliability prediction then needs to account for the effect of this margin policy decision, which may require the consideration of additional root causes. Safe life qualification to avoid wear-out failures before end-of-life is a case in point; wear-out models that are based on Physics of Failure allow quantifying the effect of the associated margins (e.g. radiation margins) on the item’s reliability. More generally, the effect of design margins can be quantified with the aid of any reliability model that consider the effect of the stress contributors that are addressed by this margin. 
+The recommendations made in {numref}`methodo-table5-7` are based on the assumption that the occurrence of certain root causes is effectively reduced by different mitigation measures, as listed in {numref}`methodo-table5-5`. However, one possible use of quantitative reliability predictions is to assess the risk associated with a reduction of design margins, or the benefit of increasing a specific margin. The reliability prediction then needs to account for the effect of this margin policy decision, which may require the consideration of additional root causes. {term}`Safe life qualification <Safe life qualification>` to avoid {term}`wear-out failures <Wear-out failure>` before end-of-life is a case in point; wear-out models that are based on {term}`Physics of Failures <Physics of failure>` allow quantifying the effect of the associated margins (e.g. radiation margins) on the item's reliability. More generally, the effect of design margins can be quantified with the aid of any reliability model that consider the effect of the stress contributors that are addressed by this margin. 
 
 (methodo_5_3_2_4)=
 #### Reliability prediction supporting the choice of a test strategy
 
-Also the choice of a suitable test strategy may be based on quantitative reliability predictions to assess the effect on the reliability of the flight item. Part level tests, such as e.g. lot acceptance tests, reliability tests, lifetime tests or radiation tests, generally have a clear relation to a specific failure category and the risk associated with a specific test plan (e.g. sample size, duration) can be quantified using statistical methods.
+Also the choice of a suitable test strategy may be based on quantitative reliability predictions to assess the effect on the reliability of the flight item. Part level tests, such as e.g. lot acceptance tests, reliability tests, lifetime tests or radiation tests, generally have a clear relation to a specific failure category and the risk associated with a specific test plan (e.g. sample size, duration) can be quantified using {term}`statistical methods <Statistical method>`.
 
-System level qualification and verification tests are performed mainly as a means of quality control, to identify possible design and manufacturing errors that may otherwise lead to systematic failures during operations in orbit. However, with the approaches for systematic failure modelling presented in the current handbook, it is not possible to consider the effect of testing and thus to quantify the risk associated with a specific test strategy.
+System level qualification and verification tests are performed mainly as a means of quality control, to identify possible design and manufacturing errors that may otherwise lead to {term}`systematic failures <Systematic failure>` during operations in orbit. However, with the approaches for {term}`systematic failure <Systematic failure>` modelling presented in the current handbook, it is not possible to consider the effect of testing and thus to quantify the risk associated with a specific test strategy.
 
 (methodo_5_3_2_5)=
 #### Reliability prediction as input for business planning and design of constellations
 
-To support business planning on the customer side (for single satellites, and especially for constellations), or for the insurance of space systems, reliability predictions need to be as realistic as possible. To achieve this, the scope of the prediction should follow the recommendations made for design support ({numref}`methodo-table5-7`), with an extension to account for systematic failures as well.
+To support business planning on the customer side (for single satellites, and especially for constellations), or for the insurance of space systems, reliability predictions need to be as realistic as possible. To achieve this, the scope of the prediction should follow the recommendations made for design support ({numref}`methodo-table5-7`), with an extension to account for {term}`systematic failures <Systematic failure>` as well.
 
 (methodo_5_3_2_6)=
 #### Reliability prediction to support decisions about life time extensions
@@ -354,7 +354,7 @@ The limited coverage of wear-out effects proposed in {numref}`methodo-table5-7` 
 
 To support decisions on life time extensions, it may not be required to revisit the scope of the prediction for all spacecraft elements; e.g. for space debris mitigation only the functions needed for safe disposal are of interest, and health monitoring may be used to better assess the risk of failure in redundant system architectures. 
 
-Where a quantitative prediction is required, the scope of the prediction needs to be extended to account for additional wear-out failures that may become relevant due to the lifetime extension.
+Where a quantitative prediction is required, the scope of the prediction needs to be extended to account for additional {term}`wear-out failures <Wear-out failure>` that may become relevant due to the lifetime extension.
 
 (methodo_5_4)=
 ## Reliability prediction during project life cycle
@@ -1080,7 +1080,7 @@ The outcome of the conceptual design phase are concepts that will be implemented
 * Presentation of the pros and cons of the design solution, and 
 * Identification of the technical and programmatic risks. 
 
-The reliability prediction is an important part of the trade-off studies and could be applied to support system engineering, subsystem engineering and equipment level design engineering. It provides a quantitative assessment of alternative design solutions regarding the achievement of reliability requirements. In the trade-off study, a sensitivity analysis can support system engineering through quantifying how reliability on system level changes if certain parameters change. Importance measures (see {numref}`sec_sys_handbook`) could be used to perform such a sensitivity analysis. Furthermore, the reliability prediction for the trade-off should identify the equipment failure modes that significantly impact the system reliability. If the correlation between equipment failure modes and system reliability can be established, the aim of system reliability improvement is to eliminate or significantly reduced these failure modes by improving equipment quality or reconfiguring the system architecture. Different design concepts may cause different types of failure modes. The system designers should be aware of the underlying failure causes to achieve a robust design. To achieve the desired quality, the development process should be accompanied by an appropriate quality assurance procedure, see e.g. {cite:t}`methodo-ECSS-Q-ST-10C`.
+The reliability prediction is an important part of the trade-off studies and could be applied to support {term}`system engineering <System engineering>`, subsystem engineering and equipment level design engineering. It provides a quantitative assessment of alternative design solutions regarding the achievement of reliability requirements. In the trade-off study, a sensitivity analysis can support {term}`system engineering <System engineering>` through quantifying how reliability on system level changes if certain parameters change. Importance measures (see {numref}`sec_sys_handbook`) could be used to perform such a sensitivity analysis. Furthermore, the reliability prediction for the trade-off should identify the equipment failure modes that significantly impact the system reliability. If the correlation between equipment failure modes and system reliability can be established, the aim of system reliability improvement is to eliminate or significantly reduced these failure modes by improving equipment quality or reconfiguring the system architecture. Different design concepts may cause different types of failure modes. The system designers should be aware of the underlying failure causes to achieve a robust design. To achieve the desired quality, the development process should be accompanied by an appropriate quality assurance procedure, see e.g. {cite:t}`methodo-ECSS-Q-ST-10C`.
 
 (methodo_5_4_4)=
 ### Reliability requirement verification for compliance demonstration

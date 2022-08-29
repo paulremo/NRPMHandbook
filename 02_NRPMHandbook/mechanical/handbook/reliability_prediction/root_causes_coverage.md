@@ -9,17 +9,17 @@
 :widths: 25 75
 
 *   - Root cause category
-    - Coverage by the mechanical reliability prediction methodology
-*   - Random failures
-    - Considered by the methods described in {numref}`meca_4_5`, including early wear-out failures and failures due to foreseen extrinsic stresses, provided that these cannot be explained by gross design or manufacturing errors (cf. systematic failures).
+    - Coverage by the mechanical {term}`reliability prediction methodology <Reliability prediction methodology>`
+*   - {term}`Random failures <Random failure>`
+    - Considered by the methods described in {numref}`meca_4_5`, including early wear-out failures and failures due to foreseen extrinsic stresses, provided that these cannot be explained by gross design or manufacturing errors (cf. {term}`systematic failures <Systematic failure>`).
 *   - Wear-out failures
     - Considered by the methods described in {numref}`meca_4_5`, especially by those based on structural reliability theory with time-dependent {term}`degradation <Degradation>` models. 
-    Safe life qualification alone is not sufficient as a justification to discard the probability of premature mechanical wear-out failures before the end of the nominal lifetime. 
+    {term}`Safe life qualification <Safe life qualification>` alone is not sufficient as a justification to discard the probability of premature mechanical {term}`wear-out failures <Wear-out failure>` before the end of the nominal lifetime. 
     The consideration of additional {term}`failure mechanisms <Failure mechanism>`, which are assumed to be effectively handled during nominal lifetime, may be required in case of lifetime extensions (using the same methods, but with an extended modelling scope).
 *   - Extrinsic failures
-    - Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in-orbit (e.g. temperature) should be considered as stress contributors in the modelling of random and wear-out failures, see {numref}`meca-table4-2` in {numref}`meca_4_2_3` for the most relevant interactions. A separate modelling may be required if the probability of additional {term}`failure mechanisms <Failure mechanism>` induced by the space environment cannot be neglected – e.g. space debris impact, see {numref}`meca_4_2_3` for details.
-*   - Systematic failures
-    - Process related failures due to minor design and manufacturing weaknesses can be considered with the methods described in {numref}`meca_4_5`, provided that the failure process or mechanism remains unchanged (cf. random failures). 
+    - Foreseen extrinsic effects due to the launch environment (vibrations, shocks) and physical conditions in-orbit (e.g. temperature) should be considered as stress contributors in the modelling of random and {term}`wear-out failures <Wear-out failure>`, see {numref}`meca-table4-2` in {numref}`meca_4_2_3` for the most relevant interactions. A separate modelling may be required if the probability of additional {term}`failure mechanisms <Failure mechanism>` induced by the space environment cannot be neglected – e.g. space debris impact, see {numref}`meca_4_2_3` for details.
+*   - {term}`Systematic failures <Systematic failure>`
+    - Process related failures due to minor design and manufacturing weaknesses can be considered with the methods described in {numref}`meca_4_5`, provided that the failure process or mechanism remains unchanged (cf. {term}`random failures <Random failure>`). 
     Gross design or manufacturing errors must be considered separately, see {numref}`syst_4_9` in the System level chapter.
 ```
 
@@ -33,7 +33,7 @@ In this line of thought, all failures due to minor uncertainties in the design a
 (meca_4_2_2)=
 ## Wear-out failures
 
-In the frame of this handbook, {term}`wear-out failures <Wear-out failure>` are generally assumed to occur after the specified mission life time, assuming that {term}`safe life qualification <Safe life qualification>` processes have successfully mitigated the risk of premature failures. However, for mechanical items, this assumption may not necessarily be valid, as experience shows that there is a certain risk of premature wear-out despite {term}`safe life qualification <Safe life qualification>`, which may lead to a (slowly) increasing failure rate already during the course of the mission, as illustrated in {numref}`Figure_3_1`. The root cause of these premature {term}`wear-out failures <Wear-out failure>` will mostly be related to the design or manufacturing process. However, following the same line of thought as in {numref}`meca_4_2_1`) above, failures due to minor design or manufacturing variability can nevertheless be considered as wear-out rather than {term}`systematic failures <Systematic failure>`, and considered with the methodology presented in this chapter. Only {term}`wear-out failures <Wear-out failure>` due to gross design or manufacturing errors are left for the systematic failure modelling.
+In the frame of this handbook, {term}`wear-out failures <Wear-out failure>` are generally assumed to occur after the specified mission life time, assuming that {term}`safe life qualification <Safe life qualification>` processes have successfully mitigated the risk of premature failures. However, for mechanical items, this assumption may not necessarily be valid, as experience shows that there is a certain risk of premature wear-out despite {term}`safe life qualification <Safe life qualification>`, which may lead to a (slowly) increasing failure rate already during the course of the mission, as illustrated in {numref}`Figure_3_1`. The root cause of these premature {term}`wear-out failures <Wear-out failure>` will mostly be related to the design or manufacturing process. However, following the same line of thought as in {numref}`meca_4_2_1`) above, failures due to minor design or manufacturing variability can nevertheless be considered as wear-out rather than {term}`systematic failures <Systematic failure>`, and considered with the methodology presented in this chapter. Only {term}`wear-out failures <Wear-out failure>` due to gross design or manufacturing errors are left for the {term}`systematic failure <Systematic failure>` modelling.
 
 ```{figure} ../../pictures/figure4_1.png
 ---

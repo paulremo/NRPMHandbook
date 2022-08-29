@@ -38,16 +38,16 @@ In-orbit return failure data provides valuable information on the in-service rel
 (meca_4_3_1_3)=
 ### Manufacturer reliability data
 
-Mechanical space equipment suppliers are highly specialized companies, delivering their products for many different missions. Manufacturer reliability data can thus be a highly relevant source of information for mechanical reliability prediction. This holds especially for standardized items with a long space heritage, where manufacturer’s in-orbit return (considered in {numref}`meca_4_3_1_2) can be used for the reliability prediction. Also test data available on the manufacturer’s side may be considered. Manufacturer reliability data derived from analysis should be checked for consistency with the methodology presented in this handbook.
+Mechanical space equipment suppliers are highly specialized companies, delivering their products for many different missions. Manufacturer reliability data can thus be a highly relevant source of information for mechanical reliability prediction. This holds especially for standardized items with a long space heritage, where manufacturer’s in-orbit return (considered in {numref}`meca_4_3_1_2) can be used for the reliability prediction. Also {term}`test data <Test data>` available on the manufacturer’s side may be considered. Manufacturer reliability data derived from analysis should be checked for consistency with the methodology presented in this handbook.
 
 Apart from this, more general {term}`manufacturer data <Manufacturer part>`, such as design information, material specifications, or equipment level FMEA analyses are also important inputs for reliability predictions of {term}`mechanical part <Mechanical part>`s. 
 
 (meca_4_3_1_4)=
 ### Test data
 
-Test data for {term}`mechanical part <Mechanical part>`s tested at operational conditions would be a relevant source of information for reliability prediction, but is in most cases not available in large enough quantities. Small data samples can be used to calibrate or update models derived from analysis, or to check the modelling assumptions.
+{term}`Test data <Test data>` for {term}`mechanical part <Mechanical part>`s tested at operational conditions would be a relevant source of information for reliability prediction, but is in most cases not available in large enough quantities. Small data samples can be used to calibrate or update models derived from analysis, or to check the modelling assumptions.
 
-Another possible use of test data is for the derivation of physical quantities needed in reliability models based on {term}`PoF`, such as e.g. wear rates or resistances against specific stresses. The advantage is that with this approach test data can be useful even if the test is performed at different than operational conditions and/or the design is not exactly the same as for the flight item. An important limitation is that in practice most items are not tested to failure and therefore the data is censored and less informative for modelling purposes.
+Another possible use of {term}`test data <Test data>` is for the derivation of physical quantities needed in reliability models based on {term}`PoF`, such as e.g. wear rates or resistances against specific stresses. The advantage is that with this approach {term}`test data <Test data>` can be useful even if the test is performed at different than operational conditions and/or the design is not exactly the same as for the flight item. An important limitation is that in practice most items are not tested to failure and therefore the data is censored and less informative for modelling purposes.
 
 Finally, one specific feature of pre-flight acceptance tests should be mentioned: Due to the fact that these tests are performed on the flight item, they can provide relevant information about its strength or resistance against the applied stresses. The fact that the item has passed the tests may be used to exclude lower fractile values of the strength distribution in {term}`PoF` approaches. Note that this “proof load” approach is only valid for {term}`failure mechanism <Failure mechanism>`s resulting from peak load effects, and cannot be applied when cumulative stresses are driving failure. More details on the use of proof load test results for reliability prediction can be found e.g. in {cite:t}`mec-AO-1-8017-14-NL-KM`, {cite:t}`mec-Venter2012AccountingFP`.
 
@@ -101,7 +101,7 @@ As a result, the {term}`NSWC` should not be used as a data source for mechanical
 
 Beyond this, the {term}`NSWC` method is recommended only as a scaling method for specific part types, allowing to tune statistical estimates from “space relevant” data sources (the {term}`NSWC` base failure rates should not be used). The approach is applicable only if the {term}`failure mechanism <Failure mechanism>`s that are of relevance in space applications are the same as those considered by the {term}`NSWC` models, see {numref}`meca-table4-6` in {numref}`meca_4_5_2` for guidance. It is based on the following steps:
 
-* Estimate a new base failure rate with statistical methods using relevant data. The data should be “space relevant” in terms of design, quality level and dominating {term}`failure mechanism <Failure mechanism>`s, but must not exactly fit the required application.
+* Estimate a new base failure rate with {term}`statistical methods <Statistical method>` using relevant data. The data should be “space relevant” in terms of design, quality level and dominating {term}`failure mechanism <Failure mechanism>`s, but must not exactly fit the required application.
 * Select the parameters from the {term}`NSWC` Handbook method that are needed to scale the new base failure rate to the considered application.
   * Determine scaling factors for the new base failure rate (new “reference conditions”, implicit in the statistical data used)
   * Determine scaling factors for the considered application (“operational conditions”)
@@ -123,7 +123,7 @@ The following methods can be used for the derivation of reliability estimates fo
 * **Handbook methods** are not the recommended choice for mechanical reliability prediction in space applications, as has been discussed in {numref}`meca_4_3_1_5`, addressing {term}`NPRD` and {term}`NSWC`. 
 * **A combined approach** based on one of the methods listed above and {term}`Bayesian inference <Bayesian inference>` updating with relevant data (additional and independent from the prior estimate) is the preferred approach whenever suitable data is available, but not in sufficient quantity for a pure statistical approach.
 
-Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the {term}`physics of failure <Physics of failure>`. General guidance on method selection is presented in {numref}`Figure_3_2` below. The upper row in the matrix represents statistical methods, the middle row a combined approach with {term}`Bayesian inference <Bayesian inference>` updating, and the lower row either handbook methods or data ({term}`NPRD`, {term}`NSWC`) or – generally preferred in the absence of statistical data – structural reliability methods ({term}`SRM`) based on the {term}`physics of failure <Physics of failure>`s.
+Which method is most appropriate depends on the information available to do the prediction, in particular the availability of suitable reliability (or failure) data, and the engineering knowledge regarding the design, the use conditions and the {term}`physics of failure <Physics of failure>`. General guidance on method selection is presented in {numref}`Figure_3_2` below. The upper row in the matrix represents {term}`statistical methods <Statistical method>`, the middle row a combined approach with {term}`Bayesian inference <Bayesian inference>` updating, and the lower row either handbook methods or data ({term}`NPRD`, {term}`NSWC`) or - generally preferred in the absence of statistical data - {term}`structural reliability methods <Structural reliability method>` ({term}`SRM`) based on the {term}`physics of failure <Physics of failure>`s.
 More specific recommendations are given in {numref}`meca_4_5`.
 
 ```{figure} ../../pictures/figure4_2.png
@@ -139,17 +139,17 @@ In the following subsections, the implementation of the different methods in mec
 (meca_4_3_2_1)=
 ### Statistical methods
 
-Statistical methods for reliability prediction are in principle domain-independent, and do not require any specific considerations for {term}`mechanical parts <Mechanical part>`. However, the following two important reliability characteristics of {term}`mechanical parts <Mechanical part>` should be kept in mind when doing the analysis:
+{term}`Statistical methods <Statistical method>` for reliability prediction are in principle domain-independent, and do not require any specific considerations for {term}`mechanical parts <Mechanical part>`. However, the following two important reliability characteristics of {term}`mechanical parts <Mechanical part>` should be kept in mind when doing the analysis:
 
 * Many mechanical items are prone to premature wear-out, requiring a thorough selection of the distributional model. Assuming constant failure rates as a default is not acceptable, especially when the dominating {term}`failure mechanisms <Failure mechanism>` are known to be time-dependent. 
 * Mechanical items reliability is strongly dependent on the specific design and use conditions. Data from different applications should thus be treated with care, possibly requiring a dedicated Physics of failure modelling to understand the impact of the relevant variables.
 
 
-The use of statistical methods for mechanical reliability prediction is not discussed any further in the present chapter; the reader is referred to {numref}`methods` for a discussion of these methods.
+The use of {term}`statistical methods <Statistical method>` for mechanical reliability prediction is not discussed any further in the present chapter; the reader is referred to {numref}`methods` for a discussion of these methods.
 
 (meca_4_3_2_2)=
 ### Physics of failure methods
-The use of structural reliability methods for mechanical reliability prediction is discussed in more detail in {numref}`meca_4_6` and {numref}`meca_4_7`. The use of other methods that are based on the {term}`physics of failure <Physics of failure>` (not described in this chapter) is possible, provided that the {term}`failure mechanism <Failure mechanism>` modelling is accompanied by a suitable quantification of the relevant uncertainties.
+The use of {term}`structural reliability methods <Structural reliability method>` for mechanical reliability prediction is discussed in more detail in {numref}`meca_4_6` and {numref}`meca_4_7`. The use of other methods that are based on the {term}`physics of failure <Physics of failure>` (not described in this chapter) is possible, provided that the {term}`failure mechanism <Failure mechanism>` modelling is accompanied by a suitable quantification of the relevant uncertainties.
 
 (meca_4_3_2_3)=
 ### Handbook methods
@@ -157,4 +157,4 @@ The use of existing reliability handbooks and data sources, especially as a stan
 
 (meca_4_3_2_4)=
 ### Combined approach
-{term}`Bayesian inference <Bayesian inference>` updating is the recommended method for combining different sources of information for mechanical reliability prediction with independent statistical data. The specific case of {term}`Bayesian inference <Bayesian inference>` updating for reliability estimates derived with structural reliability methods, using failure data collected e.g. in part level testing, is discussed in {numref}`meca_4_6_5`. However, {term}`Bayesian inference <Bayesian inference>` statistics as discussed in {numref}`methods` are applicable also more generally, e.g. to update preliminary estimates based on Handbook data or expert elicitation.
+{term}`Bayesian inference <Bayesian inference>` updating is the recommended method for combining different sources of information for mechanical reliability prediction with independent statistical data. The specific case of {term}`Bayesian inference <Bayesian inference>` updating for reliability estimates derived with {term}`structural reliability methods <Structural reliability method>`, using failure data collected e.g. in part level testing, is discussed in {numref}`meca_4_6_5`. However, {term}`Bayesian inference <Bayesian inference>` statistics as discussed in {numref}`methods` are applicable also more generally, e.g. to update preliminary estimates based on Handbook data or expert elicitation.

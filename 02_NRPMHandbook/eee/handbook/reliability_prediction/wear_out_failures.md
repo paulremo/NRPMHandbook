@@ -13,7 +13,7 @@ The estimation of wear-out in space applications is a strategic subject as high 
 
 All components can be subjected to wear-out due to different phenomena such as material transformation, diffusion mechanisms and intermetallic growth. Generally, for most of them, wear-out will occur only after a very long period of time which is generally much longer than the satellite life. This is the main raison why wear-out is not taken into account in the predictive reliability calculation for EEE components. Nevertheless, in some particular cases, with the increase of stress such as temperature, voltage, thermal cycling, ON / OFF cycles and vibrations, wear-out can occur but generally after a duration higher than the life duration of the system.
 
-In the specific case of space applications, cumulated radiation dose can create wear-out on specific technologies. For some EEE components of the EPPL list, the wear-out occurs in a limited time and is directly due to the technology of these EEE components. Some attempts to estimate the wear-out of EEE components have been performed in space applications. The ECSS document {cite:t}`eee-ECSS-Q-TM-30-12A` provides the list of components with their possible drifts due to ageing depending on temperature. These drifts are based on test data issued from life tests. Unfortunately, as test data are not always available, the drifts are provided only for a low quantity of technologies with a subjective confidence.
+In the specific case of space applications, cumulated radiation dose can create wear-out on specific technologies. For some EEE components of the EPPL list, the wear-out occurs in a limited time and is directly due to the technology of these EEE components. Some attempts to estimate the wear-out of EEE components have been performed in space applications. The ECSS document {cite:t}`eee-ECSS-Q-TM-30-12A` provides the list of components with their possible drifts due to ageing depending on temperature. These drifts are based on {term}`test data <Test data>` issued from life tests. Unfortunately, as {term}`test data <Test data>` are not always available, the drifts are provided only for a low quantity of technologies with a subjective confidence.
 
 (eee_4_6_3)=
 ## List of components subjected to wear-out failures
@@ -356,7 +356,7 @@ The datasheet of the components and other information from the component manufac
 
 **Specific case of the solder joints**
 
-The random failure rates of the solder joints are taken into account in FIDES methodology. Concerning the wear-out, solder joints are affected by creep fatigue due to temperature cycling and vibrations. Some diffusion mechanisms and intermetallic growth can also occur at high temperatures. Moreover, all of these mechanisms can be combined all together. As previously mentioned, the reliability of the solder joints is impacted by the thermal mechanical constraints induced by the mismatch of the Coefficients of Thermal Expansion (CTE) of the different materials used at board and component level. Among the materials, the type and quality of solder alloy also has an impact.
+The {term}`random failure <Random failure>` rates of the solder joints are taken into account in FIDES methodology. Concerning the wear-out, solder joints are affected by creep fatigue due to temperature cycling and vibrations. Some diffusion mechanisms and intermetallic growth can also occur at high temperatures. Moreover, all of these mechanisms can be combined all together. As previously mentioned, the reliability of the solder joints is impacted by the thermal mechanical constraints induced by the mismatch of the Coefficients of Thermal Expansion (CTE) of the different materials used at board and component level. Among the materials, the type and quality of solder alloy also has an impact.
 
 When new technologies of solder, substrate or components packaging are introduced, it is strongly recommended to perform reliability tests such as thermal cycling tests and vibration tests in order to determine the Time To Failure of the assembly at board level. The {numref}`eee_4_6_6_3` provides formulas for acceleration factors currently used for the assessment of solder joints reliability based on the Coffin-Manson and Norris-Landzberg laws.
 
@@ -899,7 +899,7 @@ An example is provided in {numref}`eee_4_6_9`.
 (eee_4_6_8_4)=
 ### Failure distribution
 
-Once the tests have shown wear-out failures, a suitable failure distribution which fits to the wear-out phenomenon of the components has to be determined.
+Once the tests have shown {term}`wear-out failures <Wear-out failure>`, a suitable failure distribution which fits to the wear-out phenomenon of the components has to be determined.
 
 The third part of the bathtub curve can be represented by several potential distributions, see {numref}`methodologies` for details. The most common used distributions for the wear-out of EEE components are the Weibull distribution with two or three parameters (introducing a shift *τ* in the two-parameter model $f(t-\tau)$), and the Lognormal distribution.
 
@@ -909,7 +909,7 @@ For the Lognormal distribution, the failure rate starts increasing exponentially
 
 **Combination of distributions**
 
-The combination of the second and third part of the bathtub curve is necessary to go beyond the random failures and to enlarge to the ageing of EEE components in the definition of the failure rate. Then, the random and wear-out failures are considered inside the same model. This approach is described in {numref}`sec_sys_handbook` with three different models mixing the exponential distribution and the wear-out distribution of EEE components.
+The combination of the second and third part of the bathtub curve is necessary to go beyond the {term}`random failures <Random failure>` and to enlarge to the ageing of EEE components in the definition of the failure rate. Then, the random and {term}`wear-out failures <Wear-out failure>` are considered inside the same model. This approach is described in {numref}`sec_sys_handbook` with three different models mixing the exponential distribution and the wear-out distribution of EEE components.
 
 (eee_4_6_9)=
 ## Application to wear-out of an operational amplifier due to radiation dose

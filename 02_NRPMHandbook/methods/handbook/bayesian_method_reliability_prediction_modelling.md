@@ -14,7 +14,7 @@ Both applications make use of the same theorem, called Bayes rule. Before explai
 
 **Bayes theorem in a reliability context**
 
-Consider a random variable $X$ with probability density function $f_{X}\left( x \right)$. If $\mathbf{\theta}$ denotes a vector of distribution parameters, the density function of $X$ is written as $f_{X}\left( x,\mathbf{\theta} \right)$. If the parameters are uncertain, the density can be considered as a conditional density function, i.e. $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$. The vector $\mathbf{\theta}$ now denotes a realisation of the random vector $\mathbf{\Theta}$ and the initial probability density function for the parameters, ${f'}_{\mathbf{\Theta}}\left( \mathbf{\theta} \right)$, is denoted the *prior density function*.
+Consider a random variable $X$ with {term}`probability density function <Probability density function>` $f_{X}\left( x \right)$. If $\mathbf{\theta}$ denotes a vector of distribution parameters, the density function of $X$ is written as $f_{X}\left( x,\mathbf{\theta} \right)$. If the parameters are uncertain, the density can be considered as a conditional density function, i.e. $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$. The vector $\mathbf{\theta}$ now denotes a realisation of the random vector $\mathbf{\Theta}$ and the initial {term}`probability density function <Probability density function>` for the parameters, ${f'}_{\mathbf{\Theta}}\left( \mathbf{\theta} \right)$, is denoted the *prior density function*.
 
 Now let us assume that $n$ independent observations (realisations) of the random variable $X$ are available that can be used to update the initial parameter estimate. The data sample is stored in a vector $\widehat{\mathbf{x}} = \left( {\widehat{x}}_{1},\ldots,{\widehat{x}}_{n} \right)^{T}$. The new (updated) density function ${f''}_{\mathbf{\Theta}}\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ of the uncertain parameters $\mathbf{\Theta}$ given the observations $\widehat{\mathbf{x}}$ is denoted as *posterior density function*. From Bayes' rule it may be derived as follows:
 
@@ -69,7 +69,7 @@ Applying Bayesian updating of a reliability estimate with new statistical data g
 
     -   Selection of the distribution type, e.g. considering the natural constraints of the distribution parameters. A conjugate prior may be selected to simplify the analysis
 
-    -   Parameter estimation for the selected prior distribution, e.g. based on alternative data sets, handbook data, Physics of Failure analyses or expert judgement.
+    -   Parameter estimation for the selected prior distribution, e.g. based on alternative data sets, handbook data, {term}`Physics of Failure <Physics of failure>` analyses or expert judgement.
 
         The general principles of the prior definition are discussed in {numref}`method_7_4`, with some more practical guidance for specific applications provided in {numref}`method_7_6`.
 
@@ -105,7 +105,7 @@ L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i 
 ```
 ````
 
-The selection of an appropriate distributional model for the sampling distribution $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$ follows the same principles as in the case of model development using statistical methods ({numref}`method_6_4_2`), or for the basic variable modelling required for probabilistic Physics of Failure methods ({numref}`method_6_5_2`). A formal comparison of different competing distribution types can be achieved with the aid of Bayesian information criteria **\[BR21\]**.
+The selection of an appropriate distributional model for the sampling distribution $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$ follows the same principles as in the case of model development using {term}`statistical methods <Statistical method>` ({numref}`method_6_4_2`), or for the basic variable modelling required for probabilistic {term}`Physics of Failure <Physics of failure>` methods ({numref}`method_6_5_2`). A formal comparison of different competing distribution types can be achieved with the aid of Bayesian information criteria **\[BR21\]**.
 
 In addition to the selection of a distribution type, aspects of truncation and censoring may have to be considered, as will be discussed below.
 
@@ -114,7 +114,7 @@ In addition to the selection of a distribution type, aspects of truncation and c
 
 For the correct formulation of the likelihood, it is important to distinguish truncated sampling distributions from censored data samples.
 
--   **Truncation** applies when observations are in principle not possible below or above a certain threshold, but the selected distribution type supports values below or above this threshold. To improve the modelling and avoid unexpected results, the distribution can be truncated by "cutting off" the lower or upper tail, and renormalizing to ensure that the probability density function integrates to unity. A classic example is the truncated Normal distribution, which ensures that the distribution does not support negative values.
+-   **Truncation** applies when observations are in principle not possible below or above a certain threshold, but the selected distribution type supports values below or above this threshold. To improve the modelling and avoid unexpected results, the distribution can be truncated by "cutting off" the lower or upper tail, and renormalizing to ensure that the {term}`probability density function <Probability density function>` integrates to unity. A classic example is the truncated Normal distribution, which ensures that the distribution does not support negative values.
 
 -   **Censoring** is considered when values below (right censored) or above (left censored) a specific threshold are theoretically possible, but could not be observed in the data used for updating. To give an example, data on observed failures may include both failed items (with observed time to failure), and items operating without failure until the end of the observation period. These "successes" represent censored data points, i.e. the exact time to failure is unknown, but it is known that it must be larger than the censoring point. Also interval censoring is possible. In this case, the specific value is not observed but it is known that the failure time lies within a given interval.
 
@@ -136,7 +136,7 @@ L \propto \ \prod_{i = 1}^{n}{f\left( \widehat{\mathbf{x}_{\mathbf{i}}}|\theta \
 ```
 ````
 
-Where $\widehat{\mathbf{x}_{\mathbf{\text{up}}}}$ is the upper censoring point, $\theta$ represents the distribution parameters, $\widehat{\mathbf{x}_{\mathbf{i}}}$ are the observed failures, $f\left( . \right)$ is the probability distribution function and $F\left( . \right)$ is the probability density function. The likelihood formulation for left censoring is:
+Where $\widehat{\mathbf{x}_{\mathbf{\text{up}}}}$ is the upper censoring point, $\theta$ represents the distribution parameters, $\widehat{\mathbf{x}_{\mathbf{i}}}$ are the observed failures, $f\left( . \right)$ is the probability distribution function and $F\left( . \right)$ is the {term}`probability density function <Probability density function>`. The likelihood formulation for left censoring is:
 
 ````{admonition} Equation
 :class: equation
@@ -606,7 +606,7 @@ Several MCMC programs and toolboxes are available, e.g. WinBUGS/OpenBUGS **\[BR2
 
 -   Bayesian model choice and model validation
 
-In the following a numerical example of the application of the MCMC is shown. In this example the failure hour data set given in {numref}`method-table7-4` is used, allowing a comparison of the results with the analytic solution. Another example for the use of numerical methods can be found in {numref}`sec_mech_handbook` for Mechanical reliability prediction, applying Bayesian updating to improve a wear-out model derived from the Physics of Failure with In Orbit Return observations.
+In the following a numerical example of the application of the MCMC is shown. In this example the failure hour data set given in {numref}`method-table7-4` is used, allowing a comparison of the results with the analytic solution. Another example for the use of numerical methods can be found in {numref}`sec_mech_handbook` for Mechanical reliability prediction, applying Bayesian updating to improve a wear-out model derived from the {term}`Physics of Failure <Physics of failure>` with In Orbit Return observations.
 
 **Example: Numerical Bayes approach for the Exponential distribution**
 
@@ -686,9 +686,9 @@ In the following, some practical guidance is provided, mainly focussed on the de
 (method_7_6_1)=
 ### Updating of estimates from previous statistical analysis
 
-Bayesian updating for a prior derived from a previous statistical analysis on an independent data set is the most straight-forward case for the definition of a prior distribution. The parameters of the prior distribution (the hyperparameters) are in this case simply derived from the existing ("prior") data set. The advantage of Bayesian updating in this context is that information from a previous analysis can still be considered even without having access to the original data sample. Note, however, that this requires that not only a point estimate for the model parameters, but also some information on the statistical uncertainty associated with the parameter estimate is available.
+Bayesian updating for a prior derived from a previous statistical analysis on an independent data set is the most straight-forward case for the definition of a prior distribution. The parameters of the prior distribution (the hyperparameters) are in this case simply derived from the existing ("prior") data set. The advantage of Bayesian updating in this context is that information from a previous analysis can still be considered even without having access to the original data sample. Note, however, that this requires that not only a point estimate for the model parameters, but also some information on the {term}`statistical uncertainty <Statistical uncertainty>` associated with the parameter estimate is available.
 
-It is important to note that priors derived with the aid of statistical estimation methods provide information only on statistical uncertainty resulting from sample size limitations. A more general view on various modelling uncertainties is taken in {numref}`methods` of this handbook, including a discussion of different sources of uncertainty. The analyst may choose to increase the variance of the prior distribution to account for additional uncertainty sources, e.g. if the prior data does not exactly represent the considered technology or operating conditions. An increased variance of the prior is equivalent to reducing the "equivalent sample size" of the prior data set and thus reducing the weight of the prior, and giving more weight to the new data. Obviously, this is only justified if the new data set does not introduce large additional uncertainties as well.
+It is important to note that priors derived with the aid of statistical estimation methods provide information only on {term}`statistical uncertainty <Statistical uncertainty>` resulting from sample size limitations. A more general view on various modelling uncertainties is taken in {numref}`methods` of this handbook, including a discussion of different sources of uncertainty. The analyst may choose to increase the variance of the prior distribution to account for additional uncertainty sources, e.g. if the prior data does not exactly represent the considered technology or operating conditions. An increased variance of the prior is equivalent to reducing the "equivalent sample size" of the prior data set and thus reducing the weight of the prior, and giving more weight to the new data. Obviously, this is only justified if the new data set does not introduce large additional uncertainties as well.
 
 (method_7_6_2)=
 ### Updating of reliability estimates derived from reliability handbooks
@@ -731,13 +731,13 @@ For the selection and evaluation of experts, several methodologies are available
 (method_7_6_4)=
 ### Bayesian updating with Physics of Failure methods
 
-Bayesian updating can also be used in combination with Physics of Failure methods, e.g. the structural reliability methods discussed in {numref}`method_6_5`. Different applications are possible in this context:
+Bayesian updating can also be used in combination with {term}`Physics of Failure <Physics of failure>` methods, e.g. the {term}`structural reliability methods <Structural reliability method>` discussed in {numref}`method_6_5`. Different applications are possible in this context:
 
--   Bayesian updating of basic variable distributions that are required for an appropriate uncertainty quantification in Physics of Failure approaches ({numref}`method_6_5_2`).
+-   Bayesian updating of basic variable distributions that are required for an appropriate uncertainty quantification in {term}`Physics of Failure <Physics of failure>` approaches ({numref}`method_6_5_2`).
 
--   Bayesian updating of reliability estimates derived from the Physics of Failure, using failure in a combined approach ({numref}`method_6_6`)
+-   Bayesian updating of reliability estimates derived from the {term}`Physics of Failure <Physics of failure>`, using failure in a combined approach ({numref}`method_6_6`)
 
 The first application considers the distribution of physical variables, such as loads and material characteristics, which can be directly or indirectly observed during tests or operations. The selected probabilistic models should be updated whenever new data becomes available. The approach for updating of these basic variable distribution follows the same principles as discussed above. Also in this context, the prior may be defined based on alternative data sources, literature values, handbook data or expert judgement.
 
-A different situation occurs if a data sample with information on failures and successes (e.g. individual time-to-failure records for several items) is used to update a prior reliability estimate that has been derived using Physics of Failure methods. The advantage of this approach is that several sources of information can be combined consistently, allowing to make use of limited data samples which would not be sufficient for a pure statistical approach. The details of Bayesian updating for a prior derived from structural reliability methods is discussed in {numref}`sec_mech_handbook` for Mechanical reliability prediction, including also some examples illustrating the use of this combined approach in practice. However, the basic principles and mathematical formulas are of course applicable also outside the mechanical domain.
+A different situation occurs if a data sample with information on failures and successes (e.g. individual time-to-failure records for several items) is used to update a prior reliability estimate that has been derived using {term}`Physics of Failure <Physics of failure>` methods. The advantage of this approach is that several sources of information can be combined consistently, allowing to make use of limited data samples which would not be sufficient for a pure statistical approach. The details of Bayesian updating for a prior derived from {term}`structural reliability methods <Structural reliability method>` is discussed in {numref}`sec_mech_handbook` for Mechanical reliability prediction, including also some examples illustrating the use of this combined approach in practice. However, the basic principles and mathematical formulas are of course applicable also outside the mechanical domain.
 

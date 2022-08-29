@@ -49,81 +49,8 @@ However, independence between different {term}`failure mechanisms <Failure mecha
 ```{list-table} Possible interactions between different mechanical failure mechanisms
 :name: meca-table4-5
 
-* - 
+* - ![table5_4_5](../../pictures/table5_4_5.png)
 ```
-
-<script>
-	window.onload = runDT;
-</script>
-
-<style>
-.decision-tree{
-    width: 100%;
-}
-
-.decision-tree td{
-    width: 20%;
-    height: 40px;
-}
-
-.leaf-item{
-    width: 80%;
-    height: 100%;
-    margin-inline: 10%;
-    margin-block: 5%;
-    background-color: rgb(49, 81, 49);
-    color: beige;
-	font-size: 0.6vw;
-}
-</style>
-
-<div>
-	<table class="decision-tree">
-		<tr>
-			<td></td>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-1-1">Different parts</button>
-			</td>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-1-2">Same parts</button>
-			</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-2-1"></button>
-			</td>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-2-2"></button>
-			</td>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-2-3"></button>
-			</td>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-2-4"></button>
-			</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-3-1"></button>
-			</td>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-3-2"></button>
-			</td>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-3-3"></button>
-			</td>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-3-4"></button>
-			</td>
-			<td class="leaf">
-				<button class="leaf-item" id="leaf-3-5"></button>
-			</td>
-		</tr>
-	</table>
-</div>
 
 
 A simple way to account for such interactions is to select the dominating {term}`failure mechanism <Failure mechanism>` (e.g. the one with the highest probability of failure) and to consider the effect of other {term}`failure mechanism(s) <Failure mechanism>` on the dominating {term}`failure mechanism <Failure mechanism>`. When using {term}`structural reliability methods <Structural reliability method>`, this can be achieved by adapting the basic variable distributions to account for physical effects related to other {term}`failure mechanism <Failure mechanism>` processes. The assessment then requires the following steps:
@@ -518,7 +445,7 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 *   - Fusible Wires
     - A device consisting of metal strips soldered with a fusible alloy that melts at a specific temperature, allowing the pieces to separate
     - II Passive
-    - Quality issue or random failure
+    - Quality issue or {term}`random failure <Random failure>`
     - Statistical methods
 	- <p>fatigue &fracture</p><p>distortion</p>
 	- <p><i class="fa fa-check" style="color:green"></i></p><p>generic</p>

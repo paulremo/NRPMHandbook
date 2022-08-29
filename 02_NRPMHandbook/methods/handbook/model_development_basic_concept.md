@@ -71,7 +71,7 @@ f_{T}\left( t \right) = \frac{\mathrm{d}F_{T}\left( t \right)}{\mathrm{d}t}
 ```
 ````
 
-The failure density corresponds to the probability density function of the failure time distribution.
+The failure density corresponds to the {term}`probability density function <Probability density function>` of the failure time distribution.
 
 **Failure rate *$λ(t)$***
 
@@ -160,7 +160,7 @@ The models provided in the {ref}`EEE chapter<sec_eee_handbook>`, the {ref}`MEC c
 
 Satellite operators, prime contractors and lower level manufacturers can obtain IOR at spacecraft level, subsystem level (e.g. platform), equipment level (e.g. on-board computers) or in some cases at part level (e.g. passive RF parts or some families of FPGA by technology nodes).
 
-With the analysis of the elements contained in the spacecraft, it is then possible to interpret the data through statistical methods, provided the total number of elements (or cumulated hours and observed failures) is sufficient.
+With the analysis of the elements contained in the spacecraft, it is then possible to interpret the data through {term}`statistical methods <Statistical method>`, provided the total number of elements (or cumulated hours and observed failures) is sufficient.
 
 In-orbit return data can be used for the development of new reliability prediction models, provided that the following conditions are fulfilled:
 
@@ -250,7 +250,7 @@ There are a number of existing {term}`handbook data sources <Handbook data sourc
 
 Knowing and managing the {term}`failure mechanisms <Failure mechanism>` within parts or systems is generally a good starting point to perform a reliability prediction. From a practical point of view, it becomes even more interesting when no other data are available to perform the reliability prediction of a part, a unit or a subsystem, and the last resort for the reliability engineer is to analyse the {term}`failure mechanisms <Failure mechanism>` of the item under consideration.
 
-The first step is to identify potential failure modes and associated {term}`failure mechanisms <Failure mechanism>`, e.g. by performing a Design or Process FMEA, or through engineering judgment and/or lessons learnt. The following steps will then consist in determining reliability data linked to the phenomenon identified as most likely responsible for the undesired failure mode. The approach used for analysing in depth the {term}`failure mechanisms <Failure mechanism>` is the Physics of Failures, see {numref}`method_6_5` for details.
+The first step is to identify potential failure modes and associated {term}`failure mechanisms <Failure mechanism>`, e.g. by performing a Design or Process FMEA, or through engineering judgment and/or lessons learnt. The following steps will then consist in determining reliability data linked to the phenomenon identified as most likely responsible for the undesired failure mode. The approach used for analysing in depth the {term}`failure mechanisms <Failure mechanism>` is the {term}`Physics of Failures <Physics of failure>`, see {numref}`method_6_5` for details.
 
 (method_6_2_6)=
 ### Failure mode repartition data
@@ -283,17 +283,17 @@ It should be noted that the failure modes are believed to be industry and applic
 Different approaches can be followed to develop reliability models. For elementary (e.g. part level) reliability modelling, one of the following approaches may be used:
 
 -   **Statistical approach:**
-    Starting with observations of an item's behaviour under certain conditions (data from on-ground testing or operational feedback), a reliability model is derived using statistical methods. The mathematical tools and methods from classical reliability theory can be used for this purpose.
+    Starting with observations of an item's behaviour under certain conditions (data from on-ground testing or operational feedback), a reliability model is derived using {term}`statistical methods <Statistical method>`. The mathematical tools and methods from classical reliability theory can be used for this purpose.
 
 -   **Physics of Failure:**
     A reliability model is derived from a mathematical representation of the dominating {term}`failure mechanisms <Failure mechanism>` with due consideration of the relevant contributors (environmental and use conditions) and the associated uncertainties. Mathematical tools and methods may be taken e.g. from structural reliability theory, encompassing stress-strength interference methods but also methods to account for more complex {term}`failure mechanisms <Failure mechanism>`.
 
 
--   **Combined approach:** By combination of statistical and Physics of Failure approaches, the strengths of both approaches are combined, while mitigating their weaknesses. Mathematical methods for combining different sources of information are available e.g. from the field of Bayesian statistics, allowing also the consideration of limited data samples by making use of additional information from Physics of Failure modelling.
+-   **Combined approach:** By combination of statistical and {term}`Physics of Failure <Physics of failure>` approaches, the strengths of both approaches are combined, while mitigating their weaknesses. Mathematical methods for combining different sources of information are available e.g. from the field of Bayesian statistics, allowing also the consideration of limited data samples by making use of additional information from {term}`Physics of Failure <Physics of failure>` modelling.
 
-To a certain extent, the same methods can also be applied at higher levels of assembly, in particular the statistical approach which is in principle applicable at any level from part to system, provided that suitable and sufficient data is available for the item under consideration. Physics of Failure models, on the other hand, are generally developed bottom-up, focussing on the {term}`failure mechanisms <Failure mechanism>` of parts or relatively small assemblies. Methods for combining elementary reliability models in system level reliability prediction are described in {numref}`sec_sys_handbook`.
+To a certain extent, the same methods can also be applied at higher levels of assembly, in particular the statistical approach which is in principle applicable at any level from part to system, provided that suitable and sufficient data is available for the item under consideration. {term}`Physics of Failure <Physics of failure>` models, on the other hand, are generally developed bottom-up, focussing on the {term}`failure mechanisms <Failure mechanism>` of parts or relatively small assemblies. Methods for combining elementary reliability models in system level reliability prediction are described in {numref}`sec_sys_handbook`.
 
-Each approach makes use of different pieces of information to estimate the reliability of the considered item, see {numref}`method_figure6_1` for illustration. The statistical approach uses relevant failure data to estimate the reliability of an item, whereas the Physics of Failure approach combines the analysis of the relevant {term}`failure mechanisms <Failure mechanism>` with information on the variability of the physical variables driving the process. Both approaches can be combined, e.g. with the aid of Bayesian updating, making best use of all available information.
+Each approach makes use of different pieces of information to estimate the reliability of the considered item, see {numref}`method_figure6_1` for illustration. The statistical approach uses relevant failure data to estimate the reliability of an item, whereas the {term}`Physics of Failure <Physics of failure>` approach combines the analysis of the relevant {term}`failure mechanisms <Failure mechanism>` with information on the variability of the physical variables driving the process. Both approaches can be combined, e.g. with the aid of Bayesian updating, making best use of all available information.
 
 ```{figure} pictures/method_figure6_1.png
 ---
@@ -305,7 +305,7 @@ Relation between different types of reliability prediction methods and the avail
 
 The following sections provide a short discussion of the three approaches listed above. Which approach is most suitable depends on the application. A simple flow chart for the selection of reliability prediction methods is given in {numref}`method_figure6_2`, naming only Bayesian updating as a possible combined method to use both knowledge about the physical process leading to failure and relevant failure data.
 
-In practice, making a choice between Statistics and Physics of Failure may be less black and white than depicted in the flow chart. For example, understanding the physics can help judging the relevance of available statistical data, and vice versa. Also, it should be noted that a combination of both approaches may also be achieved in a less sequential manner than with the Bayesian approach, where the Physics of Failure is used to derive a prior model that can then be updated using statistical data on observed failures. To give an example, the FIDES approach for reliability prediction, underlying the approach for EEE reliability prediction in {ref}`EEE chapter<sec_eee_handbook>` of this handbook, makes use of statistical base failure rates that are then tuned to give relevant results for a specific application with the aid of scaling factors that have been derived from the Physics of Failure.
+In practice, making a choice between Statistics and {term}`Physics of Failure <Physics of failure>` may be less black and white than depicted in the flow chart. For example, understanding the physics can help judging the relevance of available statistical data, and vice versa. Also, it should be noted that a combination of both approaches may also be achieved in a less sequential manner than with the Bayesian approach, where the {term}`Physics of Failure <Physics of failure>` is used to derive a prior model that can then be updated using statistical data on observed failures. To give an example, the FIDES approach for reliability prediction, underlying the approach for EEE reliability prediction in {ref}`EEE chapter<sec_eee_handbook>` of this handbook, makes use of statistical base failure rates that are then tuned to give relevant results for a specific application with the aid of scaling factors that have been derived from the {term}`Physics of Failure <Physics of failure>`.
 
 ```{figure} pictures/method_figure6_2.png
 ---
@@ -318,7 +318,7 @@ Selection of reliability prediction methods depending on the available informati
 (method_6_4)=
 ## Statistical approach and classical reliability methods
 
-Statistical methods, sometimes also called “classical reliability methods”, focus on the statistical distribution of the time to failure or other relevant characteristics related to the reliability of technical system and components, and on the estimation of the related reliability metrics from statistical data. Different data sources that are relevant for reliability prediction in space applications have been discussed in {numref}`method_6_2` above.
+{term}`Statistical methods <Statistical method>`, sometimes also called “classical reliability methods”, focus on the statistical distribution of the time to failure or other relevant characteristics related to the reliability of technical system and components, and on the estimation of the related reliability metrics from statistical data. Different data sources that are relevant for reliability prediction in space applications have been discussed in {numref}`method_6_2` above.
 A correct implementation of the statistical approach requires the following three steps:
 
 -   Sampling characterisation
@@ -407,7 +407,7 @@ The probability distribution and density functions for the different models are 
 
 The classical way to model the reliability especially of EEE components is to assume a constant failure rate $\lambda\left( t \right) = \lambda$ during the component's useful life. This implies that the time to failure follows an Exponential distribution, which strongly simplifies the analysis. In particular, for a data-based estimation of constant failure rates it is sufficient to know the total number of failures and the total number of component hours or cycles in which the failures have been observed.
 
-In the Exponential model, the probability density function $f_{T}(t)$ and the cumulative distribution function $F_{T}(t)$ of the time to failure are defined as follows:
+In the Exponential model, the {term}`probability density function <Probability density function>` $f_{T}(t)$ and the cumulative distribution function $F_{T}(t)$ of the time to failure are defined as follows:
 
 ````{admonition} Equation
 :class: equation
@@ -436,9 +436,9 @@ The Exponential time-to-failure model can also be derived from a homogeneous Poi
 (method_6_4_2_2)=
 #### The Weibull distribution for non-constant failure rates
 
-For some components, e.g. from the Mechanical domain, the failure rate is not constant but rather (slowly) increasing already during the part's useful life, as a result of deterioration effects. In this case, other distributions than the Exponential model have to be used to model the time to failure. The same is obviously true when considering the wear-out phase of the bath-tub curve, e.g. in the context of life time extensions, or when modelling systematic failures that are likely to show decreasing failure rates (similar to "infant mortality" effects). The combination of a distribution accounting for deterioration effects with a constant failure rate is discussed in {ref}`sec_sys_handbook`.
+For some components, e.g. from the Mechanical domain, the failure rate is not constant but rather (slowly) increasing already during the part's useful life, as a result of deterioration effects. In this case, other distributions than the Exponential model have to be used to model the time to failure. The same is obviously true when considering the wear-out phase of the bath-tub curve, e.g. in the context of life time extensions, or when modelling {term}`systematic failures <Systematic failure>` that are likely to show decreasing failure rates (similar to "infant mortality" effects). The combination of a distribution accounting for deterioration effects with a constant failure rate is discussed in {ref}`sec_sys_handbook`.
 
-The most common time-to-failure distribution model with non-constant failure rate is certainly the Weibull distribution. The probability density function $f_{T}(t)$ and the cumulative distribution function $F_{T}(t)$ of the Weibull distribution are defined as follows:
+The most common time-to-failure distribution model with non-constant failure rate is certainly the Weibull distribution. The {term}`probability density function <Probability density function>` $f_{T}(t)$ and the cumulative distribution function $F_{T}(t)$ of the Weibull distribution are defined as follows:
 
 ````{admonition} Equation
 :class: equation
@@ -514,7 +514,7 @@ Which of the two models, i.e. standby failures versus failure on demand, is appr
 (method_6_4_3)=
 ### Parameter estimation
 
-Once a suitable distribution law has been selected, the data sample can be used to estimate the distribution parameters, i.e. to fit the distribution to the data. Various standard statistical methods can be used for this task, the preferred ones being the Maximum Likelihood Method or Bayesian parameter estimation:
+Once a suitable distribution law has been selected, the data sample can be used to estimate the distribution parameters, i.e. to fit the distribution to the data. Various standard {term}`statistical methods <Statistical method>` can be used for this task, the preferred ones being the Maximum Likelihood Method or Bayesian parameter estimation:
 
 -   The *Maximum Likelihood Method* or *Bayesian methods with non-informative prior* can be applied if the considered data sample is the only information used for modelling.
 
@@ -547,7 +547,7 @@ Parameter estimation is rather simple for the Exponential distribution, the cons
 ```
 ````
 
-Where $n_{f}$ denotes the number of observed failures, $n$ the number of items tested and $t_{i}$ the test duration for each item. The statistical uncertainty associated with the failure rate estimation is quantified by the following expression for the Coefficient of Variation (CoV) of the failure rate:
+Where $n_{f}$ denotes the number of observed failures, $n$ the number of items tested and $t_{i}$ the test duration for each item. The {term}`statistical uncertainty <Statistical uncertainty>` associated with the failure rate estimation is quantified by the following expression for the Coefficient of Variation (CoV) of the failure rate:
 
 
 ````{admonition} Equation
@@ -572,7 +572,7 @@ It should be emphasized that Eq. {eq}`Equation_method_6_13` and Eq. {eq}`Equatio
 
 Equations for Bayesian updating with the analytic approach using a conjugate Gamma prior are given in {numref}`method_7_5_1` ({numref}`method-table7-2`). Without prior information, the results are equivalent to Eq. {eq}`Equation_method_6_13` and Eq. {eq}`Equation_method_6_14` above. However, the failure rate is modelled with a Gamma distribution with support for positive values only, which is more consistent that the asymptotic Normal distribution assumption in the Maximum Likelihood method.
 
-Another well-known approach to quantify the statistical uncertainty associated with data-based failure rate estimates is the use of confidence intervals. For the Exponential model, a $1 - \alpha$ confidence interval can be derived analytically, leading to the following interval estimate:
+Another well-known approach to quantify the {term}`statistical uncertainty <Statistical uncertainty>` associated with data-based failure rate estimates is the use of confidence intervals. For the Exponential model, a $1 - \alpha$ confidence interval can be derived analytically, leading to the following interval estimate:
 
 ````{admonition} Equation
 :class: equation
@@ -609,7 +609,7 @@ In practice, most data samples include censored observations, which is important
 
 Here, $L\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ denotes the Likelihood of a parameter set $\mathbf{\theta}$ conditional on the data $\widehat{\mathbf{x}}$ (see {numref}`method_7_3`for details), and $l\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ is the corresponding log-Likelihood.
 
-The statistical uncertainty and covariance between the different parameters can be evaluated with the aid of the Fisher information matrix, which is derived from the Hessian matrix; the Hessian is usually determined as a by-product of the optimization routine used to solve Eq. {eq}`Equation_method_6_16`.
+The {term}`statistical uncertainty <Statistical uncertainty>` and covariance between the different parameters can be evaluated with the aid of the Fisher information matrix, which is derived from the Hessian matrix; the Hessian is usually determined as a by-product of the optimization routine used to solve Eq. {eq}`Equation_method_6_16`.
 
 In practice, it may be sufficient to know that at least for standard distribution models and usual sampling characteristics, analytic and numerical approaches for Maximum Likelihood Estimations are implemented in various software tools for statistical and/or reliability analysis.
 
@@ -630,7 +630,7 @@ The Maximum Likelihood Estimate for the probability of failure in the Binomial m
 
 Where $n_{f}$ denotes the number of observed failures in $n$ independent Bernoulli trials. Similar to the exponential model, for constant probability $p$ it does not matter how many items have been tested or observed for how long and whether observations are censored -- what counts is just the total number of failures and trials
 
-The number of failures determines the statistical uncertainty associated with the estimate. Note that the normal approximation assumed for estimating the standard deviation associated with the Maximum Likelihood Estimate is not appropriate for small probabilities of failures, unless the data sample is very large. Uncertainty quantification can be improved by using the analytical Bayes approach with a conjugate prior, see {numref}`method-table7-2` in {numref}`method_7_5_1` for details. Using a non-informative Jeffrey's prior, the following interval estimate is derived:
+The number of failures determines the {term}`statistical uncertainty <Statistical uncertainty>` associated with the estimate. Note that the normal approximation assumed for estimating the standard deviation associated with the Maximum Likelihood Estimate is not appropriate for small probabilities of failures, unless the data sample is very large. Uncertainty quantification can be improved by using the analytical Bayes approach with a conjugate prior, see {numref}`method-table7-2` in {numref}`method_7_5_1` for details. Using a non-informative Jeffrey's prior, the following interval estimate is derived:
 
 ````{admonition} Equation
 :class: equation
@@ -647,7 +647,7 @@ Where $\text{Beta}_{q}\left( \alpha,\ \beta \right)$ denotes the $q$ Quantile of
 (method_6_5)=
 ## Physics of failure and structural reliability methods
 
-Physics of Failure methods for reliability prediction are based on a mathematical modelling of the relevant {term}`failure mechanisms <Failure mechanism>` leading to failure. It is important to make a clear distinction between the use of Physics of Failure models in the context of design versus reliability prediction:
+{term}`Physics of Failure <Physics of failure>` methods for reliability prediction are based on a mathematical modelling of the relevant {term}`failure mechanisms <Failure mechanism>` leading to failure. It is important to make a clear distinction between the use of {term}`Physics of Failure <Physics of failure>` models in the context of design versus reliability prediction:
 
 -   During design, the objective is to model and account for anticipated {term}`failure mechanisms <Failure mechanism>` in order to avoid failures, and thus to improve reliability (design for reliability). The analysis is in most cases deterministic, using margins to account for uncertainty and variability. The probabilities of success or failure are generally not quantified.
 
@@ -655,18 +655,18 @@ Physics of Failure methods for reliability prediction are based on a mathematica
 
 It is also possible to combine both applications, e.g. in the context of Reliability Based Design Optimization {cite:t}`method-19970017405`, {cite:t}`method-design-space-decomposition`.
 
-The focus of the following discussion will be on the application of Physics of Failure models in the context of reliability prediction. It should be noted that the mathematical models used to describe the {term}`failure mechanism <Failure mechanism>` process may be the same as the ones used for design; it is the quantification of uncertainties that makes the difference.
+The focus of the following discussion will be on the application of {term}`Physics of Failure <Physics of failure>` models in the context of reliability prediction. It should be noted that the mathematical models used to describe the {term}`failure mechanism <Failure mechanism>` process may be the same as the ones used for design; it is the quantification of uncertainties that makes the difference.
 
-Thus, a sound Physics of Failure method requires a combination of physical laws describing mathematically the relevant {term}`failure mechanisms <Failure mechanism>` with probabilistic models that account for variability and uncertainty in the manufacturing of items and their use (e.g. the distribution laws used in the Stress Strength method). Statistical observations can be used for this task, and often are the preferred input for the required probabilistic modelling. Nevertheless, in the frame of this handbook, an approach is classified as "pure" Physics of Failure as long as no reliability data is used for the quantification (see {numref}`method_figure6_1`).
+Thus, a sound {term}`Physics of Failure <Physics of failure>` method requires a combination of physical laws describing mathematically the relevant {term}`failure mechanisms <Failure mechanism>` with probabilistic models that account for variability and uncertainty in the manufacturing of items and their use (e.g. the distribution laws used in the Stress Strength method). Statistical observations can be used for this task, and often are the preferred input for the required probabilistic modelling. Nevertheless, in the frame of this handbook, an approach is classified as "pure" {term}`Physics of Failure <Physics of failure>` as long as no reliability data is used for the quantification (see {numref}`method_figure6_1`).
 
-An important prerequisite for the successful use of Physics of Failure methods is that the physical process leading to failure needs to be well understood and the uncertainty quantification has to account for the relevant {term}`failure root causes <Failure root cause>`. This can be rather straightforward in some cases, e.g. for the modelling of wear-out failures, but may be a challenge in other applications. In particular the consideration of random failures with a pure physics-based approach is certainly more difficult due to the fact that (by definition) the root cause of these failures is not known. To overcome this limitation, some existing methodologies (e.g. {cite:t}`method-UTE-C80-811` for {term}`EEE parts <EEE part>`, {cite:t}`method-NSWC-11` ) combine Physics of Failure considerations with field return data to derive pertinent models that can be used for a wide range of applications. Note that such "combined" approaches, making use of both Physics of Failure and reliability data, are discussed separately in {numref}`method_6_6`.
+An important prerequisite for the successful use of {term}`Physics of Failure <Physics of failure>` methods is that the physical process leading to failure needs to be well understood and the uncertainty quantification has to account for the relevant {term}`failure root causes <Failure root cause>`. This can be rather straightforward in some cases, e.g. for the modelling of {term}`wear-out failures <Wear-out failure>`, but may be a challenge in other applications. In particular the consideration of random failures with a pure physics-based approach is certainly more difficult due to the fact that (by definition) the root cause of these failures is not known. To overcome this limitation, some existing methodologies (e.g. {cite:t}`method-UTE-C80-811` for {term}`EEE parts <EEE part>`, {cite:t}`method-NSWC-11` ) combine {term}`Physics of Failure <Physics of failure>` considerations with field return data to derive pertinent models that can be used for a wide range of applications. Note that such "combined" approaches, making use of both {term}`Physics of Failure <Physics of failure>` and reliability data, are discussed separately in {numref}`method_6_6`.
 
-The following subsections provide guidance on the use of "pure" Physics of Failure reliability prediction methods, with some more details on the class of structural reliability methods provided in {numref}`method_6_5_4`. A rather simple application of structural reliability methods is for the analysis of structures using the well-known stress-strength approach (see {numref}`sec_mech_handbook` for details). However, the mathematical methods are well applicable to any Physics of Failure reliability prediction problem, not only for structures and including much more complex model formulations.
+The following subsections provide guidance on the use of "pure" {term}`Physics of Failure <Physics of failure>` reliability prediction methods, with some more details on the class of {term}`structural reliability methods <Structural reliability method>` provided in {numref}`method_6_5_4`. A rather simple application of {term}`structural reliability methods <Structural reliability method>` is for the analysis of structures using the well-known stress-strength approach (see {numref}`sec_mech_handbook` for details). However, the mathematical methods are well applicable to any {term}`Physics of Failure <Physics of failure>` reliability prediction problem, not only for structures and including much more complex model formulations.
 
 (method_6_5_1)=
 ### Failure mechanisms identification and modelling
 
-Applying the Physics of Failure approach first requires the understanding of the {term}`failure mechanisms <Failure mechanism>` contributing to the predominant failure modes for an item. Possible ways to initiate a {term}`failure mechanism <Failure mechanism>` analysis can be based on the following pieces of information:
+Applying the {term}`Physics of Failure <Physics of failure>` approach first requires the understanding of the {term}`failure mechanisms <Failure mechanism>` contributing to the predominant failure modes for an item. Possible ways to initiate a {term}`failure mechanism <Failure mechanism>` analysis can be based on the following pieces of information:
 
 -   Engineering analysis and judgment from design and reliability experts
 
@@ -674,11 +674,11 @@ Applying the Physics of Failure approach first requires the understanding of the
 
 -   Results from a {term}`Design FMEA <Design FMEA>` (DFMEA) or Process FMEA (PFMEA)
 
-Besides gaining knowledge about all {term}`failure mechanisms <Failure mechanism>` that may potentially cause the item under analysis to fail, it is also relevant to know which are the dominating ones for the considered design and application. A good, though still qualitative, understanding how much different {term}`failure mechanisms <Failure mechanism>` may contribute (or not) to overall unreliability can help to focus the analysis and to strongly reduce the effort required by the Physics of Failure approach.
+Besides gaining knowledge about all {term}`failure mechanisms <Failure mechanism>` that may potentially cause the item under analysis to fail, it is also relevant to know which are the dominating ones for the considered design and application. A good, though still qualitative, understanding how much different {term}`failure mechanisms <Failure mechanism>` may contribute (or not) to overall unreliability can help to focus the analysis and to strongly reduce the effort required by the {term}`Physics of Failure <Physics of failure>` approach.
 
 The next step is to define a mathematical model describing the {term}`failure mechanisms <Failure mechanism>` identified in the first step. Note that a model in this context may be an analytic function or a numerical model; the only requirement is that the failure state is clearly defined as a function of the relevant physical variables.
 
-The effort required to develop a new {term}`failure mechanism <Failure mechanism>` model can be considerable. It is thus highly recommended to start by a search for published models from similar applications. A collection of models for various {term}`failure mechanisms <Failure mechanism>` can be found in the RiAC's Web-Accessible Repository of Physics-based Models ({cite:t}`method-RiAC`), which has been set up to foster the use of Physics of Failure methods in practical applications. Models used by the design engineers are another valuable source of information.
+The effort required to develop a new {term}`failure mechanism <Failure mechanism>` model can be considerable. It is thus highly recommended to start by a search for published models from similar applications. A collection of models for various {term}`failure mechanisms <Failure mechanism>` can be found in the RiAC's Web-Accessible Repository of Physics-based Models ({cite:t}`method-RiAC`), which has been set up to foster the use of {term}`Physics of Failure <Physics of failure>` methods in practical applications. Models used by the design engineers are another valuable source of information.
 
 (method_6_5_2)=
 ### Quantification of variable and model uncertainties
@@ -722,24 +722,24 @@ Finally, it should be mentioned that also the mathematical model used to represe
 (method_6_5_3)=
 ### Uncertainty propagation and reliability estimation
 
-Reliability estimation with Physics of Failure methods requires that the identified uncertainties are propagated through the {term}`failure mechanisms <Failure mechanism>` model to assess the probability of failure due to unfavourable combinations of random variable realizations. With the information from the previous steps, this is basically a mathematical question.
+Reliability estimation with {term}`Physics of Failure <Physics of failure>` methods requires that the identified uncertainties are propagated through the {term}`failure mechanisms <Failure mechanism>` model to assess the probability of failure due to unfavourable combinations of random variable realizations. With the information from the previous steps, this is basically a mathematical question.
 
-Various tools and techniques are available to perform this task, from analytic solutions for some basic problems to numerical methods, e.g. using Monte Carlo simulations. An overview on the so-called structural reliability methods is given in the following section.
+Various tools and techniques are available to perform this task, from analytic solutions for some basic problems to numerical methods, e.g. using Monte Carlo simulations. An overview on the so-called {term}`structural reliability methods <Structural reliability method>` is given in the following section.
 
 (method_6_5_4)=
 ### Overview of structural reliability methods
 
-Structural reliability embraces a class of methods that can be used to derive a reliability estimate from a mathematical model describing the Physics of Failure. The starting point is the formulation of a so-called limit state function $g\left( \mathrm{X} \right)$, defined as a function of a random vector $\mathrm{X}$ . The variables in $\mathrm{X}$ (called "basic variables") represent all inputs required to model the physics of failure that are associated with uncertainties. The failure domain is defined as $g\left( \mathrm{X} \right) \leq 0$, bounded by the limit state $g\left( \mathrm{X} \right) = 0$, the "failure surface".
+Structural reliability embraces a class of methods that can be used to derive a reliability estimate from a mathematical model describing the {term}`Physics of Failure <Physics of failure>`. The starting point is the formulation of a so-called limit state function $g\left( \mathrm{X} \right)$, defined as a function of a random vector $\mathrm{X}$ . The variables in $\mathrm{X}$ (called "basic variables") represent all inputs required to model the {term}`physics of failures <Physics of failure>` that are associated with uncertainties. The failure domain is defined as $g\left( \mathrm{X} \right) \leq 0$, bounded by the limit state $g\left( \mathrm{X} \right) = 0$, the "failure surface".
 
 The following steps, each corresponding to one of the previous subsections ({numref}`method_6_5_1` to {numref}`method_6_5_3`), are required to perform a structural reliability analysis:
 
 1)  Formulation of the limit state function $g\left( \mathrm{X} \right)$, defining failure as a function of all physical variables that are relevant for the considered {term}`failure mechanism <Failure mechanism>` ("basic variables", vector $\mathrm{X}$).
 
-2)  Choice of suitable probabilistic models (distribution type and parameters, and dependence modelling) for these basic variables, defining the joint probability density function for the random vector $\mathrm{X}$.
+2)  Choice of suitable probabilistic models (distribution type and parameters, and dependence modelling) for these basic variables, defining the joint {term}`probability density function <Probability density function>` for the random vector $\mathrm{X}$.
 
 3)  Derivation of the failure probability $P_{f} = P\left\lbrack g\left( \mathrm{X} \right) \leq 0 \right\rbrack$ using suitable analytic or numerical methods.
 
-To clarify the link to statistical methods for reliability prediction, it is important to understand that the probability of failure, when calculated with structural reliability methods, always refers to a specified time frame (e.g. mission life time) or event (e.g. solar array deployment), which determines the probabilistic modelling. However, the random variables in $\mathrm{X}$, or possibly the limit state function itself, can be modelled as a function of time, which allows to derive the time-to-failure distribution and reliability function by performing multiple calculations for different time intervals:
+To clarify the link to {term}`statistical methods <Statistical method>` for reliability prediction, it is important to understand that the probability of failure, when calculated with {term}`structural reliability methods <Structural reliability method>`, always refers to a specified time frame (e.g. mission life time) or event (e.g. solar array deployment), which determines the probabilistic modelling. However, the random variables in $\mathrm{X}$, or possibly the limit state function itself, can be modelled as a function of time, which allows to derive the time-to-failure distribution and reliability function by performing multiple calculations for different time intervals:
 
 ````{admonition} Equation
 :class: equation
@@ -751,19 +751,19 @@ R_{T}\left( t \right) = 1 - F_{T}\left( t \right) = 1 - P_{f}\left( t \right) = 
 ```
 ````
 
-The Physics of Failure model has to consider the dominating {term}`failure mechanism(s) <Failure mechanism>` contributing most to the item's unreliability (see {numref}`method_6_5_1`). The limit state function $g\left( \mathrm{X} \right)$ used for this purpose can be of any functional form, or represented by a numerical model. The straight line shown in {numref}`method_figure6_3` represents the failure surface for the so-called "fundamental case" with $g\left( \mathrm{X} \right) = X_{1} - X_{2}$, where failure occurs if the random "resistance" or strength $X_{1}$ of an item is smaller than the "load" or stress $X_{2}$ acting on it. The well-known stress-strength interference methods may thus be considered as a subclass of structural reliability methods ({numref}`sec_mech_handbook`). More general models can be derived by considering more than two basic variables, nonlinear limit state functions and/or or numerical models defining the failure domain.
+The {term}`Physics of Failure <Physics of failure>` model has to consider the dominating {term}`failure mechanism(s) <Failure mechanism>` contributing most to the item's unreliability (see {numref}`method_6_5_1`). The limit state function $g\left( \mathrm{X} \right)$ used for this purpose can be of any functional form, or represented by a numerical model. The straight line shown in {numref}`method_figure6_3` represents the failure surface for the so-called "fundamental case" with $g\left( \mathrm{X} \right) = X_{1} - X_{2}$, where failure occurs if the random "resistance" or strength $X_{1}$ of an item is smaller than the "load" or stress $X_{2}$ acting on it. The well-known stress-strength interference methods may thus be considered as a subclass of {term}`structural reliability methods <Structural reliability method>` ({numref}`sec_mech_handbook`). More general models can be derived by considering more than two basic variables, nonlinear limit state functions and/or or numerical models defining the failure domain.
 
 ```{figure} pictures/method_figure6_3.png
 ---
 width: 600px
 name: method_figure6_3
 ---
-Illustration of structural reliability methods, where failure is defined with the aid of a limit state function $g\left( \mathrm{X} \right)$, here depicted for a simple "strength -- stress" interference model. The probability of failure is derived as the probability integral over the failure domain, i.e. where $g\left( \mathrm{X} \right) \leq 0$
+Illustration of {term}`structural reliability methods <Structural reliability method>`, where failure is defined with the aid of a limit state function $g\left( \mathrm{X} \right)$, here depicted for a simple "strength -- stress" interference model. The probability of failure is derived as the probability integral over the failure domain, i.e. where $g\left( \mathrm{X} \right) \leq 0$
 ```
 
 Once the limit state function is defined, the second step requires a probabilistic modelling of the random variables entering the limit state function (vector $\mathrm{X}$). This step is described in {numref}`method_6_5_2` above. The probabilistic models chosen may have implications on the methods that can be used for the third step. Nevertheless, basic variable models should not be selected for mathematical convenience only, as the choice may strongly affect the result. The reason becomes obvious when considering a simple stress-strength reliability problem, with the probability of failure resulting from the overlap between the two distributions. Due to the different form of the lower and upper tails of different distribution models, the reliability prediction may be very much different when switching e.g. from a Normal distribution assumption to a Lognormal model for one of the two distributions.
 
-Finally, in the third step, a suitable structural reliability method needs to be chosen to perform the calculations. Very broadly, the following categories of methods can be distinguished.
+Finally, in the third step, a suitable {term}`structural reliability method <Structural reliability method>` needs to be chosen to perform the calculations. Very broadly, the following categories of methods can be distinguished.
 
 -   *Analytic methods*\
     Closed-form solutions for the probability of failure exist for some special cases, mostly considering the "fundamental case" with interference of two random variables. The most well-known example (basic stress/strength approach) is a linear limit state function of two normal distributed random variables ({numref}`sec_mech_handbook`).
@@ -776,7 +776,7 @@ Finally, in the third step, a suitable structural reliability method needs to be
 
 Surrogate modelling can be used to complement these different methods if the limit state function is not defined explicitly (i.e. using an analytic formula), but implicitly with the aid of a numerical model. The safe domain can in this case only be defined through repeated numerical analysis with different input values. A surrogate model is an analytic function that approximates the results of the numerical model, allowing to apply FORM/SORM methods and a more efficient use of Monte Carlo Simulations. Various approaches for the construction of surrogate models are discussed in the literature (see e.g. {cite:t}`method-meta-models`), including Response Surfaces, Kriging, Polynomial Chaos Expansions and Support Vector Machines.
 
-The different methods available to perform a prediction with structural reliability methods are discussed in comprehensive textbooks (e.g. {cite:t}`method-methods-structural-safety`, {cite:t}`method-structural-reliability-methods`, {cite:t}`method-structural-reliability-analysis-prediction`) and have been implemented in various software packages, both commercial {cite:t}`method-strurel`, {cite:t}`method-nessus`,{cite:t}`method-uq-lab` and freeware {cite:t}`method-ferum`, {cite:t}`method-open-turns`. Here, only the strengths and limitations of each method will be briefly explained.
+The different methods available to perform a prediction with {term}`structural reliability methods <Structural reliability method>` are discussed in comprehensive textbooks (e.g. {cite:t}`method-methods-structural-safety`, {cite:t}`method-structural-reliability-methods`, {cite:t}`method-structural-reliability-analysis-prediction`) and have been implemented in various software packages, both commercial {cite:t}`method-strurel`, {cite:t}`method-nessus`,{cite:t}`method-uq-lab` and freeware {cite:t}`method-ferum`, {cite:t}`method-open-turns`. Here, only the strengths and limitations of each method will be briefly explained.
 
 (method_6_5_4_1)=
 #### Analytic methods strengths and limitations
@@ -823,7 +823,7 @@ Monte Carlo methods should be considered if any of these conditions is not fulfi
 (method_6_5_4_3)=
 #### Monte Carlo methods strengths and limitations
 
-One of the biggest strengths of the Monte Carlo approach is its simplicity: The generation of random numbers, even using standard software is generally straightforward for most probability distributions. In addition, (crude) Monte Carlo is certainly the most intuitive way to propagate uncertainties through a Physics of Failure model, whether it is defined by an analytic function or a numerical model.
+One of the biggest strengths of the Monte Carlo approach is its simplicity: The generation of random numbers, even using standard software is generally straightforward for most probability distributions. In addition, (crude) Monte Carlo is certainly the most intuitive way to propagate uncertainties through a {term}`Physics of Failure <Physics of failure>` model, whether it is defined by an analytic function or a numerical model.
 
 Unfortunately, the simplicity of crude Monte Carlo comes at a cost, requiring a large computational effort to perform a sufficient number of simulations for a stable reliability estimate. How many simulations are required depends on the (expected) probability of failure and the required accuracy of the results. A simple rule-of-thumb is provided by the following relationship:
 
@@ -848,24 +848,24 @@ In summary, the Monte Carlo method is a viable approach for all reliability esti
 (method_6_6)=
 ## Combined approach
 
-The discussion of statistical methods and Physics of Failure so far has focused on the application of each of them as a standalone method, making use of probabilistic {term}`failure mechanisms <Failure mechanism>` modelling *or* statistical data on observed failures. Both methods have their strengths and limitations and can sometimes be difficult to apply in a specific context.
+The discussion of {term}`statistical methods <Statistical method>` and {term}`Physics of Failure <Physics of failure>` so far has focused on the application of each of them as a standalone method, making use of probabilistic {term}`failure mechanisms <Failure mechanism>` modelling *or* statistical data on observed failures. Both methods have their strengths and limitations and can sometimes be difficult to apply in a specific context.
 
-The basic idea of the combined approach is to make use of all available information, combining suitable failure data with Physics of Failure modelling to derive models that are backed both by the available statistics and by the consideration of the driving {term}`failure mechanisms <Failure mechanism>` and the associated contributing factors. Two different approaches are distinguished in this handbook:
+The basic idea of the combined approach is to make use of all available information, combining suitable failure data with {term}`Physics of Failure <Physics of failure>` modelling to derive models that are backed both by the available statistics and by the consideration of the driving {term}`failure mechanisms <Failure mechanism>` and the associated contributing factors. Two different approaches are distinguished in this handbook:
 
--   Bayesian updating of Physics of Failure models, using relevant failure data
+-   Bayesian updating of {term}`Physics of Failure <Physics of failure>` models, using relevant failure data
 
--   Statistical base failure rates with multiplicative factors derived from the Physics of Failure
+-   Statistical base failure rates with multiplicative factors derived from the {term}`Physics of Failure <Physics of failure>`
 
-The first approach, using Bayesian updating, uses Physics of Failure considerations to derive a prior reliability estimate, which is then updated using statistical data in order to reduce {term}`model uncertainty <Model uncertainty>` and to derive more realistic results. Bayesian methods for model updating are discussed more detail in {numref}`method_7` of this handbook.
+The first approach, using Bayesian updating, uses {term}`Physics of Failure <Physics of failure>` considerations to derive a prior reliability estimate, which is then updated using statistical data in order to reduce {term}`model uncertainty <Model uncertainty>` and to derive more realistic results. Bayesian methods for model updating are discussed more detail in {numref}`method_7` of this handbook.
 
-The second approach uses statistical methods in order to establish a fixed "base failure rate" for a certain item or family of items, and the Physics of Failure is then used to determine acceleration factors depending on the considered design, its use conditions and the environment. Models based on this approach are provided e.g. in the FIDES guide {cite:t}`method-UTE-C80-811` , which is considered as a basis for EEE reliability prediction in this handbook ({numref}`sec_eee_handbook`), or in the NSWC handbook for Mechanical reliability prediction {cite:t}`method-NSWC-11` , see {numref}`sec_mech_handbook` for discussion.
+The second approach uses {term}`statistical methods <Statistical method>` in order to establish a fixed "base failure rate" for a certain item or family of items, and the {term}`Physics of Failure <Physics of failure>` is then used to determine acceleration factors depending on the considered design, its use conditions and the environment. Models based on this approach are provided e.g. in the FIDES guide {cite:t}`method-UTE-C80-811` , which is considered as a basis for EEE reliability prediction in this handbook ({numref}`sec_eee_handbook`), or in the NSWC handbook for Mechanical reliability prediction {cite:t}`method-NSWC-11` , see {numref}`sec_mech_handbook` for discussion.
 
-Among the two approaches, the Bayesian approach is generally preferred from an uncertainty quantification point of view, as it allows to consistently account for the amount of information provided by statistics and Physics of Failure (e.g. sample size of the failure data used for updating, degree of belief in the {term}`failure mechanism <Failure mechanism>` modelling). However, the Bayesian approach may sometimes be difficult to apply in practice, e.g. if aggregated failure rate data is available from a different field of application, but the underlying data that could be used in a Bayesian framework cannot be accessed. In this case, the second approach with statistical base failure rates "tuned" to fit the specific application with the aid of multiplicative PoF factors may be the method of choice from a practical point of view.
+Among the two approaches, the Bayesian approach is generally preferred from an uncertainty quantification point of view, as it allows to consistently account for the amount of information provided by statistics and {term}`Physics of Failure <Physics of failure>` (e.g. sample size of the failure data used for updating, degree of belief in the {term}`failure mechanism <Failure mechanism>` modelling). However, the Bayesian approach may sometimes be difficult to apply in practice, e.g. if aggregated failure rate data is available from a different field of application, but the underlying data that could be used in a Bayesian framework cannot be accessed. In this case, the second approach with statistical base failure rates "tuned" to fit the specific application with the aid of multiplicative PoF factors may be the method of choice from a practical point of view.
 
 (method_6_7)=
 ## Process for the development of new models
 
-A major requirement for the sustainability of a reliability prediction methodology is the possibility to account for technological development. Apart from model updating, which is discussed in {numref}`method_7`, this also requires the development of completely new reliability prediction models when innovative technologies are used. The purpose of the present section is to provide practical guidance for the development of such new models, making use of the inputs and methods discussed above in consistency with the philosophy of this handbook.
+A major requirement for the sustainability of a {term}`reliability prediction methodology <Reliability prediction methodology>` is the possibility to account for technological development. Apart from model updating, which is discussed in {numref}`method_7`, this also requires the development of completely new reliability prediction models when innovative technologies are used. The purpose of the present section is to provide practical guidance for the development of such new models, making use of the inputs and methods discussed above in consistency with the philosophy of this handbook.
 
 It should be noted that the process provided herein is not restricted to innovative technologies -- It can be used for any application where the existing models cannot be used or do not cover the required scope, whether in terms of technology, use conditions, or failure root causes.
 
@@ -892,10 +892,10 @@ The general process for the development of new reliability prediction models is 
     All kinds of information that can be made available as a basis for modelling needs to be collected, considering all categories of inputs listed in {numref}`method_6_2`. The search may be widened to consider also information from relevant similar applications if the available information for the specified modelling scope is insufficient.
 
 -   **Gain understanding of the relevant failure modes, {term}`failure mechanisms <Failure mechanism>` and root causes**
-    Expertise from designers, test engineers and RAMS experts should be brought together to understand what are the potential and relevant failure causes, processes and symptoms. The Physics of Failure as well as the uncertainties and variabilities inherent in the design and manufacturing process need to be well understood in this step, even if this information is not explicitly used for modelling in the next steps.
+    Expertise from designers, test engineers and RAMS experts should be brought together to understand what are the potential and relevant failure causes, processes and symptoms. The {term}`Physics of Failure <Physics of failure>` as well as the uncertainties and variabilities inherent in the design and manufacturing process need to be well understood in this step, even if this information is not explicitly used for modelling in the next steps.
 
 -   **Select an appropriate method to do the modelling**
-    Considering the available inputs, an appropriate method needs to be selected from the approaches listed in {numref}`method_6_3`. Approaches based on the Physics of Failure are generally much more useful for the consideration of innovative technologies, as they don't require waiting for sufficient data to accumulate. Combined methods can be used e.g. to profit from data collected from relevant similar applications, or to update a Physics of Failure model with limited data samples such as test data.
+    Considering the available inputs, an appropriate method needs to be selected from the approaches listed in {numref}`method_6_3`. Approaches based on the {term}`Physics of Failure <Physics of failure>` are generally much more useful for the consideration of innovative technologies, as they don't require waiting for sufficient data to accumulate. Combined methods can be used e.g. to profit from data collected from relevant similar applications, or to update a {term}`Physics of Failure <Physics of failure>` model with limited data samples such as test data.
 
 -   **Identify and handle knowledge gaps**
     Any knowledge gap identified during the modelling should be documented, to make clear what kind of information must be collected to improve the model. To complete the modelling in the short run, these gaps may be closed using expert judgement.
@@ -913,6 +913,6 @@ The process for the development of new reliability models is applicable to all t
 
 -   **EEE:** New reliability prediction models for EEE items can be derived using different inputs, as discussed in {numref}`sec_eee_handbook`. For new technologies there is no data available from IOR, making it necessary to rely on manufacturer data or dedicated testing.
 
--   **Mechanical:** The general process for the development of new reliability prediction models is essentially equivalent to the approach for mechanical reliability prediction presented in {numref}`sec_mech_handbook`, where a strong focus is set on the relevant {term}`failure mechanisms <Failure mechanism>` and the associated Physics of Failure. Bayesian methods for model updating allow the consideration of available data (e.g. test data), even with limited sample size.
+-   **Mechanical:** The general process for the development of new reliability prediction models is essentially equivalent to the approach for mechanical reliability prediction presented in {numref}`sec_mech_handbook`, where a strong focus is set on the relevant {term}`failure mechanisms <Failure mechanism>` and the associated {term}`Physics of Failure <Physics of failure>`. Bayesian methods for model updating allow the consideration of available data (e.g. test data), even with limited sample size.
 
 -   **Miscellaneous:** {numref}`sec_misc_handbook` provides reliability models and data for commonly used miscellaneous items with sufficient IOR data. The reliability of \"non-standard model\" items, requiring a new dedicated model, can be considered based on Engineering/PoF approaches mainly based on DFMEA/PFMEA

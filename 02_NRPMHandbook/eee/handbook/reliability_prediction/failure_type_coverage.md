@@ -13,18 +13,18 @@ For EEE components and units for space applications, the root causes coverage ca
 :widths: 30 70
 
 *   - Root cause category
-    - Coverage by the EEE reliability prediction methodology
-*   - Random failures
+    - Coverage by the EEE {term}`reliability prediction methodology <Reliability prediction methodology>`
+*   - {term}`Random failures <Random failure>`
     - Considered through the method described in this handbook in {numref}`eee_4_3`
-*   - Systematic failures
+*   - {term}`Systematic failures <Systematic failure>`
     - Some items can be taken into account through the process factor ΠProcess calculated through the questionnaire as described in {numref}`eee_4_5`. Such failures must be considered at design or manufacturing level. The role of the questionnaire is to take into account such process in the reliability prediction.
 *   - Wear-out failures
-    - The coverage of wear-out failures is limited to some EEE components subject to wear-out failures and addressed in {numref}`eee_4_6`; in those cases, the wear out can be considered by applying the methods described in this Paragraph.
+    - The coverage of {term}`wear-out failures <Wear-out failure>` is limited to some EEE components subject to {term}`wear-out failures <Wear-out failure>` and addressed in {numref}`eee_4_6`; in those cases, the wear out can be considered by applying the methods described in this Paragraph.
 *   - {term}`extrinsic failure <Extrinsic failure>`
     - Extrinsic failures considered for EEE components are mainly due to heavy ions, radiations and plasma. They should be avoided by technological choice (for instance by selecting components not sensitive to SEE) or at system level (using redundancy or protection). Robustness tests can also help mounting electronic boards less sensitive to extreme constraints. The consideration of {term}`extrinsic failures <Extrinsic failure>` in the context of reliability prediction is described in {numref}`eee_4_7`.
 ```
 
-The infant mortality, which represents the period of triggering for most systematic failures, is not directly taken into account in prediction methodologies but the reliability.space handbook provides a method to consider it within the $\Pi_{\text{Process}}$ factor. This factor allows adjusting the failure rate according to the whole design and manufacturing process. Infant mortality for EEE components is generally managed by selecting adapted components lots, performing screening at components, boards or system level. If they are performed in the early phases of the electronic design robustness, tests can also detect some weaknesses.
+The infant mortality, which represents the period of triggering for most {term}`systematic failures <Systematic failure>`, is not directly taken into account in prediction methodologies but the reliability.space handbook provides a method to consider it within the $\Pi_{\text{Process}}$ factor. This factor allows adjusting the failure rate according to the whole design and manufacturing process. Infant mortality for EEE components is generally managed by selecting adapted components lots, performing screening at components, boards or system level. If they are performed in the early phases of the electronic design robustness, tests can also detect some weaknesses.
 
 ```{figure} ../../pictures/eee_figure4_2.png
 ---

@@ -557,8 +557,8 @@ The main steps to perform an Event Tree Analysis are {cite:t}`sys-event-tree-ana
 - Calculate the probabilities/frequencies for the identified consequences (outcomes)
 
 An initiating event may be caused by:
-- System or equipment failure (random, wear-out or systematic failure)
-- Systematic failure caused by design, manufacturing or operation error
+- System or equipment failure (random, wear-out or {term}`systematic failure <Systematic failure>`)
+- {term}`Systematic failure <Systematic failure>` caused by design, manufacturing or operation error
 - External event
 
 The initiating event is normally anticipated during the system development and the system designers have implemented barriers that are designed to respond to the initiating event by terminating the sequence or by mitigating the consequences. For each initiating event the potential progressions leading to system failure, the system dependencies and the conditional system responses have to be identified. 

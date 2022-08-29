@@ -35,11 +35,11 @@ In addition, it is possible to mix these data with data coming from standards or
 
 This corresponds to the information obtained through the present handbook. The main methodology used is the FIDES method with some adaptations proposed in each subfamily section.
 
-See {numref}`eee_4_3` for the Random Failures calculations through FIDES, {numref}`eee_4_5` for the Systematic failures, {numref}`eee_4_6` for the wear-out failures and {numref}`eee_4_7` for the {term}`extrinsic failures <Extrinsic failure>`.
+See {numref}`eee_4_3` for the {term}`Random failures <Random failure>` calculations through FIDES, {numref}`eee_4_5` for the {term}`Systematic failures <Systematic failure>`, {numref}`eee_4_6` for the {term}`wear-out failures <Wear-out failure>` and {numref}`eee_4_7` for the {term}`extrinsic failures <Extrinsic failure>`.
 
 **Model from other methodologies**
 
-As indicated in the previous section, the reliability.space approach for EEE items Random Failures is based on the FIDES methodology.
+As indicated in the previous section, the reliability.space approach for EEE items {term}`Random failures <Random failure>` is based on the FIDES methodology.
 
 However, FIDES does not cover all families and subfamilies of components and technologies used in space applications.
 

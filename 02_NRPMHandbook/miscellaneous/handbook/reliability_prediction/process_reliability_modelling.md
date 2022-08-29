@@ -313,7 +313,7 @@ P(\text{FAILURE}) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
 
 * Model 1 and model 3 are very close since the constant failure rates used for {term}`miscellaneous items <Miscellaneous item>` are very low regarding the increasing failure rates of any distribution such as Normal or Weibull distribution.
 * Model 2 could be considered as optimistic since it addresses wear-out only after the qualification time.
-* Model 1 appears as the most appropriate, summing the failure rate for {term}`random failures <Random failure>` modelling and the failure rate for Wear-out failure modelling. It is recommended to be used except technical arguments support another choice.
+* Model 1 appears as the most appropriate, summing the failure rate for {term}`random failures <Random failure>` modelling and the failure rate for {term}`Wear-out failure <Wear-out failure>` modelling. It is recommended to be used except technical arguments support another choice.
 
 ````{admonition} Recommendation
 :class: recommendation
@@ -330,7 +330,7 @@ Failure rates for the three Wear-out models (Exponential, Weibull)
 
 **Guidance to derive the Wear Out distribution characteristics**
 
-In the case there is no data to support the selection of a wear-out failure time distribution and the associated parameters it is recommend to apply the following process.
+In the case there is no data to support the selection of a {term}`wear-out failure <Wear-out failure>` time distribution and the associated parameters it is recommend to apply the following process.
 
 The first assumption is to consider a normal distribution. The user should have to determine:
 

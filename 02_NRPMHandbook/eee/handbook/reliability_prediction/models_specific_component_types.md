@@ -71,7 +71,7 @@ GaAs components are used mainly for microwave and radio-frequency applications. 
 
 The FIDES guide includes models for GaAs components for radio-frequency applications. These models are applicable for low power transistors and high power transistors. The model is similar for both categories of transistors, but the basic failure rates are different. FIDES is continuously increasing its database with the tests and feedback from GaAs components and data from manufacturers. Even if the quantity of the available data is significant, the intention is to merge these two basic failure rates into only one category that gathers all types of GaAs transistors. Otherwise, a synthesis of data from manufacturers of GaAs components has provided an activation energy of 2.0eV for GaAs components dedicated to radio-frequency. The next step is to realise a model based on this information.
 
-Note: In the 2021 issue of the FIDES guide, some update (Pi Process HF/RF, $\lambda_{\text{OTH}}$) has been provided for the HF/RF GaAs models, providing in particular a new version of $\lambda_{\text{TH}}$ that would require some modelling in order to compare it to test data and define its applicability.
+Note: In the 2021 issue of the FIDES guide, some update (Pi Process HF/RF, $\lambda_{\text{OTH}}$) has been provided for the HF/RF GaAs models, providing in particular a new version of $\lambda_{\text{TH}}$ that would require some modelling in order to compare it to {term}`test data <Test data>` and define its applicability.
 
 (eee_4_4_2_3)=
 ### GaN components

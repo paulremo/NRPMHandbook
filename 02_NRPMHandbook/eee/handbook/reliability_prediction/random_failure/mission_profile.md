@@ -19,7 +19,7 @@ The mission profile, or life profile, is an important step to consider when usin
 
 The mission profile allows taking into account the use, which is one of the three items with technology and process on which the reliability prediction of any electronic equipment is based. The mission profile should be as accurate and as pertinent as necessary to get the desired {term}`level of confidence <Level of confidence>` in the reliability prediction.
 
-The stress values defined for each phase of the mission profile are used as input parameters describing the physical stresses acting on the EEE components. More specifically, the values of temperature, temperature cycling, vibration and humidity are directly used in the physics of failures equations used in the models for EEE components. The chemical values are used in the consideration of over-stresses with the induced factor $\Pi_{\text{induced}\_i}$ defined in {numref}`eee_4_3_1_17`.
+The stress values defined for each phase of the mission profile are used as input parameters describing the physical stresses acting on the EEE components. More specifically, the values of temperature, temperature cycling, vibration and humidity are directly used in the {term}`physics of failures <Physics of failure>` equations used in the models for EEE components. The chemical values are used in the consideration of over-stresses with the induced factor $\Pi_{\text{induced}\_i}$ defined in {numref}`eee_4_3_1_17`.
 
 For space applications, mission profiles are based on the same main phases, as explained in {numref}`eee_4_3_1_3_4`. Furthermore, the stress applied on electronic equipment of satellites is mainly linked to the temperature, in addition to the electrical stresses dealt with directly at part level. From the regular mission profile definitions from FIDES, the other stresses such as vibrations, humidity and chemical pollution are considered, but they are mainly present only during the launch phase.
 
@@ -208,7 +208,7 @@ The humidity stress is required for the reliability prediction of sensitive comp
 (eee_4_3_1_7)=
 ## Quantification of vibrations
 
-The vibrations are mainly present during the launch phase. Once the satellite is in space, there is only little vibration and failures due to vibrations are considered as random failures. So, vibrations are mainly considered in the mission profile during the launch phase and can be considered as {term}`extrinsic failures <Extrinsic failure>`. The value of vibrations depends on the position of the electronic equipment inside the satellite, on the maximum vibrations endured by the satellite during the launch, and on the launcher. This value is estimated by measurements or mechanical simulations. Even if the influence of vibrations can be small due to the low duration of this phase, the vibrations have to be considered.
+The vibrations are mainly present during the launch phase. Once the satellite is in space, there is only little vibration and failures due to vibrations are considered as {term}`random failures <Random failure>`. So, vibrations are mainly considered in the mission profile during the launch phase and can be considered as {term}`extrinsic failures <Extrinsic failure>`. The value of vibrations depends on the position of the electronic equipment inside the satellite, on the maximum vibrations endured by the satellite during the launch, and on the launcher. This value is estimated by measurements or mechanical simulations. Even if the influence of vibrations can be small due to the low duration of this phase, the vibrations have to be considered.
 
 Whatever the estimated reliability prediction due to vibrations, as the risk of {term}`extrinsic failures <Extrinsic failure>` due to vibrations is still present, specific qualifications of the equipment should be done to ensure that vibrations cannot affect the behaviour of the electronic equipment.
 
@@ -235,7 +235,7 @@ The contributions of over-stresses in the mission profile on components are defi
 (eee_4_3_1_10)=
 ## Specific stresses not considered in the mission profile
 
-Some of the stresses are not considered to the real level of influence that they can have in space applications compared to other applications. The failures due to ON / OFF cycles and due to radiations are classified as wear-out failures as they affect the {term}`degradation <Degradation>` of the equipment.
+Some of the stresses are not considered to the real level of influence that they can have in space applications compared to other applications. The failures due to ON / OFF cycles and due to radiations are classified as {term}`wear-out failures <Wear-out failure>` as they affect the {term}`degradation <Degradation>` of the equipment.
 
 (eee_4_3_1_11)=
 ## ON / OFF cycles
@@ -258,7 +258,7 @@ In the classification of Chapter 2, the physical failure rate $\lambda_{\text{Ph
 
 -   The basic failure rates $\lambda_{0}$ based on statistics;
 
--   The physical contributions $\Pi_{\text{acceleration}}$ which are based on the physics of failures, as described in {numref}`eee_4_3_1_13`, {numref}`eee_4_3_1_14`, {numref}`eee_4_3_1_15`, {numref}`eee_4_3_1_16`.
+-   The physical contributions $\Pi_{\text{acceleration}}$ which are based on the {term}`physics of failures <Physics of failure>`, as described in {numref}`eee_4_3_1_13`, {numref}`eee_4_3_1_14`, {numref}`eee_4_3_1_15`, {numref}`eee_4_3_1_16`.
 
 -   The contributions of specific over-stresses $\Pi_{\text{induced}}$ not considered by the mission profile, as described in {numref}`eee_4_3_1_20`.
 
@@ -272,9 +272,9 @@ In the classification of Chapter 2, the physical failure rate $\lambda_{\text{Ph
 ```
 ````
 
-The physical contributors considered are the temperatures, the humidity level, the thermal cycling, the vibrations and the electrical stresses. The formulas applied in the models have been established from the physics of failures of each EEE component considered.
+The physical contributors considered are the temperatures, the humidity level, the thermal cycling, the vibrations and the electrical stresses. The formulas applied in the models have been established from the {term}`physics of failures <Physics of failure>` of each EEE component considered.
 
-The thermal and thermo-electrical stresses are taken into account by the physics of failures with the Arrhenius' law, multiplied by the contribution of electrical stress, such as voltage or current for example.
+The thermal and thermo-electrical stresses are taken into account by the {term}`physics of failures <Physics of failure>` with the Arrhenius' law, multiplied by the contribution of electrical stress, such as voltage or current for example.
 
 ````{admonition} Equations
 :class: equation
@@ -317,7 +317,7 @@ For some components that are sensitive to {term}`failure mechanisms <Failure mec
 (eee_4_3_1_14)=
 ## Thermo-mechanical stress
 
-The thermo-mechanical stress is associated with the thermal cycling of the equipment. It is considered by the physics of failures with the Norris-Landzberg's model defined in document {cite:t}`eee-Norris1969ReliabilityOC`. This model is based on the thermo-mechanical effects based on the Coffin-Manson model.
+The thermo-mechanical stress is associated with the thermal cycling of the equipment. It is considered by the {term}`physics of failures <Physics of failure>` with the Norris-Landzberg's model defined in document {cite:t}`eee-Norris1969ReliabilityOC`. This model is based on the thermo-mechanical effects based on the Coffin-Manson model.
 
 ````{admonition} Equation
 :class: equation
@@ -357,7 +357,7 @@ The activation energy $E_{a}$, fatigue coefficient $m$ and accelerating power of
 (eee_4_3_1_15)=
 ## Humidity stress
 
-The humidity stress is taken into account by the physics of failures with Peck's model.
+The humidity stress is taken into account by the {term}`physics of failures <Physics of failure>` with Peck's model.
 
 ````{admonition} Equation
 :class: equation
@@ -391,7 +391,7 @@ For space applications, the humidity stress is present only during the launch ph
 (eee_4_3_1_16)=
 ## Vibration stress
 
-The vibration stress is taken into account by the physics of failures with Basquin's law.
+The vibration stress is taken into account by the {term}`physics of failures <Physics of failure>` with Basquin's law.
 
 ````{admonition} Equation
 :class: equation
@@ -651,7 +651,7 @@ A first recommendation concerning the questionnaire is to answer to all question
 ```{admonition} Rule
 :class: rule
 
-For CDR, Sub-contractors, or suppliers, in particular those who are new in the space industry or in the frame of "new space" programs need to adapt these levels to their conditions with rationale provided.
+For CDR, Sub-contractors, or suppliers, in particular those who are new in the space industry or in the frame of "{term}`new space <New space>`" programs need to adapt these levels to their conditions with rationale provided.
 ```
 
 Therefore, the table with associated weights and levels N4 for space applications is the following:

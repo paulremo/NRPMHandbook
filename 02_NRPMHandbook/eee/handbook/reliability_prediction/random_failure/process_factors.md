@@ -190,9 +190,9 @@ As the FIDES methodology has not been originally developed for space application
 
 -   Sub-contractor for classic design and manufacturing of satellites;
 
--   Prime contractor for "new space" design and manufacturing of satellites;
+-   Prime contractor for "{term}`new space <New space>`" design and manufacturing of satellites;
 
--   Sub-contractor for "new space" design and manufacturing of satellites.
+-   Sub-contractor for "{term}`new space <New space>`" design and manufacturing of satellites.
 
 The space customization of the audit addresses the following points:
 
@@ -222,7 +222,7 @@ The space customization of the audit addresses the following points:
 
 This guidance is available for companies which have already performed the complete questionnaire process and are aware of its limitations.
 
-For other companies from "new space" domains, or sub-contractors which have never performed the questionnaire process, it is recommended to perform the complete questionnaire process at least once before using the adapted questionnaire.
+For other companies from "{term}`new space <New space>`" domains, or sub-contractors which have never performed the questionnaire process, it is recommended to perform the complete questionnaire process at least once before using the adapted questionnaire.
 
 The questions of the updated questionnaire with suggested answers are provided in EEE Annex A with the classification of each phase: Specification, Design, Manufacturing of board or subassembly, Integration into equipment, Integration into the system, Operation and maintenance, Support activities.
 

@@ -4,7 +4,7 @@
 
 The reliability.space approach for EEE items provides models for reliability predictions for the EEE components which are used in space applications. The conventional component types refer to the components which are defined in the EPPL list {cite:t}`eee-EPPL007-37` and the PCB as expressed in {ref}`eee_annex_a`.
 
-The reliability.space approach covering the random failures for EEE items is described in this part of the handbook. This methodology is based on the FIDES methodology, 2009 version.
+The reliability.space approach covering the {term}`random failures <Random failure>` for EEE items is described in this part of the handbook. This methodology is based on the FIDES methodology, 2009 version.
 
 Following the observations from the TEC QQD Study - Reliability Prediction Data Sources and Methodologies for Space Applications, it is adapted to the specificities of the space applications.
 
@@ -40,7 +40,7 @@ The reliability.space approach is performed by considering each of these three a
 
 -   adaptation of a mission profile as defined in {numref}`eee_4_3_1` with some specificities of the space applications such as thermal management by conduction, cyclic variations of temperature, level of humidity and vibrations in space;
 
--   use of the reliability models built for each technology of EEE components based on the Physics of Failure with some adaptations described in {numref}`eee_4_3_4` each component model; the preferred use is the part stress method as described in the section.
+-   use of the reliability models built for each technology of EEE components based on the {term}`Physics of Failure <Physics of failure>` with some adaptations described in {numref}`eee_4_3_4` each component model; the preferred use is the part stress method as described in the section.
 
 -   consideration of the process during the phases of development, integration into the equipment, integration into the satellite and operations by evaluating a process factor as defined in {numref}`eee_4_3_2_1`.
 
