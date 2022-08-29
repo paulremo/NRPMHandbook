@@ -1,3 +1,5 @@
+# Copyright (C) Matrisk GmbH 2022
+
 from setuptools import setup, find_packages
 
 # installation requirements

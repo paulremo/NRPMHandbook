@@ -1,3 +1,5 @@
+# Copyright (C) Matrisk GmbH 2022
+
 from scipy import stats
 import numpy as np
 

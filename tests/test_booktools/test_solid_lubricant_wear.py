@@ -1,3 +1,5 @@
+# Copyright (C) Matrisk GmbH 2022
+
 import operator
 import pytest
 from scipy import stats

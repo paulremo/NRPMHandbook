@@ -1,3 +1,5 @@
+# Copyright (C) Matrisk GmbH 2022
+
 # display packages
 from nrpmint.interface.web import UI
 

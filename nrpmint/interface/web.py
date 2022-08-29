@@ -1,3 +1,5 @@
+# Copyright (C) Matrisk GmbH 2022
+
 import IPython
 import ipywidgets as widgets
 from ipywidgets import interactive, Layout, HBox, VBox

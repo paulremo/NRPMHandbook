@@ -1,3 +1,5 @@
+# Copyright (C) Matrisk GmbH 2022
+
 import numpy as np
 
 def sample(inputs, N, skip=[], seed=2312):
