@@ -107,7 +107,7 @@ As part of the ESA project _Adaptation of the NRPM Handbook into an ESA Handbook
  
 In the context of the digitalization and possibilities of the digital world, within the ESA project _Adaptation of the NRPM Handbook into an ESA Handbook following the ECSS_ the consortium under the ESA contract `No. 4000135482/21/NL/AR/va` developed the idea to create a digital interactive version besides the classical handbook version. In the project, the digital version was developed with the aim to show which interactive possibilities exist for books and to conduct a feasibility study for the implementation.
  
-ESA contract `No. 4000121065/17/NL/PS` consortium:
+ESA contract `No. 4000121065/17/NL/PS` (reliability.space) consortium:
 - [Matrisk GmbH](https://matrisk.ch/en/) (lead)
 - [Airbus Defence and Space](https://www.airbus.com/en/products-services/space/)
 - [Thales Alenia Space](https://www.thalesgroup.com/en/global/activities/space)
