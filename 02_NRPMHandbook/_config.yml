@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: NRPM digital handbook
-author: <a href='/home.html#imprint'>ESA contract No. 4000121065/17/NL/PS</a> and <a href='/home.html#imprint'>4000135482/21/NL/AR/va</a>
+author: Matrisk GmbH
 logo: _static/images/reliabilityspace_logo_vector.png
 copyright: "2022"
 
@@ -26,7 +26,9 @@ html:
   use_issues_button: true
   use_edit_page_button: true
   favicon: _static/images/favicon.ico
-  announcement              : "️⚠ This digital handbook is currently under development! Content may change unexpectedly!⚠"
+  announcement: "️⚠ This digital handbook is currently under development! Content may change unexpectedly!⚠"
+  extra_footer: <a href='/home.html#imprint'>ESA contract No. 4000121065/17/NL/PS</a> and <a href='/home.html#imprint'>4000135482/21/NL/AR/va</a>
+  extra_navbar: ""
 
 # Information about where the book exists on the web
 repository:
@@ -47,6 +49,7 @@ sphinx:
     bibtex_reference_style  : label
     execution_show_tb       : True
     execution_timeout       : 60
+    html_show_copyright     : true
     
     # turn off jupyter notebook execution
     jupyter_execute_notebooks: "off" 
@@ -59,12 +62,6 @@ sphinx:
       'preamble': 
         \let\originalhyperlink\hyperlink
         \renewcommand\hyperlink[2]{\protect\originalhyperlink{#1}{#2}}
-        
-    # for latex title page
-    latex_documents : 
-      'targetname': book.tex
-      'title': NRPM handbook
-      'author': ESA contract No. 4000121065/17/NL/PS and 4000135482/21/NL/AR/va
     
 # The following is currently not possible, because it overwrites the Jupyter Book html_theme_options. There is currently no way to add this option without overwriting.
 #    html_theme_options      : 
