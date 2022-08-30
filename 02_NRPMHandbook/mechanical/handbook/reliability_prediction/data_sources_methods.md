@@ -98,7 +98,7 @@ The advantage of this approach is the increased flexibility, as generic models f
 * The scaling factors are based on the {term}`physics of failure <Physics of failure>` in terrestrial applications, which may in some cases not be applicable in space
 * Scaling factors are based on deterministic relationships, which may lead to a large bias when the effect of the variable entering the scaling factor is highly nonlinear
 * The model output is a constant failure rate, which is often not consistent with the {term}`failure mechanism <Failure mechanism>`s that have been analysed to derive the scaling factors
-* 
+
 As a result, the {term}`NSWC` should not be used as a data source for mechanical reliability prediction in space applications. The data can only be used to derive “ballpark” estimates, e.g. for early design phases, for comparison with other methods, or as a prior for {term}`Bayesian inference <Bayesian inference>` updating. 
 
 Beyond this, the {term}`NSWC` method is recommended only as a scaling method for specific part types, allowing to tune statistical estimates from “space relevant” data sources (the {term}`NSWC` base failure rates should not be used). The approach is applicable only if the {term}`failure mechanism <Failure mechanism>`s that are of relevance in space applications are the same as those considered by the {term}`NSWC` models, see {numref}`meca-table4-6` in {numref}`meca_4_5_2` for guidance. It is based on the following steps:
