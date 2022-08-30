@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 function searchTable() {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;

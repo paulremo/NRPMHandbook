@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 let recomNS = new Map([
     ["Specification", new Map([
         ["1", new Map([["prime", new Set(['NA'])], ["subco", new Set(['2', '3', '4'])]])],

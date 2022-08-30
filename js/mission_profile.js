@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 function runMissionprofile() {
 
     let existing_phase_mp = null;

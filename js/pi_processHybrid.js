@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 function runPiProcessHybrid() {
 
     let answers_Hybrid = new Map([

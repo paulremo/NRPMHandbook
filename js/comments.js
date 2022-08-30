@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 let dicoComments = new Map([
     ["Specification", new Map([
         [0, new Map([["subcontractor", true],["levelRecommended", null]])],

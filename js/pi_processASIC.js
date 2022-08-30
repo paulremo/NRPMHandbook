@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 function runPiProcessASIC() {
 
     let answers_ASIC = new Map([

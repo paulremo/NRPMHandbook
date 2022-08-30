@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 function runPiProcessRFHF() {
 
     let answers = new Map([

@@ -1,3 +1,5 @@
+// Copyright (C) Matrisk GmbH 2022
+
 function runDT() {
 
     console.log("initiate decision tree")
