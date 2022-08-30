@@ -59,6 +59,12 @@ sphinx:
       'preamble': 
         \let\originalhyperlink\hyperlink
         \renewcommand\hyperlink[2]{\protect\originalhyperlink{#1}{#2}}
+        
+    # for latex title page
+    latex_documents : 
+      'targetname': book.tex
+      'title': NRPM handbook
+      'author': ESA contract No. 4000121065/17/NL/PS and 4000135482/21/NL/AR/va
     
 # The following is currently not possible, because it overwrites the Jupyter Book html_theme_options. There is currently no way to add this option without overwriting.
 #    html_theme_options      : 
