@@ -1,0 +1,129 @@
+#step_picture_cell{
+    width: 30%;
+}
+
+#conversation_track_eee_guide{
+    width: 70%;
+}
+
+.scroll-eee-guide {
+    margin: 5px;
+    padding: 5px;
+    /*background-color: rgb(198, 207, 242);*/
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+
+    /*text-align: justify;*/
+}
+
+.track-eee-guide {
+    /*text-align: justify;*/
+    width: 100%;
+    font-family: 'Courier New'
+}
+
+
+.step-picture-eee-guide{
+    width: 50%;
+    margin-left: 25%;
+}
+
+#step_picture_cell{
+    width: 10%;
+    background-color: black;
+}
+
+.hidden-picture-eee-guide{
+    visibility: hidden;
+}
+
+
+
+#conversation_eee_guide{
+    background-color: cadetblue;
+}
+
+.choice-button-eee-guide{
+    background-color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 10em;
+    font-size: 1vw;
+    font-weight: bold;
+    color: rgb(72, 77, 77);
+    margin-left: 10%;
+    margin-bottom: 2px;
+    border-radius: 10px;
+}
+
+.choice-button-eee-guide:hover{
+    background-color: rgb(176, 231, 231);
+    color: rgb(72, 77, 77);
+    cursor: pointer;
+}
+
+
+.choice-button-eee-guide:disabled{
+    background-color: rgb(210, 230, 230);
+    color: rgb(160, 170, 170);
+    cursor: not-allowed;
+}
+
+
+.chosen-choice-button-eee:disabled{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 10em;
+    font-size: 1vw;
+    font-weight: bold;
+    background-color: rgb(15, 60, 60);
+    color: white;
+    cursor: not-allowed;
+    margin-left: 10%;
+    margin-bottom: 2px;
+    border-radius: 10px;
+}
+
+.question-line-eee-guide{
+    padding-block: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 55%;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: #0F4754;
+    color: white;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+}
+
+.answer-line-eee-guide{
+    padding-block: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 55%;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: #26B4D4;
+    color: white;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.information-filtering-eee-guide{
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+}
+
+.information-filtering-eee-guide:disabled{
+    background-color: rgb(210, 230, 230);
+    color: rgb(160, 170, 170);
+    cursor: not-allowed; 
+}
