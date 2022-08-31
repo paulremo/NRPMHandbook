@@ -17,7 +17,7 @@
     max-height: 400px;
     overflow: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     /*text-align: justify;*/
 }
@@ -124,7 +124,7 @@
 
 .information-filtering-eee-guide{
     width: 80%;
-    margin-left: 25%;
+    margin-left: 10%;
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1vw;

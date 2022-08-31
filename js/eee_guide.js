@@ -477,6 +477,7 @@ function runEEEGuide() {
         let first_step_buttons_div = document.createElement("div");
         first_step_buttons_div.id = "first_step_buttons_div"
         first_step_div.appendChild(first_step_buttons_div);
+        first_step_div.scrollIntoView();
         displayFamilyButton("");
         
         document.getElementById("conversation_track_eee_guide").style.height = "400px";
@@ -624,6 +625,7 @@ function runEEEGuide() {
         let second_step_buttons_div = document.createElement("div");
         second_step_buttons_div.id = "first_step_buttons_div"
         second_step_div.appendChild(second_step_buttons_div);
+        second_step_div.scrollIntoView();
         displayGroupButton(selection, "");
         
         document.getElementById("conversation_track_eee_guide").style.height = "400px";
@@ -674,6 +676,7 @@ function runEEEGuide() {
         let third_step_buttons_div = document.createElement("div");
         third_step_buttons_div.id = "third_step_buttons_div"
         third_step_div.appendChild(third_step_buttons_div);
+        third_step_div.scrollIntoView();
         displayModelButton(selection, group, "");
         
         document.getElementById("conversation_track_eee_guide").style.height = "400px";
@@ -742,6 +745,7 @@ function runEEEGuide() {
 
 
         document.getElementById("conversation_track_eee_guide").appendChild(final_question_div);
+        final_question_div.scrollIntoView();
         
         document.getElementById("conversation_track_eee_guide").style.height = "400px";
 
@@ -754,6 +758,7 @@ function runEEEGuide() {
             }
 
             document.getElementById("conversation_track_eee_guide").appendChild(final_question_div2);
+            final_question_div2.scrollIntoView();
         
             document.getElementById("conversation_track_eee_guide").style.height = "400px";
         }, 200);
