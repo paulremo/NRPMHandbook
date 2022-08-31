@@ -418,33 +418,32 @@ function runEEEGuide() {
     ])
 
     setInterval(function () {
-        for (var img of document.getElementsByClassName("step-picture-eee-guide")) {
-            let src_data = img.src.split('/');
-            let elt = src_data[[src_data.length - 1]]
-            if (elt == "final_on.svg") {
-                img.src = "../../_static/images/final_off.svg"
-            }
-            else if (elt == "final_off.svg") {
-                img.src = "../../_static/images/final_on.svg"
-            }
-            else if (elt == "moon_on.svg") {
-                img.src = "../../_static/images/moon_off.svg"
-            }
-            else if (elt == "moon_off.svg") {
-                img.src = "../../_static/images/moon_on.svg"
-            }
-            else if (elt == "launch_on.svg") {
-                img.src = "../../_static/images/launch_off.svg"
-            }
-            else if (elt == "launch_off.svg") {
-                img.src = "../../_static/images/launch_on.svg"
-            }
-            else if (elt == "ground_on.svg") {
-                img.src = "../../_static/images/ground_off.svg"
-            }
-            else if (elt == "ground_off.svg") {
-                img.src = "../../_static/images/ground_on.svg"
-            }
+        let img = document.getElementById("astroPicture");
+        let src_data = img.src.split('/');
+        let elt = src_data[[src_data.length - 1]]
+        if (elt == "final_on.svg") {
+            img.src = "pictures/eee_guide/final_off.svg"
+        }
+        else if (elt == "final_off.svg") {
+            img.src = "pictures/eee_guide/final_on.svg"
+        }
+        else if (elt == "moon_on.svg") {
+            img.src = "pictures/eee_guide/moon_off.svg"
+        }
+        else if (elt == "moon_off.svg") {
+            img.src = "pictures/eee_guide/moon_on.svg"
+        }
+        else if (elt == "launch_on.svg") {
+            img.src = "pictures/eee_guide/launch_off.svg"
+        }
+        else if (elt == "launch_off.svg") {
+            img.src = "pictures/eee_guide/launch_on.svg"
+        }
+        else if (elt == "ground_on.svg") {
+            img.src = "pictures/eee_guide/ground_off.svg"
+        }
+        else if (elt == "ground_off.svg") {
+            img.src = "pictures/eee_guide/ground_on.svg"
         }
     }
         , 300);
@@ -454,8 +453,16 @@ function runEEEGuide() {
     let third_step_div = document.createElement("div");
 
     function displayStep1() {
-        first_step_div.className = "answer-line-eee-guide";
-        document.getElementById("conversation_track_eee_guide").appendChild(first_step_div);
+
+        let first_question_div = document.createElement("div");
+        first_question_div.className = "other-message";
+        first_question_div.innerHTML = "What's your component's family ?"
+
+        document.getElementById("messagesTrack").appendChild(first_question_div);
+
+
+        first_step_div.className = "my-message";
+        document.getElementById("messagesTrack").appendChild(first_step_div);
 
         let family_filtering_area = document.createElement("input");
         family_filtering_area.id = "family_filtering_area";
@@ -480,7 +487,7 @@ function runEEEGuide() {
         first_step_div.scrollIntoView();
         displayFamilyButton("");
         
-        document.getElementById("conversation_track_eee_guide").style.height = "400px";
+        document.getElementById("messagesTrack").style.height = "400px";
 
 
     }
@@ -595,14 +602,14 @@ function runEEEGuide() {
 
 
         let second_question_div = document.createElement("div");
-        second_question_div.className = "question-line-eee-guide";
+        second_question_div.className = "other-message";
         second_question_div.innerHTML = "What's your component's group ?"
 
-        document.getElementById("conversation_track_eee_guide").appendChild(second_question_div);
+        document.getElementById("messagesTrack").appendChild(second_question_div);
 
 
-        second_step_div.className = "answer-line-eee-guide";
-        document.getElementById("conversation_track_eee_guide").appendChild(second_step_div);
+        second_step_div.className = "my-message";
+        document.getElementById("messagesTrack").appendChild(second_step_div);
 
         let group_filtering_area = document.createElement("input");
         group_filtering_area.id = "group_filtering_area";
@@ -628,7 +635,7 @@ function runEEEGuide() {
         second_step_div.scrollIntoView();
         displayGroupButton(selection, "");
         
-        document.getElementById("conversation_track_eee_guide").style.height = "400px";
+        document.getElementById("messagesTrack").style.height = "400px";
     }
 
     function removeModelBTN() {
@@ -646,14 +653,14 @@ function runEEEGuide() {
     function displayStep3(selection, group) {
 
         let third_question_div = document.createElement("div");
-        third_question_div.className = "question-line-eee-guide";
+        third_question_div.className = "other-message";
         third_question_div.innerHTML = "What's your component's model ?"
 
-        document.getElementById("conversation_track_eee_guide").appendChild(third_question_div);
+        document.getElementById("messagesTrack").appendChild(third_question_div);
 
 
-        third_step_div.className = "answer-line-eee-guide";
-        document.getElementById("conversation_track_eee_guide").appendChild(third_step_div);
+        third_step_div.className = "my-message";
+        document.getElementById("messagesTrack").appendChild(third_step_div);
 
         let model_filtering_area = document.createElement("input");
         model_filtering_area.id = "model_filtering_area";
@@ -679,7 +686,7 @@ function runEEEGuide() {
         third_step_div.scrollIntoView();
         displayModelButton(selection, group, "");
         
-        document.getElementById("conversation_track_eee_guide").style.height = "400px";
+        document.getElementById("messagesTrack").style.height = "400px";
     }
 
     function displayModelButton(selection, group, search) {
@@ -736,7 +743,7 @@ function runEEEGuide() {
         changePicture(4);
 
         let final_question_div = document.createElement("div");
-        final_question_div.className = "question-line-eee-guide";
+        final_question_div.className = "other-message";
 
         if (is_fides_model) {
             final_question_div.innerHTML = "Your component '" + model + " has a FIDES model components : " + eee_families_informations.get(selection).get(group).get(model) + ".";
@@ -744,23 +751,23 @@ function runEEEGuide() {
 
 
 
-        document.getElementById("conversation_track_eee_guide").appendChild(final_question_div);
+        document.getElementById("messagesTrack").appendChild(final_question_div);
         final_question_div.scrollIntoView();
         
-        document.getElementById("conversation_track_eee_guide").style.height = "400px";
+        document.getElementById("messagesTrack").style.height = "400px";
 
         setTimeout(() => {
             let final_question_div2 = document.createElement("div");
-            final_question_div2.className = "question-line-eee-guide";
+            final_question_div2.className = "other-message";
 
             if (is_fides_model) {
                 final_question_div2.innerHTML = "You can find the dedicated handbook page <a href='" + eee_families_links.get(selection) + "' style='color:white;'>here</a>.";
             }
 
-            document.getElementById("conversation_track_eee_guide").appendChild(final_question_div2);
+            document.getElementById("messagesTrack").appendChild(final_question_div2);
             final_question_div2.scrollIntoView();
         
-            document.getElementById("conversation_track_eee_guide").style.height = "400px";
+            document.getElementById("messagesTrack").style.height = "400px";
         }, 200);
 
     }
@@ -768,13 +775,12 @@ function runEEEGuide() {
     function changePicture(step) {
         if (step == 2) {
             setTimeout(() => {
-                document.getElementById("ground_picture_eee_guide").style.opacity = "0.75";
+                document.getElementById("astroPicture").style.opacity = "0.75";
                 setTimeout(() => {
-                    document.getElementById("ground_picture_eee_guide").style.opacity = "0.5";
+                    document.getElementById("astroPicture").style.opacity = "0.5";
                     setTimeout(() => {
-                        document.getElementById("ground_picture_eee_guide").style.opacity = "0.25";
+                        document.getElementById("astroPicture").style.opacity = "0.25";
                         setTimeout(() => {
-                            document.getElementById("ground_picture_eee_guide").className += " hidden-picture-eee-guide";
                             displayPicture(2)
                         }, 100);
                     }, 100);
@@ -784,14 +790,13 @@ function runEEEGuide() {
         }
         else if (step == 3) {
             setTimeout(() => {
-                document.getElementById("launch_picture_eee_guide").style.opacity = "0.75";
+                document.getElementById("astroPicture").style.opacity = "0.75";
                 setTimeout(() => {
-                    document.getElementById("launch_picture_eee_guide").style.opacity = "0.5";
+                    document.getElementById("astroPicture").style.opacity = "0.5";
                     setTimeout(() => {
-                        document.getElementById("launch_picture_eee_guide").style.opacity = "0.25";
+                        document.getElementById("astroPicture").style.opacity = "0.25";
                         setTimeout(() => {
-                            document.getElementById("launch_picture_eee_guide").style.opacity = "0";
-                            document.getElementById("launch_picture_eee_guide").className += " hidden-picture-eee-guide";
+                            document.getElementById("astroPicture").style.opacity = "0";
                             displayPicture(3);
                         }, 100);
                     }, 100);
@@ -801,14 +806,13 @@ function runEEEGuide() {
         }
         else if (step == 4) {
             setTimeout(() => {
-                document.getElementById("moon_picture_eee_guide").style.opacity = "0.75";
+                document.getElementById("astroPicture").style.opacity = "0.75";
                 setTimeout(() => {
-                    document.getElementById("moon_picture_eee_guide").style.opacity = "0.5";
+                    document.getElementById("astroPicture").style.opacity = "0.5";
                     setTimeout(() => {
-                        document.getElementById("moon_picture_eee_guide").style.opacity = "0.25";
+                        document.getElementById("astroPicture").style.opacity = "0.25";
                         setTimeout(() => {
-                            document.getElementById("moon_picture_eee_guide").style.opacity = "0";
-                            document.getElementById("moon_picture_eee_guide").className += " hidden-picture-eee-guide";
+                            document.getElementById("astroPicture").style.opacity = "0";
                             displayPicture(4);
                         }, 100);
                     }, 100);
@@ -820,17 +824,17 @@ function runEEEGuide() {
 
     function displayPicture(step) {
         if (step == 2) {
-            document.getElementById("launch_picture_eee_guide").style.visibility = "visible";
-            document.getElementById("launch_picture_eee_guide").style.opacity = "0";
-            document.getElementById("launch_picture_eee_guide").style.className = "step-picture-eee-guide";
+            document.getElementById("astroPicture").style.visibility = "visible";
+            document.getElementById("astroPicture").style.opacity = "0";
+            document.getElementById("astroPicture").src = "pictures/eee_guide/launch_on.svg";
             setTimeout(() => {
-                document.getElementById("launch_picture_eee_guide").style.opacity = "0.25";
+                document.getElementById("astroPicture").style.opacity = "0.25";
                 setTimeout(() => {
-                    document.getElementById("launch_picture_eee_guide").style.opacity = "0.5";
+                    document.getElementById("astroPicture").style.opacity = "0.5";
                     setTimeout(() => {
-                        document.getElementById("launch_picture_eee_guide").style.opacity = "0.75";
+                        document.getElementById("astroPicture").style.opacity = "0.75";
                         setTimeout(() => {
-                            document.getElementById("launch_picture_eee_guide").style.opacity = "1";
+                            document.getElementById("astroPicture").style.opacity = "1";
                         }, 100);
                     }, 100);
                 }, 100);
@@ -838,17 +842,17 @@ function runEEEGuide() {
 
         }
         else if (step == 3) {
-            document.getElementById("moon_picture_eee_guide").style.visibility = "visible";
-            document.getElementById("moon_picture_eee_guide").style.opacity = "0";
-            document.getElementById("moon_picture_eee_guide").style.className = "step-picture-eee-guide";
+            document.getElementById("astroPicture").style.visibility = "visible";
+            document.getElementById("astroPicture").style.opacity = "0";
+            document.getElementById("astroPicture").src = "pictures/eee_guide/moon_on.svg";
             setTimeout(() => {
-                document.getElementById("moon_picture_eee_guide").style.opacity = "0.25";
+                document.getElementById("astroPicture").style.opacity = "0.25";
                 setTimeout(() => {
-                    document.getElementById("moon_picture_eee_guide").style.opacity = "0.5";
+                    document.getElementById("astroPicture").style.opacity = "0.5";
                     setTimeout(() => {
-                        document.getElementById("moon_picture_eee_guide").style.opacity = "0.75";
+                        document.getElementById("astroPicture").style.opacity = "0.75";
                         setTimeout(() => {
-                            document.getElementById("moon_picture_eee_guide").style.opacity = "1";
+                            document.getElementById("astroPicture").style.opacity = "1";
                         }, 100);
                     }, 100);
                 }, 100);
@@ -856,17 +860,17 @@ function runEEEGuide() {
 
         }
         else if (step == 4) {
-            document.getElementById("final_picture_eee_guide").style.visibility = "visible";
-            document.getElementById("final_picture_eee_guide").style.opacity = "0";
-            document.getElementById("final_picture_eee_guide").style.className = "step-picture-eee-guide";
+            document.getElementById("astroPicture").style.visibility = "visible";
+            document.getElementById("astroPicture").style.opacity = "0";
+            document.getElementById("astroPicture").src = "pictures/eee_guide/final_on.svg";
             setTimeout(() => {
-                document.getElementById("final_picture_eee_guide").style.opacity = "0.25";
+                document.getElementById("astroPicture").style.opacity = "0.25";
                 setTimeout(() => {
-                    document.getElementById("final_picture_eee_guide").style.opacity = "0.5";
+                    document.getElementById("astroPicture").style.opacity = "0.5";
                     setTimeout(() => {
-                        document.getElementById("final_picture_eee_guide").style.opacity = "0.75";
+                        document.getElementById("astroPicture").style.opacity = "0.75";
                         setTimeout(() => {
-                            document.getElementById("final_picture_eee_guide").style.opacity = "1";
+                            document.getElementById("astroPicture").style.opacity = "1";
                         }, 100);
                     }, 100);
                 }, 100);
