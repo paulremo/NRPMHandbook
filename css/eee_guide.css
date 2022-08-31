@@ -97,7 +97,7 @@
     padding-block: 1em;
     padding-left: 1em;
     padding-right: 1em;
-    margin-right: 55%;
+    margin-right: 35%;
     margin-left: 5%;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -112,7 +112,7 @@
     padding-block: 1em;
     padding-left: 1em;
     padding-right: 1em;
-    margin-left: 55%;
+    margin-left: 35%;
     margin-right: 5%;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -123,11 +123,11 @@
 }
 
 .information-filtering-eee-guide{
-    width: 50%;
+    width: 80%;
     margin-left: 25%;
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2vw;
+    font-size: 1vw;
 }
 
 .information-filtering-eee-guide:disabled{
