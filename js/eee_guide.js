@@ -422,28 +422,28 @@ function runEEEGuide() {
             let src_data = img.src.split('/');
             let elt = src_data[[src_data.length - 1]]
             if (elt == "final_on.svg") {
-                img.src = "pictures/eee_guide/final_off.svg"
+                img.src = "../../_static/images/final_off.svg"
             }
             else if (elt == "final_off.svg") {
-                img.src = "pictures/eee_guide/final_on.svg"
+                img.src = "../../_static/images/final_on.svg"
             }
             else if (elt == "moon_on.svg") {
-                img.src = "pictures/eee_guide/moon_off.svg"
+                img.src = "../../_static/images/moon_off.svg"
             }
             else if (elt == "moon_off.svg") {
-                img.src = "pictures/eee_guide/moon_on.svg"
+                img.src = "../../_static/images/moon_on.svg"
             }
             else if (elt == "launch_on.svg") {
-                img.src = "pictures/eee_guide/launch_off.svg"
+                img.src = "../../_static/images/launch_off.svg"
             }
             else if (elt == "launch_off.svg") {
-                img.src = "pictures/eee_guide/launch_on.svg"
+                img.src = "../../_static/images/launch_on.svg"
             }
             else if (elt == "ground_on.svg") {
-                img.src = "pictures/eee_guide/ground_off.svg"
+                img.src = "../../_static/images/ground_off.svg"
             }
             else if (elt == "ground_off.svg") {
-                img.src = "pictures/eee_guide/ground_on.svg"
+                img.src = "../../_static/images/ground_on.svg"
             }
         }
     }
@@ -454,7 +454,6 @@ function runEEEGuide() {
     let third_step_div = document.createElement("div");
 
     function displayStep1() {
-
         first_step_div.className = "answer-line-eee-guide";
         document.getElementById("conversation_track_eee_guide").appendChild(first_step_div);
 
@@ -479,6 +478,9 @@ function runEEEGuide() {
         first_step_buttons_div.id = "first_step_buttons_div"
         first_step_div.appendChild(first_step_buttons_div);
         displayFamilyButton("");
+        
+        document.getElementById("conversation_track_eee_guide").style.height = "400px";
+
 
     }
 
@@ -623,6 +625,8 @@ function runEEEGuide() {
         second_step_buttons_div.id = "first_step_buttons_div"
         second_step_div.appendChild(second_step_buttons_div);
         displayGroupButton(selection, "");
+        
+        document.getElementById("conversation_track_eee_guide").style.height = "400px";
     }
 
     function removeModelBTN() {
@@ -671,6 +675,8 @@ function runEEEGuide() {
         third_step_buttons_div.id = "third_step_buttons_div"
         third_step_div.appendChild(third_step_buttons_div);
         displayModelButton(selection, group, "");
+        
+        document.getElementById("conversation_track_eee_guide").style.height = "400px";
     }
 
     function displayModelButton(selection, group, search) {
@@ -736,6 +742,8 @@ function runEEEGuide() {
 
 
         document.getElementById("conversation_track_eee_guide").appendChild(final_question_div);
+        
+        document.getElementById("conversation_track_eee_guide").style.height = "400px";
 
         setTimeout(() => {
             let final_question_div2 = document.createElement("div");
@@ -746,6 +754,8 @@ function runEEEGuide() {
             }
 
             document.getElementById("conversation_track_eee_guide").appendChild(final_question_div2);
+        
+            document.getElementById("conversation_track_eee_guide").style.height = "400px";
         }, 200);
 
     }

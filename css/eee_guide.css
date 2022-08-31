@@ -4,6 +4,8 @@
 
 #conversation_track_eee_guide{
     width: 70%;
+    height: 400px;
+    max-height: 400px;
 }
 
 .scroll-eee-guide {
