@@ -9,16 +9,16 @@
         <tr>
             <td id="step_picture_cell">
                 <div style="display: block;">
-                    <img class="step-picture-eee-guide hidden-picture-eee-guide" id="final_picture_eee_guide" src="pictures/eee_guide/final_on.svg"/>
+                    <img class="step-picture-eee-guide hidden-picture-eee-guide" id="final_picture_eee_guide" src="../../_static/images/final_on.svg"/>
                 </div>
                 <div style="display: block;">
-                    <img class="step-picture-eee-guide hidden-picture-eee-guide" id="moon_picture_eee_guide" src="pictures/eee_guide/moon_on.svg"/>
+                    <img class="step-picture-eee-guide hidden-picture-eee-guide" id="moon_picture_eee_guide" src="../../_static/images/moon_on.svg"/>
                 </div>
                 <div style="display: block;">
-                    <img class="step-picture-eee-guide hidden-picture-eee-guide" id="launch_picture_eee_guide" src="pictures/eee_guide/launch_on.svg"/>
+                    <img class="step-picture-eee-guide hidden-picture-eee-guide" id="launch_picture_eee_guide" src="../../_static/images/launch_on.svg"/>
                 </div>
                 <div style="display: block;">
-                    <img class="step-picture-eee-guide" id="ground_picture_eee_guide" src="pictures/eee_guide/ground_on.svg"/>
+                    <img class="step-picture-eee-guide" id="ground_picture_eee_guide" src="../../_static/images/ground_on.svg"/>
                 </div>
             </td>
             <td id="conversation_track_eee_guide">
