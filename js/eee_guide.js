@@ -422,28 +422,28 @@ function runEEEGuide() {
         let src_data = img.src.split('/');
         let elt = src_data[[src_data.length - 1]]
         if (elt == "final_on.svg") {
-            img.src = "pictures/eee_guide/final_off.svg"
+            img.src = "../../_static/images/final_off.svg"
         }
         else if (elt == "final_off.svg") {
-            img.src = "pictures/eee_guide/final_on.svg"
+            img.src = "../../_static/images/final_on.svg"
         }
         else if (elt == "moon_on.svg") {
-            img.src = "pictures/eee_guide/moon_off.svg"
+            img.src = "../../_static/images/moon_off.svg"
         }
         else if (elt == "moon_off.svg") {
-            img.src = "pictures/eee_guide/moon_on.svg"
+            img.src = "../../_static/images/moon_on.svg"
         }
         else if (elt == "launch_on.svg") {
-            img.src = "pictures/eee_guide/launch_off.svg"
+            img.src = "../../_static/images/launch_off.svg"
         }
         else if (elt == "launch_off.svg") {
-            img.src = "pictures/eee_guide/launch_on.svg"
+            img.src = "../../_static/images/launch_on.svg"
         }
         else if (elt == "ground_on.svg") {
-            img.src = "pictures/eee_guide/ground_off.svg"
+            img.src = "../../_static/images/ground_off.svg"
         }
         else if (elt == "ground_off.svg") {
-            img.src = "pictures/eee_guide/ground_on.svg"
+            img.src = "../../_static/images/ground_on.svg"
         }
     }
         , 300);
@@ -826,7 +826,7 @@ function runEEEGuide() {
         if (step == 2) {
             document.getElementById("astroPicture").style.visibility = "visible";
             document.getElementById("astroPicture").style.opacity = "0";
-            document.getElementById("astroPicture").src = "pictures/eee_guide/launch_on.svg";
+            document.getElementById("astroPicture").src = "../../_static/images/launch_on.svg";
             setTimeout(() => {
                 document.getElementById("astroPicture").style.opacity = "0.25";
                 setTimeout(() => {
@@ -844,7 +844,7 @@ function runEEEGuide() {
         else if (step == 3) {
             document.getElementById("astroPicture").style.visibility = "visible";
             document.getElementById("astroPicture").style.opacity = "0";
-            document.getElementById("astroPicture").src = "pictures/eee_guide/moon_on.svg";
+            document.getElementById("astroPicture").src = "../../_static/images/moon_on.svg";
             setTimeout(() => {
                 document.getElementById("astroPicture").style.opacity = "0.25";
                 setTimeout(() => {
@@ -862,7 +862,7 @@ function runEEEGuide() {
         else if (step == 4) {
             document.getElementById("astroPicture").style.visibility = "visible";
             document.getElementById("astroPicture").style.opacity = "0";
-            document.getElementById("astroPicture").src = "pictures/eee_guide/final_on.svg";
+            document.getElementById("astroPicture").src = "../../_static/images/final_on.svg";
             setTimeout(() => {
                 document.getElementById("astroPicture").style.opacity = "0.25";
                 setTimeout(() => {
