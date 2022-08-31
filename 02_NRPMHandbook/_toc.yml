@@ -63,6 +63,7 @@ parts:
     - file: eee/models/intro
       title: Models
       sections:
+      - file: eee/models/eee_family_guide
       - file: eee/models/pi_process_model
       - file: eee/models/pi_process_RFHF
       - file: eee/models/pi_process_ASIC
