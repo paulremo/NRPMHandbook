@@ -31,5 +31,4 @@
         </tr>
     </table>
 </div>
-<script type="text/javascript" src="../js/eee_guide.js"></script>
 <script type="text/javascript">runEEEGuide();</script>
