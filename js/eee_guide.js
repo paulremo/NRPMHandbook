@@ -395,6 +395,28 @@ function runEEEGuide() {
 
     ])
 
+    let eee_families_links = new Map([
+
+        ["Capacitors", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#capacitors-family-01"],
+        ["Connectors", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#connectors-family-02"],
+        ["Piezo electric", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#piezo-electric-devices-family-03"],
+        ["Diodes", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#diodes-family-04"],
+        ["Filters", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#filters-family-05"],
+        ["Fuses", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#fuses-family-06"],
+        ["Inductors", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#inductors-family-07"],
+        ["Integrated Circuits", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#integrated-circuits-family-08"],
+        ["Relays", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#relays-family-09"],
+        ["Resistors", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#resistors-family-10"],
+        ["Thermistors", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#thermistors-family-11"],
+        ["Transistors", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#transistors-family-12"],
+        ["Transformers", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#transformers-family-13"],
+        ["Switches", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#switches-family-14"],
+        ["Opto-electronics", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#opto-electronics-family-18"],
+        ["PCB", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#pcb"],
+        ["Hybrids", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#hybrids-family-40"]
+
+    ])
+
     setInterval(function () {
         for (var img of document.getElementsByClassName("step-picture-eee-guide")) {
             let src_data = img.src.split('/');
@@ -429,6 +451,7 @@ function runEEEGuide() {
 
     let first_step_div = document.createElement("div");
     let second_step_div = document.createElement("div");
+    let third_step_div = document.createElement("div");
 
     function displayStep1() {
 
@@ -466,7 +489,7 @@ function runEEEGuide() {
     }
 
     function disableFamilyBTN() {
-        for (var btn of document.getElementsByClassName("family-button-eee")){
+        for (var btn of document.getElementsByClassName("family-button-eee")) {
             btn.disabled = true;
         }
         document.getElementById("family_filtering_area").disabled = true;
@@ -515,6 +538,13 @@ function runEEEGuide() {
         div.remove();
     }
 
+    function disableGroupBTN() {
+        for (var btn of document.getElementsByClassName("group-button-eee")) {
+            btn.disabled = true;
+        }
+        document.getElementById("group_filtering_area").disabled = true;
+    }
+
     function displayGroupButton(selection, search) {
 
         changePicture(2);
@@ -531,6 +561,11 @@ function runEEEGuide() {
                     var btn = document.createElement("button");
                     btn.className = "choice-button-eee-guide group-button-eee";
                     btn.innerHTML = key;
+                    btn.onclick = function () {
+                        this.className += " chosen-choice-button-eee";
+                        disableGroupBTN();
+                        displayStep3(selection, this.innerHTML);
+                    }
                     second_step_buttons_div.appendChild(btn)
                 }
             }
@@ -542,6 +577,11 @@ function runEEEGuide() {
                 btn.className = "choice-button-eee-guide group-button-eee";
                 btn.innerHTML = key;
                 btn.id = key;
+                btn.onclick = function () {
+                    this.className += " chosen-choice-button-eee";
+                    disableGroupBTN();
+                    displayStep3(selection, this.innerHTML);
+                }
                 second_step_buttons_div.appendChild(btn)
             }
             second_step_div.appendChild(second_step_buttons_div);
@@ -561,22 +601,20 @@ function runEEEGuide() {
         second_step_div.className = "answer-line-eee-guide";
         document.getElementById("conversation_track_eee_guide").appendChild(second_step_div);
 
-        if (eee_families_informations.get(selection).size > 4) {
-            let group_filtering_area = document.createElement("input");
-            group_filtering_area.id = "group_filtering_area";
-            group_filtering_area.className = "information-filtering-eee-guide";
-            group_filtering_area.type = "search";
-            group_filtering_area.placeholder = " Tap here to filter group"
-            group_filtering_area.oninput = function () {
-                if (this.value.length > 2) {
-                    displayGroupButton(selection, this.value);
-                }
-                else {
-                    displayGroupButton(selection, "");
-                }
+        let group_filtering_area = document.createElement("input");
+        group_filtering_area.id = "group_filtering_area";
+        group_filtering_area.className = "information-filtering-eee-guide";
+        group_filtering_area.type = "search";
+        group_filtering_area.placeholder = " Tap here to filter group"
+        group_filtering_area.oninput = function () {
+            if (this.value.length > 2) {
+                displayGroupButton(selection, this.value);
             }
-            second_step_div.appendChild(group_filtering_area)
+            else {
+                displayGroupButton(selection, "");
+            }
         }
+        second_step_div.appendChild(group_filtering_area)
 
 
 
@@ -587,11 +625,136 @@ function runEEEGuide() {
         displayGroupButton(selection, "");
     }
 
-    function changePicture(step){
-        if (step == 2){
+    function removeModelBTN() {
+        let div = document.getElementById("third_step_buttons_div");
+        div.remove();
+    }
+
+    function disableModelBTN() {
+        for (var btn of document.getElementsByClassName("model-button-eee")) {
+            btn.disabled = true;
+        }
+        document.getElementById("model_filtering_area").disabled = true;
+    }
+
+    function displayStep3(selection, group) {
+
+        let third_question_div = document.createElement("div");
+        third_question_div.className = "question-line-eee-guide";
+        third_question_div.innerHTML = "What's your component's model ?"
+
+        document.getElementById("conversation_track_eee_guide").appendChild(third_question_div);
+
+
+        third_step_div.className = "answer-line-eee-guide";
+        document.getElementById("conversation_track_eee_guide").appendChild(third_step_div);
+
+        let model_filtering_area = document.createElement("input");
+        model_filtering_area.id = "model_filtering_area";
+        model_filtering_area.className = "information-filtering-eee-guide";
+        model_filtering_area.type = "search";
+        model_filtering_area.placeholder = " Tap here to filter models"
+        model_filtering_area.oninput = function () {
+            if (this.value.length > 2) {
+                displayModelButton(selection, group, this.value);
+            }
+            else {
+                displayGroupButton(selection, group, "");
+            }
+        }
+        third_step_div.appendChild(model_filtering_area)
+
+
+
+
+        let third_step_buttons_div = document.createElement("div");
+        third_step_buttons_div.id = "third_step_buttons_div"
+        third_step_div.appendChild(third_step_buttons_div);
+        displayModelButton(selection, group, "");
+    }
+
+    function displayModelButton(selection, group, search) {
+
+        changePicture(3);
+
+        let third_step_buttons_div = document.createElement("div");
+        third_step_buttons_div.id = "third_step_buttons_div"
+        third_step_div.appendChild(third_step_buttons_div);
+
+        removeModelBTN();
+        let model = eee_families_informations.get(selection).get(group);
+        if (typeof model == "string") {
+            displayStep4(selection, group, model, false);
+        }
+        else {
+            if (search != "") {
+                for (var [key, value] of model) {
+                    if (key.toLowerCase().includes(search.toLowerCase())) {
+                        var btn = document.createElement("button");
+                        btn.className = "choice-button-eee-guide model-button-eee";
+                        btn.innerHTML = key;
+                        btn.onclick = function () {
+                            this.className += " chosen-choice-button-eee";
+                            disableModelBTN();
+                            displayStep4(selection, group, this.innerHTML, true);
+                        }
+                        third_step_buttons_div.appendChild(btn)
+                    }
+                }
+                third_step_div.appendChild(third_step_buttons_div);
+            }
+            else {
+                for (var [key, value] of model) {
+                    var btn = document.createElement("button");
+                    btn.className = "choice-button-eee-guide model-button-eee";
+                    btn.innerHTML = key;
+                    btn.id = key;
+                    btn.onclick = function () {
+                        this.className += " chosen-choice-button-eee";
+                        disableModelBTN();
+                        displayStep4(selection, group, this.innerHTML, true);
+                    }
+                    third_step_buttons_div.appendChild(btn)
+                }
+                third_step_div.appendChild(third_step_buttons_div);
+            }
+        }
+
+    }
+
+    function displayStep4(selection, group, model, is_fides_model) {
+
+        changePicture(4);
+
+        let final_question_div = document.createElement("div");
+        final_question_div.className = "question-line-eee-guide";
+
+        if (is_fides_model) {
+            final_question_div.innerHTML = "Your component '" + model + " has a FIDES model components : " + eee_families_informations.get(selection).get(group).get(model) + ".";
+        }
+
+
+
+        document.getElementById("conversation_track_eee_guide").appendChild(final_question_div);
+
+        setTimeout(() => {
+            let final_question_div2 = document.createElement("div");
+            final_question_div2.className = "question-line-eee-guide";
+
+            if (is_fides_model) {
+                final_question_div2.innerHTML = "You can find the dedicated handbook page <a href='" + eee_families_links.get(selection) + "' style='color:white;'>here</a>.";
+            }
+
+            document.getElementById("conversation_track_eee_guide").appendChild(final_question_div2);
+        }, 200);
+
+    }
+
+    function changePicture(step) {
+        if (step == 2) {
             setTimeout(() => {
-               document.getElementById("ground_picture_eee_guide").style.opacity = "0.75";
-               setTimeout(() => {
+                document.getElementById("ground_picture_eee_guide").style.opacity = "0.75";
+                setTimeout(() => {
                     document.getElementById("ground_picture_eee_guide").style.opacity = "0.5";
                     setTimeout(() => {
                         document.getElementById("ground_picture_eee_guide").style.opacity = "0.25";
@@ -599,32 +762,101 @@ function runEEEGuide() {
                             document.getElementById("ground_picture_eee_guide").className += " hidden-picture-eee-guide";
                             displayPicture(2)
                         }, 100);
-                     }, 100);
+                    }, 100);
                 }, 100);
             }, 100);
-            
+
+        }
+        else if (step == 3) {
+            setTimeout(() => {
+                document.getElementById("launch_picture_eee_guide").style.opacity = "0.75";
+                setTimeout(() => {
+                    document.getElementById("launch_picture_eee_guide").style.opacity = "0.5";
+                    setTimeout(() => {
+                        document.getElementById("launch_picture_eee_guide").style.opacity = "0.25";
+                        setTimeout(() => {
+                            document.getElementById("launch_picture_eee_guide").style.opacity = "0";
+                            document.getElementById("launch_picture_eee_guide").className += " hidden-picture-eee-guide";
+                            displayPicture(3);
+                        }, 100);
+                    }, 100);
+                }, 100);
+            }, 100);
+
+        }
+        else if (step == 4) {
+            setTimeout(() => {
+                document.getElementById("moon_picture_eee_guide").style.opacity = "0.75";
+                setTimeout(() => {
+                    document.getElementById("moon_picture_eee_guide").style.opacity = "0.5";
+                    setTimeout(() => {
+                        document.getElementById("moon_picture_eee_guide").style.opacity = "0.25";
+                        setTimeout(() => {
+                            document.getElementById("moon_picture_eee_guide").style.opacity = "0";
+                            document.getElementById("moon_picture_eee_guide").className += " hidden-picture-eee-guide";
+                            displayPicture(4);
+                        }, 100);
+                    }, 100);
+                }, 100);
+            }, 100);
+
         }
     }
 
-    function displayPicture(step){
-        if (step == 2){
-            console.log("ici")
+    function displayPicture(step) {
+        if (step == 2) {
             document.getElementById("launch_picture_eee_guide").style.visibility = "visible";
             document.getElementById("launch_picture_eee_guide").style.opacity = "0";
             document.getElementById("launch_picture_eee_guide").style.className = "step-picture-eee-guide";
             setTimeout(() => {
-               document.getElementById("launch_picture_eee_guide").style.opacity = "0.25";
-               setTimeout(() => {
+                document.getElementById("launch_picture_eee_guide").style.opacity = "0.25";
+                setTimeout(() => {
                     document.getElementById("launch_picture_eee_guide").style.opacity = "0.5";
                     setTimeout(() => {
                         document.getElementById("launch_picture_eee_guide").style.opacity = "0.75";
                         setTimeout(() => {
                             document.getElementById("launch_picture_eee_guide").style.opacity = "1";
                         }, 100);
-                     }, 100);
+                    }, 100);
                 }, 100);
             }, 100);
-            
+
+        }
+        else if (step == 3) {
+            document.getElementById("moon_picture_eee_guide").style.visibility = "visible";
+            document.getElementById("moon_picture_eee_guide").style.opacity = "0";
+            document.getElementById("moon_picture_eee_guide").style.className = "step-picture-eee-guide";
+            setTimeout(() => {
+                document.getElementById("moon_picture_eee_guide").style.opacity = "0.25";
+                setTimeout(() => {
+                    document.getElementById("moon_picture_eee_guide").style.opacity = "0.5";
+                    setTimeout(() => {
+                        document.getElementById("moon_picture_eee_guide").style.opacity = "0.75";
+                        setTimeout(() => {
+                            document.getElementById("moon_picture_eee_guide").style.opacity = "1";
+                        }, 100);
+                    }, 100);
+                }, 100);
+            }, 100);
+
+        }
+        else if (step == 4) {
+            document.getElementById("final_picture_eee_guide").style.visibility = "visible";
+            document.getElementById("final_picture_eee_guide").style.opacity = "0";
+            document.getElementById("final_picture_eee_guide").style.className = "step-picture-eee-guide";
+            setTimeout(() => {
+                document.getElementById("final_picture_eee_guide").style.opacity = "0.25";
+                setTimeout(() => {
+                    document.getElementById("final_picture_eee_guide").style.opacity = "0.5";
+                    setTimeout(() => {
+                        document.getElementById("final_picture_eee_guide").style.opacity = "0.75";
+                        setTimeout(() => {
+                            document.getElementById("final_picture_eee_guide").style.opacity = "1";
+                        }, 100);
+                    }, 100);
+                }, 100);
+            }, 100);
+
         }
     }
 

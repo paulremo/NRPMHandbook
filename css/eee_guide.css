@@ -12,9 +12,10 @@
     /*background-color: rgb(198, 207, 242);*/
     width: 100%;
     height: 400px;
+    max-height: 400px;
     overflow: auto;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 
     /*text-align: justify;*/
 }
@@ -45,6 +46,11 @@
 #conversation_eee_guide{
     background-color: cadetblue;
 }
+
+#conversation_eee_guide table{
+    height: 400px;
+}
+
 
 .choice-button-eee-guide{
     background-color: azure;
