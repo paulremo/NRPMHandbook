@@ -51,7 +51,7 @@ The most important aspects of simplified structural reliability modelling from a
     - Probability distributions for all variables are chosen by the user
     - Only mean values and coefficients of variation are required as user input
 *   - Interference method
-    - FORM/SORM or Monte Carlo
+    - {term}}`FORM`/SORM or Monte Carlo
     - Analytic solutions are given
 ```
 
@@ -125,13 +125,13 @@ Another well-known application of the generic limit state function in Eq. {eq}`E
 
 The modelling of the two basic variables generally has to account for time dependency. In the simplest case without strength {term}`degradation <Degradation>`, the resistance $X_{1}$ can be considered as time invariant. A time variant load $X_{2}(t)$ may then be transformed into a time invariant random variable by taking the maximum load $X_{2}^{max} = max(X_{2}(t))$ during a specified time period, e.g. the highest load experienced during launch. The probabilistic modelling for the maximum load should then be based on extreme value theory (e.g. by fitting a random variable distribution to the maxima of a random process). More complex cases with time variant strength (e.g. {term}`degradation <Degradation>` effects) and/or cumulative loading (e.g. fatigue loads) require dedicated considerations using time variant {term}`structural reliability methods <Structural reliability method>`. In the remainder of this section, these applications will not be discussed any further, the focus will be on time invariant reliability calculations.
 
-Time invariant reliability problems - i.e. problems without the need to consider time dependency of $X_{1}$ and $X_{2}$ during the reliability calculations - can generally be solved using one of the methods discussed in {numref}`methods` (e.g. FORM/{term}`SORM`, Monte Carlo simulations). Analytic solutions are available for the following simple distributional assumptions:
+Time invariant reliability problems - i.e. problems without the need to consider time dependency of $X_{1}$ and $X_{2}$ during the reliability calculations - can generally be solved using one of the methods discussed in {numref}`methods` (e.g. {term}}`FORM`/{term}`SORM`, Monte Carlo simulations). Analytic solutions are available for the following simple distributional assumptions:
 
 * Both strength $X_{1}$ and stress $X_{2}$ are approximated by a Normal distribution
 * Both strength $X_{1}$ and stress $X_{2}$ are approximated a Lognormal distribution
 * The variability of one of the two variables (typically the Strength $X_{1}$) is negligible compared to the variability of the other variable, allowing for an approximate analytic solution
 
-In the following, closed-form solutions are given for these three cases. The choice of distributional assumptions should, however, not be driven by mathematical convenience, especially considering the limited effort required to perform an analysis for this simple limit state function, using numerical methods like FORM or Monte Carlo Analysis, which offer full flexibility in terms of distributional assumptions.
+In the following, closed-form solutions are given for these three cases. The choice of distributional assumptions should, however, not be driven by mathematical convenience, especially considering the limited effort required to perform an analysis for this simple limit state function, using numerical methods like {term}}`FORM` or Monte Carlo Analysis, which offer full flexibility in terms of distributional assumptions.
 
 The probability of failure for the Normal distribution assumption is derived as follows:
 

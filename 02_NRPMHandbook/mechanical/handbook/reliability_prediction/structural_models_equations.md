@@ -1138,7 +1138,7 @@ model instead of Eq. {eq}`Equation_3_55`.
 Independent of the approach chosen to combine several failure criteria,
 reliability is best assessed using Monte Carlo simulations with variance
 reduction techniques to reduce the number of required simulations.
-FORM/{term}`SORM` techniques are not recommended due to the iterative nature and
+{term}}`FORM`/{term}`SORM` techniques are not recommended due to the iterative nature and
 nonlinear behaviour of the crack growth model.
 
 To perform a reliability assessment, the following uncertainties have to

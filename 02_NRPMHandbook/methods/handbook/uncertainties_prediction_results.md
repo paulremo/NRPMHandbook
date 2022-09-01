@@ -517,7 +517,7 @@ For an efficient usage of the questionnaire in {numref}`method-table8-7`, in con
 
     -   The number of "dominating" components considered may be reduced in each step
 
-    -   Component models may be grouped if the same modelling approach is used for a variety of parts (e.g. models for EEE components taken from the same source).
+    -   Component models may be grouped if the same modelling approach is used for a variety of parts (e.g. models for {term}`EEE` components taken from the same source).
 
 -   Summarize the uncertainty assessment by making a (qualitative) statement about the major (e.g. Top 5) uncertainties associated with the predictions at the highest level of assembly.
 

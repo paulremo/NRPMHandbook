@@ -400,7 +400,7 @@ HDBK
 HET
 	Hall Effect Thruster
 
-HF 
+HF
 	High Frequency
 
 HPA

@@ -3,7 +3,7 @@
 (eee_4_3_5)=
 # Families count and part count methods
 
-The families count reliability prediction can be used to produce a reliability evaluation with the least amount of information about the product definition. Previous case studies have shown that this method is not clearly adapted and can provide discrepancies higher than 100% compared to the part stress method. That is why these methods are not recommended for space applications and the part stress method should be used as the main method for reliability prediction of EEE components.
+The families count reliability prediction can be used to produce a reliability evaluation with the least amount of information about the product definition. Previous case studies have shown that this method is not clearly adapted and can provide discrepancies higher than 100% compared to the part stress method. That is why these methods are not recommended for space applications and the part stress method should be used as the main method for reliability prediction of {term}`EEE` components.
 
 The parts count reliability prediction is similar to the families count method, but with more details, as for example more information about the package of integrated parts or the resistors dissipation. It provides a fast evaluation of reliability predictions. Therefore, this method is particularly useful for reliability studies on very large systems for which it is not necessary to describe thousands of components in detail. Previous case studies \[BR-EEE-8\] have shown that this method is providing acceptable results with discrepancies up to 60% compared to the part stress method.
 
@@ -115,7 +115,7 @@ These physical stresses use two different types of parameters:
 
 -   the parameters issued from the mission profile such as temperature, thermal cycling data, vibrations and humidity rate which are specific to space applications;
 
--   the other parameters are default values which are specific to each technology of EEE components and available whatever the domains; they are listed in the FIDES guide from pages 241 to 244 for the families count method and from pages 231 to 240 for the part count method.
+-   the other parameters are default values which are specific to each technology of {term}`EEE` components and available whatever the domains; they are listed in the FIDES guide from pages 241 to 244 for the families count method and from pages 231 to 240 for the part count method.
 
 Some components more specific to the space domain can be defined with equivalent components:
 
@@ -225,7 +225,7 @@ Some components more specific to the space domain can be defined with equivalent
     </table>
 ```
 
-The part manufacturing factor $\Pi_{\text{PM}}$ is related to the quality of EEE components and the recommendation is to use a fixed value determined by the values listed in the FIDES guide on page 229.
+The part manufacturing factor $\Pi_{\text{PM}}$ is related to the quality of {term}`EEE` components and the recommendation is to use a fixed value determined by the values listed in the FIDES guide on page 229.
 
 The process factor $\Pi_{\text{Process}}$ is related to the development process of electronic equipment and the recommendation is to either use a typical $\Pi_{\text{Process}}$ previously calculated for the same kind of application or in case no information is available, to use the maximum value issued from the questionnaire adapted to space applications and described in {numref}`eee_4_3_2_1`.
 

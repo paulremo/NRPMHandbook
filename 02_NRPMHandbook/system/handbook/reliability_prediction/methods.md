@@ -16,9 +16,9 @@ This section presents various system reliability modelling techniques such as re
     - Use cases
     - Remarks
     - Inputs/Outputs
-*   - **RBD** See {numref}`syst_4_3_2`, **FTA** See {numref}`syst_4_3_2`
-    - They are well suited for systems with non-repairable components following independent behaviour. The methods RBD and FTA should be used for system reliability analysis if the system can be represented as a serial or parallel arrangement or a combination of both without dependencies. 
-    - <p>Repair, sequences, re-configuration and dependencies cannot be modelled.</p><p>The calculation rules are identical for RBD and FTA, just the graphical presentation of the system behaviour is different.</p>
+*   - **RBD** See {numref}`syst_4_3_2`, **{term}`FTA`** See {numref}`syst_4_3_2`
+    - They are well suited for systems with non-repairable components following independent behaviour. The methods RBD and {term}`FTA` should be used for system reliability analysis if the system can be represented as a serial or parallel arrangement or a combination of both without dependencies. 
+    - <p>Repair, sequences, re-configuration and dependencies cannot be modelled.</p><p>The calculation rules are identical for RBD and {term}`FTA`, just the graphical presentation of the system behaviour is different.</p>
     - <p>Inputs: System architecture, component or sub-system failure rates/reliabilities</p><p>Output: System Reliability</p>
 *   - **Event Tree Analysis** See Section {numref}`syst_4_3_3`
     - Analyse the sequence of events following an initiating event
@@ -588,7 +588,7 @@ P(\text{Outcome 1} | \text{Initiating event}) = P(B_{1} \cup B_{2} \cup B_{3} \c
 ````
 
 The advantages of Event Tree Analysis are the visualization of the chain of events following an initiating event and the visualization of barriers and their sequence of activation. Event Tree Analysis therefore provides a good basis to evaluate the need for improved procedures and mitigations means in the system. On the other hand, Event Tree Analysis has several limitations: 
-- Only one initiating event can be considered in each analysis. The ETA is not well suited for the consideration of common cause failures in quantitative analysis. 
+- Only one initiating event can be considered in each analysis. The {term}`ETA` is not well suited for the consideration of common cause failures in quantitative analysis. 
 - Subtle system dependencies can be easily overlooked and the Event Tree does not show acts of omission. 
 - Furthermore, there is no standard for the graphical representation of the Event Tree. 
 
@@ -878,7 +878,7 @@ Analysis methods of Petri nets
 (syst_4_3_6)=
 ## Bayesian networks
 
-Bayesian networks are directed acyclic graphs DAG, in which the nodes represent random variables and a probability is associated to each state of the node. Directed arcs between pairs of nodes represent dependencies between the random variables. A Bayesian network uniquely defines a joint probability distribution over all the random variables present in the graph. The nodes that have arrows directed into them are called child nodes and the nodes that have arrows directed from them are called parent nodes. Nodes without incoming arcs, thus without parents, are called root nodes. Each root node has a marginal probability distribution associated with it, and all other nodes have conditional (conditioned on the state of the parent nodes) probability tables associated with them. The conditional probability tables quantify the probability of a node depending on the states of its parent nodes. The state probabilities for all nodes are fully defined by the input and calculated from the (marginal and conditional) probability tables. The underlying inference method, making use of Bayes' theorem (see {numref}`methods`) is a powerful tool allowing also inverse modelling, e.g. to estimate the conditional probability of component failures based on an observed system level failure mode.
+Bayesian networks are directed acyclic graphs {term}`DAG`, in which the nodes represent random variables and a probability is associated to each state of the node. Directed arcs between pairs of nodes represent dependencies between the random variables. A Bayesian network uniquely defines a joint probability distribution over all the random variables present in the graph. The nodes that have arrows directed into them are called child nodes and the nodes that have arrows directed from them are called parent nodes. Nodes without incoming arcs, thus without parents, are called root nodes. Each root node has a marginal probability distribution associated with it, and all other nodes have conditional (conditioned on the state of the parent nodes) probability tables associated with them. The conditional probability tables quantify the probability of a node depending on the states of its parent nodes. The state probabilities for all nodes are fully defined by the input and calculated from the (marginal and conditional) probability tables. The underlying inference method, making use of Bayes' theorem (see {numref}`methods`) is a powerful tool allowing also inverse modelling, e.g. to estimate the conditional probability of component failures based on an observed system level failure mode.
 
 
 The graph can be regarded as a probabilistic expert system, whereby the reasoning is based on dependency relations: fault-symptoms, cause-effects, and hypothesis-evidence. Every fault and symptom is modelled by random variables with a finite range of possible values. An example of a basic Bayesian network is shown in {numref}`Figure_7_21`.

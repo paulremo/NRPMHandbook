@@ -6,7 +6,7 @@
 (eee_4_3_4_1)=
 ## Capacitors (family 01)
 
-Capacitors are classified as family 01 in EPPL {cite:t}`eee-EPPL007-37`.
+Capacitors are classified as family 01 in {term}`EPPL` {cite:t}`eee-EPPL007-37`.
 
 All capacitors used for Space applications can be modelled through FIDES.
 
@@ -135,7 +135,7 @@ All this being based on a mission profile to be defined for the whole unit.
 (eee_4_3_4_1_1)=
 ### Ceramic Capacitors (01 & 02 subfamilies) & Feedthrough (10 subfamily)
 
-The following table lists the 8 categories that cover the Ceramic Capacitor subfamily based on the CV calculation.
+The following table lists the 8 categories that cover the Ceramic Capacitor subfamily based on the {term}`CV` calculation.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_20')" placeholder="Search table...">
 
@@ -152,7 +152,7 @@ The following table lists the 8 categories that cover the Ceramic Capacitor subf
         </tr>
         <tr>
             <td>ECCC_02</td>
-            <td>Ceramic Capacitor Type I - Medium CV</td>
+            <td>Ceramic Capacitor Type I - Medium </td>
         </tr>
         <tr>
             <td>ECCC_03</td>
@@ -271,7 +271,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
     - $\gamma_{\text{TH}_{\text{EL}}}$
     - $\gamma_{\text{TCy}}$
     - $\gamma_{\text{Mech}}$
-*   - Ceramic Capacitor Type I - Low CV
+*   - Ceramic Capacitor Type I - Low {term}`CV`
     - ECCC_01
     - 0.03
     - 0.1
@@ -279,7 +279,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
     - 0.7
     - 0.28
     - 0.02
-*   - Ceramic Capacitor Type I - Medium CV
+*   - Ceramic Capacitor Type I - Medium {term}`CV`
     - ECCC_02
     - 0.05
     - 0.1
@@ -287,7 +287,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
     - 0.7
     - 0.28
     - 0.02
-*  - Ceramic Capacitor Type I - High CV
+*  - Ceramic Capacitor Type I - High {term}`CV`
     - ECCC_03
     - 0.40
     - 0.1
@@ -295,7 +295,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
     - 0.69
     - 0.26
     - 0.05
-*   - Ceramic Capacitor Type II - Low CV
+*   - Ceramic Capacitor Type II - Low {term}`CV`
     - ECCC_04
     - 0.08
     - 0.1
@@ -303,7 +303,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
     - 0.7
     - 0.28
     - 0.02
-*   - Ceramic Capacitor Type II - Medium CV
+*   - Ceramic Capacitor Type II - Medium {term}`CV`
     - ECCC_05
     - 0.15
     - 0.1
@@ -311,7 +311,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
     - 0.7
     - 0.28
     - 0.02
-*   - Ceramic Capacitor Type II - High CV
+*   - Ceramic Capacitor Type II - High {term}`CV`
     - ECCC_06
     - 1.20
     - 0.1
@@ -319,7 +319,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
     - 0.44
     - 0.51
     - 0.05
-*   - Ceramic Capacitor Type II Polymer terminations - Low CV
+*   - Ceramic Capacitor Type II Polymer terminations - Low {term}`CV`
     - ECCC_07
     - 0.08
     - 0.1
@@ -327,7 +327,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
     - 0.7
     - 0.28
     - 0.02
-*   - Ceramic Capacitor Type II Polymer terminations - High/Medium CV
+*   - Ceramic Capacitor Type II Polymer terminations - High/Medium {term}`CV`
     - ECCC_08
     - 0.15
     - 0.1
@@ -337,7 +337,7 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
     - 0.02
 ```
 
-The CV factor mentioned in {numref}`eee-table4-20` corresponds to the Capacitance \* Voltage Rated value of the component. The level is given in {numref}`eee-table4-23` This table differs from the one presented in FIDES 2009 (and presented for information in Annex B: Capacitors) in order to take into account the fact that the actual discrimination between high and medium levels attributed to the technological limits. This table is included in the FIDES 2021 version of the handbook.
+The {term}`CV` factor mentioned in {numref}`eee-table4-20` corresponds to the Capacitance \* Voltage Rated value of the component. The level is given in {numref}`eee-table4-23` This table differs from the one presented in FIDES 2009 (and presented for information in Annex B: Capacitors) in order to take into account the fact that the actual discrimination between high and medium levels attributed to the technological limits. This table is included in the FIDES 2021 version of the handbook.
 
 ```{admonition} Rule
 :class: rule
@@ -1309,7 +1309,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_2)=
 ## Connectors (family 02)
 
-Connectors are classified as family 02 in EPPL {cite:t}`eee-EPPL007-37`.
+Connectors are classified as family 02 in {term}`EPPL` {cite:t}`eee-EPPL007-37`.
 
 All connectors used for Space applications can be modelled through FIDES.
 
@@ -1849,7 +1849,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: Telcordia GR1217-CORE, {term}`ARINC` 600 and 80x (not space adapted), {term}`AECMA`, SAE (39029)
     - Equivalent
     - 2
-*   - Qualification according to one of the following standards: EIA, IEC, SAE, {term}`BS`
+*   - Qualification according to one of the following standards: {term}`EIA`, IEC, SAE, {term}`BS`
     - Lower
     - 1
 *   - No information
@@ -1888,7 +1888,7 @@ In the 2021 issue of FIDES, a table has been added for gauges of circular sectio
 (eee_4_3_4_3)=
 ## Piezo electric devices (family 03)
 
-Piezo electric devices are classified as family 03 in the EPPL {cite:t}`eee-EPPL007-37`. Crystal/Quartz resonators/oscillators can be modelled through FIDES.
+Piezo electric devices are classified as family 03 in the {term}`EPPL` {cite:t}`eee-EPPL007-37`. Crystal/Quartz resonators/oscillators can be modelled through FIDES.
 
 The following table presents the different subfamilies and the corresponding models with the FIDES method.
 
@@ -2517,7 +2517,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_4)=
 ## Diodes (family 04)
 
-General diodes and RF HF diodes are classified as family 04 in EPPL {cite:t}`eee-EPPL007-37`.
+General diodes and RF {term}`HF` diodes are classified as family 04 in {term}`EPPL` {cite:t}`eee-EPPL007-37`.
 
 All diodes used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
 
@@ -2744,7 +2744,7 @@ The following table presents the different subfamilies and the corresponding mod
 
 All this being based on a mission profile to be defined for the whole unit.
 
-With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_4_3_2_1` and RF HF process factor $\Pi_{\text{ProcessRFHF}}$ according to {numref}`eee_4_3_2_5`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_4_3_2_1` and RF {term}`HF` process factor $\Pi_{\text{ProcessRFHF}}$ according to {numref}`eee_4_3_2_5`.
 
 > **a) Mission profile**
 
@@ -2872,7 +2872,7 @@ $E_{a}$ = 0.7eV;
 ```
 ````
 
-for signal diodes up to 1A (PIN, Schottky, signal, varactor) and for RF HF diodes
+for signal diodes up to 1A (PIN, Schottky, signal, varactor) and for RF {term}`HF` diodes
 
 for all other diodes, $\Pi_{\text{El}}$ = 1.
 
@@ -3189,14 +3189,14 @@ The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_4_3_1_21` 
     - $C_{\text{sensitivity}}$
 *   - Si and Ge RF diodes
     - 6.30
-*   - GaAs RF diodes
+*   - {term}`GaAs` RF diodes
     - 7.40
 ```
 
 ```{admonition} Note
 :class: note
 
-For the 2021 issue of FIDES, these values have not been updated, except for the addition of data for GaN diodes (6.9).
+For the 2021 issue of FIDES, these values have not been updated, except for the addition of data for {term}`GaN` diodes (6.9).
 ```
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
@@ -3405,7 +3405,7 @@ $E_{a}$ = 0.7eV;
 ```
 ````
 
-for signal diodes up to 1A (PIN, Schottky, signal, varactor) and for RF HF diodes
+for signal diodes up to 1A (PIN, Schottky, signal, varactor) and for RF {term}`HF` diodes
 
 for all other diodes, $\Pi_{\text{El}}$ = 1.
 
@@ -3799,9 +3799,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_5)=
 ## Filters family 05
 
-Filters are classified as family 05 in EPPL {cite:t}`eee-EPPL007-37`. 
+Filters are classified as family 05 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
-The HF/RF  filters used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+The {term}`HF`/RF  filters used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 The following table presents the different subfamilies and the corresponding models with the FIDES method.
 
 
@@ -3878,7 +3878,7 @@ The following table presents the different subfamilies and the corresponding mod
 
 All this being based on a mission profile to be defined for the whole unit.
 
-With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_4_3_2_1` and RF/HF process factor $\Pi_{\text{ProcessRFHF}}$  according to {numref}`eee_4_3_2_5`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_4_3_2_1` and RF/{term}`HF` process factor $\Pi_{\text{ProcessRFHF}}$  according to {numref}`eee_4_3_2_5`.
 .
 
 > **a) Mission profile**
@@ -4357,7 +4357,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_6)=
 ## Fuses (family 06)
 
-Fuses are classified as family 06 in EPPL {cite:t}`eee-EPPL007-37`. All fuses used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+Fuses are classified as family 06 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. All fuses used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
 The following table presents the different subfamilies and the corresponding models with the FIDES method.
 
@@ -4848,7 +4848,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_7)=
 ## Inductors (family 07)
 
-Inductors are classified as family 07 in EPPL {cite:t}`eee-EPPL007-37`. 
+Inductors are classified as family 07 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
 All inductors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 The following table presents the different subfamilies and the corresponding models with the FIDES method.
@@ -5445,7 +5445,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_8)=
 ## Integrated Circuits (Family 08)
 
-Integrated circuits are classified as family 08 in EPPL {cite:t}`eee-EPPL007-37`. 
+Integrated circuits are classified as family 08 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
 All integrated circuits used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -5701,7 +5701,7 @@ The following table presents the different subfamilies and the corresponding mod
 ```{admonition} Note
 :class: note
 
-In the 2021 issue of FIDES, a GaN MMIC model has been included. The detail is provided in 4.4.2.3, as it has not yet been assessed and is just a proposition for the user.
+In the 2021 issue of FIDES, a {term}`GaN` MMIC model has been included. The detail is provided in 4.4.2.3, as it has not yet been assessed and is just a proposition for the user.
 ```
 
 (eee_4_3_4_8_1)=
@@ -5769,22 +5769,22 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - Si, Ge Integrated Circuit
     -
     - 
-*   - Si RF and HF (MOS) analogue circuit (power amplifier)
+*   - Si RF and {term}`HF` (MOS) analogue circuit (power amplifier)
     -
     - 0.53
-*   - Si, SiGe Analogue and mixed circuit (MOS, Bipolar, {term}`BiCMOS`, MOSFET, PHEMT, HBT) including RF and HF
+*   - Si, SiGe Analogue and mixed circuit (MOS, Bipolar, {term}`BiCMOS`, MOSFET, PHEMT, HBT) including RF and {term}`HF`
     -
     - 0.19
-*   - Si, SiGe RF and HF digital circuit (MOS, bipolar {term}`BiCMOS`)
+*   - Si, SiGe RF and {term}`` digital circuit (MOS, bipolar {term}`BiCMOS`)
     -
     - 0.04
-*   - GaAs Integrated Circuit
+*   - {term}`GaAs` Integrated Circuit
     -
     - 
-*   - GaAs, RF and HF analogue circuit (power amplifier)
+*   - {term}`GaAs`, RF and {term}`HF` analogue circuit (power amplifier)
     -
     - 0.70*
-*   - GaAs Analogue and mixed circuit (MOS, Bipolar, {term}`BiCMOS`, MOSFET, PHEMT, HBT) including RF and HF
+*   - {term}`GaAs` Analogue and mixed circuit (MOS, Bipolar, {term}`BiCMOS`, MOSFET, PHEMT, HBT) including RF and {term}`HF`
     -
     - 0.19
 ```
@@ -5794,7 +5794,7 @@ A specific value for the basic failure rate $\lambda_{\text{OTH}}$ is provided f
 ```{admonition} Note *
 :class: note
 
-$\lambda_{\text{OTH}}$ for Power HF/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
+$\lambda_{\text{OTH}}$ for Power {term}`HF`/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
 ```
 
 The basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{OTCyCase}}$, $\lambda_{\text{OTCySolderjoints}}$ and $\lambda_{\text{Mech}}$ are calculated through two constants *a* and *b* considering the type of package and the number of pins. The formula to apply is:
@@ -6543,7 +6543,7 @@ The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_4_3_1_21` 
 ```{admonition} Note
 :class: note
 
-For the 2021 issue of FIDES, this value has been updated to 7.75, and for GaN MMICs, the value of 6.9 has been proposed.
+For the 2021 issue of FIDES, this value has been updated to 7.75, and for {term}`GaN` MMICs, the value of 6.9 has been proposed.
 ```
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
@@ -7553,7 +7553,7 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - Type
     - Groups
     - $\lambda_{\text{OTH}}$
-*   - FPGA, {term}`CPLD`, FPGA Antifuse, PAL
+*   - {term}`FPGA`, {term}`CPLD`, {term}`FPGA` Antifuse, PAL
     - 30
     - 0.166
 *   - Analog and Hybrid circuit (MOS, Bipole, {term}`BiCMOS`)
@@ -7562,13 +7562,13 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - Microprocessor, Microcontroller, DSP
     - 10
     - 0.075
-*   - Flash, EEPROM, EPROM
+*   - Flash, {term}`EEPROM`, {term}`EPROM`
     - 23-24
     - 0.060
 *   - SRAM
     - 20
     - 0.055
-*   - DRAM
+*   - {term}`DRAM`
     - 21
     - 0.047
 *   - Digital circuit (MOS, Bipole, {term}`BiCMOS`)
@@ -8400,7 +8400,7 @@ In the 2021 issue of FIDES, new types of packages and associated values have bee
 (eee_4_3_4_9)=
 ## Relays (family 09)
 
-Relays are classified as family 09 in EPPL {cite:t}`eee-EPPL007-37`. 
+Relays are classified as family 09 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
 All relays used for Space applications can be modelled through FIDES, directly or indirectly. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -8980,7 +8980,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: MIL-PRF-39016 (or 83536 or 6106) level R, MIL-PRF-39016 (or 83536 or 6106) level P, NASDA-QTS-6106A
     - Equivalent
     - 2
-*   - Qualification according to one of the following approved EIA, IEC, SAE, {term}`BS`
+*   - Qualification according to one of the following approved {term}`EIA`, IEC, SAE, {term}`BS`
     - Lower
     - 1
 *   - No information
@@ -9015,7 +9015,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_10)=
 ## Resistors (family 10)
 
-Resistors are classified as family 10 in EPPL {cite:t}`eee-EPPL007-37`. 
+Resistors are classified as family 10 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
 All resistors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -9772,7 +9772,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_11)=
 ## Thermistors (family 11)
 
-Thermistors are classified as family 11 in EPPL {cite:t}`eee-EPPL007-37`. 
+Thermistors are classified as family 11 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
 FIDES does not present models for thermistors, hence the models detailed hereafter as based on resistors models.
 
@@ -10428,7 +10428,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_12)=
 ## Transistors (family 12)
 
-General transistors and RF HF transistors are classified as family 12 in EPPL {cite:t}`eee-EPPL007-37`. 
+General transistors and RF HF transistors are classified as family 12 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
 All transistors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
 
@@ -10643,7 +10643,7 @@ With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_4_3_2_1` an
 ```{admonition} Note
 :class: note
 
-In the 2021 issue of FIDES, a GaN Transistor model has been included. The detail is provided in {numref}`eee_4_4_2_3`, as it has not yet been assessed and is just a proposition for the user.
+In the 2021 issue of FIDES, a {term}`GaN` Transistor model has been included. The detail is provided in {numref}`eee_4_4_2_3`, as it has not yet been assessed and is just a proposition for the user.
 ```
 
 > **a) Mission profile**
@@ -10727,9 +10727,9 @@ $\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the
 
 *   - Type
     - $\lambda_{\text{OTH}}$
-*   - Power HF/RF transistor – GaAs > 1W
+*   - Power HF/RF transistor – {term}`GaAs` > 1W
     - 0.0927*
-*   - Low power HF/RF transistor – GaAs < 1W
+*   - Low power HF/RF transistor – {term}`GaAs` < 1W
     - 0.0488*
 *   - Power HF/RF transistor – Silicon Bipole > 5W
     - 0.0478
@@ -11070,7 +11070,7 @@ The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_4_3_1_21` 
     - $C_{\text{sensitivity}}$
 *   - Si or SiGe RF transistors
     - 6.30
-*   - GaAs RF transistors
+*   - {term}`GaAs` RF transistors
     - 7.40
 ```
 
@@ -11235,22 +11235,22 @@ $\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the
 
 *   - Type
     - $\lambda_{\text{OTH}}$
-*   - Power HF/RF transistor – GaAs > 1W
+*   - Power {term}`HF`/RF transistor – {term}`GaAs` > 1W
     - 0.0927*
-*   - Low power HF/RF transistor – GaAs < 1W
+*   - Low power {term}`HF`/RF transistor – {term}`GaAs` < 1W
     - 0.0488*
-*   - Power HF/RF transistor – Silicon Bipole > 5W
+*   - Power {term}`HF`/RF transistor – Silicon Bipole > 5W
     - 0.0478
-*   - Power HF/RF transistor – Silicon MOS > 5W
+*   - Power {term}`HF`/RF transistor – Silicon MOS > 5W
     - 0.0202
-*   - Low power HF/RF transistor –
+*   - Low power {term}`HF`/RF transistor –
     - 0.0138
 ```
 
 ```{admonition} Note
 :class: note
 
-$\lambda_{\text{OTH}}$ for Power HF/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
+$\lambda_{\text{OTH}}$ for Power {term}`HF`/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
 ```
 
 **Physical stresses for the general transistors and the RF HF transistors family:**
@@ -11659,7 +11659,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_13)=
 ## Transformers (family 13)
 
-Transformers are classified as family 13 in EPPL {cite:t}`eee-EPPL007-37`. 
+Transformers are classified as family 13 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
 All transformers used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
 
@@ -12167,7 +12167,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_14)=
 ## Switches (family 14)
 
-Switches are classified as family 14 in EPPL {cite:t}`eee-EPPL007-37`. 
+Switches are classified as family 14 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
 Most of the switches used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -12765,7 +12765,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: MIL-PRF-24236, MIL-C-xxxx
     - Equivalent
     - 2
-*   - Qualification according to one of the following approved EIA, IEC, SAE, {term}`BS`
+*   - Qualification according to one of the following approved {term}`EIA`, IEC, SAE, {term}`BS`
     - Lower
     - 1
 *   - No information
@@ -12801,7 +12801,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_15)=
 ## Opto-electronics (family 18)
 
-Opto-electronics are classified as family 18 in EPPL {cite:t}`eee-EPPL007-37`. 
+Opto-electronics are classified as family 18 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
 
 Some of the opto-electronics components used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -12850,21 +12850,21 @@ The following table presents the different subfamilies and the corresponding mod
             <td>03 Phototransistor</td>
             <td>No</td>
             <td>No</td>
-            <td>Telcordia SR-332 : “phototransistor” after investigation and assessment according to Section 4.4.1</td>
+            <td>Telcordia SR-332 : “phototransistor” after investigation and assessment.</td>
             <td>NA</td>
         </tr>
         <tr>
             <td>04 Photodiode</td>
             <td>No</td>
             <td>No</td>
-            <td>Telcordia SR-332 : “photodiode” after investigation and assessment according to Section 4.4.1</td>
+            <td>Telcordia SR-332 : “photodiode” after investigation and assessment.</td>
             <td>NA</td>
         </tr>
         <tr>
             <td>05 Laser diode</td>
             <td>No</td>
             <td>No</td>
-            <td>Telcordia SR-332 : “Single LED/LCD Segment” after investigation and assessment according to Section 4.4.1
+            <td>Telcordia SR-332 : “Single LED/LCD Segment” after investigation and assessment.
             </td>
             <td>NA</td>
         </tr>
@@ -12886,7 +12886,7 @@ The following table presents the different subfamilies and the corresponding mod
             <td>Laser detector</td>
             <td>No</td>
             <td>No</td>
-            <td>Telcordia SR-332 : “Laser Module - CW Laser” after investigation and assessment according to Section 4.4.1
+            <td>Telcordia SR-332 : “Laser Module - CW Laser” after investigation and assessment.
             </td>
             <td>NA</td>
         </tr>
@@ -12894,11 +12894,15 @@ The following table presents the different subfamilies and the corresponding mod
             <td>Laser transceiver</td>
             <td>No</td>
             <td>No</td>
-            <td>Telcordia SR-332: “Laser Module - CW Laser” after investigation and assessment according to Section 4.4.1
+            <td>Telcordia SR-332: “Laser Module - CW Laser” after investigation and assessment.
             </td>
             <td>NA</td>
         </tr>
     </table>
+```
+
+```{note}
+Investigation and assessment according to {numref}`eee_4_4_1`.
 ```
 
 (eee_4_3_4_15_1)=
@@ -13690,7 +13694,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_16)=
 ## PCB
 
-PCB are not classified as family in EPPL but as an important part of electronics units modelling, they are considered in this handbook. They are modelled in FIDES as seen in the following table:
+PCB are not classified as family in {term}`EPPL` but as an important part of electronics units modelling, they are considered in this handbook. They are modelled in FIDES as seen in the following table:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_184')"
     placeholder="Search table...">
@@ -14223,7 +14227,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_17)=
 ## Hybrids (family 40)
 
-Hybrids are classified as family 40 in EPPL  {cite:t}`eee-EPPL007-37`.. They can be modelled with FIDES, as presented in the following table, for FIDES 2009 and 2021.
+Hybrids are classified as family 40 in {term}`EPPL`  {cite:t}`eee-EPPL007-37`.. They can be modelled with FIDES, as presented in the following table, for FIDES 2009 and 2021.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_191')"
     placeholder="Search table...">
@@ -14309,7 +14313,7 @@ For microcomponents associated with bare chips (integrated circuits, transistors
 ```
 ````
 
-$\lambda_{\text{OTH}}$ and $\Pi_{\text{Thermique}}$ are corresponding to the basic thermal failure rates as defined in the models corresponding to the type of chip considered, either integrated circuits in Section 0 or discrete semiconductors in Sections 0 and 0;
+$\lambda_{\text{OTH}}$ and $\Pi_{\text{Thermique}}$ are corresponding to the basic thermal failure rates as defined in the models corresponding to the type of chip considered, either integrated circuits in {numref}`eee_4_3_4_8` or discrete semiconductors in {numref}`eee_4_3_4_4` and {numref}`eee_4_3_4_12`;
 
 The factor $C_{\text{moulding}}$ is defined as follows for chips:
 
@@ -14751,13 +14755,13 @@ Some manufacturers of {term}`COTS` boards do provide a reliability prediction fo
 (eee_4_3_4_20)=
 ## Reliability prediction of COTS boards with raw data provided by manufacturers
 
-If the manufacturer agrees to provide a datasheet and a parts list, the best solution is to perform a complete reliability calculation with the methodology provided in this handbook based on this data. This data could provide references of the EEE components, manufacturers of the EEE components, and derating computed by the manufacturer. In the unlikely event that the manufacturers fill the Pi Process questionnaire themselves, the resulting *Π~Process~* issued from the questionnaire is used to complete the reliability prediction. If not, as it is difficult to fill in the questionnaire for the manufacturer, an alternate solution is to use a recommended value for *Π~Process~* of 4.0 if suppliers of {term}`COTS` boards have no experience with space applications. In case of manufacturers of {term}`COTS` boards applying the quality process of space industry and having experience with satellites in orbit, this recommended value can be reduced to 2.5. Consequently, it is difficult to justify a value lower than 2.5 without justified rationales from the {term}`COTS` boards' manufacturers.
+If the manufacturer agrees to provide a datasheet and a parts list, the best solution is to perform a complete reliability calculation with the methodology provided in this handbook based on this data. This data could provide references of the {term}`EEE` components, manufacturers of the {term}`EEE` components, and derating computed by the manufacturer. In the unlikely event that the manufacturers fill the Pi Process questionnaire themselves, the resulting *Π~Process~* issued from the questionnaire is used to complete the reliability prediction. If not, as it is difficult to fill in the questionnaire for the manufacturer, an alternate solution is to use a recommended value for *Π~Process~* of 4.0 if suppliers of {term}`COTS` boards have no experience with space applications. In case of manufacturers of {term}`COTS` boards applying the quality process of space industry and having experience with satellites in orbit, this recommended value can be reduced to 2.5. Consequently, it is difficult to justify a value lower than 2.5 without justified rationales from the {term}`COTS` boards' manufacturers.
 
 (eee_4_3_4_21)=
 
 ## Reliability prediction of COTS boards without data provided by manufacturers
 
-Unfortunately, manufacturers of {term}`COTS` boards usually do not provide any information. One possible solution to overcome this situation is to identify the EEE components of the board and to reconstruct the parts list by reverse engineering, through visual inspection for instance. As it is not possible to identify all characteristics of the components and to estimate the deratings, a simple and fast calculation based on a families count or part count methods is suggested instead of doing a complete part stress calculation.
+Unfortunately, manufacturers of {term}`COTS` boards usually do not provide any information. One possible solution to overcome this situation is to identify the {term}`EEE` components of the board and to reconstruct the parts list by reverse engineering, through visual inspection for instance. As it is not possible to identify all characteristics of the components and to estimate the deratings, a simple and fast calculation based on a families count or part count methods is suggested instead of doing a complete part stress calculation.
 
 The families count prediction method considers all the components without distinguishing the different technologies. The part count prediction method considers all types of components with their various technologies. The method for calculating the reliability prediction of {term}`COTS` boards with the families count and part count method is provided in {numref}`eee_4_3_5`.
 

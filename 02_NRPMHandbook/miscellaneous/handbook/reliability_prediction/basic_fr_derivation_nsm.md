@@ -25,9 +25,9 @@ It is recommended to use the {cite:t}`mis-SAE_standard, mis-PFMEA` which provide
 * **@unit level**: under supplier responsibility
 * **@system level**: integrated at system level by System {term}`RAMS` engineer (including HSIA supporting the failure tolerance: observability in-orbit…)
 
-**{term}`Design FMEA`: Required on critical functions only (Risk analysis)**
+**{term}`Design `: Required on critical functions only (Risk analysis)**
 
-* Is a tool/method supporting the product {term}`quality <Quality>` identifying all the elementary {term}`failure mode <Failure mode>`s due to DESIGN errors. It includes, as a minimum, the {term}`failure mode <Failure mode>`s identified by FMEA.
+* Is a tool/method supporting the product {term}`quality <Quality>` identifying all the elementary {term}`failure mode <Failure mode>`s due to DESIGN errors. It includes, as a minimum, the {term}`failure mode <Failure mode>`s identified by {term}`FMEA`.
 * **@unit level**: under unit designer / {term}`quality <Quality>` Assurance responsibility
 * **@system level**: reviewed by procurement within the unit acceptance process
 
@@ -45,9 +45,9 @@ name: Figure_5_8
 Differences between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
 ```
 
-{numref}`Figure_5_8` highlights the differences and the commonalities between FMEA, {term}`Design FMEA` and {term}`Process FMEA`.
+{numref}`Figure_5_8` highlights the differences and the commonalities between {term}`FMEA`, {term}`Design FMEA` and {term}`Process FMEA`.
 
-{numref}`Figure_5_9`  provides an example of {term}`Design FMEA` and {term}`Process FMEA` at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to FMEA (blue perimeter in {numref}`Figure_5_8`), whereas the right-hand side refers to {term}`Design FMEA` data (green perimeter in {numref}`Figure_5_8`).
+{numref}`Figure_5_9`  provides an example of {term}`Design FMEA` and {term}`Process FMEA` at elementary part level (interconnect between Solar cells). The left-hand side of the table refers to {term}`FMEA` (blue perimeter in {numref}`Figure_5_8`), whereas the right-hand side refers to {term}`Design FMEA` data (green perimeter in {numref}`Figure_5_8`).
 
 The main outcome is the ranking of every root cause (Design error, Manufacturing error) in
 

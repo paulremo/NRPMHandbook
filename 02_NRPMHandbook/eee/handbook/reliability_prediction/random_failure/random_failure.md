@@ -4,9 +4,9 @@
 # Random failure
 
 
-The reliability.space approach for EEE items provides models for reliability predictions for the EEE components which are used in space applications. The conventional component types refer to the components which are defined in the EPPL list {cite:t}`eee-EPPL007-37` and the PCB as expressed in {ref}`eee_annex_a`.
+The reliability.space approach for {term}`EEE` items provides models for reliability predictions for the {term}`EEE` components which are used in space applications. The conventional component types refer to the components which are defined in the {term}`EPPL` list {cite:t}`eee-EPPL007-37` and the PCB as expressed in {ref}`eee_annex_a`.
 
-The reliability.space approach covering the {term}`random failures <Random failure>` for EEE items is described in this part of the handbook. This methodology is based on the FIDES methodology, 2009 version.
+The reliability.space approach covering the {term}`random failures <Random failure>` for {term}`EEE` items is described in this part of the handbook. This methodology is based on the FIDES methodology, 2009 version.
 
 Following the observations from the TEC QQD Study - Reliability Prediction Data Sources and Methodologies for Space Applications, it is adapted to the specificities of the space applications.
 
@@ -24,9 +24,9 @@ It is recommended to read this section carefully before modelling the reliabilit
 
 The FIDES approach consists in putting a special attention on the following aspects:
 
--   Technologies: FIDES considers the instrinsic aspect of the EEE components and their integration into equipment;
+-   Technologies: FIDES considers the instrinsic aspect of the {term}`EEE` components and their integration into equipment;
 
--   Process: it translates the idea that all practices from the development of the equipment to its use in operation are important for the overall reliability, it refers to the equipment and not to the EEE components;
+-   Process: it translates the idea that all practices from the development of the equipment to its use in operation are important for the overall reliability, it refers to the equipment and not to the {term}`EEE` components;
 
 -   Use: it is also important to take into account the constraints linked to the use of the equipment into the satellite.
 
@@ -34,7 +34,7 @@ The part stress method is based on a general equation and calculation of physica
 
 -   the mission profile of the equipment for the different use phases
 
--   the quality of EEE components linked to their manufacturing
+-   the quality of {term}`EEE` components linked to their manufacturing
 
 -   the quality and technical control over reliability in the product life cycle
 
@@ -42,7 +42,7 @@ The reliability.space approach is performed by considering each of these three a
 
 -   adaptation of a mission profile as defined in {numref}`eee_4_3_1` with some specificities of the space applications such as thermal management by conduction, cyclic variations of temperature, level of humidity and vibrations in space;
 
--   use of the reliability models built for each technology of EEE components based on the {term}`Physics of Failure <Physics of failure>` with some adaptations described in {numref}`eee_4_3_4` each component model; the preferred use is the part stress method as described in the section.
+-   use of the reliability models built for each technology of {term}`EEE` components based on the {term}`Physics of Failure <Physics of failure>` with some adaptations described in {numref}`eee_4_3_4` each component model; the preferred use is the part stress method as described in the section.
 
 -   consideration of the process during the phases of development, integration into the equipment, integration into the satellite and operations by evaluating a process factor as defined in {numref}`eee_4_3_2_1`.
 
@@ -66,7 +66,7 @@ In the following, the general model for conventional components is described, fo
 ```
 ````
 
-for RF HF components:
+for RF {term}`HF` components:
 
 ````{admonition} Equation
 :class: equation
@@ -98,7 +98,7 @@ With:
 
 -   $\Pi_{\text{Process}}$ as the process related factor described in {numref}`eee_4_3_2_3`
 
--   $\Pi_{\text{ProcessRFHF}}$ as the process related factor for RF HF components described in {numref}`eee_4_3_2_5`;
+-   $\Pi_{\text{ProcessRFHF}}$ as the process related factor for RF {term}`HF` components described in {numref}`eee_4_3_2_5`;
 
 -   $\Pi_{\text{ProcessASIC}}$ as the process related factor for {term}`ASIC` components described in {numref}`eee_4_3_2_6`;
 
@@ -123,7 +123,7 @@ With $\Pi_{\text{LF}} = 1$, the general part stress reliability models may be si
 ```
 ````
 
-for RF HF components:
+for RF {term}`HF` components:
 
 ````{admonition} Equation
 :class: equation

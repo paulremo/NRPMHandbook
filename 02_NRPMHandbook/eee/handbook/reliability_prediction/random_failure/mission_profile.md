@@ -6,7 +6,7 @@
 (eee_4_3_1_1)=
 ## Mission Profile Definition
 
-As mentioned before, the reliability.space approach for EEE components is based on the FIDES  methodology. One advantage of the FIDES approach is that the reliability calculations calculated through reliability.space are specific to a particular application of the electronic equipment or the system, as defined by an application specific mission profile.
+As mentioned before, the reliability.space approach for {term}`EEE` components is based on the FIDES  methodology. One advantage of the FIDES approach is that the reliability calculations calculated through reliability.space are specific to a particular application of the electronic equipment or the system, as defined by an application specific mission profile.
 
 The consideration of the mission profile allows offering different reliability prediction results for each unit/subsystem, depending on the actual mission of the satellite.
 
@@ -21,7 +21,7 @@ The mission profile, or life profile, is an important step to consider when usin
 
 The mission profile allows taking into account the use, which is one of the three items with technology and process on which the reliability prediction of any electronic equipment is based. The mission profile should be as accurate and as pertinent as necessary to get the desired {term}`level of confidence <Level of confidence>` in the reliability prediction.
 
-The stress values defined for each phase of the mission profile are used as input parameters describing the physical stresses acting on the EEE components. More specifically, the values of temperature, temperature cycling, vibration and humidity are directly used in the {term}`physics of failures <Physics of failure>` equations used in the models for EEE components. The chemical values are used in the consideration of over-stresses with the induced factor $\Pi_{\text{induced}\_i}$ defined in {numref}`eee_4_3_1_17`.
+The stress values defined for each phase of the mission profile are used as input parameters describing the physical stresses acting on the {term}`EEE` components. More specifically, the values of temperature, temperature cycling, vibration and humidity are directly used in the {term}`physics of failures <Physics of failure>` equations used in the models for {term}`EEE` components. The chemical values are used in the consideration of over-stresses with the induced factor $\Pi_{\text{induced}\_i}$ defined in {numref}`eee_4_3_1_17`.
 
 For space applications, mission profiles are based on the same main phases, as explained in {numref}`eee_4_3_1_3_4`. Furthermore, the stress applied on electronic equipment of satellites is mainly linked to the temperature, in addition to the electrical stresses dealt with directly at part level. From the regular mission profile definitions from FIDES, the other stresses such as vibrations, humidity and chemical pollution are considered, but they are mainly present only during the launch phase.
 
@@ -129,7 +129,7 @@ Only the electronic units used for decommissioning have to be taken into account
 
 The potential life extension of a satellite is also generally not considered in the mission profile. However, it can be considered to forecast reliability during life extension. Therefore, once in orbit, it can be useful to reconsider the reliability prediction to support decisions about life time extensions, using a Bayesian approach by considering the past failures of the electronic equipment as described in {numref}`methodologies`). In this way, the calculation is performed to study the influence on reliability prediction of the additional life.
 
-In addition, as described in {numref}`eee_4_6`, an analysis has to be performed to identify the EEE components with limited life duration, to estimate the potential wear-out of the equipment and to mitigate the possible risks of using these components and equipment during the life extension.
+In addition, as described in {numref}`eee_4_6`, an analysis has to be performed to identify the {term}`EEE` components with limited life duration, to estimate the potential wear-out of the equipment and to mitigate the possible risks of using these components and equipment during the life extension.
 
 (eee_4_3_1_3_4)=
 ### Sequence of phases
@@ -157,9 +157,9 @@ The thermal characteristics of the electrical equipment in a satellite are the m
 
 The environmental temperature of the satellite is changing according to the position of the satellite to the sun. The external temperature of the satellite can reach +100°C in the sun light and -200°C in the shadow. That is the reason why a thermal regulation is implemented in order to have a temperature inside the satellite that allows the correct functioning of all equipment. This thermal regulation is generally performed with heating resistance using conduction to heat this equipment. With the ageing of this heating system, it is generally noticed that the temperature of electronic equipment is slightly increasing by several degrees during the life of the satellite.
 
-In the mission profile, the temperature of the electronic equipment is mainly based on this regulated temperature and eventually mitigated by the influence of the environmental temperature, which is used as the reference temperature for the electronic equipment in the reliability.space models. For each of the electronic boards and for each phase of the mission profile, a reference temperature is defined based on the temperature gradient from the electronic equipment to the electronic boards. If the temperature of the boards inside the equipment is accessible thanks to thermocouples or other sensors, then it is better to directly use this measured temperature in the mission profile. Otherwise, the temperature gradient has to be estimated from calculation, thermal analysis and simulation or tests on ground. Finally, the reference temperature of all EEE components is calculated from the reference temperature of each electronic board by considering the temperature rise due to heat dissipation of these components.
+In the mission profile, the temperature of the electronic equipment is mainly based on this regulated temperature and eventually mitigated by the influence of the environmental temperature, which is used as the reference temperature for the electronic equipment in the reliability.space models. For each of the electronic boards and for each phase of the mission profile, a reference temperature is defined based on the temperature gradient from the electronic equipment to the electronic boards. If the temperature of the boards inside the equipment is accessible thanks to thermocouples or other sensors, then it is better to directly use this measured temperature in the mission profile. Otherwise, the temperature gradient has to be estimated from calculation, thermal analysis and simulation or tests on ground. Finally, the reference temperature of all {term}`EEE` components is calculated from the reference temperature of each electronic board by considering the temperature rise due to heat dissipation of these components.
 
-When necessary, if the temperature is different depending on the time due to functioning and non-functioning phases, due to ageing of the thermal regulation system, or due to the periods of the year especially close to solstices, then additional phases can be added to reflect the different temperature values. When the reference temperature is not stable during a phase, for example during activation of an electronic board or an EEE component, the assumption is made that the reference temperature is stable over the whole phase. In this case, the reference temperature to consider is the average temperature during the phase and not the maximum temperature during the phase.
+When necessary, if the temperature is different depending on the time due to functioning and non-functioning phases, due to ageing of the thermal regulation system, or due to the periods of the year especially close to solstices, then additional phases can be added to reflect the different temperature values. When the reference temperature is not stable during a phase, for example during activation of an electronic board or an {term}`EEE` component, the assumption is made that the reference temperature is stable over the whole phase. In this case, the reference temperature to consider is the average temperature during the phase and not the maximum temperature during the phase.
 
 During the launch and orbit raising phases, some electronic equipment is switched off and so the temperature is directly the reference temperature of the heating system. As previously noticed, the temperature of the equipment increases with the ageing of the heating system. To consider this phenomenon, an approach in three steps can be followed:
 
@@ -195,7 +195,7 @@ The maximum temperature to be computed for the mission profile corresponds to th
 
 Humidity can only be present during the launch phase and all the phases on ground. Once the satellite is in space, there is no more humidity in the environment, and so no more humidity on the electronic equipment. Therefore, it is proposed to consider humidity in the mission profile only during the launch phase and the phases on ground. However, even if the influence of the humidity is light due to the low duration of this phase, the humidity has to be considered during this phase. Especially, the relative humidity factor may become predominant in mission profiles of satellites that include long storage periods before launch. That is why the values for relative humidity and temperature shall be determined with accuracy for long storage phases.
 
-In estimating relative humidity, it is important to consider the relative humidity actually experienced by the EEE components. Change in humidity is a function of temperature. For a constant composition of the air, the humidity decreases as the temperature increases. The change in the relative humidity as a function of the temperature can be read from the following hygrothermal diagram.
+In estimating relative humidity, it is important to consider the relative humidity actually experienced by the {term}`EEE` components. Change in humidity is a function of temperature. For a constant composition of the air, the humidity decreases as the temperature increases. The change in the relative humidity as a function of the temperature can be read from the following hygrothermal diagram.
 
 ```{figure} ../../../pictures/eee_figure4_4.png
 ---
@@ -225,7 +225,7 @@ The chemical stresses considered in the definition of the mission profile are th
 
 -   Application pollution: this pollution is present in areas where the pollution due to other equipment is present, for example an engine of a vehicle; for space applications, this pollution is not relevant except for some equipment close to thrusters;
 
--   Protection level: the protection is linked to the ability of humidity to infiltrate in the EEE components; as humidity is not present in space, the protection level is considered as "hermetic".
+-   Protection level: the protection is linked to the ability of humidity to infiltrate in the {term}`EEE` components; as humidity is not present in space, the protection level is considered as "hermetic".
 
 So, pollution could be considered as "low" and protection level as "hermetic" for any electronic equipment in satellites except for some specific cases, such as the launch phase when humidity and chemical pollution are present. The chemical stresses are required for the reliability prediction of some electromechanical components such as fuses and connectors.
 
@@ -242,14 +242,14 @@ Some of the stresses are not considered to the real level of influence that they
 (eee_4_3_1_11)=
 ## ON / OFF cycles
 
-The equipment is generally switched off when it is not used to limit as much as possible the consumption of energy. In the mission profile, the impact on EEE components of the frequent ON / OFF cycles is considered only by the thermal variations due to the self-heating of electronic equipment in the model. The influence of frequent switching on and switching off on the reliability of electronic equipment is not perfectly apprehended and not correctly considered.
+The equipment is generally switched off when it is not used to limit as much as possible the consumption of energy. In the mission profile, the impact on {term}`EEE` components of the frequent ON / OFF cycles is considered only by the thermal variations due to the self-heating of electronic equipment in the model. The influence of frequent switching on and switching off on the reliability of electronic equipment is not perfectly apprehended and not correctly considered.
 
-A transmitter of a Low Earth Orbit satellite being switched off when out of the scope of the reception stations can occur up to 100 000 times over the {term}`mission lifetime <Mission lifetime>` without having any failures. For this specific constraint, no potential impacts have been currently found with experience of In-Orbit Return. Consequently, the impact of these frequent ON / OFF cycles is considered as a wear-out phenomenon of EEE components and is discussed in {numref}`eee_4_6_5`.
+A transmitter of a Low Earth Orbit satellite being switched off when out of the scope of the reception stations can occur up to 100 000 times over the {term}`mission lifetime <Mission lifetime>` without having any failures. For this specific constraint, no potential impacts have been currently found with experience of In-Orbit Return. Consequently, the impact of these frequent ON / OFF cycles is considered as a wear-out phenomenon of {term}`EEE` components and is discussed in {numref}`eee_4_6_5`.
 
 (eee_4_3_1_12)=
 ## Radiations
 
-Another specificity of the space domain is an environment subjected to high cumulated doses of radiation (protons and electrons), due to the Van Allen radiation belt in particular. The methodology considers a part of these phenomena through the electrical over-stresses, but with insufficient quantification. Currently, the design of any electronic equipment for satellites is qualified with the total dose corresponding to the life of the equipment with a supplementary safety margin. However, commercial EEE components are more and more sensitive to cumulated doses of radiation. The experience and lessons-learnt issued from various industrial domains is not sufficient to presently develop these models. For space applications, only simple models such as the model presented in {numref}`eee_4_6_5_1` is proposed with results of radiation tests performed on components correlated with the level of radiation considered in the different phases of the mission profile.
+Another specificity of the space domain is an environment subjected to high cumulated doses of radiation (protons and electrons), due to the Van Allen radiation belt in particular. The methodology considers a part of these phenomena through the electrical over-stresses, but with insufficient quantification. Currently, the design of any electronic equipment for satellites is qualified with the total dose corresponding to the life of the equipment with a supplementary safety margin. However, commercial {term}`EEE` components are more and more sensitive to cumulated doses of radiation. The experience and lessons-learnt issued from various industrial domains is not sufficient to presently develop these models. For space applications, only simple models such as the model presented in {numref}`eee_4_6_5_1` is proposed with results of radiation tests performed on components correlated with the level of radiation considered in the different phases of the mission profile.
 
 (eee_4_3_1_13)=
 ## Temperature and thermos-electrical stress
@@ -274,7 +274,7 @@ In the classification of Chapter 2, the physical failure rate $\lambda_{\text{Ph
 ```
 ````
 
-The physical contributors considered are the temperatures, the humidity level, the thermal cycling, the vibrations and the electrical stresses. The formulas applied in the models have been established from the {term}`physics of failures <Physics of failure>` of each EEE component considered.
+The physical contributors considered are the temperatures, the humidity level, the thermal cycling, the vibrations and the electrical stresses. The formulas applied in the models have been established from the {term}`physics of failures <Physics of failure>` of each {term}`EEE` component considered.
 
 The thermal and thermo-electrical stresses are taken into account by the {term}`physics of failures <Physics of failure>` with the Arrhenius' law, multiplied by the contribution of electrical stress, such as voltage or current for example.
 
@@ -701,7 +701,7 @@ Therefore, the table with associated weights and levels N4 for space application
 	- N4
 	- To Be Completed
 *   - 167
-	- Carry out a process FMECA (Failure Modes, Effects and Criticality Analysis) for implementation operations
+	- Carry out a process {term}`FMECA` (Failure Modes, Effects and Criticality Analysis) for implementation operations
 	- 4
 	- N4
 	- To Be Completed
@@ -785,7 +785,7 @@ recom_{grade} = \frac{1}{213} \cdot \sum_{i}^{\text{Recommendations}}{{\text{Rec
 (eee_4_3_1_21)=
 ## Coefficient of sensitivity to over-stresses
 
-$C_{sensitivity}$ represents the coefficient of sensitivity to over-stresses inherent to the item technology considered. Sensitivities related to Electrical OverStress, Thermal OverStress and Mechanical OverStress are given to show the relative sensitivity of EEE components to the different types of overstresses. The coefficient $C_{sensitivity}$ is an exponential factor in the $\Pi_{induced\_ i}$ formula and specific to each component technology. The values for each technology are provided in {numref}`eee_4_3_4`.
+$C_{sensitivity}$ represents the coefficient of sensitivity to over-stresses inherent to the item technology considered. Sensitivities related to Electrical OverStress, Thermal OverStress and Mechanical OverStress are given to show the relative sensitivity of {term}`EEE` components to the different types of overstresses. The coefficient $C_{sensitivity}$ is an exponential factor in the $\Pi_{induced\_ i}$ formula and specific to each component technology. The values for each technology are provided in {numref}`eee_4_3_4`.
 
 ```{admonition} Note
 :class: note

@@ -129,7 +129,7 @@ The lists given hereafter provide the order of preference for the use of the dif
 
 Irrespective of the preference ordering, a specific input should only be used under the conditions specified in the following subsections.
 
-For EEE reliability prediction, the following preference ordering applies:
+For {term}`EEE` reliability prediction, the following preference ordering applies:
 
 1.  IOR data
 
@@ -160,7 +160,7 @@ The models provided in the {ref}`EEE chapter<sec_eee_handbook>`, the {ref}`MEC c
 (method_6_2_1)=
 ### In-orbit return
 
-Satellite operators, prime contractors and lower level manufacturers can obtain IOR at spacecraft level, subsystem level (e.g. platform), equipment level (e.g. on-board computers) or in some cases at part level (e.g. passive RF parts or some families of FPGA by technology nodes).
+Satellite operators, prime contractors and lower level manufacturers can obtain IOR at spacecraft level, subsystem level (e.g. platform), equipment level (e.g. on-board computers) or in some cases at part level (e.g. passive RF parts or some families of {term}`FPGA` by technology nodes).
 
 With the analysis of the elements contained in the spacecraft, it is then possible to interpret the data through {term}`statistical methods <Statistical method>`, provided the total number of elements (or cumulated hours and observed failures) is sufficient.
 
@@ -168,7 +168,7 @@ In-orbit return data can be used for the development of new reliability predicti
 
 -   the item for which the In-Orbit Return data has been compiled is comparable to the item under consideration, technology and functions wise (e.g. for mechanisms or structures, same material, same shape),
 
--   the conditions of use are comparable (e.g. same or comparable orbit, as the use of data obtained for a GEO satellite cannot be used for LEO satellites without technical justification),
+-   the conditions of use are comparable (e.g. same or comparable orbit, as the use of data obtained for a {term}`GEO` satellite cannot be used for LEO satellites without technical justification),
 
 -   the thermal conditions (ambient temperature and thermal cycling) are in the same range.
 
@@ -180,11 +180,11 @@ In case only the first condition is not fulfilled, i.e. the IOR data is relevant
 There are two types of manufacturer data:
 
 -   *Manufacturer general data*\
-    It corresponds to the information that can be used to perform reliability calculations. The data can be related, for example, to the quality level or the qualification of a subsystem, a unit or a part, to the package information or to the complexity of a die for a {term}`EEE part <EEE part>`, to the physical characteristics of the material for mechanical parts, to the constituting components for miscellaneous items, or the FMEA or RBDs at system or subsystem level.\
+    It corresponds to the information that can be used to perform reliability calculations. The data can be related, for example, to the quality level or the qualification of a subsystem, a unit or a part, to the package information or to the complexity of a die for a {term}`EEE part <EEE part>`, to the physical characteristics of the material for mechanical parts, to the constituting components for miscellaneous items, or the {term}`FMEA` or RBDs at system or subsystem level.\
     These data are either requested by the project as part of the deliverable documentation (e.g. in the form of a technical note or a datasheet), provided within the elements of the data packages or available publicly (e.g. on the manufacturer's website).
 
 -   *Manufacturer reliability data*\
-    It corresponds to reliability or reliability oriented data provided by the manufacturer of the part, unit or subassembly, such as FIT rates, success probabilities or MTBF.\
+    It corresponds to reliability or reliability oriented data provided by the manufacturer of the part, unit or subassembly, such as {term}`FIT` rates, success probabilities or MTBF.\
     It can be part of catalogues, reliability reports or datasheets, provided on request or as part of data packages, and take the form of analyses, curves, figures or tables.\
     In some cases, it does not only apply to the specific item under consideration, but it can also be generic information, e.g. for a given technology or for a family of subassemblies designed and manufactured by the same entity. In those cases, it is necessary to define whether these data can apply for the specific cases.
 
@@ -252,16 +252,16 @@ There are a number of existing {term}`handbook data sources <Handbook data sourc
 
 Knowing and managing the {term}`failure mechanisms <Failure mechanism>` within parts or systems is generally a good starting point to perform a reliability prediction. From a practical point of view, it becomes even more interesting when no other data are available to perform the reliability prediction of a part, a unit or a subsystem, and the last resort for the reliability engineer is to analyse the {term}`failure mechanisms <Failure mechanism>` of the item under consideration.
 
-The first step is to identify potential failure modes and associated {term}`failure mechanisms <Failure mechanism>`, e.g. by performing a Design or Process FMEA, or through engineering judgment and/or lessons learnt. The following steps will then consist in determining reliability data linked to the phenomenon identified as most likely responsible for the undesired failure mode. The approach used for analysing in depth the {term}`failure mechanisms <Failure mechanism>` is the {term}`Physics of Failures <Physics of failure>`, see {numref}`method_6_5` for details.
+The first step is to identify potential failure modes and associated {term}`failure mechanisms <Failure mechanism>`, e.g. by performing a Design or Process {term}`FMEA`, or through engineering judgment and/or lessons learnt. The following steps will then consist in determining reliability data linked to the phenomenon identified as most likely responsible for the undesired failure mode. The approach used for analysing in depth the {term}`failure mechanisms <Failure mechanism>` is the {term}`Physics of Failures <Physics of failure>`, see {numref}`method_6_5` for details.
 
 (method_6_2_6)=
 ### Failure mode repartition data
 
 The present handbook generally takes into account all potential failure modes without providing information on the potential failure mode distribution for each part or component.
 
-However, if needed for specific purposes (e.g. FMECA, safety analysis, fault tree analysis, common modes analysis, specific analyses for single point failures or Integrated Logistic Support) there are several ways to proceed in order to define the most appropriate failure mode repartition, making use of the sources discussed in the following.
+However, if needed for specific purposes (e.g. {term}`FMECA`, safety analysis, fault tree analysis, common modes analysis, specific analyses for single point failures or Integrated Logistic Support) there are several ways to proceed in order to define the most appropriate failure mode repartition, making use of the sources discussed in the following.
 
-For EEE mainly:
+For {term}`EEE` mainly:
 
 -   {cite:t}`method-ECSS-Q-ST-30-02C` Annex G
 
@@ -269,7 +269,7 @@ For EEE mainly:
 
 -   {cite:t}`method-reliability-engineers-toolkit`
 
-For both EEE and Mechanical parts:
+For both {term}`EEE` and Mechanical parts:
 
 -   {cite:t}`method-FMD-2016`
 
@@ -407,7 +407,7 @@ The probability distribution and density functions for the different models are 
 (method_6_4_2_1)=
 #### The Exponential distribution for constant failure rates
 
-The classical way to model the reliability especially of EEE components is to assume a constant failure rate $\lambda\left( t \right) = \lambda$ during the component's useful life. This implies that the time to failure follows an Exponential distribution, which strongly simplifies the analysis. In particular, for a data-based estimation of constant failure rates it is sufficient to know the total number of failures and the total number of component hours or cycles in which the failures have been observed.
+The classical way to model the reliability especially of {term}`EEE` components is to assume a constant failure rate $\lambda\left( t \right) = \lambda$ during the component's useful life. This implies that the time to failure follows an Exponential distribution, which strongly simplifies the analysis. In particular, for a data-based estimation of constant failure rates it is sufficient to know the total number of failures and the total number of component hours or cycles in which the failures have been observed.
 
 In the Exponential model, the {term}`probability density function <Probability density function>` $f_{T}(t)$ and the cumulative distribution function $F_{T}(t)$ of the time to failure are defined as follows:
 
@@ -770,13 +770,13 @@ Finally, in the third step, a suitable {term}`structural reliability method <Str
 -   *Analytic methods*\
     Closed-form solutions for the probability of failure exist for some special cases, mostly considering the "fundamental case" with interference of two random variables. The most well-known example (basic stress/strength approach) is a linear limit state function of two normal distributed random variables ({numref}`sec_mech_handbook`).
 
--   *First/Second Order Reliability Methods -- FORM/SORM*\
-    FORM analysis starts with a transformation of all random variables to standardized normal space, in which the most likely point of failure (the "design point") is identified by a search algorithm. It is defined as the point on the failure surface $g\left( \mathrm{X} \right) = 0$ having the shortest distance to the origin, defining the reliability index $\beta$. Using a first-order approximation (FORM) of the limit state $g\left( \mathrm{X} \right) = 0$, the probability of failure is a direct function of this distance $\beta$. Second-order approximations (SORM) may be used to refine the analysis.
+-   *First/Second Order Reliability Methods -- {term}}`FORM`/SORM*\
+    {term}}`FORM` analysis starts with a transformation of all random variables to standardized normal space, in which the most likely point of failure (the "design point") is identified by a search algorithm. It is defined as the point on the failure surface $g\left( \mathrm{X} \right) = 0$ having the shortest distance to the origin, defining the reliability index $\beta$. Using a first-order approximation (FORM) of the limit state $g\left( \mathrm{X} \right) = 0$, the probability of failure is a direct function of this distance $\beta$. Second-order approximations (SORM) may be used to refine the analysis.
 
 -   *Monte Carlo Simulations*\
     Simulation methods are based on repeated evaluations of the limit state function with simulated realisations of the random vector $\mathrm{X}$. The probability of failure is estimated by dividing the number of failures "observed" in this numerical exercise by the total number of simulations. Different variance reduction techniques are available to improve the accuracy of this estimate with reasonable numerical effort.
 
-Surrogate modelling can be used to complement these different methods if the limit state function is not defined explicitly (i.e. using an analytic formula), but implicitly with the aid of a numerical model. The safe domain can in this case only be defined through repeated numerical analysis with different input values. A surrogate model is an analytic function that approximates the results of the numerical model, allowing to apply FORM/SORM methods and a more efficient use of Monte Carlo Simulations. Various approaches for the construction of surrogate models are discussed in the literature (see e.g. {cite:t}`method-meta-models`), including Response Surfaces, Kriging, Polynomial Chaos Expansions and Support Vector Machines.
+Surrogate modelling can be used to complement these different methods if the limit state function is not defined explicitly (i.e. using an analytic formula), but implicitly with the aid of a numerical model. The safe domain can in this case only be defined through repeated numerical analysis with different input values. A surrogate model is an analytic function that approximates the results of the numerical model, allowing to apply {term}}`FORM`/SORM methods and a more efficient use of Monte Carlo Simulations. Various approaches for the construction of surrogate models are discussed in the literature (see e.g. {cite:t}`method-meta-models`), including Response Surfaces, Kriging, Polynomial Chaos Expansions and Support Vector Machines.
 
 The different methods available to perform a prediction with {term}`structural reliability methods <Structural reliability method>` are discussed in comprehensive textbooks (e.g. {cite:t}`method-methods-structural-safety`, {cite:t}`method-structural-reliability-methods`, {cite:t}`method-structural-reliability-analysis-prediction`) and have been implemented in various software packages, both commercial {cite:t}`method-strurel`, {cite:t}`method-nessus`,{cite:t}`method-uq-lab` and freeware {cite:t}`method-ferum`, {cite:t}`method-open-turns`. Here, only the strengths and limitations of each method will be briefly explained.
 
@@ -798,7 +798,7 @@ An important prerequisite is that the limit state can be defined with an analyti
 
 Possible limitations can arise when the failure surface has several likely failure points with similar distance to the origin in standardized normal space, which may lead to convergence issues in the search algorithm. It can be difficult to anticipate such behaviour due to the variable transformation prior to the search. To check convergence, it is thus recommended to run the search algorithm several times with random starting points.
 
-Apart from this, the linear (FORM) or quadratic (SORM) approximation of the failure surface (illustrated in {numref}`method_figure6_4` obviously introduces an error, whose magnitude depends on the form of the limit state function. Due to the exponential decay of the standard normal distribution when moving from the origin to the tails, the error will usually be small even with a first order approximation. Nevertheless, FORM/SORM methods should not be used with limit states that are strongly nonlinear, or in case of several limit states defining the failure domain.
+Apart from this, the linear ({term}}`FORM`) or quadratic (SORM) approximation of the failure surface (illustrated in {numref}`method_figure6_4` obviously introduces an error, whose magnitude depends on the form of the limit state function. Due to the exponential decay of the standard normal distribution when moving from the origin to the tails, the error will usually be small even with a first order approximation. Nevertheless, {term}}`FORM`/SORM methods should not be used with limit states that are strongly nonlinear, or in case of several limit states defining the failure domain.
 
 Additional problems may arise in cases where the probability of failure is very high, especially for $P_{f} > 0.15$. In this case, simulation techniques are more efficient and accurate and should be considered as the method of choice
 
@@ -810,7 +810,7 @@ name: method_figure6_4
 Illustration of the failure surface linearization in the design point $\mathbf{u}^{\mathbf{*}}$ in Standard Normal space. The reliability index $\beta$ is defined as the shortest distance of the failure surface to the origin, allowing to derive the probability of failure from the Standard Normal distribution, $P_{f} = \Phi\left( - \beta \right)$.
 ```
 
-In summary, FORM/SORM are suitable methods to derive the probability of failure provided that the following conditions are fulfilled:
+In summary, {term}}`FORM`/SORM are suitable methods to derive the probability of failure provided that the following conditions are fulfilled:
 
 -   The boundary of the failure domain is defined explicitly by a failure surface $g\left( \mathrm{X} \right) = 0$, possibly derived as a surrogate model representing a numerical model.
 
@@ -860,7 +860,7 @@ The basic idea of the combined approach is to make use of all available informat
 
 The first approach, using Bayesian updating, uses {term}`Physics of Failure <Physics of failure>` considerations to derive a prior reliability estimate, which is then updated using statistical data in order to reduce {term}`model uncertainty <Model uncertainty>` and to derive more realistic results. Bayesian methods for model updating are discussed more detail in {numref}`method_7` of this handbook.
 
-The second approach uses {term}`statistical methods <Statistical method>` in order to establish a fixed "base failure rate" for a certain item or family of items, and the {term}`Physics of Failure <Physics of failure>` is then used to determine acceleration factors depending on the considered design, its use conditions and the environment. Models based on this approach are provided e.g. in the FIDES guide {cite:t}`method-UTE-C80-811` , which is considered as a basis for EEE reliability prediction in this handbook ({numref}`sec_eee_handbook`), or in the NSWC handbook for Mechanical reliability prediction {cite:t}`method-NSWC-11` , see {numref}`sec_mech_handbook` for discussion.
+The second approach uses {term}`statistical methods <Statistical method>` in order to establish a fixed "base failure rate" for a certain item or family of items, and the {term}`Physics of Failure <Physics of failure>` is then used to determine acceleration factors depending on the considered design, its use conditions and the environment. Models based on this approach are provided e.g. in the FIDES guide {cite:t}`method-UTE-C80-811` , which is considered as a basis for {term}`EEE` reliability prediction in this handbook ({numref}`sec_eee_handbook`), or in the NSWC handbook for Mechanical reliability prediction {cite:t}`method-NSWC-11` , see {numref}`sec_mech_handbook` for discussion.
 
 Among the two approaches, the Bayesian approach is generally preferred from an uncertainty quantification point of view, as it allows to consistently account for the amount of information provided by statistics and {term}`Physics of Failure <Physics of failure>` (e.g. sample size of the failure data used for updating, degree of belief in the {term}`failure mechanism <Failure mechanism>` modelling). However, the Bayesian approach may sometimes be difficult to apply in practice, e.g. if aggregated failure rate data is available from a different field of application, but the underlying data that could be used in a Bayesian framework cannot be accessed. In this case, the second approach with statistical base failure rates "tuned" to fit the specific application with the aid of multiplicative PoF factors may be the method of choice from a practical point of view.
 
@@ -913,7 +913,7 @@ The general process for the development of new reliability prediction models is 
 
 The process for the development of new reliability models is applicable to all technical domains. Additional information can be found in the dedicated chapters ({ref}`EEE chapter<sec_eee_handbook>`, {ref}`MEC chapter<sec_mech_handbook>` and {ref}`MIS chapter<sec_misc_handbook>`):
 
--   **EEE:** New reliability prediction models for EEE items can be derived using different inputs, as discussed in {numref}`sec_eee_handbook`. For new technologies there is no data available from IOR, making it necessary to rely on manufacturer data or dedicated testing.
+-   **EEE:** New reliability prediction models for {term}`EEE` items can be derived using different inputs, as discussed in {numref}`sec_eee_handbook`. For new technologies there is no data available from IOR, making it necessary to rely on manufacturer data or dedicated testing.
 
 -   **Mechanical:** The general process for the development of new reliability prediction models is essentially equivalent to the approach for mechanical reliability prediction presented in {numref}`sec_mech_handbook`, where a strong focus is set on the relevant {term}`failure mechanisms <Failure mechanism>` and the associated {term}`Physics of Failure <Physics of failure>`. Bayesian methods for model updating allow the consideration of available data (e.g. test data), even with limited sample size.
 

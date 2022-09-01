@@ -230,7 +230,7 @@ The required coverage in terms of root causes (failure categories, see {numref}`
 
 Achieving a high reliability product is an important objective during the design and production of any space system. Considering all root causes of failure is a prerequisite, and different mitigation processes are in place to avoid the occurrence of each of them, see {numref}`methodo-table5-5` for examples. Apart from measures to avoid the different root causes, system level design aims at mitigating the effect of lower level failures on the success of the mission.
 
-The objective of reliability predictions is to provide quantitative estimates for the (remaining) probability of failure despite the implementation of these measures. Some of the mitigation measures are explicitly considered in the prediction, e.g. quality level of {term}`EEE parts <EEE part>`, or redundancy at system level. Others may be used as a justification to neglect certain root causes in the prediction, provided that the mitigation measures are sufficiently effective to avoid their occurrence. To give an example, calculations from radiation engineering may provide evidence that the rate of destructive Single Event Effects is negligible compared to the random failure rate. Similar considerations become relevant for {term}`wear-out failures <Wear-out failure>` of EEE components, which can in most cases be effectively avoided by {term}`safe life qualification <Safe life qualification>` (with appropriate margins), at least when the prediction is limited to the specified design lifetime.
+The objective of reliability predictions is to provide quantitative estimates for the (remaining) probability of failure despite the implementation of these measures. Some of the mitigation measures are explicitly considered in the prediction, e.g. quality level of {term}`EEE parts <EEE part>`, or redundancy at system level. Others may be used as a justification to neglect certain root causes in the prediction, provided that the mitigation measures are sufficiently effective to avoid their occurrence. To give an example, calculations from radiation engineering may provide evidence that the rate of destructive Single Event Effects is negligible compared to the random failure rate. Similar considerations become relevant for {term}`wear-out failures <Wear-out failure>` of {term}`EEE` components, which can in most cases be effectively avoided by {term}`safe life qualification <Safe life qualification>` (with appropriate margins), at least when the prediction is limited to the specified design lifetime.
 
 n addition, depending on the intended use of the prediction, there may be no added value to make a quantitative prediction for a certain root cause, because it does not make a difference for the trade-offs that will be supported by the prediction. These aspects are discussed in the following sections.
 
@@ -483,7 +483,7 @@ The contribution of reliability prediction to each phase and the associated revi
         </table>
 ```
 
-*) Although ECSS-Q-ST-30C mentions a reliability prediction at PRR and SRR, this is not done for all projects and may be used only to assist apportioning of requirements to lower level. A FMEA at SRR may be required for specific missions and can be used e.g. to assist safety analysis.
+*) Although ECSS-Q-ST-30C mentions a reliability prediction at PRR and SRR, this is not done for all projects and may be used only to assist apportioning of requirements to lower level. A {term}`FMEA` at SRR may be required for specific missions and can be used e.g. to assist safety analysis.
 
 <input type="text" class="myInput" id="myInput5-9" onkeyup="searchTableJupyter(this, 'methodo_table5_9')" placeholder="Search table...">
 
@@ -737,7 +737,7 @@ The allocation of reliability requirements then consists of the following steps:
 Methodo  Assign reliability targets to sub-functions. Besides the use of historical data of similar systems different approaches could be used to assign initial reliability targets, for example, see page 50: 
    * Equal allocation
    * Proportional allocation ({term}`ARINC` method)
-   * Feasibility-Of-Objectives (FOO) Method 
+   * Feasibility-Of-Objectives ({term}`FOO`) Method 
 6. Review of sub-system targets with regard to feasibility, cost, schedule etc. and refine allocation if deemed necessary. This may involve iterations to find a well-balanced apportionment of reliability targets.
 
 The allocation of requirements to lower level starts with the identification of system functions. Based on the customer top level reliability requirements, a system function for the design can be identified. This overall system function is decomposed into its sub-functions {cite:t}`methodo-DFM-21173`. The functional failure analysis determines the failure effects and repercussions at system level. The following generic failures could be used as guideline to assess each function and sub-function:
@@ -824,7 +824,7 @@ In the following, different approaches for requirement allocation are introduced
 
 * Equal allocation
 * Proportional allocation ({term}`ARINC` method)
-* Feasibility-Of-Objectives (FOO) Method
+* Feasibility-Of-Objectives ({term}`FOO`) Method
 
 These methods are applicable for a serial system structure only. For more complex system architectures, the reliability allocation should also make use of system level reliability assessment methods (see {numref}`sec_sys_handbook`). 
 
@@ -953,7 +953,7 @@ Given that 15% of the system failures are caused by a failure of the power suppl
 
 **Feasibility-Of-Objectives (FOO) Method**
 
-The FOO method allows users to assign grading factors to sub-systems and their components in order to determine how reliability targets are cascaded from top level to lower level. A sub-system with high grading factors is allocated a lower reliability than a sub-system with low grading factors. Default grading categories are complexity, technical level (state of art), operating time and environmental condition. Users may change these categories. Each rank is based on a scale from 1 to 10 and is estimated using both design engineering and expert judgment {cite:t}`methodo-MIL-HDBK-338B` : 
+The {term}`FOO` method allows users to assign grading factors to sub-systems and their components in order to determine how reliability targets are cascaded from top level to lower level. A sub-system with high grading factors is allocated a lower reliability than a sub-system with low grading factors. Default grading categories are complexity, technical level (state of art), operating time and environmental condition. Users may change these categories. Each rank is based on a scale from 1 to 10 and is estimated using both design engineering and expert judgment {cite:t}`methodo-MIL-HDBK-338B` : 
 
 1. System Complexity. Complexity is evaluated by considering the probable number of parts or components making up the sub system and also is judged by the assembled intricacy of these parts or components. The least complex sub system is rated at 1, and a highly complex sub system is rated at 10.
 2. Technology level. The state of present engineering progress in all fields is considered. The least developed design or method receives a value of 10, and the most highly developed is assigned a value of 1.
@@ -983,7 +983,7 @@ w_{i} = \frac{\prod_{j}^{n} g_{ij}}{\sum_{i} G_{i}}
 ```
 ````
 
-An example for reliability allocation using FOO method is shown in {numref}`methodo-table5-14`. The system level reliability target of 0.9 is distributed to sub-systems based on weighting factor obtained from Eq. {eq}`Equation_methodo_7`.
+An example for reliability allocation using {term}`FOO` method is shown in {numref}`methodo-table5-14`. The system level reliability target of 0.9 is distributed to sub-systems based on weighting factor obtained from Eq. {eq}`Equation_methodo_7`.
 
 
 <input type="text" class="myInput" id="myInput5-14" onkeyup="searchTableJupyter(this, 'methodo_table5_14')" placeholder="Search table...">

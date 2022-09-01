@@ -6,9 +6,9 @@
 (eee_4_3_3_1)=
 ## Quality factors
 
-The $\Pi_{\text{PM}}$ component manufacturing factor is related to the quality of EEE components and is adapted to space applications.
+The $\Pi_{\text{PM}}$ component manufacturing factor is related to the quality of {term}`EEE` components and is adapted to space applications.
 
-The $\Pi_{\text{PM}}$ part manufacturing factor characterizes the quality of EEE components linked to their manufacturing. This factor is a direct multiplicative factor in the final calculation of the reliability prediction and takes into consideration the qualification and reliability monitoring tests for the case and for the active parts. The information which is used to estimate this factor is generally provided in the datasheet, in the reliability reports of the EEE components or available from the manufacturer.
+The $\Pi_{\text{PM}}$ part manufacturing factor characterizes the quality of {term}`EEE` components linked to their manufacturing. This factor is a direct multiplicative factor in the final calculation of the reliability prediction and takes into consideration the qualification and reliability monitoring tests for the case and for the active parts. The information which is used to estimate this factor is generally provided in the datasheet, in the reliability reports of the {term}`EEE` components or available from the manufacturer.
 
 This factor considers the following four parameters:
 
@@ -77,7 +77,7 @@ Sometimes, some of the components are manufactured in different manufacturing si
 *   - Certified according to standard: IATF/TS 16949
     - Higher
     - 3
-*   - Certified according to one of the following standards: TL9000, ISO/TS 22163, EN9100, AS9100, JISQ9100, AQAP 2110, AQAP 2120, AQAP 2130, ISO/TS 22163, IEC TS 62239, ESA/ECSS QML/QPL, MIL-PRF-38535 QML, MIL-PRF-19500 and any standards in accordance with ISO 9001 version 2015
+*   - Certified according to one of the following standards: TL9000, ISO/TS 22163, EN9100, AS9100, JISQ9100, AQAP 2110, AQAP 2120, AQAP 2130, ISO/TS 22163, IEC TS 62239, {term}`ESA`/{term}`ECSS` QML/QPL, MIL-PRF-38535 QML, MIL-PRF-19500 and any standards in accordance with ISO 9001 version 2015
     - Equivalent
     - 2
 *   - Certified ISO 9001 version 2015
@@ -105,7 +105,7 @@ Additionally, these components endure screening tests and so, tests for which pa
 ```{admonition} Rule
 :class: rule
 
-The following tables, reworked and agreed with EEE experts and the FIDES consortium team, shall apply for Space applications, for hermetic components and for non hermetic components.
+The following tables, reworked and agreed with {term}`EEE` experts and the FIDES consortium team, shall apply for Space applications, for hermetic components and for non hermetic components.
 ```
 
 (eee_4_3_3_5)=

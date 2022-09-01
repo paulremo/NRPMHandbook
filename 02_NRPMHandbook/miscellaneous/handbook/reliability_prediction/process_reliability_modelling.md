@@ -26,7 +26,7 @@ First, it is necessary, before starting anything, to collect/define all technica
 
 * Functional analysis: list of all the main functions supported by the item,
 * Technical performances: list of all the specified performances regarding the nominal mission / the reduced mission,
-* Hardware description: functional breakdown and hardware architecture as per reliability block diagram (refer to the reliability analysis and associated FMEA),
+* Hardware description: functional breakdown and hardware architecture as per reliability block diagram (refer to the reliability analysis and associated {term}`FMEA`),
 * Trajectory ({term}`GEO`, {term}`LEO`, {term}`MEO`, Interplanetary orbit) on which the item is intended to be used,
 * Operating conditions
   * Duty cycle
@@ -409,7 +409,7 @@ P(\text{FAILURE}) = 1 - \left(1 - EX\right) * \left(1 - SF\right) * \left(1 - e^
 ```
 ````
 
-The probability of {term}`extrinsic failures <Extrinsic failure>` EX is dependent on 
+The probability of {term}`extrinsic failures <Extrinsic failure>` {term}`EX` is dependent on 
 
 1. The item location (outside the satellite), 
 2. The probability to be hit by a particle (refer to µmeteorits flux and characteristics depending on the orbit, on the position on the orbit and on the velocity vector) and 

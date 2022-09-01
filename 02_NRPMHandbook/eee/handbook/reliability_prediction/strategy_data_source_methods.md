@@ -41,7 +41,7 @@ See {numref}`eee_4_3` for the {term}`Random failures <Random failure>` calculati
 
 **Model from other methodologies**
 
-As indicated in the previous section, the reliability.space approach for EEE items {term}`Random failures <Random failure>` is based on the FIDES methodology.
+As indicated in the previous section, the reliability.space approach for {term}`EEE` items {term}`Random failures <Random failure>` is based on the FIDES methodology.
 
 However, FIDES does not cover all families and subfamilies of components and technologies used in space applications.
 
@@ -63,11 +63,11 @@ The failure rates provided by the manufacturers are relevant for the steady stat
 
 The failure rate is calculated with the χ² formula according to the methodology described in the JEDEC document for semiconductor components.
 
-This methodology can be used by similarity for any type of EEE components. The confidence level generally used by component manufacturers is 60% and can be 90 or 95% in very specific cases when a higher {term}`level of confidence <Level of confidence>` is required.
+This methodology can be used by similarity for any type of {term}`EEE` components. The confidence level generally used by component manufacturers is 60% and can be 90 or 95% in very specific cases when a higher {term}`level of confidence <Level of confidence>` is required.
 
 Using manufacturer data presents some limitations though:
 
--   For specific EEE components used in space applications, due to the fact that the quantities are low and as the qualification chosen can be different from qualification approach described in the JEDEC methodology, the calculation of the failure rate can be inaccurate;
+-   For specific {term}`EEE` components used in space applications, due to the fact that the quantities are low and as the qualification chosen can be different from qualification approach described in the JEDEC methodology, the calculation of the failure rate can be inaccurate;
 
 -   Manufacturers for commercial components generally provide failure rates calculated only for one stress such as temperature; therefore, the failure rate for other stresses such as thermal cycling has to be extrapolated with acceleration laws;
 
@@ -77,7 +77,7 @@ It is important before taking into account these data to assess its potential ap
 
 **Estimation of reliability from reliability tests**
 
-If no data is available from manufacturers, the user of the EEE components under consideration can perform their own reliability tests on these components by using acceleration laws, if the activation energy $\text{E}_{a}$ is known.
+If no data is available from manufacturers, the user of the {term}`EEE` components under consideration can perform their own reliability tests on these components by using acceleration laws, if the activation energy $\text{E}_{a}$ is known.
 
 The methodology is strictly the same as for performing a life test, generally limited in time and then estimating by interval the failure rate with the $\chi^{2}$ formula. The limitation is generally the quantity of parts to be tested if a low failure rate needs to be addressed. Indeed, the manufacturers of components can cumulate numerous components of the same technology and address failure rates lower than 10 FITs. But for some users, it is more complicated to test large quantities of components for an extensive time so the calculated reliability prediction obtained that way sometimes does not match the targeted reliability figure. Furthermore, each test generally only addresses one or two {term}`failure mechanisms <Failure mechanism>` while a specific {term}`failure mechanism <Failure mechanism>`with different activation energy $\text{E}_{a}$, not considered by the test, can happen during the mission with different stresses and constraints.
 

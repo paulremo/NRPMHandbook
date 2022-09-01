@@ -57,6 +57,6 @@ The holistic reliability model is then calculated based on the process presented
 (misc_5_4_4)=
 ## Dormant failures
 
-Currently no reliability model is provided to support failure modelling in dormant mode for {term}`miscellaneous items <Miscellaneous item>`. The {term}`miscellaneous items <Miscellaneous item>` are from different nature (mix of EEE and mechanics, passive components, tubing, piping…) and it is not relevant to provide a generic rule to derive a dormant failure rate from the active {term}`miscellaneous item <Miscellaneous item>` failure rate.
+Currently no reliability model is provided to support failure modelling in dormant mode for {term}`miscellaneous items <Miscellaneous item>`. The {term}`miscellaneous items <Miscellaneous item>` are from different nature (mix of {term}`EEE` and mechanics, passive components, tubing, piping…) and it is not relevant to provide a generic rule to derive a dormant failure rate from the active {term}`miscellaneous item <Miscellaneous item>` failure rate.
 
 In case, depending on the mission and on the operations, it is necessary to use a reliability model in dormant mode (no power supply during certain storage duration, no activation for “maintenance”) the user will define a dedicated reliability model (refer to the different methods listed previously) accounting for the specific conditions in storage.

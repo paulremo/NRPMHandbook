@@ -2,7 +2,7 @@
 
 # Scope
 
-The reliability.space handbook was developed during an ESA study aiming at the development of a *new reliability prediction methodology* ({term}`NRPM`) for space applications. The objective of the handbook was to provide a reliability methodology that can be used for space applications, without the limitations and shortcomings of existing reliability prediction methodologies that are mainly focussed on ground applications. 
+The reliability.space handbook was developed during an {term}`ESA` study aiming at the development of a *new reliability prediction methodology* ({term}`NRPM`) for space applications. The objective of the handbook was to provide a reliability methodology that can be used for space applications, without the limitations and shortcomings of existing reliability prediction methodologies that are mainly focussed on ground applications. 
 
 The term *reliability prediction* ({term}`RP`) is here to be understood as the process, or outcome, of predicting the reliability of a system or its components, i.e., the probability of success. In the more general context of {term}`RAMS` analyses, making use of qualitative and quantitative techniques, {term}`RP` is restricted to providing quantitative estimates for the probability of success or failure. The focus of the methodology presented herein is on reliability in this narrow sense. Specific requirements of *availability*, *maintainability* or *safety analyses* have not been considered during the development of the methodology and are out of the scope of this handbook, even though the probabilistic methods provided may of course also be used to support these analyses.
 

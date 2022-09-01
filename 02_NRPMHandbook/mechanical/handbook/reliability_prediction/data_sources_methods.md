@@ -31,7 +31,7 @@ A first analysis and understanding of the potential {term}`failure mechanism <Fa
 (meca_4_3_1_2)=
 ### In-orbit return (IOR) data
 
-In-orbit return failure data provides valuable information on the in-service reliability performance in space applications. For mechanical equipment, it may in certain cases be possible to track the failure cause down to part level, making the information even more valuable. However, the use of {term}`in-orbit return (IOR) data <In-orbit return (IOR) data>` for reliability prediction is hindered by the small degree of standardization of mechanical items (compared to EEE) and the large effect of the design details and the operational conditions on {term}`mechanical part <Mechanical part>` reliability. As a stand-alone input, it will thus be restricted to highly standardized applications. Apart from this, in-orbit return can provide the following information when combined with other inputs:
+In-orbit return failure data provides valuable information on the in-service reliability performance in space applications. For mechanical equipment, it may in certain cases be possible to track the failure cause down to part level, making the information even more valuable. However, the use of {term}`in-orbit return (IOR) data <In-orbit return (IOR) data>` for reliability prediction is hindered by the small degree of standardization of mechanical items (compared to {term}`EEE`) and the large effect of the design details and the operational conditions on {term}`mechanical part <Mechanical part>` reliability. As a stand-alone input, it will thus be restricted to highly standardized applications. Apart from this, in-orbit return can provide the following information when combined with other inputs:
 
 * Information on observed {term}`failure mode <Failure mode>`s and root causes to select the focus of the prediction
 * In-orbit measurements of physical data to model the relevant variables in {term}`PoF` approaches
@@ -42,7 +42,7 @@ In-orbit return failure data provides valuable information on the in-service rel
 
 Mechanical space equipment suppliers are highly specialized companies, delivering their products for many different missions. Manufacturer reliability data can thus be a highly relevant source of information for mechanical reliability prediction. This holds especially for standardized items with a long space heritage, where manufacturer’s in-orbit return (considered in {numref}`meca_4_3_1_2`) can be used for the reliability prediction. Also {term}`test data <Test data>` available on the manufacturer’s side may be considered. Manufacturer reliability data derived from analysis should be checked for consistency with the methodology presented in this handbook.
 
-Apart from this, more general {term}`manufacturer data <Manufacturer part>`, such as design information, material specifications, or equipment level FMEA analyses are also important inputs for reliability predictions of {term}`mechanical part <Mechanical part>`s. 
+Apart from this, more general {term}`manufacturer data <Manufacturer part>`, such as design information, material specifications, or equipment level {term}`FMEA` analyses are also important inputs for reliability predictions of {term}`mechanical part <Mechanical part>`s. 
 
 (meca_4_3_1_4)=
 ### Test data
@@ -77,7 +77,7 @@ The confidence in the {term}`NPRD` data strongly depends on its relevance with r
 
 **Naval Surface Warfare Center (NSWC) Reliability Prediction Handbook**
 
-The {term}`NSWC` Handbook for Mechanical Reliability Prediction {cite:t}`mec-NSWC-11` provides models derived from a combined approach similar to the one applied for EEE components in {numref}`sec_eee_handbook`: Base failure rates, derived from statistical data at reference conditions, are scaled to a specific design and operating conditions with the aid of multiplicative factors accounting for the specificities of material, design and environment. The scaling factors are based on {term}`PoF` relationships to determine the mean time to failure MTTF at reference and operating conditions:
+The {term}`NSWC` Handbook for Mechanical Reliability Prediction {cite:t}`mec-NSWC-11` provides models derived from a combined approach similar to the one applied for {term}`EEE` components in {numref}`sec_eee_handbook`: Base failure rates, derived from statistical data at reference conditions, are scaled to a specific design and operating conditions with the aid of multiplicative factors accounting for the specificities of material, design and environment. The scaling factors are based on {term}`PoF` relationships to determine the mean time to failure MTTF at reference and operating conditions:
 
 
 ````{admonition} Equation

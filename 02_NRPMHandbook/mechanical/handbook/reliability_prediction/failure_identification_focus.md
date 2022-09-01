@@ -85,7 +85,7 @@ For structures that do not fulfil the abovementioned conditions, reliability fig
 (meca_4_4_2)=
 ## Failure mechanisms completion
 
-The final step involves an assessment of relevant qualitative {term}`RAMS` data (e.g. FMEA reports, non-compliances reports, design review data packages, and history data) to identify critical {term}`failure modes <Failure mode>` and related {term}`failure mechanisms <Failure mechanism>`. The outcome shall be used to cross-check the conclusions from the previous steps and to consider additional {term}`failure mechanisms <Failure mechanism>` as relevant.
+The final step involves an assessment of relevant qualitative {term}`RAMS` data (e.g. {term}`FMEA` reports, non-compliances reports, design review data packages, and history data) to identify critical {term}`failure modes <Failure mode>` and related {term}`failure mechanisms <Failure mechanism>`. The outcome shall be used to cross-check the conclusions from the previous steps and to consider additional {term}`failure mechanisms <Failure mechanism>` as relevant.
 
 Similar to the considerations made for the structural category in {numref}`meca_4_4_1`, it can be justified to exclude certain parts and {term}`failure mechanisms <Failure mechanism>` from the analysis, provided that all or most of the following conditions are fulfilled:
 

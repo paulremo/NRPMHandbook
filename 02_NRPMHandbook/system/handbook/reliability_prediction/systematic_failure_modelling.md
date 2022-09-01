@@ -16,7 +16,7 @@ It is important to remind that the occurrence of {term}`systematic failures <Sys
 
 The modelling approach followed in the present section avoids these difficulties by working top-down, starting at spacecraft level and going down to subsystem level only. No common cause modelling is required with this approach, as subsystems are combined at spacecraft level in a serial system design. However, common cause must be considered for {term}`systematic failures <Systematic failure>` when relying on models developed at lower levels.
 
-Considering the system level effects, it may be said that systematic {term}`failure root causes <Failure root cause>` are generally more likely to lead to severe consequences at spacecraft level than {term}`random failures <Random failure>`, whose effect can be modelled and mitigated by redundancy and Fault Detection Isolation and Recovery (FDIR). However, this does not mean that each {term}`systematic failure <Systematic failure>` immediately leads to the collapse of the overall system in the sense of a single point failure. Redundancy, robust design and failure detection and recovery can help in the case of {term}`systematic failures <Systematic failure>` as well, and workarounds may be implemented from ground by uploading software updates and/or adapting operational procedures.
+Considering the system level effects, it may be said that systematic {term}`failure root causes <Failure root cause>` are generally more likely to lead to severe consequences at spacecraft level than {term}`random failures <Random failure>`, whose effect can be modelled and mitigated by redundancy and Fault Detection Isolation and Recovery ({term}`FDIR`). However, this does not mean that each {term}`systematic failure <Systematic failure>` immediately leads to the collapse of the overall system in the sense of a single point failure. Redundancy, robust design and failure detection and recovery can help in the case of {term}`systematic failures <Systematic failure>` as well, and workarounds may be implemented from ground by uploading software updates and/or adapting operational procedures.
 
 To account for these mitigation measures, the modelling presented in this section considers (major) anomalies rather than failures, and works with a classification by severity to model the impact on the mission. Definitions are provided in {numref}`syst_4_9_3_1`. {numref}`Figure_7_33` illustrates the introduction of flaws during design (including specification) and manufacturing, which -- if undetected before launch -- may lead to failures or anomalies in orbit under operational and/or environmental stresses (Note that operation errors may lead to {term}`systematic failures <Systematic failure>` even without the presence of flaws). The severity category depends on the effect propagation in the overall system, and can be reduced by mitigation measures implemented a priori during design, or a posteriori after {term}`anomaly <Anomaly>` investigation.
 
@@ -75,7 +75,7 @@ Independent of the classification, all types of errors may lead to failures in-o
 
 In principle, {term}`systematic failures <Systematic failure>` may be introduced at any level. This holds especially for design and manufacturing errors, which may result from weaknesses in the design or manufacturing of parts, equipment, {term}`interface <Interface>`s or the overall system. At spacecraft level, operation mistakes and software errors come into play. It should be noted that the level at which a failure is observed may be different due to failure propagation processes.
 
-It is also noteworthy that in some situations the {term}`systematic failures <Systematic failure>` occur in a complex failure scenario, e.g. a {term}`random failure <Random failure>` at equipment level may lead to the loss of the satellite through failure propagation when the FDIR function is not designed appropriately (e.g. no segregation between nominal channel and redundant one).
+It is also noteworthy that in some situations the {term}`systematic failures <Systematic failure>` occur in a complex failure scenario, e.g. a {term}`random failure <Random failure>` at equipment level may lead to the loss of the satellite through failure propagation when the {term}`FDIR` function is not designed appropriately (e.g. no segregation between nominal channel and redundant one).
 
 (syst_4_9_3)=
 ## Data sources and methods
@@ -99,7 +99,7 @@ The following anomalies observed in orbit are classified as major:
 
 -   A hardware definitive failure at equipment level, total or partial
 
--   A FDIR inadvertent triggering leading to Hardware configuration modification
+-   A {term}`FDIR` inadvertent triggering leading to Hardware configuration modification
 
 -   An outage (mission is stopped during a certain time, or the operation plan is not respected)
 
@@ -192,7 +192,7 @@ As can be seen from this classification, the modelling considers also anomalies 
 
 **Classification of hardware anomalies by technical domain**
 
-Anomalies whose root cause is classified as "hardware" (design or manufacturing error) can be further classified by the type of hardware, considering the equipment involved in a subsystem {term}`anomaly <Anomaly>`. The repartition is done using the same classification as for the chapters in Part III of this handbook, i.e. considering EEE, Mechanical ({term}`MEC`) and Miscellaneous ({term}`MIS`) items.
+Anomalies whose root cause is classified as "hardware" (design or manufacturing error) can be further classified by the type of hardware, considering the equipment involved in a subsystem {term}`anomaly <Anomaly>`. The repartition is done using the same classification as for the chapters in Part III of this handbook, i.e. considering {term}`EEE`, Mechanical ({term}`MEC`) and Miscellaneous ({term}`MIS`) items.
 
 (syst_4_9_3_2)=
 ### Methods and modelling assumptions
@@ -297,7 +297,7 @@ The impact of different spacecraft development strategies (e.g. generic versus n
 
 **Using severity levels in a reliability prediction context**
 
-As has been explained in {numref}`syst_4_9_3_1` above, the model is based on data on major anomalies collected at satellite level. The use of the model is thus most straightforward when applied in combination with predictions for different degraded system modes, as discussed in {numref}`syst_4_6` for the case of {term}`random failures <Random failure>`. In this context, it is important to note that the severity of the observed anomalies may have been limited not only by barriers inherent in the system design (e.g. redundancy, FDIR), but also by measures implemented after {term}`anomaly <Anomaly>` occurrence, e.g. when patches are uploaded to "repair" a software bug or workarounds are implemented in the case of an {term}`anomaly <Anomaly>` due to hardware design or manufacturing errors. Thus, the prediction does not give the "inherent" reliability of the technical system, but rather that of a larger system, involving also the recovery strategies (i.e. failure management on-board plus Ground capacity for recovery / workaround) implemented after launch.
+As has been explained in {numref}`syst_4_9_3_1` above, the model is based on data on major anomalies collected at satellite level. The use of the model is thus most straightforward when applied in combination with predictions for different degraded system modes, as discussed in {numref}`syst_4_6` for the case of {term}`random failures <Random failure>`. In this context, it is important to note that the severity of the observed anomalies may have been limited not only by barriers inherent in the system design (e.g. redundancy, {term}`FDIR`), but also by measures implemented after {term}`anomaly <Anomaly>` occurrence, e.g. when patches are uploaded to "repair" a software bug or workarounds are implemented in the case of an {term}`anomaly <Anomaly>` due to hardware design or manufacturing errors. Thus, the prediction does not give the "inherent" reliability of the technical system, but rather that of a larger system, involving also the recovery strategies (i.e. failure management on-board plus Ground capacity for recovery / workaround) implemented after launch.
 
 Another consequence of the selected modelling approach is that it is not straight-forward how to use the results when making predictions based on a more traditional interpretation of system level relia-bility, where severity is not of relevance: Either the system performs as specified or it is considered as failed. A shortcut approximation in this case is to consider all anomalies except for those classified as "no impact" (severity 4 and 5) to derive the {term}`systematic failure <Systematic failure>` rate (mission out of specification) at system level. Adding also the anomalies with hardware failure (severity 4) gives an upper bound for the {term}`systematic failure <Systematic failure>` rate.
 
@@ -395,7 +395,7 @@ These probabilities can be combined with the overall {term}`anomaly <Anomaly>` o
     - $\eta_{i}''$ (posterior)
 *   - AOCS
     - 299
-*   - DEP
+*   - {term}`DEP`
     - 1
 *   - DHS
     - 60
@@ -457,7 +457,7 @@ Posterior marginal distributions of the conditional probabilities for the repart
 *   - AOCS
     - 19
     - 281
-*   - DEP
+*   - {term}`DEP`
     - 1
     - 1
 *   - DHS
@@ -538,7 +538,7 @@ The posterior parameters of the Dirichlet distribution for the different severit
     - 2
     - 2
     - 15
-*   - DEP
+*   - {term}`DEP`
     - 1
     - 1
     - 1
@@ -637,7 +637,7 @@ Percentage of anomalies with hardware failure (severity category 1 to 4) for the
 
 **Classification by technical domain (EEE, Mechanical, Miscellaneous)**
 
-The repartition by satellite subsystem already gives a first indication on the relevance of systematic anomalies related to EEE, Mechanical or {term}`miscellaneous items <Miscellaneous item>`. For the anomalies whose root cause is classified as "hardware", {numref}`Figure_7_45` gives further information on the repartition by the type of the equipment involved, and by the details of the root cause (design or manufacturing error). The classification is done at equipment level, considering all satellite subsystems and using the same three classes as outlined in {numref}`sec_eee_handbook`, {numref}`sec_mech_handbook` and {numref}`sec_misc_handbook`. It can be seen that the contribution of "Mechanical" anomalies is very low, which may be explained by the fact that many of the most error-prone satellite elements are classified as "miscellaneous items" in this handbook.
+The repartition by satellite subsystem already gives a first indication on the relevance of systematic anomalies related to {term}`EEE`, Mechanical or {term}`miscellaneous items <Miscellaneous item>`. For the anomalies whose root cause is classified as "hardware", {numref}`Figure_7_45` gives further information on the repartition by the type of the equipment involved, and by the details of the root cause (design or manufacturing error). The classification is done at equipment level, considering all satellite subsystems and using the same three classes as outlined in {numref}`sec_eee_handbook`, {numref}`sec_mech_handbook` and {numref}`sec_misc_handbook`. It can be seen that the contribution of "Mechanical" anomalies is very low, which may be explained by the fact that many of the most error-prone satellite elements are classified as "miscellaneous items" in this handbook.
 
 ```{figure} ../../picture/figure4_45.png
 ---

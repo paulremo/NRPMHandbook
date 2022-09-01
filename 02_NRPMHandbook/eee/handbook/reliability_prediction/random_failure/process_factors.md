@@ -7,7 +7,7 @@ This Paragraph deals with the different process factors dedicated to the quality
 
 -   general process factor $\Pi_{\text{process}}$;
 
--   process factor for RF HF components $\Pi_{\text{ProcessRFHF}}$;
+-   process factor for RF {term}`HF` components $\Pi_{\text{ProcessRFHF}}$;
 
 -   process factor for {term}`ASIC` components $\Pi_{\text{ProcessASIC}}$;
 
@@ -135,7 +135,7 @@ The $Satisfaction_{mark_{i}}$ for each level is determined as follows:
     - 4
 ```
 
-Each recommendation is weighted by a specific $Recom\_ Weight_{i}$. The value of each $Recom\_ Weight_{i}$ for each question of phase $j$ is provided in EEE Annex A. Once all questions have been answered, the first calculation step consists in producing the $Audit\_ Mark_{i}$ for each phase $j$ according to the formula:
+Each recommendation is weighted by a specific $Recom\_ Weight_{i}$. The value of each $Recom\_ Weight_{i}$ for each question of phase $j$ is provided in {numref}`eee_annex_a`. Once all questions have been answered, the first calculation step consists in producing the $Audit\_ Mark_{i}$ for each phase $j$ according to the formula:
 
 ````{admonition} Equation
 :class: equation
@@ -271,19 +271,19 @@ RFHF\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maxim
     - 10
     - 0
 *   - 2
-    - Presence of protections against disconnection of antennas around RF and HF amplifiers and power transistors
+    - Presence of protections against disconnection of antennas around RF and {term}`HF` amplifiers and power transistors
     - 5
     - 0
 *   - 3
-    - Presence of protections for EMC compatibility (check on out of band) around RF and HF amplifiers and power transistors. For example circulator, filter, etc.
+    - Presence of protections for {term}`EMC` compatibility (check on out of band) around RF and {term}`HF` amplifiers and power transistors. For example circulator, filter, etc.
     - 5
     - 0
 *   - 4
-    - Presence of protections against mismatch of load around RF and HF amplifiers and power transistors. For example, circulator, isolator, filter, etc.
+    - Presence of protections against mismatch of load around RF and {term}`HF` amplifiers and power transistors. For example, circulator, isolator, filter, etc.
     - 5
     - 0
 *   - 5
-    - Presence of protections against temperature overstresses around RF and HF amplifiers and power transistors.
+    - Presence of protections against temperature overstresses around RF and {term}`HF` amplifiers and power transistors.
     - 5
     - 0
 *   - 6
@@ -309,7 +309,7 @@ Concerning criterion n°8, the formal method shall include specific procedures i
 ``` {admonition} Note
 :class: note
 
-For the 2021 issue of FIDES, a new table is provided; it no longer consists in 8 questions but is now more complete with a total of 23 questions, divided between 7 categories: generalities, Power Supply management, Burn-in, Junction temperature, Compression -- DC/RF performance & robustness, Environmental tests & Qualification and Reliability .
+For the 2021 issue of FIDES, a new table is provided; it no longer consists in 8 questions but is now more complete with a total of 23 questions, divided between 7 categories: generalities, Power Supply management, Burn-in, Junction temperature, Compression -- {term}`DC`/RF performance & robustness, Environmental tests & Qualification and Reliability .
 ```
 
 (eee_4_3_2_6)=
@@ -483,7 +483,7 @@ H\& M\_ process\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{
     - 4
     - 0
 *   - 7
-    - Qualification of the line for space application (ESA/{term}`CNES`) - (class K according to the MIL-PRF 38534F classification, or class I according to JESD93), or equivalent
+    - Qualification of the line for space application ({term}`ESA`/{term}`CNES`) - (class K according to the MIL-PRF 38534F classification, or class I according to JESD93), or equivalent
     - 30
     - 0
 *   - 8

@@ -59,9 +59,9 @@ To derive the appropriate success criteria for the reliability analysis of phase
 *   - Phase transition scenarios
     - Success Criteria
 *   - A combination of failures does not lead to system failure in both phases $i$ and $i+1$.
-    - Success criterion does not change from phase $i$ to $i+1$. E.g. same RBD or FTA.
+    - Success criterion does not change from phase $i$ to $i+1$. E.g. same RBD or {term}`FTA`.
 *   - A combination of failures leads to system failure in both phases $i$ and $i+1$.
-    - Success criteria do not change from phase $i$ to $i+1$. E.g. same RBD or FTA.
+    - Success criteria do not change from phase $i$ to $i+1$. E.g. same RBD or {term}`FTA`.
 *   - A combination of component failures does not imply system failure in phase $i$ but is treated as system failure in phase $i+1$.
     - This case should be treated as latent failures in the earlier phase $i$ as well. This is because such combinations, once present during a phase are bound to lead to the system failure eventually at the transition time when the system enters the later phase $i+1$.
 *   - A combination of component failures implies system failure in phase $i$ but does not imply system failure in phase $i+1$.

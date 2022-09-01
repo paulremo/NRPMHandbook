@@ -49,7 +49,7 @@ The duration of the mission is determined by the specified lifetime, counting fr
 
 Reliability generally varies as a function of time, although for some items it is more appropriate to consider reliability as a function of (or conditional on) demand - e.g. constant probability of failure for one shot items, stress-strength approach for shock loading. Nevertheless, from a system level perspective also these models can be transformed to a time scale by making predictions on the occurrence of the relevant stresses and demands during the mission.
 
-At part level, time dependent reliability is often explained with the well-known bathtub curve, as illustrated in {numref}`Figure 4.1`. The curve is divided in three phases: In the initial phase, production errors and workmanship defects are a significant source of failure. When a component has survived a certain time it implies that such birth defects are not present and consequently the reliability increases. At the end of a component's useful life, ageing and {term}`wear-out failures <Wear-out failure>` lead to an increasing failure rate. Between these two phases the failure rate of many parts (e.g. most EEE components) remains roughly constant on a low level. For other parts (e.g. mechanical ones), such a steady-state phase cannot be observed, and the failure rate is slowly increasing already during the useful life.
+At part level, time dependent reliability is often explained with the well-known bathtub curve, as illustrated in {numref}`Figure 4.1`. The curve is divided in three phases: In the initial phase, production errors and workmanship defects are a significant source of failure. When a component has survived a certain time it implies that such birth defects are not present and consequently the reliability increases. At the end of a component's useful life, ageing and {term}`wear-out failures <Wear-out failure>` lead to an increasing failure rate. Between these two phases the failure rate of many parts (e.g. most {term}`EEE` components) remains roughly constant on a low level. For other parts (e.g. mechanical ones), such a steady-state phase cannot be observed, and the failure rate is slowly increasing already during the useful life.
 
 ```{figure} pictures/methodo_figure4_1.png
 ---
@@ -76,7 +76,7 @@ In space applications, reliability predictions need to consider different kinds 
 The handbook scope is limited to Reliability Predictions for systems that operate in space, e.g. a spacecraft. The following types of spacecrafts can be considered:
 
 * Satellite: unmanned spacecraft in Earth orbit
-  * GEO satellites, e.g. telecommunications
+  * {term}`GEO` satellites, e.g. telecommunications
   * MEO satellites, e.g. navigation
   * LEO satellites, e.g. Earth Observation
 * Space probe: spacecraft leaving earth orbit to explore further into outer space
@@ -88,7 +88,7 @@ The handbook is generally applicable to all spacecraft missions, although limite
 
 Due to the environments and technologies considered, it is not recommended to directly use the handbook for other types of space products, such as launchers or ground segments, even though parts of the methodology can still be applicable. Also, it should be noted that the focus is on systems that are non-repairable, possibly requiring additional considerations for repairable systems.
 
-Finally, it should be noted that the handbook generally assumes a level of quality assurance as usual for spacecrafts manufactured by major satellite prime contractors. The methodology and methods can of course be used also in other applications such as microsats or for “{term}`New Space <New space>`” applications. However, the models, background data and underlying assumptions may not be fully applicable, especially when dealing with process and quality related contributions to unreliability, e.g. for reliability prediction of EEE components and assemblies {numref}`sec_eee_handbook` or when modelling {term}`systematic failures <Systematic failure>` based on IOR ({numref}`sec_sys_handbook`).
+Finally, it should be noted that the handbook generally assumes a level of quality assurance as usual for spacecrafts manufactured by major satellite prime contractors. The methodology and methods can of course be used also in other applications such as microsats or for “{term}`New Space <New space>`” applications. However, the models, background data and underlying assumptions may not be fully applicable, especially when dealing with process and quality related contributions to unreliability, e.g. for reliability prediction of {term}`EEE` components and assemblies {numref}`sec_eee_handbook` or when modelling {term}`systematic failures <Systematic failure>` based on IOR ({numref}`sec_sys_handbook`).
 
 (methodo_4_2_2)=
 ### Levels of assembly from part to system
@@ -98,8 +98,8 @@ For a more specific description of the level of assembly considered, the followi
 
 * Spacecraft level (only functional)
 * Interfaces level (electrical, mechanical or physical)
-* Equipment/Unit level (EEE, mechanical or miscellaneous)
-* Part/Component level (EEE, mechanical or miscellaneous)
+* Equipment/Unit level ({term}`EEE`, mechanical or miscellaneous)
+* Part/Component level ({term}`EEE`, mechanical or miscellaneous)
 
 The spacecraft level as well as the interface level (dealing with the boundaries where different products interact) are considered in the frame of system level reliability prediction. For the equipment and component level, three technical domains are distinguished in this handbook, as outlined in {numref}`methodo_4_2_3` below.  The methods and models provided for these levels focus on elementary reliability prediction and may have to be combined with general system level models for equipment level reliability prediction (i.e. considering the equipment as a system of elementary parts). Additional levels (intermediate or beyond) may be considered as required by the analysis. 
 
@@ -110,15 +110,15 @@ At each level of assembly, different types of elements can be used as a part of 
 
 * **EEE**
 
-    A EEE component performs an electrical, electronic or electromechanical function. At equipment level, an electrical unit is considered as a set of {term}`EEE parts <EEE part>` assembled in a single package with structure, boards, wires and connectors to support the specified functions.
+    A {term}`EEE` component performs an electrical, electronic or electromechanical function. At equipment level, an electrical unit is considered as a set of {term}`EEE parts <EEE part>` assembled in a single package with structure, boards, wires and connectors to support the specified functions.
 
 * **Mechanical**
   
-    A mechanical part is defined as a non-electronics part, i.e. a part that does not perform any EEE function. At equipment level, a mechanical unit (or mechanism) is assembled of mechanical parts - and possibly some EEE components - to support the specified functions. Also structural elements are considered as mechanical items.
+    A mechanical part is defined as a non-electronics part, i.e. a part that does not perform any {term}`EEE` function. At equipment level, a mechanical unit (or mechanism) is assembled of mechanical parts - and possibly some {term}`EEE` components - to support the specified functions. Also structural elements are considered as mechanical items.
 
 * **Miscellaneous**
   
-    Mainly for modelling reasons, the handbook considers a third category of “miscellaneous” items, as parts or assemblies that are difficult to classify as either EEE or mechanical, e.g. due to their EEE-mechanical hybrid aspects. 
+    Mainly for modelling reasons, the handbook considers a third category of “miscellaneous” items, as parts or assemblies that are difficult to classify as either {term}`EEE` or mechanical, e.g. due to their EEE-mechanical hybrid aspects. 
 
 At spacecraft level, elements from these three categories, which focus on the classification of hardware, will generally interact with software to perform the required functions. Software failures are discussed in the context of system level reliability prediction, as a subclass of (non-part related) {term}`systematic failures <Systematic failure>`. 
 
@@ -177,7 +177,7 @@ The root cause of {term}`systematic failures <Systematic failure>` originates fr
 {term}`Systematic failures <Systematic failure>` may in principle be part-related (due to part design or manufacturing errors) or non-part related, i.e. the error can be introduced at higher than part level. In the frame of this handbook it is assumed that the occurrence of part-related {term}`systematic failures <Systematic failure>` is effectively reduced by using space qualified components and by the processes in place in case of an alert issued by a manufacturer. At this quality assurance level, part related failures due to design or manufacturing errors may be assumed covered by the {term}`random failure <Random failure>` rate. Therefore, the focus of {term}`systematic failure <Systematic failure>` modelling in this handbook will be on the consideration of non-part related {term}`systematic failures <Systematic failure>`.
 
 Examples of {term}`systematic failures <Systematic failure>`:
-* Gold pollution during the assembly of a EEE package (part level, manufacturing)
+* Gold pollution during the assembly of a {term}`EEE` package (part level, manufacturing)
 * Poor lubricant choice leading to increased friction in a mechanism (equipment level, design)
 * PCB cracked by the manufacturing tool (equipment level, manufacturing)
 * Wrong connection of a connector (interface level, manufacturing)
@@ -254,7 +254,7 @@ The following subsections give a brief overview on the coverage in terms of spac
 
 To simplify the application of the handbook for users in practice, {numref}`sec_eee_handbook`, {numref}`sec_mech_handbook`, {numref}`sec_misc_handbook`, {numref}`sec_sys_handbook` are structured based on the technical domains introduced in {numref}`methodo_4_2_3`:
 
-* **{numref}`sec_eee_handbook`** for the modelling of **EEE** components and assemblies
+* **{numref}`sec_eee_handbook`** for the modelling of **{term}`EEE`** components and assemblies
 * **{numref}`sec_mech_handbook`** for the modelling of **Mechanical** and structural parts and assemblies
 * **{numref}`sec_misc_handbook`** for the modelling of **Miscellaneous** items
 * **{numref}`sec_sys_handbook`** for **System level** considerations, independent of the technical domains
@@ -270,12 +270,12 @@ Each chapter in {numref}`methods` of the handbook (Models) provides information 
 
 * RANDOM FAILURES: {term}`Random failures <Random failure>` are clearly a relevant input for the design of reliable systems. They are fully covered by the methodology provided in this handbook.
 * SYSTEMATIC FAILURES: The models provided in this handbook do not guarantee a complete coverage of all {term}`systematic failures <Systematic failure>` for all spacecraft elements. 
-    * For EEE items, a certain coverage of {term}`systematic failures <Systematic failure>` is achieved with the aid of process factors adapted to space applications.
+    * For {term}`EEE` items, a certain coverage of {term}`systematic failures <Systematic failure>` is achieved with the aid of process factors adapted to space applications.
     * For Mechanical items, the methodology allows the consideration of failures due to minor design uncertainties and manufacturing variability. Gross errors require a dedicated modelling at system level.
     * For {term}`Miscellaneous items <Miscellaneous item>`, the methodology allows the consideration of {term}`systematic failures <Systematic failure>` from a simple statistical perspective, referring to the modelling at system level as well. 
     * General considerations for {term}`systematic failure <Systematic failure>` modelling are given in the system level chapter, including a statistical model based on IOR data.
 * WEAR-OUT FAILURES: Also {term}`wear-out failures <Wear-out failure>` are not completely covered by the models provided in this handbook:
-    * For EEE items, the models provided generally assume constant failure rates during the useful life of a component, but a methodology for the separate consideration of {term}`wear-out failures <Wear-out failure>` is proposed in case an explicit wear-out modelling is needed, e.g. in the context of a life time extension.
+    * For {term}`EEE` items, the models provided generally assume constant failure rates during the useful life of a component, but a methodology for the separate consideration of {term}`wear-out failures <Wear-out failure>` is proposed in case an explicit wear-out modelling is needed, e.g. in the context of a life time extension.
     * The methodology for Mechanical reliability prediction includes an explicit consideration of relevant {term}`wear-out failure <Wear-out failure>` mechanisms, which may be used to model premature failures before the end-of-life, as well as {term}`wear-out failures <Wear-out failure>` during a potential life time extension.
     * For {term}`Miscellaneous items <Miscellaneous item>`, the methodology includes the consideration of {term}`wear-out failures <Wear-out failure>`, modelled beyond the {term}`mission lifetime <Mission lifetime>` based on an increasing failure rate and with model parameters related to the lifetime qualification of the items. 
     * System level considerations of wear-out modelling can be found in the system chapter, including approaches for the combination of a constant failure rate for {term}`random failures <Random failure>` with a separate wear-out model implying increasing failure rates.
