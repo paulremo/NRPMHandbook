@@ -64,6 +64,7 @@ parts:
       title: Models
       sections:
       - file: eee/models/eee_family_guide
+      - file: eee/models/cv_calculator
       - file: eee/models/pi_process_model
       - file: eee/models/pi_process_RFHF
       - file: eee/models/pi_process_ASIC
