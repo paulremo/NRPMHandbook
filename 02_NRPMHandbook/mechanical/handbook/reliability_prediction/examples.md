@@ -115,10 +115,8 @@ To calculate the coefficient of variation of the volume worn away, the covarianc
 :class: equation
 ```{math}
 :label: eq_example_3
-\begin{align}
-\text{Cov}\left[K_H,\alpha\right] &= \sigma_{K_H}\cdot\sigma_\alpha=v_{K_H}\cdot \text{E}\left[K_H\right]\cdot v_\alpha\cdot \text{E}\left[\alpha\right]\\
-&=0.6\cdot4\cdot10^{-15}\cdot0.1\cdot0.033=7.92\cdot10^{-18}
-\end{align}
+\text{Cov}\left[K_H,\alpha\right]&= \sigma_{K_H}\cdot\sigma_\alpha=v_{K_H}\cdot \text{E}\left[K_H\right]\cdot v_\alpha\cdot \text{E}\left[\alpha\right]\\
+&=0.6\cdot 4\cdot 10^{-15}\cdot 0.1\cdot 0.033=7.92 \cdot 10^{-18}
 ```
 ````
 
@@ -127,11 +125,9 @@ The variance of the product $K_H\cdot\alpha$ is calculated as:
 :class: equation
 ```{math}
 :label: eq_example_4
-\begin{align}
 \text{Var}\left[K_H\cdot\alpha\right]&=Var_{K_H}\cdot \text{Var}_\alpha+Var_{K_H}E\left[\alpha\right]^2+Var_\alpha E\left[K_H\right]^2\\
 &=5.76\cdot10^{-30}\cdot1.1\cdot10^{-5}+5.76\cdot10^{-30}\cdot\left(0.033\right)^2+1.1\cdot10^{-5}\cdot\left(4\cdot10^{-15}\right)^2\\
 &=6.51\cdot10^{-33}
-\end{align}
 ```
 ````
 
@@ -140,11 +136,9 @@ According to Eq. {eq}`Equation_3_22`, the expected value of the volume worn away
 :class: equation
 ```{math}
 :label: eq_example_5
-\begin{align}
 \text{E}\left[X_2\right]&=\text{E}\left[K_H\cdot\alpha\right]\cdot \text{rev}=\left(\text{E}\left[K_H\right]\cdot \text{E}\left[\alpha\right]+\text{Cov}\left[K_H,\alpha\right]\right)\cdot \text{rev}\\
 &=\left(4\cdot10^{-15}\cdot0.033+7.92\cdot10^{-18}\right)10^6\\
 &=7\cdot10^{-8}
-\end{align}
 ```
 ````
 and the coefficient of variation of the volume worn away is according to Eq. {eq}`Equation_3_23`: 
@@ -161,12 +155,10 @@ Finally, the probability of failure is calculated according to Eq. {eq}`Equation
 :class: equation
 ```{math}
 :label: eq_example_7
-\begin{align}
 P_f&=P\left[X_1-X_2\cdot\Theta\le0\right]\\
 &=\Phi\left(\frac{ln\left(E\left[\Theta\right]\right)-ln\left(E\left[X_1\right]/E\left[X_2\right]\right)+0.5\cdot\left(ln\left(v_{X_1}^2+1\right)-ln\left(v_{X_2}^2+1\right)-ln\left(v_\Theta^2+1\right)\right)}{\sqrt{ln\left(v_{X_1}^2+1\right)+ln\left(v_{X_2}^2+1\right)+ln\left(v_\Theta^2+1\right)}}\right)\\
 &=\Phi\left(\frac{ln\left(1.2\right)-ln\left(6\cdot10^{-8}/1.4\cdot10^{-10}\right)+0.5\cdot\left(ln\left(0.2^2+1\right)-ln\left(0.577^2+1\right)-ln\left(0.2^2+1\right)\right)}{\sqrt{ln\left(0.2^2+1\right)+ln\left(0.577^2+1\right)+ln\left(0.2^2+1\right)}}\right)\\
 &=\Phi\left(-2.709\right)=0.0034,
-\end{align}
 ```
 ````
 where $\Phi$ denotes the cumulative standard normal distribution.
@@ -250,11 +242,9 @@ The prior hyperparameters for the distribution of $\mu_{\text{rev}}$ are estimat
 :class: equation
 ```{math}
 :label: eq_example_15
-\begin{align}
 \mu\prime&=ln\left(k\right)-ln\left(E\left[\Theta\right]\right)+0.5\cdot\left(ln\left(v_\Theta^2+1\right)-ln\left(v_{X_1}^2+1\right)+ln\left(v_{X_2}^2+1\right)\right)\\
 &=ln\left(4.29\cdot10^8\right)-ln\left(1.2\right)+0.5\cdot\left(ln\left(0.2^2+1\right)-ln\left(0.2^2+1\right)+ln\left(0.577^2+1\right)\right)\\
 &=19.84
-\end{align}
 ```
 ```{math}
 :label: eq_example_16
@@ -380,10 +370,8 @@ Using the additional data, the reliability model for the bearing can be updated.
 ````{admonition} Equation
 :class: equation
 ```{math}
-\begin{align}
 \sigma\prime\prime&=0.1292,\\
 \mu\prime\prime&=20.23
-\end{align}
 ```
 ````
 

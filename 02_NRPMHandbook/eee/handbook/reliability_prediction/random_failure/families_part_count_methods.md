@@ -229,7 +229,7 @@ The part manufacturing factor $\Pi_{\text{PM}}$ is related to the quality of {te
 
 The process factor $\Pi_{\text{Process}}$ is related to the development process of electronic equipment and the recommendation is to either use a typical $\Pi_{\text{Process}}$ previously calculated for the same kind of application or in case no information is available, to use the maximum value issued from the questionnaire adapted to space applications and described in {numref}`eee_4_3_2_1`.
 
-The induced factor $\Pi_{\text{Induced_i}}$, has some parameters directly fixed for space applications as described in {numref}`eee_4_3_1`.
+The induced factor $\Pi_{\text{Induced\_i}}$, has some parameters directly fixed for space applications as described in {numref}`eee_4_3_1`.
 
 ```{admonition} Recommendation
 :class: recommendation

@@ -11,7 +11,7 @@ This Paragraph deals with the different process factors dedicated to the quality
 
 -   process factor for {term}`ASIC` components $\Pi_{\text{ProcessASIC}}$;
 
--   process factor for Hybrids and Multi Chip Modules $\Pi_{\text{Process\_ H&M}}$.
+-   process factor for Hybrids and Multi Chip Modules $\Pi_{\text{Process\_H\&M}}$.
 
 (eee_4_3_2_1)=
 ## Process factor for quality and technical control over reliability
@@ -21,7 +21,7 @@ The process factor $\Pi_{\text{process}}$ represents the quality and technical c
 (eee_4_3_2_2)=
 ## Contribution of different phases in the development process
 
-The FIDES questionnaire for $\Pi_{\text{process}}$ is based on questions having a possible impact on the reliability of the equipment and related to the different phases of its development and manufacturing. The relative influence of each phase, $Contribution\_ Phase_{i}$, is weighted depending on the importance of each phase in the total contribution to the reliability of the equipment. This phase contribution is directly used in the calculation of the process factor $\Pi_{\text{process}}$.
+The FIDES questionnaire for $\Pi_{\text{process}}$ is based on questions having a possible impact on the reliability of the equipment and related to the different phases of its development and manufacturing. The relative influence of each phase, $\text{Contribution\_Phase}_{i}$, is weighted depending on the importance of each phase in the total contribution to the reliability of the equipment. This phase contribution is directly used in the calculation of the process factor $\Pi_{\text{process}}$.
 
 The FIDES guide provides default values that can be used by all domains, but recommends to use dedicated values for the considered industrial domain.
 
@@ -429,9 +429,9 @@ ASIC\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maxim
 (eee_4_3_2_7)=
 ## Process factor for Hybrids and Multi Chip Modules
 
-The process factor $\Pi_{\text{Process\_ H&M}}$ takes into account of how control over design and manufacturing of the Hybrids and Multi Chip Modules influences reliability. This factor is complementary to the process factor $\Pi_{\text{Process}}$ that remains applicable for Hybrids and Multi Chip Modules.
+The process factor $\Pi_{\text{Process\_H\&M}}$ takes into account of how control over design and manufacturing of the Hybrids and Multi Chip Modules influences reliability. This factor is complementary to the process factor $\Pi_{\text{Process}}$ that remains applicable for Hybrids and Multi Chip Modules.
 
-$\Pi_{\text{Process\_ H&M}}$ is issued from the following equations and questionnaire:
+$\Pi_{\text{Process\_H\&M}}$ is issued from the following equations and questionnaire:
 
 ````{admonition} Equation
 :class: equation
@@ -439,17 +439,17 @@ $\Pi_{\text{Process\_ H&M}}$ is issued from the following equations and question
 ``  
 ```{math}
 :label: Equation_1_26
-\Pi_{Process\_ H\& M} = exp\left\lbrack 1.39 \cdot \left( 1 - H\& M\_ process\_ grade \right) \right\rbrack
+\Pi_{\text{Process\_H\&M}} = exp\left\lbrack 1.39 \cdot \left( 1 - \text{H\&M\_process\_grade} \right) \right\rbrack
 ```  
 ```{math}
 :label: Equation_1_27
-H\& M\_ process\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maximum applicable mark}}
+\text{H\&M\_process\_grade} = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maximum applicable mark}}
 ```
 ````
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-14')" placeholder="Search table...">
 
-```{list-table} Factors influencing the $\Pi_{\text{Process\_ H&M}}$
+```{list-table} Factors influencing the $\Pi_{\text{Process\\_H\\&M}}$
 :name: eee-table4-14
 :header-rows: 1
 :widths: 10 70 10 10

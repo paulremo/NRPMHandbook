@@ -8,7 +8,7 @@
 The content of this page is missing and will be provided in a future version of the NRPM digital handbook.
 ```
 
-This table contains, for each phase of the development and manufacturing, the recommendations for the satisfaction level of the questions of the questionnaire to estimate the process factor $\PI_{\text{Process}}$ for quality and technical control over reliability in the product life cycle as defined in Section {numref}`eee_4_1`. It considers also the modified questions of {ref}`eee_annex_c` adapted to space applications. The recommendations are done for the following contributors:
+This table contains, for each phase of the development and manufacturing, the recommendations for the satisfaction level of the questions of the questionnaire to estimate the process factor $\Pi_{\text{Process}}$ for quality and technical control over reliability in the product life cycle as defined in Section {numref}`eee_4_1`. It considers also the modified questions of {ref}`eee_annex_c` adapted to space applications. The recommendations are done for the following contributors:
 
 -   The prime contractor for classical space applications;
 

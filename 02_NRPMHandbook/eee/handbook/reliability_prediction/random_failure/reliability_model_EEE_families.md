@@ -2031,7 +2031,7 @@ $\gamma_{TH - EL}$ depends on the type of piezo electrical devices.
 :widths: 70 30
 
 *   - Component description
-    - ${\gamma_{TH - EL}$
+    - $\gamma_{TH - EL}$
 *   - Oscillator surface, XO, MCSO case type
     - 0.31
 *   - Oscillator through, XO case type
@@ -2865,10 +2865,11 @@ $E_{a}$ = 0.7eV;
 ``  
 ```{math}
 :label: Equation_1_70
-\Pi_{\text{El}} = \left\{ \begin{matrix}  \left( \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{2.4}\ \mathrm{\text{if}}\ \frac{V_{\text{applied}}}{V_{\text{rated}}} > 0.3 \\   
-   \\                                                                                                                                          
-  0.056\ \mathrm{\text{if}}\ \frac{V_{\text{applied}}}{V_{\text{rated}}} \leq 0.3 \\                                                           
-  \end{matrix} \right.\ $$                          
+\Pi_{\text{El}}=
+\begin{cases}
+\left( \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{2.4} &\text{if} \frac{V_{\text{applied}}}{V_{\text{rated}}} > 0.3 \\
+0.056 &\text{if} \frac{V_{\text{applied}}}{V_{\text{rated}}} \leq 0.3.
+\end{cases}
 ```
 ````
 
@@ -12326,7 +12327,7 @@ All other parameters are issued from the mission profile.
 ```
 ````
 
-${C_{\text{EL}}$ = 0.56;
+$C_{\text{EL}}$ = 0.56;
 
 $\Pi_{\text{pole}}$ depending on the type of switch (for SPST $\Pi_{\text{pole}}$= 1, for DPDT $\Pi_{\text{pole}}$=3, for 3PDT $\Pi_{\text{pole}}$=4.25 and for 4PDT $\Pi_{\text{pole}}$=5.5).
 
