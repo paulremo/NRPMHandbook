@@ -699,7 +699,7 @@ function runEEEGuide() {
 
         removeModelBTN();
         let model = eee_families_informations.get(selection).get(group);
-        if (typeof model == "string") {
+        if (typeof model == "string" || isEmptyDictionary(model)) {
             displayStep4(selection, group, model, false);
         }
         else {
@@ -877,6 +877,16 @@ function runEEEGuide() {
             }, 100);
 
         }
+    }
+
+    function isEmptyDictionary(dico){
+        let empty = true;
+        for (var [key,value] of dico){
+            if (dico.get(key) != ""){
+                empty = false;
+            }
+        }
+        return empty
     }
 
     displayStep1()
