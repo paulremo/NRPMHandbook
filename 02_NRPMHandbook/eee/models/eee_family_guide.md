@@ -9,17 +9,17 @@ The content of this page is missing and will be provided in a future version of 
 ```
 
 
-<div id="conversation">
+<div id="conversation-eee-guide">
     <table>
         <tr>
-            <td id="astronautDiv">
-                <div id="astronaut">
-                    <img id="astroPicture" src="../../_static/images/ground_on.svg"/>
+            <td id="pictureDiv_eee_guide">
+                <div id="picture_eee_guide">
+                    <img id="animated_picture_eee_guide" src="../../_static/images/ground_on.svg"/>
                 </div>
             </td>
-            <td id="messageDiv">
-                <div id="messages" class="scroll">
-                    <table class="track" id="messagesTrack"></table>
+            <td id="messageDiv_eee_guide">
+                <div id="messages_eee_guide" class="scroll-eee-guide">
+                    <table class="track-eee-guide" id="messagesTrack_eee_guide"></table>
                 </div>
             </td>
         </tr>
