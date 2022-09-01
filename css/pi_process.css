@@ -338,6 +338,7 @@
 }
 
 #question-load {
+    cursor: pointer;
     height: fit-content;
     margin-top: 2em;
     width: fit-content;
@@ -347,6 +348,12 @@
     color: #0b025a;
     font-size: 1em;
 }
+
+#question-load:disabled {
+    cursor: not-allowed;
+    background-color: #555;
+}
+
 
 .informationGrid {
     width: 100%;
@@ -385,6 +392,12 @@
 .answers-input input{
     margin-left: 1em;
 }
+
+.answers-input input:disabled{
+    cursor: not-allowed;
+    background-color: #555;
+}
+
 .answers-input button{
     background-color: rgb(194, 48, 48);
     font-size: 1.2em;
@@ -392,8 +405,28 @@
     color: #FFFFFF;
     padding-inline: 1em;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+.answers-input button:hover{
+    background-color: rgb(245, 55, 55);
+}
+
+.answers-input button:disabled{
+    background-color: rgb(145, 144, 144);
+    cursor: not-allowed;
 }
 
 .progress-star{
     font-size: 1.2em;
+}
+
+#reload_button_process{
+    background-color:slategray; 
+    color: black;
+}
+
+#reload_button_process:hover{
+    background-color: #ddd;
+    cursor: pointer;
 }

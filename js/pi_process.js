@@ -111,6 +111,7 @@ function runPiProcess() {
                     answers_loaded = true;
                     this.disabled = true;
                     document.getElementById("question-load").disabled = true;
+                    document.getElementById("question-load-button").disabled = true;
                 }
                 else {
                     alert("Values corrupted, please verify your data and try again");
@@ -132,29 +133,18 @@ function runPiProcess() {
         if (answers_loaded) {
 
             for (const [key, value] of new_dico) {
-                let ct_dict = new Map();
-                for (const [q, v] of value) {
-                    if (modeSubco) {
-                        modeKey = "subco"
-                    }
-                    else {
-                        modeKey = "prime"
-                    }
-                    if (appliNS) {
-                        appliDico = recomNS
-                    }
-                    else {
-                        appliDico = recomCL
-                    }
-                    let recoms = appliDico.get(current_category).get(new_dico.get(key).get(parseInt(q)).get("id")).get(modeKey);
-                    if (recoms.values().next().value == 'NA') {
-                        ct_dict.set(q, "NA");
-                    }
-                    else {
-                        ct_dict.set(q, null);
-                    }
+                if (modeSubco) {
+                    modeKey = "subco"
                 }
-                currentAnswers.set(key, ct_dict);
+                else {
+                    modeKey = "prime"
+                }
+                if (appliNS) {
+                    appliDico = recomNS
+                }
+                else {
+                    appliDico = recomCL
+                }
             }
         }
         else {
@@ -468,7 +458,7 @@ function runPiProcess() {
                     this.innerHTML = "0" + (id + 1);
                 }
                 else {
-                    this.innerHTML = id + 1; 
+                    this.innerHTML = id + 1;
                 }
                 if (this.id == currentPage) {
                     this.style.backgroundColor = "red";
@@ -1118,7 +1108,7 @@ function runPiProcess() {
         document.getElementById("overlay").style.display = "block";
         document.getElementById("modeInput").style.display = "none";
         document.getElementById("answersInput").style.display = "none";
-        for (var element of document.getElementsByClassName("help-message-pi-process")){
+        for (var element of document.getElementsByClassName("help-message-pi-process")) {
             element.style.display = "block";
         }
         document.getElementById("start").style.display = "none";
