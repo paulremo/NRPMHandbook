@@ -1,6 +1,6 @@
 /* Copyright (C) Matrisk GmbH 2022*/
 
-#conversation{
+#conversation-eee-guide{
     width: 100%;
 }
 
@@ -8,19 +8,19 @@
     width: 100%;
 }
 
-#astroPicture{
+#animated_picture_eee_guide{
     width: 70%;
 }
 
-#astronautDiv{
+#pictureDiv_eee_guide{
     width: 30%;
 }
 
-#messageDiv{
+#messageDiv_eee_guide{
     width: 70%;
 }
 
-.scroll {
+.scroll-eee-guide {
     margin: 5px;
     padding: 5px;
     /*background-color: rgb(198, 207, 242);*/
@@ -33,7 +33,7 @@
     /*text-align: justify;*/
 }
 
-.track {
+.track-eee-guide {
     /*text-align: justify;*/
     width: 100%;
     font-family: 'Courier New'
@@ -62,54 +62,22 @@
     margin-top: 5%;
 }
 
-.extra-bar {
-    min-height: 20px;
-    word-wrap: break-word;
-    margin-left: 650px;
-    margin-top: 20px;
+.choice-button-eee-guide{
+    padding-inline: 20px;
+    margin: 10px;
 }
 
-.button-fail{
-    background-color: rgb(0, 0, 0);
-    color:white
+.choice-button-eee-guide:hover{
+    cursor: pointer;
+    background-color: lightsteelblue;
 }
 
-.button-next{
-    background-color: rgb(0, 0, 0);
-    color:white;
-    width: 50%;
-    margin-left: 25%;
+.chosen-choice-button-eee{
+    background-color: #0F4754;
+    color: white;
 }
 
-.button-next:disabled{
-    background-color: #26B4D4;
-    color:rgb(0, 0, 0);
-    width: 50%;
-    margin-left: 25%;
-}
-
-.button-fail:disabled{
-    background-color: #0D3C47;
-    color: azure;
-}
-
-#inputComponent{
-    width: 50%;
-    margin-left: 25%;
-}
-
-#inputComponent:disabled{
-    background-color: #26B4D4;
-    color:rgb(0, 0, 0);
-    width: 50%;
-    margin-left: 25%;
-}
-
-.choice-button:disabled{
-    background-color: #0D3C47;
-    color: azure;
-}
-
-u {
-    text-decoration: white solid underline;
+.information-filtering-eee-guide{
+    width: 80%;
+    margin-left: 10%;
 }
