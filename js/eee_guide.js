@@ -35,7 +35,7 @@ function runEEEGuide() {
                 ["Aluminium solid electrolyte capacitor", "ECAC_02"]
             ])],
             ["Semiconductors", new Map([
-                ["Low power transistors, Silicon MOS < 5W", "ECDS_19"]
+                ["Low power transistors, Silicon MOS lower than 5W", "ECDS_19"]
             ])]
         ])],
         ["Connectors", new Map([
@@ -97,7 +97,7 @@ function runEEEGuide() {
                 ["Protection diodes more than 3kW (in peak 10ms/100ms) (TVS)", "ECDS_17"]
             ])],
             ["High voltage rectifier", new Map([
-                ["Rather use Rectifying diodes > 3A", "ECDS_15"]
+                ["Rather use Rectifying diodes superior to 3A", "ECDS_15"]
             ])],
             ["Microwave varactor (GaAs)", new Map([
                 ["Rather use PIN, Schottky, Tunnel, varactor diodes (RF HF)", "HFDI_01"]
@@ -291,56 +291,56 @@ function runEEEGuide() {
             ])]
         ])],
         ["Transistors", new Map([
-            ["Low Power, NPN (< 2watts)", new Map([
-                ["Low power Transistors Silicon bipolar < 5W", "ECDS_20"]
+            ["Low Power, NPN (lower than 2watts)", new Map([
+                ["Low power Transistors Silicon bipolar lower than 5W", "ECDS_20"]
             ])],
-            ["Low Power, PNP (< 2watts)", new Map([
-                ["Low power Transistors Silicon bipolar < 5W", "ECDS_20"]
+            ["Low Power, PNP (lower than 2watts)", new Map([
+                ["Low power Transistors Silicon bipolar lower than 5W", "ECDS_20"]
             ])],
-            ["High Power, NPN (> 2watts)", new Map([
-                ["Power Transistors Silicon bipolar > 5W", "ECDS_21"]
+            ["High Power, NPN (superior to 2watts)", new Map([
+                ["Power Transistors Silicon bipolar superior to 5W", "ECDS_21"]
             ])],
-            ["High Power, PNP (> 2watts)", new Map([
-                ["Power Transistors Silicon bipolar > 5W", "ECDS_21"]
+            ["High Power, PNP (superior to 2watts)", new Map([
+                ["Power Transistors Silicon bipolar superior to 5W", "ECDS_21"]
             ])],
             ["FET N Channel", new Map([
-                ["Low power Transistors Silicon MOS < 5W", "ECDS_19"],
-                ["Low power Transistors Silicon JFET < 5W", "ECDS_18"]
+                ["Low power Transistors Silicon MOS lower than 5W", "ECDS_19"],
+                ["Low power Transistors Silicon JFET lower than 5W", "ECDS_18"]
             ])],
             ["FET P Channel", new Map([
-                ["Low power Transistors Silicon MOS < 5W", "ECDS_19"],
-                ["Low power Transistors Silicon JFET < 5W", "ECDS_18"]
+                ["Low power Transistors Silicon MOS lower than 5W", "ECDS_19"],
+                ["Low power Transistors Silicon JFET lower than 5W", "ECDS_18"]
             ])],
             ["RF/microwave Npn Low Power / Low Noise", new Map([
-                ["RF HF Low power Transistors Silicon Bipolar < 5W", "HFDI_02"],
-                ["RF HF Low power Transistors SiGe Bipolar < 1W", "HFDI_03"]
+                ["RF HF Low power Transistors Silicon Bipolar lower than 5W", "HFDI_02"],
+                ["RF HF Low power Transistors SiGe Bipolar lower than 1W", "HFDI_03"]
             ])],
             ["RF/microwave Pnp Low Power / Low Noise", new Map([
-                ["RF HF Low power Transistors Silicon Bipolar < 5W", "HFDI_02"],
-                ["RF HF Low power Transistors SiGe Bipolar < 1W", "HFDI_03"]
+                ["RF HF Low power Transistors Silicon Bipolar lower than 5W", "HFDI_02"],
+                ["RF HF Low power Transistors SiGe Bipolar lower than 1W", "HFDI_03"]
             ])],
             ["RF/microwave Bipolar Power", new Map([
-                ["RF HF Power Transistors Silicon Bipolar > 5W", "HFDI_05"]
+                ["RF HF Power Transistors Silicon Bipolar superior to 5W", "HFDI_05"]
             ])],
             ["RF/microwave FET N-channel/ P-channel", "No more present in the EPPL"],
             ["RF/microwave FET Power (Si)", new Map([
-                ["Rather use RF HF Power Transistors Silicon MOS > 5W", "HFDI_06"]
+                ["Rather use RF HF Power Transistors Silicon MOS superior to 5W", "HFDI_06"]
             ])],
             ["Microwave Power (GaAs)", new Map([
-                ["Rather use RF HF Power Transistors GaAs>1W", "HFDI_07"]
+                ["Rather use RF HF Power Transistors GaAs superior to 1W", "HFDI_07"]
             ])],
             ["Microwave Low Noise (GaAs)", new Map([
-                ["Rather use RF HF Low power Transistors GaAs<1W", "HFDI_04"],
-                ["Rather use RF HF Power Transistors GaAs>1W", "HFDI_07"]
+                ["Rather use RF HF Low power Transistors GaAs lower than 1W", "HFDI_04"],
+                ["Rather use RF HF Power Transistors GaAs superior to 1W", "HFDI_07"]
             ])],
             ["Multiple", "Rather model as the sum of all individual transistors"],
             ["Switching", new Map([
-                ["Rather use Low power Transistors Silicon bipolar < 5W", "ECDS_20"]
+                ["Rather use Low power Transistors Silicon bipolar lower than 5W", "ECDS_20"]
             ])],
             ["Chopper", new Map([
-                ["Low power Transistors Silicon bipolar < 5W", "ECDS_20"],
-                ["Low power Transistors Silicon MOS < 5W", "ECDS_19"],
-                ["Low power Transistors Silicon JFET < 5W", "ECDS_18"]
+                ["Low power Transistors Silicon bipolar lower than 5W", "ECDS_20"],
+                ["Low power Transistors Silicon MOS lower than 5W", "ECDS_19"],
+                ["Low power Transistors Silicon JFET lower than 5W", "ECDS_18"]
             ])]
         ])],
         ["Transformers", new Map([
@@ -699,7 +699,8 @@ function runEEEGuide() {
 
         removeModelBTN();
         let model = eee_families_informations.get(selection).get(group);
-        if (typeof model == "string" || isEmptyDictionary(model)) {
+        console.log(group)
+        if (typeof model == "string" || model == undefined || isEmptyDictionary(model)) {
             displayStep4(selection, group, model, false);
         }
         else {
