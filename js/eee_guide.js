@@ -422,28 +422,28 @@ function runEEEGuide() {
         let src_data = img.src.split('/');
         let elt = src_data[[src_data.length - 1]]
         if (elt == "final_on.svg") {
-            img.src = "../../_static/images/final_off.svg"
+            img.setAttribute("src","../../_static/images/final_off.svg");
         }
         else if (elt == "final_off.svg") {
-            img.src = "../../_static/images/final_on.svg"
+            img.setAttribute("src","../../_static/images/final_on.svg");
         }
         else if (elt == "moon_on.svg") {
-            img.src = "../../_static/images/moon_off.svg"
+            img.setAttribute("src","../../_static/images/moon_off.svg");
         }
         else if (elt == "moon_off.svg") {
-            img.src = "../../_static/images/moon_on.svg"
+            img.setAttribute("src","../../_static/images/moon_on.svg");
         }
         else if (elt == "launch_on.svg") {
-            img.src = "../../_static/images/launch_off.svg"
+            img.setAttribute("src","../../_static/images/launch_off.svg");
         }
         else if (elt == "launch_off.svg") {
-            img.src = "../../_static/images/launch_on.svg"
+            img.setAttribute("src","../../_static/images/launch_on.svg");
         }
         else if (elt == "ground_on.svg") {
-            img.src = "../../_static/images/ground_off.svg"
+            img.setAttribute("src","../../_static/images/ground_off.svg");
         }
         else if (elt == "ground_off.svg") {
-            img.src = "../../_static/images/ground_on.svg"
+            img.setAttribute("src","../../_static/images/ground_on.svg");
         }
     }
         , 300);
