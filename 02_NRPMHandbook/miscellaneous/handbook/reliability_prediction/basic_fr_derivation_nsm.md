@@ -25,7 +25,7 @@ It is recommended to use the {cite:t}`mis-SAE_standard, mis-PFMEA` which provide
 * **@unit level**: under supplier responsibility
 * **@system level**: integrated at system level by System {term}`RAMS` engineer (including HSIA supporting the failure tolerance: observability in-orbit…)
 
-**{term}`Design `: Required on critical functions only (Risk analysis)**
+**{term}`Design FMEA`: Required on critical functions only (Risk analysis)**
 
 * Is a tool/method supporting the product {term}`quality <Quality>` identifying all the elementary {term}`failure mode <Failure mode>`s due to DESIGN errors. It includes, as a minimum, the {term}`failure mode <Failure mode>`s identified by {term}`FMEA`.
 * **@unit level**: under unit designer / {term}`quality <Quality>` Assurance responsibility
