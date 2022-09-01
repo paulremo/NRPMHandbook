@@ -736,7 +736,7 @@ The allocation of reliability requirements then consists of the following steps:
 4. Create a high level system model that consists of the relevant subsystems based on the functional failure analysis. 
 Methodo  Assign reliability targets to sub-functions. Besides the use of historical data of similar systems different approaches could be used to assign initial reliability targets, for example, see page 50: 
    * Equal allocation
-   * Proportional allocation (ARINC method)
+   * Proportional allocation ({term}`ARINC` method)
    * Feasibility-Of-Objectives (FOO) Method 
 6. Review of sub-system targets with regard to feasibility, cost, schedule etc. and refine allocation if deemed necessary. This may involve iterations to find a well-balanced apportionment of reliability targets.
 
@@ -823,7 +823,7 @@ The analysis of functional failures can also be represented with a reliability b
 In the following, different approaches for requirement allocation are introduced, including:
 
 * Equal allocation
-* Proportional allocation (ARINC method)
+* Proportional allocation ({term}`ARINC` method)
 * Feasibility-Of-Objectives (FOO) Method
 
 These methods are applicable for a serial system structure only. For more complex system architectures, the reliability allocation should also make use of system level reliability assessment methods (see {numref}`sec_sys_handbook`). 
@@ -894,7 +894,7 @@ The equal allocation is very easy to apply, but does not consider the technical 
 
 **Proportional Allocation (ARINC Method)**
 
-The proportional allocation also known as ARINC method takes historical data on sub-system reliability into account to distribute the reliability to sub-system level. The weighting factor is determined by the ratio of the observed sub-system failure probability to the total system failure probability, as shown in Eq. {eq}`Equation_methodo_5`. The new reliability target is allocated to sub-system proportional to this factor.
+The proportional allocation also known as {term}`ARINC` method takes historical data on sub-system reliability into account to distribute the reliability to sub-system level. The weighting factor is determined by the ratio of the observed sub-system failure probability to the total system failure probability, as shown in Eq. {eq}`Equation_methodo_5`. The new reliability target is allocated to sub-system proportional to this factor.
 
 ````{admonition} Equation
 :class: equation

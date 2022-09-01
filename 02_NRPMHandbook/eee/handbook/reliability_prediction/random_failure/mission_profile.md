@@ -653,7 +653,7 @@ A first recommendation concerning the questionnaire is to answer to all question
 ```{admonition} Rule
 :class: rule
 
-For CDR, Sub-contractors, or suppliers, in particular those who are new in the space industry or in the frame of "{term}`new space <New space>`" programs need to adapt these levels to their conditions with rationale provided.
+For {term}`CDR`, Sub-contractors, or suppliers, in particular those who are new in the space industry or in the frame of "{term}`new space <New space>`" programs need to adapt these levels to their conditions with rationale provided.
 ```
 
 Therefore, the table with associated weights and levels N4 for space applications is the following:
@@ -669,7 +669,7 @@ Therefore, the table with associated weights and levels N4 for space application
 	- Recommendation
 	- $Recom_{weight}$
 	- Preliminary Level
-	- CDR Level
+	- {term}`CDR` Level
 *   - 169
 	- Write complete procedures for all product implementation operations
 	- 7

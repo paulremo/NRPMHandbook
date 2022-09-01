@@ -701,7 +701,7 @@ Component manufacturing factor $\Pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: MIL-PRF-xxxx level T, MIL-PRF-xxxx level S, MIL-PRF-xxxx level R, ESCC 300x, NASDA-QTS-xxxx class I (JAXA-QTS-2040E)
     - Higher
     - 3
-*   - Qualification according to one of the following standards: AEC Q200, MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved CECC standards.
+*   - Qualification according to one of the following standards: AEC Q200, MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved {term}`CECC` standards.
     - Equivalent
     - 2
 *   - Qualification according to one of the following MIL-PRF-xxxx level M, or qualification program internal to the manufacturer and unidentified manufacturing sites
@@ -970,7 +970,7 @@ Component manufacturing factor $\Pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: AEC Q200, MIL-PRF-xxxx level T, MIL-PRF-xxxx level B, ESCC 300x, NASDA-QTS-xxxx class I (JAXA-QTS-2040E)
     - Higher
     - 3
-*   - Qualification according to one of the following standards: MIL-PRF-xxxx level C, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards. Qualification according to approved CECC standards.
+*   - Qualification according to one of the following standards: MIL-PRF-xxxx level C, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards. Qualification according to approved {term}`CECC` standards.
     - Equivalent
     - 2
 *   - Qualification according to one of the following: MIL-PRF-xxxx level D, or qualification program internal to the manufacturer and unidentified manufacturing sites
@@ -1272,7 +1272,7 @@ Component manufacturing factor $\Pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: AEC Q200, MIL-PRF-xxxx level T, MIL-PRF-xxxx level S, MIL-PRF-xxxx level R, ESCC 400x, NASDA-QTS-xxxx class I (JAXA-QTS-2050D)
     - Higher
     - 3
-*   - Qualification according to one of the following standards: MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved CECC standards.
+*   - Qualification according to one of the following standards: MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved {term}`CECC` standards.
     - Equivalent
     - 2
 *   - Qualification according to MIL-PRF-xxxx level M, or qualification program internal to the manufacturer and unidentified manufacturing sites
@@ -1846,10 +1846,10 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: ESCC 340x level B, NASDA-QTS-xxxx class 1, MIL-DTL-xxxxx, JAXA-QTS-2060E, GSFC
     - Higher
     - 3
-*   - Qualification according to one of the following standards: Telcordia GR1217-CORE, ARINC 600 and 80x (not space adapted), AECMA, SAE (39029)
+*   - Qualification according to one of the following standards: Telcordia GR1217-CORE, {term}`ARINC` 600 and 80x (not space adapted), {term}`AECMA`, SAE (39029)
     - Equivalent
     - 2
-*   - Qualification according to one of the following standards: EIA, IEC, SAE, BS
+*   - Qualification according to one of the following standards: EIA, IEC, SAE, {term}`BS`
     - Lower
     - 1
 *   - No information
@@ -5410,7 +5410,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: AEC Q200, MIL-STD-981 class S, MIL-PRF-xxx level T, ESCC 320x, NASDA-QTS-xxxx class I
     - Higher
     - 3
-*   - Qualification according to one of the following standards: MIL-STD-981 class B, MIL-PRF-xxx level M, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved CECC standards.
+*   - Qualification according to one of the following standards: MIL-STD-981 class B, MIL-PRF-xxx level M, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved {term}`CECC` standards.
     - Equivalent
     - 2
 *   - Qualification according to one of the following MIL-PRF-xxxx level C, or qualification program internal to the manufacturer and unidentified manufacturing sites
@@ -5772,10 +5772,10 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - Si RF and HF (MOS) analogue circuit (power amplifier)
     -
     - 0.53
-*   - Si, SiGe Analogue and mixed circuit (MOS, Bipolar, BiCMOS, MOSFET, PHEMT, HBT) including RF and HF
+*   - Si, SiGe Analogue and mixed circuit (MOS, Bipolar, {term}`BiCMOS`, MOSFET, PHEMT, HBT) including RF and HF
     -
     - 0.19
-*   - Si, SiGe RF and HF digital circuit (MOS, bipolar BiCMOS)
+*   - Si, SiGe RF and HF digital circuit (MOS, bipolar {term}`BiCMOS`)
     -
     - 0.04
 *   - GaAs Integrated Circuit
@@ -5784,7 +5784,7 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - GaAs, RF and HF analogue circuit (power amplifier)
     -
     - 0.70*
-*   - GaAs Analogue and mixed circuit (MOS, Bipolar, BiCMOS, MOSFET, PHEMT, HBT) including RF and HF
+*   - GaAs Analogue and mixed circuit (MOS, Bipolar, {term}`BiCMOS`, MOSFET, PHEMT, HBT) including RF and HF
     -
     - 0.19
 ```
@@ -5853,9 +5853,9 @@ All packages have been split into the following six categories:
 
 *   - Typical name
     - Description
-*   - CERDIP, CDIP, sidebraze
+*   - {term}`CERDIP`, CDIP, sidebraze
     - Ceramic dual in line package
-*   - CPGA
+*   - {term}`CPGA`
     - Ceramic pin grid array
 *   - PDIP, TO116
     - Plastic dual in line package
@@ -5926,11 +5926,11 @@ All packages have been split into the following six categories:
 *   - PBGA 1.5mm
     -  Plastic ball grid array with solder ball pitch = 1.5 mm
 *   - FPBGA
-    -  Fine pitch BGA
+    -  Fine pitch {term}`BGA`
 *   - FCPBGA
-    -  Flip chip plastic BGA
+    -  Flip chip plastic {term}`BGA`
 *   - Power BGA (TBGA, SBGA …)
-    -  Tape BGA, PBGA with heat sink, die top down pitch=1.27mm Super BGA, PBGA with heat sink, die top down pitch=1.27mm
+    -  Tape {term}`BGA`{term}`BGA`, PBGA with heat sink, die top down pitch=1.27mm Super {term}`BGA`, PBGA with heat sink, die top down pitch=1.27mm
 *   - MAPBGA
     -  Moulded Array Process Ball Grid
 *   - QFN, aQFN, DFN, MLF, LLP, ODFN, WQFN, VQFN, X2QFN
@@ -5948,7 +5948,7 @@ All packages have been split into the following six categories:
 *   - Other CSP
     -  Micro CSP
 *   - PSvfBGA
-    -  Package Stackable Very Thin Fine Pitch BGA (pop)
+    -  Package Stackable Very Thin Fine Pitch {term}`BGA` (pop)
 *   - PSfcCSP
     -  Package Stackable Flip Chip Chip Scale Package (pop)
 *   - TMV, SV
@@ -5960,11 +5960,11 @@ All packages have been split into the following six categories:
 *   - WLFO, eWLB
     -  Wafer Level Fan-Out
 *   - CABGA, LBGA
-    -  ChipArray BGA
+    -  ChipArray {term}`BGA`
 *   - CTBGA TFBGA
-    -  Thin ChipArray BGA
+    -  Thin ChipArray {term}`BGA`
 *   - CVBGA, VFBGA
-    - Very thin ChipArray BGA
+    - Very thin ChipArray {term}`BGA`
 ```
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-88')" placeholder="Search table...">
@@ -5996,7 +5996,7 @@ All packages have been split into the following six categories:
 *   - Typical name
     - Description
 *   - FCBGA
-    - Flip chip BGA
+    - Flip chip {term}`BGA`
 *   - CBGA
     - Ceramic ball grid array
 *   - J-CLCC
@@ -6748,9 +6748,9 @@ All packages have been split into the following six categories:
 
 *   - Typical name
     - Description
-*   - CERDIP, CDIP, sidebraze
+*   - {term}`CERDIP`, CDIP, sidebraze
     - Ceramic dual in line package
-*   - CPGA
+*   - {term}`CPGA`
     - Ceramic pin grid array
 *   - PDIP, TO116
     - Plastic dual in line package
@@ -6821,11 +6821,11 @@ All packages have been split into the following six categories:
 *   - PBGA 1.5mm
     -  Plastic ball grid array with solder ball pitch = 1.5 mm
 *   - FPBGA
-    -  Fine pitch BGA
+    -  Fine pitch {term}`BGA`
 *   - FCPBGA
-    -  Flip chip plastic BGA
-*   - Power BGA (TBGA, SBGA …)
-    -  Tape BGA, PBGA with heat sink, die top down pitch=1.27mm Super BGA, PBGA with heat sink, die top down pitch=1.27mm
+    -  Flip chip plastic {term}`BGA`
+*   - Power {term}`BGA` (TBGA, SBGA …)
+    -  Tape {term}`BGA`, PBGA with heat sink, die top down pitch=1.27mm Super {term}`BGA`, PBGA with heat sink, die top down pitch=1.27mm
 *   - MAPBGA
     -  Moulded Array Process Ball Grid
 *   - QFN, aQFN, DFN, MLF, LLP, ODFN, WQFN, VQFN, X2QFN
@@ -6843,7 +6843,7 @@ All packages have been split into the following six categories:
 *   - Other CSP
     -  Micro CSP
 *   - PSvfBGA
-    -  Package Stackable Very Thin Fine Pitch BGA (pop)
+    -  Package Stackable Very Thin Fine Pitch {term}`BGA` (pop)
 *   - PSfcCSP
     -  Package Stackable Flip Chip Chip Scale Package (pop)
 *   - TMV, SV
@@ -6855,11 +6855,11 @@ All packages have been split into the following six categories:
 *   - WLFO, eWLB
     -  Wafer Level Fan-Out
 *   - CABGA, LBGA
-    -  ChipArray BGA
+    -  ChipArray {term}`BGA`
 *   - CTBGA TFBGA
-    -  Thin ChipArray BGA
+    -  Thin ChipArray {term}`BGA`
 *   - CVBGA, VFBGA
-    - Very thin ChipArray BGA
+    - Very thin ChipArray {term}`BGA`
 ```
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-101')" placeholder="Search table...">
@@ -7553,10 +7553,10 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - Type
     - Groups
     - $\lambda_{\text{OTH}}$
-*   - FPGA, CPLD, FPGA Antifuse, PAL
+*   - FPGA, {term}`CPLD`, FPGA Antifuse, PAL
     - 30
     - 0.166
-*   - Analog and Hybrid circuit (MOS, Bipole, BiCMOS)
+*   - Analog and Hybrid circuit (MOS, Bipole, {term}`BiCMOS`)
     - 50-69/80
     - 0.123
 *   - Microprocessor, Microcontroller, DSP
@@ -7571,7 +7571,7 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - DRAM
     - 21
     - 0.047
-*   - Digital circuit (MOS, Bipole, BiCMOS)
+*   - Digital circuit (MOS, Bipole, {term}`BiCMOS`)
     - 80
     - 0.021
 ```
@@ -7633,9 +7633,9 @@ All packages have been split into the following six categories:
 
 *   - Typical name
     - Description
-*   - CERDIP, CDIP, sidebraze
+*   - {term}`CERDIP`, CDIP, sidebraze
     - Ceramic dual in line package
-*   - CPGA
+*   - {term}`CPGA`
     - Ceramic pin grid array
 *   - PDIP, TO116
     - Plastic dual in line package
@@ -7706,11 +7706,11 @@ All packages have been split into the following six categories:
 *   - PBGA 1.5mm
     -  Plastic ball grid array with solder ball pitch = 1.5 mm
 *   - FPBGA
-    -  Fine pitch BGA
+    -  Fine pitch {term}`BGA`
 *   - FCPBGA
-    -  Flip chip plastic BGA
-*   - Power BGA (TBGA, SBGA …)
-    -  Tape BGA, PBGA with heat sink, die top down pitch=1.27mm Super BGA, PBGA with heat sink, die top down pitch=1.27mm
+    -  Flip chip plastic {term}`BGA`
+*   - Power {term}`BGA` (TBGA, SBGA …)
+    -  Tape {term}`BGA`, PBGA with heat sink, die top down pitch=1.27mm Super {term}`BGA`, PBGA with heat sink, die top down pitch=1.27mm
 *   - MAPBGA
     -  Moulded Array Process Ball Grid
 *   - QFN, aQFN, DFN, MLF, LLP, ODFN, WQFN, VQFN, X2QFN
@@ -7728,7 +7728,7 @@ All packages have been split into the following six categories:
 *   - Other CSP
     -  Micro CSP
 *   - PSvfBGA
-    -  Package Stackable Very Thin Fine Pitch BGA (pop)
+    -  Package Stackable Very Thin Fine Pitch {term}`BGA` (pop)
 *   - PSfcCSP
     -  Package Stackable Flip Chip Chip Scale Package (pop)
 *   - TMV, SV
@@ -7740,11 +7740,11 @@ All packages have been split into the following six categories:
 *   - WLFO, eWLB
     -  Wafer Level Fan-Out
 *   - CABGA, LBGA
-    -  ChipArray BGA
+    -  ChipArray {term}`BGA`
 *   - CTBGA TFBGA
-    -  Thin ChipArray BGA
+    -  Thin ChipArray {term}`BGA`
 *   - CVBGA, VFBGA
-    - Very thin ChipArray BGA
+    - Very thin ChipArray {term}`BGA`
 ```
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-114')" placeholder="Search table...">
@@ -8980,7 +8980,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: MIL-PRF-39016 (or 83536 or 6106) level R, MIL-PRF-39016 (or 83536 or 6106) level P, NASDA-QTS-6106A
     - Equivalent
     - 2
-*   - Qualification according to one of the following approved EIA, IEC, SAE, BS
+*   - Qualification according to one of the following approved EIA, IEC, SAE, {term}`BS`
     - Lower
     - 1
 *   - No information
@@ -9735,7 +9735,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: AEC Q200, MIL-PRF-xxxx level T, MIL-PRF-xxxx level S, MIL-PRF-xxxx level R, ESCC 400x, NASDA-QTS-xxxx class I (JAXA-QTS-2050D)
     - Higher
     - 3
-*   - Qualification according to one of the following standards: MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved CECC standards.
+*   - Qualification according to one of the following standards: MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved {term}`CECC` standards.
     - Equivalent
     - 2
 *   - Qualification according to MIL-PRF-xxxx level M, or qualification program internal to the manufacturer and unidentified manufacturing sites
@@ -10393,7 +10393,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: AEC Q200, MIL-PRF-xxxx level T, MIL-PRF-xxxx level S, MIL-PRF-xxxx level R, ESCC 400x, NASDA-QTS-xxxx class I (JAXA-QTS-2050D)
     - Higher
     - 3
-*   - Qualification according to one of the following standards: MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved CECC standards.
+*   - Qualification according to one of the following standards: MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved {term}`CECC` standards.
     - Equivalent
     - 2
 *   - Qualification according to MIL-PRF-xxxx level M, or qualification program internal to the manufacturer and unidentified manufacturing sites
@@ -12132,7 +12132,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: AEC Q200, MIL-STD-981 class S, MIL-PRF-xxx level T, ESCC 320x, NASDA-QTS-xxxx class I
     - Higher
     - 3
-*   - Qualification according to one of the following standards: MIL-STD-981 class B, MIL-PRF-xxx level M, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved CECC standards.
+*   - Qualification according to one of the following standards: MIL-STD-981 class B, MIL-PRF-xxx level M, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards, qualification according to approved {term}`CECC` standards.
     - Equivalent
     - 2
 *   - Qualification according to one of the following MIL-PRF-xxxx level C, or qualification program internal to the manufacturer and unidentified manufacturing sites
@@ -12765,7 +12765,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to one of the following standards: MIL-PRF-24236, MIL-C-xxxx
     - Equivalent
     - 2
-*   - Qualification according to one of the following approved EIA, IEC, SAE, BS
+*   - Qualification according to one of the following approved EIA, IEC, SAE, {term}`BS`
     - Lower
     - 1
 *   - No information
@@ -14188,7 +14188,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_4_3_3
 *   - Qualification according to following standard: IPC-9701 with identification of manufacturing sites for these standards
     - Equivalent
     - 2
-*   - Qualification according to one of the following standard: BS CECC 23000, IEC 61189-6 or qualification program internal to the manufacturer and unidentified manufacturing sites
+*   - Qualification according to one of the following standard: {term}`BS` {term}`CECC` 23000, IEC 61189-6 or qualification program internal to the manufacturer and unidentified manufacturing sites
     - Lower
     - 1
 *   - No information
@@ -14355,9 +14355,9 @@ C_{Surface\_ chip} = \left( 1 + S^{d} \right)
 
 *   - Type of chip
     - $d$
-*   - Numeric Si integrated circuits (MOS, Bipolar and BiCMOS)
+*   - Numeric Si integrated circuits (MOS, Bipolar and {term}`BiCMOS`)
     - 0.35
-*   - Analogue Si integrated circuits (MOS, Bipolar and BiCMOS)
+*   - Analogue Si integrated circuits (MOS, Bipolar and {term}`BiCMOS`)
     - 0.2
 *   - Discrete circuits
     - 0.1
@@ -14739,29 +14739,29 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_18)=
 ## Model of COTS boards for space applications 
 
-COTS board are electronic and off-the-shelf boards generally supplied from specific manufacturers with very little to no information provided on their content. These COTS boards are generally designed to perform a generic or standard functionality such as input / output, memory storage, specific signal data processing or communication protocols. For space applications, they are currently only used for on-ground systems. However, with the development of nanosatellites for "{term}`new space <New space>`", the request to use these boards is increasing to minimize costs and to reduce development time.
+{term}`COTS` board are electronic and off-the-shelf boards generally supplied from specific manufacturers with very little to no information provided on their content. These {term}`COTS` boards are generally designed to perform a generic or standard functionality such as input / output, memory storage, specific signal data processing or communication protocols. For space applications, they are currently only used for on-ground systems. However, with the development of nanosatellites for "{term}`new space <New space>`", the request to use these boards is increasing to minimize costs and to reduce development time.
 
-There is presently no existing {term}`reliability prediction model <Reliability prediction model>` for COTS boards adapted to space applications. The methodology proposed in the following is based on the data from manufacturer and especially datasheet and parts list of the boards. In case of no information available from the manufacturers, a possible solution is to perform a reverse engineering of the board and to use the families or part count method to estimate the reliability prediction. This method is clearly not recommended. In fact, only life tests on a sufficiently large amount of COTS boards are suitable to estimate the COTS board reliability when no data are available from the manufacturer.
+There is presently no existing {term}`reliability prediction model <Reliability prediction model>` for {term}`COTS` boards adapted to space applications. The methodology proposed in the following is based on the data from manufacturer and especially datasheet and parts list of the boards. In case of no information available from the manufacturers, a possible solution is to perform a reverse engineering of the board and to use the families or part count method to estimate the reliability prediction. This method is clearly not recommended. In fact, only life tests on a sufficiently large amount of {term}`COTS` boards are suitable to estimate the {term}`COTS` board reliability when no data are available from the manufacturer.
 
 (eee_4_3_4_19)=
 ## Reliability prediction of COTS boards done by manufacturers
 
-Some manufacturers of COTS boards do provide a reliability prediction for their COTS boards and publish this information inside the datasheet. An assessment of this estimation could be made to appreciate its applicability to space applications. Elements, such as the {term}`level of confidence <Level of confidence>`, the methodology applied, number of tested boards, number of failed boards and root cause of failure analysis should be provided by the manufacturers of COTS boards to justify their estimations and to provide rationales of their confidence.
+Some manufacturers of {term}`COTS` boards do provide a reliability prediction for their {term}`COTS` boards and publish this information inside the datasheet. An assessment of this estimation could be made to appreciate its applicability to space applications. Elements, such as the {term}`level of confidence <Level of confidence>`, the methodology applied, number of tested boards, number of failed boards and root cause of failure analysis should be provided by the manufacturers of {term}`COTS` boards to justify their estimations and to provide rationales of their confidence.
 
 (eee_4_3_4_20)=
 ## Reliability prediction of COTS boards with raw data provided by manufacturers
 
-If the manufacturer agrees to provide a datasheet and a parts list, the best solution is to perform a complete reliability calculation with the methodology provided in this handbook based on this data. This data could provide references of the EEE components, manufacturers of the EEE components, and derating computed by the manufacturer. In the unlikely event that the manufacturers fill the Pi Process questionnaire themselves, the resulting *Π~Process~* issued from the questionnaire is used to complete the reliability prediction. If not, as it is difficult to fill in the questionnaire for the manufacturer, an alternate solution is to use a recommended value for *Π~Process~* of 4.0 if suppliers of COTS boards have no experience with space applications. In case of manufacturers of COTS boards applying the quality process of space industry and having experience with satellites in orbit, this recommended value can be reduced to 2.5. Consequently, it is difficult to justify a value lower than 2.5 without justified rationales from the COTS boards' manufacturers.
+If the manufacturer agrees to provide a datasheet and a parts list, the best solution is to perform a complete reliability calculation with the methodology provided in this handbook based on this data. This data could provide references of the EEE components, manufacturers of the EEE components, and derating computed by the manufacturer. In the unlikely event that the manufacturers fill the Pi Process questionnaire themselves, the resulting *Π~Process~* issued from the questionnaire is used to complete the reliability prediction. If not, as it is difficult to fill in the questionnaire for the manufacturer, an alternate solution is to use a recommended value for *Π~Process~* of 4.0 if suppliers of {term}`COTS` boards have no experience with space applications. In case of manufacturers of {term}`COTS` boards applying the quality process of space industry and having experience with satellites in orbit, this recommended value can be reduced to 2.5. Consequently, it is difficult to justify a value lower than 2.5 without justified rationales from the {term}`COTS` boards' manufacturers.
 
 (eee_4_3_4_21)=
 
 ## Reliability prediction of COTS boards without data provided by manufacturers
 
-Unfortunately, manufacturers of COTS boards usually do not provide any information. One possible solution to overcome this situation is to identify the EEE components of the board and to reconstruct the parts list by reverse engineering, through visual inspection for instance. As it is not possible to identify all characteristics of the components and to estimate the deratings, a simple and fast calculation based on a families count or part count methods is suggested instead of doing a complete part stress calculation.
+Unfortunately, manufacturers of {term}`COTS` boards usually do not provide any information. One possible solution to overcome this situation is to identify the EEE components of the board and to reconstruct the parts list by reverse engineering, through visual inspection for instance. As it is not possible to identify all characteristics of the components and to estimate the deratings, a simple and fast calculation based on a families count or part count methods is suggested instead of doing a complete part stress calculation.
 
-The families count prediction method considers all the components without distinguishing the different technologies. The part count prediction method considers all types of components with their various technologies. The method for calculating the reliability prediction of COTS boards with the families count and part count method is provided in {numref}`eee_4_3_5`.
+The families count prediction method considers all the components without distinguishing the different technologies. The part count prediction method considers all types of components with their various technologies. The method for calculating the reliability prediction of {term}`COTS` boards with the families count and part count method is provided in {numref}`eee_4_3_5`.
 
-If it is not possible to apply the families or part count method due to specific concerns such as boards with potting or boards encapsulated in other systems, a reliability prediction based on calculation is not possible. The alternative is to perform the reliability prediction based on life tests of the COTS boards.
+If it is not possible to apply the families or part count method due to specific concerns such as boards with potting or boards encapsulated in other systems, a reliability prediction based on calculation is not possible. The alternative is to perform the reliability prediction based on life tests of the {term}`COTS` boards.
 
 The determination of the number of boards to be tested is done from the χ² law:
 
@@ -14775,7 +14775,7 @@ The determination of the number of boards to be tested is done from the χ² law
 ```
 where:
 
--   $\lambda$: objective failure rate of the COTS board in FIT;
+-   $\lambda$: objective failure rate of the {term}`COTS` board in FIT;
 
 -   $CL$: confidence level in %;
 
@@ -14783,7 +14783,7 @@ where:
 
 -   $t$: test duration in hours;
 
--   $AF$: acceleration factor defined depending on the acceleration law;
+-   {term}`AF`: acceleration factor defined depending on the acceleration law;
 
 -   $n$: quantity of tested parts.
 ````

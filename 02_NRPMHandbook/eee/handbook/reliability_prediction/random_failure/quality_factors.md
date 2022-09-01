@@ -100,7 +100,7 @@ The $\text{RA}_{\text{component}}$ factor is defined only for active parts and i
 
 For Space applications, the tests applied are different and very particular to space applications, in terms of lot sizes and number of hours, because qualified components are very few and are issued from the same and unique lot. Therefore, this factor is adapted to this situation.
 
-Additionally, these components endure screening tests and so, tests for which parameters are similar to AEC-Q tests have no justification for space applications. This factor is defined differently depending on the package of the component.
+Additionally, these components endure screening tests and so, tests for which parameters are similar to {term}`AEC-Q <AEC-Q>` tests have no justification for space applications. This factor is defined differently depending on the package of the component.
 
 ```{admonition} Rule
 :class: rule

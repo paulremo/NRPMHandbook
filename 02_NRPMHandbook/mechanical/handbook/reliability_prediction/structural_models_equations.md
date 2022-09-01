@@ -152,7 +152,7 @@ variable definitions are given in {numref}`meca-table4-11`.
     - Definition of the variable
     - Unit
     - Distribution
-    - CoV range
+    - {term}`CoV` range
 *   - $V_{limit}$
     - Limiting value (worn volume)
     - [$\text{m}^{3}$]
@@ -323,7 +323,7 @@ $X_{2}$ is defined as the volume worn away and $X_{1}$ as the corresponding limi
     - Definition of the variable
     - Unit
     - Distribution
-    - CoV range
+    - {term}`CoV` range
 *   - $V_{limit}$
     - Limiting value (worn volume)
     - [$\text{m}^{3}$]
@@ -717,7 +717,7 @@ Thus, $X_{2}$ is defined as accumulated damage, which is calculated based on the
     - Definition of the variable
     - Unit
     - Distribution
-    - CoV range
+    - {term}`CoV` range
 *   - $D_{cr}$
     - Threshold for accumulated damage
     - $[-]$
@@ -916,7 +916,7 @@ To allow for a first quick assessment, some reference values for the coefficient
     - Definition of the variable
     - Unit
     - Mean
-    - CoV
+    - {term}`CoV`
 *   - $D_{cr}$
     - Threshold for accumulated damage
     - $[-]$
@@ -1380,7 +1380,7 @@ The variable definitions are given in {numref}`meca-table4-17` below.
     - Definition of the variable
     - Unit
     - Distribution
-    - CoV range
+    - {term}`CoV` range
  *  - $D_{A}$
     - Allowable radiation dose
     - [rad]
