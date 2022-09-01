@@ -379,8 +379,8 @@ function runEEEGuide() {
                 ["ASIC, Silicon bipolar, BiCMOS, Digital ASIC", "ECAS"]
             ])],
             ["LCD screen", "LCD screens (TFT, STN) but not used in space applications"],
-            ["Laser detector", "Laser Module - CW Laser” after investigation and assessment"],
-            ["Laser transceiver", "Laser Module - CW Laser” after investigation and assessment"]
+            ["Laser detector", "Laser Module - CW Laser after investigation and assessment"],
+            ["Laser transceiver", "Laser Module - CW Laser after investigation and assessment"]
         ])],
         ["PCB", new Map([
             ["PCB", new Map([
@@ -422,28 +422,28 @@ function runEEEGuide() {
         let src_data = img.src.split('/');
         let elt = src_data[[src_data.length - 1]]
         if (elt == "final_on.svg") {
-            img.setAttribute("src","../../_static/images/final_off.svg");
+            img.setAttribute("src", "../../_static/images/final_off.svg");
         }
         else if (elt == "final_off.svg") {
-            img.setAttribute("src","../../_static/images/final_on.svg");
+            img.setAttribute("src", "../../_static/images/final_on.svg");
         }
         else if (elt == "moon_on.svg") {
-            img.setAttribute("src","../../_static/images/moon_off.svg");
+            img.setAttribute("src", "../../_static/images/moon_off.svg");
         }
         else if (elt == "moon_off.svg") {
-            img.setAttribute("src","../../_static/images/moon_on.svg");
+            img.setAttribute("src", "../../_static/images/moon_on.svg");
         }
         else if (elt == "launch_on.svg") {
-            img.setAttribute("src","../../_static/images/launch_off.svg");
+            img.setAttribute("src", "../../_static/images/launch_off.svg");
         }
         else if (elt == "launch_off.svg") {
-            img.setAttribute("src","../../_static/images/launch_on.svg");
+            img.setAttribute("src", "../../_static/images/launch_on.svg");
         }
         else if (elt == "ground_on.svg") {
-            img.setAttribute("src","../../_static/images/ground_off.svg");
+            img.setAttribute("src", "../../_static/images/ground_off.svg");
         }
         else if (elt == "ground_off.svg") {
-            img.setAttribute("src","../../_static/images/ground_on.svg");
+            img.setAttribute("src", "../../_static/images/ground_on.svg");
         }
     }
         , 300);
@@ -486,7 +486,7 @@ function runEEEGuide() {
         first_step_div.appendChild(first_step_buttons_div);
         first_step_div.scrollIntoView();
         displayFamilyButton("");
-        
+
         document.getElementById("messagesTrack_eee_guide").style.height = "400px";
 
 
@@ -634,7 +634,7 @@ function runEEEGuide() {
         second_step_div.appendChild(second_step_buttons_div);
         second_step_div.scrollIntoView();
         displayGroupButton(selection, "");
-        
+
         document.getElementById("messagesTrack_eee_guide").style.height = "400px";
     }
 
@@ -652,40 +652,49 @@ function runEEEGuide() {
 
     function displayStep3(selection, group) {
 
-        let third_question_div = document.createElement("div");
-        third_question_div.className = "other-message";
-        third_question_div.innerHTML = "What's your component's model ?"
+        let model = eee_families_informations.get(selection).get(group);
+        console.log(group)
+        if (typeof model == "string" || model == undefined || isEmptyDictionary(model)) {
 
-        document.getElementById("messagesTrack_eee_guide").appendChild(third_question_div);
-
-
-        third_step_div.className = "my-message";
-        document.getElementById("messagesTrack_eee_guide").appendChild(third_step_div);
-
-        let model_filtering_area = document.createElement("input");
-        model_filtering_area.id = "model_filtering_area";
-        model_filtering_area.className = "information-filtering-eee-guide";
-        model_filtering_area.type = "search";
-        model_filtering_area.placeholder = " Tap here to filter models"
-        model_filtering_area.oninput = function () {
-            if (this.value.length > 2) {
-                displayModelButton(selection, group, this.value);
-            }
-            else {
-                displayGroupButton(selection, group, "");
-            }
         }
-        third_step_div.appendChild(model_filtering_area)
+        else {
+            let third_question_div = document.createElement("div");
+            third_question_div.className = "other-message";
+            third_question_div.innerHTML = "What's your component's model ?"
+
+            document.getElementById("messagesTrack_eee_guide").appendChild(third_question_div);
+
+
+            third_step_div.className = "my-message";
+            document.getElementById("messagesTrack_eee_guide").appendChild(third_step_div);
+
+            let model_filtering_area = document.createElement("input");
+            model_filtering_area.id = "model_filtering_area";
+            model_filtering_area.className = "information-filtering-eee-guide";
+            model_filtering_area.type = "search";
+            model_filtering_area.placeholder = " Tap here to filter models"
+            model_filtering_area.oninput = function () {
+                if (this.value.length > 2) {
+                    displayModelButton(selection, group, this.value);
+                }
+                else {
+                    displayGroupButton(selection, group, "");
+                }
+            }
+            third_step_div.appendChild(model_filtering_area)
 
 
 
 
-        let third_step_buttons_div = document.createElement("div");
-        third_step_buttons_div.id = "third_step_buttons_div"
-        third_step_div.appendChild(third_step_buttons_div);
-        third_step_div.scrollIntoView();
+            let third_step_buttons_div = document.createElement("div");
+            third_step_buttons_div.id = "third_step_buttons_div"
+            third_step_div.appendChild(third_step_buttons_div);
+            third_step_div.scrollIntoView();
+        }
+
+
         displayModelButton(selection, group, "");
-        
+
         document.getElementById("messagesTrack_eee_guide").style.height = "400px";
     }
 
@@ -693,17 +702,18 @@ function runEEEGuide() {
 
         changePicture(3);
 
-        let third_step_buttons_div = document.createElement("div");
-        third_step_buttons_div.id = "third_step_buttons_div"
-        third_step_div.appendChild(third_step_buttons_div);
-
-        removeModelBTN();
         let model = eee_families_informations.get(selection).get(group);
         console.log(group)
         if (typeof model == "string" || model == undefined || isEmptyDictionary(model)) {
+            console.log("ici")
             displayStep4(selection, group, model, false);
         }
         else {
+            let third_step_buttons_div = document.createElement("div");
+            third_step_buttons_div.id = "third_step_buttons_div"
+            third_step_div.appendChild(third_step_buttons_div);
+
+            removeModelBTN();
             if (search != "") {
                 for (var [key, value] of model) {
                     if (key.toLowerCase().includes(search.toLowerCase())) {
@@ -749,12 +759,14 @@ function runEEEGuide() {
         if (is_fides_model) {
             final_question_div.innerHTML = "Your component '" + model + " has a FIDES model components : " + eee_families_informations.get(selection).get(group).get(model) + ".";
         }
-
+        else {
+            final_question_div.innerHTML = "Your component has no dedicated FIDES model.";
+        }
 
 
         document.getElementById("messagesTrack_eee_guide").appendChild(final_question_div);
         final_question_div.scrollIntoView();
-        
+
         document.getElementById("messagesTrack_eee_guide").style.height = "400px";
 
         setTimeout(() => {
@@ -762,12 +774,15 @@ function runEEEGuide() {
             final_question_div2.className = "other-message";
 
             if (is_fides_model) {
-                final_question_div2.innerHTML = "You can find the dedicated handbook page <a href='" + eee_families_links.get(selection) + "' style='color:white;'>here</a>.";
+                final_question_div2.innerHTML = "You can find the dedicated handbook page <a href='" + eee_families_links.get(selection) + "' style='color:white;'><u>here</u></a>.";
+            }
+            else {
+                final_question_div2.innerHTML = "You can find information on the dedicated handbook page <a href='" + eee_families_links.get(selection) + "' style='color:white;'><u>here</u></a>.";
             }
 
             document.getElementById("messagesTrack_eee_guide").appendChild(final_question_div2);
             final_question_div2.scrollIntoView();
-        
+
             document.getElementById("messagesTrack_eee_guide").style.height = "400px";
         }, 200);
 
@@ -880,10 +895,10 @@ function runEEEGuide() {
         }
     }
 
-    function isEmptyDictionary(dico){
+    function isEmptyDictionary(dico) {
         let empty = true;
-        for (var [key,value] of dico){
-            if (dico.get(key) != ""){
+        for (var [key, value] of dico) {
+            if (dico.get(key) != "") {
                 empty = false;
             }
         }
