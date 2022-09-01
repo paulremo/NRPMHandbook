@@ -331,7 +331,7 @@ Prior and posterior predictive distribution of revolutions to failure $\text{rev
 ```
 `````
 
-(meca_example_2_updating)=
+(meca_example_3_censored)=
 ## Updating of structural reliability methods using right censored data
 
 In contrast to the example in {numref}`meca_4_8_2`, censored data is often available in practice. In this case, the simplified analytic approach for updating is no longer applicable and numerical methods must be used. In this example, MCMC will be used to conduct the updating for the location parameter. To keep the example simple, the same assumption as in {numref}`meca_4_8_2` is made that the scale parameter is known and will not be updated. This assumption is not necessary using MCMC for the updating and might be relaxed for a more advanced modelling.
