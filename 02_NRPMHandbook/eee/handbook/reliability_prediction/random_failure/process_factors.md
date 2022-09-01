@@ -9,7 +9,7 @@ This Paragraph deals with the different process factors dedicated to the quality
 
 -   process factor for RF HF components $\Pi_{\text{ProcessRFHF}}$;
 
--   process factor for ASIC components $\Pi_{\text{ProcessASIC}}$;
+-   process factor for {term}`ASIC` components $\Pi_{\text{ProcessASIC}}$;
 
 -   process factor for Hybrids and Multi Chip Modules $\Pi_{\text{Process\_ H&M}}$.
 
@@ -483,7 +483,7 @@ H\& M\_ process\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{
     - 4
     - 0
 *   - 7
-    - Qualification of the line for space application (ESA/CNES) - (class K according to the MIL-PRF 38534F classification, or class I according to JESD93), or equivalent
+    - Qualification of the line for space application (ESA/{term}`CNES`) - (class K according to the MIL-PRF 38534F classification, or class I according to JESD93), or equivalent
     - 30
     - 0
 *   - 8

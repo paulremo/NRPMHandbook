@@ -257,7 +257,7 @@ Reference values for usual dispersions of material strength are provided in {num
 
 *   - Material or item
     - Strength characteristics
-    - CoV
+    - {term}`CoV`
 *   - Metallic materials
     - <p>Fracture strength (ultimate stress)</p><p>Yield strength (ultimate stress / yield stress < 1.2)</p><p>Yield strength (ultimate stress / yield stress > 1.2)</p>
     - <p>8%</p><p>8%</p><p>15%</p>

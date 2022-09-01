@@ -42,7 +42,7 @@ Among components which are proposed by ESA in its EPPL {cite:t}`eee-EPPL007-37`,
 
 -   Power components submitted to ON / OFF cycles can be affected to specific wear-out effects such as bond lift due to local thermal cycles.
 
--   Technologies used in semiconductors, integrated circuits and discrete components such as diodes and transistors based on CMOS, NMOS or BiCMOS can be sensitive to cumulated radiation dose.
+-   Technologies used in semiconductors, integrated circuits and discrete components such as diodes and transistors based on {term}`CMOS`, NMOS or {term}`BiCMOS` can be sensitive to cumulated radiation dose.
 
 In all these cases, the design, the component selection and the qualification should be done according to each technology depending on the stresses of the mission profile. The design should be done to ensure no occurrence of any failure during the life duration.
 
@@ -122,7 +122,7 @@ This model is a first interesting recommendation for a model of radiations. It n
 (eee_4_6_5_2)=
 ### ON / OFF cycling as a factor of wear-out
 
-Satellites are designed with an objective to minimise the consumption of energy. In this way, a mechanism to minimize the consumption of energy is to switch off the equipment when it is not used. As a consequence of this strategy, permanent ON / OFF switches of the equipment are continuously realised. For low Earth orbit satellites, up to 20 ON / OFF cycles per orbit can occur for an equipment leading to up to 200 000 ON / OFF cycles during the lifetime of the satellite. According to the studies from CNES {cite:t}`eee-ESCCON` and {cite:t}`eee-JEP001`, these ON / OFF cycles have an effect on bonding wires of integrated circuits. Repetitive switches increase the temperature at the interfaces, and as the coefficients of thermal extensions are different between bonding wires and silicon, cracks appear at the interface. These cracks can lead to a disconnection, followed by a definitive drift or a failure. Wear-out could be addressed by using the process described in {numref}`eee_4_6_9`.
+Satellites are designed with an objective to minimise the consumption of energy. In this way, a mechanism to minimize the consumption of energy is to switch off the equipment when it is not used. As a consequence of this strategy, permanent ON / OFF switches of the equipment are continuously realised. For low Earth orbit satellites, up to 20 ON / OFF cycles per orbit can occur for an equipment leading to up to 200 000 ON / OFF cycles during the lifetime of the satellite. According to the studies from {term}`CNES` {cite:t}`eee-ESCCON` and {cite:t}`eee-JEP001`, these ON / OFF cycles have an effect on bonding wires of integrated circuits. Repetitive switches increase the temperature at the interfaces, and as the coefficients of thermal extensions are different between bonding wires and silicon, cracks appear at the interface. These cracks can lead to a disconnection, followed by a definitive drift or a failure. Wear-out could be addressed by using the process described in {numref}`eee_4_6_9`.
 
 (eee_4_6_5_3)=
 ### Single atomic oxygen as a factor of wear-out
@@ -189,7 +189,7 @@ The following table provides the most common {term}`failure mechanisms <Failure 
     - 
     - (x)
     - (x)
-*   - Bias Temperature Instability (BTI)
+*   - Bias Temperature Instability ({term}`BTI`)
     - 
     - x
     - x
@@ -295,7 +295,7 @@ The following table provides the most common {term}`failure mechanisms <Failure 
     - (x)
 ```
 
-The datasheet of the components and other information from the component manufacturer could be used to get information about the {term}`failure mechanisms <Failure mechanism>`. Particularly, the application notes, the possible use of reliability models and the tests performed are a good basis for evaluating the risk of wear-out. It could be difficult to get such information from the manufacturer. Only the qualification test results are available generally using trunked test, often limited to 1000 hours. In such a case, only the estimation of the constant failure rate is available, considering the flat part of the bathtub curve. For integrated circuits qualified with AEC-Q automotive grade, the standard {cite:t}`eee-Black1978ElectromigrationOA` describes specific tests that must be done when a new technology of semiconductor is introduced. However, this information is generally only available upon request to the manufacturer. The failures mechanisms covered are the Hot Carrier Injection (HCI), the Negative Bias Temperature Instability (NBTI) and the Stress Migration (SM) specific to semiconductors. The following table is an extract from standard {cite:t}`eee-Black1978ElectromigrationOA` listing the tests to perform for some {term}`failure mechanisms <Failure mechanism>`. The manufacturer has to fill the cells with number of tested parts, number of lots, test method and test acceptance criteria.
+The datasheet of the components and other information from the component manufacturer could be used to get information about the {term}`failure mechanisms <Failure mechanism>`. Particularly, the application notes, the possible use of reliability models and the tests performed are a good basis for evaluating the risk of wear-out. It could be difficult to get such information from the manufacturer. Only the qualification test results are available generally using trunked test, often limited to 1000 hours. In such a case, only the estimation of the constant failure rate is available, considering the flat part of the bathtub curve. For integrated circuits qualified with {term}`AEC-Q <AEC-Q>` automotive grade, the standard {cite:t}`eee-Black1978ElectromigrationOA` describes specific tests that must be done when a new technology of semiconductor is introduced. However, this information is generally only available upon request to the manufacturer. The failures mechanisms covered are the Hot Carrier Injection (HCI), the Negative Bias Temperature Instability (NBTI) and the Stress Migration (SM) specific to semiconductors. The following table is an extract from standard {cite:t}`eee-Black1978ElectromigrationOA` listing the tests to perform for some {term}`failure mechanisms <Failure mechanism>`. The manufacturer has to fill the cells with number of tested parts, number of lots, test method and test acceptance criteria.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_202')"
     placeholder="Search table...">

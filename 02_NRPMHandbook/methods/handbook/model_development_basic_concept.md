@@ -549,7 +549,7 @@ Parameter estimation is rather simple for the Exponential distribution, the cons
 ```
 ````
 
-Where $n_{f}$ denotes the number of observed failures, $n$ the number of items tested and $t_{i}$ the test duration for each item. The {term}`statistical uncertainty <Statistical uncertainty>` associated with the failure rate estimation is quantified by the following expression for the Coefficient of Variation (CoV) of the failure rate:
+Where $n_{f}$ denotes the number of observed failures, $n$ the number of items tested and $t_{i}$ the test duration for each item. The {term}`statistical uncertainty <Statistical uncertainty>` associated with the failure rate estimation is quantified by the following expression for the Coefficient of Variation ({term}`CoV`) of the failure rate:
 
 
 ````{admonition} Equation

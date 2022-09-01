@@ -78,7 +78,7 @@ for RF HF components:
 ```
 ````
 
-and for ASIC components:
+and for {term}`ASIC` components:
 
 ````{admonition} Equation
 :class: equation
@@ -100,7 +100,7 @@ With:
 
 -   $\Pi_{\text{ProcessRFHF}}$ as the process related factor for RF HF components described in {numref}`eee_4_3_2_5`;
 
--   $\Pi_{\text{ProcessASIC}}$ as the process related factor for ASIC components described in {numref}`eee_4_3_2_6`;
+-   $\Pi_{\text{ProcessASIC}}$ as the process related factor for {term}`ASIC` components described in {numref}`eee_4_3_2_6`;
 
 -   $\Pi_{\text{LF}}$ as the lead-free process factor described hereafter.
 ````

@@ -139,7 +139,7 @@ The beta factor is calculated as follows
 
 Where $\text{CCS}_{\max}$ denotes the maximum possible Common Cause Susceptibility Score, assigning 10 to each category.
 
-As shown in the example in {numref}`syst-table4-15` the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score (*CCS*) of 32. With 7 categories, $\text{CCS}_{\max}$ is 70. If the lowest value of 10% for $\text{MCCV}$ is selected, the following $\beta$ value is obtained from Eq. {eq}`Equation_7_91`.
+As shown in the example in {numref}`syst-table4-15` the assigned Susceptibility Scores add up to a total Common Cause Susceptibility Score ({term}`CCS`) of 32. With 7 categories, $\text{CCS}_{\max}$ is 70. If the lowest value of 10% for $\text{MCCV}$ is selected, the following $\beta$ value is obtained from Eq. {eq}`Equation_7_91`.
 
 ````{admonition} Equation
 :class: equation

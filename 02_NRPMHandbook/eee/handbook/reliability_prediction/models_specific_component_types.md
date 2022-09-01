@@ -50,15 +50,15 @@ The PISTIS has performed perform long duration tests in order to get failures on
 
 The model proposed in the 2021 issue of FIDES focusses on the main changes vs other Integrated Circuits, ie the wear out failures type.
 
-The BTI mechanism has been identified as the main contributor for {term}`degradation <Degradation>` of DSMs.
+The {term}`BTI` mechanism has been identified as the main contributor for {term}`degradation <Degradation>` of DSMs.
 
--   Up to 100°C junction temperature with a duty cycle of 100%, the FR related to BTI is negligible -\> it remains below 0.1 FIT after 50 years of use.
+-   Up to 100°C junction temperature with a duty cycle of 100%, the FR related to {term}`BTI` is negligible -\> it remains below 0.1 FIT after 50 years of use.
 
 -   Above 100°C junction temperature, it does become significant.
 
 The recommendation from the FIDES consortium is then:
 
--   Under 100°C and with $V_{\text{applied}}/V_{\text{nom}}$ \< or = 1.05 -\> the FR associated to BTI can be negliged
+-   Under 100°C and with $V_{\text{applied}}/V_{\text{nom}}$ \< or = 1.05 -\> the FR associated to {term}`BTI` can be negliged
 
 -   Above 100°C and with a ratio $V_{\text{applied}}/V_{\text{nom}}$ \< or = 1.05 -\> the impact needs to be assessed following at table provided in the guide.
 
