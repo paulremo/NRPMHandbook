@@ -6,6 +6,8 @@ function runMissionprofile() {
 
     var current_category_mp = "1";
 
+    let first_category_filled = false;
+
     var current_phase = new Map([
         ["phase type", null],
         ["phase name", null],
@@ -132,40 +134,92 @@ function runMissionprofile() {
         update_slider_mp(slider);
     }
 
+    for (ct of document.getElementsByClassName("cat-name-mp")) {
+        if (ct.id != "cat-name-1") {
+            ct.style.cursor = "not-allowed";
+            ct.style.backgroundColor = "gray";
+            ct.style.color = "white";
+            ct.getElementsByTagName("img")[0].src = mp_categories_pictures.get(ct.id.substring(9)).get("unselected");
+        }
+    }
+
     for (var cat of document.getElementsByClassName("cat-name-mp")) {
         cat.onclick = function () {
-            for (card of document.getElementsByClassName("entry-card")) {
-                card.style.display = "none";
+            if (first_category_filled) {
+                for (card of document.getElementsByClassName("entry-card")) {
+                    card.style.display = "none";
+                }
+                for (ct of document.getElementsByClassName("cat-name-mp")) {
+                    ct.style.backgroundColor = "";
+                    ct.style.color = "white";
+                    ct.getElementsByTagName("img")[0].src = mp_categories_pictures.get(ct.id.substring(9)).get("unselected");
+                }
+                let id = this.id.substring(9);
+                this.style.backgroundColor = "#d7e9eb";
+                this.style.color = "black";
+                this.getElementsByTagName("img")[0].src = mp_categories_pictures.get(id).get("selected");
+                document.getElementById("entry-card-" + id).style.display = "block";
+                current_category_mp = "entry-card-" + id;
+                configure_category_mp();
             }
-            for (ct of document.getElementsByClassName("cat-name-mp")) {
-                ct.style.backgroundColor = "";
-                ct.style.color = "white";
-                ct.getElementsByTagName("img")[0].src = mp_categories_pictures.get(ct.id.substring(9)).get("unselected");
+            else {
+                if (this.id == "cat-name-1") {
+
+                    for (card of document.getElementsByClassName("entry-card")) {
+                        card.style.display = "none";
+                    }
+                    let id = this.id.substring(9);
+                    this.style.backgroundColor = "#d7e9eb";
+                    this.style.color = "black";
+                    this.getElementsByTagName("img")[0].src = mp_categories_pictures.get(id).get("selected");
+                    document.getElementById("entry-card-" + id).style.display = "block";
+                    current_category_mp = "entry-card-" + id;
+                    configure_category_mp();
+                }
             }
-            let id = this.id.substring(9);
-            this.style.backgroundColor = "#d7e9eb";
-            this.style.color = "black";
-            this.getElementsByTagName("img")[0].src = mp_categories_pictures.get(id).get("selected");
-            document.getElementById("entry-card-" + id).style.display = "block";
-            current_category_mp = "entry-card-" + id;
-            configure_category_mp();
 
         }
         cat.onmouseenter = function () {
-            this.style.backgroundColor = "#1B7E94";
-        }
-        cat.onmouseleave = function () {
-            if (current_category_mp == "entry-card-" + this.id.substring(9)) {
-                this.style.backgroundColor = "#d7e9eb";
-                this.style.color = "black";
-                this.getElementsByTagName("img")[0].src = mp_categories_pictures.get(current_category_mp.substring(11)).get("selected");
-                document.getElementById("entry-card-" + this.id.substring(9)).style.display = "block";
+            console.log(this.id)
+            if (first_category_filled) {
+                this.style.backgroundColor = "#1B7E94";
             }
             else {
-                this.style.backgroundColor = "";
-                this.style.color = "white";
-                this.getElementsByTagName("img")[0].src = mp_categories_pictures.get(this.id.substring(9)).get("unselected");
+                if (this.id == "cat-name-1") {
+                    this.style.backgroundColor = "#1B7E94";
+                }
             }
+        }
+        cat.onmouseleave = function () {
+            if (first_category_filled) {
+                if (current_category_mp == "entry-card-" + this.id.substring(9)) {
+                    this.style.backgroundColor = "#d7e9eb";
+                    this.style.color = "black";
+                    this.getElementsByTagName("img")[0].src = mp_categories_pictures.get(current_category_mp.substring(11)).get("selected");
+                    document.getElementById("entry-card-" + this.id.substring(9)).style.display = "block";
+                }
+                else {
+                    this.style.backgroundColor = "";
+                    this.style.color = "white";
+                    this.getElementsByTagName("img")[0].src = mp_categories_pictures.get(this.id.substring(9)).get("unselected");
+                }
+            }
+            else {
+                if (this.id == "cat-name-1") {
+                    if (current_category_mp == "entry-card-" + this.id.substring(9)) {
+                        this.style.backgroundColor = "#d7e9eb";
+                        this.style.color = "black";
+                        this.getElementsByTagName("img")[0].src = mp_categories_pictures.get(current_category_mp.substring(11)).get("selected");
+                        document.getElementById("entry-card-" + this.id.substring(9)).style.display = "block";
+                    }
+                    else {
+                        this.style.backgroundColor = "";
+                        this.style.color = "white";
+                        this.getElementsByTagName("img")[0].src = mp_categories_pictures.get(this.id.substring(9)).get("unselected");
+                    }
+                }
+            }
+
         }
     }
 
@@ -188,6 +242,7 @@ function runMissionprofile() {
 
     document.getElementById("validate-phase-MP").onclick = function () {
         if (check_all_parameters_filled_mp()) {
+
 
             if (existing_phase_mp != null) {
                 edit_line_mp(existing_phase_mp);
@@ -215,7 +270,22 @@ function runMissionprofile() {
                 ["protection level", null]
             ])
 
-            reinitialize_interactors();
+
+
+            for (ct of document.getElementsByClassName("cat-name-mp")) {
+                if (ct.id != "cat-name-1") {
+                    ct.style.cursor = "not-allowed";
+                    ct.style.backgroundColor = "gray";
+                    ct.style.color = "white";
+                    ct.getElementsByTagName("img")[0].src = mp_categories_pictures.get(ct.id.substring(9)).get("unselected");
+                }
+            }
+
+            existing_phase_mp = null;
+
+            first_category_filled = false;
+
+            document.getElementById("cat-name-1").click();
         }
 
         else {
@@ -530,7 +600,6 @@ function runMissionprofile() {
             else {
                 document.getElementById("validate-phase-MP").disabled = true;
             }
-            console.log(current_answers_mp)
         }
     }
 
@@ -585,6 +654,7 @@ function runMissionprofile() {
     reinitialize_interactors();
 
     function convert_picture_to_phase(picture) {
+        console.log("convert_picture_to_phase");
         if (picture.includes("storage")) {
             return "Storage"
         }
@@ -607,35 +677,52 @@ function runMissionprofile() {
 
     function edit_phase(name_of_phase) {
 
-        existing_phase_mp = name_of_phase;
+        if (check_all_phase_filled_mp(name_of_phase)) {
+            let phase_nodes = document.getElementById(name_of_phase).getElementsByTagName("td");
 
-        let phase_nodes = document.getElementById(name_of_phase).getElementsByTagName("td");
+            let text = "You will edit the phase called : " + phase_nodes[2].innerHTML + ". You will lose your current inputs, are you sure you want to edit ?";
 
-        let text = "You will edit the phase called : " + phase_nodes[1].innerHTML + ". You will lose your current inputs, are you sure you want to edit ?";
-        if (confirm(text) == true) {
+            if (confirm(text) == true) {
 
-            current_phase = new Map([
-                ["phase type", convert_picture_to_phase(phase_nodes[0].getElementsByTagName("img")[0].src)],
-                ["phase name", phase_nodes[1].innerHTML],
-                ["unit onboard", phase_nodes[2].innerHTML],
-                ["calendar time", phase_nodes[3].innerHTML.replace(" h", "")],
-                ["ambient temperature", phase_nodes[4].innerHTML.replace(" °C", "")],
-                ["delta t", phase_nodes[5].innerHTML.replace(" °C", "")],
-                ["cycle duration", phase_nodes[6].innerHTML.replace(" h", "")],
-                ["number of cycles", phase_nodes[7].innerHTML],
-                ["max temperature", phase_nodes[8].innerHTML.replace(" °C", "")],
-                ["humidity rate", phase_nodes[9].innerHTML.replace(" %", "")],
-                ["random vibrations", phase_nodes[10].innerHTML.replace(" Grms", "")],
-                ["saline pollution", phase_nodes[11].innerHTML],
-                ["environment pollution", phase_nodes[12].innerHTML],
-                ["application pollution", phase_nodes[13].innerHTML],
-                ["protection level", phase_nodes[14].innerHTML]
-            ])
-            document.getElementById("cat-name-1").click();
+                if (existing_phase_mp != null){
+                    document.getElementById(existing_phase_mp).remove();
+                }
+                
 
-        } else {
+                existing_phase_mp = name_of_phase;
 
+
+                current_phase = new Map([
+                    ["phase type", convert_picture_to_phase(phase_nodes[1].getElementsByTagName("img")[0].src)],
+                    ["phase name", phase_nodes[2].innerHTML],
+                    ["unit onboard", phase_nodes[3].innerHTML],
+                    ["calendar time", phase_nodes[4].innerHTML.replace(" h", "")],
+                    ["ambient temperature", phase_nodes[5].innerHTML.replace(" °C", "")],
+                    ["delta t", phase_nodes[6].innerHTML.replace(" °C", "")],
+                    ["cycle duration", phase_nodes[7].innerHTML.replace(" h", "")],
+                    ["number of cycles", phase_nodes[8].innerHTML],
+                    ["max temperature", phase_nodes[9].innerHTML.replace(" °C", "")],
+                    ["humidity rate", phase_nodes[10].innerHTML.replace(" %", "")],
+                    ["random vibrations", phase_nodes[11].innerHTML.replace(" Grms", "")],
+                    ["saline pollution", phase_nodes[12].innerHTML],
+                    ["environment pollution", phase_nodes[13].innerHTML],
+                    ["application pollution", phase_nodes[14].innerHTML],
+                    ["protection level", phase_nodes[15].innerHTML]
+                ])
+
+                first_category_filled = true;
+                document.getElementById("cat-name-1").click();
+
+            } else {
+
+            }
         }
+        else {
+            let text = "You can't edit this line as it's not complete.";
+            alert(text);
+        }
+
+
 
 
     }
@@ -735,6 +822,7 @@ function runMissionprofile() {
     }
 
     function configure_category_mp() {
+        reinitialize_interactors();
         current_answers_mp = new Map();
         if (current_category_mp.substring(11) == "1") {
             current_answers_mp.set("phase name", current_phase.get("phase name"));
@@ -768,7 +856,6 @@ function runMissionprofile() {
             }
         }
         else if (current_category_mp.substring(11) == "2") {
-            console.log("cldt : " + current_phase.get("calendar time"))
             current_answers_mp.set("calendar time", current_phase.get("calendar time"));
             if (current_phase.get("calendar time") != null) {
                 document.getElementById("calendar-time-entry").value = current_phase.get("calendar time");
@@ -842,7 +929,6 @@ function runMissionprofile() {
         }
         else if (current_category_mp.substring(11) == "5") {
             if (current_phase.get("phase type") == "In-orbit") {
-                console.log(current_phase)
                 if (current_phase.get("saline pollution") != null) {
                     current_answers_mp.set("saline pollution", current_phase.get("saline pollution"));
                     document.getElementById("saline-pollution-entry").value = range_pollution_values.get("saline pollution").keys(current_phase.get("saline pollution"))[0];
@@ -911,22 +997,51 @@ function runMissionprofile() {
     }
 
     function validate_category_mp() {
-        if (check_cat_parameters_filled_mp()) {
-            for ([ans, value] of current_answers_mp) {
-                current_phase.set(ans, value);
+        if (current_category_mp.substring(11) == "1") {
+            if (check_cat_parameters_filled_mp()) {
+                for ([ans, value] of current_answers_mp) {
+                    current_phase.set(ans, value);
+                }
+                existing_phase_mp = current_phase.get("phase name") + "-tabline-mp";
+                if (first_category_filled) {
+                    edit_line_mp(existing_phase_mp);
+                }
+                else {
+                    fillInformationTableMP();
+                }
+
+                first_category_filled = true;
+                for (ct of document.getElementsByClassName("cat-name-mp")) {
+                    if (ct.id != "cat-name-1") {
+                        ct.style.cursor = "pointer";
+                        ct.style.backgroundColor = "#092B33";
+                        ct.style.color = "white";
+                        ct.getElementsByTagName("img")[0].src = mp_categories_pictures.get(ct.id.substring(9)).get("unselected");
+                    }
+                }
+            }
+            else {
+                alert("It seems that some parameters are empty or not correctly filled. Please have a look and try again.")
             }
         }
         else {
-            alert("It seems that some parameters are empty or not correctly filled. Please have a look and try again.")
+            if (check_cat_parameters_filled_mp()) {
+                for ([ans, value] of current_answers_mp) {
+                    current_phase.set(ans, value);
+                }
+                existing_phase_mp = current_phase.get("phase name") + "-tabline-mp";
+                edit_line_mp(existing_phase_mp);
+            }
+            else {
+                alert("It seems that some parameters are empty or not correctly filled. Please have a look and try again.")
+            }
         }
+
     }
 
     function check_cat_parameters_filled_mp() {
         var filled = true;
         for ([ans, value] of current_answers_mp) {
-            console.log(value)
-            console.log(value == null)
-            console.log(value == '')
             if (value == null || value == '' && value != 0) {
                 filled = false
             }
@@ -944,76 +1059,171 @@ function runMissionprofile() {
         return filled
     }
 
+    function check_all_phase_filled_mp(name_of_phase) {
+        if (document.getElementById(name_of_phase) == null) {
+            return false;
+        }
+        else {
+            let phase_nodes = document.getElementById(name_of_phase).getElementsByTagName("td");
+            var filled = true;
+            for (var dt of phase_nodes) {
+                if (dt.innerHTML == '') {
+                    filled = false
+                }
+            }
+            return filled
+        }
+
+    }
+
 
     function fillInformationTableMP() {
+
+        let name = current_phase.get("phase name");
+        
         let new_line = document.createElement("tr");
         new_line.id = current_phase.get("phase name") + "-tabline-mp";
         new_line.className = "phase-information-line";
-        new_line.addEventListener('dblclick', function (e) {
-            edit_phase(this.id)
-        })
 
         let new_parameter = document.createElement("td");
+        new_parameter.innerHTML = "<i class='fa fa-edit'></i>";
+        new_parameter.onclick = function() {
+            edit_phase(name + "-tabline-mp");
+        }
+        new_line.appendChild(new_parameter);
+
+        new_parameter = document.createElement("td");
         let phase_icone = document.createElement("img");
         phase_icone.className = "sumup-icon-phase-mp";
         phase_icone.src = phase_type_images_mp.get(current_phase.get("phase type").replace(" ", ""));
         new_parameter.appendChild(phase_icone);
         new_line.appendChild(new_parameter);
 
+
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("phase name");
+        if (current_phase.get("phase name") != null) {
+            new_parameter.innerHTML = current_phase.get("phase name");
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("unit onboard");
+        if (current_phase.get("unit onboard") != null) {
+            new_parameter.innerHTML = current_phase.get("unit onboard");
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("calendar time") + " h";
+        if (current_phase.get("calendar time") != null) {
+            new_parameter.innerHTML = current_phase.get("calendar time") + " h";
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("ambient temperature") + " &deg;C";
+        if (current_phase.get("ambient temperature") != null) {
+            new_parameter.innerHTML = current_phase.get("ambient temperature") + " &deg;C";
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("delta t") + " &deg;C";
+        if (current_phase.get("delta t") != null) {
+            new_parameter.innerHTML = current_phase.get("delta t") + " &deg;C";
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("cycle duration") + " h";
+        if (current_phase.get("cycle duration") != null) {
+            new_parameter.innerHTML = current_phase.get("cycle duration") + " h";
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("number of cycles");
+        if (current_phase.get("number of cycles") != null) {
+            new_parameter.innerHTML = current_phase.get("number of cycles");
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("max temperature") + " &deg;C";
+        if (current_phase.get("max temperature") != null) {
+            new_parameter.innerHTML = current_phase.get("max temperature") + " &deg;C";
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("humidity rate") + " %";
+        if (current_phase.get("humidity rate") != null) {
+            new_parameter.innerHTML = current_phase.get("humidity rate") + " %";
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("random vibrations") + " Grms";
+        if (current_phase.get("random vibrations") != null) {
+            new_parameter.innerHTML = current_phase.get("random vibrations") + " Grms";
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("saline pollution");
+        if (current_phase.get("saline pollution") != null) {
+            new_parameter.innerHTML = current_phase.get("saline pollution");
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("environment pollution");
+        if (current_phase.get("environment pollution") != null) {
+            new_parameter.innerHTML = current_phase.get("environment pollution");
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("application pollution");
+        if (current_phase.get("application pollution") != null) {
+            new_parameter.innerHTML = current_phase.get("application pollution");
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
-        new_parameter.innerHTML = current_phase.get("protection level");
+        if (current_phase.get("protection level") != null) {
+            new_parameter.innerHTML = current_phase.get("protection level");
+        }
+        else {
+            new_parameter.innerHTML = "";
+        }
         new_line.appendChild(new_parameter);
 
         document.getElementById("phases-sum-up-mission-profile").appendChild(new_line);
@@ -1021,28 +1231,104 @@ function runMissionprofile() {
 
     function edit_line_mp(name_of_phase) {
 
+
         let phase_nodes = document.getElementById(name_of_phase).getElementsByTagName("td");
 
-        phase_nodes[0].getElementsByTagName("img")[0].src = phase_type_images_mp.get(current_phase.get("phase type"));
-        phase_nodes[1].innerHTML = current_phase.get("phase name")
-        phase_nodes[2].innerHTML = current_phase.get("unit onboard");
-        phase_nodes[3].innerHTML = current_phase.get("calendar time") + " h";
-        phase_nodes[4].innerHTML = current_phase.get("ambient temperature") + " &deg;C";
-        phase_nodes[5].innerHTML = current_phase.get("delta t") + " &deg;C";
-        phase_nodes[6].innerHTML = current_phase.get("cycle duration") + " h";
-        phase_nodes[7].innerHTML = current_phase.get("number of cycles");
-        phase_nodes[8].innerHTML = current_phase.get("max temperature") + " &deg;C";
-        phase_nodes[9].innerHTML = current_phase.get("humidity rate") + " %";
-        phase_nodes[10].innerHTML = current_phase.get("random vibrations") + " Grms";
-        phase_nodes[11].innerHTML = current_phase.get("saline pollution");
-        phase_nodes[12].innerHTML = current_phase.get("environment pollution");
-        phase_nodes[13].innerHTML = current_phase.get("application pollution");
-        phase_nodes[14].innerHTML = current_phase.get("protection level");
+        if (current_phase.get("phase type") != null) {
+            phase_nodes[1].getElementsByTagName("img")[0].src = phase_type_images_mp.get(current_phase.get("phase type"));
+        }
+        else {
+            phase_nodes[1].innerHTML = "";
+        }
+        if (current_phase.get("phase name") != null) {
+            phase_nodes[2].innerHTML = current_phase.get("phase name");
+            document.getElementById(name_of_phase).id = current_phase.get("phase name") + "-tabline-mp";
+        }
+        else {
+            phase_nodes[2].innerHTML = "";
+        }
+        if (current_phase.get("unit onboard") != null) {
+            phase_nodes[3].innerHTML = current_phase.get("unit onboard");
+        }
+        else {
+            phase_nodes[3].innerHTML = "";
+        }
+        if (current_phase.get("calendar time") != null) {
+            phase_nodes[4].innerHTML = current_phase.get("calendar time") + " h";
+        }
+        else {
+            phase_nodes[4].innerHTML = "";
+        }
+        if (current_phase.get("ambient temperature") != null) {
+            phase_nodes[5].innerHTML = current_phase.get("ambient temperature") + " &deg;C";
+        }
+        else {
+            phase_nodes[5].innerHTML = "";
+        }
+        if (current_phase.get("delta t") != null) {
+            phase_nodes[6].innerHTML = current_phase.get("delta t") + " &deg;C";
+        }
+        else {
+            phase_nodes[6].innerHTML = "";
+        }
+        if (current_phase.get("cycle duration") != null) {
+            phase_nodes[7].innerHTML = current_phase.get("cycle duration") + " h";
+        }
+        else {
+            phase_nodes[7].innerHTML = "";
+        }
+        if (current_phase.get("number of cycles") != null) {
+            phase_nodes[8].innerHTML = current_phase.get("number of cycles");
+        }
+        else {
+            phase_nodes[8].innerHTML = "";
+        }
+        if (current_phase.get("max temperature") != null) {
+            phase_nodes[9].innerHTML = current_phase.get("max temperature") + " &deg;C";
+        }
+        else {
+            phase_nodes[9].innerHTML = "";
+        }
+        if (current_phase.get("humidity rate") != null) {
+            phase_nodes[10].innerHTML = current_phase.get("humidity rate") + " %";
+        }
+        else {
+            phase_nodes[10].innerHTML = "";
+        }
+        if (current_phase.get("random vibrations") != null) {
+            phase_nodes[11].innerHTML = current_phase.get("random vibrations") + " Grms";
+        }
+        else {
+            phase_nodes[11].innerHTML = "";
+        }
+        if (current_phase.get("saline pollution") != null) {
+            phase_nodes[12].innerHTML = current_phase.get("saline pollution");
+        }
+        else {
+            phase_nodes[12].innerHTML = "";
+        }
+        if (current_phase.get("environment pollution") != null) {
+            phase_nodes[13].innerHTML = current_phase.get("environment pollution");
+        }
+        else {
+            phase_nodes[13].innerHTML = "";
+        }
+        if (current_phase.get("application pollution") != null) {
+            phase_nodes[14].innerHTML = current_phase.get("application pollution");
+        }
+        else {
+            phase_nodes[14].innerHTML = "";
+        }
+        if (current_phase.get("protection level") != null) {
+            phase_nodes[15].innerHTML = current_phase.get("protection level");
+        }
+        else {
+            phase_nodes[15].innerHTML = "";
+        }
 
-        document.getElementById(name_of_phase).id = current_phase.get("phase name") + "-tabline-mp";
-        document.getElementById(name_of_phase).addEventListener('dblclick', function (e) {
-            edit_phase(this.id)
-        })
+        let name = current_phase.get("phase name");
+
+        document.getElementById(name_of_phase).id = name + "-tabline-mp";
     }
 
     function getByKey(map, value) {
@@ -1080,26 +1366,99 @@ function runMissionprofile() {
 
             let phase_nodes = line.getElementsByTagName("td");
 
-            let phase_type = convert_picture_to_phase(phase_nodes[0].getElementsByTagName("img")[0].src);
-            data = data + phase_type + ",";
-            data = data + phase_nodes[1].innerHTML + ",";
-            data = data + phase_nodes[2].innerHTML + ",";
-            data = data + phase_nodes[3].innerHTML.replace(" h", "") + ",";
-            data = data + phase_nodes[4].innerHTML.replace(" °C", "") + ",";
-            data = data + phase_nodes[5].innerHTML.replace(" °C", "") + ",";
-            data = data + phase_nodes[6].innerHTML.replace(" h", "") + ",";
-            data = data + phase_nodes[7].innerHTML + ",";
-            data = data + phase_nodes[8].innerHTML.replace(" °C", "") + ",";
-            data = data + phase_nodes[9].innerHTML.replace(" %", "") + ",";
-            data = data + phase_nodes[10].innerHTML.replace(" Grms", "") + ",";
-            data = data + phase_nodes[11].innerHTML + ",";
-            data = data + phase_nodes[12].innerHTML + ",";
-            data = data + phase_nodes[13].innerHTML + ",";
-            data = data + phase_nodes[14].innerHTML + ";";
+            if (phase_nodes[1].innerHTML != "") {
+                let phase_type = convert_picture_to_phase(phase_nodes[1].getElementsByTagName("img")[0].src);
+                data = data + phase_type + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[2].innerHTML != "") {
+                data = data + phase_nodes[2].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[3].innerHTML != "") {
+                data = data + phase_nodes[3].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[4].innerHTML != "") {
+                data = data + phase_nodes[4].innerHTML.replace(" h", "") + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[5].innerHTML != "") {
+                data = data + phase_nodes[5].innerHTML.replace(" °C", "") + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[6].innerHTML != "") {
+                data = data + phase_nodes[6].innerHTML.replace(" °C", "") + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[7].innerHTML != "") {
+                data = data + phase_nodes[7].innerHTML.replace(" h", "") + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[8].innerHTML != "") {
+                data = data + phase_nodes[8].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[9].innerHTML != "") {
+                data = data + phase_nodes[9].innerHTML.replace(" °C", "") + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[10].innerHTML != "") {
+                data = data + phase_nodes[10].innerHTML.replace(" %", "") + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[11].innerHTML != "") {
+                data = data + phase_nodes[11].innerHTML.replace(" Grms", "") + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[12].innerHTML != "") {
+                data = data + phase_nodes[12].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[13].innerHTML != "") {
+                data = data + phase_nodes[13].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[14].innerHTML != "") {
+                data = data + phase_nodes[14].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[15].innerHTML != "") {
+                data = data + phase_nodes[15].innerHTML + ";";
+            }
+            else {
+                data = data + ",";
+            }
         }
-
         download("mission_profile_data.csv", data);
-
     }
 
 
@@ -1113,25 +1472,95 @@ function runMissionprofile() {
 
             let phase_nodes = line.getElementsByTagName("td");
 
-            data = data + phase_nodes[1].innerHTML + ",";
-            data = data + phase_nodes[2].innerHTML.toUpperCase() + ",";
-            data = data + phase_nodes[3].innerHTML + ",";
+            if (phase_nodes[2].innerHTML != "") {
+                data = data + phase_nodes[2].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[3].innerHTML != "") {
+                data = data + phase_nodes[3].innerHTML.toUpperCase() + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[4].innerHTML != "") {
+                data = data + phase_nodes[4].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
             data = data + ",";
-            data = data + phase_nodes[4].innerHTML + ",";
+            if (phase_nodes[5].innerHTML != "") {
+                data = data + phase_nodes[5].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
             data = data + ",";
-            data = data + phase_nodes[5].innerHTML + ",";
-            data = data + phase_nodes[6].innerHTML + ",";
-            data = data + phase_nodes[7].innerHTML + ",";
-            data = data + phase_nodes[8].innerHTML + ",";
+            if (phase_nodes[6].innerHTML != "") {
+                data = data + phase_nodes[6].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[7].innerHTML != "") {
+                data = data + phase_nodes[7].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[8].innerHTML != "") {
+                data = data + phase_nodes[8].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[9].innerHTML != "") {
+                data = data + phase_nodes[9].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
             data = data + ",";
-            data = data + phase_nodes[9].innerHTML.replace(" %", "") + ",";
+            if (phase_nodes[10].innerHTML != "") {
+                data = data + phase_nodes[10].innerHTML.replace(" %", "") + ",";
+            }
+            else {
+                data = data + ",";
+            }
             data = data + ",";
-            data = data + phase_nodes[10].innerHTML + ",";
+            if (phase_nodes[11].innerHTML != "") {
+                data = data + phase_nodes[11].innerHTML + ",";
+            }
+            else {
+                data = data + ",";
+            }
             data = data + ",";
-            data = data + phase_nodes[11].innerHTML[0].toUpperCase() + phase_nodes[11].innerHTML.substring(1) + ",";
-            data = data + phase_nodes[12].innerHTML[0].toUpperCase() + phase_nodes[12].innerHTML.substring(1) + ",";
-            data = data + phase_nodes[13].innerHTML[0].toUpperCase() + phase_nodes[13].innerHTML.substring(1) + ",";
-            data = data + phase_nodes[14].innerHTML[0].toUpperCase() + phase_nodes[14].innerHTML.substring(1);
+            if (phase_nodes[12].innerHTML != "") {
+                data = data + phase_nodes[12].innerHTML[0].toUpperCase() + phase_nodes[12].innerHTML.substring(1) + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[13].innerHTML != "") {
+                data = data + phase_nodes[13].innerHTML[0].toUpperCase() + phase_nodes[13].innerHTML.substring(1) + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[14].innerHTML != "") {
+                data = data + phase_nodes[14].innerHTML[0].toUpperCase() + phase_nodes[14].innerHTML.substring(1) + ",";
+            }
+            else {
+                data = data + ",";
+            }
+            if (phase_nodes[15].innerHTML != "") {
+                data = data + phase_nodes[15].innerHTML[0].toUpperCase() + phase_nodes[15].innerHTML.substring(1);
+            }
+            else {
+                data = data + ",";
+            }
         }
 
         download("mission_profile_expertool.csv", data);
@@ -1149,26 +1578,101 @@ function runMissionprofile() {
                 if (!first && dt != "") {
                     let values = dt.split(",");
                     if (values.length == 15) {
-                        current_phase = new Map([
-                            ["phase type", values[0][0].toUpperCase() + values[0].substring(1)],
-                            ["phase name", values[1]],
-                            ["unit onboard", values[2]],
-                            ["calendar time", values[3]],
-                            ["ambient temperature", values[4]],
-                            ["delta t", values[5]],
-                            ["cycle duration", values[6]],
-                            ["number of cycles", values[7]],
-                            ["max temperature", values[8]],
-                            ["humidity rate", values[9]],
-                            ["random vibrations", values[10]],
-                            ["saline pollution", values[11]],
-                            ["environment pollution", values[12]],
-                            ["application pollution", values[13]],
-                            ["protection level", values[14]]
-                        ])
+                        current_phase = new Map();
+                        if (values[0] != "") {
+                            current_phase.set("phase type", values[0].substring(1));
+                        }
+                        else {
+                            current_phase.set("phase type", null);
+                        }
+                        if (values[1] != "") {
+                            current_phase.set("phase name", values[1]);
+                        }
+                        else {
+                            current_phase.set("phase name", null);
+                        }
+                        if (values[2] != "") {
+                            current_phase.set("unit onboard", values[2]);
+                        }
+                        else {
+                            current_phase.set("unit onboard", null);
+                        }
+                        if (values[3] != "") {
+                            current_phase.set("calendar time", values[3]);
+                        }
+                        else {
+                            current_phase.set("calendar time", null);
+                        }
+                        if (values[4] != "") {
+                            current_phase.set("ambient temperature", values[4]);
+                        }
+                        else {
+                            current_phase.set("ambient temperature", null);
+                        }
+                        if (values[5] != "") {
+                            current_phase.set("delta t", values[5]);
+                        }
+                        else {
+                            current_phase.set("delta t", null);
+                        }
+                        if (values[6] != "") {
+                            current_phase.set("cycle duration", values[6]);
+                        }
+                        else {
+                            current_phase.set("cycle duration", null);
+                        }
+                        if (values[7] != "") {
+                            current_phase.set("number of cycles", values[7]);
+                        }
+                        else {
+                            current_phase.set("number of cycles", null);
+                        }
+                        if (values[8] != "") {
+                            current_phase.set("max temperature", values[8]);
+                        }
+                        else {
+                            current_phase.set("max temperature", null);
+                        }
+                        if (values[9] != "") {
+                            current_phase.set("humidity rate", values[9]);
+                        }
+                        else {
+                            current_phase.set("humidity rate", null);
+                        }
+                        if (values[10] != "") {
+                            current_phase.set("random vibrations", values[10]);
+                        }
+                        else {
+                            current_phase.set("random vibrations", null);
+                        }
+                        if (values[11] != "") {
+                            current_phase.set("saline pollution", values[11]);
+                        }
+                        else {
+                            current_phase.set("saline pollution", null);
+                        }
+                        if (values[12] != "") {
+                            current_phase.set("environment pollution", values[12]);
+                        }
+                        else {
+                            current_phase.set("environment pollution", null);
+                        }
+                        if (values[13] != "") {
+                            current_phase.set("application pollution", values[13]);
+                        }
+                        else {
+                            current_phase.set("application pollution", null);
+                        }
+                        if (values[14] != "") {
+                            current_phase.set("protection level", values[14]);
+                        }
+                        else {
+                            current_phase.set("protection level", null);
+                        }
                         fillInformationTableMP();
+                        
                     }
-                    else{
+                    else {
                         alert("Data are not regular, please check they are not corrupted.")
                     }
                 }
@@ -1177,8 +1681,42 @@ function runMissionprofile() {
                 }
             }
             document.getElementById("load-answers-mp").disabled = true;
+            current_phase = new Map([
+                ["phase type", null],
+                ["phase name", null],
+                ["unit onboard", null],
+                ["calendar time", null],
+                ["ambient temperature", null],
+                ["delta t", null],
+                ["cycle duration", null],
+                ["number of cycles", null],
+                ["max temperature", null],
+                ["humidity rate", null],
+                ["random vibrations", null],
+                ["saline pollution", null],
+                ["environment pollution", null],
+                ["application pollution", null],
+                ["protection level", null]
+            ])
+
+
+
+            for (ct of document.getElementsByClassName("cat-name-mp")) {
+                if (ct.id != "cat-name-1") {
+                    ct.style.cursor = "not-allowed";
+                    ct.style.backgroundColor = "gray";
+                    ct.style.color = "white";
+                    ct.getElementsByTagName("img")[0].src = mp_categories_pictures.get(ct.id.substring(9)).get("unselected");
+                }
+            }
+
+            existing_phase_mp = null;
+
+            first_category_filled = false;
+
+            document.getElementById("cat-name-1").click();
         }
-        else{
+        else {
             alert("Data are not regular, please check they are not corrupted.")
         }
 

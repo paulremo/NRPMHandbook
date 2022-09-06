@@ -263,10 +263,6 @@ input[type=number]:valid {
     text-align: center;
 }
 
-#phases-sum-up-mission-profile tr:hover {
-    background-color: rgb(181, 199, 233);
-}
-
 .sumup-icon-phase-mp {
     width: 1vw;
 }

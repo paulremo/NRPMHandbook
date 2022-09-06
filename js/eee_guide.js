@@ -789,110 +789,13 @@ function runEEEGuide() {
 
     function changePicture(step) {
         if (step == 2) {
-            setTimeout(() => {
-                document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
-                setTimeout(() => {
-                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
-                    setTimeout(() => {
-                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
-                        setTimeout(() => {
-                            document.getElementById("animated_picture_eee_guide").style.opacity = "0";
-                            displayPicture(2)
-                        }, 100);
-                    }, 100);
-                }, 100);
-            }, 100);
-        }
-        else if (step == 3) {
-            setTimeout(() => {
-                document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
-                setTimeout(() => {
-                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
-                    setTimeout(() => {
-                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
-                        setTimeout(() => {
-                            document.getElementById("animated_picture_eee_guide").style.opacity = "0";
-                            displayPicture(3);
-                        }, 100);
-                    }, 100);
-                }, 100);
-            }, 100);
-        }
-        else if (step == 4) {
-            setTimeout(() => {
-                document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
-                setTimeout(() => {
-                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
-                    setTimeout(() => {
-                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
-                        setTimeout(() => {
-                            document.getElementById("animated_picture_eee_guide").style.opacity = "0";
-                            displayPicture(4);
-                        }, 100);
-                    }, 100);
-                }, 100);
-            }, 100);
-        }
-    }
-
-    function displayPicture(step) {
-        if (step == 2) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/launch_on.svg";
-            setTimeout(() => {
-                document.getElementById("animated_picture_eee_guide").style.visibility = "visible";
-                document.getElementById("animated_picture_eee_guide").style.opacity = "0";
-                setTimeout(() => {
-                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
-                    setTimeout(() => {
-                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
-                        setTimeout(() => {
-                            document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
-                            setTimeout(() => {
-                                document.getElementById("animated_picture_eee_guide").style.opacity = "1";
-                            }, 100);
-                        }, 100);
-                    }, 100);
-                }, 100);
-            }, 100);
-
         }
         else if (step == 3) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/moon_on.svg";
-            setTimeout(() => {
-                document.getElementById("animated_picture_eee_guide").style.visibility = "visible";
-                document.getElementById("animated_picture_eee_guide").style.opacity = "0";
-                setTimeout(() => {
-                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
-                    setTimeout(() => {
-                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
-                        setTimeout(() => {
-                            document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
-                            setTimeout(() => {
-                                document.getElementById("animated_picture_eee_guide").style.opacity = "1";
-                            }, 100);
-                        }, 100);
-                    }, 100);
-                }, 100);
-            }, 100);
         }
         else if (step == 4) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/final_on.svg";
-            setTimeout(() => {
-                document.getElementById("animated_picture_eee_guide").style.visibility = "visible";
-                document.getElementById("animated_picture_eee_guide").style.opacity = "0";
-                setTimeout(() => {
-                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
-                    setTimeout(() => {
-                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
-                        setTimeout(() => {
-                            document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
-                            setTimeout(() => {
-                                document.getElementById("animated_picture_eee_guide").style.opacity = "1";
-                            }, 100);
-                        }, 100);
-                    }, 100);
-                }, 100);
-            }, 100);
         }
     }
 
