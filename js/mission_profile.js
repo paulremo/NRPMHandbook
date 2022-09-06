@@ -26,7 +26,7 @@ function runMissionprofile() {
         ["protection level", null]
     ])
 
-    var range_pollution_values = new Map([
+    let range_pollution_values = new Map([
         ["saline pollution", new Map([
             [0, "low"],
             [100, "high"]
@@ -44,6 +44,27 @@ function runMissionprofile() {
         ["protection level", new Map([
             [0, "hermetic"],
             [100, "non hermetic"]
+        ])]
+    ]);
+
+    let range_pollution_keys = new Map([
+        ["saline pollution", new Map([
+            ["low", 0],
+            ["high", 100]
+        ])],
+        ["environment pollution", new Map([
+            ["low", 0],
+            ["moderate", 50],
+            ["high", 100]
+        ])],
+        ["application pollution", new Map([
+            ["low", 0],
+            ["moderate", 50],
+            ["high", 100]
+        ])],
+        ["protection level", new Map([
+            ["hermetic", 0],
+            ["non hermetic", 100]
         ])]
     ]);
 
@@ -180,7 +201,6 @@ function runMissionprofile() {
 
         }
         cat.onmouseenter = function () {
-            console.log(this.id)
             if (first_category_filled) {
                 this.style.backgroundColor = "#1B7E94";
             }
@@ -252,6 +272,8 @@ function runMissionprofile() {
                 fillInformationTableMP();
             }
 
+            document.getElementById("edit-button-" + current_phase.get("phase name") + "-mp").disabled = false;
+
             current_phase = new Map([
                 ["phase type", null],
                 ["phase name", null],
@@ -296,11 +318,11 @@ function runMissionprofile() {
 
     document.getElementById("on-off-entry-mp").onchange = function () {
         if (this.checked) {
-            current_answers_mp.set("unit onboard", "on");
+            current_answers_mp.set("unit onboard", "ON");
             document.getElementById("on-off-switch-mp").style.backgroundColor = "#098324";
         }
         else {
-            current_answers_mp.set("unit onboard", "off");
+            current_answers_mp.set("unit onboard", "OFF");
             document.getElementById("on-off-switch-mp").style.backgroundColor = "red";
         }
         free_validation_category_mp();
@@ -654,7 +676,6 @@ function runMissionprofile() {
     reinitialize_interactors();
 
     function convert_picture_to_phase(picture) {
-        console.log("convert_picture_to_phase");
         if (picture.includes("storage")) {
             return "Storage"
         }
@@ -680,16 +701,20 @@ function runMissionprofile() {
         if (check_all_phase_filled_mp(name_of_phase)) {
             let phase_nodes = document.getElementById(name_of_phase).getElementsByTagName("td");
 
+
+
             let text = "You will edit the phase called : " + phase_nodes[2].innerHTML + ". You will lose your current inputs, are you sure you want to edit ?";
 
             if (confirm(text) == true) {
 
-                if (existing_phase_mp != null){
+                if (existing_phase_mp != null) {
                     document.getElementById(existing_phase_mp).remove();
                 }
-                
+
 
                 existing_phase_mp = name_of_phase;
+
+                console.log(phase_nodes[9].innerHTML.replace(" °C", ""))
 
 
                 current_phase = new Map([
@@ -711,7 +736,20 @@ function runMissionprofile() {
                 ])
 
                 first_category_filled = true;
+
+
+                for (ct of document.getElementsByClassName("cat-name-mp")) {
+                    if (ct.id != "cat-name-1") {
+                        ct.style.cursor = "pointer";
+                        ct.style.backgroundColor = "";
+                        ct.style.color = "white";
+                        ct.getElementsByTagName("img")[0].src = mp_categories_pictures.get(ct.id.substring(9)).get("unselected");
+                    }
+                }
+
                 document.getElementById("cat-name-1").click();
+
+                document.getElementById("edit-button-" + current_phase.get("phase name") + "-mp").disabled = true;
 
             } else {
 
@@ -835,7 +873,7 @@ function runMissionprofile() {
             }
             current_answers_mp.set("unit onboard", current_phase.get("unit onboard"));
             if (current_phase.get("unit onboard") != null) {
-                if (current_phase.get("unit onboard") == "on") {
+                if (current_phase.get("unit onboard") == "ON") {
                     if (document.getElementById("on-off-entry-mp").checked == true) {
                         document.getElementById("on-off-entry-mp").click();
                         document.getElementById("on-off-entry-mp").click();
@@ -931,7 +969,7 @@ function runMissionprofile() {
             if (current_phase.get("phase type") == "In-orbit") {
                 if (current_phase.get("saline pollution") != null) {
                     current_answers_mp.set("saline pollution", current_phase.get("saline pollution"));
-                    document.getElementById("saline-pollution-entry").value = range_pollution_values.get("saline pollution").keys(current_phase.get("saline pollution"))[0];
+                    document.getElementById("saline-pollution-entry").value = range_pollution_keys.get("saline pollution").get(current_phase.get("saline pollution"));
                     document.getElementById("saline-pollution-entry").click();
                 }
                 else {
@@ -941,7 +979,7 @@ function runMissionprofile() {
                 }
                 if (current_phase.get("environment pollution") != null) {
                     current_answers_mp.set("environment pollution", current_phase.get("environment pollution"));
-                    document.getElementById("environment-pollution-entry").value = range_pollution_values.get("environment pollution").keys(current_phase.get("environment pollution"))[0];
+                    document.getElementById("environment-pollution-entry").value = range_pollution_keys.get("environment pollution").get(current_phase.get("environment pollution"));
                     document.getElementById("environment-pollution-entry").click();
                 }
                 else {
@@ -951,7 +989,7 @@ function runMissionprofile() {
                 }
                 if (current_phase.get("application pollution") != null) {
                     current_answers_mp.set("application pollution", current_phase.get("application pollution"));
-                    document.getElementById("application-pollution-entry").value = range_pollution_values.get("application pollution").keys(current_phase.get("application pollution"))[0];
+                    document.getElementById("application-pollution-entry").value = range_pollution_keys.get("application pollution").get(current_phase.get("application pollution"));
                     document.getElementById("application-pollution-entry").click();
                 }
                 else {
@@ -961,7 +999,7 @@ function runMissionprofile() {
                 }
                 if (current_phase.get("protection level") != null) {
                     current_answers_mp.set("protection level", current_phase.get("protection level"));
-                    document.getElementById("protection-level-entry").value = range_pollution_values.get("protection level").keys(current_phase.get("protection level"))[0];;
+                    document.getElementById("protection-level-entry").value = range_pollution_keys.get("protection level").get(current_phase.get("protection level"));;
                     document.getElementById("protection-level-entry").click();
                 }
                 else {
@@ -973,22 +1011,22 @@ function runMissionprofile() {
             else {
                 current_answers_mp.set("saline pollution", current_phase.get("saline pollution"));
                 if (current_phase.get("saline pollution") != null) {
-                    document.getElementById("saline-pollution-entry").value = range_pollution_values.get("saline pollution").keys(current_phase.get("saline pollution"))[0];
+                    document.getElementById("saline-pollution-entry").value = range_pollution_keys.get("saline pollution").get(current_phase.get("saline pollution"));
                     document.getElementById("saline-pollution-entry").click();
                 }
                 current_answers_mp.set("environment pollution", current_phase.get("environment pollution"));
                 if (current_phase.get("environment pollution") != null) {
-                    document.getElementById("environment-pollution-entry").value = range_pollution_values.get("environment pollution").keys(current_phase.get("environment pollution"))[0];
+                    document.getElementById("environment-pollution-entry").value = range_pollution_keys.get("environment pollution").get(current_phase.get("environment pollution"));
                     document.getElementById("environment-pollution-entry").click();
                 }
                 current_answers_mp.set("application pollution", current_phase.get("application pollution"));
                 if (current_phase.get("application pollution") != null) {
-                    document.getElementById("application-pollution-entry").value = range_pollution_values.get("application pollution").keys(current_phase.get("application pollution"))[0];
+                    document.getElementById("application-pollution-entry").value = range_pollution_keys.get("application pollution").get(current_phase.get("application pollution"));
                     document.getElementById("application-pollution-entry").click();
                 }
                 current_answers_mp.set("protection level", current_phase.get("protection level"));
                 if (current_phase.get("protection level") != null) {
-                    document.getElementById("protection-level-entry").value = range_pollution_values.get("protection level").keys(current_phase.get("protection level"))[0];
+                    document.getElementById("protection-level-entry").value = range_pollution_keys.get("protection level").get(current_phase.get("protection level"));
                     document.getElementById("protection-level-entry").click();
                 }
             }
@@ -1005,20 +1043,22 @@ function runMissionprofile() {
                 existing_phase_mp = current_phase.get("phase name") + "-tabline-mp";
                 if (first_category_filled) {
                     edit_line_mp(existing_phase_mp);
+                    document.getElementById("edit-button-" + current_phase.get("phase name") + "-mp").disabled = true;
                 }
                 else {
                     fillInformationTableMP();
-                }
-
-                first_category_filled = true;
-                for (ct of document.getElementsByClassName("cat-name-mp")) {
-                    if (ct.id != "cat-name-1") {
-                        ct.style.cursor = "pointer";
-                        ct.style.backgroundColor = "#092B33";
-                        ct.style.color = "white";
-                        ct.getElementsByTagName("img")[0].src = mp_categories_pictures.get(ct.id.substring(9)).get("unselected");
+                    document.getElementById("edit-button-" + current_phase.get("phase name") + "-mp").disabled = true;
+                    first_category_filled = true;
+                    for (ct of document.getElementsByClassName("cat-name-mp")) {
+                        if (ct.id != "cat-name-1") {
+                            ct.style.cursor = "pointer";
+                            ct.style.backgroundColor = "";
+                            ct.style.color = "white";
+                            ct.getElementsByTagName("img")[0].src = mp_categories_pictures.get(ct.id.substring(9)).get("unselected");
+                        }
                     }
                 }
+
             }
             else {
                 alert("It seems that some parameters are empty or not correctly filled. Please have a look and try again.")
@@ -1080,22 +1120,25 @@ function runMissionprofile() {
     function fillInformationTableMP() {
 
         let name = current_phase.get("phase name");
-        
+
         let new_line = document.createElement("tr");
         new_line.id = current_phase.get("phase name") + "-tabline-mp";
         new_line.className = "phase-information-line";
 
         let new_parameter = document.createElement("td");
-        new_parameter.innerHTML = "<i class='fa fa-edit'></i>";
-        new_parameter.onclick = function() {
+        let edit_button = document.createElement("button");
+        edit_button.id = "edit-button-" + current_phase.get("phase name") + "-mp";
+        edit_button.innerHTML = "<i class='fa fa-edit'></i></button>";
+        edit_button.onclick = function () {
             edit_phase(name + "-tabline-mp");
         }
+        new_parameter.appendChild(edit_button);
         new_line.appendChild(new_parameter);
 
         new_parameter = document.createElement("td");
         let phase_icone = document.createElement("img");
         phase_icone.className = "sumup-icon-phase-mp";
-        phase_icone.src = phase_type_images_mp.get(current_phase.get("phase type").replace(" ", ""));
+        phase_icone.src = phase_type_images_mp.get(current_phase.get("phase type"));
         new_parameter.appendChild(phase_icone);
         new_line.appendChild(new_parameter);
 
@@ -1111,7 +1154,7 @@ function runMissionprofile() {
 
         new_parameter = document.createElement("td");
         if (current_phase.get("unit onboard") != null) {
-            new_parameter.innerHTML = current_phase.get("unit onboard");
+            new_parameter.innerHTML = current_phase.get("unit onboard").toUpperCase();
         }
         else {
             new_parameter.innerHTML = "";
@@ -1120,7 +1163,7 @@ function runMissionprofile() {
 
         new_parameter = document.createElement("td");
         if (current_phase.get("calendar time") != null) {
-            new_parameter.innerHTML = current_phase.get("calendar time") + " h";
+            new_parameter.innerHTML = current_phase.get("calendar time");
         }
         else {
             new_parameter.innerHTML = "";
@@ -1129,7 +1172,7 @@ function runMissionprofile() {
 
         new_parameter = document.createElement("td");
         if (current_phase.get("ambient temperature") != null) {
-            new_parameter.innerHTML = current_phase.get("ambient temperature") + " &deg;C";
+            new_parameter.innerHTML = current_phase.get("ambient temperature");
         }
         else {
             new_parameter.innerHTML = "";
@@ -1138,7 +1181,7 @@ function runMissionprofile() {
 
         new_parameter = document.createElement("td");
         if (current_phase.get("delta t") != null) {
-            new_parameter.innerHTML = current_phase.get("delta t") + " &deg;C";
+            new_parameter.innerHTML = current_phase.get("delta t");
         }
         else {
             new_parameter.innerHTML = "";
@@ -1147,7 +1190,7 @@ function runMissionprofile() {
 
         new_parameter = document.createElement("td");
         if (current_phase.get("cycle duration") != null) {
-            new_parameter.innerHTML = current_phase.get("cycle duration") + " h";
+            new_parameter.innerHTML = current_phase.get("cycle duration");
         }
         else {
             new_parameter.innerHTML = "";
@@ -1165,7 +1208,7 @@ function runMissionprofile() {
 
         new_parameter = document.createElement("td");
         if (current_phase.get("max temperature") != null) {
-            new_parameter.innerHTML = current_phase.get("max temperature") + " &deg;C";
+            new_parameter.innerHTML = current_phase.get("max temperature");
         }
         else {
             new_parameter.innerHTML = "";
@@ -1174,7 +1217,7 @@ function runMissionprofile() {
 
         new_parameter = document.createElement("td");
         if (current_phase.get("humidity rate") != null) {
-            new_parameter.innerHTML = current_phase.get("humidity rate") + " %";
+            new_parameter.innerHTML = current_phase.get("humidity rate");
         }
         else {
             new_parameter.innerHTML = "";
@@ -1183,7 +1226,7 @@ function runMissionprofile() {
 
         new_parameter = document.createElement("td");
         if (current_phase.get("random vibrations") != null) {
-            new_parameter.innerHTML = current_phase.get("random vibrations") + " Grms";
+            new_parameter.innerHTML = current_phase.get("random vibrations");
         }
         else {
             new_parameter.innerHTML = "";
@@ -1248,31 +1291,31 @@ function runMissionprofile() {
             phase_nodes[2].innerHTML = "";
         }
         if (current_phase.get("unit onboard") != null) {
-            phase_nodes[3].innerHTML = current_phase.get("unit onboard");
+            phase_nodes[3].innerHTML = current_phase.get("unit onboard").toUpperCase();
         }
         else {
             phase_nodes[3].innerHTML = "";
         }
         if (current_phase.get("calendar time") != null) {
-            phase_nodes[4].innerHTML = current_phase.get("calendar time") + " h";
+            phase_nodes[4].innerHTML = current_phase.get("calendar time");
         }
         else {
             phase_nodes[4].innerHTML = "";
         }
         if (current_phase.get("ambient temperature") != null) {
-            phase_nodes[5].innerHTML = current_phase.get("ambient temperature") + " &deg;C";
+            phase_nodes[5].innerHTML = current_phase.get("ambient temperature");
         }
         else {
             phase_nodes[5].innerHTML = "";
         }
         if (current_phase.get("delta t") != null) {
-            phase_nodes[6].innerHTML = current_phase.get("delta t") + " &deg;C";
+            phase_nodes[6].innerHTML = current_phase.get("delta t");
         }
         else {
             phase_nodes[6].innerHTML = "";
         }
         if (current_phase.get("cycle duration") != null) {
-            phase_nodes[7].innerHTML = current_phase.get("cycle duration") + " h";
+            phase_nodes[7].innerHTML = current_phase.get("cycle duration");
         }
         else {
             phase_nodes[7].innerHTML = "";
@@ -1284,19 +1327,19 @@ function runMissionprofile() {
             phase_nodes[8].innerHTML = "";
         }
         if (current_phase.get("max temperature") != null) {
-            phase_nodes[9].innerHTML = current_phase.get("max temperature") + " &deg;C";
+            phase_nodes[9].innerHTML = current_phase.get("max temperature");
         }
         else {
             phase_nodes[9].innerHTML = "";
         }
         if (current_phase.get("humidity rate") != null) {
-            phase_nodes[10].innerHTML = current_phase.get("humidity rate") + " %";
+            phase_nodes[10].innerHTML = current_phase.get("humidity rate");
         }
         else {
             phase_nodes[10].innerHTML = "";
         }
         if (current_phase.get("random vibrations") != null) {
-            phase_nodes[11].innerHTML = current_phase.get("random vibrations") + " Grms";
+            phase_nodes[11].innerHTML = current_phase.get("random vibrations");
         }
         else {
             phase_nodes[11].innerHTML = "";
@@ -1492,14 +1535,14 @@ function runMissionprofile() {
             }
             data = data + ",";
             if (phase_nodes[5].innerHTML != "") {
-                data = data + phase_nodes[5].innerHTML + ",";
+                data = data + phase_nodes[5].innerHTML.replace(" &deg;", "°") + ",";
             }
             else {
                 data = data + ",";
             }
             data = data + ",";
             if (phase_nodes[6].innerHTML != "") {
-                data = data + phase_nodes[6].innerHTML + ",";
+                data = data + phase_nodes[6].innerHTML.replace(" &deg;", "°") + ",";
             }
             else {
                 data = data + ",";
@@ -1517,7 +1560,7 @@ function runMissionprofile() {
                 data = data + ",";
             }
             if (phase_nodes[9].innerHTML != "") {
-                data = data + phase_nodes[9].innerHTML + ",";
+                data = data + phase_nodes[9].innerHTML.replace(" &deg;", "°") + ",";
             }
             else {
                 data = data + ",";
@@ -1670,7 +1713,7 @@ function runMissionprofile() {
                             current_phase.set("protection level", null);
                         }
                         fillInformationTableMP();
-                        
+
                     }
                     else {
                         alert("Data are not regular, please check they are not corrupted.")
