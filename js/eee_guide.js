@@ -785,7 +785,6 @@ function runEEEGuide() {
 
             document.getElementById("messagesTrack_eee_guide").style.height = "400px";
         }, 200);
-
     }
 
     function changePicture(step) {
@@ -797,12 +796,12 @@ function runEEEGuide() {
                     setTimeout(() => {
                         document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
                         setTimeout(() => {
+                            document.getElementById("animated_picture_eee_guide").style.opacity = "0";
                             displayPicture(2)
                         }, 100);
                     }, 100);
                 }, 100);
             }, 100);
-
         }
         else if (step == 3) {
             setTimeout(() => {
@@ -818,7 +817,6 @@ function runEEEGuide() {
                     }, 100);
                 }, 100);
             }, 100);
-
         }
         else if (step == 4) {
             setTimeout(() => {
@@ -834,23 +832,24 @@ function runEEEGuide() {
                     }, 100);
                 }, 100);
             }, 100);
-
         }
     }
 
     function displayPicture(step) {
         if (step == 2) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/launch_on.svg";
-            document.getElementById("animated_picture_eee_guide").style.visibility = "visible";
-            document.getElementById("animated_picture_eee_guide").style.opacity = "0";
             setTimeout(() => {
-                document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
+                document.getElementById("animated_picture_eee_guide").style.visibility = "visible";
+                document.getElementById("animated_picture_eee_guide").style.opacity = "0";
                 setTimeout(() => {
-                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
+                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
                     setTimeout(() => {
-                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
+                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
                         setTimeout(() => {
-                            document.getElementById("animated_picture_eee_guide").style.opacity = "1";
+                            document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
+                            setTimeout(() => {
+                                document.getElementById("animated_picture_eee_guide").style.opacity = "1";
+                            }, 100);
                         }, 100);
                     }, 100);
                 }, 100);
@@ -859,39 +858,41 @@ function runEEEGuide() {
         }
         else if (step == 3) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/moon_on.svg";
-            document.getElementById("animated_picture_eee_guide").style.visibility = "visible";
-            document.getElementById("animated_picture_eee_guide").style.opacity = "0";
             setTimeout(() => {
-                document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
+                document.getElementById("animated_picture_eee_guide").style.visibility = "visible";
+                document.getElementById("animated_picture_eee_guide").style.opacity = "0";
                 setTimeout(() => {
-                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
+                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
                     setTimeout(() => {
-                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
+                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
                         setTimeout(() => {
-                            document.getElementById("animated_picture_eee_guide").style.opacity = "1";
+                            document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
+                            setTimeout(() => {
+                                document.getElementById("animated_picture_eee_guide").style.opacity = "1";
+                            }, 100);
                         }, 100);
                     }, 100);
                 }, 100);
             }, 100);
-
         }
         else if (step == 4) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/final_on.svg";
-            document.getElementById("animated_picture_eee_guide").style.visibility = "visible";
-            document.getElementById("animated_picture_eee_guide").style.opacity = "0";
             setTimeout(() => {
-                document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
+                document.getElementById("animated_picture_eee_guide").style.visibility = "visible";
+                document.getElementById("animated_picture_eee_guide").style.opacity = "0";
                 setTimeout(() => {
-                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
+                    document.getElementById("animated_picture_eee_guide").style.opacity = "0.25";
                     setTimeout(() => {
-                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
+                        document.getElementById("animated_picture_eee_guide").style.opacity = "0.5";
                         setTimeout(() => {
-                            document.getElementById("animated_picture_eee_guide").style.opacity = "1";
+                            document.getElementById("animated_picture_eee_guide").style.opacity = "0.75";
+                            setTimeout(() => {
+                                document.getElementById("animated_picture_eee_guide").style.opacity = "1";
+                            }, 100);
                         }, 100);
                     }, 100);
                 }, 100);
             }, 100);
-
         }
     }
 
