@@ -21,7 +21,7 @@ Here is an example of electronic equipment located on the platform of a geostati
 
 -   stable temperature in orbit of 25°C with some thermal cycling of 5°C maximum due to thermal regulation.
 
-As explained in Section {numref}`eee_4_5_6`, vibrations during launch phase are considered in the mission profile of geostationary satellites even if their influence on the total reliability prediction could be minor.
+As explained in Section {numref}`eee_4_3_1_7`, vibrations during launch phase are considered in the mission profile of geostationary satellites even if their influence on the total reliability prediction could be minor.
 
 Considering the example of electronic equipment inside a geostationary satellite, the corresponding mission profile is described in the following table. Values highlighted in bold characters are parameters of the mission profile which can differ from one equipment to another. Values in standard characters are parameters which usually do not change whatever the equipment.
 
@@ -123,7 +123,7 @@ The mission of this equipment is the following:
 
 -   stable temperature in orbit of 25°C with thermal cycling from maximum ±5°C during equipment switched on and maximum ±3°C during equipment switched off.
 
-As explained in Section {numref}`eee_4_5_6`, vibrations during launch phase are considered in the mission profile of Low Earth Orbit satellites even if their influence on the total reliability prediction could be minor.
+As explained in Section {numref}`eee_4_3_1_7`, vibrations during launch phase are considered in the mission profile of Low Earth Orbit satellites even if their influence on the total reliability prediction could be minor.
 
 Considering this electronic equipment inside a Low Earth Orbit satellite, the example of a mission profile is described in the following table. Values highlighted in bold characters are parameters of the mission profile which can differ from one equipment to another. Values in standard characters are parameters which usually do not change whatever the equipment.
 
