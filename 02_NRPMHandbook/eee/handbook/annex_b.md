@@ -43,7 +43,7 @@ Generally, each question is dedicated to either the prime contractor or the sub-
 ```{list-table} Questions and answers to process questionnaire - SPECIFICATION
 :name: eee-table4-127-a
 :header-rows: 1
-:widths: 3 30 20 7 10 10 10 10
+:widths: 3 50 22 5 5 5 5 5
 
 *   - No.
     - Recommendation
@@ -204,7 +204,7 @@ Generally, each question is dedicated to either the prime contractor or the sub-
 ```{list-table} Questions and answers to process questionnaire - DESIGN
 :name: eee-table4-127-b
 :header-rows: 1
-:widths: 3 30 20 7 10 10 10 10
+:widths: 3 50 22 5 5 5 5 5
 
 *   - No.
     - Recommendation
@@ -470,7 +470,7 @@ Generally, each question is dedicated to either the prime contractor or the sub-
 ```{list-table} Questions and answers to process questionnaire - MANUFACTURING OF BOARD - SUBASSEMBLY
 :name: eee-table4-127-c
 :header-rows: 1
-:widths: 3 30 20 7 10 10 10 10
+:widths: 3 50 22 5 5 5 5 5
 
 *   - No.
     - Recommendation
@@ -919,7 +919,7 @@ Generally, each question is dedicated to either the prime contractor or the sub-
 ```{list-table} Questions and answers to process questionnaire - INTEGRATION INTO EQUIPEMENT
 :name: eee-table4-127-d
 :header-rows: 1
-:widths: 3 30 20 7 10 10 10 10
+:widths: 3 50 22 5 5 5 5 5
 
 *   - No.
     - Recommendation
@@ -1376,7 +1376,7 @@ Generally, each question is dedicated to either the prime contractor or the sub-
 ```{list-table} Questions and answers to process questionnaire - INTEGRATION INTO SYSTEM
 :name: eee-table4-127-e
 :header-rows: 1
-:widths: 3 30 20 7 10 10 10 10
+:widths: 3 50 22 5 5 5 5 5
 
 *   - No.
     - Recommendation
@@ -1681,7 +1681,7 @@ Generally, each question is dedicated to either the prime contractor or the sub-
 ```{list-table} Questions and answers to process questionnaire - OPERATION AND MAINTENANCE
 :name: eee-table4-127-f
 :header-rows: 1
-:widths: 3 30 20 7 10 10 10 10
+:widths: 3 50 22 5 5 5 5 5
 
 *   - No.
     - Recommendation
@@ -1930,7 +1930,7 @@ Generally, each question is dedicated to either the prime contractor or the sub-
 ```{list-table} Questions and answers to process questionnaire - SUPPORT ACTIVITIES
 :name: eee-table4-127-g
 :header-rows: 1
-:widths: 3 30 20 7 10 10 10 10
+:widths: 3 50 22 5 5 5 5 5
 
 *   - No.
     - Recommendation
