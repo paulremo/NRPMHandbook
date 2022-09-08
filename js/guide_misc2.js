@@ -1,10 +1,14 @@
 // Copyright (C) Matrisk GmbH 2022
 
 function runMiscellaneousGuide() {
+
+    /** Associated the HTML conversation container */
     let conv_container = document.getElementById("messagesTrack");
 
+    /* Collection of buttons diplayed */
     let buttons = new Map();
 
+    /* Set of component names */
     dataComponent = new Set([
         "TWTA, Single MPM",
         "TWTA, Double MPM",
@@ -37,6 +41,7 @@ function runMiscellaneousGuide() {
         "OPTRONICS",
     ]);
 
+    /* Collection of models associated to components names*/
     dataComponentType = new Map([
         ["TWTA, Single MPM", "standard"],
         ["TWTA, Double MPM", "standard"],
@@ -69,6 +74,7 @@ function runMiscellaneousGuide() {
         ["OPTRONICS", "non-standard"],
     ])
 
+    /* Lambda 1 value for statndard components*/
     standardComponentFR = new Map([
         ["TWTA, Single MPM", 200],
         ["TWTA, Double MPM", 400],
@@ -86,6 +92,7 @@ function runMiscellaneousGuide() {
         ["DEPLOYMENT DEVICE Solar Array", 0.3],
     ]);
 
+    /* Components categories */
     dataCategories = new Set([
         "Radio Frequency",
         "Power",
@@ -97,6 +104,7 @@ function runMiscellaneousGuide() {
         "Other"
     ]);
 
+    /* Components associated to categories */
     dataModelsByCategories = new Map([
         ["Radio Frequency", new Set(
             ["TWTA, Single MPM",
@@ -145,6 +153,7 @@ function runMiscellaneousGuide() {
         )]
     ])
 
+    /* Find an element in a dataset depending on the entry elt, or return null if not found */
     function getResult(elt, data) {
         let res = new Set();
         let words = elt.split(" ");
@@ -165,6 +174,7 @@ function runMiscellaneousGuide() {
 
     }
 
+    /* First step of the conversation that enables to start the guide */
     function runB0() {
         let div = document.createElement("div");
         div.setAttribute("class", "other-message");
@@ -205,6 +215,7 @@ function runMiscellaneousGuide() {
         }, 1500);
     }
 
+    /* Second step of the conversation that enables to enter the name of the user's component */
     function runB1() {
         let div = document.createElement("div");
         div.setAttribute("class", "other-message");
@@ -238,6 +249,7 @@ function runMiscellaneousGuide() {
         }, 1500);
     }
 
+    /* Third step of the conversation that enables the users to select a component name among the results of the research in the components names dataset */
     function runB2() {
         console.log("b2");
         let data = getResult(document.getElementById('inputComponent').value, dataComponent);
@@ -291,6 +303,7 @@ function runMiscellaneousGuide() {
 
     }
 
+    /* Fourth step of the conversation that gives the vale of lambda1 if standard component and/or display linked pages */
     function runB3(key) {
         for (var [k, b] of buttons) {
             document.getElementById(k).disabled = true;
@@ -383,6 +396,7 @@ function runMiscellaneousGuide() {
         }
     }
 
+    /* Fourth step if the user did not find mathing component in the list provided by the search in runB2()*/
     function runB4() {
         for (var [k, b] of buttons) {
             document.getElementById(k).disabled = true;
@@ -397,6 +411,8 @@ function runMiscellaneousGuide() {
         document.getElementById("astroPicture").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
         setTimeout(() => { runB5() }, 1500);
     }
+
+    /* Fifth step if the user did not find mathing component displaying components categories*/
     function runB5() {
         let data = dataCategories;
 
@@ -425,6 +441,7 @@ function runMiscellaneousGuide() {
 
     }
 
+    /* Sixth step displaying the components names related to the chosen category*/
     function runB6(choice) {
 
         let data = dataModelsByCategories.get(choice);
@@ -465,6 +482,7 @@ function runMiscellaneousGuide() {
 
     }
 
+    /* Last step if the user did not find matching components from the mist provided in runB6() leading to tips for holistic components*/
     function runB7() {
         let div = document.createElement("div");
         div.setAttribute("class", "other-message");

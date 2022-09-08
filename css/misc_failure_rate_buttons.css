@@ -6,6 +6,7 @@
     }
 }
 
+/* Style for help given by the astronaut */
 #helpMFR {
     position: absolute;
     top: 0;
@@ -15,10 +16,12 @@
     z-index: 1;
 }
 
+/* Style for the astronaut picture in helpMFR */
 #astronaut {
     margin-top: 0%;
 }
 
+/* Style for message container in helpMFR */
 .message {
     margin-left: 20px;
     background-color: #e4c665;
@@ -26,12 +29,14 @@
     border-radius: 5px;
 }
 
+/* Style for the help message in helpMFR */
 .help-message {
     font-size: 11px;
     padding: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Style for the green choice button */
 .green-button {
     width: 22%;
     padding: 2px 2px;
@@ -48,18 +53,12 @@
     box-shadow: 0 5px #666;
 }
 
+/* Style for the green choice button inside controllers*/
 .controllers .green-button {
     width: 15%;
 }
 
-/*.green-button:hover {background-color: #3e8e41}
-
-.green-button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}*/
-
+/* Style for the red choice button */
 .red-button {
     width: 22%;
     padding: 2px 2px;
@@ -76,18 +75,12 @@
     box-shadow: 0 5px #666;
 }
 
+/* Style for the red choice button inside controllers*/
 .controllers .red-button {
     width: 15%;
 }
 
-/*.red-button:hover {background-color: #d12500}
-
-.red-button:active {
-  background-color: #d12500;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}*/
-
+/* Style for the yellow choice button */
 .yellow-button {
     width: 22%;
     padding: 2px 2px;
@@ -104,18 +97,12 @@
     box-shadow: 0 5px #666;
 }
 
+/* Style for the yellow choice button inside controllers*/
 .controllers .yellow-button {
     width: 15%;
 }
 
-/*.yellow-button:hover {background-color: #e1b800}
-
-.yellow-button:active {
-  background-color: #e1b800;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}*/
-
+/* Style for the lambda 3 value*/
 .main-value-title {
     color: #8d0308;
     font-family: 'Nunito', sans-serif;
@@ -128,6 +115,7 @@
     cursor: help;
 }
 
+/* Style for the first column content*/
 .value-type-mfr-title {
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
@@ -139,6 +127,7 @@
     cursor: help;
 }
 
+/* Style for the subparameters column content*/
 .value-type-mfr-subtitle {
     font-family: 'Nunito', sans-serif;
     font-size: 12px;
@@ -150,11 +139,13 @@
     cursor: help;
 }
 
+/* Style for the table containing the different parameters */
 .customed-table {
     border-collapse: collapse;
     margin-top: 8em;
 }
 
+/* Style for the first column*/
 .value-type-mfr {
     background-color: #383b3a;
     color: #ffffff;
@@ -164,6 +155,7 @@
     cursor: help;
 }
 
+/* Style for the processed parameter column*/
 .value-processed {
     font-weight: bold;
     color: #383b3a;
@@ -172,6 +164,7 @@
     text-align: center;
 }
 
+/* Style for text entries */
 .text-entry {
     border-color: #383b3a;
     border-radius: 5px;
