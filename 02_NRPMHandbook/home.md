@@ -7,7 +7,7 @@ This is the digital version of the {term}`NRPM` handbook for reliability.space. 
 
 ## Objective
 
-The reliability.space 2020 handbook was developed during a {term}`ESA` study aiming at the development of a new {term}`reliability prediction <Reliability prediction>` methodology ({term}`NRPM`) for space applications. The objective of the handbook is to provide a methodology that is dedicated to space, avoiding the limitations and shortcomings of existing {term}`reliability prediction <Reliability prediction>` methodologies which were largely focussing on ground applications. The outcome of the {term}`ESA` study {term}`NRPM` is denoted by reliabiltiy.space. The present digital handbook is a digitalized version of the reliabililty.space 2020 handbook that offers easier access, interactive content, and a contemporary design.
+The reliability.space 2020 handbook was developed during an {term}`ESA` study aiming at the development of a new {term}`reliability prediction <Reliability prediction>` methodology ({term}`NRPM`) for space applications. The objective of the handbook is to provide a methodology that is dedicated to space, avoiding the limitations and shortcomings of existing {term}`reliability prediction <Reliability prediction>` methodologies which were largely focussing on ground applications. The outcome of the {term}`ESA` study {term}`NRPM` is denoted by reliabiltiy.space. The present digital handbook is a digitalized version of the reliabililty.space 2020 handbook that offers easier access, interactive content, and a contemporary design.
 
 This digital handbook contains a methodology, a methods and four application-specific chapters for {term}`reliability prediction <Reliability prediction>` in space applications. These chapters can be accessed by clicking on the icons below or browsing the table of contents to the left of this page.
 
@@ -23,7 +23,7 @@ Explains the framework and taxonomy used in the {term}`NRPM` handbook and links 
 :::{grid-item-card} **Methods**
 <a href="methods/handbook/intro.html"><img class="link-image" src="_static/images/methodPicture.png" alt="logo methods"></a>
 ^^^
-Provides information on different inputs and reliability prediction inputs and methods, allowing to understand the background of the models defined in the following chapters.
+Provides information on different reliability prediction and methods inputs, allowing to understand the background of the models defined in the following chapters.
 :::
 ::::
 
