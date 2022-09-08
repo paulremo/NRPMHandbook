@@ -141,9 +141,9 @@ The four classes of failure listed in {numref}`methodo-table4-2` are defined to 
     - REMARK
 *   - {term}`RANDOM FAILURE  <Random failure>`(RF)
     - UNKNOWN RESIDUAL DEFECT / WEAKNESS <ul><li>CONSISTENT WITH QUALITY LEVEL</li><li>UNDER NORMAL STRESSES (REFER TO DATA SHEET)</li><li>ONE-OFF EVENT</li></ul>
-    - RELEVANT FOR <ul><li>PART LEVEL (in particular EEE)</li></ul>
+    - Relevant for <ul><li>PART LEVEL (in particular EEE)</li></ul>
 *   - {term}`SYSTEMATIC FAILURE <Systematic failure>` (SF)
-    - <ul><li>DESIGN ERROR</li><li>MANUFACTURING ERROR</li><li>OPERATIONS ERROr</li></ul>
+    - <ul><li>DESIGN ERROR</li><li>MANUFACTURING ERROR</li><li>OPERATIONS ERROR</li></ul>
     - Relevant for <ul><li>PART LEVEL</li><li>UNIT/EQUIPMENT LEVEL</li><li>INTERFACES</li><li>SYSTEM (FUNCTIONAL)</li></ul>
 *   - WEAR-OUT FAILURE (WO)
     - <ul><li>NORMAL PHYSICAL PROCESS &#8594; TIME/EQUIVALENT TIME <ul><li>OPERATIONS-RELATED (e.g. On/Off, duty cycle)</li></ul><ul><li>ENVIRONMENT-RELATED (e.g. Radiations)</li></ul> </li></ul>
