@@ -1,5 +1,6 @@
 function runEEEGuide() {
 
+    /* Collection that determines all data for the eee families*/
     let eee_families_informations = new Map([
 
         ["Capacitors", new Map([
@@ -395,6 +396,7 @@ function runEEEGuide() {
 
     ])
 
+    /* Collection that gives the dedicated pages for each family */
     let eee_families_links = new Map([
 
         ["Capacitors", "https://nrpmhandbook.reliability.space/en/latest/eee/handbook/reliability_prediction/random_failure/reliability_model_EEE_families.html#capacitors-family-01"],
@@ -417,6 +419,7 @@ function runEEEGuide() {
 
     ])
 
+    /* Set animations for step pictures */
     setInterval(function () {
         let img = document.getElementById("animated_picture_eee_guide");
         let src_data = img.src.split('/');
@@ -448,10 +451,12 @@ function runEEEGuide() {
     }
         , 300);
 
+    /* Defines containers for each steps */
     let first_step_div = document.createElement("div");
     let second_step_div = document.createElement("div");
     let third_step_div = document.createElement("div");
 
+    /* Defines the messages for the first step : definition of the family */
     function displayStep1() {
 
         let first_question_div = document.createElement("div");
@@ -492,12 +497,13 @@ function runEEEGuide() {
 
     }
 
-
+    /* Remove the buttons on filtering for family choice */
     function removeFamilyBTN() {
         let div = document.getElementById("first_step_buttons_div");
         div.remove();
     }
 
+    /* Disable the buttons on click for family choice */
     function disableFamilyBTN() {
         for (var btn of document.getElementsByClassName("family-button-eee")) {
             btn.disabled = true;
@@ -505,6 +511,7 @@ function runEEEGuide() {
         document.getElementById("family_filtering_area").disabled = true;
     }
 
+    /* Display the buttons for family choice */
     function displayFamilyButton(search) {
         removeFamilyBTN();
         let first_step_buttons_div = document.createElement("div");
@@ -543,11 +550,13 @@ function runEEEGuide() {
         }
     }
 
+    /* Remove the buttons on filtering for group choice */
     function removeGroupBTN() {
         let div = document.getElementById("second_step_buttons_div");
         div.remove();
     }
 
+    /* Disable the buttons on click for group choice */
     function disableGroupBTN() {
         for (var btn of document.getElementsByClassName("group-button-eee")) {
             btn.disabled = true;
@@ -555,6 +564,7 @@ function runEEEGuide() {
         document.getElementById("group_filtering_area").disabled = true;
     }
 
+    /* Display the buttons for group choice depending on family */
     function displayGroupButton(selection, search) {
 
         changePicture(2);
@@ -598,6 +608,7 @@ function runEEEGuide() {
         }
     }
 
+    /* Defines the messages for the second step : definition of the group depending on the family chosen */
     function displayStep2(selection) {
 
 
@@ -638,11 +649,13 @@ function runEEEGuide() {
         document.getElementById("messagesTrack_eee_guide").style.height = "400px";
     }
 
+    /* Remove the buttons on filtering for model choice */
     function removeModelBTN() {
         let div = document.getElementById("third_step_buttons_div");
         div.remove();
     }
 
+    /* Disable the buttons on click for model choice */
     function disableModelBTN() {
         for (var btn of document.getElementsByClassName("model-button-eee")) {
             btn.disabled = true;
@@ -650,6 +663,7 @@ function runEEEGuide() {
         document.getElementById("model_filtering_area").disabled = true;
     }
 
+    /* Defines the messages for the third step : definition of the model depending on the group chosen */
     function displayStep3(selection, group) {
 
         let model = eee_families_informations.get(selection).get(group);
@@ -698,6 +712,7 @@ function runEEEGuide() {
         document.getElementById("messagesTrack_eee_guide").style.height = "400px";
     }
 
+    /* Display the buttons for model choice depending on group */
     function displayModelButton(selection, group, search) {
 
         changePicture(3);
@@ -749,6 +764,7 @@ function runEEEGuide() {
 
     }
 
+    /* Defines the messages for the fourth step : definition of the FIDES reference for the model and the dedicated handbook page */
     function displayStep4(selection, group, model, is_fides_model) {
 
         changePicture(4);
@@ -787,6 +803,7 @@ function runEEEGuide() {
         }, 200);
     }
 
+    /* Change the picture depending on the step */
     function changePicture(step) {
         if (step == 2) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/launch_on.svg";
@@ -799,6 +816,7 @@ function runEEEGuide() {
         }
     }
 
+    /* Check if a string dictionary contains only empty strings */
     function isEmptyDictionary(dico) {
         let empty = true;
         for (var [key, value] of dico) {
@@ -809,6 +827,7 @@ function runEEEGuide() {
         return empty
     }
 
+    /* Initiate the interface */
     displayStep1()
 
 }

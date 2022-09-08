@@ -1,23 +1,24 @@
+/* Style for the conversation container */
 #conversation_capacitor{
     width: 100%;
 }
 
-#navigation{
-    width: 100%;
-}
-
+/* Style for the astronaut picture */
 #astroPicture_capacitor{
     width: 70%;
 }
 
+/* Style for the astronaut picture container */
 #astronaut_capacitor_div{
     width: 30%;
 }
 
+/* Style the messages container */
 #message_capacitor_div{
     width: 70%;
 }
 
+/* Style the srcolling area */
 .scroll {
     margin: 5px;
     padding: 5px;
@@ -31,12 +32,14 @@
     /*text-align: justify;*/
 }
 
+/* Style the table containing the conversation */
 .track {
     /*text-align: justify;*/
     width: 100%;
     font-family: 'Courier New'
 }
 
+/* Style the messages from the astronaut */
 .other-message {
     word-wrap: break-word;
     width: 80%;
@@ -49,6 +52,7 @@
     margin-top: 5%;
 }
 
+/* Style the messages from the user */
 .my-message {
     word-wrap: break-word;
     width: 80%;
@@ -60,18 +64,13 @@
     margin-top: 5%;
 }
 
-.extra-bar {
-    min-height: 20px;
-    word-wrap: break-word;
-    margin-left: 650px;
-    margin-top: 20px;
-}
-
+/* Style the escape buttons */
 .button-fail{
     background-color: rgb(0, 0, 0);
     color:white
 }
 
+/* Style the buttons that only lead to next messages */
 .button-next{
     background-color: rgb(0, 0, 0);
     color:white;
@@ -79,6 +78,7 @@
     margin-left: 25%;
 }
 
+/* Style the buttons that only lead to next messages if disabled */
 .button-next:disabled{
     background-color: #26B4D4;
     color:rgb(0, 0, 0);
@@ -86,16 +86,19 @@
     margin-left: 25%;
 }
 
+/* Style the escape buttons if disabled*/
 .button-fail:disabled{
     background-color: #0D3C47;
     color: azure;
 }
 
+/* Style the text entry controllers */
 #inputComponent{
     width: 50%;
     margin-left: 25%;
 }
 
+/* Style the text entry controllers if disabled*/
 #inputComponent:disabled{
     background-color: #26B4D4;
     color:rgb(0, 0, 0);
@@ -103,15 +106,18 @@
     margin-left: 25%;
 }
 
+/* Style the choice buttons if disabled*/
 .choice-button:disabled{
     background-color: #0D3C47;
     color: azure;
 }
 
+/* Style the underlined text*/
 u {
     text-decoration: white solid underline;
 }
 
+/* Style the button for speed selection */
 .selected_speed_capacitor{
     background-color: black;
     color: white;

@@ -1,7 +1,10 @@
 function runCapacitorFamilyGuide() {
 
+    /* Defines the current flow of the interface */
     let answering_speed = 1500;
 
+
+    /* Configure the slow flow button */
     document.getElementById("slow_capacitor_guide").onclick = function() {
         this.disabled = true;
         this.className = "selected_speed_capacitor";
@@ -13,6 +16,7 @@ function runCapacitorFamilyGuide() {
         answering_speed = 2500;
     }
 
+    /* Configure the medium flow button */
     document.getElementById("medium_capacitor_guide").onclick = function() {
         this.disabled = true;
         this.className = "selected_speed_capacitor";
@@ -24,6 +28,7 @@ function runCapacitorFamilyGuide() {
         answering_speed = answering_speed;
     }
 
+    /* Configure the fast flow button */
     document.getElementById("fast_capacitor_guide").onclick = function() {
         this.disabled = true;
         this.className = "selected_speed_capacitor";
@@ -35,11 +40,15 @@ function runCapacitorFamilyGuide() {
         answering_speed = 500;
     }
 
+    /* Set the medium button as default */
     document.getElementById("medium_capacitor_guide").click();
 
+    /* Defines the conversation container */
     let conv_container = document.getElementById("messages_track_capacitor");
 
     let buttons = new Map();
+
+    /* Defines all the data concerning the current component */
 
     let component_group = null;
     let component_name = "";
@@ -56,6 +65,7 @@ function runCapacitorFamilyGuide() {
     let component_pi_film_grade = 0;
     let component_pi_film;
 
+    /* Defines data for capacitor types */
     let ceramic_categories = new Map([
         [1, new Map([
             [false, new Map([
@@ -78,17 +88,7 @@ function runCapacitorFamilyGuide() {
         ])],
     ])
 
-    /*let ceramic_parameters = new Map([
-        ["ECCC_01", new Map([
-            ["lambda0",0.03],
-            ["lambda0",0.1],
-            ["lambda0",0.3],
-            ["lambda0",0.7],
-            ["lambda0",0.28],
-            ["lambda0",0.02]
-        ])]
-    ])*/
-
+    /* Display message containing only text */
     function displayTextMessage(text) {
         let div = document.createElement("div");
         div.setAttribute("class", "other-message");
@@ -101,6 +101,7 @@ function runCapacitorFamilyGuide() {
     }
 
 
+    /* Run initial step of the guide to explain how it will work */
     function runB0() {
 
         displayTextMessage("Welcome to the capacitor family guide !");
@@ -135,6 +136,7 @@ function runCapacitorFamilyGuide() {
         }, answering_speed);
     }
 
+    /* Step that asks the name of the component */
     function runB1() {
 
         displayTextMessage("Awesome ! So can you give me the name of your component ?");
@@ -164,6 +166,7 @@ function runCapacitorFamilyGuide() {
         }, answering_speed);
     }
 
+    /* Step from step 1 that check if the capacitor group determined from the name suits to user's expactations */
     function runB2a() {
         component_name = document.getElementById('inputComponent').value.toUpperCase();
         document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
@@ -251,6 +254,8 @@ function runCapacitorFamilyGuide() {
 
     }
 
+
+    /* Step from step 1 that displays all capacitors groups if not determined from name */
     function runB2b() {
         displayTextMessage("Is your component from one of these groups ?");
 
@@ -425,6 +430,7 @@ function runCapacitorFamilyGuide() {
 
     /* Ceramic functions */
 
+    /* First step for ceramic capacitors : determines the type */
     function runB3ceramic() {
         component_group = "CERAMIC";
         displayTextMessage("Is your component Type I or II ?");
@@ -463,6 +469,7 @@ function runCapacitorFamilyGuide() {
             }
 
             fail_button.onclick = function () {
+                /* If not sure, try to determine from the name */
                 typeI_button.disabled = true;
                 typeII_button.disabled = true;
                 this.disabled = true;
@@ -487,6 +494,7 @@ function runCapacitorFamilyGuide() {
 
                     }
                     else {
+                        /* If no information from name, tries to determine with some questions */
                         displayTextMessage("Your component's name does not include any clue as 'I' or 'II'.");
                         setTimeout(() => {
                             displayTextMessage("Is the temperature coefficient defined for your component ?");
@@ -662,6 +670,7 @@ function runCapacitorFamilyGuide() {
 
     }
 
+    /* Termination questions for ceramic capacitors */
     function runB4_ceramic() {
         if (component_type == 2) {
             displayTextMessage("Has your component polymeric terminations ?");
@@ -703,6 +712,7 @@ function runCapacitorFamilyGuide() {
 
     }
 
+    /* CV calculation for ceramic components */
     function runB4CV() {
         displayTextMessage("Now that we know your component's type, let's calculate its CV to determine its category.");
         setTimeout(() => {
@@ -773,11 +783,9 @@ function runCapacitorFamilyGuide() {
             }, answering_speed);
         }, answering_speed);
 
-
-
-
     }
 
+    /* Determine the CV level for the ceramic component */
     function runB5ceramic() {
         displayTextMessage("The CV of your component equals to " + component_CV + " VF.");
         setTimeout(() => {
@@ -882,6 +890,7 @@ function runCapacitorFamilyGuide() {
 
     }
 
+    /* Gives the FIDES reference and the dedicated page from the handbook */
     function runB6ceramic() {
         displayTextMessage("Your component has a " + component_CV_type + " CV !");
         setTimeout(() => {
@@ -909,6 +918,7 @@ function runCapacitorFamilyGuide() {
 
     /* Tantalum capacitor */
 
+    /* For tantalum components, determine wet/dry property */
     function runB3tantalum() {
         component_group = "TANTALUM";
         displayTextMessage("Is your component wet or dry ?");
@@ -947,6 +957,8 @@ function runCapacitorFamilyGuide() {
                 wet_button.disabled = true;
                 dry_button.disabled = true;
                 this.disabled = true;
+
+                /* If no clue, try with other properties */
 
                 displayTextMessage("Is your component sealed by glass beads or elastomer ?");
 
@@ -1017,6 +1029,7 @@ function runCapacitorFamilyGuide() {
         }, answering_speed);
     }
 
+    /* If wet, determine case type */
     function runB4tantalum_wet() {
         displayTextMessage("Is your component contained in a silver case or a beads tantalum case ?");
 
@@ -1091,6 +1104,7 @@ function runCapacitorFamilyGuide() {
 
     }
 
+    /* From beads, determine the FIDES model for tantalum wet components */
     function runB5tantalum_wet() {
         if (component_case == "SILVER") {
             displayTextMessage("Is your component sealed by elastomer or glass beads ?");
@@ -1132,6 +1146,7 @@ function runCapacitorFamilyGuide() {
         }
     }
 
+    /* Determine case type for dry tantalum components and gives the associated FIDES model */
     function runB4tantalum_dry() {
         displayTextMessage("Which packaging fits to your component ?");
 
@@ -1185,6 +1200,7 @@ function runCapacitorFamilyGuide() {
 
     /* Plastic Metallized Capacitor */
 
+    /* Determines the kind of film for plastic metallized capacitors */
     function runB3plastic() {
         component_group = "PLASTIC METALLIZED";
         displayTextMessage("Which kind of film does you component contain ?");
@@ -1290,6 +1306,7 @@ function runCapacitorFamilyGuide() {
 
     }
 
+    /* Propose to determine the Pi Film factor */
     function runB4plastic() {
         displayTextMessage("I can help you compute the &Pi;<sub>Film</sub> factor. Are you interested ?");
         setTimeout(() => {
@@ -1351,6 +1368,7 @@ function runCapacitorFamilyGuide() {
 
     }
 
+    /* Ask humidity information for Pi Film */
     function runB5plastic() {
         displayTextMessage("Can you give me an approximation of your component's environnement humidity rate ?");
 
@@ -1435,6 +1453,7 @@ function runCapacitorFamilyGuide() {
 
     }
 
+    /* Ask if component is specifically developped for its current application for Pi film */
     function runB6plastic() {
         displayTextMessage("Has your component been  specically developped for current application ?");
         setTimeout(() => {
@@ -1497,6 +1516,7 @@ function runCapacitorFamilyGuide() {
         }, answering_speed);
     }
 
+    /* Step that gives information for glass components */
     function runB3glass(){
         displayTextMessage("It seems that this type of capacitor is no longer used in space application.");
         setTimeout(() => {
@@ -1504,6 +1524,7 @@ function runCapacitorFamilyGuide() {
         }, answering_speed);
     }
 
+    /* Step that gives information for mica components */
     function runB3mica(){
         displayTextMessage("It seems that this type of capacitor is no longer used in space application.");
         setTimeout(() => {
@@ -1511,6 +1532,7 @@ function runCapacitorFamilyGuide() {
         }, answering_speed);
     }
 
+    /* Step that gives information for alu components */
     function runB3alu(){
         displayTextMessage("If your component is aluminium liquid electrolyte capacitor or aluminium solid electrolyte capacitor, then it belongs to category <b>ECAC_01</b>.");
         setTimeout(() => {
@@ -1521,6 +1543,7 @@ function runCapacitorFamilyGuide() {
         }, answering_speed);
     }
 
+    /* Step that gives information for semiconductor components */
     function runB3semiconductor(){
         displayTextMessage("This kind of component belongs to category <b>ECDS_19</b> of semiconductors.");
         setTimeout(() => {
@@ -1528,6 +1551,7 @@ function runCapacitorFamilyGuide() {
         }, answering_speed);
     }
 
+    /* Initiate interface */
     runB0();
     //component_type = 1
     //runB4CV();

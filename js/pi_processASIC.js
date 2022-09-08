@@ -2,6 +2,7 @@
 
 function runPiProcessASIC() {
 
+    /* Store the answers for each question*/
     let answers_ASIC = new Map([
         ["1", false],
         ["2", false],
@@ -16,6 +17,7 @@ function runPiProcessASIC() {
         ["11", false]
     ])
 
+    /* Configure the switch controllers */
     for (var slider_switch of document.getElementsByClassName("switch-check")) {
         slider_switch.onclick = function () {
             answers_ASIC.set(this.id.split("_")[1], true);
@@ -38,10 +40,12 @@ function runPiProcessASIC() {
         }
     }
 
+    /* Configure the button that enables to copy the value computed to clipboard */
     document.getElementById("copy_button_ASIC").onclick = function () {
         navigator.clipboard.writeText(document.getElementById("final_value_ASIC").innerHTML);
     }
 
+    /* Process the asic factor */
     function process_asic() {
         var asic_grade = 0;
         let all_filled = true;

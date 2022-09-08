@@ -2,6 +2,7 @@
 
 function runPiProcessHybrid() {
 
+    /* Store the answers for each question*/
     let answers_Hybrid = new Map([
         ["1", false],
         ["2", false],
@@ -17,6 +18,7 @@ function runPiProcessHybrid() {
         ["12", false]
     ])
 
+    /* Defines the value of each questions */
     let answers_points_Hybrid = new Map([
         ["1", 15],
         ["2", 15],
@@ -32,8 +34,10 @@ function runPiProcessHybrid() {
         ["12", 10]
     ])
 
+    /* Defines if the "click" event is performed automatically or by the user */
     let auto_click = false;
 
+    /* Configure switch controllers */
     for (var slider_switch of document.getElementsByClassName("switch-check")) {
         slider_switch.onclick = function () {
             answers_Hybrid.set(this.id.split("_")[1], true);
@@ -75,6 +79,7 @@ function runPiProcessHybrid() {
         }
     }
 
+    /* Set a switch unclicked */
     function setUnclick(slider){
         auto_click = true;
         if (slider.checked){
@@ -86,10 +91,12 @@ function runPiProcessHybrid() {
         }
     }
 
+    /* Configure the button that enables to copy the value computed to clipboard */
     document.getElementById("copy_button_Hybrid").onclick = function () {
         navigator.clipboard.writeText(document.getElementById("final_value_Hybrid").innerHTML);
     }
 
+    /* Process the hybrid factor */
     function process_hybrid() {
         var hybrid_grade = 0;
         let all_filled = true;

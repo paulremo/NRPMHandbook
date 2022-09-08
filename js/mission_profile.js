@@ -2,12 +2,16 @@
 
 function runMissionprofile() {
 
+    /* Define the phase that is being modified */
     let existing_phase_mp = null;
 
+    /* Define the current category */
     var current_category_mp = "1";
 
+    /* True if the general information category has been field for a new phase */
     let first_category_filled = false;
 
+    /* Store the answers for the current phase */
     var current_phase = new Map([
         ["phase type", null],
         ["phase name", null],
@@ -26,6 +30,7 @@ function runMissionprofile() {
         ["protection level", null]
     ])
 
+    /* Give equivalence between 3 or 2 step sliders and their parameters value */
     let range_pollution_values = new Map([
         ["saline pollution", new Map([
             [0, "low"],
@@ -47,6 +52,7 @@ function runMissionprofile() {
         ])]
     ]);
 
+    /* Invert the range_pollution_values */
     let range_pollution_keys = new Map([
         ["saline pollution", new Map([
             ["low", 0],
@@ -68,10 +74,13 @@ function runMissionprofile() {
         ])]
     ]);
 
+    /* Store all the answers for the mission profile */
     var current_answers_mp = new Map();
 
+    /* Stores the name of phases to avoid duplicated names */
     var phases_names_mp = new Set();
 
+    /* Collection of pictures for different categories */
     var mp_categories_pictures = new Map([
         ["1", new Map([
             ["selected", "pictures/mission_profile/general_information.svg"],
@@ -95,6 +104,7 @@ function runMissionprofile() {
         ])],
     ])
 
+    /* Collection of pictures for phase types */
     var phase_type_images_mp = new Map([
         ["Storage", "pictures/mission_profile/storage.svg"],
         ["Transport", "pictures/mission_profile/transport.svg"],
@@ -104,6 +114,7 @@ function runMissionprofile() {
         ["Other", "pictures/mission_profile/other.svg"]
     ])
 
+    /* Initiate 2 steps sliders */
     for (var sldr of document.getElementsByClassName("step-range-mp-2")) {
         sldr.onclick = function () {
             changeSlider2(this);
@@ -118,6 +129,7 @@ function runMissionprofile() {
         }
     }
 
+    /* Initiate 3 steps sliders */
     for (var sldr of document.getElementsByClassName("step-range-mp-3")) {
         sldr.onclick = function () {
             changeSlider3(this);
@@ -132,6 +144,7 @@ function runMissionprofile() {
         }
     }
 
+    /* Update style for 3 steps sliders */
     function changeSlider3(slider) {
         if (slider.value == 0) {
             slider.style.backgroundColor = "green"
@@ -145,6 +158,7 @@ function runMissionprofile() {
         update_slider_mp(slider);
     }
 
+    /* Update style for 2 steps sliders */
     function changeSlider2(slider) {
         if (slider.value == 0) {
             slider.style.backgroundColor = "green"
@@ -155,6 +169,7 @@ function runMissionprofile() {
         update_slider_mp(slider);
     }
 
+    /* Initiate categories style */
     for (ct of document.getElementsByClassName("cat-name-mp")) {
         if (ct.id != "cat-name-1") {
             ct.style.cursor = "not-allowed";
@@ -164,8 +179,10 @@ function runMissionprofile() {
         }
     }
 
+    /* Initiate categories events */
     for (var cat of document.getElementsByClassName("cat-name-mp")) {
         cat.onclick = function () {
+            /* If the first category has been field for a new phase */
             if (first_category_filled) {
                 for (card of document.getElementsByClassName("entry-card")) {
                     card.style.display = "none";
@@ -184,6 +201,7 @@ function runMissionprofile() {
                 configure_category_mp();
             }
             else {
+                /* If you are clicking on the first category for the first step of a new phase definition */
                 if (this.id == "cat-name-1") {
 
                     for (card of document.getElementsByClassName("entry-card")) {
@@ -243,6 +261,7 @@ function runMissionprofile() {
         }
     }
 
+    /* Initiates the radio buttons for phase types */
     for (rdo of document.getElementsByClassName("radio-phase-type-box")) {
         rdo.onclick = function () {
             for (rd of document.getElementsByClassName("phase-type-entry-mp")) {
@@ -260,6 +279,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiate the validation phase button that enables to add a phase to the table */
     document.getElementById("validate-phase-MP").onclick = function () {
         if (check_all_parameters_filled_mp()) {
 
@@ -272,7 +292,10 @@ function runMissionprofile() {
                 fillInformationTableMP();
             }
 
+            /* Enables edition of the phase once validated */
             document.getElementById("edit-button-" + current_phase.get("phase name") + "-mp").disabled = false;
+
+            /* Reinitiate interface for a new phase */
 
             current_phase = new Map([
                 ["phase type", null],
@@ -316,6 +339,7 @@ function runMissionprofile() {
     }
     document.getElementById("validate-phase-MP").disabled = true;
 
+    /* Initiate the on off for onboard units */
     document.getElementById("on-off-entry-mp").onchange = function () {
         if (this.checked) {
             current_answers_mp.set("unit onboard", "ON");
@@ -334,6 +358,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiate the phase name input */
     document.getElementById("phase-name-entry").oninput = function () {
         var re = new RegExp('[A-Za-z0-9]+[A-Za-z0-9_ ]*');
         let current_name = this.value;
@@ -368,6 +393,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiates the calendar time input */
     document.getElementById("calendar-time-entry").oninput = function () {
         var re = new RegExp('[0-9]+\.?[0-9]*');
         let current_name = this.value;
@@ -388,6 +414,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiates the cycle duration input */
     document.getElementById("cycle-duration-entry").oninput = function () {
         var re = new RegExp('[0-9]+\.?[0-9]*');
         let current_name = this.value;
@@ -408,6 +435,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiates the number of cycles input */
     document.getElementById("number-cycles-entry").oninput = function () {
         var re = new RegExp('[0-9]+');
         let current_name = this.value;
@@ -428,6 +456,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiates the ambient temperature input */
     document.getElementById("ambient-temperature-entry").oninput = function () {
         var re = new RegExp('-?[0-9]+\.?[0-9]*');
         let current_name = this.value;
@@ -462,6 +491,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiates the maximum temperature input */
     document.getElementById("max-temperature-entry").oninput = function () {
         var re = new RegExp('-?[0-9]+\.?[0-9]*');
         let current_name = this.value;
@@ -496,6 +526,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiates the random vibrations input */
     document.getElementById("random-vibration-entry").oninput = function () {
         var re = new RegExp('[0-9]+\.?[0-9]*');
         let current_name = this.value;
@@ -516,6 +547,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiates the humidity rate input */
     document.getElementById("humidity-rate-entry").oninput = function () {
         var re = new RegExp('[0-9]+\.?[0-9]*');
         let current_name = this.value;
@@ -536,6 +568,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiates the delta t input */
     for (dt_entry of document.getElementsByClassName("delta-T-entry-mp")) {
         dt_entry.oninput = function () {
             var re = new RegExp('[0-9]+\.?[0-9]*');
@@ -557,6 +590,7 @@ function runMissionprofile() {
         back_recom_mp();
     }
 
+    /* Initiates the button to calculate the delta t mean */
     document.getElementById("temperature-mode-selection").onchange = function () {
         if (this.checked) {
             document.getElementById("add-delta-t-mp").disabled = false;
@@ -577,6 +611,7 @@ function runMissionprofile() {
     }
     document.getElementById("temperature-mode-selection").checked = false;
 
+    /* Initiates the button to add delta t input */
     document.getElementById("add-delta-t-mp").onclick = function () {
         let div = document.createElement("div");
         let entry = document.createElement("input");
@@ -600,18 +635,22 @@ function runMissionprofile() {
         document.getElementById("delta-t-entries-box-mp").appendChild(entry);
     }
 
+    /* Initiates the button to save answers */
     document.getElementById("save-button-mp").onclick = function () {
         saveAnswersMP();
     }
 
+    /* Initiates the button to export answers to ExperTool */
     document.getElementById("export-button-mp").onclick = function () {
         exportAnswersMP();
     }
 
+    /* Initiates the button to load answers on the home page */
     document.getElementById("load-answers-mp").onclick = function () {
         loadAnswers();
     }
 
+    /* Initiates the phase validation buttons */
     for (validation_button of document.getElementsByClassName("validate-mp-cat")) {
         validation_button.onclick = function () {
             validate_category_mp();
@@ -625,6 +664,7 @@ function runMissionprofile() {
         }
     }
 
+    /* Initiates the information buttons */
     for (info_button of document.getElementsByClassName("info-button-mp")) {
         info_button.onclick = function () {
             document.getElementById("overlay-mp").style.display = 'block';
@@ -632,10 +672,12 @@ function runMissionprofile() {
         }
     }
 
+    /* Initiates the close button for overlay */
     document.getElementById("overlay-close-mp").onclick = function () {
         document.getElementById("overlay-mp").style.display = 'none';
     }
 
+    /* Initiates the buttons to a calculate time information dependinf on the two entered*/
     for (calculate_button of document.getElementsByClassName("calculate-time-information-mp")) {
         calculate_button.onclick = function () {
             if (this.id == "calculate-number-cycles") {
@@ -675,6 +717,7 @@ function runMissionprofile() {
 
     reinitialize_interactors();
 
+    /* Convert the picture source to the equivalent phase type */
     function convert_picture_to_phase(picture) {
         if (picture.includes("storage")) {
             return "Storage"
@@ -696,6 +739,7 @@ function runMissionprofile() {
         }
     }
 
+    /* Enables to modify a validated phase in the table */
     function edit_phase(name_of_phase) {
 
         if (check_all_phase_filled_mp(name_of_phase)) {
@@ -716,6 +760,7 @@ function runMissionprofile() {
 
                 console.log(phase_nodes[9].innerHTML.replace(" °C", ""))
 
+                /* Configure the inpu interface to the data of the phase to modify */
 
                 current_phase = new Map([
                     ["phase type", convert_picture_to_phase(phase_nodes[1].getElementsByTagName("img")[0].src)],
@@ -738,6 +783,7 @@ function runMissionprofile() {
                 first_category_filled = true;
 
 
+                /* Free category buttons */
                 for (ct of document.getElementsByClassName("cat-name-mp")) {
                     if (ct.id != "cat-name-1") {
                         ct.style.cursor = "pointer";
@@ -765,6 +811,7 @@ function runMissionprofile() {
 
     }
 
+    /* Update recommendations for each parameter */
     function update_recom_mp(interactor) {
         let new_recom = recoms_mp.get(interactor);
         if (new_recom != "") {
@@ -772,11 +819,13 @@ function runMissionprofile() {
         }
     }
 
+    /* Set default recom for the current category */
     function back_recom_mp() {
         let infos = infos_mp_categories.get(current_category_mp.substring(11));
         document.getElementById("mp-recoms-text").innerHTML = infos;
     }
 
+    /* Set default configuration to all controllers */
     function reinitialize_interactors() {
         let all_dt_entries = new Set();
         for (element of document.getElementsByClassName("delta-T-entry-mp")) {
@@ -815,10 +864,12 @@ function runMissionprofile() {
         }
     }
 
+    /* Enables validation of phase */
     function free_validation_category_mp() {
         document.getElementById("validate-mp-cat-" + current_category_mp.substring(11)).disabled = false;
     }
 
+    /* Update sliders configuration to the current answer value */
     function update_slider_mp(slider) {
         let id = slider.id;
         if (id.includes("saline")) {
@@ -835,10 +886,12 @@ function runMissionprofile() {
         }
     }
 
+    /* Count the number of delta t input controllers used */
     function count_delta_t_entries() {
         return document.getElementsByClassName("delta-T-entry-mp").length;
     }
 
+    /* Calculate the delta t mean */
     function calculate_delta_T_value_mp() {
         let delta_t_value = 0;
         let count = 0;
@@ -859,6 +912,7 @@ function runMissionprofile() {
 
     }
 
+    /* Configure interface for the current category */
     function configure_category_mp() {
         reinitialize_interactors();
         current_answers_mp = new Map();
@@ -1034,6 +1088,7 @@ function runMissionprofile() {
         }
     }
 
+    /* Store the category input data on category validation */
     function validate_category_mp() {
         if (current_category_mp.substring(11) == "1") {
             if (check_cat_parameters_filled_mp()) {
@@ -1079,6 +1134,7 @@ function runMissionprofile() {
 
     }
 
+    /* Check that all the parameters of the category are filled */
     function check_cat_parameters_filled_mp() {
         var filled = true;
         for ([ans, value] of current_answers_mp) {
@@ -1089,6 +1145,7 @@ function runMissionprofile() {
         return filled
     }
 
+    /* Check that alle the parameters of the phase are filled */
     function check_all_parameters_filled_mp() {
         var filled = true;
         for ([ans, value] of current_phase) {
@@ -1099,6 +1156,7 @@ function runMissionprofile() {
         return filled
     }
 
+    /* Check that all the parameters of a line in the table are filled */
     function check_all_phase_filled_mp(name_of_phase) {
         if (document.getElementById(name_of_phase) == null) {
             return false;
@@ -1116,7 +1174,7 @@ function runMissionprofile() {
 
     }
 
-
+    /* Fill the table depending on information stored in the interface */
     function fillInformationTableMP() {
 
         let name = current_phase.get("phase name");
@@ -1272,6 +1330,7 @@ function runMissionprofile() {
         document.getElementById("phases-sum-up-mission-profile").appendChild(new_line);
     }
 
+    /* Edit the line of the table dedicated to the current phase */
     function edit_line_mp(name_of_phase) {
 
 
@@ -1374,17 +1433,7 @@ function runMissionprofile() {
         document.getElementById(name_of_phase).id = name + "-tabline-mp";
     }
 
-    function getByKey(map, value) {
-        for (var element of map) {
-            if (map[element] == value) {
-                return map[element];
-            }
-        }
-        return null;
-    }
-
-
-
+    /* Enables to download a file containing the text desired */
     function download(filename, text) {
         var element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -1398,7 +1447,7 @@ function runMissionprofile() {
         document.body.removeChild(element);
     }
 
-
+    /* Save current answers in a text file to be reused when the user comes back to the interface */
     function saveAnswersMP() {
 
         let data = "phase type,phase name,unit onboard,calendar time,ambient temperature,delta t,cycle duration,number of cycles,max temperature,humidity rate,random vibrations,saline pollution,environment pollution,application pollution,protection level;";
@@ -1504,7 +1553,7 @@ function runMissionprofile() {
         download("mission_profile_data.csv", data);
     }
 
-
+    /* Save current answers in a csv file to be reused in the ExperTool interface */
     function exportAnswersMP() {
 
         let data = "";
@@ -1610,6 +1659,7 @@ function runMissionprofile() {
 
     }
 
+    /* Enables to load the answers saved in the text file at the beginning of the interface */
     function loadAnswers() {
         for (var line of document.getElementsByClassName("phase-information-line")) {
             line.remove();
@@ -1766,5 +1816,3 @@ function runMissionprofile() {
     }
 
 }
-
-//#26B4D4; #1B7E94; #0D3C47; #0F4754; #092B33

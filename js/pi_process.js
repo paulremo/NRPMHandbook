@@ -4,20 +4,25 @@ function runPiProcess() {
 
     /* CONFIGURE CONSTANTS */
 
+    /* Defines the HTML components reused several times in the code */
     let planets = document.getElementsByClassName("planet");
     let options = document.getElementsByClassName("choice-description");
     let pages = document.getElementsByClassName("pageNumber");
 
+    /* Defines the astronaut pictures sources for each state */
     let astronaut = "pictures/new_astronaut.svg";
     let happy_astronaut = "pictures/new_astronaut_happy.svg";
     let idea_astronaut = "pictures/new_astronaut_idea.svg";
     let speaking_astronaut = "pictures/new_astronaut_speaks.svg";
 
+    /* Defines the HTML component for the collapsible help container */
     var coll = document.getElementsByClassName("collapsible-help");
 
+    /* Store the collection of questions from questions.js */
     let new_dico = question_dico;
 
 
+    /* Defines the HTML id that corresponds to each category */
     let categoryIcons = new Map([
         ["Specification", "planet1"],
         ["Design", "planet2"],
@@ -28,6 +33,7 @@ function runPiProcess() {
         ["Support Activities", "planet7"]
     ])
 
+    /* Defines ID for each category name */
     let categoryId = new Map([
         ["Specification", 1],
         ["Design", 2],
@@ -38,7 +44,7 @@ function runPiProcess() {
         ["Support Activities", 7]
     ])
 
-
+    /* Defines the contribution for each category */
     let categoryContribution = new Map([
         ["Specification", 10],
         ["Design", 21],
@@ -49,28 +55,42 @@ function runPiProcess() {
         ["Support Activities", 9]
     ])
 
+    /* DEFINE CONSTANTS */
+
     let delta_2 = 2.079;
+
+    let commentsDico = dicoComments;
+
 
     /* CONFIGURE VARIABLES */
 
     var i;
 
+    /* Store the answers */
     let currentAnswers = new Map();;
 
-    let commentsDico = dicoComments;
-
+    /* Store the current category of questions */
     let current_category = "Specification";
+
+    /* Defines the current questions */
     let current_question = 0;
 
+    /* Defines if the help if displayed or not */
     let info_displayed = false;
 
-
+    /* Store the value of the process factor */
     let process_factor = 1;
 
+    /* Define if the user is prime or subcontractor */
     let modeSubco = true;
+
+    /* Defines if the methodology used is standard or New Space */
     let appliNS = true;
 
+    /* Store the id of the current question HTML representation */
     let currentPage = "page0";
+
+    /* Defines the maximum of questions for this category */
     let maxPage = new_dico.get(current_category).size;
 
     /* CONFIGURE ONCLICK EVENTS */
@@ -98,10 +118,12 @@ function runPiProcess() {
     }
 
     let modeKey;
+
     let appliDico;
 
     let answers_loaded = false;
 
+    /* Defines the load answers onclick event */
     document.getElementById("question-load-button").onclick = function () {
         if (document.getElementById("question-load").value != "") {
             if (document.getElementById("question-load").value.substring(0, 13) == "Specification") {
@@ -126,10 +148,11 @@ function runPiProcess() {
         }
     }
 
+    /* Defines the actions to statrt the interface on click on Start */
     document.getElementById("start").onclick = function () {
 
         document.getElementById('overlay').style.display = 'none';
-
+         /*If answers have been loaded */
         if (answers_loaded) {
 
             for (const [key, value] of new_dico) {
@@ -183,7 +206,7 @@ function runPiProcess() {
 
     }
 
-
+    /* Defines the action for collapsible help */
     var i_coll;
 
     for (i_coll = 0; i_coll < coll.length; i_coll++) {
@@ -204,9 +227,7 @@ function runPiProcess() {
 
     /* CONFIGURE COLLECTIONS */
 
-
-
-
+    /* Store if categories are entirely filled or not */
     let categoriesCollection = new Map([
         ["1", false],
         ["2", false],
@@ -217,6 +238,7 @@ function runPiProcess() {
         ["7", false]
     ])
 
+    /* Store the option chosen for the current question */
     let optionsCollection = new Map([
         ["1", false],
         ["2", false],
@@ -224,18 +246,13 @@ function runPiProcess() {
         ["4", false]
     ])
 
-
+    /* Store the HTML page collection for the current category */
     let pagesCollection = new Map();
 
 
     /* UTILITY FUNCTIONS */
 
-    function clearElement(e) {
-        for (child of e.childNodes) {
-            child.remove();
-        }
-    }
-
+    /* Return the min and the max values of a Set */
     function minmax(dataset) {
         const [first] = dataset;
         let mn = first;
@@ -251,6 +268,7 @@ function runPiProcess() {
         return new Map([["mx", mx], ["mn", mn]]);
     }
 
+    /* Transform the name of a category to fit the dataset */
     function transformName(name) {
         let trueName;
         if (name == "MANUFACTURING OF BOARD - SUBASSEMBLY") {
@@ -269,6 +287,7 @@ function runPiProcess() {
         return trueName;
     }
 
+    /* Save answers in a text file to be downloaded */
     function saveAnswers() {
         let ans = "";
         for ([cat, value] of currentAnswers) {
@@ -293,6 +312,7 @@ function runPiProcess() {
         return ans;
     }
 
+    /* Transform loaded answers to a collection understood by the interface */
     function generate_saved_answers_collection(answer_str) {
         let loaded_answers = new Map();
         let ans = answer_str.split("@");
@@ -327,6 +347,7 @@ function runPiProcess() {
         return loaded_answers
     }
 
+    /* Update the count of the questions (total, to be answered and answered) */
     function updateQuestionId() {
         let q_id = new_dico.get(current_category).get(parseInt(current_question)).get("id");
         let q_total = new_dico.get(current_category).size;
@@ -345,6 +366,7 @@ function runPiProcess() {
         document.getElementById("qTotal").innerHTML = q_total - q_na;
     }
 
+    /* Update the progress Bar depending on the questions answered */
     function updateProgressBar() {
         let q_na = 0;
         let q_ans = 0;
@@ -361,6 +383,7 @@ function runPiProcess() {
         document.getElementById("myBar").style.width = Math.trunc(filled) + "%";
     }
 
+    /* Download a file containing the desired text */
     function download(filename, text) {
         var element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -374,6 +397,7 @@ function runPiProcess() {
         document.body.removeChild(element);
     }
 
+    /* Save a csv file containing a sum up of off questions, readable with excel */
     function saveSumUp() {
         let ans = "";
         for ([cat, value] of currentAnswers) {
@@ -419,6 +443,7 @@ function runPiProcess() {
             document.getElementById("pages-box").appendChild(page_num);
         }
 
+        /* Configure question pages bar */
         pages = document.getElementsByClassName("pageNumber");
 
         for (var pgn of pages) {
@@ -567,13 +592,12 @@ function runPiProcess() {
             document.getElementById("page0").click();
         }
 
-
-
         calculate_process_factor();
         updateProgressBar();
 
     }
 
+    /* Configure the pages bar for the current question */
     function configureCurrentPage() {
         for (var p of document.getElementsByClassName("pageNumber")) {
             p.innerHTML = '<i class="fa fa-circle"></i>';
@@ -606,6 +630,7 @@ function runPiProcess() {
 
     }
 
+    /* Turn the current question page into a circle hiding its id*/
     function hideCurrentPage() {
         let id = parseInt(currentPage.substring(4));
         document.getElementById(currentPage).innerHTML = '<i class="fa fa-circle"></i>';
@@ -628,6 +653,7 @@ function runPiProcess() {
         }*/
     }
 
+    /* Find the first question not set to Non applicable */
     function findFirstApplicable(category) {
         let cnt = 0;
         let found = false;
@@ -730,6 +756,7 @@ function runPiProcess() {
 
     /* NAVIGATION FUNCTIONS */
 
+    /* Switch to the next question inside the category, or to the next category if last*/
     function nextQuestion() {
         if (parseInt(current_question) < currentAnswers.get(current_category).size) {
             let nxtQuestion = parseInt(current_question) + 1;
@@ -754,6 +781,7 @@ function runPiProcess() {
         }
     }
 
+    /* Switch to the previous question inside the category */
     function previousQuestion() {
         if (parseInt(current_question) > 0) {
             let prevQuestion = parseInt(current_question) - 1;
@@ -770,6 +798,7 @@ function runPiProcess() {
 
     /* STYLING AND ANSWER FUNCTIONS */
 
+    /* Set action to a chosen option */
     function setOptionClicked(opt) {
         let optDescr = opt.id.substr(-1);
         optionsCollection.set(optDescr, true);
@@ -783,29 +812,35 @@ function runPiProcess() {
         updateQuestionId();
     }
 
+
+    /* Set action to a non chosen option */
     function setOptionUnclicked(opt) {
         let optDescr = opt.id.substr(-1);
         optionsCollection.set(optDescr, false);
     }
 
+    /* Set style to a non chosen option */
     function setFreeOptionStyle(opt) {
         let optDescr = opt;
         optDescr.style.backgroundColor = "#eae8e8";
         optDescr.style.color = "#555555";
     }
 
+    /* Set style to a hovered option */
     function setHoveredOptionStyle(opt) {
         let optDescr = opt;
         optDescr.style.backgroundColor = "#1B7E94";
         optDescr.style.color = "#eee";
     }
 
+    /* Set action to a chosen option */
     function setClickedOptionStyle(opt) {
         let optDescr = opt;
         optDescr.style.backgroundColor = "#0F4754";
         optDescr.style.color = "#eee";
     }
 
+    /* Set action to a selected category */
     function setCategoryClicked(plt) {
         let num = plt.id.substr(-1);
         categoriesCollection.set(num, true);
@@ -813,6 +848,7 @@ function runPiProcess() {
         configureCategory(transformName(catName));
     }
 
+    /* Set action and style to the non applicable option selected */
     function setNonApplicableClicked() {
         let btn = document.getElementById("not-applicable");
         btn.style.backgroundColor = "#0D3C47";
@@ -820,6 +856,7 @@ function runPiProcess() {
         currentAnswers.get(current_category).set(parseInt(current_question), "NA");
     }
 
+    /* Set action and style to the non applicable option unselected */
     function setNonApplicableUnclicked() {
         let btn = document.getElementById("not-applicable");
         btn.style.backgroundColor = "black";
@@ -828,28 +865,33 @@ function runPiProcess() {
 
 
 
+    /* Set action to an unselected category */
     function setCategoryUnclicked(plt) {
         let num = plt.id.substr(-1);
         categoriesCollection.set(num, false);
     }
 
+    /* Set style to an unselected category */
     function setUnclickedCategoryStyle(plt) {
         plt.style.backgroundColor = "";
         plt.style.color = "#f2f2f2";
     }
 
+    /* Set style to a hovered category */
     function setHoveredCategoryStyle(plt) {
         let num = plt.id.substr(-1);
         plt.style.backgroundColor = "#1B7E94";
         plt.style.color = "black";
     }
 
+    /* Set action to a selected category */
     function setClickedCategoryStyle(plt) {
         let num = plt.id.substr(-1);
         plt.style.backgroundColor = "#26B4D4";
         plt.style.color = "black";
     }
 
+    /* Set action to selected page */
     function setPageClicked(pg) {
         let num = pg.id.substr(4);
 
@@ -871,11 +913,13 @@ function runPiProcess() {
 
     }
 
+    /* Set action to unselected page */
     function setPageUnclicked(pg) {
         let num = pg.id.substr(4);
         pagesCollection.set(num, false);
     }
 
+    /* Set style to unselected page */
     function setUnclickedPageStyle(pg) {
         let num = pg.id.substr(4);
         if (currentAnswers.get(current_category).get(parseInt(num)) == "NA") {
@@ -892,6 +936,7 @@ function runPiProcess() {
         }
     }
 
+    /* Set style to selected page */
     function setClickedPageStyle(pg) {
         pg.style.backgroundColor = "#26B4D4";
         pg.style.color = "black";
@@ -913,6 +958,7 @@ function runPiProcess() {
         }
     }
 
+    /* Count the number of categories entirely filled */
     function countCategoryFilled() {
         let count = 0;
         for (var [cat, content] of categoryIcons) {
@@ -930,6 +976,7 @@ function runPiProcess() {
         return count
     }
 
+    /* Check that all caegories are entirely filled */
     function checkAllCategoryFilled() {
         all_filled = true;
         for (var [cat, content] of new_dico) {
@@ -1008,6 +1055,7 @@ function runPiProcess() {
     /* CONFIGURE INTERFACE */
 
 
+    /* Set categories HTML representations events */
     for (var p of planets) {
         p.onclick = function () {
             for (var pb of document.getElementsByClassName("planet")) {
@@ -1035,6 +1083,7 @@ function runPiProcess() {
         }
     }
 
+    /* Set options HTML representations events */
     for (var opt of options) {
         opt.onclick = function () {
             for (var pb of document.getElementsByClassName("choice-description")) {
@@ -1069,6 +1118,7 @@ function runPiProcess() {
         }
     }
 
+    /* Set non applicable option HTML representation events */
     document.getElementById("not-applicable").onclick = function () {
         for (var pb of document.getElementsByClassName("choice-description")) {
             setOptionUnclicked(pb);
@@ -1086,6 +1136,7 @@ function runPiProcess() {
 
     }
 
+    /* Set navigation buttons HTML representation events */
     document.getElementById("left-button").onclick = function () {
         previousQuestion();
     }
@@ -1094,16 +1145,19 @@ function runPiProcess() {
         nextQuestion();
     }
 
+    /* Set save answers button HTML representation events */
     document.getElementById("copyAnswers").onclick = function () {
         let ans = saveAnswers();
         navigator.clipboard.writeText(ans);
         alert("Copied the answers. Please make sure to properly paste the answers and to save it in a dedicated text file. Modifying the data might compromise the results.");
     }
 
+    /* Set resume button HTML representation in help page events */
     document.getElementById("resume").onclick = function () {
         document.getElementById("overlay").style.display = "none";
     }
 
+    /* Set help button HTML representation events */
     document.getElementById("helpPiProcess").onclick = function () {
         document.getElementById("overlay").style.display = "block";
         document.getElementById("modeInput").style.display = "none";
@@ -1116,10 +1170,12 @@ function runPiProcess() {
 
     }
 
+    /* Set sum up answers button HTML representation events */
     document.getElementById("sumUpAnswers").onclick = function () {
         saveSumUp();
     }
 
+    /* Compute the total weihts of all categories */
     function process_all_weights() {
         weight = 0
         for (var [key, value] of new_dico) {

@@ -2,6 +2,7 @@
 
 function runPiProcessRFHF() {
 
+    /* Store the answers for each question*/
     let answers = new Map([
         ["1", false],
         ["2", false],
@@ -13,6 +14,7 @@ function runPiProcessRFHF() {
         ["8", false]
     ])
 
+    /* Configure the switch controllers */
     for (var slider_switch of document.getElementsByClassName("switch-check")) {
         slider_switch.onclick = function () {
             answers.set(this.id.split("_")[1], true);
@@ -35,10 +37,12 @@ function runPiProcessRFHF() {
         }
     }
 
+    /* Configure the button that enables to copy the value computed to clipboard */
     document.getElementById("copy_button_RFHF").onclick = function () {
         navigator.clipboard.writeText(document.getElementById("final_value_RFHF").innerHTML);
     }
 
+    /* Process the rfhf factor */
     function process_rfhf() {
         var rfhf_grade = 0;
         let all_filled = true;

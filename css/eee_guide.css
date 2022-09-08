@@ -1,48 +1,46 @@
 /* Copyright (C) Matrisk GmbH 2022*/
 
+/* Style for the conversation container */
 #conversation-eee-guide{
     width: 100%;
 }
 
-#navigation{
-    width: 100%;
-}
-
+/* Style for the step pictures */
 #animated_picture_eee_guide{
     width: 70%;
 }
 
+/* Style for the step picture container */
 #pictureDiv_eee_guide{
     width: 30%;
 }
 
+/* Style the messages container */
 #messageDiv_eee_guide{
     width: 70%;
 }
 
+/* Style the srcolling area */
 .scroll-eee-guide {
     margin: 5px;
     padding: 5px;
-    /*background-color: rgb(198, 207, 242);*/
     width: 100%;
     height: 400px;
     overflow: auto;
     display: flex;
     flex-direction: column-reverse;
-
-    /*text-align: justify;*/
 }
 
+/* Style the table containing the conversation */
 .track-eee-guide {
-    /*text-align: justify;*/
     width: 100%;
     font-family: 'Courier New'
 }
 
+/* Style the messages from the astronaut */
 .other-message {
     word-wrap: break-word;
     width: 80%;
-    /*text-align: justify;*/
     background-color: #0F4754;
     color: azure;
     border-radius: 10px;
@@ -51,10 +49,10 @@
     margin-top: 5%;
 }
 
+/* Style the messages from the user */
 .my-message {
     word-wrap: break-word;
     width: 80%;
-    /*text-align: justify;*/
     background-color: #26B4D4;
     border-radius: 10px;
     padding: 5px;
@@ -62,21 +60,25 @@
     margin-top: 5%;
 }
 
+/* Style the messages from the user */
 .choice-button-eee-guide{
     padding-inline: 20px;
     margin: 10px;
 }
 
+/* Style the choice buttons if hovered*/
 .choice-button-eee-guide:hover{
     cursor: pointer;
     background-color: lightsteelblue;
 }
 
+/* Style the choice buttons if chosen*/
 .chosen-choice-button-eee{
     background-color: #0F4754;
     color: white;
 }
 
+/* Style the text entry for information filtering*/
 .information-filtering-eee-guide{
     width: 80%;
     margin-left: 10%;
