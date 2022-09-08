@@ -5776,7 +5776,7 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - Si, SiGe Analogue and mixed circuit (MOS, Bipolar, {term}`BiCMOS`, MOSFET, PHEMT, HBT) including RF and {term}`HF`
     -
     - 0.19
-*   - Si, SiGe RF and {term}`` digital circuit (MOS, bipolar {term}`BiCMOS`)
+*   - Si, SiGe RF and {term}`digital circuit` (MOS, bipolar {term}`BiCMOS`)
     -
     - 0.04
 *   - {term}`GaAs` Integrated Circuit
