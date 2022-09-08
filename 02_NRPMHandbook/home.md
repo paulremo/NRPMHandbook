@@ -23,7 +23,7 @@ Explains the framework and taxonomy used in the {term}`NRPM` handbook and links 
 :::{grid-item-card} **Methods**
 <a href="methods/handbook/intro.html"><img class="link-image" src="_static/images/methodPicture.png" alt="logo methods"></a>
 ^^^
-Provides information on different inputs and reliability prediction inputs and methods, allowing to understand the background of the models defined in the following chapters.
+Provides information on different reliability prediction and methods inputs, allowing to understand the background of the models defined in the following chapters.
 :::
 ::::
 
