@@ -734,7 +734,7 @@ The allocation of reliability requirements then consists of the following steps:
 2. Define functional architecture to ensure system performance.
 3. Functional failure analysis at system and sub-system level to identify failure scenarios that would lead to violation of reliability requirements
 4. Create a high level system model that consists of the relevant subsystems based on the functional failure analysis. 
-Methodo  Assign reliability targets to sub-functions. Besides the use of historical data of similar systems different approaches could be used to assign initial reliability targets, for example, see page 50: 
+5. Assign reliability targets to sub-functions. Besides the use of historical data of similar sys-tems different approaches could be used to assign initial reliability targets, for example: 
    * Equal allocation
    * Proportional allocation ({term}`ARINC` method)
    * Feasibility-Of-Objectives ({term}`FOO`) Method 
