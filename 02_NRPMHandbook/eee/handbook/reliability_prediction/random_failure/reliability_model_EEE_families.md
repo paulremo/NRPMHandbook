@@ -6199,7 +6199,7 @@ For components with more than 256 leads, the recommendation for the parameters *
 In the 2021 issue of FIDES, some evolution concerning the inclusing of underfill has been added. Hence, In Note 4 p127 in the Integrated Circuits Section, it is indicated that in case of underfill, $\lambda_{\text{OTCySolderjoints}}$ and $\lambda_{\text{Mech}}$ should be divided by 3. This needs to be assessed before being recommended in the frame of this handbook.
 ```
 
-**Physical stresses for the inductors family:**
+**Physical stresses for the integrated circuits family, except ASIC components:**
 
 ````{admonition} Equation
 :class: equation
@@ -7094,7 +7094,7 @@ For components with more than 256 leads, the recommendation for the parameters *
 In the 2021 issue of FIDES, some evolution concerning the inclusing of underfill has been added. Hence, In Note 4 p127 in the Integrated Circuits section, it is indicated that in case of underfill, $\lambda_{\text{OTCySolderjoints}}$ and $\lambda_{\text{Mech}}$ should be divided by 3. This needs to be assessed before being recommended in the frame of this handbook.
 ```
 
-**Physical stresses for the inductors family:**
+**Physical stresses for the integrated circuits family, ASIC components:**
 
 ````{admonition} Equation
 :class: equation
