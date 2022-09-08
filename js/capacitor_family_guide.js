@@ -97,7 +97,7 @@ function runCapacitorFamilyGuide() {
         par.innerHTML = text;
         div.appendChild(par);
         conv_container.appendChild(div);
-        document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut_speaks.svg");
+        document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
     }
 
 
@@ -111,7 +111,7 @@ function runCapacitorFamilyGuide() {
             setTimeout(() => {
                 displayTextMessage("Let me guide you through the different steps and you should be able to find the answer !");
 
-                document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut_speaks.svg");
+                document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
 
                 setTimeout(() => {
                     let buttonOK = document.createElement("button");
@@ -127,7 +127,7 @@ function runCapacitorFamilyGuide() {
                     div.setAttribute("class", "my-message");
                     div.appendChild(buttonOK);
                     conv_container.appendChild(div);
-                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut_happy.svg");
+                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut_happy.svg");
                 }, answering_speed);
 
             }, answering_speed);
@@ -139,7 +139,7 @@ function runCapacitorFamilyGuide() {
 
         displayTextMessage("Awesome ! So can you give me the name of your component ?");
 
-        document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut_speaks.svg");
+        document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
 
         setTimeout(() => {
             let div = document.createElement("div");
@@ -154,7 +154,7 @@ function runCapacitorFamilyGuide() {
             inputComponent.appendChild(sbt);
             div.appendChild(inputComponent);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
             sbt.onclick = function () {
                 this.disabled = true;
                 document.getElementById('inputComponent').disabled = true;
@@ -166,7 +166,7 @@ function runCapacitorFamilyGuide() {
 
     function runB2a() {
         component_name = document.getElementById('inputComponent').value.toUpperCase();
-        document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut_speaks.svg");
+        document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut_speaks.svg");
         let family = null;
         if (document.getElementById('inputComponent').value.toUpperCase().includes("CERAMIC")) {
             family = "ceramic";
@@ -239,7 +239,7 @@ function runCapacitorFamilyGuide() {
                 div.appendChild(yesB2a);
                 div.appendChild(noB2a);
                 conv_container.appendChild(div);
-                document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
             }, answering_speed);
         }
         else {
@@ -417,7 +417,7 @@ function runCapacitorFamilyGuide() {
             div.appendChild(semi_button);
             div.appendChild(other_button);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
 
         }, answering_speed);
 
@@ -612,7 +612,7 @@ function runCapacitorFamilyGuide() {
                                             div.appendChild(typeI_button2);
                                             div.appendChild(typeII_button2);
                                             conv_container.appendChild(div);
-                                            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                                            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
 
                                         }
 
@@ -623,7 +623,7 @@ function runCapacitorFamilyGuide() {
                                         div.appendChild(no_button2);
                                         div.appendChild(fail_button3);
                                         conv_container.appendChild(div);
-                                        document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                                        document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
                                     }, answering_speed);
 
 
@@ -634,7 +634,7 @@ function runCapacitorFamilyGuide() {
                                 div.appendChild(no_button);
                                 div.appendChild(fail_button2);
                                 conv_container.appendChild(div);
-                                document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                                document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
                             }, answering_speed);
 
 
@@ -653,7 +653,7 @@ function runCapacitorFamilyGuide() {
             div.appendChild(typeII_button);
             div.appendChild(fail_button);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
         }, answering_speed);
 
 
@@ -694,7 +694,7 @@ function runCapacitorFamilyGuide() {
                 div.appendChild(yes_button);
                 div.appendChild(no_button);
                 conv_container.appendChild(div);
-                document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
             }, answering_speed);
         }
         else {
@@ -769,7 +769,7 @@ function runCapacitorFamilyGuide() {
                 div.appendChild(voltage_input);
                 div.appendChild(buttonOK);
                 conv_container.appendChild(div);
-                document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
             }, answering_speed);
         }, answering_speed);
 
@@ -819,7 +819,7 @@ function runCapacitorFamilyGuide() {
                         div.appendChild(yes_button);
                         div.appendChild(no_button);
                         conv_container.appendChild(div);
-                        document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                        document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
                     }, answering_speed);
 
                 }
@@ -865,7 +865,7 @@ function runCapacitorFamilyGuide() {
                         div.appendChild(yes_button);
                         div.appendChild(no_button);
                         conv_container.appendChild(div);
-                        document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                        document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
                     }, answering_speed);
 
 
@@ -897,7 +897,7 @@ function runCapacitorFamilyGuide() {
                 setTimeout(() => {
                     if (component_type == 1) {
                         displayTextMessage("Your component may be an HFRF component. Then replace the 'ECCC' by 'HFHC' in the category name to get the right one.");
-                        document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut_idea.svg");
+                        document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut_idea.svg");
                     }
                 }, answering_speed);
 
@@ -1000,7 +1000,7 @@ function runCapacitorFamilyGuide() {
                     div.appendChild(dry_button);
                     div.appendChild(fail_button2);
                     conv_container.appendChild(div);
-                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
                 }, answering_speed);
 
             }
@@ -1013,7 +1013,7 @@ function runCapacitorFamilyGuide() {
             div.appendChild(dry_button);
             div.appendChild(fail_button);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
         }, answering_speed);
     }
 
@@ -1048,7 +1048,7 @@ function runCapacitorFamilyGuide() {
             div.appendChild(wet_button);
             div.appendChild(dry_button);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
         }, answering_speed);
 
     }
@@ -1086,7 +1086,7 @@ function runCapacitorFamilyGuide() {
             div.appendChild(silver_button);
             div.appendChild(beads_button);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
         }, answering_speed);
 
     }
@@ -1123,7 +1123,7 @@ function runCapacitorFamilyGuide() {
                 div.appendChild(elastomer_button);
                 div.appendChild(beads_button);
                 conv_container.appendChild(div);
-                document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
             }, answering_speed);
         }
 
@@ -1178,7 +1178,7 @@ function runCapacitorFamilyGuide() {
             div.appendChild(smd_button);
             div.appendChild(axial_button);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
         }, answering_speed);
 
     }
@@ -1285,7 +1285,7 @@ function runCapacitorFamilyGuide() {
             div.appendChild(pps_button);
             div.appendChild(ptfe_button);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
         }, answering_speed);
 
     }
@@ -1331,7 +1331,7 @@ function runCapacitorFamilyGuide() {
                     div.appendChild(ac_button);
                     div.appendChild(dc_button);
                     conv_container.appendChild(div);
-                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
                 }, answering_speed);
             }
 
@@ -1346,7 +1346,7 @@ function runCapacitorFamilyGuide() {
             div.appendChild(yes_button);
             div.appendChild(no_button);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
         }, answering_speed);
 
     }
@@ -1411,7 +1411,7 @@ function runCapacitorFamilyGuide() {
                     div.appendChild(yes_button);
                     div.appendChild(no_button);
                     conv_container.appendChild(div);
-                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
                 }, answering_speed);
 
             }
@@ -1484,7 +1484,7 @@ function runCapacitorFamilyGuide() {
                     div.appendChild(yes_button2);
                     div.appendChild(no_button2);
                     conv_container.appendChild(div);
-                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+                    document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
                 }, answering_speed);
             }
 
@@ -1493,7 +1493,7 @@ function runCapacitorFamilyGuide() {
             div.appendChild(yes_button);
             div.appendChild(no_button);
             conv_container.appendChild(div);
-            document.getElementById("astroPicture_capacitor").setAttribute("src", "../html/pictures/new_astronaut.svg");
+            document.getElementById("astroPicture_capacitor").setAttribute("src", "../../_static/images/new_astronaut.svg");
         }, answering_speed);
     }
 
