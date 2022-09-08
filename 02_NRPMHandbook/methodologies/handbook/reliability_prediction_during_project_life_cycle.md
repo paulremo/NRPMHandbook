@@ -110,7 +110,7 @@ Any reliability prediction report should provide full information on the assumpt
             <tr>
                 <td>3.3</td>
                 <td>Operational conditions</td>
-                <td>In each project phase, the operational conditions shall be denied or updated based on all available information</td>
+                <td>In each project phase, the operational conditions shall be defined or updated based on all available information</td>
             </tr>
             <tr>
                 <td>3.4</td>
