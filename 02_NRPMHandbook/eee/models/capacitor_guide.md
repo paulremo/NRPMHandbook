@@ -33,5 +33,4 @@ The content of this page is missing and will be provided in a future version of 
     </table>
 </div>
 
-<script type="text/javascript" src="../js/capacitor_family_guide.js"></script>
 <script type="text/javascript">runCapacitorFamilyGuide();</script>
