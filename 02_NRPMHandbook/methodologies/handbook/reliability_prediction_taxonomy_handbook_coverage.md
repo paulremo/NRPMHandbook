@@ -149,7 +149,7 @@ The four classes of failure listed in {numref}`methodo-table4-2` are defined to 
     - <ul><li>NORMAL PHYSICAL PROCESS &#8594; TIME/EQUIVALENT TIME <ul><li>OPERATIONS-RELATED (e.g. On/Off, duty cycle)</li></ul><ul><li>ENVIRONMENT-RELATED (e.g. Radiations)</li></ul> </li></ul>
     - Considered as {term}`systematic failure <Systematic failure>` when failure occurs (loss of mission/performances) before the design lifetime
 *   - EXTRINSIC FAILURE (EF)
-    - <ul><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV ({term}`degradation <Degradation>` &#8594; considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>METEORITES</li><li>DEBRIS</li></ul>
+    - <ul><li>VACUUM (Outgassing, cold-welding, heat transfer)</li><li>THERMAL (Solar radiations, Solar albedo, Earth OL Radiation</li><li>MAGNETIC FIELD</li><li>MECHANICAL VIBRATIONS / SHOCKS (launcher, pyro activation)</li><li>ATOMS (EROSION (O) &#8594; considered as WO)</li><li>RADIATIONS (CUMULATED EFFECTS &#8594; considered as WO)</li><li>UV ({term}`degradation <Degradation>` considered as WO)</li><li>PLASMA (ESD)</li><li>SEE : DESTRUCTIVE / NON DESTRUCTIVE</li><li>METEORITES</li><li>DEBRIS</li></ul>
     - <p>Space environment phenomena inducing external failure causes </p> <p>Considered as {term}`systematic failure <Systematic failure>` when the extrinsic effects are underestimated before the design lifetime</p>
 ```
 
