@@ -24,7 +24,7 @@ Using a data source for reliability prediction – e.g. in-orbit return as the f
 Despite its late appearance in the preference listing given above, a good understanding of the {term}`failure mechanism <Failure mechanism>`s driving the (un-)reliability of {term}`mechanical part <Mechanical part>`s should always form the basis for the reliability prediction, even if it is only used to decide whether the available data can be used for the prediction.
 
 (meca_4_3_1_1)=
-### Analysis of the Failure mechanism>
+### Analysis of the Failure mechanism
 
 A first analysis and understanding of the potential {term}`failure mechanism <Failure mechanism>`s for {term}`mechanical part <Mechanical part>`s and equipment should generally be available from the design process and should always be considered as an important input for the prediction, even if a pure statistical approach is used to estimate an item’s reliability. The approach described in {numref}`meca_4_4` and {numref}`meca_4_5` is based on this idea, focussing on the identification of relevant {term}`failure mechanism <Failure mechanism>`s although not necessarily requiring {term}`physics of failure <Physics of failure>` methods for the mathematical modelling.
 
