@@ -60,8 +60,7 @@
 }
 
 .badge:disabled {
-    background-color: rgb(159, 159, 159);
-    color: rgb(93, 93, 93);
+    background-color: red;
     cursor: not-allowed;
 }
 
