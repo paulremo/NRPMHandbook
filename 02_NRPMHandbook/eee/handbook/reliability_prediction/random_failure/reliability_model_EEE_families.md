@@ -1456,9 +1456,9 @@ With:
 ```
 With:
 
--    \lambda_{\text{Type}} equals 0.05 for circular & rectangular connectors, 0.07 for coaxial and 0.1 for PCB connectors.     
--   \Pi_{\text{Transfer}} depends on the soldering method and is defined by {numref}`eee-table4-38`.
--   $\Pi_{\text{Contact}}$ depends on the number of contacts (N~contact~) of the connector:  $\pi_{\text{contact}} = \left( N_{\text{contact}} \right)^{0.5}$
+-   $\lambda_{\text{Type}}$ equals 0.05 for circular & rectangular connectors, 0.07 for coaxial and 0.1 for PCB connectors.     
+-   $\Pi_{\text{Transfer}}$ depends on the soldering method and is defined by {numref}`eee-table4-38`.
+-   $\Pi_{\text{Contact}}$ depends on the number of contacts ($N_{\text{contact}}$) of the connector:  $\pi_{\text{contact}} = \left( N_{\text{contact}} \right)^{0.5}$
 -   $\Pi_{\text{Cycle}}$  depends on the annual number of cycles (one cycle = one connection + one disconnection): $\pi_{\text{cycles}}  = 0.2 \times \left( N_{annual\_ cycles} \right)^{0.25}$
 ````
 
@@ -6112,7 +6112,7 @@ For components with more than 256 leads, the recommendation for the parameters *
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_90')"
     placeholder="Search table...">
 
-```{list-table} Parameters a and b for components with 0 to 256 leads.
+```{list-table} Parameters a and b for components with more than 256 leads.
 :name: eee-table4-91
 
 * - <table class="myTable" id="">
@@ -12977,7 +12977,7 @@ All other basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}
 :name: eee-table4-176
 
 * - <table class="myTable" id="eee_table4_176">
-        <thead>
+       <thead>
             <th><strong>Direct current IF maximum</strong></th>
             <th><strong>SMD or Through hole</strong></th>
             <th colspan="2"><strong>Case type</strong></th>
@@ -12989,9 +12989,9 @@ All other basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}
         </thead>
         <tr>
             <td rowspan="13">IF &lt; 150mA</td>
-            <td rowspan="13">Through SMD</td>
+            <td rowspan="2">Through</td>
             <td>T1-x</td>
-            <td rowspan="7">Plastic</td>
+            <td rowspan="9">Plastic</td>
             <td>2 to 4</td>
             <td rowspan="13">0.0034</td>
             <td rowspan="13">0.0104</td>
@@ -13003,6 +13003,7 @@ All other basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}
             <td>4</td>
         </tr>
         <tr>
+            <td rowspan="11">SMD</td>
             <td>Chip</td>
             <td>2</td>
         </tr>
