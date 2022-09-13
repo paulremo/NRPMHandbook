@@ -905,7 +905,7 @@ Once the tests have shown {term}`wear-out failures <Wear-out failure>`, a suitab
 
 The third part of the bathtub curve can be represented by several potential distributions, see {numref}`methodologies` for details. The most common used distributions for the wear-out of {term}`EEE` components are the Weibull distribution with two or three parameters (introducing a shift *τ* in the two-parameter model $f(t-\tau)$), and the Lognormal distribution.
 
-The Weibull distribution is often used to model "weakest link" failures such as dielectric breakdown and thermo mechanical failures due to solder joints {term}`degradation <Degradation>` {cite:p}`eee-JEP122H`. The complete methodology to define a Weibull distribution model is provided in document \[BR-EEE-29\].
+The Weibull distribution is often used to model "weakest link" failures such as dielectric breakdown and thermo mechanical failures due to solder joints {term}`degradation <Degradation>` {cite:p}`eee-JEP122H`. The complete methodology to define a Weibull distribution model is provided in document {cite:p}`eee-ADS-RPDSM-FR`.
 
 For the Lognormal distribution, the failure rate starts increasing exponentially up to a maximum and then decreases. The Lognormal distribution is generally used for chemical {term}`degradation <Degradation>` such as corrosion or for some semiconductor failure mechanisms as electromigration (EM). Due to its mathematical formula, the MTTF of a Lognormal distribution is always longer than the MTTF of a Weibull distribution. Documents {cite:p}`eee-JEP122H` and {cite:p}`eee-JESD-37A` provide the methodology to define the Lognormal distribution.
 
