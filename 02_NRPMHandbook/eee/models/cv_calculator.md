@@ -3,10 +3,6 @@
 (cv_calculator)=
 # CV product calculator for capacitor components
 
-```{admonition} Under construction
-:class: todo
-The content of this page is missing and will be provided in a future version of the NRPM digital handbook.
-```
 <div class="calculator-container-eee" id="capa_type_voltage_input">
     <div>
         <p>Component type : </p>
