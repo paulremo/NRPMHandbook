@@ -446,7 +446,7 @@ When possible, the tests should be done with accelerated conditions versus the c
 (eee_4_6_7)=
 ## Calculation of acceleration factors
 
-The acceleration factors use {term}`degradation <Degradation>` laws generally well known for {term}`EEE` components and described in document {cite:p}`eee-JEP122H`. The general laws with a single parameter can be used for most of the more useful stresses such as the Arrhenius' law for temperature, the Eyring's law and the inverse power laws for voltage and current. The Coffin-Manson's law is used for thermal and mechanical stresses. More complex laws with more than one parameter can also be used such as Peck's model for both temperature and humidity, the Norris-Landzberg's law for solder joints and the Black's law for electromigration {cite:p}`eee-SSB-1.003`.
+The acceleration factors (see also {numref}`eee_4_3_1_13` where they are denoted by $\Pi_{\text{acceleration}}$) use {term}`degradation <Degradation>` laws generally well known for {term}`EEE` components and described in document {cite:p}`eee-JEP122H`. The general laws with a single parameter can be used for most of the more useful stresses such as the Arrhenius' law for temperature, the Eyring's law and the inverse power laws for voltage and current. The Coffin-Manson's law is used for thermal and mechanical stresses. More complex laws with more than one parameter can also be used such as Peck's model for both temperature and humidity, the Norris-Landzberg's law for solder joints and the Black's law for electromigration {cite:p}`eee-SSB-1.003`.
 
 (eee_4_6_7_1)=
 ### Inverse power law

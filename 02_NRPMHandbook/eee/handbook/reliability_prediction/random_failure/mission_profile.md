@@ -284,11 +284,11 @@ The thermal and thermo-electrical stresses are taken into account by the {term}`
 ``  
 ```{math}
 :label: Equation_1_8
-AF = \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T}_{0}} - \frac{1}{273 + T_{board_{ref}} + \Delta_{T}} \right) \right\rbrack
+\Pi_{\text{acceleration}} = \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T}_{0}} - \frac{1}{273 + T_{board_{ref}} + \Delta_{T}} \right) \right\rbrack
 ```
 ```{math}
 :label: Equation_1_9
-AF = \left( \frac{1}{S_{\text{reference}}} \cdot \frac{I_{\text{applied}}}{I_{\text{rated}}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T_{0}}} - \frac{1}{273 + T_{board_{ref}} + \Delta_{T}} \right) \right\rbrack
+\Pi_{\text{acceleration}} = \left( \frac{1}{S_{\text{reference}}} \cdot \frac{I_{\text{applied}}}{I_{\text{rated}}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T_{0}}} - \frac{1}{273 + T_{board_{ref}} + \Delta_{T}} \right) \right\rbrack
 ```
 where:
 
@@ -327,7 +327,7 @@ The thermo-mechanical stress is associated with the thermal cycling of the equip
 ``  
 ```{math}
 :label: Equation_1_10
-AF = \left( \frac{12 \cdot N_{cy_{\text{phase}}}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{min} \left( \theta_{\text{cy}}, 2 \right)}{\text{min} \left( \theta_{0}, 2 \right)} \right)^{p} \cdot \left( \frac{\Delta T_{\text{cycling}}}{\Delta T_{0}} \right)^{m} \cdot \text{exp} \left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{273+T_{0}+\Delta T_{0}} - \frac{1}{273+T_{max_{\text{cycling}}}} \right) \right\rbrack
+\Pi_{\text{acceleration}} = \left( \frac{12 \cdot N_{cy_{\text{phase}}}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{min} \left( \theta_{\text{cy}}, 2 \right)}{\text{min} \left( \theta_{0}, 2 \right)} \right)^{p} \cdot \left( \frac{\Delta T_{\text{cycling}}}{\Delta T_{0}} \right)^{m} \cdot \text{exp} \left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{273+T_{0}+\Delta T_{0}} - \frac{1}{273+T_{max_{\text{cycling}}}} \right) \right\rbrack
 ```
 where:
 
@@ -367,7 +367,7 @@ The humidity stress is taken into account by the {term}`physics of failures <Phy
 ``  
 ```{math}
 :label: Equation_1_11
-AF = \left( \frac{\text{RH}_{board_{ref}}}{\text{RH}_{0}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T_{0}}} - \frac{1}{{273 + T_{board_{ref}}}+ \Delta T} \right) \right\rbrack
+\Pi_{\text{acceleration}} = \left( \frac{\text{RH}_{board_{ref}}}{\text{RH}_{0}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T_{0}}} - \frac{1}{{273 + T_{board_{ref}}}+ \Delta T} \right) \right\rbrack
 ```
 where:
 
@@ -401,7 +401,7 @@ The vibration stress is taken into account by the {term}`physics of failures <Ph
 ``  
 ```{math}
 :label: Equation_1_12
-AF = \left( \frac{G_{\text{rms}}}{0.5} \right)^{p}
+\Pi_{\text{acceleration}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{p}
 ```
 where:
 

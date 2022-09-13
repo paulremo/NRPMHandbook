@@ -14788,7 +14788,7 @@ where:
 
 -   $t$: test duration in hours;
 
--   {term}`AF`: acceleration factor defined depending on the acceleration law;
+-   {term}`AF`: acceleration factor defined depending on the acceleration law (see also {numref}`eee_4_3_1_13` where it is denoted by $\Pi_{\text{acceleration}}$);
 
 -   $n$: quantity of tested parts.
 ````
