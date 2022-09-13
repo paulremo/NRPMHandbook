@@ -11,35 +11,21 @@ The method selection for {term}`mechanical parts <Mechanical part>` reliability 
 
 ```{list-table} Categories of mechanical failure mechanisms
 :name: meca-table4-4
+:header-rows: 1
 
-* - <table class="myTable" id="meca_table4_4">
-		<thead>
-			<tr>
-				<th>Failure mechanism category</th>
-				<th>Examples</th>
-			</tr>
-		</thead>
-		<tr>
-			<td>Distortion</td>
-			<td>Creep, elastic deformation, plastic deformation, displacement</td>
-		</tr>
-		<tr>
-			<td>Fracture / Fatigue</td>
-			<td>Ductile/brittle fracture, high-cycle fatigue, low-cycle fatigue</td>
-		</tr>
-		<tr>
-			<td>Mechanical wear</td>
-			<td>Adhesive wear, abrasive wear, lubricated wear</td>
-		</tr>
-		<tr>
-			<td>Corrosion</td>
-			<td>Stress-corrosion cracking, galvanic corrosion</td>
-		</tr>
-		<tr>
-			<td>Material {term}`degradation <Degradation>`</td>
-			<td>Thermal {term}`degradation <Degradation>`, radiation damage</td>
-		</tr>
-	</table>
+* - Failure mechanism category
+  - Examples
+* - Distortion
+  - Creep, elastic deformation, plastic deformation, displacement
+* - Fracture/Fatigue
+  - Ductile/brittle fracture, high-cycle fatigue, low-cycle fatigue
+* - Mechanical wear
+  - Adhesive wear, abrasive wear, lubricated wear
+* - Corrosion
+  - Stress-corrosion cracking, galvanic corrosion
+* - Material {term}`degradation <Degradation>`
+  - Thermal {term}`degradation <Degradation>`, radiation damage
+
 ```
 
 The probability of failure can for some items be driven by several different {term}`failure mechanisms <Failure mechanism>`. When using {term}`PoF` methods, the results for the individual mechanisms have to be combined to estimate the overall part reliability. The correct way of doing this depends on whether the different {term}`failure mechanisms <Failure mechanism>` can be considered as independent processes or events.
@@ -487,7 +473,7 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 * Statistical (or combined) methods are suitable provided that relevant failure data is available directly at the level of the considered assembly.
 * {term}`Physics of failure <Physics of failure>` methods based on Structural reliability theory are suitable if the assembly level probability of failure is dominated by one or very few {term}`failure mechanisms <Failure mechanism>` (see also the discussion in {numref}`meca_4_4`).
 * Bottom-up modelling starting from part level analysis is recommended in case none of the abovementioned conditions is fulfilled.
-* 
+
 It should be noted that the {term}`NSWC` Handbook {cite:p}`mec-NSWC-11` contains models also for some items that are better considered as assemblies rather than parts, including e.g. electric motors, solenoids and transducers. For reasons already discussed in {numref}`meca_4_3_1_5`, the direct use of these models is not recommended for space applications.
 
 
