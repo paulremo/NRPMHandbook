@@ -420,8 +420,8 @@ ASIC\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maxim
             <td>0</td>
         </tr>
         <tr>
-            <td colspan="2" bgcolor="black" color="white">Maximum applicable mark</td>
-            <td colspan="2" bgcolor="black" color="white">100</td>
+            <td colspan="2" bgcolor="DimGray" color="white">Maximum applicable mark</td>
+            <td colspan="2" bgcolor="DimGray" color="white">100</td>
         </tr>
     </table>
 ```
