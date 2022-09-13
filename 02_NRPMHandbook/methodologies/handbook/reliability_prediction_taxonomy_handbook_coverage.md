@@ -77,8 +77,8 @@ The handbook scope is limited to Reliability Predictions for systems that operat
 
 * Satellite: unmanned spacecraft in Earth orbit
   * {term}`GEO` satellites, e.g. telecommunications
-  * MEO satellites, e.g. navigation
-  * LEO satellites, e.g. Earth Observation
+  * {term}`MEO` satellites, e.g. navigation
+  * {term}`LEO` satellites, e.g. Earth Observation
 * Space probe: spacecraft leaving earth orbit to explore further into outer space
 * Constellation of satellites, from two to hundreds or thousands of satellites
 * Man-tended vehicles and experiments or modules installed in the Space Station
@@ -199,7 +199,7 @@ The different stresses that may lead to {term}`wear-out failures <Wear-out failu
 * *Operations-related*: Use in time, On/Off cycling, mechanical wear
 * *Environment-related*: Thermal cycling, cumulated radiation, UV light, mono atomic oxygen 
 
-To ensure mutually exclusive categories, and as a matter of convention, failures resulting from wear-out due to environmental effects are classified as Wear-out (not Extrinsic) failures.
+To ensure mutually exclusive categories, and as a matter of convention, failures resulting from wear-out due to environmental effects are classified as {term}`wear-out <Wear-out failure>` (not {term}`extrinsic <Extrinsic failure>`) failures.
 
 When modelling wear-out, it is important to be clear about the definition of “failure”. The time dependent physical {term}`degradation <Degradation>` of an item as such is not considered as a failure before a critical threshold is surpassed, leading either to a definitive failure at part level or to a failure at system level without part level failure. An example for a definitive {term}`wear-out failure <Wear-out failure>` would be fracture of a mechanical part after successive crack growth due to cyclic loading, whereas in the case of battery discharge due to calendar aging failure is better defined at system level by specifying a performance threshold for the battery capacity (Ah).
 
