@@ -1456,9 +1456,9 @@ With:
 ```
 With:
 
--    \lambda_{\text{Type}} equals 0.05 for circular & rectangular connectors, 0.07 for coaxial and 0.1 for PCB connectors.     
--   \Pi_{\text{Transfer}} depends on the soldering method and is defined by {numref}`eee-table4-38`.
--   $\Pi_{\text{Contact}}$ depends on the number of contacts (N~contact~) of the connector:  $\pi_{\text{contact}} = \left( N_{\text{contact}} \right)^{0.5}$
+-   $\lambda_{\text{Type}}$ equals 0.05 for circular & rectangular connectors, 0.07 for coaxial and 0.1 for PCB connectors.     
+-   $\Pi_{\text{Transfer}}$ depends on the soldering method and is defined by {numref}`eee-table4-38`.
+-   $\Pi_{\text{Contact}}$ depends on the number of contacts ($N_{\text{contact}}$) of the connector:  $\pi_{\text{contact}} = \left( N_{\text{contact}} \right)^{0.5}$
 -   $\Pi_{\text{Cycle}}$  depends on the annual number of cycles (one cycle = one connection + one disconnection): $\pi_{\text{cycles}}  = 0.2 \times \left( N_{annual\_ cycles} \right)^{0.25}$
 ````
 
