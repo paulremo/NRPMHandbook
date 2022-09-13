@@ -1,2 +1,6 @@
 02_NRPMHandbook/_build/
+__pycache__/
+.idea/
+build/
+*.egg-info/
 *.bak
