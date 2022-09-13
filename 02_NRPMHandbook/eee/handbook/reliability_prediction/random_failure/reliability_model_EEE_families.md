@@ -5699,7 +5699,7 @@ The following table presents the different subfamilies and the corresponding mod
     </table>
 ```
 
-```{admonition} Note
+```{admonition} Note *
 :class: note
 
 In the 2021 issue of FIDES, a {term}`GaN` MMIC model has been included. The detail is provided in 4.4.2.3, as it has not yet been assessed and is just a proposition for the user.
@@ -10740,7 +10740,7 @@ $\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the
     - 0.0138
 ```
 
-```{admonition} Note
+```{admonition} Note *
 :class: note
 
 $\lambda_{\text{OTH}}$ for Power HF/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
@@ -11248,7 +11248,7 @@ $\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the
     - 0.0138
 ```
 
-```{admonition} Note
+```{admonition} Note *
 :class: note
 
 $\lambda_{\text{OTH}}$ for Power {term}`HF`/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
