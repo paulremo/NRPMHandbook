@@ -1,0 +1,125 @@
+/* Copyright (C) Matrisk GmbH 2022*/
+
+#help{
+    width: 100%;
+    height: 200px;
+}
+
+#astronaut{
+    margin-top: 0%;
+}
+
+.message{
+    margin-left: 20px;
+    background-color: #e4c665;
+    color: black;
+    border-radius: 5px;
+}
+
+.help-message{
+    font-size: 11px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formula-map {
+    background-color: white;
+    margin-left: 20px;
+    table-layout: fixed;
+    width: 600px;
+    height: 400px;
+}
+
+.formula-map td {
+    width: 20%;
+}
+
+.map-node {
+    background-color: white;
+    width: 100%;
+
+}
+
+.central-node {
+    background-color: white
+}
+
+.extra-space {
+    /*padding-top: 20px;*/
+    padding: auto;
+}
+
+.map-button {
+    margin: 15px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #47064a;
+    border: none;
+    border-radius: 30px;
+    width: 80%;
+    height: 30px;
+}
+
+.central-button {
+    margin: 15px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #0c0679;
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    height: 40px;
+}
+
+.node-button {
+    margin: 15px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #7a747b;
+    border: none;
+    border-radius: 30px;
+    width: 80%;
+    height: 30px;
+}
+
+.tc-button {
+    background-color: aquamarine;
+    font-weight: bold;
+    width: 30%;
+    font-size: 6px;
+    text-align: center;
+}
+
+.back-button {
+    background-color: rgb(1, 1, 1);
+    color: white;
+    width: 40%;
+    font-size: 10px;
+    border-radius: 50%;    
+    text-align: center;
+}
+
+.formula-entry{
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(208, 208, 208);
+    border: none;
+    width: 20%;
+    height: 15px;
+    resize:none;
+}

@@ -1,0 +1,339 @@
+/* Copyright (C) Matrisk GmbH 2022*/
+
+.main-div-mission-profile {
+    width: 80%;
+    height: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10%;
+    overflow-y: auto;
+}
+
+.topnav-mission-profile {
+    width: 100%;
+    background-color: #092B33;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav-mission-profile td.cat-name-mp p {
+    text-transform: uppercase;
+}
+
+.topnav-mission-profile td.cat-name-mp img {
+    float: none;
+}
+
+.topnav-mission-profile td.cat-name-mp {
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9em;
+    width: fit-content;
+    height: 3em;
+    padding-inline: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tab-mission-profile {
+    width: 80%;
+    border-width: 5px;
+    background-color: #d7e9eb;
+    font-size: 1.2em;
+    padding-left: 1em;
+}
+
+.tab-mission-profile div.entry-card {
+    width: 95%;
+    float: left;
+    /*margin-left: 1em;*/
+    vertical-align: middle;
+}
+
+.phase-type-label {
+    float: top;
+}
+
+.radio-phase-type-box {
+    text-align: center;
+    cursor: pointer;
+    margin-inline: 1.5em;
+    width: fit-content;
+}
+
+.radio-phase-type-box label {
+    text-align: center;
+    cursor: pointer;
+}
+
+.radio-phase-type-box input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px;
+    width: 100%;
+    height: 2em;
+    cursor: pointer;
+}
+
+
+#phase-type-choices {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-block: 2em;
+}
+
+#delta-t-entries-box-mp {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
+
+.parameter-title-mission-profile {
+    padding-bottom: 1em;
+}
+
+.parameter-title-mission-profile label {
+    margin-right: 2em;
+    cursor: help;
+}
+
+.mission-profile-selector {
+    padding-left: 0.5em;
+}
+
+.name-entry-mission-profile {
+    font-size: 1em;
+}
+
+input[type=number] {
+    font-size: 1em;
+}
+
+/*input[type=number]:invalid {
+    border: 2px dashed red;
+}*/
+
+input[type=number]:valid {
+    border: 1px solid black;
+}
+
+
+.radio-phase-type-box {
+    width: 2em;
+}
+
+.steps-mp-3 {
+    width: 100%;
+}
+
+.step0-mp-3 {
+    text-align: left;
+    width: 33%;
+    cursor: help;
+}
+
+.step1-mp-3 {
+    text-align: center;
+    width: 33%;
+    cursor: help;
+}
+
+.step2-mp-3 {
+    text-align: right;
+    width: 33%;
+    cursor: help;
+}
+
+.step-range-mp-3 {
+    width: 100%;
+    -webkit-appearance: none;
+    padding: 0;
+    font: inherit;
+    outline: none;
+    color: #069;
+    opacity: .8;
+    background: #CCC;
+    box-sizing: border-box;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.steps-mp-2 {
+    width: 100%;
+}
+
+.step0-mp-2 {
+    text-align: left;
+    width: 50%;
+    cursor: help;
+}
+
+.step1-mp-2 {
+    text-align: right;
+    width: 50%;
+    cursor: help;
+}
+
+.step-range-mp-2 {
+    width: 100%;
+    -webkit-appearance: none;
+    padding: 0;
+    font: inherit;
+    outline: none;
+    color: #069;
+    opacity: .8;
+    background: #CCC;
+    box-sizing: border-box;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch .switch-check {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch-check:checked+.switch-slider {
+    background-color: #098324;
+}
+
+.switch-check:focus+.switch-slider {
+    box-shadow: 0 0 1px #098324;
+}
+
+.switch-check:checked+.switch-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+#phases-sum-up-mission-profile {
+    margin-top: 3em;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+#phases-sum-up-mission-profile thead th {
+    font-size: 1vw;
+    background-color: #1B7E94;
+    color: white;
+}
+
+#phases-sum-up-mission-profile td {
+    font-size: 1vw;
+    text-align: center;
+}
+
+.sumup-icon-phase-mp {
+    width: 1vw;
+}
+
+
+.recom-part-mission-profile {
+    width: 20%;
+    font-size: 1.2em;
+    background-color: #d7e9eb;
+}
+
+#mp-recoms-text {
+    text-align: center;
+}
+
+#overlay-mp {
+    position: fixed;
+    overflow-y: auto;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.infoBox-mp {
+    background-color: white;
+    margin-top: 5em;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#text-mp {
+    width: 100%;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#overlay-close-mp {
+    color: #730f00;
+}
+
+.info-button-mp {
+    font-size: 1.4em;
+    margin-right: 0.8em;
+    cursor: pointer;
+    color: black;
+}
+
+.info-button-mp:hover {
+    color: #1B7E94;
+}
+
+#load-answers-mp {
+    font-size: 1.1em;
+    background-color: rgb(42, 126, 42);
+    color: azure;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding-inline: 1em;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+#load-answers-mp:disabled {
+    background-color: rgb(138, 138, 138);
+    cursor: not-allowed;
+}

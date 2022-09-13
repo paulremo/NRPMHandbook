@@ -1,0 +1,176 @@
+/* Copyright (C) Matrisk GmbH 2022*/
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+}
+
+/* Style for help given by the astronaut */
+#helpMFR {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 140px;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+/* Style for the astronaut picture in helpMFR */
+#astronaut {
+    margin-top: 0%;
+}
+
+/* Style for message container in helpMFR */
+.message {
+    margin-left: 20px;
+    background-color: #e4c665;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Style for the help message in helpMFR */
+.help-message {
+    font-size: 11px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style for the green choice button */
+.green-button {
+    width: 22%;
+    padding: 2px 2px;
+    margin: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #04AA6D;
+    border: none;
+    /*border-radius: 15px;*/
+    box-shadow: 0 5px #666;
+}
+
+/* Style for the green choice button inside controllers*/
+.controllers .green-button {
+    width: 15%;
+}
+
+/* Style for the red choice button */
+.red-button {
+    width: 22%;
+    padding: 2px 2px;
+    margin: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #d12500;
+    border: none;
+    /*border-radius: 15px;*/
+    box-shadow: 0 5px #666;
+}
+
+/* Style for the red choice button inside controllers*/
+.controllers .red-button {
+    width: 15%;
+}
+
+/* Style for the yellow choice button */
+.yellow-button {
+    width: 22%;
+    padding: 2px 2px;
+    margin: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #e1b800;
+    border: none;
+    /*border-radius: 15px;*/
+    box-shadow: 0 5px #666;
+}
+
+/* Style for the yellow choice button inside controllers*/
+.controllers .yellow-button {
+    width: 15%;
+}
+
+/* Style for the lambda 3 value*/
+.main-value-title {
+    color: #8d0308;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: help;
+}
+
+/* Style for the first column content*/
+.value-type-mfr-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: help;
+}
+
+/* Style for the subparameters column content*/
+.value-type-mfr-subtitle {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: help;
+}
+
+/* Style for the table containing the different parameters */
+.customed-table {
+    border-collapse: collapse;
+    margin-top: 8em;
+}
+
+/* Style for the first column*/
+.value-type-mfr {
+    background-color: #383b3a;
+    color: #ffffff;
+    text-align: center;
+    width: 80px;
+    height: 60px;
+    cursor: help;
+}
+
+/* Style for the processed parameter column*/
+.value-processed {
+    font-weight: bold;
+    color: #383b3a;
+    width: 50px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+/* Style for text entries */
+.text-entry {
+    border-color: #383b3a;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding-left: 10px;
+    width: 130px;
+    resize: none;
+    font-size: 10px;
+}

@@ -1,0 +1,328 @@
+<!-- Copyright (C) Matrisk GmbH 2022 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test with JS</title>
+    <link rel="stylesheet" href="../css/misc_failure_rate_sliders.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="help">
+        <table>
+            <tr>
+                <td>
+                    <div id="astronaut">
+                        <img id="astroPicture" src="pictures/astronaut1.png" style="height: 160px;" />
+                    </div>
+                </td>
+                <td>
+                    <div id="messages" class="message">
+                        <p class="help-message" id="messagesTrack">Hover an element or click it to get information</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <table class="customed-table">
+
+        <tr>
+            <td class="value-type" id="lambda_1" onmouseenter="update_help('lambda_1')">
+                <p class="value-type-title">Value of &lambda;<sub>1</sub> (FITs) </p>
+            </td>
+            <td class="value-processed">
+                <p id="lambda1_value"></p>
+            </td>
+            <td class="controllers">
+                <textarea class="text-entry" id="lambda1_entry" name="story" rows="1" cols="12"
+                    onchange="lambda12Entry.onLambdachanged()"></textarea><a style="margin-left: 50px;"
+                    id="lambda1_message"></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type" id="lambda_2" onmouseenter="update_help('lambda_2')">
+                <p class="value-type-title">Value of &lambda;<sub>2</sub> (FITs) </p>
+            </td>
+            <td class="value-processed">
+                <p id="lambda2_value"></p>
+            </td>
+            <td class="controllers">
+                <textarea class="text-entry" id="lambda2_entry" name="story" rows="1" cols="12"
+                    onchange="lambda12Entry.onLambdachanged()"></textarea><a style="margin-left: 50px;"
+                    id="lambda2_message"></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type" id="pi_Q" onmouseenter="update_help('pi_Q')">
+                <p class="value-type-title">Value of &Pi;<sub>Q</sub> : </p>
+            </td>
+            <td class="value-processed">
+                <p id="piQ_value"></p>
+            </td>
+            <td>
+                <table class="customed-table">
+                    <td class="description">
+                        <p>Quality</p>
+                    </td>
+                    <td class="description-value">
+                        <p id="piQ_description"></p>
+                    </td>
+                    <td class="controllers">
+                        <input type="range" class="three-choice-slider" min="0" max="300" id="piQ_slider" step="1"
+                            value="0" oninput="piQSlider.changed()">
+                    </td>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="value-type" id="pi_M" onmouseenter="update_help('pi_M')">
+                <p class="value-type-title">Value of &Pi;<sub>M</sub> : </p>
+            </td>
+            <td class="value-processed">
+                <p id="piM_value"></p>
+            </td>
+            <td>
+                <table class="customed-table">
+                    <td class="description">
+                        <p>Maturity</p>
+                    </td>
+                    <td class="description-value">
+                        <p id="piM_description"></p>
+                    </td>
+                    <td class="controllers">
+                        <input type="range" class="three-choice-slider" min="0" max="300" id="piM_slider" step="1"
+                            value="0" oninput="piMSlider.changed()">
+                    </td>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="value-type" id="pi_T" onmouseenter="update_help('pi_T')">
+                <p class="value-type-title">Value of &Pi;<sub>T</sub> : </p>
+            </td>
+            <td class="value-processed">
+                <p id="piT_value"></p>
+            </td>
+            <td>
+                <table class="customed-table">
+                    <td class="description">
+                        <p>Technology</p>
+                    </td>
+                    <td class="description-value">
+                        <p id="piT_description"></p>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="piT_checkbox" onclick="checkboxPiT.change_check()">
+                        <label for="piT_checkbox">Applicable</label>
+                    </td>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="value-type" id="pi_C"  onmouseenter="update_help('pi_C')">
+                <p class="value-type-title">Value of &Pi;<sub>C</sub> : </p>
+            </td>
+            <td class="value-processed">
+                <p id="piC_value"></p>
+            </td>
+            <td>
+                <table class="customed-table">
+                    <td class="description">
+                        <p>Complexity</p>
+                    </td>
+                    <td class="description-value">
+                        <p id="piC_description"></p>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="piC_checkbox" onclick="checkboxPiC.change_check()">
+                        <label for="piC_checkbox">Applicable</label>
+                    </td>
+                </table>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="value-type" id="pi_OP" onmouseenter="update_help('pi_OP')">
+                <p class="value-type-title">Value of &Pi;<sub>OP</sub> : </p>
+            </td>
+            <td class="value-processed">
+                <p id="piOP_value"></p>
+            </td>
+            <td>
+                <table class="customed-table">
+                    <tr>
+                        <td class="value-type" id="orbit" onmouseenter="update_help('orbit')">
+                            <p class="value-type-title">Value of orbit : </p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="orbit_value"></p>
+                        </td>
+                        <td>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Orbit</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="orbit_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="orbit_slider"
+                                        step="1" value="0" oninput="orbitSlider.changed()">
+                                </td>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="value-type" id="temperature" onmouseenter="update_help('temperature')">
+                            <p class="value-type-title">Value of temperature : </p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="temperature_value"></p>
+                        </td>
+                        <td>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Temperature</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="temperature_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300"
+                                        id="temperature_slider" step="1" value="0"
+                                        oninput="temperatureSlider.changed()">
+                                </td>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="value-type" id="power" onmouseenter="update_help('power')">
+                            <p class="value-type-title">Value of power : </p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="power_value"></p>
+                        </td>
+                        <td>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Power</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="power_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="power_slider"
+                                        step="1" value="0" oninput="powerSlider.changed()">
+                                </td>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="value-type" id="duty_cycle" onmouseenter="update_help('duty_cycle')">
+                            <p class="value-type-title">Value of duty cycle : </p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="dc_value"></p>
+                        </td>
+                        <td>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Duty cycle</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="dc_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="dc_slider"
+                                        step="1" value="0" oninput="dcSlider.changed()">
+                                </td>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="value-type" id="thermal_cycling" onmouseenter="update_help('thermal_cycling')">
+                            <p class="value-type-title">Value of Thermal cycling : </p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="tc_value"></p>
+                        </td>
+                        <td>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Temperature cycling</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="tc_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="tc_slider"
+                                        step="1" value="0" oninput="tcSlider.changed()">
+                                </td>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="value-type" id="others" onmouseenter="update_help('others')">
+                            <p class="value-type-title">Value of others : </p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="others_value"></p>
+                        </td>
+                        <td>
+                            <table>
+                                <td class="description-piOP">
+                                    <p>Others</p>
+                                </td>
+                                <td class="description-value-piOP">
+                                    <p id="others_description"></p>
+                                </td>
+                                <td class="controllers">
+                                    <input type="range" class="three-choice-slider" min="0" max="300" id="others_slider"
+                                        step="1" value="0" oninput="othersSlider.changed()">
+                                </td>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+
+    </table>
+
+    <p class="main-value-title">Value of &lambda;<sub>3</sub> : <a id="lambda3_value"></a> (FITS)</p>
+
+    <script type="text/javascript" src="../js/misc_failure_rate_sliders.js"></script>
+
+    <script>
+        let str = document.getElementById("lambda1_entry");
+        str.placeholder = "Enter the value of \u{03BB}\u{2081}";
+        let str2 = document.getElementById("lambda2_entry");
+        str2.placeholder = "Enter Kparameters";
+    </script>
+
+
+</body>
+
+</html>

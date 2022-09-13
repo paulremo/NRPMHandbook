@@ -1,0 +1,157 @@
+<!-- Copyright (C) Matrisk GmbH 2022 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test with JS</title>
+    <link rel="stylesheet" href="../css/map3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    
+    <div id="help">
+        <table>
+            <tr>
+                <td>
+                    <div id="astronaut">
+                        <img id="astroPicture" src="pictures/astronaut1.png" style="height: 160px;"/>
+                    </div>
+                </td>
+                <td>
+                    <div id="messages" class="message">
+                        <p class="help-message" id="messagesTrack">Hover an element or click it to get information</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <table class="formula-map">
+        <thead>
+            <th width="20%"></th>
+            <th width="20%"><button class="back-button" id="back_button" onclick="sf.backToMain()">Back</button></th>
+            <th width="20%"></th>
+            <th width="20%"></th>
+            <th width="20%"></th>
+        </thead>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="extra_1">
+                <div>
+                    <button class="tc-button" id="tcc_1_1" onclick="sf.clickedButton(this)">LOW</button>
+                    <button class="tc-button" id="tcc_2_1" onclick="sf.clickedButton(this)">MEDIUM</button>
+                    <button class="tc-button" id="tcc_3_1" onclick="sf.clickedButton(this)">HIGH</button>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="map-node">
+                <button class="map-button" id="1" onclick="sf.clickNode(this)" onmouseenter="sf.moved(this)">MAP</button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="extra_2">
+                <div>
+                    <button class="tc-button" id="tcc_1_2" onclick="sf.clickedButton(this)" >LOW</button>
+                    <button class="tc-button" id="tcc_2_2" onclick="sf.clickedButton(this)">MEDIUM</button>
+                    <button class="tc-button" id="tcc_3_2" onclick="sf.clickedButton(this)">HIGH</button>
+                </div>
+            </td>
+            <td class="map-node">
+                <button class="node-button" id="2" onclick="sf.clickNode(this)" onmouseenter="sf.moved(this)">NODE</button>
+            </td>
+            <td></td>
+            <td class="map-node">
+                <button class="node-button" id="3" onclick="sf.clickNode(this)" onmouseenter="sf.moved(this)">NODE</button>
+            </td>
+            <td id="extra_3" class="extra-space">
+                <div>
+                    <button class="tc-button" id="tcc_1_3" onclick="sf.clickedButton(this)" >LOW</button>
+                    <button class="tc-button" id="tcc_2_3" onclick="sf.clickedButton(this)">MEDIUM</button>
+                    <button class="tc-button" id="tcc_3_3" onclick="sf.clickedButton(this)">HIGH</button>
+                </div>
+                
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="central-node">
+                <button class="central-button" id="0" onclick="sf.clickNode(this)" onmouseenter="sf.moved(this)">CENTRAL</button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="extra_4">
+                <div>
+                    <button class="tc-button" id="tcc_1_4" onclick="sf.clickedButton(this)" >LOW</button>
+                    <button class="tc-button" id="tcc_2_4" onclick="sf.clickedButton(this)">MEDIUM</button>
+                    <button class="tc-button" id="tcc_3_4" onclick="sf.clickedButton(this)">HIGH</button>
+                </div>
+            </td>
+            <td class="map-node">
+                <button class="node-button" id="4" onclick="sf.clickNode(this)" onmouseenter="sf.moved(this)">NODE</button>
+            </td>
+            <td></td>
+            <td class="map-node">
+                <button class="node-button" id="5" onclick="sf.clickNode(this)" onmouseenter="sf.moved(this)">NODE</button>
+            </td>
+            <td id="extra_5">
+                <div>
+                    <button class="tc-button" id="tcc_1_5" onclick="sf.clickedButton(this)" >LOW</button>
+                    <button class="tc-button" id="tcc_2_5" onclick="sf.clickedButton(this)">MEDIUM</button>
+                    <button class="tc-button" id="tcc_3_5" onclick="sf.clickedButton(this)">HIGH</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td class="map-node">
+                <button class="node-button" id="6" onclick="sf.clickNode(this)">NODE</button>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="extra_6">
+                <div>
+                    <button class="tc-button" id="tcc_1_6" onclick="sf.clickedButton(this)" >LOW</button>
+                    <button class="tc-button" id="tcc_2_6" onclick="sf.clickedButton(this)">MEDIUM</button>
+                    <button class="tc-button" id="tcc_3_6" onclick="sf.clickedButton(this)">HIGH</button>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <div style="padding: 20px; margin-left: 100px;" id="entry-div">
+        <textarea id="entry_lambda_1" row = "1" col ="12" class="formula-entry" placeholder="Enter λ₁" oninput="sf.entryChanged(this)"></textarea>
+        <textarea id="entry_k_parameter" row = "1" col ="12" class="formula-entry" placeholder="Enter Kparameter" oninput="sf.entryChanged(this)"></textarea>
+    </div>
+
+    <script type="text/javascript" src="../js/map3.js"></script>
+
+</body>
+
+
+</html>

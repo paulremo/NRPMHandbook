@@ -1,0 +1,215 @@
+<!-- Copyright (C) Matrisk GmbH 2022 -->
+
+<!DOCTYPE html>
+<html style="overflow: hidden;">
+
+<head>
+    <title>Test with JS</title>
+    <link rel="stylesheet" href="../css/misc_failure_rate_buttons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">    
+</head>
+
+<body>
+
+    <div id="helpMFR">
+        <table>
+            <tr>
+                <td>
+                    <div id="astronaut">
+                        <img id="astroPicture" src="pictures/new_astronaut.svg" style="height: 8em;cursor: pointer;"/>
+                    </div>
+                </td>
+                <td>
+                    <div id="messages" class="message">
+                        <p class="help-message" id="messagesTrack">Hover an element or click it to get information</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <table class="customed-table">
+
+        <tr>
+            <td class="value-type-mfr" id="lambda_1">
+                <p class="value-type-mfr-title">Value of &lambda;<sub>1</sub> (FITs) </p>
+            </td>
+            <td class="value-processed">
+                <p id="lambda1_value"></p>
+            </td>
+            <td class="controllers">   
+                <textarea class="text-entry" id="lambda1_entry" name="story" rows="1" cols="6"></textarea><a style="margin-left: 50px;" id="lambda1_message"></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type-mfr" id="lambda_2">
+                <p class="value-type-mfr-title">Value of K<sub>parameter</sub></p>
+            </td>
+            <td class="value-processed">
+                <p id="lambda2_value"></p>
+            </td>
+            <td class="controllers">   
+                <textarea class="text-entry" id="lambda2_entry" name="story" rows="1" cols="12"></textarea><a style="margin-left: 50px;font-size: 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="lambda2_message"></a>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type-mfr" id="pi_Q">
+                <p class="value-type-mfr-title">Value of &Pi;<sub>Q</sub></p>
+            </td>
+            <td class="value-processed">
+                <p id="piQ_value"></p>
+            </td>
+            <td class="controllers">
+                <button class="red-button" id="low_piQ_button">LOW</button>
+                <button class="yellow-button" id="medium_piQ_button">MEDIUM</button>
+                <button class="green-button" id="high_piQ_button">HIGH</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type-mfr" id="pi_M">
+                <p class="value-type-mfr-title">Value of &Pi;<sub>M</sub></p>
+            </td>
+            <td class="value-processed">
+                <p id="piM_value"></p>
+            </td>
+            <td class="controllers">
+                <button class="red-button" id="low_piM_button">LOW</button>
+                <button class="yellow-button" id="medium_piM_button">MEDIUM</button>
+                <button class="green-button" id="high_piM_button">HIGH</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type-mfr" id="pi_T">
+                <p class="value-type-mfr-title">Value of &Pi;<sub>T</sub></p>
+            </td>
+            <td class="value-processed">
+                <p id="piT_value"></p>
+            </td>
+            <td>
+                <input type="checkbox" id="piT_checkbox">
+                <label for="piT_checkbox">Applicable</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type-mfr" id="pi_C">
+                <p class="value-type-mfr-title">Value of &Pi;<sub>C</sub></p>
+            </td>
+            <td class="value-processed">
+                <p id="piC_value"></p>
+            </td>
+            <td>
+                <input type="checkbox" id="piC_checkbox">
+                <label for="piC_checkbox">Applicable</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="value-type-mfr" id="pi_OP">
+                <p class="value-type-mfr-title">Value of &Pi;<sub>OP</sub></p>
+            </td>
+            <td class="value-processed">
+                <p id="piOP_value"></p>
+            </td>
+            <td>
+                <table class="customed-table">
+                    <tr>
+                        <td class="value-type-mfr" id="orbit">
+                            <p class="value-type-mfr-subtitle">Value of orbit</p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="orbit_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_orbit_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_orbit_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_orbit_button">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="value-type-mfr" id="temperature">
+                            <p class="value-type-mfr-subtitle">Value of temperature</p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="temperature_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_temperature_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_temperature_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_temperature_button">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="value-type-mfr" id="power">
+                            <p class="value-type-mfr-subtitle">Value of power</p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="power_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_power_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_power_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_power_button">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="value-type-mfr" id="thermal_cycling">
+                            <p class="value-type-mfr-subtitle">Value of thermal cycling</p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="tc_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_tc_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_tc_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_tc_button">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="value-type-mfr" id="duty_cycle">
+                            <p class="value-type-mfr-subtitle">Value of duty cycle</p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="dc_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_dc_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_dc_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_dc_button">FULL COMPLIANCE</button>
+                    </tr>
+                    <tr>
+                        <td class="value-type-mfr" id="others">
+                            <p class="value-type-mfr-subtitle">Value of others</p>
+                        </td>
+                        <td class="value-processed">
+                            <p id="others_value"></p>
+                        </td>
+                        <td>
+                            <button class="red-button" id="low_others_button">NO COMPLIANCE</button>
+                            <button class="yellow-button" id="medium_others_button">PARTIAL COMPLIANCE</button>
+                            <button class="green-button" id="high_others_button">FULL COMPLIANCE</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <p class="main-value-title">Value of &lambda;<sub>3</sub> : <a id="lambda3_value"></a> (FITs) </p>
+
+    <script type="text/javascript" src="../js/misc_failure_rate_buttons.js"></script>
+    <script type="text/javascript">runMFRbuttons();</script>
+    <script>
+        let str = document.getElementById("lambda1_entry");
+        str.placeholder = "Enter the value of \u{03BB}\u{2081}";
+    </script>
+
+</body>
+
+</html>

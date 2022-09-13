@@ -1,0 +1,147 @@
+/* Copyright (C) Matrisk GmbH 2022*/
+
+.topnav-pi-process-RFHF {
+    width: 100%;
+    background-color: #092B33;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav-pi-process-RFHF td.cat-name-RFHF p {
+    text-transform: uppercase;
+}
+
+.topnav-pi-process-RFHF td.cat-name-RFHF img {
+    float: none;
+}
+
+.topnav-pi-process-RFHF td {
+    color: #f2f2f2;
+    text-align: left;
+    text-decoration: none;
+    font-size: 0.9em;
+    width: fit-content;
+    height: 3em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#questions-RFHF {
+    width: 60%;
+    border-width: 0;
+    border-collapse: collapse;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch .switch-check {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.inner-span-switch {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch-check:checked+.switch-slider {
+    background-color: #098324;
+}
+
+.switch-check:focus+.switch-slider {
+    box-shadow: 0 0 1px #098324;
+}
+
+.inner-span-switch-on {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.inner-span-switch-start {
+    left: 17px;
+}
+
+#pi_process_RFHF_table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#pi_process_RFHF_table td{
+    padding-block: 0.3em;
+    vertical-align: middle;
+}
+
+.header_RFHF{
+    background-color: #092B33;
+    color: white;
+    border-color: #092B33;
+    border-width: 0.5px 0px;
+}
+
+.question_id_RFHF{
+    width: 5%;
+    text-align: center;
+    background-color: #092B33;
+    color: white;
+}
+
+.question_criteria_RFHF{
+    text-align: justify;
+    padding-inline: 1em;
+    border-color: cadetblue;
+    border-width: 0.5px 0px;
+    border-style: double;
+}
+
+.question_application_RFHF{
+    width: fit-content;
+    padding-inline: 1em;
+    text-align: center;
+    border-color: cadetblue;
+    border-width: 0.5px 0px;
+    border-style: double;
+}
+
+#result_RFHF{
+    width: fit-content;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-inline: 1em;
+    padding-inline: 1em;
+    padding-block: 5px;
+    border-color: #092B33;
+    border-width: 0px 0px 0.5px 0px;
+    border-style: double;
+    color: #092B33;
+    vertical-align: middle;
+}

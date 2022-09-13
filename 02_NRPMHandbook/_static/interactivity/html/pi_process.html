@@ -1,0 +1,270 @@
+<!-- Copyright (C) Matrisk GmbH 2022 -->
+
+<!DOCTYPE html>
+<html style="overflow-x: hidden;overflow-y: scroll !important;height: fit-content;min-height: fit-content;">
+
+<head>
+    <title>Pi Process NRPM</title>
+    <link rel="stylesheet" href="../css/pi_process.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div style="width: 100%; height: fit-content; font-family: Arial, Helvetica, sans-serif;">
+        <div id="overlay">
+            <div class="infoBox">
+                <table class="informationGrid">
+                    <tr>
+                        <td width="30%">
+                            <img src="pictures/new_astronaut_happy.svg" width="80%" style="margin-top: 20%;" />
+                        </td>
+                        <td width="70%">
+                            <div id="text">
+                                <p>Welcome to the Π<sub>process</sub> calculation interface!</p>
+                                <p class="help-message-pi-process" style="display: none;">Here you can aswer the
+                                    different questions to calculate the value of the factor
+                                    Π<sub>process</sub> by selecting one of the four options.</p>
+                                <p class="help-message-pi-process" style="display: none;">Click the planets <a><img
+                                            src="pictures/pi_process/emptyPlanet.svg" width="20em" /></a>
+                                    at
+                                    the top to access the different categories.</p>
+                                <p class="help-message-pi-process" style="display: none;">Click the button "Learn more"
+                                    to get more information on the question (FIDES
+                                    reference,
+                                    recommendation, weight).</p>
+                                <p class="help-message-pi-process" style="display: none;">The indications <a
+                                        style="color:darkgoldenrod;">MAX, |, MIN and FXD</a> indicate the
+                                    recommended level(s) for your application.</p>
+                                <p class="help-message-pi-process" style="display: none;">You can save your answers by
+                                    clicking the pink button "Save answers". This will copy
+                                    your
+                                    answers in the clipboard and save a txt file containing your answers.
+                                    Then you can load the answers by pasting this value in the text input below.</p>
+                                <p class="help-message-pi-process" style="display: none;">You can also download a csv
+                                    sum up file of your answers.</p>
+                                <div id="modeInput">
+                                    <p>Before starting, please chose your configuration below:</p>
+                                    <table id="parameter-table">
+                                        <tr class="mode-box">
+                                            <td class="parameter-title">NEW SPACE :</td>
+                                            <td>
+                                                <input type="radio" id="application-choice-yes"
+                                                    class="application-choice" /><label
+                                                    for="application-choice-yes">YES</label>
+                                            </td>
+                                            <td>
+                                                <input type="radio" id="application-choice-no"
+                                                    class="application-choice" /><label
+                                                    for="application-choice-no">NO</label>
+                                            </td>
+                                        </tr>
+                                        <tr class="status-box">
+                                            <td class="parameter-title">STATUS :</td>
+                                            <td>
+                                                <input type="radio" id="mode-choice-subco" class="mode-choice" /><label
+                                                    for="mode-choice-subco">SUBCONTRACTOR</label>
+                                            </td>
+                                            <td>
+                                                <input type="radio" id="mode-choice-prime" class="mode-choice" /><label
+                                                    for="mode-choice-prime">PRIME</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="answers-input" id="answersInput">
+                                    <a style="margin-left: 5px; font-size: 1.2em;">Paste copied answers to load your
+                                        saved answers.</a><input type="text" id="question-load"
+                                        placeholder="Paste answers here" /><button
+                                        id="question-load-button">Load</button>
+                                </div>
+                                <div>
+                                    <button id="start"
+                                        style="width: 20%;font-size: 1.2em;border-radius: 0.5em;background-color: #006a23;color: white; margin-top: 1em;cursor: pointer;">Start</button>
+                                    <button id="resume"
+                                        style="width: 20%;font-size: 1.2em;border-radius: 0.5em;background-color: #000000;color: white; margin-top: 1em;cursor: pointer;display: none;">Resume</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="mainDiv">
+
+            <table class="topnav-pi-process">
+                <tr>
+                    <td class="planet" id="planetBox1">
+                        <img style="vertical-align:middle; height: 2.5em;" src="pictures/pi_process/emptyPlanet.svg"
+                            id="planet1" class="planetPicture">
+                        <br><span id="cat-name-1">SPECIFICATION</span>
+                    </td>
+                    <td class="planet" id="planetBox2">
+                        <img style="vertical-align:middle; height: 2.5em;" src="pictures/pi_process/emptyPlanet.svg"
+                            id="planet2" class="planetPicture">
+                        <br><span id="cat-name-2">DESIGN</span>
+                    </td>
+                    <td class="planet" id="planetBox3">
+                        <img style="vertical-align:middle; height: 2.5em;" src="pictures/pi_process/emptyPlanet.svg"
+                            id="planet3" class="planetPicture">
+                        <br><span id="cat-name-3">MANUFACTURING OF BOARD - SUBASSEMBLY</span>
+                    </td>
+                    <td class="planet" id="planetBox4">
+                        <img style="vertical-align:middle; height: 2.5em;" src="pictures/pi_process/emptyPlanet.svg"
+                            id="planet4" class="planetPicture">
+                        <br><span id="cat-name-4">INTEGRATION INTO EQUIPMENT</span>
+                    </td>
+                    <td class="planet" id="planetBox5">
+                        <img style="vertical-align:middle; height: 2.5em;" src="pictures/pi_process/emptyPlanet.svg"
+                            id="planet5" class="planetPicture">
+                        <br><span id="cat-name-5">INTEGRATION INTO SYSTEM</span>
+                    </td>
+                    <td class="planet" id="planetBox6">
+                        <img style="vertical-align:middle; height: 2.5em;" src="pictures/pi_process/emptyPlanet.svg"
+                            id="planet6" class="planetPicture">
+                        <br><span id="cat-name-6">OPERATION AND MAINTENANCE</span>
+                    <td class="planet" id="planetBox7">
+                        <img style="vertical-align:middle; height: 2.5em;" src="pictures/pi_process/emptyPlanet.svg"
+                            id="planet7" class="planetPicture">
+                        <br><span id="cat-name-7">SUPPORT ACTIVITIES</span>
+                    </td>
+                </tr>
+
+            </table>
+
+            <table id="answers-box">
+                <tr>
+                    <td><button
+                            style="font-size:24px; border-radius: 20px;background-color: white; color: darkred;margin-right: 5px;cursor: pointer;"
+                            title="Help" id="helpPiProcess"><i class="fa fa-question-circle"></i></button><a
+                            id="mode-indication" style="text-transform: uppercase;"></a></td>
+                    <td>
+                        <button class="badge" id="pi-process-box" disabled>Pi process : </button>
+                    </td>
+                    <!--<td id="progressStars">
+                    <i class="fa fa-star fa-2x progress-star" id="star1"></i>
+                    <i class="fa fa-star fa-2x progress-star" id="star2"></i>
+                    <i class="fa fa-star fa-2x progress-star" id="star3"></i>
+                    <i class="fa fa-star fa-2x progress-star" id="star4"></i>
+                    <i class="fa fa-star fa-2x progress-star" id="star5"></i>
+                    <i class="fa fa-star fa-2x progress-star" id="star6"></i>
+                    <i class="fa fa-star fa-2x progress-star" id="star7"></i>
+                </td>-->
+                    <td>
+                        <button class="extra-interactor" id="copyAnswers">Copy answers <i class="fa fa-download"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="extra-interactor" id="sumUpAnswers">Sum up sheet</button>
+                    </td>
+                    <td>
+                        <button class="extra-interactor" id="reload_button_process" onclick="window.location.reload();"><i class="fa fa-refresh"></i> Reload</button>
+                    </td>
+                </tr>
+            </table>
+
+            <table id="quiz">
+                <tr>
+                    <td rowspan="5" id="left-button" class="nav-button">&#10094;</td>
+                    <td id="questionId">Question <a id="qId"></a> (<a id="qCount"></a>/<a id="qTotal"></a>)</td>
+                    <td>
+                        <div id="myProgress">
+                            <span id="category-title">Category</span>
+                            <div id="myBar"></div>
+                        </div>
+
+                    </td>
+                    <td rowspan="5" id="right-button" class="nav-button">&#10095;</td>
+                </tr>
+                <tr>
+                    <td><img src="pictures/new_astronaut.svg" id="astronautPicture" /></td>
+                    <td id="questionBox">Question</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" class="collapsible-help" id="learnMore"><i class="fa fa-info-circle"></i>
+                            Learn
+                            More<span style="float: right;">+</span></button>
+                        <div class="content">
+                            <div>
+                                <p><b><u>Reference : </u></b></p>
+                                <p id="number"></p>
+                                <p><b><u>Recommendation : </u></b></p>
+                                <p id="recommandation"></p>
+                                <p><b><u>Weight : </u></b></p>
+                                <p id="weight"></p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table id="choices">
+                            <tr class="choice-option">
+                                <td class="choice-level">L4</td>
+                                <td style="text-align: center;"><button class="choice-description" id="choice4">Choice
+                                        4</button></td>
+                                <td class="recom" id="recommendation4"></td>
+                            </tr>
+                            <tr>
+                                <td class="choice-level">L3</td>
+                                <td style="text-align: center;"><button class="choice-description" id="choice3">Choice
+                                        3</button></td>
+                                <td class="recom" id="recommendation3"></td>
+                            </tr>
+                            <tr>
+                                <td class="choice-level">L2</td>
+                                <td style="text-align: center;"><button class="choice-description" id="choice2">Choice
+                                        2</button></td>
+                                <td class="recom" id="recommendation2"></td>
+                            </tr>
+                            <tr>
+                                <td class="choice-level">L1</td>
+                                <td style="text-align: center;"><button class="choice-description" id="choice1">Choice
+                                        1</button></td>
+                                <td class="recom" id="recommendation1"></td>
+                            </tr>
+                            <tr>
+                                <td class="choice-level"></td>
+                                <td style="text-align: center;"><button class="choice-description-na"
+                                        id="not-applicable">Non
+                                        applicable</button></td>
+                                <td class="recom" id="recommendationNA"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div>
+                            <table id="pages">
+                                <tr id="pages-box"></tr>
+                            </table>
+                            <!--<div id="pages">
+                                <div id="pages-box"></div>
+                            </div>-->
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../js/questions.js"></script>
+    <script type="text/javascript" src="../js/comments.js"></script>
+    <script type="text/javascript" src="../js/recom.js"></script>
+    <script type="text/javascript" src="../js/pi_process.js"></script>
+    <script type="text/javascript">runPiProcess();</script>
+
+    <script type="text/javascript">
+        window.onbeforeunload = function () {
+            return "Be careful, if you reload this page you will lose your answers. Please Save them before leaving.";
+        }
+    </script>
+
+</body>
+
+</html>
