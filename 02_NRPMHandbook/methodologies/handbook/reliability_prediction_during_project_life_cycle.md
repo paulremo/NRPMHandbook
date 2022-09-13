@@ -667,7 +667,7 @@ In the following, the process steps to support the establishment of appropriate 
     - Launcher, Launch base
 ```
 
-Within each class, the missions can be further categorized based on the following criteria **[RD19]** :
+Within each class, the missions can be further categorized based on the following criteria {cite:p}`methodo-TASF-RAMS-0010`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-11')" placeholder="Search table...">
 
