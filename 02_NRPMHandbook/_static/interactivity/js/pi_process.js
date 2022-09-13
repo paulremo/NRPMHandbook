@@ -677,7 +677,6 @@ function runPiProcess() {
                 setFreeOptionStyle(pb);
             }
         }
-        document.getElementById("number").innerHTML = id;
         document.getElementById("recommandation").innerHTML = recommandation;
         document.getElementById("weight").innerHTML = weight;
 
