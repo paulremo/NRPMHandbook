@@ -18,7 +18,7 @@ This section presents various system reliability modelling techniques such as re
     - Inputs/Outputs
 *   - **RBD** See {numref}`syst_4_3_2`, **{term}`FTA`** See {numref}`syst_4_3_2`
     - They are well suited for systems with non-repairable components following independent behaviour. The methods RBD and {term}`FTA` should be used for system reliability analysis if the system can be represented as a serial or parallel arrangement or a combination of both without dependencies. 
-    - <p>Repair, sequences, re-configuration and dependencies cannot be modelled.</p><p>The calculation rules are identical for RBD and {term}`FTA`, just the graphical presentation of the system behaviour is different.</p>
+    - <p>Repair, sequences, re-configuration and dependencies cannot be modelled.</p><p>The calculation rules are identical for RBD and FTA, just the graphical presentation of the system behaviour is different.</p>
     - <p>Inputs: System architecture, component or sub-system failure rates/reliabilities</p><p>Output: System Reliability</p>
 *   - **Event Tree Analysis** See Section {numref}`syst_4_3_3`
     - Analyse the sequence of events following an initiating event

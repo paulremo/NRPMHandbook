@@ -252,7 +252,7 @@ To use the reliability model it is, first, necessary to assess that the {term}`m
             <td>
                 <p>Based on Manufacturer data.</p>
                 <p>Mechanical models for structural failure mechanisms and radiation
-                    {term}`degradation <Degradation>` (wear-out).</p>
+                    degradation (wear-out).</p>
             </td>
         </tr>
         <tr>

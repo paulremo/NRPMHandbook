@@ -231,7 +231,7 @@ The observations of the number of anomalies for each subsystem can be used to es
 
 This probability can be modelled by a multinomial sampling distribution. The conjugate prior is a multivariate generalization of the beta distribution and known as Dirichlet distribution:
 
-> $f\left( p_{i,\text{subsystem}} \vee \text{{term}`anomaly <Anomaly>`} \right) = \frac{\Gamma\left( \sum_{i = 1}^{12}\eta_{i} \right)}{\prod_{i = 1}^{12}{\Gamma\left( \eta_{i} \right)}}\prod_{i = 1}^{12}p_{i}^{\eta_{i} - 1}$
+> $f\left( p_{i,\text{subsystem}} \vee \text{Anomaly} \right) = \frac{\Gamma\left( \sum_{i = 1}^{12}\eta_{i} \right)}{\prod_{i = 1}^{12}{\Gamma\left( \eta_{i} \right)}}\prod_{i = 1}^{12}p_{i}^{\eta_{i} - 1}$
 
 where $\eta_{i}$ represent the parameters of the Dirichlet distribution for the 12 subsystems.
 
