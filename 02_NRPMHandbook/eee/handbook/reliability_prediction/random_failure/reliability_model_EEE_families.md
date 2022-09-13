@@ -6112,7 +6112,7 @@ For components with more than 256 leads, the recommendation for the parameters *
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_90')"
     placeholder="Search table...">
 
-```{list-table} Parameters a and b for components with 0 to 256 leads.
+```{list-table} Parameters a and b for components with more than 256 leads.
 :name: eee-table4-91
 
 * - <table class="myTable" id="">
