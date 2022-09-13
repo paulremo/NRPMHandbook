@@ -12977,7 +12977,7 @@ All other basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}
 :name: eee-table4-176
 
 * - <table class="myTable" id="eee_table4_176">
-        <thead>
+       <thead>
             <th><strong>Direct current IF maximum</strong></th>
             <th><strong>SMD or Through hole</strong></th>
             <th colspan="2"><strong>Case type</strong></th>
@@ -12989,9 +12989,9 @@ All other basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}
         </thead>
         <tr>
             <td rowspan="13">IF &lt; 150mA</td>
-            <td rowspan="13">Through SMD</td>
+            <td rowspan="2">Through</td>
             <td>T1-x</td>
-            <td rowspan="7">Plastic</td>
+            <td rowspan="9">Plastic</td>
             <td>2 to 4</td>
             <td rowspan="13">0.0034</td>
             <td rowspan="13">0.0104</td>
@@ -13003,6 +13003,7 @@ All other basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}
             <td>4</td>
         </tr>
         <tr>
+            <td rowspan="11">SMD</td>
             <td>Chip</td>
             <td>2</td>
         </tr>
