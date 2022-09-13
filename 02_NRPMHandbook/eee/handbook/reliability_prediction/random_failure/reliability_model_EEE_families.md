@@ -3798,7 +3798,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 </table>
 
 (eee_4_3_4_5)=
-## Filters family 05
+## Filters (family 05)
 
 Filters are classified as family 05 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
