@@ -5767,8 +5767,8 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - Type
     - Groups
     - $\lambda_{\text{OTH}}$
-*   - Si, Ge Integrated Circuit
-    -
+*   - **Si, Ge Integrated Circuit**
+    - 
     - 
 *   - Si RF and {term}`HF` (MOS) analogue circuit (power amplifier)
     -
@@ -5779,7 +5779,7 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
 *   - Si, SiGe RF and digital circuit (MOS, bipolar {term}`BiCMOS`)
     -
     - 0.04
-*   - {term}`GaAs` Integrated Circuit
+*   - **{term}`GaAs` Integrated Circuit**
     -
     - 
 *   - {term}`GaAs`, RF and {term}`HF` analogue circuit (power amplifier)
