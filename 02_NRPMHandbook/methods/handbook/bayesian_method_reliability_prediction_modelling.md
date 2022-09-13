@@ -107,7 +107,7 @@ L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i 
 ```
 ````
 
-The selection of an appropriate distributional model for the sampling distribution $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$ follows the same principles as in the case of model development using {term}`statistical methods <Statistical method>` ({numref}`method_6_4_2`), or for the basic variable modelling required for probabilistic {term}`Physics of Failure <Physics of failure>` methods ({numref}`method_6_5_2`). A formal comparison of different competing distribution types can be achieved with the aid of Bayesian information criteria **\[BR21\]**.
+The selection of an appropriate distributional model for the sampling distribution $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$ follows the same principles as in the case of model development using {term}`statistical methods <Statistical method>` ({numref}`method_6_4_2`), or for the basic variable modelling required for probabilistic {term}`Physics of Failure <Physics of failure>` methods ({numref}`method_6_5_2`). A formal comparison of different competing distribution types can be achieved with the aid of Bayesian information criteria {cite:p}`method-Gelman2013`.
 
 In addition to the selection of a distribution type, aspects of truncation and censoring may have to be considered, as will be discussed below.
 
@@ -237,9 +237,9 @@ A non-informative or vague prior provides no or very little (negligible) informa
 
 Non-informative priors can be selected based on the following principles:
 
--   In case that only one parameter needs to be estimated, a Jeffreys prior can be used **\[BR22\]**.
+-   In case that only one parameter needs to be estimated, a Jeffreys prior can be used {cite:p}`method-jeffreys`.
 
--   If the problem is multivariate, then a reference prior (vague prior) can be used **\[BR23\]**.
+-   If the problem is multivariate, then a reference prior (vague prior) can be used {cite:p}`method-Gelman2013`.
 
 An example for the use of a Jeffreys prior for Bayesian updating in the case of an Exponential time-to-failure model is:
 
@@ -285,7 +285,7 @@ Relation between different types of reliability prediction methods and the avail
 (method_7_5_1)=
 ### Analytical approach with conjugate prior
 
-In general, when applying Bayes theorem for updating, the prior distribution and the posterior distribution of the random hyper-parameters (e.g. the failure rate) do not have the same distribution type. A prior that does not change the distribution type from prior to posterior is called a conjugate prior; an analytical solution is possible if a conjugate prior exists **\[BR24\]**. Conjugate priors are available for several distributions, see {numref}`method-table7-2` for some models that are of relevance in reliability applications. The use of the table can be explained as followed:
+In general, when applying Bayes theorem for updating, the prior distribution and the posterior distribution of the random hyper-parameters (e.g. the failure rate) do not have the same distribution type. A prior that does not change the distribution type from prior to posterior is called a conjugate prior; an analytical solution is possible if a conjugate prior exists {cite:p}`method-Fink1997ACO`. Conjugate priors are available for several distributions, see {numref}`method-table7-2` for some models that are of relevance in reliability applications. The use of the table can be explained as followed:
 
 -   **Sampling distribution**\
     This is the distribution of the observable variable for which data is available for updating (e.g. time to failure), see {numref}`method_7_3`. The analytic formulas in {numref}`method-table7-2` are only applicable if the likelihood is formulated without censoring and truncation.
@@ -592,11 +592,11 @@ The Chi-Square estimator is thus for the case that no observation is made equal 
 (method_7_5_2)=
 ### Numerical approach using Markov Chain Monte Carlo Methods
 
-In case where no analytical solution is available, numerical approaches can be used. In the Bayesian rule (Eq. {eq}`Equation_method_7_21` in {numref}`method_7_1` the likelihood function and the prior density function are known and can be easily calculated. For calculating the posterior function, the denominator needs to be solved which is in general analytically not possible and numerically difficult. This problem is solved by a class of numerical algorithms, the so-called Markov Chain Monte Carlo (MCMC) methods **\[BR25\]**. These methods are independent from the distribution of the prior density function and the formulation of the Likelihood function, and can be applied to a wide class of problems.
+In case where no analytical solution is available, numerical approaches can be used. In the Bayesian rule (Eq. {eq}`Equation_method_7_21` in {numref}`method_7_1` the likelihood function and the prior density function are known and can be easily calculated. For calculating the posterior function, the denominator needs to be solved which is in general analytically not possible and numerically difficult. This problem is solved by a class of numerical algorithms, the so-called Markov Chain Monte Carlo (MCMC) methods {cite:p}`method-Dezfuli2009BayesianIF`. These methods are independent from the distribution of the prior density function and the formulation of the Likelihood function, and can be applied to a wide class of problems.
 
 Besides offering full flexibility in terms of prior and sampling distributions, MCMC methods can also be used for the development of more complex probabilistic models, such as e.g. hierarchical models to combine different non-homogeneous data samples.
 
-Several MCMC programs and toolboxes are available, e.g. WinBUGS/OpenBUGS **\[BR26\]**, JAGS **\[BR27\]** or Stan **\[BR28\]**, to mention just a few. An introduction and overview on the use of Bayesian methods in a reliability context, using many MCMC examples, can be found in a NASA guide dedicated to Bayesian methods for risk and reliability **\[BR29\]**, including the following topics:
+Several MCMC programs and toolboxes are available, e.g. WinBUGS/OpenBUGS {cite:p}`method-bugs`, JAGS {cite:p}`method-jags` or Stan {cite:p}`method-stan`, to mention just a few. An introduction and overview on the use of Bayesian methods in a reliability context, using many MCMC examples, can be found in a NASA guide dedicated to Bayesian methods for risk and reliability {cite:p}`method-Dezfuli2009BayesianIF`, including the following topics:
 
 -   {term}`Bayesian inference <Bayesian inference>` for common time-to-failure models
 
@@ -705,7 +705,7 @@ Once the distributional models have been chosen (e.g. Exponential or Weibull sam
 
 As a first step, the statistical background and methodology underlying a handbook needs to be reviewed in order to determine whether the prediction may be seen as a mean value or rather as conservative estimate such as an upper confidence bound for the failure rate. Unfortunately, this is not always clearly defined in the handbooks. A common assumption is to take the handbook values as 60% confidence estimates for the failure rate if no alternative definition is available (see e.g. {cite:p}`method-ECSS-Q-ST-30C`).
 
-In addition, the uncertainty of the predicted failure rate needs to be quantified based on the information given in a handbook and/or expert judgement. Many handbooks do not provide confidence bounds for the failure rate, as the estimates are based on a combination of various data sets and not all uncertainties associated with the prediction are of statistical origin. An alternative approach is to treat the ratio between the "observed" and the "predicted" (based on a handbook) failure rate as a random variable, covering all uncertainties associated with the prediction method. Quantitative estimates for this ratio are provided e.g. in the NPRD data handbook {cite:p}`method-NPRD-16` , in {cite:p}`method-HDBK-217Plus` , and in **\[BR30\]** for calculations based on the FIDES guide {cite:p}`method-UTE-C80-811` . The figures provided may serve as rough approximation for the "{term}`model uncertainty <Model uncertainty>`" of the considered handbook methods and possibly also for other, similar reliability handbooks.
+In addition, the uncertainty of the predicted failure rate needs to be quantified based on the information given in a handbook and/or expert judgement. Many handbooks do not provide confidence bounds for the failure rate, as the estimates are based on a combination of various data sets and not all uncertainties associated with the prediction are of statistical origin. An alternative approach is to treat the ratio between the "observed" and the "predicted" (based on a handbook) failure rate as a random variable, covering all uncertainties associated with the prediction method. Quantitative estimates for this ratio are provided e.g. in the NPRD data handbook {cite:p}`method-NPRD-16` , in {cite:p}`method-HDBK-217Plus` , and in **\[BR30\]** for calculations based on the FIDES guide {cite:p}`method-UTE-C80-811`. The figures provided may serve as rough approximation for the "{term}`model uncertainty <Model uncertainty>`" of the considered handbook methods and possibly also for other, similar reliability handbooks.
 
 (method_7_6_3)=
 ### Prior definition based on expert elicitation
