@@ -116,7 +116,7 @@ function runCvCalculator() {
     }
 
     function runTechnoCV(){
-        document.getElementById("intermediary_cv_value_output").innerHTML = cv_value.toExponential();
+        document.getElementById("intermediary_cv_value_output").innerHTML = cv_value.toExponential(3);
         document.getElementById("techno_limit_input").style.display = "block";
     }
 
