@@ -129,7 +129,7 @@ Time invariant reliability problems - i.e. problems without the need to consider
 
 * Both strength $X_{1}$ and stress $X_{2}$ are approximated by a Normal distribution
 * Both strength $X_{1}$ and stress $X_{2}$ are approximated a Lognormal distribution
-* The variability of one of the two variables (typically the Strength $X_{1}$) is negligible compared to the variability of the other variable, allowing for an approximate analytic solution
+* The variability of one of the two variables (typically the strength $X_{1}$) is negligible compared to the variability of the other variable, allowing for an approximate analytic solution
 
 In the following, closed-form solutions are given for these three cases. The choice of distributional assumptions should, however, not be driven by mathematical convenience, especially considering the limited effort required to perform an analysis for this simple limit state function, using numerical methods like {term}`FORM` or Monte Carlo Analysis, which offer full flexibility in terms of distributional assumptions.
 
