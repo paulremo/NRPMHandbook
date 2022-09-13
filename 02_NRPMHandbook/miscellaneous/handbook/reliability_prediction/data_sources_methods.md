@@ -96,7 +96,7 @@ Several tests are recommended to verify the reliability of the one-shot devices:
 (misc_5_3_3_2)=
 ### Wear-out characterization
 
-Regarding wear-out, the {term}`miscellaneous items <Miscellaneous item>` should be qualified versus specified lifetime and ground lifetime as per {cite:t}`mis-ECSS-E-ST-33-01C`, implementing a safety factor (number of elements, number of tests). The results of these tests are considered as evidence, with a certain {term}`level of confidence <Level of confidence>`, that no wear occurs before the end of the specified lifetime (or better that no performances {term}`degradation <Degradation>` impacts the mission of the item).
+Regarding wear-out, the {term}`miscellaneous items <Miscellaneous item>` should be qualified versus specified lifetime and ground lifetime as per {cite:p}`mis-ECSS-E-ST-33-01C`, implementing a safety factor (number of elements, number of tests). The results of these tests are considered as evidence, with a certain {term}`level of confidence <Level of confidence>`, that no wear occurs before the end of the specified lifetime (or better that no performances {term}`degradation <Degradation>` impacts the mission of the item).
 
 
 (misc_5_3_4)=
@@ -104,7 +104,7 @@ Regarding wear-out, the {term}`miscellaneous items <Miscellaneous item>` should 
 
 {term}`Physics of failure <Physics of failure>` can be used to identify the dominating {term}`failure mechanisms <Failure mechanism>` of the {term}`miscellaneous items <Miscellaneous item>`. This approach should be used when no data are available and pertinent enough to populate a reliability model with accuracy. It is the case for a new development with innovative technology for which no statistical data exist.
 
-Use of {term}`Design FMEA` / {term}`Process FMEA` could be helpful, and is recommended, to identify the causes (design, manufacturing) of the {term}`failure mechanisms <Failure mechanism>` and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A {term}`RPN` metric (Risk Priority Number) is derived (refer to standard {cite:t}`mis-PFMEA`) and risk mitigation actions set up in order to reduce the {term}`RPN` to an acceptable level, i.e. under a certain level of probability of occurrence.
+Use of {term}`Design FMEA` / {term}`Process FMEA` could be helpful, and is recommended, to identify the causes (design, manufacturing) of the {term}`failure mechanisms <Failure mechanism>` and their criticality in terms of mission severity, failure occurrence likelihood and detectability on ground. A {term}`RPN` metric (Risk Priority Number) is derived (refer to standard {cite:p}`mis-PFMEA`) and risk mitigation actions set up in order to reduce the {term}`RPN` to an acceptable level, i.e. under a certain level of probability of occurrence.
 
 When it is not possible to derive the probability of occurrence of a {term}`failure mechanism <Failure mechanism>` based on {term}`PoF`, engineering judgement, with experts, is recommended with associated justification.
 

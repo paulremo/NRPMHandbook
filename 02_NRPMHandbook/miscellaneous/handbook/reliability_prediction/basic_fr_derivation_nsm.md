@@ -17,11 +17,11 @@ After the first item characterization, a {term}`Design FMEA` and a {term}`Proces
 1. Design errors and
 2. Manufacturing errors.
 
-It is recommended to use the {cite:t}`mis-SAE_standard, mis-PFMEA` which provides the method to apply for a {term}`Design FMEA` / {term}`Process FMEA`. {term}`Process FMEA` is also specified in {cite:t}`mis-ECSS-Q-ST-30-02C`.
+It is recommended to use the {cite:p}`mis-SAE_standard, mis-PFMEA` which provides the method to apply for a {term}`Design FMEA` / {term}`Process FMEA`. {term}`Process FMEA` is also specified in {cite:p}`mis-ECSS-Q-ST-30-02C`.
 
 **FMEA: Required for every unit**
 
-* Is a tool/method supporting the design of the unit, identifying all the elementary “{term}`failure modes <Failure mode>`” due to “_{term}`random failure <Random failure>`” (part intrinsic reliability)_ as defined in the {term}`failure mode <Failure mode>` list (refer to {cite:t}`mis-ECSS-Q-ST-30-02C`). 
+* Is a tool/method supporting the design of the unit, identifying all the elementary “{term}`failure modes <Failure mode>`” due to “_{term}`random failure <Random failure>`” (part intrinsic reliability)_ as defined in the {term}`failure mode <Failure mode>` list (refer to {cite:p}`mis-ECSS-Q-ST-30-02C`). 
 * **@unit level**: under supplier responsibility
 * **@system level**: integrated at system level by System {term}`RAMS` engineer (including HSIA supporting the failure tolerance: observability in-orbit…)
 

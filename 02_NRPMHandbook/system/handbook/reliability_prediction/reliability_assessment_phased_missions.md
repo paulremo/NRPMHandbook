@@ -40,14 +40,14 @@ Depending on the success criteria the system could include:
 
 In case of phase independent success criteria, the methods described in {numref}`syst_4_3` can be used and no special treatment is required. However, the failure rates of the functional blocks of the system may depend on the phase, as a consequence of different loads applied in different mission phases. Phase dependent component reliability is considered in {numref}`syst_4_4_2`. 
 
-There are several reasons for reconfiguration and changes in success criteria from phase to phase {cite:t}`sys-Somani1994PhasedmissionSA`, which in the end could result in a situation where some combination of failures of components leads to failure of the system in one phase, whereas the same combination does not lead to failure in another phase.
+There are several reasons for reconfiguration and changes in success criteria from phase to phase {cite:p}`sys-Somani1994PhasedmissionSA`, which in the end could result in a situation where some combination of failures of components leads to failure of the system in one phase, whereas the same combination does not lead to failure in another phase.
 - A component is used in all phases but its operational level .term}`requirement <Requirement>`s may change. In this case, no special treatment is required for this component. The definition of operation or failed state depends on the success criteria.
 - A component is used in consecutive phases starting with one phase, and is then not needed for system operation in the remaining phases.
 - A component is required to remain operational for some phase, is not needed for the operation of a few phases and is then required again for system operation.
 - Spare or operational redundant modules corresponding to one subsystem become spare or redundant modules for another subsystem.
 
 
-To derive the appropriate success criteria for the reliability analysis of phased mission the phase transition needs to be considered. Depending on the success criteria of the consecutive phase there could be cases where the system state may change at the time of phase transition. The following scenarios of phase transitions could be considered {cite:t}`sys-Somani1994PhasedmissionSA`:
+To derive the appropriate success criteria for the reliability analysis of phased mission the phase transition needs to be considered. Depending on the success criteria of the consecutive phase there could be cases where the system state may change at the time of phase transition. The following scenarios of phase transitions could be considered {cite:p}`sys-Somani1994PhasedmissionSA`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst_table4_7')" placeholder="Search table...">
 
@@ -93,7 +93,7 @@ If wear-out has to be considered please refer to {numref}`syst_4_8`.
 (syst_4_4_3)=
 ## Combinatorial methods for phased mission based on mini-components
 
-The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms {cite:t}`sys-Esary1975ReliabilityAO` proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in {numref}`Figure_7_25`. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases. 
+The analytical methods assume that all components are independent in each phase. But each individual component is used in the different phases and dependency exists across the phases. To account for these dependencies across mission phases Esary and Ziehms {cite:p}`sys-Esary1975ReliabilityAO` proposed replacing the component in each phase with a system of components, so called mini-components, performing independently and in series, as shown in {numref}`Figure_7_25`. That means the component A is operational in phase j only if it has not failed in all previous phases, assuming a non-repairable system. Alternatively, the phase mission system can be calculated as serial system of the individual phases. 
 
 ```{figure} ../../picture/figure4_25.png
 ---
@@ -123,7 +123,7 @@ name: Figure_7_27
 Single phase mission model
 ```
 
-The initial configurations for the three phases have been transformed to a single reliability block diagram comprising three sub-systems in a series arrangement. Since the subsystems will generally have components in common, they will not function independently {cite:t}`sys-Somani1994PhasedmissionSA`. The reliability of each phase is obtained from the following equations:
+The initial configurations for the three phases have been transformed to a single reliability block diagram comprising three sub-systems in a series arrangement. Since the subsystems will generally have components in common, they will not function independently {cite:p}`sys-Somani1994PhasedmissionSA`. The reliability of each phase is obtained from the following equations:
 
 ````{admonition} Equation
 :class: equation
@@ -170,7 +170,7 @@ q_{ij} = P\left(x_{i}\left(t_{j}\right) = 1 | x_{i}\left(t_{j-1}\right) = 1\righ
 (syst_4_4_4)=
 ## Boolean phase algebra
 
-The before mentioned methods consider the failure of components in different phases separately. To overcome this limitation and to handle the dependencies of component states used in various mission phases, a set of Boolean algebraic laws to represent combinations of component behaviour can be applied to phased mission systems. A basic event A may be represented in the following way {cite:t}`sys-Somani1994PhasedmissionSA`:
+The before mentioned methods consider the failure of components in different phases separately. To overcome this limitation and to handle the dependencies of component states used in various mission phases, a set of Boolean algebraic laws to represent combinations of component behaviour can be applied to phased mission systems. A basic event A may be represented in the following way {cite:p}`sys-Somani1994PhasedmissionSA`:
 - $A_{1}=1$ denotes the event that component A is operational during the interval from the start of the mission until the end of phase $i$. This automatically implies that the component is operational during all earlier phases as well.
 
 The following rules should be applied to Boolean variables belonging to the same component to simplify the Boolean expression, with $j>i$. 
@@ -364,7 +364,7 @@ R_{S}\left( t \right) = 1 - P\left( E \middle| 3 \right) = 1 - P\left( {\overlin
 (syst_4_4_5)=
 ## State space model of phased mission
 
-The phased mission system can also be analysed based on a state space model using Markov model. Smotherman and Zemoudeh {cite:t}`sys-Esary1975ReliabilityAO` used a single non-homogeneous Markov chain model to perform the reliability analysis of a phased mission system. The behaviour of the system in each phase is represented using a different Markov chain, which may contain a different subset of states. The state transitions are described in terms of time dependent rates to include phase changes. Thus, state-dependent phase changes, random phase durations as well as time varying failure and repair behaviour can be easily modelled.
+The phased mission system can also be analysed based on a state space model using Markov model. Smotherman and Zemoudeh {cite:p}`sys-Esary1975ReliabilityAO` used a single non-homogeneous Markov chain model to perform the reliability analysis of a phased mission system. The behaviour of the system in each phase is represented using a different Markov chain, which may contain a different subset of states. The state transitions are described in terms of time dependent rates to include phase changes. Thus, state-dependent phase changes, random phase durations as well as time varying failure and repair behaviour can be easily modelled.
 
 The example shown in {numref}`Figure_7_26` is shown as Markov chain in {numref}`Figure_7_28`, where the failure of components A, B and C are given by the associated failure rates $\lambda_{a}$, $\lambda_{b}$ and $\lambda_{c}$. Each component can have two states, failed or operational. An identifier is assigned to each system state where, e.g."011" indicates A failed, B and C operational. The transition from phase 1 to phase 2 is given by the time dependent rate $h_{1}\left( t \right)$ and $h_{2}\left( t \right)$ denotes the rate of change from phase 2 to phase 3.
 
@@ -375,7 +375,7 @@ The main advantage of this model is that it includes the configurations for all 
 width: 600px
 name: Figure_7_28
 ---
-Phased mission Markov model approach by Smotherman and Zemoudeh {cite:t}`sys-Esary1975ReliabilityAO`
+Phased mission Markov model approach by Smotherman and Zemoudeh {cite:p}`sys-Esary1975ReliabilityAO`
 ```
 
-As shown before, two classes of approaches have been developed to analyse phased missions, the combinatorial approach and the Markov chain approach. The combinatorial approaches are computationally efficient, but are applicable only when each phase is a static phase, in which all components are functionally independent and the order in which failures occur does not matter. Markov based approaches are able to capture the functional dependencies among components and the required order of failures, or dynamic failure criteria. On the other hand, the size of the Markov model may increase such it become not feasible to be solved. Therefore, a modular approach that combines combinatorial and Markov chain approach as appropriate can also be used to analyse phased mission systems {cite:t}`sys-Esary1975ReliabilityAO`.
+As shown before, two classes of approaches have been developed to analyse phased missions, the combinatorial approach and the Markov chain approach. The combinatorial approaches are computationally efficient, but are applicable only when each phase is a static phase, in which all components are functionally independent and the order in which failures occur does not matter. Markov based approaches are able to capture the functional dependencies among components and the required order of failures, or dynamic failure criteria. On the other hand, the size of the Markov model may increase such it become not feasible to be solved. Therefore, a modular approach that combines combinatorial and Markov chain approach as appropriate can also be used to analyse phased mission systems {cite:p}`sys-Esary1975ReliabilityAO`.

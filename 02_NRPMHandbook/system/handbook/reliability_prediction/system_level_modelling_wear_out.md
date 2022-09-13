@@ -392,7 +392,7 @@ With the three wear-out models the following results shown in {numref}`syst-tabl
 
 In the following section, another form of redundancy is presented: standby redundancy. In standby redundancy the components have two states: an active state and a standby state. The stand-by component is exposed to reduced loads while not needed and under the operating load when they are activated. Consequently, components in standby redundancy have two failure distributions, one for each state. In the case that both stand-by and active failure distributions are the same, the units are in a simple parallel configuration (also called a hot standby configuration). When the failure rate of the standby component is lower than in active mode that is called a warm standby configuration. When the rate of failure of the standby component is zero (i.e., the component cannot fail when in standby), it is called a cold standby configuration.
 
-The reliability of the system at time $t$ can be obtained using the following equation {cite:t}`sys-time-dependent-system-reliability`:
+The reliability of the system at time $t$ can be obtained using the following equation {cite:p}`sys-time-dependent-system-reliability`:
 
 ````{admonition} Equation
 :class: equation
@@ -423,7 +423,7 @@ name: Figure_7_32
 Stand-by system with switching device
 ```
 
-Two scenarios have to be considered to include the reliability of a switch in the analysis with two probabilities can be considered. The first one is the probability of the switch performing the action (i.e., switching) when requested to do so, the Switch Probability per Request, which is expressed as a static probability. The second probability takes into account the possibility that the switch could fail before the active component fails, as the switch might wear out with age due to material {term}`degradation <Degradation>`. However, a switch failure does not cause the system to fail immediately, but if the active component fails and the switch has also failed, then the system cannot be switched to the standby component and it therefore fails. The reliability of the system including switching is given by the following equation {cite:t}`sys-time-dependent-system-reliability`.
+Two scenarios have to be considered to include the reliability of a switch in the analysis with two probabilities can be considered. The first one is the probability of the switch performing the action (i.e., switching) when requested to do so, the Switch Probability per Request, which is expressed as a static probability. The second probability takes into account the possibility that the switch could fail before the active component fails, as the switch might wear out with age due to material {term}`degradation <Degradation>`. However, a switch failure does not cause the system to fail immediately, but if the active component fails and the switch has also failed, then the system cannot be switched to the standby component and it therefore fails. The reliability of the system including switching is given by the following equation {cite:p}`sys-time-dependent-system-reliability`.
 
 ````{admonition} Equation
 :class: equation

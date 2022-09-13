@@ -236,7 +236,7 @@ Before starting a system reliability analysis, the following aspects are importa
 
 - Sound understanding of the system to be modelled is a prerequisite. Starting point is the identification of the system functions for which system reliability requirements have been defined and a functional break down of the system. The system architecture and the components allocated to the function needs to be described. 
 - Failure criteria should be clearly defined. The functional failure can be of different nature, e.g. total loss, partial loss, erroneous function (detected or undetected), inadvertent function or degraded performance. Each of them results from different failure modes of contributing components. If more than one definition of failure or success of the system is possible, a separate system level analysis may be required for each. The functional failure analysis provides the input to select the relevant system function and the functional failure that affects system reliability.
-- In order to represent the system behaviour correctly a comprehensive understanding of the implemented fault tolerances, fault recoveries and redundancies is vital. In addition to the system descriptions, the Fault Detection Isolation and Recovery ({term}`FDIR`) Analysis should be reviewed by the reliability engineer to understand the system behaviour in case of component failures. A detailed description of {term}`FDIR` is given in ECSS-E-ST-70-11C {cite:t}`sys-ECSS-E-ST-70-11C`.
+- In order to represent the system behaviour correctly a comprehensive understanding of the implemented fault tolerances, fault recoveries and redundancies is vital. In addition to the system descriptions, the Fault Detection Isolation and Recovery ({term}`FDIR`) Analysis should be reviewed by the reliability engineer to understand the system behaviour in case of component failures. A detailed description of {term}`FDIR` is given in ECSS-E-ST-70-11C {cite:p}`sys-ECSS-E-ST-70-11C`.
 - Environmental and operating considerations: the description of the environmental conditions under which the system is designed to operate should be obtained. A space system is used in more than one environment: on the ground, during flight, in orbit. In such scenarios, reliability evaluation should be carried out using the appropriate failure rates for each environment and dormancy periods for hidden failures. To consider the different phases of the mission in conjunction, a reliability prediction for phased mission should be performed, see {numref}`syst_4_4`
 - The relationship between calendar time, operating time, and on/off cycles should be established.
 - For all system components the reliability data (failure rates, reliability, and failure probability) should be available with reference to the environmental and operating conditions, for which these values were established. The FME(C)A are essential input documents for this task. Depending on the reliability requirement and the operational context, the appropriate risk times have to be used in the calculation. The risk time could be a fraction of the mission time if a failure would only be critical when it occurs during a specific time period of the mission. For example, for the failure of an unfolding mechanism the time period until the unfolding is done is the risk time and not the complete mission time. It may also be useful to describe the reliability curve R(t) from t=0 until end of lifetime. 
@@ -250,7 +250,7 @@ Before starting a system reliability analysis, the following aspects are importa
 (syst_4_3_1)=
 ## Reliability Block Diagram
 
-The Reliability Block Diagram ({term}`RBD`) uses a block structure to represent the success logic of the system. It is easy to understand and system success paths can be verified visually. For the purpose of a quantitative reliability analysis, the {term}`RBD` considers required combinations of system components that are needed to keep the system working. The application of an {term}`RBD` provides a structured representation of system architecture, and single point failures become quite obvious in the block diagram. Reliability modelling with an {term}`RBD` is primarily intended for non-repairable systems. The {term}`IEC` standard {cite:t}`sys-IEC-61078:2016`  provides the application rules and definitions. 
+The Reliability Block Diagram ({term}`RBD`) uses a block structure to represent the success logic of the system. It is easy to understand and system success paths can be verified visually. For the purpose of a quantitative reliability analysis, the {term}`RBD` considers required combinations of system components that are needed to keep the system working. The application of an {term}`RBD` provides a structured representation of system architecture, and single point failures become quite obvious in the block diagram. Reliability modelling with an {term}`RBD` is primarily intended for non-repairable systems. The {term}`IEC` standard {cite:p}`sys-IEC-61078:2016`  provides the application rules and definitions. 
 
 The {term}`RBD` is created under the assumption that all failures are independent, thus the occurrence rate of an individual block in the {term}`RBD` is independent of the occurrence of other events in the {term}`RBD`. Unless the simultaneous failure of redundant components is explicitly represented in the block diagram, like it is done with the beta factor model to evaluate common cause failures in {term}`FTA`, dependencies cannot be modelled with an {term}`RBD`. Furthermore, the {term}`RBD` approach has limitations in considering different failure modes, priority of events and sequencing of failure. For example: a stand-by redundancy for which different failure rates in stand-by mode and active mode are to be considered depending on the occurrence of another failure cannot be modelled using {term}`RBD`. Repairable components are also not considered in the model.  
 
@@ -472,7 +472,7 @@ For the above-mentioned example, a rigorous solution can be found by analysis of
 (syst_4_3_2)=
 ## Fault Tree Analysis
 
-The Fault Tree Analysis ({term}`FTA`) is a structured, conclusive failure analysis which is focused on one particular undesired top event and used to identify potential causes of this event. {term}`FTA` uses identi-cal calculation methods to those applied in the {term}`RBD`. Therefore, it is widely used as an alternative method for the {term}`RBD`. By setting up a qualitative model and then evaluating this model, the {term}`FTA` is representing a "top-down" system evaluation procedure. After the undesired top level event has been identified, the different failure modes of sub-systems and components which could cause this event have to be determined systematically. The individual failures leading to the top event are combined through OR and AND gates, which correspond to serial and parallel arrangements in a {term}`RBD`. Therefore, {term}`FTA` is a graphical method that shows the logical relation between each particular failure scenario and the primary elements, component failures or events that can cause it. Guide-lines for {term}`FTA` can be found in {cite:t}`sys-ECSS-Q-ST-40-12C`.
+The Fault Tree Analysis ({term}`FTA`) is a structured, conclusive failure analysis which is focused on one particular undesired top event and used to identify potential causes of this event. {term}`FTA` uses identi-cal calculation methods to those applied in the {term}`RBD`. Therefore, it is widely used as an alternative method for the {term}`RBD`. By setting up a qualitative model and then evaluating this model, the {term}`FTA` is representing a "top-down" system evaluation procedure. After the undesired top level event has been identified, the different failure modes of sub-systems and components which could cause this event have to be determined systematically. The individual failures leading to the top event are combined through OR and AND gates, which correspond to serial and parallel arrangements in a {term}`RBD`. Therefore, {term}`FTA` is a graphical method that shows the logical relation between each particular failure scenario and the primary elements, component failures or events that can cause it. Guide-lines for {term}`FTA` can be found in {cite:p}`sys-ECSS-Q-ST-40-12C`.
 
 (syst_4_3_2_1)=
 ### Procedure to create FTA
@@ -550,7 +550,7 @@ R_{S}(t) = \sum_{k}^{n} \frac{n!}{i!(n-i)!}R(t)^{i}(1-R(t))^{n-i}
 
 Event Tree Analysis ({term}`ETA`) is an inductive method which shows all possible outcomes resulting from an initiating event. The event tree models the sequences containing relationships from an initiating event and subsequent responses along with the end states. Various system failure sequences can be identified and the probability of occurrence of each sequence is quantified. 
 
-The main steps to perform an Event Tree Analysis are {cite:t}`sys-event-tree-analysis`:
+The main steps to perform an Event Tree Analysis are {cite:p}`sys-event-tree-analysis`:
 - Identify (and define) a relevant initial event that may lead to unwanted consequences with respect to system reliability, e.g. loss of system performance, mission failure etc. 
 - Identify the barriers that are implemented to deal with the initial event
 - Construct the event tree
@@ -595,7 +595,7 @@ The advantages of Event Tree Analysis are the visualization of the chain of even
 (syst_4_3_4)=
 ## Markov model
 
-Markov models are especially suited for the evaluation of system reliability for the following systems {cite:t}`sys-IEC-61165:2006`:
+Markov models are especially suited for the evaluation of system reliability for the following systems {cite:p}`sys-IEC-61165:2006`:
 
 - Systems for which the system failure depends on sequential events
 - Repairable systems, or system for which reconfiguration, re-boot or switch to back-up to restore function is possible.
@@ -621,21 +621,21 @@ Depending on the objective of the reliability analysis further classes of system
 - To determine the probability of the system to be in one particular state
 - To determine the probability of the system to be at a certain performance level
 
-As a guideline, the following questions should be considered to define the boundary conditions of the analysis and the characteristics of the system {cite:t}`sys-IEC-61165:2006`:
+As a guideline, the following questions should be considered to define the boundary conditions of the analysis and the characteristics of the system {cite:p}`sys-IEC-61165:2006`:
 
 - What are the important features of the system which need to be modelled, e.g. cold redundancy, reconfiguration of the system in degraded modes? These system characteristics need to be modelled for the reliability prediction. For example, the transitions to redundant components are to be modelled. 
 - Will the system be restored after a failure or not? This will define the failure scenario of the system. If the system function can be restored for a specific combination of component failures, the associated system states are not failure states of the system and a transition with related repair rate is leading back to fully operational system states. 
 - Is it necessary to describe time-dependent behaviour?
 
 
-The fact that the Markov model is based on the representation of system states could make practical application more difficult for large number of components, as the number of possible transitions and system states increases rapidly with the number of components. Another limitation of Markov model is related to the assumption that the future behaviour of the system depends only on the present state of the system, and not on the way the system arrived at this state {cite:t}`sys-IEC-61165:2006`. Consequently, it has to be ensured that the actual system behaviour is adequately represented with such memory-less Markov models. 
+The fact that the Markov model is based on the representation of system states could make practical application more difficult for large number of components, as the number of possible transitions and system states increases rapidly with the number of components. Another limitation of Markov model is related to the assumption that the future behaviour of the system depends only on the present state of the system, and not on the way the system arrived at this state {cite:p}`sys-IEC-61165:2006`. Consequently, it has to be ensured that the actual system behaviour is adequately represented with such memory-less Markov models. 
 
 
 Creating a Markov Model includes the following steps:
 
 1. All the system states are to be identified and classified as either operating states or failed states, or another category has to be defined. If each component has two possible states (operating and failed) and if the system has n components, the maximum number of states is $2^{n}$. During the life of the system, failed states can appear due to the existence of failures, or disappear following repairs. 
 2. The possible transitions between the different states are to be listed and the causes of transitions needs to be identified. A transition rate has to be assigned based on theses causes. The causes of the transitions are either failure of one or several subsystem components; in this case the failure rate is representing the transition rate. Or the function of a component is restored and the repair rate is used as transition rate.
-3. The state transition diagram is developed wherein each node represents a state of the system, and each arc represents a transition between states. The guidelines given in {cite:t}`sys-IEC-61165:2006` for state transition diagrams should be applied.
+3. The state transition diagram is developed wherein each node represents a state of the system, and each arc represents a transition between states. The guidelines given in {cite:p}`sys-IEC-61165:2006` for state transition diagrams should be applied.
 4. The probabilities of being in the different states during a certain period in the life are calculated based on the state transition diagram. For a system with $m$ states a set of $m$ differential equations is derived from the state transition diagram. 
 
 
@@ -781,7 +781,7 @@ For complex problems with $n$ components it is more suitable to solve the set of
 (syst_4_3_5)=
 ## Petri Network
 
-Petri nets are a graphical technique for the representation and analysis of complex logical interactions among elements in a system. Petri nets allow describing the behaviour of a system by modelling the relationship between local states and local events {cite:t}`sys-IEC-62551`. They are able to model the various states of the system and how it evolves from one state to another when events (failures, repairs, periodic tests, mission phases, etc.) occur. A detailed description of Petri networks can be found in {cite:t}`sys-IEC-62551`.
+Petri nets are a graphical technique for the representation and analysis of complex logical interactions among elements in a system. Petri nets allow describing the behaviour of a system by modelling the relationship between local states and local events {cite:p}`sys-IEC-62551`. They are able to model the various states of the system and how it evolves from one state to another when events (failures, repairs, periodic tests, mission phases, etc.) occur. A detailed description of Petri networks can be found in {cite:p}`sys-IEC-62551`.
 
 A Petri net consists of the following basic elements:
 - Places: Circles used to model local states or conditions (e.g. failed or functioning).
@@ -810,7 +810,7 @@ name: Figure_7_16
 Petri net with inhibitor arc
 ```
 
-The different types of transitions within a Petri net can be described as deterministic or as stochastic, as shown {numref}`syst-table4-4` according to {cite:t}`sys-IEC-62551`. Deterministic transitions include immediate transitions with no delay, or transitions with a delay, where the parameter  denotes the duration of delay. Stochastic transitions are defined by their distribution function modelling the time to transition. 
+The different types of transitions within a Petri net can be described as deterministic or as stochastic, as shown {numref}`syst-table4-4` according to {cite:p}`sys-IEC-62551`. Deterministic transitions include immediate transitions with no delay, or transitions with a delay, where the parameter  denotes the duration of delay. Stochastic transitions are defined by their distribution function modelling the time to transition. 
 
 ```{list-table} Type of transitions in Petri net
 :name: syst-table4-4
@@ -838,7 +838,7 @@ name: Figure_7_18
 Petri net of a) serial system (OR gate) and b) parallel system (AND gate)
 ```
 
-Within a Petri net, the system model can be structured hierarchically by using super nodes representing a sub model and a super transition that represents the transition between sub models connected by super arc, see {cite:t}`sys-IEC-62551` for details.
+Within a Petri net, the system model can be structured hierarchically by using super nodes representing a sub model and a super transition that represents the transition between sub models connected by super arc, see {cite:p}`sys-IEC-62551` for details.
 
 (syst_4_3_5_1)=
 ### Creating a system model using Petri network
@@ -865,7 +865,7 @@ Main steps for system reliability analysis with Petri nets.
 (syst_4_3_5_2)=
 ### Analysing Petri net models
 
-Petri nets used for quantitative analysis are primarily based on timed or stochastic state transition diagrams. The quantitative analysis of Petri nets provides the probability of reaching certain states that are relevant for reliability assessment (stationary analysis), as well as the probability of certain transitions (transition analysis). Petri nets that consist exclusively exponential distributed transitions can be converted to its corresponding Markov models. So general stochastic Petri net models containing complex interactions can often be described more easily and with a smaller diagram than using Markov model {cite:t}`sys-IEC-61165:2006`. In case of arbitrary distributions, Monte Carlo simulation are used to perform transient or stationary analysis. Monte Carlo simulation is also applied to Petri nets if the number of reachable states is too large to solve the corresponding Markov model. The number of manageable states strongly depends on computing performance, however up to 107 states can be regarded as analysable. Besides a quantitative analysis, a qualitative analysis can be performed to determine the possibility to reach certain states (reachability analysis) or to identify invariants, deadlocks and traps (structured analysis). The qualitative analysis is based on an untimed state transition diagram, which means the transitions are not quantified. The following diagram provides an overview of the analysis methods for Petri nets. 
+Petri nets used for quantitative analysis are primarily based on timed or stochastic state transition diagrams. The quantitative analysis of Petri nets provides the probability of reaching certain states that are relevant for reliability assessment (stationary analysis), as well as the probability of certain transitions (transition analysis). Petri nets that consist exclusively exponential distributed transitions can be converted to its corresponding Markov models. So general stochastic Petri net models containing complex interactions can often be described more easily and with a smaller diagram than using Markov model {cite:p}`sys-IEC-61165:2006`. In case of arbitrary distributions, Monte Carlo simulation are used to perform transient or stationary analysis. Monte Carlo simulation is also applied to Petri nets if the number of reachable states is too large to solve the corresponding Markov model. The number of manageable states strongly depends on computing performance, however up to 107 states can be regarded as analysable. Besides a quantitative analysis, a qualitative analysis can be performed to determine the possibility to reach certain states (reachability analysis) or to identify invariants, deadlocks and traps (structured analysis). The qualitative analysis is based on an untimed state transition diagram, which means the transitions are not quantified. The following diagram provides an overview of the analysis methods for Petri nets. 
 
 ```{figure} ../../picture/figure4_20.png
 ---
@@ -934,7 +934,7 @@ P\left(B=S_{B_{1}}\right) = P\left(B=S_{B_{1}}|A=S_{A_{1}}\right)P\left(A=S_{A_{
 ```
 ````
 
-An advantage of Bayesian networks for system reliability estimation is the fact that it allows to merge knowledge of diverse natures in one model: data from feedback experience, experts’ judgment (express through logical rules, equations or subjective probabilities), the behaviour of the studied system (functional and dysfunctional analysis) and observations. Moreover, Bayesian network allow the explicit representation of dependencies between failures and establish cause effect relationships between the influencing factors {cite:t}`sys-Weber2012OverviewOB`. Dependent events can be found in reliability analysis in the following cases {cite:t}`sys-bayesian-networks`:
+An advantage of Bayesian networks for system reliability estimation is the fact that it allows to merge knowledge of diverse natures in one model: data from feedback experience, experts’ judgment (express through logical rules, equations or subjective probabilities), the behaviour of the studied system (functional and dysfunctional analysis) and observations. Moreover, Bayesian network allow the explicit representation of dependencies between failures and establish cause effect relationships between the influencing factors {cite:p}`sys-Weber2012OverviewOB`. Dependent events can be found in reliability analysis in the following cases {cite:p}`sys-bayesian-networks`:
 
 - **Common causes**. Failure of multiple items occurring from a single cause that is common to all of them. Thus, under these conditions, component failures are no longer independent. See also {numref}`syst_4_7`.
 - **Mutually exclusive primary events**. Consider the basic events: “switch fails to close” and “switch fails to open”. These two basic events are mutually exclusive, i.e., the occurrence of one basic event precludes another. Thus, the occurrence of one event is not independent from the occurrence of another event when basic events are mutually exclusive.
@@ -966,7 +966,7 @@ P(X,A,B) = P(X|A,B)P(A,B)
 ```
 ````
 
-The conditional probability of the child node X for a serial system is given by Eq. {eq}`Equation_7_28` {cite:t}`sys-bayesian-networks`:
+The conditional probability of the child node X for a serial system is given by Eq. {eq}`Equation_7_28` {cite:p}`sys-bayesian-networks`:
 
 ````{admonition} Equation
 :class: equation

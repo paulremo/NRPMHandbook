@@ -3,7 +3,7 @@
 (syst_4_5)=
 # Important measures
 
-In case the reliability targets are not met, the design process reconsiders the system architecture in order to improve the reliability. Quantification of system reliability gives only the overall system performance measure, but the reliability assessment can also provide a ranking of components with respect to their significance for system reliability. Several measures of significance have been proposed for the case where the support model is a fault tree or {term}`RBD`, grouped under the generic designation of "importance measures". The aim of importance measures is to support system design in selecting the most efficient solution through quantitative analysis related to the following questions {cite:t}`sys-vahl1998interaktive`:
+In case the reliability targets are not met, the design process reconsiders the system architecture in order to improve the reliability. Quantification of system reliability gives only the overall system performance measure, but the reliability assessment can also provide a ranking of components with respect to their significance for system reliability. Several measures of significance have been proposed for the case where the support model is a fault tree or {term}`RBD`, grouped under the generic designation of "importance measures". The aim of importance measures is to support system design in selecting the most efficient solution through quantitative analysis related to the following questions {cite:p}`sys-vahl1998interaktive`:
 
 -   Which component influences the overall reliability the most?
 
@@ -24,7 +24,7 @@ The methods to determine importance measures are based on the Boolean model for 
 (syst_4_5_1)=
 ## Birnbaum importance or marginal importance
 
-The so-called Birnbaum or marginal importance indicates how sensitive the system reliability is with regard to changes of the reliability of a certain component. The marginal importance of component $i$ is defined as the [partial derivative] of the system reliability function $R_{S}$ with respect to the reliability of component $i$ {cite:t}`sys-Birnbaum1968ONTI`.
+The so-called Birnbaum or marginal importance indicates how sensitive the system reliability is with regard to changes of the reliability of a certain component. The marginal importance of component $i$ is defined as the [partial derivative] of the system reliability function $R_{S}$ with respect to the reliability of component $i$ {cite:p}`sys-Birnbaum1968ONTI`.
 
 ````{admonition} Equation
 :class: equation
@@ -168,7 +168,7 @@ The calculation of importance measures requires a defined system architecture an
 
 Typical structural importance measures are using a reliability of 0.5 for all components or calculating a mean value of the importance over the interval $R_{i} \in \left\lbrack 0;1 \right\rbrack.$
 
-This assumption is not realistic for space systems. The relevant range of component reliabilities for highly reliable space systems is much smaller. Even if the failure rates for the components are not known, a conservative assumption about the order of magnitude of the worst case failure rates allows defining a relevant interval. To account for this, the reduced structural importance has been defined as mean value of the Birnbaum importance for component reliability in the range between $R_{\min}$ and 1. It is assumed that all components of the system have reliability equal to or greater than $R_{\min}$ at the end of the considered time interval, although the exact failure rates are not known, but only the rough order of magnitude {cite:t}`sys-vahl1998interaktive`. That means, for each component the reliability is set to $R_{\min}$ and to 1 for the lower and upper boundary.
+This assumption is not realistic for space systems. The relevant range of component reliabilities for highly reliable space systems is much smaller. Even if the failure rates for the components are not known, a conservative assumption about the order of magnitude of the worst case failure rates allows defining a relevant interval. To account for this, the reduced structural importance has been defined as mean value of the Birnbaum importance for component reliability in the range between $R_{\min}$ and 1. It is assumed that all components of the system have reliability equal to or greater than $R_{\min}$ at the end of the considered time interval, although the exact failure rates are not known, but only the rough order of magnitude {cite:p}`sys-vahl1998interaktive`. That means, for each component the reliability is set to $R_{\min}$ and to 1 for the lower and upper boundary.
 
 ````{admonition} Equation
 :class: equation
@@ -223,7 +223,7 @@ It can be seen that the relative ranking of the components will be the same for 
 (syst_4_5_3)=
 ## Reliability allocation based on importance measures
 
-The importance measure quantifies the impact of each component on the system reliability. This information can be used to support the allocation of a system reliability target to subsystem or component level, as a general rule {cite:t}`sys-Mettas2000ReliabilityAA`:
+The importance measure quantifies the impact of each component on the system reliability. This information can be used to support the allocation of a system reliability target to subsystem or component level, as a general rule {cite:p}`sys-Mettas2000ReliabilityAA`:
 
 * Components with high reliability importance will be assigned a high reliability target, as these components have the strongest influence on the system reliability.
 
@@ -241,7 +241,7 @@ Furthermore, the Birnbaum importance allows to quantify how much the system reli
 ```
 ````
 
-Thus, the change in system reliability is the weighted sum of changes in component reliability, where the weighting factors are given by the Birnbaum Importance of the components. The change of the system reliability depending on the change of one component reliability can be determined using the Birnbaum importance as shown in the following equation {cite:t}`sys-Si2019SystemRA`:
+Thus, the change in system reliability is the weighted sum of changes in component reliability, where the weighting factors are given by the Birnbaum Importance of the components. The change of the system reliability depending on the change of one component reliability can be determined using the Birnbaum importance as shown in the following equation {cite:p}`sys-Si2019SystemRA`:
 
 ````{admonition} Equation
 :class: equation

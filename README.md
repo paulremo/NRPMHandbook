@@ -35,7 +35,7 @@ Every chapter has its own bibliography that consists of two different reference 
 
 ### How to cite?
 Two different citation formats are supported: 
-- ``{cite:t}`key` `` for paranthesis citations
+- ``{cite:p}`key` `` for paranthesis citations
 - ``{cite:t}`key` `` for textual citations
  
 The key is the key defined inside the `.bib` file but is additionally preceded by a prefix according to the chapter: `eee-`, `mec-`, `mis-`, or `sys-`. 

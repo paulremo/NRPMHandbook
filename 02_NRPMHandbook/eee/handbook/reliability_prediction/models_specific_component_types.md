@@ -3,7 +3,7 @@
 (eee_4_4)=
 # Models for specific component types
 
-The reliability.space approach for {term}`EEE` items provides data about models for reliability predictions for some {term}`EEE` components which have no validated models. The specific component types refer to the components which are not included in the {term}`EPPL` {cite:t}`eee-EPPL007-37` or which have no validated models.
+The reliability.space approach for {term}`EEE` items provides data about models for reliability predictions for some {term}`EEE` components which have no validated models. The specific component types refer to the components which are not included in the {term}`EPPL` {cite:p}`eee-EPPL007-37` or which have no validated models.
 
 (eee_4_4_1)=
 ## Models from the Telcordia SR-332 handbook

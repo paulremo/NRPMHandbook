@@ -51,16 +51,16 @@ Apart from this, more general {term}`manufacturer data <Manufacturer part>`, suc
 
 Another possible use of {term}`test data <Test data>` is for the derivation of physical quantities needed in reliability models based on {term}`PoF`, such as e.g. wear rates or resistances against specific stresses. The advantage is that with this approach {term}`test data <Test data>` can be useful even if the test is performed at different than operational conditions and/or the design is not exactly the same as for the flight item. An important limitation is that in practice most items are not tested to failure and therefore the data is censored and less informative for modelling purposes.
 
-Finally, one specific feature of pre-flight acceptance tests should be mentioned: Due to the fact that these tests are performed on the flight item, they can provide relevant information about its strength or resistance against the applied stresses. The fact that the item has passed the tests may be used to exclude lower fractile values of the strength distribution in {term}`PoF` approaches. Note that this “proof load” approach is only valid for {term}`failure mechanism <Failure mechanism>`s resulting from peak load effects, and cannot be applied when cumulative stresses are driving failure. More details on the use of proof load test results for reliability prediction can be found e.g. in {cite:t}`mec-AO-1-8017-14-NL-KM`, {cite:t}`mec-Venter2012AccountingFP`.
+Finally, one specific feature of pre-flight acceptance tests should be mentioned: Due to the fact that these tests are performed on the flight item, they can provide relevant information about its strength or resistance against the applied stresses. The fact that the item has passed the tests may be used to exclude lower fractile values of the strength distribution in {term}`PoF` approaches. Note that this “proof load” approach is only valid for {term}`failure mechanism <Failure mechanism>`s resulting from peak load effects, and cannot be applied when cumulative stresses are driving failure. More details on the use of proof load test results for reliability prediction can be found e.g. in {cite:p}`mec-AO-1-8017-14-NL-KM`, {cite:p}`mec-Venter2012AccountingFP`.
 
 (meca_4_3_1_5)=
 ### Models from existing data sources
 
-Two well-known reliability handbooks are presently available providing input data for mechanical reliability prediction: the {term}`NPRD` {cite:t}`mec-NPRD-16` and the {term}`NSWC` {cite:t}`mec-NSWC-11`. Both handbooks cannot be recommended as a stand-alone method for mechanical reliability prediction in space applications, but may be used as a complementary source of information, as will be discussed in the following.
+Two well-known reliability handbooks are presently available providing input data for mechanical reliability prediction: the {term}`NPRD` {cite:p}`mec-NPRD-16` and the {term}`NSWC` {cite:p}`mec-NSWC-11`. Both handbooks cannot be recommended as a stand-alone method for mechanical reliability prediction in space applications, but may be used as a complementary source of information, as will be discussed in the following.
 
 **Non-electronic parts reliability data (NPRD)**
 
-{term}`NPRD` {cite:t}`mec-NPRD-16` is a data source providing part and assembly level failure rate estimates from various sources and industries. Its application is straight-forward when used without extrapolation beyond the covered part types, operational and environmental conditions. Due to the following limitations, it cannot be used as a general reliability data source for mechanical reliability prediction in space applications:
+{term}`NPRD` {cite:p}`mec-NPRD-16` is a data source providing part and assembly level failure rate estimates from various sources and industries. Its application is straight-forward when used without extrapolation beyond the covered part types, operational and environmental conditions. Due to the following limitations, it cannot be used as a general reliability data source for mechanical reliability prediction in space applications:
 
 * The coverage of part types used in space and space-graded parts is limited
 * Most data come from terrestrial sources, with limited coverage of space applications 
@@ -77,7 +77,7 @@ The confidence in the {term}`NPRD` data strongly depends on its relevance with r
 
 **Naval Surface Warfare Center (NSWC) Reliability Prediction Handbook**
 
-The {term}`NSWC` Handbook for Mechanical Reliability Prediction {cite:t}`mec-NSWC-11` provides models derived from a combined approach similar to the one applied for {term}`EEE` components in {numref}`sec_eee_handbook`: Base failure rates, derived from statistical data at reference conditions, are scaled to a specific design and operating conditions with the aid of multiplicative factors accounting for the specificities of material, design and environment. The scaling factors are based on {term}`PoF` relationships to determine the mean time to failure MTTF at reference and operating conditions:
+The {term}`NSWC` Handbook for Mechanical Reliability Prediction {cite:p}`mec-NSWC-11` provides models derived from a combined approach similar to the one applied for {term}`EEE` components in {numref}`sec_eee_handbook`: Base failure rates, derived from statistical data at reference conditions, are scaled to a specific design and operating conditions with the aid of multiplicative factors accounting for the specificities of material, design and environment. The scaling factors are based on {term}`PoF` relationships to determine the mean time to failure MTTF at reference and operating conditions:
 
 
 ````{admonition} Equation
@@ -94,7 +94,7 @@ The {term}`NSWC` Handbook for Mechanical Reliability Prediction {cite:t}`mec-NSW
 The advantage of this approach is the increased flexibility, as generic models for different part “families”, e.g. springs, can be tuned to a wide variety of specific part types and applications. Despite this interesting feature, the direct application of the {term}`NSWC` models for reliability predictions in space applications is not recommended due to the following limitations:
 
 * Base failure rates are from naval/terrestrial sources only and do not reflect the use conditions nor the quality level of {term}`mechanical part <Mechanical part>`s used in space
-* The sample size of the data used to derive the base failure rates is unknown and may in some cases be very small {cite:t}`mec-Kowal1994MechanicalSR`.
+* The sample size of the data used to derive the base failure rates is unknown and may in some cases be very small {cite:p}`mec-Kowal1994MechanicalSR`.
 * The scaling factors are based on the {term}`physics of failure <Physics of failure>` in terrestrial applications, which may in some cases not be applicable in space
 * Scaling factors are based on deterministic relationships, which may lead to a large bias when the effect of the variable entering the scaling factor is highly nonlinear
 * The model output is a constant failure rate, which is often not consistent with the {term}`failure mechanism <Failure mechanism>`s that have been analysed to derive the scaling factors
@@ -155,7 +155,7 @@ The use of {term}`structural reliability methods <Structural reliability method>
 
 (meca_4_3_2_3)=
 ### Handbook methods
-The use of existing reliability handbooks and data sources, especially as a stand-alone method, is generally not recommended for the modelling of mechanical items in space applications. Limitations of {term}`NPRD` {cite:t}`mec-NPRD-16` and the {term}`NSWC` {cite:t}`mec-NSWC-11` handbooks are discussed in {numref}`meca_4_3_1_5`, including some guidance on potential uses of these methods, e.g. to derive ball-park estimates for preliminary design or as a prior for a combined approach using {term}`Bayesian inference <Bayesian inference>` updating.
+The use of existing reliability handbooks and data sources, especially as a stand-alone method, is generally not recommended for the modelling of mechanical items in space applications. Limitations of {term}`NPRD` {cite:p}`mec-NPRD-16` and the {term}`NSWC` {cite:p}`mec-NSWC-11` handbooks are discussed in {numref}`meca_4_3_1_5`, including some guidance on potential uses of these methods, e.g. to derive ball-park estimates for preliminary design or as a prior for a combined approach using {term}`Bayesian inference <Bayesian inference>` updating.
 
 (meca_4_3_2_4)=
 ### Combined approach

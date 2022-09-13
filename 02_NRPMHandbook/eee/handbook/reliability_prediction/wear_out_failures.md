@@ -15,22 +15,22 @@ The estimation of wear-out in space applications is a strategic subject as high 
 
 All components can be subjected to wear-out due to different phenomena such as material transformation, diffusion mechanisms and intermetallic growth. Generally, for most of them, wear-out will occur only after a very long period of time which is generally much longer than the satellite life. This is the main raison why wear-out is not taken into account in the predictive reliability calculation for {term}`EEE` components. Nevertheless, in some particular cases, with the increase of stress such as temperature, voltage, thermal cycling, ON / OFF cycles and vibrations, wear-out can occur but generally after a duration higher than the life duration of the system.
 
-In the specific case of space applications, cumulated radiation dose can create wear-out on specific technologies. For some {term}`EEE` components of the {term}`EPPL` list, the wear-out occurs in a limited time and is directly due to the technology of these {term}`EEE` components. Some attempts to estimate the wear-out of {term}`EEE` components have been performed in space applications. The {term}`ECSS` document {cite:t}`eee-ECSS-Q-TM-30-12A` provides the list of components with their possible drifts due to ageing depending on temperature. These drifts are based on {term}`test data <Test data>` issued from life tests. Unfortunately, as {term}`test data <Test data>` are not always available, the drifts are provided only for a low quantity of technologies with a subjective confidence.
+In the specific case of space applications, cumulated radiation dose can create wear-out on specific technologies. For some {term}`EEE` components of the {term}`EPPL` list, the wear-out occurs in a limited time and is directly due to the technology of these {term}`EEE` components. Some attempts to estimate the wear-out of {term}`EEE` components have been performed in space applications. The {term}`ECSS` document {cite:p}`eee-ECSS-Q-TM-30-12A` provides the list of components with their possible drifts due to ageing depending on temperature. These drifts are based on {term}`test data <Test data>` issued from life tests. Unfortunately, as {term}`test data <Test data>` are not always available, the drifts are provided only for a low quantity of technologies with a subjective confidence.
 
 (eee_4_6_3)=
 ## List of components subjected to wear-out failures
 
-Among components which are proposed by {term}`ESA` in its {term}`EPPL` {cite:t}`eee-EPPL007-37`, only a few of them can be subjected to wear-out. Examples of such components are listed below:
+Among components which are proposed by {term}`ESA` in its {term}`EPPL` {cite:p}`eee-EPPL007-37`, only a few of them can be subjected to wear-out. Examples of such components are listed below:
 
--   Plastic film capacitors: wear-out could occur but mainly for high voltage capacitors due to the Corona effect, especially when they are used with low derating; the standard ECSS-Q-ST-30-11C {cite:t}`eee-ECSS-Q-ST-30-11C` requires having a maximum 60% of derating, this value is adequate to minimize the likelihood of premature wear-out.
+-   Plastic film capacitors: wear-out could occur but mainly for high voltage capacitors due to the Corona effect, especially when they are used with low derating; the standard ECSS-Q-ST-30-11C {cite:p}`eee-ECSS-Q-ST-30-11C` requires having a maximum 60% of derating, this value is adequate to minimize the likelihood of premature wear-out.
 
 -   Plastic film capacitors: these components are also sensitive to humidity; this is not a concern in orbit but could be taken into account before launching.
 
--   Tantalum capacitors: wear-out could occur when they are used with low derating; the standard ECSS-Q-ST-30-11C {cite:t}`eee-ECSS-Q-ST-30-11C` requires having a maximum 60% of derating, this value is adequate to minimize the likelihood of premature wear-out.
+-   Tantalum capacitors: wear-out could occur when they are used with low derating; the standard ECSS-Q-ST-30-11C {cite:p}`eee-ECSS-Q-ST-30-11C` requires having a maximum 60% of derating, this value is adequate to minimize the likelihood of premature wear-out.
 
--   Memories such as Memory PROM, Memory {term}`EPROM`, Memory {term}`EEPROM`, Flash memory, Programmable Logic, Anti fuse {term}`FPGA`, SRAM based {term}`FPGA`, Flash technology: these components are subjected to a limited retention time or a maximum number of write / read cycles depending on the junction temperature; the standard ECSS-Q-ST-30-11C {cite:t}`eee-ECSS-Q-ST-30-11C` requires to determine the endurance of Memory {term}`EPROM`, Memory {term}`EEPROM` and Flash memory by using the data from the manufacturer and estimating the equivalent time by using the Arrhenius' law with an activation energy *E~a~* of +0.6eV.
+-   Memories such as Memory PROM, Memory {term}`EPROM`, Memory {term}`EEPROM`, Flash memory, Programmable Logic, Anti fuse {term}`FPGA`, SRAM based {term}`FPGA`, Flash technology: these components are subjected to a limited retention time or a maximum number of write / read cycles depending on the junction temperature; the standard ECSS-Q-ST-30-11C {cite:p}`eee-ECSS-Q-ST-30-11C` requires to determine the endurance of Memory {term}`EPROM`, Memory {term}`EEPROM` and Flash memory by using the data from the manufacturer and estimating the equivalent time by using the Arrhenius' law with an activation energy *E~a~* of +0.6eV.
 
--   Integrated circuits such as Microwave Monolithic Integrated Circuits: these components should be subjected to a limited cumulated time of use; the standard ECSS-Q-ST-30-11C {cite:t}`eee-ECSS-Q-ST-30-11C` provides values for derating in supply voltage, output current and maximum junction temperature.
+-   Integrated circuits such as Microwave Monolithic Integrated Circuits: these components should be subjected to a limited cumulated time of use; the standard ECSS-Q-ST-30-11C {cite:p}`eee-ECSS-Q-ST-30-11C` provides values for derating in supply voltage, output current and maximum junction temperature.
 
 -   Deep Sub Micron components: it seems that these components can be subjected to a limited cumulated time of use due to their design and manufacturing, however knowledge on these components is still incomplete and wear-out is very dependent on the type of component, technology, manufacturer or size.
 
@@ -38,7 +38,7 @@ Among components which are proposed by {term}`ESA` in its {term}`EPPL` {cite:t}`
 
 -   Optoelectronics such as LED, laser diodes, optocouplers: these components can be subjected to a limited number of hours of functioning due to brightness {term}`degradation <Degradation>` of their optical parts.
 
--   Power Mosfets: these components can be subjected to a limited cumulated time depending on their design and technologies especially for {term}`GaN` technology; the standard ECSS-Q-ST-30-11C {cite:t}`eee-ECSS-Q-ST-30-11C` provides values of derating in drain to source voltage, gate to source voltage, gate to drain voltage, drain current, power dissipation and maximum junction temperature.
+-   Power Mosfets: these components can be subjected to a limited cumulated time depending on their design and technologies especially for {term}`GaN` technology; the standard ECSS-Q-ST-30-11C {cite:p}`eee-ECSS-Q-ST-30-11C` provides values of derating in drain to source voltage, gate to source voltage, gate to drain voltage, drain current, power dissipation and maximum junction temperature.
 
 -   Power components submitted to ON / OFF cycles can be affected to specific wear-out effects such as bond lift due to local thermal cycles.
 
@@ -51,7 +51,7 @@ Creating models of wear-out is necessary to estimate the {term}`degradation <Deg
 (eee_4_6_4)=
 ## Models for wear-out failures for components and sub-assemblies
 
-The methodologies and standards that provide some models for wear-out of {term}`EEE` components are quite few. Among all of them, the standards FIDES and IEC TR 62380 {cite:t}`eee-IEC-TR-62380` provide some simple models. FIDES only provides wear-out models of sub-assemblies such as screens, keyboards, hard disks, fans and batteries and does not provide any models for {term}`EEE` components. IEC TR 62380 provides wear-out models for some components from the {term}`EPPL` such as relays, switches, optocouplers, LED and laser diodes. These different models are not directly available for space applications as they are not validated and have never been used in a space context. The methodology to estimate wear-out is based on qualification and tests as explained in {numref}`eee_4_6_6` and validated with an example in {numref}`eee_4_6_9`.
+The methodologies and standards that provide some models for wear-out of {term}`EEE` components are quite few. Among all of them, the standards FIDES and IEC TR 62380 {cite:p}`eee-IEC-TR-62380` provide some simple models. FIDES only provides wear-out models of sub-assemblies such as screens, keyboards, hard disks, fans and batteries and does not provide any models for {term}`EEE` components. IEC TR 62380 provides wear-out models for some components from the {term}`EPPL` such as relays, switches, optocouplers, LED and laser diodes. These different models are not directly available for space applications as they are not validated and have never been used in a space context. The methodology to estimate wear-out is based on qualification and tests as explained in {numref}`eee_4_6_6` and validated with an example in {numref}`eee_4_6_9`.
 
 (eee_4_6_4_1)=
 ### Model for wear-out of relays
@@ -89,7 +89,7 @@ In space, radiations are one of the sources for {term}`degradation <Degradation>
 
 **Model of wear-out for radiations**
 
-The publication {cite:t}`eee-Wang2016AMO` provides a model of Total Ionizing Dose (TID) for space applications. According to standard {cite:t}`eee-MIL-HDBK-814`, the Lognormal distribution is used to define the failure rate due to radiations according to the equation:
+The publication {cite:p}`eee-Wang2016AMO` provides a model of Total Ionizing Dose (TID) for space applications. According to standard {cite:p}`eee-MIL-HDBK-814`, the Lognormal distribution is used to define the failure rate due to radiations according to the equation:
 
  
 ````{admonition} Equation
@@ -113,16 +113,16 @@ Where:
 -   $\sigma$: standard deviation.
 ````
 
-An example is provided in this publication {cite:t}`eee-Wang2016AMO` with the estimation of the failure rate due to TID of a lot of 11 {term}`FPGA` which have failed.
+An example is provided in this publication {cite:p}`eee-Wang2016AMO` with the estimation of the failure rate due to TID of a lot of 11 {term}`FPGA` which have failed.
 
-This model can be completed with the modelisation defined in publication {cite:t}`eee-Everline2008EstimatingTR` which considers also uncertainty in the Total Ionizing Dose, based on a time-dependent stress strength approach.
+This model can be completed with the modelisation defined in publication {cite:p}`eee-Everline2008EstimatingTR` which considers also uncertainty in the Total Ionizing Dose, based on a time-dependent stress strength approach.
 
 This model is a first interesting recommendation for a model of radiations. It needs to be validated to be used in calculation of failure rate due to radiations.
 
 (eee_4_6_5_2)=
 ### ON / OFF cycling as a factor of wear-out
 
-Satellites are designed with an objective to minimise the consumption of energy. In this way, a mechanism to minimize the consumption of energy is to switch off the equipment when it is not used. As a consequence of this strategy, permanent ON / OFF switches of the equipment are continuously realised. For low Earth orbit satellites, up to 20 ON / OFF cycles per orbit can occur for an equipment leading to up to 200 000 ON / OFF cycles during the lifetime of the satellite. According to the studies from {term}`CNES` {cite:t}`eee-ESCCON` and {cite:t}`eee-JEP001`, these ON / OFF cycles have an effect on bonding wires of integrated circuits. Repetitive switches increase the temperature at the interfaces, and as the coefficients of thermal extensions are different between bonding wires and silicon, cracks appear at the interface. These cracks can lead to a disconnection, followed by a definitive drift or a failure. Wear-out could be addressed by using the process described in {numref}`eee_4_6_9`.
+Satellites are designed with an objective to minimise the consumption of energy. In this way, a mechanism to minimize the consumption of energy is to switch off the equipment when it is not used. As a consequence of this strategy, permanent ON / OFF switches of the equipment are continuously realised. For low Earth orbit satellites, up to 20 ON / OFF cycles per orbit can occur for an equipment leading to up to 200 000 ON / OFF cycles during the lifetime of the satellite. According to the studies from {term}`CNES` {cite:p}`eee-ESCCON` and {cite:p}`eee-JEP001`, these ON / OFF cycles have an effect on bonding wires of integrated circuits. Repetitive switches increase the temperature at the interfaces, and as the coefficients of thermal extensions are different between bonding wires and silicon, cracks appear at the interface. These cracks can lead to a disconnection, followed by a definitive drift or a failure. Wear-out could be addressed by using the process described in {numref}`eee_4_6_9`.
 
 (eee_4_6_5_3)=
 ### Single atomic oxygen as a factor of wear-out
@@ -132,9 +132,9 @@ In space, the single atomic oxygen is present and can generate corrosion on sate
 (eee_4_6_6)=
 ## Methodology to estimate the wear-out of EEE components by testing
 
-In case of insufficient data from the manufacturers or no data available, reliability tests could be performed to evaluate the wear-out of {term}`EEE` components. The objective is to perform tailored life tests on components until having a minimum number of parts that fail and ideally 100% of failed parts. The test duration can last several hundred hours to several months or years. Different types of life tests can be performed depending on the {term}`failure mechanisms <Failure mechanism>` that should be revealed. For active {term}`EEE` components with semiconductors, most of the basics are developed in JEDEC standards {cite:t}`eee-JESD-37A`, {cite:t}`eee-ESD-94B` and {cite:t}`eee-JEP148B`. The methods used are generally deterministic.
+In case of insufficient data from the manufacturers or no data available, reliability tests could be performed to evaluate the wear-out of {term}`EEE` components. The objective is to perform tailored life tests on components until having a minimum number of parts that fail and ideally 100% of failed parts. The test duration can last several hundred hours to several months or years. Different types of life tests can be performed depending on the {term}`failure mechanisms <Failure mechanism>` that should be revealed. For active {term}`EEE` components with semiconductors, most of the basics are developed in JEDEC standards {cite:p}`eee-JESD-37A`, {cite:p}`eee-ESD-94B` and {cite:p}`eee-JEP148B`. The methods used are generally deterministic.
 
-To assess the wear-out of {term}`EEE` components, it is required to set up a methodology with a global strategy that should be adapted according to the type of technology of the component. This methodology is issued from multiple standards and publications such as {cite:t}`eee-ECSS-Q-ST-30-11C`, {cite:t}`eee-Harper1997PassiveEC` and {cite:t}`eee-robusteness-validation-knowledge-matrix`. The following chart explains the methodology used to estimate wear-out of components and each step of the methodology is explained in details hereafter.
+To assess the wear-out of {term}`EEE` components, it is required to set up a methodology with a global strategy that should be adapted according to the type of technology of the component. This methodology is issued from multiple standards and publications such as {cite:p}`eee-ECSS-Q-ST-30-11C`, {cite:p}`eee-Harper1997PassiveEC` and {cite:p}`eee-robusteness-validation-knowledge-matrix`. The following chart explains the methodology used to estimate wear-out of components and each step of the methodology is explained in details hereafter.
 
 ```{figure} ../../pictures/eee_figure4_5.png
 ---
@@ -156,7 +156,7 @@ The objective is to identify the technologies sensitive to constraints identifie
 
 For each technology, the possible {term}`failure mechanisms <Failure mechanism>` which can occur on the components should be listed.
 
-The following table provides the most common {term}`failure mechanisms <Failure mechanism>` of {term}`EEE` components submitted to wear-out. The {term}`failure mechanisms <Failure mechanism>` of active components are taken from the standard. For {term}`failure mechanisms <Failure mechanism>` of passive components, the publications and documents are not so consistent. Information can be found in book {cite:t}`eee-robusteness-validation-knowledge-matrix` or in the robustness matrix. The following table lists the main {term}`failure mechanisms <Failure mechanism>` of {term}`EEE` components listed in the {term}`EPPL` which can be affected by wear-out. This matrix is not exhaustive, it indicates some main failures mechanisms which can lead to wear-out of {term}`EEE` components, but other {term}`failure mechanisms <Failure mechanism>` can occur.
+The following table provides the most common {term}`failure mechanisms <Failure mechanism>` of {term}`EEE` components submitted to wear-out. The {term}`failure mechanisms <Failure mechanism>` of active components are taken from the standard. For {term}`failure mechanisms <Failure mechanism>` of passive components, the publications and documents are not so consistent. Information can be found in book {cite:p}`eee-robusteness-validation-knowledge-matrix` or in the robustness matrix. The following table lists the main {term}`failure mechanisms <Failure mechanism>` of {term}`EEE` components listed in the {term}`EPPL` which can be affected by wear-out. This matrix is not exhaustive, it indicates some main failures mechanisms which can lead to wear-out of {term}`EEE` components, but other {term}`failure mechanisms <Failure mechanism>` can occur.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-201')" placeholder="Search table...">
 
@@ -295,7 +295,7 @@ The following table provides the most common {term}`failure mechanisms <Failure 
     - (x)
 ```
 
-The datasheet of the components and other information from the component manufacturer could be used to get information about the {term}`failure mechanisms <Failure mechanism>`. Particularly, the application notes, the possible use of reliability models and the tests performed are a good basis for evaluating the risk of wear-out. It could be difficult to get such information from the manufacturer. Only the qualification test results are available generally using trunked test, often limited to 1000 hours. In such a case, only the estimation of the constant failure rate is available, considering the flat part of the bathtub curve. For integrated circuits qualified with {term}`AEC-Q <AEC-Q>` automotive grade, the standard {cite:t}`eee-Black1978ElectromigrationOA` describes specific tests that must be done when a new technology of semiconductor is introduced. However, this information is generally only available upon request to the manufacturer. The failures mechanisms covered are the Hot Carrier Injection ({term}`HCI`), the Negative Bias Temperature Instability (NBTI) and the Stress Migration (SM) specific to semiconductors. The following table is an extract from standard {cite:t}`eee-Black1978ElectromigrationOA` listing the tests to perform for some {term}`failure mechanisms <Failure mechanism>`. The manufacturer has to fill the cells with number of tested parts, number of lots, test method and test acceptance criteria.
+The datasheet of the components and other information from the component manufacturer could be used to get information about the {term}`failure mechanisms <Failure mechanism>`. Particularly, the application notes, the possible use of reliability models and the tests performed are a good basis for evaluating the risk of wear-out. It could be difficult to get such information from the manufacturer. Only the qualification test results are available generally using trunked test, often limited to 1000 hours. In such a case, only the estimation of the constant failure rate is available, considering the flat part of the bathtub curve. For integrated circuits qualified with {term}`AEC-Q <AEC-Q>` automotive grade, the standard {cite:p}`eee-Black1978ElectromigrationOA` describes specific tests that must be done when a new technology of semiconductor is introduced. However, this information is generally only available upon request to the manufacturer. The failures mechanisms covered are the Hot Carrier Injection ({term}`HCI`), the Negative Bias Temperature Instability (NBTI) and the Stress Migration (SM) specific to semiconductors. The following table is an extract from standard {cite:p}`eee-Black1978ElectromigrationOA` listing the tests to perform for some {term}`failure mechanisms <Failure mechanism>`. The manufacturer has to fill the cells with number of tested parts, number of lots, test method and test acceptance criteria.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_202')"
     placeholder="Search table...">
@@ -446,7 +446,7 @@ When possible, the tests should be done with accelerated conditions versus the c
 (eee_4_6_7)=
 ## Calculation of acceleration factors
 
-The acceleration factors use {term}`degradation <Degradation>` laws generally well known for {term}`EEE` components and described in document {cite:t}`eee-JEP122H`. The general laws with a single parameter can be used for most of the more useful stresses such as the Arrhenius' law for temperature, the Eyring's law and the inverse power laws for voltage and current. The Coffin-Manson's law is used for thermal and mechanical stresses. More complex laws with more than one parameter can also be used such as Peck's model for both temperature and humidity, the Norris-Landzberg's law for solder joints and the Black's law for electromigration {cite:t}`eee-SSB-1.003`.
+The acceleration factors use {term}`degradation <Degradation>` laws generally well known for {term}`EEE` components and described in document {cite:p}`eee-JEP122H`. The general laws with a single parameter can be used for most of the more useful stresses such as the Arrhenius' law for temperature, the Eyring's law and the inverse power laws for voltage and current. The Coffin-Manson's law is used for thermal and mechanical stresses. More complex laws with more than one parameter can also be used such as Peck's model for both temperature and humidity, the Norris-Landzberg's law for solder joints and the Black's law for electromigration {cite:p}`eee-SSB-1.003`.
 
 (eee_4_6_7_1)=
 ### Inverse power law
@@ -515,7 +515,7 @@ where:
 -   $T_{u}$: stress test temperature in °C.
 ````
 
-As the activation energy $E_{a}$ is often unknown, some studies such as the documents {cite:t}`eee-JEP122H`, {cite:t}`eee-Livingston2000` and {cite:t}`eee-JESD-202` provide the activation energies $E_{a}$ of most common {term}`failure mechanisms <Failure mechanism>`. Otherwise, the value of $E_{a}$=0.7eV is generally used as a default value. This assumption could be validated by tests according to {numref}`eee_4_6_8`.
+As the activation energy $E_{a}$ is often unknown, some studies such as the documents {cite:p}`eee-JEP122H`, {cite:p}`eee-Livingston2000` and {cite:p}`eee-JESD-202` provide the activation energies $E_{a}$ of most common {term}`failure mechanisms <Failure mechanism>`. Otherwise, the value of $E_{a}$=0.7eV is generally used as a default value. This assumption could be validated by tests according to {numref}`eee_4_6_8`.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_204')"
     placeholder="Search table...">
@@ -626,7 +626,7 @@ where:
 -   $q$: coefficient related to cycling frequency = 0.3.
 ````
 
-For the {term}`failure mechanisms <Failure mechanism>` of solder joints, the value of the activation energy $E_{a}$ is 0.1216eV, the coefficient related to the components $m$ is 2 for tin lead solder and 2.6 for lead free alloy. For other materials, different studies have been performed to determine the coefficient related to the components $m$. These studies are resumed in documents {cite:t}`eee-SSB-1.003` and {cite:t}`eee-Livingston2000` and presented in the following table:
+For the {term}`failure mechanisms <Failure mechanism>` of solder joints, the value of the activation energy $E_{a}$ is 0.1216eV, the coefficient related to the components $m$ is 2 for tin lead solder and 2.6 for lead free alloy. For other materials, different studies have been performed to determine the coefficient related to the components $m$. These studies are resumed in documents {cite:p}`eee-SSB-1.003` and {cite:p}`eee-Livingston2000` and presented in the following table:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-205')" placeholder="Search table...">
 
@@ -730,12 +730,12 @@ where:
 -   $r$: humidity coefficient.
 ````
 
-According to document {cite:t}`eee-JEP122H`, the value of activation energy $E_{a}$ is 0.8eV and the humidity coefficient $r$ is 2.66.
+According to document {cite:p}`eee-JEP122H`, the value of activation energy $E_{a}$ is 0.8eV and the humidity coefficient $r$ is 2.66.
 
 (eee_4_6_7_5)=
 ### Black’s law for electromigration
 
-With this law described in document {cite:t}`eee-SSB-1.003`, the main difficulty is to determine the unknown parameters and especially the activation energy $E_{a}$, and power coefficient $n$. Therefore, it is often necessary to perform several tests with different conditions of stress. This is the case for this example of the Black's law for electromigration on semiconductors {cite:t}`eee-SSB-1.003`. The procedure to define the parameters of the law is described in document {cite:t}`eee-IEC-61649`. The formula of the Black's law is the following:
+With this law described in document {cite:p}`eee-SSB-1.003`, the main difficulty is to determine the unknown parameters and especially the activation energy $E_{a}$, and power coefficient $n$. Therefore, it is often necessary to perform several tests with different conditions of stress. This is the case for this example of the Black's law for electromigration on semiconductors {cite:p}`eee-SSB-1.003`. The procedure to define the parameters of the law is described in document {cite:p}`eee-IEC-61649`. The formula of the Black's law is the following:
 
 ````{admonition} Equation
 :class: equation
@@ -905,9 +905,9 @@ Once the tests have shown {term}`wear-out failures <Wear-out failure>`, a suitab
 
 The third part of the bathtub curve can be represented by several potential distributions, see {numref}`methodologies` for details. The most common used distributions for the wear-out of {term}`EEE` components are the Weibull distribution with two or three parameters (introducing a shift *τ* in the two-parameter model $f(t-\tau)$), and the Lognormal distribution.
 
-The Weibull distribution is often used to model "weakest link" failures such as dielectric breakdown and thermo mechanical failures due to solder joints {term}`degradation <Degradation>` {cite:t}`eee-JEP122H`. The complete methodology to define a Weibull distribution model is provided in document \[BR-EEE-29\].
+The Weibull distribution is often used to model "weakest link" failures such as dielectric breakdown and thermo mechanical failures due to solder joints {term}`degradation <Degradation>` {cite:p}`eee-JEP122H`. The complete methodology to define a Weibull distribution model is provided in document \[BR-EEE-29\].
 
-For the Lognormal distribution, the failure rate starts increasing exponentially up to a maximum and then decreases. The Lognormal distribution is generally used for chemical {term}`degradation <Degradation>` such as corrosion or for some semiconductor failure mechanisms as electromigration (EM). Due to its mathematical formula, the MTTF of a Lognormal distribution is always longer than the MTTF of a Weibull distribution. Documents {cite:t}`eee-JEP122H` and {cite:t}`eee-JESD-37A` provide the methodology to define the Lognormal distribution.
+For the Lognormal distribution, the failure rate starts increasing exponentially up to a maximum and then decreases. The Lognormal distribution is generally used for chemical {term}`degradation <Degradation>` such as corrosion or for some semiconductor failure mechanisms as electromigration (EM). Due to its mathematical formula, the MTTF of a Lognormal distribution is always longer than the MTTF of a Weibull distribution. Documents {cite:p}`eee-JEP122H` and {cite:p}`eee-JESD-37A` provide the methodology to define the Lognormal distribution.
 
 **Combination of distributions**
 

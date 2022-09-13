@@ -3,7 +3,7 @@
 (meca_4_7)=
 # Structural reliability models and equations
 
-The present section provides limit state functions and guidance for the modelling of several {term}`failure mechanisms <Failure mechanism>` that are of relevance for mechanical {term}`reliability prediction <Reliability prediction>`. The content of this Section is largely based on {cite:t}`mec-AO-1-8017-14-NL-KM`, where some aspects are discussed in more detail.
+The present section provides limit state functions and guidance for the modelling of several {term}`failure mechanisms <Failure mechanism>` that are of relevance for mechanical {term}`reliability prediction <Reliability prediction>`. The content of this Section is largely based on {cite:p}`mec-AO-1-8017-14-NL-KM`, where some aspects are discussed in more detail.
 
 An overview on the {term}`failure mechanisms <Failure mechanism>` covered by the different subsections is found in {numref}`meca-table4-10`. The limit state functions provided in each dedicated subsection are generally applicable with the “full” {term}`structural reliability method <Structural reliability method>` described in {numref}`meca_4_6_1` and in {numref}`methods`. Simplified models in the sense of {numref}`meca_4_6_2`, with analytic solutions for the probability of failure calculations, are provided for some {term}`failure mechanisms <Failure mechanism>`. {term}`Failure mechanisms <Failure mechanism>` that can be modelled with the aid of simple stress strength methods (as discussed in {numref}`meca_4_6_3`) are also mentioned in {numref}`meca-table4-10`, but will not discussed any further in the present section.
 
@@ -54,7 +54,7 @@ An overview on the {term}`failure mechanisms <Failure mechanism>` covered by the
     - {numref}`meca_4_7_4_1`
 ```
 
-{term}`Failure mechanisms <Failure mechanism>` that are not listed in {numref}`meca-table4-10` need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC's WARP {cite:t}`mec-RiAC` or Kowal {cite:t}`mec-19970017405`. The “full” {term}`structural reliability method <Structural reliability method>` may be applied with any limit state function or {term}`failure mechanism <Failure mechanism>` model, see {numref}`meca_4_6_1` for details.
+{term}`Failure mechanisms <Failure mechanism>` that are not listed in {numref}`meca-table4-10` need to be modelled by the handbook user, possibly making use of published information, e.g. in RiAC's WARP {cite:p}`mec-RiAC` or Kowal {cite:p}`mec-19970017405`. The “full” {term}`structural reliability method <Structural reliability method>` may be applied with any limit state function or {term}`failure mechanism <Failure mechanism>` model, see {numref}`meca_4_6_1` for details.
 The following subsections dedicated to each {term}`failure mechanism <Failure mechanism>` model always follow the same logic: First the {term}`failure mechanism <Failure mechanism>` is introduced and a generic limit state function is derived that can be used with general {term}`structural reliability methods <Structural reliability method>`, possibly requiring numerical methods to derive the probability of failure. Closed form solutions (if available) are then discussed separately under the heading “Simplified {term}`failure mechanism <Failure mechanism>` model”. 
 
 The derivation of these closed-form solutions is based on several assumptions related to the limit state function and the basic variable modelling, see {numref}`meca_4_6_3` for a general introduction. The detailed assumptions are specific to the considered {term}`failure mechanisms <Failure mechanism>`; a short summary is provided together with each simplified model. Note that it is not possible to make a general statement how “exact” the analytic solutions are, e.g. when compared to a “full” structural reliability assessment. However, the assumptions listed can and should be checked to decide whether the simplified model can be used for a given application or whether the “full” {term}`structural reliability method <Structural reliability method>` is more appropriate.
@@ -75,12 +75,12 @@ Adhesive, abrasive and fretting wear show common behaviour, and it is commonly a
 
 **Lubricated wear** is related to the {term}`degradation <Degradation>` of the lubricant or the lubricant reservoir in lubricated contacts. This regime is typical for bearings, with analytical models provided in {numref}`meca_4_7_1_2` for solid lubricated bearings (particularly bearing cages), and in {numref}`meca_4_7_1_3` for fluid lubricated bearings.
 
-Finally, **fatigue wear** is caused by cyclic loading and corresponding crack formation. It is the dominant bearing {term}`failure mechanism <Failure mechanism>` in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory {cite:t}`mec-PalmgrenDieLV` with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the {term}`degradation <Degradation>` of the lubricant {cite:t}`mec-TEC-MSM`. For this reason, fatigue wear is not discussed any further in the following.
+Finally, **fatigue wear** is caused by cyclic loading and corresponding crack formation. It is the dominant bearing {term}`failure mechanism <Failure mechanism>` in on-ground applications, where bearing life is traditionally modelled based on the Lundberg-Palmgren theory {cite:p}`mec-PalmgrenDieLV` with empirical formulas for the “basic life” of a bearing (corresponding to the number of revolutions at which 10% of the bearings have failed). However, in space applications, bearing lifetime is almost never limited by material fatigue, but instead by the {term}`degradation <Degradation>` of the lubricant {cite:p}`mec-TEC-MSM`. For this reason, fatigue wear is not discussed any further in the following.
 
 (meca_4_7_1_1)=
 ### Adhesive wear
 
-Adhesive wear is considered as governing for many wear failures, and is thus typically used for the analytical prediction of wear. The key parameter for the wear estimation is the volume worn away per unit of sliding distance, which can be estimated based on the classical wear model by Archard {cite:t}`mec-wear-theory-mechanisms`, here used in the form of Lancaster {cite:t}`mec-Lancaster1973DryBA`. Failure due to adhesive wear is then modelled with the following limit state function:
+Adhesive wear is considered as governing for many wear failures, and is thus typically used for the analytical prediction of wear. The key parameter for the wear estimation is the volume worn away per unit of sliding distance, which can be estimated based on the classical wear model by Archard {cite:p}`mec-wear-theory-mechanisms`, here used in the form of Lancaster {cite:p}`mec-Lancaster1973DryBA`. Failure due to adhesive wear is then modelled with the following limit state function:
 
 
 ````{admonition} Equation
@@ -272,7 +272,7 @@ summarized as follows:
 * The wear rate $K_{H}$ is constant over the whole mission (all time intervals $i$).
 * The normal load $S_{i}$ and sliding velocity $v_{i}$ (or the sliding work per time unit $P_{i} = S_{i} \cdot v_{i}$) are constant during each time interval $t_{i}$.
 * The distributions of all basic variables can be represented by the models listed in {numref}`meca-table4-11`. Other models for $K_{H}$ and $P_{i}$ are possible as long as the distribution of $X_{2}$ may still be approximated by a Lognormal distribution.
-* The effect of the Lognormal assumption for $X_{1} = V_{limit}$ has been investigated in {cite:t}`mec-AO-1-8017-14-NL-KM`. It may lead to an underestimation of the probability of failure, see {numref}`Figure_3_6` below.
+* The effect of the Lognormal assumption for $X_{1} = V_{limit}$ has been investigated in {cite:p}`mec-AO-1-8017-14-NL-KM`. It may lead to an underestimation of the probability of failure, see {numref}`Figure_3_6` below.
 
 Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of $X_{1} = V_{limit}$ is larger than $0.3$.
 
@@ -425,7 +425,7 @@ The main assumptions underlying the simplified solid lubricant wear model are th
 
 * The distributions of all basic variables can be represented by the models listed in {numref}`meca-table4-12`. Other models for $K_{H,i}$ and $\alpha_{i}$ are possible as long as the distribution of $X_{2}$ may still be approximated by a Lognormal distribution.
 
-* *The effect of the Lognormal assumption for $X_{1} = V_{limit}$ may lead to an underestimation of the probability of failure, see {cite:t}`mec-AO-1-8017-14-NL-KM` and {numref}`Figure_3_6`.
+* *The effect of the Lognormal assumption for $X_{1} = V_{limit}$ may lead to an underestimation of the probability of failure, see {cite:p}`mec-AO-1-8017-14-NL-KM` and {numref}`Figure_3_6`.
 
 Due to the effect of the last assumption, the analytic method should not be used without justification if the coefficient of variation of $X_{1} = V_{limit}$ is larger than 0.3.
 
@@ -434,7 +434,7 @@ Due to the effect of the last assumption, the analytic method should not be used
 
 In this section a fluid lubricant wear modelling is described taking example in a ball bearing again. The modelling is applicable to other cases of fluid lubricant wear, but the number of revolutions has to be substituted with another measure of sliding distance in this case.
 
-The starting point for the modelling of fluid lubricant wear is the following limit state function, see {cite:t}`mec-Palladino2011LIFEPO` for details:
+The starting point for the modelling of fluid lubricant wear is the following limit state function, see {cite:p}`mec-Palladino2011LIFEPO` for details:
 
 
 ````{admonition} Equation
@@ -447,7 +447,7 @@ g\left( \text{X}(t) \right) = X_{1} - \Theta \cdot X_{2}(t) = M_{0} - M_{inactiv
 ```
 ````
 
-Here, $M_{0}$ denotes the initial mass of the lubricant, $M_{inactive}$ the mass of lubricant not participating in the contact (e.g. due to evaporation), and $\Theta$ the {term}`model uncertainty <Model uncertainty>` for the associated term, which represents the model to estimate lubricant life described in {cite:t}`mec-Palladino2011LIFEPO`. In this term, $N_{b}$ denotes the number of balls in the bearing, $p_{d}$ the pitch diameter, $b_{d}$ the ball diameter, $\vartheta$ the contact angle, $K$ is an empirical constant, $p_{m}$ the contact pressure and $rev$ the number of revoluations during the considered time interval $t$. The variables related to bearing geometry are illustrated in the figure given below.
+Here, $M_{0}$ denotes the initial mass of the lubricant, $M_{inactive}$ the mass of lubricant not participating in the contact (e.g. due to evaporation), and $\Theta$ the {term}`model uncertainty <Model uncertainty>` for the associated term, which represents the model to estimate lubricant life described in {cite:p}`mec-Palladino2011LIFEPO`. In this term, $N_{b}$ denotes the number of balls in the bearing, $p_{d}$ the pitch diameter, $b_{d}$ the ball diameter, $\vartheta$ the contact angle, $K$ is an empirical constant, $p_{m}$ the contact pressure and $rev$ the number of revoluations during the considered time interval $t$. The variables related to bearing geometry are illustrated in the figure given below.
 
 ```{figure} ../../pictures/figure4_9.png
 ---
@@ -461,13 +461,13 @@ Bearing geometry.
 
 <a href="../../models/fluid_lubricant_wear.html" class="back-forward-button">Go to model</a>
 
-For the simplified modelling, it is considered sufficient to model only $\Theta$ and $K$ as random variables; all other variables in Eq. {eq}`Equation_3_32` are assumed to be deterministic. Since the relation for the bearing life from {cite:t}`mec-Palladino2011LIFEPO`, $K \cdot \text{exp}\left( - 3.35 \cdot p_{m} \right)$, is purely empirical, curve fitting residuals or the distribution of the coefficient $K$ may be used for the probabilistic assessments.
+For the simplified modelling, it is considered sufficient to model only $\Theta$ and $K$ as random variables; all other variables in Eq. {eq}`Equation_3_32` are assumed to be deterministic. Since the relation for the bearing life from {cite:p}`mec-Palladino2011LIFEPO`, $K \cdot \text{exp}\left( - 3.35 \cdot p_{m} \right)$, is purely empirical, curve fitting residuals or the distribution of the coefficient $K$ may be used for the probabilistic assessments.
 
-Note that in principle, $M_{inactive}$ may also be treated as stochastic, but its value will generally be only a small fraction of $M_{0}$, typically not exceeding 1-2% when considering only evaporation losses for a bearing with a labyrinth seal under optimal temperature conditions {cite:t}`mec-Palladino2011LIFEPO`.
+Note that in principle, $M_{inactive}$ may also be treated as stochastic, but its value will generally be only a small fraction of $M_{0}$, typically not exceeding 1-2% when considering only evaporation losses for a bearing with a labyrinth seal under optimal temperature conditions {cite:p}`mec-Palladino2011LIFEPO`.
 
 It is furthermore assumed that all variables (except for the number of revolutions $rev$) are constant over the whole length of the mission. $M_{inactive}$ should be estimated considering the amount of lubricant that has evaporated (or is not participating in the contact due to other reasons) at the end of the mission. In reality the amount of evaporated lubricant depends on the number of revolutions, thus the proposed approach leads to a slightly conservative estimation.
 
-These assumptions allow the application of Eq. {eq}`Equation_3_32` without any further simplifications in the limit state function. Thus, $X_{1} = M_{0} - M_{inactive}$ is defined as the amout of lubricant available and $X_{2}$ as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in {cite:t}`mec-Palladino2011LIFEPO`. Detailed variable definitions are reminded in {numref}`meca-table4-13` below.
+These assumptions allow the application of Eq. {eq}`Equation_3_32` without any further simplifications in the limit state function. Thus, $X_{1} = M_{0} - M_{inactive}$ is defined as the amout of lubricant available and $X_{2}$ as the amount of lubricant required for the mission, estimated based on the lubricant life model presented in {cite:p}`mec-Palladino2011LIFEPO`. Detailed variable definitions are reminded in {numref}`meca-table4-13` below.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'meca-table4-13')" placeholder="Search table...">
 
@@ -580,7 +580,7 @@ model are the following:
 
 * The amount of lubricant not participating in the contact (e.g. due to evaporation), $M_{inactive}$, is a small fraction of the initial amount of lubricant, $M_{0}$ (1-2% for bearings with a labyrinth seal under optimal temperature condition).
 
-* The estimate for the (deterministic) variable $M_{inactive}$ is chosen conservatively, e.g. by determining the amount of lubricant evaporated at the end of the mission based on the model provided in {cite:t}`mec-Palladino2011LIFEPO`.
+* The estimate for the (deterministic) variable $M_{inactive}$ is chosen conservatively, e.g. by determining the amount of lubricant evaporated at the end of the mission based on the model provided in {cite:p}`mec-Palladino2011LIFEPO`.
 
 * The uncertainty in most of the variables listed in {numref}`meca-table4-13` (except for the empirical constant of the lubricant life model $K$ and the {term}`model uncertainty <Model uncertainty>` $\Theta$) can be neglected.
 
@@ -609,7 +609,7 @@ Failures due to low-cycle fatigue are driven by accumulated plastic deformations
 
 In the remainder of this section, only high-cycle fatigue is considered.
 
-The standard approach to the fracture control for space projects is presented in {cite:t}`mec-ECSS-E-ST-32-01C`. Depending on the criticality, different approaches can be used:
+The standard approach to the fracture control for space projects is presented in {cite:p}`mec-ECSS-E-ST-32-01C`. Depending on the criticality, different approaches can be used:
 
 * **Fail-safe** – damage-tolerance design principle, where a structure has redundancy to ensure that failure of one structural element does not cause general failure of the entire structure during the remaining lifetime.
 
@@ -648,7 +648,7 @@ S_{eq} = S_{\max}(1 - R)^{P} = S_{\max}\left( 1 - \frac{S_{\min}}{S_{\max}} \rig
 ```
 ````
 
-Here, $S_{\min}$ and $S_{\max}$ denoting the minimum and maximum stress during one load cycle and $A$, $B$, $C$ and $P$ are model parameters of the S/N curve model that can be derived from {term}`test data <Test data>`, e.g. those presented in {cite:t}`mec-MMPDS` or its predecessor,{cite:t}`mec-MIL-HDBK-5J`. Of special interest is the parameter $C$, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus $N_{f}(S \leq C) \rightarrow \infty$.
+Here, $S_{\min}$ and $S_{\max}$ denoting the minimum and maximum stress during one load cycle and $A$, $B$, $C$ and $P$ are model parameters of the S/N curve model that can be derived from {term}`test data <Test data>`, e.g. those presented in {cite:p}`mec-MMPDS` or its predecessor,{cite:p}`mec-MIL-HDBK-5J`. Of special interest is the parameter $C$, corresponding to the fatigue limit stress, or endurance limit, under which it is assumed that no fatigue failure occurs, thus $N_{f}(S \leq C) \rightarrow \infty$.
 
 The S/N curve is valid for cyclic loading with constant amplitude or equivalent stress. For cyclic loading with varying stress levels, the S/N curve is combined with the Palmgren-Miner accumulation law to estimate the accumulated damage $D_{tot}$ after $N$ stress cycles:
 
@@ -692,7 +692,7 @@ The time dependent formulation in Eq. {eq}`Equation_3_39` neglects load history 
 
 <a href="../../models/fatigue_failure.html" class="back-forward-button">Go to model</a>
 
-The starting point for the simplified model is the limit state function in Eq. {eq}`Equation_3_39`, with load cycles summarized in bins (last row). For the simplified approach, the variables $N_{j}$, $B$ and $C$ are assumed to be deterministic. The uncertainty associated with the loading $S_{eq,j}$ is then the only uncertainty that cannot be taken out of the sum. A simple approach to model this uncertainty is to multiply deterministic values for $S_{eq,j}$ (e.g. taken from design calculations) with a random stress scaling factor $SSF$ that is applied globally, i.e. taking on the same value for all bins {cite:t}`mec-TEC-MCS`. If it is furthermore assumed that the endurance limit $C$ equals zero (which is conservative for all applications), the limit state function defined in Eq. {eq}`Equation_3_39` can be brought into the following simple expression:
+The starting point for the simplified model is the limit state function in Eq. {eq}`Equation_3_39`, with load cycles summarized in bins (last row). For the simplified approach, the variables $N_{j}$, $B$ and $C$ are assumed to be deterministic. The uncertainty associated with the loading $S_{eq,j}$ is then the only uncertainty that cannot be taken out of the sum. A simple approach to model this uncertainty is to multiply deterministic values for $S_{eq,j}$ (e.g. taken from design calculations) with a random stress scaling factor $SSF$ that is applied globally, i.e. taking on the same value for all bins {cite:p}`mec-TEC-MCS`. If it is furthermore assumed that the endurance limit $C$ equals zero (which is conservative for all applications), the limit state function defined in Eq. {eq}`Equation_3_39` can be brought into the following simple expression:
 
 ````{admonition} Equation
 :class: equation
@@ -760,7 +760,7 @@ Thus, $X_{2}$ is defined as accumulated damage, which is calculated based on the
     - $\nu_{\Theta} \geq 0$
 ```
 
-Without additional information, the expected value of $D_{cr}$ may be assumed to be equal to unity and its coefficient of variation equal to 0.3 (based on JCSS {cite:t}`mec-jcss` and Wirsching {cite:t}`mec-Wirsching1984FatigueRF`). The mean value and coefficient of variation of the stress scaling factor $SSF$ can be determined as follows: First an appropriate coefficient of variation $v_{SSF}$ reflecting all uncertainties associated with the load analysis is chosen, considering the most uncertain load event to be conservative.
+Without additional information, the expected value of $D_{cr}$ may be assumed to be equal to unity and its coefficient of variation equal to 0.3 (based on JCSS {cite:p}`mec-jcss` and Wirsching {cite:p}`mec-Wirsching1984FatigueRF`). The mean value and coefficient of variation of the stress scaling factor $SSF$ can be determined as follows: First an appropriate coefficient of variation $v_{SSF}$ reflecting all uncertainties associated with the load analysis is chosen, considering the most uncertain load event to be conservative.
 The mean value of the stress scaling factor then depends on the definition of the $S_{eq,j}$ values. Design values for fatigue stresses are typically defined as upper fractile values, leading to the following relationship:
 
 ````{admonition} Equation
@@ -965,20 +965,20 @@ To allow for a first quick assessment, some reference values for the coefficient
 Crack growth calculations are performed to show that the growth of minor
 cracks under fatigue loading does not lead to structural failure. The
 required deterministic methods are available and implemented in
-specialized Software, such as ESACRACK {cite:t}`mec-ESACRACK` / NASGRO {cite:t}`mec-NASGRO`. A
+specialized Software, such as ESACRACK {cite:p}`mec-ESACRACK` / NASGRO {cite:p}`mec-NASGRO`. A
 probabilistic approach based these models is possible and has been
-described by {cite:t}`mec-extending-ESAFATIGUE-ESACRACK` and {cite:t}`mec-TEC-MCS`, discussing the development and use
+described by {cite:p}`mec-extending-ESAFATIGUE-ESACRACK` and {cite:p}`mec-TEC-MCS`, discussing the development and use
 of a probabilistic version of ESACRACK. Developments for {term}`NASA` in the
-field of probabilistic fracture mechanics are discussed in {cite:t}`mec-18.18074.08.808`. In
+field of probabilistic fracture mechanics are discussed in {cite:p}`mec-18.18074.08.808`. In
 the present section, only the generic approach to probabilistic fracture
 analysis is presented together with a short discussion of the required
 uncertainty quantification. More detailed information can be found in
-Mattrand {cite:t}`mec-TEC-MCS`.
+Mattrand {cite:p}`mec-TEC-MCS`.
 
 In the space industry fatigue crack growth calculations are typically
 performed using a relationship called the NASGRO equation, which was
-initially documented by Forman and Mettu {cite:t}`mec-Forman1992BehaviorOS`. It is given by
-{cite:t}`mec-NASGRO`:
+initially documented by Forman and Mettu {cite:p}`mec-Forman1992BehaviorOS`. It is given by
+{cite:p}`mec-NASGRO`:
 
 ````{admonition} Equation
 :class: equation
@@ -1129,7 +1129,7 @@ P_{f}(t) = \text{Pr}\left\lbrack g_{1}\left( a(t) \right) \leq 0 \cup g_{2}\left
 
 As an alternative, $g_{1}$ and $g_{2}$ may also be combined into a
 single limit state function by making use of an interaction model, as
-described e.g. by {cite:t}`mec-TEC-MCS`. Note, however, that these models are
+described e.g. by {cite:p}`mec-TEC-MCS`. Note, however, that these models are
 generally developed for a specific crack geometry, e.g. assuming a
 through crack in an infinite plate. Hence, the applicability to the
 crack under consideration shall be assessed when using an interaction
@@ -1189,12 +1189,12 @@ be derived based on the following assumptions:
 
 -   The uncertainty associated with the chosen {term}`NDE` technique can be
     described with the aid of a probability of detection curve
-    $POD(a)$, see e.g. {cite:t}`mec-Rummel1997NondestructiveE`}.
+    $POD(a)$, see e.g. {cite:p}`mec-Rummel1997NondestructiveE`}.
 
 -   Only parts without detected defects are used.
 
 Bayes’ theorem ({numref}`methods`) can now be used to determine the
-probability distribution of the crack size after inspection {cite:t}`mec-Zheng1998RoleON`:
+probability distribution of the crack size after inspection {cite:p}`mec-Zheng1998RoleON`:
 
 ````{admonition} Equation
 :class: equation
@@ -1213,7 +1213,7 @@ part that is inspected (again) after testing, a probabilistic crack
 growth analysis for the applied test loads can be used to derive
 ${f'}_{A}(a)$.
 
-In {cite:t}`mec-TEC-MCS`, {cite:t}`mec-18.18074.08.808` it is stated that the POD curve may be interpreted
+In {cite:p}`mec-TEC-MCS`, {cite:p}`mec-18.18074.08.808` it is stated that the POD curve may be interpreted
 directly as the cumulative distribution function of the crack size after
 inspection. This approach leads to the same result as Eq. {eq}`Equation_3_56`
 when assuming a noninformative (positive) uniform prior distribution for
@@ -1254,16 +1254,16 @@ cycles with stress intensity factor ranges below this threshold. At the
 upper limit, uncertainty in the fracture toughness ($K_{Ic}$ or
 $K_{instability}$) and flow stress $\sigma_{flow}$ (or yield stress
 $\sigma_{y}$) may be expected to play a major role only if the initial
-crack size is close to the critical size {cite:t}`mec-TEC-MCS`.
+crack size is close to the critical size {cite:p}`mec-TEC-MCS`.
 
-A literature survey presented by Mattrand {cite:t}`mec-TEC-MCS` reports coefficients
+A literature survey presented by Mattrand {cite:p}`mec-TEC-MCS` reports coefficients
 of variation between 5% and 25% for the fracture toughness and yield
 strength of metallic materials (note that some material specific
-information may be found e.g. in MMPDS-12 {cite:t}`mec-MMPDS` or its predecessor,
-MIL-HDBK-5 {cite:t}`mec-MIL-HDBK-5J`). Typical distributional assumptions for the two
+information may be found e.g. in MMPDS-12 {cite:p}`mec-MMPDS` or its predecessor,
+MIL-HDBK-5 {cite:p}`mec-MIL-HDBK-5J`). Typical distributional assumptions for the two
 variables are Weibull or Lognormal distributions. A proposal for the
 probabilistic modelling of Al 7075 T7351 and Ti 6Al 4V material
-properties can be found in {numref}`meca-table4-16` (taken from {cite:t}`mec-TEC-MCS`).
+properties can be found in {numref}`meca-table4-16` (taken from {cite:p}`mec-TEC-MCS`).
 
 ```{list-table} Probabilistic modelling of material parameters for Al 7075 T7351 and Ti 6Al 4V
 :name: meca-table4-16
@@ -1281,7 +1281,7 @@ ensured by specific storage conditions. Special types of corrosion that
 that are of relevance only for specific parts, e.g. in the propulsion
 subsystem, are not discussed in the present handbook. The reader is
 referred to the compendium of limit states for space applications that
-has been prepared by Kowal {cite:t}`mec-Kowal1994MechanicalSR`, which includes also a discussion of
+has been prepared by Kowal {cite:p}`mec-Kowal1994MechanicalSR`, which includes also a discussion of
 several types of corrosion.
 
 A corrosion mechanism that is closely related to the crack growth
@@ -1308,7 +1308,7 @@ life time extensions beyond the nominal mission.
 
 <u>Thermal {term}`degradation <Degradation>`</u> is of relevance mainly for non-metallic
 materials such as polymers or insulation material. Some basic models
-have been reviewed in {cite:t}`mec-Kowal1994MechanicalSR`. Thermal {term}`degradation <Degradation>` as an individual
+have been reviewed in {cite:p}`mec-Kowal1994MechanicalSR`. Thermal {term}`degradation <Degradation>` as an individual
 {term}`failure mechanism <Failure mechanism>` is not discussed any further in the present chapter.
 Note, however, that temperature may have to be considered as a
 contributor or influencing variable during several other failure
@@ -1334,7 +1334,7 @@ strength and ultimate stress, creep, fatigue, thermal conductivity,
 hardness, optical properties etc. Metallic materials are rather
 unaffected by radiation, but {term}`degradation <Degradation>` needs to be considered for
 optical materials (e.g. darkening of glass) and for organic materials
-such as plastics and polymers {cite:t}`mec-Bouquet1979DesignersGT`. Due to the complexity of the
+such as plastics and polymers {cite:p}`mec-Bouquet1979DesignersGT`. Due to the complexity of the
 phenomena, a quantitative estimation of the radiation effects is
 difficult. Therefore, a simplified assessment of the radiation hardness
 is performed during the design, taking its basis in an allowable

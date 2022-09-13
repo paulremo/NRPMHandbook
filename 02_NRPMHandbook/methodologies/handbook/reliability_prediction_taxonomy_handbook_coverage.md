@@ -12,7 +12,7 @@ The following subsections give a brief introduction to the project life cycle an
 (methodo_4_1_1)=
 ### Project life cycle and space mission phases
 
-Space projects are typically divided in seven life cycle phases from 0 to F, as defined in {numref}`methodo-table4-1` (cf {cite:t}`methodo-ECSS-M-ST-10C`). The production and verification of the actual flight item takes place in Phase D, followed by its launch and utilization in Phase E and the disposal at end of life in Phase F.
+Space projects are typically divided in seven life cycle phases from 0 to F, as defined in {numref}`methodo-table4-1` (cf {cite:p}`methodo-ECSS-M-ST-10C`). The production and verification of the actual flight item takes place in Phase D, followed by its launch and utilization in Phase E and the disposal at end of life in Phase F.
 
 The duration of the mission is determined by the specified lifetime, counting from launch to end-of-life (disposal) of a spacecraft; sometimes the disposal phase is included to consider deorbiting / reorbiting success calculations. Possible lifetime extensions increase the duration of operations in-orbit. In addition, also information about mission phases prior to launch may need to be considered as an input for reliability prediction, e.g. to consider design and manufacturing process contributions, or to account for stresses experienced during verification testing.
 

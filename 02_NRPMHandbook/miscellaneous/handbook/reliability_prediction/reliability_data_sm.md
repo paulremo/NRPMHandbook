@@ -10,7 +10,7 @@ The meaning of the columns is explained in {numref}`misc-table4-7`.
 :class: note
 The failure rate is provided per TWT Channel (mono channel or dual channel). In order to be used for LEO, if adaptation is necessary, it is recommended to use 
 
-1.  by default the following proportion (based on average MIL-HDBK-217 {cite:t}`mis-MIL-HDBK-217F` {term}`reliability prediction <Reliability prediction>`) of the whole failure rate.
+1.  by default the following proportion (based on average MIL-HDBK-217 {cite:p}`mis-MIL-HDBK-217F` {term}`reliability prediction <Reliability prediction>`) of the whole failure rate.
     * EPC_common = 36%
     * EPC_channel = 9%
     * {term}`CAMP` = 25%

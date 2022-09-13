@@ -31,7 +31,7 @@ Thus, sufficient information on these three points should be available before st
 
 It should be clear that the assumptions made can have a tremendous impact on the results. If the main goal is to receive reliability predictions that are comparable (e.g. between different manufacturers or suppliers), one must ensure that the same assumptions are used. At least the key assumptions with the largest impact on the result should be agreed by all parties, and/or specified in the supply chain.
 
-Any reliability prediction report should provide full information on the assumptions made for the prediction, as listed in {numref}`methodo-table5-3`. This ensures that the required elements of a reliability prediction, as defined in {cite:t}`methodo-IEEE-Std-1413TM`, Clause 4, are provided with the prediction. The relation between each of these required elements, the assumptions listed in {numref}`methodo-table5-3` and the relevant sections of this handbook is given in {numref}`methodo-table5-4`.
+Any reliability prediction report should provide full information on the assumptions made for the prediction, as listed in {numref}`methodo-table5-3`. This ensures that the required elements of a reliability prediction, as defined in {cite:p}`methodo-IEEE-Std-1413TM`, Clause 4, are provided with the prediction. The relation between each of these required elements, the assumptions listed in {numref}`methodo-table5-3` and the relevant sections of this handbook is given in {numref}`methodo-table5-4`.
 
 <input type="text" class="myInput" id="myInput5-3" onkeyup="searchTableJupyter(this, 'methodo_table5_3')" placeholder="Search table...">
 
@@ -188,7 +188,7 @@ Any reliability prediction report should provide full information on the assumpt
 :header-rows: 1
 :widths: 50 30 20
 
-*   - Required element of a reliability prediction ({cite:t}`methodo-IEEE-Std-1413TM`, Clause 4)
+*   - Required element of a reliability prediction ({cite:p}`methodo-IEEE-Std-1413TM`, Clause 4)
     - {numref}`methodo-table5-3` Assumptions
     - Handbook Chapters
 *   - Identification and description of the item for which the prediction is made and the life cycle phase upon which the prediction is performed
@@ -197,13 +197,13 @@ Any reliability prediction report should provide full information on the assumpt
 *   - Intended use of the prediction results
     - <ul><li>Intended use of the prediction</li></ul>
     - {numref}`methodo_5_3_2`
-*   - RP coverage: No required element in {cite:t}`methodo-IEEE-Std-1413TM`
+*   - RP coverage: No required element in {cite:p}`methodo-IEEE-Std-1413TM`
     - <ul><li>Mission phase coverage</li><li>Elements coverage</li><li>Failure modes coverage</li><li>Failure mechanisms coverage</li><li>Root causes coverage</li></ul>
     - {numref}`methodo_4_1`, {numref}`methodo_4_2`, {numref}`method_6`, {numref}`methodo_4_3`, {numref}`methodo_4_4`
 *   - List of inputs used for the selected methodologies
     - <ul><li>Mission definition</li><li>Design lifetime</li><li>Operational conditions</li><li>Environmental conditions</li><li>Product design information</li><li>Methods, models</li><li>Data</li></ul>
     - {numref}`methodo_4_3_4`, {numref}`method_6`
-*   - Modelling: No required element in {cite:t}`methodo-IEEE-Std-1413TM`
+*   - Modelling: No required element in {cite:p}`methodo-IEEE-Std-1413TM`
     - <ul><li>Redundancy considerations</li><li>Degraded system modes</li><li>Dormant phases</li><li>Common cause effects</li><li>Distribution functions</li></ul>
     - {numref}`sec_sys_handbook`
 *   - Prediction metrics: Definitions and values
@@ -361,7 +361,7 @@ Where a quantitative prediction is required, the scope of the prediction needs t
 (methodo_5_4)=
 ## Reliability prediction during project life cycle
 
-This section explains how the system reliability prediction process interacts with the system development process and which activities and deliverables should be performed throughout the system life cycle. The typical system life cycle of space products according to {cite:t}`methodo-ECSS-M-ST-10C` consists of seven phases, as shown in {numref}`Figure_methodo_2` (see also {numref}`methodo_4_1_1`).
+This section explains how the system reliability prediction process interacts with the system development process and which activities and deliverables should be performed throughout the system life cycle. The typical system life cycle of space products according to {cite:p}`methodo-ECSS-M-ST-10C` consists of seven phases, as shown in {numref}`Figure_methodo_2` (see also {numref}`methodo_4_1_1`).
 
 ```{figure} pictures/methodo_figure5_2.png
 ---
@@ -376,7 +376,7 @@ The establishment and cascading of reliability requirements will be explained in
 (methodo_5_4_1)=
 ### Deliverables of the reliability prediction process during Life Cycle
 
-The scope and aim of each system life cycle phase, is highlighted in {numref}`Figure_methodo_2`, taken from {cite:t}`methodo-ECSS-M-ST-10C`.
+The scope and aim of each system life cycle phase, is highlighted in {numref}`Figure_methodo_2`, taken from {cite:p}`methodo-ECSS-M-ST-10C`.
 
 ```{figure} pictures/methodo_figure5_3.png
 ---
@@ -644,7 +644,7 @@ The contribution of reliability prediction to each phase and the associated revi
 (methodo_5_4_2_1)=
 #### Establishment of reliability requirements
 
-In the following, the process steps to support the establishment of appropriate reliability requirements will be explained according to {cite:t}`methodo-TASF-RAMS-0010` . The first step is the classification of the type of space mission, as shown in {numref}`methodo-table5-10`. Details on the coverage of this handbook in terms of mission types can be found in {numref}`methodo_4_2_1`.
+In the following, the process steps to support the establishment of appropriate reliability requirements will be explained according to {cite:p}`methodo-TASF-RAMS-0010` . The first step is the classification of the type of space mission, as shown in {numref}`methodo-table5-10`. Details on the coverage of this handbook in terms of mission types can be found in {numref}`methodo_4_2_1`.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-10')" placeholder="Search table...">
 
@@ -740,7 +740,7 @@ The allocation of reliability requirements then consists of the following steps:
    * Feasibility-Of-Objectives ({term}`FOO`) Method 
 6. Review of sub-system targets with regard to feasibility, cost, schedule etc. and refine allocation if deemed necessary. This may involve iterations to find a well-balanced apportionment of reliability targets.
 
-The allocation of requirements to lower level starts with the identification of system functions. Based on the customer top level reliability requirements, a system function for the design can be identified. This overall system function is decomposed into its sub-functions {cite:t}`methodo-DFM-21173`. The functional failure analysis determines the failure effects and repercussions at system level. The following generic failures could be used as guideline to assess each function and sub-function:
+The allocation of requirements to lower level starts with the identification of system functions. Based on the customer top level reliability requirements, a system function for the design can be identified. This overall system function is decomposed into its sub-functions {cite:p}`methodo-DFM-21173`. The functional failure analysis determines the failure effects and repercussions at system level. The following generic failures could be used as guideline to assess each function and sub-function:
 
 * Total loss of function 
 * Partial loss of function
@@ -847,7 +847,7 @@ It is obvious that for different values for $R_{i}(t)$ the same system reliabili
 
 **Equal Allocation**
 
-This method equally distributes the system reliability on all the sub-systems below the system level ``{cite:t}`MIL-HDBK-338B` ``. The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by
+This method equally distributes the system reliability on all the sub-systems below the system level ``{cite:p}`MIL-HDBK-338B` ``. The weighting factor is equal for each sub system and given by the number of sub systems. The reliability target for the sub-systems is given by
 
 ````{admonition} Equation
 :class: equation
@@ -953,7 +953,7 @@ Given that 15% of the system failures are caused by a failure of the power suppl
 
 **Feasibility-Of-Objectives (FOO) Method**
 
-The {term}`FOO` method allows users to assign grading factors to sub-systems and their components in order to determine how reliability targets are cascaded from top level to lower level. A sub-system with high grading factors is allocated a lower reliability than a sub-system with low grading factors. Default grading categories are complexity, technical level (state of art), operating time and environmental condition. Users may change these categories. Each rank is based on a scale from 1 to 10 and is estimated using both design engineering and expert judgment {cite:t}`methodo-MIL-HDBK-338B` : 
+The {term}`FOO` method allows users to assign grading factors to sub-systems and their components in order to determine how reliability targets are cascaded from top level to lower level. A sub-system with high grading factors is allocated a lower reliability than a sub-system with low grading factors. Default grading categories are complexity, technical level (state of art), operating time and environmental condition. Users may change these categories. Each rank is based on a scale from 1 to 10 and is estimated using both design engineering and expert judgment {cite:p}`methodo-MIL-HDBK-338B` : 
 
 1. System Complexity. Complexity is evaluated by considering the probable number of parts or components making up the sub system and also is judged by the assembled intricacy of these parts or components. The least complex sub system is rated at 1, and a highly complex sub system is rated at 10.
 2. Technology level. The state of present engineering progress in all fields is considered. The least developed design or method receives a value of 10, and the most highly developed is assigned a value of 1.
@@ -1076,13 +1076,13 @@ An example for reliability allocation using {term}`FOO` method is shown in {numr
 (methodo_5_4_3)=
 ## Reliability assessment for system architecture development during conceptual design 
 
-The outcome of the conceptual design phase are concepts that will be implemented during the next stages of the system development. The selection of the preferred system architecture is essentially a trade-off among the various architecture options. According to {cite:t}`methodo-ECSS-E-ST-10C`, a trade-report should contain the result of the evaluation of every identified alternative design solution with regard to the key technical requirements. For each alternative design solution, the following should be performed: 
+The outcome of the conceptual design phase are concepts that will be implemented during the next stages of the system development. The selection of the preferred system architecture is essentially a trade-off among the various architecture options. According to {cite:p}`methodo-ECSS-E-ST-10C`, a trade-report should contain the result of the evaluation of every identified alternative design solution with regard to the key technical requirements. For each alternative design solution, the following should be performed: 
 
 * Assessment of all the key technical requirements / evaluation criteria, 
 * Presentation of the pros and cons of the design solution, and 
 * Identification of the technical and programmatic risks. 
 
-The reliability prediction is an important part of the trade-off studies and could be applied to support {term}`system engineering <System engineering>`, subsystem engineering and equipment level design engineering. It provides a quantitative assessment of alternative design solutions regarding the achievement of reliability requirements. In the trade-off study, a sensitivity analysis can support {term}`system engineering <System engineering>` through quantifying how reliability on system level changes if certain parameters change. Importance measures (see {numref}`sec_sys_handbook`) could be used to perform such a sensitivity analysis. Furthermore, the reliability prediction for the trade-off should identify the equipment failure modes that significantly impact the system reliability. If the correlation between equipment failure modes and system reliability can be established, the aim of system reliability improvement is to eliminate or significantly reduced these failure modes by improving equipment quality or reconfiguring the system architecture. Different design concepts may cause different types of failure modes. The system designers should be aware of the underlying failure causes to achieve a robust design. To achieve the desired quality, the development process should be accompanied by an appropriate quality assurance procedure, see e.g. {cite:t}`methodo-ECSS-Q-ST-10C`.
+The reliability prediction is an important part of the trade-off studies and could be applied to support {term}`system engineering <System engineering>`, subsystem engineering and equipment level design engineering. It provides a quantitative assessment of alternative design solutions regarding the achievement of reliability requirements. In the trade-off study, a sensitivity analysis can support {term}`system engineering <System engineering>` through quantifying how reliability on system level changes if certain parameters change. Importance measures (see {numref}`sec_sys_handbook`) could be used to perform such a sensitivity analysis. Furthermore, the reliability prediction for the trade-off should identify the equipment failure modes that significantly impact the system reliability. If the correlation between equipment failure modes and system reliability can be established, the aim of system reliability improvement is to eliminate or significantly reduced these failure modes by improving equipment quality or reconfiguring the system architecture. Different design concepts may cause different types of failure modes. The system designers should be aware of the underlying failure causes to achieve a robust design. To achieve the desired quality, the development process should be accompanied by an appropriate quality assurance procedure, see e.g. {cite:p}`methodo-ECSS-Q-ST-10C`.
 
 (methodo_5_4_4)=
 ### Reliability requirement verification for compliance demonstration

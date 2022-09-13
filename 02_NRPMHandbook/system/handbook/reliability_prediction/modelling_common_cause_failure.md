@@ -3,7 +3,7 @@
 (syst_4_7)=
 # Modelling of common cause failure
 
-In order to quantitatively assess the influence of {term}`common cause failure <Common cause failure>` on the system reliability several methods exist, for example {cite:t}`sys-Jones2012CommonCF`:
+In order to quantitatively assess the influence of {term}`common cause failure <Common cause failure>` on the system reliability several methods exist, for example {cite:p}`sys-Jones2012CommonCF`:
 
 -   **Basic Parameter Model** -- uses direct probability of the {term}`common cause failure <Common cause failure>` event.
 
@@ -20,7 +20,7 @@ In the following, the {term}`contributing factors <Contributing factor>` to {ter
 (syst_4_7_1)=
 ## Contributing factors to common cause failure
 
-In order to quantify the possibility of {term}`common cause failure <Common cause failure>` the significant contributors that affect the coupling mechanisms will be reviewed. The significant contributors are described by the following areas {cite:t}`sys-Hark2015CommonCF`:
+In order to quantify the possibility of {term}`common cause failure <Common cause failure>` the significant contributors that affect the coupling mechanisms will be reviewed. The significant contributors are described by the following areas {cite:p}`sys-Hark2015CommonCF`:
 
 -   **Separation/segregation**
     > Redundant component installed in close proximity to each other can make the system susceptible to common cause fault resulting from physical interference between components. Such {term}`common cause failure <Common cause failure>` can result from a failure of a single component when the physical effects are not limited to one component, e.g. fragments resulting from disintegration of pressure vessel could impact with other components. The more segregation of redundant components can be achieved, the less this factor influences {term}`common cause failures <Common cause failure>`. It should be noted that for space applications there are volume constrains which leads to limitations of separation and segregation of system components.
@@ -54,7 +54,7 @@ In order to avoid that {term}`common cause failures <Common cause failure>` rest
 (syst_4_7_2)=
 ## Basic Parameter model
 
-The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and {term}`common cause failures <Common cause failure>`, as shown in {numref}`Figure_7_31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by {cite:t}`sys-Jones2012CommonCF`
+The basic parameter model is called a direct model because the probabilities of the different failure events are used directly. In the following, a simple redundant system with two identical components in parallel is considered, in which at least one out of two is required to work. It is assumed that the total failure probability consists of both independent and {term}`common cause failures <Common cause failure>`, as shown in {numref}`Figure_7_31`. The probability that either one of the two components fails independently is $Q_{I}$. The probability that both components fail together from a common cause is $Q_{C}$. The system failure probability is obtained by {cite:p}`sys-Jones2012CommonCF`
 
 ````{admonition} Equation
 :class: equation
@@ -79,7 +79,7 @@ System failure calculation including {term}`common cause failure <Common cause f
 (syst_4_7_3)=
 ## Beta Factor model
 
-For explanation of the beta factor model, also a system with two identical redundant components A and B is considered. The failure of one component will, with probability $\beta$, cause all components to fail, and with probability $1- \beta$, just involve the given channel. The total failure rate of a channel is obtained by {cite:t}`sys-Hark2015CommonCF`:
+For explanation of the beta factor model, also a system with two identical redundant components A and B is considered. The failure of one component will, with probability $\beta$, cause all components to fail, and with probability $1- \beta$, just involve the given channel. The total failure rate of a channel is obtained by {cite:p}`sys-Hark2015CommonCF`:
 
 ````{admonition} Equation
 :class: equation
@@ -123,7 +123,7 @@ With the categories of significant contributors to {term}`CCF` shown in {numref}
 ```
 ````
 
-The next step is to assess the maximum common cause value {term}`MCCV`. According to {cite:t}`sys-Hark2015CommonCF` one of three possible values 10%, 20% or 30% should be selected for the {term}`MCCV` based on experience of maximum {term}`common cause failure <Common cause failure>` in the industry. For example, for an industry with a strong safety culture and established methods to analyse and mitigate {term}`common cause failure <Common cause failure>` as it is the case for the space industry, the lowest value of {term}`MCCV` is selected.
+The next step is to assess the maximum common cause value {term}`MCCV`. According to {cite:p}`sys-Hark2015CommonCF` one of three possible values 10%, 20% or 30% should be selected for the {term}`MCCV` based on experience of maximum {term}`common cause failure <Common cause failure>` in the industry. For example, for an industry with a strong safety culture and established methods to analyse and mitigate {term}`common cause failure <Common cause failure>` as it is the case for the space industry, the lowest value of {term}`MCCV` is selected.
 
 The beta factor is calculated as follows
 

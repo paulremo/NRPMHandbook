@@ -6,7 +6,7 @@
 (eee_4_3_4_1)=
 ## Capacitors (family 01)
 
-Capacitors are classified as family 01 in {term}`EPPL` {cite:t}`eee-EPPL007-37`.
+Capacitors are classified as family 01 in {term}`EPPL` {cite:p}`eee-EPPL007-37`.
 
 All capacitors used for Space applications can be modelled through FIDES.
 
@@ -1309,7 +1309,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_2)=
 ## Connectors (family 02)
 
-Connectors are classified as family 02 in {term}`EPPL` {cite:t}`eee-EPPL007-37`.
+Connectors are classified as family 02 in {term}`EPPL` {cite:p}`eee-EPPL007-37`.
 
 All connectors used for Space applications can be modelled through FIDES.
 
@@ -1888,7 +1888,7 @@ In the 2021 issue of FIDES, a table has been added for gauges of circular sectio
 (eee_4_3_4_3)=
 ## Piezo electric devices (family 03)
 
-Piezo electric devices are classified as family 03 in the {term}`EPPL` {cite:t}`eee-EPPL007-37`. Crystal/Quartz resonators/oscillators can be modelled through FIDES.
+Piezo electric devices are classified as family 03 in the {term}`EPPL` {cite:p}`eee-EPPL007-37`. Crystal/Quartz resonators/oscillators can be modelled through FIDES.
 
 The following table presents the different subfamilies and the corresponding models with the FIDES method.
 
@@ -2517,7 +2517,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_4)=
 ## Diodes (family 04)
 
-General diodes and RF {term}`HF` diodes are classified as family 04 in {term}`EPPL` {cite:t}`eee-EPPL007-37`.
+General diodes and RF {term}`HF` diodes are classified as family 04 in {term}`EPPL` {cite:p}`eee-EPPL007-37`.
 
 All diodes used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
 
@@ -3800,7 +3800,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_5)=
 ## Filters family 05
 
-Filters are classified as family 05 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+Filters are classified as family 05 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 The {term}`HF`/RF  filters used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 The following table presents the different subfamilies and the corresponding models with the FIDES method.
@@ -4358,7 +4358,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_6)=
 ## Fuses (family 06)
 
-Fuses are classified as family 06 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. All fuses used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+Fuses are classified as family 06 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. All fuses used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
 The following table presents the different subfamilies and the corresponding models with the FIDES method.
 
@@ -4451,9 +4451,9 @@ $I_{\text{applied}}$ is the current in the fuse during the considered phase
 
 $I_{\text{rated}}$ is the rated current in the fuse without opening for an ambient temperature of 20°C. This value is equal to:
 
--   rated current for fuses following standard IEC 60127-1 {cite:t}`eee-IEC-60127-1`
+-   rated current for fuses following standard IEC 60127-1 {cite:p}`eee-IEC-60127-1`
 
--   75% of rated current for fuses following standard UL 248-14 {cite:t}`eee-UL-248-14`
+-   75% of rated current for fuses following standard UL 248-14 {cite:p}`eee-UL-248-14`
 
 
 ````{admonition} Equation
@@ -4849,7 +4849,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_7)=
 ## Inductors (family 07)
 
-Inductors are classified as family 07 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+Inductors are classified as family 07 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 All inductors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 The following table presents the different subfamilies and the corresponding models with the FIDES method.
@@ -5446,7 +5446,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_8)=
 ## Integrated Circuits (Family 08)
 
-Integrated circuits are classified as family 08 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+Integrated circuits are classified as family 08 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 All integrated circuits used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -8401,7 +8401,7 @@ In the 2021 issue of FIDES, new types of packages and associated values have bee
 (eee_4_3_4_9)=
 ## Relays (family 09)
 
-Relays are classified as family 09 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+Relays are classified as family 09 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 All relays used for Space applications can be modelled through FIDES, directly or indirectly. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -9016,7 +9016,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_10)=
 ## Resistors (family 10)
 
-Resistors are classified as family 10 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+Resistors are classified as family 10 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 All resistors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -9773,7 +9773,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_11)=
 ## Thermistors (family 11)
 
-Thermistors are classified as family 11 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+Thermistors are classified as family 11 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 FIDES does not present models for thermistors, hence the models detailed hereafter as based on resistors models.
 
@@ -10429,7 +10429,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_12)=
 ## Transistors (family 12)
 
-General transistors and RF HF transistors are classified as family 12 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+General transistors and RF HF transistors are classified as family 12 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 All transistors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
 
@@ -11660,7 +11660,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_13)=
 ## Transformers (family 13)
 
-Transformers are classified as family 13 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+Transformers are classified as family 13 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 All transformers used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
 
@@ -12168,7 +12168,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_14)=
 ## Switches (family 14)
 
-Switches are classified as family 14 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+Switches are classified as family 14 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 Most of the switches used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -12802,7 +12802,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_15)=
 ## Opto-electronics (family 18)
 
-Opto-electronics are classified as family 18 in {term}`EPPL` {cite:t}`eee-EPPL007-37`. 
+Opto-electronics are classified as family 18 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
 Some of the opto-electronics components used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
 
@@ -14228,7 +14228,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_17)=
 ## Hybrids (family 40)
 
-Hybrids are classified as family 40 in {term}`EPPL`  {cite:t}`eee-EPPL007-37`.. They can be modelled with FIDES, as presented in the following table, for FIDES 2009 and 2021.
+Hybrids are classified as family 40 in {term}`EPPL`  {cite:p}`eee-EPPL007-37`.. They can be modelled with FIDES, as presented in the following table, for FIDES 2009 and 2021.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_191')"
     placeholder="Search table...">

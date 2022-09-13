@@ -86,9 +86,9 @@ Accounting for these effects with the methodology for mechanical {term}`reliabil
 {term}`Extrinsic failures <Extrinsic failure>` due space debris or micrometeoroid impact are typically relevant for components with significant exposed area (e.g. reflectors, solar arrays). Accounting for these failures may require a dedicated modelling if it cannot be shown that the impact on mission reliability is negligible.
 
 The calculation is performed in the following three steps:
-1. Determine the debris and meteoroids environment (average flux as a function of particle size, velocity distribution) based on the mission parameters {cite:t}`mec-ECSS-E-ST-10-04C`, e.g. using tools like {term}`ECSS` MASTER 2009 {cite:t}`mec-space-debris` to assess the debris or meteoroid flux on a {term}`spacecraft <Spacecraft>` on an arbitrary earth orbit.
+1. Determine the debris and meteoroids environment (average flux as a function of particle size, velocity distribution) based on the mission parameters {cite:p}`mec-ECSS-E-ST-10-04C`, e.g. using tools like {term}`ECSS` MASTER 2009 {cite:p}`mec-space-debris` to assess the debris or meteoroid flux on a {term}`spacecraft <Spacecraft>` on an arbitrary earth orbit.
 2. Obtain minimum critical particle size for each direction of the component on the {term}`spacecraft <Spacecraft>`, considering directionality and velocity of the impact. The term “critical” relates to the effects of an impact on the satellite elements, e.g. penetration of the shielding leading to damage of shielded elements.
-3. Combine the results from the previous steps to calculate the probability of collision and number of collisions with the particles larger or equal to the critical particle size, see e.g. {cite:t}`mec-ECSS-E-ST-10-04C` .
+3. Combine the results from the previous steps to calculate the probability of collision and number of collisions with the particles larger or equal to the critical particle size, see e.g. {cite:p}`mec-ECSS-E-ST-10-04C` .
 
 Collision failures can be neglected in the frame of {term}`reliability prediction <Reliability prediction>` if the corresponding probability of failure is at least one order of magnitude smaller than the probability of failure due to other {term}`failure root causes <Failure root cause>`.
 

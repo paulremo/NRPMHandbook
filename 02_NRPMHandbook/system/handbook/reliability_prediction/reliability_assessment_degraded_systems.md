@@ -71,7 +71,7 @@ With this method, the occurrence probability for all system performance levels a
 
 It should be noted that for practical reasons, the applicability of this method using elementary system states is limited to systems with a small number of components, since the number of states grows exponentially with the number of components. For *n* components $2^{n}$ states have to be considered.
 
-Therefore, it is more efficient to use the success paths. For each system performance level, the correlated success paths have to be generated. In addition, auxiliary conditions are defined that describe the logical combination of the performance determining components that are required to achieve performance levels equal to or greater than $p_{S}$. This will be explained using the example shown in {numref}`Figure_7_30` and {numref}`syst-table4-13`. The analysis of degraded systems consists of the following steps {cite:t}`sys-vahl1998interaktive`:
+Therefore, it is more efficient to use the success paths. For each system performance level, the correlated success paths have to be generated. In addition, auxiliary conditions are defined that describe the logical combination of the performance determining components that are required to achieve performance levels equal to or greater than $p_{S}$. This will be explained using the example shown in {numref}`Figure_7_30` and {numref}`syst-table4-13`. The analysis of degraded systems consists of the following steps {cite:p}`sys-vahl1998interaktive`:
 
 -   Identification of all possible system performance levels through combination of the performance contributing components.
 
@@ -136,7 +136,7 @@ The system state function can be defined as follows:
 
 Where $k$ denotes the index of the success paths and $m$ the total number of success path.
 
-With Eq. {eq}`Equation_7_72`, the following expression is obtained for the system state function for the top event "system performance $p_{S}$ ≥ x" {cite:t}`sys-vahl1998interaktive`.
+With Eq. {eq}`Equation_7_72`, the following expression is obtained for the system state function for the top event "system performance $p_{S}$ ≥ x" {cite:p}`sys-vahl1998interaktive`.
 
 ````{admonition} Equation
 :class: equation
