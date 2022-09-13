@@ -95,14 +95,14 @@ In such a general setting, it makes sense to switch from a quantitative treatmen
 -   *What is the contribution of each model to the overall system level (un-)reliability?*\
     The models with the largest contribution are also likely to have a large contribution to the overall {term}`epistemic uncertainty <Epistemic uncertainty>` associated with the prediction.
 
--   *At which level have the various uncertainties been introduced?
-    *Uncertainty sources at higher levels (e.g. mission profile definition at system level) have a larger contribution to the overall epistemic uncertainties than uncertainties associated with part level reliability predictions.
+-   *At which level have the various uncertainties been introduced?*\
+    Uncertainty sources at higher levels (e.g. mission profile definition at system level) have a larger contribution to the overall epistemic uncertainties than uncertainties associated with part level reliability predictions.
 
--   *What is the dependency structure between various uncertainty sources?
-    *Uncertainties that are statistically dependent (e.g. the same assumption is used for various elementary reliability models) have a stronger effect than independent uncertainty sources.
+-   *What is the dependency structure between various uncertainty sources?*\
+    Uncertainties that are statistically dependent (e.g. the same assumption is used for various elementary reliability models) have a stronger effect than independent uncertainty sources.
 
--   *What is the order of magnitude of each relevant {term}`epistemic uncertainty <Epistemic uncertainty>`?
-    *From the uncertainty sources judged to be most relevant from a system level point of view (based on the previous criteria), those leading to the largest scatter will have the largest impact on the system level reliability prediction uncertainty.
+-   *What is the order of magnitude of each relevant {term}`epistemic uncertainty <Epistemic uncertainty>`?*\
+    From the uncertainty sources judged to be most relevant from a system level point of view (based on the previous criteria), those leading to the largest scatter will have the largest impact on the system level reliability prediction uncertainty.
 
 {numref}`method_8_3` contains a questionnaire approach which can be used to identify different sources of epistemic uncertainties associated with a reliability prediction model or method and its usage. For practical purposes, a full discussion and consideration of all identified uncertainties is not necessarily relevant and may even be considered as excessive information if the goal is to understand the main uncertainties associated with a prediction at system level. Instead, the focus should be on a few uncertainties having the largest impact. A rough qualitative ranking to identify e.g. the Top 5 uncertainty drivers can be established based on the criteria listed above.
 
