@@ -1139,7 +1139,7 @@ The most convenient {term}`degradation <Degradation>` model is clearly based on 
 ```
 ````
 
-```{list-table} Characteristics of the exponential model to the {term}`degradation <Degradation>` data.
+```{list-table} Characteristics of the exponential model to the degradation data.
 :name: eee-table4-207
 :header-rows: 1
 :widths: 25 25 25 25
@@ -1192,15 +1192,14 @@ Estimation of the {term}`degradation <Degradation>` of input current of operatio
 
 The wear-out of the operational amplifier is considered as not acceptable for a certain level of {term}`degradation <Degradation>`. This level of {term}`degradation <Degradation>` is depending on the satellite and its application. In this example, not acceptable levels of {term}`degradation <Degradation>` of 10% to 99% are considered. For each level and for biased and unbiased operational amplifiers, the predicted dose of radiation to get failure is calculated in the following table:
 
-```{list-table} Predicted dose of radiation to failure for each level of {term}`degradation <Degradation>`.
+```{list-table} Predicted dose of radiation to failure for each level of degradation.
 :name: eee-table4-208
 
 * - <table class="myTable" id="eee_table4_208">
         <thead>
             <tr>
                 <th rowspan="2"><strong>Operational amplifier</strong></th>
-                <th colspan="10"><strong>Predicted dose of radiation to failure in krad for percentage of
-                        {term}`degradation <Degradation>`</strong></th>
+                <th colspan="10"><strong>Predicted dose of radiation to failure in krad for percentage of degradation</strong></th>
             </tr>
             <tr>
                 <th><strong>10%</strong></th>

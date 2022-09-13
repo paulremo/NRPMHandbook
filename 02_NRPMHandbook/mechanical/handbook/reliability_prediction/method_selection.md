@@ -225,7 +225,7 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 			<td>
 				<p><u>fatigue &fracture</u></p>
 				<p>distortion</p>
-				<p>{term}`degradation <Degradation>`</p>
+				<p>degradation</p>
 			</td>
 			<td>
 				<p><i class="fa fa-check" style="color:green"></i></p>
@@ -296,12 +296,12 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
 				<p>II Passive</p>
 				<p>III Fluidic</p>
 			</td>
-			<td>Wear, {term}`degradation <Degradation>`, installation damage</td>
+			<td>Wear, degradation, installation damage</td>
 			<td>NSWC adjusted, Statistical methods or Structural reliability methods</td>
 			<td>
 				<p><u>wear</u></p>
 				<p>distortion</p>
-				<p>{term}`degradation <Degradation>`</p>
+				<p>degradation</p>
 			</td>
 			<td>
 				<p><i class="fa fa-check" style="color:green"></i></p>
@@ -415,7 +415,7 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
     - IV Structural
     - Fracture
     - Structural reliability methods
-	- <p><u>fatigue &fracture</u></p><p>distortion</p><p>{term}`degradation <Degradation>`</p>
+	- <p><u>fatigue &fracture</u></p><p>distortion</p><p>degradation</p>
 	- <p><i class="fa fa-check" style="color:green"></i></p><p>generic</p><p><i class="fa fa-check" style="color:green"></i></p>
 	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p><p><i class="fa fa-check" style="color:green"></i></p>
 	- <p><i class="fa fa-times" style="color:red"></i></p>
@@ -445,7 +445,7 @@ Also a combined approach with {term}`Bayesian inference <Bayesian inference>` up
     - <p>I Active</p><p>II Passive</p><p>III Fluidic</p>
     - Wear, {term}`degradation <Degradation>`, installation damage
     - NSWC adjusted, Statistical methods or Structural reliability methods
-	- <p><u>wear</u></p><p>distortion</p><p>{term}`degradation <Degradation>`</p>
+	- <p><u>wear</u></p><p>distortion</p><p>degradation</p>
 	- <p><i class="fa fa-check" style="color:green"></i></p><p>generic</p><p><i class="fa fa-times" style="color:red"></i></p>
 	- <p><i class="fa fa-check" style="color:green"></i></p><p><i class="fa fa-times" style="color:red"></i></p><p><i class="fa fa-times" style="color:red"></i></p>
 	- <p><i class="fa fa-check" style="color:green"></i></p>
