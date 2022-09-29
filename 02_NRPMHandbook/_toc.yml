@@ -47,6 +47,7 @@ parts:
         - file: eee/handbook/reliability_prediction/failure_type_coverage
         - file: eee/handbook/reliability_prediction/random_failure/random_failure
           sections:
+          - file: eee/handbook/reliability_prediction/random_failure/lead_free_soldering
           - file: eee/handbook/reliability_prediction/random_failure/mission_profile
           - file: eee/handbook/reliability_prediction/random_failure/process_factors
           - file: eee/handbook/reliability_prediction/random_failure/quality_factors

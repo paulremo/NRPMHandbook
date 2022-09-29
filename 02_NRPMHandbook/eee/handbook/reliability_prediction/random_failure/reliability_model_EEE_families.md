@@ -110,6 +110,12 @@ The following table presents the different subfamilies and the corresponding mod
     </table>
 ```
 
+```{admonition} Note
+:class: note
+
+**Type 1** and **Type 2** correspond to the two types of ceramic capacitors, **Type 1** ceramic capacitors are ceramic capacitors with high stability and low losses compensating the influence of temperature in resonant circuit applications. Their dielectric is paraelectric, **Type 2** corresponds to ceramic capacitors with high volumetric efficiency for buffer, by-pass and coupling applications. Their dielectric is ferroelectric.
+```
+
 Here is the generic formula used in FIDES for capacitors:
 
 ````{admonition} Equation
@@ -14789,7 +14795,7 @@ where:
 
 -   $t$: test duration in hours;
 
--   {term}`AF`: acceleration factor defined depending on the acceleration law (see also {numref}`eee_4_3_1_13` where it is denoted by $\Pi_{\text{acceleration}}$);
+-   {term}`AF`: acceleration factor defined depending on the acceleration law;
 
 -   $n$: quantity of tested parts.
 ````

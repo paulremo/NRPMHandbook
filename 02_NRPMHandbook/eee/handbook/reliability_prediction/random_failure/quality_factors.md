@@ -109,7 +109,7 @@ The following tables, reworked and agreed with {term}`EEE` experts and the FIDES
 ```
 
 (eee_4_3_3_5)=
-## Hermetic components
+### Hermetic components
 
 The following table provides the different levels and associated values to consider for hermetic components:
 
@@ -158,7 +158,7 @@ The following table provides the different levels and associated values to consi
 ```
 
 (eee_4_3_3_6)=
-## Non Hermetic (Plastic) components
+### Non Hermetic (Plastic) components
 
 The following table provides the different levels and associated values to consider for plastic components (non-hermetic) used for space applications:
 

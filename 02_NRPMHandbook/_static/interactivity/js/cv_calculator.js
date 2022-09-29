@@ -12,8 +12,8 @@ function runCvCalculator() {
     
     document.getElementById("type1").checked = false;
     document.getElementById("type2").checked = false;
-    document.getElementById("capacitance_input_cv").value = "";
     document.getElementById("voltage_input_cv").value = "";
+    document.getElementById("capacitance_input_cv").value = "";
 
     document.getElementById("type1").onclick = function () {
         document.getElementById("type2").checked = false;
@@ -35,7 +35,7 @@ function runCvCalculator() {
         component_type = 2;
     }
 
-    document.getElementById("capacitance_input_cv").oninput = function (){
+    document.getElementById("voltage_input_cv").oninput = function (){
         if (this.value == "" || parseFloat(this.value) <= 0){
             this.style.color = "red";
             component_capacitance = null;
@@ -46,25 +46,25 @@ function runCvCalculator() {
         }
     }
 
-    document.getElementById("voltage_input_cv").oninput = function (){
+    document.getElementById("capacitance_input_cv").oninput = function (){
         if (this.value == "" || parseFloat(this.value) <= 0){
             this.style.color = "red";
             component_voltage = null;
         }
         else{
             this.style.color = "black";
-            let pw = -1 * parseInt(document.getElementById("voltage_unit_cv").value);
+            let pw = -1 * parseInt(document.getElementById("capacitance_unit_cv").value);
             component_voltage = parseFloat(this.value) * Math.pow(10, pw);
         }
     }
 
-    document.getElementById("voltage_unit_cv").onchange = function(){
-        if (document.getElementById("voltage_input_cv").value == "" || parseFloat(document.getElementById("voltage_input_cv").value) <= 0){
+    document.getElementById("capacitance_unit_cv").onchange = function(){
+        if (document.getElementById("capacitance_input_cv").value == "" || parseFloat(document.getElementById("capacitance_input_cv").value) <= 0){
             component_voltage = null;
         }
         else{
             let pw = -1 * parseInt(this.value);
-            component_voltage = parseFloat(document.getElementById("voltage_input_cv").value) * Math.pow(10, pw);
+            component_voltage = parseFloat(document.getElementById("capacitance_input_cv").value) * Math.pow(10, pw);
         }
     }
 

@@ -252,7 +252,7 @@ A transmitter of a Low Earth Orbit satellite being switched off when out of the 
 Another specificity of the space domain is an environment subjected to high cumulated doses of radiation (protons and electrons), due to the Van Allen radiation belt in particular. The methodology considers a part of these phenomena through the electrical over-stresses, but with insufficient quantification. Currently, the design of any electronic equipment for satellites is qualified with the total dose corresponding to the life of the equipment with a supplementary safety margin. However, commercial {term}`EEE` components are more and more sensitive to cumulated doses of radiation. The experience and lessons-learnt issued from various industrial domains is not sufficient to presently develop these models. For space applications, only simple models such as the model presented in {numref}`eee_4_6_5_1` is proposed with results of radiation tests performed on components correlated with the level of radiation considered in the different phases of the mission profile.
 
 (eee_4_3_1_13)=
-## Temperature and thermos-electrical stress
+## Temperature and thermo-electrical stress
 
 **Physical stresses:**
 
@@ -642,7 +642,9 @@ Based on the marks given in {numref}`eee-table4-5` and calculation with {eq}`Equ
 (eee_4_3_1_20)=
 ## Influence of the policy for over-stresses
 
-$\Pi_{ruggedising}$ represents the influence of the policy for considering over-stresses in the product development and is based on 17 different questions. Some of the answers of these questions are common to all space applications. Questions n° 157, 158, 159, 160, 161, 163, 167 and 169 have been partly modified to consider specificities of space applications, mainly because maintenance of the products is not possible on satellites. The modification of the recommendations, descriptions and criteria of these modified questions are listed in {ref}`eee_annex_a`. Moreover, question n°168 is not directly applicable to space applications also due to its maintenance purpose and is removed from the questionnaire.
+$\Pi_{ruggedising}$ represents the influence of the policy for considering over-stresses in the product development and is based on 17 different questions presented in the paragraph dedicated to $\Pi_{ruggedising}$ in {cite:p}`eee-UTE-C80-811` page 102. 
+
+Some of the answers of these questions are common to all space applications. Questions n° 157, 158, 159, 160, 161, 163, 167 and 169 have been partly modified to consider specificities of space applications, mainly because maintenance of the products is not possible on satellites. The modification of the recommendations, descriptions and criteria of these modified questions are listed in {ref}`eee_annex_a`. Moreover, question n°168 is not directly applicable to space applications also due to its maintenance purpose and is removed from the questionnaire.
 
 ```{admonition} Recommendation
 :class: recommendation

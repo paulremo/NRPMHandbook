@@ -1074,7 +1074,7 @@ An example for reliability allocation using {term}`FOO` method is shown in {numr
 ```
 
 (methodo_5_4_3)=
-#### Reliability assessment for system architecture development during conceptual design 
+### Reliability assessment for system architecture development during conceptual design 
 
 The outcome of the conceptual design phase are concepts that will be implemented during the next stages of the system development. The selection of the preferred system architecture is essentially a trade-off among the various architecture options. According to {cite:p}`methodo-ECSS-E-ST-10C`, a trade-report should contain the result of the evaluation of every identified alternative design solution with regard to the key technical requirements. For each alternative design solution, the following should be performed: 
 
@@ -1085,7 +1085,7 @@ The outcome of the conceptual design phase are concepts that will be implemented
 The reliability prediction is an important part of the trade-off studies and could be applied to support {term}`system engineering <System engineering>`, subsystem engineering and equipment level design engineering. It provides a quantitative assessment of alternative design solutions regarding the achievement of reliability requirements. In the trade-off study, a sensitivity analysis can support {term}`system engineering <System engineering>` through quantifying how reliability on system level changes if certain parameters change. Importance measures (see {numref}`sec_sys_handbook`) could be used to perform such a sensitivity analysis. Furthermore, the reliability prediction for the trade-off should identify the equipment failure modes that significantly impact the system reliability. If the correlation between equipment failure modes and system reliability can be established, the aim of system reliability improvement is to eliminate or significantly reduced these failure modes by improving equipment quality or reconfiguring the system architecture. Different design concepts may cause different types of failure modes. The system designers should be aware of the underlying failure causes to achieve a robust design. To achieve the desired quality, the development process should be accompanied by an appropriate quality assurance procedure, see e.g. {cite:p}`methodo-ECSS-Q-ST-10C`.
 
 (methodo_5_4_4)=
-## Reliability requirement verification for compliance demonstration
+### Reliability requirement verification for compliance demonstration
 
 The verification activities should demonstrate that the design and architecture is compliant with the reliability requirements for the corresponding level. This includes to demonstrate that: 
 
@@ -1100,7 +1100,7 @@ The verification activities should demonstrate that the design and architecture 
 * For reliability requirements, the verification is performed through quantitative analysis, see {numref}`sec_sys_handbook`. To finally demonstrate compliance with the top level reliability requirements, the final reliability prediction should be performed when the data for the sub-systems and component failure behaviour are available. Depending on the performance requirements, a consideration of degraded system operability might be useful.
 
 (methodo_5_4_5)=
-## Reliability assessment for life time extension and safe disposal
+### Reliability assessment for life time extension and safe disposal
 
 To support life time extension decisions, the reliability prediction may need to be updated and in particular the reliability of the functions for safe disposal has to be considered to demonstrate compliance with space debris mitigation requirements, see also {numref}`methodo_5_3_2_6`.
 

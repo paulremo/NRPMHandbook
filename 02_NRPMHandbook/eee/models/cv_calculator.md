@@ -14,14 +14,14 @@
         </form>
     </div>
     <div>
-        <p>Capacitance : </p>
-        <input type="number" id="capacitance_input_cv"><a>&nbsp;&nbsp;&nbsp;V</a>
+        <p>Voltage: </p>
+        <input type="number" id="voltage_input_cv"><a>&nbsp;&nbsp;&nbsp;V</a>
     </div>
     <br>
     <div>
-        <p>Voltage : </p>
-        <input type="number" id="voltage_input_cv">
-        <select id="voltage_unit_cv">
+        <p>Capacitance: </p>
+        <input type="number" id="capacitance_input_cv">
+        <select id="capacitance_unit_cv">
             <option value="0">F</option>
             <option value="6">&mu;F</option>
             <option value="9">nF</option>
