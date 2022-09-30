@@ -159,6 +159,9 @@ Systematic failure
 System engineering
 	 an interdisciplinary approach and means to enable the realization of successful systems which focuses on defining customer needs and required functionality early in the development cycle, documenting requirements, and then proceeding with design synthesis and system validation while considering the complete problem: operations, cost and schedule, performance, training and support, test, manufacturing, and disposal. (International Council on Systems Engineering INCOSE)
 
+Technological limits
+	 refers to the highest value for some given characteristics for a reference covering a range of values.
+
 Test data
 	 it corresponds to reliability data obtained through tests 
 

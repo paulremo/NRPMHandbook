@@ -13,6 +13,12 @@ name: Figure_1_1
 Strategy for reliability modelling.
 ```
 
+```{admonition} Note
+:class: note
+
+This flowchart corresponds to the adapted way to proceed now that reliability.space has been introduced. It differs from the order presented in the **methods chapter** ({numref}`methods`) that considered the situation before reliability.space.
+```
+
 **In-Orbit Return experience**
 
 In-Orbit Return data provide the best information concerning failure rates and {term}`failure root causes <Failure root cause>`. As it is difficult to obtain reliable data at component level from In-Orbit Return, it is not possible to use this data for EEE components except in specific cases.

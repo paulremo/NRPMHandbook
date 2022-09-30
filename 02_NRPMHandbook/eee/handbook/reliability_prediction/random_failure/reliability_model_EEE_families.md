@@ -3,6 +3,10 @@
 (eee_4_3_4)=
 # Reliability model proposed for all EEE families
 
+This section introduces all the models proposed for the different families. These models are mainly based on the models proposed in {cite:p}`eee-UTE-C80-811`.
+
+The failure rates calculated with reliability.space are given directly in FITs (failure in time, correspong to failures per billion hours). As for the FIDES methodology, these {term}`FRs <FR>`, if corresponding to modelling over several phases constituting a mission profile, are calendar lambdas, as explained in {numref}`eee_4_3_1_1`.
+
 (eee_4_3_4_1)=
 ## Capacitors (family 01)
 
@@ -349,6 +353,12 @@ The {term}`CV` factor mentioned in {numref}`eee-table4-20` corresponds to the Ca
 :class: rule
 
 This table is the one that needs to be applied for Space applications.
+```
+
+```{admonition} Note
+:class: note
+
+Technological limit refers to the highest value for some given characteristics for a reference covering a range of values (e.g., if the CC0x0x family corresponds to components with a capacitance between 10pf and 10nF, then the 10nF component is considered as the technological limit for this reference).
 ```
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_23')"
@@ -5714,7 +5724,7 @@ In the 2021 issue of FIDES, a {term}`GaN` MMIC model has been included. The deta
 (eee_4_3_4_8_1)=
 ### MMIC (95 family)
 
-**General model for the integrated circuits family, except ASIC components:**
+**General model for the HF/RF ICs:**
 
 ````{admonition} Equation
 :class: equation
@@ -5795,8 +5805,6 @@ $\lambda_{\text{OTH}}$ is a fixed value given in the following table, depending 
     -
     - 0.19
 ```
-
-A specific value for the basic failure rate $\lambda_{\text{OTH}}$ is provided for ASICs, depending on the type of components.
 
 ```{admonition} Note *
 :class: note
@@ -6606,7 +6614,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_8_2)=
 ### ASIC (40, 41 and 42 families)
 
-**General model for the integrated circuits family, ASIC components:**
+**General model for the ASIC components:**
 
 ````{admonition} Equation
 :class: equation
@@ -7013,7 +7021,7 @@ For components with more than 256 leads, the recommendation for the parameters *
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_104')"
     placeholder="Search table...">
 
-```{list-table} Parameters a and b for components with 0 to 256 leads.
+```{list-table} Parameters a and b for components with more than 256 leads.
 :name: eee-table4-104
 
 * - <table class="myTable" id="eee_table4_104">
@@ -7501,7 +7509,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_8_3)=
 ### Integrated Circuits (others)
 
-**General model for the integrated circuits family, ASIC components:**
+**General model for the integrated circuits family, except ASIC and HF/RF components:**
 
 ````{admonition} Equation
 :class: equation
@@ -7898,7 +7906,7 @@ For components with more than 256 leads, the recommendation for the parameters *
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_117')"
     placeholder="Search table...">
 
-```{list-table} Parameters a and b for components with 0 to 256 leads.
+```{list-table} Parameters a and b for components with more than 256 leads.
 :name: eee-table4-117
 
 * - <table class="myTable" id="eee_table4_117">
@@ -9229,13 +9237,13 @@ $\lambda_{O_{\text{Resistor}}}$ corresponds to the basic failure rate defined fo
     - 0.4
 *   - 1, 8, 9a
     - High stability
-    - from 0.14 to 0.25 in FIDES xx page 131
+    - from 0.14 to 0.25 in {cite:p}`eee-UTE-C80-811` page 131
 *   - 1, 8, 9c
     - Minimelf
     - 0.1
 *   - 10
     - SMD resistive network
-    - x $\sqrt{N_{R}}$
+    - 0.01 $\sqrt{N_{R}}$
 ```
 
 With $N_{R}$ as the number of resistors in the network.
@@ -9278,7 +9286,7 @@ $\gamma_{TH\_ EL}$ and $A$ depend on the type of resistors:
 *   - 1, 8, 9a
     - High stability
     - 85
-    - from 0.07 to 0.18 in FIDES xx page 131
+    - from 0.07 to 0.18 in {cite:p}`eee-UTE-C80-811` page 131
 *   - 1, 8, 9c
     - Minimelf
     - 85
@@ -9321,7 +9329,7 @@ $\gamma_{\text{TCy}}$ depends on the type of resistors:
     - 0.97
 *   - 1, 8, 9a
     - High stability
-    - from 0.43 to 0.55 in FIDES xx page 131
+    - from 0.43 to 0.55 in {cite:p}`eee-UTE-C80-811` page 131
 *   - 1, 8, 9c
     - Minimelf
     - 0.89
@@ -9360,7 +9368,7 @@ $\gamma_{\text{Mech}}$ depends on the type of resistors:
     - 0.01
 *   - 1, 8, 9a
     - High stability
-    - from 0.05 to 0.08 in FIDES xx page 131
+    - from 0.05 to 0.08 in {cite:p}`eee-UTE-C80-811` page 131
 *   - 1, 8, 9c
     - Minimelf
     - 0.01
@@ -9401,7 +9409,7 @@ $\gamma_{\text{RH}}$ depends on the type of resistors:
     - 0.01
 *   - 1, 8, 9a
     - High stability
-    - from 0.26 to 0.41 in FIDES xx page 131
+    - from 0.26 to 0.41 in {cite:p}`eee-UTE-C80-811` page 131
 *   - 1, 8, 9c
     - Minimelf
     - 0.06
@@ -10727,29 +10735,29 @@ $\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-151')" placeholder="Search table...">
 
-```{list-table} Basic failure rates $\lambda_{\text{OTH}}$ for RF/HF transistors.
+```{list-table} Basic failure rates $\lambda_{\text{OTH}}$ for HF/RF transistors.
 :name: eee-table4-151
 :header-rows: 1
 :widths: 70 30
 
 *   - Type
     - $\lambda_{\text{OTH}}$
-*   - Power HF/RF transistor – {term}`GaAs` > 1W
+*   - Power {term}`HF`/RF transistor – {term}`GaAs` > 1W
     - 0.0927*
-*   - Low power HF/RF transistor – {term}`GaAs` < 1W
+*   - Low power {term}`HF`/RF transistor – {term}`GaAs` < 1W
     - 0.0488*
-*   - Power HF/RF transistor – Silicon Bipole > 5W
+*   - Power {term}`HF`/RF transistor – Silicon Bipolar > 5W
     - 0.0478
-*   - Power HF/RF transistor – Silicon MOS > 5W
+*   - Power {term}`HF`/RF transistor – Silicon MOS > 5W
     - 0.0202
-*   - Low power HF/RF transistor –
+*   - Low power {term}`HF`/RF transistor – Silicon, Bipolar <5W / SiGe, Bipolar <1W
     - 0.0138
 ```
 
 ```{admonition} Note *
 :class: note
 
-$\lambda_{\text{OTH}}$ for Power HF/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
+$\lambda_{\text{OTH}}$ for Power {term}`HF`/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
 ```
 
 **Physical stresses for the general transistors and the RF HF transistors family:**
@@ -11148,7 +11156,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 ``  
 ```{math}
 :label: Equation_1_159
-\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessLF}}
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}}
 ```
 -   $\lambda_{\text{Physical}}$ the physical contribution for each component,
 
@@ -11235,29 +11243,23 @@ $\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-157')" placeholder="Search table...">
 
-```{list-table} Basic failure rates $\lambda_{\text{OTH}}$ for RF/HF transistors.
+```{list-table} Basic failure rates $\lambda_{\text{OTH}}$ for other types of transistors.
 :name: eee-table4-157
 :header-rows: 1
 :widths: 70 30
 
 *   - Type
     - $\lambda_{\text{OTH}}$
-*   - Power {term}`HF`/RF transistor – {term}`GaAs` > 1W
-    - 0.0927*
-*   - Low power {term}`HF`/RF transistor – {term}`GaAs` < 1W
-    - 0.0488*
-*   - Power {term}`HF`/RF transistor – Silicon Bipole > 5W
+*   - Power transistor – Silicon, Bipolar >5W
     - 0.0478
-*   - Power {term}`HF`/RF transistor – Silicon MOS > 5W
+*   - Power transistor – Silicon MOS > 5W
     - 0.0202
-*   - Low power {term}`HF`/RF transistor –
+*   - Low power transistor – Silicon MOS < 5W
+    - 0.0145
+*   - Low power transistor – Silicon JFET < 5W
+    - 0.0143
+*   - Low power transistor – Silicon Bipolar < 5W
     - 0.0138
-```
-
-```{admonition} Note *
-:class: note
-
-$\lambda_{\text{OTH}}$ for Power {term}`HF`/RF has been updated in the 2021 issue of the FIDES guide to 0.3756.
 ```
 
 **Physical stresses for the general transistors and the RF HF transistors family:**

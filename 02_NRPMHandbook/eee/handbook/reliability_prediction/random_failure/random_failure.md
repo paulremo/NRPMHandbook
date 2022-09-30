@@ -66,7 +66,7 @@ In the following, the general model for conventional components is described, fo
 ```
 ````
 
-for RF {term}`HF` components:
+for RF/{term}`HF` components:
 
 ````{admonition} Equation
 :class: equation
@@ -87,6 +87,18 @@ and for {term}`ASIC` components:
 ```{math}
 :label: Equation_1_3
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessASIC}} \cdot \Pi_{\text{LF}}
+```
+````
+
+and for Hybrids & MCM components:
+
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: Equation_1_4
+\lambda_{\text{HM}} = \sum_{\mu\text{-components}}(\lambda_{\mu\text{-components}}\cdot \Pi_{PM_{\mu\text{-components}}})\cdot\Pi_{\text{Process HM}} \cdot \Pi_{\text{Process}} + (\lambda_{\text{wiring}} + \lambda_{\text{case + substrate}} + \lambda_{\text{external connections}}) \cdot \Pi_{\text{Process HM}}\cdot\Pi_{\text{Process}}
 ```
 With:
 

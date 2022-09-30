@@ -234,10 +234,16 @@ The questions of the updated questionnaire with suggested answers are provided i
 For Space Application, the new version of the Pi Process questionnaire needs to be applied.
 ```
 
+```{admonition} Note
+:class: note
+
+The value obtained through the Pi Process calculation ranges from 1 to 8.
+```
+
 (eee_4_3_2_5)=
 ## Process factor for RF/HF components
 
-he process factor $\Pi_{\text{ProcessRFHF}}$ takes into account how control over the life cycle of a radiofrequency or microwave product influences reliability. This factor is complementary to the process factor $\Pi_{\text{Process}}$ that remains applicable for microwave and frequency products.
+The process factor $\Pi_{\text{ProcessRFHF}}$ takes into account how control over the life cycle of a radiofrequency or microwave product influences reliability. This factor is complementary to the process factor $\Pi_{\text{Process}}$ that remains applicable for microwave and frequency products.
 
 $\Pi_{\text{ProcessRFHF}}$is issued from the following equations and questionnaire:
 
@@ -305,6 +311,12 @@ RFHF\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maxim
 ```
 
 Concerning criterion n°8, the formal method shall include specific procedures in the manufacturing lines of electronic boards with hyper frequency components: specific storage in a protected incubator, no manual manipulation of the components, protection of the board during transportation... Specific attention shall be placed on the cleanliness of the manufacturing devices during the manufacturing of the electronic board with hyper frequency components. The cleanliness of the board is a key factor to avoid any concern with hyper frequency components during use.
+
+```{admonition} Note
+:class: note
+
+The value obtained through the Pi Process {term}`HF`/RF calculation ranges from 0.5 to 4.
+```
 
 ``` {admonition} Note
 :class: note
@@ -426,6 +438,12 @@ ASIC\_ grade = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maxim
     </table>
 ```
 
+```{admonition} Note
+:class: note
+
+The value obtained through the Pi Process ASIC calculation ranges from 1 to 4.
+```
+
 (eee_4_3_2_7)=
 ## Process factor for Hybrids and Multi Chip Modules
 
@@ -513,3 +531,9 @@ $\Pi_{\text{Process\_H\&M}}$ is issued from the following equations and question
 ```
 
 Questions 7, 8 and 9 exclude each other, thus only one of them can be answered with \"true\".
+
+```{admonition} Note
+:class: note
+
+The value obtained through the Pi Process H&M calculation ranges from 1 to 4.
+```

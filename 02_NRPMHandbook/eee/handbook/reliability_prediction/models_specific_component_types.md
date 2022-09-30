@@ -73,7 +73,11 @@ A model is also provided for 3D technologies
 
 The FIDES guide includes models for {term}`GaAs` components for radio-frequency applications. These models are applicable for low power transistors and high power transistors. The model is similar for both categories of transistors, but the basic failure rates are different. FIDES is continuously increasing its database with the tests and feedback from {term}`GaAs` components and data from manufacturers. Even if the quantity of the available data is significant, the intention is to merge these two basic failure rates into only one category that gathers all types of {term}`GaAs` transistors. Otherwise, a synthesis of data from manufacturers of {term}`GaAs` components has provided an activation energy of 2.0eV for {term}`GaAs` components dedicated to radio-frequency. The next step is to realise a model based on this information.
 
-Note: In the 2021 issue of the FIDES guide, some update (Pi Process {term}`HF`/RF, $\lambda_{\text{OTH}}$) has been provided for the {term}`HF`/RF {term}`GaAs` models, providing in particular a new version of $\lambda_{\text{TH}}$ that would require some modelling in order to compare it to {term}`test data <Test data>` and define its applicability.
+```{admonition} Note
+:class: note
+
+In the 2021 issue of the FIDES guide, some update (Pi Process {term}`HF`/RF, $\lambda_{\text{OTH}}$) has been provided for the {term}`HF`/RF {term}`GaAs` models, providing in particular a new version of $\lambda_{\text{TH}}$ that would require some modelling in order to compare it to {term}`test data <Test data>` and define its applicability.
+```
 
 (eee_4_4_2_3)=
 ### GaN components
@@ -117,4 +121,10 @@ The models for both {term}`GaN` MMICs and {term}`GaN` transistors are introduced
     - 6.9
 *   - {term}`GaN` MMIC
     - 6.9
+```
+
+```{admonition} Note
+:class: note
+
+The use of GaN power FETs had not been considered at the beginning of this project but it is actually currently used in designs for space applications. A model now exists in FIDES 2021 after the PISTIS models have been developed, so the user can apply this model. But like for the rest of models from PISTIS, these have not been analysed or applied in the frame of this study.
 ```

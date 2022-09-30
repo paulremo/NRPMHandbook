@@ -14,6 +14,12 @@ In particular, modelling for different mission profiles means taking into accoun
 
 The objective of this chapter is to provide a methodology to define the mission profile of a satellite. Some examples of mission profiles for the most common space applications: geostationary telecommunication satellites and Low Earth Orbit satellites are presented in {ref}`eee_annex_a`.
 
+```{admonition} Note
+:class: note
+
+The {term}`FRs <FR>` calculated through applying the method proposed here are calendar failure rates, meaning that they represent the behaviour of the element under consideration over the whole mission profile. In order to get one failure rate for each phase, it is necessary either to calculate it separately for each phase or to apply the pro rata of the phase vs. the overall mission to discriminate it. For instance, comparing it to the {cite:p}`eee-MIL-HDBK-217F` way of calculating failure rates: A FIDES Lambda over the mission profile would correspond to ($x \cdot GF + y \cdot SF + z \cdot GB)/(x+y+z)$, with $x$ the portion of time for the Ground Fixed ($GF$) phase, $y$ the portion of time for the Space Flight ($SF$) phase and $z$ the portion of time for the Ground Benign ($GB$) phase. 
+```
+
 (eee_4_3_1_2)=
 ## Methodology to define a mission profile for space applications
 
