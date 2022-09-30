@@ -7,6 +7,12 @@ This section introduces all the models proposed for the different families. Thes
 
 The failure rates calculated with reliability.space are given directly in FITs (failure in time, correspong to failures per billion hours). As for the FIDES methodology, these {term}`FRs <FR>`, if corresponding to modelling over several phases constituting a mission profile, are calendar lambdas, as explained in {numref}`eee_4_3_1_1`.
 
+```{admonition} Note
+:class: note
+
+For each family, a table presents the different subfamilies. In the *remark* column are the reference linked to the subfamily in the FIDES Expertool. This is just given as an information for users willing to model with that tool, in order to make sure that they consider the correct model.
+```
+
 (eee_4_3_4_1)=
 ## Capacitors (family 01)
 
@@ -2535,9 +2541,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 General diodes and RF {term}`HF` diodes are classified as family 04 in {term}`EPPL` {cite:p}`eee-EPPL007-37`.
 
-All diodes used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
+All diodes used for Space applications can be modelled through FIDES.
 
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_52')"
     placeholder="Search table...">
@@ -3818,8 +3824,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 Filters are classified as family 05 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-The {term}`HF`/RF  filters used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The {term}`HF`/RF  filters used for Space applications can be modelled through FIDES.
+
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_65')"
@@ -4374,9 +4381,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_6)=
 ## Fuses (family 06)
 
-Fuses are classified as family 06 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. All fuses used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+Fuses are classified as family 06 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. All fuses used for Space applications can be modelled through FIDES.
 
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_71')"
@@ -4867,8 +4874,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 Inductors are classified as family 07 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-All inductors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+All inductors used for Space applications can be modelled through FIDES.
+
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_76')"
@@ -5464,9 +5472,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 Integrated circuits are classified as family 08 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-All integrated circuits used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+All integrated circuits used for Space applications can be modelled through FIDES.
 
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_82')"
     placeholder="Search table...">
@@ -8417,9 +8425,9 @@ In the 2021 issue of FIDES, new types of packages and associated values have bee
 
 Relays are classified as family 09 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-All relays used for Space applications can be modelled through FIDES, directly or indirectly. The pages where the models can be found in the two versions of the FIDES guide
+All relays used for Space applications can be modelled through FIDES, directly or indirectly.
 
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_122')"
     placeholder="Search table...">
@@ -9032,9 +9040,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 Resistors are classified as family 10 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-All resistors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+All resistors used for Space applications can be modelled through FIDES.
 
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_129')"
     placeholder="Search table...">
@@ -9789,7 +9797,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 Thermistors are classified as family 11 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-FIDES does not present models for thermistors, hence the models detailed hereafter as based on resistors models.
+FIDES does not present models for thermistors, hence the models detailed hereafter as based on resistors models. The pages where the models can be found in the two versions of the FIDES guide (2009 & 2021) are provided in the following table.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_139')"
     placeholder="Search table...">
@@ -10445,9 +10453,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 General transistors and RF HF transistors are classified as family 12 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-All transistors used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
+All transistors used for Space applications can be modelled through FIDES.
 
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_149')"
     placeholder="Search table...">
@@ -11670,9 +11678,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 Transformers are classified as family 13 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-All transformers used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide.
+All transformers used for Space applications can be modelled through FIDES.
 
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_162')"
     placeholder="Search table...">
@@ -12178,9 +12186,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 Switches are classified as family 14 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-Most of the switches used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+Most of the switches used for Space applications can be modelled through FIDES.
 
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_167')"
     placeholder="Search table...">
@@ -12812,9 +12820,9 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 Opto-electronics are classified as family 18 in {term}`EPPL` {cite:p}`eee-EPPL007-37`. 
 
-Some of the opto-electronics components used for Space applications can be modelled through FIDES. The pages where the models can be found in the two versions of the FIDES guide
+Some of the opto-electronics components used for Space applications can be modelled through FIDES.
 
-The following table presents the different subfamilies and the corresponding models with the FIDES method.
+The following table presents the different subfamilies and the corresponding models with the FIDES method, giving the pages where it can be found in both versions (2009 & 2021), for information.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_174')"
     placeholder="Search table...">

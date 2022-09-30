@@ -8,7 +8,7 @@ The reliability.space approach for {term}`EEE` items provides data about models 
 (eee_4_4_1)=
 ## Models from the Telcordia SR-332 handbook
 
-Five opto-electronic components usually used in space applications have no models available in the FIDES guide. These five components are the phototransistor, the photodiode, the laser diode, the laser detector and the laser transceiver. A possible way forward is to use the models provided by the Telcordia SR-332 handbook \[BR-EEE-1\]. However, these models of opto-electronics components have been developed for communication systems on ground. They have never been assessed for space applications and a preliminary investigation and assessment are required to use them for space applications.
+Five opto-electronic components usually used in space applications have no models available in the FIDES guide. These five components are the phototransistor, the photodiode, the laser diode, the laser detector and the laser transceiver. A possible way forward is to use the models provided by the Telcordia SR-332 handbook {cite:p}`eee-SR-332`. However, these models of opto-electronics components have been developed for communication systems on ground. They have never been assessed for space applications and a preliminary investigation and assessment are required to use them for space applications.
 
 ```{admonition} Proposition
 :class: recommendation

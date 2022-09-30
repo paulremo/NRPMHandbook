@@ -668,7 +668,7 @@ function runPiProcess() {
             document.getElementById("choice" + q_answer[1]).click();
         }
         else if (q_answer == "NA") {
-            document.getElementById("not-applicable").click();
+            document.getElementById("choice4").click();
         }
         else {
             for (var pb of document.getElementsByClassName("choice-description")) {
@@ -816,7 +816,8 @@ function runPiProcess() {
         let btn = document.getElementById("not-applicable");
         btn.style.backgroundColor = "#0D3C47";
         btn.style.color = "#eee";
-        currentAnswers.get(current_category).set(parseInt(current_question), "NA");
+        document.getElementById("choice4").click();
+        currentAnswers.get(current_category).set(parseInt(current_question), "N4");
     }
 
     function setNonApplicableUnclicked() {

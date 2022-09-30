@@ -34,6 +34,12 @@ Among components which are proposed by {term}`ESA` in its {term}`EPPL` {cite:p}`
 
 -   Deep Sub Micron components: it seems that these components can be subjected to a limited cumulated time of use due to their design and manufacturing, however knowledge on these components is still incomplete and wear-out is very dependent on the type of component, technology, manufacturer or size.
 
+```{admonition} Note
+:class: note
+
+This aspect is addressed in FIDES 2021 and explained in {numref}`eee_4_4_2_1`. 
+```
+
 -   Relays and switches such as non-latching relays, latching relays and switches: these components can be subjected to a limited number of switching or number of hours depending on the number of operations.
 
 -   Optoelectronics such as LED, laser diodes, optocouplers: these components can be subjected to a limited number of hours of functioning due to brightness {term}`degradation <Degradation>` of their optical parts.
@@ -295,12 +301,12 @@ The following table provides the most common {term}`failure mechanisms <Failure 
     - (x)
 ```
 
-The datasheet of the components and other information from the component manufacturer could be used to get information about the {term}`failure mechanisms <Failure mechanism>`. Particularly, the application notes, the possible use of reliability models and the tests performed are a good basis for evaluating the risk of wear-out. It could be difficult to get such information from the manufacturer. Only the qualification test results are available generally using trunked test, often limited to 1000 hours. In such a case, only the estimation of the constant failure rate is available, considering the flat part of the bathtub curve. For integrated circuits qualified with {term}`AEC-Q <AEC-Q>` automotive grade, the standard {cite:p}`eee-Black1978ElectromigrationOA` describes specific tests that must be done when a new technology of semiconductor is introduced. However, this information is generally only available upon request to the manufacturer. The failures mechanisms covered are the Hot Carrier Injection ({term}`HCI`), the Negative Bias Temperature Instability (NBTI) and the Stress Migration (SM) specific to semiconductors. The following table is an extract from standard {cite:p}`eee-Black1978ElectromigrationOA` listing the tests to perform for some {term}`failure mechanisms <Failure mechanism>`. The manufacturer has to fill the cells with number of tested parts, number of lots, test method and test acceptance criteria.
+The datasheet of the components and other information from the component manufacturer could be used to get information about the {term}`failure mechanisms <Failure mechanism>`. Particularly, the application notes, the possible use of reliability models and the tests performed are a good basis for evaluating the risk of wear-out. It could be difficult to get such information from the manufacturer. Only the qualification test results are available generally using trunked test, often limited to 1000 hours. In such a case, only the estimation of the constant failure rate is available, considering the flat part of the bathtub curve. For integrated circuits qualified with {term}`AEC-Q <AEC-Q>` automotive grade, the standard {cite:p}`eee-AEC-Q100` describes specific tests that must be done when a new technology of semiconductor is introduced. However, this information is generally only available upon request to the manufacturer. The failures mechanisms covered are the Hot Carrier Injection ({term}`HCI`), the Negative Bias Temperature Instability (NBTI) and the Stress Migration (SM) specific to semiconductors. The following table is an extract from standard {cite:p}`eee-AEC-Q100` listing the tests to perform for some {term}`failure mechanisms <Failure mechanism>`. The manufacturer has to fill the cells with number of tested parts, number of lots, test method and test acceptance criteria.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_202')"
     placeholder="Search table...">
 
-```{list-table} Extract of the standard \[BR-EEE-24\] showing reliability tests addressing wear-out.
+```{list-table} Extract of the standard [BR_EEE_7] showing reliability tests addressing wear-out.
 :name: eee-table4-202
 
 * - <table class="myTable" id="eee_table4_202">
