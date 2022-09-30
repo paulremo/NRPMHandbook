@@ -21,7 +21,7 @@ The process factor $\Pi_{\text{process}}$ represents the quality and technical c
 (eee_4_3_2_2)=
 ## Contribution of different phases in the development process
 
-The FIDES questionnaire for $\Pi_{\text{process}}$ is based on questions having a possible impact on the reliability of the equipment and related to the different phases of its development and manufacturing. The relative influence of each phase, $\text{Contribution_Phase}_{i}$, is weighted depending on the importance of each phase in the total contribution to the reliability of the equipment. This phase contribution is directly used in the calculation of the process factor $\Pi_{\text{process}}$.
+The FIDES questionnaire for $\Pi_{\text{process}}$ is based on questions having a possible impact on the reliability of the equipment and related to the different phases of its development and manufacturing. The relative influence of each phase, $\text{Contribution}\_\text{Phase}_{i}$, is weighted depending on the importance of each phase in the total contribution to the reliability of the equipment. This phase contribution is directly used in the calculation of the process factor $\Pi_{\text{process}}$.
 
 The FIDES guide provides default values that can be used by all domains, but recommends to use dedicated values for the considered industrial domain.
 
