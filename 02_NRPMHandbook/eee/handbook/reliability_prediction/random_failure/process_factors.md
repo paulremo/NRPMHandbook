@@ -27,7 +27,7 @@ The FIDES guide provides default values that can be used by all domains, but rec
 
 The table presented in the FIDES guide is present in the following Table:
 
-```{list-table} $\text{Contribution\_Phase}_{i}$ for each phase.
+```{list-table} $\text{Contribution}\\_\text{Phase}_{i}$ for each phase.
 :name: eee-table4-9
 :header-rows: 1
 :widths: 10 50 40
@@ -69,7 +69,7 @@ In order to better represent the space applications designs, a specific analysis
 A weight table specific for space applications has been built according to the specific development and manufacturing process of electronic equipment embedded on satellites. Compared to standard contributions in other industrial domains, the design and manufacturing phases are more significant, unlike the operations and maintenance which influence is less meaningful for space applications. The recommended phase contribution is provided in the following table:
 ```
 
-```{list-table} $\text{Contribution\_Phase}_{i}$ for each phase for space applications.
+```{list-table} $\text{Contribution}\\_\text{Phase}_{i}$ for each phase for space applications.
 :name: eee-table4-10
 :header-rows: 1
 :widths: 10 50 40
