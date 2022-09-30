@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: NRPM digital handbook
+title: digital handbook
 author: reliability.space consortium
 logo: _static/images/reliabilityspace_logo_vector.png
 copyright: "Matrisk GmbH 2022"
@@ -26,7 +26,7 @@ html:
   use_issues_button: true
   use_edit_page_button: true
   favicon: _static/images/favicon.ico
-  announcement: "️🚀 This is the final mock-up version v0.2.0 of the NRPM digital handbook 🌔"
+  announcement: "️🚀 This is the final mock-up version v0.2.0 of the reliability.space digital handbook 🌔"
   extra_footer: <a href='/home.html#imprint'>ESA contract No. 4000121065/17/NL/PS</a> and <a href='/home.html#imprint'>4000135482/21/NL/AR/va</a>
   extra_navbar: ""
 

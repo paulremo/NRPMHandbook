@@ -1,9 +1,9 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
 (home_page)=
-# Welcome to the NRPM digital handbook!
+# Welcome to the reliability.space digital handbook!
 
-This is the digital version of the {term}`NRPM` handbook for reliability.space. The handbook offers technical content in the [Handbook](methodologies) sections and interactive content in the [Models](sec_eee_models) sections.
+This is the digital version of the reliability.space 2020 handbook. The handbook offers technical content in the [Handbook](methodologies) sections and interactive content in the [Models](sec_eee_models) sections.
 
 ## Objective
 
@@ -17,7 +17,7 @@ This digital handbook contains a methodology, a methods and four application-spe
 :::{grid-item-card} **Methodologies**
 <a href="methodologies/handbook/intro.html"><img class="link-image" src="_static/images/methodologyPicture.png" alt="logo methodologies"></a>
 ^^^
-Explains the framework and taxonomy used in the {term}`NRPM` handbook and links it to the reliability prediction process and usage, and provides guidance for users that are in charge of planning a prediction.
+Explains the framework and taxonomy used in the reliability.space handbook and links it to the reliability prediction process and usage, and provides guidance for users that are in charge of planning a prediction.
 :::
 
 :::{grid-item-card} **Methods**
@@ -94,7 +94,7 @@ This digital handbook is supplied in a versioned format powered by [ReadTheDocs]
 - `latest` this is the latest version of the document and might change unexpectedly.
 - `stable` this is the latest official version of the document and corresponds to the last released numbered version.
 
-All versions may also be accessed (and linked to) with the following URL: `https://nrpmhandbook.reliability.space/en/<version>/...` where `<version>` can be replaced by any version of this document.
+All versions may also be accessed (and linked to) with the following URL: `https://handbook.reliability.space/en/<version>/...` where `<version>` can be replaced by any version of this document.
 
 
 (imprint)=
