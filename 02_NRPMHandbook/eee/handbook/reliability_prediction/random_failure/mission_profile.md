@@ -4,7 +4,7 @@
 # Mission profile
 
 (eee_4_3_1_1)=
-## Mission Profile Definition
+## Mission profile definition
 
 As mentioned before, the reliability.space approach for {term}`EEE` components is based on the FIDES  methodology. One advantage of the FIDES approach is that the reliability calculations calculated through reliability.space are specific to a particular application of the electronic equipment or the system, as defined by an application specific mission profile.
 

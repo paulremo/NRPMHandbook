@@ -7,7 +7,7 @@ This Paragraph deals with the different process factors dedicated to the quality
 
 -   general process factor $\Pi_{\text{process}}$;
 
--   process factor for RF {term}`HF` components $\Pi_{\text{ProcessRFHF}}$;
+-   process factor for {term}`HF`/RF components $\Pi_{\text{ProcessRFHF}}$;
 
 -   process factor for {term}`ASIC` components $\Pi_{\text{ProcessASIC}}$;
 
@@ -21,13 +21,13 @@ The process factor $\Pi_{\text{process}}$ represents the quality and technical c
 (eee_4_3_2_2)=
 ## Contribution of different phases in the development process
 
-The FIDES questionnaire for $\Pi_{\text{process}}$ is based on questions having a possible impact on the reliability of the equipment and related to the different phases of its development and manufacturing. The relative influence of each phase, $\text{Contribution\_Phase}_{i}$, is weighted depending on the importance of each phase in the total contribution to the reliability of the equipment. This phase contribution is directly used in the calculation of the process factor $\Pi_{\text{process}}$.
+The FIDES questionnaire for $\Pi_{\text{process}}$ is based on questions having a possible impact on the reliability of the equipment and related to the different phases of its development and manufacturing. The relative influence of each phase, $\text{Contribution_Phase}_{i}$, is weighted depending on the importance of each phase in the total contribution to the reliability of the equipment. This phase contribution is directly used in the calculation of the process factor $\Pi_{\text{process}}$.
 
 The FIDES guide provides default values that can be used by all domains, but recommends to use dedicated values for the considered industrial domain.
 
 The table presented in the FIDES guide is present in the following Table:
 
-```{list-table} $Contribution\_ Phase_{i}$ for each phase.
+```{list-table} $\text{Contribution\_Phase}_{i}$ for each phase.
 :name: eee-table4-9
 :header-rows: 1
 :widths: 10 50 40
@@ -61,7 +61,7 @@ The table presented in the FIDES guide is present in the following Table:
     - 100%
 ```
 
-In order to better represent the Space Application designs, a specific analysis has been performed, jointly with the FIDES consortium team, which result in the following rule.
+In order to better represent the space applications designs, a specific analysis has been performed, jointly with the FIDES consortium team, which result in the following rule.
 
 ```{admonition} Rule
 :class: rule
@@ -69,7 +69,7 @@ In order to better represent the Space Application designs, a specific analysis 
 A weight table specific for space applications has been built according to the specific development and manufacturing process of electronic equipment embedded on satellites. Compared to standard contributions in other industrial domains, the design and manufacturing phases are more significant, unlike the operations and maintenance which influence is less meaningful for space applications. The recommended phase contribution is provided in the following table:
 ```
 
-```{list-table} $Contribution\_ Phase_{i}$ for each phase for Space Applications.
+```{list-table} $\text{Contribution\_Phase}_{i}$ for each phase for space applications.
 :name: eee-table4-10
 :header-rows: 1
 :widths: 10 50 40
@@ -231,7 +231,7 @@ The questions of the updated questionnaire with suggested answers are provided i
 ```{admonition} Rule
 :class: rule
 
-For Space Application, the new version of the Pi Process questionnaire needs to be applied.
+For space applications, the new version of the Pi Process questionnaire needs to be applied.
 ```
 
 ```{admonition} Note
@@ -245,7 +245,7 @@ The value obtained through the Pi Process calculation ranges from 1 to 8.
 
 The process factor $\Pi_{\text{ProcessRFHF}}$ takes into account how control over the life cycle of a radiofrequency or microwave product influences reliability. This factor is complementary to the process factor $\Pi_{\text{Process}}$ that remains applicable for microwave and frequency products.
 
-$\Pi_{\text{ProcessRFHF}}$is issued from the following equations and questionnaire:
+$\Pi_{\text{ProcessRFHF}}$ is issued from the following equations and questionnaire:
 
 ````{admonition} Equation
 :class: equation
@@ -447,9 +447,9 @@ The value obtained through the Pi Process ASIC calculation ranges from 1 to 4.
 (eee_4_3_2_7)=
 ## Process factor for Hybrids and Multi Chip Modules
 
-The process factor $\Pi_{\text{Process\_H\&M}}$ takes into account of how control over design and manufacturing of the Hybrids and Multi Chip Modules influences reliability. This factor is complementary to the process factor $\Pi_{\text{Process}}$ that remains applicable for Hybrids and Multi Chip Modules.
+The process factor $\Pi_{\text{Process}\_\text{H}\&\text{M}}$ takes into account of how control over design and manufacturing of the Hybrids and Multi Chip Modules influences reliability. This factor is complementary to the process factor $\Pi_{\text{Process}}$ that remains applicable for Hybrids and Multi Chip Modules.
 
-$\Pi_{\text{Process\_H\&M}}$ is issued from the following equations and questionnaire:
+$\Pi_{\text{Process}\_\text{H}\&\text{M}}$ is issued from the following equations and questionnaire:
 
 ````{admonition} Equation
 :class: equation
@@ -457,17 +457,17 @@ $\Pi_{\text{Process\_H\&M}}$ is issued from the following equations and question
 ``  
 ```{math}
 :label: Equation_1_26
-\Pi_{\text{Process\_H\&M}} = exp\left\lbrack 1.39 \cdot \left( 1 - \text{H\&M\_process\_grade} \right) \right\rbrack
+\Pi_{\text{Process}\_\text{H}\&\text{M}} = exp\left\lbrack 1.39 \cdot \left( 1 - \text{H}\&\text{M}\_\text{process}\_\text{grade} \right) \right\rbrack
 ```  
 ```{math}
 :label: Equation_1_27
-\text{H\&M\_process\_grade} = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maximum applicable mark}}
+\text{H}\&\text{M}\_\text{process}\_\text{grade} = \frac{\sum_{}^{}\text{Values in the following table}}{\text{Maximum applicable mark}}
 ```
 ````
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-14')" placeholder="Search table...">
 
-```{list-table} Factors influencing the $\Pi_{\text{Process\\_H\\&M}}$
+```{list-table} Factors influencing the $\Pi_{\text{Process}\\_\text{H}\\&\text{M}}$
 :name: eee-table4-14
 :header-rows: 1
 :widths: 10 70 10 10
@@ -501,7 +501,7 @@ $\Pi_{\text{Process\_H\&M}}$ is issued from the following equations and question
     - 4
     - 0
 *   - 7
-    - Qualification of the line for space application ({term}`ESA`/{term}`CNES`) - (class K according to the MIL-PRF 38534F classification, or class I according to JESD93), or equivalent
+    - Qualification of the line for space applications ({term}`ESA`/{term}`CNES`) - (class K according to the MIL-PRF 38534F classification, or class I according to JESD93), or equivalent
     - 30
     - 0
 *   - 8

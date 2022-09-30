@@ -240,6 +240,6 @@ It is recommended not to use either of these methods for reliability predictions
 ```{admonition} Note
 :class: note
 
-For the 2021 issue of FIDES, the family count method is not longer present.
+For the 2021 issue of FIDES, the family count method is no longer present.
 ```
 

@@ -19,7 +19,7 @@ With $\Pi_{\text{LF}} = 1$, the general part stress reliability models may be si
 ```
 ````
 
-for RF {term}`HF` components:
+for {term}`HF`/RF components:
 
 ````{admonition} Equation
 :class: equation

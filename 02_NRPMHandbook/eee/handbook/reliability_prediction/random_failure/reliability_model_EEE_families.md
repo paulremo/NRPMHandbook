@@ -403,9 +403,9 @@ Technological limit refers to the highest value for some given characteristics f
     </table>
 ```
 
-**Induced factor $\Pi_{induced}$:**
+**Induced factor $\Pi_{\text{induced}}$:**
 
-The $\Pi_{induced}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_4_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_4_3_1`. Its formula is:
 
 
 ````{admonition} Equation
@@ -414,23 +414,23 @@ The $\Pi_{induced}$ factor allows taking into account the influence of the missi
 ``  
 ```{math}
 :label: Equation_1_36
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
-- $\Pi_{placement\_ i}$
+- $\Pi_{\text{placement}\_ i}$
 
-The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`. Recommendation for the definition of parameter $\Pi_{placement\_ i}$:
+The Pi Placement depends on the function, there are 6 choices to choose as recalled here from {numref}`eee-table4-3`. Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-24')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$
 :name: eee-table4-24
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -445,16 +445,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-- $\Pi_{application}$
+- $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_25')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-25
 
 * - <table class="myTable" id="eee_table4_25">
@@ -655,7 +655,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($\text{P}_{\text{os}}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($\text{P}_{\text{os}}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -663,13 +663,13 @@ A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 
 In bold in the table are the levels considered for the space environment (orbit raising and orbit keeping). They represent the typical environment met in space for satellites, hence the figure can be used for all in flight phases for all projects provided they don't present a specific application; in that case, it has to be re-evaluated.
 ```
 
-- $\Pi_{ruggedissing}$
+- $\Pi_{\text{ruggedising}}$
 
 The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_4_3_1_17`.
 
-- $C_{Sensitivity}$
+- $C_{\text{sensitivity}}$
 
-The induced factor $C_{Sensitivity}$ , presented in {numref}`eee_4_3_1_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ , presented in {numref}`eee_4_3_1_21` is provided in the following table:
 
 ```{list-table} Coefficient of sensitivity for capacitors.
 :name: eee-table4-26
@@ -677,7 +677,7 @@ The induced factor $C_{Sensitivity}$ , presented in {numref}`eee_4_3_1_21` is pr
 :widths: 70 30
 
 *   - Technologies
-    - $C_{Sensitivity}$
+    - $C_{\text{sensitivity}}$
 *   - Ceramic capacitors
     - 6.05
 ```
@@ -694,9 +694,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_1
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_2
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -794,9 +807,9 @@ The following table lists the 6 categories that cover the Tantalum Capacitor sub
 ```
 ````
 
-> **a) Determination of the $\Pi_{\text{Process}}$ factor**
+> **a) Mission profile**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_4_3_2`.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_4_3_1` for details.
 
 > **b) Calculation $\lambda_{\text{Physical}}$**
 
@@ -921,9 +934,9 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
 ```
 
 
-**Induced factor $\Pi_{induced}$:**
+**Induced factor $\Pi_{\text{induced}}$:**
 
-The $\Pi_{induced}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_4_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_4_3_1`. Its formula is:
 
 
 ````{admonition} Equation
@@ -932,7 +945,7 @@ The $\Pi_{induced}$ factor allows taking into account the influence of the missi
 ``  
 ```{math}
 :label: Equation_1_41
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -946,7 +959,7 @@ The induced factor $C_{\text{sensitivity}}$ is provided in the following table:
 :widths: 70 30
 
 *   - Technologies
-    - $C_{Sensitivity}$
+    - $C_{\text{sensitivity}}$
 *   - Tantalum capacitors
     - 6.95
 ```
@@ -963,9 +976,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_3
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_4
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -1060,9 +1086,9 @@ The following table lists the 5 categories that cover the Plastic Metallized Cap
 ```
 ````
 
-> **a) Determination of the $\Pi_{\text{Process}}$ factor**
+> **a) Mission profile**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_4_3_2`.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_4_3_1` for details.
 
 > **b) Calculation $\lambda_{\text{Physical}}$**
 
@@ -1229,9 +1255,9 @@ FILM\_ Grade = \frac{\sum_{}^{}\text{Values in the following table}}{100}
     </table>
 ```
 
-**Induced factor $\Pi_{induced}$:**
+**Induced factor $\Pi_{\text{induced}}$:**
 
-The $\Pi_{induced}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_4_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_4_3_1`. Its formula is:
 
 
 ````{admonition} Equation
@@ -1240,7 +1266,7 @@ The $\Pi_{induced}$ factor allows taking into account the influence of the missi
 ``  
 ```{math}
 :label: Equation_1_50
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -1254,7 +1280,7 @@ The induced factor $C_{\text{sensitivity}}$ is provided in the following table:
 :widths: 70 30
 
 *   - Technologies
-    - $C_{Sensitivity}$
+    - $C_{\text{sensitivity}}$
 *   - Plastic film capacitors
     - 6.05
 ```
@@ -1265,9 +1291,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_5
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_6
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -1579,7 +1618,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_59
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -1587,16 +1626,16 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 The value of Pi Placement for connectors is 1.
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_39')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-39
 
 * - <table class="myTable" id="eee_table4_39">
@@ -1800,7 +1839,7 @@ It is evaluated through the questions presented in the following table:
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -1839,9 +1878,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_7
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_8
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -1968,16 +2020,8 @@ The following table presents the different subfamilies and the corresponding mod
 
 -   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
 
--   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
-
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_4_3`).
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item.
 ````
-
-```{admonition} Todo 
-:class: todo
-
-error with this equation, term missing Pi LF
-```
 
 All this being based on a mission profile to be defined for the whole unit.
 
@@ -2189,7 +2233,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_66
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -2199,13 +2243,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-48')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-48
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -2220,16 +2264,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_49')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-49
 
 * - <table class="myTable" id="eee_table4_49">
@@ -2433,7 +2477,7 @@ It is evaluated through the questions presented in the following table:
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -2474,9 +2518,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_9
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_10
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -2539,7 +2596,7 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 (eee_4_3_4_4)=
 ## Diodes (family 04)
 
-General diodes and RF {term}`HF` diodes are classified as family 04 in {term}`EPPL` {cite:p}`eee-EPPL007-37`.
+General diodes and {term}`HF`/RF diodes are classified as family 04 in {term}`EPPL` {cite:p}`eee-EPPL007-37`.
 
 All diodes used for Space applications can be modelled through FIDES.
 
@@ -2766,7 +2823,7 @@ The following table presents the different subfamilies and the corresponding mod
 
 All this being based on a mission profile to be defined for the whole unit.
 
-With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_4_3_2_1` and RF {term}`HF` process factor $\Pi_{\text{ProcessRFHF}}$ according to {numref}`eee_4_3_2_5`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_4_3_2_1` and {term}`HF`/RF process factor $\Pi_{\text{ProcessRFHF}}$ according to {numref}`eee_4_3_2_5`.
 
 > **a) Mission profile**
 
@@ -2895,7 +2952,7 @@ $E_{a}$ = 0.7eV;
 ```
 ````
 
-for signal diodes up to 1A (PIN, Schottky, signal, varactor) and for RF {term}`HF` diodes
+for signal diodes up to 1A (PIN, Schottky, signal, varactor) and for {term}`HF`/RF diodes
 
 for all other diodes, $\Pi_{\text{El}}$ = 1.
 
@@ -2943,7 +3000,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_74
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -2953,13 +3010,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-55')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-55
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -2974,16 +3031,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_56')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-56
 
 * - <table class="myTable" id="eee_table4_56">
@@ -3187,7 +3244,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -3228,9 +3285,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_11
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{36}$
+with
+
+```{math}
+:label: eq_eee_fam_12
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} + \text{RA}_{\text{component}} \right) \times \varepsilon}{36}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -3428,7 +3498,7 @@ $E_{a}$ = 0.7eV;
 ```
 ````
 
-for signal diodes up to 1A (PIN, Schottky, signal, varactor) and for RF {term}`HF` diodes
+for signal diodes up to 1A (PIN, Schottky, signal, varactor) and for {term}`HF`/RF diodes
 
 for all other diodes, $\Pi_{\text{El}}$ = 1.
 
@@ -3474,7 +3544,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_82
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -3484,13 +3554,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-61')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-61
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -3505,16 +3575,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_62')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-62
 
 * - <table class="myTable" id="eee_table4_62">
@@ -3718,7 +3788,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -3757,9 +3827,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_13
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{36}$
+with
+
+```{math}
+:label: eq_eee_fam_14
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} + \text{RA}_{\text{component}} \right) \times \varepsilon}{36}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -4032,7 +4115,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_89
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -4042,13 +4125,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-67')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-67
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -4063,16 +4146,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_68')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-68
 
 * - <table class="myTable" id="eee_table4_68">
@@ -4276,7 +4359,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -4315,9 +4398,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_15
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_16
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -4524,7 +4620,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_96
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -4534,13 +4630,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-72')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-72
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -4555,16 +4651,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_73')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-73
 
 * - <table class="myTable" id="eee_table4_73">
@@ -4768,7 +4864,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -4807,9 +4903,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_17
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_18
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -5119,7 +5228,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_102
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -5129,13 +5238,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-78')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-78
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -5150,16 +5259,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_79')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-79
 
 * - <table class="myTable" id="eee_table4_79">
@@ -5363,7 +5472,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -5406,9 +5515,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_19
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_20
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -6292,7 +6414,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_111
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -6302,13 +6424,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-92')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-92
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -6323,16 +6445,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_93')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-93
 
 * - <table class="myTable" id="eee_table4_93">
@@ -6536,7 +6658,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -6575,9 +6697,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_21
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{36}$
+with
+
+```{math}
+:label: eq_eee_fam_22
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} + \text{RA}_{\text{component}} \right) \times \varepsilon}{36}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -7187,7 +7322,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_120
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -7197,13 +7332,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-105')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-105
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -7218,16 +7353,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_106')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-106
 
 * - <table class="myTable" id="eee_table4_106">
@@ -7431,7 +7566,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -7470,9 +7605,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_23
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{36}$
+with
+
+```{math}
+:label: eq_eee_fam_24
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} + \text{RA}_{\text{component}} \right) \times \varepsilon}{36}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -8066,7 +8214,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_129
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -8076,13 +8224,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-118')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-118
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -8097,16 +8245,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_119')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-119
 
 * - <table class="myTable" id="eee_table4_119">
@@ -8310,7 +8458,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -8349,9 +8497,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_25
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{36}$
+with
+
+```{math}
+:label: eq_eee_fam_26
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} + \text{RA}_{\text{component}} \right) \times \varepsilon}{36}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -8503,12 +8664,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 $\lambda_{O_{\text{Relay}}}$ is equal to 1.1.
 
 For space applications, $\Pi_{\text{Chemical}}$ is equal to 0, $\Pi_{\text{manoeuvres}}$ is equal to 1.
-
-```{admonition} Todo
-:class: todo
-
-error in equation 131, miss Pi chamical and manoeuvre"
-```
 
 **Physical stresses for the relays family:**
 
@@ -8688,7 +8843,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_137
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -8698,13 +8853,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-125')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-125
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -8719,16 +8874,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_126')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-126
 
 * - <table class="myTable" id="eee_table4_126">
@@ -8932,7 +9087,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -8971,9 +9126,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_23_1
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_24_1
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -9438,7 +9606,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_144
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -9448,13 +9616,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-135')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-135
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -9469,16 +9637,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_136')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-136
 
 * - <table class="myTable" id="eee_table4_136">
@@ -9682,7 +9850,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -9729,9 +9897,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_25_1
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_26_1
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -10100,7 +10281,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_151
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -10110,13 +10291,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-145')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-145
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -10131,16 +10312,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_146')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-146
 
 * - <table class="myTable" id="eee_table4_146">
@@ -10344,7 +10525,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -10387,9 +10568,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_27
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_28
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -10824,7 +11018,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_158
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -10834,13 +11028,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-152')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-152
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -10855,16 +11049,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_153')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-153
 
 * - <table class="myTable" id="eee_table4_153">
@@ -11068,7 +11262,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -11109,9 +11303,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_29
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{36}$
+with
+
+```{math}
+:label: eq_eee_fam_30
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} + \text{RA}_{\text{component}} \right) \times \varepsilon}{36}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -11326,7 +11533,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_165
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -11336,13 +11543,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-158')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-158
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -11357,16 +11564,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_159')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-159
 
 * - <table class="myTable" id="eee_table4_159">
@@ -11570,7 +11777,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -11609,9 +11816,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_31
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{36}$
+with
+
+```{math}
+:label: eq_eee_fam_32
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} + \text{RA}_{\text{component}} \right) \times \varepsilon}{36}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -11835,7 +12055,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_171
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -11845,13 +12065,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-163')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-163
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -11866,16 +12086,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_164')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-164
 
 * - <table class="myTable" id="eee_table4_164">
@@ -12079,7 +12299,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -12120,9 +12340,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_33
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_34
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -12467,7 +12700,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_179
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -12477,13 +12710,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-170')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-170
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -12498,16 +12731,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_171')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-171
 
 * - <table class="myTable" id="eee_table4_171">
@@ -12711,7 +12944,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -12750,9 +12983,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_35
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_36
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -13155,7 +13401,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_187
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -13165,13 +13411,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-177')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-177
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -13186,16 +13432,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_178')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-178
 
 * - <table class="myTable" id="eee_table4_178">
@@ -13399,7 +13645,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -13438,9 +13684,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_37
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_38
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -13619,7 +13878,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_195
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -13648,9 +13907,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_39
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_40
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -13895,7 +14167,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_202
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -13905,13 +14177,13 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-187')" placeholder="Search table...">
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
+```{list-table} Recommendation for the definition of parameter $\Pi_{\text{placement}\_ i}$.
 :name: eee-table4-187
 :header-rows: 1
 :widths: 70 30
 
 *   - Description of the placement influence
-    - $\Pi_{placement\_ i}$
+    - $\Pi_{\text{placement}\_ i}$
 *   - Digital non-interface function
     - 1.0
 *   - Digital interface function
@@ -13926,16 +14198,16 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
     - 2.5
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_188')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-188
 
 * - <table class="myTable" id="eee_table4_188">
@@ -14139,7 +14411,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -14178,9 +14450,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_41
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_42
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 
@@ -14434,7 +14719,7 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ``  
 ```{math}
 :label: Equation_1_209
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
+\Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
 ```
 ````
 
@@ -14465,16 +14750,16 @@ The placement factor $\Pi_{placement}$ and induced factors $C_{\text{sensitivity
     - 1.8
 ```
 
-> $\Pi_{application}$
+> $\Pi_{\text{application}}$
 
-$\Pi_{application}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
+$\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
 It is evaluated through the questions presented in the following table and addressed in {numref}`eee_4_3_1_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_196')"
     placeholder="Search table...">
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit
+```{list-table} Recommended parameters for $\Pi_{\text{application}\_ i}$ for the launch, time to reach orbit and in-orbit
 :name: eee-table4-196
 
 * - <table class="myTable" id="eee_table4_196">
@@ -14678,7 +14963,7 @@ It is evaluated through the questions presented in the following table and addre
     </table>
 ```
 
-A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{application}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
+A mark is given for each level: 1 for level 0, 3.2 for level 1 and 10 for level 2. This mark is multiplied by the weight ($P_{os}$) and the sum of all the products is divided by 66. For the present application here, we consider $\Pi_{\text{application}}$ = 1.1, the value determined in the frame of an Airbus Defence & Space observation project, for all in flight phases.
 
 ```{admonition} Note
 :class: note
@@ -14721,9 +15006,22 @@ The Part\_Manufacturing factor presented in {numref}`eee_4_3_3` represents the q
 
 Its high level formula is
 
-${\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}$
+````{admonition} Equation
+:class: equation
+``
+``  
+```{math}
+:label: eq_eee_fam_43
+{\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
+```
 
-With, for capacitors, $Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}$
+with
+
+```{math}
+:label: eq_eee_fam_44
+Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \times \varepsilon}{24}
+```
+````
 
 These parameters are determined through tables available in FIDES.
 

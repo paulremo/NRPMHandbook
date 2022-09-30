@@ -8,7 +8,7 @@ The reliability.space approach for {term}`EEE` items provides models for reliabi
 
 The reliability.space approach covering the {term}`random failures <Random failure>` for {term}`EEE` items is described in this part of the handbook. This methodology is based on the FIDES methodology, 2009 version.
 
-Following the observations from the TEC QQD Study - Reliability Prediction Data Sources and Methodologies for Space Applications, it is adapted to the specificities of the space applications.
+Following the observations from the TEC QQD Study - Reliability Prediction Data Sources and Methodologies for space applications, it is adapted to the specificities of the space applications.
 
 ```{admonition} Note 1
 :class: note
@@ -110,7 +110,7 @@ With:
 
 -   $\Pi_{\text{Process}}$ as the process related factor described in {numref}`eee_4_3_2_3`
 
--   $\Pi_{\text{ProcessRFHF}}$ as the process related factor for RF {term}`HF` components described in {numref}`eee_4_3_2_5`;
+-   $\Pi_{\text{ProcessRFHF}}$ as the process related factor for {term}`HF`/RF components described in {numref}`eee_4_3_2_5`;
 
 -   $\Pi_{\text{ProcessASIC}}$ as the process related factor for {term}`ASIC` components described in {numref}`eee_4_3_2_6`;
 

@@ -3,9 +3,6 @@
 (eee_4_3_3)=
 # Quality factors
 
-(eee_4_3_3_1)=
-## Quality factors
-
 The $\Pi_{\text{PM}}$ component manufacturing factor is related to the quality of {term}`EEE` components and is adapted to space applications.
 
 The $\Pi_{\text{PM}}$ part manufacturing factor characterizes the quality of {term}`EEE` components linked to their manufacturing. This factor is a direct multiplicative factor in the final calculation of the reliability prediction and takes into consideration the qualification and reliability monitoring tests for the case and for the active parts. The information which is used to estimate this factor is generally provided in the datasheet, in the reliability reports of the {term}`EEE` components or available from the manufacturer.
@@ -55,7 +52,7 @@ Part\_ Grade = \left\lbrack \frac{\left( \text{QA}_{\text{manufacturer}} + \text
 ```  
 ````
 
-No specific change of the equations is done for space applications. The range of $Part\_ Grade$ is between 0 for the worst mark and 1 for the best mark. Therefore, *Π~PM~* component manufacturing factor is still comprised between 0.5 to 2.0 and adjusted by the factors 1.39 and 0.69 in the exponential.
+No specific change of the equations is done for space applications. The range of $Part\_ Grade$ is between 0 for the worst mark and 1 for the best mark. Therefore, *Π~PM~* component manufacturing factor is still comprised between 0.5 to 2 and adjusted by the factors 1.39 and 0.69 in the exponential.
 
 (eee_4_3_3_2)=
 ## Manufacturer quality assurance for space applications
@@ -229,8 +226,6 @@ The following table provides the different levels and associated values to consi
 (eee_4_3_3_7)=
 ## Experience factor for space applications
 
-A final recommendation is to adapt the value of the experience factor $\epsilon$ according to the experience of the manufacturers of components. Generally, the prime contractors have a fairly good knowledge of their manufacturers and their processes. Hence, they can define a fairly accurate value of this experience factor $\epsilon$ based on their past and ongoing experience with them.
-
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_18')" placeholder="Search table...">
 
 ```{list-table} Recommendation for definition of parameter $\epsilon$
@@ -263,3 +258,9 @@ A final recommendation is to adapt the value of the experience factor $\epsilon$
     </table>
 ```
 
+```{admonition} Recommendation
+:class: recommendation
+
+A recommendation is to adapt the value of the experience factor $\epsilon$ according to the experience of the manufacturers of components. Generally, the prime contractors have a fairly good knowledge of their manufacturers and their processes. Hence, they can define a fairly accurate value of this experience factor $\epsilon$ based on their past and ongoing experience with them.
+
+```
