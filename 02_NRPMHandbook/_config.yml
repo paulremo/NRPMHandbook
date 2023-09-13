@@ -26,7 +26,7 @@ html:
   use_issues_button: true
   use_edit_page_button: true
   favicon: _static/images/favicon.ico
-  announcement: "️🚀 This is version v0.2.1 of the reliability.space digital handbook 🌔"
+  announcement: "️🚀 This is version v0.2.2 of the reliability.space digital handbook 🌔"
   extra_footer: <a href='/home.html#imprint'>ESA contract No. 4000121065/17/NL/PS</a> and <a href='/home.html#imprint'>4000135482/21/NL/AR/va</a>
   extra_navbar: ""
 
