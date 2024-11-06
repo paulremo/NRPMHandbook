@@ -1,3 +1,4 @@
+pip==14.0
 alabaster==0.7.12
 anyio==3.6.1
 appdirs==1.4.4
