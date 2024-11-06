@@ -1,2 +1,2 @@
-jupyter-book==0.13.0
+jupyter-book==0.13.2
 linkchecker==10.1.0

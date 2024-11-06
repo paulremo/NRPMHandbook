@@ -29,6 +29,7 @@ html:
   announcement: "️🚀 This is version v0.2.2 of the reliability.space digital handbook 🌔"
   extra_footer: <a href='/home.html#imprint'>ESA contract No. 4000121065/17/NL/PS</a> and <a href='/home.html#imprint'>4000135482/21/NL/AR/va</a>
   extra_navbar: ""
+  google_analytics_id: G-FRRDTYGBJE
 
 # Information about where the book exists on the web
 repository:
@@ -68,7 +69,6 @@ sphinx:
 #      search_bar_text       : "Search handbook..."
   extra_extensions: 
     - sphinx_multitoc_numbering # fix, because use_multitoc_numbering doesn't get forwarded to sphinx properly by jupyter book
-  
     
 
 
