@@ -3,7 +3,7 @@
 (eee_4_7)=
 # Extrinsic failures of EEE components
 
-An {term}`extrinsic failure <Extrinsic failure>` is a failure induced by the space environment on the satellite elements. Hello Marie-Sarah.
+An {term}`extrinsic failure <Extrinsic failure>` is a failure induced by the space environment on the satellite elements. Test 1
 
 For {term}`EEE` components reliability assessment, the following aspects need to be considered:
 
