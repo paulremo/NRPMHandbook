@@ -60,8 +60,6 @@ The failure rate is referred to as basic failure rate $\lambda_{1} = \lambda_{B}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_1
 \lambda_{1} = \lambda_{B}
@@ -86,8 +84,6 @@ The resulting failure rate is:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_2
 \lambda_{2} = \lambda_{1} * K_{parameters}
@@ -214,8 +210,6 @@ The resulting failure rate is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 
 ```{math}
 :label: Equation_5_3
@@ -253,8 +247,6 @@ The method used is the {term}`Bayesian inference <Bayesian inference>` approach 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_4
 \lambda_{3}^{\gamma} = \lambda_{3}
@@ -289,8 +281,6 @@ The resulting failure rate is :
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_5
 \lambda_{4}(t) = \lambda_{3}^{\gamma} + \lambda_{WO}(t)
@@ -301,8 +291,6 @@ The {term}`reliability prediction <Reliability prediction>` of the item is then 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_6
 P(\text{FAILURE}) = 1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}
@@ -381,8 +369,6 @@ The step 6 consists in adding a probability of failure related to {term}`systema
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_7
 P(\text{FAILURE}) = 1 - (1 - SF) * (1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u})
@@ -401,8 +387,6 @@ The step 7 consists in adding a probability of failure related to the external p
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_8
 P(\text{FAILURE}) = 1 - \left(1 - EX\right) * \left(1 - SF\right) * \left(1 - e^{-\int_{0}^{t} \lambda_{4}(u) \, \mathrm{d}u}\right)

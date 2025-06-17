@@ -82,8 +82,6 @@ The {term}`NSWC` Handbook for Mechanical Reliability Prediction {cite:p}`mec-NSW
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_1
 \lambda = \lambda_{ref} \cdot \frac{\lambda_{op}}{\lambda} = \lambda_{ref} \cdot \frac{MTTF_{ref}}{MTTF} = \lambda_{ref} \cdot C

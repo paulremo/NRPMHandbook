@@ -100,8 +100,6 @@ The publication {cite:p}`eee-Wang2016AMO` provides a model of Total Ionizing Dos
  
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_218
 \lambda_{\text{TID}} = - \frac{1}{T} \cdot ln\left\{ 1 - \Phi\left\lbrack \frac{\ln\left( R_{\text{spaceTID}}\left( T \right) \right) - \mu}{\sigma} \right\rbrack \right\}
@@ -461,8 +459,6 @@ When temperature does not operate on a {term}`failure mechanism <Failure mechani
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_219
 \text{AF}_{\text{IPL}} = \left( \frac{S_{s}}{S_{u}} \right)^{m}
@@ -482,8 +478,6 @@ The Eyring's law is an example of an inverse power law for voltage with:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_220
 \text{AF}_{\text{Ey}} = \left( \frac{V_{s}}{V_{u}} \right)^{m}
@@ -504,8 +498,6 @@ The High Temperature Operating Life test is a test that combines high temperatur
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_221
 \text{AF}_{\text{Ar}} = exp\left\lbrack - \frac{E_{a}}{k} \cdot \left( \frac{1}{273 + T_{s}} - \frac{1}{273 + T_{u}} \right) \right\rbrack
@@ -603,8 +595,6 @@ The Thermal Variation test is a test with rapid change of temperature of the com
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_222
 \text{AF}_{\text{NoLa}} = \left( \frac{{\mathrm{\Delta}T}_{s}}{{\mathrm{\Delta}T}_{u}} \right)^{m} \cdot \left( \frac{F_{u}}{F_{s}} \right)^{q} \cdot exp\left\lbrack - \frac{E_{a}}{k} \cdot \left( \frac{1}{273 + T_{s_{\max}}} - \frac{1}{{273 + T}_{u_{\max}}} \right) \right\rbrack
@@ -713,8 +703,6 @@ The Damp Heat test is a test with a combination of temperature and humidity, gen
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_223
 \text{AF}_{\text{Pe}} = \left( \frac{\text{RH}_{s}}{\text{RH}_{u}} \right)^{r} \cdot exp\left\lbrack - \frac{E_{a}}{k} \cdot \left( \frac{1}{273 + T_{s}} - \frac{1}{273 + T_{u}} \right) \right\rbrack
@@ -745,8 +733,6 @@ With this law described in document {cite:p}`eee-SSB-1.003`, the main difficulty
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_224
 \text{AF}_{\text{Bl}} = \left( \frac{I_{s}}{I_{u}} \right)^{n} \cdot exp\left\lbrack - \frac{E_{a}}{k} \cdot \left( \frac{1}{273 + T_{s}} - \frac{1}{273 + T_{u}} \right) \right\rbrack
@@ -795,8 +781,6 @@ For the Arrhenius' law, the activation energy $E_{a}$ can be found with the form
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_225
 E_{a} = k \cdot \frac{\ln\left( t_{f1} \right) - ln\left( t_{f2} \right)}{\frac{1}{273 + T_{1}} - \frac{1}{273 + T_{2}}}
@@ -815,8 +799,6 @@ For the inverse power law, the empirical exponent *m* can be found with the form
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_226
 m = \frac{ln\left( \frac{t_{f2}}{t_{f1}} \right)}{ln\left( \frac{S_{2}}{S_{1}} \right)}
@@ -846,8 +828,6 @@ The potential two-parameter models for {term}`EEE` components {term}`degradation
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_227
 \text{Deg}\left( t \right) = b + \frac{t}{a}
@@ -858,8 +838,6 @@ The potential two-parameter models for {term}`EEE` components {term}`degradation
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_228
 \text{Deg}\left( t \right) = \frac{1}{b \cdot t^{a}}
@@ -870,8 +848,6 @@ The potential two-parameter models for {term}`EEE` components {term}`degradation
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_229
 \text{Deg}\left( t \right) = b \cdot exp\left( a \cdot t \right)
@@ -882,8 +858,6 @@ The potential two-parameter models for {term}`EEE` components {term}`degradation
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_230
 \text{Deg}\left( t \right) = b + a \cdot ln(t)
@@ -894,8 +868,6 @@ A third parameter can be useful for {term}`degradation <Degradation>` models: th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_231
 \text{Deg}\left( t \right) = Model\left( t - \tau \right)
@@ -938,8 +910,6 @@ To estimate the wear-out of the operational amplifier OP27 with accumulation of 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_232
 \text{Deg}\left( I_{b} \right) = \left( \begin{matrix}
@@ -1137,8 +1107,6 @@ The most convenient {term}`degradation <Degradation>` model is clearly based on 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_233
 \text{Deg}\left( \text{Dose} \right) = 1 - exp\left\lbrack - a \cdot max(Dose - 20;0) \right\rbrack
@@ -1168,8 +1136,6 @@ For the exponential model, the equations of {term}`degradation <Degradation>` in
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_234
 \text{Deg}_{\text{biased}}\left( \text{Dose} \right) = 1 - exp\left\lbrack - 0.0319 \cdot max(Dose - 20;0) \right\rbrack
@@ -1178,8 +1144,6 @@ For the exponential model, the equations of {term}`degradation <Degradation>` in
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_235
 \text{Deg}_{\text{unbiased}}\left( \text{Dose} \right) = 1 - exp\left\lbrack - 0.1620 \cdot max(Dose - 20;0) \right\rbrack

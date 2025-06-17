@@ -289,8 +289,6 @@ The following rules apply for the calculation of the Failure Probability or Reli
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_1
 R_{S}(t) = R_{A}(t) * R_{B}(t)
@@ -299,8 +297,6 @@ R_{S}(t) = R_{A}(t) * R_{B}(t)
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_2
 F_{S}(t) = F_{A}(t) + F_{B}(t) - F_{A}(t) * F_{B}(t)
@@ -311,8 +307,6 @@ In general, the following rule applies for a serial system with $n$ components:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_3
 R_{S}(t) = \prod_{i = 1}^{n} R_{i}(t)
@@ -335,8 +329,6 @@ For parallel systems, the following mathematical rules for the calculation of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_4
 R_{S}(t) = R_{A}(t) + R_{B}(t) - R_{A}(t) * R_{B}(t)
@@ -345,8 +337,6 @@ R_{S}(t) = R_{A}(t) + R_{B}(t) - R_{A}(t) * R_{B}(t)
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_5
 F_{S}(t) = F_{A}(t) * F_{B}(t)
@@ -355,8 +345,6 @@ F_{S}(t) = F_{A}(t) * F_{B}(t)
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_6
 R_{S}(t) = 1 - \prod_{i=1}^{n} (1-R_{i}(t))
@@ -382,8 +370,6 @@ In the first step, the summary of the serial connection between the failure of c
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_7
 R_{B \vee C}(t) = R_{B}(t) * R_{C}(t)
@@ -394,8 +380,6 @@ In the second and final step, the combination of the parallel arrangement descri
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_8
 R_{S}(t) = R_{A}(t) + R_{B \vee C}(t) -  R_{A}(t) * R_{B \vee C}(t)
@@ -404,8 +388,6 @@ R_{S}(t) = R_{A}(t) + R_{B \vee C}(t) -  R_{A}(t) * R_{B \vee C}(t)
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_9
 R_{S}(t) = R_{A}(t) + R_{B}(t) * R_{C}(t) -  R_{A}(t) * R_{B}(t) * R_{C}(t)
@@ -447,8 +429,6 @@ The failure probability of the entire system can be approximated by adding the f
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_10
 F_{S}(t) \cong F_{A}(t)F_{B}(t) + F_{C}(t)F_{D}(t) + F_{A}(t)F_{D}(t)F_{E}(t) + F_{B}(t)F_{C}(t)F_{E}(t)
@@ -459,8 +439,6 @@ The system reliability is then given by Eq. {eq}`Equation_7_11`.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_11
 R(t) = 1 - F(t)
@@ -537,8 +515,6 @@ Example Fault Tree with Vote gate (2 out of 3 logic).
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_12
 R_{S}(t) = \sum_{k}^{n} \frac{n!}{i!(n-i)!}R(t)^{i}(1-R(t))^{n-i}
@@ -579,8 +555,6 @@ The consequences of the event are considered through a series of possible paths.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_13
 P(\text{Outcome 1} | \text{Initiating event}) = P(B_{1} \cup B_{2} \cup B_{3} \cup B_{4})
@@ -660,8 +634,6 @@ A set of differential equations can be obtained from the state transition diagra
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_14
 \text{Change in probability of state } i = \text{incoming probability from all other states} - \text{outgoing probability to all other states}
@@ -672,8 +644,6 @@ The following set of differential equations is obtained from the state transitio
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_15
 \dot{P_{1}}(t) = -(\lambda_{A} + \lambda_{B})P_{1}(t)
@@ -682,8 +652,6 @@ The following set of differential equations is obtained from the state transitio
 
 ````{admonition} Equation
 :class: equation
-``  
-``  
 ```{math}
 :label: Equation_7_16
 \dot{P_{2}}(t) = \lambda_{B}P_{1}(t) - \lambda_{A}P_{2}(t)
@@ -692,8 +660,6 @@ The following set of differential equations is obtained from the state transitio
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_17
 \dot{P_{3}}(t) = \lambda_{A}P_{1}(t) - \lambda_{B}P_{3}(t)
@@ -702,8 +668,6 @@ The following set of differential equations is obtained from the state transitio
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_18
 \dot{P_{4}}(t) = \lambda_{A}P_{2}(t) + \lambda_{B}P_{3}(t)
@@ -714,8 +678,6 @@ Where $P_{1}(t)$ denotes the probability of being in state $S_{1}$, and $P_{2}(t
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_19
 [\dot{P}] = [P][A]
@@ -726,8 +688,6 @@ For a system with $m$ states, the square matrix $A$ has $m$ rows and $m$ columns
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_20
 \sum^{i=m}P_{i}(t) = 1
@@ -738,8 +698,6 @@ To solve the differential equations, the initial state probabilities at $t = 0$ 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_21
 P_{1}(t) = \text{exp}\left(-\left(\lambda_{A} + \lambda_{B} \right)t\right)
@@ -748,8 +706,6 @@ P_{1}(t) = \text{exp}\left(-\left(\lambda_{A} + \lambda_{B} \right)t\right)
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_22
 P_{2}(t) = \text{exp}\left(-\lambda_{A}t\right)
@@ -758,8 +714,6 @@ P_{2}(t) = \text{exp}\left(-\lambda_{A}t\right)
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_23
 P_{3}(t) = \text{exp}\left(-\lambda_{B}t\right)
@@ -768,8 +722,6 @@ P_{3}(t) = \text{exp}\left(-\lambda_{B}t\right)
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_24
 P_{4}(t) = 1 - \text{exp}\left(-\lambda_{B}t\right)
@@ -897,8 +849,6 @@ Considering a Bayesian network with random variables $X_{1}, X_{2}, ..., X_{n}$ 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_25
 P\left(X_{1},..., X_{n}\right) = \prod^{n}P\left(X_{i}|\text{pa}\left(X_{i}\right)\right)
@@ -926,8 +876,6 @@ The marginal distribution $P\left(B=S_{B_{1}}\right)$ is obtained from Bayesian 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_26
 P\left(B=S_{B_{1}}\right) = P\left(B=S_{B_{1}}|A=S_{A_{1}}\right)P\left(A=S_{A_{1}}\right) + P\left(B=S_{B_{1}}|A=S_{A_{2}}\right)P\left(A=S_{A_{2}}\right)
@@ -958,8 +906,6 @@ The joint probability of the serial system is given by
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_27
 P(X,A,B) = P(X|A,B)P(A,B)
@@ -970,8 +916,6 @@ The conditional probability of the child node X for a serial system is given by 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_28
 P(X|A,B) = \begin{bmatrix}
@@ -985,8 +929,6 @@ For a serial system the conditional probabilities are either 1 or 0, which means
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_29
 P(X|A,B) = \begin{bmatrix}

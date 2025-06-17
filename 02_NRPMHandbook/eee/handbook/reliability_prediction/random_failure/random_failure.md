@@ -58,8 +58,6 @@ In the following, the general model for conventional components is described, fo
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_1
 \lambda = \lambda_{\text{Physical}}{\cdot \Pi}_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}}
@@ -70,8 +68,6 @@ for RF/{term}`HF` components:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_2
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessRFHF}} \cdot \Pi_{\text{LF}}
@@ -82,8 +78,6 @@ and for {term}`ASIC` components:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_3
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessASIC}} \cdot \Pi_{\text{LF}}
@@ -94,8 +88,6 @@ and for Hybrids & MCM components:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_3_1
 \lambda_{\text{HM}} = \sum_{\mu\text{-components}}(\lambda_{\mu\text{-components}}\cdot \Pi_{PM_{\mu\text{-components}}})\cdot\Pi_{\text{Process HM}} \cdot \Pi_{\text{Process}} + (\lambda_{\text{wiring}} + \lambda_{\text{case + substrate}} + \lambda_{\text{external connections}}) \cdot \Pi_{\text{Process HM}}\cdot\Pi_{\text{Process}}

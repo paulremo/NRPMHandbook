@@ -272,8 +272,6 @@ In the classification of Chapter 2, the physical failure rate $\lambda_{\text{Ph
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_7
 \lambda_{\text{Physical}} = \left\lbrack \sum_{Physical\_ Contributions}^{}\left( \lambda_{0} \cdot \Pi_{\text{acceleration}} \right) \right\rbrack \cdot {\Pi_{\text{induced}}}_{i}
@@ -286,8 +284,6 @@ The thermal and thermo-electrical stresses are taken into account by the {term}`
 
 ````{admonition} Equations
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_8
 \Pi_{\text{acceleration}} = \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T}_{0}} - \frac{1}{273 + T_{board_{ref}} + \Delta_{T}} \right) \right\rbrack
@@ -329,8 +325,6 @@ The thermo-mechanical stress is associated with the thermal cycling of the equip
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_10
 \Pi_{\text{acceleration}} = \left( \frac{12 \cdot N_{cy_{\text{phase}}}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{min} \left( \theta_{\text{cy}}, 2 \right)}{\text{min} \left( \theta_{0}, 2 \right)} \right)^{p} \cdot \left( \frac{\Delta T_{\text{cycling}}}{\Delta T_{0}} \right)^{m} \cdot \text{exp} \left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{273+T_{0}+\Delta T_{0}} - \frac{1}{273+T_{max_{\text{cycling}}}} \right) \right\rbrack
@@ -369,8 +363,6 @@ The humidity stress is taken into account by the {term}`physics of failures <Phy
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_11
 \Pi_{\text{acceleration}} = \left( \frac{\text{RH}_{board_{ref}}}{\text{RH}_{0}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T_{0}}} - \frac{1}{{273 + T_{board_{ref}}}+ \Delta T} \right) \right\rbrack
@@ -403,8 +395,6 @@ The vibration stress is taken into account by the {term}`physics of failures <Ph
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_12
 \Pi_{\text{acceleration}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{p}
@@ -435,8 +425,6 @@ Reliability.space directly considers the contribution of mechanical, electrical 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_13
 \Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -565,8 +553,6 @@ The final calculation of $\Pi_{application\_ i}$ is therefore:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_14
 \Pi_{\text{application}} = \frac{1}{66} \cdot \sum_{k = Criteria}^{}{P_{\text{marks}_{k}} \cdot \text{Pos}_{k}}\begin{matrix}   \\                                                                                                                                   
@@ -637,8 +623,6 @@ Based on the marks given in {numref}`eee-table4-5` and calculation with {eq}`Equ
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_15
 \Pi_{\text{application}} = \frac{1}{66} \cdot \sum_{k = Criteria}^{}{P_{\text{marks}_{k}} \cdot \text{Pos}_{k}} = \frac{1*20 + 1*12 + 1*4 + 1*15 + 1*4 + 1*6 + 1*3 + 1*2}{66} = \frac{66}{66} = 1.00
@@ -778,8 +762,6 @@ The final calculation of $\Pi_{ruggedising}$ with removal of question n°168 is 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_16
 recom_{grade} = \frac{1}{213} \cdot \sum_{i}^{\text{Recommendations}}{{\text{Recom}_{\text{Weight}}}_{i} \cdot}{\text{Satisfaction}_{\text{Mark}}}_{i} = \frac{213}{213} = 1

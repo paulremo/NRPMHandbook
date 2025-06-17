@@ -65,8 +65,6 @@ The simplified approach is based on a generic limit state function with the foll
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_2
 g(X) = X_{1} - \Theta X_{2}
@@ -138,8 +136,6 @@ The probability of failure for the Normal distribution assumption is derived as 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_3
 P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi \left(\frac{- \mu_{X_{1}} - \mu_{X_{2}}}{\sqrt{\sigma_{X_{1}}^{2} + \sigma_{X_{2}}^{2}}}\right) = \Phi \left(\frac{- p - 1}{\sqrt{p^{2} \nu_{X_{1}}^{2} + \nu_{X_{2}}^{2}}}\right)
@@ -153,8 +149,6 @@ For the Lognormal distribution case we get:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_4
 P_{f} = P[X_{1} - X_{2} \leq 0] = \Phi \left(\frac{- \ln(p) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
@@ -166,8 +160,6 @@ Finally, in the third case, the probability of failure is simply derived from th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_5
 P_{f} \cong F_{X_{1}}(\widehat{X_{2}})  or  P_{f} \cong 1 - F_{X_{2}}(\widehat{X_{1}})
@@ -355,8 +347,6 @@ The general principles of {term}`Bayesian inference <Bayesian inference>` updati
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_6
 F_{T}(t) = P[T \leq t] = P_{f}(t) = P[g(X(t)) \leq 0]
@@ -370,8 +360,6 @@ A straightforward approach for updating this prior is to treat the {term}`model 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_7
 F_{T}(t | \theta) = P[T \leq t | \theta] = P_{f}(t | \theta) = P[g(X(t)) \leq 0 | \Theta = \theta]
@@ -385,8 +373,6 @@ Using the generic simplified limit state function defined in Eq. {eq}`Equation_3
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_8
 F_{T}(t | \theta) = P[X_{1}(t) - \theta X_{2}(t) \leq 0] = P[p(t) X'_{1} - \theta X'_{2} \leq 0]
@@ -400,8 +386,6 @@ The analytic method for {term}`Bayesian inference <Bayesian inference>` updating
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_9
 F_{T}(t | \theta) = \Phi \left(\frac{- \ln(p(t)) + \ln(\theta) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
@@ -415,8 +399,6 @@ The following derivation is based on the proportionality assumption mentioned ab
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_10
 F_{T}(t | \theta) = \Phi \left(\frac{- \ln(t) - \ln(k) + \ln(\theta) + 0.5 ( \ln(\nu_{X_{1}}^{2} + 1) - \ln(\nu_{X_{2}}^{2} + 1))}{\sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}}\right)
@@ -428,8 +410,6 @@ By comparing this result with the cumulative distribution function of the Lognor
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_11
 \mu_{T} = \ln(k) - \ln(\theta) + 0.5 (-\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1))
@@ -438,8 +418,6 @@ By comparing this result with the cumulative distribution function of the Lognor
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation 3.12
 \sigma_{T} = \sqrt{\ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1)}
@@ -451,8 +429,6 @@ For the {term}`Bayesian inference <Bayesian inference>` updating, the „determi
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_13
 \mu ' = \ln(k) - \ln(E(\theta)) + 0.5 (\ln(\nu_{\Theta}^{2} + 1) - \ln(\nu_{X_{1}}^{2} + 1) + \ln(\nu_{X_{2}}^{2} + 1))
@@ -461,8 +437,6 @@ For the {term}`Bayesian inference <Bayesian inference>` updating, the „determi
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_14
 \sigma ' = \sqrt{\ln(\nu_{\Theta}^{2} + 1)}
@@ -474,8 +448,6 @@ The Normal distribution for the location parameter $\mu_{T}$ is a conjugate prio
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_15
 \mu '' = (\sigma '')^{2} \left(\frac{\mu '}{\sigma'^{2}} + \frac{\sum_{i=1}^{n} (\ln(\widehat{t_{i}}))}{\sigma_{T}^{2}}\right)
@@ -484,8 +456,6 @@ The Normal distribution for the location parameter $\mu_{T}$ is a conjugate prio
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_16
 \sigma '' = (1 / \sigma'^{2} + n / \sigma_{T}^{2})^{1/2}

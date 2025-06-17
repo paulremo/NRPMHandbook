@@ -130,8 +130,6 @@ Here is the generic formula used in FIDES for capacitors:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_31
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}}
@@ -235,8 +233,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_32
 \lambda_{\text{Physical}} = \lambda_{0_{\text{capacitor}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -255,8 +251,6 @@ With:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_33
 \Pi_{\text{Thermal}} = \gamma_{\text{TH}_{\text{EL}}} \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{3} \cdot \exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{\text{board}_{\text{ref}}} + \text{ΔT}} \right) \right\rbrack
@@ -410,8 +404,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_36
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -696,8 +688,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_1
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -799,8 +789,6 @@ The following table lists the 6 categories that cover the Tantalum Capacitor sub
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_37
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{Film}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}}
@@ -815,8 +803,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 \lambda_{\text{Physical}} = \lambda_{0_{\text{capacitor}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
@@ -828,8 +814,6 @@ Refer to {eq}`Equation_1_32`.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_38
 \Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{3} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -941,8 +925,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_41
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -978,8 +960,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_3
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -1078,8 +1058,6 @@ The following table lists the 5 categories that cover the Plastic Metallized Cap
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_42
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{Film}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}}
@@ -1094,8 +1072,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 \lambda_{\text{Physical}} = \lambda_{0_{\text{capacitor}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
 ```
@@ -1106,8 +1082,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_44
 \Pi_{\text{Thermal}} = 0.18 \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{6} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -1179,8 +1153,6 @@ For plastic film capacitors: $\Pi_{\text{Film}}$ factor is calculated from a que
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_48
 \Pi_{\text{Film}} = e^{1.39 \cdot FILM\_ Grade}
@@ -1262,8 +1234,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_50
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -1293,8 +1263,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_5
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -1461,8 +1429,6 @@ is the generic formula used in FIDES for connectors:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_51
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}}
@@ -1488,8 +1454,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_52
 \lambda_{\text{Physical}} = \lambda_{O_{\text{connector}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} + \Pi_{\text{Chemical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -1509,8 +1473,6 @@ With:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_53
 \lambda_{O\_ connector} = \lambda_{\text{Type}} \cdot \Pi_{\text{Transfer}} \cdot \Pi_{\text{Contact}} \cdot \Pi_{\text{Cycle}}
@@ -1560,8 +1522,6 @@ For space applications, where the number of cycles (mating/demating) per year is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_54
 \Pi_{\text{Thermal}} = 0.58 \cdot exp\left\lbrack 11604 \cdot 0.1 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -1570,8 +1530,6 @@ For space applications, where the number of cycles (mating/demating) per year is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_55
 \Pi_{\text{Tcy}} = 0.04 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -1580,8 +1538,6 @@ For space applications, where the number of cycles (mating/demating) per year is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_56
 \Pi_{\text{Mechanical}} = 0.05 \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -1590,8 +1546,6 @@ For space applications, where the number of cycles (mating/demating) per year is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_57
 \Pi_{\text{RH}} = 0.13 \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.8 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -1600,8 +1554,6 @@ For space applications, where the number of cycles (mating/demating) per year is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_58
 \Pi_{\text{Chemical}} = 0.2
@@ -1614,8 +1566,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_59
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -1880,8 +1830,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_7
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -2010,8 +1958,6 @@ The following table presents the different subfamilies and the corresponding mod
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_60
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}}
@@ -2033,8 +1979,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_61
 \lambda_{\text{Physical}} = \lambda_{O_{\text{piezoelectric}}} \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{Thermo\_ electrical} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -2079,8 +2023,6 @@ $\lambda_{0_{\text{piezoelectric}}}$ corresponds to the basic failure rate defin
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_62
 \Pi_{Thermo\_ electrical} = \gamma_{TH - EL} \cdot \Pi_{rating\_ TH\_ i} \cdot \Pi_{rating\_ EL\_ i}
@@ -2126,8 +2068,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_63
 \Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -2159,8 +2099,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_64
 \Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -2192,8 +2130,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_65
 \Pi_{\text{RH}} = \gamma_{\text{RH}} \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -2229,8 +2165,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_66
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -2520,8 +2454,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_9
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -2806,8 +2738,6 @@ The following table presents the different subfamilies and the corresponding mod
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_67
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{ProcessRFHF}}
@@ -2833,8 +2763,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_68
 \lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
@@ -2928,8 +2856,6 @@ $\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_69
 \Pi_{\text{Thermal}} = \Pi_{\text{El}} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -2940,8 +2866,6 @@ $E_{a}$ = 0.7eV;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_70
 \Pi_{\text{El}}=
@@ -2958,8 +2882,6 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_71
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -2969,8 +2891,6 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_72
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -2980,8 +2900,6 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_73
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -2996,8 +2914,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_74
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -3287,8 +3203,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_11
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -3350,8 +3264,6 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_75
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{ProcessRFHF}}
@@ -3367,8 +3279,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_76
 \lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
@@ -3475,8 +3385,6 @@ $\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_77
 \Pi_{\text{Thermal}} = \Pi_{\text{El}} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -3487,8 +3395,6 @@ $E_{a}$ = 0.7eV;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_78
 \Pi_{\text{El}} = \left\{ \begin{matrix}  \left( \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{2.4}\ \mathrm{\text{if}}\ \frac{V_{\text{applied}}}{V_{\text{rated}}} > 0.3 \\   
@@ -3504,8 +3410,6 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_79
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -3514,8 +3418,6 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_80
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -3524,8 +3426,6 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_81
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -3540,8 +3440,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_82
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -3829,8 +3727,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_13
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -3966,8 +3862,6 @@ The following table presents the different subfamilies and the corresponding mod
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_83
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessRFHF}}
@@ -3996,8 +3890,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_84
 \lambda_{\text{Physical}} = \lambda_{O_{\text{PassiveRFHF}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -4015,8 +3907,6 @@ $\lambda_{O_{\text{PassiveRFHF}}}$ corresponds to the basic failure rate defined
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_85
 \Pi_{\text{Thermal}} = \eta \cdot 0.01 \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -4032,8 +3922,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_86
 \Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack         
@@ -4050,8 +3938,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_87
 \Pi_{\text{Mechanical}} = 0.30 \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}     
@@ -4062,8 +3948,6 @@ All parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_88
 \Pi_{\text{RH}} = {\gamma_{\text{RH}} \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack 
@@ -4111,8 +3995,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_89
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -4400,8 +4282,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_15
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -4515,8 +4395,6 @@ The following table presents the different subfamilies and the corresponding mod
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_90
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
@@ -4542,8 +4420,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_91
 \lambda_{\text{Physical}} = \lambda_{O_{\text{fuse}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} + \Pi_{\text{Chi}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -4556,8 +4432,6 @@ Basic failure rate $\lambda_{O_{\text{fuse}}}$ is equal to 0.5 for all fuses.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_92
 \Pi_{\text{Thermal}} = 0.13 \cdot \left( \frac{1}{0.8} \cdot \frac{I_{\text{applied}}}{I_{\text{rated}}} \right)^{1.5} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -4577,8 +4451,6 @@ $I_{\text{rated}}$ is the rated current in the fuse without opening for an ambie
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_93
 \Pi_{\text{Tcy}} = 0.51 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack\            
@@ -4587,8 +4459,6 @@ $I_{\text{rated}}$ is the rated current in the fuse without opening for an ambie
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_94
 \Pi_{\text{Mechanical}} = 0.06 \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -4598,8 +4468,6 @@ $I_{\text{rated}}$ is the rated current in the fuse without opening for an ambie
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_95
 \Pi_{\text{RH}} = 0.24 \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.8 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -4616,8 +4484,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_96
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -4905,8 +4771,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_17
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -5081,8 +4945,6 @@ Core means coil without winding.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_97
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
@@ -5106,8 +4968,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_98
 \lambda_{\text{Physical}} = \lambda_{O_{\text{Magnetic}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{Thermo\_ electrical} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -5124,8 +4984,6 @@ $\lambda_{O_{\text{Magnetic}}}$ corresponds to the basic failure rate defined fo
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_99
 \Pi_{Thermo - electrical} = \gamma_{TH\_ EL} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -5146,8 +5004,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_100
 \Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -5166,8 +5022,6 @@ All other parameters are issued from the mission profile
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_101
 \Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -5224,8 +5078,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_102
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -5517,8 +5369,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_19
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -5858,8 +5708,6 @@ In the 2021 issue of FIDES, a {term}`GaN` MMIC model has been included. The deta
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_103
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessHFRF}}
@@ -5884,8 +5732,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_104
 \lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
@@ -5946,8 +5792,6 @@ The basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{OTCyCase}}$, $\l
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_105
 \lambda_{0_{\text{constraint}}} = exp\left( - a \right) \cdot {N_{p}}^{b}
@@ -6156,7 +6000,7 @@ For each stress $\lambda_{\text{ORH}}$, $\lambda_{\text{OTCyCase}}$, $\lambda_{\
 
 For components with 0 to 256 leads, the recommendation for the parameters *a* and *b* is the following:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_90')"
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-90')"
     placeholder="Search table...">
 
 ```{list-table} Parameters a and b for components with 0 to 256 leads.
@@ -6253,7 +6097,7 @@ For components with 0 to 256 leads, the recommendation for the parameters *a* an
 
 For components with more than 256 leads, the recommendation for the parameters *a* and *b* is the following:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_90')"
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-91')"
     placeholder="Search table...">
 
 ```{list-table} Parameters a and b for components with more than 256 leads.
@@ -6347,8 +6191,6 @@ In the 2021 issue of FIDES, some evolution concerning the inclusing of underfill
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_106
 \Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -6362,8 +6204,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_107
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -6372,8 +6212,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_108
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -6383,8 +6221,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_109
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -6394,8 +6230,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_110
 \Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -6410,8 +6244,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_111
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -6699,8 +6531,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_21
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -6761,8 +6591,6 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_112
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessASIC}}
@@ -6787,8 +6615,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_113
 \lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
@@ -6854,8 +6680,6 @@ The basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{OTCyCase}}$, $\l
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_114
 \lambda_{0_{\text{constraint}}} = exp\left( - a \right) \cdot {N_{p}}^{b}
@@ -7255,8 +7079,6 @@ In the 2021 issue of FIDES, some evolution concerning the inclusing of underfill
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_115
 \Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -7270,8 +7092,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_116
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -7280,8 +7100,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_117
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -7291,8 +7109,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_118
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -7302,8 +7118,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_119
 \Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -7318,8 +7132,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_120
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -7607,8 +7419,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_23
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -7669,8 +7479,6 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_121
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}}
@@ -7695,8 +7503,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_122
 \lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix}
@@ -7752,8 +7558,6 @@ The basic failure rate $\lambda_{\text{OTH}}$ is a fixed value given in the foll
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_123
 \lambda_{0_{\text{constraint}}} = exp\left( - a \right) \cdot {N_{p}}^{b}
@@ -8147,8 +7951,6 @@ For components with more than 256 leads, the recommendation for the parameters *
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_124
 \Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -8162,8 +7964,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_125
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -8172,8 +7972,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_126
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -8183,8 +7981,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_127
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -8194,8 +7990,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_128
 \Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -8210,8 +8004,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_129
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -8499,8 +8291,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_25
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -8630,8 +8420,6 @@ The following table presents the different subfamilies and the corresponding mod
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_130
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
@@ -8653,8 +8441,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_131
 \lambda_{\text{Physical}} = \lambda_{O_{\text{Relay}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{Electrical}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -8669,8 +8455,6 @@ For space applications, $\Pi_{\text{Chemical}}$ is equal to 0, $\Pi_{\text{manoe
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_132
 \Pi_{\text{Thermal}} = 0.29 \cdot \Pi_{\text{TH\ contact}} \cdot \Pi_{\text{TH\ breaking}} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{313} - \frac{1}{273 + T^{'}} \right) \right\rbrack
@@ -8681,8 +8465,6 @@ $E_{a}$ = 0.25eV;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_133
 T^{'} = \left\{ \begin{matrix}                                                                                         
@@ -8718,8 +8500,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_134
 \Pi_{\text{Electrical}} = 0.55 \cdot \Pi_{\text{pole}} \cdot \Pi_{\text{EL\ breaking}} \cdot \Pi_{\text{load\ type}} \cdot {S_{V}}^{m_{1}} \cdot {S_{I}}^{m_{2}} \cdot \left( \frac{U_{\text{nominal}}}{U_{\text{coil}}} \right)
@@ -8791,8 +8571,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_135
 \Pi_{\text{Tcy}} = 0.02 \cdot \Pi_{\text{prot\ TCY}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -8809,8 +8587,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_136
 \Pi_{\text{Mechanical}} = 0.05 \cdot \Pi_{\text{pole}} \cdot \Pi_{\text{ME\ contact}} \cdot \Pi_{\text{ME\ breaking}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -8839,8 +8615,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_137
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -9128,8 +8902,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_23_1
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -9360,8 +9132,6 @@ HFRF resistors can also be modelled with FIDES, with the HFRF model.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_138
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
@@ -9385,8 +9155,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_139
 \lambda_{\text{Physical}} = \lambda_{O_{\text{Resistor}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -9428,8 +9196,6 @@ With $N_{R}$ as the number of resistors in the network.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_140
 \Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \cdot \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
@@ -9477,8 +9243,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_141
 \Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -9516,8 +9280,6 @@ $\gamma_{\text{TCy}}$ depends on the type of resistors:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_142
 \Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -9557,8 +9319,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_143
 \Pi_{\text{RH}} = {\gamma_{\text{RH}} \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \cdot \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
@@ -9602,8 +9362,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_144
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -9899,8 +9657,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_25_1
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -10069,8 +9825,6 @@ FIDES does not present models for thermistors, hence the models detailed hereaft
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_145
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
@@ -10094,8 +9848,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_146
 \lambda_{\text{Physical}} = \lambda_{O_{\text{Thermistor}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -10129,8 +9881,6 @@ $\lambda_{O_{\text{Thermistor}}}$ corresponds to the basic failure rate defined 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_147
 \Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \cdot \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
@@ -10141,7 +9891,7 @@ $E_{a}$ = 0.15eV;
 
 $\gamma_{TH\_ EL}$ and $A$ depend on the type of thermistors:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-131')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-141')" placeholder="Search table...">
 
 ```{list-table} Values of $\gamma_{TH\_ EL}$ for thermistors.
 :name: eee-table4-141
@@ -10170,8 +9920,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_148
 \Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -10205,8 +9953,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_149
 \Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -10240,8 +9986,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_150
 Pi_{\text{RH}} = {\gamma_{\text{RH}} \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + A \cdot \frac{P_{\text{applied}}}{P_{\text{rated}}}} \right) \right\rbrack
@@ -10277,8 +10021,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_151
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -10570,8 +10312,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_27
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -10836,8 +10576,6 @@ The following table presents the different subfamilies and the corresponding mod
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_152
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessRFHF}}
@@ -10871,8 +10609,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_153
 \lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
@@ -10966,8 +10702,6 @@ $\lambda_{\text{OTH}}$ for Power {term}`HF`/RF has been updated in the 2021 issu
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_154
 \Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -10978,8 +10712,6 @@ $E_{a}$ = 0.7eV;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_155
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -10988,8 +10720,6 @@ $E_{a}$ = 0.7eV;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_156
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -10998,8 +10728,6 @@ $E_{a}$ = 0.7eV;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_157
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -11014,8 +10742,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_158
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -11305,8 +11031,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_29
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -11367,8 +11091,6 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_159
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}}
@@ -11392,8 +11114,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_160
 \lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
@@ -11481,8 +11201,6 @@ $\lambda_{\text{OTH}}$ is a fixed value given in another table, depending on the
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_161
 \Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -11493,8 +11211,6 @@ $E_{a}$ = 0.7eV;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_162
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -11503,8 +11219,6 @@ $E_{a}$ = 0.7eV;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_163
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -11513,8 +11227,6 @@ $E_{a}$ = 0.7eV;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_164
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -11529,8 +11241,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_165
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -11818,8 +11528,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_31
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -11940,8 +11648,6 @@ The following table presents the different subfamilies and the corresponding mod
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_166
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}}
@@ -11964,8 +11670,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_167
 \lambda_{\text{Physical}} = \lambda_{O_{\text{Magnetic}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -11991,8 +11695,6 @@ $\lambda_{O_{\text{Magnetic}}}$ mentioned groups:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_168
 \Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -12011,8 +11713,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_169
 \Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -12029,8 +11729,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_170
 \Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -12051,8 +11749,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_171
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -12342,8 +12038,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_33
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -12484,8 +12178,6 @@ The following table presents the different subfamilies and the corresponding mod
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_172
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
@@ -12508,8 +12200,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_173
 \lambda_{\text{Physical}} = \lambda_{O_{\text{Switch}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{Electrical}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -12524,8 +12214,6 @@ For space applications, $\Pi_{\text{Chemical}}$ is equal to 0, $\Pi_{\text{manoe
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_174
 \Pi_{\text{Thermal}} = 0.21 \cdot C_{\text{TH}} \cdot \Pi_{\text{TH\ contact}} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{313} - \frac{1}{273 + T^{'}} \right) \right\rbrack
@@ -12537,8 +12225,6 @@ $C_{\text{TH}}$ = 1.11;
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_175
 T^{'} = \left\{ \begin{matrix}                                                                                        
@@ -12568,8 +12254,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_176
 \Pi_{\text{Electrical}} = 0.59 \cdot {C_{\text{EL}} \cdot \Pi}_{\text{pole}} \cdot \Pi_{\text{EL\ breaking}} \cdot \Pi_{\text{load\ type}} \cdot {S_{V}}^{m_{1}} \cdot {S_{I}}^{m_{2}}
@@ -12642,8 +12326,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_177
 \Pi_{\text{Tcy}} = 0.02 \cdot \Pi_{\text{prot\ TCY}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -12664,8 +12346,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_178
 \Pi_{\text{Mechanical}} = 0.06 \cdot C_{\text{MECH}} \cdot \Pi_{\text{pole}} \cdot \Pi_{\text{ME\ contact}} \cdot \Pi_{\text{ME\ breaking}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -12696,8 +12376,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_179
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -12985,8 +12663,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_35
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -13175,8 +12851,6 @@ Investigation and assessment according to {numref}`eee_4_4_1`.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_180
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
@@ -13199,8 +12873,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_181
 \lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix} 
@@ -13338,8 +13010,6 @@ All other basic failure rates $\lambda_{\text{ORH}}$, $\lambda_{\text{0TcyCase}}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_182
 \Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -13351,8 +13021,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_183
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -13361,8 +13029,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_184
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -13371,8 +13037,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_185
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -13381,8 +13045,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_186
 \Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -13397,8 +13059,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_187
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -13686,8 +13346,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_37
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -13748,8 +13406,6 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_188
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
@@ -13772,8 +13428,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_189
 \lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \begin{pmatrix}
@@ -13815,8 +13469,6 @@ According to the different types of packages defined in {numref}`eee-table4-84` 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_190
 \Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -13828,8 +13480,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_191
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -13838,8 +13488,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_192
 \Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -13848,8 +13496,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_193
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -13858,8 +13504,6 @@ All other parameters are issued from the mission profile.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_194
 \Pi_{\text{RH}} = \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -13874,8 +13518,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_195
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -13909,8 +13551,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_39
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -14019,8 +13659,6 @@ PCB are not classified as family in {term}`EPPL` but as an important part of ele
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_196
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{Process}}
@@ -14043,8 +13681,6 @@ In order to model the reliability for each component of a unit, it is necessary 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_197
 \lambda_{\text{Physical}} = \lambda_{\text{OPCB}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} + \Pi_{\text{RH}} + \Pi_{\text{Chemical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
@@ -14057,8 +13693,6 @@ $\lambda_{\text{OPCB}}$ is issued from the following equation:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_198
 \lambda_{O_{\text{PCB}}} = 5.10^{- 4} \cdot \left( N_{\text{layers}} \right)^{\frac{1}{2}} \cdot \left( \frac{N_{\text{connection}}}{2} \right) \cdot \Pi_{\text{Class}} \cdot \Pi_{Techno\_ PCB}
@@ -14127,8 +13761,6 @@ The value $\Pi_{\text{Class}}$ reflects the effect on the reliability prediction
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_199
 \Pi_{\text{Tcy}} = 0.6 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -14137,8 +13769,6 @@ The value $\Pi_{\text{Class}}$ reflects the effect on the reliability prediction
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_200
 \Pi_{\text{Mechanical}} = 0.2 \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
@@ -14147,8 +13777,6 @@ The value $\Pi_{\text{Class}}$ reflects the effect on the reliability prediction
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_201
 \Pi_{\text{RH}} = 0.18 \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.8 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
@@ -14163,8 +13791,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_202
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -14452,8 +14078,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_41
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -14565,8 +14189,6 @@ Hybrids are classified as family 40 in {term}`EPPL`  {cite:p}`eee-EPPL007-37`.. 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_203
 \lambda_{H\& M} = \sum_{\text{µcomponents}}^{}\left( \lambda_{\text{µcomponent}} \cdot \Pi_{PM_{\text{µcomponent}}} \right) \cdot \Pi_{Process\_ H\& M} \cdot \Pi_{\text{Process}} 
@@ -14584,8 +14206,6 @@ For each basic element (microcomponent, wiring, case-substrate, external connect
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_204
 \lambda_{\text{element}} = \sum_{i}^{\text{Phases}}\left\lbrack \frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \sum_{\text{stresses}}^{}\left( \lambda_{0stress} \cdot \Pi_{\text{stress}} \right) \right)_{i} \cdot \left( \Pi_{\text{induced}} \right)_{i} \right\rbrack
@@ -14596,8 +14216,6 @@ with
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_205
 \lambda_{\text{element}} = \lambda_{\text{µcomponent}}\ \mathrm{\text{or}}\ \lambda_{\text{wiring}}\ \mathrm{\text{or}}\ \lambda_{Case + Substrate}\ \mathrm{\text{or}}\ \lambda_{External\_ connections}
@@ -14608,8 +14226,6 @@ For microcomponents associated with bare chips (integrated circuits, transistors
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_206
 \lambda_{\text{µcomponent}} = \lambda_{\text{Chip}} = \left( \lambda_{\text{OTH}} \cdot \Pi_{\text{Thermique}} \right) + \left( C_{\text{moulding}} \cdot C_{chip\_ area} \cdot \lambda_{0\_ Chip\_ TCy} \cdot \Pi_{TCy\_ case} \right)
@@ -14644,8 +14260,6 @@ The factor $C_{chip\_ area}$ is defined as follows for chips:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_207
 C_{Surface\_ chip} = \left( 1 + S^{d} \right)
@@ -14697,8 +14311,6 @@ The factor $\lambda_{0T\_chip\_TCy}$ is equal to 0.011 for Hybrids and Multi Chi
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_208
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -14715,8 +14327,6 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_209
 \Pi_{\text{induced}\_ i} = \left( \Pi_{\text{placement}\_ i} \cdot \Pi_{\text{application}\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
@@ -15008,8 +14618,6 @@ Its high level formula is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: eq_eee_fam_43
 {\pi_{\text{PM}} = e}^{1.39*\left( 1 - Part_{\text{Grade}} \right) - 0.69}
@@ -15087,8 +14695,6 @@ The determination of the number of boards to be tested is done from the χ² law
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_210
 \lambda = \frac{\chi_{2n_{f} + 2,1 - CL}^{2}}{2 \cdot t \cdot AF \cdot n}

@@ -20,59 +20,76 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+# HTML Configuration
 html:
-  use_multitoc_numbering: true
-  use_repository_button: true
-  use_issues_button: true
-  use_edit_page_button: true
-  favicon: _static/images/favicon.ico
-  announcement: "️🚀 This is version v0.2.2 of the reliability.space digital handbook 🌔"
-  extra_footer: <a href='/home.html#imprint'>ESA contract No. 4000121065/17/NL/PS</a> and <a href='/home.html#imprint'>4000135482/21/NL/AR/va</a>
+  use_multitoc_numbering: true  # Keep TOC numbering enabled
+  use_repository_button: true  # Enable GitHub repository button
+  use_issues_button: true  # Enable issues button
+  use_edit_page_button: true  # Enable edit page button for GitHub
+  favicon: _static/images/favicon.ico  # Path to the favicon
+  announcement: "🚀 This is version v0.2.2 of the reliability.space digital handbook 🌔"
+  extra_footer: "<a href='/home.html#imprint'>ESA contract No. 4000121065/17/NL/PS</a> and <a href='/home.html#imprint'>4000135482/21/NL/AR/va</a>"
   extra_navbar: ""
-  google_analytics_id: G-FRRDTYGBJE
-
+  extra_head:
+    - "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-papapapa...' crossorigin='anonymous' referrerpolicy='no-referrer' />"
+  analytics:
+    google_analytics_id: "G-FRRDTYGBJE"
+  theme: sphinx_book_theme
+  toc:
+    collapse_navigation: true
+    sticky_navigation: true
+    titles_only: false
+    
 # Information about where the book exists on the web
 repository:
-  url                       : https://github.com/paulremo/NRPMHandbook  # Online location of your book
-  path_to_book              : 02_NRPMHandbook  # Optional path to your book, relative to the repository root
-  branch                    : main 
- 
- 
-# modifications of sphinx config
+  url: https://github.com/paulremo/NRPMHandbook
+  path_to_book: 02_NRPMHandbook
+  branch: main
+
+# Modifications of sphinx
 sphinx:
   config:
-    # modifications of thebe config (change of the repo URL to the interactivity repo)
+    # Modifications of thebe config
     thebe_config:
-      repository_url        : https://github.com/paulremo/NRPMInteractivity
-      repository_branch     : python
-    # modifications of bibtex reference style
-    bibtex_default_style    : plain
-    bibtex_reference_style  : label
-    execution_show_tb       : True
-    execution_timeout       : 60
-    html_show_copyright     : true
+      repository_url: https://github.com/paulremo/NRPMInteractivity
+      repository_branch: python
+    # Modifications of bibtex reference style
+    bibtex_default_style: plain
+    bibtex_reference_style: label
+    nb_execution_show_tb: True
+    nb_execution_timeout: 60
+    html_show_copyright: true
     
-    # turn off jupyter notebook execution
-    jupyter_execute_notebooks: "off" 
+    # Turn off Jupyter notebook execution (now managed via the MyST parser)
+    nb_execution_mode: "off"
     
-    # change figure numbering
+    # Change figure numbering
     numfig_secnum_depth: 2
     
-    # for LaTeX compilation, protect hyperlinks to allow references inside captions
-    latex_elements : 
-      'preamble': 
+    # For LaTeX compilation, protect hyperlinks to allow references inside captions
+    latex_elements:
+      'preamble':
         \let\originalhyperlink\hyperlink
         \renewcommand\hyperlink[2]{\protect\originalhyperlink{#1}{#2}}
-    
+
+# MyST Parser Configuration
+myst:
+  enable_extensions:
+    - deflist       # Enables definition lists (e.g., `term:: definition`)
+    - tasklist      # Enables task lists in markdown
+    - footnotes     # Enables footnotes in your markdown
+    - html_image    # Allows HTML-based images
+  nb_execution_mode: off  # Disable notebook execution
+
 # The following is currently not possible, because it overwrites the Jupyter Book html_theme_options. There is currently no way to add this option without overwriting.
 #    html_theme_options      : 
 #      search_bar_text       : "Search handbook..."
-  extra_extensions: 
-    - sphinx_multitoc_numbering # fix, because use_multitoc_numbering doesn't get forwarded to sphinx properly by jupyter book
-    
 
-
-# deactivate mybinder button and activate thebe button
+# Extra Extensions
+#extra_extensions:
+  #- sphinx_multitoc_numbering
+  
+# Launch Buttons Configuration
 launch_buttons:
-  binderhub_url             : ""
-  thebe                     : true
+  binderhub_url: ""
+  thebe: true

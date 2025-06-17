@@ -58,8 +58,6 @@ The basic parameter model is called a direct model because the probabilities of 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_87
 Q_{S} = Q_{I}^{2} + Q_{C}
@@ -83,8 +81,6 @@ For explanation of the beta factor model, also a system with two identical redun
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_88
 \lambda_{T} = \lambda_{I} + \lambda_{C}
@@ -99,8 +95,6 @@ The factor $\beta$ is defined as the ratio of the failure rate due to common cau
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_89
 \beta = \frac{\lambda_{C}}{\lambda_{T}}
@@ -115,8 +109,6 @@ With the categories of significant contributors to {term}`CCF` shown in {numref}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_90
 \text{CCS} = \sum_{i}^{}{\text{CC}S_{i}}
@@ -129,8 +121,6 @@ The beta factor is calculated as follows
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_91
 \beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV}
@@ -143,15 +133,13 @@ As shown in the example in {numref}`syst-table4-15` the assigned Susceptibility 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_92
 \beta = \frac{\text{CCS}}{\text{CCS}_{\max}} \times \text{MCCV} = \frac{32}{70} \times 0.10 = 0.0471
 ```
 ````
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst_table4_15')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst-table4-15')" placeholder="Search table...">
 
 ```{list-table} Example for the evaluation of a Common Cause Beta Factor
 :name: syst-table4-15

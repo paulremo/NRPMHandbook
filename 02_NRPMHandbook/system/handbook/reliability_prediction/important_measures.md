@@ -28,8 +28,6 @@ The so-called Birnbaum or marginal importance indicates how sensitive the system
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_48
 I_{m}\left( i \right) = \frac{\partial R_{S}}{\partial R_{i}}
@@ -40,8 +38,6 @@ Instead of the partial derivation, the Birnbaum importance can be obtained, as s
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_49
 I_{m}\left( i \right) = R_{S}
@@ -52,8 +48,6 @@ Where $r$ denotes the ordered list of component reliabilities for *i*= 1 to *n*.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_50
 r : = \left( R_{i}\left( t \right),\ldots R_{n}\left( t \right) \right)
@@ -74,8 +68,6 @@ The system structure function of this example is given by
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_51
 \Phi\left( x \right) = \left( x \middle| 1 \land x_{5} \right) \vee \left( x \middle| 1 \land x_{2} \land x_{3} \right) \vee \left( x \middle| 1{\land x}_{2}{\land x}_{4} \right)
@@ -87,8 +79,6 @@ The disjunctive terms in Eq. {eq}`Equation_7_51` are derived from minimal succes
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_52
 \Phi\left( x \right) = \left( x \middle| 1 \land {\overline{x}}_{2} \land x_{5} \right) \vee \left( x \middle| 1 \land x_{2} \land x_{3} \land {\overline{x}}_{4} \right) \vee \left( x \middle| 1{\land x}_{2} \land {\overline{x}}_{3}{\land x}_{4} \right)
@@ -100,8 +90,6 @@ The system reliability function is then given by:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_53
 R_{S} = E\left( \Phi\left( x \right) \right) = P
@@ -110,8 +98,6 @@ R_{S} = E\left( \Phi\left( x \right) \right) = P
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_54
 R_{S} = R_{1}\left( 1 - R_{2} \right)R_{5} + R_{1}R_{2}R_{3}\left( 1 - R_{4} \right) + R_{1}R_{2}\left( 1 - R \middle| 3 \right)R_{4}
@@ -122,8 +108,6 @@ Using Eq. {eq}`Equation_7_49`, the following expression is obtained for Birnbaum
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_55
 I_{m1} = XXX
@@ -172,8 +156,6 @@ This assumption is not realistic for space systems. The relevant range of compon
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_56
 I_{\text{RS}}\left( i,r \right) = \frac{1}{{1 - R}_{\text{mi}n}}\int_{R_{\min}}^{1}{\frac{\partial R_{s}\left( r \right)}{\partial R_{i}}dR_{i}} = \frac{1}{{1 - R}_{\text{mi}n}}{\int_{R_{\min}}^{1}{I_{m}\left( i,r \right)dR_{i}}}
@@ -233,8 +215,6 @@ Furthermore, the Birnbaum importance allows to quantify how much the system reli
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_57
 \text{dR}_{S}\left( r \right) = \sum_{i = 1}^{n}{\frac{\partial R_{S}}{\partial R_{i}}dR_{i}}
@@ -245,8 +225,6 @@ Thus, the change in system reliability is the weighted sum of changes in compone
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_58
 {\mathrm{\Delta}R}_{S} = \sum_{i = 1}^{n}{I_{m}\left( i,r \right)\mathrm{\Delta}R_{i}}
@@ -273,8 +251,6 @@ From the example in {numref}`syst-table4-10`, it can be seen that the power conv
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_59
 \mathrm{\Delta}R_{S} = {\hat{R}}_{S}\left( t \right) - R_{S}\left( t \right)
@@ -287,8 +263,6 @@ With Eq. {eq}`Equation_7_58` the change of the system reliability depending on t
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_60
 \mathrm{\Delta}R_{i} = \frac{{\mathrm{\Delta}R}_{S}}{I_{m}\left( i,r \right)}
@@ -299,8 +273,6 @@ The reliability target is given by the minimum of the initial reliability plus $
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_61
 {\hat{R}}_{i} = \min\left( R_{i} + \mathrm{\Delta}R_{i};R_{i,\max} \right)
@@ -311,8 +283,6 @@ In order to allocate the reliability targets efficiently, the components are gro
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_62
 \mathrm{\Delta}R_{1} = \frac{{\mathrm{\Delta}R}_{S}}{I_{m}\left( 1,r \right)} = \frac{0,04081}{0,992} = 0,0411
@@ -323,8 +293,6 @@ With a maximum achievable reliability of $R_{1,\max} = 0.955$ the reliability ta
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_63
 {\hat{R}}_{1} = \min\left( R_{1} + \mathrm{\Delta}R_{1};R_{1,\max} \right) = \min\left( 0,91613 + 0,0411;0,955 \right)
@@ -337,8 +305,6 @@ The components in group II are now considered for allocation of new reliability 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_64
 \mathrm{\Delta}R_{2} = \frac{0,5{\mathrm{\Delta}R}_{S}}{I_{m}\left( 2,r \right)} = \frac{1,117E - 03}{4,14603E - 02} = 1,46E - 02
@@ -347,8 +313,6 @@ The components in group II are now considered for allocation of new reliability 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_65
 \mathrm{\Delta}R_{5} = \frac{0,5{\mathrm{\Delta}R}_{S}}{I_{m}\left( 5,r \right)} = \frac{1,117E - 03}{6,4029E - 02} = 1,35E - 02
@@ -359,8 +323,6 @@ The reliability targets for component 2 and 5 are obtained from the following eq
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_66
 {\hat{R}}_{2} = \min\left( R_{2} + \mathrm{\Delta}R_{2};R_{2,\max} \right) = \min\left( 0,91613 + 1,46E - 02;0,945 \right) = 0,93077
@@ -369,8 +331,6 @@ The reliability targets for component 2 and 5 are obtained from the following eq
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_67
 {\hat{R}}_{5} = \min\left( R_{5} + \mathrm{\Delta}R_{5};R_{5,\max} \right)

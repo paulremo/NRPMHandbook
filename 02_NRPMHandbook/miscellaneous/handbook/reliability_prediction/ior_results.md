@@ -54,8 +54,6 @@ The {term}`Bayesian inference <Bayesian inference>` estimator is defined as the 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_9
 E(\Delta | T_{1} = t_{1}, T_{2} = t_{2}, ..., T_{n} = t_{n}) = \frac{\alpha + n}{\beta + \sum_{i} (t_{i})} = \frac{\frac{\alpha}{n}}{\frac{\beta}{n} + \frac{\sum_{i} (t_{i})}{n}}
@@ -79,8 +77,6 @@ We determine $\alpha$ so that the expected value of the gamma distribution is $\
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_10
 E(\Delta) = \frac{\alpha}{\beta} = \lambda_{0}
@@ -92,8 +88,6 @@ A second equation is provided by the {term}`level of confidence <Level of confid
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_5_11
 F_{\Delta}(\lambda_{0}) = P(\Delta \leq \lambda_{0}) = \int_{0}^{\lambda_{0}} \frac{\beta^{\alpha} e^{- \lambda \beta} \lambda^{\alpha - 1}}{\Gamma (\alpha)} = \frac{1}{\Gamma (\alpha)} \gamma (\alpha, \alpha) = a
