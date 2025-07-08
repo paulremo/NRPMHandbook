@@ -85,8 +85,6 @@ Adhesive wear is considered as governing for many wear failures, and is thus typ
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_17
 g\left( \text{X}(t) \right) = X_{1} - \Theta \cdot X_{2}(t) = V_{limit} - \Theta \cdot \int_{0}^{T}{K_{H}(t) \cdot S(t) \cdot v(t)\text{d}t}
@@ -98,8 +96,6 @@ $V_{limit}$ is the limiting value for the volume worn away, $\Sigma$ the {term}`
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_18
 g\left( \text{X}(t) \right) = X_{1} - \Theta \cdot X_{2}(t) = d_{limit} - \Theta \cdot \int_{0}^{T}{K_{H}(t) \cdot \frac{S(t)}{A_{app}} \cdot v(t)\text{d}t}
@@ -128,8 +124,6 @@ mission phases), the limit state function given in Eq. {eq}`Equation_3_17` can b
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_19
 g\left( \text{X}(t) \right) = X_{1} - \Theta \cdot X_{2}(t) = V_{limit} - \Theta \cdot K_{H} \cdot \sum_{i = 1}^{n_{P}}{P_{i} \cdot t_{i}}
@@ -193,8 +187,6 @@ are determined as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_20
 \mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack
@@ -203,8 +195,6 @@ are determined as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_21
 \mu_{X_{2}} = \text{E}\left\lbrack K_{H} \right\rbrack \cdot \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \cdot t_{i}}
@@ -213,8 +203,6 @@ are determined as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_22
 \nu_{X_{1}} = \nu_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}
@@ -223,8 +211,6 @@ are determined as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_23
 \nu_{X_{2}} = \sqrt{\nu_{K_{H}}^{2} + \left( 1 + \nu_{K_{H}}^{2} \right) \cdot \frac{\text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \cdot t_{i}} \right\rbrack}{\left( \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack P_{i} \right\rbrack \cdot t_{i}} \right)^{2}}}
@@ -233,8 +219,6 @@ are determined as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_24
 \text{Var}\left\lbrack \sum_{i = 1}^{n_{P}}{P_{i} \cdot t_{i}} \right\rbrack = \sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack P_{i} \right\rbrack \cdot t_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack P_{i},P_{j} \right\rbrack \cdot t_{i} \cdot t_{j}}} =
@@ -255,8 +239,6 @@ With the distributional assumptions in {numref}`meca-table4-11`, an analytic sol
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_25
 P_{f} (t) = P[X_{1} - X_{2}(t) \cdot \Theta \leq 0]
@@ -302,8 +284,6 @@ Using the simplified form of the adhesive wear model in Eq. {eq}`Equation_3_19` 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_26
 g\left( \text{X}(t) \right) = X_{1} - \Theta \cdot X_{2}(t) = V_{limit} - \Theta \cdot \sum_{i = 1}^{n_{P}}{K_{H,i} \cdot \alpha_{i} \cdot {rev}_{i}}
@@ -361,8 +341,6 @@ The expected values and coefficients of variation of $X_{1}$ and $X_{2}$ are det
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_27
 \mu_{X_{1}} = \text{E}\lbrack V_{limit}\rbrack
@@ -371,8 +349,6 @@ The expected values and coefficients of variation of $X_{1}$ and $X_{2}$ are det
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_28
 \mu_{X_{2}} = \sum_{i = 1}^{n_{P}}{\text{E}\left\lbrack K_{H,i} \cdot \alpha_{i} \right\rbrack \cdot {rev}_{i}} = \sum_{i = 1}^{n_{P}}{\left( \text{E}\left\lbrack K_{H,i} \right\rbrack \cdot \text{E}\left\lbrack \alpha_{i} \right\rbrack + \text{Cov}\left\lbrack K_{H,i},\alpha_{i} \right\rbrack \right) \cdot {rev}_{i}}
@@ -381,8 +357,6 @@ The expected values and coefficients of variation of $X_{1}$ and $X_{2}$ are det
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_29
 v_{X_{1}} = v_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\text{E}\lbrack V_{limit}\rbrack}
@@ -392,8 +366,6 @@ v_{X_{1}} = v_{V_{limit}} = \frac{\sqrt{\text{Var}\lbrack V_{limit}\rbrack}}{\te
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_30
 v_{X_{2}} = \frac{1}{\mu_{X_{2}}}\sqrt{\sum_{i = 1}^{n_{P}}{\text{Var}\left\lbrack K_{H,i}\alpha_{i} \right\rbrack \cdot {rev}_{i}^{2}} + 2\sum_{i = 1}^{n_{P}}{\sum_{j = i + 1}^{n_{P}}{\text{Cov}\left\lbrack K_{H,i}\alpha_{i},K_{H,j}\alpha_{j} \right\rbrack \cdot {rev}_{i} \cdot {rev}_{j}}}}
@@ -407,8 +379,6 @@ With the distributional assumptions in {numref}`meca-table4-12`, an analytic sol
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_31
 P_{f} (t) = P[X_{1} - X_{2}(t) \cdot \Theta \leq 0]
@@ -439,8 +409,6 @@ The starting point for the modelling of fluid lubricant wear is the following li
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_32
 g\left( \text{X}(t) \right) = X_{1} - \Theta \cdot X_{2}(t) = M_{0} - M_{inactive} - \Theta \cdot \frac{\frac{N_{b}}{2} \cdot \left( 1 - \frac{b_{d}}{p_{d}} \cdot \cos\vartheta \right)}{2 \cdot K \cdot \exp\left( - 3.35p_{m} \right)} \cdot rev(t)
@@ -538,8 +506,6 @@ The mean value of $X_{1}$ is determined as $\mu_{X_{1}} = M_{0} - M_{inactive}$ 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_33
 \mu_{X_{2}} = \frac{\left( v_{K}^{2} + 1 \right)}{\text{E}\lbrack K\rbrack} \cdot \frac{\frac{N_{b}}{2} \cdot \left( 1 - \frac{b_{d}}{p_{d}} \cdot \cos\vartheta \right)}{2 \cdot \exp\left( - 3.35p_{m} \right)} \cdot rev
@@ -548,8 +514,6 @@ The mean value of $X_{1}$ is determined as $\mu_{X_{1}} = M_{0} - M_{inactive}$ 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_34
 v_{X_{2}} = v_{K} = \frac{\sqrt{\text{Var}\lbrack K\rbrack}}{\text{E}\lbrack K\rbrack}
@@ -561,8 +525,6 @@ The probability of failure is estimated as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_35
 P_{f} (t) = P[X_{1} - X_{2}(t) \cdot \Theta \leq 0]
@@ -628,8 +590,6 @@ Crack generation due to high cycle fatigue is most commonly modelled using so-ca
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_36
 \text{log}_{10}\left( N_{f} \right) = A - B \cdot \text{log}_{10}\left( S_{eq} - C \right)
@@ -640,8 +600,6 @@ Where the equivalent stress is determined as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_37
 S_{eq} = S_{\max}(1 - R)^{P} = S_{\max}\left( 1 - \frac{S_{\min}}{S_{\max}} \right)^{P}
@@ -654,8 +612,6 @@ The S/N curve is valid for cyclic loading with constant amplitude or equivalent 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math} 
 :label: Equation_3_38
 D_{tot} = \sum_{i = 1}^{N}\frac{1}{N_{f,i}} = \sum_{i = 1}^{N}{10^{- A} \cdot \left( \text{max}\left\lbrack S_{eq,i} - C;0 \right\rbrack \right)^{B}}
@@ -672,8 +628,6 @@ A limit state function for high-cycle fatigue is now derived as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math} 
 :label: Equation_3_39
 g\left(X(t)\right) = X_{1} - \Theta \cdot X_{2} = D_{cr} - \Theta \cdot D_{tot}
@@ -696,8 +650,6 @@ The starting point for the simplified model is the limit state function in Eq. {
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_40
 g\left( \mathbf{X}(t) \right) = X_{1} - \Theta \cdot X_{2} = D_{cr} - \Theta \cdot D_{tot} = D_{cr} - \Theta \cdot 10^{- A} \cdot {SSF}^{B} \cdot \sum_{j = 1}^{k}{N_{j} \cdot {S_{eq,j}}^{B}}
@@ -765,8 +717,6 @@ The mean value of the stress scaling factor then depends on the definition of th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_41
 \text{E}\lbrack SSF\rbrack = \frac{\sqrt{v_{SSF}^{2} + 1}}{\text{exp}\left( \Phi^{- 1}(\alpha) \cdot \sqrt{\text{ln}\left( v_{SSF}^{2} + 1 \right)} \right)}
@@ -779,8 +729,6 @@ Finally, the expected values and coefficients of variation of $X_{1}$ and $X_{2}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_42
 \mu_{X_{1}} = \text{E}\lbrack D_{cr}\rbrack
@@ -789,8 +737,6 @@ Finally, the expected values and coefficients of variation of $X_{1}$ and $X_{2}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_43
 \mu_{X_{2}} = \text{E}\left\lbrack 10^{- A} \cdot {SSF}^{B} \right\rbrack \cdot \sum_{j = 1}^{k}{N_{j} \cdot S_{eq,j}^{B}}
@@ -799,8 +745,6 @@ Finally, the expected values and coefficients of variation of $X_{1}$ and $X_{2}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_44
 \text{E}\left\lbrack 10^{- A} \cdot {SSF}^{B} \right\rbrack = 10^{- E\lbrack A\rbrack + \frac{1}{2}\text{∙ln}(10) \cdot Var\lbrack A\rbrack} \cdot {E\lbrack SSF\rbrack}^{B} \cdot \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2} - B}
@@ -809,8 +753,6 @@ Finally, the expected values and coefficients of variation of $X_{1}$ and $X_{2}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_45
 v_{X_{1}} = v_{D_{cr}} = \frac{\sqrt{\text{Var}\lbrack D_{cr}\rbrack}}{\text{E}\lbrack D_{cr}\rbrack}
@@ -819,8 +761,6 @@ v_{X_{1}} = v_{D_{cr}} = \frac{\sqrt{\text{Var}\lbrack D_{cr}\rbrack}}{\text{E}\
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation 3.46
 v_{X_{2}} = \sqrt{10^{Var\lbrack A\rbrack\text{∙ln}(10)} \cdot \left( \sqrt{v_{SSF}^{2} + 1} \right)^{B^{2}} - 1}
@@ -832,8 +772,6 @@ With the distributional assumptions in {numref}`meca-table4-14`, an analytic sol
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math} 
 :label: Equation_3_47
 P_{f} (t) = P[X_{1} - X_{2}(t) \cdot \Theta \leq 0]
@@ -846,8 +784,6 @@ With large coefficients of variation for the S/N curve parameter $A$ and/or the 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_48
 P_{f} = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \mu_{X_{1}} \right) + \text{ln}\left( \mu_{X_{2}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+Var}\left\lbrack \text{ln}\left( X_{2} \right) \right\rbrack\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
@@ -858,8 +794,6 @@ Where $Var\left\lbrack \ln\left( X_{2} \right) \right\rbrack$ and $\ln\left( \mu
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_49
 \text{Var}\lbrack\ln\left(X_{2}\right)\rbrack = \nu_{A}^{2} \cdot \text{E}[A]^{2} \cdot \ln(10)^{2} + B^{2} \cdot \ln \left( \nu_{SSF}^{2} + 1 \right)
@@ -868,8 +802,6 @@ Where $Var\left\lbrack \ln\left( X_{2} \right) \right\rbrack$ and $\ln\left( \mu
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_50
 \ln \left( \mu_{X_{2}} \right) = 0.5 \cdot \left( E[A]^{2} \cdot \ln (10)^{2} + (B^{2} - B) \cdot \ln \left( \nu_{SSF}^{2} + 1 \right) \right) 
@@ -982,8 +914,6 @@ initially documented by Forman and Mettu {cite:p}`mec-Forman1992BehaviorOS`. It 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_51
 \frac{da}{dN} = C\left\lbrack \left( \frac{1 - f}{1 - R} \right)\mathrm{\Delta}K \right\rbrack^{n}\frac{\left( 1 - \frac{\Delta K_{th}}{\mathrm{\Delta}K} \right)^{p}}{\left( 1 - \frac{K_{\max}}{K_{c}} \right)^{q}}
@@ -1070,8 +1000,6 @@ of the three failure criteria above:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_52
 g_{1}\left( \mathbf{X},a(t) \right) = K_{instability} - K_{\max}\left( a(t) \right)
@@ -1080,8 +1008,6 @@ g_{1}\left( \mathbf{X},a(t) \right) = K_{instability} - K_{\max}\left( a(t) \rig
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_53
 g_{2}\left( \mathbf{X,}a(t) \right) = \sigma_{flow} - \sigma_{n}\left( a(t) \right)
@@ -1090,8 +1016,6 @@ g_{2}\left( \mathbf{X,}a(t) \right) = \sigma_{flow} - \sigma_{n}\left( a(t) \rig
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_54
 g_{3}\left( \mathbf{X,}a(t) \right) = a_{\max} - a(t)
@@ -1119,8 +1043,6 @@ and yielding, apply):
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_55
 P_{f}(t) = \text{Pr}\left\lbrack g_{1}\left( a(t) \right) \leq 0 \cup g_{2}\left( a(t) \right) \leq 0 \right\rbrack
@@ -1198,8 +1120,6 @@ probability distribution of the crack size after inspection {cite:p}`mec-Zheng19
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_56
 {f''}_{A}(a) = \frac{\left( 1 - POD(a) \right) \cdot {f'}_{A}(a)}{\int_{0}^{\infty}{\left( 1 - POD(a) \right) \cdot {f'}_{A}(a)\text{\ d}a}}
@@ -1347,8 +1267,6 @@ dose $D_{A}$ is used as a limit state function:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_57
 g\left( \text{X} \right) = X_{1} - \Theta \cdot X_{2}(t) = D_{A} - \Theta \cdot D(t)
@@ -1413,8 +1331,6 @@ the probability of failure is derived as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_3_58
 P_{f}(t) = \text{P}\left\lbrack X_{1} - X_{2}(t) \cdot \Theta \leq 0 \right\rbrack = \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) - 0.5 \cdot \text{ln}\left( v_{\Theta}^{2} + 1 \right)}{\sqrt{\text{ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)

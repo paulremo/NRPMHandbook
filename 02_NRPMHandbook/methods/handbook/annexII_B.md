@@ -17,7 +17,7 @@ Besides providing own models based on {term}`Structural Reliability Methods <Str
 
 The “standard” model for {term}`Miscellaneous items <Miscellaneous item>`, as defined in {numref}`sec_misc_handbook`, has been developed based on IOR for an equivalent class of items. Model development uncertainties associated with this approach are listed in {numref}`method-table8-14`. For “non-standard” items only a general process for model development is provided and the model development uncertainties have to be assessed by the user.
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_8')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table8-8')" placeholder="Search table...">
 
 ```{list-table} Model uncertainties associated with the statistical modelling behind the EEE component models (base failure rates). 
 :name: method-table8-8
@@ -125,12 +125,12 @@ The “standard” model for {term}`Miscellaneous items <Miscellaneous item>`, a
         </table>
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_9')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table8-9')" placeholder="Search table...">
 
 ```{list-table} Model uncertainties associated with the PoF modelling behind the EEE component models (acceleration factors).
 :name: method-table8-9
 
-*   - <table class="easy-table" id="method_table8_9">
+*   - <table class="easy-table" id="method-table8-9">
             <tr>
                 <td class="full-span" colspan="4">1 Physics of Failure: Inputs</td>
             </tr>
@@ -195,12 +195,12 @@ The “standard” model for {term}`Miscellaneous items <Miscellaneous item>`, a
 
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_10')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table8-10')" placeholder="Search table...">
 
 ```{list-table} Uncertainties associated with the mechanical reliability models based on (simplified) structural reliability methods (Physics of Failure).
 :name: method-table8-10
 
-*   - <table class="easy-table" id="method_table8_10">
+*   - <table class="easy-table" id="method-table8-10">
             <tr>
                 <td class="full-span" colspan="4">Physics of Failure: Inputs</td>
             </tr>
@@ -265,12 +265,12 @@ The “standard” model for {term}`Miscellaneous items <Miscellaneous item>`, a
 
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_11')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table8-11')" placeholder="Search table...">
 
 ```{list-table} Model uncertainties associated with the NPRD when considered as a data source for Mechanical reliability prediction in space applications.
 :name: method-table8-11
 
-*   - <table class="easy-table" id="method_table8_11">
+*   - <table class="easy-table" id="method-table8-11">
             <tr>
                 <td class="full-span" colspan="4">1 Statistical approach: Inputs</td>
             </tr>
@@ -353,12 +353,12 @@ The “standard” model for {term}`Miscellaneous items <Miscellaneous item>`, a
         </table>
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_12')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table8-12')" placeholder="Search table...">
 
 ```{list-table} Model uncertainties associated with the statistical modelling behind the NSWC models when considered as a data source for Mechanical reliability prediction in space applications.
 :name: method-table8-12
 
-*   - <table class="easy-table" id="method_table8_12">
+*   - <table class="easy-table" id="method-table8-12">
             <tr>
                 <td class="full-span" colspan="4">1 Statistical approach: Inputs</td>
             </tr>
@@ -442,7 +442,7 @@ The “standard” model for {term}`Miscellaneous items <Miscellaneous item>`, a
 
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_13')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table8-13')" placeholder="Search table...">
 
 ```{list-table} Model uncertainties associated with the PoF modelling behind the NSWC  models when considered as a data source for Mechanical reliability prediction in space applications.
 :name: method-table8-13
@@ -512,7 +512,7 @@ The “standard” model for {term}`Miscellaneous items <Miscellaneous item>`, a
 
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method_table8_14')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table8-14')" placeholder="Search table...">
 
 ```{list-table} Model uncertainties associated with the “standard model” for Miscellaneous items.
 :name: method-table8-14

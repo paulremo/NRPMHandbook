@@ -37,8 +37,6 @@ Based on the elementary states that are linked to a certain system performance l
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_68
 \Phi_{50\mathrm{\%}} = X_{1}X_{2}\overline{X_{3}}X_{4}X_{5} \vee X_{1}X_{2}X_{3}\overline{X_{4}}\overline{X_{5}}
@@ -49,8 +47,6 @@ Since the elementary states are mutually exclusive, the probability of occurrenc
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_69
 P\left\lbrack \Phi \middle| 50\mathrm{\%} = 1 \right\rbrack = {P_{50\mathrm{\%}} = R}_{1}R_{2}F_{3}R_{4}R_{5} + {R_{1}R}_{2}R_{3}F_{4}F_{5}
@@ -61,8 +57,6 @@ With this method, the occurrence probability for all system performance levels a
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_70
 \sum_{i = 0\mathrm{\%}}^{100\mathrm{\%}}P_{i} = 1
@@ -88,8 +82,6 @@ To achieve a system performance of $p_{S}$ ≥ 50% the following condition can b
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_71
 \Gamma_{\geq 50\mathrm{\%}} = X_{3}X_{4}X_{5} \vee X_{3}X_{4} \vee X_{3}X_{5} \vee X_{4}X_{5} \vee X_{3}
@@ -100,8 +92,6 @@ Generally, the condition can be formulated as:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_72
 \Gamma_{50\mathrm{\%}} = \bigvee_{f = 1}^{f_{max}} \left\lbrack \bigwedge_{g = 1}^{g_{max}} X_{g} \right\rbrack
@@ -114,8 +104,6 @@ Eq. {eq}`Equation_7_71` can be simplified and the following term is obtained:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_73
 \Gamma_{50\mathrm{\%}} = X_{4}X_{5} \vee X_{3}
@@ -126,8 +114,6 @@ The system state function can be defined as follows:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_74
 \Phi = \bigvee_{k = 1}^{m} M_{k}
@@ -140,8 +126,6 @@ With Eq. {eq}`Equation_7_72`, the following expression is obtained for the syste
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_75
 \Phi = \bigvee_{f = 1}^{f_{max}} \left\lbrack \bigwedge_{g = 1}^{g_{max}} \left ( \bigvee_{h = 1}^{h_{max}} M_{h} \right) \right \rbrack
@@ -152,8 +136,6 @@ Where $h$ denotes the index of the success path. Each success path can contain o
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_76
 \Phi_{\geq 50\mathrm{\%}} = M_{1} \vee \left( M_{2} \land M_{3} \right)
@@ -162,8 +144,6 @@ Where $h$ denotes the index of the success path. Each success path can contain o
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_77
 \Phi_{\geq 50\mathrm{\%}} = X_{1}X_{2}X_{3} \vee X_{1}X_{2}X_{4}X_{5}
@@ -174,8 +154,6 @@ Through orthogonalization, Eq. {eq}`Equation_7_77` can be transformed from a Boo
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_78
 \Phi_{\geq 50\mathrm{\%}} = X_{1}X_{2}X_{3} \vee X_{1}X_{2}{\overline{X}}_{3}X_{4}X_{5}
@@ -186,8 +164,6 @@ Thus, Eq. {eq}`Equation_7_78` represents mutually exclusive events and the proba
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_79
 P_{\geq 50\mathrm{\%}} = R_{1}R_{2}R_{3} \vee R_{1}R_{2}{\overline{F}}_{3}R_{4}R_{5}
@@ -198,8 +174,6 @@ In order to calculate the occurrence probability for all possible system perform
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_80
 \Gamma_{\geq 20\mathrm{\%}} = X_{5}
@@ -208,8 +182,6 @@ In order to calculate the occurrence probability for all possible system perform
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_81
 \Gamma_{\geq 30\mathrm{\%}} = X_{4}
@@ -218,8 +190,6 @@ In order to calculate the occurrence probability for all possible system perform
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_82
 \Gamma_{\geq 70\mathrm{\%}} = X_{3}X_{5}
@@ -228,8 +198,6 @@ In order to calculate the occurrence probability for all possible system perform
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_83
 \Gamma_{\geq 80\mathrm{\%}} = X_{3}X_{4}
@@ -238,8 +206,6 @@ In order to calculate the occurrence probability for all possible system perform
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_84
 \Gamma_{100\mathrm{\%}} = X_{3}X_{4}X_{5}
@@ -250,8 +216,6 @@ The probability that the system performance is within the interval \[0, x\] is d
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_85
 P_{x\mathrm{\%}} = P\left\lbrack x > p_{s} \geq 0 \right\rbrack
@@ -262,8 +226,6 @@ The performance distribution function is obtained by inverting the function $P_{
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_86
 P_{x\mathrm{\%}} = P\left\lbrack x > p_{s} \geq 0 \right\rbrack = 1 - P\left\lbrack 100\mathrm{\%} \geq p_{s} \geq x \right\rbrack={1 - P}_{\geq x\mathrm{\%}}

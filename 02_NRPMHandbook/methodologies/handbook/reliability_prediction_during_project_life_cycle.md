@@ -234,9 +234,9 @@ The objective of reliability predictions is to provide quantitative estimates fo
 
 In addition, depending on the intended use of the prediction, there may be no added value to make a quantitative prediction for a certain root cause, because it does not make a difference for the trade-offs that will be supported by the prediction. These aspects are discussed in the following sections.
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table4-5')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-5')" placeholder="Search table...">
 
-```{list-table} Failure categories (from Table   4 -2) with examples of mitigation measures.
+```{list-table} Failure categories (from Table 4-2) with examples of mitigation measures.
 :name: methodo-table5-5
 :header-rows: 1
 :widths: 20 50 30
@@ -386,14 +386,14 @@ name: Figure_methodo_3
 System Life Cycle.
 ```
 
-The contribution of reliability prediction to each phase and the associated reviews are explained as follows in {numref}`methodo-table5-8`. {numref}`methodo-table5-9` gives an overview of reliability documents to be provided per review during the system life cycle. 
+The contribution of reliability prediction to each phase and the associated reviews are explained as follows in {numref}`methodo-table5-8`. {numref}`methodo-table5-8` gives an overview of reliability documents to be provided per review during the system life cycle. 
 
-<input type="text" class="myInput" id="myInput5-8" onkeyup="searchTableJupyter(this, 'methodo_table5_8')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput5-8" onkeyup="searchTableJupyter(this, 'methodo-table5-8')" placeholder="Search table...">
 
 ```{list-table} Reliability Deliverables per Project Milestones/Reviews
 :name: methodo-table5-8
 
-*   - <table class="myTable" id="methodo_table5_8">
+*   - <table class="myTable" id="methodo-table5-8">
             <thead>
                 <tr>
                     <th></th>
@@ -485,7 +485,7 @@ The contribution of reliability prediction to each phase and the associated revi
 
 *) Although ECSS-Q-ST-30C mentions a reliability prediction at PRR and SRR, this is not done for all projects and may be used only to assist apportioning of requirements to lower level. A {term}`FMEA` at SRR may be required for specific missions and can be used e.g. to assist safety analysis.
 
-<input type="text" class="myInput" id="myInput5-9" onkeyup="searchTableJupyter(this, 'methodo_table5_9')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput5-9" onkeyup="searchTableJupyter(this, 'methodo-table5-9')" placeholder="Search table...">
 
 ```{list-table} Contribution of reliability prediction in different mission phases
 :name: methodo-table5-9
@@ -832,8 +832,6 @@ The apportionment of the system level reliability target to sub systems is based
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_methodo_1
 \hat{R}_{i}(t) = (\hat{R}_{S}(t))^{w_{i}}
@@ -851,8 +849,6 @@ This method equally distributes the system reliability on all the sub-systems be
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_methodo_2
 \hat{R}_{i}(t) = (\hat{R}_{S}(t))^{\frac{1}{n}}
@@ -866,8 +862,6 @@ For example, a reliability target of 0.9 on system level would result in a targe
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_methodo_3
 \hat{F}_{i}(t) = \frac{\hat{F}_{S}(t)}{n}
@@ -879,8 +873,6 @@ For example, a reliability target of 0.9 on system level would result in a targe
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_methodo_4
 \hat{\lambda}_{i}(t) = \frac{\hat{\lambda}_{S}(t)}{n}
@@ -898,8 +890,6 @@ The proportional allocation also known as {term}`ARINC` method takes historical 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_methodo_5
 w_{i} = \frac{F_{i.old}(t)}{F_{S.old}(t)}
@@ -965,8 +955,6 @@ The first stage for this allocation method is to calculate the total grading val
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_methodo_6
 G_{i} = \prod_{j}^{n} g_{ij}
@@ -975,8 +963,6 @@ G_{i} = \prod_{j}^{n} g_{ij}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_methodo_7
 w_{i} = \frac{\prod_{j}^{n} g_{ij}}{\sum_{i} G_{i}}

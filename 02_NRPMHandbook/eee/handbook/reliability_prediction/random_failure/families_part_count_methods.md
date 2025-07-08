@@ -18,8 +18,6 @@ The FIDES families count and part count reliability model for all components is 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_211
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}}
@@ -30,8 +28,6 @@ with:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_212
 {\lambda_{\text{Physical}} = \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \lambda_{\text{ECU}} \right)_{i}} 
@@ -54,8 +50,6 @@ with:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_213
 \Pi_{\text{Thermal}} = exp\left\lbrack 11604 \cdot E_{\text{aTH}} \cdot \left( \frac{1}{T_{0} + 273} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T \cdot exp( - \alpha \cdot T_{board\_ ref})} \right) \right\rbrack
@@ -66,8 +60,6 @@ with:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_214
 \Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{B}} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -78,8 +70,6 @@ with:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_215
 \Pi_{TcySolder\_ Joints} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{\text{JB}}} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
@@ -90,8 +80,6 @@ with:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_216
 \Pi_{\text{Mechanical}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{n}
@@ -102,8 +90,6 @@ with:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_217
 {\Pi_{\text{RH}} = \left( \frac{\text{RH}_{\text{boar}d_{\text{ref}}}}{70} \right)^{4.4} 

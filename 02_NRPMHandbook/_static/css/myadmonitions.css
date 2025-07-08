@@ -13,6 +13,7 @@
     content: '⚠';
 }
 
+/*Bloc to implement the rule frame*/
 .admonition.rule {
     border-left-color: #73163a;
 }
@@ -21,22 +22,32 @@
     color: #050A05;
 }
 .admonition.rule .admonition-title:before {
+	font-family: "Font Awesome 5 Free";
     color: #050A05;
-    content: '\f197';
+    content: '\f135';
+	/*This following lines are to define the wanted position*/
+	left: .6rem;
+	top: auto;
 }
 
+/*Bloc to implement the recommendation frame*/
 .admonition.recommendation {
     border-left-color: #5b5511;
 }
 .admonition.recommendation .admonition-title {
     background-color: #C7BE61;
-    color: #000000;
+    color: #FFFFFA;
 }
 .admonition.recommendation .admonition-title:before {
-    color: #000000;
+	font-family: "Font Awesome 5 Free";
+    color: #FFFFFA;
     content: '\f091';
+	/*This following lines are to define the wanted position*/
+	left: .6rem;
+	top: auto;
 }
 
+/*Bloc to implement the remark frame*/
 .admonition.remark {
     border-left-color: #390f1f;
 }
@@ -45,10 +56,15 @@
     color: #FFFFFA;
 }
 .admonition.remark .admonition-title:before {
+	font-family: "Font Awesome 5 Free";
     color: #FFFFFA;
-    content: '\f0a4';
+    content: '\f075';
+	/*This following lines are to define the wanted position*/
+	left: .6rem;
+	top: auto;
 }
 
+/*Bloc to implement the equation frame*/
 .admonition.equation {
     border-left-color: #0d3c47;
 }
@@ -57,6 +73,33 @@
     color: #FFFFFA;
 }
 .admonition.equation .admonition-title:before {
+	font-family: "Font Awesome 5 Free";
     color: #FFFFFA;
     content: '\f12b';
+	/*This following lines are to define the wanted position*/
+	left: .6rem;
+	top: auto;
+}
+
+/*Bloc to implement the note frame*/
+.admonition.note {
+    border-left-color: #0d3c47;
+}
+.admonition.note .admonition-title {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.admonition.note .admonition-title:before {
+	font-family: "Font Awesome 5 Free";
+    color: #107FBC;
+    content: '\f129';
+	/*This following lines are to define the wanted position*/
+	left: 0.9em;
+	top: auto;
+}
+
+/*Remove the default icon for admonitions to add our personnalize icon*/
+.admonition > .admonition-title::after,
+div.admonition > .admonition-title::after {
+  content: none !important;
 }

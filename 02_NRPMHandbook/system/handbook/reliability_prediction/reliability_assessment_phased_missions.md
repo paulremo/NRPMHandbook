@@ -49,7 +49,7 @@ There are several reasons for reconfiguration and changes in success criteria fr
 
 To derive the appropriate success criteria for the reliability analysis of phased mission the phase transition needs to be considered. Depending on the success criteria of the consecutive phase there could be cases where the system state may change at the time of phase transition. The following scenarios of phase transitions could be considered {cite:p}`sys-Somani1994PhasedmissionSA`:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst_table4_7')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst-table4-7')" placeholder="Search table...">
 
 ```{list-table} Phase transition scenarios in phased mission
 :name: syst-table4-7
@@ -75,8 +75,6 @@ During the different phases of the space mission different load levels might be 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_30
 R_{k}(t) = \text{exp}\left(-\lambda_{k}t\right)\text{exp}\left(-\sum_{i=1}^{i=k-1}\lambda_{i}T_{i}\right)
@@ -127,8 +125,6 @@ The initial configurations for the three phases have been transformed to a singl
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_31
 R_{1}(t) = 1 - (1-q_{A_{1}})(1-q_{B_{1}})(1-q_{C_{1}})
@@ -137,8 +133,6 @@ R_{1}(t) = 1 - (1-q_{A_{1}})(1-q_{B_{1}})(1-q_{C_{1}})
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_32
 R_{2}(t) = q_{A_{1}}q_{A_{2}}\left(q_{B_{1}}q_{B_{2}} + q_{C_{1}}q_{C_{2}} - q_{B_{1}}q_{B_{2}}q_{C_{1}}q_{C_{2}}\right)
@@ -147,8 +141,6 @@ R_{2}(t) = q_{A_{1}}q_{A_{2}}\left(q_{B_{1}}q_{B_{2}} + q_{C_{1}}q_{C_{2}} - q_{
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_33
 R_{3}(t) = q_{A_{1}}q_{A_{2}}q_{A_{3}}q_{B_{1}}q_{B_{2}}q_{B_{3}}q_{C_{1}}q_{C_{2}}q_{C_{3}}
@@ -159,8 +151,6 @@ Where $q_{ij}$ denotes the conditional reliability of component $i$ in phase $j$
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_34
 q_{ij} = P\left(x_{i}\left(t_{j}\right) = 1 | x_{i}\left(t_{j-1}\right) = 1\right)
@@ -175,7 +165,7 @@ The before mentioned methods consider the failure of components in different pha
 
 The following rules should be applied to Boolean variables belonging to the same component to simplify the Boolean expression, with $j>i$. 
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst_table4_8')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'syst-table4-8')" placeholder="Search table...">
 
 ```{list-table} Boolean Phase Algebra rules
 :name: syst-table4-8
@@ -206,8 +196,6 @@ The Boolean phase algebra in {numref}`syst-table4-8` allows identifying the poss
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_35
 R_{S} = 1 - \left(P\left(E_{P} \right) + \sum_{i=1}^{i=p-1}P\left(PFC_{i}\right) \right)
@@ -223,8 +211,6 @@ The system reliability of the system shown in {numref}`Figure_7_26` is given by
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_36
 R_{s} = 1 - \left( P\left( E_{3} \right) + P\left( \text{PFC}_{2} \right) + P\left( \text{PFC}_{1} \right) \right)
@@ -235,8 +221,6 @@ The failure combinations for the 3 phases are given by:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_37
 E_{1} = {\overline{A}}_{1} \cap {\overline{B}}_{1} \cap {\overline{C}}_{1}
@@ -245,8 +229,6 @@ E_{1} = {\overline{A}}_{1} \cap {\overline{B}}_{1} \cap {\overline{C}}_{1}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_38
 E_{2} = {\overline{A}}_{2} \cup {\overline{B}}_{2} \cap {\overline{C}}_{2}
@@ -255,8 +237,6 @@ E_{2} = {\overline{A}}_{2} \cup {\overline{B}}_{2} \cap {\overline{C}}_{2}
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_39
 E_{3} = {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3}
@@ -269,8 +249,6 @@ With Eq. {eq}`Equation_7_39` the following is obtained for the failure probabili
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_40
 P\left( E \middle| 3 \right) = P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)
@@ -281,8 +259,6 @@ The failure probability in phase 1 and 2 is given by the following equations.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_41
 P\left( \text{PFC} \middle| 1 \right) = P\left( \left( E_{1} \cap {\overline{E}}_{2} \right) \cap {\overline{E}}_{3} \right)
@@ -294,8 +270,6 @@ P\left( \text{PFC} \middle| 1 \right) = P
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_42
 P\left( \text{PFC} \middle| 2 \right) = P\left( E_{2} \cap {\overline{E}}_{3} \right)
@@ -309,8 +283,6 @@ The phase algebra rules in {numref}`syst-table4-8` are applied for phase 2 and t
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_43
 P\left( \text{PFC} \middle| 2 \right) = P
@@ -319,8 +291,6 @@ P\left( \text{PFC} \middle| 2 \right) = P
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_44
 P\left( \text{PFC} \middle| 2 \right) = P\left( \left( {\overline{A}}_{2} \cup {\overline{B}}_{2}{\overline{\cap C}}_{2} \right) \cap \left( A_{3} \cap B_{3} \cap C_{3} \right) \right)
@@ -329,8 +299,6 @@ P\left( \text{PFC} \middle| 2 \right) = P\left( \left( {\overline{A}}_{2} \cup {
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_45
 P\left( \text{PFC} \middle| 2 \right) = P
@@ -341,8 +309,6 @@ In Eq. {eq}`Equation_7_45` it can be seen that both component A and B are failed
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_46
 P\left( \text{PFC} \middle| 1 \right) = P
@@ -353,8 +319,6 @@ Thus, the reliability of the phase mission system is given by Eq. {eq}`Equation_
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_7_47
 R_{S}\left( t \right) = 1 - P\left( E \middle| 3 \right) = 1 - P\left( {\overline{A}}_{3} \cup {\overline{B}}_{3} \cup {\overline{C}}_{3} \right)

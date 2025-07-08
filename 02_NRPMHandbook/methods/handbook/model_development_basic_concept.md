@@ -19,8 +19,6 @@ The probability that the system or component does not fail and performs its inte
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_1
 R_{T}\left( t \right) = P\left\lbrack T > t \right\rbrack = 1 - \int_{0}^{t}{f_{T}\left( t \right)\mathrm{d}t} = 1 - F_{T}\left( t \right) = \mathrm{\exp}\left( - \int_{0}^{t}{\lambda\left( x \right)\text{dx}} \right)
@@ -37,8 +35,6 @@ The probability that a failure occurs and the system or component cannot perform
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_2
 F_{T}\left( t \right) = P\left\lbrack T \leq t \right\rbrack = \int_{0}^{t}{f_{T}\left( t \right)\mathrm{d}t} = 1 - R_{T}\left( t \right) = 1 - \mathrm{\exp}\left( - \int_{0}^{t}{\lambda\left( x \right)\mathrm{d}x} \right)
@@ -51,8 +47,6 @@ Following Boolean logic, each system and its components can have two possible st
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_3
 R\left( t \right) + F\left( t \right) = 1\ .0
@@ -65,8 +59,6 @@ The first derivative of the failure probability at time $t$.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_4
 f_{T}\left( t \right) = \frac{\mathrm{d}F_{T}\left( t \right)}{\mathrm{d}t}
@@ -81,8 +73,6 @@ The failure rate $\lambda\left( t \right)$ describes the probability that a fail
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_5
 \lambda\left( t \right) = \lim_{\Delta t \rightarrow 0}\left( \frac{F_{T}\left( t + \Delta t \right) - F_{T}(t)}{\text{Δt}}*\frac{1}{R_{T}(t)} \right) = \frac{f_{T}(t)}{R_{T}(t)}
@@ -97,8 +87,6 @@ The average time until failure occurs, defined as the expected value of the fail
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_6
 \text{MTTF} = E\left\lbrack T \right\rbrack = \int_{0}^{\infty}{t \cdot f_{T}\left( t \right)\ \mathrm{d}t} = \int_{0}^{\infty}{R_{T}\left( t \right)\ \mathrm{d}t}
@@ -413,8 +401,6 @@ In the Exponential model, the {term}`probability density function <Probability d
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_7
 f_{T}(t) = \ \lambda \cdot exp( - \lambda t)
@@ -423,8 +409,6 @@ f_{T}(t) = \ \lambda \cdot exp( - \lambda t)
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_8
 F_{T}\left( t \right) = \ 1 - exp\left( - \lambda t \right) = 1 - R_{T}\left( t \right)
@@ -444,8 +428,6 @@ The most common time-to-failure distribution model with non-constant failure rat
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_9
 f_{T}(t) = \ \frac{\beta}{\alpha} \cdot \left( \frac{t}{\alpha} \right)^{\beta - 1}\exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack
@@ -454,8 +436,6 @@ f_{T}(t) = \ \frac{\beta}{\alpha} \cdot \left( \frac{t}{\alpha} \right)^{\beta -
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_10
 F_{T}\left( t \right) = \ 1 - exp\left\lbrack - \left( \frac{t}{\alpha} \right)^{\beta} \right\rbrack
@@ -474,8 +454,6 @@ The expected time to failure is a function of both distribution parameters and m
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_11
 \Gamma\left( x \right) = \int_{0}^{\infty}{t^{x - 1}\mathrm{\exp}\left( - t \right)\text{\ dt}}
@@ -499,8 +477,6 @@ A Bernoulli trial is an experiment with only two possible mutually exclusive out
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_12
 p_{Y}\left( Y = y \right) = \ \begin{pmatrix}n\\y\\\end{pmatrix}p^{y}\left( 1 - p \right)^{n - y} = \frac{n!}{y!\left( n - y \right)!}p^{y}\left( 1 - p \right)^{n - y}
@@ -541,8 +517,6 @@ Parameter estimation is rather simple for the Exponential distribution, the cons
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_13
 \widehat{\lambda} = E\left\lbrack \lambda \right\rbrack = \frac{n_{f}}{\sum_{i = 1}^{n}t_{i}}
@@ -554,8 +528,6 @@ Where $n_{f}$ denotes the number of observed failures, $n$ the number of items t
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_14
 \text{CoV}\left\lbrack \lambda \right\rbrack = \frac{\sqrt{\text{Var}\left\lbrack \lambda \right\rbrack}}{E\left\lbrack \lambda \right\rbrack} = \frac{1}{\sqrt{n_{f}}}
@@ -578,8 +550,6 @@ Another well-known approach to quantify the {term}`statistical uncertainty <Stat
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_15
 P\left\lbrack \frac{\chi_{f,\frac{\alpha}{2}}^{2}}{2\sum_{i}^{n}t_{i}} \leq \lambda \leq \frac{\chi_{f,1 - \frac{\alpha}{2}}^{2}}{2\sum_{i}^{n}t_{i}} \right\rbrack = 1 - \alpha
@@ -601,8 +571,6 @@ In practice, most data samples include censored observations, which is important
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_16
 \widehat{\mathbf{\theta}} = \min_{\mathbf{\theta}}\left\lbrack - l(\mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\ ) \right\rbrack = \min_{\mathbf{\theta}}\left\lbrack - \mathrm{\ln}\left( L(\mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\ ) \right) \right\rbrack
@@ -622,8 +590,6 @@ The Maximum Likelihood Estimate for the probability of failure in the Binomial m
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_17
 \widehat{p} = E\left\lbrack p \right\rbrack = \frac{n_{f}}{n}
@@ -636,8 +602,6 @@ The number of failures determines the {term}`statistical uncertainty <Statistica
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_18
 P\left\lbrack \text{Beta}_{\frac{\alpha}{2}}\left( n_{f},\ n - n_{f} + 1 \right) \leq p \leq \text{Beta}_{\frac{\alpha}{2}}\left( n_{f} + 1,\ n - n_{f} \right) \right\rbrack = 1 - \alpha
@@ -745,8 +709,6 @@ To clarify the link to {term}`statistical methods <Statistical method>` for reli
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_19
 R_{T}\left( t \right) = 1 - F_{T}\left( t \right) = 1 - P_{f}\left( t \right) = 1 - \ P\left\lbrack g\left( \mathrm{X}\left( t \right) \right) \leq 0 \right\rbrack
@@ -831,8 +793,6 @@ Unfortunately, the simplicity of crude Monte Carlo comes at a cost, requiring a 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_6_20
 N \geq \left( \frac{2 \cdot \sqrt{P_{f}\left( 1 - P_{f} \right)}}{\alpha \cdot P_{f}} \right)^{2} + 1

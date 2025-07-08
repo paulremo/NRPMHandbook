@@ -21,8 +21,6 @@ according to the following equations:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_28
 \Pi_{\text{PM}} = exp\left\lbrack 1.39 \cdot \left( 1 - Part\_ Grade \right) - 0.69 \right\rbrack
@@ -32,8 +30,6 @@ with $Part\_ Grade$ for active parts:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_29
 Part\_ Grade = \left\lbrack \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} + \text{RA}_{\text{component}} \right) \cdot \varepsilon}{36} \right\rbrack
@@ -44,8 +40,6 @@ and for other parts:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_1_30
 Part\_ Grade = \left\lbrack \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text{component}} \right) \cdot \varepsilon}{24} \right\rbrack

@@ -22,8 +22,6 @@ Now let us assume that $n$ independent observations (realisations) of the random
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_21
 f_{\mathbf{\Theta}}^{''}\left( \mathbf{\theta} \middle| \widehat{\mathbf{x}} \right) = \frac{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right) \cdot f_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)}{\int_{\text{DΘ}}^{}{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right)}{\cdot f}_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)d\mathbf{\theta}}
@@ -99,8 +97,6 @@ In a Bayesian analysis, the sampling distribution is needed for the formulation 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_22
 L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}
@@ -130,8 +126,6 @@ The likelihood $L$ for a right censored data set is:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_23
 L \propto \ \prod_{i = 1}^{n}{f\left( \widehat{\mathbf{x}_{\mathbf{i}}}|\theta \right) \cdot \prod_{j = 1}^{m}\left( 1 - F\left( \widehat{\mathbf{x}_{\mathbf{\text{up}}}}|\theta \right) \right)}
@@ -142,8 +136,6 @@ Where $\widehat{\mathbf{x}_{\mathbf{\text{up}}}}$ is the upper censoring point, 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_24
 L \propto \ \prod_{i = 1}^{n}{f\left( \widehat{\mathbf{x}_{\mathbf{i}}}|\theta \right) \cdot \prod_{j = 1}^{m}\left( F\left( \widehat{\mathbf{x}_{\mathbf{\text{iow}}}}|\theta \right) \right)}
@@ -154,8 +146,6 @@ Where $\widehat{\mathbf{x}_{\mathbf{\text{iow}}}}$ is the lower censoring point.
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_25
 L \propto \ \prod_{j = 1}^{m}\left( F\left( \widehat{\mathbf{x}_{\mathbf{up,i}}}|\theta \right) - F\left( \widehat{\mathbf{x}_{\mathbf{low,i}}}|\theta \right) \right)
@@ -166,8 +156,6 @@ For the situation where the likelihood needs to be truncated, right, left or int
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_26
 L \propto \ \prod_{i = 1}^{n}\frac{f\left( \widehat{\mathbf{x}_{\mathbf{i}}}|\theta \right)}{F\left( x_{\text{up}}|\theta \right)}
@@ -178,8 +166,6 @@ The likelihood formulation in the case of left truncation is
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_27
 L \propto \ \prod_{i = 1}^{n}\frac{f\left( \widehat{\mathbf{x}_{\mathbf{i}}}|\theta \right)}{1 - F\left( x_{\text{low}}|\theta \right)}
@@ -245,8 +231,6 @@ An example for the use of a Jeffreys prior for Bayesian updating in the case of 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_28
 {f'}_{\Theta}\left( \theta \right) \propto \frac{1}{\lambda}
@@ -257,8 +241,6 @@ The reference prior is used e.g. for the Weibull distribution:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_29
 {f'}_{\Theta}\left( \theta \right) \propto \frac{1}{\alpha \beta}
@@ -348,7 +330,7 @@ In general, when applying Bayes theorem for updating, the prior distribution and
     - $\mu_{p_{X}}^{''} = \frac{\alpha''}{\alpha^{''} + \beta''}$
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table7-2')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'method-table7-3')" placeholder="Search table...">
 
 ```{list-table} Conjugate priors for time-constant failure rate or failure probability models, for updating with censored and/or aggregated failure data (see Annex II.A for parametrization).
 :name: method-table7-3
@@ -413,8 +395,6 @@ The parameters of the posterior gamma distribution for the failure rate $\lambda
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_30
 \begin{matrix} \beta'' = \sum_{i = 1}^{n}{t_{i} = 677810} \\   \alpha^{''} = n = 10 \\\end{matrix}
@@ -425,8 +405,6 @@ Assuming that a vague (improper) prior is used for the gamma distribution:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_31
 \begin{matrix}\beta' = 0 \\ \alpha^{'} = 0 \\ \end{matrix}
@@ -439,8 +417,6 @@ The posterior mean and standard deviation of the failure rate are:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_32
 \begin{matrix}{\mu''}_{\lambda} = \frac{\alpha''}{\beta''} = \frac{10}{\ 677810} = 1.47\  \cdot 10^{- 5} \\                                
@@ -463,8 +439,6 @@ In practice sometimes no failure event is observed but an estimate of the failur
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_33
 \Pr\left( 0,T \right) = 1 - e^{- \lambda T}
@@ -475,8 +449,6 @@ And thus,
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_34
 \Pr\left( 0,\sum_{i = 1}^{n}t_{i} \right) = {1 - e}^{- \lambda\sum_{i = 1}^{n}t_{i}}
@@ -491,8 +463,6 @@ This assumption results in
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_35
 \lambda_{p} = \frac{- ln\left( 1 - \int_{0}^{p}{f\left( p \right)\text{dp}} \right)}{\sum_{i = 1}^{n}t_{i}}
@@ -513,8 +483,6 @@ The average failure rate can be estimated by
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_36
 E\left\lbrack \lambda \right\rbrack = \int_{0}^{1}\frac{- ln\left( 1 - \int_{0}^{p}{f\left( p \right)\text{dp}} \right)}{\sum_{i = 1}^{n}t_{i}}dp = \frac{1}{\sum_{i = 1}^{n}t_{i}}
@@ -527,8 +495,6 @@ The number of failures corresponding to a median failure rate is calculated by
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_37
 \lambda_{0.5} = \int_{0}^{1}\frac{- ln\left( 1 - \int_{0}^{0.5}{f\left( p \right)\text{dp}} \right)}{\sum_{i = 1}^{n}t_{i}}dp = \frac{- ln(0.5)}{\sum_{i = 1}^{n}t_{i}}
@@ -543,8 +509,6 @@ Using the Chi-Square distribution $\chi_{f,q}^{2}$ with $f$ degrees of freedom, 
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_38
 \lambda = \frac{\chi_{2\left( n_{f} + 1 \right),1 - \alpha}^{2}}{2 \cdot \sum_{i = 1}^{n}t_{i}}
@@ -555,8 +519,6 @@ Where $n_{f}$ denotes the number of failure events, $\alpha$ the {term}`level of
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_39
 n_{f,equi,1 - \alpha} = \frac{\chi_{2\left( n_{f} + 1 \right),1 - \alpha}^{2}}{2}
@@ -567,8 +529,6 @@ The equivalent number of failure events is the expected number of failures for a
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_40
 n_{f,equi,1 - \alpha} = \frac{\chi_{2\left( 0 + 1 \right),1 - 0.5}^{2}}{2} = \frac{1.3863}{2} = 0.6931 = - ln(\alpha) = - ln(0.5)
@@ -579,8 +539,6 @@ This corresponds to the median of the posterior distribution. More generally, th
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_41
 n_{equi,1 - \alpha} = \frac{\chi_{2\left( 0 + 1 \right),1 - \alpha}^{2}}{2} = - ln(\alpha)
@@ -618,8 +576,6 @@ The likelihood is defined by:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_42
 L\left( \widehat{\mathbf{x}}\left| \lambda \right.\  \right) = \prod_{i = 1}^{n}{\lambda \cdot e^{- \lambda x_{i}}}
@@ -630,8 +586,6 @@ Where $n$ denotes the number of (here: time-to-failure) observations of the rand
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_43
 {f'}_{}\left( \theta_{} \right){= f'}_{}\left( \lambda \right) = \frac{1}{\lambda}
@@ -642,8 +596,6 @@ Further, an initial starting point for the MCMC has to be defined:
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_44
 \lambda_{0} = \frac{1}{20'000} = 5 \cdot 10^{- 5}\lbrack/h\rbrack
@@ -670,8 +622,6 @@ From the Markov chain the statistical characteristics of the estimated parameter
 
 ````{admonition} Equation
 :class: equation
-``
-``  
 ```{math}
 :label: Equation_method_7_45
 \begin{matrix}E\left\lbrack \lambda \right\rbrack = 1.467 \cdot 10^{- 5}\ \ \lbrack 1/h\rbrack \\\text{STD}\left\lbrack \lambda \right\rbrack = 4.731 \cdot 10^{- 6}\ \lbrack 1/h\rbrack \end{matrix}
