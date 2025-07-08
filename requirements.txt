@@ -30,6 +30,7 @@ jupyter-cache==1.0.1
 jupyter_client==8.6.3
 jupyter_core==5.8.1
 latexcodec==3.0.0
+linkChecker==10.5.0
 linkify-it-py==2.0.3
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
