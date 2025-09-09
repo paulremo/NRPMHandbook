@@ -1,18 +1,20 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
-(meca_4_8)=
+(meca_9_8)=
 # Examples
 
-The following sections provide some examples for the application of the methods introduced in Paragraph{numref}`meca_4_6` and {numref}`meca_4_7`.
+The following paragraphs provide some examples for the application of the methods introduced in {numref}`meca_9_6` and {numref}`meca_9_7`.
 
-(meca_4_8_1)=
-## Simplified wear modelling: Solid lubricant wear
+(meca_9_8_1)=
+## Simplified wear modelling: solid lubricant wear
 
-In this example the simplified method presented in {numref}`meca_4_7_1` is utilized to model the reliability of a bearing. The considered {term}`failure mechanism <Failure mechanism>` is solid lubricant wear.
+In this example, the simplified method presented in {numref}`meca_9_7_1` is utilized to model the reliability of a bearing. The considered {term}`failure mechanism <Failure mechanism>` is solid lubricant wear.
+
 
 (meca_example_1_given)=
 `````{dropdown} **Given**
-A solid lubricated ball bearing is considered. The basic variables, necessary to model the {term}`failure mechanism <Failure mechanism>`, are modelled as follows (please note that the values indicated in the following table serve as an illustrative example).
+
+A solid lubricated ball bearing is considered. The basic variables, necessary to model the failure mechanism, are modelled as follows: 
 
 ```{list-table} Variables considered in the example
 :name: meca-examples-table-1
@@ -79,20 +81,28 @@ A solid lubricated ball bearing is considered. The basic variables, necessary to
 
 ```
 
-In this example, it is assumed that only one mission phase is relevant, i.e., $n_P=1$.
+```{admonition} Note
+:class: note
+The values indicated in the following table serve as an illustrative example.
+```
+
+In this example, it is assumed that only one mission phase is relevant, i.e. $n_P=1$.
 
 `````
 
 (meca_example_1_rel_model)=
 `````{dropdown} **Reliability model**
+
 To estimate the probability of failure with the simplified methods, the following need to be known:
 
-- the expected value of the limiting volume;
-- the coefficient of variation of the limiting volume;
-- the expected value of the volume worn away;
-- the coefficient of variation of the volume worn away.
+* The expected value of the limiting volume,
+*	The CoV of the limiting volume,
+*	The expected value of the volume worn away 
+*	The CoV of the volume worn away.
+
 
 According to Eq. {eq}`Equation_3_20`, the expected value of the limiting volume is:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -102,6 +112,7 @@ According to Eq. {eq}`Equation_3_20`, the expected value of the limiting volume 
 ````
 
 According to Eq. {eq}`Equation_3_22`, the coefficient of variation of the limiting value is:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -110,7 +121,8 @@ v_{X_1}=v_{V_{\text{limit}}}=\frac{\sqrt{\text{Var}\left[V_{\text{limit}}\right]
 ```
 ````
 
-To calculate the coefficient of variation of the volume worn away, the covariance of $K_H$ and $\alpha$ is calculated under the assumption of full correlation between $K_H$ and $\alpha$:
+To calculate the CoV of the volume worn away, the covariance of $K_H$ and $\alpha$ is calculated under the assumption of full correlation between $K_H$ and $\alpha$:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -121,6 +133,7 @@ To calculate the coefficient of variation of the volume worn away, the covarianc
 ````
 
 The variance of the product $K_H\cdot\alpha$ is calculated as:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -132,6 +145,7 @@ The variance of the product $K_H\cdot\alpha$ is calculated as:
 ````
 
 According to Eq. {eq}`Equation_3_22`, the expected value of the volume worn away is:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -141,7 +155,8 @@ According to Eq. {eq}`Equation_3_22`, the expected value of the volume worn away
 &=7\cdot10^{-8}
 ```
 ````
-and the coefficient of variation of the volume worn away is according to Eq. {eq}`Equation_3_23`: 
+And the CoV of the volume worn away is according to Eq. {eq}`Equation_3_23`: 
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -150,7 +165,8 @@ v_{X_2}=\frac{1}{\text{E}\left[X_2\right]}\cdot \text{rev}\cdot\sqrt{Var\left[K_
 ```
 ````
 
-Finally, the probability of failure is calculated according to Eq. {eq}`Equation_3_24`
+Finally, the probability of failure is calculated according to Eq. {eq}`Equation_3_24`:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -160,21 +176,24 @@ P_f&=P\left[X_1-X_2\cdot\Theta\le0\right]\\
 &=\Phi\left(\frac{ln\left(1.2\right)-ln\left(6\cdot10^{-8}/1.4\cdot10^{-10}\right)+0.5\cdot\left(ln\left(0.2^2+1\right)-ln\left(0.577^2+1\right)-ln\left(0.2^2+1\right)\right)}{\sqrt{ln\left(0.2^2+1\right)+ln\left(0.577^2+1\right)+ln\left(0.2^2+1\right)}}\right)\\
 &=\Phi\left(-2.709\right)=0.0034,
 ```
+Where, $\Phi$ denotes the cumulative standard normal distribution.
 ````
-where $\Phi$ denotes the cumulative standard normal distribution.
 
 `````
 
-(meca_4_8_2)=
+(meca_9_8_2)=
 ## Updating of reliability estimates derived from structural reliability methods
 
-This example is based on the example provided in {numref}`meca_4_8_1`, i.e., it considers a bearing that fails from solid lubricant wear. The structural reliability model is established with the simplified methods in {numref}`meca_4_7_1`. Upon availability of new data on the reliability of the bearing in ques-tion, the model is updated making use of the approach described in {numref}`meca_4_6_5`.
+This example is based on the example provided in {numref}`meca_9_8_1`, i.e. it considers a bearing that fails from solid lubricant wear. The structural reliability model is established with the simplified methods in {numref}`meca_9_7_1`. Upon availability of new data on the reliability of the bearing in question, the model is updated making use of the approach described in {numref}`meca_9_6_5`.
+
 
 (meca_example_2_given)=
 `````{dropdown} **Given**
-A solid lubricated ball bearing is considered. The basic variables, necessary to establish a reliability model in accordance with the simplified method described in {numref}`meca_4_7_1_2`, are modelled in the same way as in the example in {numref}`meca_4_8_1` shown in {numref}`meca-examples-table-1`.
 
-From {numref}`meca_4_7_1_2` it follows:
+A solid lubricated ball bearing is considered. The basic variables, necessary to establish a reliability model in accordance with the simplified method described in {numref}`meca_9_6_2`, are modelled as follows:
+
+From {numref}`meca_9_7_1`, it follows:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -182,7 +201,8 @@ From {numref}`meca_4_7_1_2` it follows:
 \text{E}\left[ X_1 \right] = \text{E}\left[ V_{\text{limit}}\right ],
 ```
 ````
-and under the assumption of a single mission phase:
+And, under the assumption of a single mission phase:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -194,7 +214,9 @@ and under the assumption of a single mission phase:
 
 (meca_example_2_prior)=
 `````{dropdown} **Prior model**
-The probability of failure in function of the number of revolutions $\text{rev}$ is modelled. According to {numref}`meca_4_6_5`, it can be approximated with the Lognormal distribution:
+
+The probability of failure in function of the number of revolutions $\text{rev}$ is modelled. According to {numref}`meca_9_6_5`, it can be approximated with the lognormal distribution:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -203,7 +225,7 @@ The probability of failure in function of the number of revolutions $\text{rev}$
 ```
 ````
 
-The coefficients of variation $v_{X_1}$ and $v_{X_2}$ have already been determined in the example in {numref}`meca_4_8_1`.
+The CoV $v_{X_1}$ and $v_{X_2}$ have already been determined in the example in {numref}`meca_9_8_1`.
 
 ````{admonition} Equation
 :class: equation
@@ -213,7 +235,7 @@ The coefficients of variation $v_{X_1}$ and $v_{X_2}$ have already been determin
 ```
 ````
 
-The location parameter $\mu_{\text{rev}}$ is considered uncertain and is modelled with a Normal distribution (conjugate prior, see {numref}`methods`).
+The location parameter $\mu_{\text{rev}}$ is considered uncertain and is modelled with a normal distribution (conjugate prior, see {ref}`Part 2 - Methods <methods>`).
 
 ````{admonition} Equation
 :class: equation
@@ -223,7 +245,7 @@ The location parameter $\mu_{\text{rev}}$ is considered uncertain and is modelle
 ```
 ````
 
-According to {numref}`meca_4_6_5`, $p=\frac{E\left[X_1\right]}{E\left[X_2\right]}$ has to be brought to the form $p=k\cdot\frac{1}{rev}$. Using the relations in Eq. {eq}`Equation_3_24` and Eq. {eq}`Equation_3_28`.
+According to {numref}`meca_9_6_5`, $p=\frac{E\left[X_1\right]}{E\left[X_2\right]}$ should be brought to the form $p=k\cdot\frac{1}{rev}$. Using the relations in Eq. {eq}`Equation_3_24` and Eq. {eq}`Equation_3_28`:
 
 ````{admonition} Equation
 :class: equation
@@ -238,6 +260,7 @@ k=\frac{E\left[V_{\text{limit}}\right]}{E\left[K_H\cdot\alpha\right]}=\frac{6\cd
 ````
 
 The prior hyperparameters for the distribution of $\mu_{\text{rev}}$ are estimated according to Eq. {eq}`Equation_3_13` and Eq. {eq}`Equation_3_14`:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -255,7 +278,8 @@ The prior hyperparameters for the distribution of $\mu_{\text{rev}}$ are estimat
 
 (meca_example_2_data)=
 `````{dropdown} **Additional data**
-Additional data on the reliability of the bearing is given in the table below.
+
+Additional data on the reliability of the bearing is given in the table below:
 
 ```{list-table} Additional data considered in the example
 :name: meca-examples-table-2
@@ -284,7 +308,9 @@ Additional data on the reliability of the bearing is given in the table below.
 
 (meca_example_2_updating)=
 `````{dropdown} **Updating**
-With the additional data, the reliability model for the bearing can be updated. The updating is done using the equations for the analytic approach using conjugate priors, given in {numref}`methods`:
+
+With the additional data, the reliability model for the bearing can be updated. The updating is done using the equations for the analytic approach using conjugate priors, given in {ref}`Part 2 - Methods <methods>` of this handbook:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -297,40 +323,41 @@ With the additional data, the reliability model for the bearing can be updated. 
 ```
 ````
 
-The posterior predictive of $\text{rev}$ is also a Lognormal distribution. Its distribution function can be calculated with the help of the analytic formulas provided in {numref}`methods`.
+The posterior predictive of $\text{rev}$ is also a lognormal distribution. Its distribution function can be calculated with the help of the analytic formulas provided in {ref}`Part 2 - Methods <methods>` of this handbook.
 
 `````
 
 (meca_example_2_results)=
 `````{dropdown} **Results**
-In {numref}`Figure_mec_example_2_results_1` the prior and posterior distribution of parameter $\mu_{\text{rev}}$ is represented. In {numref}`Figure_mec_example_2_results_2`, the prior and posterior probability of failure are shown in function of the number of revolutions $\text{rev}$. As can be seen in the figure, the probability of failure increases from the updating.
+
+In {numref}`Figure_mec_example_2_results_1`, the prior and posterior distribution of parameter $\mu_{\text{rev}}$ is represented. In {numref}`Figure_mec_example_2_results_2`, the prior and posterior probability of failure are shown in function of the number of revolutions $\text{rev}$. As can be seen in the figure, the probability of failure increases from the updating.
 
 ```{figure} ../../pictures/example_2_results_1.png
 ---
 width: 600px
 name: Figure_mec_example_2_results_1
 ---
-Prior and posterior distribution for parameter $\mu_{\text{rev}}$.
+Prior and posterior distribution for parameter $\mu_{\text{rev}}$
 ```
 ```{figure} ../../pictures/example_2_results_2.png
 ---
 width: 600px
 name: Figure_mec_example_2_results_2
 ---
-Prior and posterior predictive distribution of revolutions to failure $\text{rev}$.
+Prior and posterior predictive distribution of revolutions to failure $\text{rev}$
 ```
 `````
 
 (meca_example_3_censored)=
 ## Updating of structural reliability methods using right censored data
 
-In contrast to the example in {numref}`meca_4_8_2`, censored data is often available in practice. In this case, the simplified analytic approach for updating is no longer applicable and numerical methods must be used. In this example, MCMC will be used to conduct the updating for the location parameter. To keep the example simple, the same assumption as in {numref}`meca_4_8_2` is made that the scale parameter is known and will not be updated. This assumption is not necessary using MCMC for the updating and might be relaxed for a more advanced modelling.
+In contrast to the example in {numref}`meca_9_8_2`, censored data is often available in practice. In this case, the simplified analytic approach for updating is no longer applicable and numerical methods should be used. In this example, {term}`MCMC` will be used to do the updating for the location parameter. To keep the example simple, the same assumption as in {numref}`meca_9_8_2` is made that the scale parameter is known and will not be updated. This assumption is not necessary using MCMC for the updating and might be relaxed for a more advanced modelling.
 
 (meca_example_3_additional_data)=
 `````{dropdown} **Additional data**
-Additional, censored, data on the reliability of the bearing is given in the table below. 
+Additional, censored, data on the reliability of the bearing is given in the table below 
 
-```{list-table} Additional censored data considered in the example
+```{list-table} Additional censored data for the reliability of a bearing
 :name: meca-examples-table-3
 :header-rows: 1
 :widths: 20 80
@@ -351,14 +378,15 @@ Additional, censored, data on the reliability of the bearing is given in the tab
 
 (meca_example_3_updating)=
 `````{dropdown} **Updating**
-With the additional data, the reliability model for the bearing can be updated. The updating is done using the MCMC method described in {numref}`methods`. The data set is right-censored and the likelihood $L$ for a right censored data set is given by:
+With the additional data, the reliability model for the bearing can be updated. The updating is done using the MCMC method described in {ref}`Part 2 - Methods <methods>`. The data set is right-censored and the likelihood $L$ for a right censored data set is given by:
+
 ````{admonition} Equation
 :class: equation
 ```{math}
 L\propto\ \prod_{i=1}^{n}{f\left(\widehat{x_i}|\theta\right)\cdot\prod_{j=1}^{m}\left(1-F\left(\widehat{x_{\text{up}}}|\theta\right)\right)},
 ```
 ````
-using the data from {numref}`meca-examples-table-3`, the likelihood is given by
+Using the data from above ({numref}`meca-examples-table-3`), the likelihood is given by:
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -380,7 +408,7 @@ Using the additional data, the reliability model for the bearing can be updated.
 width: 600px
 name: Figure_mec_example_3_results_1
 ---
-Markov Chain and posterior density of the parameter.
+Markov chain and posterior density of the parameter
 ```
 
 The posterior predictive of $\text{rev}$ is shown in {numref}`Figure_mec_example_3_results_2`. It is seen that the consideration of censored data might have a large impact on the updating and has a large potential especial for end of life decision-making.
@@ -390,14 +418,14 @@ The posterior predictive of $\text{rev}$ is shown in {numref}`Figure_mec_example
 width: 600px
 name: Figure_mec_example_3_results_2
 ---
-Prior and posterior distribution for parameter $\mu_{\text{rev}}$.
+Prior and posterior distribution for parameter $\mu_{\text{rev}}$
 ```
 ```{figure} ../../pictures/example_3_results_3.png
 ---
 width: 600px
 name: Figure_mec_example_3_results_3
 ---
-Prior and posterior predictive distribution of revolutions to failure $\text{rev}$.
+Prior and posterior predictive distribution of revolutions to failure $\text{rev}$
 ```
 
 `````
