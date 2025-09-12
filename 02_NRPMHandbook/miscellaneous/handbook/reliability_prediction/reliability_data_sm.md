@@ -15,7 +15,7 @@ The failure rate is provided per TWT Channel (mono channel or dual channel). In 
     * EPC_common = 36%
     * EPC_channel = 9%
     * {term}`CAMP` = 25%
-    * {term}`TWT` = 30%
+    * TWT = 30%
 2. To use the supplier repartition as per its own reliability prediction.
 
 ````

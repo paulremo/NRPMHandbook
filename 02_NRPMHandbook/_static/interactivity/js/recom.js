@@ -669,114 +669,113 @@ let recomNS = new Map([
             ["subco", new Set(['NA'])]
         ])]
     ])],
-
     ["Integration into system", new Map([
         ["7", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["8", new Map([
-            ["prime", new Set(['2', '3', '4'])],
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["9", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["10", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["11", new Map([
-            ["prime", new Set(['3', '4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["12", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["13", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["14", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["15", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["30", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["32", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["35", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["37", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
-        ])],
-        ["47", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["49", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["66", new Map([
-            ["prime", new Set(['3', '4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["67", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["71", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["73", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
-        ])],
-        ["74", new Map([
             ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
-        ["75", new Map([
+        ["10", new Map([
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["11", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["12", new Map([
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["13", new Map([
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["14", new Map([
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["15", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["30", new Map([
             ["prime", new Set(['3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["32", new Map([
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["35", new Map([
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["37", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["47", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["49", new Map([
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["66", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["67", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["71", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["73", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["74", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
+        ])],
+        ["75", new Map([
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["77", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["78", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["79", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["80", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["81", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["82", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["88", new Map([
@@ -784,11 +783,11 @@ let recomNS = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["91", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["99", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["113", new Map([
@@ -796,15 +795,15 @@ let recomNS = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["114", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["116", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["138", new Map([
-            ["prime", new Set(['1', '2', '3', '4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["153", new Map([
@@ -813,40 +812,40 @@ let recomNS = new Map([
         ])],
         ["155", new Map([
             ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["subco", new Set(['NA'])]
         ])]
     ])],
     ["Operation and Maintenance", new Map([
         ["7", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["8", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['2', '3', '4'])]
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
         ])],
         ["9", new Map([
             ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["10", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
         ["11", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
         ["13", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["14", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["20", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["30", new Map([
@@ -882,7 +881,7 @@ let recomNS = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["72", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["73", new Map([
@@ -926,113 +925,113 @@ let recomNS = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["114", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
         ["116", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
         ["181", new Map([
             ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["subco", new Set(['NA'])]
         ])]
     ])],
     ["Support Activities", new Map([
         ["3", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["4", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["24", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['2', '3', '4'])]
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["45", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["prime", new Set(['3', '4'])],
+            ["subco", new Set(['2', '3', '4'])]
         ])],
         ["53", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['2', '3', '4'])]
         ])],
         ["55", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["prime", new Set(['3', '4'])],
+            ["subco", new Set(['2', '3', '4'])]
         ])],
         ["56", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["58", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["59", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['2', '3', '4'])]
         ])],
         ["68", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['1', '2', '3', '4'])]
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['NA'])]
         ])],
         ["69", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["76", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['2', '3', '4'])]
         ])],
         ["104", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['2', '3', '4'])]
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["105", new Map([
-            ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['2', '3', '4'])]
         ])],
         ["110", new Map([
             ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
         ["111", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["119", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['2', '3', '4'])]
+            ["prime", new Set(['2', '3', '4'])],
+            ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["142", new Map([
             ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["subco", new Set(['2', '3', '4'])]
         ])],
         ["143", new Map([
             ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["subco", new Set(['2', '3', '4'])]
         ])],
         ["146", new Map([
             ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["148", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['2', '3', '4'])]
         ])],
         ["149", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['4'])]
+            ["prime", new Set(['3', '4'])],
+            ["subco", new Set(['3', 'NA'])]
         ])],
         ["151", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["152", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
     ])]
@@ -1720,7 +1719,7 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["8", new Map([
-            ["prime", new Set(['2', '3', '4'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["9", new Map([
@@ -1732,7 +1731,7 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["11", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["12", new Map([
@@ -1764,7 +1763,7 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["37", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["47", new Map([
@@ -1792,11 +1791,11 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["74", new Map([
-            ["prime", new Set(['2', '3', '4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["75", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["77", new Map([
@@ -1808,11 +1807,11 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["79", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["80", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["81", new Map([
@@ -1820,11 +1819,11 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["82", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["88", new Map([
-            ["prime", new Set(['1', '2', '3', '4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["91", new Map([
@@ -1836,11 +1835,11 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["113", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["114", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["116", new Map([
@@ -1848,7 +1847,7 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["138", new Map([
-            ["prime", new Set(['1', '2', '3', '4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["153", new Map([
@@ -1856,29 +1855,29 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["155", new Map([
-            ["prime", new Set(['1', '2', '3', '4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
     ])],
     ["Operation and Maintenance", new Map([
         ["7", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["8", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['2', '3', '4'])]
+            ["prime", new Set(['4'])],
+            ["subco", new Set(['NA'])]
         ])],
         ["9", new Map([
             ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["10", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
         ["11", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
         ["13", new Map([
@@ -1890,11 +1889,11 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["20", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["30", new Map([
-            ["prime", new Set(['3', '4'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["32", new Map([
@@ -1970,106 +1969,106 @@ let recomCL = new Map([
             ["subco", new Set(['NA'])]
         ])],
         ["114", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
         ["116", new Map([
-            ["prime", new Set(['4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
         ["181", new Map([
-            ["prime", new Set(['1', '2', '3', '4'])],
+            ["prime", new Set(['NA'])],
             ["subco", new Set(['NA'])]
         ])],
     ])],
     ["Support Activities", new Map([
         ["3", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['3', '4'])]
         ])],
         ["4", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['1', '2', '3', '4'])],
             ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["24", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['2', '3', '4'])]
         ])],
         ["45", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['3', '4'])]
         ])],
         ["53", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["prime", new Set(['3', '4'])],
+            ["subco", new Set(['2', '3', '4'])]
         ])],
         ["55", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['4'])],
             ["subco", new Set(['3', '4'])]
         ])],
         ["56", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['1', '2', '3', '4'])]
+            ["prime", new Set(['4'])],
+            ["subco", new Set(['3', '4'])]
         ])],
         ["58", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['1', '2', '3', '4'])]
+            ["prime", new Set(['4'])],
+            ["subco", new Set(['3', '4'])]
         ])],
         ["59", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['2', '3', '4'])]
+            ["prime", new Set(['4'])],
+            ["subco", new Set(['3', '4'])]
         ])],
         ["68", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['1', '2', '3', '4'])]
+            ["prime", new Set(['4'])],
+            ["subco", new Set(['3', '4'])]
         ])],
         ["69", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['2', '3', '4'])]
         ])],
         ["76", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['3', '4'])]
         ])],
         ["104", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['2', '3', '4'])]
+            ["prime", new Set(['4'])],
+            ["subco", new Set(['3', '4'])]
         ])],
         ["105", new Map([
             ["prime", new Set(['4'])],
-            ["subco", new Set(['NA'])]
+            ["subco", new Set(['4'])]
         ])],
         ["110", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['NA'])]
+            ["prime", new Set(['1', '2', '3', '4'])],
+            ["subco", new Set(['1', '2', '3', '4'])]
         ])],
         ["111", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["prime", new Set(['4'])],
+            ["subco", new Set(['4'])]
         ])],
         ["119", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['2', '3', '4'])]
+            ["prime", new Set(['4'])],
+            ["subco", new Set(['4'])]
         ])],
         ["142", new Map([
             ["prime", new Set(['NA'])],
-            ["subco", new Set(['3', '4'])]
+            ["subco", new Set(['4'])]
         ])],
         ["143", new Map([
             ["prime", new Set(['NA'])],
             ["subco", new Set(['3', '4'])]
         ])],
         ["146", new Map([
-            ["prime", new Set(['2', '3', '4'])],
+            ["prime", new Set(['3', '4'])],
             ["subco", new Set(['NA'])]
         ])],
         ["148", new Map([
-            ["prime", new Set(['NA'])],
+            ["prime", new Set(['2', '3', '4'])],
             ["subco", new Set(['2', '3', '4'])]
         ])],
         ["149", new Map([
-            ["prime", new Set(['NA'])],
-            ["subco", new Set(['4'])]
+            ["prime", new Set(['4'])],
+            ["subco", new Set(['NA'])]
         ])],
         ["151", new Map([
             ["prime", new Set(['4'])],

@@ -46,7 +46,7 @@ c. For the purpose of this handbook, the terms and definitions from ECSS-E-ST-33
 
 ## Terms specific for the current handbook
 
-For the purpose of this handbook, these definitions found in ECSS-Q-HB-30-02 apply:
+For the purpose of this handbook, these definitions found in ECSS-Q-HB-30-02A apply:
 
 ```{glossary}
 Bayesian inference

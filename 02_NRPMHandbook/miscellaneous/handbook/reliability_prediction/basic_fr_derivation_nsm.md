@@ -215,7 +215,6 @@ This represents the basic failure rate or the basic probability of failure. Then
 
 ```{admonition} Note 
 :class: note
-:name: note
 This probability ranking needs to be clearly justified and documented.
 ```
 

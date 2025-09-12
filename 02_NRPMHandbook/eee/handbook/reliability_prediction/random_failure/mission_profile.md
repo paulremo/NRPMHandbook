@@ -277,297 +277,104 @@ The contributions of over-stresses in the mission profile on components are defi
 (eee_8_3_2_10)=
 ## Specific stresses not considered in the mission profile
 
-Some of the stresses are not considered to the real level of influence that they can have in space applications compared to other applications. The failures due to ON / OFF cycles and due to radiations are classified as {term}`wear-out failures <Wear-out failure>` as they affect the {term}`degradation <Degradation>` of the equipment.
+Some of the stresses should not be considered to the real level of influence that they can have in space applications compared to other applications. The failures due to On / Off cycles and due to radiations are classified as degradation failures, as they affect the degradation of the equipment.
 
 (eee_8_3_2_11)=
-## ON / OFF cycles
+## On / Off cycles
 
-The equipment is generally switched off when it is not used to limit as much as possible the consumption of energy. In the mission profile, the impact on {term}`EEE` components of the frequent ON / OFF cycles is considered only by the thermal variations due to the self-heating of electronic equipment in the model. The influence of frequent switching on and switching off on the reliability of electronic equipment is not perfectly apprehended and not correctly considered.
-
-A transmitter of a Low Earth Orbit satellite being switched off when out of the scope of the reception stations can occur up to 100 000 times over the {term}`mission lifetime <Mission lifetime>` without having any failures. For this specific constraint, no potential impacts have been currently found with experience of In-Orbit Return. Consequently, the impact of these frequent ON / OFF cycles is considered as a wear-out phenomenon of {term}`EEE` components and is discussed in {numref}`eee_8_6_5`.
+The equipment is generally switched off when it is not used to limit as much as possible the consumption of energy. In the mission profile, the impact on EEE components of the frequent On / Off cycles are considered only by the thermal variations due to the self-heating of electronic equipment in the model. The influence of frequent switching on and switching off on the reliability of electronic equipment is not perfectly apprehended and not correctly considered. 
+A transmitter of a LEO satellite being switched off when out of the scope of the reception stations can occur up to 100 000 times over the mission lifetime without having any failures. For this specific constraint, no potential impacts have been currently found with experience of IOR. Consequently, the impact of these frequent On / Off cycles is considered as a degradation phenomenon of EEE components and is discussed in
+{numref}`eee_8_5_5`.
 
 (eee_8_3_2_12)=
 ## Radiations
 
-Another specificity of the space domain is an environment subjected to high cumulated doses of radiation (protons and electrons), due to the Van Allen radiation belt in particular. The methodology considers a part of these phenomena through the electrical over-stresses, but with insufficient quantification. Currently, the design of any electronic equipment for satellites is qualified with the total dose corresponding to the life of the equipment with a supplementary safety margin. However, commercial {term}`EEE` components are more and more sensitive to cumulated doses of radiation. The experience and lessons-learnt issued from various industrial domains is not sufficient to presently develop these models. For space applications, only simple models such as the model presented in {numref}`eee_8_6_5_1` is proposed with results of radiation tests performed on components correlated with the level of radiation considered in the different phases of the mission profile.
+Another specificity of the space domain is an environment subjected to high cumulated doses of radiation (protons and electrons), due to the Van Allen radiation belt in particular. The methodology considers a part of these phenomena through the electrical over-stresses, but with insufficient quantification. Currently, the design of any electronic equipment for satellites is qualified with the total dose corresponding to the life of the equipment with a supplementary safety margin. However, commercial EEE components are more and more sensitive to cumulated doses of radiation. 
+
+The experience and lessons-learnt issued from various industrial domains is not sufficient to presently develop these models. For space applications, only simple models such as the model presented in {numref}`eee_8_5_5_1` is proposed with results of radiation tests performed on components correlated with the level of radiation considered in the different phases of the mission profile.
+
+```{admonition} Note
+:class: note
+Concerning radiations as well, Single Events Effects (SEEs) are not considered here as they do not result from failures but from deterministic phenomena. 
+```
 
 (eee_8_3_2_13)=
 ## Temperature and thermo-electrical stress
 
-**Physical stresses:**
+**Physical stresses**
 
-In the classification of Chapter 2, the physical failure rate $\lambda_{\text{Physical}}$ is based on a combined approach. It gathers the following information:
+In the classification of {ref}`Part 2 - Methods <methods>` of this handbook, the physical failure rate $\lambda_{\text{Physical}}$ is based on a combined approach. It gathers the following information:
 
--   The basic failure rates $\lambda_{0}$ based on statistics;
+-   The basic failure rates $\lambda_{0}$ based on statistics,
 
--   The physical contributions $\Pi_{\text{acceleration}}$ which are based on the {term}`physics of failures <Physics of failure>`, as described in {numref}`eee_8_3_2_13`, {numref}`eee_8_3_2_14`, {numref}`eee_8_3_2_15`, {numref}`eee_8_3_2_16`.
+-   The physical contributions $\Pi_{\text{acceleration}}$ which are based on the physics of failures, as described in {numref}`eee_8_3_2_13`, {numref}`eee_8_3_2_14`, {numref}`eee_8_3_2_15`, {numref}`eee_8_3_2_16`,
 
 -   The contributions of specific over-stresses $\Pi_{\text{induced}}$ not considered by the mission profile, as described in {numref}`eee_8_3_2_20`.
 
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_7
-\lambda_{\text{Physical}} = \left\lbrack \sum_{Physical\_ Contributions}^{}\left( \lambda_{0} \cdot \Pi_{\text{acceleration}} \right) \right\rbrack \cdot {\Pi_{\text{induced}}}_{i}
-```
-````
 
-The physical contributors considered are the temperatures, the humidity level, the thermal cycling, the vibrations and the electrical stresses. The formulas applied in the models have been established from the {term}`physics of failures <Physics of failure>` of each {term}`EEE` component considered.
 
-The thermal and thermo-electrical stresses are taken into account by the {term}`physics of failures <Physics of failure>` with the Arrhenius' law, multiplied by the contribution of electrical stress, such as voltage or current for example.
+The physical contributors considered are the temperatures, the humidity level, the thermal cycling, the vibrations and the electrical stresses. The formulas applied in the models have been established from the physics of failures of each EEE component considered. The thermal and thermo-electrical stresses are taken into account by the physics of failures with the Arrhenius‘ law, multiplied by the contribution of electrical stress, such as voltage or current for example (see Annex A.2.3 for the acceleration factor equations).
 
-````{admonition} Equations
-:class: equation
-```{math}
-:label: Equation_1_8
-\Pi_{\text{acceleration}} = \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T}_{0}} - \frac{1}{273 + T_{board_{ref}} + \Delta_{T}} \right) \right\rbrack
-```
-```{math}
-:label: Equation_1_9
-\Pi_{\text{acceleration}} = \left( \frac{1}{S_{\text{reference}}} \cdot \frac{I_{\text{applied}}}{I_{\text{rated}}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T_{0}}} - \frac{1}{273 + T_{board_{ref}} + \Delta_{T}} \right) \right\rbrack
-```
-where:
+For some components that are sensitive to failure mechanisms linked to electrical operation, the contribution of electrical stress is considered as a multiplicative factor. This electrical stress is determined based on the ratio between applied stress and rated stress, elevated to an accelerating power $p$. The considered stresses are voltage and current. The accelerating power $p$ is derived based on publications or by engineering judgment.
 
--   $T_{board_{ref}}$: operating temperature at board level;
-
--   $\Delta_{T}$ : temperature rise due to the heat dissipation of component;
-
--   $T_{0}$: reference temperature defined in the formula for each type of component;
-
--   $V_{\text{applied}}$: operating voltage;
-
--   $V_{\text{rated}}$: rated voltage of the component;
-
--   $I_{\text{applied}}$: operating current;
-
--   $I_{\text{rated}}$: rated current in the component;
-
--   $S_{\text{reference}}$: reference level for the electrical stress;
-
--   $p$: accelerating power for the electrical stress, defined in the formula for each type of component;
-
--   $E_{a}$ : The value of the activation energy which depends on the technology and main contributing {term}`failure mechanism <Failure mechanism>` considered.
-````
-
-For some components that are sensitive to {term}`failure mechanisms <Failure mechanism>` linked to electrical operation, the contribution of electrical stress is considered as a multiplicative factor. This electrical stress is determined based on the ratio between applied stress and rated stress, elevated to an accelerating power $p$. The considered stresses are voltage and current. The accelerating power $p$ is derived based on publications or by engineering judgment.
 
 
 (eee_8_3_2_14)=
 ## Thermo-mechanical stress
 
-The thermo-mechanical stress is associated with the thermal cycling of the equipment. It is considered by the {term}`physics of failures <Physics of failure>` with the Norris-Landzberg's model defined in document {cite:p}`eee-Norris1969ReliabilityOC`. This model is based on the thermo-mechanical effects based on the Coffin-Manson model.
-
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_10
-\Pi_{\text{acceleration}} = \left( \frac{12 \cdot N_{cy_{\text{phase}}}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{min} \left( \theta_{\text{cy}}, 2 \right)}{\text{min} \left( \theta_{0}, 2 \right)} \right)^{p} \cdot \left( \frac{\Delta T_{\text{cycling}}}{\Delta T_{0}} \right)^{m} \cdot \text{exp} \left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{273+T_{0}+\Delta T_{0}} - \frac{1}{273+T_{max_{\text{cycling}}}} \right) \right\rbrack
-```
-where:
-
--   $N_{cy_{\text{phase}}}$: number of cycles in the phase;
-
--   $t_{\text{phase}}$: duration of the phase;
-
--   $\theta_{\text{cy}}$: cycle duration in hours;
-
--   $\theta_{0}$: reference cycle duration;
-
--   $\Delta T_{\text{cycling}}$: thermal amplitude of the cycle;
-
--   $\Delta T_{0}$: reference thermal amplitude of the cycle;
-
--   $E_{a}$: activation energy in eV;
-
--   $T_{max_{\text{cycling}}}$: maximum temperature reached during the cycle;
-
--   $T_{0}$: reference temperature;
-
--   $m$: fatigue coefficient;
-
--   $p$: accelerating power of the duration factor.
-````
-
-The activation energy $E_{a}$, fatigue coefficient $m$ and accelerating power of the duration factor $p$ are the parameters used for the thermo-mechanical fatigue. The activation energy $E_{a}$, fatigue coefficient $m$ and accelerating power of the duration factor $p$ are similar for all components and set to $E_{a}=0.122eV$, $m=1.9$ for fatigue of SnPb solder joints and $p=0.33$. However, experience and engineering judgment have shown that the parameters of the Norris-Landzberg's model are also applicable to lead-free process. All other parameters are depending on the mission profile of the equipment.
+The thermo-mechanical stress is associated with the thermal cycling of the equipment. It is considered by the physics of failures with the Norris-Landzberg’s model defined in document {cite:p}`eee-Norris1969ReliabilityOC`. This model is based on the thermo-mechanical effects based on the Coffin-Manson model.
 
 (eee_8_3_2_15)=
 ## Humidity stress
 
-The humidity stress is taken into account by the {term}`physics of failures <Physics of failure>` with Peck's model.
+The humidity stress is taken into account by the physics of failures with Peck‘s model
 
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_11
-\Pi_{\text{acceleration}} = \left( \frac{\text{RH}_{board_{ref}}}{\text{RH}_{0}} \right)^{p} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{{273 + T_{0}}} - \frac{1}{{273 + T_{board_{ref}}}+ \Delta T} \right) \right\rbrack
-```
-where:
+It is presented in Annex A.2-5 and in Formulae concerning section 8.3.5.1 Capacitors, Annex B.1, Equation B.1-10. Peck’s model uses the activation energy $E_{a}$ and the humidity factor $p$ as inputs to the calculation of humidity contribution to the reliability prediction. All other parameters are depending on the mission profile of the equipment.
 
--   $\text{RH}_{board_{ref}}$: relative humidity of the environment considered;
+For space applications, the humidity stress is present only during the launch phase (and storage/on-ground phases if they are taken into account). In orbit, humidity is no more present and the stress is no more applied. 
 
--   $\text{RH}_{0}$: reference relative humidity;
-
--   $T_{board_{ref}}$: environment temperature considered;
-
--   $\Delta T$: temperature rise due to the component heat dissipation;
-
--   $E_{a}$: activation energy in eV;
-
--   $T_{0}$: reference temperature;
-
--   $p$: accelerating power of the duration factor.
-````
-
-Peck's model uses the activation energy $E_{a}$ and the humidity factor $p$ as inputs to the calculation of humidity contribution to the reliability prediction. All other parameters are depending on the mission profile of the equipment.
-
-For space applications, the humidity stress is present only during the launch phase (and the storage/on-ground phases if they are taken into account). In orbit, the humidity is no more present and the stress is no more applied.
 
 (eee_8_3_2_16)=
 ## Vibration stress
 
-The vibration stress is taken into account by the {term}`physics of failures <Physics of failure>` with Basquin's law.
+The vibration stress is taken into account by the physics of failures with Basquin’s law.
 
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_12
-\Pi_{\text{acceleration}} = \left( \frac{G_{\text{rms}}}{0.5} \right)^{p}
-```
-where:
-
--   $G_{\text{rms}}$: root mean square vibration amplitude in the environment considered;
-
--   $G_{\text{rms0}}=0.5g_{rms}$: reference vibration amplitude;
-
--   $p$: accelerating power for the mechanical stress.
-````
-
-This accelerating model uses the power factor $p$ as inputs to the calculation of the vibration contribution to the reliability prediction. The other parameter is depending on the equipment's mission profile. The vibration power $p$ is similar for all components and set to $p=1.5$. This value is close to the bottom of the range of fatigue coefficients generally encountered for Basquin's law.
-
-For space applications, the vibration stress is present only during the launch phase. In orbit, vibrations are no more present and the stress is no more applied.
+It is presented in Annex A.2-6. This accelerating model uses the power factor p as inputs to the calculation of the vibration contribution to the reliability prediction. The other parameter is depending on the equipment’s mission profile. The vibration power $p$ is similar for all components and set to $p=1.5$. This value is close to the bottom of the range of fatigue coefficients generally encountered for Basquin’s law. For space applications, the vibration stress is present only during the launch phase. In orbit, vibrations are no more present and the stress is no more applied.
 
 ```{admonition} Recommendation
 :class: recommendation
-
-When computing the vibration input in the mission profile, for phases with no vibration, it is recommended nevertheless to compute as a minimum 0.01 Grms value for stability of the formulae.
+When computing the vibration input in the mission profile in a tool, for phases with no vibration, it is recommended nevertheless to compute as a minimum 0.01 Grms value for stability of the formulae within the tool.
 ```
 
 (eee_8_3_2_17)=
 ## Recommended values for over-stresses of EEE components for space applications
 
-Reliability.space directly considers the contribution of mechanical, electrical or thermal over-stresses on components as described in {numref}`eee_8_3_2_13`. An additional factor, the induced factor $\Pi_{\text{induced}\_i}$ is a parameter representing the contribution of other specific over-stresses not considered by the mission profile. This induced factor is based on four different contributors according to the following equation:
+The method recommended here directly considers the contribution of mechanical, electrical or thermal over-stresses on components as described in {numref}`eee_8_3_2_13`. An additional factor, the induced factor $\Pi_{\text{induced}\_i}$ is a parameter representing the contribution of other specific over-stresses not considered by the mission profile. This induced factor is based on four different contributors according to the equation presented in Annex A, section  A.2-7.
 
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_13
-\Pi_{induced\_ i} = \left( \Pi_{placement\_ i} \cdot \Pi_{application\_ i} \cdot \Pi_{\text{ruggedising}} \right)^{0.511 \cdot ln(C_{\text{sensitivity}})}
-```
-With:
-
--   $\Pi_{induced \_ i}$ as the induced factor;
-
--   $\Pi_{placement\_ i}$ as the influence of the component placement in the equipment
-
--   $\Pi_{application\_ i}$ as the influence of the usage environment
-
--   $\Pi_{\text{ruggedising}}$ as the influence of the policy for over-stresses
-
--   $C_{\text{sensitivity}}$ as the coefficient of sensitivity to over-stresses
-````
 
 (eee_8_3_2_18)=
 ## Influence of the component placement in the equipment
 
-$\Pi_{placement\_ i}$ represents the influence of the component location in the equipment or the system. The component is considered as belonging to an interface if it belongs to a functional block linked to a function that provides interconnection between two systems. The location refers to the position of the item or the function in which it is integrated and is only considered from an electrical point of view. The electronic schematic and the description in functional blocks are the main inputs to define the allocation by zone and technical functions. For space applications, interfaces are generally functionalities linked to the power bus and data bus shared between platform and payload. All components constituting the same functional block should inherit the same $\Pi_{placement\_ i}$.
+$\Pi_{placement\_ i}$ translates the influence of the component position in the equipment or the system. As described in the FIDES 2022 handbook, in order to determine which Pi Placement applies to a component, two questions need to be answered:
 
-This parameter is defined in the following table:
+-	*Is the component considered at the interface or not at the interface?*
 
-```{list-table} Recommendation for the definition of parameter $\Pi_{placement\_ i}$.
-:name: eee-table4-3
-:header-rows: 1
-:widths: 70 30
+-	*Is the component part of a digital, analog or power function?*
 
-*   - Description of the placement influence
-	- $\Pi_{placement\_ i}$
-*   - Digital non-interface function
-	- 1.0
-*   - Digital interface function
-	- 1.6
-*   - Analog low-level non-interface function (<1A)
-	- 1.3
-*   - Analog low-level interface function (<1A)
-	- 2.0
-*   - Analog power non-interface function (≥1A)
-	- 1.6
-*   - Analog power interface function (≥1A)
-	- 2.5
-```
+To be able to answer the first question, it is important to insist on a common definition of “interface”: An interface is the junction that provides interconnection between two systems. The concept of interface must be considered from an electrical point of view. A component is considered as an interface if it is more exposed to accidental electrical hazards because of its position in the system. On a circuit board, the interface components are often (but not only) protections, filters or insulation components. Should be considered as an interface component all components on an input signal up to the first protection or the first active part able to withstand a surge. For space applications, interfaces are generally functionalities linked to the power bus and data bus shared between platform and payload.
+Concerning the second question, it is important to insist on the fact that the focus concerns the function that the component is included in, not the component itself. All components constituting the same functional block should inherit the same $\Pi_{placement\_ i}$. This parameter is defined in Annex A, section A.2-8.
+
 
 (eee_8_3_2_19)=
 ## Influence of the use environment
 
-$\Pi_{application\_ i}$ represents the influence of the use environment for the application of the product containing the component. For example, the exposure to a mechanical over-stress is more significant in electronics integrated into a mobile system than in a fixed station system. This factor is usually variable depending on each phase of the mission profile. This parameter is based on a list of criteria which have three different levels corresponding to a favourable, moderate or unfavourable situation. For space applications, these criteria can be fixed as the use environment is normally the same for all satellites. In some specific situations, it could be possible to make some adaptations, but normally these values are appropriate whatever the equipment and whatever the phase of the mission profile.
+$\Pi_{application\_ i}$ represents the influence of the use environment for the application of the product containing the component. For example, the exposure to a mechanical overstress is more significant in electronics integrated into a mobile system than in a fixed station system. This factor is usually variable depending on each phase of the mission profile. This parameter is based on a list of criteria which have three different levels corresponding to a favourable, moderate or unfavourable situation. For space applications, these criteria can be fixed as the use environment is normally the same for all satellites. In some specific situations, it could be possible to make some adaptations, but normally these values are appropriate whatever the equipment and whatever the phase of the mission profile. 
 
 Therefore, the recommendation for space applications during the launch, time to reach orbit and in-orbit phases is the following:
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-4')" placeholder="Search table...">
+Each level 0, 1 or 2 of the recommendation is given a specific mark as defined in the table, independently of the levels and independently of the phases, as presented in Annex A, section A.2-9.1.
 
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for the launch, time to reach orbit and in-orbit phases.
-:name: eee-table4-4
-:header-rows: 1
-:widths: 15 25 15 35 10
-
-*   - 
-	- 
-	- 
-	- Examples and comments
-	- Weight
-*   - User type in the phase considered
-	- Represents the capability to respect procedures, facing operational constraints.
-	- <p>0: Favourable</p><p>1: Moderate</p><p>2: Unfavourable</p>
-	- <p>0: Industry</p><p>1: General public</p><p>2: Military</p><p>The most severe level must be adopted for military applications</p>
-	- 20
-*   - User qualification level in the phase considered
-	- Represents the level of control of the user or the worker regarding an operational context
-	- <p>0: Favourable</p><p>1: Moderate</p><p>2: Unfavourable</p>
-	- <p>0: Highly qualified</p><p>1: Qualified</p><p>2: Slightly qualified or with little experience</p><p>In some phases, the user to be considered is the person who does the maintenance or servicing</p>
-	- 10
-*   - System mobility
-	- Represents contingencies related to possibilities of the system being moved
-	- <p>0:Non aggressive</p><p>1: Moderate</p>
-	- <p>0: Few contingencies (fixed or stable environment)</p><p>1: Moderate contingencies</p><p>2: Severe contingencies, large variability (automobile)</p>
-	- 4
-*   - Product manipulation
-	- Represents the possibility of false manipulations, shocks, drops, etc .
-	- <p>0:Non aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- <p>0: Not manipulated</p><p>1: Manipulation without displacement or disassembly</p><p>2: Manipulation with displacement or disassembly</p>
-	- 15
-*   - Type of electrical network for the system
-	- Represents the level of electrical disturbance expected on power supplies, signals and electrical lines: power on, switching, power supply, connection/disconnection
-	- <p>0:Non aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- <p>0: Undisturbed network (dedicated regulated power supply)</p><p>1: Slightly disturbed network</p><p>2: Network subject to disturbances (on board network)</p><p>The network type is a system data but that can be broken down and related to specific products</p>
-	- 4
-*   - Product exposure to human activity
-	- Represents exposure to contingencies related to human activity: shock, change in final use, etc.
-	- <p>0:Non aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- <p>0: Uninhabitable zone</p><p>1: Possible activity in the product zone</p><p>2: Normal activity in the product zone</p><p>The product can be exposed to human activity even if it is not handled itself during normal use</p>
-	- 8
-*   - Product exposure to machine disturbances
-	- Represents contingencies related to operation of machines, engines, actuators: shock, overheating, electrical disturbances, pollutants, etc.
-	- <p>0:Non aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- <p>0: Null (telephone)</p><p>1: Indirect exposure (product in compartment)</p><p>2: Strong or direct exposure (product in engine area)</p>
-	- 3
-*   - Product exposure to the weather
-	- Represents exposure to rain, hail, frost, sandstorm, lightning, dust
-	- <p>0:Non aggressive</p><p>1: Moderate</p>
-	- <p>0: Null (home)</p><p>1: Indirect exposure (compartment, station hall)</p><p>2: Outdoors (automobile engine)</p>
-	- 2
-```
-
-Each level 0, 1 or 2 of the recommendation is given a specific mark as defined in the following table, independently of the levels and independently of the phases:
-
-```{list-table} Marks for $\Pi_{application\_ i}$ whatever the phase.
+```{list-table} Marks for $\Pi_{application\_ i}$ whatever the phase
 :name: eee-table4-5
 :header-rows: 1
 :widths: 60 40
@@ -584,7 +391,6 @@ Each level 0, 1 or 2 of the recommendation is given a specific mark as defined i
 
 The final calculation of $\Pi_{application\_ i}$ is therefore:
 
-
 ````{admonition} Equation
 :class: equation
 ```{math}
@@ -597,222 +403,29 @@ The final calculation of $\Pi_{application\_ i}$ is therefore:
 
 So, the recommendation for space applications for the launch, time to reach orbit and in-orbit phases is to use the value of 1.13 for the calculation of $\Pi_{application\_ i}$ in all applications.
 
-For transport and storage phases of the mission profile, the recommendation for space applications is the following:
-
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-6')" placeholder="Search table...">
-
-```{list-table} Recommended parameters for $\Pi_{application\_ i}$ for transport and storage phases.
-:name: eee-table4-6
-:header-rows: 1
-:widths: 25 35 15 15 10
-
-*   - Criterion
-	- Description
-	- Levels
-	- Recommendation
-	- Weight $\text{Pos}_{k}$
-*   - User type in the phase considered
-	- Represents the capability to respect procedures, facing operational constraints.
-	- <p>0: Favourable</p><p>1: Moderate</p><p>2: Unfavourable</p>
-	- 0 Favourable
-	- 20
-*   - User qualification level in the phase considered
-	- Represents the level of control of the user or the worker regarding an operational context
-	- <p>0: Favourable</p><p>1: Moderate</p><p>2: Unfavourable</p>
-	- 0 Favourable
-	- 12
-*   - System mobility
-	- Represents contingencies related to possibilities of the system being moved
-	- <p>0: Non-aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- 0 Non-aggressive
-	- 4
-*   - Product manipulation
-	- Represents the possibility of false manipulations, shocks, drops, etc.
-	- <p>0: Non-aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- 0 Non-aggressive
-	- 15
-*   - Type of electrical network for the system
-	- Represents the level of electrical disturbance expected on power supplies, signals and electrical lines: power on, switching, power supply, connection/disconnection
-	- <p>0: Non-aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- 0 Non-aggressive
-	- 4
-*   - Product exposure to human activity
-	- Represents exposure to contingencies related to human activity: shock, change in final use, etc.
-	- <p>0: Non-aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- 0 Non-aggressive
-	- 6
-*   - Product exposure to machine disturbances
-	- Represents contingencies related to operation of machines, engines, actuators: shock, overheating, electrical disturbances, pollutants, etc.
-	- <p>0: Non-aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- 0 Non-aggressive
-	- 3
-*   - Product exposure to the weather
-	- Represents exposure to rain, hail, frost, sandstorm, lightning, dust
-	- <p>0: Non-aggressive</p><p>1: Moderate</p><p>2: Severe</p>
-	- 0 Non-aggressive
-	- 2
-```
+For transport and storage phases of the mission profile, the Recommendation for space applications is presented in Annex A.2-9.2.
 
 Based on the marks given in {numref}`eee-table4-5` and calculation with {eq}`Equation_1_14`, the recommendation for space applications for transport and storage phases is to use the value of 1.00 for the calculation of $\Pi_{application\_ i}$ in all applications.
 
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_15
-\Pi_{\text{application}} = \frac{1}{66} \cdot \sum_{k = Criteria}^{}{P_{\text{marks}_{k}} \cdot \text{Pos}_{k}} = \frac{1*20 + 1*12 + 1*4 + 1*15 + 1*4 + 1*6 + 1*3 + 1*2}{66} = \frac{66}{66} = 1.00
-```
-````
 
 (eee_8_3_2_20)=
 ## Influence of the policy for over-stresses
 
-$\Pi_{ruggedising}$ represents the influence of the policy for considering over-stresses in the product development and is based on 17 different questions presented in the paragraph dedicated to $\Pi_{ruggedising}$ in {cite:p}`eee-UTE-C80-811` page 102. 
+$\Pi_{ruggedising}$ represents the influence of the policy for considering over-stresses in the product development and is based on 17 different questions presented in the paragraph dedicated to $\Pi_{ruggedising}$ in {cite:p}`eee-UTE-C80-811`, page 102. 
 
-Some of the answers of these questions are common to all space applications. Questions n° 157, 158, 159, 160, 161, 163, 167 and 169 have been partly modified to consider specificities of space applications, mainly because maintenance of the products is not possible on satellites. The modification of the recommendations, descriptions and criteria of these modified questions are listed in {ref}`eee_annex_a`. Moreover, question n°168 is not directly applicable to space applications also due to its maintenance purpose and is removed from the questionnaire.
+Some of the answers to these questions are common to all space applications. Questions n° 157, 158, 159, 160, 161, 163, 167 and 169 have been partly modified to consider specificities of space applications, mainly because maintenance of the products is not possible on spacecrafts. The modification of the Recommendations, descriptions and criteria of these modified questions are listed in {ref}`eee_annex_a`, section A.2-10. Moreover, question n°168 is not directly applicable to space applications also due to its maintenance purpose and is removed from the questionnaire. 
 
 ```{admonition} Recommendation
 :class: recommendation
-
-A first recommendation concerning the questionnaire is to answer to all questions as N4 ("recommendation is fully applied") for most electronic units' suppliers in the space industry as a first approach.
+Answer all the questions as N4 (“Recommendation is fully applied”) for most electronic units’ suppliers in the space industry, as a first approach. 
 ```
 
 ```{admonition} Rule
 :class: rule
-
-For {term}`CDR`, Sub-contractors, or suppliers, in particular those who are new in the space industry or in the frame of "{term}`new space <New space>`" programs need to adapt these levels to their conditions with rationale provided.
+For {term}`CDR`, sub-contractors, or suppliers, in particular those who are new in the space industry or in the frame of “new space” programs need to adapt these levels to their conditions with rationale provided. Therefore, the table with associated weights and levels N4 for space applications is presented in Annex A.2-10, Table A.10-1.
 ```
-
-Therefore, the table with associated weights and levels N4 for space applications is the following:
-
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-7')" placeholder="Search table...">
-
-```{list-table} Recommended parameters for $\Pi_{ruggedising}$.
-:name: eee-table4-7
-:header-rows: 1
-:widths: 10 50 10 10 20
-
-*   - Sheet
-	- Recommendation
-	- $Recom_{weight}$
-	- Preliminary Level
-	- {term}`CDR` Level
-*   - 169
-	- Write complete procedures for all product implementation operations
-	- 7
-	- N4
-	- To Be Completed
-*   - 157
-	- Provide training and manage maintenance of skills for implementation of the product
-	- 7
-	- N4
-	- To Be Completed
-*   - 158
-	- Check that procedures specific to the product and rules specific to businesses are respected by an appropriate monitoring system
-	- 7
-	- N4
-	- To Be Completed
-*   - 156
-	- Check that environmental specifications are complete.
-	- 4
-	- N4
-	- To Be Completed
-*   - 164
-	- Justify that environment specifications are respected
-	- 4
-	- N4
-	- To Be Completed
-*   - 165
-	- Carry out a product improvement process (for example highly accelerated stress tests) so as to limit the product sensitivity to environmental constraints (disturbances, environments, overstress)
-	- 7
-	- N4
-	- To Be Completed
-*   - 167
-	- Carry out a process {term}`FMECA` (Failure Modes, Effects and Criticality Analysis) for implementation operations
-	- 4
-	- N4
-	- To Be Completed
-*   - 170
-	- Respect a standard dealing with power supplies (standard that defines possible disturbances and possible EN2282 type variations). The standard must be respected both for electricity generation and for electricity consumption 
-	- 4
-	- N4
-	- To Be Completed
-*   - 166
-	- Perform an analysis of failure cases that could result in failure propagation.
-	- 4
-	- N4
-	- To Be Completed
-*   - 163
-	- Include production and storage environments in the product environment specifications
-	- 4
-	- N4
-	- To Be Completed
-*   - 160
-	- Study and handle risks of the product under test being deteriorated by failures of its test means
-	- 4
-	- N4
-	- To Be Completed
-*   - 162
-	- Use appropriate prevention means to identify and handle reasonably predictable abnormal uses
-	- 4
-	- N4
-	- To Be Completed
-*   - 161
-	- Identify and use appropriate prevention means of preventing reasonably predictable aggressions
-	- 4
-	- N4
-	- To Be Completed
-*   - 159
-	- Design dependable electrical protection devices.
-	- 4
-	- N4
-	- To Be Completed
-*   - 171
-	- Respect a standard dealing with conducted and radiated electromagnetic disturbances. This is equally applicable to the product and the system into which it is integrated
-	- 3
-	- N4
-	- To Be Completed
-```
-
-Each level N1, N2, N3 or N4 of the recommendation is given a specific mark as defined in the following table:
-
-```{list-table} Recommended parameters for $\Pi_{ruggedising}$.
-:name: eee-table4-8
-:header-rows: 1
-:widths: 25 75
-
-*   - Level
-	- Marks $Satisfaction_{mark}$
-*   - N1
-	- 0
-*   - N2
-	- 1
-*   - N3
-	- 2
-*   - N4
-	- 3
-```
-
-The final calculation of $\Pi_{ruggedising}$ with removal of question n°168 is therefore:
-
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_16
-recom_{grade} = \frac{1}{213} \cdot \sum_{i}^{\text{Recommendations}}{{\text{Recom}_{\text{Weight}}}_{i} \cdot}{\text{Satisfaction}_{\text{Mark}}}_{i} = \frac{213}{213} = 1
-```  
-```{math}
-:label: Equation_1_17
-\Pi_{\text{ruggedising}} = exp\left\lbrack 0.7 \cdot \left( 1 - recom_{grade} \right) \right\rbrack = exp\left\lbrack 0.7 \cdot (1 - 1) \right\rbrack = 1.0
-```
-````
 
 (eee_8_3_2_21)=
 ## Coefficient of sensitivity to over-stresses
 
-$C_{sensitivity}$ represents the coefficient of sensitivity to over-stresses inherent to the item technology considered. Sensitivities related to Electrical OverStress, Thermal OverStress and Mechanical OverStress are given to show the relative sensitivity of {term}`EEE` components to the different types of overstresses. The coefficient $C_{sensitivity}$ is an exponential factor in the $\Pi_{induced\_ i}$ formula and specific to each component technology. The values for each technology are provided in {numref}`eee_8_3_4`.
-
-```{admonition} Note
-:class: note
-
-For the 2021 issue of FIDES, these actors have been modified. The detail is also given in {numref}`eee_8_3_4`.
-```
+$C_{sensitivity}$ represents the coefficient of sensitivity to over stresses inherent to the item technology considered. Sensitivities related to electrical overstress, thermal overstress and mechanical over stress are given, to show the relative sensitivity of EEE components to the different types of over stresses.  The coefficient $C_{sensitivity}$ is an exponential factor in the $\Pi_{induced\_ i}$ formula and specific to each component technology. The values for each technology are provided in {numref}`eee_8_3_5`.

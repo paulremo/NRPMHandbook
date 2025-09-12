@@ -354,7 +354,6 @@ Guidance on the root cause coverage required for this reliability prediction use
 
 ```{admonition} Note 5
 :class: note
-:name: note_5
 The recommendation made for systematic failure modelling is driven by the limitations of the available modelling approaches, which do not account for the relevant decision variables (e.g. impact of maturity category, test strategy). Other design decisions, such as redundancy sizing or the margin policy, are not effective to avoid systematic failures. For these reasons, the added value to consider this failure category for design support is small despite its clear relevance for the overall failure count. 
 ```
 
@@ -547,7 +546,6 @@ The contribution of reliability prediction to each phase and the associated revi
 
 ```{admonition} Note 6
 :class: note
-:name: note_6
 * Although ECSS-Q-ST-30C mentions a reliability prediction at {term}`PRR` and {term}`SRR`, this is not done for all projects and can be used only to assist apportioning of requirements to lower level. A {term}`FMEA` at SRR can be required for specific missions and can be used, e.g. to assist safety analysis. 
 ```
 
@@ -766,7 +764,6 @@ Within each class, the missions can be further categorized based on the followin
 
 ```{admonition} Note 7
 :class: note
-:name: note_7
 Other companies can have their own specific mission classification.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'methodo-table5-11')" placeholder="Search table...">
@@ -1063,7 +1060,6 @@ Given that 15% of the system failures are caused by a failure of the power suppl
 
 ```{admonition} Note 8
 :class: note
-:name: note_8
 This table corresponds to a specific example with the predefined weighting factors. It should be adapted to the need and experience of the user.
 ```
 

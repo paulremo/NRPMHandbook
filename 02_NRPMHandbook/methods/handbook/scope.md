@@ -2,7 +2,7 @@
 
 # Scope
 
-This digital platform mirrors the content of the ECSS-Q-HB-30-02, Issue 1. 
+This digital platform mirrors the content of the ECSS-Q-HB-30-02A, Issue 1. 
 
 The objective of the handbook was to provide a reliability methodology that can be used for space applications, without the limitations and shortcomings of existing reliability prediction methodologies, that are mainly focussed on ground applications. 
 

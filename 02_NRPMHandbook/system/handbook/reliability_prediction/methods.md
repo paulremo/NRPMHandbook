@@ -888,7 +888,6 @@ The reliability analysis based on Bayesian networks starts with identifying the 
 
 ````{admonition} Note
 :class: note
-:name: note
 For a serial and parallel system, the Bayesian network is the same but with different probability tables.
 ````
 

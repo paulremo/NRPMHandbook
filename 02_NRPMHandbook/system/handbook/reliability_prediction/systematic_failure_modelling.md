@@ -23,7 +23,6 @@ To account for these mitigation measures, the modelling presented in this paragr
 
 ````{admonition} Note
 :class: note
-:name: Note
 Operation errors can lead to systematic failures even without the presence of flaws. 
 ````
 
@@ -74,7 +73,6 @@ E.g. operation error = 300 000 On/Off cycles over {term}`mission lifetime <Missi
 
 ````{admonition} Note
 :class: note
-:name: Note
 The term “system” in this context can relate to different levels in the system hierarchy, e.g. equipment, subsystem or spacecraft level.
 ````
 
@@ -88,7 +86,6 @@ Systematic failures can result from requirement, design or manufacturing errors 
 
 ````{admonition} Note
 :class: note
-:name: Note
 The same categorization in principle applies also to software errors, which can be introduced during software requirement specification, during software design and during manufacturing (coding). During operations (maintenance), software errors can be introduced when uploading patches, including errors that occur during the process of uploading the patch.
 ````
 
@@ -98,7 +95,6 @@ In principle, systematic failures can be introduced at any level. This holds esp
 
 ````{admonition} Note
 :class: note
-:name: Note
 In some situations, the systematic failures occur in a complex failure scenario, e.g. a random failure at equipment level can lead to the loss of the satellite through failure propagation when the FDIR function is not designed appropriately (e.g. no segregation between nominal channel and redundant one).
 ````
 
@@ -159,7 +155,6 @@ The data used for modelling provides information on anomalies observed during op
 
 ````{admonition} Note
 :class: note
-:name: Note
 In the case of Single Point Failure ({term}`SPF`) (i.e. no redundancy), a definitive failure would lead to severity from 1 to 3, depending on the consequences.
 ````
 
@@ -213,7 +208,6 @@ Operation error relates to any anomaly in the operations plan with respect to th
 
 ````{admonition} Note
 :class: note
-:name: Note
 It is assumed that the user’s manual is error free, otherwise the error is considered as a design error.
 ````
 
@@ -357,7 +351,7 @@ In the following paragraph, some basic assumptions and resulting limitations of 
 
 The selected modelling approach is independent of the manufacturer and spacecraft for which the prediction should be performed, but the data used for modelling is not. In terms of quality assurance levels and manufacturer experience, the model is valid for major satellite prime contractors and should not be used when lower quality levels should be suspected (see e.g. Lecointe et al. {cite:p}`sys-firts-750-cubesats` for a comparison between Cubesat reliability and traditional {term}`GEO` satellites or Swartwout {cite:p}`sys-all-cubesats` for a comparison of different Cubesat missions implying different quality assurance regimes).
 
-The impact of different spacecraft development strategies (e.g. generic versus non-generic product) and orbits (e.g. {term}`GEO` versus LEO) was investigated based on the data used for the model in {ref}`Annex A <syst_annex_a>`, but the results were difficult to interpret and are therefore not shown hereafter. The model provided is based on the overall fleet data, i.e. considering a mix of generic and non-generic products in different orbits. What can be said from the investigations made is that the model is well in line with the results derived for GEO satellites. For other types of spacecrafts, it can be used as a first approximation even though implying a somewhat larger implicit {term}`model uncertainty <Model uncertainty>`.
+The impact of different spacecraft development strategies (e.g. generic versus non-generic product) and orbits (e.g. {term}`GEO` versus LEO) was investigated based on the data used for the model in Annex A od this part, but the results were difficult to interpret and are therefore not shown hereafter. The model provided is based on the overall fleet data, i.e. considering a mix of generic and non-generic products in different orbits. What can be said from the investigations made is that the model is well in line with the results derived for GEO satellites. For other types of spacecrafts, it can be used as a first approximation even though implying a somewhat larger implicit {term}`model uncertainty <Model uncertainty>`.
 
 
 **Using severity levels in a reliability prediction context**
@@ -369,7 +363,7 @@ Another consequence of the selected modelling approach is that it is not straigh
 
 **Applicability at different levels**
 
-The modelling has been performed top down, starting at satellite level and going down to subsystem level only in a second step. As discussed in {ref}`Annex A <syst_annex_a>`, an important assumption behind this approach is the shape of the anomaly occurrence model. It is independent of the considered subsystem, which is certainly not true in reality. As a result, even though it is mathematically possible to derive a time dependent anomaly rate per subsystem simply by multiplying the satellite level anomaly occurrence model with the conditional probability of each subsystem given anomaly occurrence, but the distribution of anomalies over time should be treated with caution when following this approach (see also {numref}`syst_11_9_4_2`).
+The modelling has been performed top down, starting at satellite level and going down to subsystem level only in a second step. As discussed in Annex A of this part, an important assumption behind this approach is the shape of the anomaly occurrence model. It is independent of the considered subsystem, which is certainly not true in reality. As a result, even though it is mathematically possible to derive a time dependent anomaly rate per subsystem simply by multiplying the satellite level anomaly occurrence model with the conditional probability of each subsystem given anomaly occurrence, but the distribution of anomalies over time should be treated with caution when following this approach (see also {numref}`syst_11_9_4_2`).
 
 Going down only to subsystem level avoids the complexities arising due to redundancy implemented at equipment level: The data preparation would have been much more demanding at this level. The effect of redundancy is implicit in the classification by severity but cannot be made explicit based on the data used for modelling.  
 
@@ -384,7 +378,7 @@ As the modelling goes down to subsystem level only, the results cannot be used t
 (syst_11_9_4_2)=
 ### Additional data
 
-In addition to the information directly used for modelling ({ref}`Annex A <syst_annex_a>`), the following information can be useful for the interpretation of the modelling results. The data is taken from the same source as the model input.
+In addition to the information directly used for modelling (see Annex A of this part), the following information can be useful for the interpretation of the modelling results. The data is taken from the same source as the model input.
 
 **Major anomalies during In-Orbit Testing**
 
@@ -406,7 +400,6 @@ As discussed in {numref}`syst_11_9_2`, systematic failures and anomalies can be 
 
 ````{admonition} Note
 :class: note
-:name: Note
 Hardware failure” is here defined in a wide sense, i.e. all anomalies having an impact on the mission (severity 1 to 3) are considered as failures, even though they cannot involve a definitive hardware failure.
 ````
 

@@ -1,9 +1,583 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
 (eee_annex_b)=
-# Annex B : list of questions in the process questionnaire
+# Annex B : Formulae concerning {numref}`eee_8_3_5_1`, Capacitors
 
-This table contains, for each phase of the development and manufacturing, the recommendations for the satisfaction level of the questions of the questionnaire to estimate the process factor $\Pi_{\text{Process}}$ for quality and technical control over reliability in the product life cycle as defined in Section {numref}`eee_4_1`. It considers also the modified questions of {ref}`eee_annex_c` adapted to space applications. The recommendations are done for the following contributors:
+(eee_annex_b_1)=
+## Lambda physical formula
+
+For ceramic and tantalum capacitors:
+
+````{admonition} Equation
+:class: equation
+```{math}
+:label: Equation_1_32
+\lambda_{\text{Physical}} = \lambda_{0_{\text{capacitor}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
+````
+
+With the following parameters:
+
+```{list-table} Details of parameters for ceramic capacitors
+:name: eee_table_b_1_1
+:header-rows: 1
+:widths: 40 60
+
+* - Parameter
+  - Description
+* - $\lambda_{\text{phy}}$
+  - Physical stresses failure rate (overall term)
+* - $\lambda_{0_\text{capacitor}}$
+  - Base failure rate for one group of capacitor
+* - $\Pi_{\text{Thermo-electrical}}$
+  - Thermo-electrical factor
+* - $\Pi_{TCy}$
+  - Cycling factor
+* - $\Pi_{\text{mechanical}}$
+  - Mechanical factor
+* - $\Pi_{\text{induced}}$
+  - Induced factor
+```
+
+
+(eee_annex_b_1_1)=
+### Physical stresses for capacitors (ceramic & tantalum)
+
+The physical stresses modelled for capacitors are the thermal, thermal cycling and mechanical factors.
+
+````{admonition} Equation
+:class: equation
+```{math}
+:label: Equation_1_33
+\Pi_{\text{Thermal}} = \gamma_{\text{TH}_{\text{EL}}} \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{3} \cdot \exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{\text{board}_{\text{ref}}} + \text{ΔT}} \right) \right\rbrack
+```
+```{math}
+:label: Equation_1_34
+\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{\text{cy}_{\text{phase}}}}{t_{\text{phase}}} \right) \cdot \left( \frac{\min\left( \theta_{\text{cy}},2 \right)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\Delta T_{\text{cycling}}}{20} \right)^{1.9} \cdot \exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{\max_{\text{cycling}}}} \right) \right\rbrack
+```  
+```{math}
+:label: Equation_1_35
+\Pi_{\text{Mechanical}} = \gamma_{\text{Mech}} \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+```
+Where, $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_{\text{TCy}}$, $\gamma_{\text{Mech}}$, $\gamma_{\text{TH}_{\text{EL}}}$ is explained in Annex A.3 to A.6 and presented in Table B.1-2 for ceramic capacitors and B.1-5 for tantalum capacitors.
+````
+
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table_b_1_2')" placeholder="Search table...">
+
+```{list-table} Details of parameters for ceramic capacitors
+:name: eee_table_b_1_2
+:header-rows: 1
+:widths: 30 10 10 10 10 10 10 10
+
+*   - Description
+    - Ref
+    - $\lambda_{0_{\text{capacitor}}}$
+    - $E_{a}$
+    - $S_{\text{reference}}$
+    - $\gamma_{\text{TH}_{\text{EL}}}$
+    - $\gamma_{\text{TCy}}$
+    - $\gamma_{\text{Mech}}$
+*   - Ceramic Capacitor Type I - Low {term}`CV`
+    - ECCC_01
+    - 0.03
+    - 0.1
+    - 0.3
+    - 0.7
+    - 0.28
+    - 0.02
+*   - Ceramic Capacitor Type I - Medium {term}`CV`
+    - ECCC_02
+    - 0.05
+    - 0.1
+    - 0.3
+    - 0.7
+    - 0.28
+    - 0.02
+*  - Ceramic Capacitor Type I - High {term}`CV`
+    - ECCC_03
+    - 0.40
+    - 0.1
+    - 0.3
+    - 0.69
+    - 0.26
+    - 0.05
+*   - Ceramic Capacitor Type II - Low {term}`CV`
+    - ECCC_04
+    - 0.08
+    - 0.1
+    - 0.3
+    - 0.7
+    - 0.28
+    - 0.02
+*   - Ceramic Capacitor Type II - Medium {term}`CV`
+    - ECCC_05
+    - 0.15
+    - 0.1
+    - 0.3
+    - 0.7
+    - 0.28
+    - 0.02
+*   - Ceramic Capacitor Type II - High {term}`CV`
+    - ECCC_06
+    - 1.20
+    - 0.1
+    - 0.3
+    - 0.44
+    - 0.51
+    - 0.05
+*   - Ceramic Capacitor Type II Polymer terminations - Low {term}`CV`
+    - ECCC_07
+    - 0.08
+    - 0.1
+    - 0.3
+    - 0.7
+    - 0.28
+    - 0.02
+*   - Ceramic Capacitor Type II Polymer terminations - High/Medium {term}`CV`
+    - ECCC_08
+    - 0.15
+    - 0.1
+    - 0.3
+    - 0.7
+    - 0.28
+    - 0.02
+```
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table_b_1_3')" placeholder="Search table...">
+
+```{list-table} Definition of CV product for ceramic capacitors for space applications
+:name: eee_table_b_1_3
+
+* - <table class="myTable" id="eee_table_b_1_3">
+        <thead>
+            <th><strong>CV product</strong></th>
+            <th><strong>Type I</strong></th>
+            <th><strong>Type II</strong></th>
+        </thead>
+        <tr>
+            <td>Low CV product</td>
+            <td>Less than 5.0x10<sup>-8</sup>V.F</td>
+            <td>Less than 5.0x10<sup>-6</sup>V.F</td>
+        </tr>
+        <tr>
+            <td>Medium CV product</td>
+            <td>
+                <p>Between 5.0x10<sup>-8</sup>V.F and 1.0x10<sup>-6</sup>V.F</p>
+                <p>or Higher than 1.0x10<sup>-6</sup>V.F and not in technological limit</p>
+            </td>
+            <td>
+                <p>Between 5.0x10<sup>-6</sup>V.F and 1.0x10<sup>-4</sup>V.F</p>
+                <p>or Higher than 1.0x10<sup>-4</sup>V.F and not in technological limit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>High CV product</td>
+            <td>Higher than 1.0x10<sup>-6</sup>V.F and in technological limit</td>
+            <td>Higher than 1.0x10<sup>-4</sup>V.F and in technological limit</td>
+        </tr>
+    </table>
+```
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table_b_1_4')"
+    placeholder="Search table...">
+
+```{list-table} Groups of tantalum capacitors
+:name: eee_table_b_1_4
+
+* - <table class="myTable" id="eee_table_b_1_4">
+        <thead>
+            <tr class="header">
+                <th><strong>Description </strong></th>
+                <th><strong>Ref</strong></th>
+                <th><em><strong>λ<sub>0_capacitor</sub></strong></em></th>
+                <th><em><strong>E<sub>a</sub> (eV)</strong></em></th>
+                <th><em><strong>S<sub>reference</sub></strong></em></th>
+                <th><em><strong>\(\gamma\)<sub>TH_El</sub></strong></em></th>
+                <th><em><strong>\(\gamma\)<sub>TCy</sub></strong></em></th>
+                <th><em><strong>\(\gamma\)<sub>Mech</sub></strong></em></th>
+            </tr>
+        </thead>
+        <tr>
+            <td colspan="8" class="db-header">Wet tantalum capacitor (ETCT_07)</td>
+        </tr>
+        <tr>
+            <td>Wet tantalum capacitor silver case sealed by elastomer</td>
+            <td>ECTC_01</td>
+            <td>0.77</td>
+            <td>0.15</td>
+            <td>0.6</td>
+            <td>0.87</td>
+            <td>0.01</td>
+            <td>0.12</td>
+        </tr>
+        <tr>
+            <td>Wet tantalum capacitor silver case sealed by glass beads</td>
+            <td>ECTC_02</td>
+            <td>0.33</td>
+            <td>0.15</td>
+            <td>0.6</td>
+            <td>0.81</td>
+            <td>0.01</td>
+            <td>0.18</td>
+        </tr>
+        <tr>
+            <td>Wet tantalum capacitor beads tantalum case sealed by glass beads</td>
+            <td>ECTC_03</td>
+            <td>0.05</td>
+            <td>0.15</td>
+            <td>0.6</td>
+            <td>0.88</td>
+            <td>0.04</td>
+            <td>0.08</td>
+        </tr>
+        <tr>
+            <td colspan="8" class="db-header">Solid tantalum capacitor (ETCT_08)</td>
+        </tr>
+        <tr>
+            <td>Solid tantalum capacitor drop packaging</td>
+            <td>ECTC_04</td>
+            <td>1.09</td>
+            <td>0.15</td>
+            <td>0.4</td>
+            <td>0.86</td>
+            <td>0.12</td>
+            <td>0.02</td>
+        </tr>
+        <tr>
+            <td>Solid tantalum capacitor SMD packaging</td>
+            <td>ECTC_05</td>
+            <td>0.54</td>
+            <td>0.15</td>
+            <td>0.4</td>
+            <td>0.84</td>
+            <td>0.14</td>
+            <td>0.02</td>
+        </tr>
+        <tr>
+            <td>Solid tantalum axial metal packaging</td>
+            <td>ECTC_06</td>
+            <td>0.25</td>
+            <td>0.15</td>
+            <td>0.4</td>
+            <td>0.94</td>
+            <td>0.04</td>
+            <td>0.02</td>
+        </tr>
+    </table>
+```
+
+(eee_annex_b_1_2)=
+### Physical stresses for plastic film capacitors
+
+The generic formula for plastic film capacitors is a little different from the one presented above, as shown here:
+
+General formula:`
+
+````{admonition} Equation
+:class: equation
+```{math}
+:label: Equation_1_37
+\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{Film}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}}
+```
+````
+
+With:
+
+````{admonition} Equation
+:class: equation
+```{math}
+\lambda_{\text{Physical}} = \lambda_{0_{\text{capacitor}}} \cdot \sum_{i}^{\text{Phases}}{\frac{\left( t_{\text{phase}} \right)_{i}}{t_{\text{total}}} \cdot \left( \Pi_{\text{Thermal}} + \Pi_{\text{TCy}} + \Pi_{\text{Mechanical}} \right)_{i}} \cdot \left( \Pi_{\text{induced}} \right)_{i}
+````
+
+With the following parameters:
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table_b_1_5')"
+    placeholder="Search table...">
+
+```{list-table} Details of parameters for plastic film capacitors
+:name: eee_table_b_1_5
+
+* - <div class="wy-table-responsive">
+      <table class="myTable" id="eee_table_b_1_5">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="math">\( \lambda_{\text{phy}} \)</span></td>
+            <td>Physical stresses failure rate (overall term)</td>
+          </tr>
+          <tr>
+            <td><span class="math">\( \lambda_{0_\text{capacitor}} \)</span></td>
+            <td>Base failure rate for one group of capacitor</td>
+          </tr>
+          <tr>
+            <td><span class="math">\( \Pi_{\text{Thermal}} \)</span></td>
+            <td>Thermal factor</td>
+          </tr>
+          <tr>
+            <td><span class="math">\( \Pi_{TCy} \)</span></td>
+            <td>Cycling factor</td>
+          </tr>
+          <tr>
+            <td><span class="math">\( \Pi_{\text{mechanical}} \)</span></td>
+            <td>Mechanical factor</td>
+          </tr>
+          <tr>
+            <td><span class="math">\( \Pi_{RH} \)</span></td>
+            <td>Humidity factor</td>
+          </tr>
+          <tr>
+            <td><span class="math">\( \Pi_{\text{induced}} \)</span></td>
+            <td>Induced factor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+```
+
+````{admonition} Note
+:class: note
+PFILM  is defined in 8.3.3.9 and A.2.18.
+````
+
+The physical stresses modelled for plastic film capacitors are the thermal, thermal cycling, mechanical and humidity factors. 
+
+````{admonition} Equation
+:class: equation
+```{math}
+:label: Equation_1_44
+\Pi_{\text{Thermal}} = 0.18 \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{6} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```  
+```{math}
+:label: Equation_1_45
+\Pi_{\text{Tcy}} = 0.14 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+```  
+```{math}
+:label: Equation_1_46
+\Pi_{\text{Mechanical}} = 0.02 \cdot \left( \frac{G_{\text{rms}}}{0.5} \right)^{1.5}
+``` 
+```{math}
+:label: Equation_1_47
+\Pi_{\text{RH}} = {0.66 \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+```
+Where, $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$ explained in Annex A.3 to A.6 and presented in Table B.1-2 for ceramic capacitors and B.1-5 for tantalum capacitors.
+
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table_b_1_6')"
+    placeholder="Search table...">
+
+```{list-table} Parameters for physical stresses of plastic film capacitors.
+:name: eee-table4-33
+
+* - <table class="myTable" id="eee_table4_33">
+        <thead>
+            <tr>
+                <th><strong>Type of plastic film capacitors</strong></th>
+                <th><strong>Ref</strong></th>
+                <th><strong>λ<sub>0_capacitor</sub></strong></th>
+                <th><strong>E<sub>a</sub> (eV)</strong></th>
+                <th><strong>S<sub>reference</sub></strong></th>
+                <th><strong>γ<sub>TH El</sub></strong></th>
+                <th><strong>γ<sub>TCy</sub></strong></th>
+                <th><strong>γ<sub>Mech</sub></strong></th>
+                <th><strong>γ<sub>RH</sub></strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Polypropylene film capacitor</td>
+                <td>PP</td>
+                <td>0.02</td>
+                <td>0.65</td>
+                <td>0.3</td>
+                <td>0.18</td>
+                <td>0.14</td>
+                <td>0.02</td>
+                <td>0.66</td>
+            </tr>
+            <tr>
+                <td>Polyethylene terephtalate film capacitor</td>
+                <td>PET</td>
+                <td>0.06</td>
+                <td>0.48</td>
+                <td>0.3</td>
+                <td>0.18</td>
+                <td>0.14</td>
+                <td>0.02</td>
+                <td>0.66</td>
+            </tr>
+            <tr>
+                <td>Polyethylene naphtalate film capacitor</td>
+                <td>PEN</td>
+                <td>0.03</td>
+                <td>0.55</td>
+                <td>0.3</td>
+                <td>0.18</td>
+                <td>0.14</td>
+                <td>0.02</td>
+                <td>0.66</td>
+            </tr>
+            <tr>
+                <td>Polyphenylene sulfide film capacitor</td>
+                <td>PPS</td>
+                <td>0.02</td>
+                <td>0.55</td>
+                <td>0.3</td>
+                <td>0.18</td>
+                <td>0.14</td>
+                <td>0.02</td>
+                <td>0.66</td>
+            </tr>
+            <tr>
+                <td>Teflon film capacitor</td>
+                <td>PTFE</td>
+                <td>0.03</td>
+                <td>0.55</td>
+                <td>0.3</td>
+                <td>0.18</td>
+                <td>0.14</td>
+                <td>0.02</td>
+                <td>0.66</td>
+            </tr>
+        </tbody>
+    </table>
+```
+
+(eee_annex_b_1_3)=
+### Induced factor Πinduced
+
+**Csensitivity**
+
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table_b_1_7')"
+    placeholder="Search table...">
+
+```{list-table} Coefficient of sensitivity for capacitors
+:name: eee_table_b_1_7
+:header-rows: 1
+:widths: 70 30
+
+* - Technologies
+  - $C_{\text{sensitivity}}$
+* - Ceramic capacitor with defined temperature coefficient (type I)
+  - 6.30
+* - Ceramic capacitor with non-defined temperature coefficient (type II X5R)
+  - 6.48
+* - Ceramic capacitor with non-defined temperature coefficient (type II X7R)
+  - 6.48
+* - Ceramic capacitor with polymer terminations and non-defined temperature coefficient (type II X5R)
+  - 6.08
+* - Ceramic capacitor with polymer terminations and non-defined temperature coefficient (type II X7R)
+  - 6.03
+* - Tantalum capacitors
+  - 7.43
+* - Plastic film capacitors
+  - 6.05
+```
+
+(eee_annex_b_2)=
+## Pi Part-Manufacturing
+
+(eee_annex_b_2_1)=
+### Ceramic capacitors
+
+```{list-table} Recommendation for definition of parameter $QA_{\text{component}}$ for ceramic capacitors
+:name: eee_table_b_2_1
+:header-rows: 1
+:widths: 50 30 20
+
+* - Ceramic capacitors: Component quality assurance level
+  - Position relative to the state of the art
+  - $QA_{\text{component}}$
+* - Qualification according to one of the following standards:  
+    MIL-PRF-xxxx level T, MIL-PRF-xxxx level S, MIL-PRF-xxxx level R,  
+    ESCC 300x, NASDA-QTS-xxxx class I (JAXA-QTS-2040E)
+  - Higher
+  - 3
+* - Qualification according to one of the following standards:  
+    AEC Q200, MIL-PRF-xxx level P, NASDA-QTS-xxxx class II,  
+    with identification of manufacturing sites for these standards,  
+    qualification according to approved CECC standards.
+  - Equivalent
+  - 2
+* - Qualification according to one of the following MIL-PRF-xxxx level M,  
+    or qualification program internal to the manufacturer and unidentified manufacturing sites
+  - Lower
+  - 1
+* - No information
+  - Much lower
+  - 0
+```
+
+(eee_annex_b_2_2)=
+### Tantalum capacitors
+
+```{list-table} Recommendation for definition of parameter $QA_{\text{component}}$ for tantalum capacitors
+:name: eee_table_b_2_2
+:header-rows: 1
+:widths: 50 30 20
+
+* - Tantalum capacitors: Component quality assurance level
+  - Position relative to the state of the art
+  - $QA_{\text{component}}$
+* - Qualification according to one of the following standards:  
+    AEC Q200, MIL-PRF-xxxx level T, MIL-PRF-xxxx level B,  
+    ESCC 300x, NASDA-QTS-xxxx class I (JAXA-QTS-2040E)
+  - Higher
+  - 3
+* - Qualification according to one of the following standards:  
+    MIL-PRF-xxxx level C, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards,  
+    qualification according to approved CECC standards.
+  - Equivalent
+  - 2
+* - Qualification according to one of the following:  
+    MIL-PRF-xxxx level D, or qualification program internal to the manufacturer and unidentified manufacturing sites
+  - Lower
+  - 1
+* - No information
+  - Much lower
+  - 0
+```
+
+(eee_annex_b_2_3)=
+### Plastic film capacitors
+
+```{list-table} Recommendation for definition of parameter $QA_{\text{component}}$ for plastic film capacitors
+:name: eee_table_b_2_3
+:header-rows: 1
+:widths: 50 30 20
+
+* - Plastic film capacitors: Component quality assurance level
+  - Position relative to the state of the art
+  - $QA_{\text{component}}$
+* - Qualification according to one of the following standards:  
+    AEC Q200, MIL-PRF-xxxx level T, MIL-PRF-xxxx level S, MIL-PRF-xxxx level R,  
+    ESCC 400x, NASDA-QTS-xxxx class I (JAXA-QTS-2050D)
+  - Higher
+  - 3
+* - Qualification according to one of the following standards:  
+    MIL-PRF-xxx level P, NASDA-QTS-xxxx class II with identification of manufacturing sites for these standards,  
+    qualification according to approved CECC standards.
+  - Equivalent
+  - 2
+* - Qualification according to MIL-PRF-xxxx level M,  
+    or qualification program internal to the manufacturer and unidentified manufacturing sites
+  - Lower
+  - 1
+* - No information
+  - Much lower
+  - 0
+```
+
+
+
+
+<!--
+
+This table contains, for each phase of the development and manufacturing, the recommendations for the satisfaction level of the questions of the questionnaire to estimate the process factor $\Pi_{\text{Process}}$ for quality and technical control over reliability in the product life cycle as defined in Section {numref}`eee_8_1`. It considers also the modified questions of {ref}`eee_annex_c` adapted to space applications. The recommendations are done for the following contributors:
 
 -   The prime contractor for classical space applications;
 

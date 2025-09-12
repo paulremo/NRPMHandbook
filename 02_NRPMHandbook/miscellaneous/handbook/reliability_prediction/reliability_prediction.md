@@ -28,7 +28,6 @@ One of the major characteristics of miscellaneous parts/items is that they are v
 
 ```{admonition} Note 
 :class: note
-:name: note_
 
 Software is, by nature, a miscellaneous item. Due to its specificity, a dedicated paragraph ({numref}`syst_11_10` of {ref}`Part 6 – System <sec_sys_handbook>` of this handbook) addresses software reliability modelling and therefore software reliability is not considered in the present part of this handbook.
 ```
@@ -45,7 +44,6 @@ The process used to define a miscellaneous ({term}`MIS`) item reliability model 
 
 ```{admonition} Note XX
 :class: note
-:name: note_XX
 MIS-X, below, addresses the miscellaneous part paragraphs. e.g. MIS-5.5 refers to  {numref}`misc_10_4`.
 ```
 

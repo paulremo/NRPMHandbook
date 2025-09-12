@@ -417,36 +417,28 @@ function runEEEGuide() {
 
     ])
 
-    setInterval(function () {
+    setInterval(function() {
         let img = document.getElementById("animated_picture_eee_guide");
         let src_data = img.src.split('/');
         let elt = src_data[[src_data.length - 1]]
         if (elt == "final_on.svg") {
             img.setAttribute("src", "../../_static/images/final_off.svg");
-        }
-        else if (elt == "final_off.svg") {
+        } else if (elt == "final_off.svg") {
             img.setAttribute("src", "../../_static/images/final_on.svg");
-        }
-        else if (elt == "moon_on.svg") {
+        } else if (elt == "moon_on.svg") {
             img.setAttribute("src", "../../_static/images/moon_off.svg");
-        }
-        else if (elt == "moon_off.svg") {
+        } else if (elt == "moon_off.svg") {
             img.setAttribute("src", "../../_static/images/moon_on.svg");
-        }
-        else if (elt == "launch_on.svg") {
+        } else if (elt == "launch_on.svg") {
             img.setAttribute("src", "../../_static/images/launch_off.svg");
-        }
-        else if (elt == "launch_off.svg") {
+        } else if (elt == "launch_off.svg") {
             img.setAttribute("src", "../../_static/images/launch_on.svg");
-        }
-        else if (elt == "ground_on.svg") {
+        } else if (elt == "ground_on.svg") {
             img.setAttribute("src", "../../_static/images/ground_off.svg");
-        }
-        else if (elt == "ground_off.svg") {
+        } else if (elt == "ground_off.svg") {
             img.setAttribute("src", "../../_static/images/ground_on.svg");
         }
-    }
-        , 300);
+    }, 300);
 
     let first_step_div = document.createElement("div");
     let second_step_div = document.createElement("div");
@@ -469,11 +461,10 @@ function runEEEGuide() {
         family_filtering_area.className = "information-filtering-eee-guide";
         family_filtering_area.type = "search";
         family_filtering_area.placeholder = " Tap here to filter families"
-        family_filtering_area.oninput = function () {
+        family_filtering_area.oninput = function() {
             if (this.value.length > 2) {
                 displayFamilyButton(this.value);
-            }
-            else {
+            } else {
                 displayFamilyButton("");
             }
         }
@@ -516,7 +507,7 @@ function runEEEGuide() {
                     var btn = document.createElement("button");
                     btn.className = "choice-button-eee-guide family-button-eee";
                     btn.innerHTML = key;
-                    btn.onclick = function () {
+                    btn.onclick = function() {
                         this.className = "chosen-choice-button-eee";
                         disableFamilyBTN();
                         displayStep2(this.innerHTML);
@@ -525,14 +516,13 @@ function runEEEGuide() {
                 }
             }
             first_step_div.appendChild(first_step_buttons_div);
-        }
-        else {
+        } else {
             for (var [key, value] of eee_families_informations) {
                 var btn = document.createElement("button");
                 btn.className = "choice-button-eee-guide family-button-eee";
                 btn.innerHTML = key;
                 btn.id = key;
-                btn.onclick = function () {
+                btn.onclick = function() {
                     this.className += " chosen-choice-button-eee";
                     disableFamilyBTN();
                     displayStep2(this.innerHTML);
@@ -571,7 +561,7 @@ function runEEEGuide() {
                     var btn = document.createElement("button");
                     btn.className = "choice-button-eee-guide group-button-eee";
                     btn.innerHTML = key;
-                    btn.onclick = function () {
+                    btn.onclick = function() {
                         this.className += " chosen-choice-button-eee";
                         disableGroupBTN();
                         displayStep3(selection, this.innerHTML);
@@ -580,14 +570,13 @@ function runEEEGuide() {
                 }
             }
             second_step_div.appendChild(second_step_buttons_div);
-        }
-        else {
+        } else {
             for (var [key, value] of family) {
                 var btn = document.createElement("button");
                 btn.className = "choice-button-eee-guide group-button-eee";
                 btn.innerHTML = key;
                 btn.id = key;
-                btn.onclick = function () {
+                btn.onclick = function() {
                     this.className += " chosen-choice-button-eee";
                     disableGroupBTN();
                     displayStep3(selection, this.innerHTML);
@@ -616,11 +605,10 @@ function runEEEGuide() {
         group_filtering_area.className = "information-filtering-eee-guide";
         group_filtering_area.type = "search";
         group_filtering_area.placeholder = " Tap here to filter group"
-        group_filtering_area.oninput = function () {
+        group_filtering_area.oninput = function() {
             if (this.value.length > 2) {
                 displayGroupButton(selection, this.value);
-            }
-            else {
+            } else {
                 displayGroupButton(selection, "");
             }
         }
@@ -656,8 +644,7 @@ function runEEEGuide() {
         console.log(group)
         if (typeof model == "string" || model == undefined || isEmptyDictionary(model)) {
 
-        }
-        else {
+        } else {
             let third_question_div = document.createElement("div");
             third_question_div.className = "other-message";
             third_question_div.innerHTML = "What's your component's model ?"
@@ -673,11 +660,10 @@ function runEEEGuide() {
             model_filtering_area.className = "information-filtering-eee-guide";
             model_filtering_area.type = "search";
             model_filtering_area.placeholder = " Tap here to filter models"
-            model_filtering_area.oninput = function () {
+            model_filtering_area.oninput = function() {
                 if (this.value.length > 2) {
                     displayModelButton(selection, group, this.value);
-                }
-                else {
+                } else {
                     displayGroupButton(selection, group, "");
                 }
             }
@@ -707,8 +693,7 @@ function runEEEGuide() {
         if (typeof model == "string" || model == undefined || isEmptyDictionary(model)) {
             console.log("ici")
             displayStep4(selection, group, model, false);
-        }
-        else {
+        } else {
             let third_step_buttons_div = document.createElement("div");
             third_step_buttons_div.id = "third_step_buttons_div"
             third_step_div.appendChild(third_step_buttons_div);
@@ -720,7 +705,7 @@ function runEEEGuide() {
                         var btn = document.createElement("button");
                         btn.className = "choice-button-eee-guide model-button-eee";
                         btn.innerHTML = key;
-                        btn.onclick = function () {
+                        btn.onclick = function() {
                             this.className += " chosen-choice-button-eee";
                             disableModelBTN();
                             displayStep4(selection, group, this.innerHTML, true);
@@ -729,14 +714,13 @@ function runEEEGuide() {
                     }
                 }
                 third_step_div.appendChild(third_step_buttons_div);
-            }
-            else {
+            } else {
                 for (var [key, value] of model) {
                     var btn = document.createElement("button");
                     btn.className = "choice-button-eee-guide model-button-eee";
                     btn.innerHTML = key;
                     btn.id = key;
-                    btn.onclick = function () {
+                    btn.onclick = function() {
                         this.className += " chosen-choice-button-eee";
                         disableModelBTN();
                         displayStep4(selection, group, this.innerHTML, true);
@@ -758,8 +742,7 @@ function runEEEGuide() {
 
         if (is_fides_model) {
             final_question_div.innerHTML = "Your component '" + model + " has a FIDES model components : " + eee_families_informations.get(selection).get(group).get(model) + ".";
-        }
-        else {
+        } else {
             final_question_div.innerHTML = "Your component has no dedicated FIDES model.";
         }
 
@@ -775,8 +758,7 @@ function runEEEGuide() {
 
             if (is_fides_model) {
                 final_question_div2.innerHTML = "You can find the dedicated handbook page <a href='" + eee_families_links.get(selection) + "' style='color:white;'><u>here</u></a>.";
-            }
-            else {
+            } else {
                 final_question_div2.innerHTML = "You can find information on the dedicated handbook page <a href='" + eee_families_links.get(selection) + "' style='color:white;'><u>here</u></a>.";
             }
 
@@ -790,11 +772,9 @@ function runEEEGuide() {
     function changePicture(step) {
         if (step == 2) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/launch_on.svg";
-        }
-        else if (step == 3) {
+        } else if (step == 3) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/moon_on.svg";
-        }
-        else if (step == 4) {
+        } else if (step == 4) {
             document.getElementById("animated_picture_eee_guide").src = "../../_static/images/final_on.svg";
         }
     }

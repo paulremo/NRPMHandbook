@@ -28,6 +28,5 @@ The {term}`failure mechanisms <Failure mechanism>` of the miscellaneous parts re
 
 ```{admonition} Note 
 :class: note
-:name: note_
 Definitions of these root cause category can be found in {ref}` Part 7 – Glossary <glossary>` of this handbook.
 ```

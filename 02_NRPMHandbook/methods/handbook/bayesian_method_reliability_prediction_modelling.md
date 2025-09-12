@@ -130,13 +130,11 @@ For the correct formulation of the likelihood, it is important to distinguish tr
 
 ```{admonition} Note 21
 :class: note
-:name: note_21
 Even if the data set is not censored, it can be necessary to work with “artificial” censoring, e.g. if the degradation phase is modelled and only failures after a certain number of operating hours are of interest. Similar considerations hold for basic variable modelling in a stress/strength approach, where the model needs to be precise especially in the lower or upper tail of the distribution. Thus, censoring needs to be applied if the focus is on a specific part of the distribution or the bathtub curve.
 ```
 
 ```{admonition} Note 22
 :class: note
-:name: note_22
 The definitions of truncation and censoring given above are different to the terminology used to describe reliability tests, e.g. a time truncated test will lead to a censored data sample.
 ```
 
@@ -303,7 +301,7 @@ In general, when applying Bayes theorem for updating, the prior distribution and
     The conjugate prior defines the prior distribution of the sampling distribution parameters which should be selected for analytic updating. 
     ```{admonition} Note 23
     :class: note
-    :name: note_23
+
     For two-parameter models like Weibull, only one parameter can be updated, and the other one is assumed to be deterministic. Bayesian updating of both model parameters requires a numerical approach.
     ```
 
@@ -691,13 +689,11 @@ Bayesian updating for a prior derived from a previous statistical analysis on an
 
 ```{admonition} Note 24
 :class: note
-:name: note_24
 This requires that, not only a point estimate for the model parameters but also some information on the statistical uncertainty associated with the parameter estimate is available. 
 ```
 
 ```{admonition} Note 25
 :class: note
-:name: note_25
 Also, priors derived with the aid of statistical estimation methods provide information only on statistical uncertainty resulting from sample size limitations. . 
 ```
 A more general view on various modelling uncertainties is taken in {ref}`Part 2 - Methods <methods>` of the handbook, including a discussion of different sources of uncertainty. The analyst can choose to increase the variance of the prior distribution to account for additional uncertainty sources, e.g. if the prior data does not exactly represent the considered technology or operating conditions. An increased variance of the prior is equivalent to reducing the “equivalent sample size” of the prior data set and thus reducing the weight of the prior, and giving more weight to the new data. Obviously, this is only justified if the new data set does not introduce large additional uncertainties as well.

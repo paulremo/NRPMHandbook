@@ -11,7 +11,6 @@ In the following, we distinguish between software requirement errors, which are 
 
 ````{admonition} Note
 :class: note
-:name: Note
 The data set used for the quantitative modelling in {numref}`syst_11_9` in principle considers all types of software related major anomalies. The effect of the anomalies at system level is considered with the aid of the anomaly severity classification.
 ````
 
@@ -53,7 +52,6 @@ A different approach to account for the effects of software at system level is d
 
 ````{admonition} Note
 :class: note
-:name: Note
 Takes a rather atypical position on this topic, and many communication, navigation and surveillance and Air Traffic Management (CNS/ATM) Systems use ED-109 instead (also known as DO-278), which takes a similar position on software reliability prediction as presented in DO-178C {cite:p}`sys-EUROCAE-ED-153` for airborne systems.
 ````
 

@@ -71,7 +71,6 @@ With this method, the occurrence probability for all system performance levels a
 
 ````{admonition} Note
 :class: note
-:name: Note
 For practical reasons, the applicability of this method using elementary system states is limited to systems with a small number of components, since the number of states grows exponentially with the number of components. For *n* components $2^{n}$ states have to be considered.
 ````
 

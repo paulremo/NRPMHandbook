@@ -2,7 +2,7 @@
 
 # Scope
 
-This digital platform mirrors the content of the ECSS-Q-HB-30-02, Issue 1.
+This digital platform mirrors the content of the ECSS-Q-HB-30-02A, Issue 1.
 
 The focus of the present part is the selection and use of system level reliability methods. The reliability of all components ({term}`EEE`, {term}`MEC`, {term}`MIS`) are considered in the context of the system. 
 

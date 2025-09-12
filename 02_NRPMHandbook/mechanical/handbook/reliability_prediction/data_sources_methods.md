@@ -107,7 +107,7 @@ The advantage of this approach is the increased flexibility, as generic models f
 
 As a result, the NSWC should not be used as a data source for mechanical reliability prediction in space applications. The data can only be used to derive “ballpark” estimates, e.g. for early design phases, for comparison with other methods, or as a prior for {term}`Bayesian inference <Bayesian inference>` updating. 
 
-Beyond this, the NSWCmethod is recommended only as a scaling method for specific part types, allowing to tune statistical estimates from “space relevant” data sources (the NSWC base failure rates should not be used). ). The approach is applicable only if the failure mechanisms that are of relevance in space applications are the same as those considered by the NSWC models, see {numref}`meca-table4-6` in {numref}`meca_9_5_2` for guidance. 
+Beyond this, the NSWCmethod is recommended only as a scaling method for specific part types, allowing to tune statistical estimates from “space relevant” data sources (the NSWC base failure rates should not be used). ). The approach is applicable only if the failure mechanisms that are of relevance in space applications are the same as those considered by the NSWC models, see {numref}`meca_9_5_2` for guidance. 
 
 It is based on the following steps:
 

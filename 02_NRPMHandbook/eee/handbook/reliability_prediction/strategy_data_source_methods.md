@@ -37,12 +37,12 @@ The main limitations for space applications are the following:
 
 For this kind of information to be usable, it is necessary to make sure that the quantity of parts and the total number of flight hours are high enough for consideration. In some cases, the data obtained this way at component level can be used as a maximum value to be considered as a worst case if no other data source is available.
 
-In addition, it is possible and recommended in the present handbook, to mix these data with data coming from standards or handbooks by the Bayesian method as presented in {ref}`Part 5 - MIS <sec_misc_handbook>` of this handbook {numref}`misc_5_6`.
+In addition, it is possible and recommended in the present handbook, to mix these data with data coming from standards or handbooks by the Bayesian method as presented in {ref}`Part 5 - MIS <sec_misc_handbook>` of this handbook ref misc_5_6`.
 
 
 **Model proposed in this handbook for EEE items**
 
-This corresponds to the information obtained through the present handbook. The main methodology used is the FIDES 2022 method with some adaptations proposed in each subfamily section, see {numref}`eee_8_3` for the {term}`random failures <Random failure>` (RF) calculations through FIDES, {numref}`eee_8_5` for the {term}`systematic failures <Systematic failure>` (SF), {numref}`eee_8_6` for the {term}`degradation failures <Degradation failure>` (DEG) and {numref}`eee_8_7` for the {term}`extrinsic failures <Extrinsic failure>` (EX).
+This corresponds to the information obtained through the present handbook. The main methodology used is the FIDES 2022 method with some adaptations proposed in each subfamily section, see {numref}`eee_8_3` for the {term}`random failures <Random failure>` (RF) calculations through FIDES, {numref}`eee_8_4` for the {term}`systematic failures <Systematic failure>` (SF), {numref}`eee_8_5` for the {term}`degradation failures <Degradation failure>` (DEG) and {numref}`eee_8_6` for the {term}`extrinsic failures <Extrinsic failure>` (EX).
 
 
 **Model from other methodologies**

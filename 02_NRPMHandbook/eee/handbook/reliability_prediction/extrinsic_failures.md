@@ -1,6 +1,6 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
-(eee_4_7)=
+(eee_8_6)=
 # Extrinsic failures of EEE components
 
 An {term}`extrinsic failure <Extrinsic failure>` is a failure induced by the space environment on the satellite elements. Sucess
@@ -9,11 +9,11 @@ For {term}`EEE` components reliability assessment, the following aspects need to
 
 -   The failure modes induced by the "physical conditions" are assumed to be mitigated by appropriate design and qualification;
 
--   Wear-out-like threats due to UV {term}`degradation <Degradation>`, atomic oxygen effects are assumed to be controlled through appropriate qualification within the nominal {term}`mission lifetime <Mission lifetime>` of the satellite;
+-   Wear-out-like threats due to UV degradation, atomic oxygen effects are assumed to be controlled through appropriate qualification within the nominal {term}`mission lifetime <Mission lifetime>` of the satellite;
 
 -   Heavy ions, radiations and plasma can lead to specific defects. EEE components are sensitive to SEE with high energy particles. These particles are changing the state of transistors in junction and are destructive or non-destructive for the component depending on its technology. Most of the {term}`EEE` components designed for space applications are qualified against SEE with high energy particles. For commercial components, specific tests are realised to ensure a minimum of robustness against these constraints.
 
-(eee_4_7_1)=
+(eee_8_6_1)=
 ## List of components sensitive to extrinsic failures
 
 Among the components which are listed by {term}`ESA` in its {term}`EPPL`, only few of them are sensitive to {term}`extrinsic failures <Extrinsic failure>`:
@@ -26,10 +26,10 @@ Among the components which are listed by {term}`ESA` in its {term}`EPPL`, only f
 
 -   Switches such as end-of-course switches: some concerns have been reported on the behaviour of these components in vacuum.
 
-(eee_4_7_2)=
+(eee_8_6_2)=
 ## Consideration of extrinsic failures in reliability prediction
 
-The reliability.space approach for E{term}`EEE`EE components accounts for some {term}`extrinsic failure <Extrinsic failure>` by considering the mechanical, thermal and electrical over-stress. These over-stresses are defined for each {term}`EEE` component by the factor $C_{\text{sensitivity}}$ representing the coefficient of sensitivity to over-stresses inherent to each considered technology. Generally, the contributions of electrical, mechanical and thermal over-stresses are respectively 55%, 35% and 10%. Afterwards, this factor has a direct influence in the calculation of the induced factor $\Pi_{\text{induced}}$ and thus on the global reliability prediction of {term}`EEE` components. Therefore, by the factor $C_{\text{sensitivity}}$, extrinsic influences are part of the calculation, although not covering space specific environmental effects such as radiations, ultra violet light and vacuum.
+This approach approach for E{term}`EEE`EE components accounts for some {term}`extrinsic failure <Extrinsic failure>` by considering the mechanical, thermal and electrical over-stress. These over-stresses are defined for each {term}`EEE` component by the factor $C_{\text{sensitivity}}$ representing the coefficient of sensitivity to over-stresses inherent to each considered technology. Generally, the contributions of electrical, mechanical and thermal over-stresses are respectively 55%, 35% and 10%. Afterwards, this factor has a direct influence in the calculation of the induced factor $\Pi_{\text{induced}}$ and thus on the global reliability prediction of {term}`EEE` components. Therefore, by the factor $C_{\text{sensitivity}}$, extrinsic influences are part of the calculation, although not covering space specific environmental effects such as radiations, ultra violet light and vacuum.
 
 To minimize the occurrence of {term}`extrinsic failures <Extrinsic failure>` on the global reliability prediction, design rules and specific qualification tests should be performed to ensure integrity of {term}`EEE` components:
 

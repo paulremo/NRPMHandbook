@@ -11,7 +11,6 @@ This section details how to build a reliability model for {term}`miscellaneous i
 
 ```{admonition} Note 
 :class: note
-:name: note
 On {numref}`Figure_5_4`, the basic model is a failure rate but it could also be a probability of failure.
 ```
 
@@ -203,7 +202,6 @@ The resulting failure rate is:
 ````
 ```{admonition} Note 
 :class: note
-:name: note
 For operating conditions, it is necessary to define the weights per contributor and to add a number of conditions as necessary. The process is:
 
 * To define the number of conditions
@@ -223,13 +221,11 @@ For operating conditions, it is necessary to define the weights per contributor 
 
 ```{admonition} Note 
 :class: note
-:name: note
 The column “value” provides the factors depending on the classification (column “scale”).
 ```
 
 ```{admonition} Note 
 :class: note
-:name: note
 The tDEG right-hand columns provide the result for one example (“X” representing the ranking regarding the different categories with the associated resulting factor in the right column).
 
 $1.1 = 1.00 * 1.00 * 1 * 1 * 1.1 = \Pi_{Q} * \Pi_{M} * \Pi_{CT} * \Pi_{C} * \Pi_{OP}$
@@ -369,7 +365,6 @@ Then the probability $\text{P} (\text{T} > \text{t}_{\text{Q}})$ provides the {t
 
 ```{admonition} Note 
 :class: note
-:name: note
 When the parameters are consistent the reliability function is similar between the normal distribution and the Weibull distribution. {numref}`Figure_5_6` (resp. {numref}`Figure_5_7`) presents an example of such calculation with normal law (resp. Weibull).
 ```
 

@@ -10,35 +10,3 @@ The original objective was to prevent any discrepancies with possible increase o
 The situation is similar for space applications where a lead-free process is used on electronic boards mounted on the payloads of telecommunication satellites. No change on failure occurrences has been noticed between both processes, so that is why the Recommendation is to use a value of this factor equal to 1. Any differences between the manufacturing process with tin-lead soldering and lead-free soldering is handled by the process related factor $\Pi_{\text{Process}}$.
 
 The simplified formula for all families is presented in Annex A.2, Equations A.2-5 to A.2-7.
-
-<!--
-With $\Pi_{\text{LF}} = 1$, the general part stress reliability models may be simplified by dropping this factor in the equations:
-
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_4
-\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}}
-```
-````
-
-for {term}`HF`/RF components:
-
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_5
-\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessRFHF}}
-```
-````
-
-and for ASIC components:
-
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_6
-\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessASIC}}
-```
-````
-

@@ -2,7 +2,7 @@
 
 # Scope
 
-This digital platform mirrors the content of the ECSS-Q-HB-30-02, Issue 1. 
+This digital platform mirrors the content of the ECSS-Q-HB-30-02A, Issue 1. 
 
 Reliability assessment of mechanical parts in space applications entails several challenges. 
 

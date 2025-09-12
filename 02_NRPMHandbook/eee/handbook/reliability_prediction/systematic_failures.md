@@ -1,6 +1,6 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
-(eee_4_5)=
+(eee_8_4)=
 # Systematic failures
 
 In the classification of {term}`failure root causes <Failure root cause>`, the {term}`systematic failures <Systematic failure>` are considered as major contributors to the total anomalies occurring on board of a satellite. For {term}`EEE` components and electronic equipment, the {term}`systematic failures <Systematic failure>` are linked mainly to the design and manufacturing errors such as errors during the design of the electronic boards, or during the soldering of {term}`EEE` components on the electronic boards.

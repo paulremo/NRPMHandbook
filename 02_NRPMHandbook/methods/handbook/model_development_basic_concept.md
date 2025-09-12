@@ -47,7 +47,6 @@ In statistical terminology, the probability of failure during a time interval $t
 
 ```{admonition} Note 9
 :class: note
-:name: note_9
 The subscript $T$, referring to the random time to failure, can be dropped throughout the handbook for the ease of notation, i.e. $F\left( t \right) = F_{T}\left( t \right)$.
 ```
 
@@ -115,7 +114,6 @@ A special case of use-related failures are failures of items, which are actuated
 
 ```{admonition} Note 10
 :class: note
-:name: note_10
 A “demand” in this context should not necessarily be use-related but can also represent an environmental stress acting at a discrete point in time (e.g. shock due to pyro activation).
 ```
 
@@ -286,7 +284,6 @@ For both EEE and mechanical parts:
 
 ```{admonition} Note 11
 :class: note
-:name: note_11
 The failure modes are believed to be industry and application dependent, so it is recommended whenever possible to build an own catalogue.
 ```
 
@@ -322,7 +319,6 @@ In practice, making a choice between statistics and PoF can be less black and wh
 
 ```{admonition} Note 12
 :class: note
-:name: note_12
 A combination of both approaches can also be achieved in a less sequential manner than with the Bayesian approach, where the PoF is used to derive a prior model that can then be updated using statistical data on observed failures. 
 ```
 
@@ -591,7 +587,6 @@ Here, $\chi_{f,\frac{\alpha}{2}}^{2}$ and $\chi_{f,1 - \frac{\alpha}{2}}^{2}$ ar
 
 ```{admonition} Note 13
 :class: note
-:name: note_13
 Eq. {eq}`Equation_method_5_15` is based on the mathematical relationship between the exponential, gamma and Chi-square distribution and fully equivalent with the Bayesian approach using a gamma conjugate prior, see {numref}`method_6_5_1` for details.
 ```
 
@@ -640,7 +635,6 @@ The number of failures determines the statistical uncertainty associated with th
 
 ```{admonition} Note 14
 :class: note
-:name: note_14
 The normal approximation assumed for estimating the standard deviation associated with the MLE method is not appropriate for small probabilities of failures, unless the data sample is very large.
 ```
 
@@ -673,7 +667,6 @@ The focus of the following discussion will be on the application of PoF models i
 
 ```{admonition} Note 15
 :class: note
-:name: note_15
 The mathematical models used to describe the failure mechanism process can be the same as the ones used for design; it is the quantification of uncertainties that makes the difference. 
 ```
 
@@ -684,7 +677,6 @@ In particular the consideration of random failures with a pure physics-based app
 
 ```{admonition} Note 16
 :class: note
-:name: note_16
 Such “combined” approaches, making use of both PoF and reliability data, are discussed separately in {numref}`method_5_6`.
 ```
 
@@ -710,7 +702,6 @@ The next step is to define a mathematical model describing the failure mechanism
 
 ```{admonition} Note 17
 :class: note
-:name: note_17
 A model in this context may be an analytic function or a numerical model; the only requirement is that the failure state is clearly defined as a function of the relevant physical variables.
 ``` 
 
@@ -733,7 +724,6 @@ Variables that are modelled as deterministic should be considered with their mea
 
 ```{admonition} Note 18
 :class: note
-:name: note_18
 Designers typically use conservative estimates.
 ```
 The remaining variables should be considered as random variables, requiring modelling choices regarding the distribution type and an estimation of the distribution parameters for the considered application. The following discussion focuses on probabilistic modelling for single variables; correlation or dependence can need to be considered in case different variables are not statistically independent.
@@ -759,7 +749,6 @@ After selecting an appropriate model, the distribution parameters need to be est
 
 ```{admonition} Note 19
 :class: note
-:name: note_19
 A good fit of the distribution (both in terms of the selection of the distribution model and its parameters) is important especially in the part of the distribution that contributes to unreliability, which is typically the lower tail for variables governing strength, and the upper tail for many stress variables. 
 ```
 When judging about the variability of a random variable, e.g. to estimate the CoV, it is important to know which root causes need to be considered in the prediction. 
@@ -930,7 +919,6 @@ A major requirement for the sustainability of a {term}`reliability prediction me
 
 ```{admonition} Note 20
 :class: note
-:name: note_20
 The process provided herein is not restricted to innovative technologies. It can be used for any application where the existing models cannot be used or do not cover the required scope, whether in terms of technology, use conditions, or failure root causes.
 ```
 

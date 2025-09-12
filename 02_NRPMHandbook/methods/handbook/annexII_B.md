@@ -7,7 +7,6 @@ In the following, the model development uncertainties associated with the predic
 
 ```{admonition} Note 27
 :class: note
-:name: note_27
 The uncertainty of the prediction results depends not only on the uncertainties inherent in the model, but also on the use of these modelss, see {numref}`method_7_3_2` for details.
 ```
 

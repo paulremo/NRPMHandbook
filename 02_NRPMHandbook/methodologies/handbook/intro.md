@@ -3,7 +3,7 @@
 (methodologies)=
 # Part 1 - Methodologies
 
-This part explains the framework and taxonomy used in the ECSS-Q-HB-30-02 handbook and links it to the reliability prediction process and usage. It provides guidance for users that are in charge of planning a prediction. 
+This part explains the framework and taxonomy used in the ECSS-Q-HB-30-02A handbook and links it to the reliability prediction process and usage. It provides guidance for users that are in charge of planning a prediction. 
 
 The *taxonomy* is defined on two major axes: 
 1. The *type of elements* ({term}`EEE`, mechanical, and miscellaneous elements)

@@ -46,68 +46,10 @@ The main changes performed in the proposed approach are the following:
 
 -   Consideration of the process during the phases of development, integration into the equipment, integration into the satellite and operations by evaluating a process factor as defined in {numref}`eee_8_3_3_1`,
 
--   Use of acceleration factors as described in {numref}`eee_8_3_1_16` by considering the duration of each phase $t_{text{phase}}$ according to the total life duration of the satellite,
+-   Use of acceleration factors as described in {numref}`eee_8_3_2_16` by considering the duration of each phase $t_{text{phase}}$ according to the total life duration of the satellite,
 
 -   Recommendation of default values for some of the factors defining the induced factor $\Pi_{\text{induced}\_i}$ as described in {numref}`eee_8_3_2_17`, such as the influence of the usage environment $\Pi_{\text{application}\_i}$ and the influence of the policy for over-stresses $\Pi_{\text{ruggedising}}$,
 
 -   Improvement and adaptation of values for some of the factors defining the part manufacturing factor $\Pi_{\text{PM}}$ as described in {numref}`eee_8_3_4` such as the manufacturer quality assurance $\text{QA}_{\text{manufacturer}}$, the results and severity of tests factor $\text{RA}_{\text{component}}$ and the experience factor $\epsilon$.
 
 The general model for all families is introduced in {numref}`eee_annex_a_2`, Equations A.2-1 to A.2-4. 
-
-<!--
-**General model for all families**
-
-In the following, the general model for conventional components is described, forming the basis for the models provided in {numref}`eee_8_3_4`:
-
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_1
-\lambda = \lambda_{\text{Physical}}{\cdot \Pi}_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}}
-```
-````
-
-for RF/{term}`HF` components:
-
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_2
-\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessRFHF}} \cdot \Pi_{\text{LF}}
-```
-````
-
-and for {term}`ASIC` components:
-
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_3
-\lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{ProcessASIC}} \cdot \Pi_{\text{LF}}
-```
-````
-
-and for Hybrids & MCM components:
-
-````{admonition} Equation
-:class: equation
-```{math}
-:label: Equation_1_3_1
-\lambda_{\text{HM}} = \sum_{\mu\text{-components}}(\lambda_{\mu\text{-components}}\cdot \Pi_{PM_{\mu\text{-components}}})\cdot\Pi_{\text{Process HM}} \cdot \Pi_{\text{Process}} + (\lambda_{\text{wiring}} + \lambda_{\text{case + substrate}} + \lambda_{\text{external connections}}) \cdot \Pi_{\text{Process HM}}\cdot\Pi_{\text{Process}}
-```
-With:
-
--   $\lambda$ as the estimated reliability prediction;
-
--   $\lambda_{\text{physical}}$ as the physical contribution of reliability prediction;
-
--   $\Pi_{\text{PM}}$ as the part manufacturing factor described in {numref}`eee_8_3_3`
-
--   $\Pi_{\text{Process}}$ as the process related factor described in {numref}`eee_8_3_2_3`
-
--   $\Pi_{\text{ProcessRFHF}}$ as the process related factor for {term}`HF`/RF components described in {numref}`eee_8_3_2_5`;
-
--   $\Pi_{\text{ProcessASIC}}$ as the process related factor for {term}`ASIC` components described in {numref}`eee_8_3_2_6`;
-
--   $\Pi_{\text{LF}}$ as the lead-free process factor described hereafter.
-````

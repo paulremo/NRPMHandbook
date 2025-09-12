@@ -28,7 +28,7 @@ The basic reliability data are provided in {numref}`misc-table_10_8` with the as
 (misc_10_4_2)=
 ## Non-standard model for specific miscellaneous items
 
-A “specific” miscellaneous item relates to a product which is not fully modelled by {term}`EEE parts <EEE part>` and/or {term}`mechanical parts <Mechanical part>` and which is not listed in the equivalent classes of miscellaneous items in {numref}`misc_10_1`, e.g. Hold Release Mechanism Low Shock presented in {numref}`Figure_5_3`.
+A “specific” miscellaneous item relates to a product which is not fully modelled by {term}`EEE parts <EEE part>` and/or mechanical parts and which is not listed in the equivalent classes of miscellaneous items in {numref}`misc_10_1`, e.g. Hold Release Mechanism Low Shock presented in {numref}`Figure_5_3`.
 
 The item is neither a mechanism, nor an assembly of EEE parts. It is constituted by different parts such as spring, glue, expansion unit. Since the design is very specific without any IOR data it is necessary to define a dedicated reliability model.
 

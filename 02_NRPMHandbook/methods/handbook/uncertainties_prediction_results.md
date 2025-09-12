@@ -484,6 +484,5 @@ When following this procedure, some uncertainties introduced at the highest leve
 
 ```{admonition} Note 26
 :class: note
-:name: note_26
 This becomes more and more unlikely the further the assessment goes down in the system hierarchy. Going into the details of each part level model is thus certainly not necessary to assess the major uncertainties associated with the prediction.
 ```

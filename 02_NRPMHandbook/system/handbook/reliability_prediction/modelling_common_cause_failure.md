@@ -31,7 +31,6 @@ Redundant component installed near each other can make the system susceptible to
 
 ````{admonition} Note
 :class: note
-:name: Note
 For space applications, there are volume constrains which leads to limitations of separation and segregation of system components. 
 ````
 

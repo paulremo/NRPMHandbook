@@ -1,15 +1,15 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
 (home_page)=
-# Welcome to the ECSS-Q-HB-30-02 digital reliability handbook
+# Welcome to the ECSS-Q-HB-30-02A digital reliability handbook
 
-This is the digital version of the ECSS-Q-HB-30-02 reliability handbook. This handbook offers:
+This is the digital version of the ECSS-Q-HB-30-02A reliability handbook. This handbook offers:
  * **Technical content** in the [Handbook](methodologies) sections,
  * **Interactive content** in the [Models](sec_eee_models) sections.
 
 ## Objective
 
-The ECSS-Q-HB-30-02 reliability handbook was developed to provide a reliability methodology that can be used for space applications, without the limitations and shortcomings of existing {term}`reliability prediction <Reliability prediction>` methodologies. The present digital handbook is a digitalized version of the ECSS-Q-HB-30-02 reliability handbook that offers easier access, interactive content, and a contemporary design.
+The ECSS-Q-HB-30-02A reliability handbook was developed to provide a reliability methodology that can be used for space applications, without the limitations and shortcomings of existing {term}`reliability prediction <Reliability prediction>` methodologies. The present digital handbook is a digitalized version of the ECSS-Q-HB-30-02A reliability handbook that offers easier access, interactive content, and a contemporary design.
 
 This digital handbook contains 7 parts. These parts can be accessed by clicking on the icons below or browsing the table of contents on the left side of this page.
 

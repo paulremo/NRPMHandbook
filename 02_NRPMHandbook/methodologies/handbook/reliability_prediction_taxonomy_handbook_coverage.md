@@ -68,7 +68,6 @@ Space projects are typically divided in seven life cycle phases from 0 to F, as 
 
 ```{admonition} Note 1
 :class: note
-:name: note_1
 This table corresponds to typical mission phases. In case of pioneering missions, this should be adapted in consequence.
 ```
 
@@ -152,7 +151,6 @@ For the purpose of this handbook, a system is considered in the generic sense an
 
 ```{admonition} Note 2
 :class: note
-:name: note_2
 The lowest level of a system is an elementary part (or component).
 ```
 
@@ -330,7 +328,6 @@ Extrinsic failures are sudden failures induced by the environment on the spacecr
 
 ```{admonition} Note 3
 :class: note
-:name: note_3
 As mentioned in {numref}`methodo-table4-2`, the extrinsic failures for launchers are due to the weather conditions around the launcher facilities. This will not be developed here. Only the space conditions leading to extrinsic failures on satellites, uncrewed/crewed vehicles and probes are addressed in this paragraph as these are the ones specific to space applications.
 ```
 
@@ -388,7 +385,6 @@ For the coverage in terms of failure categories, the methodology has a clear foc
 
 ```{admonition} Note 4
 :class: note
-:name: note_4
 The distinction between random, systematic, degradation and extrinsic failures is not always a clear-cut and can sometimes be a modelling choice, or a matter of definition, rather than resulting directly from the “nature” of the failures.
 ```
 
