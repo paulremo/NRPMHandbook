@@ -1,6 +1,6 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
-(eee_4_3_5)=
+(eee_8_3_6)=
 # Families count and part count methods
 
 The families count reliability prediction can be used to produce a reliability evaluation with the least amount of information about the product definition. Previous case studies have shown that this method is not clearly adapted and can provide discrepancies higher than 100% compared to the part stress method. That is why these methods are not recommended for space applications and the part stress method should be used as the main method for reliability prediction of {term}`EEE` components.
@@ -45,7 +45,7 @@ with:
 
 **Physical stresses:**
 
--   $\Pi_{\text{Thermal}}$ Thermo-electrical stress from {numref}`eee_4_3_1_13`:
+-   $\Pi_{\text{Thermal}}$ Thermo-electrical stress from {numref}`eee_8_3_2_13`:
 
 
 ````{admonition} Equation
@@ -56,7 +56,7 @@ with:
 ```
 ````
 
--   $\Pi_{\text{TcyCase}}$ Temperature cycling stress from {numref}`eee_4_3_1_14`:
+-   $\Pi_{\text{TcyCase}}$ Temperature cycling stress from {numref}`eee_8_3_2_14`:
 
 ````{admonition} Equation
 :class: equation
@@ -66,7 +66,7 @@ with:
 ```
 ````
 
--   $\Pi_{TcySolder\_ Joints}$ Temperature cycling stress from {numref}`eee_4_3_1_14`:
+-   $\Pi_{TcySolder\_ Joints}$ Temperature cycling stress from {numref}`eee_8_3_2_14`:
 
 ````{admonition} Equation
 :class: equation
@@ -76,7 +76,7 @@ with:
 ```
 ````
 
--   $\Pi_{\text{Mechanical}}$ Mechanical stress from {numref}`eee_4_3_1_16`:
+-   $\Pi_{\text{Mechanical}}$ Mechanical stress from {numref}`eee_8_3_2_16`:
 
 ````{admonition} Equation
 :class: equation
@@ -86,7 +86,7 @@ with:
 ```
 ````
 
--   $\Pi_{\text{RH}}$ Humidity stress from {numref}`eee_4_3_1_6`:
+-   $\Pi_{\text{RH}}$ Humidity stress from {numref}`eee_8_3_2_6`:
 
 ````{admonition} Equation
 :class: equation
@@ -213,9 +213,9 @@ Some components more specific to the space domain can be defined with equivalent
 
 The part manufacturing factor $\Pi_{\text{PM}}$ is related to the quality of {term}`EEE` components and the recommendation is to use a fixed value determined by the values listed in the FIDES guide on page 229.
 
-The process factor $\Pi_{\text{Process}}$ is related to the development process of electronic equipment and the recommendation is to either use a typical $\Pi_{\text{Process}}$ previously calculated for the same kind of application or in case no information is available, to use the maximum value issued from the questionnaire adapted to space applications and described in {numref}`eee_4_3_2_1`.
+The process factor $\Pi_{\text{Process}}$ is related to the development process of electronic equipment and the recommendation is to either use a typical $\Pi_{\text{Process}}$ previously calculated for the same kind of application or in case no information is available, to use the maximum value issued from the questionnaire adapted to space applications and described in {numref}`eee_8_3_2_1`.
 
-The induced factor $\Pi_{\text{Induced\_i}}$, has some parameters directly fixed for space applications as described in {numref}`eee_4_3_1`.
+The induced factor $\Pi_{\text{Induced\_i}}$, has some parameters directly fixed for space applications as described in {numref}`eee_8_3_2`.
 
 ```{admonition} Recommendation
 :class: recommendation

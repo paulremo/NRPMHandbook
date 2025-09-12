@@ -3,7 +3,8 @@
 (annexII_A)=
 # Annex A Probability distributions
 
-In the following, the parametrization of the probability distributions introduced in Section 6.4 (Model development: {term}`Statistical methods <Statistical method>`) and used in Chapter 7 (Bayesian methods) is given as a common reference.
+In the following, the parametrization of the probability distributions introduced in {numref}`method_5_4` (Model development: {term}`Statistical methods <Statistical method>`) and used in {numref}`method_6` (Bayesian methods) of this part, is given as a common reference.
+
 
 **Exponential distribution**
 
@@ -56,7 +57,7 @@ Lower incomplete gamma function: $\Gamma\left( \alpha,\beta x \right) = \int_{0}
     - $\sqrt{\mathrm{\text{Var}}\left\lbrack X \right\rbrack} = \sigma$
 ```
 
-Standard Normal distribution: $\Phi\left( x \right) = \ \frac{1}{\sqrt{2\pi}} \cdot \int_{- \infty}^{x}{\exp\left\lbrack - \frac{t^{2}}{2} \right\rbrack}\mathrm{d}t$
+Standard normal distribution: $\Phi\left( x \right) = \ \frac{1}{\sqrt{2\pi}} \cdot \int_{- \infty}^{x}{\exp\left\lbrack - \frac{t^{2}}{2} \right\rbrack}\mathrm{d}t$
 
 **Lognormal distribution**
 
@@ -110,7 +111,7 @@ Beta function: $B\left( \alpha,\beta \right) = \Gamma\left( \alpha \right) \cdot
 
 Incomplete beta function: $B\left( x;\alpha,\beta \right) = \int_{0}^{x}{t^{\alpha - 1}\left( 1 - t \right)^{\beta - 1}\mathrm{d}t}$
 
-**Inverse Gamma distribution**
+**Inverse gamma distribution**
 
 ```{list-table}
 

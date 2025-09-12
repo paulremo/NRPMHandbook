@@ -1,129 +1,107 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
-(misc_5_8)=
+(misc_10_8)=
 # Reliability data for miscellaneous “standard model”
-{numref}`misc-table4-8` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
 
-The meaning of the columns is explained in {numref}`misc-table4-7`.
+{numref}`misc-table_10_8` provides the basic failures rates or basic probability of failure (%) to be considered for miscellaneous “standard models”. 
+
+The meaning of the columns is explained in {numref}`misc-table_10_7`.
 
 ````{admonition} Note 1 : MIS_01 TWTA, Single HPA
 :class: note
-The failure rate is provided per TWT Channel (mono channel or dual channel). In order to be used for LEO, if adaptation is necessary, it is recommended to use 
+The failure rate is provided per TWT Channel (mono channel or dual channel). In order to be used for {term}`LEO`, if adaptation is necessary, it is recommended to use: 
 
-1.  by default the following proportion (based on average MIL-HDBK-217 {cite:p}`mis-MIL-HDBK-217F` {term}`reliability prediction <Reliability prediction>`) of the whole failure rate.
+1.  By default the following proportion (based on average MIL-HDBK-217 {cite:p}`mis-MIL-HDBK-217F` {term}`reliability prediction <Reliability prediction>`) of the whole failure rate.
     * EPC_common = 36%
     * EPC_channel = 9%
     * {term}`CAMP` = 25%
     * TWT = 30%
-2. to use the supplier repartition as per its own {term}`reliability prediction <Reliability prediction>`.
+2. To use the supplier repartition as per its own reliability prediction.
 
 ````
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc_table4_7')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc-table_10_7')" placeholder="Search table...">
 
 ```{list-table} Structure of the reliability data table
-:name: misc-table4-7
+:name: misc-table_10_7
+:header-rows: 1
+:widths: 20 55 25
 
-* - <table class="large-table" id="misc_table4_7">
-        <thead>
-            <tr>
-                <th>Column</th>
-                <th>Description</th>
-                <th>Remark</th>
-            </tr>
-        </thead>
-        <tr>
-            <td>REF</td>
-            <td>Identifies the miscellaneous item</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>EQUIPMENT</td>
-            <td>Name of the item</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>FR</td>
-            <td>
-                <p>Depending on the model either a constant Failure rate (fit) or %
-                    standing for estimate of the proportion of failures</p>
-                <p>A figure (integer) means a Failure rate in fit. A proportion (figure
-                    followed by %) means a proportion of failure</p>
-            </td>
-            <td>Constant failure rate @60% LoC (Chi Square) or Probability of
-                failure @60% upper bound one-sided interval</td>
-        </tr>
-        <tr>
-            <td>POINT ESTIMATE</td>
-            <td>When relevant - observed failure(s) - point estimate of the failure
-                rate or of the proportion of failures %</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>QUALITY</td>
-            <td>Level of quality used to define the “standard model”</td>
-            <td>HIGH, MEDIUM, LOW</td>
-        </tr>
-        <tr>
-            <td>MATURITY</td>
-            <td>Indicates the level of maturity, generally based on the first use of
-                the equipment in-orbit</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>TECHNOLOGY</td>
-            <td>Indicates when relevant which technology is concerned</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>COMPLEXITY</td>
-            <td>Indicates when relevant the level of complexity</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>ORBIT</td>
-            <td>Indicates which orbit is relevant to the “standard model”</td>
-            <td>LEO, GEO</td>
-        </tr>
-        <tr>
-            <td>T°</td>
-            <td>Indicates the range of T° when T° has to be considered</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>POWER</td>
-            <td>Indicates the range of Power when Power has to be considered</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>CYCLING</td>
-            <td>Indicates the fact that cycling is a contributor to reliability</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>DUTY CYCLE</td>
-            <td>The percentage of time during which the item is operated</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>OTHER</td>
-            <td>Any other parameters or data to be considered</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>WO</td>
-            <td>Wear-Out is to be considered when “YES”</td>
-            <td></td>
-        </tr>
-    </table>
+* - Column
+  - Description
+  - Remark
+
+* - REF
+  - Identifies the miscellaneous item
+  -
+
+* - EQUIPMENT
+  - Name of the item
+  -
+
+* - FR
+  - Depending on the model, either a constant failure rate (fit) or a % standing for an estimate of the proportion of failures:
+
+    - A figure (integer) means a failure rate in fit,
+    - A proportion (figure followed by %) means a proportion of failure.
+  - Constant failure rate at 60% LoC (Chi-square) **or**  
+    Probability of failure at 60% upper-bound one-sided interval
+
+* - POINT ESTIMATE
+  - When relevant — observed failure(s) — point estimate of the failure rate or of the proportion of failures %
+  -
+
+* - QUALITY
+  - Level of quality used to define the “standard model”
+  - High, Medium, Low
+
+* - MATURITY
+  - Indicates the level of maturity, generally based on the first use of the equipment in-orbit
+  -
+
+* - TECHNOLOGY
+  - Indicates, when relevant, which technology is concerned
+  -
+
+* - COMPLEXITY
+  - Indicates, when relevant, the level of complexity
+  -
+
+* - ORBIT
+  - Indicates which orbit is relevant to the “standard model”
+  - LEO, GEO
+
+* - T°
+  - Indicates the range of T° when T° should be considered
+  -
+
+* - POWER
+  - Indicates the range of Power when Power should be considered
+  -
+
+* - CYCLING
+  - Indicates the fact that cycling is a contributor to reliability
+  -
+
+* - DUTY CYCLE
+  - The percentage of time during which the item is operated
+  -
+
+* - OTHER
+  - Any other parameters or data to be considered
+  -
+
+* - DEG
+  - Degradation is to be considered when “YES”
+  -
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc_table4_8')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc-table_10_8')" placeholder="Search table...">
 
 ```{list-table} Reliability data
-:name: misc-table4-8
+:name: misc-table_10_8
 
-* - <table class="myTable" id="misc_table4_8">
+* - <table class="myTable" id="misc-table_10_8">
         <thead>
             <tr>
                 <th>REF</th>

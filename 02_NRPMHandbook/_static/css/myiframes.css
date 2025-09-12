@@ -1,8 +1,18 @@
 .ext_content {
-	width: 100%;
-	overflow-y: hidden !important;
+    width: 100%;
+    overflow-y: hidden !important;
 }
 
 .no-x-scroll {
-	overflow-x: hidden;
+    overflow-x: hidden;
+}
+
+iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 800px;
+    height: auto;
+    min-height: 600px;
+    border: none;
+    box-sizing: border-box;
 }

@@ -3,5 +3,5 @@
 # Terms, definitions and abbreviated terms
 ```{admonition} Remark
 :class: remark
-The terms and definitions of the entire digital handbook are listed in {numref}`terms`.
+The terms and definitions of the entire digital handbook are listed in {numref}`accronyms` of {ref}` Part 7 – Glossary <glossary>`.
 ```

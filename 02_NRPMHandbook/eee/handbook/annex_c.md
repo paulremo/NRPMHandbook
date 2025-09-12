@@ -3,7 +3,7 @@
 (eee_annex_c)=
 # Annex C: modified questions in the process questionnaire
 
-The questionnaire is performed by a list of questions applicable for each phase of the development and manufacturing in order to estimate the process factor $\Pi_{\text{process}}$ for quality and technical control over reliability in the product life cycle as defined in Section {numref}`eee_4_1`. However, some of the questions are not perfectly applicable to space applications. This is why this present annex contains the modified questions of the questionnaire adapted to space applications according to the content of Section {numref}`eee_4_3_2_4`. Recommendations for the satisfaction level of the modified and non-modified questions of the questionnaire are proposed in {numref}`eee_annex_b`.
+The questionnaire is performed by a list of questions applicable for each phase of the development and manufacturing in order to estimate the process factor $\Pi_{\text{process}}$ for quality and technical control over reliability in the product life cycle as defined in Section {numref}`eee_8_1`. However, some of the questions are not perfectly applicable to space applications. This is why this present annex contains the modified questions of the questionnaire adapted to space applications according to the content of Section {numref}`eee_8_3_2_4`. Recommendations for the satisfaction level of the modified and non-modified questions of the questionnaire are proposed in {numref}`eee_annex_b`.
 
 Questions n°14, n°71 and n°114 are modified only for the "Operation and maintenance" phase and are not modified for the other phases. Other questions are modified for all phases of use.
 

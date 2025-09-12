@@ -75,24 +75,24 @@ function runPiProcess() {
 
     /* CONFIGURE ONCLICK EVENTS */
 
-    document.getElementById("mode-choice-subco").onclick = function () {
+    document.getElementById("mode-choice-subco").onclick = function() {
         modeSubco = true;
         document.getElementById("mode-choice-prime").checked = false;
     }
     document.getElementById("mode-choice-subco").checked = true;
 
-    document.getElementById("mode-choice-prime").onclick = function () {
+    document.getElementById("mode-choice-prime").onclick = function() {
         modeSubco = false;
         document.getElementById("mode-choice-subco").checked = false;
     }
 
-    document.getElementById("application-choice-yes").onclick = function () {
+    document.getElementById("application-choice-yes").onclick = function() {
         appliNS = true;
         document.getElementById("application-choice-no").checked = false;
     }
     document.getElementById("application-choice-yes").checked = true;
 
-    document.getElementById("application-choice-no").onclick = function () {
+    document.getElementById("application-choice-no").onclick = function() {
         appliNS = false;
         document.getElementById("application-choice-yes").checked = false;
     }
@@ -102,7 +102,7 @@ function runPiProcess() {
 
     let answers_loaded = false;
 
-    document.getElementById("question-load-button").onclick = function () {
+    document.getElementById("question-load-button").onclick = function() {
         if (document.getElementById("question-load").value != "") {
             if (document.getElementById("question-load").value.substring(0, 13) == "Specification") {
                 let ans_dico = generate_saved_answers_collection(document.getElementById("question-load").value);
@@ -112,21 +112,18 @@ function runPiProcess() {
                     this.disabled = true;
                     document.getElementById("question-load").disabled = true;
                     document.getElementById("question-load-button").disabled = true;
-                }
-                else {
+                } else {
                     alert("Values corrupted, please verify your data and try again");
                 }
-            }
-            else {
+            } else {
                 alert("Values corrupted, please verify your data and try again");
             }
-        }
-        else {
+        } else {
             alert("No answers to load");
         }
     }
 
-    document.getElementById("start").onclick = function () {
+    document.getElementById("start").onclick = function() {
 
         document.getElementById('overlay').style.display = 'none';
 
@@ -135,39 +132,33 @@ function runPiProcess() {
             for (const [key, value] of new_dico) {
                 if (modeSubco) {
                     modeKey = "subco"
-                }
-                else {
+                } else {
                     modeKey = "prime"
                 }
                 if (appliNS) {
                     appliDico = recomNS
-                }
-                else {
+                } else {
                     appliDico = recomCL
                 }
             }
-        }
-        else {
+        } else {
             for (const [key, value] of new_dico) {
                 let ct_dict = new Map();
                 for (const [q, v] of value) {
                     if (modeSubco) {
                         modeKey = "subco"
-                    }
-                    else {
+                    } else {
                         modeKey = "prime"
                     }
                     if (appliNS) {
                         appliDico = recomNS
-                    }
-                    else {
+                    } else {
                         appliDico = recomCL
                     }
                     let recoms = appliDico.get(key).get(new_dico.get(key).get(parseInt(q)).get("id")).get(modeKey);
                     if (recoms.values().next().value == 'NA') {
                         ct_dict.set(q, "NA");
-                    }
-                    else {
+                    } else {
                         ct_dict.set(q, null);
                     }
                 }
@@ -187,7 +178,7 @@ function runPiProcess() {
     var i_coll;
 
     for (i_coll = 0; i_coll < coll.length; i_coll++) {
-        coll[i_coll].addEventListener("click", function () {
+        coll[i_coll].addEventListener("click", function() {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
             if (content.style.display === "block") {
@@ -243,12 +234,14 @@ function runPiProcess() {
         for (var e of dataset) {
             if (e > mx) {
                 mx = e
-            }
-            else if (e < mn) {
+            } else if (e < mn) {
                 mn = e
             }
         }
-        return new Map([["mx", mx], ["mn", mn]]);
+        return new Map([
+            ["mx", mx],
+            ["mn", mn]
+        ]);
     }
 
     function transformName(name) {
@@ -256,14 +249,11 @@ function runPiProcess() {
         if (name == "MANUFACTURING OF BOARD - SUBASSEMBLY") {
             /*trueName = content[0].charAt(0) + content[0].slice(1).toLowerCase() + "-" + content[1].charAt(0) +  content[1].charAt(1) +content[1].slice(2).toLowerCase();*/
             trueName = "Manufacturing of board - Subassembly";
-        }
-        else if (name == "OPERATION AND MAINTENANCE") {
+        } else if (name == "OPERATION AND MAINTENANCE") {
             trueName = "Operation and Maintenance";
-        }
-        else if (name == "SUPPORT ACTIVITIES") {
+        } else if (name == "SUPPORT ACTIVITIES") {
             trueName = "Support Activities";
-        }
-        else {
+        } else {
             trueName = name.charAt(0) + name.slice(1).toLowerCase();
         }
         return trueName;
@@ -276,11 +266,9 @@ function runPiProcess() {
             for ([q, v] of currentAnswers.get(cat)) {
                 if (currentAnswers.get(cat).get(q) == 'NA') {
                     ans = ans + q + "," + 'NA';
-                }
-                else if (currentAnswers.get(cat).get(q) == null) {
+                } else if (currentAnswers.get(cat).get(q) == null) {
                     ans = ans + q + "," + 'null';
-                }
-                else {
+                } else {
                     ans = ans + q + "," + currentAnswers.get(cat).get(q);
                 }
                 ans = ans + ";"
@@ -299,15 +287,13 @@ function runPiProcess() {
         if (ans[1] == "false") {
             modeSubco = false;
             modeKey = "prime";
-        }
-        else {
+        } else {
             modeSubco = true;
             modeKey = "subco";
         }
         if (ans[2] == "false") {
             appliNS = false;
-        }
-        else {
+        } else {
             appliNS = true;
         }
         let categories = ans[0].split("!");
@@ -335,8 +321,7 @@ function runPiProcess() {
         for (const [key, v] of currentAnswers.get(current_category)) {
             if (v == 'NA') {
                 q_na = q_na + 1;
-            }
-            else if (v != null) {
+            } else if (v != null) {
                 q_ans = q_ans + 1
             }
         }
@@ -352,8 +337,7 @@ function runPiProcess() {
         for (const [key, v] of currentAnswers.get(current_category)) {
             if (v == 'NA') {
                 q_na = q_na + 1;
-            }
-            else if (v != null) {
+            } else if (v != null) {
                 q_ans = q_ans + 1;
             }
         }
@@ -382,11 +366,9 @@ function runPiProcess() {
                 let qDescription = new_dico.get(cat).get(q).get("question").replaceAll(',', ' ');
                 if (currentAnswers.get(cat).get(q) == 'NA') {
                     ans = ans + new_dico.get(cat).get(q).get("id") + "," + qDescription + "," + 'NA';
-                }
-                else if (currentAnswers.get(cat).get(q) == null) {
+                } else if (currentAnswers.get(cat).get(q) == null) {
                     ans = ans + new_dico.get(cat).get(q).get("id") + "," + qDescription + "," + 'Not answered';
-                }
-                else {
+                } else {
                     let lvlDescription = new_dico.get(cat).get(q).get("levels").get(currentAnswers.get(cat).get(q)).replaceAll(',', ' ');
                     ans = ans + new_dico.get(cat).get(q).get("id") + "," + qDescription + "," + currentAnswers.get(cat).get(q) + " : " + lvlDescription;
                 }
@@ -422,7 +404,7 @@ function runPiProcess() {
         pages = document.getElementsByClassName("pageNumber");
 
         for (var pgn of pages) {
-            pgn.onclick = function () {
+            pgn.onclick = function() {
                 for (var pb of pages) {
                     setPageUnclicked(pb);
                 }
@@ -431,18 +413,16 @@ function runPiProcess() {
                 currentPage = this.id;
                 configureCurrentPage()
             }
-            pgn.onmouseenter = function () {
+            pgn.onmouseenter = function() {
                 for (var p of document.getElementsByClassName("pageNumber")) {
                     p.innerHTML = '<i class="fa fa-circle"></i>';
                     p.style.backgroundColor = "white";
                     if (currentAnswers.get(current_category).get(parseInt(p.id.substring(4))) == 'NA') {
                         console.log("na")
                         p.style.color = "black";
-                    }
-                    else if (currentAnswers.get(current_category).get(parseInt(p.id.substring(4))) != null) {
+                    } else if (currentAnswers.get(current_category).get(parseInt(p.id.substring(4))) != null) {
                         p.style.color = "#b3b3b3";
-                    }
-                    else {
+                    } else {
                         p.style.color = "#26B4D4";
                     }
                     p.style.fontSize = "1.5vw";
@@ -453,24 +433,19 @@ function runPiProcess() {
                 }
                 if (id < 9) {
                     this.innerHTML = "00" + (id + 1);
-                }
-                else if (id < 99) {
+                } else if (id < 99) {
                     this.innerHTML = "0" + (id + 1);
-                }
-                else {
+                } else {
                     this.innerHTML = id + 1;
                 }
                 if (this.id == currentPage) {
                     this.style.backgroundColor = "red";
-                }
-                else {
+                } else {
                     if (currentAnswers.get(current_category).get(parseInt(this.id.substring(4))) == 'NA') {
                         this.style.backgroundColor = "black";
-                    }
-                    else if (currentAnswers.get(current_category).get(parseInt(this.id.substring(4))) != null) {
+                    } else if (currentAnswers.get(current_category).get(parseInt(this.id.substring(4))) != null) {
                         this.style.backgroundColor = "#b3b3b3";
-                    }
-                    else {
+                    } else {
                         this.style.backgroundColor = "#26B4D4";
                     }
                 }
@@ -517,34 +492,32 @@ function runPiProcess() {
                     document.getElementById("page" + id3).style.fontSize = "1.2em";
                 }*/
             }
-            pgn.onmouseleave = function () {
+            pgn.onmouseleave = function() {
                 this.innerHTML = '<i class="fa fa-circle"></i>';
                 this.style.backgroundColor = "white";
                 if (currentAnswers.get(current_category).get(this.id.substring(4)) == 'NA') {
                     this.style.color = "black";
-                }
-                else if (currentAnswers.get(current_category).get(this.id.substring(4)) != null) {
+                } else if (currentAnswers.get(current_category).get(this.id.substring(4)) != null) {
                     this.style.color = "#b3b3b3";
-                }
-                else {
+                } else {
                     this.style.color = "#26B4D4";
                 }
                 this.style.fontSize = "1.5vw";
                 let id = parseInt(this.id.substring(4))
-                /*if (id > 0) {
-                    let id2 = id - 1;
-                    document.getElementById("page" + id2).innerHTML = '<i class="fa fa-circle"></i>';
-                    document.getElementById("page" + id2).style.backgroundColor = "white";
-                    document.getElementById("page" + id2).style.color = "#0F4754";
-                    document.getElementById("page" + id2).style.fontSize = "1.5vw";
-                }
-                if (id < maxPage) {
-                    let id3 = id + 1;
-                    document.getElementById("page" + id3).innerHTML = '<i class="fa fa-circle"></i>';
-                    document.getElementById("page" + id3).style.backgroundColor = "white";
-                    document.getElementById("page" + id3).style.color = "#0F4754";
-                    document.getElementById("page" + id3).style.fontSize = "1.5vw";
-                }*/
+                    /*if (id > 0) {
+                        let id2 = id - 1;
+                        document.getElementById("page" + id2).innerHTML = '<i class="fa fa-circle"></i>';
+                        document.getElementById("page" + id2).style.backgroundColor = "white";
+                        document.getElementById("page" + id2).style.color = "#0F4754";
+                        document.getElementById("page" + id2).style.fontSize = "1.5vw";
+                    }
+                    if (id < maxPage) {
+                        let id3 = id + 1;
+                        document.getElementById("page" + id3).innerHTML = '<i class="fa fa-circle"></i>';
+                        document.getElementById("page" + id3).style.backgroundColor = "white";
+                        document.getElementById("page" + id3).style.color = "#0F4754";
+                        document.getElementById("page" + id3).style.fontSize = "1.5vw";
+                    }*/
                 configureCurrentPage();
             }
 
@@ -562,8 +535,7 @@ function runPiProcess() {
         let first = findFirstApplicable(cat);
         if (first != null) {
             document.getElementById("page" + first).click();
-        }
-        else {
+        } else {
             document.getElementById("page0").click();
         }
 
@@ -581,11 +553,9 @@ function runPiProcess() {
             if (currentAnswers.get(current_category).get(parseInt(p.id.substring(4))) == 'NA') {
                 console.log("na")
                 p.style.color = "black";
-            }
-            else if (currentAnswers.get(current_category).get(parseInt(p.id.substring(4))) != null) {
+            } else if (currentAnswers.get(current_category).get(parseInt(p.id.substring(4))) != null) {
                 p.style.color = "#b3b3b3";
-            }
-            else {
+            } else {
                 p.style.color = "#26B4D4";
             }
             p.style.fontSize = "1.5vw";
@@ -593,11 +563,9 @@ function runPiProcess() {
         let id = parseInt(currentPage.substring(4));
         if (id < 10) {
             document.getElementById(currentPage).innerHTML = "00" + (id + 1);
-        }
-        else if (id < 100) {
+        } else if (id < 100) {
             document.getElementById(currentPage).innerHTML = "0" + (id + 1);
-        }
-        else {
+        } else {
             document.getElementById(currentPage).innerHTML = id + 1;
         }
         document.getElementById(currentPage).style.backgroundColor = "red";
@@ -637,8 +605,7 @@ function runPiProcess() {
         }
         if (found) {
             return cnt - 1
-        }
-        else {
+        } else {
             return null
         }
     }
@@ -652,6 +619,7 @@ function runPiProcess() {
         let text = q_information.get('question');
         let recommandation = q_information.get('recommandation');
         let weight = q_information.get('weight');
+        // let applicability = q_information.get('applicability');
         let n1 = q_information.get('levels').get('N1');
         let n2 = q_information.get('levels').get('N2');
         let n3 = q_information.get('levels').get('N3');
@@ -666,11 +634,9 @@ function runPiProcess() {
         let q_answer = currentAnswers.get(current_category).get(parseInt(q));
         if (q_answer != "NA" && q_answer != null) {
             document.getElementById("choice" + q_answer[1]).click();
-        }
-        else if (q_answer == "NA") {
+        } else if (q_answer == "NA") {
             document.getElementById("choice4").click();
-        }
-        else {
+        } else {
             for (var pb of document.getElementsByClassName("choice-description")) {
                 setNonApplicableUnclicked();
                 setOptionUnclicked(pb);
@@ -679,17 +645,17 @@ function runPiProcess() {
         }
         document.getElementById("recommandation").innerHTML = recommandation;
         document.getElementById("weight").innerHTML = weight;
+        // Check if the question has an applicability comment and write the comment, else write "Applicable to all space systems.".
+        document.getElementById("applicability").innerHTML = (q_information.get('applicability')) ? q_information.get('applicability') : "Applicable to all space systems.";
 
         if (modeSubco) {
             modeKey = "subco"
-        }
-        else {
+        } else {
             modeKey = "prime"
         }
         if (appliNS) {
             appliDico = recomNS;
-        }
-        else {
+        } else {
             appliDico = recomCL;
         }
 
@@ -706,18 +672,14 @@ function runPiProcess() {
             for (var el of recoms) {
                 if (el == 'NA') {
                     document.getElementById("recommendationNA").innerHTML = "FXD";
-                }
-                else if (lvlMax == lvlMin) {
+                } else if (lvlMax == lvlMin) {
                     document.getElementById("recommendation" + el).innerHTML = "FXD";
-                }
-                else {
+                } else {
                     if (el == lvlMax) {
                         document.getElementById("recommendation" + el).innerHTML = "MAX";
-                    }
-                    else if (el == lvlMin) {
+                    } else if (el == lvlMin) {
                         document.getElementById("recommendation" + el).innerHTML = "MIN";
-                    }
-                    else {
+                    } else {
                         document.getElementById("recommendation" + el).innerHTML = "|";
                     }
                 }
@@ -739,14 +701,12 @@ function runPiProcess() {
                 if (categoryId.get(current_category) < 7) {
                     let nextCat = categoryId.get(current_category) + 1;
                     document.getElementById("planet" + nextCat).click();
-                }
-                else {
+                } else {
                     document.getElementById("page" + current_question).click();
                     document.getElementById("right-button").className = "nav-button disabled-nav";
                 }
 
-            }
-            else {
+            } else {
                 document.getElementById("page" + nxtQuestion).click();
             }
 
@@ -857,13 +817,11 @@ function runPiProcess() {
         if (num == "0") {
             document.getElementById("left-button").className = "nav-button disabled-nav";
             document.getElementById("right-button").className = "nav-button";
-        }
-        else if (parseInt(num) == new_dico.get(current_category.size - 2)) {
+        } else if (parseInt(num) == new_dico.get(current_category.size - 2)) {
             document.getElementById("left-button").className = "nav-button";
             document.getElementById("right-button").className = "nav-button";
             document.getElementById("right-button").style.backgroundColor = "#04AA6D";
-        }
-        else {
+        } else {
             document.getElementById("left-button").className = "nav-button";
             document.getElementById("right-button").className = "nav-button";
         }
@@ -881,12 +839,10 @@ function runPiProcess() {
         if (currentAnswers.get(current_category).get(parseInt(num)) == "NA") {
             pg.style.backgroundColor = "black";
             pg.style.color = "white";
-        }
-        else if (currentAnswers.get(current_category).get(parseInt(num)) != null) {
+        } else if (currentAnswers.get(current_category).get(parseInt(num)) != null) {
             pg.style.backgroundColor = "gray";
             pg.style.color = "white";
-        }
-        else {
+        } else {
             pg.style.backgroundColor = "#88b2c1";
             pg.style.color = "black";
         }
@@ -947,8 +903,7 @@ function runPiProcess() {
         if (all_filled) {
             document.getElementById("pi-process-box").disabled = false;
             document.getElementById("sumUpAnswers").disabled = false;
-        }
-        else {
+        } else {
             document.getElementById("pi-process-box").disabled = true;
             document.getElementById("sumUpAnswers").disabled = true;
         }
@@ -967,18 +922,14 @@ function runPiProcess() {
                 if (v == null) {
                     n_audit = n_audit + 0 * parseFloat(new_dico.get(key).get(k).get('weight'));
                     n_audit_max = n_audit_max + 3 * parseFloat(new_dico.get(key).get(k).get('weight'));
-                }
-                else if (v == 'NA') {
-                }
-                else {
+                } else if (v == 'NA') {} else {
                     n_audit = n_audit + (parseInt(v.slice(1)) - 1) * parseFloat(new_dico.get(key).get(k).get('weight'));
                     n_audit_max = n_audit_max + 3 * parseFloat(new_dico.get(key).get(k).get('weight'));
                 }
             }
             if (n_audit_max == 0) {
                 process_grade = process_grade + categoryContribution.get(key) * n_audit;
-            }
-            else {
+            } else {
                 process_grade = process_grade + categoryContribution.get(key) * n_audit / n_audit_max;
                 total_contribution = total_contribution + categoryContribution.get(key)
             }
@@ -1009,7 +960,7 @@ function runPiProcess() {
 
 
     for (var p of planets) {
-        p.onclick = function () {
+        p.onclick = function() {
             for (var pb of document.getElementsByClassName("planet")) {
                 setCategoryUnclicked(pb);
                 setUnclickedCategoryStyle(pb);
@@ -1017,26 +968,25 @@ function runPiProcess() {
             setClickedCategoryStyle(this);
             setCategoryClicked(this);
         }
-        p.onmouseenter = function () {
+        p.onmouseenter = function() {
             let num = this.id.substr(-1);
             if (!categoriesCollection.get(num)) {
                 setHoveredCategoryStyle(this);
             }
 
         }
-        p.onmouseleave = function () {
+        p.onmouseleave = function() {
             let num = this.id.substr(-1);
             if (!categoriesCollection.get(num)) {
                 setUnclickedCategoryStyle(this);
-            }
-            else {
+            } else {
                 setClickedCategoryStyle(this);
             }
         }
     }
 
     for (var opt of options) {
-        opt.onclick = function () {
+        opt.onclick = function() {
             for (var pb of document.getElementsByClassName("choice-description")) {
                 setOptionUnclicked(pb);
                 setFreeOptionStyle(pb);
@@ -1055,13 +1005,13 @@ function runPiProcess() {
                 nextQuestion();
             }*/
         }
-        opt.onmouseenter = function () {
+        opt.onmouseenter = function() {
             let num = this.id.substr(-1);
             if (!optionsCollection.get(num)) {
                 setHoveredOptionStyle(this);
             }
         }
-        opt.onmouseleave = function () {
+        opt.onmouseleave = function() {
             let num = this.id.substr(-1);
             if (!optionsCollection.get(num)) {
                 setFreeOptionStyle(this);
@@ -1069,7 +1019,7 @@ function runPiProcess() {
         }
     }
 
-    document.getElementById("not-applicable").onclick = function () {
+    document.getElementById("not-applicable").onclick = function() {
         for (var pb of document.getElementsByClassName("choice-description")) {
             setOptionUnclicked(pb);
             setFreeOptionStyle(pb);
@@ -1086,25 +1036,25 @@ function runPiProcess() {
 
     }
 
-    document.getElementById("left-button").onclick = function () {
+    document.getElementById("left-button").onclick = function() {
         previousQuestion();
     }
 
-    document.getElementById("right-button").onclick = function () {
+    document.getElementById("right-button").onclick = function() {
         nextQuestion();
     }
 
-    document.getElementById("copyAnswers").onclick = function () {
+    document.getElementById("copyAnswers").onclick = function() {
         let ans = saveAnswers();
         navigator.clipboard.writeText(ans);
         alert("Copied the answers. Please make sure to properly paste the answers and to save it in a dedicated text file. Modifying the data might compromise the results.");
     }
 
-    document.getElementById("resume").onclick = function () {
+    document.getElementById("resume").onclick = function() {
         document.getElementById("overlay").style.display = "none";
     }
 
-    document.getElementById("helpPiProcess").onclick = function () {
+    document.getElementById("helpPiProcess").onclick = function() {
         document.getElementById("overlay").style.display = "block";
         document.getElementById("modeInput").style.display = "none";
         document.getElementById("answersInput").style.display = "none";
@@ -1116,12 +1066,13 @@ function runPiProcess() {
 
     }
 
-    document.getElementById("sumUpAnswers").onclick = function () {
+    document.getElementById("sumUpAnswers").onclick = function() {
         saveSumUp();
     }
 
     function process_all_weights() {
         weight = 0
+        console.log(new_dico);
         for (var [key, value] of new_dico) {
             for (const [k, v] of value) {
                 weight = weight + parseInt(v.get('weight'))
@@ -1130,4 +1081,3 @@ function runPiProcess() {
     }
 
 }
-

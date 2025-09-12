@@ -1,15 +1,17 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
 (home_page)=
-# Welcome to the reliability.space digital handbook!
+# Welcome to the ECSS-Q-HB-30-02A digital reliability handbook
 
-This is the digital version of the reliability.space 2020 handbook. The handbook offers technical content in the [Handbook](methodologies) sections and interactive content in the [Models](sec_eee_models) sections.
+This is the digital version of the ECSS-Q-HB-30-02A reliability handbook. This handbook offers:
+ * **Technical content** in the [Handbook](methodologies) sections,
+ * **Interactive content** in the [Models](sec_eee_models) sections.
 
 ## Objective
 
-The reliability.space 2020 handbook was developed during an {term}`ESA` study aiming at the development of a new {term}`reliability prediction <Reliability prediction>` methodology ({term}`NRPM`) for space applications. The objective of the handbook is to provide a methodology that is dedicated to space, avoiding the limitations and shortcomings of existing {term}`reliability prediction <Reliability prediction>` methodologies which were largely focussing on ground applications. The outcome of the {term}`ESA` study {term}`NRPM` is denoted by reliability.space. The present digital handbook is a digitalized version of the reliability.space 2020 handbook that offers easier access, interactive content, and a contemporary design.
+The ECSS-Q-HB-30-02A reliability handbook was developed to provide a reliability methodology that can be used for space applications, without the limitations and shortcomings of existing {term}`reliability prediction <Reliability prediction>` methodologies. The present digital handbook is a digitalized version of the ECSS-Q-HB-30-02A reliability handbook that offers easier access, interactive content, and a contemporary design.
 
-This digital handbook contains a methodology, a methods and four application-specific chapters for {term}`reliability prediction <Reliability prediction>` in space applications. These chapters can be accessed by clicking on the icons below or browsing the table of contents to the left of this page.
+This digital handbook contains 7 parts. These parts can be accessed by clicking on the icons below or browsing the table of contents on the left side of this page.
 
 ::::{grid}
 :gutter: 3
@@ -17,13 +19,13 @@ This digital handbook contains a methodology, a methods and four application-spe
 :::{grid-item-card} **Methodologies**
 <a href="methodologies/handbook/intro.html"><img class="link-image" src="_static/images/methodologyPicture.png" alt="logo methodologies"></a>
 ^^^
-Explains the framework and taxonomy used in the reliability.space handbook and links it to the reliability prediction process and usage, and provides guidance for users that are in charge of planning a prediction.
+Gives a brief introduction to the project life cycle and to the different phases describing an item’s reliability over time. These concepts are needed to understand the taxonomy and for the reliability prediction process discussed in this handbook.
 :::
 
 :::{grid-item-card} **Methods**
 <a href="methods/handbook/intro.html"><img class="link-image" src="_static/images/methodPicture.png" alt="logo methods"></a>
 ^^^
-Provides information on different reliability prediction and methods inputs, allowing to understand the background of the models defined in the following chapters.
+Provides information on different reliability prediction and methods inputs, allowing to understand the background of the models defined in the following parts.
 :::
 ::::
 
@@ -59,22 +61,32 @@ Provides an overview of existing methods for system applications and considerati
 :::
 ::::
 
-{term}`Reliability prediction <Reliability prediction>` ({term}`RP`) is not an end in itself – the ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single {term}`spacecrafts <Spacecraft>` or constellations.
+::::{grid}
+:gutter: 3
 
-The purpose of the **methodology chapter** ({numref}`methodologies`) is to provide guidance for the use of {term}`reliability prediction <Reliability prediction>` to support such decisions. The ground rules and scope of the prediction are defined accounting for the {term}`RP` objectives and uses as well as for the project life cycle phase in which the predictions are performed. Ultimately, the goal is to select suitable methods and models to perform a prediction in a given context. The **methods chapter** ({numref}`methods`) contains information about the inputs and modelling approaches that can be used to develop models for {term}`reliability predictions <Reliability prediction>` in a given application. The discussion of methods can be used to derive new applications or update existing ones. However, the main purpose of this chapter is to form the basis for the application specific-chapters following it: **EEE chapter** ({numref}`sec_eee_handbook`, {numref}`sec_eee_models`), **mechanical chapter** ({numref}`sec_mech_handbook`, {numref}`sec_mech_models`), **miscellaneous chapter** ({numref}`sec_misc_handbook`, {numref}`sec_misc_models`), **system chapter** ({numref}`sec_sys_handbook`, {numref}`sec_sys_models`).
+:::{grid-item-card} **Glossary**
+<a href="glossary/handbook/intro.html"><img class="link-image" src="_static/images/glossary_picture1.png" alt="logo glossary"></a>
+^^^
+Provides a glossary of terms, definitions and abbreviated terms that can be found in the 6 previous parts.
+:::
+::::
+
+Reliability prediction ({term}`RP`) is not an end in itself. The ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single spacecraft or constellations.
+
+The purpose of the **Part 1 - Methodology** ({numref}`methodologies`) is to provide guidance for the use of reliability prediction to support such decisions. The ground rules and scope of the prediction are defined accounting for the RP objectives and uses as well as for the project life cycle phase in which the predictions are performed. Ultimately, the goal is to select suitable methods and models to perform a prediction in a given context. The **Part 2 - Methods** ({numref}`methods`) contains information about the inputs and modelling approaches that can be used to develop models for reliability predictions in a given application. The discussion of methods can be used to derive new applications or update existing ones. However, the main purpose of this chapter is to form the basis for the application specific-parts following it: **Part 3 - EEE** ({numref}`sec_eee_handbook`, {numref}`sec_eee_models`), **Part 4 - Mechanical** ({numref}`sec_mech_handbook`, {numref}`sec_mech_models`), **Part 5 - Miscellaneous** ({numref}`sec_misc_handbook`, {numref}`sec_misc_models`), **Part 6 - System** ({numref}`sec_sys_handbook`, {numref}`sec_sys_models`).
 
 ```{figure} _static/images/overview_hdbk.png
 ---
 width: 600px
 name: fig_hdbk
 ---
-Tasks in {term}`reliability prediction<Reliability prediction>`.
+Tasks in reliability prediction
 ```
 
 
-Even though the handbook targets decision support, the decision-making as such is left to the user; {term}`reliability prediction <Reliability prediction>` is limited to providing the numbers that can be used to decide in a given trade-off situation. Also, the practical implementation and development or choice of suitable software tools is outside the scope of this handbook. As a general rule, models are provided with full detail, allowing the development of tools without any restrictions regarding the information needed to implement them.
+Even though the handbook targets decision support, the decision-making as such is left to the user; reliability prediction is limited to providing the numbers that can be used to decide in a given trade-off situation. Also, the practical implementation and development or choice of suitable software tools is outside the scope of this handbook. As a general rule, models are provided with full detail, allowing the development of tools without any restrictions regarding the information needed to implement them.
 
-## How to use this digital handbook
+## **How to use this digital handbook**
 
 ### Navigation
 

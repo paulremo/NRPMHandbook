@@ -1,22 +1,23 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
-(misc_5_1)=
+(misc_10_1)=
 # List of miscellaneous items
-{numref}`misc-table4-1` presents the {term}`miscellaneous items <Miscellaneous item>` for which a reliability “standard model” is defined (refer to {numref}`misc_5_7` and {numref}`misc_5_8`).
 
-The reliability model derived from IOR data gathers in fact all the elements related to an “equivalent class” and is only valid for this class of miscellaneous items. The related numerical values are provided in {numref}`misc-table4-8`.
+{numref}`misc-table_10_1` presents the miscellaneous items for which a reliability “standard model” is defined (refer to {numref}`misc_10_7` and {numref}`misc_10_8`).
 
-To use the reliability model it is, first, necessary to assess that the {term}`miscellaneous item <Miscellaneous item>` considered falls in the scope of the model definition. The “standard model” refers to a class of {term}`miscellaneous item <Miscellaneous item>` identified by the main functions which are supported, the parameters reflecting the reliability ({term}`quality <Quality>`…) and the operating conditions.
+The reliability model derived from IOR data gathers in fact all the elements related to an “equivalent class” and is only valid for this class of miscellaneous items. The related numerical values are provided in {numref}`misc-table_10_8`.
 
-{numref}`misc-table4-2` provides additional information for the {term}`miscellaneous items <Miscellaneous item>` for which no “standard model” is provided (the list is not exhaustive, refer to {numref}`misc_5_7`).
+To use the reliability model, it is, first, necessary to assess that the miscellaneous item considered falls in the scope of the model definition. The “standard model” refers to a class of miscellaneous item identified by the main functions which are supported, the parameters reflecting the reliability (quality…) and the operating conditions.
+
+{numref}`misc-table_10_2` provides additional information for the miscellaneous items for which no “standard model” is provided (the list is not exhaustive, refer to {numref}`misc_10_7`).
 
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc_table4_1')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc_table_10_1')" placeholder="Search table...">
 
 ```{list-table} List of miscellaneous items with “standard model”
-:name: misc-table4-1
+:name: misc-table_10_1
 
-* - <table class="myTable" id="misc_table4_1">
+* - <table class="myTable" id="misc_table_10_1">
         <thead>
             <tr>
                 <th>REF</th>
@@ -131,12 +132,12 @@ To use the reliability model it is, first, necessary to assess that the {term}`m
     </table>
 ```
 
-<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc_table4_2')" placeholder="Search table...">
+<input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'misc-table_10_2')" placeholder="Search table...">
 
 ```{list-table} List of Miscellaneous items with “non-standard model”
-:name: misc-table4-2
+:name: misc-table_10_2
 
-* - <table id="misc_table4_2" class="myTable">
+* - <table id="misc-table_10_2" class="myTable">
         <thead>
             <tr>
                 <th>REF</th>
@@ -161,7 +162,7 @@ To use the reliability model it is, first, necessary to assess that the {term}`m
             <td>N-STD_002</td>
             <td>POWER</td>
             <td>CONNECTORS</td>
-            <td>See EEE</td>
+            <td>Not covered in this part, see Part 3 - EEE of this handbook</td>
         </tr>
         <tr>
             <td colspan="4" class="full-span">PROP - Propulsion</td>
@@ -252,14 +253,14 @@ To use the reliability model it is, first, necessary to assess that the {term}`m
             <td>
                 <p>Based on Manufacturer data.</p>
                 <p>Mechanical models for structural failure mechanisms and radiation
-                    degradation (wear-out).</p>
+                    degradation (wear-out)</p>
             </td>
         </tr>
         <tr>
             <td>N-STD_015</td>
             <td>ALL</td>
             <td>OPTRONICS</td>
-            <td>See EEE</td>
+            <td>Not covered in this part, see Part 3 - EEE of this handbook</td>
         </tr>
     </table>
 ```
