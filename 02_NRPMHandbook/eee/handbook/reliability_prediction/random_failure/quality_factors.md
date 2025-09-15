@@ -17,7 +17,7 @@ This factor considers the following four parameters:
 
 -   The experience factor $\epsilon$ which represents the buyer’s experience with the supplier.
 
-According to the equations presented in Annex A.2-17. No specific change of the equations is done for space applications. The range of $Part{\text{_Grade}}$ is between 0 for the worst mark and 1 for the best mark. Therefore, $Pi_{\text{PM}}$ component manufacturing factor is still comprised between 0.5 and 2 and adjusted by the factors 1.39 and 0.69 in the exponential.
+According to the equations presented in Annex A.2-17. No specific change of the equations is done for space applications. The range of $Part{\text{Grade}}$ is between 0 for the worst mark and 1 for the best mark. Therefore, $Pi_{\text{PM}}$ component manufacturing factor is still comprised between 0.5 and 2 and adjusted by the factors 1.39 and 0.69 in the exponential.
 
 
 (eee_8_3_4_1)=

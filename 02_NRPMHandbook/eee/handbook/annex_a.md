@@ -566,12 +566,12 @@ Acceleration factor for thermal and thermo-electrical stresses:
 :label: equation_a_3_3
 \lambda_{\text{physical}} =
 \left[
-\sum_{\text{Physical_Contributions}}
+\sum_{\text{Physical\_Contributions}}
 \left( \lambda_0 \cdot \Pi_{\text{acceleration}} \right)
 \right] \cdot \Pi_{\text{induced}_i}
 ```
 Where,
-* $T_{\text{board_ref}}$: operating temperature at board level
+* $T_{\text{board\_ref}}$: operating temperature at board level
 * $\Delta T$: temperature rise due to the heat dissipation of component
 * $T_0$: reference temperature defined in the formula for each type of component
 * $V_{\text{applied}}$: operating voltage
@@ -604,14 +604,14 @@ Acceleration factor for the thermo-mechanical stress:
 \right]
 ```
 Where,
-* $N_{\text{cy_phase}}$: number of cycles in the phase
+* $N_{\text{cy\_phase}}$: number of cycles in the phase
 * $t_{\text{phase}}$: duration of the phase
 * $\theta_{\text{cy}}$: cycle duration in hours
 * $\theta_0$: reference cycle duration
 * $\Delta T_{\text{cycling}}$: thermal amplitude of the cycle
 * $\Delta T_0$: reference thermal amplitude of the cycle
 * $E_a$: activation energy in eV
-* $T_{\text{max_cycling}}$: maximum temperature reached during the cycle
+* $T_{\text{max\_cycling}}$: maximum temperature reached during the cycle
 * $T_0$: reference temperature
 * $m$: fatigue coefficient
 * $p$: accelerating power of the duration factor
@@ -634,18 +634,18 @@ Acceleration factor for the relative humidity stress:
 ```{math}
 :label: equation_a_5_1
 \Pi_{RH} =
-\left( \frac{RH_{\text{board_ref}}}{RH_0} \right)^p
+\left( \frac{RH_{\text{board\_ref}}}{RH_0} \right)^p
 \cdot \exp \left[
 11604 \cdot E_a \cdot
 \left(
-\frac{1}{273+T_0} - \frac{1}{273+T_{\text{board_ref}}+\Delta T}
+\frac{1}{273+T_0} - \frac{1}{273+T_{\text{board\_ref}}+\Delta T}
 \right)
 \right]
 ```
 Where,
-* $RH_{\text{board_ref}}$: relative humidity of the environment considered
+* $RH_{\text{board\_ref}}$: relative humidity of the environment considered
 * $RH_0$: reference relative humidity
-* $T_{\text{board_ref}}$: environment temperature considered
+* $T_{\text{board\_ref}}$: environment temperature considered
 * $\Delta T$: temperature rise due to the component heat dissipation
 * $T_0$: reference temperature
 * $E_a$: activation energy

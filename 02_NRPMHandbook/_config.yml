@@ -27,7 +27,7 @@ html:
   use_issues_button: true  # Enable issues button
   use_edit_page_button: true  # Enable edit page button for GitHub
   favicon: _static/images/favicon.ico  # Path to the favicon
-  announcement: "🚀 This is version v0.4.0 of the ECSS-Q-HB-30-02A digital handbook 👩‍🚀"
+  announcement: "🚀 This is version v0.4.1 of the ECSS-Q-HB-30-02A digital handbook 👩‍🚀"
   extra_footer: "<a href='/home.html#imprint'>ESA contract No. 4000121065/17/NL/PS</a> and <a href='/home.html#imprint'>4000135482/21/NL/AR/va</a>"
   extra_navbar: ""
   extra_head:

@@ -6,9 +6,9 @@
 This paragraph deals with the different process factors dedicated to the quality in the product life cycle of components:
 
 * General process factor $Pi_{\text{process}}$ in {numref}`eee_8_3_3_1` to {numref}`eee_8_3_3_3`,
-* Process factor for RF/MW components $Pi_{\text{RF/MW_process}}$ in {numref}`eee_8_3_3_6`,
-* Process factor for ASIC components $Pi_{\text{ASIC_process}}$ in {numref}`eee_8_3_3_6`,
-* Process factor for hybrids and multi-chip modules $Pi_{\text{process_H&M}}$ in {numref}`eee_8_3_3_7`.
+* Process factor for RF/MW components $Pi_{\text{RF/MW\_process}}$ in {numref}`eee_8_3_3_6`,
+* Process factor for ASIC components $Pi_{\text{ASIC\_process}}$ in {numref}`eee_8_3_3_6`,
+* Process factor for hybrids and multi-chip modules $Pi_{\text{process\_H\&M}}$ in {numref}`eee_8_3_3_7`.
 * Power factor for Power semiconductors $Pi_{\text{process)PW}}$ in {numref}`eee_8_3_3_8`.
 
 (eee_8_3_3_1)=
@@ -32,7 +32,7 @@ In addition, in the audit, “product” is often mentioned; the way it needs to
 (eee_8_3_3_2)=
 ## Contribution of different phases in the development process
 
-The FIDES questionnaire for $Pi_{\text{process}}$ is based on questions having a possible impact on the reliability of the equipment and related to the different phases of its development and manufacturing. The relative influence of each phase, $Contribution_{\text{phase_i}}$, is weighted depending on the importance of each phase in the total contribution to the reliability of the equipment. This phase contribution is directly used in the calculation of the process factor $Pi_{\text{process}}$. The FIDES guide provides default values for the relative weights of each phase that can be used by all domains but recommends using dedicated values for the considered industrial domain. The table presented in the FIDES guide is in {numref}`eee_table_8_4`.
+The FIDES questionnaire for $Pi_{\text{process}}$ is based on questions having a possible impact on the reliability of the equipment and related to the different phases of its development and manufacturing. The relative influence of each phase, $Contribution_{\text{phase\_i}}$, is weighted depending on the importance of each phase in the total contribution to the reliability of the equipment. This phase contribution is directly used in the calculation of the process factor $Pi_{\text{process}}$. The FIDES guide provides default values for the relative weights of each phase that can be used by all domains but recommends using dedicated values for the considered industrial domain. The table presented in the FIDES guide is in {numref}`eee_table_8_4`.
 
 ```{list-table} Phase contribution for space applications
 :name: eee_table_8_4
@@ -181,33 +181,33 @@ In addition, for each question, recommendations are made in terms of the levels 
 (eee_8_3_3_5)=
 ## Process factor for RF / MW components
 
-The process factor $Pi_{\text{process_RF/MW}}$ takes into account how control over the life cycle of a radiofrequency or microwave product influences reliability. This factor is complementary to the process factor $Pi_{\text{process}}$ that remains applicable for microwave and frequency products. $Pi_{\text{process_RF/MW}}$  is issued from the equations and table presented in Annex A.2-14.
+The process factor $Pi_{\text{process\_RF/MW}}$ takes into account how control over the life cycle of a radiofrequency or microwave product influences reliability. This factor is complementary to the process factor $Pi_{\text{process}}$ that remains applicable for microwave and frequency products. $Pi_{\text{process\_RF/MW}}$  is issued from the equations and table presented in Annex A.2-14.
 
 The questionnaire consists in 23 questions divided between 7 categories: general, power supply management, burn-in, junction temperature, compression – DC/RF performance & robustness, environmental tests & qualification and reliability.
 
 ```{admonition} Note
 :class: note
-The value obtained through the $Pi_{\text{process_RF/MW}}$ calculation ranges from 0.5 to 4. The default value recommended by the FIDES handbook is 2.2.
+The value obtained through the $Pi_{\text{process\_RF/MW}}$ calculation ranges from 0.5 to 4. The default value recommended by the FIDES handbook is 2.2.
 ```
 
 (eee_8_3_3_6)=
 ## Process factor for ASIC components
 
-The process factor $Pi_{\text{process_ASIC}}$ takes into account the use of a formal methodology, the level of control of subcontractors and the good control in production and appropriate monitoring during the ASIC manufacturing process. This factor is complementary to the process factor $Pi_{\text{process}}$ that remains applicable for ASIC products.  $Pi_{\text{process_ASIC}}$ is issued from the equations and table presented in Annex A.2-15.
+The process factor $Pi_{\text{process\_ASIC}}$ takes into account the use of a formal methodology, the level of control of subcontractors and the good control in production and appropriate monitoring during the ASIC manufacturing process. This factor is complementary to the process factor $Pi_{\text{process}}$ that remains applicable for ASIC products.  $Pi_{\text{process\_ASIC}}$ is issued from the equations and table presented in Annex A.2-15.
 
 ```{admonition} Note
 :class: note
-The value obtained through the $Pi_{\text{process_ASIC}}$ calculation ranges from 1 to 4. The default value recommended by the FIDES handbook is 2.5.
+The value obtained through the $Pi_{\text{process\_ASIC}}$ calculation ranges from 1 to 4. The default value recommended by the FIDES handbook is 2.5.
 ```
 
 (eee_8_3_3_7)=
 ## Process factor for hybrids and multi-chip modules
 
-The process factor $Pi_{\text{process_H&M}}$ takes into account of how control over design and manufacturing of the hybrids and multi-chip modules influences reliability. This factor is complementary to the process factor $Pi_{\text{process}}$ that remains applicable for hybrids and multi-chip modules. $Pi_{\text{process_H&M}}$ is issued from the equations and table presented in Annex A.2-16.
+The process factor $Pi_{\text{process\_H\&M}}$ takes into account of how control over design and manufacturing of the hybrids and multi-chip modules influences reliability. This factor is complementary to the process factor $Pi_{\text{process}}$ that remains applicable for hybrids and multi-chip modules. $Pi_{\text{process\_H\&M}}$ is issued from the equations and table presented in Annex A.2-16.
 
 ```{admonition} Note
 :class: note
-The value obtained through the $Pi_{\text{process_H&M}}$ calculation ranges from 1 to 4. The default value recommended by the FIDES handbook is 2.5.
+The value obtained through the $Pi_{\text{process\_H\&M}}$ calculation ranges from 1 to 4. The default value recommended by the FIDES handbook is 2.5.
 ```
 
 (eee_8_3_3_8)=
