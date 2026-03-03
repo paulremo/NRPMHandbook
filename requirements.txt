@@ -89,4 +89,4 @@ uc-micro-py==1.0.3
 urllib3==2.4.0
 wcwidth==0.2.13
 zipp==3.23.0
-setuptools==82.0.0
+setuptools==81.0.0
