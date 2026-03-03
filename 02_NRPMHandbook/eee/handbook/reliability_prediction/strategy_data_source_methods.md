@@ -37,7 +37,7 @@ The main limitations for space applications are the following:
 
 For this kind of information to be usable, it is necessary to make sure that the quantity of parts and the total number of flight hours are high enough for consideration. In some cases, the data obtained this way at component level can be used as a maximum value to be considered as a worst case if no other data source is available.
 
-In addition, it is possible and recommended in the present handbook, to mix these data with data coming from standards or handbooks by the Bayesian method as presented in {ref}`Part 5 - MIS <sec_misc_handbook>` of this handbook ref misc_5_6`.
+In addition, it is possible and recommended in the present handbook, to mix these data with data coming from standards or handbooks by the Bayesian method as presented in {ref}`Part 5 - MIS <sec_misc_handbook>` of this handbook.
 
 
 **Model proposed in this handbook for EEE items**

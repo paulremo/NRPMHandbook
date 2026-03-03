@@ -1,7 +1,9 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
 (eee_annex_b)=
-# Annex B : Formulae concerning {numref}`eee_8_3_5_1`, Capacitors
+# Annex B : Formulae concerning Capacitors
+
+The formulae described in this annex conern Capacitors as described in {numref}`eee_8_3_5_1`.
 
 (eee_annex_b_1)=
 ## Lambda physical formula

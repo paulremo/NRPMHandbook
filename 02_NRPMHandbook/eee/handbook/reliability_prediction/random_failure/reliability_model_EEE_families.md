@@ -5,7 +5,7 @@
 
 This paragraph introduces all the models proposed for the different families. These models are mainly based on the models proposed in FIDES 2022 {cite:p}`eee-UTE-C80-811`.
 
-The failure rates calculated with this handbook are given directly in FITs (Failure in Time, corresponding to failures per billion hours). As for the FIDES methodology, these FRs, if corresponding to modelling over several phases constituting a mission profile, are calendar lambdas, as explained in refeee_8_3_2_1`.
+The failure rates calculated with this handbook are given directly in FITs (Failure in Time, corresponding to failures per billion hours). As for the FIDES methodology, these FRs, if corresponding to modelling over several phases constituting a mission profile, are calendar lambdas, as explained in {numref}`eee_8_3_2_1`.
 
 ```{admonition} Note
 :class: note
@@ -108,7 +108,7 @@ All capacitors used for space applications can be modelled through FIDES). The f
     </table>
 ```
 
-The generic formula to be used for all types of capacitors is given in Equations A.2-1 (generic case) and A.2-2 (RF/MW capacitors – see refeee_table_8_8`).
+The generic formula to be used for all types of capacitors is given in Equations A.2-1 (generic case) and A.2-2 (RF/MW capacitors – see {numref}`eee_table_8_8`).
 
 ```{admonition} Note
 :class: note
@@ -167,7 +167,7 @@ The following table lists the 8 categories that cover the Ceramic Capacitor subf
     </table>
 ```
 
-For the special case of RF/MW capacitors, the choice is given in refeee_table_8_8`:
+For the special case of RF/MW capacitors, the choice is given in {numref}`eee_table_8_8`:
 
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table_8_8')"
@@ -196,7 +196,7 @@ For the special case of RF/MW capacitors, the choice is given in refeee_table_8_
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration (see refeee_8_3_2` for details).
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration (see {numref}`eee_8_3_2` for details).
 
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
@@ -211,7 +211,7 @@ The physical stresses modelled for capacitors are the thermal, thermal cycling a
 
 **Induced factor $\Pi_{\text{induced}}$ (same as for ceramic capacitors):**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 
 ````{admonition} Equation
@@ -253,7 +253,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_25')"
     placeholder="Search table...">
@@ -469,11 +469,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 - $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 - $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ , presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ , presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Coefficient of sensitivity for capacitors.
 :name: eee-table4-26
@@ -494,7 +494,7 @@ For the 2021 issue of FIDES, the table has been updated, splitting the sensitivi
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -515,15 +515,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--   $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-   $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-26`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-26`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\Pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\Pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-27')" placeholder="Search table...">
 
@@ -551,7 +551,7 @@ Component manufacturing factor $\Pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2`.
 
 
 (eee_8_3_5_1_2)=
@@ -565,7 +565,7 @@ The following table lists the 6 categories that cover the Tantalum Capacitor sub
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation $\lambda_{\text{Physical}}$**
 
@@ -599,12 +599,12 @@ With $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$, $\gamma_
 
 **Induced factor $\Pi_{\text{induced}}$:**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 
 
 
-See refeee_8_3_5_1_1` for details.
+See {numref}`eee_8_3_5_1_1` for details.
 
 The induced factor $C_{\text{sensitivity}}$ is provided in the following table:
 
@@ -618,7 +618,7 @@ For the 2021 issue of FIDES, the value has been updated (to 7.43).
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -626,22 +626,22 @@ Its high level formula is
 
 These parameters are determined through tables available in FIDES.
 
--   $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-   $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-26`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-26`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\Pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\Pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 
 
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2`.
 
 (eee_8_3_5_1_3)=
 ### Plastic Metallized Capacitors (05 family)
@@ -658,7 +658,7 @@ The following table lists the 5 categories that cover the Plastic Metallized Cap
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation $\lambda_{\text{Physical}}$**
 
@@ -739,7 +739,7 @@ For plastic film capacitors: $\Pi_{\text{Film}}$ factor is calculated from a que
 
 **Induced factor $\Pi_{\text{induced}}$:**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 
 ````{admonition} Equation
@@ -750,14 +750,14 @@ The $\Pi_{\text{induced}}$ factor allows taking into account the influence of th
 ```
 ````
 
-See refeee_8_3_5_1_1` for details.
+See {numref}`eee_8_3_5_1_1` for details.
 
 The induced factor $C_{\text{sensitivity}}$ is provided in the following table:
 
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -778,15 +778,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--   $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-   $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-26`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-26`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\Pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\Pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-36')" placeholder="Search table...">
 
@@ -814,7 +814,7 @@ Component manufacturing factor $\Pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2`.
 
 **Summary for the Capacitors family 01**
 
@@ -940,14 +940,14 @@ is the generic formula used in FIDES for connectors:
 
 -   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 All this being based on a mission profile to be defined for the whole unit.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -980,7 +980,7 @@ With:
 With:
 
 -   $\lambda_{\text{Type}}$ equals 0.05 for circular & rectangular connectors, 0.07 for coaxial and 0.1 for PCB connectors.     
--   $\Pi_{\text{Transfer}}$ depends on the soldering method and is defined by refeee-table4-38`.
+-   $\Pi_{\text{Transfer}}$ depends on the soldering method and is defined by {numref}`eee-table4-38`.
 -   $\Pi_{\text{Contact}}$ depends on the number of contacts ($N_{\text{contact}}$) of the connector:  $\pi_{\text{contact}} = \left( N_{\text{contact}} \right)^{0.5}$
 -   $\Pi_{\text{Cycle}}$  depends on the annual number of cycles (one cycle = one connection + one disconnection): $\pi_{\text{cycles}}  = 0.2 \times \left( N_{annual\_ cycles} \right)^{0.25}$
 ````
@@ -1062,7 +1062,7 @@ For space applications, where the number of cycles (mating/demating) per year is
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -1299,11 +1299,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for connectors.
 :name: eee-table4-40
@@ -1324,7 +1324,7 @@ For the 2021 issue of FIDES, the value has been updated (to 3.13).
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -1345,15 +1345,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-41`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-41`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-41')" placeholder="Search table...">
 
@@ -1381,7 +1381,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 ```{admonition} Note
 :class: note
@@ -1473,7 +1473,7 @@ All this being based on a mission profile to be defined for the whole unit.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -1661,7 +1661,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -1921,11 +1921,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for piezo electric devices.
 :name: eee-table4-50
@@ -1948,7 +1948,7 @@ For the 2021 issue of FIDES, the value has been updated (respectively to 3.95 an
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -1969,15 +1969,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-51`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-51`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-51')" placeholder="Search table...">
 
@@ -2005,7 +2005,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Crystal resonators family 03**
 
@@ -2248,16 +2248,16 @@ The following table presents the different subfamilies and the corresponding mod
 
 -   $\Pi_{\text{ProcessRFHF}}$ the quality and technical control over the development, manufacturing and use process for the RFHF item,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 All this being based on a mission profile to be defined for the whole unit.
 
-With process factor $\Pi_{\text{Process}}$ according to refeee_8_3_2_1` and HF/RF process factor $\Pi_{\text{ProcessRFHF}}$ according to refeee_8_3_2_5`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_8_3_2_1` and HF/RF process factor $\Pi_{\text{ProcessRFHF}}$ according to {numref}`eee_8_3_2_5`.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -2410,7 +2410,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -2451,7 +2451,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_56')"
     placeholder="Search table...">
@@ -2670,11 +2670,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for piezo electric devices.
 :name: eee-table4-57
@@ -2697,7 +2697,7 @@ For the 2021 issue of FIDES, these values have not been updated, except for the 
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -2718,15 +2718,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-58`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-58`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-58')" placeholder="Search table...">
 
@@ -2754,7 +2754,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 
 (eee_8_3_5_4_2)=
@@ -2768,12 +2768,12 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 :label: Equation_1_75
 \lambda = \lambda_{\text{Physical}} \cdot \Pi_{\text{PM}} \cdot \Pi_{\text{Process}} \cdot \Pi_{\text{LF}} \cdot \Pi_{\text{ProcessRFHF}}
 ```
-With process factor $\Pi_{\text{Process}}$ according to refeee_8_3_2_1`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_8_3_2_1`.
 ````
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -2936,7 +2936,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -2977,7 +2977,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_62')"
     placeholder="Search table...">
@@ -3196,11 +3196,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for piezo electric devices.
 :name: eee-table4-63
@@ -3221,7 +3221,7 @@ For the 2021 issue of FIDES, the value has been updated (to 6.30).
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -3242,15 +3242,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-64`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-64`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-64')" placeholder="Search table...">
 
@@ -3278,7 +3278,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Diodes family 04**
 
@@ -3374,17 +3374,17 @@ The following table presents the different subfamilies and the corresponding mod
 
 -   $\Pi_{\text{ProcessRFHF}}$ 
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 All this being based on a mission profile to be defined for the whole unit.
 
-With process factor $\Pi_{\text{Process}}$ according to refeee_8_3_2_1` and RF/HF process factor $\Pi_{\text{ProcessRFHF}}$  according to refeee_8_3_2_5`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_8_3_2_1` and RF/HF process factor $\Pi_{\text{ProcessRFHF}}$  according to {numref}`eee_8_3_2_5`.
 .
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -3491,7 +3491,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -3532,7 +3532,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_68')"
     placeholder="Search table...">
@@ -3751,11 +3751,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for filters.
 :name: eee-table4-69
@@ -3776,7 +3776,7 @@ For the 2021 issue of FIDES, this value has been updated to 2.40.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -3797,15 +3797,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-70`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-70`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-70')" placeholder="Search table...">
 
@@ -3833,7 +3833,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Filters family 06**
 
@@ -3905,16 +3905,16 @@ The following table presents the different subfamilies and the corresponding mod
 
 -   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 All this being based on a mission profile to be defined for the whole unit.
 
-With process factor $\Pi_{\text{Process}}$ according to refeee_8_3_2_1`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_8_3_2_1`.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -3980,7 +3980,7 @@ As the chemical stresses are low for space applications, the value $\Pi_{\text{C
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -4021,7 +4021,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_73')"
     placeholder="Search table...">
@@ -4240,11 +4240,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for fuses.
 :name: eee-table4-74
@@ -4265,7 +4265,7 @@ For the 2021 issue of FIDES, this value has been updated to 5.90.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -4286,15 +4286,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-75`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-75`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-75')" placeholder="Search table...">
 
@@ -4322,7 +4322,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Fuses family 06**
 
@@ -4455,14 +4455,14 @@ Core means coil without winding.
 
 -   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 All this being based on a mission profile to be defined for the whole unit.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -4574,7 +4574,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -4615,7 +4615,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_79')"
     placeholder="Search table...">
@@ -4834,11 +4834,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for fuses.
 :name: eee-table4-80
@@ -4863,7 +4863,7 @@ For the 2021 issue of FIDES, these values have been updated to respectively 4.73
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -4884,15 +4884,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-81`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-81`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-81')" placeholder="Search table...">
 
@@ -4920,7 +4920,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Inductors family 06**
 
@@ -5219,14 +5219,14 @@ In the 2021 issue of FIDES, a {term}`GaN` MMIC model has been included. The deta
 -   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
 -   $\Pi_{\text{ProcessHFRF}}$ the quality and technical control over the development, manufacturing and use process for the RFHF item
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 All this being based on a mission profile to be defined for the whole unit.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -5740,7 +5740,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -5781,7 +5781,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_93')"
     placeholder="Search table...">
@@ -6000,11 +6000,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for integrated circuits.
 :name: eee-table4-94
@@ -6025,7 +6025,7 @@ For the 2021 issue of FIDES, this value has been updated to 7.75, and for {term}
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -6046,15 +6046,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-95`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-95`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-95')" placeholder="Search table...">
 
@@ -6082,7 +6082,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 (eee_8_3_5_8_2)=
 ### ASIC (40, 41 and 42 families)
@@ -6103,13 +6103,13 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 -   $\Pi_{\text{ProcessASIC}}$ the quality and technical control over the development of ASICs, as defined in 0
 ````
 
-With process factor $\Pi_{\text{Process}}$ according to refeee_8_3_2_1` and ASIC process factor $\Pi_{\text{ProcessASIC}}$ according to refeee_8_3_2_6`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_8_3_2_1` and ASIC process factor $\Pi_{\text{ProcessASIC}}$ according to {numref}`eee_8_3_2_6`.
 
 All this being based on a mission profile to be defined for the whole unit.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -6628,7 +6628,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -6669,7 +6669,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_106')"
     placeholder="Search table...">
@@ -6888,11 +6888,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} nduced factor coefficient of sensitivity for integrated circuits.
 :name: eee-table4-107
@@ -6913,7 +6913,7 @@ For the 2021 issue of FIDES, this value has been updated to 7.75.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -6934,15 +6934,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-108`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-108`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-108')" placeholder="Search table...">
 
@@ -6970,7 +6970,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 (eee_8_3_5_8_3)=
 ### Integrated Circuits (others)
@@ -6988,16 +6988,16 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 -   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
 
 -   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered. For Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered. For Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
-With process factor $\Pi_{\text{Process}}$ according to refeee_8_3_2_1`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_8_3_2_1`.
 
 All this being based on a mission profile to be defined for the whole unit.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -7500,7 +7500,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -7541,7 +7541,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_119')"
     placeholder="Search table...">
@@ -7760,11 +7760,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} nduced factor coefficient of sensitivity for integrated circuits.
 :name: eee-table4-120
@@ -7785,7 +7785,7 @@ For the 2021 issue of FIDES, this value has been updated to 7.75.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -7806,15 +7806,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-121`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-121`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-121')" placeholder="Search table...">
 
@@ -7842,7 +7842,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Integrated Circuits family 08**
 
@@ -7930,12 +7930,12 @@ The following table presents the different subfamilies and the corresponding mod
 
 -   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -8111,7 +8111,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -8152,7 +8152,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_126')"
     placeholder="Search table...">
@@ -8371,11 +8371,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for relays.
 :name: eee-table4-127
@@ -8396,7 +8396,7 @@ For the 2021 issue of FIDES, this value has been updated to 7.43.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -8417,15 +8417,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-128`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-128`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-128')" placeholder="Search table...">
 
@@ -8453,7 +8453,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary or the Relays family 09**
 
@@ -8642,14 +8642,14 @@ HFRF resistors can also be modelled with FIDES, with the HFRF model.
 
 -   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
-With process factor $\Pi_{\text{Process}}$ according to refeee_8_3_2_1`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_8_3_2_1`.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -8858,7 +8858,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -8899,7 +8899,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_136')"
     placeholder="Search table...">
@@ -9118,11 +9118,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for resistors.
 :name: eee-table4-137
@@ -9151,7 +9151,7 @@ For the 2021 issue of FIDES, these values have been updated, as well the overall
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -9172,15 +9172,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-138`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-138`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-138')" placeholder="Search table...">
 
@@ -9208,7 +9208,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Resistors family 10**
 
@@ -9333,16 +9333,16 @@ FIDES does not present models for thermistors, hence the models detailed hereaft
 
 -   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
 
--   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see refeee_8_3_2_1`,
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see {numref}`eee_8_3_2_1`,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 All this being based on a mission profile to be defined for the whole unit.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -9517,7 +9517,7 @@ $\gamma_{\text{RH}}$ depends on the type of thermistors:
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -9558,7 +9558,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_146')"
     placeholder="Search table...">
@@ -9777,11 +9777,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for thermistors.
 :name: eee-table4-147
@@ -9806,7 +9806,7 @@ For the 2021 issue of FIDES, these values have been updated to 1.83, 4.95 and 3.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -9827,15 +9827,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-138`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-138`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-148')" placeholder="Search table...">
 
@@ -9863,7 +9863,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Thermistors family 10**
 
@@ -10088,12 +10088,12 @@ The following table presents the different subfamilies and the corresponding mod
 
 -   $\Pi_{\text{ProcessRFHF}}$ the quality and technical control over the development, manufacturing and use process for the RFHF item,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 All this being based on a mission profile to be defined for the whole unit.
 
-With process factor $\Pi_{\text{Process}}$ according to refeee_8_3_2_1` and HF/RF process factor $\Pi_{\text{ProcessRFHF}}$ according to refeee_8_3_2_5`.
+With process factor $\Pi_{\text{Process}}$ according to {numref}`eee_8_3_2_1` and HF/RF process factor $\Pi_{\text{ProcessRFHF}}$ according to {numref}`eee_8_3_2_5`.
 
 ```{admonition} Note
 :class: note
@@ -10103,7 +10103,7 @@ In the 2021 issue of FIDES, a {term}`GaN` Transistor model has been included. Th
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -10238,7 +10238,7 @@ All parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -10279,7 +10279,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_153')"
     placeholder="Search table...">
@@ -10498,11 +10498,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for thermistors.
 :name: eee-table4-154
@@ -10525,7 +10525,7 @@ For the 2021 issue of FIDES, these values have not been updated.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -10546,15 +10546,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-155`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-155`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-155')" placeholder="Search table...">
 
@@ -10582,7 +10582,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 (eee_8_3_5_12_2)=
 ### Transistors (other)
@@ -10601,14 +10601,14 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 -   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 All this being based on a mission profile to be defined for the whole unit.
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -10737,7 +10737,7 @@ All parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -10778,7 +10778,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_159')"
     placeholder="Search table...">
@@ -10997,11 +10997,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for transistors.
 :name: eee-table4-160
@@ -11022,7 +11022,7 @@ Note: For the 2021 issue of FIDES, this value has been updated to 5.20.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -11043,15 +11043,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-161`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-161`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-161')" placeholder="Search table...">
 
@@ -11079,7 +11079,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 
 **Summary for the Transistors family 12**
@@ -11156,15 +11156,15 @@ The following table presents the different subfamilies and the corresponding mod
 
 -   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
 
--   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see refeee_8_3_2_1`,
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see {numref}`eee_8_3_2_1`,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -11245,7 +11245,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -11286,7 +11286,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_164')"
     placeholder="Search table...">
@@ -11505,11 +11505,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for transformers.
 :name: eee-table4-165
@@ -11532,7 +11532,7 @@ For the 2021 issue of FIDES, these values have been updated to 5.63 and 6.13.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -11553,15 +11553,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-166`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-166`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-166')" placeholder="Search table...">
 
@@ -11589,7 +11589,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Transformers family 13**
 
@@ -11686,15 +11686,15 @@ The following table presents the different subfamilies and the corresponding mod
 
 -   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
 
--   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see refeee_8_3_2_1`,
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see {numref}`eee_8_3_2_1`,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -11872,7 +11872,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -11913,7 +11913,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_171')"
     placeholder="Search table...">
@@ -12132,11 +12132,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for switches.
 :name: eee-table4-172
@@ -12157,7 +12157,7 @@ For the 2021 issue of FIDES, this value has not updated to 7.38.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -12178,15 +12178,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-173`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-173`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-173')" placeholder="Search table...">
 
@@ -12214,7 +12214,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Switches family 14**
 
@@ -12341,7 +12341,7 @@ The following table presents the different subfamilies and the corresponding mod
 ```
 
 ```{note}
-Investigation and assessment according to refeee_8_4_1`.
+Investigation and assessment according to {numref}`eee_8_4`.
 ```
 
 (eee_8_3_5_15_1)=
@@ -12359,15 +12359,15 @@ Investigation and assessment according to refeee_8_4_1`.
 
 -   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
 
--   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see refeee_8_3_2_1`,
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see {numref}`eee_8_3_2_1`,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -12555,7 +12555,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -12596,7 +12596,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_178')"
     placeholder="Search table...">
@@ -12815,11 +12815,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for opto-electronics.
 :name: eee-table4-179
@@ -12840,7 +12840,7 @@ For the 2021 issue of FIDES, this value has been updated to 5.68.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -12861,15 +12861,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-180`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-180`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-180')" placeholder="Search table...">
 
@@ -12897,7 +12897,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 (eee_8_3_5_15_2)=
 ### Opto (other)
@@ -12914,15 +12914,15 @@ The $\Pi_{\text{Process}}$ factor is determined according to the formula present
 
 -   $\Pi_{\text{PM}}$ the quality and technical control over manufacturing of the item,
 
--   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see refeee_8_3_2_1`,
+-   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item, see {numref}`eee_8_3_2_1`,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -12963,7 +12963,7 @@ For optocouplers, the basic failure rates $\lambda_{\text{OTH}}$, $\lambda_{\tex
     - 0.011
 ```
 
-According to the different types of packages defined in refeee-table4-84` to refeee-table4-89`, the basic failure rates $\lambda_{\text{0TcyCase}}$, $\lambda_{\text{OTCySolderjoints}}$, $\lambda_{\text{OCaseMech}}$ and $\lambda_{\text{ORH}}$ are similar to the basic failure rates of packages of integrated circuits available in refeee-table4-90`.
+According to the different types of packages defined in {numref}`eee-table4-84` to {numref}`eee-table4-89`, the basic failure rates $\lambda_{\text{0TcyCase}}$, $\lambda_{\text{OTCySolderjoints}}$, $\lambda_{\text{OCaseMech}}$ and $\lambda_{\text{ORH}}$ are similar to the basic failure rates of packages of integrated circuits available in {numref}`eee-table4-90`.
 
 **Physical stresses for the opto-electronics family:**
 
@@ -13014,7 +13014,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -13045,7 +13045,7 @@ For the 2021 issue of FIDES, this value has been updated to 5.63.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -13066,15 +13066,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-183`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-183`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-183')" placeholder="Search table...">
 
@@ -13102,7 +13102,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the Opto-electronics family 18**
 
@@ -13169,13 +13169,13 @@ PCB are not classified as family in {term}`EPPL` but as an important part of ele
 
 -   $\Pi_{\text{Process}}$ the quality and technical control over the development, manufacturing and use process for the product containing the item,
 
--   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see refeee_8_3`).
+-   $\Pi_{\text{LF}}$ the factor representing the process to become lead-free if it has to be considered for Space applications, it is equal to 1 (see {numref}`eee_8_3`).
 ````
 
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{Physical}}$**
 
@@ -13287,7 +13287,7 @@ All other parameters are issued from the mission profile.
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -13328,7 +13328,7 @@ The Pi Placement depends on the function, there are 6 choices to choose as recal
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_188')"
     placeholder="Search table...">
@@ -13547,11 +13547,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for PCB.
 :name: eee-table4-189
@@ -13572,7 +13572,7 @@ For the 2021 issue of FIDES, this value has been updated to 5.55.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -13593,15 +13593,15 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in refeee-table4-190`
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in {numref}`eee-table4-190`
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` with component quality assurance levels $\text{QA}_{\text{component}}$ defined in the following tables:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee-table4-190')" placeholder="Search table...">
 
@@ -13629,7 +13629,7 @@ Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` with
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for the PCB family**
 
@@ -13698,7 +13698,7 @@ Hybrids are classified as family 40 in {term}`EPPL`  {cite:p}`eee-EPPL007-37`.. 
 
 > **a) Mission profile**
 
-In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See refeee_8_3_1` for details.
+In order to model the reliability for each component of a unit, it is necessary to define the mission profile corresponding to the unit under consideration. See {numref}`eee_8_3_1` for details.
 
 > **b) Calculation of $\lambda_{\text{element}}$**
 
@@ -13732,7 +13732,7 @@ For microcomponents associated with bare chips (integrated circuits, transistors
 ```
 ````
 
-$\lambda_{\text{OTH}}$ and $\Pi_{\text{Thermique}}$ are corresponding to the basic thermal failure rates as defined in the models corresponding to the type of chip considered, either integrated circuits in refeee_8_3_5_8` or discrete semiconductors in refeee_8_3_5_4` and refeee_8_3_5_12`;
+$\lambda_{\text{OTH}}$ and $\Pi_{\text{Thermique}}$ are corresponding to the basic thermal failure rates as defined in the models corresponding to the type of chip considered, either integrated circuits in {numref}`eee_8_3_5_8` or discrete semiconductors in {numref}`eee_8_3_5_4` and {numref}`eee_8_3_5_12`;
 
 The factor $C_{\text{moulding}}$ is defined as follows for chips:
 
@@ -13823,7 +13823,7 @@ The chemical factor $\Pi_{\text{Chemical}}$ is calculated for different pollutio
 
 **Induced factor $\Pi_{\text{induced}}$**
 
-The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in refeee_8_3_1`. Its formula is:
+The $\Pi_{\text{induced}}$ factor allows taking into account the influence of the mission profile as described in {numref}`eee_8_3_1`. Its formula is:
 
 ````{admonition} Equation
 :class: equation
@@ -13864,7 +13864,7 @@ The placement factor $\Pi_{placement}$ and induced factors $C_{\text{sensitivity
 
 $\Pi_{\text{application}}$ represents the influence of the type of application and the environment of the product containing the part. This factor varies depending on the phase of the profile.
 
-It is evaluated through the questions presented in the following table and addressed in refeee_8_3_2_19`:
+It is evaluated through the questions presented in the following table and addressed in {numref}`eee_8_3_2_19`:
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_196')"
     placeholder="Search table...">
@@ -14083,11 +14083,11 @@ In bold in the table are the levels considered for the space environment (orbit 
 
 > $\Pi_{\text{ruggedising}}$
 
-The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See refeee_8_3_2_17`.
+The ruggedising factor is determined through a 16 questions audit ensuring the evaluation of the procedures established to guarantee the safety and maintenance of the product and that the procedures are indeed applied. See {numref}`eee_8_3_2_17`.
 
 > $C_{\text{sensitivity}}$
 
-The induced factor $C_{\text{sensitivity}}$ presented in refeee_8_3_2_21` is provided in the following table:
+The induced factor $C_{\text{sensitivity}}$ presented in {numref}`eee_8_3_2_21` is provided in the following table:
 
 ```{list-table} Induced factor coefficient of sensitivity for Hybrids and Multi Chip Modules.
 :name: eee-table4-197
@@ -14112,7 +14112,7 @@ For the 2021 issue of FIDES, these values have not been updated.
 
 > **c) Component manufacturing factor $\Pi_{\text{PM}}$**
 
-The Part\_Manufacturing factor presented in refeee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
+The Part\_Manufacturing factor presented in {numref}`eee_8_3_3` represents the quality of the component. This factor transcribes the confidence that can be attributed to the way the part has been manufactured, through factors quantifying the manufacturing process of the part, the tests ran and the confidence in the manufacturer.
 
 Its high level formula is
 
@@ -14133,19 +14133,19 @@ Part\_ Grade = \ \frac{\left( \text{QA}_{\text{manufacturer}} + \text{QA}_{\text
 
 These parameters are determined through tables available in FIDES.
 
--  $\text{QA}_{\text{manufacturer}}$ is presented in refeee_8_3_3_2`
+-  $\text{QA}_{\text{manufacturer}}$ is presented in {numref}`eee_8_3_3_2`
 
--   $\text{QA}_{\text{component}}$ is presented in refeee_8_3_3_3` and defined in the different table in each section dedicated to the components
+-   $\text{QA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_3` and defined in the different table in each section dedicated to the components
 
--   $\text{RA}_{\text{component}}$ is presented in refeee_8_3_3_4`
+-   $\text{RA}_{\text{component}}$ is presented in {numref}`eee_8_3_3_4`
 
--   $\epsilon$  is presented in refeee_8_3_3_7`
+-   $\epsilon$  is presented in {numref}`eee_8_3_3_7`
 
-Component manufacturing factor $\pi_{\text{PM}}$ according to refeee_8_3_3` and calculated using the calculation method described to determinate the $\pi_{\text{PM}}$ of the corresponding components (integrated circuits and discrete semiconductors, resistors, capacitors, inductors).
+Component manufacturing factor $\pi_{\text{PM}}$ according to {numref}`eee_8_3_3` and calculated using the calculation method described to determinate the $\pi_{\text{PM}}$ of the corresponding components (integrated circuits and discrete semiconductors, resistors, capacitors, inductors).
 
 > **d) Determination of the $\Pi_{\text{Process}}$ factor**
 
-The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in refeee_8_3_2_3`.
+The $\Pi_{\text{Process}}$ factor is determined according to the formula presented in {numref}`eee_8_3_2_3`.
 
 **Summary for Hybrids**
 
@@ -14187,7 +14187,7 @@ If the manufacturer agrees to provide a datasheet and a parts list, the best sol
 
 Unfortunately, manufacturers of {term}`COTS` boards usually do not provide any information. One possible solution to overcome this situation is to identify the {term}`EEE` components of the board and to reconstruct the parts list by reverse engineering, through visual inspection for instance. As it is not possible to identify all characteristics of the components and to estimate the deratings, a simple and fast calculation based on a families count or part count methods is suggested instead of doing a complete part stress calculation.
 
-The families count prediction method considers all the components without distinguishing the different technologies. The part count prediction method considers all types of components with their various technologies. The method for calculating the reliability prediction of {term}`COTS` boards with the families count and part count method is provided in refeee_8_3_5`.
+The families count prediction method considers all the components without distinguishing the different technologies. The part count prediction method considers all types of components with their various technologies. The method for calculating the reliability prediction of {term}`COTS` boards with the families count and part count method is provided in {numref}`eee_8_3_5`.
 
 If it is not possible to apply the families or part count method due to specific concerns such as boards with potting or boards encapsulated in other systems, a reliability prediction based on calculation is not possible. The alternative is to perform the reliability prediction based on life tests of the {term}`COTS` boards.
 

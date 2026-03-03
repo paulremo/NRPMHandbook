@@ -37,7 +37,7 @@ Among components which are proposed by {term}`ESA` in its {term}`EPPL` {cite:p}`
 ```{admonition} Note
 :class: note
 
-This aspect is addressed in FIDES 2021 and explained in  ref eee_8_4_2_1`. 
+This aspect is addressed in FIDES 2021 and explained in {numref}`eee_8_4`. 
 ```
 
 -   Relays and switches such as non-latching relays, latching relays and switches: these components can be subjected to a limited number of switching or number of hours depending on the number of operations.
@@ -57,7 +57,7 @@ Creating models of wear-out is necessary to estimate the {term}`degradation of t
 (eee_8_5_4)=
 ## Models for wear-out failures for components and sub-assemblies
 
-The methodologies and standards that provide some models for wear-out of {term}`EEE` components are quite few. Among all of them, the standards FIDES and IEC TR 62380 {cite:p}`eee-IEC-TR-62380` provide some simple models. FIDES only provides wear-out models of sub-assemblies such as screens, keyboards, hard disks, fans and batteries and does not provide any models for {term}`EEE` components. IEC TR 62380 provides wear-out models for some components from the {term}`EPPL` such as relays, switches, optocouplers, LED and laser diodes. These different models are not directly available for space applications as they are not validated and have never been used in a space context. The methodology to estimate wear-out is based on qualification and tests as explained in ref eee_8_5_6` and validated with an example in ref eee_8_5_9`.
+The methodologies and standards that provide some models for wear-out of {term}`EEE` components are quite few. Among all of them, the standards FIDES and IEC TR 62380 {cite:p}`eee-IEC-TR-62380` provide some simple models. FIDES only provides wear-out models of sub-assemblies such as screens, keyboards, hard disks, fans and batteries and does not provide any models for {term}`EEE` components. IEC TR 62380 provides wear-out models for some components from the {term}`EPPL` such as relays, switches, optocouplers, LED and laser diodes. These different models are not directly available for space applications as they are not validated and have never been used in a space context. The methodology to estimate wear-out is based on qualification and tests as explained in {numref}`eee_8_5_6` and validated with an example in {numref}`eee_8_5_9`.
 
 (eee_8_5_4_1)=
 ### Model for wear-out of relays
@@ -126,7 +126,7 @@ This model is a first interesting recommendation for a model of radiations. It n
 (eee_8_5_5_2)=
 ### ON / OFF cycling as a factor of wear-out
 
-Satellites are designed with an objective to minimise the consumption of energy. In this way, a mechanism to minimize the consumption of energy is to switch off the equipment when it is not used. As a consequence of this strategy, permanent ON / OFF switches of the equipment are continuously realised. For low Earth orbit satellites, up to 20 ON / OFF cycles per orbit can occur for an equipment leading to up to 200 000 ON / OFF cycles during the lifetime of the satellite. According to the studies from {term}`CNES` {cite:p}`eee-ESCCON` and {cite:p}`eee-JEP001`, these ON / OFF cycles have an effect on bonding wires of integrated circuits. Repetitive switches increase the temperature at the interfaces, and as the coefficients of thermal extensions are different between bonding wires and silicon, cracks appear at the interface. These cracks can lead to a disconnection, followed by a definitive drift or a failure. Wear-out could be addressed by using the process described in ref eee_8_5_9`.
+Satellites are designed with an objective to minimise the consumption of energy. In this way, a mechanism to minimize the consumption of energy is to switch off the equipment when it is not used. As a consequence of this strategy, permanent ON / OFF switches of the equipment are continuously realised. For low Earth orbit satellites, up to 20 ON / OFF cycles per orbit can occur for an equipment leading to up to 200 000 ON / OFF cycles during the lifetime of the satellite. According to the studies from {term}`CNES` {cite:p}`eee-ESCCON` and {cite:p}`eee-JEP001`, these ON / OFF cycles have an effect on bonding wires of integrated circuits. Repetitive switches increase the temperature at the interfaces, and as the coefficients of thermal extensions are different between bonding wires and silicon, cracks appear at the interface. These cracks can lead to a disconnection, followed by a definitive drift or a failure. Wear-out could be addressed by using the process described in {numref}`eee_8_5_9`.
 
 (eee_8_5_5_3)=
 ### Single atomic oxygen as a factor of wear-out
@@ -151,7 +151,7 @@ Methodology used to estimate wear-out of EEE components.
 (eee_8_5_6_1)=
 ### Mission profile of satellite and equipment
 
-The first step is to get a clear definition of the mission profile considering all the phases in the life of the equipment. This mission profile can also include the industrial phase with transportation and storage. The mission profile is the basis for a complete analysis of the different constraints applicable to the components. The construction of the mission profile is described in ref eee_8_3_1`. Stresses which are generally considered are temperature, thermal cycling, moisturizing, vibrations and chemical pollution. However, some stresses are not always considered in the mission profile as they have consequences only on the wear-out of equipment. Stresses, such as electromagnetic susceptibility, radiation dose or ON / OFF cycling could be evaluated in order to have a correct appraisal of the quantity of stress that applies on the EEE components. 
+The first step is to get a clear definition of the mission profile considering all the phases in the life of the equipment. This mission profile can also include the industrial phase with transportation and storage. The mission profile is the basis for a complete analysis of the different constraints applicable to the components. The construction of the mission profile is described in {numref}`eee_8_3_1`. Stresses which are generally considered are temperature, thermal cycling, moisturizing, vibrations and chemical pollution. However, some stresses are not always considered in the mission profile as they have consequences only on the wear-out of equipment. Stresses, such as electromagnetic susceptibility, radiation dose or ON / OFF cycling could be evaluated in order to have a correct appraisal of the quantity of stress that applies on the EEE components. 
 
 (eee_8_5_6_2)=
 ### Risk analysis and identification of the failure mechanisms
@@ -364,7 +364,7 @@ The datasheet of the components and other information from the component manufac
 
 The {term}`random failure <Random failure>` rates of the solder joints are taken into account in FIDES methodology. Concerning the wear-out, solder joints are affected by creep fatigue due to temperature cycling and vibrations. Some diffusion mechanisms and intermetallic growth can also occur at high temperatures. Moreover, all of these mechanisms can be combined all together. As previously mentioned, the reliability of the solder joints is impacted by the thermal mechanical constraints induced by the mismatch of the Coefficients of Thermal Expansion ({term}`CTE`) of the different materials used at board and component level. Among the materials, the type and quality of solder alloy also has an impact.
 
-When new technologies of solder, substrate or components packaging are introduced, it is strongly recommended to perform reliability tests such as thermal cycling tests and vibration tests in order to determine the Time To Failure of the assembly at board level. The ref eee_8_5_6_3` provides formulas for acceleration factors currently used for the assessment of solder joints reliability based on the Coffin-Manson and Norris-Landzberg laws.
+When new technologies of solder, substrate or components packaging are introduced, it is strongly recommended to perform reliability tests such as thermal cycling tests and vibration tests in order to determine the Time To Failure of the assembly at board level. The {numref}`eee_8_5_6_3` provides formulas for acceleration factors currently used for the assessment of solder joints reliability based on the Coffin-Manson and Norris-Landzberg laws.
 
 (eee_8_5_6_3)=
 ### Tailored reliability life test definition and realization of tests
@@ -450,7 +450,7 @@ When possible, the tests should be done with accelerated conditions versus the c
 (eee_8_5_7)=
 ## Calculation of acceleration factors
 
-The acceleration factors (see ref eee_8_3_1_13`, ref eee_8_3_1_14`, ref eee_8_3_1_15`, ref eee_8_3_1_16` for the different relevant acceleration factors) use degradation laws generally well known for {term}`EEE` components and described in document {cite:p}`eee-JEP122H`. The general laws with a single parameter can be used for most of the more useful stresses such as the Arrhenius' law for temperature, the Eyring's law and the inverse power laws for voltage and current. The Coffin-Manson's law is used for thermal and mechanical stresses. More complex laws with more than one parameter can also be used such as Peck's model for both temperature and humidity, the Norris-Landzberg's law for solder joints and the Black's law for electromigration {cite:p}`eee-SSB-1.003`.
+The acceleration factors (see {numref}`eee_8_5_7_1`, {numref}`eee_8_5_7_2`, {numref}`eee_8_5_7_3`, {numref}`eee_8_5_7_4` for the different relevant acceleration factors) use degradation laws generally well known for {term}`EEE` components and described in document {cite:p}`eee-JEP122H`. The general laws with a single parameter can be used for most of the more useful stresses such as the Arrhenius' law for temperature, the Eyring's law and the inverse power laws for voltage and current. The Coffin-Manson's law is used for thermal and mechanical stresses. More complex laws with more than one parameter can also be used such as Peck's model for both temperature and humidity, the Norris-Landzberg's law for solder joints and the Black's law for electromigration {cite:p}`eee-SSB-1.003`.
 
 (eee_8_5_7_1)=
 ### Inverse power law
@@ -513,7 +513,7 @@ where:
 -   $T_{u}$: stress test temperature in °C.
 ````
 
-As the activation energy $E_{a}$ is often unknown, some studies such as the documents {cite:p}`eee-JEP122H`, {cite:p}`eee-Livingston2000` and {cite:p}`eee-JESD-202` provide the activation energies $E_{a}$ of most common {term}`failure mechanisms <Failure mechanism>`. Otherwise, the value of $E_{a}$=0.7eV is generally used as a default value. This assumption could be validated by tests according to ref eee_8_5_8`.
+As the activation energy $E_{a}$ is often unknown, some studies such as the documents {cite:p}`eee-JEP122H`, {cite:p}`eee-Livingston2000` and {cite:p}`eee-JESD-202` provide the activation energies $E_{a}$ of most common {term}`failure mechanisms <Failure mechanism>`. Otherwise, the value of $E_{a}$=0.7eV is generally used as a default value. This assumption could be validated by tests according to {numref}`eee_8_5_8`.
 
 <input type="text" class="myInput" id="myInput" onkeyup="searchTableJupyter(this, 'eee_table4_204')"
     placeholder="Search table...">
@@ -760,7 +760,7 @@ where:
 (eee_8_5_8_1)=
 ### Degradation model analysis
 
-On a reliability life test, it is essential to validate the degradation laws and their related parameters. The main degradation models for {term}`EEE` components are detailed in the previous ref eee_8_5_6_3`. The model is related to the {term}`failure mechanisms <Failure mechanism>` but the parameters of the model are related to the stress.
+On a reliability life test, it is essential to validate the degradation laws and their related parameters. The main degradation models for {term}`EEE` components are detailed in the previous {numref}`eee_8_5_6_3`. The model is related to the {term}`failure mechanisms <Failure mechanism>` but the parameters of the model are related to the stress.
 
 Thus, each failure should be physically analysed in order to identify the {term}`failure mechanism <Failure mechanism>`. However, different cases can occur:
 
@@ -770,7 +770,7 @@ Thus, each failure should be physically analysed in order to identify the {term}
 
 -   If the {term}`failure mechanism <Failure mechanism>` is undefined but the degradation law is suspected to be sound, a second test should be carried out with a different stress level;
 
-In any cases, the determination of the parameters of the model is realized by analysing the results of the tests by considering the deterministic models as described in ref eee_8_5_8_2`. However, if neither the mechanism nor the degradation model is accepted, an experimental model should be defined and determined as described in ref eee_8_5_8_3`.
+In any cases, the determination of the parameters of the model is realized by analysing the results of the tests by considering the deterministic models as described in {numref}`eee_8_5_8_2`. However, if neither the mechanism nor the degradation model is accepted, an experimental model should be defined and determined as described in {numref}`eee_8_5_8_3`.
 
 (eee_8_5_8_2)=
 ### Deterministic models
@@ -874,14 +874,14 @@ A third parameter can be useful for degradation models: the time shift. This par
 ```
 ````
 
-An example is provided in ref eee_8_5_9`.
+An example is provided in {numref}`eee_8_5_9`.
 
 (eee_8_5_8_4)=
 ### Failure distribution
 
 Once the tests have shown {term}`wear-out failures <Wear-out failure>`, a suitable failure distribution which fits to the wear-out phenomenon of the components has to be determined.
 
-The third part of the bathtub curve can be represented by several potential distributions, see ref methodologies` for details. The most common used distributions for the wear-out of {term}`EEE` components are the Weibull distribution with two or three parameters (introducing a shift *τ* in the two-parameter model $f(t-\tau)$), and the Lognormal distribution.
+The third part of the bathtub curve can be represented by several potential distributions, see {numref}`methodologies` for details. The most common used distributions for the wear-out of {term}`EEE` components are the Weibull distribution with two or three parameters (introducing a shift *τ* in the two-parameter model $f(t-\tau)$), and the Lognormal distribution.
 
 The Weibull distribution is often used to model "weakest link" failures such as dielectric breakdown and thermo mechanical failures due to solder joints degradation {cite:p}`eee-JEP122H`. The complete methodology to define a Weibull distribution model is provided in document {cite:p}`eee-ADS-RPDSM-FR`.
 
@@ -889,7 +889,7 @@ For the Lognormal distribution, the failure rate starts increasing exponentially
 
 **Combination of distributions**
 
-The combination of the second and third part of the bathtub curve is necessary to go beyond the {term}`random failures <Random failure>` and to enlarge to the ageing of {term}`EEE` components in the definition of the failure rate. Then, the random and {term}`wear-out failures <Wear-out failure>` are considered inside the same model. This approach is described in ref sec_sys_handbook` with three different models mixing the exponential distribution and the wear-out distribution of {term}`EEE` components.
+The combination of the second and third part of the bathtub curve is necessary to go beyond the {term}`random failures <Random failure>` and to enlarge to the ageing of {term}`EEE` components in the definition of the failure rate. Then, the random and {term}`wear-out failures <Wear-out failure>` are considered inside the same model. This approach is described in {numref}`sec_sys_handbook` with three different models mixing the exponential distribution and the wear-out distribution of {term}`EEE` components.
 
 (eee_8_5_9)=
 ## Application to wear-out of an operational amplifier due to radiation dose

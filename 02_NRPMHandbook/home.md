@@ -1,9 +1,9 @@
 <!--- Copyright (C) Matrisk GmbH 2022 -->
 
 (home_page)=
-# Welcome to the ECSS-Q-HB-30-02A digital reliability handbook
+# Welcome to the draft of the ECSS-Q-HB-30-02A digital reliability handbook
 
-This is the digital version of the ECSS-Q-HB-30-02A reliability handbook. This handbook offers:
+This is a draft of the digital version of the ECSS-Q-HB-30-02A reliability handbook, which is currently under preparation by the ECSS. This handbook offers:
  * **Technical content** in the [Handbook](methodologies) sections,
  * **Interactive content** in the [Models](sec_eee_models) sections.
 
