@@ -38,7 +38,7 @@ First, it is necessary, before starting anything, to collect/define all technica
 The basic principle is to provide through a reference failure rate (or a probability of failure for one-shot devices) and to up-date this reference failure rate as relevant considering the contributors (multiplying corrective factors) to the probability of failure. In the following paragraph, the general process is described.
 
 Note that it is considered that the multiplying corrective factor is also used to up-date the probability of failure in the case of a one-shot device, based on the fact that, for constant failure rate, when the probability of failure can be approximated by $\lambda t$ (i.e. for exponential distribution in the case $\lambda t < 10^{-2}$) the corrective factor $K$ leads to a new probability = $K t$, which means the probability of failure is multiplied by the corrective factor.
-As a result, the same applies for the probability of failure P_f for a one-shot device: the basic probability can be amended by a factor $K$, leading to $K P_{F}$.
+As a result, the same applies for the probability of failure $P_f$ for a one-shot device: the basic probability can be amended by a factor $K$, leading to $K P_{F}$.
 
 So, what is discussed in the following paragraphs, addressing directly the failure rate, applies for the probability of failure for one-shot device.
 
