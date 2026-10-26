@@ -48,7 +48,7 @@ platformdirs==4.3.8
 prompt_toolkit==3.0.51
 psutil==7.0.0
 pure_eval==0.2.3
-pybtex==0.24.0
+pybtex==0.26.1
 pybtex-docutils==1.0.3
 pydata-sphinx-theme==0.15.4
 Pygments==2.21.0
