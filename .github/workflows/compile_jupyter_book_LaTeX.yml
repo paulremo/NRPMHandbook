@@ -25,12 +25,15 @@ jobs:
 
       - uses: actions/setup-python@v7
         with:
-          python-version: '3.13'
+          python-version-file: ".python-version"
+
+      - uses: astral-sh/setup-uv@v9
+        with:
+          version: "0.8.24"
+          enable-cache: true
       
       - name: install python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+        run: uv sync --locked
           
       - name: Install latex dependencies
         run: |
@@ -45,5 +48,4 @@ jobs:
             xindy
           
       - name: Build PDF from LaTeX (Docs)
-        run: |
-          jupyter-book build 02_NRPMHandbook --builder pdflatex
+        run: uv run --locked jupyter-book build 02_NRPMHandbook --builder pdflatex

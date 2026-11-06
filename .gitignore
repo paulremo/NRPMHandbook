@@ -1,8 +1,9 @@
 02_NRPMHandbook/.vscode/
 02_NRPMHandbook/_build/
 02_NRPMHandbook/_templates/
-02_NRPMHandbook/conf.py
+__pycache__/
 .ipynb_checkpoints/
 *.bak
 *.tmp
 Thumbs.db
+.venv/

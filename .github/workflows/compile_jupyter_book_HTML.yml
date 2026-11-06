@@ -27,15 +27,18 @@ jobs:
 
       - uses: actions/setup-python@v7
         with:
-          python-version: '3.13'
+          python-version-file: ".python-version"
+          
+      - uses: astral-sh/setup-uv@v9
+        with:
+          version: "0.8.24"
+          enable-cache: true
 
       - name: install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+        run: uv sync --locked
 
       - name: Build jupyter book (fail on warnings)
-        run: jupyter-book build -W 02_NRPMHandbook
+        run: uv run --locked jupyter-book build -W 02_NRPMHandbook
 
       - name: validate HTML links
-        run: linkchecker 02_NRPMHandbook/_build/html/home.html
+        run: uv run --locked linkchecker 02_NRPMHandbook/_build/html/home.html

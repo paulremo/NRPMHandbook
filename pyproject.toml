@@ -1,0 +1,15 @@
+[project]
+name = "handbook.reliability.space"
+version = "0.4.5"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "jupyter-book==1.0.4",
+    "linkchecker==10.5.0",
+]
+
+[tool.uv]
+package = false
+constraint-dependencies = [
+    # Version 1.1.0 crashes while assigning section numbers for this book's TOC.
+    "sphinx-external-toc==1.0.1",
+]

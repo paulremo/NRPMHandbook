@@ -3,6 +3,26 @@ Welcome to the repository that stores and tracks the development on the ADS/Matr
 
 - `02_NRPMHandbook` This is the main folder for the digital handbook. All jupyter files are stored in this folder.
 
+# Local setup
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run the following command from the repository root:
+
+```powershell
+uv sync --locked
+```
+
+This creates or updates the project's `.venv` using the exact dependency versions in `uv.lock`. The project uses Python 3.13, selected by `.python-version`; uv can download it automatically if needed. Run `uv sync --locked` again after pulling dependency changes. If it reports that the lockfile is out of date, check that `pyproject.toml` and `uv.lock` were updated together.
+
+Build the book locally with:
+
+```powershell
+uv run --locked jupyter-book build 02_NRPMHandbook
+```
+
+Open `02_NRPMHandbook/_build/html/home.html` to view the result. Commands prefixed with `uv run` use the project environment, so manual activation is unnecessary.
+
+The handbook version is defined by `[project].version` in `pyproject.toml`. At build time, the local `handbook_version` Sphinx extension reads it and replaces `{version}` in the announcement banner configured in `_config.yml`. To update the banner version, change `pyproject.toml`, run `uv lock` to refresh the lockfile's project metadata, and rebuild. Read the Docs loads the same settings through `02_NRPMHandbook/conf.py`; keep that file as source and do not overwrite it with `jupyter-book config sphinx`.
+
 # FAQ
 
 ## Where is the book hosted?
@@ -15,12 +35,12 @@ To publish a jupyter book, locally perform the following commands from the main 
 
 First build the book HTML:
 ```
-jupyter-book build 02_NRPMHandbook
+uv run --locked jupyter-book build 02_NRPMHandbook
 ```
 
-Then push it to the pubslishing branch using the `ghp-import` utility:
+Then push it to the publishing branch using the `ghp-import` utility, which `uvx` runs in a separate tool environment:
 ```
-ghp-import -n -p -f --cname=nrpmhandbook.reliability.space 02_NRPMHandbook\_build\html
+uvx ghp-import -n -p -f --cname=nrpmhandbook.reliability.space 02_NRPMHandbook\_build\html
 ```
 
 The book is then published as a Git Page with the URL https://paulremo.github.io/NRPMHandbook/.
