@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{array,longtable,varwidth,hyperref}
+\newcommand{\cellwidth}{.45\linewidth}
+\begin{document}
+Table changes follow.
+\makeatletter
+  \LTleft \@totalleftmargin plus1fill
+  \LTright\dimexpr\columnwidth-\@totalleftmargin-\linewidth\relax plus1fill
+\makeatother
+\begin{longtable}{p{.45\linewidth}p{.45\linewidth}}
+Heading & Value \\
+\endhead
+Updated text & Updated value \\
+\multicolumn{2}{c}{%
+\begin{varwidth}[t]{\cellwidth}
+An added spanning cell with text.
+\par
+\vskip-\baselineskip\vbox{\hbox{\strut}}\end{varwidth}%
+}\\
+\end{longtable}
+\end{document}

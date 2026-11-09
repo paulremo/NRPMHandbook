@@ -395,9 +395,8 @@ The final calculation of $\Pi_{application\_ i}$ is therefore:
 :class: equation
 ```{math}
 :label: Equation_1_14
-\Pi_{\text{application}} = \frac{1}{66} \cdot \sum_{k = Criteria}^{}{P_{\text{marks}_{k}} \cdot \text{Pos}_{k}}\begin{matrix}   \\                                                                                                                                   
-   \\                                                                                                                                   
-  \end{matrix} = \frac{1*20 + 1*12 + 1*4 + 1*15 + 3.2*4 + 1*6 + 1*3 + 1*2}{66} = \frac{74.8}{66} = 1.13
+\Pi_{\text{application}} &= \frac{1}{66} \cdot \sum_{k = Criteria}^{}{P_{\text{marks}_{k}} \cdot \text{Pos}_{k}} \\
+ &= \frac{1*20 + 1*12 + 1*4 + 1*15 + 3.2*4 + 1*6 + 1*3 + 1*2}{66} = \frac{74.8}{66} = 1.13
 ```
 ````
 

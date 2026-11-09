@@ -62,7 +62,8 @@ with:
 :class: equation
 ```{math}
 :label: Equation_1_214
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{B}} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{B}} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -72,7 +73,8 @@ with:
 :class: equation
 ```{math}
 :label: Equation_1_215
-\Pi_{TcySolder\_ Joints} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{\text{JB}}} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{TcySolder\_ Joints} &= \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{m_{\text{JB}}} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 

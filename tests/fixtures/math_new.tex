@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\begin{document}
+\begin{equation}\label{eq:regression}
+\begin{split}\begin{aligned}
+R_k(t) = \exp\Bigg\{&
+-\sum_{i=1}^{k-1}
+\left[
+\lambda_i T_i
++\left(\frac{T_{C_i}}{\alpha_i}\right)^{\beta_i}
+-\left(\frac{T_{C_{i-1}}}{\alpha_i}\right)^{\beta_i}
+\right]\\
+&-\lambda_k t
+-\left(\frac{T_{C_{k-1}}+t}{\alpha_k}\right)^{\beta_k}
++\left(\frac{T_{C_{k-1}}}{\alpha_k}\right)^{\beta_k}
+\Bigg\}
+\end{aligned}\end{split}
+\end{equation}
+\end{document}

@@ -53,6 +53,7 @@ repository:
 sphinx:
   local_extensions:
     handbook_version: _ext
+    handbook_pdf: _ext
   config:
     # Modifications of thebe config
     thebe_config:
@@ -71,11 +72,29 @@ sphinx:
     # Change figure numbering
     numfig_secnum_depth: 2
     
-    # For LaTeX compilation, protect hyperlinks to allow references inside captions
+    # Avoid Sphinx 7 colorrows recursion with newer array/colortbl packages.
+    # https://github.com/sphinx-doc/sphinx/issues/14465
+    latex_table_style: [booktabs]
+    sd_fontawesome_latex: true
+
+    # LaTeX heading numbering and hyperlink protection inside captions
     latex_elements:
-      'preamble':
+      cmappkg: ''  # XeLaTeX supplies Unicode mappings without the pdfTeX cmap package.
+      sphinxsetup: 'iconpackage=fontawesome'
+      # Load the TeX-distributed font by filename on Windows as well as Linux.
+      extrapackages: '\defaultfontfeatures[FontAwesome]{Extension=.otf}'
+      # Number headings through chapter.section.subsection.subsubsection (e.g. 9.4.8.1.1).
+      secnumdepth: '\setcounter{secnumdepth}{4}'
+      'preamble': |
         \let\originalhyperlink\hyperlink
         \renewcommand\hyperlink[2]{\protect\originalhyperlink{#1}{#2}}
+        \pgfplotsset{compat=1.18}
+        \usepackage{xurl}
+        \usepackage{ragged2e,pdflscape,etoolbox}
+        \setlength{\emergencystretch}{3em}
+        \makeatletter
+        \AtBeginEnvironment{figure}{\spx@image@maxheight=.85\textheight}
+        \makeatother
 
 # MyST Parser Configuration
 myst:

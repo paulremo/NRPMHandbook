@@ -23,6 +23,48 @@ Open `02_NRPMHandbook/_build/html/home.html` to view the result. Commands prefix
 
 The handbook version is defined by `[project].version` in `pyproject.toml`. At build time, the local `handbook_version` Sphinx extension reads it and replaces `{version}` in the announcement banner configured in `_config.yml`. To update the banner version, change `pyproject.toml`, run `uv lock` to refresh the lockfile's project metadata, and rebuild. Read the Docs loads the same settings through `02_NRPMHandbook/conf.py`; keep that file as source and do not overwrite it with `jupyter-book config sphinx`.
 
+## Local PDF build
+
+Build the PDF from the repository root with:
+
+```powershell
+uv run --locked python scripts/build_pdf.py
+```
+
+The PDF is written to `02_NRPMHandbook/_build/latex/book.pdf`. The script generates LaTeX and runs `latexmk` directly, avoiding Jupyter Book's `make.bat` launcher failure on Windows. It requires a LaTeX installation with **latexmk**, **XeLaTeX**, **makeindex** on Windows (**xindy** on Linux/macOS), and **Perl**. On Windows it can use Perl bundled with Git for Windows. These tools are not installed by `uv sync`.
+
+Alternating table row shading is disabled through `latex_table_style` for compatibility between Sphinx 7 and newer TeX packages. Close an existing output PDF in your reader before rebuilding.
+
+The local `handbook_pdf` Sphinx extension preserves HTML table content and cell line breaks in the PDF edition, and lays out wide data tables on landscape pages. It also converts unsupported image color profiles to sRGB in generated PDF build copies, preserving the original images. Font Awesome icons use the TeX-distributed font file, so no Windows font installation is needed.
+
+## PDF review of local changes
+
+To create a PDF with changes marked against the latest commit, run:
+
+```powershell
+uv run --locked python scripts/diff_pdf.py
+```
+
+The review PDF is written to `02_NRPMHandbook/_build/diff/handbook-changes.pdf`. Added text is blue and underlined; deleted text is red and struck out. Equation changes are marked too. An introductory review page explains the markup and lists the changed source files. The comparison includes staged and unstaged edits and untracked, non-ignored book files, including notebooks. Your working files and Git index are not modified.
+
+The script requires Git, the project's Python environment, and a LaTeX installation with **latexdiff**, **latexmk**, **XeLaTeX**, an indexing tool (**makeindex** on Windows, **xindy** on Linux/macOS), and the packages/fonts needed by the normal PDF build. Perl is also required; on Windows the script can use Perl bundled with Git for Windows. For this large handbook, `latexdiff-fast` is preferred when GNU `diff` is available (also bundled with Git for Windows); otherwise the script prefers standalone `latexdiff-so`. Both variants avoid a separate Perl `Algorithm::Diff` installation. These system tools are not installed by `uv sync`. See the [latexdiff documentation](https://ctan.org/pkg/latexdiff).
+
+To compare with a different commit or release tag, or choose another output file:
+
+```powershell
+uv run --locked python scripts/diff_pdf.py --base v0.4.4 --output 02_NRPMHandbook/_build/diff/review.pdf
+```
+
+Both source snapshots are built with your current Python environment. Review copies can have different pagination and numbering because deleted text remains visible. Alternating table row shading is disabled in the review copy for compatibility between Sphinx 7 and newer TeX installations. Changes inside figure image files are not compared; figures use the current images. Notebook code is not executed beyond the book's configured build behavior.
+
+Generated Sphinx table-layout calculations are protected from change markup so that added or reformatted tables remain valid LaTeX. The text inside table cells is still compared and marked normally.
+
+The default `--math-markup auto` first tries detailed equation markup. If LaTeX reports a math/alignment error, the script automatically retries in a fresh build directory with whole-equation markup. This preserves complex equation layouts: the old equation is shown in red and the new equation in blue, while ordinary text still uses word-level markup. Use `--math-markup whole` to choose this behavior immediately, or `--math-markup fine` to require detailed markup without a retry.
+
+Use `--no-compile` to generate `review.tex` and its assets without compiling a PDF (auto mode generates fine markup without testing the fallback), or `--keep-workdir` to retain the snapshots and logs after a successful PDF build. Build files are always retained on failure, and the script prints their location. The comparison metadata records the equation markup mode that was actually used.
+
+Close an existing output PDF in your reader before replacing it, or choose a different filename with `--output`.
+
 # FAQ
 
 ## Where is the book hosted?

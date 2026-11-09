@@ -16,9 +16,9 @@ Both applications make use of the same theorem, called Bayes rule. Before explai
 
 **Bayes theorem in a reliability context**
 
-Consider a random variable $X$ with {term}`probability density function <Probability density function>` $f_{X}\left( x \right)$. If $\mathbf{\theta}$ denotes a vector of distribution parameters, the density function of $X$ is written as $f_{X}\left( x,\mathbf{\theta} \right)$. If the parameters are uncertain, the density can be considered as a conditional density function, i.e. $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$. The vector $\mathbf{\theta}$ now denotes a realisation of the random vector $\mathbf{\Theta}$ and the initial probability density function for the parameters, ${f'}_{\mathbf{\Theta}}\left( \mathbf{\theta} \right)$, is denoted the *prior density function*.
+Consider a random variable $X$ with {term}`probability density function <Probability density function>` $f_{X}\left( x \right)$. If $\boldsymbol{\theta}$ denotes a vector of distribution parameters, the density function of $X$ is written as $f_{X}\left( x,\boldsymbol{\theta} \right)$. If the parameters are uncertain, the density can be considered as a conditional density function, i.e. $f_{X}\left( x\left| \boldsymbol{\theta} \right.\  \right)$. The vector $\boldsymbol{\theta}$ now denotes a realisation of the random vector $\boldsymbol{\Theta}$ and the initial probability density function for the parameters, ${f'}_{\boldsymbol{\Theta}}\left( \boldsymbol{\theta} \right)$, is denoted the *prior density function*.
 
-Now, let us assume that $n$ independent observations (realisations) of the random variable $X$ are available that can be used to update the initial parameter estimate. The data sample is stored in a vector $\widehat{\mathbf{x}} = \left( {\widehat{x}}_{1},\ldots,{\widehat{x}}_{n} \right)^{T}$. The new (updated) density function ${f''}_{\mathbf{\Theta}}\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ of the uncertain parameters $\mathbf{\Theta}$ given the observations $\widehat{\mathbf{x}}$ is denoted as *posterior density function*. 
+Now, let us assume that $n$ independent observations (realisations) of the random variable $X$ are available that can be used to update the initial parameter estimate. The data sample is stored in a vector $\widehat{\mathbf{x}} = \left( {\widehat{x}}_{1},\ldots,{\widehat{x}}_{n} \right)^{T}$. The new (updated) density function ${f''}_{\boldsymbol{\Theta}}\left( \boldsymbol{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ of the uncertain parameters $\boldsymbol{\Theta}$ given the observations $\widehat{\mathbf{x}}$ is denoted as *posterior density function*.
 
 From Bayes' rule, it may be derived as follows:
 
@@ -26,12 +26,12 @@ From Bayes' rule, it may be derived as follows:
 :class: equation
 ```{math}
 :label: Equation_method_6_21
-f_{\mathbf{\Theta}}^{''}\left( \mathbf{\theta} \middle| \widehat{\mathbf{x}} \right) = \frac{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right) \cdot f_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)}{\int_{\text{DΘ}}^{}{L\left( \widehat{\mathbf{x}} \middle| \mathbf{\theta} \right)}{\cdot f}_{\mathbf{\Theta}}^{'}\left( \mathbf{\theta} \right)d\mathbf{\theta}}
+f_{\boldsymbol{\Theta}}^{''}\left( \boldsymbol{\theta} \middle| \widehat{\mathbf{x}} \right) = \frac{L\left( \widehat{\mathbf{x}} \middle| \boldsymbol{\theta} \right) \cdot f_{\boldsymbol{\Theta}}^{'}\left( \boldsymbol{\theta} \right)}{\int_{\text{DΘ}}^{}{L\left( \widehat{\mathbf{x}} \middle| \boldsymbol{\theta} \right)}{\cdot f}_{\boldsymbol{\Theta}}^{'}\left( \boldsymbol{\theta} \right)d\boldsymbol{\theta}}
 ```
-Where, $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}$ is the likelihood of the given observations assuming that the distribution parameters are equal to $\mathbf{\theta}$. The denominator of Eq. {eq}`Equation_method_6_21` is a normalizing constant, which ensures that the posterior density function ${f''}_{\mathbf{\Theta}}\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ integrates to unity. To understand Bayesian updating it is sufficient to know that ${f''}_{\mathbf{\Theta}}\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right) \propto L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right){f'}_{\mathbf{\Theta}}\left( \mathbf{\theta} \right)$.
+Where, $L\left( \widehat{\mathbf{x}}\left| \boldsymbol{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \boldsymbol{\theta} \right.\  \right)}$ is the likelihood of the given observations assuming that the distribution parameters are equal to $\boldsymbol{\theta}$. The denominator of Eq. {eq}`Equation_method_6_21` is a normalizing constant, which ensures that the posterior density function ${f''}_{\boldsymbol{\Theta}}\left( \boldsymbol{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ integrates to unity. To understand Bayesian updating it is sufficient to know that ${f''}_{\boldsymbol{\Theta}}\left( \boldsymbol{\theta}\left| \widehat{\mathbf{x}} \right.\  \right) \propto L\left( \widehat{\mathbf{x}}\left| \boldsymbol{\theta} \right.\  \right){f'}_{\boldsymbol{\Theta}}\left( \boldsymbol{\theta} \right)$.
 ````
 
-In a reliability context, $X$ can be for example the random time to failure of an item with a failure rate $\mathbf{\theta}\mathbf{=}\lambda$, assumed to be constant in time. The conditional density function $f_{X}\left( x\left| \lambda \right.\  \right)$ (also called "sampling distribution") is in this case defined by the exponential distribution, conditional on the failure rate $\lambda$. The prior distribution for the failure rate, ${f'}_{\Lambda}\left( \lambda \right)$,can be derived e.g. from a handbook estimate, and can be updated with new time-to-failure data.
+In a reliability context, $X$ can be for example the random time to failure of an item with a failure rate $\boldsymbol{\theta}\mathbf{=}\lambda$, assumed to be constant in time. The conditional density function $f_{X}\left( x\left| \lambda \right.\  \right)$ (also called "sampling distribution") is in this case defined by the exponential distribution, conditional on the failure rate $\lambda$. The prior distribution for the failure rate, ${f'}_{\Lambda}\left( \lambda \right)$,can be derived e.g. from a handbook estimate, and can be updated with new time-to-failure data.
 
 
 (method_6_1_1)=
@@ -53,11 +53,11 @@ Bayesian updating of a prior estimate for a constant failure rate $\lambda$ with
 (method_6_1_2)=
 ### Bayes rule as estimation method
 
-As it has been discussed in {numref}`method_6_4`, Bayesian statistics can also be used as a method for the estimation of model parameters from statistical data, without consideration of prior knowledge. When compared correctly, the point estimates derived from a Bayesian analysis are generally equivalent to the MLE method, which takes basis in the same likelihood function $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right)$ as used by Eq. {eq}`Equation_method_6_21`. 
+As it has been discussed in {numref}`method_6_4`, Bayesian statistics can also be used as a method for the estimation of model parameters from statistical data, without consideration of prior knowledge. When compared correctly, the point estimates derived from a Bayesian analysis are generally equivalent to the MLE method, which takes basis in the same likelihood function $L\left( \widehat{\mathbf{x}}\left| \boldsymbol{\theta} \right.\  \right)$ as used by Eq. {eq}`Equation_method_6_21`.
 
 However, the uncertainty quantification provided by Bayes rule is more consistent than the normal approximation used by the MLE method.
 
-To apply Bayesian methods for parameter estimation, the prior distribution  ${f'}_{\mathbf{\Theta}}\left( \mathbf{\theta} \right)$ should be selected as a non-informative prior, see {numref}`method_6_4_2` for details. 
+To apply Bayesian methods for parameter estimation, the prior distribution  ${f'}_{\boldsymbol{\Theta}}\left( \boldsymbol{\theta} \right)$ should be selected as a non-informative prior, see {numref}`method_6_4_2` for details.
 
 Examples for Bayesian updating with non-informative priors can be found in {numref}`method_6_5`.
 
@@ -97,7 +97,7 @@ The final outcome of a Bayesian analysis is the posterior distribution of the mo
 (method_6_3)=
 ## Likelihood formulation
 
-In Bayes rule, (Eq. {eq}`Equation_method_6_21`), the likelihood $L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}$ contains the information provided by the data sample that is used for updating. The formulation of the likelihood is based on the sampling distribution $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$, which defines also the model parameters $\mathbf{\theta}$ to be updated. This is why the consideration of the sampling distribution is always the first step in a Bayesian analysis.
+In Bayes rule, (Eq. {eq}`Equation_method_6_21`), the likelihood $L\left( \widehat{\mathbf{x}}\left| \boldsymbol{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \boldsymbol{\theta} \right.\  \right)}$ contains the information provided by the data sample that is used for updating. The formulation of the likelihood is based on the sampling distribution $f_{X}\left( x\left| \boldsymbol{\theta} \right.\  \right)$, which defines also the model parameters $\boldsymbol{\theta}$ to be updated. This is why the consideration of the sampling distribution is always the first step in a Bayesian analysis.
 
 (method_6_3_1)=
 ### Distributional model for the sampling distribution
@@ -110,11 +110,11 @@ In a Bayesian analysis, the sampling distribution is needed for the formulation 
 :class: equation
 ```{math}
 :label: Equation_method_6_22
-L\left( \widehat{\mathbf{x}}\left| \mathbf{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \mathbf{\theta} \right.\  \right)}
+L\left( \widehat{\mathbf{x}}\left| \boldsymbol{\theta} \right.\  \right) = \prod_{i = 1}^{n}{f_{X}\left( {\widehat{x}}_{i}\left| \boldsymbol{\theta} \right.\  \right)}
 ```
 ````
 
-The selection of an appropriate distributional model for the sampling distribution $f_{X}\left( x\left| \mathbf{\theta} \right.\  \right)$ follows the same principles as in the case of model development using {term}`statistical methods <Statistical method>` ({numref}`method_6_4_2`), or for the basic variable modelling required for probabilistic PoF methods ({numref}`method_6_5_2`). A formal comparison of different competing distribution types can be achieved with the aid of Bayesian information criteria {cite:p}`method-Gelman2013`.
+The selection of an appropriate distributional model for the sampling distribution $f_{X}\left( x\left| \boldsymbol{\theta} \right.\  \right)$ follows the same principles as in the case of model development using {term}`statistical methods <Statistical method>` ({numref}`method_6_4_2`), or for the basic variable modelling required for probabilistic PoF methods ({numref}`method_6_5_2`). A formal comparison of different competing distribution types can be achieved with the aid of Bayesian information criteria {cite:p}`method-Gelman2013`.
 
 In addition to the selection of a distribution type, aspects of truncation and censoring can have to be considered, as will be discussed below.
 
@@ -204,7 +204,7 @@ Guidance on the selection of a censored and a truncates likelihood
 (method_6_4)=
 ## Guidance on the prior selection
 
-In a Bayesian analysis, the distribution parameters $\mathbf{\theta}$ of the sampling distribution, e.g. the failure rate in the case of an exponential time-to-failure model are considered as random variables. The prior distribution represents the available knowledge for each model parameter, prior to the consideration of the new data set used for updating.
+In a Bayesian analysis, the distribution parameters $\boldsymbol{\theta}$ of the sampling distribution, e.g. the failure rate in the case of an exponential time-to-failure model are considered as random variables. The prior distribution represents the available knowledge for each model parameter, prior to the consideration of the new data set used for updating.
 
 Bayesian methods can be used with informative or non-informative priors. Guidance on the principal selection of a prior is provided in {numref}`method_figure7_7`. In general, if an existing model is available and the aim is to update this prior, then the prior is called informative. If no data-based prior is available then it should be checked whether other information, like engineering knowledge or handbook data, is available and can be used to build an informative prior. Only in the case that no information is available except for the new data, a non-informative prior should be used.
 
@@ -321,6 +321,7 @@ In general, when applying Bayes theorem for updating, the prior distribution and
 
 ```{list-table} Conjugate priors for various standard life distributions, for updating with complete (uncensored) time-to-failure data (see Annex II.A for parametrization)
 :name: method_table_6_1
+:class: pdf-landscape
 :header-rows: 1
 :widths: 20 20 20 20 20
 

@@ -584,11 +584,13 @@ Refer to {eq}`Equation_1_32`.
 :class: equation
 ```{math}
 :label: Equation_1_38
-\Pi_{\text{Thermal}} = \gamma_{TH\_ EL} \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{3} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{Thermal}} &= \gamma_{TH\_ EL} \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{3} \\
+&\quad \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```  
 ```{math}
 :label: Equation_1_39
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\Delta T_{\text{cycling}}}{20} \right)^{1.9} \cdot exp \left \lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right  \rbrack
+\Pi_{\text{Tcy}} &= \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\Delta T_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp \left \lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right  \rbrack
 ```  
 ```{math}
 :label: Equation_1_40
@@ -1032,7 +1034,8 @@ For space applications, where the number of cycles (mating/demating) per year is
 :class: equation
 ```{math}
 :label: Equation_1_55
-\Pi_{\text{Tcy}} = 0.04 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= 0.04 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -1570,7 +1573,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_63
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -2384,7 +2388,8 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 :class: equation
 ```{math}
 :label: Equation_1_71
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -2393,7 +2398,8 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 :class: equation
 ```{math}
 :label: Equation_1_72
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} &= \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -2900,7 +2906,7 @@ $E_{a}$ = 0.7eV;
 \Pi_{\text{El}} = \left\{ \begin{matrix}  \left( \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{2.4}\ \mathrm{\text{if}}\ \frac{V_{\text{applied}}}{V_{\text{rated}}} > 0.3 \\   
    \\                                                                                                                                          
   0.056\ \mathrm{\text{if}}\ \frac{V_{\text{applied}}}{V_{\text{rated}}} \leq 0.3 \\                                                           
-  \end{matrix} \right.\                       
+  \end{matrix} \right.
 ```
 ````
 
@@ -2912,7 +2918,8 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 :class: equation
 ```{math}
 :label: Equation_1_79
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -2920,7 +2927,8 @@ for all other diodes, $\Pi_{\text{El}}$ = 1.
 :class: equation
 ```{math}
 :label: Equation_1_80
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} &= \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -3424,7 +3432,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_86
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack         
+\Pi_{\text{Tcy}} &= \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -3953,7 +3962,8 @@ $I_{\text{rated}}$ is the rated current in the fuse without opening for an ambie
 :class: equation
 ```{math}
 :label: Equation_1_93
-\Pi_{\text{Tcy}} = 0.51 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack\            
+\Pi_{\text{Tcy}} &= 0.51 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -4506,7 +4516,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_100
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -5706,7 +5717,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_107
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -5714,7 +5726,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_108
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -6594,7 +6607,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_116
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -6602,7 +6616,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_117
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -7466,7 +7481,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_125
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -7474,7 +7490,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_126
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -7971,7 +7988,7 @@ T^{'} = \left\{ \begin{matrix}
   40 - \frac{85}{55} \cdot \left( T_{board\_ ref} + \Delta T \right) & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T \leq 0{^\circ}C \\   
   40{^\circ}C & \mathrm{\text{if}}\ {0{^\circ}C < T}_{board\_ ref} + \Delta T \leq 40{^\circ}C \\                                            
   T_{board\_ ref} + \Delta T & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T > 40{^\circ}C \\                                               
-  \end{matrix} \right.\ 
+  \end{matrix} \right.
 ```
 ````
 
@@ -8073,7 +8090,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_135
-\Pi_{\text{Tcy}} = 0.02 \cdot \Pi_{\text{prot\ TCY}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= 0.02 \cdot \Pi_{\text{prot\ TCY}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -8745,7 +8763,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_141
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -9422,7 +9441,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_148
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -10214,7 +10234,8 @@ $E_{a}$ = 0.7eV;
 :class: equation
 ```{math}
 :label: Equation_1_155
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -10222,7 +10243,8 @@ $E_{a}$ = 0.7eV;
 :class: equation
 ```{math}
 :label: Equation_1_156
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} &= \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -10713,7 +10735,8 @@ $E_{a}$ = 0.7eV;
 :class: equation
 ```{math}
 :label: Equation_1_162
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -10721,7 +10744,8 @@ $E_{a}$ = 0.7eV;
 :class: equation
 ```{math}
 :label: Equation_1_163
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} &= \left( \frac{{12 \cdot N}_{cy\_ annual}}{t_{\text{annual}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -11215,7 +11239,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_169
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -11731,7 +11756,7 @@ T^{'} = \left\{ \begin{matrix}
   40 - \frac{85}{55} \cdot \left( T_{board\_ ref} + \Delta T \right) & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T \leq 0{^\circ}C \\   
   40{^\circ}C & \mathrm{\text{if}}\ {0{^\circ}C < T}_{board\_ ref} + \Delta T \leq 40{^\circ}C \\                                            
   T_{board\_ ref} + \Delta T & \mathrm{\text{if}}\ T_{board\_ ref} + \Delta T > 40{^\circ}C \\                                               
-  \end{matrix} \right.\ 
+  \end{matrix} \right.
 ```
 ````
 
@@ -11828,7 +11853,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_177
-\Pi_{\text{Tcy}} = 0.02 \cdot \Pi_{\text{prot\ TCY}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= 0.02 \cdot \Pi_{\text{prot\ TCY}} \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -12523,7 +12549,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_183
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -12531,7 +12558,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_184
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -12982,7 +13010,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_191
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -12990,7 +13019,8 @@ All other parameters are issued from the mission profile.
 :class: equation
 ```{math}
 :label: Equation_1_192
-\Pi_{\text{TcySolderjoints}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcySolderjoints}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -13263,7 +13293,8 @@ The value $\Pi_{\text{Class}}$ reflects the effect on the reliability prediction
 :class: equation
 ```{math}
 :label: Equation_1_199
-\Pi_{\text{Tcy}} = 0.6 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= 0.6 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 
@@ -13691,8 +13722,8 @@ Hybrids are classified as family 40 in {term}`EPPL`  {cite:p}`eee-EPPL007-37`.. 
 :class: equation
 ```{math}
 :label: Equation_1_203
-\lambda_{H\& M} = \sum_{\text{µcomponents}}^{}\left( \lambda_{\text{µcomponent}} \cdot \Pi_{PM_{\text{µcomponent}}} \right) \cdot \Pi_{Process\_ H\& M} \cdot \Pi_{\text{Process}} 
- + \left( \lambda_{\text{wiring}} + \lambda_{Case + Substrate} + \lambda_{External\_ connections} \right) \cdot \Pi_{Process\_ H\& M} \cdot \Pi_{\text{Process}}
+\lambda_{H\& M} &= \sum_{\text{µcomponents}}^{}\left( \lambda_{\text{µcomponent}} \cdot \Pi_{PM_{\text{µcomponent}}} \right) \cdot \Pi_{Process\_ H\& M} \cdot \Pi_{\text{Process}}  \\
+&\quad + \left( \lambda_{\text{wiring}} + \lambda_{Case + Substrate} + \lambda_{External\_ connections} \right) \cdot \Pi_{Process\_ H\& M} \cdot \Pi_{\text{Process}}
 ```
 ````
 
@@ -13813,7 +13844,8 @@ The factor $\lambda_{0T\_chip\_TCy}$ is equal to 0.011 for Hybrids and Multi Chi
 :class: equation
 ```{math}
 :label: Equation_1_208
-\Pi_{\text{TcyCase}} = \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{TcyCase}} &= \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{4} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```
 ````
 

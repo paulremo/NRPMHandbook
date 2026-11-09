@@ -50,11 +50,13 @@ The physical stresses modelled for capacitors are the thermal, thermal cycling a
 :class: equation
 ```{math}
 :label: Equation_1_33
-\Pi_{\text{Thermal}} = \gamma_{\text{TH}_{\text{EL}}} \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{3} \cdot \exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{\text{board}_{\text{ref}}} + \text{ΔT}} \right) \right\rbrack
+\Pi_{\text{Thermal}} &= \gamma_{\text{TH}_{\text{EL}}} \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{3} \\
+&\quad \cdot \exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{\text{board}_{\text{ref}}} + \text{ΔT}} \right) \right\rbrack
 ```
 ```{math}
 :label: Equation_1_34
-\Pi_{\text{Tcy}} = \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{\text{cy}_{\text{phase}}}}{t_{\text{phase}}} \right) \cdot \left( \frac{\min\left( \theta_{\text{cy}},2 \right)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\Delta T_{\text{cycling}}}{20} \right)^{1.9} \cdot \exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{\max_{\text{cycling}}}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= \gamma_{\text{TCy}} \cdot \left( \frac{{12 \cdot N}_{\text{cy}_{\text{phase}}}}{t_{\text{phase}}} \right) \cdot \left( \frac{\min\left( \theta_{\text{cy}},2 \right)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\Delta T_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot \exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{\max_{\text{cycling}}}} \right) \right\rbrack
 ```  
 ```{math}
 :label: Equation_1_35
@@ -352,11 +354,13 @@ The physical stresses modelled for plastic film capacitors are the thermal, ther
 :class: equation
 ```{math}
 :label: Equation_1_44
-\Pi_{\text{Thermal}} = 0.18 \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{6} \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
+\Pi_{\text{Thermal}} &= 0.18 \cdot \left( \frac{1}{S_{\text{reference}}} \cdot \frac{V_{\text{applied}}}{V_{\text{rated}}} \right)^{6} \\
+&\quad \cdot exp\left\lbrack 11604 \cdot E_{a} \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```  
 ```{math}
 :label: Equation_1_45
-\Pi_{\text{Tcy}} = 0.14 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
+\Pi_{\text{Tcy}} &= 0.14 \cdot \left( \frac{{12 \cdot N}_{cy\_ phase}}{t_{\text{phase}}} \right) \cdot \left( \frac{min(\theta_{\text{cy}},2)}{2} \right)^{\frac{1}{3}} \cdot \left( \frac{\text{ΔT}_{\text{cycling}}}{20} \right)^{1.9} \\
+&\quad \cdot exp\left\lbrack 1414 \cdot \left( \frac{1}{313} - \frac{1}{{273 + T}_{max\_ cycling}} \right) \right\rbrack
 ```  
 ```{math}
 :label: Equation_1_46
@@ -366,6 +370,7 @@ The physical stresses modelled for plastic film capacitors are the thermal, ther
 :label: Equation_1_47
 \Pi_{\text{RH}} = {0.66 \cdot \left( \frac{\text{RH}_{board\_ ref}}{70} \right)}^{4.4} \cdot \ exp\left\lbrack 11604 \cdot 0.9 \cdot \left( \frac{1}{293} - \frac{1}{{273 + T}_{board\_ ref} + \Delta T} \right) \right\rbrack
 ```
+````
 Where, $\lambda_{0_{\text{capacitor}}}$, $E_{a}$, $S_{\text{reference}}$ explained in Annex A.3 to A.6 and presented in Table B.1-2 for ceramic capacitors and B.1-5 for tantalum capacitors.
 
 

@@ -245,8 +245,8 @@ With the distributional assumptions in {numref}`meca-table4-11`, an analytic sol
 :class: equation
 ```{math}
 :label: Equation_3_25
-P_{f} (t) = P[X_{1} - X_{2}(t) \cdot \Theta \leq 0]
-= \text{Φ}\left( \frac{\text{ln}\left(\text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left(\frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left(v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) -\text{ln}\left( v_{\Theta}^{2} + 1 \right)\right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left(v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}}\right)
+P_{f} (t) &= P[X_{1} - X_{2}(t) \cdot \Theta \leq 0] \\
+&= \text{Φ}\left( \frac{\text{ln}\left(\text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left(\frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left(v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) -\text{ln}\left( v_{\Theta}^{2} + 1 \right)\right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left(v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}}\right)
 ```
 ````
 
@@ -384,8 +384,8 @@ With the distributional assumptions in {numref}`meca-table4-12`, an analytic sol
 :class: equation
 ```{math}
 :label: Equation_3_31
-P_{f} (t) = P[X_{1} - X_{2}(t) \cdot \Theta \leq 0]
-= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
+P_{f} (t) &= P[X_{1} - X_{2}(t) \cdot \Theta \leq 0] \\
+&= \text{Φ}\left( \frac{\text{ln}\left( \text{E}\lbrack\Theta\rbrack \right) - \text{ln}\left( \frac{\mu_{X_{1}}}{\mu_{X_{2}}} \right) + 0.5\left( \text{ln}\left( v_{X_{1}}^{2} + 1 \right) - \text{ln}\left( v_{X_{2}}^{2} + 1 \right) - \text{ln}\left( v_{\Theta}^{2} + 1 \right) \right)}{\sqrt{\text{ln}\left( v_{X_{1}}^{2} + 1 \right)\text{+ln}\left( v_{X_{2}}^{2} + 1 \right)\text{+ln}\left( v_{\Theta}^{2} + 1 \right)}} \right)
 ```
 ````
 

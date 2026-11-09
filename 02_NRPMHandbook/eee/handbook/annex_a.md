@@ -491,11 +491,11 @@ For Hybrids & MCM components:
 :class: equation
 ```{math}
 :label: equation_a_2_4
-\lambda_{H\&M} =
+\lambda_{H\&M} &=
 \sum_{\mu\text{components}}
 \left( \lambda_{\mu\text{component}} \cdot \Pi_{PM_{\mu\text{component}}} \right)
-\cdot \Pi_{\text{Process\_H\&M}} \cdot \Pi_{\text{Process}}
-+ \left( \lambda_{\text{Wiring}} + \lambda_{\text{Case+Substrate}} + \lambda_{\text{External\_connections}} \right)
+\cdot \Pi_{\text{Process\_H\&M}} \cdot \Pi_{\text{Process}} \\
+&\quad + \left( \lambda_{\text{Wiring}} + \lambda_{\text{Case+Substrate}} + \lambda_{\text{External\_connections}} \right)
 \cdot \Pi_{\text{Process\_H\&M}} \cdot \Pi_{\text{Process}}
 ```
 
@@ -592,11 +592,11 @@ Acceleration factor for the thermo-mechanical stress:
 :class: equation
 ```{math}
 :label: equation_a_4_1
-\Pi_{\text{thermo-mechanical}} =
+\Pi_{\text{thermo-mechanical}} &=
 \left( \frac{12 \cdot N_{\text{cy\_phase}}}{t_{\text{phase}}} \right)
 \cdot \left( \frac{\min(\theta_{\text{cy}},2)}{\min(\theta_0,2)} \right)^p
-\cdot \left( \frac{\Delta T_{\text{cycling}}}{\Delta T_0} \right)^m
-\cdot \exp \left[
+\cdot \left( \frac{\Delta T_{\text{cycling}}}{\Delta T_0} \right)^m \\
+&\quad \cdot \exp \left[
 11604 \cdot E_a \cdot
 \left(
 \frac{1}{273+T_0+\Delta T} - \frac{1}{273+T_{\text{max\_cycling}}}

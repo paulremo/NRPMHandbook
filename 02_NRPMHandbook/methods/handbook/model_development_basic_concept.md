@@ -605,11 +605,11 @@ In practice, most data samples include censored observations, which is important
 :class: equation
 ```{math}
 :label: Equation_method_5_16
-\widehat{\mathbf{\theta}} = \min_{\mathbf{\theta}}\left\lbrack - l(\mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\ ) \right\rbrack = \min_{\mathbf{\theta}}\left\lbrack - \mathrm{\ln}\left( L(\mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\ ) \right) \right\rbrack
+\widehat{\boldsymbol{\theta}} = \min_{\boldsymbol{\theta}}\left\lbrack - l(\boldsymbol{\theta}\left| \widehat{\mathbf{x}} \right.\ ) \right\rbrack = \min_{\boldsymbol{\theta}}\left\lbrack - \mathrm{\ln}\left( L(\boldsymbol{\theta}\left| \widehat{\mathbf{x}} \right.\ ) \right) \right\rbrack
 ```
 ````
 
-Here, $L\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ denotes the likelihood of a parameter set $\mathbf{\theta}$ conditional on the data $\widehat{\mathbf{x}}$ (see {numref}`method_7_3`for details), and $l\left( \mathbf{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ is the corresponding log-likelihood.
+Here, $L\left( \boldsymbol{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ denotes the likelihood of a parameter set $\boldsymbol{\theta}$ conditional on the data $\widehat{\mathbf{x}}$ (see {numref}`method_7_3`for details), and $l\left( \boldsymbol{\theta}\left| \widehat{\mathbf{x}} \right.\  \right)$ is the corresponding log-likelihood.
 
 The statistical uncertainty and covariance between the different parameters can be evaluated with the aid of the Fisher information matrix, which is derived from the Hessian matrix; the Hessian is usually determined as a by-product of the optimization routine used to solve Eq. {eq}`Equation_method_5_16`.
 
