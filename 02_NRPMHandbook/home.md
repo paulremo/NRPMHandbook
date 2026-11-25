@@ -13,63 +13,77 @@ The ECSS-Q-HB-30-02A reliability handbook was developed to provide a reliability
 
 This digital handbook contains 7 parts. These parts can be accessed by clicking on the icons below or browsing the table of contents on the left side of this page.
 
-::::{grid}
+:::::{grid}
 :gutter: 3
 
-:::{grid-item-card} **Methodologies**
+::::{grid-item-card} **Methodologies**
+:::{card-header}
 <a href="methodologies/handbook/intro.html"><img class="link-image" src="_static/images/methodologyPicture.png" alt="logo methodologies"></a>
-^^^
+:::
+
 Gives a brief introduction to the project life cycle and to the different phases describing an item’s reliability over time. These concepts are needed to understand the taxonomy and for the reliability prediction process discussed in this handbook.
-:::
+::::
 
-:::{grid-item-card} **Methods**
+::::{grid-item-card} **Methods**
+:::{card-header}
 <a href="methods/handbook/intro.html"><img class="link-image" src="_static/images/methodPicture.png" alt="logo methods"></a>
-^^^
+:::
+
 Provides information on different reliability prediction and methods inputs, allowing to understand the background of the models defined in the following parts.
-:::
 ::::
+:::::
 
-::::{grid}
+:::::{grid}
 :gutter: 3
 
-:::{grid-item-card} **EEE**
+::::{grid-item-card} **EEE**
+:::{card-header}
 <a href="eee/handbook/intro.html"><img class="link-image" src="_static/images/eeePicture.png" alt="logo eee"></a>
-^^^
+:::
+
 Explains the modelling of EEE components based on the FIDES methodology.
-:::
+::::
 
-:::{grid-item-card} **Mechanical**
+::::{grid-item-card} **Mechanical**
+:::{card-header}
 <a href="mechanical/handbook/intro.html"><img class="link-image" src="_static/images/mecaPicture.png" alt="logo mechanical"></a>
-^^^
+:::
+
 Introduces different inputs and methods for mechanical reliability prediction and presents elementary reliability modelling of mechanical items.
-:::
 ::::
+:::::
 
-::::{grid}
+:::::{grid}
 :gutter: 3
 
-:::{grid-item-card} **Miscellaneous**
+::::{grid-item-card} **Miscellaneous**
+:::{card-header}
 <a href="miscellaneous/handbook/intro.html"><img class="link-image" src="_static/images/miscellaneousPicture.png" alt="logo miscellaneous"></a>
-^^^
-Introduces methods to treat parts that are difficult to classify into either EEE or mechanical.
 :::
 
-:::{grid-item-card} **System**
-<a href="system/handbook/intro.html"><img class="link-image" src="_static/images/systemPicture.png" alt="logo system"></a>
-^^^
-Provides an overview of existing methods for system applications and consideration of specific aspects relevant to space applications.
-:::
+Introduces methods to treat parts that are difficult to classify into either EEE or mechanical.
 ::::
 
-::::{grid}
+::::{grid-item-card} **System**
+:::{card-header}
+<a href="system/handbook/intro.html"><img class="link-image" src="_static/images/systemPicture.png" alt="logo system"></a>
+:::
+
+Provides an overview of existing methods for system applications and consideration of specific aspects relevant to space applications.
+::::
+:::::
+
+:::::{grid}
 :gutter: 3
 
-:::{grid-item-card} **Glossary**
+::::{grid-item-card} **Glossary**
+:::{card-header}
 <a href="glossary/handbook/intro.html"><img class="link-image" src="_static/images/glossary_picture1.png" alt="logo glossary"></a>
-^^^
-Provides a glossary of terms, definitions and abbreviated terms that can be found in the 6 previous parts.
 :::
+
+Provides a glossary of terms, definitions and abbreviated terms that can be found in the 6 previous parts.
 ::::
+:::::
 
 Reliability prediction ({term}`RP`) is not an end in itself. The ultimate goal is decision support. A “decision” in this context should be understood as any kind of engineering, project management or business choice or trade-off, including e.g. feasibility assessments and design trade-offs, decisions during operations or for safe disposal, and business planning for single spacecraft or constellations.
 

@@ -69,6 +69,9 @@ sphinx:
     
     # Change figure numbering
     numfig_secnum_depth: 2
+
+    # Card headers and footers use sphinx-design directives.
+    sd_card_legacy_separators: false
     
     # Avoid Sphinx 7 colorrows recursion with newer array/colortbl packages.
     # https://github.com/sphinx-doc/sphinx/issues/14465
